@@ -1,0 +1,23 @@
+== FIX-C5 / Macaulay2 ==
+(Delta_v = , (-(3/4)*s-13/4)*a^4+(-(3/4)*s-13/4)*a^3*b+((3/4)*s-13/4)*a*b^3+((3/4)*s-13/4)*b^4-4*om*a^2*y^2+4*a*b*y^2+(4*om+4)*b^2*y^2+(4*om+4)*a^2*z^2+4*a*b*z^2-4*om*b^2*z^2+y^2*z^2)
+(Delta_v is homogeneous of degree 4 : , true)
+(Delta_v mod Q1 == (c y z)^2 : , true)
+(Sing is empty (unit ideal)? , false)
+(dim of the affine cone over Sing = , 1)
+(PROJECTIVE dim Sing(Delta_v)     = , 0)
+(degree Sing(Delta_v)             = , 6)
+(Delta_v lies in the jacobian ideal (Euler) : , true)
+(Sing subset {Q1 = 0} : , true)
+(node component Py subset Sing : , true)
+(node component Pz subset Sing : , true)
+(node component Ny subset Sing : , true)
+(node component Nz subset Sing : , true)
+(degrees (Py,Pz,Ny,Nz) = , {1, 1, 2, 2})
+(intersection of the four components == Sing : , true)
+(contracted locus: proj dim = , 0,   degree = , 6)
+(contracted locus == Sing(Delta_v) : , true)
+(CONTROL reducible quartic  : proj dim Sing = , 1)
+(CONTROL nonreduced quartic : proj dim Sing = , 2)
+(CONTROL smooth quartic     : Sing = unit ideal? , true)
+CONTROL nonunit: Js != (1) as printed above.
+FIX_C5_M2_OK

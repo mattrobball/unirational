@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `515f700` (2026-08-05; the
+Snapshot metadata — notebook parent head: `508fd80` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2696,7 +2696,25 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   count on certified data (infeasible ∀d = the kill; feasible = the
   explicit candidate). Worker re-redirected (second redirect: two of
   its three derivation tasks now theorems; target = the budget
-  count consuming the E15-era tables).**** Same-day
+  count consuming the E15-era tables). Sixteenth wave — **FIX-C5
+  landed (`FIX-C5-GEOMETRY-OK`, director-replayed, five green routes:
+  139/180/M2/OSCAR/61)**: the hand-derived `Δ_v` VERIFIED three ways
+  (incl. `Res_x(F, ∂F/∂x) = −Q₁Δ_v`); **absolutely irreducible** —
+  the 5.18-B parity condition is single-channel; **`Sing(Δ_v) = six
+  ordinary nodes**, all on `{Q₁ = 0}`, and `π_v(contracted locus) =
+  Sing(Δ_v)` AS SCHEMES; **line census: exactly 6 lines through the
+  χ₁-vertex** (the classical count) — `L₂ = ℓ_{σ₃}`, `L₃ = ℓ_{σ₂}`
+  from the 55-arrangement plus FOUR NEW lines over quadratic
+  extensions (V4-orbits 2+2); `Δ_v` is a 6-nodal quartic (nodal K3),
+  `Δ_v/V4` rational. Smoke test on the sealed N2C witness PASSES
+  with two worker-caught findings applied: **(C5-1)** the §5.19
+  dictionary sign is `γ = −u₀′` (corrected); **(C5-2)** the
+  invariant identity is a faithful 52-coefficient reindexing (3
+  variables, degree `3s`), not an equation-count reduction; plus a
+  notation-collision note (`c` = xyz-coefficient ≠ FIX-L1's
+  Chebyshev `c`). The (D1)-criterion's specific tangency data
+  (`E ∩ K_c` of the LINE projection) remains write-up material,
+  extractable by the same methods.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

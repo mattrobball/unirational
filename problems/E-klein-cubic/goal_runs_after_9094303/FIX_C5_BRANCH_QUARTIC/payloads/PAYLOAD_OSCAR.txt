@@ -1,0 +1,28 @@
+== FIX-C5 / OSCAR 1.8.0 ==
+field K = Q(u), u^4+28u^2+64 : om, nu, delta, sqrt33 all verified
+Delta_v = (3//8*u^2 + 2)*a^4 + (3//8*u^2 + 2)*a^3*b + (1//8*u^3 + 5//2*u + 2)*a^2*y^2 + (-1//8*u^3 - 5//2*u + 2)*a^2*z^2 + (-3//8*u^2 - 17//2)*a*b^3 + 4*a*b*y^2 + 4*a*b*z^2 + (-3//8*u^2 - 17//2)*b^4 + (-1//8*u^3 - 5//2*u + 2)*b^2*y^2 + (1//8*u^3 + 5//2*u + 2)*b^2*z^2 + y^2*z^2
+factor(Delta_v): number of irreducible factors = 1
+    multiplicity 1, degree 4
+VERDICT: Delta_v is IRREDUCIBLE over K (single factor, multiplicity 1).
+CONTROL reducible quartic: 2 factors (expected 2)
+CONTROL square quartic:    multiplicity 2 (expected 2)
+Sing = unit ideal? false
+dim(affine cone over Sing) = 1   PROJECTIVE dim = 0
+degree Sing = 6
+Sing is radical? true
+number of primary components over K: 4
+  component 1 : proj dim 0, degree 2, primary == prime? true
+      P = AbstractAlgebra.Generic.MPoly{AbsSimpleNumFieldElem}[z, a + b, 66*b^2 + (u^3 + 36*u)*y^2]
+  component 2 : proj dim 0, degree 1, primary == prime? true
+      P = AbstractAlgebra.Generic.MPoly{AbsSimpleNumFieldElem}[z, b, a]
+  component 3 : proj dim 0, degree 2, primary == prime? true
+      P = AbstractAlgebra.Generic.MPoly{AbsSimpleNumFieldElem}[y, a + b, 66*b^2 + (-u^3 - 36*u)*z^2]
+  component 4 : proj dim 0, degree 1, primary == prime? true
+      P = AbstractAlgebra.Generic.MPoly{AbsSimpleNumFieldElem}[y, b, a]
+Q1 vanishes on Sing? true
+contracted locus: proj dim 0, degree 6
+contracted locus == Sing(Delta_v)  (as IDEALS)? true
+Delta_bar == hyperbola form? true
+4 Q1Q2Q3 + C == (4+kp)a^3 + (4+km)b^3 ? true
+(4+kp)(4+km) = 22   (nonzero => the cubic is honest)
+FIX_C5_OSCAR_OK

@@ -1,0 +1,86 @@
+# FIX-C5 INDEPENDENT VERIFIER -- branch quartic Delta_v
+# packet goal_runs_after_9094303/FIX_C5_BRANCH_QUARTIC
+# own exact K = Q(om,nu); no sympy, no group theory, no floating point
+
+== 0.  self-test of the verifier's own machinery ==
+   check() fires on a false statement                          PASS
+   field, quadratic-extension and polynomial arithmetic self-tests PASS
+
+== 1.  the field K = Q(om,nu), and the frame constants ==
+   om^2+om+1 = 0, nu^2 = -11, delta = 2om+1, sqrt33 = -nu*delta : PASS
+   kp = (13+3 sqrt33)/16, km = (13-3 sqrt33)/16 ; kp+km = 13/8, kp km = -1/2
+   FIX-L1 regressions alpha = 12 c_cheb = 16 kp - 4 and F(c_sigma) = c_cheb^3 : PASS
+
+== 2.  F, the chi_1-vertex, and Delta_v by three routes ==
+   F(v) = 0 for v = [0:0:1:0:0]   (no x^3 monomial)              PASS
+   F is invariant under all four V4 sign patterns                PASS
+   route (a): F = Q1 x^2 + (c yz) x + [C + Q2 y^2 + Q3 z^2]      PASS
+   route (b): sec.5.19's (ell, q, k) reproduced; x'-cancellation   PASS
+   routes (a) and (b) give the SAME Delta_v                       PASS
+   route (c): Sylvester Res_x(F, dF/dx) = -Q1 * Delta_v            PASS
+   Delta_v = c^2 y^2 z^2 - 4 Q1 (Q2 y^2 + Q3 z^2 + C)             PASS
+   Delta_v == (c y z)^2 modulo Q1                                 PASS
+   Delta_v is V4-invariant, character chi_0                       PASS
+   Gal(K/Q) acts on Delta_v by the coordinate swaps (a b), (y z)  PASS
+
+== 3.  the census of lines of X through v ==
+   incidence system solved: a = 0 gives L2, L3 ; a = 1, b = -1 gives
+   y^2 = 3nu/8 (two roots) and z^2 = -3nu/8 (two roots)          => 6 LINES
+   F|_{L2} = F|_{L3} = 0 identically                              PASS
+   F|_{M_y+-} = F|_{M_z+-} = 0 identically (in K(rho))            PASS
+   3nu/8, -3nu/8 are NONSQUARES in K (controls: 4, -3, -11 are squares,
+   2 is not)  ==> M_y+-, M_z+- are defined over quadratic extensions of K,
+   the two degree-2 components of Sing are K-PRIME, and the total
+   K-decomposition of Sing is 1 + 1 + 2 + 2 = 6.                  PASS
+
+== 4.  Sing(Delta_v): the exact case analysis ==
+   d_y, d_z, d_a, d_b in the factored shapes                      PASS
+   CASE I (Q1 = 0): the system becomes {yz = 0, k = 0} = the INCIDENCE
+   SYSTEM of part 3, hence exactly the six contracted points.      PASS
+   CASE II.a (y = z = 0): Euler forces C = 0, then d_a, d_b force a = b = 0.
+   CASE II.b (y = 0, z != 0): Q3 = 0 => b = -om a, C = (kp-km) a^3,
+   Delta = -4 Q1 C and Euler force a = 0 -- contradiction.
+   CASE II.c (z = 0, y != 0): symmetric -- contradiction.
+   CASE II.d (y,z != 0): the COLLAPSE  d_a = -4Q1(12+3kp)a^2 ,
+   d_b = -4Q1(12+3km)b^2 forces a = b = 0 -- contradiction. (N = 22 != 0)
+
+   ==> dim Sing(Delta_v) = 0, Sing = the six contracted points.   PASS
+
+== 5.  the six nodes: vanishing and the Hessian (node) test ==
+   P_y     Delta = grad = 0 ;  det Hess = 96  != 0  -> A_1 node
+   P_z     Delta = grad = 0 ;  det Hess = 96  != 0  -> A_1 node
+   N_y+    Delta = grad = 0 ;  det Hess = (-594) + (0)rho  != 0  -> A_1 node
+   N_y-    Delta = grad = 0 ;  det Hess = (-594) + (0)rho  != 0  -> A_1 node
+   N_z+    Delta = grad = 0 ;  det Hess = (-594) + (0)rho  != 0  -> A_1 node
+   N_z-    Delta = grad = 0 ;  det Hess = (-594) + (0)rho  != 0  -> A_1 node
+
+   Sing(Delta_v) = { P_y, P_z, N_y+, N_y-, N_z+, N_z- } = the six images
+   of the six contracted lines : BIJECTION.                       PASS
+
+== 6.  irreducibility (Lemma C5-I) ==
+   LEMMA C5-I.  A nonzero form G of degree >= 2 on P^n, n >= 3, with
+   dim Sing V(G) = 0 is reduced and absolutely irreducible: a repeated
+   factor would make Sing contain a hypersurface, and two distinct factors
+   would make Sing contain their intersection, of dimension >= n-2 >= 1.
+   Section 4 above proves dim Sing(Delta_v) = 0 in exact K-arithmetic.
+   ==> Delta_v is ABSOLUTELY IRREDUCIBLE.                          PASS
+
+== 7.  the V4-quotient and the plane sections ==
+   Delta_bar : YZ = 4 Q1(Q2 Y + Q3 Z + C) on P(1,1,2,2), pulls back to
+   Delta_v ; hyperbola form and (4+kp)a^3+(4+km)b^3 verified.      PASS
+   Delta|_{y=0} = -4Q1(Q3z^2+C), Delta|_{z=0} = -4Q1(Q2y^2+C),
+   Delta|_{V4-fixed line} = -4 Q1 C : FOUR DISTINCT points (kp,km != 0 and
+   kp != km), so E_{sigma_1} -> P^1 has 4 branch points, g = 1.     PASS
+
+== 8.  cross-check against payloads/c5_data.json ==
+   every structural field of c5_data.json agrees with this verifier. PASS
+
+== 9.  40-digit numeric sanity layer (printed only; no decision) ==
+   sqrt33 = 5.74456264653802865985061146821892931822
+   kp     = 1.889605496225880373721989650291049247166
+   km     = -0.2646054962258803737219896502910492471663
+   (4+kp)(4+km) = 22.0   [exact 22]
+   kp*km  = -0.5   [exact -1/2]
+
+exact checks performed: 180
+elapsed 0.1 s

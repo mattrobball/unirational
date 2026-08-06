@@ -806,9 +806,17 @@ degree-`3s` identity in the invariant variables
 
 which is `F(T) ≡ 0` verbatim under `u₀′ = xγ̃` — the projection is a
 REWRITING at the pointwise level, not new content. Its genuine
-value: (a) COMPUTATIONAL — the 52-equation slot systems collapse to
+value: (a) COMPUTATIONAL — the 52-equation slot systems reindex to
 one identity in three invariant variables with unknown degrees
-`(s−1, s−1, s, s, s)`; (C3)-type runs should use this presentation;
+`(s−1, s−1, s, s, s)` (FIX-C5's measurement C5-2: 52 occupied
+coefficients — a faithful reindexing gaining 3-vs-5 variables and
+degree `3s`-vs-`3r`, NOT a reduction in equation count); (C3)-type
+runs should use this presentation. **Corrections from FIX-C5:**
+(C5-1) the dictionary sign is `γ = −u₀′` (the criterion's own
+solution formula `u₀′ = (−cYZ+g)/(2Q₁)`), not `u₀′ = +xγ̃`;
+(notation) this section's `c` is the `xyz`-COEFFICIENT of the normal
+form (`= 1` in the certified frame), NOT FIX-L1's Chebyshev
+uniformiser `c` — a collision to keep explicit;
 (b) **FAMILY-LEVEL MONODROMY (new content, proved):** for a FAMILY of
 pointwise elements over a base curve, the sheet datum is a 2-torsion
 (square-root) choice; over `ℓ_V ≅ P¹` double covers are classified by

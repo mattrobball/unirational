@@ -1,0 +1,286 @@
+{
+ "branch_quartic": {
+  "Delta_frame": "3*a**4*nu*om/2 + 3*a**4*nu/4 - 13*a**4/4 + 3*a**3*b*nu*om/2 + 3*a**3*b*nu/4 - 13*a**3*b/4 - 4*a**2*om*y**2 + 4*a**2*om*z**2 + 4*a**2*z**2 - 3*a*b**3*nu*om/2 - 3*a*b**3*nu/4 - 13*a*b**3/4 + 4*a*b*y**2 + 4*a*b*z**2 - 3*b**4*nu*om/2 - 3*b**4*nu/4 - 13*b**4/4 + 4*b**2*om*y**2 - 4*b**2*om*z**2 + 4*b**2*y**2 + y**2*z**2",
+  "Delta_generic": "-4*a**4*kps - 4*a**3*b*kps - 4*a**2*om*y**2 + 4*a**2*om*z**2 + 4*a**2*z**2 - 4*a*b**3*kms + 4*a*b*y**2 + 4*a*b*z**2 - 4*b**4*kms + 4*b**2*om*y**2 - 4*b**2*om*z**2 + 4*b**2*y**2 + c**2*y**2*z**2",
+  "Delta_structured": "y^2 z^2 - 4[ kp a^4 + kp a^3 b + km a b^3 + km b^4 + (om a^2 - ab + om^2 b^2) y^2 + (om^2 a^2 - ab + om b^2) z^2 ]",
+  "ell": "a + b",
+  "k": "a**3*kps + a*om*y**2 - a*om*z**2 + a*xp**2 - a*z**2 + b**3*kms - b*om*y**2 + b*om*z**2 + b*xp**2 - b*y**2 + c*xp*y*z",
+  "q": "2*a*xp + 2*b*xp + c*y*z"
+ },
+ "c_chebyshev": "-nu*om/2 - nu/4 + 3/4",
+ "c_xyz": 1,
+ "checks": 139,
+ "field": "K = Q(om,nu), om^2+om+1 = 0, nu^2 = -11 ; sqrt33 = -nu(2om+1)",
+ "frame": "FIX_L1_FRAME_CONSTANTS (V4-packet normal form (1.1))",
+ "irreducibility": {
+  "galois_closure": "K is its own Galois closure over Q",
+  "over_K": "IRREDUCIBLE",
+  "over_Kbar": "IRREDUCIBLE",
+  "routes": [
+   "Lemma C5-I + exact dim Sing = 0",
+   "OSCAR/Hecke factor over K",
+   "sympy factor_list over K",
+   "M2 + OSCAR dim/degree of Sing"
+  ],
+  "sympy": {
+   "sympy_factors": 1,
+   "sympy_seconds": 82.5
+  }
+ },
+ "km": "3*nu*om/8 + 3*nu/16 + 13/16",
+ "kp": "-3*nu*om/8 - 3*nu/16 + 13/16",
+ "line_census": {
+  "arrangement": {
+   "V4_involutions": [
+    1,
+    385,
+    454
+   ],
+   "identification": {
+    "385": "l_t = <E_x, E_z> = L3",
+    "454": "l_t = <E_x, E_y> = L2"
+   },
+   "n_involutions": 55,
+   "n_through_v": 2,
+   "sigma": 1,
+   "stabiliser_of_v": [
+    0,
+    1,
+    385,
+    454
+   ],
+   "thru": [
+    385,
+    454
+   ]
+  },
+  "count": 6,
+  "incidence_system": [
+   "Q1(a,b) = 0",
+   "c*y*z = 0",
+   "C(a,b) + Q2 y^2 + Q3 z^2 = 0"
+  ],
+  "lines": [
+   {
+    "direction": [
+     "0",
+     "0",
+     "0",
+     "1",
+     "0"
+    ],
+    "image": "[0:0:1:0]",
+    "name": "L2 = <v,E_y>"
+   },
+   {
+    "direction": [
+     "0",
+     "0",
+     "0",
+     "0",
+     "1"
+    ],
+    "image": "[0:0:0:1]",
+    "name": "L3 = <v,E_z>"
+   },
+   {
+    "direction": [
+     "1",
+     "-1",
+     "0",
+     "r0",
+     "0"
+    ],
+    "image": "[1:-1:r0:0]",
+    "name": "M_y+"
+   },
+   {
+    "direction": [
+     "1",
+     "-1",
+     "0",
+     "-r0",
+     "0"
+    ],
+    "image": "[1:-1:-r0:0]",
+    "name": "M_y-"
+   },
+   {
+    "direction": [
+     "1",
+     "-1",
+     "0",
+     "0",
+     "iz*r0"
+    ],
+    "image": "[1:-1:0:i r0]",
+    "name": "M_z+"
+   },
+   {
+    "direction": [
+     "1",
+     "-1",
+     "0",
+     "0",
+     "-iz*r0"
+    ],
+    "image": "[1:-1:0:-i r0]",
+    "name": "M_z-"
+   }
+  ],
+  "new_line_field": "K(r0), 8 r0^2 = 3 nu  (and K(i r0)); 64 r0^4 + 99 = 0",
+  "orbits": [
+   {
+    "name": "L2 = <v,E_y>",
+    "orbit": [
+     "L2 = <v,E_y>"
+    ],
+    "stabiliser": [
+     "id",
+     "sigma_1",
+     "sigma_2",
+     "sigma_3"
+    ]
+   },
+   {
+    "name": "L3 = <v,E_z>",
+    "orbit": [
+     "L3 = <v,E_z>"
+    ],
+    "stabiliser": [
+     "id",
+     "sigma_1",
+     "sigma_2",
+     "sigma_3"
+    ]
+   },
+   {
+    "name": "M_y+",
+    "orbit": [
+     "M_y+",
+     "M_y-"
+    ],
+    "stabiliser": [
+     "id",
+     "sigma_2"
+    ]
+   },
+   {
+    "name": "M_y-",
+    "orbit": [
+     "M_y+",
+     "M_y-"
+    ],
+    "stabiliser": [
+     "id",
+     "sigma_2"
+    ]
+   },
+   {
+    "name": "M_z+",
+    "orbit": [
+     "M_z+",
+     "M_z-"
+    ],
+    "stabiliser": [
+     "id",
+     "sigma_3"
+    ]
+   },
+   {
+    "name": "M_z-",
+    "orbit": [
+     "M_z+",
+     "M_z-"
+    ],
+    "stabiliser": [
+     "id",
+     "sigma_3"
+    ]
+   }
+  ]
+ },
+ "normal_form": "F = C(a,b) + Q1 x^2 + Q2 y^2 + Q3 z^2 + c xyz ; C = kp a^3 + km b^3, Q1 = a+b, Q2 = om a + om^2 b, Q3 = om^2 a + om b, c = 1",
+ "packet": "FIX_C5_BRANCH_QUARTIC",
+ "singular_locus": {
+  "all_on_plane": "Q1 = a + b = 0",
+  "degree": 6,
+  "dim": 0,
+  "hessian_determinants": {
+   "N_y+": "-594",
+   "N_y-": "-594",
+   "N_z+": "-594",
+   "N_z-": "-594",
+   "P_y  (=image of L2)": "96",
+   "P_z  (=image of L3)": "96"
+  },
+  "points": [
+   {
+    "coords": [
+     "0",
+     "0",
+     "1",
+     "0"
+    ],
+    "name": "P_y  (=image of L2)",
+    "stab": "V4-fixed"
+   },
+   {
+    "coords": [
+     "0",
+     "0",
+     "0",
+     "1"
+    ],
+    "name": "P_z  (=image of L3)",
+    "stab": "V4-fixed"
+   },
+   {
+    "coords": [
+     "1",
+     "-1",
+     "r0",
+     "0"
+    ],
+    "name": "N_y+",
+    "stab": "stab <sigma_2>"
+   },
+   {
+    "coords": [
+     "1",
+     "-1",
+     "-r0",
+     "0"
+    ],
+    "name": "N_y-",
+    "stab": "stab <sigma_2>"
+   },
+   {
+    "coords": [
+     "1",
+     "-1",
+     "0",
+     "iz*r0"
+    ],
+    "name": "N_z+",
+    "stab": "stab <sigma_3>"
+   },
+   {
+    "coords": [
+     "1",
+     "-1",
+     "0",
+     "-iz*r0"
+    ],
+    "name": "N_z-",
+    "stab": "stab <sigma_3>"
+   }
+  ],
+  "reduced": true,
+  "type": "six A_1 (ordinary) nodes"
+ },
+ "v4": {
+  "Delta_bar": "Y*Z - 4*Y*a**2*om + 4*Y*a*b + 4*Y*b**2*om + 4*Y*b**2 + 4*Z*a**2*om + 4*Z*a**2 + 4*Z*a*b - 4*Z*b**2*om + 3*a**4*nu*om/2 + 3*a**4*nu/4 - 13*a**4/4 + 3*a**3*b*nu*om/2 + 3*a**3*b*nu/4 - 13*a**3*b/4 - 3*a*b**3*nu*om/2 - 3*a*b**3*nu/4 - 13*a*b**3/4 - 3*b**4*nu*om/2 - 3*b**4*nu/4 - 13*b**4/4"
+ },
+ "vertex": "v = [0:0:1:0:0] = E_x  (the chi_1-vertex, V4-fixed, on X)"
+}

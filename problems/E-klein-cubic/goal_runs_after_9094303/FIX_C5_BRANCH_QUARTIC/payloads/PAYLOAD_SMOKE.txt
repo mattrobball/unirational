@@ -1,0 +1,51 @@
+# FIX-C5 -- sec.5.19 gamma-criterion smoke test on the FIX-N2C lam=1 witness
+# packet goal_runs_after_9094303/FIX_C5_BRANCH_QUARTIC
+
+S0  FIX-N2C witness rebuilt and re-verified in place (37.8 s):
+S0     all of its own checks PASS (52 landing equations, C3-equivariance,
+S0     r = 7, m = 1, primitivity, the q-tower corollary).
+
+S1  PARITY SHAPES CONFIRMED for the r = 7 (s = 3) witness:
+S1     a' = xyz*At , b' = xyz*Bt , u0' = x*gt , u1' = y*Yt , u2' = z*Zt ,
+S1     with At,Bt,gt,Yt,Zt polynomials in (t,v,w) = (x^2,y^2,z^2) of degrees
+S1     [2, 2, 3, 3, 3]  --  sec.5.19 predicts (s-1,s-1,s,s,s) = (2,2,3,3,3).
+
+S2  THE SINGLE IDENTITY, evaluated on the witness (all coefficients reduced
+S2  modulo the FIX-N2C Groebner basis {P1^3-..., c^3-3c-kap, om^2+om+1,
+S2  8kp^2-13kp-4}):
+S2     with  - c*gt*Yt*Zt   (sec.5.19 AS PRINTED, gt := +u0'/x) :  NONZERO (52 monomials)
+S2     with  + c*gt*Yt*Zt   (gt := -u0'/x, i.e. gamma = -u0')        :  ZERO
+
+S3  CONVENTION PINNED (and a correction owed back to sec.5.19).
+S3  The gamma-criterion is derived in sec.5.19 by writing the square root
+S3  of h*Delta_v as  g = c YZ - 2 Q1 gamma ; the residual root of the
+S3  projection quadratic is then
+S3        u0' = (-c YZ + g)/(2 Q1) = -gamma ,
+S3  so the dictionary is  gamma = -u0'  (equivalently gt = -u0'/x), NOT
+S3  u0' = x*gt.  With gamma = -u0' the printed identity
+S3        Q2 Y^2 + Q3 Z^2 + C = gamma (c YZ - Q1 gamma)
+S3  is EXACTLY F(T) = 0 ; with gamma = +u0' the sign of the c-term flips.
+S3  sec.5.19's sentence "which is F(T) = 0 verbatim under u0' = x*gt"
+S3  should read  "under u0' = -x*gt".  The CRITERION itself is unaffected
+S3  (gamma ranges over all forms of character chi_1, and gamma -> -gamma is
+S3  a bijection of that space); only the dictionary carries the sign.
+S4  [machine]  sec.5.19's identity AS PRINTED, with gt := -u0'/x :  ZERO.
+S4  [machine]  the same identity with +c and gt := +u0'/x       :  ZERO.
+
+S5  THE ADVERTISED COLLAPSE (sec.5.19(a)), MEASURED.  For this cell
+S5     - the raw slot system of FIX-N2C has                      52 equations
+S5     - the invariant identity has degree 3s = 9 in (t,v,w), so at most
+S5       C(9+2,2) = 55 coefficients; the number actually OCCUPIED is  52.
+S5  These agree EXACTLY (52 = 52): the "collapse" of sec.5.19(a) is a faithful
+S5  REINDEXING of the same equations -- five unknown ternary forms
+S5  (At,Bt,gt,Yt,Zt) in three invariant variables instead of five slot tuples
+S5  in (x,y,z) -- NOT a reduction in the number of conditions.  This is
+S5  precisely what sec.5.19's "honest scope" paragraph claims, now measured.
+S5  The genuine computational gain is variable count (3 instead of 5) and
+S5  degree (3s instead of 3r); the equation count is unchanged.
+
+S6  VERDICT: FIX-C5-SMOKE-OK, with ONE convention correction owed to
+S6  sec.5.19 (the sign in the gamma <-> u0' dictionary; see S3).
+
+exact checks performed: 61
+elapsed 53.2 s

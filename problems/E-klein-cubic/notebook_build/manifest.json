@@ -1432,12 +1432,12 @@
    "path": "goal_runs_after_9094303/FIX_C5_BRANCH_QUARTIC",
    "entry": "E56",
    "kind": "goal_run",
-   "verification_class": "PROPOSAL-UNRUN",
-   "primary_exit": "UNDECIDED",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-C5-GEOMETRY-OK",
    "superseded_by": null,
-   "char0_scope": "in flight",
+   "char0_scope": "char0 exact (K = Q(omega,nu) + quadratic extensions; five green routes: produce 139, verify 180, M2, OSCAR, smoke 61)",
    "tracked": "main",
-   "notes": "IN-FLIGHT (2026-08-06, opus): FIX-C5 — named by Note IV sec5.18-5.19: verify the hand-derived branch quartic Delta_v, its irreducibility/singular locus/V4-structure, the census of X-lines through the chi-vertex (contracted locus), and the gamma-criterion smoke test on a Chebyshev witness. Input to (T1a)'s parity-count route."
+   "notes": "landed 2026-08-06, director-replayed (FIX_C5_VERIFY_OK). Delta_v hand-derivation VERIFIED three ways (binary-cubic route, quadratic-in-x, Sylvester resultant Res_x(F, dF/dx) = -Q1.Delta_v); ABSOLUTELY IRREDUCIBLE (parity condition single-channel). Sing(Delta_v) = SIX ORDINARY NODES, all on {Q1=0}, K-components 1+1+2+2; pi_v(contracted locus) = Sing(Delta_v) AS SCHEMES. Line census: exactly 6 lines through the chi_1-vertex (classical count): L2 = ell_{sigma_3}, L3 = ell_{sigma_2} (arrangement members) + four NEW lines over quadratic extensions (V4-orbits 2+2). Delta_v = 6-nodal quartic (nodal K3); Delta_v/V4 rational. Smoke test on the sealed N2C lambda=1 witness PASSES with two findings applied to Note IV: (C5-1) dictionary sign gamma = -u0' (sec5.19 corrected); (C5-2) the invariant identity has 52 occupied coefficients — faithful reindexing, not equation-count reduction. Notation collision recorded: Note IV's c (xyz-coefficient, = 1 in frame) vs FIX-L1's Chebyshev c."
   },
   {
    "path": "goal_runs_after_354a548/FIX_D2_TERMINAL_SYSTEM",

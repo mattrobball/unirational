@@ -1,0 +1,61 @@
+FIX-C5 -- the branch quartic Delta_v of the chi_1-vertex projection
+packet goal_runs_after_9094303/FIX_C5_BRANCH_QUARTIC
+theory/FIX_IV_closure.md sec. 5.18-5.19 ; frame = FIX_L1_FRAME_CONSTANTS
+
+FRAME (V4-packet normal form (1.1), certified by FIX-L1):
+  F = C + Q1 x^2 + Q2 y^2 + Q3 z^2 + c xyz  on P^4 = P(a,b,x,y,z)
+  C  = kp a^3 + km b^3      kp = (13+3 sqrt33)/16, km = (13-3 sqrt33)/16
+  Q1 = a + b   Q2 = om a + om^2 b   Q3 = om^2 a + om b   c = 1
+  K  = Q(om,nu) = Q(sqrt-3, sqrt-11) ; sqrt33 = -nu*delta, delta = 2om+1
+  v  = [0:0:1:0:0] = E_x : the chi_1-vertex, V4-fixed, ON X
+
+THE PROJECTION.  pi_v : X --> P^3 = P(a,b,y,z) eliminates x; F is a
+QUADRATIC in x, so pi_v is 2:1, V4-equivariantly, with V4 acting on
+P^3 by (a,b,y,z) -> (a,b, e2 y, e3 z)   (faithful).
+
+THE BRANCH QUARTIC  (sec.5.19 hand derivation VERIFIED, 3 routes):
+  Delta_v = c^2 y^2 z^2 - 4 Q1(a,b) [ Q2 y^2 + Q3 z^2 + C ]
+          = y^2 z^2 - 4[ kp a^4 + kp a^3 b + km a b^3 + km b^4
+                         + (om a^2 - ab + om^2 b^2) y^2
+                         + (om^2 a^2 - ab + om b^2) z^2 ]
+  Delta_v == (c y z)^2   mod Q1 .
+  Character: chi_0 (V4-invariant).  Degree 4.  IRREDUCIBLE over K and
+  over K-bar.  Gal(K/Q) acts by the coordinate swaps (a b), (y z).
+
+SINGULAR LOCUS:  dim 0, degree 6, reduced; SIX ORDINARY NODES (A_1).
+  name    point [a:b:y:z]        field        V4-stabiliser  det Hess
+  P_y     [0:0:1:0]              K            V4             96
+  P_z     [0:0:0:1]              K            V4             96
+  N_y+-   [1:-1:+-r0:0]          K(r0)        <sigma_2>      -594
+  N_z+-   [1:-1:0:+-i r0]        K(i r0)      <sigma_3>      -594
+  with  8 r0^2 = 3 nu  (64 r0^4 + 99 = 0; 3nu/8 is a NONSQUARE in K).
+  ALL SIX lie on the plane {Q1 = a+b = 0}; three on {Q1=z=0} (P_y,N_y+-)
+  and three on {Q1=y=0} (P_z,N_z+-).  Delta_v|_{Q1=0} = (c y z)^2.
+
+LINE CENSUS -- lines of X through v.  Incidence system in P^3:
+  Q1(a,b) = 0 ,  c y z = 0 ,  C + Q2 y^2 + Q3 z^2 = 0   (= {ell=q=k=0})
+  EXACTLY SIX lines, all distinct and reduced (Bezout 1*2*3 = 6):
+  name    line                    image       V4-orbit  arrangement?
+  L2      <E_x, E_y>              [0:0:1:0]   {L2}      YES  (= l_{sigma_3})
+  L3      <E_x, E_z>              [0:0:0:1]   {L3}      YES  (= l_{sigma_2})
+  M_y+-   <E_x,(1,-1,0,+-r0,0)>   [1:-1:+-r0:0]  size 2  NO
+  M_z+-   <E_x,(1,-1,0,0,+-i r0)> [1:-1:0:+-i r0] size 2 NO
+  (six = the classical count of lines through a general point of a
+   smooth cubic threefold.  Stab_{PSL(2,11)}(v) = V4, so exactly TWO
+   of the 55 arrangement lines pass through v.)
+
+*** HEADLINE INCIDENCE ***
+  pi_v(contracted lines)  =  Sing(Delta_v) ,  as SCHEMES, bijectively,
+  V4-equivariantly.  Delta_v is a 6-NODAL QUARTIC (nodal K3) and
+  Bl_v X -> P^3 is the small resolution of the double solid
+  w^2 = Delta_v.  No node off the contracted locus; no contracted line
+  whose image is a smooth point of Delta_v.
+
+V4-STRUCTURE.  Characters on P^3: a,b : chi_0 ; y : chi_2 ; z : chi_3 .
+  Fix(V4) = line {y=z=0} + points [0:0:1:0], [0:0:0:1].
+  The two isolated fixed points ARE two of the six nodes.
+  Delta_v|_{y=z=0} = -4 Q1 C : four points -- exactly the branch points
+  of the double cover E_{sigma_1} = X cap P(W^+) -> P^1, g = 1.
+  QUOTIENT: Delta_v/V4 = { YZ = 4Q1(Q2 Y + Q3 Z + C) } in P(1,1,2,2),
+  i.e. (Y-4Q1Q3)(Z-4Q1Q2) = 4Q1[(4+kp)a^3 + (4+km)b^3] -- a RATIONAL
+  surface (graph of a rational function of (a,b,Y)); (4+kp)(4+km) = 22.
