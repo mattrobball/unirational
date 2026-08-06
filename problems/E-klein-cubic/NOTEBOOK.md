@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `450a17d` (2026-08-05; the
+Snapshot metadata — notebook parent head: `354a548` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2649,7 +2649,14 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   route is component-agnostic (uses only P2–P4, the vertex relation,
   I₀/I₁, L1 constants; never the pointwise classification).
   **Complete remaining ledger: (D2″) + (C2′), then assembly + the
-  full independent audit. Nothing else remains.**** Same-day
+  full independent audit. Nothing else remains. **FIX-D2 dispatched
+  (in flight, `goal_runs_after_354a548/FIX_D2_TERMINAL_SYSTEM`): the
+  terminal system (D2″) at `c_σ` for `m = 1, 3` + the (C2′)
+  rung-independence check — the last two computations of the negative
+  program; either terminal verdict feeds the director's assembly of
+  Thm 3.1 (INCONSISTENT ⟹ [U1] via the `w = 0` channel + [L];
+  SOLVABLE ⟹ an explicit candidate jet, a finding of first
+  importance).**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

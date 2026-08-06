@@ -1438,6 +1438,17 @@
    "char0_scope": "in flight",
    "tracked": "main",
    "notes": "IN-FLIGHT (2026-08-06, opus): FIX-C5 — named by Note IV sec5.18-5.19: verify the hand-derived branch quartic Delta_v, its irreducibility/singular locus/V4-structure, the census of X-lines through the chi-vertex (contracted locus), and the gamma-criterion smoke test on a Chebyshev witness. Input to (T1a)'s parity-count route."
+  },
+  {
+   "path": "goal_runs_after_354a548/FIX_D2_TERMINAL_SYSTEM",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "PROPOSAL-UNRUN",
+   "primary_exit": "UNDECIDED",
+   "superseded_by": null,
+   "char0_scope": "in flight",
+   "tracked": "main",
+   "notes": "IN-FLIGHT (2026-08-06, opus): FIX-D2 — the TERMINAL SYSTEM (D2'') of Note IV sec5.24 (the last computation of [U1]'s w != 0 branch: square-root pinning + I0-transfer with the L1 constants + order-1 equalizer + I1 binding, exact, at c_sigma, m = 1 and 3) and the rung-independence check (C2') for [L]. Either verdict feeds the director's assembly of Thm 3.1: INCONSISTENT => [U1] via the w = 0 channel + [L]; SOLVABLE => an explicit candidate jet (finding of first importance)."
   }
  ],
  "known_branches": [
