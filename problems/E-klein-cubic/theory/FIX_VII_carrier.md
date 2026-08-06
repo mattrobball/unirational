@@ -1,0 +1,172 @@
+# FIX VII — The W-carrier condition
+
+Opened 2026-08-06 (director). Status: DRAFT-FOR-DERIVATION, same
+trust class as Note IV/VI hand-work — machine/literature checks
+named inline. This note records a new GLOBAL necessary condition on
+any equivariant parameterization, independent of the D12-localized
+machinery that FIX-D2 proved insufficient.
+
+Throughout: `G = PSL(2,11)`, `W` the 5-dim Weil representation,
+`W_Q` the 10-dim Q-irreducible with `W_Q ⊗ C = W ⊕ W̄`,
+`F := Q(√−11) = End_{Q[G]}(W_Q)` (character field; Schur index 1 —
+witnessed concretely by Roulleau's `Z[ν]`-period lattice, Note VI
+§2.6), `E = E_{−11}` the CM(−11) elliptic curve (`j = −32768`).
+
+## 1. The auto-CM lemma
+
+**Lemma 1.** Let `H` be a rational polarizable Hodge structure of
+weight 1 with `G`-action such that `H ≅ W_Q` as a `G`-module. Then
+the associated abelian fivefold `A` satisfies `A ~ E⁵` (isogeny),
+automatically.
+
+*Proof.* `H ⊗ C = W ⊕ W̄` and `W ≇ W̄`, so the only 5-dimensional
+`G`-submodules are `W` and `W̄`; since `H^{1,0}` is `G`-stable of
+dimension 5, `H^{1,0} = W` (or `W̄`; wlog). `F` acts on `H`
+commuting with `G` (Schur), and acts on the isotypic components
+`W`, `W̄` by scalars (the two embeddings), hence preserves
+`H^{1,0}`: so `F ⊂ End_{HS}(A)` with signature `(5,0)`. Then
+`H₁(A,Q)` is a 5-dimensional `F`-vector space; choosing an
+`F`-basis splits it into five `F`-lines rational over `Q`, each
+giving an elliptic isogeny factor with CM by `F`; class number
+`h(−11) = 1` makes every factor isogenous to `E`. ∎
+
+Consequences: (i) Adler's `J(X) ≅ E⁵` is demystified — it is pure
+representation theory (any `G`-abelian fivefold of type `W_Q` is
+`~ E⁵`), not a special property of the Klein cubic. (ii) In Note
+VI, the CM condition adds NO constraint beyond the representation
+condition; everything below is therefore stated at the level of
+`W_Q`-multiplicity.
+
+## 2. The carrier theorem
+
+**Theorem 2 (W-carrier condition).** Suppose a `G`-equivariant
+dominant rational map `f : P(W) ⇢ X` exists. Let `Z → P(W)` be ANY
+`G`-equivariant resolution of indeterminacy (composition of blowups
+in smooth `G`-stable centers; exists functorially in char 0), with
+induced morphism `g : Z → X`. Then some center `Y` (a `G`-orbit of
+curves or surfaces, possibly lying over earlier exceptional loci)
+satisfies
+
+    mult_{W_Q}( H¹(Y, Q) ) ≥ 1 ,
+
+and the corresponding sub-Hodge structure is `G`-isogenous to `E⁵`
+(Lemma 1). Equivalently: the Weil fivefold appears in the Albanese
+of the fundamental locus of every equivariant resolution.
+
+*Proof.* `g` is a proper surjection of smooth projectives, so
+`g* : H³(X,Q) → H³(Z,Q)` is injective (split by
+`α ↦ g_*(α ∪ η)/c` for `η` a `G`-invariant multisection class,
+e.g. a power of a hyperplane class with `g_*η = c·1`, `c > 0`).
+`H³(X) ⊗ C = W ⊕ W̄`. The blowup formula gives
+`H³(Z) = H³(P⁴) ⊕ ⊕_i H¹(Y_i)(−1) ⊕ ⊕_j H³(S_j)` over curve
+centers `Y_i` and surface centers `S_j`, `H³(P⁴) = 0`, and for a
+surface `H³(S) ≅ H¹(S)(−1)` (Lefschetz); iterating stages only
+adds more terms of the same shape. So `W_Q` embeds `G`-equivariantly
+into `⊕ H¹(centers)(−1)`, hence into some `H¹(Y,Q)` (isotypic
+projection). ∎
+
+Remarks. (a) The condition is invisible to the profile theory: the
+sealed forced base locus (55 lines, 55 plus-planes, sweeps) is
+entirely `H¹ = 0`. Any parameterization needs MORE base structure
+than anything the FIX program ever forced — a new layer.
+(b) For a disconnected center `Y = G ×_H Y₀` (orbit with stabilizer
+`H`), Frobenius reciprocity: `mult_{W_Q}(Ind_H^G H¹(Y₀)) =
+mult_{Res_H W_Q}(H¹(Y₀))`. This drives the ledger below.
+(c) Centers of later blowup stages can map to POINTS of `P(W)`
+("tower carriers"): they carry no projective degree downstairs and
+must be treated by stabilizer bookkeeping, not degree counting.
+
+## 3. The carrier ledger (Chevalley–Weil)
+
+For a `Γ`-cover `C → P¹` branched with local monodromies `c_i` and
+`V` a nontrivial irreducible: `mult_V(H¹(C,C)) = −2 dim V +
+Σ_i (dim V − dim V^{c_i})`, gated by existence of a generating
+tuple with `∏ c_i = 1`. Fixed-space dimensions on `W` (from the
+character `χ_W = (5, 1, −1, 0, 0, 1, λ, λ̄)` on classes
+`(1,2,3,5A,5B,6,11A,11B)`, `λ = (−1+√−11)/2`):
+
+| order of c | 2 | 3 | 5 | 6 | 11 |
+|---|---|---|---|---|---|
+| dim W^c | 3 | 1 | 1 | 1 | 0 |
+| contribution 5 − dim W^c | 2 | 4 | 4 | 4 | 5 |
+
+Need `Σ contributions ≥ 11` (so that `mult_W ≥ 1`).
+
+**Irreducible G-carriers.** Minimal branch data `(2,3,11)`:
+`mult_W = 1`, genus `2g−2 = 660·5/66 = 50`, `g = 26` — the
+Hurwitz-class of `X(11)`, the level-11 modular curve (`PSL(2,Z) =
+C2 * C3 ↠ G` with `xy` of order 11). Next: `(2,5,11)` g = 70,
+`(2,6,11)` g = 81, `(3,3,5)` g = 45, `(2,2,3,11)` g = 136(+).
+So an irreducible carrier has genus ≥ 26 among 3-point covers
+(4-point data only grows; positive-genus base only grows).
+TO-VERIFY (literature): the classical model of `X(11)` inside
+`P(W)` itself — recalled as `Sing(Hess F)`, degree 20, genus 26
+(Klein; Adler–Ramanan LNM 1644). If confirmed, `P(W)` CONTAINS a
+canonical minimal carrier, and every construction ansatz should
+put it in the base locus.
+
+**Induced carriers** (orbit of `[G:H]` curves, stabilizer `H`,
+condition `Res_H W ⊂ H¹(C₀)`):
+
+- `H = A5` (index 11, two classes): `Res_{A5} W = V₅` (characters
+  match: `(5,1,−1,0,0)`). Minimal: `(3,3,5)`-covers, `mult = 2`,
+  `g(C₀) = 5` (generating triple exists: e.g. `(123),(245)`,
+  product of order 5, generates). Ledger: 11 curves of genus 5.
+- `H = F55 = C11⋊C5` (index 12): `Res W = Ind_{C11}^{F55}(ψ_QR)`,
+  irreducible 5-dim. `(5,5,5)`-covers: `mult = 2`, `2g−2 =
+  55·2/5 = 22`, `g = 12` (triples exist; two distinct Sylow-5s
+  generate). Ledger: 12 curves of genus 12.
+- `H = C11` (index 60): need the QR character quintet in
+  `H¹(C₀)`; minimal `C11`-curves `(11,11,11)`, `g = 5`
+  (Lefschetz curves `y¹¹ = x^a(x−1)^b`; which character sets occur
+  is classical — TO-CHECK which `(a,b)` give the QR set). Ledger:
+  60 curves of genus 5.
+- `H = D12` (index 55, over the involution/D12 geometry):
+  `Res_{D12} W = W₊ ⊕ W₋` (3+2, σ-eigen). dim 5 forces
+  `g(C₀) ≥ 3`. Ledger: 55 curves of genus ≥ 3.
+- Irregular `G`-surfaces: reduce to curves via Albanese; same
+  ledger through `Alb`.
+- Tower carriers over a point orbit with stabilizer `H`: the same
+  `H`-ledger, with the added constraint that `C₀` must embed in
+  the exceptional geometry over the point (starts in `P³ = P(T_p)`
+  with the `H`-representation structure) — finite list, unexplored.
+
+## 4. What this changes
+
+**Positive program.** Any ansatz must include a carrier in its base
+locus. The canonical candidate is the Hessian curve
+(`X(11)`-model, deg 20, g 26 — pending the TO-VERIFY above);
+cheaper alternatives are the induced configurations (11 × genus-5
+A5-curves, etc.). This is the sharpest structural guide the
+construction program has: the (3,6)-dictionary windows should be
+re-run relative to a system containing a carrier.
+
+**Negative program.** A new global necessary condition, orthogonal
+to the D12-localization (Wall: FIX-D2). The concrete question — THE
+RACE: for each `(profile, carrier)` pair, compare the linear cost
+of containing the carrier in the degree-`d` system (for a
+positive-degree carrier of degree `δ`, genus `g`: about
+`5(δd + 1 − g)` conditions, LINEAR in `d` with slope `5δ`) against
+the profile-theory slice dimensions at degree `d`. If for all
+profiles the cost outruns the budget uniformly, this is the
+effective degree obstruction Wall #1 said was missing — EXCEPT
+that tower carriers (projective degree 0) evade degree counting
+and must be excluded by the stabilizer/exceptional-geometry
+analysis instead (§3 last item; note the FIX-D2 jet machinery
+already probes exactly those local towers). Next derivation: make
+the cost function exact (vanishing on a curve is not exactly
+`h⁰`-many independent conditions; use the sealed slice machinery),
+and settle the `d = 34` window `(1,6)` first.
+
+## 5. Verification obligations
+
+1. Character/fixed-dim table against a machine character table of
+   `PSL(2,11)` (quick CAS check — fold into the next packet).
+2. Generating-tuple existence claims ((2,3,11) for G; (3,3,5) for
+   A5; (5,5,5) for F55) — finite checks, CAS-able.
+3. The `X(11) = Sing(Hess F)` model claim (literature: Adler–
+   Ramanan LNM 1644; Klein) — degree 20, genus 26, and
+   G-equivariance.
+4. Lemma 1's Schur-index-1 input — literature-anchored (Roulleau's
+   lattice) — no further check needed.
+5. Blowup-formula bookkeeping (Thm 2) is classical; no check.

@@ -120,8 +120,16 @@ Consequences and placement of our result:
    in `Aut(J, Θ) ⊇ ±G`; obstruction theory for points
    (Benoist–Wittenberg CH²-torsors, elementary obstruction, index —
    note a cubic threefold always has index | 3 via its lines) then
-   lives in Galois cohomology of a CM abelian variety over the
-   C₃-field `K_proj` — class number 1, everything in principle
-   computable. Whether any such invariant can obstruct POINTS (not
+   lives in Galois cohomology of a CM abelian variety over
+   `K_proj`, a C₄ field (trdeg 4 over C; Tsen–Lang would need
+   `n ≥ 3⁴ = 81`, so no free points) — class number 1, everything
+   in principle computable. First derivation pass (2026-08-06)
+   spun off the unconditional geometric shadow of this circle as
+   its own note: `FIX_VII_carrier.md` (the W-carrier condition).
+   The elementary obstruction vanishes (`O(1)` is `K_proj`-rational
+   since `V(Φ)` is given as a hypersurface), and `h²` makes
+   `3·[T₁] = 0` for the BW degree-1 torsor, so any torsor-side
+   obstruction to POINTS is 3-primary and finer than the classical
+   layer — parked pending Note VII's development. Whether any such invariant can obstruct POINTS (not
    just rationality) over `K_proj` is the open question this
    investigation exists to answer.

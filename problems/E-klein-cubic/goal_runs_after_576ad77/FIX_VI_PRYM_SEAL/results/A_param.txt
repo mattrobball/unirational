@@ -1,0 +1,4 @@
+b(t) = (-4*t - 4)/((t - 2)*(t + 2))
+x(t) = (-2*t**2 - 4*t - 8)/(t**2 - 4)
+projective (a:b:x) = (t**2 - 4 : -4*t - 4 : -2*t**2 - 4*t - 8)
+residual on conic = 0

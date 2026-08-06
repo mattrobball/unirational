@@ -1,0 +1,16 @@
+P6(t) = (kp+4)*(t^2-4)^3 - 64*(km+4)*(t+1)^3
+degree = 6
+leading coeff = 3*sqrt(33) + 77
+
+exact coefficients over K = Q(sqrt33, sqrt-3), t^k ascending:
+  [t^0] (-616) + (0)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+  [t^1] (-924) + (36)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+  [t^2] (-693) + (45)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+  [t^3] (-308) + (12)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+  [t^4] (-231/4) + (-9/4)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+  [t^5] (0) + (0)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+  [t^6] (77/16) + (3/16)*sqrt(33) + (0)*sqrt(-3) + (0)*sqrt(33)*sqrt(-3)
+
+sympy expansion:
+  3*sqrt(33)*t**6 + 77*t**6 - 924*t**4 - 36*sqrt(33)*t**4 - 4928*t**3 + 192*sqrt(33)*t**3 - 11088*t**2 + 720*sqrt(33)*t**2 - 14784*t + 576*sqrt(33)*t - 9856
+num / closed_form = 16

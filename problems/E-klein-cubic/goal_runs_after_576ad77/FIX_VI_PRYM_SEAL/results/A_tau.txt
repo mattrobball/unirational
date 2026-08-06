@@ -1,0 +1,6 @@
+tau(t) = (-t - 4)/(t + 1)
+tau(tau(t)) - t = 0
+fixed-point equation (numerator): -t**2 - 2*t - 4  ->  t = -1 +- sqrt(-3)
+P6(tau(t))*(t+1)^6 / P6(t) = -27
+geometric content: tau is the deck involution x -> -x of K_c -> P^1_(a:b);
+F0 is even in x, hence E_sigma (and so the 6 intersection points) is tau-stable.

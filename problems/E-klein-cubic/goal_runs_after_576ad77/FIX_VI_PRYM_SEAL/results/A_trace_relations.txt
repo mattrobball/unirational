@@ -1,0 +1,5 @@
+kappa_pm = (13 +- 3*sqrt(33))/16
+kp+km = 13/8:  residual = 0
+kp*km = -1/2:  residual = 0
+(kp+2)(km+2) = 27/4:  residual = 0
+(kp+4)(km+4) = 22:  residual = 0

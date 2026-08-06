@@ -1,0 +1,6 @@
+F0        = a**3*(13/16 + 3*sqrt(33)/16) + b**3*(13/16 - 3*sqrt(33)/16) + x**2*(a + b)
+conic K_c = -4*a**2 + 4*a*b - 4*b**2 + x**2 = 0
+target    = a**3*(3*sqrt(33)/16 + 77/16) + b**3*(77/16 - 3*sqrt(33)/16)
+rem_x(F0 - target, conic) = 0
+support: (a+b)(a^2-ab+b^2)-(a^3+b^3) = 0
+support: (wa+w^2b)(w^2a+wb)-(a^2-ab+b^2) = 0

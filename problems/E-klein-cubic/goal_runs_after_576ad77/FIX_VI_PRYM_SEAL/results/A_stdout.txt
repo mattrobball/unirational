@@ -1,0 +1,10 @@
+CHECK trace_relations PASS   | kp+km = 13/8 -> 0; kp*km = -1/2 -> 0; (kp+2)(km+2) = 27/4 -> 0; (kp+4)(km+4) = 22 -> 0
+CHECK product_22 PASS   | (kp+4)(km+4) = 22
+CHECK restriction_identity PASS   | rem(F0 - [(kp+4)a^3+(km+4)b^3], x^2-4(a^2-ab+b^2)) = 0
+CHECK omega_conic_factorisation PASS   | (wa+w^2b)(w^2a+wb) = a^2-ab+b^2 and (a+b)(a^2-ab+b^2) = a^3+b^3
+CHECK param_on_conic PASS   | x(t)^2 - 4(1-b+b^2) = 0
+CHECK sextic_degree PASS   | deg = 6, LC = 3*sqrt(33) + 77, num/closed_form = 16 (denominator = 16*(t - 2)**3*(t + 2)**3)
+CHECK sextic_coeffs_agree PASS   | K coeffs match closed form exactly; sympy cleared numerator = 16 * closed form
+CHECK tau_preserves_roots PASS   | P6(tau(t))*(t+1)^6 = (-27) * P6(t)
+CHECK tau_involution PASS   | tau(tau(t)) = t
+[section A] 9/9 pass, 0.1s

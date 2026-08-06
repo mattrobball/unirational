@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `576ad77` (2026-08-05; the
+Snapshot metadata — notebook parent head: `a836891` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2927,7 +2927,36 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   Hilbert-class-poly check `H₋₁₁(X) = X + 32768`, `E_σ` coherence
   (`j = 8192/11`), six intersection points, RH/admissible
   arithmetic; independent `verifier.py`; exits
-  `FIX-VI-PRYM-SEAL-ALLGREEN` / `FIX-VI-PRYM-SEAL-DEVIATION`.**** Same-day
+  `FIX-VI-PRYM-SEAL-ALLGREEN` / `FIX-VI-PRYM-SEAL-DEVIATION`.
+  **Wave 22 (director derivation, Note VII opened:
+  `theory/FIX_VII_carrier.md`): the W-carrier condition.** Two
+  results. (1) Auto-CM lemma: ANY weight-1 rational `G`-Hodge
+  structure of type `W_Q` is automatically isogenous to
+  `E_{−11}⁵` (only `G`-stable Hodge splittings of `W ⊕ W̄` are the
+  isotypic ones; the character field `Q(√−11)` then acts as CM
+  with signature (5,0); `h(−11) = 1`) — Adler's `J(X) ≅ E⁵` is
+  pure representation theory. (2) Carrier theorem: if an
+  equivariant dominant `P(W) ⇢ X` exists then, since `H³(P⁴) = 0`
+  and pullback along the resolved map is injective, SOME blowup
+  center of every equivariant resolution carries `W_Q` in `H¹` —
+  the Weil fivefold must appear in the Albanese of the base
+  locus. The sealed forced base locus (lines/planes/sweeps) is
+  all `H¹ = 0`, so this is structure beyond everything the FIX
+  program forced. Chevalley–Weil ledger of minimal carriers:
+  irreducible `G`-curve needs genus ≥ 26 = the `(2,3,11)` Hurwitz
+  class of the modular curve `X(11)` (recalled classical model
+  `Sing(Hess F)` in `P(W)` itself, deg 20 — TO-VERIFY vs
+  Adler–Ramanan); induced alternatives: 11 A5-curves of genus 5
+  (`(3,3,5)`, `Res W = V₅`), 12 F55-curves of genus 12, 60
+  C11-curves of genus 5, 55 D12-curves of genus ≥ 3; plus
+  degree-0 "tower carriers" over point orbits (evade degree
+  counts; the FIX-D2 jet towers probe exactly these). THE RACE
+  (next derivation): per (profile, carrier), containment cost
+  (~`5(δd+1−g)`, linear in `d`, slope `5δ`) vs slice budget; a
+  uniform win would be the missing effective degree bound
+  (Wall #1) modulo the tower-carrier branch. Note VI §3 updated
+  (trdeg slip fixed: `K_proj` is C₄ not C₃; elementary obstruction
+  vanishes; `3[T₁] = 0`).**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
