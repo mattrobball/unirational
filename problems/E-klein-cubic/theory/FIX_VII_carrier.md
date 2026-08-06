@@ -318,3 +318,46 @@ covariant tuples. It does not produce maps: landing in `X`,
 dominance, and the full profile constraints still apply on top.
 The statement with teeth is negative-space: the carrier condition
 had the potential to kill the gateway window and DID NOT.
+
+## 7. Assembly calculus along the arrangement (director, 2026-08-06)
+
+Behavior of the canonical objects on the arrangement (hand +
+machine, `sixpts.m2`, `hess_sextet.m2`; normal frame):
+
+- `F`: `ord_{L_σ}(F) = 1` (lines on `X`); `F|_{Π_σ} = F₀` (cuts
+  `E_σ`).
+- `H`: **all 55 lines lie on the Hessian quintic**, with
+  `ord_{L_σ}(H) = 1` exactly (hand proof: on `L` the Hessian
+  matrix is block-anti-diagonal with a 3×2 block, rank ≤ 4;
+  machine: `H ∈ I_L \ I_L²`).
+- Polars along lines: the `V₋`-components of BOTH `∇F` and `∇H`
+  vanish on `L_σ` — each polar maps every line into the dual
+  plus-plane `P(V̌₊)`; `∇F(L_σ)` is the explicit conic
+  `(ωy²+ω²z² : ω²y²+ωz² : yz)`.
+
+**The Hessian sextet.** `C₂₀ ∩ Π_σ = C₂₀^σ` is six points lying ON
+the conic `K_c` and OFF `E_σ` (machine: saturating by `F₀` keeps
+degree 6, saturating by the conic kills it). So the carrier meets
+the arrangement ONLY through the 55 conics — the CM-carrying
+components of the split discriminant — via its full order-2 fixed
+locus (330 = 55 × 6 points), and is disjoint from all lines and
+all `E_σ`. Each conic now carries TWO canonical D12-stable
+sextets: the discriminant sextet `E_σ ∩ K_c` (whose double cover
+split as `E_{−11} × E_{−11}`, Note VI) and the Hessian sextet
+`C₂₀ ∩ Π_σ`. The latter is also τ-stable, hence exactly even in
+the bielliptic coordinate (machine-verified), and its genus-2
+cover also splits — but NOT into the CM curve: mod 397 the two
+quotient j-invariants are −85 and −150 (≠ −32768 ≡ 183, ≠ 8192/11
+≡ 59, and ≠ each other). CONTRAST READOUT: the CM(−11) rigidity is
+a property of the DISCRIMINANT geometry specifically, not of every
+canonical sextet on the conic. (Exact identification of the new
+j-pair: open, low priority.)
+
+**Gateway bookkeeping consequence.** The profile constraints live
+on lines and plus-planes; the carrier constraint lives on `C₂₀`,
+which touches that locus exactly in the 330 conic-sextet points.
+The two condition systems interact ONLY there — the assembly at
+`d = 34` decomposes into (profile conditions) + (carrier
+conditions) + (a finite gluing block supported on the sextets).
+Next after FIX-VII-XRING lands: compute the gluing block's rank at
+the `(1,6)` window.

@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `ad6746b` (2026-08-05; the
+Snapshot metadata — notebook parent head: `3164cbe` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3042,7 +3042,29 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   ladder extraction (H, F², J₆, J₇), control prime. Exits
   `FIX-VII-XRING-ALLGREEN` / `FIX-VII-XRING-DEVIATION`. This is
   the foundation layer for the gateway assembly (d=34,
-  `(1,6)`-profile + Hessian base).**** Same-day
+  `(1,6)`-profile + Hessian base). **Wave 23 assembly calculus
+  (Note VII §7; probes `sixpts.m2`, `hess_sextet.m2`):** (i) all
+  55 lines lie on the Hessian quintic with `ord_L(H) = 1` (hand
+  block-proof: rank ≤ 4 anti-diagonal structure; machine
+  confirmed); `ord_L(F) = 1`; both polars `∇F`, `∇H` collapse the
+  `V₋`-directions along lines (each maps every line into the dual
+  plus-plane; `∇F(L)` an explicit conic). (ii) **The Hessian
+  sextet:** `C₂₀ ∩ Π_σ = C₂₀^σ` = six points ON the conic `K_c`
+  and OFF `E_σ` — the carrier meets the arrangement exactly
+  through the 55 CM-carrying conics (330 = 55·6 order-2 points),
+  disjoint from all lines and all `E_σ`; each conic now carries
+  TWO canonical D12-stable sextets (discriminant `E∩K_c` vs
+  Hessian `C∩Π`). (iii) CONTRAST: the Hessian sextet is τ-stable
+  and exactly even in the bielliptic coordinate
+  (machine-verified), but its genus-2 cover splits into two
+  DIFFERENT non-CM quotients (mod 397: j = −85, −150 vs CM ≡ 183,
+  arrangement ≡ 59) — the CM(−11) rigidity belongs to the
+  DISCRIMINANT sextet specifically, sharpening the Note VI
+  finding. (iv) Gateway bookkeeping: profile and carrier
+  condition systems interact ONLY at the 330 sextet points — the
+  d=34 assembly decomposes as profile + carrier + a finite
+  gluing block on the sextets; computing the gluing block's rank
+  at the `(1,6)` window is the step after XRING lands.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
