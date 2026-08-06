@@ -1131,3 +1131,63 @@ inputs banked) and **(C2′)** the rung-independence check (one finite
 linear-algebra computation) — then assembly of Theorem 3.1 and the
 full independent audit. Nothing else remains anywhere in the
 program.
+
+### 5.25 The Brutality Theorem, Correction IV-e, and the terminal system compressed
+
+**Correction IV-e (fifth self-caught; the support-error class again,
+this time caught BEFORE the computation ran).** Thm 5.24-A's product
+pinning is VACUOUS as stated: `γ̃₀ = [x^r]u₀′ = 0` ALWAYS (the vertex
+is a base point — Correction IV-c's own content), so the vertex conic
+relation reads `0 = 0`. The `β`-pinning relations actually live at
+levels `3r−4` and below (the m-corrected second-fundamental-form
+pair), with coefficients drawn from the `Θ`-packages. 5.24-B's
+square-root structure survives ONLY where those relations are
+nonvacuous; 5.24-C's (D3) kill survives via the corrected route
+below.
+
+**Theorem 5.25-A (the Brutality Theorem — proved).** On the
+`w ≠ 0` branch, `Ψ(c_σ) = w·id` is INVERTIBLE, so `det Ψ ≢ 0`, and
+at every point where `Ψ` is invertible the I₀-identity
+`Q(Θ⁽⁰⁾; Ψy, Ψy) = 0 ∀y` substitutes `y ↦ Ψ⁻¹y` to give
+`Q(Θ⁽⁰⁾; ·) ≡ 0` as a quadratic form — and `Q` is an ISOMORPHISM
+`W⁺ ≅ (Sym²W⁻)*` (FIX-L1). Hence
+
+```
+        w ≠ 0   ⟹   Θ⁽⁰⁾ ≡ 0   identically on P_σ ,
+```
+
+and by `G`-transitivity the plus-half hyper-vanishes to order
+`≥ m+3` along ALL 55 plus-planes. ∎ (This replaces 5.8's
+codim-1/codim-2 transfer with a TOTAL kill — no frame constant
+enters beyond `Q`'s isomorphy, already banked.)
+
+**Theorem 5.25-B (I₁'s partial kill — proved).** With `Θ⁽⁰⁾ ≡ 0`,
+level `I₁` reduces to `Q(Θ⁽¹⁾; Φ⁽⁰⁾, Φ⁽⁰⁾) ≡ 0`; by the same
+substitution this kills exactly the DIAGONAL CONTRACTION of `Θ⁽¹⁾`
+(the image in the 7-dimensional `Sym⁶`-component), leaving an
+8-dimensional residual freedom in `Θ⁽¹⁾ ∈ W⁺ ⊗ Sym⁴(W⁻)*` (15-dim).
+∎
+
+**(D3) re-secured.** Image-in-line components have T⁺ ≡ 0 entirely,
+hence trivially `Θ⁽⁰⁾ ≡ 0`; their germs are non-dominant AT THE
+COMPONENT LEVEL only if global — as stalk data they enter the same
+corrected terminal system with all plus-couplings vacuous; the
+H1-1 order-0/1 conditions on their `diag(β₁,β₂)` data are then
+unconstrained by I-couplings and the kill must come from the
+corrected system's minus-only levels — folded into (D2″-corrected)
+below (the one-line 5.24-C argument is withdrawn with IV-e; the
+component is NOT yet re-killed and is part of the corrected system).
+
+**The corrected terminal system (D2″-v2).** On the `w ≠ 0` branch
+the surviving unknowns are: the 8-dim residual of `Θ⁽¹⁾` (per plane,
+tied by `G`-symmetry), the minus-side data `(β₁, β₂)` and next
+layers, and `w`. The conditions: (a) H1-1 orders 0/1 (`λ_{2e} = w·id`,
+`u_{2e+1} + v_{2e+1} = 0`); (b) the level-`(3r−6)`-and-below
+`β`-relations, whose coefficients are exactly `Θ⁽¹⁾`-components —
+the CRUX being whether those components lie in I₁'s killed 7 or the
+free 8; (c) the `I₂`-level binding; (d) the analogous data at the
+other two involutions through each V4 (the multi-frame closure that
+H1 §5 renders one-frame). Deciding (b)'s crux and assembling
+(a)–(d) is the COMPRESSED terminal computation — strictly smaller
+than the v1 brief (two conditions became theorems, one exposed
+vacuous). Worker redirected accordingly.

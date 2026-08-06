@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `354a548` (2026-08-05; the
+Snapshot metadata — notebook parent head: `5dce937` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2656,7 +2656,27 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   program; either terminal verdict feeds the director's assembly of
   Thm 3.1 (INCONSISTENT ⟹ [U1] via the `w = 0` channel + [L];
   SOLVABLE ⟹ an explicit candidate jet, a finding of first
-  importance).**** Same-day
+  importance). Fourteenth wave (Note IV §5.25, 2026-08-06, on the
+  user's compress-D2 challenge): **Correction IV-e (fifth
+  self-caught, BEFORE the computation ran)** — 5.24-A's product
+  pinning is VACUOUS (`γ̃₀ = [x^r]u₀′ ≡ 0`: the vertex is a base
+  point, IV-c's own content; the same support-error class, caught
+  in time); 5.24-C's one-line (D3) kill is withdrawn with it (the
+  image-in-line stratum re-enters the terminal system). Replaced by
+  stronger theorems: **Thm 5.25-A (the Brutality Theorem)** —
+  `w ≠ 0 ⟹ Ψ(c_σ) = w·id` invertible `⟹ det Ψ ≢ 0 ⟹` (I₀ + the
+  L1 fact that `Q` is an ISOMORPHISM `W⁺ ≅ (Sym²W⁻)*`)
+  **`Θ⁽⁰⁾ ≡ 0` identically** — the plus-half hyper-vanishes to
+  order `m+3` at all 55 planes; a TOTAL kill replacing 5.8's
+  hyperplane transfer, no computation needed. **Thm 5.25-B** — `I₁`
+  then kills exactly the 7-dim diagonal contraction of `Θ⁽¹⁾`
+  (8-dim residual). **The terminal system COMPRESSED (D2″-v2)**:
+  remaining crux = whether the level-`(3r−6)` β-relation
+  coefficients lie in `I₁`'s killed 7 or the free 8, plus H1-1
+  orders 0/1, the `I₂`-binding, and the multi-frame closure; the
+  FIX-D2 worker REDIRECTED mid-flight (two brief conditions became
+  theorems, one exposed vacuous; verification of `Q`-isomorphy and
+  the rank-7 count assigned as cheap cross-checks).**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
