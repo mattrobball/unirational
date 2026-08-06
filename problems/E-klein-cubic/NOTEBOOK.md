@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `10dd1f0` (2026-08-05; the
+Snapshot metadata — notebook parent head: `956a025` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3243,7 +3243,27 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   apply (irreducible multisections are not G-sets) — candidate
   sources: odd multisections of the 55 conic bundles (vs the
   (D1) Brauer class), incidence correspondences, the carrier
-  geometry. Next derivation target.**** Same-day
+  geometry. Next derivation target. **Wave 26 literature event
+  (decision-grade; Note VIII §7; PDF archived): CTZ
+  arXiv:2502.19598** (Cheltsov–Tschinkel–Zhang, Feb 2025,
+  "Equivariant unirationality of Fano threefolds") — Theorem 5.1
+  proves G-unirationality for smooth cubic threefolds under
+  Condition (A) EXCEPT: Fermat/C₉⋊C₃, **Klein/PSL₂(F₁₁),
+  Klein/C₁₁⋊C₅** ("remains open", p.18), and **irreducible-A₅ on
+  the Klein–Segre pencil** ("remains open", p.20). So: (i)
+  Correction to wave-26 novelty claim: D12-unirationality was
+  KNOWN (CTZ Thm 5.1 instance via index-2 fixed points; our
+  projection proof is independent + explicit, not new); (ii) THE
+  HEADLINE IS A NAMED OPEN CASE of the Feb-2025 literature, as
+  are F55 and irreducible-A5-on-Klein — the running A5LADDER
+  attacks a named open case; (iii) CTZ Remark 5.4: under
+  Duncan–Reichstein Conjecture 10.4 (+ their Thm 10.5),
+  G-unirationality reduces to the 3-Sylow, and for the Klein
+  cubic `C₃` fixes points ⟹ **the headline is CONDITIONALLY YES
+  under the D-R conjecture**. The problem is pinched between the
+  D-R p-group detection conjecture (positive) and the CSD
+  descent gap (negative). Immediate read: D-R §10 exact
+  statements.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
