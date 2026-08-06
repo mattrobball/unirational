@@ -493,8 +493,115 @@ arrive: level 1 plus (`3s+1`, exactly consumed by the square system on
 the rigid stratum), level 2 minus (`2s`, free at level 2), level 3
 plus (`3s−2`), … while each level-`ℓ` identity has `~3s+1−ℓ`
 coefficients; cumulative equations overtake cumulative unknowns at a
-computable level `ℓ*(s)` — the first level at which polynomial
-conditions fall on `(P, Q)` themselves. Computing `ℓ*` and the leading
-consistency resultant is the next derivation step; its vanishing locus
-(within the rigid stratum, mod torus) is precisely where any
-non-classified branch must live.
+computable level `ℓ*(s)` — computed exactly in §5.12.
+
+### 5.12 The balance theorem (proved): the ladder is exactly balanced to level `r`, then `s·r` pure consistency equations
+
+**Theorem 5.12.** For the source ladder of a pointwise `(1, 2s+1)`
+element:
+
+**(o) All even levels are EMPTY by parity.** `F(T)` is V4-invariant, so
+its monomials `x^ℓ y^j z^k` have `(ℓ,j,k) ≡ (0,0,0)` or `(1,1,1)`
+mod 2; total degree `3r = 6s+3` is odd, forcing the all-odd class:
+`ℓ` odd. (This subsumes Thm 5.11(ii)'s Hessian computation by pure
+parity, and holds at ALL levels, not just level 2.)
+
+**(a) Counts.** At odd level `ℓ = 2t+1`: equations `E_t = 3s+1−t`;
+new plus-unknowns `N_{2t+1} = 3(s−t)+1` (for `t ≤ s`). At even level
+`2t` (`1 ≤ t ≤ s`): new minus-unknowns `N_{2t} = 2(s+1−t)`; zero
+equations. Slots end at `x`-degree `r`, so unknowns stop at level
+`r = 2s+1`; the identity continues to level `3r`.
+
+**(b) Exact balance.** The cumulative deficit through level `2T+1` is
+
+```
+    D(2T+1) = 2T(T − s) :
+```
+
+zero at `T = 0` (Lemma 5.10's squareness), strictly negative through
+the middle (`0 < T < s`: the ladder stays locally solvable with free
+minus-parameters), and **exactly zero again at `T = s`, the last
+unknown level** — the source ladder is precisely critical, with not
+one equation to spare through level `r`.
+
+**(c) The tail.** Levels `r+2, r+4, …, 3r` carry NO new unknowns and
+
+```
+    Σ_{t=s+1}^{3s+1} (3s+1−t)  =  s(2s+1)  =  s·r
+```
+
+pure consistency equations on the level-`≤ r` solution — i.e., after
+the rigid-stratum elimination (Thm 5.11(iii) plus the level-by-level
+solvability of (b)), **`s·r` polynomial conditions on the `2s+2`
+line-map coefficients, of which `2s−1` are essential mod torus and
+scalar.** The overdetermination margin `s·r − (2s−1) = 2s²−s+1` grows
+quadratically in `s`.
+
+**Consequences.** `ℓ* = r+2` for every `s`; the "leading consistency
+resultant" of §5.11 is the level-`(r+2)` identity evaluated on the
+solved ladder; and the expected dimension of the rigid-stratum
+consistency variety is `(2s−1) − s·r < 0` with quadratically growing
+margin — the correct *shape* for uniform mod-torus finiteness, though
+shape is not yet proof (the equations are specific, not generic; see
+§5.14 item (T1)).
+
+### 5.13 [U3] folds into the master ladder (proved modulo a bookkeeping dictionary)
+
+The slot parity classes are independent of `m`; hence Theorem 5.11(i)
+(alternation), 5.9(a) (lines land on lines at odd `r`), and the entire
+level structure of §5.10–5.12 hold VERBATIM for every odd `m` — the
+plane order enters the pointwise problem ONLY through vanishing-order
+boundary conditions at the two vertices of each source line (the
+endpoint orders of the binary forms in the ladder). Therefore the
+pointwise `(m, r)` loci for ALL odd `m` are the strata of ONE master
+consistency variety, filtered by endpoint vanishing orders — and the
+deep-`m` strata are exactly the vertex-degenerate strata of
+Thm 5.11(iv), already inside the degree-drop induction. **[U3] is
+hereby merged into [U1]/[U2]: it is no longer a separate hypothesis.**
+(Owed: the half-page endpoint-order dictionary `m ↔` vanishing
+pattern, to be written when the master analysis is finalized; no new
+mechanism is involved.)
+
+### 5.14 Reduction status: what is CAS, what is still theorem
+
+Everything the closure theorem needs now sorts into exactly two
+remaining THEOREMS and a short list of UNAVOIDABLE CAS calls.
+
+**Remaining theorems (derivation, not computation):**
+
+- **(T1) Tail uniformity.** The rigid-stratum consistency variety
+  (§5.12(c)) is a finite union of torus orbits, uniformly in `s`.
+  Route: downward induction via the degeneration strata (degree drop
+  in `s`, base cases = the SEALED `(1, r ≤ 5)` emptiness ledger)
+  plus an argument on the rigid part — either transversality of the
+  tail system or a structural factorization of the level-`(r+2)`
+  resultant. This is the keystone's final form; it could still
+  produce a genuine obstruction (an unexplained resultant component =
+  a candidate branch).
+- **(T2) [L] completion.** Rung 2 (binding the §5.8 transfer through
+  `I₁`), the non-maximal-evasion bookkeeping, and exhaustiveness
+  (all layers vanishing at the D12-orbit forces `T ≡ 0` along `ℓ_V`,
+  against the sweep (P3)). Blocked only on the FIX-L1 constants for
+  its nondegeneracy inputs; the mechanism is §5.7's.
+
+**Unavoidable CAS calls (each named by a proof):**
+
+- **(C1)** FIN(7), redirected form — mod-torus essential dimension at
+  the 27 witnesses + component sweep + the `u₀+v₀` finite check.
+  IN FLIGHT. (Empirically tests Thm 5.11(iii)'s rigidity and
+  Prop 5.3's hypothesis at the base `r`.)
+- **(C2)** FIX-L1 — the frame constants `α, β, γ, (γ⊗γ)_iso` and
+  nondegeneracy. IN FLIGHT. (Feeds (T2).)
+- **(C3)** The tail resultant at `s = 3`: compute the level-9 (and if
+  needed 11, 13) consistency polynomials on the rigid stratum at
+  `r = 7`, verify the vanishing locus equals the 27 witnesses' torus
+  orbits. (The `s ≤ 2` base cases are ALREADY BANKED: `(1,3)`,
+  `(1,5)` EMPTY, sealed.) TO FIRE when (T1)'s induction states its
+  exact base requirement.
+- **(C4)** The even-`r` master base cases — ALREADY BANKED
+  (`(1,6)` through `n = 3` char-0; `(1,8)` at `n = 0` sealed
+  two-path); the even-`r` ladder derivation (type-II anchor flip of
+  §5.9(b)) reuses the odd-`r` method and names any residual runs.
+
+Assembly and the full independent audit close the program once (T1)
+and (T2) land. Nothing else remains.

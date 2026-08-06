@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `ad9ad2a` (2026-08-05; the
+Snapshot metadata — notebook parent head: `702a73c` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2474,7 +2474,31 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   row now splits into a rigid stratum (consistency analysis at levels
   ≥ 3 on `(P,Q)` alone) plus inductively-descending degenerations —
   the structure [U2]'s uniformity needed. Next: compute the crossing
-  level `ℓ*(s)` and the leading consistency resultant.** Same-day
+  level `ℓ*(s)` and the leading consistency resultant. Sixth
+  derivation wave (Note IV §§5.12–5.14, 2026-08-06): **Theorem 5.12
+  (the balance theorem)** — all even levels of the landing identity
+  are EMPTY by pure V4-parity (subsuming 5.11(ii)'s Hessian argument);
+  exact counts per level; the cumulative deficit is `D(2T+1) =
+  2T(T−s)`: zero at level 1, negative through the middle, **exactly
+  zero at the last unknown level `r`** — the source ladder is
+  precisely critical — and the tail levels `r+2 … 3r` impose exactly
+  **`s·r` pure consistency equations on `2s−1` essential line-map
+  parameters** (overdetermination margin `2s²−s+1`, growing
+  quadratically: the right shape for uniform finiteness); `ℓ* = r+2`
+  for every `s`. **§5.13: [U3] MERGED into [U1]/[U2]** — the slot
+  parities are `m`-independent, so all odd `m` sit in ONE master
+  consistency variety filtered by endpoint vanishing orders, and the
+  deep-`m` strata are exactly the vertex-degenerate strata already in
+  the degree-drop induction (dictionary owed, no new mechanism).
+  **§5.14: the full reduction status** — remaining THEOREMS: (T1)
+  tail uniformity (the keystone's final form: rigid-stratum
+  consistency = finite torus orbits, uniformly in `s`; induction base
+  = the sealed `(1, r ≤ 5)` ledger) and (T2) [L]-completion (rung 2 +
+  exhaustiveness, blocked only on FIX-L1 constants); unavoidable CAS:
+  (C1) FIN(7) in flight, (C2) FIX-L1 in flight, (C3) the `s = 3` tail
+  resultant when (T1) names its base requirement, (C4) even-`r` base
+  cases ALREADY BANKED. Assembly + audit close the program once
+  (T1), (T2) land.** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
