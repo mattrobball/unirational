@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `5dce937` (2026-08-05; the
+Snapshot metadata — notebook parent head: `515f700` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2676,7 +2676,27 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   orders 0/1, the `I₂`-binding, and the multi-frame closure; the
   FIX-D2 worker REDIRECTED mid-flight (two brief conditions became
   theorems, one exposed vacuous; verification of `Q`-isomorphy and
-  the rank-7 count assigned as cheap cross-checks).**** Same-day
+  the rank-7 count assigned as cheap cross-checks). Fifteenth wave
+  (Note IV §5.26, 2026-08-06): **the crux decided by hand** —
+  **Thm 5.26-A**: `κ` is the multiplication `(Sym⁴)*⊗(Sym²)* →
+  (Sym⁶)*`, surjective (comultiplication injectivity), kernel
+  `≅ (Sym⁴)* ⊕ (Sym²)*` (Clebsch–Gordan `4⊗2 = 6⊕4⊕2`) — 5.25-B
+  proved structurally with exact kernel coordinates; **Thm 5.26-B**:
+  the level-`(3r−6)` β-relations are the `x`-top graded piece of
+  `I₁` itself (one identity, two gradings) and constrain `Θ⁽¹⁾`'s
+  twisted diagonal, NOT the β's — solvable for any invertible
+  minus-datum; every level `I_k` is level-locally solvable through
+  its surjective contraction. **The terminal question in final form
+  (D2″-v3): the GLOBAL DEGREE BUDGET** — with `Θ⁽⁰⁾ ≡ 0` at all 55
+  planes the plus-half is forced into `I^{(4)}`-type symbolic-power
+  loci of the 55-plane arrangement while the minus-half holds order
+  1 with nonvanishing equalizer jets: **exactly Fable's original
+  `I^{(m)}`-ladder territory ([E15]), whose dimension tables are
+  banked in the repo** — the terminal computation is a feasibility
+  count on certified data (infeasible ∀d = the kill; feasible = the
+  explicit candidate). Worker re-redirected (second redirect: two of
+  its three derivation tasks now theorems; target = the budget
+  count consuming the E15-era tables).**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

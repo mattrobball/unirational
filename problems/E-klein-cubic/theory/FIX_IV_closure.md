@@ -1191,3 +1191,42 @@ H1 §5 renders one-frame). Deciding (b)'s crux and assembling
 (a)–(d) is the COMPRESSED terminal computation — strictly smaller
 than the v1 brief (two conditions became theorems, one exposed
 vacuous). Worker redirected accordingly.
+
+### 5.26 The crux decided by hand; the terminal question in its final form
+
+**Theorem 5.26-A (the κ-structure — proved).** Under the `Q`-isomorphy,
+`κ: Hom(Sym⁴W⁻, W⁺) → Sym⁶(W⁻)*` is the multiplication map
+`(Sym⁴)*⊗(Sym²)* → (Sym⁶)*`, surjective because the comultiplication
+`Sym⁶ → Sym⁴ ⊗ Sym²` of binary forms is injective; by Clebsch–Gordan
+`4 ⊗ 2 = 6 ⊕ 4 ⊕ 2`, so `ker κ ≅ (Sym⁴)* ⊕ (Sym²)*`, dimension
+`5 + 3 = 8`. This proves 5.25-B's count and hands the worker the
+EXACT kernel description. ∎
+
+**Theorem 5.26-B (the crux answered: the β's are NOT pinned at level
+`3r−6` — proved).** The fiber's level-`(3r−6)` identity is the
+`x`-top graded piece of the SAME identity `I₁` (one identity, two
+gradings), and reads `κ_{Λ(λ)}(Θ⁽¹⁾-top) = 0` — the `Λ(λ)`-twisted
+diagonal contraction. For ANY invertible minus-datum it is solvable
+by choosing `Θ⁽¹⁾`'s top in the 8-dimensional twisted kernel: **the
+relations constrain `Θ⁽¹⁾`, not the β's.** Every subsequent level
+`I_k` likewise introduces its new plus package linearly through a
+surjective contraction: level-local solvability persists; nothing
+pins the minus data level-locally. ∎
+
+**Consequence — the terminal question in final form.** The `w ≠ 0`
+branch survives level-local analysis entirely; what decides it is the
+GLOBAL DEGREE BUDGET: the coupled tower must be solved by honest
+polynomials of the exact degrees, with the plus-half forced into deep
+symbolic powers of the 55-plane arrangement (`Θ⁽⁰⁾ ≡ 0` at all 55
+planes puts `T⁺` in `I^{(4)}`-type multiplicity loci). **This is
+precisely the territory of Fable's original `I^{(m)}`-correction
+ladder ([E15]), whose symbolic-power dimension tables for this exact
+arrangement are banked in the repo.** The terminal computation
+(D2″-v3) is therefore: the finite feasibility of the coupled tower
+in the hyper-vanishing regime, consuming the banked
+`h⁰(I^{(k)}(d))`-data — a degree-budget count, not a new theory. If
+infeasible for all `d` (the budget argument closing uniformly): the
+`w ≠ 0` branch dies and [U1] holds; if feasible: the solution is an
+explicit candidate. The old E15 computation closed a DIFFERENT
+profile (its branch died at `I^{(11)}/I^{(13)}`); ours is the
+minus-order-1/plus-order-4 profile — adjacent, not identical.
