@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `9094303` (2026-08-05; the
+Snapshot metadata — notebook parent head: `58aafc4` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2404,7 +2404,25 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   equalizer OF THE LADDER, coupled through `F`, not of the
   representation). First proof-named computation dispatched:
   `FIN(7)` (packet `goal_runs_after_9094303/FIX_U1_FIN7`, in flight) —
-  either verdict directs the [U1] proof.** Same-day amendment: FIX-C1's detached part-D
+  either verdict directs the [U1] proof. Second derivation wave (Note
+  IV §§5.5–5.8, same day): **Lemma 5.5** (concurrency amplification:
+  line-wise order-2 vanishing at `c_σ` forces full order 3; every jet
+  term below the line-wise order is `D_T`-divisible; first escape =
+  `D_T ⊗ w₁`, `w₁ ∈ V[sgn^{e+1}]`); **Lemma 5.6** (the kinematic tower
+  terminates — the evasion channel is kinematically free past order
+  `2e+1`, so [L] MUST go through the landing coupling); **§5.7** (the
+  coupled tower exact from certified A3: `F = F₀ + Q`, level identities
+  `I₀: Q(Θ⁽⁰⁾; Φ⁽⁰⁾, Φ⁽⁰⁾) ≡ 0`, `I₁`, … — a NEW global identity
+  neither H0 nor H1 used; `Q` has exactly two isotypic frame constants
+  `α, β`); **§5.8** (the first transfer condition, proved modulo stated
+  case bookkeeping: on the maximal evasion channel,
+  `c²·[αθ_t(γ⊗γ)_t + β⟨θ_s,(γ⊗γ)_s⟩] = 0` — either the evasion
+  coefficient dies or `Θ⁽⁰⁾(c_σ)` is forced onto an explicit
+  hyperplane; the [L]-ladder's first rung in closed form). Second
+  proof-named computation dispatched: `FIX-L1` (frame constants,
+  `γ`-generators for `m = 1, 3` both twists, transfer-pairing
+  nondegeneracy; packet `goal_runs_after_9094303/FIX_L1_FRAME_CONSTANTS`,
+  in flight).** Same-day amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
   EXACT on all 24 non-rational witnesses (C1 §7 item 1 closed); the H1

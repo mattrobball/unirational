@@ -250,3 +250,78 @@ condition on `Φ_k` at `c_σ`* — an equalizer-of-the-ladder, not of the
 representation. This is the same mechanism as Fable's `I^{(m)}`
 correction tower, localized at the D12-points; deriving it is the next
 item after `FIN(7)` returns.
+
+### 5.5 The concurrency amplification lemma (proved)
+
+**Lemma 5.5.** Let `Ψ` be a `V`-valued germ at `c_σ` on `P_σ` whose
+restrictions to the three mirror lines vanish to order `≥ t` at `c_σ`.
+Then for every `k < t` the order-`k` Taylor term of `Ψ` lies in
+`D_T · Sym^{k−3}(T*) ⊗ V`; in particular `term_1 = term_2 = 0` (a
+linear form on a 2-dim space cannot vanish on three distinct
+directions; a binary quadric cannot have three roots), so line-wise
+order 2 forces full order 3, and the first potentially nonzero jet is
+`term_3 = D_T ⊗ w₁` with `w₁ ∈ V[sgn^{e+1}]` (the D12-fibre argument of
+H1 §3 applied to the `sgn`-twist carried by `D`). *Proof.* A degree-`k`
+binary form vanishing at the three mirror directions is divisible by
+the mirror cubic; apply componentwise; the twist bookkeeping is (2.1)
+of H1 with one extra `sgn`. ∎
+
+### 5.6 The kinematic tower terminates (proved)
+
+**Lemma 5.6.** For a germ whose leading line datum hyper-vanishes at
+the D12-orbit, S3-equivariance of `Φ⁽⁰⁾` imposes NO further condition
+at any order past `2e+1`: by H1's own codimension count,
+`Im(ev_{v₀}) = V` on `Sym^t` for `t ≥ 2`, so the first escaping jet is
+kinematically free. *Consequence:* [L] is not representation theory;
+the evasion channel dies, if it dies, through the landing coupling. ∎
+
+### 5.7 The coupled tower in exact form (from certified A3)
+
+By certificate A3, `F(w + y) = F₀(w) + Q(w; y, y)`: `F₀` cubic on
+`W⁺`, `Q` linear in `W⁺` and quadratic in `W⁻`, nothing else. With the
+normal expansions `T⁺ = Θ⁽⁰⁾ + Θ⁽¹⁾ + ⋯` (orders `m+1, m+3, …`) and
+`T⁻ = Φ⁽⁰⁾ + Φ⁽¹⁾ + ⋯` (orders `m, m+2, …`), the landing identity
+splits into level identities on `P_σ`:
+
+```
+I₀ (level 3m+1):  Q(Θ⁽⁰⁾; Φ⁽⁰⁾, Φ⁽⁰⁾) ≡ 0
+I₁ (level 3m+3):  2Q(Θ⁽⁰⁾; Φ⁽⁰⁾, Φ⁽¹⁾) + Q(Θ⁽¹⁾; Φ⁽⁰⁾, Φ⁽⁰⁾)
+                   + F₀(Θ⁽⁰⁾) ≡ 0
+```
+
+`I₀` is a NEW global identity coupling the plus- and minus-leading
+packages, used by neither H0 nor H1. Isotypically (`W⁺ = triv ⊕ std`,
+`Sym²W⁻ = triv ⊕ std`, `Q` S3-invariant):
+`Q(w; y²) = α·w_t·(y²)_t + β·⟨w_s, (y²)_s⟩` — two frame constants,
+EXACT in the affine chart at `c_σ` because `Q` is linear in `w` and
+`c_σ` spans the `triv`-line of `W⁺` (the chart's coordinates ARE the
+std-part).
+
+### 5.8 The first transfer condition on the evasion channel (proved modulo stated bookkeeping)
+
+Maximal evasion case at `m = 1`: leading jets vanish through the tested
+orders, first escape `term_3 = D ⊗ w₁`, `w₁ = c·γ`, `γ` spanning the
+1-dimensional `V₁[sgn^{e+1}]` (Lemma 5.1). Factor `Φ⁽⁰⁾ = D^e Ψ`,
+divide `I₀` by `D^{2e}`:
+`α Θ⁽⁰⁾_t (Ψ⊗Ψ)_t + β ⟨Θ⁽⁰⁾_s, (Ψ⊗Ψ)_s⟩ ≡ 0`. Its order-6 jet at
+`c_σ` isolates `D²·(w₁⊗w₁)` (all lower `Ψ`-jets die by Lemma 5.5), and
+`D² ≠ 0` as a form, so:
+
+```
+    c² · [ α θ_t (γ⊗γ)_t + β ⟨θ_s, (γ⊗γ)_s⟩ ]  =  0 ,
+    (θ_t, θ_s) := Θ⁽⁰⁾(c_σ) ∈ Hom(Sym²std, triv ⊕ std)^{S3} ≅ C² (Schur).
+```
+
+**Either the evasion coefficient dies (`c = 0`), or the plus-package
+value at `c_σ` is forced onto an explicit hyperplane.** The condition
+TRANSFERS rather than kills; `I₁` then binds the transferred constraint
+against `Θ⁽¹⁾, Φ⁽¹⁾` — the genuine [L]-ladder, now with its first rung
+in closed form. Bookkeeping owed: escape at order exactly `2e+2`, and
+unequal line-wise orders; same method.
+
+**Named computation FIX-L1** (proof-named, small): exact σ-frame values
+of `α, β`; the generator `γ` of `V₁[sgn^{e+1}]` (both parities of `e`)
+and of `V₃[sgn^{e+1}]`; the isotypic components `(γ⊗γ)_t, (γ⊗γ)_s`;
+nondegeneracy of the transfer hyperplane
+(`(α(γ⊗γ)_t, β(γ⊗γ)_s) ≠ (0,0)`); the analogous data at `m = 3`. Pure
+frame constants; the [L] continuation consumes them.

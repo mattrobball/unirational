@@ -1,0 +1,4 @@
+2A F(p) all zero : true rank J = 31 
+1A F(p) all zero : true rank J = 31 
+0B F(p) all zero : true rank J = 34 
+0C F(p) all zero : true rank J = 34 

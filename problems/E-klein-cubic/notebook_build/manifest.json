@@ -1416,6 +1416,17 @@
    "char0_scope": "in flight",
    "tracked": "main",
    "notes": "IN-FLIGHT (2026-08-06, opus): FIN(7) — the first computation NAMED by a Note IV proof (Prop 5.3): finiteness/dimension of the pointwise non-equivariant PO-1 locus of the r=7 cone, tangent data at the 27 Chebyshev points, u0+v0 check. Either verdict is a base clause: FINITE activates Prop 5.3 (kills [U1] for the (1,7) row); INFINITE routes [U1] to shape-pinning with the component data as input."
+  },
+  {
+   "path": "goal_runs_after_9094303/FIX_L1_FRAME_CONSTANTS",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "PROPOSAL-UNRUN",
+   "primary_exit": "UNDECIDED",
+   "superseded_by": null,
+   "char0_scope": "in flight",
+   "tracked": "main",
+   "notes": "IN-FLIGHT (2026-08-06, opus): FIX-L1 — the frame constants named by Note IV sec5.8 (alpha, beta of the Q-decomposition; generators of V_m[twist] for m=1,3 both twists; transfer-pairing components; nondegeneracy verdicts). Consumed by the [L] coupled-ladder derivation."
   }
  ],
  "known_branches": [
