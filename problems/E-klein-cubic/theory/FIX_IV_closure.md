@@ -768,3 +768,54 @@ stratifies the free mapping space into DISCRETE classes, and within a
 class the sheet data is rigid — the finiteness question becomes the
 finiteness of admissible parity classes, a cohomological count. This
 is the route; (T1a) is NOT closed tonight and is stated so.
+
+### 5.19 The branch quartic in closed form, the γ-criterion, and what the projection does and does not buy
+
+**Δ_v by hand (with a built-in consistency check).** Recentering
+`F` at the χ₁-vertex (`x = 1 + x′`) gives `ℓ = Q₁(a,b)`,
+`q = 2Q₁x′ + c·yz`, `k = C + Q₁x′² + Q₂y² + Q₃z² + cx′yz`, and in
+`Δ_v = q² − 4ℓk` every `x′`-term CANCELS (as it must — the
+discriminant lives on the projection base `P³`):
+
+```
+    Δ_v  =  c²y²z² − 4·Q₁(a,b)·[ Q₂(a,b)y² + Q₃(a,b)z² + C(a,b) ] .
+```
+
+(C5)'s job shrinks to the geometry: irreducibility, singular locus,
+V4-orbit structure, and the census of `X`-lines through each χ-vertex
+(the contracted locus; `L₂, L₃` are already known members).
+
+**The γ-criterion (proved).** `Δ_v ≡ (cyz)²` modulo `Q₁`, so a
+pullback `h*Δ_v` is a perfect square iff the square root has the form
+`g = cYZ − 2Lγ`, which unwinds to: **`h` lifts to `X` iff there is a
+form `γ` (of character `χ₁`) with**
+
+```
+    Q₂(A,B)Y² + Q₃(A,B)Z² + C(A,B)  =  γ·( c·YZ − Q₁(A,B)·γ ) .
+```
+
+**Honest scope (recorded so nobody over-reads 5.18-B).** Pointwise,
+substituting the parity shapes (`A = xyz·Ã(t,v,w)` etc.,
+`γ = x·γ̃`, `(t,v,w) = (x²,y²,z²)`) turns this into the SINGLE
+degree-`3s` identity in the invariant variables
+
+```
+  Q₂(Ã,B̃)vỸ² + Q₃(Ã,B̃)wZ̃² + tvw·C(Ã,B̃) + t·Q₁(Ã,B̃)γ̃²
+      − c·γ̃ỸZ̃ = 0 ,
+```
+
+which is `F(T) ≡ 0` verbatim under `u₀′ = xγ̃` — the projection is a
+REWRITING at the pointwise level, not new content. Its genuine
+value: (a) COMPUTATIONAL — the 52-equation slot systems collapse to
+one identity in three invariant variables with unknown degrees
+`(s−1, s−1, s, s, s)`; (C3)-type runs should use this presentation;
+(b) **FAMILY-LEVEL MONODROMY (new content, proved):** for a FAMILY of
+pointwise elements over a base curve, the sheet datum is a 2-torsion
+(square-root) choice; over `ℓ_V ≅ P¹` double covers are classified by
+finite branch-parity data, so **the lifting data of any `P¹`-family is
+FINITE, and family moduli = (free `h`-family moduli) × (finite
+2-torsion data) intersected with the fiberwise γ-criterion.** This is
+the discrete stratification the parity-count route runs on; the core
+finiteness still requires the tail/vertex-jet analysis of 5.18-A —
+(T1a) remains the one open theorem, now attackable in the smallest
+coordinates it has ever had.

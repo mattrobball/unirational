@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `d05d4fa` (2026-08-05; the
+Snapshot metadata — notebook parent head: `4952617` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2542,7 +2542,22 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   criterion over the contracted lines (derivation), **(C5)** compute
   `Δ_v` + V4-structure (small CAS), then orbit-finiteness as a
   parity-class count. **(T1a) NOT closed tonight — stated plainly;
-  the double projection is the weapon it will be closed with.**** Same-day
+  the double projection is the weapon it will be closed with. Ninth
+  wave (Note IV §5.19, 2026-08-06): **the branch quartic in closed
+  form, by hand** — `Δ_v = c²y²z² − 4Q₁(Q₂y² + Q₃z² + C)`, with the
+  `x′`-cancellation as built-in consistency check and
+  `Δ_v ≡ (cyz)² mod Q₁`; **the γ-criterion (proved)** — `h` lifts to
+  `X` iff `Q₂Y² + Q₃Z² + C = γ(cYZ − Q₁γ)` for a `χ₁`-form `γ`;
+  **honest scope recorded**: pointwise the projection is a REWRITING
+  of `F(T) = 0` (`u₀′ = xγ̃` collapses the 52-equation systems to ONE
+  degree-`3s` identity in the invariant variables `(t,v,w)` — adopt
+  for all (C3)-type runs), while the NEW content is the family-level
+  monodromy principle: sheet data of `P¹`-families is finite 2-torsion
+  branch-parity data, giving the discrete stratification the (T1a)
+  parity count runs on. `FIX-C5` dispatched (in flight): verify
+  `Δ_v`, irreducibility, singular locus, the census of `X`-lines
+  through the χ-vertex, γ-criterion smoke test on a Chebyshev
+  witness.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

@@ -143,7 +143,7 @@ degree-14 ternary form).
 
 ---
 
-## 2. `PO₁(7)` is INFINITE — reason (a), the reparametrisation torus
+## 2. The reparametrisation torus: the trivial directions
 
 `(s,t,w)·T := T(sx, ty, wz)` preserves the slot parities, the degree, the
 **monomial support** (hence every plane order exactly) and the landing
@@ -156,13 +156,15 @@ vectors `E_x, E_y, E_z` (with `E_x+E_y+E_z = 7·id`, the global scalar).
 Hence through every classified point `PO₁(7)` contains a **2-dimensional
 projective rational (toric) subvariety**. In particular
 
-> `dim PO₁(7) ≥ 2`, and `PO₁(7)` is infinite.
+> `dim PO₁(7) ≥ 2`. This is the trivial infinitude of Note IV §5.9(d):
+> `FIN(7)` in its original phrasing is vacuously "infinite", which is why the
+> question is asked modulo the torus below.
 
 Explicitly, `τ ↦ (1, τ, 1)·p` is a non-constant rational curve inside
 `PO₁(7)` through `p`: the `y`-degrees occurring in `supp(p)` are
 `{0,1,2,3,4,5,6}` at every one of the 27 points (`c3_and_curve.py`).
 
-## 3. `PO₁(7)` is INFINITE — reason (b), three 17-dimensional linear components
+## 3. Three components of mod-torus dimension 15 (the real answer)
 
 If `a′ = b′ = 0` then `F(T) = u₀′u₁′u₂′`, and the polynomial ring is a domain,
 so one of the `u_i′` vanishes. Each of the three resulting **linear** spaces
@@ -177,8 +179,12 @@ plane orders exactly `(1,1,1)` (e.g. for `u₂′ = 0` one needs
 `K`-rational member the **exact** corank of the `52 × 39` Jacobian is **18**,
 so the component is exactly that linear space:
 
-> three components of `PO₁(7)` of projective dimension **exactly 17**;
-> `dim PO₁(7) ≥ 17`.
+> three components of `PO₁(7)` of projective dimension **exactly 17**, on
+> which the generic torus orbit is 2-dimensional (exact: the three weight
+> vectors are independent at a `K`-rational member). So each contributes
+> **15 dimensions modulo the torus**:
+>
+> **`PO₁(7)` is NOT a finite union of torus orbits; `dim PO₁(7)/torus ≥ 15`.**
 
 Geometrically these are the tuples whose image is contained in one of the three
 `V4`-stable lines `⟨u_j, u_k⟩ ⊂ X`. (A smooth cubic threefold contains no

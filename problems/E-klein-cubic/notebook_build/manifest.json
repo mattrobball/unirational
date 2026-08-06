@@ -1427,6 +1427,17 @@
    "char0_scope": "char0 exact (self-contained Q(omega,nu) engine; 272 checks; 40-digit numerics; 11-frame independence)",
    "tracked": "main",
    "notes": "landed 2026-08-06, director-replayed (272/272, FIX_L1_VERIFY_OK). alpha = 3(3+sqrt33) = 12c with F(c_sigma) = c^3 => alpha = 0 iff F(c_sigma) = 0: the t-channel nondegeneracy IS the certified c_sigma-off-X fact (structural, undegenerable). beta = 1 (the xyz-coefficient); std-block perfect pairing. Transfer condition NONVACUOUS in all four (m,twist) cases, solution space 1-dim each. All four V_m[twist] generators closed-form (V3[sgn] matches H1). Correction to Note IV sec5.8: Theta-space is 3-dim at m=3 (Sym^4 std = triv + 2 std), transfer codim 2 (the C^2/Schur claim was m=1 only) — applied. Flagged open bookkeeping: possible forced D-divisibility of Theta at c_sigma (shifts rung orders; budget unaffected). Discharges (C2) of Note IV sec5.14."
+  },
+  {
+   "path": "goal_runs_after_9094303/FIX_C5_BRANCH_QUARTIC",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "PROPOSAL-UNRUN",
+   "primary_exit": "UNDECIDED",
+   "superseded_by": null,
+   "char0_scope": "in flight",
+   "tracked": "main",
+   "notes": "IN-FLIGHT (2026-08-06, opus): FIX-C5 — named by Note IV sec5.18-5.19: verify the hand-derived branch quartic Delta_v, its irreducibility/singular locus/V4-structure, the census of X-lines through the chi-vertex (contracted locus), and the gamma-criterion smoke test on a Chebyshev witness. Input to (T1a)'s parity-count route."
   }
  ],
  "known_branches": [
