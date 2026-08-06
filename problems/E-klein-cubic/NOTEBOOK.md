@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `ed980f7` (2026-08-05; the
+Snapshot metadata — notebook parent head: `450a17d` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2624,7 +2624,32 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   `Δ_q`-parity calculus as (D1) at three marked points —
   finite-dimensional, degree-uniform. **The last conceptual obstacle
   in (T1a) is gone. Remaining, all finite and named: (D2′), (D3),
-  (T1b), (C2′), (C3), (C5 in flight), (T1c), assembly + audit.**** Same-day
+  (T1b), (C2′), (C3), (C5 in flight), (T1c), assembly + audit.
+  Thirteenth wave (Note IV §5.24, 2026-08-06): **Correction IV-d
+  (fourth self-caught, conceptual)** — 5.23(iii) overclaimed: the
+  equalizer consumes the fibers' VERTEX-side data (`Λ = diag(β₁,β₂)`,
+  the section at the fiber vertex), not the source-line data whose
+  rigidity 5.23(i)–(ii) proved. Replaced by something stronger:
+  **Thm 5.24-A (product pinning)** — the vertex conic relation pins
+  `β₁β₂ = g(λ)`, an explicit plus-side function (`Q₁γ̃/c` at the
+  vertex); only the ratio is an interior modulus. **Thm 5.24-B
+  (square-root structure)** — equalizer-passing jets satisfy
+  `w² = g_{4e}(p_i)`: the nonvanishing branch passes the buck
+  entirely to the Θ-jets at `c_σ`, where I₀/I₁ live — **[U1] and [L]
+  merge into one coupled jet problem**. **Thm 5.24-C ((D3) CLOSED,
+  one line)** — image-in-line components have plus ≡ 0 ⟹ `g ≡ 0` ⟹
+  `w = 0`: equalizer jets vanish there in every degree. **The
+  TERMINAL SYSTEM (D2″)** defined: five coupled jet conditions at
+  `c_σ` (square-root pinning, order-1 equalizer, I₀-transfer with the
+  L1 constants `α = 12c, β = 1`, the `g`-loop in the same
+  θ-variables, I₁-binding) — ONE exact finite computation decides the
+  `w ≠ 0` branch; `w = 0` is the evasion channel killed by [L]
+  (budget 5.15 + (C2) discharged + (C2′)). **Supersessions with
+  justification: (T1b), (T1c), (C3) RETIRE** — the terminal-system
+  route is component-agnostic (uses only P2–P4, the vertex relation,
+  I₀/I₁, L1 constants; never the pointwise classification).
+  **Complete remaining ledger: (D2″) + (C2′), then assembly + the
+  full independent audit. Nothing else remains.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

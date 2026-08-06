@@ -1062,3 +1062,72 @@ of the line. This is finite-dimensional, uniform in degree
 (D3 — the linear image-in-line components) + (T1c strata). The last
 conceptual obstacle in (T1a) is gone; everything remaining is finite,
 explicit, and named.
+
+### 5.24 Correction IV-d, the product pinning, (D3) closed, and the TERMINAL SYSTEM
+
+**Correction IV-d (fourth self-caught; conceptual).** 5.23(iii)
+overclaimed: the equalizer consumes the fibers' VERTEX-side data
+(`Λ(λ) = diag(β₁, β₂)` with `β_i` = the `x^{r−1}y/z`-coefficients =
+the section evaluated at the fiber vertex `(t:v:w) = (1:0:0)`), NOT
+the source-line data whose rigidity (i)–(ii) proved. The line-data
+rigidity stands but is not the consumed boundary; interior moduli CAN
+reach the vertex values. What replaces the overclaim is stronger:
+
+**Theorem 5.24-A (the product pinning — proved).** Evaluating the
+conic identity at the fiber vertex (where `vQ₂, wQ₃ → 0`):
+`c·Ỹ₀Z̃₀ = Q₁(Ã₀,B̃₀)·γ̃₀`, i.e. **the PRODUCT `β₁β₂ = u·v` of the
+equalizer entries is pinned to an explicit plus-side (Θ) function
+`g(λ)` along `ℓ_V`** (`= Q₁γ̃/c` at the vertex; if `γ̃₀ = 0` the
+pinning reads `Ỹ₀Z̃₀ = 0` — still a pinning). Only the RATIO
+`β₁/β₂` is an interior modulus. ∎ (This is IV-b's second-fundamental-
+form equation reborn at the right boundary.)
+
+**Theorem 5.24-B (square-root structure of equalizer-passing jets —
+proved).** With `u_{2e} = v_{2e} = w` (the order-0 equalizer for
+`m = 1`) and `u, v` vanishing to order `≥ 2e` at `p_i`:
+`(uv)_{4e} = u_{2e}v_{2e} = w²`, so `w² = g_{4e}(p_i)`: **the
+equalizer-passing jets are square roots of the Θ-side function's
+jets.** The nonvanishing branch (`w ≠ 0`) therefore requires
+`g`'s `4e`-jet ≠ 0 at the D12-points — the buck passes entirely to
+the plus-side jets at `c_σ`, exactly where the I₀/I₁ machinery
+(§§5.7–5.8, FIX-L1 constants) lives: **[U1] and [L] merge into one
+coupled jet problem at `c_σ`.** ∎
+
+**Theorem 5.24-C ((D3) closed — proved).** On the image-in-line
+components the plus-part is IDENTICALLY zero, so `g ≡ 0`, so
+`w² = 0`, so `w = 0`: **the equalizer-passing jets vanish on all
+three linear components, in every degree.** ∎ (One line, from the
+product pinning.)
+
+**The TERMINAL SYSTEM (D2″).** The nonvanishing branch (`w ≠ 0`) of
+[U1] survives iff the following finite jet system at `c_σ` is
+solvable: (a) `λ_{2e} = w·id`, `w² = g_{4e}(c_σ)` (5.24-B);
+(b) H1-1's order-1 condition `u_{2e+1} + v_{2e+1} = 0`; (c) the
+I₀-identity's leading jet: `w²·[α·θ_t·κ_t + β·⟨θ_s, κ_s⟩] = 0` with
+`(κ_t, κ_s)` the isotypic components of `id⊗id` (FIX-L1's constants:
+`α = 12c ≠ 0`, `β = 1`; the bracket's nondegeneracy is L1-checkable),
+forcing `w = 0` or `θ` onto the transfer subspace; (d) `g`'s jet
+re-expressed in the SAME `θ`-variables (`g = Q₁γ̃/c` is quadratic in
+the plus-data), closing the loop; (e) I₁ binding one order deeper.
+Deciding this system — finitely many jet variables, all constants
+banked — is **(D2″): ONE exact finite computation.** If inconsistent
+for `w ≠ 0`: [U1] holds and every germ enters the `w = 0` evasion
+channel, killed by [L] (= Thm 5.15's budget + (C2) discharged +
+(C2′)).
+
+**Supersessions (recorded with justification).** The terminal-system
+route is COMPONENT-AGNOSTIC: it uses only the germ structure
+(P2)–(P4), the vertex conic relation (from `F`'s invariant shape,
+always valid), I₀/I₁, and the L1 constants — never the pointwise
+classification. Consequently **(T1b) (conic floor), (T1c) (endpoint
+dictionary), and (C3) (tail resultant) RETIRE as superseded**: they
+belonged to the abandoned finiteness route. Degenerate vertex cases
+(`γ̃₀ = 0` at special `λ`) are inside 5.24-A's pinning and the jet
+bookkeeping, not separate strata.
+
+**The complete remaining ledger for the negative headline:**
+**(D2″)** the terminal system (one finite exact computation, all
+inputs banked) and **(C2′)** the rung-independence check (one finite
+linear-algebra computation) — then assembly of Theorem 3.1 and the
+full independent audit. Nothing else remains anywhere in the
+program.
