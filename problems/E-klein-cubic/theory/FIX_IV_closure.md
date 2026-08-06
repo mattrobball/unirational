@@ -1241,6 +1241,34 @@ EXACTLY the image-in-line components, or are there extra components
 (which would be the true terminal candidates, delivered explicitly)?
 This is a linear slice of a solved system — hours, not days.
 
+**Director probe of (C7) (2026-08-06, UNSEALED — msolve single-engine,
+bare-integer, six systems, seconds each; the FIX-D2 worker seals it):
+the equivariant plus-deep PO-1 locus at `r = 7` is EMPTY** — unit
+ideal in all three eigenblocks, saturated at `B5` and at `B8`
+separately. Two consequences, modulo the sealing:
+
+- **(i) The image-in-line components are invisible equivariantly**
+  (found en route, structural, exact): the residual-C3 relations make
+  the three minus slots rotations of ONE function (`u₁′ = λ⁻¹u₀′∘S`),
+  so `u₀′ ≡ 0` forces ALL minus slots to vanish — FIN(7)'s linear
+  components are purely non-equivariant objects. Fibers of a family
+  CAN be image-in-line only away from the two `C₃`-fixed points of
+  `ℓ_V`.
+- **(ii) Forced extra vanishing and D_B-degeneration at the special
+  fibers.** On the `w ≠ 0` branch every fiber is plus-deep
+  (Brutality); at the two `C₃`-fixed points of `ℓ_V` the fibers are
+  ALSO equivariant (Specialisation Lemma) — and the probe says
+  plus-deep + equivariant + PO-1 is impossible. Hence at those two
+  points the fiber's minus-order jumps to `≥ 3` (parity forbids 2),
+  i.e. `Λ` VANISHES at the two `C₃`-fixed points in addition to the
+  D12-orbit: the degree bound sharpens to `n = d − r ≥ 6e + 2`, and
+  the special fibers are forced into the plus-deep minus-order-3
+  locus — which is exactly where the `D_B`-shaped elements live
+  (their plus-order is 4). The `w ≠ 0` germ is thus pinned:
+  generically PO-1 along `ℓ_V`, `D_B`-type at the two special
+  points, vanishing at five marked points of `ℓ_V`. The stage
+  analysis inherits all of this structure.
+
 **The departure recursion (proposition, proof-sketch recorded).** If
 (C7) returns image-in-line-only: the `w ≠ 0` germ's leading data land
 entirely in ONE arrangement line; define the DEPARTURE ORDER

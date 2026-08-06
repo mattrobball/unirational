@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `a4a7d06` (2026-08-05; the
+Snapshot metadata — notebook parent head: `83c772a` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2733,7 +2733,24 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   stages**, and the E15-table budget count demotes to FALLBACK.
   FIX-D2 re-redirected (third): (C7) first, then the stage system;
   output-discipline directive in force after the worker's 64k
-  overflow death and resume.**** Same-day
+  overflow death and resume. Eighteenth wave — **director probe of
+  (C7)** (2026-08-06, UNSEALED, msolve single-engine on six
+  bare-integer systems, seconds each; worker seals): **the
+  equivariant plus-deep PO-1 locus at `r = 7` is EMPTY** (unit ideal,
+  all three eigenblocks, both saturations). Consequences modulo
+  sealing (Note IV §5.27-probe block): (i) the image-in-line
+  components are purely NON-equivariant (the C3-relations make the
+  three minus slots rotations of one function — found en route,
+  exact); (ii) on the `w ≠ 0` branch the fibers at the TWO C3-fixed
+  points of `ℓ_V` are equivariant + plus-deep, hence NOT PO-1: their
+  minus-order jumps to ≥ 3 (parity), `Λ` vanishes at five marked
+  points (`3 D12 + 2 C3-fixed`), the degree bound sharpens to
+  `n ≥ 6e + 2`, and the special fibers are forced into the
+  `D_B`-shaped plus-deep locus. The `w ≠ 0` germ is pinned:
+  generically PO-1, `D_B`-type at the special points — the stage
+  analysis inherits this. Probe artifacts in the session scratchpad;
+  the sealed (C7) with two engines + controls remains FIX-D2's
+  deliverable.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
