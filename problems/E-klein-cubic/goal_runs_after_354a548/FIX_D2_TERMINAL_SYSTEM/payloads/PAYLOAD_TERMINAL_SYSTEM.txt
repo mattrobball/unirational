@@ -1,0 +1,84 @@
+FIX-D2  PAYLOAD -- THE TERMINAL SYSTEM (D2''), assembled and displayed in full
+==============================================================================
+Frame: FIX-L1's certified sigma-frame.  W+ = <E_a,E_b,E_x>, W- = <E_y,E_z>.
+   F  = kp a^3 + km b^3 + a(x^2 + om y^2 + om^2 z^2) + b(x^2 + om^2 y^2 + om z^2) + xyz
+   F0(a,b,x) = kp a^3 + km b^3 + (a+b) x^2
+   Q(w;S)    = a(om S11 + om^2 S22) + b(om^2 S11 + om S22) + x S12,   S = y (x) y
+   kp = (13+3sqrt33)/16 , km = (13-3sqrt33)/16 , c = (3+sqrt33)/4
+   c_sigma = [1 : -(7+sqrt33)/4 : 0] ,  F0(c_sigma) = c^3
+   alpha = Q(c_sigma;Omega) = 9+3sqrt33 = 12c != 0 ,   beta = 1
+   Q-Gram (rows a,b,x ; cols S11,S12,S22) = [[om,0,om^2],[om^2,0,om],[0,1,0]],
+   det = delta = 1+2om,  delta^2 = -3   ==>  Q : W+ ~= (Sym^2 W-)*  ISOMORPHISM.
+
+UNKNOWNS (m = 1 branch (ii), r = 7, e = 6 ; the m = 3 branch (i) is analogous)
+------------------------------------------------------------------------------
+   w                      in C            the equalizer scalar
+   Theta^(0)(c_sigma)     in Hom(Sym^2 W-, W+)^{S3}          dim 2
+   Theta^(0) jets order k in ( Sym^k(std*) (x) Hom(Sym^2 W-,W+) )^{S3}
+                                                             dim 2,3,5,6,...
+   Theta^(1)              in Hom(Sym^4 W-, W+)               dim 15
+   Psi = Phi^(0)/D^e      in Hom(W-,W-) = End(W-)  along P_sigma
+   lambda_{2e}, lambda_{2e+1}   the equalizer jets of Lambda = diag(u,v)
+
+THE EQUATIONS
+------------------------------------------------------------------------------
+(a)  ORDER-0 EQUALIZER  (H1-1(b), Thm 5.24-B(a))
+        lambda_{2e}  =  w . id            [ V_1[triv] = <id>, 1-dimensional ]
+     STATUS: in force.  Satisfiable for every w.  Does not constrain anything else.
+
+(b)  SQUARE-ROOT PINNING  w^2 = g_{4e}(c_sigma)
+     STATUS: **VACUOUS** -- Correction IV-e: gamma~_0 = [x^r] u_0' == 0 identically
+     (the fiber vertex is a base point), so the vertex conic relation reads 0 = 0.
+     NOT COMPUTED, per the director's first redirect.
+
+(c)  I0's LEADING JET     w^2 . [ alpha.theta_t.kappa_t + beta.<theta_s,kappa_s> ] = 0
+     Exact reading: this is  kappa_Psi(Theta^(0)) = 0  with
+        kappa_Psi(Theta)(y) := Q( Theta(y) ; Psi(y) (x) Psi(y) )  in Sym^{3m+1}(W-)*.
+     STATUS: in force.
+     BRACKET NONDEGENERACY (the question the brief asked): the bracket IS a
+     NONZERO linear functional of theta -- rank 1 on the 2-dim equivariant space
+     at m=1, rank 2 on the 3-dim space at m=3 (FIX-L1 regression reproduced).
+     BUT its kernel is 1-dimensional and NONZERO, so it does NOT force w = 0.
+
+(d)  g's jet re-expressed in the theta-variables
+     STATUS: **VACUOUS** with (b).
+
+(e)  I1's LEADING BINDING
+        2Q(Theta^(0);Phi^(0),Phi^(1)) + Q(Theta^(1);Phi^(0),Phi^(0)) + F0(Theta^(0)) = 0
+     y-level: (m+1)+m+(m+2) = (m+3)+m+m = 3(m+1) = 3m+3 -- all three terms agree.
+     Reduces to   kappa_Psi(Theta^(1))  =  -( cross terms ) ,
+     a map  15 --> 7  of rank 7 (SURJECTIVE).  Solvable for EVERY right-hand side.
+     STATUS: in force, and never obstructing.
+
+(f)  H1-1's ORDER-1 CONDITION   u_{2e+1} + v_{2e+1} = 0
+     i.e. lambda_{2e+1} in <diag(1,-1)> (H1 sec.9).  Satisfiable; no constraint on w.
+
+THE CONTRACTION TABLE (the heart of the system)
+------------------------------------------------------------------------------
+   kappa_Psi : Hom(Sym^n W-, W+)  -->  Sym^{n+2m}(W-)*
+   level      n  m  Psi          source  target  rank  KERNEL
+   I0 m=1     2  1  id/V1[sgn]        9       5     5       4
+   I1 m=1     4  1  any              15       7     7       8
+   I2 m=1     6  1  any              21       9     9      12
+   I0 m=3     4  3  V3[triv]/[sgn]   15      11     7       8
+   I0 m=3     4  3  generic          15      11    11       4
+   I1 m=3     6  3  V3[*]            21      13     9      12
+   Clebsch-Gordan:  2(x)2 = 4+2+0 -> ker 3+1 = 4 ;  4(x)2 = 6+4+2 -> ker 5+3 = 8 ;
+                    6(x)2 = 8+6+4 -> ker 7+5 = 12.
+   Degeneracy at m=3:  V3[triv] = (y^2-((5+nu)/6)z^2).V1[triv]
+                       V3[sgn]  = (((-5+nu)/6)y^2+z^2).V1[sgn]
+   so kappa_{V3[*]} = h^2 . kappa_{V1[*]}, rank 7 not 11.  FORCED (each space is
+   1-dimensional -- there is no generic choice available at m = 3).
+
+SOLUTION LOCUS  (m = 1)
+------------------------------------------------------------------------------
+   w                      free, != 0                (nothing pins it)
+   Theta^(0)(c_sigma)     a 1-dim line in a 2-dim space  (generator in d2_partD.json)
+   Theta^(0) jets 0..3    residual freedom  1, 2, 4, 7   (see PAYLOAD_C2PRIME.txt)
+   Theta^(1)              free in the 8-dim ker kappa ~= (Sym^4)* (+) (Sym^2)*
+   Phi^(1), deeper minus  unconstrained level-locally
+   lambda_{2e+1}          free in <diag(1,-1)>
+
+VERDICT:   FIX-D2-TERMINAL-SOLVABLE
+           (the w != 0 branch is NOT killed by the terminal system)
+SECONDARY: FIX-D2-CORRECTION-IV-f  (Theorem 5.25-A is false as stated)

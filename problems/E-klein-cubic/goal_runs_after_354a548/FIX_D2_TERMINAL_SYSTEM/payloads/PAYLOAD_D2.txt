@@ -1,0 +1,124 @@
+FIX-D2 PRODUCER  --  exact sigma-frame from FIX-L1
+====================================================================
+
+PART A -- frame self-tests
+--------------------------------------------------------------------
+  [PASS] delta^2 = -3
+  [PASS] sqrt33^2 = 33
+  [PASS] nu^2 = -11
+  [PASS] om^2+om+1 = 0
+  [PASS] alpha = 12c
+  [PASS] alpha = 16kp-4
+  [PASS] rho|W- order 3
+  [PASS] tau|W- order 2
+  [PASS] rho|W+ order 3
+  [PASS] tau|W+ order 2
+  [PASS] S3 relation on W-
+  [PASS] S3 relation on W+
+  [PASS] Q rho-invariant
+  [PASS] Q tau-invariant
+  [PASS] F0 rho-invariant
+  [PASS] F0 tau-invariant
+  [PASS] c_sigma rho-fixed
+  [PASS] c_sigma tau-fixed
+  [PASS] F0(c_sigma) = c^3
+  [PASS] alpha = Q(c_sigma;Omega)
+  [PASS] beta = Q(E_x;v_-) = 1
+
+  Q-Gram matrix (rows a,b,x ; cols S11,S12,S22):
+      [ (1)*om , 0 , -1 + (-1)*om ]
+      [ -1 + (-1)*om , 0 , (1)*om ]
+      [ 0 , 1 , 0 ]
+  det = 1 + (2)*om   (= delta = 1 + (2)*om ?  True)
+  [PASS] Q-ISOMORPHY  W+ = (Sym^2 W-)*  (det != 0)
+  [PASS] det Q-Gram = delta  (FIX-L1 finding 2)
+
+PART A: 23 checks, 0 failures
+
+====================================================================
+PART B -- the contraction operators kappa_Psi : exact ranks
+====================================================================
+kappa_Psi(Theta)(y) := Q( Theta(y) ; Psi(y) (x) Psi(y) )
+Theta in Hom(Sym^n W-, W+)  (dim 3(n+1)) ;  target Sym^{n+2m}(W-)*
+
+  level                  Psi                dim   tgt  rank    ker
+  m=1  I0   Theta^(0)    Psi=id=V1[triv]      9     5     5      4
+  m=1  I0   Theta^(0)    Psi=V1[sgn]          9     5     5      4
+  m=1  I0   Theta^(0)    Psi=generic          9     5     5      4
+  m=1  I1   Theta^(1)    Psi=id=V1[triv]     15     7     7      8
+  m=1  I1   Theta^(1)    Psi=V1[sgn]         15     7     7      8
+  m=1  I1   Theta^(1)    Psi=generic         15     7     7      8
+  m=1  I2   Theta^(2)    Psi=id=V1[triv]     21     9     9     12
+  m=1  I2   Theta^(2)    Psi=generic         21     9     9     12
+  m=3  I0   Theta^(0)    Psi=V3[triv]        15    11     7      8
+  m=3  I0   Theta^(0)    Psi=V3[sgn]         15    11     7      8
+  m=3  I0   Theta^(0)    Psi=generic         15    11    11      4
+  m=3  I1   Theta^(1)    Psi=V3[triv]        21    13     9     12
+  m=3  I1   Theta^(1)    Psi=V3[sgn]         21    13     9     12
+  m=3  I1   Theta^(1)    Psi=generic         21    13    13      8
+
+====================================================================
+PART C -- S3-equivariant restriction at c_sigma  (FIX-L1 regression)
+====================================================================
+  dim Hom(Sym^2 W-, W+)^{S3} = 2   (expected 2)
+  dim Hom(Sym^4 W-, W+)^{S3} = 3   (expected 3)
+  dim Hom(Sym^6 W-, W+)^{S3} = 4   (expected 4)
+  dim Sym^4(W-)*^{S3} = 1
+  dim Sym^6(W-)*^{S3} = 2
+  dim Sym^10(W-)*^{S3} = 2
+  dim Sym^12(W-)*^{S3} = 3
+
+  V_m[twist] regression (FIX-L1 sec.4 generators):
+    V1[triv] : rho-equivariant True , tau-twist True
+    V1[sgn]  : rho-equivariant True , tau-twist True
+    V3[triv] : rho-equivariant True , tau-twist True
+    V3[sgn]  : rho-equivariant True , tau-twist True
+
+  the transfer condition kappa_gamma restricted to the S3-parts:
+    m     gamma        dim  rank kernel
+    m=1   V1[triv]       2     1      1
+    m=1   V1[sgn]        2     1      1
+    m=3   V3[triv]       3     2      1
+    m=3   V3[sgn]        3     2      1
+
+====================================================================
+PART D -- explicit kernel witnesses  (adjudication of Thm 5.25-A)
+====================================================================
+  D1. structural factorisation of the m=3 generators
+     V3[triv]  =  h . V1[triv]   with h = 1 , 0 , -5/6 + (-1/6)*nu  ->  MATCH
+     V3[sgn]   =  h . V1[sgn]    with h = -5/6 + (1/6)*nu , 0 , 1  ->  MATCH
+     => the equalizer-forced m=3 leading minus-datum is DEGENERATE:
+        Psi_0 = (S3-semi-invariant quadratic) x (m=1 generator).
+        This is exactly why kappa_{V3[*]} has rank 7 (not 11).
+
+  D2. ker kappa at level I0 (m=1), Psi = id  --  the 4-dim residual
+     dim ker = 4   (source 9, target 5, rank 5)
+     ker basis 1 :  (2 + (1)*om)*y^2 (x) E_x + (1 + (1)*om)*yz (x) E_a + (1)*yz (x) E_b
+     ker basis 2 :  (1/3 + (-1/3)*om)*y^2 (x) E_a + (2/3 + (1/3)*om)*y^2 (x) E_b + (1)*yz (x) E_x
+     ker basis 3 :  (-1)*y^2 (x) E_a + (-1 + (-1)*om)*y^2 (x) E_b + (1 + (1)*om)*z^2 (x) E_a + (1)*z^2 (x) E_b
+     ker basis 4 :  (-1 + (-1)*om)*y^2 (x) E_x + ((-1)*om)*yz (x) E_a + (1)*z^2 (x) E_x
+     [PASS] every listed element re-verified: kappa_id(Theta) == 0.
+
+  D3. the S3-equivariant survivor at c_sigma (FIX-L1's 1-dim kernel)
+     m=1  gamma=V1[triv] : survivor NONZERO=True , kappa(survivor)=0 : True
+     m=1  gamma=V1[sgn]  : survivor NONZERO=True , kappa(survivor)=0 : True
+     m=3  gamma=V3[triv] : survivor NONZERO=True , kappa(survivor)=0 : True
+     m=3  gamma=V3[sgn]  : survivor NONZERO=True , kappa(survivor)=0 : True
+
+  VERDICT (Part D): on the w != 0 branch the I0 identity does NOT
+  force Theta^(0) = 0.  Pointwise it confines Theta^(0)(w) to
+  ker kappa_{Psi(w)} (dim 4 at m=1 / dim 8 at m=3 for the forced
+  degenerate Psi_0); S3-equivariantly at c_sigma it leaves the
+  1-dimensional line already computed and banked by FIX-L1.
+
+====================================================================
+PART E -- MUST-FAIL CONTROLS (harness self-test)
+====================================================================
+  [PASS] control 'beta:=0 Q is rho-invariant' correctly fails
+  [PASS] control 'kappa_id injective at I0 (m=1)' correctly fails
+  [PASS] control 'kappa_id injective at I1 (m=1)' correctly fails
+  [PASS] control '[1:1:0] is rho-fixed' correctly fails
+  [PASS] control 'id lies in V1[sgn]' correctly fails
+  [PASS] control 'dim Sym^4(W-)*^{S3} == 2' correctly fails
+
+PART E: 6 controls, 0 harness failures

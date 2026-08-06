@@ -1,0 +1,69 @@
+FIX-D2 INDEPENDENT VERIFIER
+====================================================================
+
+1. field + frame DERIVED (only rho|W-, tau|W-, normal-form Q posited)
+  [PASS] om^2+om+1 = 0
+  [PASS] nu^2 = -11
+  [PASS] sqrt33^2 = 33
+  [PASS] rho|W+ derived: order 3
+  [PASS] tau|W+ derived: order 2
+  [PASS] S3 relation on W+
+  [PASS] rho|W+ matches FIX-L1 entry (1,1) = 1/4 - sqrt33/12
+  [PASS] tau|W+ = diag(1,1,-1)
+  [PASS] Q-ISOMORPHY: det Gram != 0
+  [PASS] det Gram = delta
+  [PASS] dim (W+)^{S3} = 1
+  [PASS] beta_{c_sigma} = -(7+sqrt33)/4
+  [PASS] c_sigma x-coordinate = 0
+  [PASS] kp = (13+3 sqrt33)/16
+  [PASS] km = (13-3 sqrt33)/16
+  [PASS] alpha = 9 + 3 sqrt33
+  [PASS] alpha satisfies a^2-18a-216 = 0
+  [PASS] alpha != 0
+  [PASS] beta = Q(E_x;v_-) = 1  (the xyz-coefficient)
+
+2. V_m[twist] generators DERIVED, and the m=3 FACTORISATION
+  [PASS] dim V_1[triv] = 1
+  [PASS] dim V_1[sgn] = 1
+  [PASS] dim V_3[triv] = 1
+  [PASS] dim V_3[sgn] = 1
+  [PASS] V_3[triv] = (quadratic) . V_1[triv]  -- forced degeneracy
+  [PASS] V_3[sgn] = (quadratic) . V_1[sgn]  -- forced degeneracy
+
+3. the contraction ranks  (THE decisive table)
+   m=1 I0   Psi=V1[triv]  dim  9 -> tgt  5 : rank  5 , KERNEL  4
+   m=1 I0   Psi=V1[sgn ]  dim  9 -> tgt  5 : rank  5 , KERNEL  4
+   m=1 I1   Psi=V1[triv]  dim 15 -> tgt  7 : rank  7 , KERNEL  8
+   m=1 I2   Psi=V1[triv]  dim 21 -> tgt  9 : rank  9 , KERNEL 12
+   m=3 I0   Psi=V3[triv]  dim 15 -> tgt 11 : rank  7 , KERNEL  8
+   m=3 I0   Psi=V3[sgn ]  dim 15 -> tgt 11 : rank  7 , KERNEL  8
+   m=3 I1   Psi=V3[sgn ]  dim 21 -> tgt 13 : rank  9 , KERNEL 12
+   m=1 I0 gen  generic Psi   dim  9 -> tgt  5 : rank  5 , KERNEL  4
+   m=3 I0 gen  generic Psi   dim 15 -> tgt 11 : rank 11 , KERNEL  4
+  [PASS] I0 (m=1) kernel is 4-dimensional, NOT zero
+  [PASS] I1 (m=1): rank 7 = full target (Thm 5.26-A)
+  [PASS] I1 (m=1): kernel 8 = 5+3 (Clebsch-Gordan 4(x)2 = 6+4+2)
+
+4. the S3-equivariant transfer condition at c_sigma (FIX-L1 regression)
+  [PASS] m=1 triv : dim Theta^{S3} = 2 , transfer rank = 1 , KERNEL = 1
+  [PASS]    -> survivor Theta^(0)(c_sigma) is NONZERO
+  [PASS]    -> and satisfies kappa(Theta) == 0 identically
+  [PASS] m=1 sgn : dim Theta^{S3} = 2 , transfer rank = 1 , KERNEL = 1
+  [PASS]    -> survivor Theta^(0)(c_sigma) is NONZERO
+  [PASS]    -> and satisfies kappa(Theta) == 0 identically
+  [PASS] m=3 triv : dim Theta^{S3} = 3 , transfer rank = 2 , KERNEL = 1
+  [PASS]    -> survivor Theta^(0)(c_sigma) is NONZERO
+  [PASS]    -> and satisfies kappa(Theta) == 0 identically
+  [PASS] m=3 sgn : dim Theta^{S3} = 3 , transfer rank = 2 , KERNEL = 1
+  [PASS]    -> survivor Theta^(0)(c_sigma) is NONZERO
+  [PASS]    -> and satisfies kappa(Theta) == 0 identically
+
+5. MUST-FAIL CONTROLS
+  [PASS] control correctly fails: kappa injective at I0 (m=1)
+  [PASS] control correctly fails: kappa injective at I1 (m=1)
+  [PASS] control correctly fails: a bogus [1:1:0] is S3-fixed
+  [PASS] control correctly fails: dim V_1[sgn] = 2
+  [PASS] control correctly fails: V_3[triv] = (quadratic) . V_1[sgn]
+
+====================================================================
+VERIFIER: 68 checks, 0 FAILURES

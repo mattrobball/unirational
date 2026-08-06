@@ -1,0 +1,102 @@
+{
+ "partA_checks": [
+  [
+   "delta^2 = -3",
+   true
+  ],
+  [
+   "sqrt33^2 = 33",
+   true
+  ],
+  [
+   "nu^2 = -11",
+   true
+  ],
+  [
+   "om^2+om+1 = 0",
+   true
+  ],
+  [
+   "alpha = 12c",
+   true
+  ],
+  [
+   "alpha = 16kp-4",
+   true
+  ],
+  [
+   "rho|W- order 3",
+   true
+  ],
+  [
+   "tau|W- order 2",
+   true
+  ],
+  [
+   "rho|W+ order 3",
+   true
+  ],
+  [
+   "tau|W+ order 2",
+   true
+  ],
+  [
+   "S3 relation on W-",
+   true
+  ],
+  [
+   "S3 relation on W+",
+   true
+  ],
+  [
+   "Q rho-invariant",
+   true
+  ],
+  [
+   "Q tau-invariant",
+   true
+  ],
+  [
+   "F0 rho-invariant",
+   true
+  ],
+  [
+   "F0 tau-invariant",
+   true
+  ],
+  [
+   "c_sigma rho-fixed",
+   true
+  ],
+  [
+   "c_sigma tau-fixed",
+   true
+  ],
+  [
+   "F0(c_sigma) = c^3",
+   true
+  ],
+  [
+   "alpha = Q(c_sigma;Omega)",
+   true
+  ],
+  [
+   "beta = Q(E_x;v_-) = 1",
+   true
+  ],
+  [
+   "Q-ISOMORPHY  W+ = (Sym^2 W-)*  (det != 0)",
+   true
+  ],
+  [
+   "det Q-Gram = delta  (FIX-L1 finding 2)",
+   true
+  ]
+ ],
+ "det_Q_gram": [
+  "1",
+  "2",
+  "0",
+  "0"
+ ]
+}

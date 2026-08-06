@@ -1,0 +1,26 @@
+[
+ [
+  "beta:=0 Q is rho-invariant",
+  true
+ ],
+ [
+  "kappa_id injective at I0 (m=1)",
+  true
+ ],
+ [
+  "kappa_id injective at I1 (m=1)",
+  true
+ ],
+ [
+  "[1:1:0] is rho-fixed",
+  true
+ ],
+ [
+  "id lies in V1[sgn]",
+  true
+ ],
+ [
+  "dim Sym^4(W-)*^{S3} == 2",
+  true
+ ]
+]

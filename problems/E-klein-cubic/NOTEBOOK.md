@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `83c772a` (2026-08-05; the
+Snapshot metadata — notebook parent head: `248cb53` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2750,7 +2750,38 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   generically PO-1, `D_B`-type at the special points — the stage
   analysis inherits this. Probe artifacts in the session scratchpad;
   the sealed (C7) with two engines + controls remains FIX-D2's
-  deliverable.**** Same-day
+  deliverable. **NINETEENTH WAVE — THE TERMINAL VERDICT (FIX-D2
+  landed 2026-08-06, director-replayed 68/68 + 29 producer + 11
+  controls; verifier fully independent, own field model):
+  `FIX-D2-TERMINAL-SOLVABLE` — the `w ≠ 0` branch of [U1] is NOT
+  killed by the `c_σ`-localized machinery.** **Correction IV-f
+  (worker-caught, double-refuted — the sixth and deepest): Theorem
+  5.25-A (Brutality) is FALSE** — `Θ⁽⁰⁾` carries `y`-arguments of
+  order `m+1` (§5.7's own level count requires it), so `I₀` kills
+  only the diagonal contraction (rank 5/9 at `m=1`, 7/15 at `m=3`),
+  exactly consistent with FIX-L1's banked equivariant ranks
+  (reproduced from scratch, survivors exhibited). Withdrawn in
+  cascade: 5.25-A; §5.27's plus-deep reduction, departure recursion,
+  and the (C7) premise (the director probe's emptiness stands as a
+  computation but no longer bears on the branch); the `I^{(4)}`/E15
+  budget framing (corrected condition: a rank-4 subbundle condition
+  on order-2 jets; NO global `h⁰(I^{(k)}(d))` tables exist — the
+  `I^{(11)}/I^{(13)}` numbers are LOCAL D12 data). Confirmed
+  positively: 5.26-A exactly (rank 7, ker 5+3), 5.26-B one level
+  earlier, `Q`-isomorphy, unambiguous order-accounting. **(C2′)**:
+  `m=1` rungs INDEPENDENT; `m=3` DEPENDENT with exact cause
+  (`V₃[twist] = quadratic·V₁[twist]` — the H1-forced `m=3` datum is
+  degenerate). **(D3): NOT-KILLED** (landing automatic on
+  `T⁺ ≡ 0`; only non-dominance excludes, which does not bind germ
+  data). **Load-bearing fact: the residual `Θ`-freedom GROWS along
+  the ladder (1,2,4,7 / 1,4,7) — the `I`-ladder can never exhaust
+  the jet space. Consequence: Thm 3.1 remains CONDITIONAL, [U1] is
+  genuinely OPEN, the Note-IV endgame does NOT close by
+  D12-localization; remaining negative options are GLOBAL (the
+  corrected budget/moduli question, unbanked and hard) or
+  beyond-FIX machinery. The jet-solvable locus is recorded as
+  potential positive-side evidence per the standing directive
+  (stated, not pursued). Problem E headline: OPEN.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

@@ -1,0 +1,99 @@
+FIX-D2  TASK B  --  (C2') RUNG INDEPENDENCE
+====================================================================
+
+  case B-ii  m=1 e=6   (m=1, e even, Theta-twist=triv, Psi-jets generic)
+    dim Theta-jet J_k      : [2, 3, 5, 6]
+    dim Psi-jet   P_k      : [1, 1, 2, 3]
+    dim target    C_k      : [1, 2, 3, 3]
+    rung target dim C_k    : [1, 2, 3, 3]
+    rung rank (own target) : [1, 2, 3, 3]
+    rung SURJECTIVE        : ['YES', 'YES', 'YES', 'YES']
+    stacked rank thru rung k: [1, 3, 6, 9]
+    NEW conditions per rung : [1, 2, 3, 3]
+    surjectivity deficit    : [0, 0, 0, 0]   (dim C_k - own rank)
+    overlap deficit         : [0, 0, 0, 0]   (own rank - new conditions)
+    sum of C_k dims        : [1, 3, 6, 9]
+    Theta-jet dim thru k   : [2, 5, 10, 16]
+    residual Theta freedom : [1, 2, 4, 7]
+    => RUNGS INDEPENDENT (no dependency among the rung conditions): YES
+
+  case B-ii' m=1 e=6 sgn-Theta   (m=1, e even, Theta-twist=sgn, Psi-jets generic)
+    dim Theta-jet J_k      : [1, 3, 4, 6]
+    dim Psi-jet   P_k      : [1, 1, 2, 3]
+    dim target    C_k      : [0, 2, 2, 3]
+    rung target dim C_k    : [0, 2, 2, 3]
+    rung rank (own target) : [0, 2, 2, 3]
+    rung SURJECTIVE        : ['YES', 'YES', 'YES', 'YES']
+    stacked rank thru rung k: [0, 2, 4, 7]
+    NEW conditions per rung : [0, 2, 2, 3]
+    surjectivity deficit    : [0, 0, 0, 0]   (dim C_k - own rank)
+    overlap deficit         : [0, 0, 0, 0]   (own rank - new conditions)
+    sum of C_k dims        : [0, 2, 4, 7]
+    Theta-jet dim thru k   : [1, 4, 8, 14]
+    residual Theta freedom : [1, 2, 4, 7]
+    => RUNGS INDEPENDENT (no dependency among the rung conditions): YES
+
+  case m=1 e odd (control)   (m=1, e odd, Theta-twist=triv, Psi-jets generic)
+    dim Theta-jet J_k      : [2, 3, 5, 6]
+    dim Psi-jet   P_k      : [1, 1, 2, 3]
+    dim target    C_k      : [1, 2, 3, 3]
+    rung target dim C_k    : [1, 2, 3, 3]
+    rung rank (own target) : [1, 2, 3, 3]
+    rung SURJECTIVE        : ['YES', 'YES', 'YES', 'YES']
+    stacked rank thru rung k: [1, 3, 6, 9]
+    NEW conditions per rung : [1, 2, 3, 3]
+    surjectivity deficit    : [0, 0, 0, 0]   (dim C_k - own rank)
+    overlap deficit         : [0, 0, 0, 0]   (own rank - new conditions)
+    sum of C_k dims        : [1, 3, 6, 9]
+    Theta-jet dim thru k   : [2, 5, 10, 16]
+    residual Theta freedom : [1, 2, 4, 7]
+    => RUNGS INDEPENDENT (no dependency among the rung conditions): YES
+
+  case B-i   m=3 e=3   (m=3, e odd, Theta-twist=triv, Psi-jets generic)
+    dim Theta-jet J_k      : [3, 5, 8]
+    dim Psi-jet   P_k      : [1, 3, 4]
+    dim target    C_k      : [2, 4, 6]
+    rung target dim C_k    : [2, 4, 6]
+    rung rank (own target) : [2, 3, 6]
+    rung SURJECTIVE        : ['YES', 'NO(3/4)', 'YES']
+    stacked rank thru rung k: [2, 4, 9]
+    NEW conditions per rung : [2, 2, 5]
+    surjectivity deficit    : [0, 1, 0]   (dim C_k - own rank)
+    overlap deficit         : [0, 1, 1]   (own rank - new conditions)
+    sum of C_k dims        : [2, 6, 12]
+    Theta-jet dim thru k   : [3, 8, 16]
+    residual Theta freedom : [1, 4, 7]
+    => RUNGS INDEPENDENT (no dependency among the rung conditions): NO
+
+  case m=3 e even (control)   (m=3, e even, Theta-twist=triv, Psi-jets generic)
+    dim Theta-jet J_k      : [3, 5, 8]
+    dim Psi-jet   P_k      : [1, 3, 4]
+    dim target    C_k      : [2, 4, 6]
+    rung target dim C_k    : [2, 4, 6]
+    rung rank (own target) : [2, 3, 6]
+    rung SURJECTIVE        : ['YES', 'NO(3/4)', 'YES']
+    stacked rank thru rung k: [2, 4, 9]
+    NEW conditions per rung : [2, 2, 5]
+    surjectivity deficit    : [0, 1, 0]   (dim C_k - own rank)
+    overlap deficit         : [0, 1, 1]   (own rank - new conditions)
+    sum of C_k dims        : [2, 6, 12]
+    Theta-jet dim thru k   : [3, 8, 16]
+    residual Theta freedom : [1, 4, 7]
+    => RUNGS INDEPENDENT (no dependency among the rung conditions): NO
+
+  case m=1 DEGENERATE Psi-jets   (m=1, e even, Theta-twist=triv, Psi-jets ZERO above order 0)
+    dim Theta-jet J_k      : [2, 3, 5, 6]
+    dim Psi-jet   P_k      : [1, 1, 2, 3]
+    dim target    C_k      : [1, 2, 3, 3]
+    rung target dim C_k    : [1, 2, 3, 3]
+    rung rank (own target) : [1, 2, 3, 3]
+    rung SURJECTIVE        : ['YES', 'YES', 'YES', 'YES']
+    stacked rank thru rung k: [1, 3, 6, 9]
+    NEW conditions per rung : [1, 2, 3, 3]
+    surjectivity deficit    : [0, 0, 0, 0]   (dim C_k - own rank)
+    overlap deficit         : [0, 0, 0, 0]   (own rank - new conditions)
+    sum of C_k dims        : [1, 3, 6, 9]
+    Theta-jet dim thru k   : [2, 5, 10, 16]
+    residual Theta freedom : [1, 2, 4, 7]
+    => RUNGS INDEPENDENT (no dependency among the rung conditions): YES
+

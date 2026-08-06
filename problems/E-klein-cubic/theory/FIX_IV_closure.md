@@ -1071,6 +1071,70 @@ of the line. This is finite-dimensional, uniform in degree
 conceptual obstacle in (T1a) is gone; everything remaining is finite,
 explicit, and named.
 
+### 5.28 THE TERMINAL VERDICT (FIX-D2, sealed): Correction IV-f, the Brutality Theorem is FALSE, and the `w ≠ 0` branch is NOT killed by the localized machinery
+
+**FIX-D2 landed 2026-08-06 (director-replayed, 68/68; producer 29,
+controls 11, all green; verifier fully independent — own field model,
+derives the frame from `ρ|_{W⁻}` alone). Primary exit:
+`FIX-D2-TERMINAL-SOLVABLE`.**
+
+**Correction IV-f (worker-caught, double-refuted — the sixth of the
+session and the deepest).** Theorem 5.25-A is FALSE as stated: the
+plus package `Θ⁽⁰⁾` carries `y`-arguments of order `m+1` (as §5.7's
+own level count `(m+1)+m+m = 3m+1` requires), so
+`Q(Θ⁽⁰⁾; Ψy, Ψy) ≡ 0` is the vanishing of the DIAGONAL CONTRACTION
+`κ_Ψ(Θ⁽⁰⁾)` — a rank-5-of-9 condition at `m = 1` (kernel 4;
+`m = 3`: rank 7 of 15, kernel 8) — NOT of a full quadratic form.
+There is no total kill. Independently re-refuted against FIX-L1's own
+banked equivariant ranks (1/1/2/2, kernel 1 — reproduced from
+scratch, survivors exhibited). The error is again the
+argument-slot/support class. CASCADE OF WITHDRAWALS: 5.25-A; the
+plus-deep reduction and everything §5.27 built on it (the (C7)
+premise, the departure recursion's trigger, the director-probe
+consequences (i)/(ii) — the probe's emptiness result stands as a
+computation but no longer bears on the branch); the E15-budget
+framing (the corrected condition is a rank-4 subbundle condition on
+the order-2 jet, NOT `I^{(4)}`; moreover NO global `h⁰(I^{(k)}(d))`
+tables exist — the banked `I^{(11)}/I^{(13)}` numbers are LOCAL D12
+data).
+
+**What the packet establishes positively (all exact,
+double-computed):** Thm 5.26-A CONFIRMED (rank 7, kernel `5+3`);
+5.25-B's count correct (hypothesis unavailable); 5.26-B true one
+level earlier than stated; `Q`-isomorphy confirmed (`det = δ`,
+`δ² = −3`); the `I₀/I₁` order-accounting unambiguous (both readings
+agree). **(C2′)**: `m = 1` rungs INDEPENDENT (deficits 0);
+`m = 3` DEPENDENT with exact cause — `V₃[twist] = (fixed
+quadratic)·V₁[twist]`: the H1-forced `m = 3` datum is degenerate,
+collapsing rank 11 → 7. **Load-bearing structural fact: the residual
+`Θ`-freedom GROWS along the ladder (`1,2,4,7` at `m=1`; `1,4,7` at
+`m=3`) — the `I`-ladder can NEVER exhaust the `Θ`-jet space.**
+**(D3)**: `FIX-D3-NOT-KILLED` — with `T⁺ ≡ 0` the landing is
+automatic and H1-1's two conditions are satisfiable with `w ≠ 0`;
+only non-dominance excludes, and non-dominance does not bind germ
+data.
+
+**Honest consequence for the program.** The `w ≠ 0` branch of [U1]
+SURVIVES every constraint the `c_σ`-localized machinery can field:
+jet-level candidates exist with positive-dimensional freedom at
+every ladder level. This does NOT produce a map (jet data ≠ germ ≠
+dominant map — the T5-gate and the C1 calibration stand), but it
+means: **the Note IV endgame does not close by localization at the
+D12-points. [U1] is genuinely open again**, and the negative route's
+remaining options are global: (a) the corrected budget/moduli
+question (rank-4 subbundle condition on order-2 jets along the
+55-plane arrangement — with no banked tables; a real, hard, open
+computation to be scoped honestly); (b) machinery beyond the FIX
+localization entirely. Theorem 3.1 stands as the CONDITIONAL
+statement it always was; its hypothesis [U1] is not discharged.
+Everything sealed remains sealed; §§5.25(A)/5.27 are withdrawn;
+5.21, 5.23(i)–(ii), 5.26-A/B, [L]'s budget theorem, and the entire
+pre-Note-IV chain are untouched. **Problem E headline: OPEN — and
+the honest position is now symmetric enough that the jet-level
+solvable locus deserves to be recorded as potential evidence for
+the POSITIVE side, per the standing directive to be stated but not
+pursued.**
+
 ### 5.24 Correction IV-d, the product pinning, (D3) closed, and the TERMINAL SYSTEM
 
 **Correction IV-d (fourth self-caught; conceptual).** 5.23(iii)

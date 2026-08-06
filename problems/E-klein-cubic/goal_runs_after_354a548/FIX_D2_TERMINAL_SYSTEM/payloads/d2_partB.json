@@ -1,0 +1,96 @@
+{
+ "m=1  I0   Theta^(0)": {
+  "Psi=id=V1[triv]": {
+   "src": 9,
+   "tgt": 5,
+   "rank": 5,
+   "kernel": 4
+  },
+  "Psi=V1[sgn]": {
+   "src": 9,
+   "tgt": 5,
+   "rank": 5,
+   "kernel": 4
+  },
+  "Psi=generic": {
+   "src": 9,
+   "tgt": 5,
+   "rank": 5,
+   "kernel": 4
+  }
+ },
+ "m=1  I1   Theta^(1)": {
+  "Psi=id=V1[triv]": {
+   "src": 15,
+   "tgt": 7,
+   "rank": 7,
+   "kernel": 8
+  },
+  "Psi=V1[sgn]": {
+   "src": 15,
+   "tgt": 7,
+   "rank": 7,
+   "kernel": 8
+  },
+  "Psi=generic": {
+   "src": 15,
+   "tgt": 7,
+   "rank": 7,
+   "kernel": 8
+  }
+ },
+ "m=1  I2   Theta^(2)": {
+  "Psi=id=V1[triv]": {
+   "src": 21,
+   "tgt": 9,
+   "rank": 9,
+   "kernel": 12
+  },
+  "Psi=generic": {
+   "src": 21,
+   "tgt": 9,
+   "rank": 9,
+   "kernel": 12
+  }
+ },
+ "m=3  I0   Theta^(0)": {
+  "Psi=V3[triv]": {
+   "src": 15,
+   "tgt": 11,
+   "rank": 7,
+   "kernel": 8
+  },
+  "Psi=V3[sgn]": {
+   "src": 15,
+   "tgt": 11,
+   "rank": 7,
+   "kernel": 8
+  },
+  "Psi=generic": {
+   "src": 15,
+   "tgt": 11,
+   "rank": 11,
+   "kernel": 4
+  }
+ },
+ "m=3  I1   Theta^(1)": {
+  "Psi=V3[triv]": {
+   "src": 21,
+   "tgt": 13,
+   "rank": 9,
+   "kernel": 12
+  },
+  "Psi=V3[sgn]": {
+   "src": 21,
+   "tgt": 13,
+   "rank": 9,
+   "kernel": 12
+  },
+  "Psi=generic": {
+   "src": 21,
+   "tgt": 13,
+   "rank": 13,
+   "kernel": 8
+  }
+ }
+}

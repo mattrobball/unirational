@@ -1,0 +1,390 @@
+[
+ {
+  "tag": "B-ii  m=1 e=6",
+  "m": 1,
+  "e_odd": false,
+  "theta_sgn": false,
+  "psi_generic": true,
+  "dim_J": [
+   2,
+   3,
+   5,
+   6
+  ],
+  "dim_P": [
+   1,
+   1,
+   2,
+   3
+  ],
+  "dim_C": [
+   1,
+   2,
+   3,
+   3
+  ],
+  "rung_rank": [
+   1,
+   2,
+   3,
+   3
+  ],
+  "rung_target": [
+   1,
+   2,
+   3,
+   3
+  ],
+  "stacked": [
+   1,
+   3,
+   6,
+   9
+  ],
+  "independent": true,
+  "residual": [
+   1,
+   2,
+   4,
+   7
+  ],
+  "new_per_rung": [
+   1,
+   2,
+   3,
+   3
+  ],
+  "surjectivity_deficit": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "overlap_deficit": [
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ {
+  "tag": "B-ii' m=1 e=6 sgn-Theta",
+  "m": 1,
+  "e_odd": false,
+  "theta_sgn": true,
+  "psi_generic": true,
+  "dim_J": [
+   1,
+   3,
+   4,
+   6
+  ],
+  "dim_P": [
+   1,
+   1,
+   2,
+   3
+  ],
+  "dim_C": [
+   0,
+   2,
+   2,
+   3
+  ],
+  "rung_rank": [
+   0,
+   2,
+   2,
+   3
+  ],
+  "rung_target": [
+   0,
+   2,
+   2,
+   3
+  ],
+  "stacked": [
+   0,
+   2,
+   4,
+   7
+  ],
+  "independent": true,
+  "residual": [
+   1,
+   2,
+   4,
+   7
+  ],
+  "new_per_rung": [
+   0,
+   2,
+   2,
+   3
+  ],
+  "surjectivity_deficit": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "overlap_deficit": [
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ {
+  "tag": "m=1 e odd (control)",
+  "m": 1,
+  "e_odd": true,
+  "theta_sgn": false,
+  "psi_generic": true,
+  "dim_J": [
+   2,
+   3,
+   5,
+   6
+  ],
+  "dim_P": [
+   1,
+   1,
+   2,
+   3
+  ],
+  "dim_C": [
+   1,
+   2,
+   3,
+   3
+  ],
+  "rung_rank": [
+   1,
+   2,
+   3,
+   3
+  ],
+  "rung_target": [
+   1,
+   2,
+   3,
+   3
+  ],
+  "stacked": [
+   1,
+   3,
+   6,
+   9
+  ],
+  "independent": true,
+  "residual": [
+   1,
+   2,
+   4,
+   7
+  ],
+  "new_per_rung": [
+   1,
+   2,
+   3,
+   3
+  ],
+  "surjectivity_deficit": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "overlap_deficit": [
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ {
+  "tag": "B-i   m=3 e=3",
+  "m": 3,
+  "e_odd": true,
+  "theta_sgn": false,
+  "psi_generic": true,
+  "dim_J": [
+   3,
+   5,
+   8
+  ],
+  "dim_P": [
+   1,
+   3,
+   4
+  ],
+  "dim_C": [
+   2,
+   4,
+   6
+  ],
+  "rung_rank": [
+   2,
+   3,
+   6
+  ],
+  "rung_target": [
+   2,
+   4,
+   6
+  ],
+  "stacked": [
+   2,
+   4,
+   9
+  ],
+  "independent": false,
+  "residual": [
+   1,
+   4,
+   7
+  ],
+  "new_per_rung": [
+   2,
+   2,
+   5
+  ],
+  "surjectivity_deficit": [
+   0,
+   1,
+   0
+  ],
+  "overlap_deficit": [
+   0,
+   1,
+   1
+  ]
+ },
+ {
+  "tag": "m=3 e even (control)",
+  "m": 3,
+  "e_odd": false,
+  "theta_sgn": false,
+  "psi_generic": true,
+  "dim_J": [
+   3,
+   5,
+   8
+  ],
+  "dim_P": [
+   1,
+   3,
+   4
+  ],
+  "dim_C": [
+   2,
+   4,
+   6
+  ],
+  "rung_rank": [
+   2,
+   3,
+   6
+  ],
+  "rung_target": [
+   2,
+   4,
+   6
+  ],
+  "stacked": [
+   2,
+   4,
+   9
+  ],
+  "independent": false,
+  "residual": [
+   1,
+   4,
+   7
+  ],
+  "new_per_rung": [
+   2,
+   2,
+   5
+  ],
+  "surjectivity_deficit": [
+   0,
+   1,
+   0
+  ],
+  "overlap_deficit": [
+   0,
+   1,
+   1
+  ]
+ },
+ {
+  "tag": "m=1 DEGENERATE Psi-jets",
+  "m": 1,
+  "e_odd": false,
+  "theta_sgn": false,
+  "psi_generic": false,
+  "dim_J": [
+   2,
+   3,
+   5,
+   6
+  ],
+  "dim_P": [
+   1,
+   1,
+   2,
+   3
+  ],
+  "dim_C": [
+   1,
+   2,
+   3,
+   3
+  ],
+  "rung_rank": [
+   1,
+   2,
+   3,
+   3
+  ],
+  "rung_target": [
+   1,
+   2,
+   3,
+   3
+  ],
+  "stacked": [
+   1,
+   3,
+   6,
+   9
+  ],
+  "independent": true,
+  "residual": [
+   1,
+   2,
+   4,
+   7
+  ],
+  "new_per_rung": [
+   1,
+   2,
+   3,
+   3
+  ],
+  "surjectivity_deficit": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "overlap_deficit": [
+   0,
+   0,
+   0,
+   0
+  ]
+ }
+]
