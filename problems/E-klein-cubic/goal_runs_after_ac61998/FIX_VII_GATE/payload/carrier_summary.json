@@ -1,0 +1,34 @@
+{
+ "67": {
+  "p": 67,
+  "n1": 16,
+  "rank": 3,
+  "n2": 13,
+  "nf_support": 300,
+  "components_zero": 0,
+  "IC": {
+   "dimProj": "1",
+   "degree": "20",
+   "hilbPoly": "20*i-25",
+   "ngens": "15",
+   "HF34": 655
+  },
+  "seconds": 300.0
+ },
+ "199": {
+  "p": 199,
+  "n1": 16,
+  "rank": 3,
+  "n2": 13,
+  "nf_support": 300,
+  "components_zero": 0,
+  "IC": {
+   "dimProj": "1",
+   "degree": "20",
+   "hilbPoly": "20*i-25",
+   "ngens": "15",
+   "HF34": 655
+  },
+  "seconds": 304.6
+ }
+}

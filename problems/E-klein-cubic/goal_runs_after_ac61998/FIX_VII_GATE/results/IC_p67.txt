@@ -1,0 +1,75 @@
+p 67
+degH 5
+dimProj 1
+degree 20
+hilbPoly 20*i-25
+HF 0 1
+HF 1 5
+HF 2 15
+HF 3 35
+HF 4 55
+HF 5 75
+HF 6 95
+HF 7 115
+HF 8 135
+HF 9 155
+HF 10 175
+HF 11 195
+HF 12 215
+HF 13 235
+HF 14 255
+HF 15 275
+HF 16 295
+HF 17 315
+HF 18 335
+HF 19 355
+HF 20 375
+HF 21 395
+HF 22 415
+HF 23 435
+HF 24 455
+HF 25 475
+HF 26 495
+HF 27 515
+HF 28 535
+HF 29 555
+HF 30 575
+HF 31 595
+HF 32 615
+HF 33 635
+HF 34 655
+HF 35 675
+HF 36 695
+ngens 15
+gendeg 4
+gendeg 4
+gendeg 4
+gendeg 4
+gendeg 4
+gendeg 4
+gendeg 4
+gendeg 4
+gendeg 4
+gendeg 4
+gendeg 4
+gendeg 4
+gendeg 4
+gendeg 4
+gendeg 4
+gen x1^2*x3^2-x0*x1^2*x4+x0*x2*x3*x4+x1*x4^3
+gen x0*x1*x3^2-x0^2*x1*x4+x2^2*x3*x4
+gen x0^2*x3^2-x1*x2*x3^2-x0^3*x4+x0*x1*x2*x4-x2*x4^3
+gen x1^2*x2*x3+x0*x2^2*x4-x0*x3*x4^2
+gen x0*x1*x2*x3+x2^3*x4+x1^2*x4^2-x2*x3*x4^2
+gen x0^2*x2*x3-x1*x2^2*x3+x0*x1*x4^2
+gen x1^3*x3+x0^3*x4+x2*x4^3
+gen x1*x2^3+x0*x3^3+x1^3*x4
+gen x0*x2^3+x2*x3^3+x1*x4^3
+gen x0*x1*x2^2+x1*x3^3-x0*x1*x3*x4-x2^2*x4^2+x3*x4^3
+gen x0^2*x2^2+x0*x3^3-x0^2*x3*x4+x1*x2*x3*x4
+gen x0*x1^2*x2-x0*x3^2*x4-x1*x2*x4^2
+gen x0^2*x1*x2+x1^2*x3*x4-x2*x3^2*x4
+gen x0^3*x2+x1*x3^3+x3*x4^3
+gen x0*x1^3+x0^3*x3+x2^3*x4
+Hpoly 32*x0^3*x2^2-32*x0*x1*x2^3+32*x1^3*x3^2+32*x0^2*x3^3-32*x1*x2*x3^3-32*x0*x1^3*x4-32*x0^3*x3*x4+29*x0*x1*x2*x3*x4+32*x2^3*x4^2+32*x1^2*x4^3-32*x2*x3*x4^3
+END

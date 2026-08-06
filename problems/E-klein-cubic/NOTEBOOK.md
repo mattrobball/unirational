@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `ac61998` (2026-08-05; the
+Snapshot metadata — notebook parent head: `a649149` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3096,7 +3096,33 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   degree 34, target dim 655). Exits:
   `FIX-VII-GATE-CANDIDATES-EXIST` (explicit basis dumped) /
   `FIX-VII-GATE-HESSIAN-ANSATZ-EMPTY` /
-  `FIX-VII-GATE-DEVIATION`.**** Same-day
+  `FIX-VII-GATE-DEVIATION`. **Wave 24 Italian-moves probes
+  (user-prompted strategy discussion; `italian_probe.m2`,
+  `seed25.py`, probe-grade mod 397):** (i) the Steinerian
+  involution of the Hessian quintic is now EXPLICIT and verified
+  (`st` = cofactor row of the Hessian matrix: `Hess·st ≡ 0` and
+  `H(st) ≡ 0 mod (H)`; the classical symmetric-trilinear argument
+  `F‴(x,y,·)` makes it an involution, G-equivariant for free) — a
+  genuine canonical self-map added to the toolkit; `st` does NOT
+  carry `V(H)` into `X`. (ii) Short polar words do NOT preserve
+  `X` or `V(H)`: `F(∇F̌∘∇F) ≢ 0 mod (F)` etc. — consistent with
+  the sealed ≤ 24 landing emptiness. (iii) SCOPE FACT surfaced by
+  the discussion: a landing SEED need not be dominant (the sealed
+  Kollár circle upgrades ANY nonzero landing covariant to the
+  headline via chord amplification), and degrees 25–33 are NOT
+  closed for landing covariants (E25: ≤ 24 closed char-0, 25
+  PARTIAL — the F_67-branch char-0 transfer is a named open task;
+  the ≤ 30 sweeps assume dominance). (iv) The ONLY
+  pure-composition family at degree 25 is (dual-polar-5)∘(polar-5)
+  — the explicit `⟨F·∇F, ∇J₆⟩` mirror pair — a P¹×P¹ family:
+  swept COMPLETELY mod 397 against 4 independent probe points:
+  NO landing seed (caveats: one prime; `J̌₆` same-shape-in-dual
+  assumed by the F̌-uniqueness argument, unverified). Planned
+  after GATE lands: FIX-VII-SEED — the mechanical catalog sweep of
+  all structured candidates at 25–33 (compositions with degree
+  products in range, `F̌″(P,Q)`-contractions with
+  `deg P + deg Q` in range, Hessian-ideal-structured elements)
+  plus the E25 char-0 completion.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

@@ -1,0 +1,30 @@
+{
+ "199": {
+  "gate_frame": 16,
+  "info_gate": {
+   "ncols": 3220,
+   "npair": 92,
+   "seconds": 28.9
+  },
+  "info_p2": {
+   "ncols": 3220,
+   "npair": 92,
+   "seconds": 30.6
+  },
+  "p2_frame": 16
+ },
+ "67": {
+  "gate_frame": 16,
+  "info_gate": {
+   "ncols": 3220,
+   "npair": 92,
+   "seconds": 30.8
+  },
+  "info_p2": {
+   "ncols": 3220,
+   "npair": 92,
+   "seconds": 30.7
+  },
+  "p2_frame": 16
+ }
+}
