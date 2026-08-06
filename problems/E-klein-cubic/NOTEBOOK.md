@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `80666e3` (2026-08-05; the
+Snapshot metadata — notebook parent head: `aa68551` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3147,7 +3147,17 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   configurations, conic-bundle overlay, tangent-construction over
   G-stable Fano families). GATE's landing-cone computation
   (FIX-VII-LAND) queued as the linear-system face of the same
-  hunt.**** Same-day
+  hunt. **Wave 25 dispatches:** (i) the landing-cone dimension
+  run (60 point-sampled cubics in 13 vars mod 67 from the GATE
+  candidate basis; M2 GB, background) — decisive for the
+  d=34 Hessian-ansatz: dim 0 ⇒ no landing candidate, dim > 0 ⇒
+  extract points and verify full landing; (ii) packet
+  `goal_runs_after_aa68551/FIX_VIII_MOVES` (IN-FLIGHT,
+  PROPOSAL-UNRUN): the Note VIII §3 cross-V4 experiment sweep —
+  noncommuting chord-cycle orbits (degrees/collapses/incidences),
+  Menelaus axes at special source loci, second-layer canonical
+  pairings, reachable degrees mod 3; exits COLLAPSE-FOUND /
+  NO-COLLAPSE / DEVIATION.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

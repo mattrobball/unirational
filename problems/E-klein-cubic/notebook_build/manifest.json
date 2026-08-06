@@ -1504,6 +1504,17 @@
    "char0_scope": "mod-p two primes (67, 199 \u2014 the FIX-P2 primes); profile translation gated by mandatory agreement with the sealed P2 (1,6)/d=34 slice dimension",
    "tracked": "main",
    "notes": "IN-FLIGHT (dispatched 2026-08-06): the d=34 gateway decision for the Hessian-carrier ansatz. Chain: span M_34 (must self-certify rank 576 from invariant*generator products; XRING recipes at the new primes), impose (1,6) profile at one orbit representative (plane containment + line multi-orders translated from the P2 sieve; c_sigma conditions NOT imposed per FIX-P2-H11-LOCAL-CONFIRMED), MANDATORY cross-check n1 = sealed P2 slice dim; then the carrier cut (NF mod I_C at degree 34). Exits: CANDIDATES-EXIST (explicit basis dumped) / HESSIAN-ANSATZ-EMPTY / DEVIATION."
+  },
+  {
+   "path": "goal_runs_after_aa68551/FIX_VIII_MOVES",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "PROPOSAL-UNRUN",
+   "primary_exit": "UNDECIDED",
+   "superseded_by": null,
+   "char0_scope": "mod-p exploratory (p=67); findings to be re-verified before any consumption",
+   "tracked": "main",
+   "notes": "IN-FLIGHT (dispatched 2026-08-06): Note VIII sec3 cross-V4 experiments \u2014 noncommuting chord-cycle sweep per pair-orbit (degrees, collapses, canonical-locus incidences, G-orbit structure), Menelaus axes at special source loci (rank drops/incidences), second-layer canonical pairings and reachable degrees mod 3. Exits COLLAPSE-FOUND / NO-COLLAPSE / DEVIATION."
   }
  ],
  "known_branches": [
