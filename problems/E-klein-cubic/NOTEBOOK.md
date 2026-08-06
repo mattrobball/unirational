@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `a649149` (2026-08-05; the
+Snapshot metadata — notebook parent head: `80666e3` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3122,7 +3122,32 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   all structured candidates at 25–33 (compositions with degree
   products in range, `F̌″(P,Q)`-contractions with
   `deg P + deg Q` in range, Hessian-ideal-structured elements)
-  plus the E25 char-0 completion.**** Same-day
+  plus the E25 char-0 completion. **Wave 25 (user redirect: hunt a
+  concatenation of CLASSICAL GEOMETRIC MOVES, IJ geometry as the
+  hint; Note VIII opened, `theory/FIX_VIII_italian.md`; probes
+  `cycle55.py` on GATE's explicit group): THE PROJECTION MOVE.**
+  (i) `π_σ = (I−σ)/2` maps `P(W)` onto `L_σ ⊂ X`,
+  D12-equivariantly — machine 55/55. Hence: an `L`-point of
+  `X_tw` for the degree-55 field `L = C(P(W))^{D12}`;
+  `gcd(55,3) = 1` so **`X_tw` has INDEX 1 over `K_proj`** (new);
+  by Kollár **`X_tw` is L-UNIRATIONAL**; the headline is now a
+  STRUCTURED prime-to-3 descent (55 ≡ 1 mod 3) of the open
+  Coray/CSD type, with obstructions priced in the Note-VI CM
+  fivefold. (ii) Triangle calculus: the 55 V4-line-triples are
+  PLANE SECTIONS of X (`F|_{a=b=0} = xyz`); vertex orbit 165 =
+  the χ-vertices, stabilizer V4; the chord-triple of the three
+  projections is COLLINEAR (Menelaus, machine 6/6) — a canonical
+  55-line-valued map `ℓ_{V4}(v)` (axes have full Plücker rank 10
+  at random v). (iii) The in-plane 3-adic wall: chord dynamics
+  `T: rᵢ ↦ −rⱼ/rₖ` has `T³ = cubing` — no in-plane word reduces
+  the triple to a point (reachable degrees `3k+3m ≠ 1`); the
+  descent must be CROSS-V4, where 55 ≡ 1 mod 3 gives room. Move
+  catalog for the campaign in Note VIII §3 (cross-V4 chord orbits
+  110/330, axis incidence at special v, unique-RNC-through-7
+  configurations, conic-bundle overlay, tangent-construction over
+  G-stable Fano families). GATE's landing-cone computation
+  (FIX-VII-LAND) queued as the linear-system face of the same
+  hunt.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

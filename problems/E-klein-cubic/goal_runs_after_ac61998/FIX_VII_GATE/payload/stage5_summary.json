@@ -1,0 +1,278 @@
+{
+ "67": {
+  "p": 67,
+  "n1": 16,
+  "rank": 3,
+  "n2": 13,
+  "rows": [
+   {
+    "candidate": 0,
+    "nonzero_coeffs": 33060,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33060,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3882,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 1,
+    "nonzero_coeffs": 32990,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 32990,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3913,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 2,
+    "nonzero_coeffs": 32995,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 32995,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3859,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 3,
+    "nonzero_coeffs": 33025,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33025,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3892,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 4,
+    "nonzero_coeffs": 33100,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33100,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3873,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 5,
+    "nonzero_coeffs": 33030,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33030,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3880,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 6,
+    "nonzero_coeffs": 33000,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33000,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3865,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 7,
+    "nonzero_coeffs": 33050,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33050,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3921,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 8,
+    "nonzero_coeffs": 32950,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 32950,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3872,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 9,
+    "nonzero_coeffs": 33015,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33015,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3877,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 10,
+    "nonzero_coeffs": 33000,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33000,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3906,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 11,
+    "nonzero_coeffs": 33065,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33065,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3905,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 12,
+    "nonzero_coeffs": 33025,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33025,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3812,
+    "F_of_T_mod_F_is_zero": false
+   }
+  ]
+ },
+ "199": {
+  "p": 199,
+  "n1": 16,
+  "rank": 3,
+  "n2": 13,
+  "rows": [
+   {
+    "candidate": 0,
+    "nonzero_coeffs": 33335,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33335,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3961,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 1,
+    "nonzero_coeffs": 33285,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33285,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3963,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 2,
+    "nonzero_coeffs": 33370,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33370,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3974,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 3,
+    "nonzero_coeffs": 33390,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33390,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3975,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 4,
+    "nonzero_coeffs": 33355,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33355,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3970,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 5,
+    "nonzero_coeffs": 33385,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33385,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3963,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 6,
+    "nonzero_coeffs": 33355,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33355,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3970,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 7,
+    "nonzero_coeffs": 33395,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33395,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3972,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 8,
+    "nonzero_coeffs": 33325,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33325,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3967,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 9,
+    "nonzero_coeffs": 33340,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33340,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3966,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 10,
+    "nonzero_coeffs": 33360,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33360,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3968,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 11,
+    "nonzero_coeffs": 33370,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33370,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3975,
+    "F_of_T_mod_F_is_zero": false
+   },
+   {
+    "candidate": 12,
+    "nonzero_coeffs": 33385,
+    "T_not_identically_zero": true,
+    "T_nonzero_somewhere_on_X": true,
+    "inner_T_x_deg35_nonzero_coeffs": 33385,
+    "inner_T_x_is_zero": false,
+    "F_of_T_nonzero_at_points_of_X": 3970,
+    "F_of_T_mod_F_is_zero": false
+   }
+  ]
+ }
+}
