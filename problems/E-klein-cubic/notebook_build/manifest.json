@@ -1421,12 +1421,12 @@
    "path": "goal_runs_after_9094303/FIX_L1_FRAME_CONSTANTS",
    "entry": "E56",
    "kind": "goal_run",
-   "verification_class": "PROPOSAL-UNRUN",
-   "primary_exit": "UNDECIDED",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-L1-CONSTANTS-OK",
    "superseded_by": null,
-   "char0_scope": "in flight",
+   "char0_scope": "char0 exact (self-contained Q(omega,nu) engine; 272 checks; 40-digit numerics; 11-frame independence)",
    "tracked": "main",
-   "notes": "IN-FLIGHT (2026-08-06, opus): FIX-L1 — the frame constants named by Note IV sec5.8 (alpha, beta of the Q-decomposition; generators of V_m[twist] for m=1,3 both twists; transfer-pairing components; nondegeneracy verdicts). Consumed by the [L] coupled-ladder derivation."
+   "notes": "landed 2026-08-06, director-replayed (272/272, FIX_L1_VERIFY_OK). alpha = 3(3+sqrt33) = 12c with F(c_sigma) = c^3 => alpha = 0 iff F(c_sigma) = 0: the t-channel nondegeneracy IS the certified c_sigma-off-X fact (structural, undegenerable). beta = 1 (the xyz-coefficient); std-block perfect pairing. Transfer condition NONVACUOUS in all four (m,twist) cases, solution space 1-dim each. All four V_m[twist] generators closed-form (V3[sgn] matches H1). Correction to Note IV sec5.8: Theta-space is 3-dim at m=3 (Sym^4 std = triv + 2 std), transfer codim 2 (the C^2/Schur claim was m=1 only) — applied. Flagged open bookkeeping: possible forced D-divisibility of Theta at c_sigma (shifts rung orders; budget unaffected). Discharges (C2) of Note IV sec5.14."
   }
  ],
  "known_branches": [

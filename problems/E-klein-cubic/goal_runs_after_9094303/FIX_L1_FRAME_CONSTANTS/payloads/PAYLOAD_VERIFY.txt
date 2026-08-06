@@ -1,0 +1,65 @@
+# FIX-L1 INDEPENDENT VERIFIER
+# self-contained exact field Q(om,nu); frame rebuilt WITHOUT group theory
+
+== 0.  self-test of the exact field Q(om,nu) ==
+0   14 field self-tests passed; the embedding is om = e^{2 pi i/3}, nu = +i sqrt(11), sqrt33 = -nu.delta = +5.744...
+
+== 1.  independent rebuild of the sigma-frame (NO group theory) ==
+1a  INPUT (certified, FIX-H1 payload A4): rho|_{W^-} = [[-1/2,(1-nu)/4],[(-1-nu)/4,-1/2]] , tau|_{W^-} = diag(1,-1)
+1a  rho^3 = tau^2 = (tau rho)^2 = 1, trace = -1, det = 1: W^- = std as an S3-rep  VERIFIED
+1b  Q(w;S) = a(om S11 + om^2 S22) + b(om^2 S11 + om S22) + x S12 (shape of normal form (1.1))
+1b  the induced map W^+ -> (Sym^2 W^-)^* has det = 1 + 2*om != 0: it is an ISOMORPHISM.
+1b  Hence the S3-action on W^+ is FORCED by Q-invariance from rho|_{W^-}, tau|_{W^-}.
+1c  induced tau|_{W^+} = diag(1,1,-1)  -- agrees with the certified frame  VERIFIED
+1c  induced rho|_{W^+} =
+       [ 1/4 - 1/12*sqrt33 , -5/8 + 1/24*sqrt33 , 1/24 + 1/12*om + 1/8*nu ]
+       [ -5/8 - 1/24*sqrt33 , 1/4 + 1/12*sqrt33 , -1/24 - 1/12*om + 1/8*nu ]
+       [ 1/4 + 1/2*om + 1/4*nu , -1/4 - 1/2*om + 1/4*nu , -1/2 ]
+1c  rho|_{W^+}^3 = 1, trace = 0  ->  W^+ = triv (+) std  VERIFIED
+1d  c_sigma = (W^+)^{S3}, normalised a = 1 :  DERIVED  beta = -(7+sqrt33)/4   (NOT assumed)
+1e  (kp,km) forced by S3-invariance of F0 = kp a^3 + km b^3 + (a+b)x^2 :  DERIVED  kp = (13+3 sqrt33)/16, km = (13-3 sqrt33)/16
+1e  consistency: beta^3+3beta^2+kp = 0 and c = -(1+beta) = (3+sqrt33)/4 satisfies c^3-3c = kp+2  VERIFIED
+
+== 2.  the frame constants ==
+2a  kp, km, beta, c, rho|W^-, tau|W^-, rho|W^+, tau|W^+  all MATCH the producer payload  (rho|W^+ independently DERIVED here)
+2b  F(c_sigma) = F0(c_sigma) = kp + km beta^3 = (81+15 sqrt33)/16 = c^3 != 0  VERIFIED  (A3 split reproduces the H1 fact)
+2c  A3 shape re-verified: F(w+y) = F0(w) + Q(w;y,y), no (y,z)-degree 1 or 3 terms.
+2d  Omega = diag(1-nu,1+nu), q0 = (1+nu)y^2+(1-nu)z^2, <q0,Omega> = 24   MATCH
+2e  alpha = Q(c_sigma;Omega) = 9 + 3 sqrt33 = 12 c = 16 kp - 4 ;  alpha != 0   MATCH
+2e     alpha^3 = 1728 . F(c_sigma), so alpha = 0 <=> c_sigma in X : independently re-derived.
+2f  std-block of Q = [[24 delta, 0],[0, 1]] : PERFECT pairing; beta = 1 != 0   MATCH
+
+== 3.  generators of V_m[triv], V_m[sgn] ==
+3a  dim V_m[triv] = dim V_m[sgn] = 1 for m = 1, 3  (Lemma 5.1)  VERIFIED
+3b  V_1[triv] = <id> ;  V_1[sgn] = <[[0,1],[(5-nu)/6,0]]> (off-diagonal)   MATCH
+3c  V_3[sgn] proportional to the FIX-H1 PAYLOAD generator   MATCH
+3d  all four generators match the producer payload coefficient by coefficient
+
+== 4.  transfer data and the nondegeneracy verdicts ==
+4   m=1 triv  : dim Theta-space 2 , transfer rank 1 , solution dim 1 , (gg)_t nonzero , (gg)_s nonzero , NONVACUOUS
+4   m=1 sgn   : dim Theta-space 2 , transfer rank 1 , solution dim 1 , (gg)_t nonzero , (gg)_s nonzero , NONVACUOUS
+4   m=3 triv  : dim Theta-space 3 , transfer rank 2 , solution dim 1 , (gg)_t nonzero , (gg)_s nonzero , NONVACUOUS
+4   m=3 sgn   : dim Theta-space 3 , transfer rank 2 , solution dim 1 , (gg)_t nonzero , (gg)_s nonzero , NONVACUOUS
+
+== 5.  40-digit numerics (sanity layer, decisions are exact) ==
+5   sqrt33         = 5.74456264653802865985061146821892931822
+5   kp             = 1.889605496225880373721989650291049247166
+5   km             = -0.2646054962258803737219896502910492471663
+5   beta(c_sigma)  = -3.186140661634507164962652867054732329555
+5   c (Chebyshev)  = 2.186140661634507164962652867054732329555
+5   F(c_sigma)     = 10.44802748112940186860994825145524623583
+5   alpha          = 26.23368793961408597955183440465678795466
+5   beta           = 1.0
+5   all 40-digit values agree with the closed forms to 1e-35.
+
+== SUMMARY ==
+    alpha = 9 + 3 sqrt33 = 3(3+sqrt33) = 12 c = 16 kp - 4   !=  0
+    beta  = 1                                               !=  0
+    m=1 triv  : transfer rank 1 of 2  ->  NONVACUOUS (proper condition of codimension 1)
+    m=1 sgn   : transfer rank 1 of 2  ->  NONVACUOUS (proper condition of codimension 1)
+    m=3 triv  : transfer rank 2 of 3  ->  NONVACUOUS (proper condition of codimension 2)
+    m=3 sgn   : transfer rank 2 of 3  ->  NONVACUOUS (proper condition of codimension 2)
+    272 exact checks passed.
+
+elapsed 0.2 s
+FIX_L1_VERIFY_OK  (272 checks)

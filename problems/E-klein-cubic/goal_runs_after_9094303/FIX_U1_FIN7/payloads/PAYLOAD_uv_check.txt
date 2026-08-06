@@ -1,0 +1,29 @@
+FIX-U1-FIN7 -- the u0 + v0 check of Prop 5.3 at the 27 classified
+points.  H1 frame: u0 = Lambda_yy = [x^6 y]u1' = lam^-1 B8,
+                  v0 = Lambda_zz = [x^6 z]u2' = lam^-2 B5.
+Normalisation P0 = 1; B2, P1 run over the two FIX-N2C block cubics.
+
+lam = om^0 :
+   u0 + v0 = -(B2*P1*om - B2*P1 + 6)/6
+   u0 - v0 = -(B2*P1*om + B2*P1 + 4*om + 2)/2   (FIX-H1 order-0 equalizer residual)
+   part A (1 pts, [L:K]=1) : u0+v0 NONZERO ; u0-v0 NONZERO
+   part B (2 pts, [L:K]=2) : u0+v0 NONZERO ; u0-v0 NONZERO
+   part C (2 pts, [L:K]=2) : u0+v0 NONZERO ; u0-v0 NONZERO
+   part D (4 pts, [L:K]=4) : u0+v0 NONZERO ; u0-v0 NONZERO
+lam = om^1 :
+   u0 + v0 = (B2*P1*om - B2*P1 - 3)/3
+   u0 - v0 = 2*om + 1   (FIX-H1 order-0 equalizer residual)
+   part A (1 pts, [L:K]=1) : u0+v0 NONZERO ; u0-v0 NONZERO
+   part B (2 pts, [L:K]=2) : u0+v0 NONZERO ; u0-v0 NONZERO
+   part C (2 pts, [L:K]=2) : u0+v0 NONZERO ; u0-v0 NONZERO
+   part D (4 pts, [L:K]=4) : u0+v0 NONZERO ; u0-v0 NONZERO
+lam = om^2 :
+   u0 + v0 = -(B2*P1*om - B2*P1 - 12)/6
+   u0 - v0 = B2*P1*(om + 1)/2   (FIX-H1 order-0 equalizer residual)
+   part A (1 pts, [L:K]=1) : u0+v0 NONZERO ; u0-v0 NONZERO
+   part B (2 pts, [L:K]=2) : u0+v0 NONZERO ; u0-v0 NONZERO
+   part C (2 pts, [L:K]=2) : u0+v0 NONZERO ; u0-v0 NONZERO
+   part D (4 pts, [L:K]=4) : u0+v0 NONZERO ; u0-v0 NONZERO
+
+VERDICT: u0 + v0 != 0 at all 27 classified points.
+The parameter exception of Prop 5.3 is EMPTY.

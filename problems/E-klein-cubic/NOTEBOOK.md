@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `702a73c` (2026-08-05; the
+Snapshot metadata — notebook parent head: `f2cb336` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2498,7 +2498,33 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   (C1) FIN(7) in flight, (C2) FIX-L1 in flight, (C3) the `s = 3` tail
   resultant when (T1) names its base requirement, (C4) even-`r` base
   cases ALREADY BANKED. Assembly + audit close the program once
-  (T1), (T2) land.** Same-day
+  (T1), (T2) land. Seventh wave — (T2) EXECUTED and FIX-L1 LANDED
+  (Note IV §§5.15–5.17, 2026-08-06): **Theorem 5.15 (finite-rung
+  exhaustiveness, proved)** — in the constancy regime a degree-`n`
+  form cannot vanish to total order `> n` across the D12-orbit, so at
+  most `⌈n/3⌉+1` rungs are needed and "all layers vanish" contradicts
+  the sweep (P3); **Reduction 5.15′** — [L] holds given (T1) + (C2)
+  + one finite rung-independence check (C2′); the §5.8 case
+  bookkeeping is subsumed (the budget is order-pattern-independent).
+  **Theorem 5.16 (division dichotomy, proved)** — on the `u+v`
+  gcd-stratum, either `q | T` (degree drop, the induction descends)
+  or the conic-restriction is a nonzero V4-equivariant landing datum
+  on the invariant conic: a NEW recursion floor `P⁴ → P² → P¹`
+  (V4-equivariant rational curves on `X` with six-point vanishing),
+  named (T1b). **§5.17: (T1) decomposed** into (T1a) rigid-tail orbit
+  finiteness — THE remaining core — (T1b) the conic floor, (T1c)
+  endpoint bookkeeping. **FIX-L1 landed same day
+  (`FIX-L1-CONSTANTS-OK`, director-replayed 272/272)**: `α = 12c ≠ 0`
+  with `F(c_σ) = c³` — the t-channel nondegeneracy IS the certified
+  "`c_σ` off `X`", structurally undegenerable; `β = 1`; transfer
+  NONVACUOUS in all four `(m,twist)` cases; all four generators
+  closed-form (`V₃[sgn]` matches H1); worker-caught correction to
+  §5.8 applied (`Θ`-space 3-dim at `m = 3`, transfer codim 2);
+  flagged open bookkeeping: possible forced `D`-divisibility of
+  `Θ⁽⁰⁾` (shifts rung orders, budget unaffected). **(C2) DISCHARGED.
+  The negative headline now rests on: (T1a), (T1b) as theorems;
+  (C1) in flight, (C2′), (C3) named; (T1c) bookkeeping; assembly +
+  audit.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

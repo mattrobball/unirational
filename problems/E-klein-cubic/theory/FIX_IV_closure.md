@@ -321,11 +321,29 @@ divide `I₀` by `D^{2e}`:
 ```
 
 **Either the evasion coefficient dies (`c = 0`), or the plus-package
-value at `c_σ` is forced onto an explicit hyperplane.** The condition
+value at `c_σ` is forced onto an explicit PROPER subspace — codim 1 at
+`m = 1`, codim 2 at `m = 3`** (FIX-L1's correction: the displayed
+`≅ C²` is the `m = 1` case; at `m = 3`, `Sym⁴std = triv ⊕ 2·std` makes
+the `Θ`-space 3-dimensional and the transfer rank 2). The condition
 TRANSFERS rather than kills; `I₁` then binds the transferred constraint
 against `Θ⁽¹⁾, Φ⁽¹⁾` — the genuine [L]-ladder, now with its first rung
 in closed form. Bookkeeping owed: escape at order exactly `2e+2`, and
-unequal line-wise orders; same method.
+unequal line-wise orders (same method; the Thm 5.15 budget is
+order-pattern-independent); plus FIX-L1's flagged item — possible
+forced `D`-divisibility of `Θ⁽⁰⁾` at `c_σ`, which would shift rung
+orders without affecting the budget (feeds (C2′)'s jet bookkeeping).
+
+**FIX-L1 verdicts (landed 2026-08-06, director-replayed 272/272,
+`FIX_L1_VERIFY_OK`):** `α = 3(3+√33) = 12c ≠ 0`, and `F(c_σ) = c³`, so
+**`α = 0 ⟺ F(c_σ) = 0`: the t-channel nondegeneracy IS the certified
+fact "`c_σ` off `X`" — it can never degenerate for this cubic.**
+`β = 1` (it IS the `xyz`-coefficient; the std-block is the perfect
+pairing `[[24δ, 0], [0, 1]]`). Transfer condition NONVACUOUS in all
+four `(m, twist)` cases, solution space 1-dimensional in each. All
+four `V_m[twist]` generators in closed form (`V₃[sgn]` matches H1's
+payload); `ρ|_{W⁺}` in normal-form coordinates delivered; `Q` is an
+isomorphism `W⁺ ≅ (Sym²W⁻)*`. **(C2) DISCHARGED — nondegeneracy not
+merely verified but explained.**
 
 **Named computation FIX-L1** (proof-named, small): exact σ-frame values
 of `α, β`; the generator `γ` of `V₁[sgn^{e+1}]` (both parities of `e`)
@@ -605,3 +623,89 @@ remaining THEOREMS and a short list of UNAVOIDABLE CAS calls.
 
 Assembly and the full independent audit close the program once (T1)
 and (T2) land. Nothing else remains.
+
+### 5.15 (T2) executed: the finite-rung theorem, and [L] reduced to (T1) plus two finite checks
+
+**Theorem 5.15 (exhaustiveness in the constancy regime — proved).**
+Assume the row's constancy conclusion (Prop 5.3's corrected form, i.e.
+what (T1) delivers): the top-level leading datum is `Λ = h·Λ₀` with
+`Λ₀` a fixed pointwise branch datum and `h` a binary form of degree
+`n = d − r`. Then the [L]-tower is FINITE with an explicit bound:
+the rungs test successive Taylor coefficients of `h` at the three
+D12-points; if every rung kills its coefficient, then `h` vanishes to
+total order `> n` across the orbit, forcing `h ≡ 0`, hence `Λ ≡ 0` —
+contradicting the sweep (P3). So at most `⌈n/3⌉ + 1` rungs are ever
+needed, and "all layers vanish" is impossible for a genuine map.
+*Proof.* A nonzero binary form of degree `n` has at most `n` zeros
+counted with multiplicity; three points with vanishing order
+`> n/3` each exceed the budget. ∎
+
+**Reduction 5.15′ ([L] modulo (T1) — proved).** Each rung either kills
+its `h`-coefficient outright (when the transfer pairing is
+nondegenerate and the `Θ`-side is unconstrained) or imposes one linear
+condition on the finite-dimensional jet space of `Θ⁽⁰⁾` at `c_σ`
+(dimension `2·dim(jets to the tested order)`, explicit). Hence [L]
+holds as soon as: **(C2)** the frame constants are nondegenerate
+(in flight), and **(C2′)** the successive rung conditions are linearly
+independent on the `Θ`-jet space through the budget of Theorem 5.15 —
+a single finite linear-algebra check per `m ∈ {1, 3}`, named here as a
+CAS call. With (T1), (C2), (C2′): **[L] is proved.** The owed §5.8
+case bookkeeping (non-maximal evasion) is subsumed: unequal or shifted
+vanishing orders only re-index which `h`-coefficients the rungs test;
+the budget argument is order-pattern-independent.
+
+### 5.16 The division question, and a new recursion floor (executed to structure)
+
+The degree-drop induction (Thm 5.11(iv)) needs a DIVISION LEMMA: does
+a common factor `g` of the line-maps extend to a factorization of the
+whole tuple? Executed analysis for the main stratum `g = u + v`
+(equivalently `q|_{line}`, the case containing the `q`-tower):
+
+**Theorem 5.16 (dichotomy on the `u+v` stratum — proved).** Let `T` be
+a pointwise element whose three line-restrictions are divisible by
+`u + v`. Then either `q | T` (all slots) — and `T = q·T′` descends the
+tower with `r ↦ r−2` — or the restriction `T̄ := T|_{q=0}` to the
+invariant conic is a NONZERO **V4-equivariant landing datum on the
+conic**: a V4-equivariant `P¹ ⇢ X` (the conic is V4-stable and
+rational) of degree `≤ 2r` whose values on the six points
+`conic ∩ (source lines)` vanish. *Proof.* `q | T` iff `T̄ = 0`;
+`F(T̄) = 0` and equivariance restrict; the line-divisibility hypothesis
+is exactly the vanishing at the six intersection points. ∎
+
+So the induction's obstruction is a NEW, one-dimension-lower
+recursion floor: **V4-equivariant rational curves on `X`** (the
+conic-supported data). This is classical-adjacent geometry — the
+V4-stable rational curves on a cubic threefold with prescribed
+equivariance and six-point vanishing — finite-dimensional per degree,
+and the natural target of the same parity/funnel analysis (a V4-stable
+rational curve meets `X^{V4}` — six points — or the involution loci,
+and the elliptic components again receive only points). Its
+classification is named **(T1b)** below. Note the satisfying
+structure: the program now recurses `P⁴ → P² → P¹`, one source
+dimension per floor, each floor's degenerations living on the next.
+
+### 5.17 (T1) decomposed to its irreducible core
+
+- **(T1a) Rigid-tail orbit finiteness** — on the rigid stratum
+  (Thm 5.11(iii)), the `s·r` tail equations cut finitely many torus
+  orbits, uniformly in `s`. OPEN — this is the single remaining core
+  of the negative program. Sharpest attack surface: the level-`(r+2)`
+  resultant's structure, plus the C3-stable-curve refinement (a
+  family's image is a C3-stable rational curve in the locus, so
+  positive-dimensional NON-C3-stable moduli would still not defeat
+  constancy — the needed statement is strictly weaker than literal
+  orbit-finiteness).
+- **(T1b) The conic floor** — classify V4-equivariant conic-supported
+  data (Thm 5.16's second branch). NEW but structured; expected
+  finite by the recursion's own funnel arguments.
+- **(T1c) Vertex-degenerate strata** — the endpoint-order bookkeeping
+  (subsumes old [U3]); mechanical, the dictionary owed from §5.13.
+
+**Program state after this section.** PROVED tonight: 5.15, 5.15′,
+5.16 (plus 5.12–5.14 earlier). The ENTIRE negative headline now rests
+on: **(T1a)** and **(T1b)** as theorems; **(C1), (C2), (C2′), (C3)**
+as named finite computations (two in flight); (T1c) as bookkeeping;
+then assembly + audit. Nothing else. If (T1a) fails structurally —
+an unexplained resultant component — that component is an explicit
+candidate branch, and the program's honest output changes sign
+accordingly.

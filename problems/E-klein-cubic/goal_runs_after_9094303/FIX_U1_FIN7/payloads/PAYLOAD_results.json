@@ -1,0 +1,536 @@
+{
+ "n_params": 39,
+ "n_eqs": 52,
+ "torus": [
+  [
+   0,
+   "A",
+   3,
+   true
+  ],
+  [
+   0,
+   "B",
+   3,
+   true
+  ],
+  [
+   0,
+   "C",
+   3,
+   true
+  ],
+  [
+   0,
+   "D",
+   3,
+   true
+  ],
+  [
+   1,
+   "A",
+   3,
+   true
+  ],
+  [
+   1,
+   "B",
+   3,
+   true
+  ],
+  [
+   1,
+   "C",
+   3,
+   true
+  ],
+  [
+   1,
+   "D",
+   3,
+   true
+  ],
+  [
+   2,
+   "A",
+   3,
+   true
+  ],
+  [
+   2,
+   "B",
+   3,
+   true
+  ],
+  [
+   2,
+   "C",
+   3,
+   true
+  ],
+  [
+   2,
+   "D",
+   3,
+   true
+  ]
+ ],
+ "tangent": [
+  {
+   "j": 0,
+   "part": "A",
+   "npts": 1,
+   "dimK": 4,
+   "on_cone": true,
+   "po1_ok": true,
+   "rank": 31,
+   "corank": 8,
+   "per_block": {
+    "0": [
+     11,
+     2
+    ],
+    "1": [
+     10,
+     3
+    ],
+    "2": [
+     10,
+     3
+    ]
+   }
+  },
+  {
+   "j": 0,
+   "part": "B",
+   "npts": 2,
+   "dimK": 8,
+   "on_cone": true,
+   "po1_ok": true,
+   "rank": 34,
+   "corank": 5,
+   "per_block": {
+    "0": [
+     12,
+     1
+    ],
+    "1": [
+     11,
+     2
+    ],
+    "2": [
+     11,
+     2
+    ]
+   }
+  },
+  {
+   "j": 0,
+   "part": "C",
+   "npts": 2,
+   "dimK": 8,
+   "on_cone": true,
+   "po1_ok": true,
+   "rank": 34,
+   "corank": 5,
+   "per_block": {
+    "0": [
+     12,
+     1
+    ],
+    "1": [
+     11,
+     2
+    ],
+    "2": [
+     11,
+     2
+    ]
+   }
+  },
+  {
+   "j": 0,
+   "part": "D",
+   "npts": 4,
+   "dimK": 16,
+   "on_cone": true,
+   "po1_ok": true,
+   "rank": 34,
+   "corank": 5,
+   "per_block": {
+    "0": [
+     12,
+     1
+    ],
+    "1": [
+     11,
+     2
+    ],
+    "2": [
+     11,
+     2
+    ]
+   }
+  },
+  {
+   "j": 1,
+   "part": "A",
+   "npts": 1,
+   "dimK": 4,
+   "on_cone": true,
+   "po1_ok": true,
+   "rank": 31,
+   "corank": 8,
+   "per_block": {
+    "0": [
+     10,
+     3
+    ],
+    "1": [
+     11,
+     2
+    ],
+    "2": [
+     10,
+     3
+    ]
+   }
+  },
+  {
+   "j": 1,
+   "part": "B",
+   "npts": 2,
+   "dimK": 8,
+   "on_cone": true,
+   "po1_ok": true,
+   "rank": 34,
+   "corank": 5,
+   "per_block": {
+    "0": [
+     11,
+     2
+    ],
+    "1": [
+     12,
+     1
+    ],
+    "2": [
+     11,
+     2
+    ]
+   }
+  },
+  {
+   "j": 1,
+   "part": "C",
+   "npts": 2,
+   "dimK": 8,
+   "on_cone": true,
+   "po1_ok": true,
+   "rank": 34,
+   "corank": 5,
+   "per_block": {
+    "0": [
+     11,
+     2
+    ],
+    "1": [
+     12,
+     1
+    ],
+    "2": [
+     11,
+     2
+    ]
+   }
+  },
+  {
+   "j": 1,
+   "part": "D",
+   "npts": 4,
+   "dimK": 16,
+   "on_cone": true,
+   "po1_ok": true,
+   "rank": 34,
+   "corank": 5,
+   "per_block": {
+    "0": [
+     11,
+     2
+    ],
+    "1": [
+     12,
+     1
+    ],
+    "2": [
+     11,
+     2
+    ]
+   }
+  },
+  {
+   "j": 2,
+   "part": "A",
+   "npts": 1,
+   "dimK": 4,
+   "on_cone": true,
+   "po1_ok": true,
+   "rank": 31,
+   "corank": 8,
+   "per_block": {
+    "0": [
+     10,
+     3
+    ],
+    "1": [
+     10,
+     3
+    ],
+    "2": [
+     11,
+     2
+    ]
+   }
+  },
+  {
+   "j": 2,
+   "part": "B",
+   "npts": 2,
+   "dimK": 8,
+   "on_cone": true,
+   "po1_ok": true,
+   "rank": 34,
+   "corank": 5,
+   "per_block": {
+    "0": [
+     11,
+     2
+    ],
+    "1": [
+     11,
+     2
+    ],
+    "2": [
+     12,
+     1
+    ]
+   }
+  },
+  {
+   "j": 2,
+   "part": "C",
+   "npts": 2,
+   "dimK": 8,
+   "on_cone": true,
+   "po1_ok": true,
+   "rank": 34,
+   "corank": 5,
+   "per_block": {
+    "0": [
+     11,
+     2
+    ],
+    "1": [
+     11,
+     2
+    ],
+    "2": [
+     12,
+     1
+    ]
+   }
+  },
+  {
+   "j": 2,
+   "part": "D",
+   "npts": 4,
+   "dimK": 16,
+   "on_cone": true,
+   "po1_ok": true,
+   "rank": 34,
+   "corank": 5,
+   "per_block": {
+    "0": [
+     11,
+     2
+    ],
+    "1": [
+     11,
+     2
+    ],
+    "2": [
+     12,
+     1
+    ]
+   }
+  }
+ ],
+ "ob2": [
+  [
+   0,
+   "A",
+   8,
+   21,
+   false,
+   true
+  ],
+  [
+   0,
+   "B",
+   5,
+   18,
+   true,
+   true
+  ],
+  [
+   0,
+   "C",
+   5,
+   18,
+   true,
+   true
+  ],
+  [
+   0,
+   "D",
+   5,
+   18,
+   true,
+   true
+  ],
+  [
+   1,
+   "A",
+   8,
+   21,
+   false,
+   true
+  ],
+  [
+   1,
+   "B",
+   5,
+   18,
+   true,
+   true
+  ],
+  [
+   1,
+   "C",
+   5,
+   18,
+   true,
+   true
+  ]
+ ],
+ "degenerate": [
+  [
+   "u2'",
+   true,
+   true,
+   21,
+   18
+  ],
+  [
+   "u1'",
+   true,
+   true,
+   21,
+   18
+  ],
+  [
+   "u0'",
+   true,
+   true,
+   21,
+   18
+  ]
+ ],
+ "uv": [
+  [
+   0,
+   "A",
+   1,
+   true,
+   true
+  ],
+  [
+   0,
+   "B",
+   2,
+   true,
+   true
+  ],
+  [
+   0,
+   "C",
+   2,
+   true,
+   true
+  ],
+  [
+   0,
+   "D",
+   4,
+   true,
+   true
+  ],
+  [
+   1,
+   "A",
+   1,
+   true,
+   true
+  ],
+  [
+   1,
+   "B",
+   2,
+   true,
+   true
+  ],
+  [
+   1,
+   "C",
+   2,
+   true,
+   true
+  ],
+  [
+   1,
+   "D",
+   4,
+   true,
+   true
+  ],
+  [
+   2,
+   "A",
+   1,
+   true,
+   true
+  ],
+  [
+   2,
+   "B",
+   2,
+   true,
+   true
+  ],
+  [
+   2,
+   "C",
+   2,
+   true,
+   true
+  ],
+  [
+   2,
+   "D",
+   4,
+   true,
+   true
+  ]
+ ],
+ "note": "sections 6 and 7 re-derived by make_payloads.py / verify_fin7.py; ob2 list may be partial if the producer was still running section 5 (all 27 points are covered modularly by arc_scan.py)"
+}

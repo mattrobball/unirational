@@ -1,0 +1,53 @@
+FIX-L1  PAYLOAD -- the exact sigma-frame constants of the [L] transfer condition
+==============================================================================
+
+FIELD    K = Q(om, nu),  om^2+om+1 = 0,  nu^2 = -11 ;  delta := om-om^2 (delta^2 = -3)
+         sqrt33 := -nu.delta  (positive real in the embedding z=e^{2pi i/11}, om=e^{2pi i/3})
+FRAME    the FIX-H1 sigma-frame: (E_a,E_b,E_x | E_y,E_z), W^+ = <E_a,E_b,E_x>, W^- = <E_y,E_z>,
+         F = kp a^3 + km b^3 + a(x^2+om y^2+om^2 z^2) + b(x^2+om^2 y^2+om z^2) + xyz   [normal form (1.1)]
+         rho|_{W^-} = [[-1/2,(1-nu)/4],[(-1-nu)/4,-1/2]] , tau|_{W^-} = diag(1,-1) , tau|_{W^+} = diag(1,1,-1)
+
+CONSTANT                       CLOSED FORM                            numeric (40-digit values in logs/VERIFY.log)
+------------------------------------------------------------------------------
+kp                             13/16 + 3/16*sqrt33                    1.889605496225880
+km                             13/16 - 3/16*sqrt33                    -0.264605496225880
+beta (c_sigma = [1:beta:0])    -7/4 - 1/4*sqrt33                      -3.186140661634507
+c = -(1+beta)  (Chebyshev)     3/4 + 1/4*sqrt33                       2.186140661634507
+F(c_sigma) = F0(c_sigma)       81/16 + 15/16*sqrt33                   10.448027481129403
+alpha  = Q(c_sigma;Omega)      9 + 3*sqrt33                           26.233687939614086
+beta   = Q(u-;v-)/<u-,v->      1                                      1.000000000000000
+
+IDENTITIES   alpha = 12 c = 16 kp - 4 ;  F(c_sigma) = c^3 ;  alpha^3 = 1728 F(c_sigma)
+             => alpha = 0  <=>  F(c_sigma) = 0 : alpha != 0 IS the frame fact "c_sigma off X".
+
+NORMALISATIONS (alpha, beta are each defined only up to these scalars; "!=0" is intrinsic)
+  triv(W^+)        c_sigma = E_a + beta E_b
+  triv(Sym^2 W^-)  Omega = diag(1-nu, 1+nu)   [q0 = (1+nu)y^2+(1-nu)z^2 , <q0,Omega> = 24]
+  std(W^+)         u+ = (1+sqrt33)E_a + (sqrt33-1)E_b , u- = E_x
+  std(Sym^2 W^-)   v+ = diag(1-nu,-(1+nu)) , v- = E_y(x)E_z+E_z(x)E_y
+  std pairing      <u-,v-> := 1   (invariance forces <u+,v+> = 24 delta)
+  Q std-block      [[Q(u+,v+),Q(u+,v-)],[Q(u-,v+),Q(u-,v-)]] = [[24 delta, 0],[0, 1]]  (PERFECT)
+
+NONDEGENERACY VERDICTS
+  alpha != 0   YES   (alpha = 9+3 sqrt33 = 26.2336879396...,  N_{Q(sqrt33)/Q}(alpha) = -216)
+  beta  != 0   YES   (beta = 1; it is the xyz-coefficient of the normal form)
+
+GENERATORS  V_m = Hom(Sym^m W^-, W^-) ;  dim V_m[triv] = dim V_m[sgn] = 1 for m = 1,3  (Lemma 5.1)
+  V_1[triv]  [ y ] E_y  +  [ z ] E_z
+  V_1[sgn ]  [ z ] E_y  +  [ (5/6 - 1/6*nu)y ] E_z
+  V_3[triv]  [ y^3 + (-5/6 - 1/6*nu)yz^2 ] E_y  +  [ y^2z + (-5/6 - 1/6*nu)z^3 ] E_z
+  V_3[sgn ]  [ (-5/6 + 1/6*nu)y^2z + z^3 ] E_y  +  [ (-7/18 + 5/18*nu)y^3 + (5/6 - 1/6*nu)yz^2 ] E_z
+  e-parity: w_1 in V_m[sgn^{e+1}]  ->  e EVEN picks V_m[sgn], e ODD picks V_m[triv].
+
+TRANSFER CONDITION   c^2 . Q(Theta(y^{m+1}) ; gamma(y^m) (x) gamma(y^m)) == 0  in Sym^{3m+1}(W^-)^*,
+                     Theta = Theta^(0)(c_sigma) in Hom(Sym^{m+1}W^-, W^+)^{S3}
+  (m, twist)    dim Theta-space   rank   codim   solution dim   VERDICT
+  (1, triv)          2            1      1          1          NONVACUOUS
+  (1, sgn )          2            1      1          1          NONVACUOUS
+  (3, triv)          3            2      2          1          NONVACUOUS
+  (3, sgn )          3            2      2          1          NONVACUOUS
+
+  In every case the coefficient vector (alpha (g(x)g)_t , beta (g(x)g)_s) is NONZERO in BOTH parts.
+  m = 1 : the condition is a proper HYPERPLANE in the 2-dimensional Theta-space (sec.5.8 as written).
+  m = 3 : the Theta-space is 3-dimensional (Sym^4 std = triv (+) 2 std, so "= C^2 by Schur" is an m=1 statement)
+          and the condition has CODIMENSION 2 -- strictly stronger than a hyperplane.

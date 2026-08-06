@@ -5,9 +5,17 @@ Packet `goal_runs_after_9094303/FIX_U1_FIN7/`.  Working dir = this directory
 
 ```
 cd /Users/worker/unirational/problems/E-klein-cubic/goal_runs_after_9094303/FIX_U1_FIN7
-python3 produce_fin7.py          # ~35 min ; terminal line FIX_U1_FIN7_PRODUCE_OK
-python3 verify_fin7.py           # ~12 min ; terminal line FIX_U1_FIN7_VERIFY_OK
-python3 c3_and_curve.py          # ~1 min  ; (3a) C3-stability, (3b) rational curve
+python3 produce_fin7.py          # ~50 min ; terminal line FIX_U1_FIN7_PRODUCE_OK
+python3 verify_fin7.py           # ~15 min ; terminal line FIX_U1_FIN7_VERIFY_OK
+python3 make_payloads.py         # renders payloads/PAYLOAD_*.txt from the JSON
+python3 c3_and_curve.py          # (3a) C3-stability, (3b) rational curve
+python3 xyz_form.py              # the (X,Y,Z) reformulation + completing the square
+python3 thm59_checks.py          # Theorem 5.9 (a)(b)(c) convention cross-checks
+python3 kuranishi.py             # Ob_2, Ob_3 symbolically; emits m2/kur_*.m2
+python3 arc_scan.py 10 8         # Kuranishi ray-lifting scan, all 27 points
+python3 partA_tc.py 10 8         # part A: the quadratic tangent cone
+python3 arc_pade.py 16           # rational-reconstruction attempt (negative)
+M2 --script m2/kur_j0A_OB2.m2    # -> dim 5, degree 1 : V(Ob_2) is a 5-plane
 ```
 
 Second engine (Macaulay2, exact ranks over the residue number fields):
@@ -37,7 +45,12 @@ M2 does its own differentiation, substitution and `rank` over
 | `fin7_modular.py` | split primes, modular points, modular ranks (cross-checks and certified lower bounds) |
 | `fin7_slice.py` | linear-slice generators for the global dimension attempt |
 | `make_m2.py` | Macaulay2 second-engine inputs |
-| `produce_fin7.py`, `verify_fin7.py`, `c3_and_curve.py` | producer, verifier, geometry |
+| `produce_fin7.py`, `verify_fin7.py` | producer, verifier |
+| `c3_and_curve.py` | (3a) `Θ ∘ g_{s,t,w} = g_{w,s,t} ∘ Θ`; (3b) the explicit rational curve |
+| `xyz_form.py` | exact `F(T) = xyz·G` and the completing-the-square normal form |
+| `thm59_checks.py` | Note IV Theorem 5.9 (a)(b)(c) against this build |
+| `kuranishi.py`, `arc_scan.py`, `partA_tc.py`, `arc_pade.py` | the level-0 Kuranishi map, the ray-lifting scan, part A's tangent cone, the rational-reconstruction attempt |
+| `make_payloads.py` | renders the payload text files |
 | `payloads/` | `PAYLOAD_results.json`, `PAYLOAD_tangent_table.txt`, `PAYLOAD_uv_check.txt` |
 | `logs/` | all run logs |
 
