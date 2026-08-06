@@ -224,3 +224,72 @@ piece, degree by degree, gives THE HESSIAN WINDOW: the first `d`
 at which a map-type covariant vanishing on the Hessian curve can
 exist. Compare against the sealed cutoffs (≤ 30 empty; first
 window 34 via `(1,6)`).
+
+### 6.1 EXECUTED (director probes, 2026-08-06; full consistency battery green)
+
+Fixed-point data of `C₂₀ = Sing(Hess F)`, machine-extracted mod 397
+(`hess_fix*.m2`), all counts matching Chevalley–Weil (6 / 4 / 5)
+and topological Lefschetz:
+
+- **Order 11** (cyclic frame, `g = diag(ζ^a)`, `a = (1,9,4,3,5)`,
+  the QR set): fixed points = the five coordinate points, ALL on
+  `C₂₀`, smooth (radical ideal; tangent-cone mult 1; the 2-dim
+  jacobian kernel is Euler + tangent). Tangent at `e_i` is the
+  `e_{i+1}`-direction: tangent weights `ζ^{a_{i+1}−a_i}` =
+  `ζ^{8,6,10,2,7}` — exactly the quadratic NON-residues. L-weights
+  `ζ^{−a_i}` (SL-lift canonical).
+- **Order 2** (normal-form frame): all SIX fixed points lie in the
+  plane `P(V₊)` (`C ∩ P(V₋) = ∅`); tangent weights forced `= −1`
+  by finite-order rigidity. Hence `χ_d(σ) = 3` for ALL `d`.
+- **Order 3**: fixed locus is two lines and a point; `C` misses the
+  point and meets each line in 2 points (split quadratics mod p);
+  tangent weights `(ω, ω, ω², ω²)`, L-weights `(ω², ω², ω, ω)`.
+  Hence `χ_d(ρ)` cycles `(2, −2, 0)` for `d ≡ (0,1,2) mod 3`.
+- **Orders 5, 6**: empty fixed sets (stabilizers on `X(11)` have
+  orders 2, 3, 11 only) — `χ_d = 0` identically.
+
+Atiyah–Bott then gives the FULL `G`-character of `H⁰(C, O(d)|)`
+for every `d ≥ 3` (`H¹ = 0`), i.e. the complete `G`-module
+structure of the coordinate ring of `X(11) ⊂ P(W)` — banked in
+`hess_window.py`. Verification battery, all green: character-table
+orthogonality (table itself machine-verified against OSCAR/GAP
+`character_table("L2(11)")`, `chartab.out`, including the power
+map `11a² ∈ 11b`); eigenvalue-multiset traces per class; every
+`mult_V(H⁰(L^d))` a NON-NEGATIVE INTEGER for `d = 3..64` with
+`Σ mult·dim = 20d − 25`; `H¹(C)` mults (CW: `W ⊕ W̄ ⊕ 10^{⊕2} ⊕
+11^{⊕2}`, dim 52 = 2·26) reproduce all three Lefschetz numbers.
+(Note `J(X(11)) ⊃ E_{−11}⁵` via Lemma 1 — the canonical carrier
+indeed carries the Weil fivefold, as Theorem 2 requires.)
+
+**The table** (`mult_{W̄}` = W-valued covariant tuples; ideal-part
+is the LEFT-EXACTNESS LOWER BOUND `mult(S^d) − mult(H⁰(L^d))`):
+
+| d | S^d supply | on-curve | ideal ≥ |
+|---|---|---|---|
+| 3–5 | 0,2,1 | 0,2,1 | 0 |
+| 6 | 2 | 0 | **2** |
+| 10 | 10 | 2 | 8 |
+| 25 | 189 | 4 | 185 |
+| 34 | 576 | 6 | **570** |
+| 36 | 706 | 5 | 701 |
+| 43 | 1375 | 7 | 1368 |
+
+Two structural readouts:
+
+1. **Containing the Hessian curve is representation-cheap.** The
+   on-curve column stays in single digits through `d = 64` (3–10).
+   At the `d = 34` gateway the carrier costs ≤ 6 of the ≤ 16 slice
+   dimensions: THE CARRIER CONDITION DOES NOT OBSTRUCT THE
+   GATEWAY. The positive ansatz "profile `(1,6)` at `d = 34` +
+   Hessian curve in the base locus" is dimensionally viable, and
+   supply exists from `d = 6` onward.
+2. **The bound has slack at special small degrees**: at `d = 4`
+   the gradient tuple `∇(Hess F)` vanishes on `C₂₀` by definition
+   yet the bound reads 0 — restriction to `H⁰(L⁴)` is not
+   surjective there. Ideal-parts are lower bounds, never counts.
+
+CAVEAT (scope): the table counts SUPPLY of carrier-compatible
+covariant tuples. It does not produce maps: landing in `X`,
+dominance, and the full profile constraints still apply on top.
+The statement with teeth is negative-space: the carrier condition
+had the potential to kill the gateway window and DID NOT.

@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `66f88ef` (2026-08-05; the
+Snapshot metadata — notebook parent head: `63b2c33` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2978,7 +2978,35 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   next derivation = the HESSIAN WINDOW (equivariant character of
   `H⁰(I_{C₂₀}(d))` via Chevalley–Weil on X(11); first `d`
   admitting a landing covariant vanishing on the Hessian
-  curve).**** Same-day
+  curve). **Wave 21 packet LANDED: `FIX-VI-PRYM-SEAL-ALLGREEN`**
+  (`goal_runs_after_576ad77/FIX_VI_PRYM_SEAL`; main 24/24,
+  independent verifier 24/24, director-replayed exit 0; exact
+  dim-4 field model, no simplify heuristics; verifier used a
+  different parameterisation, involution, resultant restriction,
+  Aronhold invariants, Eisenstein CM route; M2 cross-engine on
+  the intersection geometry, `b³ = −(283+21√33)/256`; deviations
+  none mathematical). Note VI §§2–2.5 computational claims are
+  now SEALED; manifest upgraded. **Wave 22 §6 EXECUTED (probes
+  `hess_fix*.m2`, `hess_window.py`, `chartab.jl/out`): the
+  equivariant coordinate ring of X(11) ⊂ P(W) fully computed.**
+  Fixed data machine-extracted mod 397, CW+Lefschetz-consistent:
+  order-11 = the 5 coordinate points (smooth on C, tangents
+  ζ^{QNR}), order-2 = 6 points all in P(V₊) (`χ_d(σ) ≡ 3`),
+  order-3 = 2+2 on the two fixed lines (tangents ω,ω,ω²,ω²;
+  `χ_d(ρ)` cycles (2,−2,0)), orders 5/6 empty. Atiyah–Bott then
+  yields all `mult_V(H⁰(O(d)|_{X(11)}))`, `d = 3..64`: every
+  mult a non-negative integer, dims sum to `20d−25`, character
+  table OSCAR-verified (incl. power map `11a² ∈ 11b`), `H¹(C) =
+  W ⊕ W̄ ⊕ 10^{⊕2} ⊕ 11^{⊕2}` reproduces all Lefschetz numbers.
+  READOUTS: (1) Hessian containment is representation-cheap
+  (on-curve mult 3–10 through d=64): at the d=34 gateway it
+  costs ≤ 6 of the ≤ 16 slice dims — THE CARRIER CONDITION DOES
+  NOT OBSTRUCT THE GATEWAY; supply of Hessian-vanishing W-valued
+  covariants exists from d=6 (d=34: ≥ 570). (2) Ideal-parts are
+  lower bounds only (at d=4 the gradient `∇Hess` vanishes on C
+  while the bound reads 0 — restriction not surjective). Note
+  VII §5 obligations 1–3 all closed (OSCAR table, triples,
+  Hessian degree/genus).**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

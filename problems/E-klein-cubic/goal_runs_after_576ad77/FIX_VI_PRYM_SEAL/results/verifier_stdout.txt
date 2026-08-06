@@ -1,0 +1,26 @@
+CHECK trace_relations PASS   | kp+km=13/8, kp*km=-1/2, (kp+2)(km+2)=27/4, (kp+4)(km+4)=22
+CHECK product_22 PASS   | (kp+4)(km+4) = 22
+CHECK restriction_identity PASS   | Res_x(F0, x^2-4(a^2-ab+b^2)) = ((kp+4)a^3+(km+4)b^3)^2
+CHECK omega_conic_factorisation PASS   | (wa+w^2b)(w^2a+wb) = a^2-ab+b^2 ; (a+b)(a^2-ab+b^2) = a^3+b^3
+CHECK param_on_conic PASS   | x(n)^2 - 4(1-b(n)+b(n)^2) = 0 for the (1,2)-based parameterisation
+CHECK sextic_degree PASS   | deg = 6, closed form (kp+4)(n^2-4)^3 + (km+4)n^3(n-4)^3, LC = 77/8
+CHECK sextic_coeffs_agree PASS   | cleared numerator = (8) * closed form, coefficient by coefficient
+CHECK tau_involution PASS   | tau_n(tau_n(n)) = n
+CHECK tau_preserves_roots PASS   | P6n(tau_n(n))*(n-1)^6 = (-27) * P6n(n)
+CHECK evenness PASS   | odd s-coefficients vanish on the (1,2)-based parameterisation too
+CHECK cubic_squarefree PASS   | disc_u(c) != 0
+CHECK j_plus_exact PASS   | j(E+) = -32768 via Aronhold I,J
+CHECK j_minus_exact PASS   | j(E-) = -32768 via Aronhold I,J
+CHECK j_plus_equals_j_minus PASS   | j(E+) = j(E-)
+CHECK s_pairing_numeric PASS   | 6 s-roots pair as {s,-s}; max |s_a+s_b| = 1.25e-71
+CHECK j_plus_numeric PASS   | |j(E+)+32768| = 3.51e-66
+CHECK j_minus_numeric PASS   | |j(E-)+32768| = 2.58e-66
+CHECK j_not_arrangement PASS   | -32768 is neither 8192/11 nor -4096/11
+CHECK cm_minus_11 PASS   | h(-11) = 1 (forms [(1, 1, 3)]); Eisenstein route |j+32768| = 4.2e-66 => H_{-11}(X) = X + 32768
+CHECK genus_Esigma PASS   | E_sigma smooth (Fx=0 forces a=b=x=0 since kp != km); cross-ratio route gives j(E_sigma) = 8192/11 exactly mod beta^3 = -kp/km
+CHECK j_Esigma_numeric PASS   | numeric cross-ratio j(E_sigma) matches 8192/11, err = 3.69e-58
+CHECK six_intersection_points PASS   | disc_n(P6n) != 0; rho = -(283+21 sqrt33)/256, != 0 and != -1; all 6 n-roots satisfy b(n)^3 = rho (max dev 2.12e-61) -> 3 distinct b, 2 distinct x each
+CHECK rh_arithmetic PASS   | g(E~)=4, g(K~)=2, p_a(D5)=6 (= plane quintic 6 = Bezout-consistent), p_a(D5~)=11=2*6-1, Prym dim = 5
+CHECK m2_independent_geometry PASS   | Macaulay2 re-run: smooth cubic + smooth conic, deg = 6, transverse, elimination gives b^3 = -(283+21 sqrt33)/256
+VERIFIER: 24/24 PASS
+[verifier] 0.8s

@@ -1,0 +1,2 @@
+CHECK m2_independent_geometry PASS   | M2: smooth cubic + smooth conic, deg(E∩K)=6, transverse, restriction identity = 0, elimination gives b^3 = -(283+21*sqrt33)/256
+[M2] 0.4s
