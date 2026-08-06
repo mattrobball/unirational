@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `2666fdb` (2026-08-05; the
+Snapshot metadata — notebook parent head: `f6aabf6` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2837,7 +2837,22 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   flight, `goal_runs_after_2666fdb/FIX_P2_GATEWAY_D36`): the
   gateway's linear cascade, then landing equations, then the sieve
   advance; cell implications for the `(1,6)` hole reported en
-  route.**** Same-day
+  route. **CLEANUP AND HANDOFF (user goal, 2026-08-06):** the packet
+  mill winds down; `HANDOFF_2026-08-06.md` written (self-contained
+  state-of-the-problem for human continuation: the cutoff theorem,
+  the profile theory, the cell ledger, the terminal verdict, the two
+  walls, the trust guidance separating sealed packets from
+  draft-grade Note IV §5 hand-proofs with the six-correction
+  history, the repo map, and the ranked open problems). Deliberately
+  STOPPED: the `(1,6)` `n = 6` modular sweep (at 2028/~4300 runs,
+  finding-grade; partial logs remain in the H1 packet) and the
+  Groebner.jl third-kernel redundancy sweep (its target already
+  double-sealed). KEPT RUNNING: the `(1,6)` `n = 4` char-0 run (a
+  live ledger clause, majority of leaves unit so far) and FIX-P2
+  (the gateway window; integrate on return). Director probe
+  artifacts preserved in `director_probes_20260806/`. Next per the
+  user: the split-discriminant Prym investigation (Note V's
+  option-2 think; `Δ₅ = E_σ ∪ K_c`).**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
