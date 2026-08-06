@@ -30,38 +30,53 @@ def emul(a, b, tab, p):
 
 
 # ---------------------------------------------------------- the cubic system
+def _mon_index(r):
+    """cubic monomials c_u c_v c_w (u<=v<=w) with the symmetrisation weights"""
+    monsl = list(itertools.combinations_with_replacement(range(r), 3))
+    U = np.array([m[0] for m in monsl])
+    V = np.array([m[1] for m in monsl])
+    W = np.array([m[2] for m in monsl])
+    mult = np.array([1 if len(set(m)) == 3 else (2 if len(set(m)) == 2 else 6)
+                     for m in monsl])
+    return monsl, U, V, W, mult
+
+
 def cubic_rows(Bmaps, mons, p, npts, rng, tab=None):
     """Bmaps: (r, 5, N) over F_p (tab=None) or (r, 5, N, k) over F_{p^k}.
 
-    Returns list of rows: coefficients of F(sum_l lam_l B_l)(x) as a cubic in
-    the lam's, one row per sample point (k rows per point in the ext case)."""
+    Returns (rows, monsl): rows[e] holds the coefficients of the cubic
+    F(sum_l lam_l B_l)(x_e) in the lam's -- scalars over F_p, or length-k
+    vectors over F_{p^k} when tab is given (one row per sample point)."""
     r = Bmaps.shape[0]
-    monsl = list(itertools.combinations_with_replacement(range(r), 3))
+    monsl, U, V, W, mult = _mon_index(r)
+    inv = np.array([pow(int(m), p - 2, p) for m in mult], dtype=np.float64)
     rows = []
     for _ in range(npts):
         x = rng.integers(0, p, size=5).astype(np.float64)
         mx = monmat([x], mons, p)[0]
         if tab is None:
-            M = np.array([[float(int(np.dot(Bmaps[l, i], mx)) % p) for l in range(r)]
-                          for i in range(5)])                       # 5 x r
+            M = np.tensordot(Bmaps, mx, axes=([2], [0])) % p              # r x 5
             C3 = np.zeros((r, r, r))
             for i in range(5):
-                u, v = M[i], M[(i + 1) % 5]
+                u, v = M[:, i], M[:, (i + 1) % 5]
                 C3 = (C3 + np.einsum('u,v,w->uvw', u, u, v)) % p
-            rows.append([int(sum(int(C3[q]) for q in set(itertools.permutations(m))) % p)
-                         for m in monsl])
         else:
             k = Bmaps.shape[3]
-            M = np.einsum('linj,n->lij', Bmaps, mx) % p             # r x 5 x k
+            M = np.einsum('linj,n->lij', Bmaps, mx) % p                   # r x 5 x k
             C3 = np.zeros((r, r, r, k))
             for i in range(5):
                 u, v = M[:, i, :], M[:, (i + 1) % 5, :]
-                uu = emul(u[:, None, :], u[None, :, :], tab, p)      # r x r x k
+                uu = emul(u[:, None, :], u[None, :, :], tab, p)
                 C3 = (C3 + emul(uu[:, :, None, :], v[None, None, :, :], tab, p)) % p
-            for comp in range(k):
-                rows.append([int(sum(int(C3[q + (comp,)])
-                                     for q in set(itertools.permutations(m))) % p)
-                             for m in monsl])
+        S = np.zeros_like(C3)
+        for perm in itertools.permutations(range(3)):
+            ax = list(perm) + ([3] if tab is not None else [])
+            S = (S + np.transpose(C3, ax)) % p
+        vals = S[U, V, W] % p
+        if tab is None:
+            rows.append((vals * inv) % p)
+        else:
+            rows.append((vals * inv[:, None]) % p)
     return rows, monsl
 
 
@@ -69,11 +84,49 @@ def write_ms(rows, monsl, r, p, path, extra_gens=()):
     names = ','.join('c%d' % i for i in range(r))
     polys = []
     for row in rows:
-        terms = ['%d*c%d*c%d*c%d' % (c, u, v, w)
-                 for c, (u, v, w) in zip(row, monsl) if c % p]
+        terms = ['%d*c%d*c%d*c%d' % (int(c) % p, u, v, w)
+                 for c, (u, v, w) in zip(row, monsl) if int(c) % p]
         if terms:
             polys.append('+'.join(terms))
     polys.extend(extra_gens)
+    if not polys:
+        polys = ['0']
+    src = names + '\n' + str(p) + '\n' + ',\n'.join(polys) + '\n'
+    assert '(' not in src, 'msolve parenthesis landmine'
+    open(path, 'w').write(src)
+    return len(polys)
+
+
+def minpoly_of(tab, p):
+    """minimal polynomial of theta for a single-block subfield with basis
+    (1, th, ..., th^{k-1}): th^k = sum_j tab[k-1,1,j] th^j."""
+    k = tab.shape[0]
+    if k == 1:
+        return None
+    co = [int(v) % p for v in tab[k - 1, 1]]
+    terms = ['1*th^%d' % k] + ['%d*th^%d' % ((-co[j]) % p, j) for j in range(k) if co[j] % p]
+    return '+'.join(t if not t.endswith('^0') else t[:-2] for t in terms)
+
+
+def write_ms_ext(rows, monsl, r, p, tab, path):
+    """extension branch: keep theta as a variable with its minimal polynomial,
+    so the system has r+1 variables instead of r*k."""
+    k = tab.shape[0]
+    names = ','.join('c%d' % i for i in range(r)) + ',th'
+    polys = []
+    for row in rows:                                  # row: (nmons, k)
+        terms = []
+        for co, (u, v, w) in zip(row, monsl):
+            for j in range(k):
+                cj = int(co[j]) % p
+                if cj:
+                    th = '' if j == 0 else ('*th' if j == 1 else '*th^%d' % j)
+                    terms.append('%d*c%d*c%d*c%d%s' % (cj, u, v, w, th))
+        if terms:
+            polys.append('+'.join(terms))
+    mp = minpoly_of(tab, p)
+    if mp:
+        polys.append(mp)
     if not polys:
         polys = ['0']
     src = names + '\n' + str(p) + '\n' + ',\n'.join(polys) + '\n'
@@ -101,13 +154,13 @@ def run_msolve(path, out, timeout, gb=True, threads=4):
 
 
 def gb_verdict(body, r):
-    """EMPTY iff the reduced GB is exactly the irrelevant maximal ideal, or the
-    unit ideal; UNIT if [1]."""
+    """EMPTY iff every c_i occurs in the reduced GB as a bare linear generator
+    (so the only solution has c = 0), or the ideal is the unit ideal."""
     b = body.strip().rstrip(':').strip()
     if b in ('[1]', '[-1]'):
         return 'UNIT'
-    gens = re.findall(r'1\*c(\d+)\^1(?=[,\]])', body)
-    if sorted(map(int, gens)) == list(range(r)):
+    gens = re.findall(r'(?:\[|,)\s*1\*c(\d+)\^1\s*(?=[,\]])', body)
+    if set(map(int, gens)) == set(range(r)):
         return 'EMPTY'
     return 'NONEMPTY-OR-UNRESOLVED'
 

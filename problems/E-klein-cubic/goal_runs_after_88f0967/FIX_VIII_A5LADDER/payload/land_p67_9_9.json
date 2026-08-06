@@ -1,0 +1,60 @@
+{
+ "9": {
+  "K": 62,
+  "branches_nonzero": 5,
+  "verdicts": {
+   "V+:Z": {
+    "dim": 2,
+    "k_eff": 1,
+    "nvars": 2,
+    "n_cubics": 4,
+    "msolve": "OK",
+    "secs": 0.0,
+    "verdict": "EMPTY",
+    "gb_head": "[1*c1^1,\n1*c0^1]:"
+   },
+   "V+:Wchi1": {
+    "dim": 12,
+    "k_eff": 1,
+    "nvars": 12,
+    "n_cubics": 59,
+    "msolve": "OK",
+    "secs": 1.1,
+    "verdict": "EMPTY",
+    "gb_head": "[1*c11^1,\n1*c10^1,\n1*c9^1,\n1*c8^1,\n1*c7^1,\n1*c6^1,\n1*c5^1,\n1*c4^1,\n1*c3^1,\n1*c2^1,\n1*c1^1,\n1*c0^1]:"
+   },
+   "V+:W0r0": {
+    "dim": 9,
+    "k_eff": 3,
+    "nvars": 10,
+    "n_cubics": 108,
+    "msolve": "OK",
+    "secs": 0.3,
+    "verdict": "EMPTY",
+    "gb_head": "[1*c8^1,\n1*c7^1,\n1*c6^1,\n1*c5^1,\n1*c4^1,\n1*c3^1,\n1*c2^1,\n1*c1^1,\n1*c0^1,\n1*th^3+62*th^2+27*th^1]:"
+   },
+   "V+:W0r1": {
+    "dim": 9,
+    "k_eff": 3,
+    "nvars": 10,
+    "n_cubics": 108,
+    "msolve": "OK",
+    "secs": 0.3,
+    "verdict": "EMPTY",
+    "gb_head": "[1*c8^1,\n1*c7^1,\n1*c6^1,\n1*c5^1,\n1*c4^1,\n1*c3^1,\n1*c2^1,\n1*c1^1,\n1*c0^1,\n1*th^3+62*th^2+27*th^1]:"
+   },
+   "V+:W0r2": {
+    "dim": 9,
+    "k_eff": 3,
+    "nvars": 10,
+    "n_cubics": 108,
+    "msolve": "OK",
+    "secs": 0.4,
+    "verdict": "EMPTY",
+    "gb_head": "[1*c8^1,\n1*c7^1,\n1*c6^1,\n1*c5^1,\n1*c4^1,\n1*c3^1,\n1*c2^1,\n1*c1^1,\n1*c0^1,\n1*th^3+62*th^2+27*th^1]:"
+   }
+  },
+  "unresolved": [],
+  "secs": 5.1
+ }
+}

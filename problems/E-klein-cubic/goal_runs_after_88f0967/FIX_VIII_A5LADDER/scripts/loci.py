@@ -17,6 +17,7 @@ The loci used (a = involution, b = order 3):
   E_w(b)  dim 2 -> E_{w^d}(b)
   E_w2(b) dim 2 -> E_{w^{2d}}(b)
 """
+import itertools
 import numpy as np, sympy
 from a5lib import mm, rref, inv_p, klein_F, monmat, monlist
 from plane import eigspace, joint_eig, coord_solver
@@ -258,6 +259,69 @@ def first_order_rows(J, qW, fq):
     # A[i, s, t] = sum_r n[r] * J[i,r,s,t]
     A = np.einsum('rk,irst->istk', n, J) % fq.p
     return A.reshape(K, 5 * M, fq.k).transpose(1, 0, 2) % fq.p     # (rows, K, k)
+
+
+def hessF(y, fq):
+    """Hessian of F(x) = sum x_i^2 x_{i+1} at y, entries over F_q"""
+    p = fq.p
+    Hs = np.zeros((5, 5, fq.k))
+    for i in range(5):
+        Hs[i, i] = 2 * y[(i + 1) % 5] % p
+        Hs[i, (i + 1) % 5] = (Hs[i, (i + 1) % 5] + 2 * y[i]) % p
+        Hs[i, (i - 1) % 5] = (Hs[i, (i - 1) % 5] + 2 * y[(i - 1) % 5]) % p
+    return Hs % p
+
+
+def second_order_quadrics(basis, mons, U, qW, S, fq, nsamp, rng):
+    """Second-order landing conditions on a contracted locus.
+
+    On U we have T|_U = h.q with h != 0.  Expanding F(T(v + eps u)) = 0 in eps
+    and using grad F(hq) = h^2 grad F(q), Hess F(hq) = h Hess F(q):
+
+      eps^2 :  h(v) * gradF(q).T_2(v,u)  +  1/2 T_1(v,u)^t HessF(q) T_1(v,u) = 0
+
+    with T_1 = DT_v(u), T_2 = 1/2 D^2T_v(u,u).  This is QUADRATIC in the
+    coefficient vector.  Returns the quadric coefficient rows (nsamp, nmon)
+    in the coordinates of the branch basis S (r x K x k), sampling random
+    (v in U, u in W)."""
+    p = fq.p
+    d = sum(mons[0])
+    r = S.shape[0]
+    assert d + 1 <= p, 'need d+1 distinct eps values'
+    n = gradF(qW, fq)
+    Hq = hessF(qW, fq)
+    # branch maps over F_q: Bm[l] = sum_i S[l,i] basis[i]   (r x 5 x N x k)
+    Bm = np.transpose(np.tensordot(S, basis, axes=([1], [0])) % p, (0, 2, 3, 1))
+    j0 = next(j for j in range(5) if np.any(qW[j] % p))
+    qinv = fq.inv(qW[j0])
+    monsl = list(itertools.combinations_with_replacement(range(r), 2))
+    # T(v + eps u) is a polynomial of degree d in eps: recover T_0, T_1, T_2 by
+    # interpolation at eps = 0..d (cheap: d+1 evaluations of the branch maps).
+    eps = np.arange(d + 1, dtype=np.float64)
+    VD = np.array([[pow(int(e), j, p) for j in range(d + 1)] for e in eps])
+    VDi = inv_p(VD, p)
+    assert VDi is not None
+    rows = []
+    for _ in range(nsamp):
+        y = rng.integers(0, p, size=U.shape[0]).astype(np.float64)
+        v = mm(y[None, :], U, p).ravel()
+        u = rng.integers(0, p, size=5).astype(np.float64)
+        pts = (v[None, :] + eps[:, None] * u[None, :]) % p
+        MX = monmat(pts, mons, p)                                # (d+1) x N
+        vals = np.einsum('linj,en->elij', Bm, MX) % p            # (d+1) x r x 5 x k
+        coef = np.tensordot(VDi, vals, axes=([1], [0])) % p      # j x r x 5 x k
+        T0, T1, T2 = coef[0], coef[1], coef[2]
+        h = fq.mul(T0[:, j0, :], qinv[None, :])                  # r x k
+        nT2 = np.einsum('rk,lrm,kmt->lt', n, T2, fq.tab) % p      # r x k  (n . T_2)
+        A = fq.mul(h[:, None, :], nT2[None, :, :])                # r x r x k
+        HT = np.einsum('ijk,ljm,kmt->lit', Hq, T1, fq.tab) % p    # r x 5 x k
+        B = np.einsum('lik,jim,kmt->ljt', T1, HT, fq.tab) % p     # r x r x k
+        Cq = (A + B * pow(2, p - 2, p)) % p
+        Cq = (Cq + np.transpose(Cq, (1, 0, 2))) % p               # symmetrise
+        vals = np.array([Cq[i, j] if i != j else Cq[i, i] * pow(2, p - 2, p) % p
+                         for i, j in monsl]) % p
+        rows.append(vals)
+    return np.array(rows) % p, monsl
 
 
 def apply_fq_rows(S, A, fq):

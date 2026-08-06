@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `b918298` (2026-08-05; the
+Snapshot metadata — notebook parent head: `55d718b` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3288,7 +3288,31 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   = Dolgachev's instance ed = 4. A5LADDER interim (in-flight):
   cones EMPTY through d = 7; surviving branches from d = 8
   (dims 1, 12, 19, 45, 60 at d = 8..12); worker mid-verification
-  of a candidate ("cplus") — report pending.**** Same-day
+  of a candidate ("cplus") — report pending. **Wave 27
+  (user-directed V₁₄ + user-demanded openness confirmation; Note
+  IX opened, `theory/FIX_IX_v14.md`; three PDFs archived):**
+  OPENNESS VERDICT: headline OPEN (CTZ Feb-2025 exception; no
+  later resolution); A5-on-pencil OPEN; F55 OPEN; V₁₄-twin
+  G-unirationality OPEN and NOT covered by CTZ (index-1 outside
+  their scope). LANDSCAPE CHANGE: **Scavia arXiv:2607.25118
+  (July 2026) REFUTES Duncan's Sylow-detection conjecture**
+  ((C₇⋊C₃)×C₂ on a dP2; explicitly flags the Klein-cubic
+  connection) — the D-R trichotomy is now the DICHOTOMY CSD ⟹
+  YES vs Dolgachev ⟹ NO. **Tschinkel–Zhang arXiv:2409.08392
+  Thm 1.1: Y × P² × P(V) ~_G X × P² × P(V)** (V = the 6-dim
+  SL₂(F₁₁)-irrep; both actions birationally rigid so plainly
+  nonbirational) — with the DERIVED caveat: the P(V)-factor's
+  Schur-class twist is Brauer-nontrivial over K_proj (nonsplit
+  C₂-extension ⟹ the twisted Severi–Brauer P⁵ has no point), so
+  plain (U) does NOT transfer across the equivalence; the twins'
+  questions are linked modulo an order-2 Brauer class = a new
+  invariant handle. MODEL START (probe `v14_model.py`): the
+  6-dim even-Weil rep of SL₂(F₁₁) built mod 397 (S² = 11·I,
+  closure exactly 660 ✓); `1⊕W` provably WRONG (its section
+  degenerates to Gr(2,W) — hand proof); packet FIX-IX-V14MODEL
+  planned (Λ²U decomposition, Gr∩P(M) verification deg-14/smooth,
+  fixed-locus arrangement, M-valued ladder with QUADRATIC landing
+  conditions, small-orbit/index census with 14 ≡ 2 mod 3).**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

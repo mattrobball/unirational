@@ -13,7 +13,8 @@ from a5lib import *
 from loci import (Loci, restrict, apply_condition, jac_values, first_order_rows,
                   apply_fq_rows)
 from fq import Fq
-from land import cubic_rows, write_ms, run_msolve, gb_verdict, full_identity, ext_table
+from land import (cubic_rows, write_ms, write_ms_ext, run_msolve, gb_verdict,
+                  full_identity, ext_table)
 
 p = int(sys.argv[1]) if len(sys.argv) > 1 else 67
 DLO = int(sys.argv[2]) if len(sys.argv) > 2 else 8
@@ -96,39 +97,35 @@ def land_on_branch(d, basis, mons, S, label, tag):
         info['grid_nonzero'] = nz
         info['grid_points'] = npts
         return info
-    npts = max(60, 4 * nvar)
+    nvar = r if keff == 1 else r + 1        # theta is one extra variable
+    info['nvars'] = nvar
+    npts = max(60, 4 * r * keff)
+    ms = os.path.join(RES, 'land_d%d_%s_p%d.ms' % (d, tag, p))
     if keff == 1:
         rows, monsl = cubic_rows(Bm[:, :, :, 0], mons, p, npts, rng, tab=None)
-    else:                              # Weil restriction: r*keff F_p variables
-        rows, monsl = weil_rows(Bm, mons, p, npts, sub)
-    R, _ = rref(np.array(rows, dtype=np.float64), p)
-    rows = [[int(v) for v in row] for row in R]
-    info['n_cubics'] = len(rows)
-    ms = os.path.join(RES, 'land_d%d_%s_p%d.ms' % (d, tag, p))
-    ng = write_ms(rows, monsl, nvar, p, ms)
+        R, _ = rref(np.array(rows, dtype=np.float64), p)
+        info['n_cubics'] = R.shape[0]
+        if R.shape[0] == 0:
+            info['verdict'] = 'ALL-CUBICS-VANISH'
+            return info
+        write_ms([[int(v) for v in row] for row in R], monsl, nvar, p, ms)
+    else:
+        rows, monsl = cubic_rows(Bm, mons, p, npts, rng, tab=sub.tab)
+        flat = np.array(rows).reshape(len(rows), -1)
+        R, _ = rref(flat, p)
+        info['n_cubics'] = R.shape[0]
+        if R.shape[0] == 0:
+            info['verdict'] = 'ALL-CUBICS-VANISH'
+            return info
+        write_ms_ext(R.reshape(R.shape[0], -1, keff), monsl, r, p, sub.tab, ms)
     t0 = time.time()
     st, body = run_msolve(ms, ms.replace('.ms', '.out'), CAP, gb=True)
     info['msolve'] = st
     info['secs'] = round(time.time() - t0, 1)
     info['verdict'] = 'UNDECIDED-TIMEOUT' if st == 'TIMEOUT' else (
-        gb_verdict(body, nvar) if st == 'OK' else 'ERROR')
-    info['gb_head'] = body[:120] if st == 'OK' else ''
+        gb_verdict(body, r) if st == 'OK' else 'ERROR')
+    info['gb_head'] = body[:150] if st == 'OK' else ''
     return info
-
-
-def weil_rows(Bm, mons, p, npts, sub):
-    """cubic system for lambda in F_{p^k}^r written over F_p (r*k variables)."""
-    r, _, N, k = Bm.shape
-    # unknown lambda_l = sum_j lam_{lj} theta^j with lam_{lj} in F_p, so the
-    # F_p-basis of maps is  theta^j . B_l
-    big = np.zeros((r * k, 5, N, k))
-    for l in range(r):
-        for j in range(k):
-            e = np.zeros(k); e[j] = 1
-            big[l * k + j] = np.einsum('ina,b,abt->int', Bm[l], e, sub.tab) % p
-    rows, monsl = cubic_rows(big, mons, p, npts, np.random.default_rng(seed + 7),
-                             tab=sub.tab)
-    return rows, monsl
 
 
 out = {}
@@ -154,7 +151,8 @@ for d in range(DLO, DHI + 1):
             qW = np.einsum('nk,nj->jk', q, np.array(Tg, dtype=np.float64)) % p
             opts.append((lab, R, q, first_order_rows(J, qW, fq)))
         subs.append((name, opts))
-    verdicts, nb = {}, 0
+    # collect the surviving branch subspaces, dedup identical ones
+    spaces, seen = [], {}
     for combo in itertools.product(*[range(len(o)) for _, o in subs]):
         Sb, lab = S0, []
         for (name, opts), j in zip(subs, combo):
@@ -165,12 +163,33 @@ for d in range(DLO, DHI + 1):
                 Sb = apply_fq_rows(Sb, FO, fq)
             if Sb.shape[0] == 0:
                 break
-        key = '|'.join(lab)
-        if Sb.shape[0] == 0 or key in verdicts:
+        if Sb.shape[0] == 0:
+            continue
+        can = fq.rref(Sb.reshape(Sb.shape[0], -1, fq.k))[0]
+        h = can.astype(np.int64).tobytes()
+        if h in seen:
+            continue
+        seen[h] = 1
+        spaces.append(('|'.join(lab), Sb))
+    spaces.sort(key=lambda t: -t[1].shape[0])
+    verdicts, nb, done = {}, 0, []
+    for key, Sb in spaces:
+        cover = None
+        for k2, S2 in done:                       # contained in an EMPTY branch?
+            if S2.shape[0] >= Sb.shape[0]:
+                st = np.concatenate([S2, Sb], axis=0).reshape(-1, S2.shape[1], fq.k)
+                if fq.rref(st)[0].shape[0] == S2.shape[0]:
+                    cover = k2
+                    break
+        if cover is not None:
+            verdicts[key] = {'dim': int(Sb.shape[0]), 'k_eff': 0, 'nvars': 0,
+                             'verdict': 'EMPTY', 'covered_by': cover}
             continue
         nb += 1
         info = land_on_branch(d, basis, mons, Sb, key, 'b%d' % nb)
         verdicts[key] = info
+        if info['verdict'] in ('EMPTY', 'ZEROMAP'):
+            done.append((key, Sb))
         print('  d=%2d %-40s dim %2d k %d vars %3d -> %-18s %s'
               % (d, key, info['dim'], info['k_eff'], info['nvars'], info['verdict'],
                  info.get('msolve', '')))
