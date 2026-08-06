@@ -1399,12 +1399,12 @@
    "path": "goal_runs_after_cbdff0a/FIX_H2_HOLE_CLOSURE",
    "entry": "E56",
    "kind": "goal_run",
-   "verification_class": "PROPOSAL-UNRUN",
-   "primary_exit": "UNDECIDED",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-H2-HOLE-16-N3-EMPTY",
    "superseded_by": null,
-   "char0_scope": "in flight",
+   "char0_scope": "char0 (all verdicts exact over QQ with minimal polynomials adjoined; Galois transitivity)",
    "tracked": "main",
-   "notes": "IN-FLIGHT (dispatched 2026-08-05, opus worker): Task A = the six hard (1,8) line-degree-0 leaves via the both-nonzero licence (saturation at B9/B6, certified-strata derivation) + director hint (irreducible type-II anchor cubic C(A,B); solve over K' = K[t]/(C)); Task B = the (1,6) n=3,4,5 char-0 lift per H1 STATUS sec6b. Record to be replaced by the verified exits on return + director replay. Registered pre-return so the parity gate stays green for the Duncan-notes ingestion commit."
+   "notes": "landed 2026-08-05; director replay of verify_h2.py (53 checks) gating the commit. Scoped exits: FIX-H2-HOLE-16-N3-EMPTY ((1,6) line degree 3, both eigenblocks, char-0 — SUPERSEDES FIX-H1's mod-p finding at n=3); FIX-H2-HOLE-1EVEN-N0-MSOLVE-EMPTY (all six residual (1,8) leaves unit ideal over QQ in 1-10 s on low-degree presentations; msolve side complete and each run is a complete char-0 proof; exit scoped -MSOLVE- because the packet's own two-engine requirement stood at 1/6 M2 confirmations at close — run_m2_final.py adopted live by the director). Mechanism: the certified-strata licence (adjoin Y1 = 0 to the whole B6-chart; 6 leaves -> 3 questions), the closed U-exponent-0 face (Y0 = 0 forces X1 = X2 = Y2 = 0; CASE Z / CASE N dichotomy), and the cube-root cover t^3 = B9 splitting the real degree-3 obstruction X1^3 = -Y0^3 B9^2 (irreducible over K(Y0,B9) — why H1's cascade stalled). Director-hint audit: the type-II anchor cubic kp A^3 + km B^3 confirmed as the pure-x^{3r} coefficient and irreducible over K, but VACUOUS on the (1,r) cell (cell support bans x^r from every slot; verifier V1) — the director's NONEMPTY-60/40 prediction for the six leaves is GRADED WRONG; the (1,6)-EMPTY-90/10 prediction GRADED RIGHT. Task B: n=3 closed; n=4,5 systems built+validated, stopped for CPU; the pipeline takes r as an argument (r=10 = same command). Strata A,C re-certified (3 engines, zero disagreements). Driver cover-vs-whole semantics bug caught mid-run (would have manufactured a false EMPTY on CASE N) — fixed and recorded. Two M2 landmines recorded (underscore variables parsed as indexed subscripts; saturate(I,{f,g}) is successive saturation) -> memory + notebook debt. Headline OPEN."
   }
  ],
  "known_branches": [

@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `baee010` (2026-08-05; the
+Snapshot metadata — notebook parent head: `40a7915` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2325,7 +2325,48 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   third sibling of T2/T3 closed with zero new lemmas, plus the CSP
   localization remark (only the exceptional-tree constraint is
   unsatisfiable — the original-arrangement system is solvable,
-  matching Duncan's closing remark).** Note I
+  matching Duncan's closing remark).** **FIX-H2 landed 2026-08-05
+  (`FIX-H2-HOLE-16-N3-EMPTY` + `FIX-H2-HOLE-1EVEN-N0-MSOLVE-EMPTY`,
+  director-replayed, 53 checks): H1's six hard `(1,8)` leaves were a
+  PRESENTATION problem, not a hardness problem — the certified-strata
+  licence (adjoin `Y1 = 0` to the whole `B6`-chart; 6 leaves → 3
+  questions), the closed `U`-exponent-0 face (`Y0 = 0 ⇒ X1 = X2 = Y2 =
+  0`, CASE Z/N dichotomy), and a cube-root cover `t³ = B9` splitting the
+  true blocking cubic `X1³ = −Y0³B9²` decide ALL SIX as the unit ideal
+  over `QQ` in 1–10 s each (msolve side complete; each run individually
+  a full char-0 proof by Galois transitivity; the packet's two-engine
+  seal stood at 1/6 M2 confirmations at close — `run_m2_final.py`
+  adopted live, exit scoped `-MSOLVE-` until it finishes). Modulo those
+  confirmations: **the `r = 8` cone has no plane-order-1 point at line
+  degree 0 in any eigenblock** — the statement H1 was six leaves short
+  of. `(1,6)` at line degree 3 **closed in characteristic zero** (96
+  runs, all unit; endpoint parameters as variables with their minimal
+  polynomials; supersedes H1's mod-`p` finding); `n = 4, 5` built and
+  validated, CPU-pending; the pipeline is parameterized in `r` (`r = 10`
+  = one command). Strata A, C re-certified (3 engines, zero
+  disagreements). Driver cover-vs-whole semantics bug caught mid-run
+  (a cover's leaves must ALL be empty — the first version would have
+  manufactured a false EMPTY on CASE N; fixed, recorded). Two M2
+  landmines recorded (memory + debt): variables containing `_` are
+  parsed as indexed subscripts (silent kill that reads like solver
+  failure; rename `inv_Y0 → invY0`), and `saturate(I,{f,g})` is
+  SUCCESSIVE saturation `I:(f·g)^∞`, not `I:(f,g)^∞` (verified on a
+  discriminating example). **Director's registered prediction GRADED
+  (the comparative the 2026-08-05 analytic derivation was for): the
+  `(1,8)`-six-leaves call — NONEMPTY at 60/40, anchored over type-II
+  points — was WRONG on both verdict and mechanism.** The frame was
+  right (the `V4`-invariant normal form `F = C(a,b) + ΣQ_i·(squares) +
+  c·xyz` is exact; the pure-`x^{3r}` coefficient IS `κ₊A³+κ₋B³`,
+  irreducible over `K` — worker-confirmed), and "hardness = an
+  irreducible cubic the reducer cannot split" was right IN KIND — but
+  the anchor is VACUOUS on the cell (the `(1,r)` cell support bans
+  `x^r` from every slot: the plane-order constraint `ord_{P_i} ≥ 1`,
+  which the director's parity-only scratch check did not impose), and
+  the actual blocking cubic is internal (`X1³ = −Y0³B9²`). The `(1,6)`
+  call (EMPTY confirms, 90/10) was RIGHT at `n = 3`. Method lesson
+  recorded: hand predictions about cells must impose the FULL cell
+  constraints (support/plane-order bounds), not representation-theoretic
+  admissibility alone.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
@@ -3151,6 +3192,18 @@ determines which route owns the certificate.)
 - **Why load-bearing:** these are exactly the items separating the current
   `PARTIAL` verdicts from decided ones; Binding rule 1 (a hole is a hole)
   applies until each lands with a replayed verifier.
+- **Update 2026-08-05 (FIX-H2):** the six hard `(1,8)` leaves are DECIDED
+  (msolve/QQ unit ideal ×6; each run individually char-0-complete);
+  remaining on this item: the five outstanding M2 second-engine
+  confirmations (`run_m2_final.py` adopted live — on completion the exit
+  upgrades `-MSOLVE-EMPTY → -EMPTY` in an amendment commit); `(1,6)`
+  `n = 3` closed char-0; `n = 4, 5` CPU-pending (systems built and
+  validated in the H2 packet); `(1, r = 10)` = one command on the same
+  pipeline; the `(1,6)` `n = 6` modular sweep still live (~2 days at
+  measured rate); stabilisation-in-`n` and all positive-line-degree
+  cells unchanged. New M2 landmines (underscore variables parsed as
+  indexed subscripts; `saturate(I,{f,g})` successive) recorded in the
+  toolchain memory alongside the msolve pair.
 
 ---
 

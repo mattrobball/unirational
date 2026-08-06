@@ -1,0 +1,199 @@
+FIX-H2 -- THE BOTH-NONZERO LICENCE, AND THE REDUCTION IT BUYS
+=============================================================
+Packet: goal_runs_after_cbdff0a/FIX_H2_HOLE_CLOSURE/
+Everything below is exact over K = QQ(om, kp) with om^2+om+1 = 0,
+8 kp^2 - 13 kp - 4 = 0 (so kp + km = 13/8, kp*km = -1/2), i.e. K = QQ(sqrt-3,
+sqrt33).  Nothing here is modular.
+
+
+0.  WHAT IS BEING REDUCED
+-------------------------
+The cell (m,r) = (1,8) at line degree 0.  In the parity-reduced picture
+(U = x^2, V = y^2, W = z^2) an even-r tuple is
+
+    a' = P(U,V,W),  b' = R(U,V,W)                      of degree r/2
+    u_0' = yz B0(U,V,W),  u_1' = zx B1,  u_2' = xy B2  of degree r/2 - 1
+
+with B1 = lam^-1 sigma B0, B2 = lam^-1 sigma B1 (residual C_3), and the
+landing equation
+
+  kp P^3 + km R^3 + (P+R) VW B0^2 + (om P+om^2 R) WU B1^2
+                  + (om^2 P+om R) UV B2^2 + UVW B0 B1 B2  =  0 .        (*)
+
+At r = 8 the block has dimension 18 in each eigenblock; the plane-order-1
+parameters are exactly B6 (the V^3-coefficient of B0) and B9 (the W^3-one).
+In the coordinates X_i = om^2 P_i + om R_i, Y_i = om P_i + om^2 R_i (an
+invertible K-linear change) the two sparsest generators of (*) are the single
+monomials
+
+    X0 * B6^2 = 0 ,        Y1 * B9^2 = 0 .                              (S)
+
+(Recomputed here from the raw landing cpoly -- verifier check V2 -- not taken
+from FIX-H1.  The pairing of indices is: X0 is the X-coordinate of the
+sigma-orbit {U^3V, V^3W, W^3U}, Y1 the Y-coordinate of {U^3W, V^3U, W^3V}.)
+
+
+1.  THE CERTIFIED FACTS THE LICENCE USES
+----------------------------------------
+FIX-H1 (goal_runs_after_541e12f/FIX_H1_EQUALIZER, STATUS.md 6a and
+payloads/HOLES_REPORT.md 3) certified in CHARACTERISTIC ZERO, in all three
+eigenblocks:
+
+  (A-cert)  stratum A = V(cone) n {B6 = 1, B9 = 0}   is EMPTY
+  (C-cert)  stratum C = V(cone) n {B9 = 1, B6 = 0}   is EMPTY
+
+FIX-H1 reports A with msolve-over-QQ AND Macaulay2, C with msolve-over-QQ plus
+a three-prime modular cross-check.  Because this packet's whole reduction
+rests on them, BOTH are re-certified from scratch inside this packet with two
+independent characteristic-zero engines (`h2_strataAC.py`,
+logs/H2_STRATA_AC.log, payloads/strataAC_r8.json).
+
+
+2.  THE LICENCE
+---------------
+The cone is homogeneous: (*) is a homogeneous cubic in the block parameters
+(P, R and the B's all carry weight 1), so {B6 != 0} meets the cone iff
+{B6 = 1} does, and likewise for B9.
+
+  (i)   On {B6 = 1} the generator X0*B6^2 = 0 reads X0 = 0.  So X0 = 0 holds
+        on the whole chart, unconditionally.
+
+  (ii)  On {B6 = 1} the generator Y1*B9^2 = 0 gives Y1 = 0 OR B9 = 0.  The
+        second alternative is exactly stratum A, EMPTY by (A-cert).  Hence
+
+            V(cone) n {B6 = 1}  =  V(cone) n {B6 = 1, X0 = 0, Y1 = 0}     (L1)
+
+        -- the equation Y1 = 0 may be adjoined WITHOUT LOSING ANY POINT.
+        This is the new one: it is not a consequence of the chart alone, only
+        of the chart together with (A-cert).  Equivalently, and this is the
+        form actually used below,
+
+            V(cone) n {B6 = 1}  is contained in  {B9 != 0} .              (L2)
+
+  (iii) On {B9 = 1} the same two generators give Y1 = 0 unconditionally and
+        X0 = 0 by (C-cert).  Moreover {B9 = 1} n {B6 = 0} is stratum C, EMPTY,
+        so every point of V(cone) n {B9 != 0} has B6 != 0 and rescales into
+        the chart {B6 = 1}.  Therefore
+
+            the plane-order-1 locus of the (1,r) cone in eigenblock lam is
+            NONEMPTY  <=>  W := V(cone, B6 - 1, X0, Y1) is NONEMPTY .      (L)
+
+CONSEQUENCE FOR FIX-H1'S SIX RESIDUAL LEAVES.  FIX-H1's undecided leaves were
+B_43 (in the chart B6 = 1) and D_41 (in the chart B9 = 1), one of each per
+eigenblock.  By (L) the three D-chart leaves need no computation of their own:
+D_41 n {B6 = 0} lies in stratum C (EMPTY), and D_41 n {B6 != 0} rescales into
+the B6-chart, where it is covered by W.  So the six leaves collapse to THREE
+questions, one per eigenblock, and all three are the single question "is W
+empty?".
+
+A CORRECTION, RECORDED DELIBERATELY.  The FIX-H2 brief motivated the licence
+by saying that inverting B9 would "fire Y1 = 0, a NEW linear relation those
+leaves never had".  That is not what happens: FIX-H1's hard leaves B_43 and
+D_41 already sit inside {X0 = 0} and {Y1 = 0} (B_43 imposes Y1 = 0 as its
+stratum and derives X0 = 0; D_41 the mirror), as the reproduction in
+logs/H2_LEAVES_R8.log shows -- neither leaf has X0 or Y1 among its 11
+variables.  The licence's real content is (L1)/(L2): the right to ADD Y1 = 0
+to the whole B6-chart, to SATURATE at B9, and to DISCARD any branch on which
+B9 vanishes identically.  The director's mid-task correction says the same.
+
+
+3.  WHAT THE LICENCE ALONE DOES NOT DO
+--------------------------------------
+The licensed system W is 15 variables, 26 generators, all of degree <= 3 --
+a far better presentation than FIX-H1's 11-variable / degree-15 leaf.  It is
+NOT by itself enough:
+
+  * msolve mod p = 100057 on W, 6 threads: NOT-DECIDED, stopped at ~26 min
+    and 15 GB (logs/H2_TASKA_TRIAGE.log).
+  * FIX-H1's exact cascade run with the extra licensed rule "a coefficient
+    that is a unit of K[vars][1/B9] may be divided out" (h2_reduce.py) removes
+    only one or two further variables and pushes the degrees back up to 15
+    (logs/H2_LICREDUCE_TRY.log).
+  * the licensed system admits NO nontrivial grading: the lattice of integer
+    weight vectors making every generator homogeneous has rank 0
+    (logs/H2_STRUCT_R8.log), so the quasi-homogeneous split suggested in the
+    brief is unavailable.
+
+The step that actually decides it is the FACE, below.
+
+
+4.  THE CLOSED U-EXPONENT-0 FACE (the structure FIX-H1 did not use)
+-------------------------------------------------------------------
+FIX-H1 used only the TOP of the plane-adic filtration -- the three
+coefficients of the top U-degree, which give (S) and hence the four strata.
+The BOTTOM of the same filtration is a much larger closed subsystem.
+
+Every term of (*) except  kp P^3,  km R^3  and  (P+R) VW B0^2  carries an
+EXPLICIT factor U (the B1^2-, B2^2- and B0B1B2-terms are shifted by (1,0,1),
+(1,1,0), (1,1,1)).  Hence the coefficient of U^0 V^b W^c in (*) involves only
+the U-degree-0 parts of the components:
+
+    kp P_0^3 + km R_0^3 + (P_0 + R_0) VW (B0)_0^2  =  0 .                (F0)
+
+At r = 8, (F0) is a binary-form identity in (V,W) whose coefficients involve
+only
+
+    X1, X2, Y0, Y2, B7, B8, B9      (7 of the 15 licensed variables)
+
+-- 7 generators, 30 terms in all (logs/H2_FACE_SHOW_R8.log; verifier V4).
+V(W) is contained in V(face), and the face is small enough to solve outright.
+
+Running FIX-H1's own exact branch-and-reduce (rules R1-R5) on the FACE alone
+gives, in every eigenblock, a single leaf under Y0 = 0 on which X1, X2 and Y2
+are all killed (logs/H2_DICHOTOMY.log):
+
+    ON THE FACE,  Y0 = 0  FORCES  X1 = X2 = Y2 = 0 .                     (D)
+
+(The mechanism is visible in the generators: the U^0V^9W^3 coefficient is
+alpha*Y0^3 + c*X2, so X2 = -(alpha/c) Y0^3; the U^0V^3W^9 one is
+c'*X2*B9^2 + beta*X1^3, so X1^3 is proportional to Y0^3 B9^2; and the
+U^0V^6W^6 one then makes Y2^3 proportional to the rest.)
+
+
+5.  THE TWO-CASE DECISION
+-------------------------
+Combining (L), (L2) and (D):
+
+    W  =  ( W n {Y0 = 0} )  u  ( W n {Y0 != 0} )  =:  CASE Z  u  CASE N,
+
+both contained in {B9 != 0}, and on CASE Z also X1 = X2 = Y2 = 0.  Each case
+is handed to the engines in two presentations:
+
+    lowdeg  : the 26 licensed cubics + the case condition + Rabinowitsch
+              inverses for B9 (and, on N, for Y0) -- degree <= 3, which is
+              what Macaulay2 wants;
+    reduced : the same after FIX-H1's exact branch-and-reduce -- few
+              variables, high degree, which is what msolve wants.
+
+Leaves on which B9 vanishes identically are DISCARDED, by (L2).  Every EMPTY
+verdict needs two independent characteristic-zero engines; a timeout is
+NOT-DECIDED.  Results: STATUS.md 3.
+
+
+6.  A CLAIM OF THE DIRECTOR'S HINT THAT DOES NOT HOLD HERE
+----------------------------------------------------------
+The mid-task hint proposed that the P_1-order-0 landing equation at even r is
+the binary cubic C(A,B) = kp A^3 + km B^3 in the two x^r-coefficients A, B of
+the a'- and b'-slots, that C is irreducible over K (a type-II anchor forcing a
+degree-3 extension), and that this explains why the leaves resist.
+
+The first half checks out and the second is confirmed: the pure-x^{3r}
+coefficient of the landing polynomial IS kp A^3 + km B^3, because every other
+term carries a factor y or z; and t^3 + km/kp is irreducible over
+K = QQ(sqrt-3, sqrt33), so C is irreducible (logs/H2_STRUCT_R8.log).
+
+But the anchor is VACUOUS on the cell in question.  The cell condition for
+(m, r) = (1, r) is that every x,y,z-exponent is at most r - m = r - 1, so the
+monomial x^r -- i.e. U^{r/2} -- is NOT in the support of the a'- and b'-slots
+at any even r:
+
+    r = 6  : sup_a has 7 monomials, U^3 absent
+    r = 8  : sup_a has 12 monomials, U^4 absent
+    r = 10 : sup_a has 18 monomials, U^5 absent
+
+(verifier check V1, recomputed independently of n2b_lib's own support code).
+Hence A = B = 0 identically, C(A,B) = 0 is not an equation, and no type-II
+anchor or degree-3 extension arises on the m = 1 row.  The obstruction to
+splitting the leaves is not an irreducible cubic; it is simply that FIX-H1's
+cascade had exhausted the TOP of the plane-adic filtration and never looked at
+the BOTTOM.

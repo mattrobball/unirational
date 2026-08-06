@@ -1,0 +1,8 @@
+{
+ "om2_N": "EMPTY-by-msolve (whole case, lowdeg, 1 s)",
+ "om2_Z": "EMPTY-by-msolve (whole case, lowdeg4, 9 s)",
+ "om_N": "EMPTY-by-msolve (whole case, lowdeg, 1 s)",
+ "om_Z": "EMPTY-by-msolve (whole case, lowdeg4, 10 s)",
+ "one_N": "EMPTY-by-msolve (whole case, lowdeg, 1 s; also all 3 cube-root branches, 0 s)",
+ "one_Z": "EMPTY-by-msolve (whole case, lowdeg4, 1 s)"
+}
