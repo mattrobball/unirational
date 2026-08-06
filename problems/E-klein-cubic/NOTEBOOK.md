@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `f760a87` (2026-08-05; the
+Snapshot metadata — notebook parent head: `2503c2a` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2892,7 +2892,20 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   banked; does `J(K̃)` split under the D12-symmetry?),
   machine-verify the genus/branch arithmetic, then the
   twisted-torsor question over `K_proj`. NOT to be consumed until
-  machine-checked (per the H1-D trust rule).**** Same-day
+  machine-checked (per the H1-D trust rule). **Wave 21 first
+  result (director probes, `director_probes_20260806/prym_*.py`,
+  Note VI §2.5): the genus-2 factor has CM by `Q(√−11)`.** In the
+  explicit normal form the `K̃`-branch restriction is exact
+  (`F₀|_{K_c} = (κ₊+4)a³+(κ₋+4)b³`, product `= 22 = 2·11`), the
+  branch sextic is exactly even after conjugating the conic
+  involution to `s ↦ −s`, so `K̃` is bielliptic with
+  `J(K̃) ~ E₊ × E₋`, and `j(E₊) = −32768 = −2¹⁵` EXACTLY
+  (symbolic; `E₋` equal to 40 digits, exact check pending) — the
+  discriminant-(−11) CM j-invariant, the field of the Weil
+  representation itself. Modulo the bielliptic bookkeeping to be
+  machine-sealed: `J(X) ~ Prym₃(Ẽ/E_σ) × E_{−11}²` per involution.
+  Sharp follow-up: is `Prym₃ ~ E_{−11}³` (Adler-type `J(X) ~
+  E_{−11}⁵`)? Probe-grade until the machine pass.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

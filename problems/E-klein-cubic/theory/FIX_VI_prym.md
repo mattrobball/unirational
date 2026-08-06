@@ -38,6 +38,38 @@ no single splitting is `G`-stable — consistent, and the joint
 compatibility of all 55 splittings is a strong new rigidity on the
 `G`-isogeny type of `J(X)`.
 
+## 2.5 The genus-2 factor splits with CM by Q(√−11) (director probes, 2026-08-06; exact at the final step)
+
+Computed in the explicit normal form
+`F = κ₊a³ + κ₋b³ + (a+b)x² + (ωa+ω²b)y² + (ω²a+ωb)z² + xyz`:
+
+- The conic is `x² = 4(a²−ab+b²)`, and the branch locus of `K̃`
+  restricts EXACTLY: `F₀|_{K_c} = (κ₊+4)a³ + (κ₋+4)b³` (the identity
+  `(a+b)(a²−ab+b²) = a³+b³` does it), with
+  `(κ₊+4)(κ₋+4) = 22 = 2·11` from the sealed trace relations — the
+  six branch points are three antipodal pairs on the conic.
+- The conic involution in the parameterizing coordinate is
+  `τ(t) = (−t−4)/(t+1)`; conjugated to `s ↦ −s` the branch sextic is
+  EXACTLY even (all odd coefficients vanish symbolically), so `K̃` is
+  bielliptic and `J(K̃) ~ E₊ × E₋`.
+- **`j(E₊) = −32768 = −2¹⁵ exactly** (symbolic, over the exact
+  field), and `E₋` agrees to 40 digits (exact check pending in the
+  machine-verification pass): **the quotients are the elliptic curve
+  with complex multiplication by `Q(√−11)`** — the same field that
+  defines the Weil representation. Hence, modulo the standard
+  bielliptic bookkeeping to be machine-sealed:
+
+```
+    J(X)  ~  Prym₃(Ẽ/E_σ)  ×  E_{−11}  ×  E_{−11}     (per involution).
+```
+
+**Sharp next test:** if the classical expectation `J(X) ~ E_{−11}⁵`
+holds (Adler-type), the 3-dimensional Prym must itself be
+`~ E_{−11}³` — directly checkable by the same machinery on the
+`Ẽ/E_σ` side. If confirmed, the arrangement provides 55 explicit
+CM-coordinatizations of `J(X)`, and the twisted-torsor question over
+`K_proj` becomes concrete CM arithmetic.
+
 ## 3. Next steps (in order)
 
 1. **Pin the two curves exactly** (small computation, frame data all
