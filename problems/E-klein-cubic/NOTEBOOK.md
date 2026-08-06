@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `a2c80d2` (2026-08-05; the
+Snapshot metadata — notebook parent head: `085f0a0` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2376,7 +2376,21 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   call (EMPTY confirms, 90/10) was RIGHT at `n = 3`. Method lesson
   recorded: hand predictions about cells must impose the FULL cell
   constraints (support/plane-order bounds), not representation-theoretic
-  admissibility alone. Same-day amendment: FIX-C1's detached part-D
+  admissibility alone. **REORDER (user directive, 2026-08-06): "prove
+  that completing would close the result before computing." All new
+  compute suspended (the mid-flight `(1,6)` `n = 4` run finishes on its
+  own; `n = 5`, char-0 `n = 6`, `r = 10` NOT fired). Note IV opened
+  (`theory/FIX_IV_closure.md`): the CONDITIONAL CLOSURE THEOREM
+  (Thm 3.1) — proved inputs (P1)–(P7) plus four named unproved
+  hypotheses ([U1] shape-uniformity in `n`; [U2] `r`-tower reduction —
+  the keystone; [U3] odd `m ≥ 5`; [L] layered-equalizer exhaustiveness)
+  imply `H⁰ = ∅` and the negative headline. First new lemma proved en
+  route (Note IV Lemma 2.1): the `q`-tower FIXES leading line jets
+  (`j(qT) = j(T)`), so reachable-jet sets increase along each parity
+  class of `r` and the Chebyshev tower's jets are constant in `r` —
+  the opening move of [U2]. Compute is now strictly downstream: a run
+  fires only when a hypothesis proof names its verdict as a base
+  clause.** Same-day amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
   EXACT on all 24 non-rational witnesses (C1 §7 item 1 closed); the H1
