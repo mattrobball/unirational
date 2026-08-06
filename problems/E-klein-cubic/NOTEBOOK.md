@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `fa7b457` (2026-08-05; the
+Snapshot metadata — notebook parent head: `576ad77` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2920,7 +2920,14 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   Q) ≅ W` over `Q(√−11)` (`Λ` a `Z[ν][G]`-lattice; CM commutes
   with `G`). Note VI §3 rewritten: curve-pinning DONE; next = the
   machine-seal packet, then the twisted-torsor question. Probe-grade
-  until the machine pass.**** Same-day
+  until the machine pass. **Wave 21 dispatch:** packet
+  `goal_runs_after_576ad77/FIX_VI_PRYM_SEAL` (IN-FLIGHT,
+  PROPOSAL-UNRUN): sections A–D per brief — restriction identity,
+  sextic evenness, both j's exact by two independent routes,
+  Hilbert-class-poly check `H₋₁₁(X) = X + 32768`, `E_σ` coherence
+  (`j = 8192/11`), six intersection points, RH/admissible
+  arithmetic; independent `verifier.py`; exits
+  `FIX-VI-PRYM-SEAL-ALLGREEN` / `FIX-VI-PRYM-SEAL-DEVIATION`.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
