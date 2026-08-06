@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `f1d1ebb` (2026-08-05; the
+Snapshot metadata — notebook parent head: `ed980f7` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2607,7 +2607,24 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   analysis of the image-in-line components. **Remaining for the
   negative headline: (D2) height finiteness (Lang–Néron route), (D3)
   linear, (T1b) conic floor, (C2′), (C3), (C5) in flight, (T1c)
-  bookkeeping, assembly + audit.**** Same-day
+  bookkeeping, assembly + audit. Twelfth wave (Note IV §5.23,
+  2026-08-06): **(D2) RESOLVED BY BOUNDARY RIGIDITY — Theorem 5.23
+  (proved)**: (i) the conic inhomogeneity `m_φ` vanishes on every
+  source line, so the section's boundary value is an ISOTROPIC vector
+  of `q_φ|_line` — the line-map `(P,Q)` is a DISCRETE branch choice
+  (`(cγ̃ ± √Δ_q)/2vQ₂`-type), not a modulus; (ii) section
+  deformations (`ζ′ = ζρ√Δ_q/m_φ`) are pole-forced into the occupied
+  isotropic direction on the lines — interior moduli CANNOT move the
+  boundary jets; (iii) hence FIN(7)'s essential moduli, the Pell/unit
+  torsor structure, and any unbounded pointwise components are ALL
+  invisible to the equalizer — **no global finiteness is needed;
+  Lang–Néron exits the program**; (iv) [U1] reduces to the finite
+  boundary-jet computation **(D2′/C6)**: the equalizer conditions on
+  branch-root jets at the three D12-points, which is the SAME
+  `Δ_q`-parity calculus as (D1) at three marked points —
+  finite-dimensional, degree-uniform. **The last conceptual obstacle
+  in (T1a) is gone. Remaining, all finite and named: (D2′), (D3),
+  (T1b), (C2′), (C3), (C5 in flight), (T1c), assembly + audit.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

@@ -1012,3 +1012,53 @@ cut. `u₀ + v₀ ≠ 0` at all 27 points (exact, Nullstellensatz) — the
   witnesses nor the linear families are not excluded; they are,
   however, subject to the same §5.21 criterion, which is
   component-agnostic.
+
+### 5.23 (D2) resolved by boundary rigidity: the interior moduli are invisible to the equalizer
+
+The height half was set up as a finiteness problem (Lang–Néron on the
+section moduli). It dissolves instead: **the equalizer never sees the
+section moduli at all.**
+
+**Theorem 5.23 (boundary rigidity — proved).**
+**(i) The line data is a branch choice, not a modulus.** The
+inhomogeneity `m_φ = −t·(vw·C + Q₁γ̃²)` VANISHES on each source line
+(`t = x² = 0`; symmetrically per line in each line-adapted
+presentation). Hence on a source line the section satisfies
+`q_φ(Y, Z)|_line = 0`: its boundary value is an ISOTROPIC vector of
+the binary form `q_φ|_line` — one of TWO discrete root-branches. The
+line-map `(P, Q)` is therefore a discrete function of `φ|_line`
+(coefficients `vQ₂(Ã,B̃), cγ̃, wQ₃` restricted to the line) together
+with a branch bit — `(P:Q) = [2·root of q_φ|_line]`, explicitly
+`(cγ̃ ± √Δ_q)/(2vQ₂)`-type with `Δ_q = c²γ̃² − 4vw·Q₂Q₃(Ã,B̃)`.
+**(ii) Section deformations fix the boundary.** A tangent vector to
+the section space at `ζ = Y + θZ` has the form `ζ′ = ζ·ρ·√Δ_q/m_φ`
+(anti-invariant multiplier). Since `m_φ` vanishes on the lines while
+`ζ′` must remain polynomial, `ζ′|_line` is forced into the isotropic
+direction already occupied: deformations move the INTERIOR of the
+section and cannot change the line data or its jets (generic
+statement; the strata where `ζ|_line` degenerates — zeros of `P, Q` at
+special points — belong to the vertex/degeneration bookkeeping
+(T1c)).
+**(iii) Consequently:** the leading-layer jets at the D12-points —
+the ONLY data the equalizer (P4) consumes — depend on nothing but
+`φ`'s boundary jets and the branch bit. FIN(7)'s essential moduli,
+the Pell/unit structure of the section torsor, and any unbounded
+components of the pointwise locus are ALL invisible to [U1]: no
+global finiteness statement is needed. Lang–Néron exits the program.
+**(iv) (D2) reduces to a finite boundary-jet computation.** [U1]
+becomes: over the §5.21-admissible `φ`-boundary space, the equalizer
+conditions (orders `2e, 2e+1` at the three D12-points) on the
+branch-root jets force vanishing. The root's jets are algebraic in
+`φ`'s jets through `√Δ_q`, so **the equalizer death is a parity/jet
+condition on `Δ_q(φ)` at the D12-points — the same
+branch-divisor-parity calculus as (D1)**, now at three marked points
+of the line. This is finite-dimensional, uniform in degree
+(conditions at fixed orders at three points), and is named
+**(C6)/(D2′)**: the explicit branch-root-jet equalizer computation.
+∎ (i)–(iii); (iv) is the reduction statement.
+
+**Program consequence.** The closure chain's [U1] is now:
+(D1 — CLOSED) + (D2′ — the finite boundary-jet computation) +
+(D3 — the linear image-in-line components) + (T1c strata). The last
+conceptual obstacle in (T1a) is gone; everything remaining is finite,
+explicit, and named.
