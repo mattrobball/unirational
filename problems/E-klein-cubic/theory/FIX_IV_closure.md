@@ -386,3 +386,57 @@ surface case** — the very setting of the collaborators' original
 observation. One structure theorem about `P² ⇢ X` under V4 replaces
 the infinite tower of per-`r` computations; that theorem is now the
 sharpest formulation of [U2].
+
+### 5.10 The source-side ladder: closed form, and the squareness lemma (proved)
+
+Work at one source line `{x = 0}` of a pointwise `(1, r)` element,
+`r = 2s + 1` odd. By §5.9 the line data is
+`u₁'|₀ = y·P(u, v)`, `u₂'|₀ = z·Q(u, v)` with `(u, v) := (y², z²)` and
+`P, Q` of degree `s` — the equivariant odd self-map of the target line
+`L₁`, vertices to vertices. The first normal data along the line has
+the forced parity shapes `a₁ = yz·A(u,v)`, `b₁ = yz·B(u,v)` (degree
+`s−1`) and `u₀'₁ = U(u,v)` (degree `s`).
+
+**Level-1 identity (closed form).** The `x¹`-coefficient of
+`F(T) ≡ 0` along the line, after dividing the forced `yz`, is the
+degree-`3s` identity in `(u, v)`:
+
+```
+  (Q₂ₐ u P² + Q₃ₐ v Q²)·A + (Q₂ᵦ u P² + Q₃ᵦ v Q²)·B + c·P Q·U ≡ 0 ,
+```
+
+where `Q₂, Q₃` are the linear forms and `c` the `xyz`-constant of the
+V4-normal form `F = C(a,b) + Σ Qᵢ(a,b)xᵢ² + c·xyz`, and subscripts
+denote the (constant) `a`/`b`-coefficients. *Derivation:* `dF` at a
+point `(0,0,0, y₀, z₀)` of `L₁` has slots
+`(Q₂ₐy₀² + Q₃ₐz₀², Q₂ᵦy₀² + Q₃ᵦz₀², c·y₀z₀, 0, 0)` — the `y, z`
+partials vanish on the line (it lies on `X`), so the minus-side normal
+data is level-1-free, and the plus-side data enters linearly. ∎
+
+**Lemma 5.10 (squareness, uniform in `r`).** The level-1 identity is a
+SQUARE linear system for the plus-normal data at every odd `r`:
+`3s + 1` coefficient equations in `3s + 1` unknowns
+(`A: s`, `B: s`, `U: s + 1`). Hence there is a UNIVERSAL square matrix
+`M(P, Q)` — polynomial in the line-map coefficients, of fixed shape for
+all `r` — with: `det M(P,Q) ≠ 0` ⟹ the first normal layer is uniquely
+determined by the line map; the branch/moduli phenomena are confined to
+the hypersurface `det M = 0` and to the CONSISTENCY conditions that
+levels `≥ 2` impose back on `(P, Q)`. ∎ (Counting: identity degree
+`1 + 2s + (s−1) = 3s`, so `3s+1` coefficients; unknowns
+`s + s + (s+1)`.)
+
+**Consequences and the [U2] proof plan it dictates.** (i) Generic line
+maps determine the whole first layer rigidly; the classification of
+pointwise `(1, r)` elements is governed by the pair
+(`det M`-locus, level-2 consistency resultants) — POLYNOMIAL objects of
+degree-independent shape in the line-map coefficients. (ii) The
+`n = 0` finiteness phenomena (the 27 points) and the FIN(7) worker's
+redirected computation measure exactly this: the essential transverse
+dimension at a witness is the kernel of this square system plus the
+level-2 conditions — the running computation and the derivation have
+converged on the same object from two sides. (iii) [U2]'s structure
+theorem now has a concrete proof shape: show the consistency locus in
+`(P, Q)`-space is a finite union of torus orbits of the known branch
+shapes, by analyzing the universal resultants — one argument for all
+odd `r`. The same construction at even `r` (type-II vertex anchors,
+per §5.9(b)'s parity flip) is the even-row analogue.

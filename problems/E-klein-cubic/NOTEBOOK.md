@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `91bf468` (2026-08-05; the
+Snapshot metadata — notebook parent head: `b97d2f5` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2442,7 +2442,22 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   `P² ⇢ X` uniformly in degree — the program recursing onto its own
   surface case, where the collaborators' machinery (T2.2 chains =
   fabulous crossings at the non-cyclic source vertices) applies
-  verbatim.** Same-day amendment: FIX-C1's detached part-D
+  verbatim. Fourth derivation wave (Note IV §5.10, 2026-08-06): **the
+  source-side ladder in closed form** — the level-1 identity along a
+  source line is `(Q₂ₐuP² + Q₃ₐvQ²)A + (Q₂ᵦuP² + Q₃ᵦvQ²)B + cPQU ≡ 0`
+  (the target-line partials vanish because `L ⊂ X`: the minus-normal
+  data is level-1-free, the plus-normal data enters linearly) — and
+  **Lemma 5.10 (squareness, uniform in `r`)**: the level-1 system is
+  SQUARE (`3s+1 × 3s+1`, `r = 2s+1`) at every odd `r`, so a UNIVERSAL
+  matrix `M(P,Q)` of degree-independent shape governs the row: generic
+  line-maps rigidly determine the first normal layer; all branch/moduli
+  phenomena are confined to `det M = 0` and the level-≥2 consistency
+  resultants — polynomial objects of fixed shape. [U2]'s proof plan is
+  now concrete (show the consistency locus is a finite union of torus
+  orbits of the known shapes, one argument for all odd `r`), and the
+  redirected FIN(7) computation measures exactly this system's kernel
+  at the 27 witnesses: derivation and computation converged on the
+  same object.** Same-day amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
   EXACT on all 24 non-rational witnesses (C1 §7 item 1 closed); the H1
