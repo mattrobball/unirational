@@ -159,8 +159,13 @@ deliberately corrupted inputs must make the corresponding checks fail.
 | `h2_leaves.py` | reproduction of FIX-H1's leaf table |
 | `h2_taskB.py` | the exact char-0 `(1,6)` line-degree build |
 | `h2_summary.py` | collects every verdict from the logs and payloads |
+| `run_msolve_all.py`, `run_m2_final.py` | the two sides of the TASK A decision |
 | `run_taskB_qq.py`, `run_taskB_ff.py` | TASK B drivers (char-0 / mod-p) |
-| `probe_sympy2.py`, `probe_sympy_z4.py`, `probe_taskB_qq.py` | the timing probes quoted in `STATUS.md` |
+| `probe_m2_tradeoff.py` | Macaulay2 across the CASE-Z variable/degree trade-off (all timeout) |
+| `probe_m2_sat.py` | CASE Z saturated at `B9` with `B0 = 0` adjoined — the best-conditioned M2 form |
+| `probe_m2_cuberoot_k0.py` | Macaulay2 on the cube-root branches (the one shape it does well) |
+| `probe_sympy2.py`, `probe_sympy_z4.py`, `probe_m2_small.py`, `probe_m2v_small.py`, `probe_taskB_qq.py` | the timing probes quoted in `STATUS.md` |
+| `m2/probe_sat.m2`, `m2/probe_sat2.m2` | the Macaulay2 `saturate` semantics checks |
 | `verify_h2.py` | the independent verifier |
 | `holes_*.py`, `k0.py` | FIX-H1 scripts, **copied** (not modified in place) |
 | `payloads/` | the licence derivation, the reduced systems, the JSON verdicts |

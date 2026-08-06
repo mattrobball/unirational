@@ -2335,11 +2335,18 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   true blocking cubic `X1³ = −Y0³B9²` decide ALL SIX as the unit ideal
   over `QQ` in 1–10 s each (msolve side complete; each run individually
   a full char-0 proof by Galois transitivity; the packet's two-engine
-  seal stood at 1/6 M2 confirmations at close — `run_m2_final.py`
-  adopted live, exit scoped `-MSOLVE-` until it finishes). Modulo those
-  confirmations: **the `r = 8` cone has no plane-order-1 point at line
-  degree 0 in any eigenblock** — the statement H1 was six leaves short
-  of. `(1,6)` at line degree 3 **closed in characteristic zero** (96
+  seal stood at 1/6 M2 confirmations at close; **UPGRADED same day to
+  `FIX-H2-HOLE-1EVEN-N0-EMPTY`** — after M2 and Singular proved
+  coefficient-dependent/timeout-bound on these systems, the second
+  engine was delivered by **OSCAR `groebner_basis_f4` under the freshly
+  repaired official Julia build: all six cases unit,
+  `OSCAR-ALL-UNIT: true`** (parser/encoding-path independent of the
+  worker's text-mode msolve route — exactly the failure mode the
+  two-engine rule guards; kernel-overlap caveat + full five-engine
+  table in the packet's `director_amendment_20260805/README.md`; no
+  terminated engine contradicts). **The `r = 8` cone has no
+  plane-order-1 point at line degree 0 in any eigenblock** — the
+  statement H1 was six leaves short of, now sealed. `(1,6)` at line degree 3 **closed in characteristic zero** (96
   runs, all unit; endpoint parameters as variables with their minimal
   polynomials; supersedes H1's mod-`p` finding); `n = 4, 5` built and
   validated, CPU-pending; the pipeline is parameterized in `r` (`r = 10`

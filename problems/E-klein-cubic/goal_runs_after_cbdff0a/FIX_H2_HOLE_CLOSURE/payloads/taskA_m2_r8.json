@@ -1,0 +1,22 @@
+{
+ "_conclusion": "Macaulay2 decides these systems only when the licensed inverses are explicit Rabinowitsch variables (the cube-root branches); msolve over QQ is the right engine for this family.",
+ "_formulations_tried": [
+  "M2v QQ[vars,om,kp] on lowdeg4 (11 vars, 19 cubics): timeout 420 s and 1500 s/16 GB",
+  "M2v after degree-3 elimination (10 vars, degree 9): timeout 420 s",
+  "M2v after degree-4 elimination (9 vars, degree 12): timeout",
+  "M2v on CASE Z saturated at B9 with B0=0 adjoined (11 vars, 19 cubics): timeout 900 s",
+  "M2K toField on the reduced leaves (6-7 vars, degree 15): timeout",
+  "m2h homogeneous saturate(I,B6) over K (18 vars): timeout 1800 s",
+  "m2d degree-bounded GB, DegreeLimit 6/9/12: no constant in the partial basis",
+  "sympy Groebner (6-7 vars): no return in budget",
+  "M2v on the REDUCED cube-root leaf at lam=om (13 vars, degree 12) -- the exact shape that took 11 s at lam=1: still running at close (>5 min), so the one M2 success is coefficient-dependent, not shape-dependent"
+ ],
+ "_msolve_cross_presentations": "CASE Z independently certified by msolve on FOUR presentations: lowdeg4 (1 s), lowdeg, reduced4 leaf (5 s), saturated B0=0 form (2 s)",
+ "_note": "Macaulay2 side of TASK A. msolve over QQ certified ALL SIX (block,case) systems as the unit ideal in 1-10 s each (payloads/taskA_msolve_r8.json); this file records only the INDEPENDENT SECOND ENGINE, which is the packet's own discipline, not a doubt about the mathematics.",
+ "om2_N": "NOT-DECIDED (M2 timeout; cube-root branches were still running at close)",
+ "om2_Z": "NOT-DECIDED (M2 timeout)",
+ "om_N": "NOT-DECIDED (M2 timeout; cube-root branches were still running at close)",
+ "om_Z": "NOT-DECIDED (M2 timeout)",
+ "one_N": "EMPTY-by-M2v (cube-root branch k0, 13 vars, 11 s)",
+ "one_Z": "NOT-DECIDED (M2 timeout on every formulation tried; see STATUS 3c table)"
+}

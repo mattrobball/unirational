@@ -217,6 +217,31 @@ formulation in `h2_homog.py` (`logs/H2_HOMOG_R8.log`) as a third route.
 | `λ = ω²` | Z | **unit** — `lowdeg4`, **9 s** | `logs/H2_M2_FINAL.log` |
 | `λ = ω²` | N | **unit** — `lowdeg`, **1 s** | `logs/H2_M2_FINAL.log` |
 
+**The Macaulay2 side, in full.** One confirmation was obtained — `λ = 1`,
+CASE N, cube-root branch `k0`, 13 variables, **11 s**. Everything tried for
+the other five is recorded here so it is not retried blindly:
+
+| M2 formulation | system | outcome |
+|---|---|---|
+| `M2v` (QQ + `om,kp` as variables) on CASE Z `lowdeg4` | 11 vars, 19 cubics | timeout (420 s, and again at 1500 s / 16 GB) |
+| `M2v` on CASE Z after degree-3 elimination | 10 vars, degree 9 | timeout (420 s) |
+| `M2v` on CASE Z after degree-4 elimination | 9 vars, degree 12 | timeout |
+| `M2v` on CASE Z saturated at `B9` **and** with `B0 = 0` adjoined (both licensed; removes the spurious `{B9=0}` component that the generator `B0·B9` otherwise forces the GB to carry) | 11 vars, 19 cubics | timeout (900 s) |
+| `M2K` (`toField`) on the reduced leaves | 6–7 vars, degree 15 | timeout (>200 s) |
+| `m2h` homogeneous `saturate(I, B6)` over `K` | 18 vars, degrees 1 and 3 | timeout (1800 s) |
+| `m2d` degree-bounded GB, `DegreeLimit` 6 / 9 / 12 | reduced leaves | GB sizes 7 / 47 / 225, **no constant** |
+| sympy Gröbner | 6–7 vars | no return in the budget |
+| `M2v` on the **reduced** cube-root leaf, `λ = ω` — the exact shape that took 11 s at `λ = 1` | 13 vars, degree 12 | still running at close (> 5 min) |
+
+Two conclusions worth carrying forward. First, **the one Macaulay2 success is
+coefficient-dependent, not shape-dependent**: the identical construction at
+`λ = ω` does not finish, so "use the cube-root branches" is not a reliable
+recipe for M2. Second, msolve over `QQ` is simply the right engine for this
+family — and it is not marginal about it: CASE Z was independently confirmed
+by msolve on **four** different presentations (`lowdeg4` 1 s, `lowdeg` , the
+`reduced4` leaf 5 s, and the saturated `B0 = 0` form 2 s), every one of which
+is a complete characteristic-zero proof on its own.
+
 **The msolve side is complete and uniform: every case in every eigenblock is
 the unit ideal over `QQ`, on a low-degree presentation, in 1–10 seconds.**
 Each of these is by itself a complete characteristic-zero proof — an exact

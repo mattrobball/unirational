@@ -27,7 +27,7 @@ I = ideal(
   om^2+om+1,
   8*kp^2-13*kp-4
 );
-stdio << "-- h2c_r8_om_k0_0" << endl << flush;
+stdio << "-- crr_om_k0_0" << endl << flush;
 u = (1_R % I);
 stdio << "ONE-IN-I " << (u == 0) << endl << flush;
 if u == 0 then ( stdio << "VERDICT UNIT-IDEAL (EMPTY)" << endl ) else ( stdio << "VERDICT NON-UNIT dim=" << dim I << endl );
