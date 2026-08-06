@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `58aafc4` (2026-08-05; the
+Snapshot metadata — notebook parent head: `91bf468` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2422,7 +2422,27 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   proof-named computation dispatched: `FIX-L1` (frame constants,
   `γ`-generators for `m = 1, 3` both twists, transfer-pairing
   nondegeneracy; packet `goal_runs_after_9094303/FIX_L1_FRAME_CONSTANTS`,
-  in flight).** Same-day amendment: FIX-C1's detached part-D
+  in flight). Third derivation wave (Note IV §5.9 + Correction IV-a,
+  2026-08-06): **Correction IV-a, self-caught** — Lemma 2.1's corollary
+  `j(qT) = j(T)` conflated jet orders (the `(m,r+2)` cell reads orders
+  `2e+4, 2e+5` of the same section); corollary withdrawn, section-
+  invariance stands, [U2] reframed. **Theorem 5.9 (the recursion
+  principle)**: pointwise cone elements ARE V4-equivariant rational
+  maps `P² ⇢ X`; at odd `r`, parity alone forces each source V4-line
+  into the corresponding target 55-line and each source vertex to a
+  χ-vertex on the elliptic (`X^{V4}` = exactly 6 points: 3 type-II + 3
+  χ-vertices); line-restrictions are unconstrained at `x`-level 0
+  (`L ⊂ X`, certificate A2) and constrained only by the higher-level
+  source-side `I_k` identities. **Torus correction to Prop 5.3**: the
+  diagonal 2-torus makes literal finiteness trivially false; the
+  criterion is corrected to finitely-many-torus-orbits and SURVIVES
+  (complete rational curves in a torus are constant); the FIN(7)
+  worker redirected mid-flight before the wasted verdict. **[U2]'s
+  sharpest form**: one structure theorem classifying V4-equivariant
+  `P² ⇢ X` uniformly in degree — the program recursing onto its own
+  surface case, where the collaborators' machinery (T2.2 chains =
+  fabulous crossings at the non-cyclic source vertices) applies
+  verbatim.** Same-day amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
   EXACT on all 24 non-rational witnesses (C1 §7 item 1 closed); the H1

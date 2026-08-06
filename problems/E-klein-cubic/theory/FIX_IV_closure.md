@@ -64,16 +64,24 @@ each of the three points (it depends on `m` and on `e mod 2` only,
 through `sgn^e`). By (P4), the leading-layer data of any global map lie
 in `J(m,r) ∩ E(m,e)`.
 
-**Lemma 2.1 (q-tower jet invariance — proved here).** Multiplication by
-`q = x² + y² + z²` maps the `(m, r)` cell to the `(m, r+2)` cell and
-FIXES the leading line jet: `j(qT) = j(T)`. *Proof.* The
-`(y,z)`-order-`m` part of `(qT)⁻` is `q · [(T⁻)_{(m)}]`; writing
-`(T⁻)_{(m)} = x^e · Λ ⊕ (higher x-order)`, the `x²`-term of `q`
-contributes `x^{e+2} Λ` while `(y²+z²)·(T⁻)_{(m)}` has `(y,z)`-order
-`m + 2`; normalizing by `x^{e+2}` returns the same `Λ` along `ℓ_V`. ∎
-Hence `J(m, r) ⊆ J(m, r+2)`: the reachable sets are increasing along
-each parity class of `r`, and the genuinely new content at each `r` is
-the primitive (non-`q`-divisible) part.
+**Lemma 2.1 (q-tower SECTION invariance — proved; corollary corrected
+2026-08-06).** Multiplication by `q = x² + y² + z²` maps the `(m, r)`
+cell to the `(m, r+2)` cell and FIXES the leading line datum as a
+SECTION: `Λ_{qT} = Λ_T` along `ℓ_V`. *Proof.* The `(y,z)`-order-`m`
+part of `(qT)⁻` is `q·[(T⁻)_{(m)}]`; the `x²`-term contributes
+`x^{e+2}Λ` while `(y²+z²)·(T⁻)_{(m)}` has `(y,z)`-order `m+2`;
+normalizing by `x^{e+2}` returns the same `Λ`. ∎
+
+> **Correction IV-a (director, self-caught).** The original corollary
+> `j(qT) = j(T)` and `J(m,r) ⊆ J(m,r+2)` CONFLATED orders: the cell
+> `(m, r+2)` reads its jets at orders `2e+4, 2e+5` of the SAME section,
+> not at `2e, 2e+1` — so the q-tower contributes *deeper Taylor data of
+> unchanged sections*, not repeated jets. The corollary is withdrawn;
+> [U2]'s framing via monotone jet sets with it. What survives and
+> matters: a map germ lives at ONE `(m, r)` (the multi-order is a
+> single global invariant), so [U2]'s true content is uniformity of the
+> per-`r` kills, and Lemma 2.1's section-invariance remains the
+> transport tool between them. The corrected [U2] formulation is §5.9.
 
 ## 3. The conditional closure theorem
 
@@ -325,3 +333,56 @@ and of `V₃[sgn^{e+1}]`; the isotypic components `(γ⊗γ)_t, (γ⊗γ)_s`;
 nondegeneracy of the transfer hyperplane
 (`(α(γ⊗γ)_t, β(γ⊗γ)_s) ≠ (0,0)`); the analogous data at `m = 3`. Pure
 frame constants; the [L] continuation consumes them.
+
+### 5.9 The recursion principle (proved), the torus correction to Prop 5.3, and [U2] reframed
+
+**Theorem 5.9 (pointwise cells are equivariant maps one dimension
+down).** A pointwise element of the `(·, r)` cone — a degree-`r` tuple
+`T(x,y,z)` in the V4-parity slots with `F(T) ≡ 0` — is precisely a
+**V4-equivariant rational map `P² ⇢ X`** of degree `r`, V4 acting on
+the source `P²` by the sign characters and on the target through
+`W|_{V4}`. Under this identification, for `r` ODD:
+
+- **(a) Lines land on lines, by parity alone.** On the source fixed
+  line `{x = 0}` (σ₁-fixed in `P²`), the slots `a', b', u₀'` vanish
+  IDENTICALLY: their parity classes require `(0, j, k)` patterns with
+  `j + k = r` that violate the class parities (all-even/all-odd for
+  `a, b`; both χ₁-classes for `u₀'` — checked; cyclic for the other
+  lines). Hence `T({x = 0}) ⊆ {a = b = x = 0} = L_{σ₁}`: **each source
+  V4-line maps into the corresponding target 55-line**; the elliptic
+  option is parity-forbidden at odd `r`.
+- **(b) Vertices land on `X^{V4}` — six points.** `X^{V4}` = the three
+  type-II points (`ℓ_V ∩ X`) plus the three χ-vertices (on `X` because
+  no `x_i³` monomial is V4-invariant). At odd `r` the source vertex
+  maps to its χ-vertex (pure `x^r` lives only in `u₀'`), which lies on
+  `E_{σ₁} = X ∩ P_{σ₁}` — a POINT of the elliptic, exactly as the
+  rational-to-elliptic funnel demands.
+- **(c) Line-restrictions are unconstrained at level zero.** On
+  `{x = 0}` the landing identity reads `F|_{L₁}(u₁', u₂') ≡ 0` —
+  automatic since `L₁ ⊂ X` (certificate A2). The line-maps
+  `{x = 0} → L₁` acquire constraints only through the HIGHER `x`-levels
+  of `F(T) ≡ 0` — the source-side analogues of §5.7's `I_k`
+  identities (the same `F₀ + Q` split, per source involution).
+- **(d) The 2-torus, and the correction to Prop 5.3.** The diagonal
+  torus `diag(λ, μ, ν)` commutes with V4 and acts on every pointwise
+  cone preserving all orders — so no stratum with trivial
+  torus-stabilizer is literally finite, and `FIN(r)` as first phrased
+  was trivially infinite (caught before the verdict; worker
+  redirected). **Prop 5.3's hypothesis is corrected to "finitely many
+  torus orbits"; its conclusion survives**: a morphism from `P¹` into a
+  finite union of locally closed torus orbits is constant on the open
+  stratum (a complete rational curve in `(C*)^k` is constant), so the
+  constancy criterion stands in the corrected form.
+
+**[U2] reframed (the keystone in its true shape).** Classify
+V4-equivariant maps `P² ⇢ X` — landing type forced by (a)/(b) at odd
+`r`, line-moduli entering only through (c)'s coupled tower, modulo
+(d)'s torus — **uniformly in `r`**. The discrete landing data is
+degree-independent, and the surface-level machinery (the T2.2 chains =
+Duncan's fabulous crossings, at source vertices whose stabilizer is the
+full V4 — non-cyclic, unbreakable) applies to these maps exactly as the
+top level applies to `P⁴ ⇢ X`: **the program recurses onto its own
+surface case** — the very setting of the collaborators' original
+observation. One structure theorem about `P² ⇢ X` under V4 replaces
+the infinite tower of per-`r` computations; that theorem is now the
+sharpest formulation of [U2].
