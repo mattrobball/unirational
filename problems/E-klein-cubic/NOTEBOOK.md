@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `508fd80` (2026-08-05; the
+Snapshot metadata — notebook parent head: `a4a7d06` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2714,7 +2714,26 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   notation-collision note (`c` = xyz-coefficient ≠ FIX-L1's
   Chebyshev `c`). The (D1)-criterion's specific tangency data
   (`E ∩ K_c` of the LINE projection) remains write-up material,
-  extractable by the same methods.**** Same-day
+  extractable by the same methods. Seventeenth wave (Note IV §5.27,
+  2026-08-06): **the plus-deep reduction** — on the `w ≠ 0` branch,
+  Brutality forces every fiber into the plus-deep sub-locus (order-2
+  plus coefficients = 0), a LINEAR slice of the sealed N2C system;
+  the 27 Chebyshev witnesses (plus-order exactly 2) are EXCLUDED, so
+  the fibers live in the image-in-line components or in
+  as-yet-unknown plus-deep extras. **Named (C7)** (cheap,
+  route-deciding): solve the sealed 52-equation system + the linear
+  plus-deep conditions — image-in-line-only vs explicit extra
+  candidates. **The departure recursion** (proposition, sketch
+  recorded): if image-in-line-only, the `w ≠ 0` germ hugs one
+  arrangement line; the departure package at the first off-line cone
+  order re-enters the SAME machinery (self-similar, shape
+  degree-independent) — either every stage kills (⟹ image in the
+  line ⟹ non-dominant ⟹ KILL) or one stage's system is solvable
+  (⟹ the explicit candidate); **one stage computation decides all
+  stages**, and the E15-table budget count demotes to FALLBACK.
+  FIX-D2 re-redirected (third): (C7) first, then the stage system;
+  output-discipline directive in force after the worker's 64k
+  overflow death and resume.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

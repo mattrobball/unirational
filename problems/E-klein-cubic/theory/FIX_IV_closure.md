@@ -1221,6 +1221,44 @@ relations constrain `Θ⁽¹⁾`, not the β's.** Every subsequent level
 surjective contraction: level-local solvability persists; nothing
 pins the minus data level-locally. ∎
 
+### 5.27 The plus-deep reduction and the departure recursion (narrowing D2 again)
+
+**Observation (proved).** On the `w ≠ 0` branch, Brutality forces
+every FIBER of the leading datum to be a pointwise element whose
+plus-half has order `≥ 4` on all three planes — the fibers live in
+the **plus-deep sub-locus** of the pointwise cone: a LINEAR slice
+(order-2 plus coefficients = 0) of the already-classified system.
+The 27 Chebyshev witnesses have plus-order exactly 2 (`α ≠ 0`,
+sealed), so they are EXCLUDED: the fibers must lie in the plus-deep
+components — known members: the three image-in-line components
+(plus ≡ 0); possible others (e.g. `u₀′`-deep-only) undetermined.
+
+**Named computation (C7) — cheap, decisive for the route:** solve the
+sealed 52-equation equivariant system PLUS the linear conditions
+{order-2 plus coefficients = 0} at `r = 7` (and the structural
+statement for general `r`): is the plus-deep equivariant PO-1 locus
+EXACTLY the image-in-line components, or are there extra components
+(which would be the true terminal candidates, delivered explicitly)?
+This is a linear slice of a solved system — hours, not days.
+
+**The departure recursion (proposition, proof-sketch recorded).** If
+(C7) returns image-in-line-only: the `w ≠ 0` germ's leading data land
+entirely in ONE arrangement line; define the DEPARTURE ORDER
+`r₁ > r` = the first cone order carrying data off the line. If no
+such order exists, the map's image lies in the line — NOT DOMINANT:
+kill. Otherwise the departure package is a new leading datum in the
+SAME V4-frame with the same `F` and shifted degrees, and the ENTIRE
+machinery (parity, equalizer, Brutality, plus-deep reduction) applies
+to it verbatim — the analysis is SELF-SIMILAR: each stage either
+kills (equalizer/`w₁ = 0` channel + [L]) or forces the next stage
+into the same dichotomy. Since "all stages image-in-line-deep
+forever" = image in the line = non-dominant, the recursion
+terminates in a kill UNLESS some stage exits through its own
+terminal-system SOLVABLE branch — and by degree-independence of the
+stage system's shape, **ONE stage computation decides ALL stages**.
+If the self-similarity holds under scrutiny, the E15-table budget
+count is unnecessary; it remains the FALLBACK.
+
 **Consequence — the terminal question in final form.** The `w ≠ 0`
 branch survives level-local analysis entirely; what decides it is the
 GLOBAL DEGREE BUDGET: the coupled tower must be solved by honest
