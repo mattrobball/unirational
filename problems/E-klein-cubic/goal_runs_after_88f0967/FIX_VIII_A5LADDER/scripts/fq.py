@@ -145,3 +145,38 @@ class Fq:
                 v[c] = (-R[i, f]) % self.p
             out.append(v)
         return np.array(out) if out else np.zeros((0, cols, k))
+
+
+def subfield_of(S, fq):
+    """smallest block-subfield of fq containing all entries of S -> (k_eff, idx)"""
+    used = set(np.nonzero(np.any(np.abs(S) > 0, axis=tuple(range(S.ndim - 1))))[0])
+    ks = fq.ks
+    cands = []
+    if not ks:
+        return 1, [0]
+    strides, st = [], 1
+    for kk in ks[::-1]:
+        strides.insert(0, st)
+        st *= kk
+    # candidate subfields: any subset of blocks
+    for mask in range(1 << len(ks)):
+        idx = [0]
+        for bi in range(len(ks)):
+            if mask >> bi & 1:
+                idx = [i + j * strides[bi] for i in idx for j in range(ks[bi])]
+        idx = sorted(idx)
+        if used <= set(idx):
+            cands.append(idx)
+    idx = min(cands, key=len)
+    return len(idx), idx
+
+
+def sub_fq(idx, fq):
+    """Fq object on the sub-basis idx (must be closed under multiplication)"""
+    k = len(idx)
+    tab = fq.tab[np.ix_(idx, idx, list(range(fq.k)))]
+    assert not np.any(np.delete(tab, idx, axis=2) % fq.p), 'not a subfield'
+    sub = Fq.__new__(Fq)
+    sub.p, sub.blocks, sub.ks, sub.k = fq.p, None, [k], k
+    sub.tab = tab[:, :, idx] % fq.p
+    return sub

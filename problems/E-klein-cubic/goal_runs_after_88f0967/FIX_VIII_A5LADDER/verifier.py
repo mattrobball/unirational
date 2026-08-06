@@ -34,10 +34,10 @@ sys.path.insert(0, os.path.join(HERE, 'scripts'))
 from a5lib import (mm, rref, rank_p, inv_p, klein_F, monlist, monmat, load_gens,
                    covariant_basis, check_equivariance, group_closure, order_of)
 from loci import (Loci, restrict, apply_condition, jac_values, first_order_rows,
-                  apply_fq_rows)
+                  apply_fq_rows, second_order_quadrics, enumerate_branches)
 from land import (cubic_rows, write_ms, write_ms_ext, run_msolve, gb_verdict,
-                  full_identity)
-from stage3_land import subfield_of, sub_fq          # reused helpers
+                  full_identity, write_quadrics)
+from fq import subfield_of, sub_fq
 
 FAILS = []
 LOG = open(os.path.join(HERE, 'results', 'verifier.log'), 'w')
@@ -185,45 +185,32 @@ def verify_prime(p, seed):
         subs = []
         for name, R, U, Tg, cands in rank1:
             J = jac_values(basis, mons, U, p, rng)
-            opts = [('Z', R, None, None)]
+            opts = [('Z', R, None, None, None)]
             for lab, q in cands:
                 qW = np.einsum('nk,nj->jk', q, np.array(Tg, dtype=np.float64)) % p
-                opts.append((lab, R, q, first_order_rows(J, qW, fq)))
-            subs.append((name, opts))
-        spaces, seen = [], set()
-        for combo in itertools.product(*[range(len(o)) for _, o in subs]):
-            Sb, lab = S0, []
-            for (name, opts), j in zip(subs, combo):
-                tag, R, q, FO = opts[j]
-                lab.append('%s:%s' % (name, tag))
-                Sb = apply_condition(Sb, R, q, fq)
-                if q is not None and Sb.shape[0]:
-                    Sb = apply_fq_rows(Sb, FO, fq)
-                if Sb.shape[0] == 0:
-                    break
-            if Sb.shape[0] == 0:
-                continue
-            h = fq.rref(Sb.reshape(Sb.shape[0], -1, fq.k))[0].astype(np.int64).tobytes()
-            if h in seen:
-                continue
-            seen.add(h)
-            spaces.append(('|'.join(lab), Sb))
-        bad, ident = [], 0
-        for key, Sb in spaces:
-            v = land_branch(d, basis, mons, Sb, fq, p, rng, key)
+                opts.append((lab, R, q, first_order_rows(J, qW, fq), qW))
+            subs.append({'name': name, 'U': U, 'opts': opts})
+        spaces = enumerate_branches(S0, subs, fq)
+        bad, ident, nz = [], 0, 0
+        for key, Sb, contr in spaces:
+            nz += 1
+            v = land_branch(d, basis, mons, Sb, contr, fq, p, rng, key)
             if v['verdict'] == 'EMPTY-IDENTITY':
                 ident += 1
-            if v['verdict'] not in ('EMPTY', 'EMPTY-IDENTITY', 'ZEROMAP'):
+            if v['verdict'] not in ('EMPTY', 'EMPTY-IDENTITY', 'EMPTY-ALL-CUBICS',
+                                    'EMPTY-QUADRICS', 'ZEROMAP'):
                 bad.append((key, v))
-        summary[d] = {'K': K, 'branches': len(spaces), 'unresolved': len(bad),
+        summary[d] = {'K': K, 'branches': nz, 'unresolved': len(bad),
                       'dim1_identity': ident, 'secs': round(time.time() - t0, 1)}
         check('v_land_d%d_p%d' % (d, p), not bad,
-              '%d branch spaces, all origin-only (%d settled by exact identity)'
-              % (len(spaces), ident) if not bad else 'unresolved %s' % [k for k, _ in bad])
+              '%d nonzero branch spaces, all origin-only (%d by exact identity)'
+              % (nz, ident) if not bad else 'unresolved %s' % [k for k, _ in bad])
     return summary
 
 
-def land_branch(d, basis, mons, S, fq, p, rng, key):
+def land_branch(d, basis, mons, S, contr, fq, p, rng, key):
+    """Independent LAND on one branch: fresh seeds, MORE sample points than the
+    main run, own msolve invocation."""
     r = S.shape[0]
     keff, idx = subfield_of(S, fq)
     sub = sub_fq(idx, fq) if keff > 1 else None
@@ -236,21 +223,54 @@ def land_branch(d, basis, mons, S, fq, p, rng, key):
         ok, nz, npts = full_identity(C, p, d=d, tab=(sub.tab if keff > 1 else None))
         return {'verdict': 'HIT' if ok else 'EMPTY-IDENTITY', 'grid_nonzero': nz}
     nvar = r if keff == 1 else r + 1
-    npts = max(80, 6 * r * keff)                    # MORE points than the main run
+    quads = []
+    if r > 25 and contr:
+        Q, monsq = [], None
+        for U, qW in contr:
+            rq, monsq = second_order_quadrics(basis, mons, U, qW, S, fq,
+                                              2 * (r * (r + 1) // 2) + 60, rng)
+            Q.append(rq)
+        allq = np.concatenate(Q, axis=0)
+        if keff == 1:
+            Rq, _ = rref(allq[:, :, 0] if allq.ndim == 3 else allq, p)
+            if Rq.shape[0] == len(monsq):
+                return {'verdict': 'EMPTY-QUADRICS', 'quadric_rank': int(Rq.shape[0])}
+            quads = write_quadrics(Rq, monsq, r, p, None)
+        else:
+            Rq, _ = rref(allq.reshape(allq.shape[0], -1), p)
+            quads = write_quadrics(Rq.reshape(Rq.shape[0], -1, keff), monsq, r, p, sub.tab)
+    budget = 4000 if r <= 25 else 900          # MORE than the main run
+    blk = max(160, 4 * r)
+    R, monsl, tot = None, None, 0
+    while tot < budget:
+        rows, monsl = cubic_rows(Bm[:, :, :, 0] if keff == 1 else Bm, mons, p, blk,
+                                 rng, tab=None if keff == 1 else sub.tab)
+        M = np.array(rows, dtype=np.float64)
+        if keff > 1:
+            M = M.reshape(M.shape[0], -1)
+        M = M if R is None else np.concatenate([R, M], axis=0)
+        new, _ = rref(M, p)
+        tot += blk
+        stop = R is not None and new.shape[0] == R.shape[0]
+        R = new
+        if stop or R.shape[0] >= len(monsl) * (1 if keff == 1 else keff):
+            break
+    if R.shape[0] >= len(monsl) * (1 if keff == 1 else keff):
+        return {'verdict': 'EMPTY-ALL-CUBICS', 'n_cubics': int(R.shape[0])}
+    if R.shape[0] == 0 and not quads:
+        return {'verdict': 'ALL-CUBICS-VANISH'}
+    nuse = min(R.shape[0], max(350, 7 * r))       # generic generators for msolve
+    if nuse < R.shape[0]:
+        Cmix = rng.integers(0, p, size=(nuse, R.shape[0])).astype(np.float64)
+        R = mm(Cmix, R, p)
     ms = os.path.join(HERE, 'results', 'v_land_d%d_p%d_%s.ms'
                       % (d, p, abs(hash(key)) % 10 ** 8))
     if keff == 1:
-        rows, monsl = cubic_rows(Bm[:, :, :, 0], mons, p, npts, rng, tab=None)
-        R, _ = rref(np.array(rows, dtype=np.float64), p)
-        if R.shape[0] == 0:
-            return {'verdict': 'ALL-CUBICS-VANISH'}
-        write_ms([[int(v) for v in row] for row in R], monsl, nvar, p, ms)
+        write_ms([[int(x) for x in row] for row in R], monsl, nvar, p, ms,
+                 extra_gens=quads)
     else:
-        rows, monsl = cubic_rows(Bm, mons, p, npts, rng, tab=sub.tab)
-        R, _ = rref(np.array(rows).reshape(len(rows), -1), p)
-        if R.shape[0] == 0:
-            return {'verdict': 'ALL-CUBICS-VANISH'}
-        write_ms_ext(R.reshape(R.shape[0], -1, keff), monsl, r, p, sub.tab, ms)
+        write_ms_ext(R.reshape(R.shape[0], -1, keff), monsl, r, p, sub.tab, ms,
+                     extra_gens=quads)
     st, body = run_msolve(ms, ms.replace('.ms', '.out'), 900, gb=True)
     if st != 'OK':
         return {'verdict': st}

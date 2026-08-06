@@ -30,7 +30,14 @@ def check(name, ok, detail=''):
 
 
 G = group_closure(load_gens(p), p)
-a, b, H = find_A5(G, p)
+A5CLS = int(os.environ.get('A5CLASS', '0'))
+if A5CLS:
+    reps, ntot = a5_classes(G, p)
+    a, b, H = reps[A5CLS]
+    print('using A5 class %d of %d (%d subgroups total)'
+          % (A5CLS, len(reps), ntot))
+else:
+    a, b, H = find_A5(G, p)
 L = Loci(p, a, b, H)
 fq = L.fq
 print('p=%d  compositum F_p^%d  F(v0)=%d  F(Wchi1)=%d  cb_W0=%s  cb_Ew=%s'
@@ -95,5 +102,5 @@ check('loci_reduction_p%d' % p, True,
 check('cone_empty_linear_certificate_p%d' % p, allzero,
       'every branch subspace is 0 for d=2..%d' % DMAX if allzero else 'branches remain')
 json.dump({'p': p, 'seed': seed, 'fq_k': fq.k, 'per_degree': out},
-          open(os.path.join(HERE, 'payload', 'loci_p%d.json' % p), 'w'), indent=1)
+          open(os.path.join(HERE, 'payload', 'loci_p%d%s.json' % (p, '' if not A5CLS else '_c%d' % A5CLS)), 'w'), indent=1)
 print('ALL BRANCHES ZERO:', allzero)

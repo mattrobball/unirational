@@ -109,6 +109,44 @@ def order_of(M, p):
     return k
 
 
+def a5_classes(G, p):
+    """all A5 subgroups of G, grouped into G-conjugacy classes.
+
+    Returns [(a, b, H)] with one representative per class, in scan order.
+    PSL(2,11) has 22 subgroups isomorphic to A5 in two classes of 11."""
+    key = lambda M: M.astype(np.int64).tobytes()
+    ords = [order_of(M, p) for M in G]
+    invs = [M for M, o in zip(G, ords) if o == 2]
+    thr = [M for M, o in zip(G, ords) if o == 3]
+    subs, seen = [], set()
+    for a in invs:
+        for b in thr:
+            if order_of(mm(a, b, p), p) != 5:
+                continue
+            H = group_closure([a, b], p, cap=200)
+            if len(H) != 60:
+                continue
+            S = frozenset(key(M) for M in H)
+            if S in seen:
+                continue
+            seen.add(S)
+            subs.append((S, a, b, H))
+    reps = []
+    for S, a, b, H in subs:
+        new = True
+        for S2, _, _, _ in reps:
+            for g in G:
+                gi = inv_p(g, p)
+                if frozenset(key(mm(mm(g, M, p), gi, p)) for M in H) == S2:
+                    new = False
+                    break
+            if not new:
+                break
+        if new:
+            reps.append((S, a, b, H))
+    return [(a, b, H) for _, a, b, H in reps], len(subs)
+
+
 def find_A5(G, p, want=0):
     """Find (a, b) with a^2 = b^3 = (ab)^5 = 1 generating a group of order 60.
 

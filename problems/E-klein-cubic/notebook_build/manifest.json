@@ -1537,6 +1537,17 @@
    "char0_scope": "mod-p (67 primary, 199 on hits); LAND-method semantics (sampled cone contains true cone; EMPTY decisive mod p, hits verified by full identity)",
    "tracked": "main",
    "notes": "IN-FLIGHT (dispatched 2026-08-06): the A5 landing ladder d = 2..12 \u2014 A5-covariant map-type spaces (dims vs A5-Molien), landing cone per degree by the LAND method, full-identity verification and Jacobian-rank on hits, second prime, rational reconstruction attempt. ANY hit = a point of X_tw over the degree-11 field = L11-unirationality (Kollar), descent gap 55 -> 11. Exits HIT-D<d> / EMPTY-THROUGH-12 / DEVIATION."
+  },
+  {
+   "path": "goal_runs_after_d0ab8d0/FIX_IX_V14MODEL",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "PROPOSAL-UNRUN",
+   "primary_exit": "UNDECIDED",
+   "superseded_by": null,
+   "char0_scope": "mod-p two primes (397, 199); exact rank/locus computations; ladder cones by LAND method",
+   "tracked": "main",
+   "notes": "IN-FLIGHT (dispatched 2026-08-06): the equivariant V14 model (Gr(2,U) cap P(10'), corrected Weil normalization), sigma/V4/cyclic fixed-locus arrangement (Condition A census; A5/D12 emptiness replayed as checks), curve-orbit census (55-conic transfer, lines Fano scheme, index arithmetic with 14 = 2 mod 3), and the 10'-valued ladder with QUADRATIC landing cones. A stage-4 verified hit would be a K_proj-point of the twisted V14 = the headline positive - flagged for triple verification."
   }
  ],
  "known_branches": [

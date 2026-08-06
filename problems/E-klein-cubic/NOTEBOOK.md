@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `55d718b` (2026-08-05; the
+Snapshot metadata — notebook parent head: `d0ab8d0` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3312,7 +3312,28 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   degenerates to Gr(2,W) — hand proof); packet FIX-IX-V14MODEL
   planned (Λ²U decomposition, Gr∩P(M) verification deg-14/smooth,
   fixed-locus arrangement, M-valued ladder with QUADRATIC landing
-  conditions, small-orbit/index census with 14 ≡ 2 mod 3).**** Same-day
+  conditions, small-orbit/index census with 14 ≡ 2 mod 3). **Wave 27 V₁₄
+  triage (Note IX §4; probes v14_lambda2/a5fix/d12fix2): the
+  dP/Fermat toolbox CANNOT close V₁₄ — proofs.** Full G: the
+  three deaths (irreducible M, simple G, no invariant
+  hyperplane). Subgroup fixed-point tools: `Λ²U = 5 ⊕ 10′`
+  (corrected Weil normalization `S² = −I`, SL-closure 1320;
+  10′-projector rank 10 ✓); `M^{A5}` is the SYMPLECTIC form of
+  quaternionic `U|_{2.A5}` — rank 6, off the Grassmannian ⟹
+  `V₁₄^{A5} = ∅` (twins agree); `M^{D12}`-pencil rank
+  distribution `{6: 395, 4: 3}` — min rank 4 ⟹ `V₁₄^{D12} = ∅`.
+  Induction tool: dies STRUCTURALLY on index-1 Fanos (hyperplane
+  sections are K3s, never unirational — why CTZ stop at index
+  ≥ 2). **Wave 28 dispatch:** packet
+  `goal_runs_after_d0ab8d0/FIX_IX_V14MODEL` (IN-FLIGHT,
+  PROPOSAL-UNRUN): exact model (quadrics in 10 vars, deg 14,
+  smooth, G-invariant, two primes), σ/V4/cyclic arrangement +
+  Condition-(A) census, curve-orbit census (55-conic
+  Iliev–Markushevich transfer, lines Fano scheme, index
+  arithmetic), 10′-ladder with QUADRATIC landing cones (a
+  verified stage-4 hit = a K_proj-point of the twisted V₁₄ =
+  the HEADLINE POSITIVE — triple-verify protocol in
+  brief).**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

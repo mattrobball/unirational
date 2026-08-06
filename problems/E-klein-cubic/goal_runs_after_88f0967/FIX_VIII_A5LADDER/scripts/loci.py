@@ -324,6 +324,32 @@ def second_order_quadrics(basis, mons, U, qW, S, fq, nsamp, rng):
     return np.array(rows) % p, monsl
 
 
+def enumerate_branches(S0, subs, fq):
+    """DFS over the sub-branch choices, sharing prefixes.
+
+    subs: [{'name','U','opts':[(tag,R,q,FO,qW), ...]}] with opts[0] the 'Z'
+    (T|_U == 0) sub-branch.  Yields (label, space, contracted_loci)."""
+    out = []
+
+    def rec(i, S, lab, contr):
+        if S.shape[0] == 0:
+            return
+        if i == len(subs):
+            out.append(('|'.join(lab), S, list(contr)))
+            return
+        s = subs[i]
+        for tag, R, q, FO, qW in s['opts']:
+            S2 = apply_condition(S, R, q, fq)
+            c2 = contr
+            if q is not None and S2.shape[0]:
+                S2 = apply_fq_rows(S2, FO, fq)
+                c2 = contr + [(s['U'], qW)]
+            rec(i + 1, S2, lab + ['%s:%s' % (s['name'], tag)], c2)
+
+    rec(0, S0, [], [])
+    return out
+
+
 def apply_fq_rows(S, A, fq):
     """A: (rows, K, k) over F_q; impose sum_i c_i A[e,i] = 0 on the space S."""
     if S.shape[0] == 0 or A.shape[0] == 0:

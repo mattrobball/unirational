@@ -74,3 +74,44 @@ QUADRATIC (Plücker), not cubic); first landing cones by the LAND
 method; small-orbit census on `V₁₄` (lines/conics orbits → small
 closed points of the twisted `V₁₄` → its INDEX over `K_proj`,
 where hyperplane degree 14 ≡ 2 mod 3 changes the game).
+
+## 4. Can the dP/Fermat toolbox close V₁₄? NO — with proofs (2026-08-06)
+
+The tools that closed del Pezzos (Duncan) and the Fermat cubic
+(CTZ): (i) projection from a G-fixed point; (ii) chords through
+the fixed pair of an index-2 subgroup; (iii) induction from a
+G-invariant UNIRATIONAL hyperplane section (CTZ Prop 3.5 — the
+Fermat-closer, via the Clebsch cubic surface). On V₁₄:
+
+- Full G: (i) dies (M = 10′ irreducible ⟹ no ambient fixed
+  points), (ii) dies (G simple), (iii) dies (no invariant
+  hyperplane). Same three deaths as on the cubic.
+- Subgroup fixed-point tools — CLOSED BY COMPUTATION TODAY
+  (`v14_lambda2.py`, `v14_a5fix.py`, `v14_d12fix2.py`, mod 397):
+  * `Λ²U = 5 ⊕ 10′` (isotypic projector rank 10 ✓; the correct
+    Weil normalization is `S² = −I`, linear closure 1320 — the
+    `+1`-sign gives a wrong central structure);
+  * `dim M^{A5} = 1`, but the invariant bivector is the
+    SYMPLECTIC form of the quaternionic `U|_{2.A5}` — rank 6,
+    not decomposable: the unique A5-fixed ambient point is OFF
+    the Grassmannian: **`V₁₄^{A5} = ∅`** (mirroring
+    `X^{A5} = ∅` on the cubic — the twins agree here);
+  * `dim M^{D12} = 2`, and the invariant pencil's rank
+    distribution over `P¹(F₃₉₇)` is `{6: 395, 4: 3}` — minimum
+    rank 4 at the three Pfaffian-cubic roots, never 2:
+    **`V₁₄^{D12} = ∅`.**
+- The induction tool (iii) dies STRUCTURALLY for EVERY subgroup:
+  V₁₄ has Fano index 1, so hyperplane sections are K3 surfaces —
+  never unirational. (This is also exactly why CTZ's paper stops
+  at index ≥ 2.)
+
+**Verdict: the same tools cannot close any V₁₄ case.** What the
+machine runs instead (packet FIX-IX-V14MODEL): the σ-fixed
+arrangement (`M^σ` = the `U₊∧U₋`-part, `V₁₄^σ` = a linear section
+of `P(U₊)×P(U₋)` — the V₁₄-analogue of `E_σ ⊔ L_σ`); `V₁₄^{V4}`
+(4-dim pencil space, rank-2 locus expected FINITE — Condition (A)
+hinges on it); the curve-orbit census (Iliev–Markushevich: conics
+on V₁₄ ↔ lines on the cubic — the 55-line orbit should transfer
+to a 55-CONIC orbit on V₁₄, and the projection-move/index-1
+story with it); the `10′`-valued ladder with QUADRATIC landing
+conditions.

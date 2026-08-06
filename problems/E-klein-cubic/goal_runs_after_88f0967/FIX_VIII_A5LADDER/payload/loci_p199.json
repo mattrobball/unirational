@@ -1,0 +1,123 @@
+{
+ "p": 199,
+ "seed": 424242,
+ "fq_k": 2,
+ "per_degree": {
+  "2": {
+   "K": 2,
+   "after_zero": 0,
+   "branch_keys": 5,
+   "max_dim": 0,
+   "max_label": "",
+   "n_nonzero": 0,
+   "nonzero": {},
+   "secs": 0.0
+  },
+  "3": {
+   "K": 3,
+   "after_zero": 0,
+   "branch_keys": 5,
+   "max_dim": 0,
+   "max_label": "",
+   "n_nonzero": 0,
+   "nonzero": {},
+   "secs": 0.0
+  },
+  "4": {
+   "K": 8,
+   "after_zero": 2,
+   "branch_keys": 5,
+   "max_dim": 0,
+   "max_label": "",
+   "n_nonzero": 0,
+   "nonzero": {},
+   "secs": 0.2
+  },
+  "5": {
+   "K": 12,
+   "after_zero": 6,
+   "branch_keys": 5,
+   "max_dim": 0,
+   "max_label": "",
+   "n_nonzero": 0,
+   "nonzero": {},
+   "secs": 0.1
+  },
+  "6": {
+   "K": 19,
+   "after_zero": 8,
+   "branch_keys": 5,
+   "max_dim": 0,
+   "max_label": "",
+   "n_nonzero": 0,
+   "nonzero": {},
+   "secs": 0.1
+  },
+  "7": {
+   "K": 31,
+   "after_zero": 23,
+   "branch_keys": 17,
+   "max_dim": 0,
+   "max_label": "",
+   "n_nonzero": 0,
+   "nonzero": {},
+   "secs": 0.9
+  },
+  "8": {
+   "K": 45,
+   "after_zero": 37,
+   "branch_keys": 100,
+   "max_dim": 1,
+   "max_label": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z",
+   "n_nonzero": 80,
+   "nonzero": "omitted",
+   "secs": 8.8
+  },
+  "9": {
+   "K": 62,
+   "after_zero": 46,
+   "branch_keys": 5,
+   "max_dim": 12,
+   "max_label": "V+:Wchi1",
+   "n_nonzero": 5,
+   "nonzero": {
+    "V+:Z": 2,
+    "V+:Wchi1": 12,
+    "V+:W0r0": 9,
+    "V+:W0r1": 9,
+    "V+:W0r2": 9
+   },
+   "secs": 0.7
+  },
+  "10": {
+   "K": 90,
+   "after_zero": 80,
+   "branch_keys": 400,
+   "max_dim": 19,
+   "max_label": "V+:Wchi1|V-:Wchi1|Ew:r0|Ew2:r0",
+   "n_nonzero": 400,
+   "nonzero": "omitted",
+   "secs": 31.3
+  },
+  "11": {
+   "K": 119,
+   "after_zero": 109,
+   "branch_keys": 80,
+   "max_dim": 45,
+   "max_label": "V+:Wchi1|Ew:r0|Ew2:r0",
+   "n_nonzero": 80,
+   "nonzero": "omitted",
+   "secs": 13.5
+  },
+  "12": {
+   "K": 157,
+   "after_zero": 136,
+   "branch_keys": 25,
+   "max_dim": 60,
+   "max_label": "V+:Wchi1|V-:Wchi1",
+   "n_nonzero": 25,
+   "nonzero": "omitted",
+   "secs": 14.8
+  }
+ }
+}

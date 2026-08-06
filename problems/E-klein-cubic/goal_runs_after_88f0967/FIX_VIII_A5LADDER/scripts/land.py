@@ -108,7 +108,7 @@ def minpoly_of(tab, p):
     return '+'.join(t if not t.endswith('^0') else t[:-2] for t in terms)
 
 
-def write_ms_ext(rows, monsl, r, p, tab, path):
+def write_ms_ext(rows, monsl, r, p, tab, path, extra_gens=()):
     """extension branch: keep theta as a variable with its minimal polynomial,
     so the system has r+1 variables instead of r*k."""
     k = tab.shape[0]
@@ -124,6 +124,7 @@ def write_ms_ext(rows, monsl, r, p, tab, path):
                     terms.append('%d*c%d*c%d*c%d%s' % (cj, u, v, w, th))
         if terms:
             polys.append('+'.join(terms))
+    polys.extend(extra_gens)
     mp = minpoly_of(tab, p)
     if mp:
         polys.append(mp)
@@ -154,15 +155,48 @@ def run_msolve(path, out, timeout, gb=True, threads=4):
 
 
 def gb_verdict(body, r):
-    """EMPTY iff every c_i occurs in the reduced GB as a bare linear generator
-    (so the only solution has c = 0), or the ideal is the unit ideal."""
+    """EMPTY iff the reduced GB contains, for every variable c_i, an element
+    whose leading monomial is a pure power c_i^e.  Then every solution has all
+    c_i nilpotent, i.e. c = 0, so the projective cone is empty.  (The extra
+    variable `th` of the extension encoding is allowed to be free.)"""
     b = body.strip().rstrip(':').strip()
     if b in ('[1]', '[-1]'):
         return 'UNIT'
-    gens = re.findall(r'(?:\[|,)\s*1\*c(\d+)\^1\s*(?=[,\]])', body)
-    if set(map(int, gens)) == set(range(r)):
+    body = b.strip('[]')
+    pure = set()
+    for elt in body.split(',\n'):
+        elt = elt.strip()
+        if not elt:
+            continue
+        lead = re.split(r'(?<![\^*])[+\-]', elt)[0].strip()
+        m = re.fullmatch(r'1\*c(\d+)(?:\^(\d+))?', lead)
+        if m:
+            pure.add(int(m.group(1)))
+    if pure >= set(range(r)):
         return 'EMPTY'
     return 'NONEMPTY-OR-UNRESOLVED'
+
+
+def write_quadrics(rows, monsq, r, p, tab=None):
+    """text of the quadric generators (theta-encoded when tab is given)"""
+    out = []
+    k = 1 if tab is None else tab.shape[0]
+    for row in rows:
+        terms = []
+        for co, (u, v) in zip(row, monsq):
+            if k == 1:
+                c = int(co) % p
+                if c:
+                    terms.append('%d*c%d*c%d' % (c, u, v))
+            else:
+                for j in range(k):
+                    cj = int(co[j]) % p
+                    if cj:
+                        th = '' if j == 0 else ('*th' if j == 1 else '*th^%d' % j)
+                        terms.append('%d*c%d*c%d%s' % (cj, u, v, th))
+        if terms:
+            out.append('+'.join(terms))
+    return out
 
 
 # -------------------------------------------------------- exact identity test
