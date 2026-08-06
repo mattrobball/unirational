@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `40a7915` (2026-08-05; the
+Snapshot metadata — notebook parent head: `0d477b1` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2366,7 +2366,12 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   call (EMPTY confirms, 90/10) was RIGHT at `n = 3`. Method lesson
   recorded: hand predictions about cells must impose the FULL cell
   constraints (support/plane-order bounds), not representation-theoretic
-  admissibility alone.** Note I
+  admissibility alone. Same-day amendment: FIX-C1's detached part-D
+  level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
+  identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
+  EXACT on all 24 non-rational witnesses (C1 §7 item 1 closed); the H1
+  leftover M2 chain's late `hard_r8_om2_*` inputs are moot (H2 decided
+  those leaves) and are committed for completeness of the packet dir.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
