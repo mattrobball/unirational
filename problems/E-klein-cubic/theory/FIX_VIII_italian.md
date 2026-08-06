@@ -143,3 +143,79 @@ is CLOSED BY MEASUREMENT.
    computation per degree: packet FIX-VIII-A5LADDER.
 2. **C-sourced constructions**: the Hessian curve as source locus
    (degeneration-free, and where Note VI's CM geometry sits).
+
+## 6. The specialization lemma, the descent literature, and the degree-7 question (2026-08-06)
+
+**Lemma 4 (specialization; strong H-unirationality).** For any
+`H ≤ G`: `X_tw(L_H) ≠ ∅` ⟺ there is a DOMINANT `H`-equivariant
+rational map `P(W) ⇢ X`. Proof: (⟸) trivial. (⟹) Kollár gives
+`L_H`-unirationality; equivariantly a dominant `H`-map
+`Φ : P³ × P(W) ⇢ X` (`H` trivial on `P³`). Choose `H`-invariant
+`τ = (τ₁,τ₂,τ₃) : P(W) ⇢ P³` with prescribed value and
+differential at a generic point `x⁰` (possible: `H` finite, so
+invariant functions are étale coordinates on the quotient near an
+unramified point; `trdeg L_H = 4 ≥ 3`). The fiberwise map
+`t ↦ Φ(t, x⁰)` is dominant `P³ ⇢ X` (the generic-fiber
+parameterization), so its differential surjects at a generic
+`t⁰`; choosing `τ(x⁰) = t⁰` with `dτ` of full rank makes
+`d(Φ∘(τ, id))` surjective. Hence `Φ∘(τ, id) : P(W) ⇢ X` is a
+dominant `H`-map. ∎
+
+**Corollary (the first unconditional equivariant-unirationality
+theorem of the program).** The projection point (Prop 1) gives
+`X_tw(L_{D12}) ≠ ∅`, so there is a DOMINANT D12-equivariant
+rational map `P(W) ⇢ X`: the Klein cubic is D12-equivariantly
+unirational, hence H-equivariantly unirational for every
+`H ≤ D12` (a dominant D12-map is H-equivariant). The headline is
+the `G`-form; the index-mod-3 lattice says the only levels of
+genuine further interest are `A5` (index 11; the ladder) and `G`.
+
+**Literature placement (verified sources, PDFs archived where
+noted).**
+- The dictionary and the versal frame: Duncan–Reichstein,
+  "Versality of algebraic group actions and rational points on
+  twisted varieties" (arXiv:1109.6093; J. Alg. Geom. 24 (2015)):
+  versality notions ⟺ points on twists. Our headline = weak
+  versality of the Klein cubic as a G-variety. The abelian
+  fixed-point conditions (Serre/RY going-down) are NECESSARY and
+  all PASS here (X^A ≠ ∅ for every abelian A ≤ G: A ∈ {1, C2,
+  C3, C5, C6, C11, V4} — E_σ⊔L_σ; 3 pts on the ω-line; 4
+  coordinate pts; 2 pts on L_σ; 5 coordinate pts; 3 vertices + 3
+  pts of ℓ_V∩X respectively); SUFFICIENCY for cubics is exactly
+  blocked by the absence of a "cubic Springer theorem".
+- The descent core: Cassels–Swinnerton-Dyer conjecture (recorded
+  in Coray 1976): a cubic form with a solution over a
+  prime-to-3 extension has one over the ground field — OPEN in
+  all dimensions. Coray: smooth cubic SURFACES, prime-to-3 ⟹
+  a closed point of degree 1, 4 or 10 (perfect fields; extended
+  to all fields by Ma). Counterexample side: Colliot-Thélène–
+  Madore (J. Inst. Math. Jussieu 2004) construct cubic surfaces
+  over fields of cohomological dimension 1 with NO rational
+  point (so index-1 ⇏ point for SURFACES over small fields; our
+  field has cd 4 — the counterexample technology is a live
+  threat, not just a curiosity).
+- Cubic THREEFOLDS, state of the art: Qixiao Ma, "Closed points
+  on cubic hypersurfaces" (arXiv:1908.03139; archived
+  `external_docs/ma_closed_points_cubic_arxiv1908.03139.pdf`),
+  Thm 3.6: a degree-7 closed point on a smooth cubic 3-fold
+  descends to degree 1, 2, 4 or 5 (unique RNC through 7 points;
+  residual degree 12 − 7 = 5; delicate non-general-position
+  analysis). Degree 2 ⟹ 1 always (chord). Also Sym⁷(X) ~st
+  Sym⁵(X) for cubic 3-folds. NOTHING is known from degree 55
+  directly.
+
+**The degree-7 question (new named finite question).** By Ma +
+chord, a closed point of degree 7 on `X_tw` would descend to
+degree 1, 4 or 5 — and 55-descent machinery is not needed. A
+closed point of degree 7 on `X_tw` = a G-stable IRREDUCIBLE
+7-multisection of `X` over `P(W)` (an irreducible G-subvariety
+of `P(W) × X`, generically finite of degree 7 over `P(W)`).
+CRITICAL: the MOVES census closed transitive G-SETS below 55,
+but a geometrically irreducible multisection is NOT a G-set —
+the census does NOT apply. Candidate sources: multisections of
+the 55 conic bundles (odd-degree multisections interact with
+the (D1) Brauer class), incidence correspondences of the
+canonical curve families, the X(11)-carrier geometry. This is
+the next derivation target; degrees 4 and 5 are the analogous
+fallback questions (4 and 5 both have no known further descent
+on 3-folds — Coray-type terminal cases).

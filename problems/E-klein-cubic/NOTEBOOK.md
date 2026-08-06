@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `fa30a6c` (2026-08-05; the
+Snapshot metadata — notebook parent head: `10dd1f0` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3217,7 +3217,33 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   which could kill the whole A5-route with a theorem — is the
   named gate). The linear-system face (d=43 etc.) is DEQUEUED:
   it runs only if the descent face stalls AND a structural
-  argument distinguishes the window beyond "next number".**** Same-day
+  argument distinguishes the window beyond "next number". **Wave
+  26 (user question: descent literature + does the extension
+  point give H-unirationality; Note VIII §6 written):** (i)
+  LEMMA 4 (specialization): for EVERY `H ≤ G`, an `L_H`-point of
+  `X_tw` ⟺ a DOMINANT H-equivariant map `P(W) ⇢ X` — the strong
+  form; proof = Kollár + graph-composition with a generic
+  H-invariant `τ: P(W) ⇢ P³` (étale-jet realizability at an
+  unramified point; fiberwise-dominance gives surjective
+  differential). COROLLARY: the Klein cubic is D12-EQUIVARIANTLY
+  UNIRATIONAL (first unconditional equivariant-unirationality
+  theorem of the program; holds for every `H ≤ D12`). (ii)
+  Literature verified and archived: Duncan–Reichstein 1109.6093
+  (headline = weak versality; abelian necessary conditions all
+  PASS — X^A ≠ ∅ checked for all 7 abelian classes; sufficiency
+  = the missing cubic Springer theorem); CSD conjecture open all
+  dims; Coray surfaces {1,4,10}; C-T–Madore cd-1 cubic-surface
+  counterexamples (index-1 ⇏ point for surfaces — live threat
+  since cd(K_proj) = 4); Qixiao Ma 1908.03139 (PDF archived):
+  cubic 3-folds degree 7 → {1,2,4,5} via unique-RNC; 2 → 1 by
+  chord; Sym⁷ ~st Sym⁵; NOTHING known from 55. (iii) NEW NAMED
+  FINITE QUESTION: a degree-7 closed point on `X_tw` (= a
+  G-stable IRREDUCIBLE 7-multisection of X over P(W)) would
+  finish the descent to {1,4,5}; the MOVES census does NOT
+  apply (irreducible multisections are not G-sets) — candidate
+  sources: odd multisections of the 55 conic bundles (vs the
+  (D1) Brauer class), incidence correspondences, the carrier
+  geometry. Next derivation target.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
