@@ -1,0 +1,170 @@
+FIX-P1  STAGE 1  --  THE PROFILE SIEVE
+==============================================================================
+
+Corollary of (C2)+(C3):  d >= 3r+2, i.e. r <= (d-2)/3.
+
+Legend: e=r-m, n=d-r (the line degree of the leading datum
+        Lambda in H^0(ell_V,O(n)) (x) V_m, Lambda != 0).
+        ord window = [2e, floor(n/3)] : H1-1(a) forces the
+        lower end, Lambda != 0 the upper.
+        EVASION = lambda_{2e} may vanish  <=>  n >= 6e+3.
+
+  d | (m, r) |  e |  n | cell        | ord window | evasion | D_B channel
+-------------------------------------------------------------------------
+ 20 | -- no admissible profile --
+ 21 | -- no admissible profile --
+ 22 | -- no admissible profile --
+ 23 | -- no admissible profile --
+ 24 | (3, 6) |  3 | 18 | POPULATED   | [ 6,  6]   | no      | DEAD (FIX-H1-EQ-M3-EMPTY, non-evasive)
+ 25 | (3, 6) |  3 | 19 | POPULATED   | [ 6,  6]   | no      | NO MEMBER (n not divisible by 3)
+ 26 | (3, 6) |  3 | 20 | POPULATED   | [ 6,  6]   | no      | NO MEMBER (n not divisible by 3)
+ 27 | (3, 6) |  3 | 21 | POPULATED   | [ 6,  7]   | YES     | DEAD (FIX-H1-EQ-M3-EMPTY, non-evasive)
+ 28 | (3, 6) |  3 | 22 | POPULATED   | [ 6,  7]   | YES     | NO MEMBER (n not divisible by 3)
+ 29 | (3, 6) |  3 | 23 | POPULATED   | [ 6,  7]   | YES     | NO MEMBER (n not divisible by 3)
+ 30 | (3, 6) |  3 | 24 | POPULATED   | [ 6,  8]   | YES     | DEAD (FIX-H1-EQ-M3-EMPTY, non-evasive)
+ 31 | (3, 6) |  3 | 25 | POPULATED   | [ 6,  8]   | YES     | NO MEMBER (n not divisible by 3)
+ 31 | (3, 7) |  4 | 24 | OPEN        | [ 8,  8]   | no      | n/a (no classified positive-line-degree family)
+ 32 | (3, 6) |  3 | 26 | POPULATED   | [ 6,  8]   | YES     | NO MEMBER (n not divisible by 3)
+ 32 | (3, 7) |  4 | 25 | OPEN        | [ 8,  8]   | no      | n/a (no classified positive-line-degree family)
+ 33 | (3, 6) |  3 | 27 | POPULATED   | [ 6,  9]   | YES     | ALIVE (n3-divisible evasion sub-family)
+ 33 | (3, 7) |  4 | 26 | OPEN        | [ 8,  8]   | no      | n/a (no classified positive-line-degree family)
+ 33 | (5, 9) |  4 | 24 | POPULATED   | [ 8,  8]   | no      | n/a (no classified positive-line-degree family)
+ 34 | (3, 6) |  3 | 28 | POPULATED   | [ 6,  9]   | YES     | NO MEMBER (n not divisible by 3)
+ 34 | (3, 7) |  4 | 27 | OPEN        | [ 8,  9]   | YES     | n/a (no classified positive-line-degree family)
+ 34 | (5, 9) |  4 | 25 | POPULATED   | [ 8,  8]   | no      | n/a (no classified positive-line-degree family)
+ 35 | (3, 6) |  3 | 29 | POPULATED   | [ 6,  9]   | YES     | NO MEMBER (n not divisible by 3)
+ 35 | (3, 7) |  4 | 28 | OPEN        | [ 8,  9]   | YES     | n/a (no classified positive-line-degree family)
+ 35 | (5, 9) |  4 | 26 | POPULATED   | [ 8,  8]   | no      | n/a (no classified positive-line-degree family)
+ 36 | (1, 6) |  5 | 30 | OPEN        | [10, 10]   | no      | n/a (no classified positive-line-degree family)
+ 36 | (3, 6) |  3 | 30 | POPULATED   | [ 6, 10]   | YES     | ALIVE (n3-divisible evasion sub-family)
+ 36 | (3, 7) |  4 | 29 | OPEN        | [ 8,  9]   | YES     | n/a (no classified positive-line-degree family)
+ 36 | (5, 9) |  4 | 27 | POPULATED   | [ 8,  9]   | YES     | n/a (no classified positive-line-degree family)
+ 37 | (1, 6) |  5 | 31 | OPEN        | [10, 10]   | no      | n/a (no classified positive-line-degree family)
+ 37 | (3, 6) |  3 | 31 | POPULATED   | [ 6, 10]   | YES     | NO MEMBER (n not divisible by 3)
+ 37 | (3, 7) |  4 | 30 | OPEN        | [ 8, 10]   | YES     | n/a (no classified positive-line-degree family)
+ 37 | (5, 9) |  4 | 28 | POPULATED   | [ 8,  9]   | YES     | n/a (no classified positive-line-degree family)
+ 38 | (1, 6) |  5 | 32 | OPEN        | [10, 10]   | no      | n/a (no classified positive-line-degree family)
+ 38 | (3, 6) |  3 | 32 | POPULATED   | [ 6, 10]   | YES     | NO MEMBER (n not divisible by 3)
+ 38 | (3, 7) |  4 | 31 | OPEN        | [ 8, 10]   | YES     | n/a (no classified positive-line-degree family)
+ 38 | (3, 8) |  5 | 30 | POPULATED   | [10, 10]   | no      | n/a (no classified positive-line-degree family)
+ 38 | (5, 9) |  4 | 29 | POPULATED   | [ 8,  9]   | YES     | n/a (no classified positive-line-degree family)
+ 39 | (1, 6) |  5 | 33 | OPEN        | [10, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 39 | (3, 6) |  3 | 33 | POPULATED   | [ 6, 11]   | YES     | ALIVE (n3-divisible evasion sub-family)
+ 39 | (3, 7) |  4 | 32 | OPEN        | [ 8, 10]   | YES     | n/a (no classified positive-line-degree family)
+ 39 | (3, 8) |  5 | 31 | POPULATED   | [10, 10]   | no      | n/a (no classified positive-line-degree family)
+ 39 | (5, 9) |  4 | 30 | POPULATED   | [ 8, 10]   | YES     | n/a (no classified positive-line-degree family)
+ 40 | (1, 6) |  5 | 34 | OPEN        | [10, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 40 | (3, 6) |  3 | 34 | POPULATED   | [ 6, 11]   | YES     | NO MEMBER (n not divisible by 3)
+ 40 | (3, 7) |  4 | 33 | OPEN        | [ 8, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 40 | (3, 8) |  5 | 32 | POPULATED   | [10, 10]   | no      | n/a (no classified positive-line-degree family)
+ 40 | (5, 9) |  4 | 31 | POPULATED   | [ 8, 10]   | YES     | n/a (no classified positive-line-degree family)
+ 40 | (5, 10) |  5 | 30 | OPEN        | [10, 10]   | no      | n/a (no classified positive-line-degree family)
+ 41 | (1, 6) |  5 | 35 | OPEN        | [10, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 41 | (3, 6) |  3 | 35 | POPULATED   | [ 6, 11]   | YES     | NO MEMBER (n not divisible by 3)
+ 41 | (3, 7) |  4 | 34 | OPEN        | [ 8, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 41 | (3, 8) |  5 | 33 | POPULATED   | [10, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 41 | (5, 9) |  4 | 32 | POPULATED   | [ 8, 10]   | YES     | n/a (no classified positive-line-degree family)
+ 41 | (5, 10) |  5 | 31 | OPEN        | [10, 10]   | no      | n/a (no classified positive-line-degree family)
+ 42 | (1, 6) |  5 | 36 | OPEN        | [10, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 42 | (3, 6) |  3 | 36 | POPULATED   | [ 6, 12]   | YES     | ALIVE (n3-divisible evasion sub-family)
+ 42 | (3, 7) |  4 | 35 | OPEN        | [ 8, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 42 | (3, 8) |  5 | 34 | POPULATED   | [10, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 42 | (5, 9) |  4 | 33 | POPULATED   | [ 8, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 42 | (5, 10) |  5 | 32 | OPEN        | [10, 10]   | no      | n/a (no classified positive-line-degree family)
+ 42 | (7, 12) |  5 | 30 | POPULATED   | [10, 10]   | no      | n/a (no classified positive-line-degree family)
+ 43 | (1, 6) |  5 | 37 | OPEN        | [10, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 43 | (3, 6) |  3 | 37 | POPULATED   | [ 6, 12]   | YES     | NO MEMBER (n not divisible by 3)
+ 43 | (1, 7) |  6 | 36 | OPEN        | [12, 12]   | no      | n/a (no classified positive-line-degree family)
+ 43 | (3, 7) |  4 | 36 | OPEN        | [ 8, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 43 | (3, 8) |  5 | 35 | POPULATED   | [10, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 43 | (5, 9) |  4 | 34 | POPULATED   | [ 8, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 43 | (5, 10) |  5 | 33 | OPEN        | [10, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 43 | (7, 12) |  5 | 31 | POPULATED   | [10, 10]   | no      | n/a (no classified positive-line-degree family)
+ 44 | (1, 6) |  5 | 38 | OPEN        | [10, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 44 | (3, 6) |  3 | 38 | POPULATED   | [ 6, 12]   | YES     | NO MEMBER (n not divisible by 3)
+ 44 | (1, 7) |  6 | 37 | OPEN        | [12, 12]   | no      | n/a (no classified positive-line-degree family)
+ 44 | (3, 7) |  4 | 37 | OPEN        | [ 8, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 44 | (3, 8) |  5 | 36 | POPULATED   | [10, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 44 | (5, 9) |  4 | 35 | POPULATED   | [ 8, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 44 | (5, 10) |  5 | 34 | OPEN        | [10, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 44 | (7, 12) |  5 | 32 | POPULATED   | [10, 10]   | no      | n/a (no classified positive-line-degree family)
+ 45 | (1, 6) |  5 | 39 | OPEN        | [10, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 45 | (3, 6) |  3 | 39 | POPULATED   | [ 6, 13]   | YES     | ALIVE (n3-divisible evasion sub-family)
+ 45 | (1, 7) |  6 | 38 | OPEN        | [12, 12]   | no      | n/a (no classified positive-line-degree family)
+ 45 | (3, 7) |  4 | 38 | OPEN        | [ 8, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 45 | (3, 8) |  5 | 37 | POPULATED   | [10, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 45 | (3, 9) |  6 | 36 | POPULATED   | [12, 12]   | no      | n/a (no classified positive-line-degree family)
+ 45 | (5, 9) |  4 | 36 | POPULATED   | [ 8, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 45 | (5, 10) |  5 | 35 | OPEN        | [10, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 45 | (7, 12) |  5 | 33 | POPULATED   | [10, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 46 | (1, 6) |  5 | 40 | OPEN        | [10, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 46 | (3, 6) |  3 | 40 | POPULATED   | [ 6, 13]   | YES     | NO MEMBER (n not divisible by 3)
+ 46 | (1, 7) |  6 | 39 | OPEN        | [12, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 46 | (3, 7) |  4 | 39 | OPEN        | [ 8, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 46 | (3, 8) |  5 | 38 | POPULATED   | [10, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 46 | (3, 9) |  6 | 37 | POPULATED   | [12, 12]   | no      | n/a (no classified positive-line-degree family)
+ 46 | (5, 9) |  4 | 37 | POPULATED   | [ 8, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 46 | (5, 10) |  5 | 36 | OPEN        | [10, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 46 | (7, 12) |  5 | 34 | POPULATED   | [10, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 47 | (1, 6) |  5 | 41 | OPEN        | [10, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 47 | (3, 6) |  3 | 41 | POPULATED   | [ 6, 13]   | YES     | NO MEMBER (n not divisible by 3)
+ 47 | (1, 7) |  6 | 40 | OPEN        | [12, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 47 | (3, 7) |  4 | 40 | OPEN        | [ 8, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 47 | (3, 8) |  5 | 39 | POPULATED   | [10, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 47 | (3, 9) |  6 | 38 | POPULATED   | [12, 12]   | no      | n/a (no classified positive-line-degree family)
+ 47 | (5, 9) |  4 | 38 | POPULATED   | [ 8, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 47 | (5, 10) |  5 | 37 | OPEN        | [10, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 47 | (5, 11) |  6 | 36 | OPEN        | [12, 12]   | no      | n/a (no classified positive-line-degree family)
+ 47 | (7, 12) |  5 | 35 | POPULATED   | [10, 11]   | YES     | n/a (no classified positive-line-degree family)
+ 48 | (1, 6) |  5 | 42 | OPEN        | [10, 14]   | YES     | n/a (no classified positive-line-degree family)
+ 48 | (3, 6) |  3 | 42 | POPULATED   | [ 6, 14]   | YES     | ALIVE (n3-divisible evasion sub-family)
+ 48 | (1, 7) |  6 | 41 | OPEN        | [12, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 48 | (3, 7) |  4 | 41 | OPEN        | [ 8, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 48 | (3, 8) |  5 | 40 | POPULATED   | [10, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 48 | (3, 9) |  6 | 39 | POPULATED   | [12, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 48 | (5, 9) |  4 | 39 | POPULATED   | [ 8, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 48 | (5, 10) |  5 | 38 | OPEN        | [10, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 48 | (5, 11) |  6 | 37 | OPEN        | [12, 12]   | no      | n/a (no classified positive-line-degree family)
+ 48 | (7, 12) |  5 | 36 | POPULATED   | [10, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 49 | (1, 6) |  5 | 43 | OPEN        | [10, 14]   | YES     | n/a (no classified positive-line-degree family)
+ 49 | (3, 6) |  3 | 43 | POPULATED   | [ 6, 14]   | YES     | NO MEMBER (n not divisible by 3)
+ 49 | (1, 7) |  6 | 42 | OPEN        | [12, 14]   | YES     | n/a (no classified positive-line-degree family)
+ 49 | (3, 7) |  4 | 42 | OPEN        | [ 8, 14]   | YES     | n/a (no classified positive-line-degree family)
+ 49 | (3, 8) |  5 | 41 | POPULATED   | [10, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 49 | (3, 9) |  6 | 40 | POPULATED   | [12, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 49 | (5, 9) |  4 | 40 | POPULATED   | [ 8, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 49 | (5, 10) |  5 | 39 | OPEN        | [10, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 49 | (5, 11) |  6 | 38 | OPEN        | [12, 12]   | no      | n/a (no classified positive-line-degree family)
+ 49 | (7, 12) |  5 | 37 | POPULATED   | [10, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 49 | (7, 13) |  6 | 36 | OPEN        | [12, 12]   | no      | n/a (no classified positive-line-degree family)
+ 50 | (1, 6) |  5 | 44 | OPEN        | [10, 14]   | YES     | n/a (no classified positive-line-degree family)
+ 50 | (3, 6) |  3 | 44 | POPULATED   | [ 6, 14]   | YES     | NO MEMBER (n not divisible by 3)
+ 50 | (1, 7) |  6 | 43 | OPEN        | [12, 14]   | YES     | n/a (no classified positive-line-degree family)
+ 50 | (3, 7) |  4 | 43 | OPEN        | [ 8, 14]   | YES     | n/a (no classified positive-line-degree family)
+ 50 | (1, 8) |  7 | 42 | OPEN        | [14, 14]   | no      | n/a (no classified positive-line-degree family)
+ 50 | (3, 8) |  5 | 42 | POPULATED   | [10, 14]   | YES     | n/a (no classified positive-line-degree family)
+ 50 | (3, 9) |  6 | 41 | POPULATED   | [12, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 50 | (5, 9) |  4 | 41 | POPULATED   | [ 8, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 50 | (5, 10) |  5 | 40 | OPEN        | [10, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 50 | (5, 11) |  6 | 39 | OPEN        | [12, 13]   | YES     | n/a (no classified positive-line-degree family)
+ 50 | (7, 12) |  5 | 38 | POPULATED   | [10, 12]   | YES     | n/a (no classified positive-line-degree family)
+ 50 | (7, 13) |  6 | 37 | OPEN        | [12, 12]   | no      | n/a (no classified positive-line-degree family)
+
+SUMMARY
+------------------------------------------------------------------------------
+  corollary_r_bound                              d >= 3r+2, i.e. r <= (d-2)/3 (from 7r-6m with m <= (2r-1)/3)
+  first_d_with_any_admissible_profile            24
+  first_d_with_evasion_arithmetically_available  27
+  first_d_with_a_LIVE_CLASSIFIED_shape           33
+  first_d_admitting_a_profile_other_than_(3,6)   31
+  d25                                            {'surviving_profiles': [[3, 6, 19]], 'evasion_available': False, 'classified_alive': False}
+
+Excluded-cell audit at small d (why nothing below (3,6)):
+  (1,2)  min d = 7r-6m =   8   EMPTY=True  [FIX-N2 / V4 Thm 2.12 (explicit)]
+  (1,3)  min d = 7r-6m =  15   EMPTY=True  [FIX-N2 / V4 Thm 2.12 (explicit)]
+  (1,4)  min d = 7r-6m =  22   EMPTY=True  [FIX-N2 / V4 Thm 2.12 (explicit)]
+  (1,5)  min d = 7r-6m =  29   EMPTY=True  [FIX-N2 / V4 Thm 2.12 (explicit)]
+  (3,5)  min d = 7r-6m =  17   EMPTY=True  [FIX-N2 / V4 Thm 2.12 (explicit)]
+  (5,8)  min d = 7r-6m =  26   EMPTY=True  [Note II Lemma 2.4 chain from (1,2)]
+  (7,11)  min d = 7r-6m =  35   EMPTY=True  [Note II Lemma 2.4 chain from (1,2)]
+  (9,14)  min d = 7r-6m =  44   EMPTY=True  [Note II Lemma 2.4 chain from (1,2)]

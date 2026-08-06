@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `063da5a` (2026-08-05; the
+Snapshot metadata — notebook parent head: `2666fdb` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2808,7 +2808,36 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   jet-solvability ≠ algebraization (T5/C1); every candidate gets the
   full two-engine seal; all six Note-IV corrections were
   support-class errors — every ansatz dimension count
-  machine-verified before consumption.**** Same-day
+  machine-verified before consumption. **FIX-P1 LANDED
+  (2026-08-06, director-replayed 35/35):
+  `FIX-P1-D25-CLOSED-BY-PROFILE` + `FIX-P1-WINDOW-25-EMPTY` + the
+  SWEEP THEOREM — no
+  equivariant dominant map of degree ≤ 35 exists in characteristic
+  zero** (previous sealed cutoff: 24). Stage 1 (the dictionary):
+  `D_B` is CUBIC in `X = f·yz`, so `n = 3·deg f` — `3 | n` always
+  (19 excluded at `d = 25`); H1-1(a) ⟺ `n₃²|f` (`n ≥ 18`); evasion
+  ⟺ `n₃³|f` (`n ≥ 27 = 6e+9`, reproducing Correction H1-C's bound
+  exactly); Lemma P1-1 (shape-free order window `2e ≤ ord ≤
+  ⌊n/3⌋`). Bonus theorems: P1-A (`d ≥ 24` by pure profile
+  arithmetic — an independent re-derivation of the sealed ladder
+  cutoff), P1-B (`d ≥ 3r+2`), P1-C (odd-`m` bottom cells empty).
+  Stage 2: `dim M₂₅ = 189`; the profile slice cascades
+  `189 → 59 → 3 → 0` — at degree 25 the max plane order is 2 (need
+  3) and max line order 4 (need 6): the landing equations were
+  never needed. The `F₆₇` order-2 branch was NEVER inside the
+  admissible profile (`(1,2)` empty); the order-≥4 branch is now
+  char-0 empty. Sweep: every admissible profile at every
+  `24 ≤ d ≤ 35` has a ZERO slice; every `m ≥ 3` profile stays zero
+  through `d = 38` (killing H1-C's evasion sub-family globally at
+  its only degrees ≤ 38). **FIRST OPEN WINDOW: `d = 36`,
+  `(m,r) = (1,6)`, `n = 30`, slice dim ≤ 83 — exactly Note II's
+  `(1,6)` hole at exactly its H1-1(a) minimal degree: the
+  gateway.** NOT DECIDED: `d ≥ 39`; the `(1,6)` stratum at
+  `d ≥ 36`. Scope: dominant maps only. **FIX-P2 dispatched** (in
+  flight, `goal_runs_after_2666fdb/FIX_P2_GATEWAY_D36`): the
+  gateway's linear cascade, then landing equations, then the sieve
+  advance; cell implications for the `(1,6)` hole reported en
+  route.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

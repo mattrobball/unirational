@@ -1,0 +1,59 @@
+{
+ "char0_bridge": "rank mod p <= rank over K, so a full-rank modular computation proves the char-0 slice is zero",
+ "controls": {
+  "arrangement_kernel_positive": true,
+  "deep_line_slice_dim": 0,
+  "deep_line_vanishing_kills": true
+ },
+ "dim_M25": 189,
+ "frame_self_tests": [
+  "g^2=-11",
+  "S^2=1",
+  "T^11=1",
+  "(ST)^3=1",
+  "|G|=660",
+  "F invariant",
+  "55 involutions",
+  "chi(2A)=1",
+  "dim W+=3, dim W-=2",
+  "V4 fixed space is a line (dim 2)"
+ ],
+ "n_pairs": 150,
+ "n_seeds_used": 189,
+ "nested_slice_dimensions": {
+  "FULL PROFILE SLICE  (A) and (B) together": {
+   "dim_slice": 0,
+   "n_functionals": 6750,
+   "rank": 189
+  },
+  "ord_{P_sigma} >= 1  (55 plus-planes in base locus)": {
+   "dim_slice": 59,
+   "n_functionals": 750,
+   "rank": 130
+  },
+  "ord_{P_sigma} >= 2": {
+   "dim_slice": 3,
+   "n_functionals": 1500,
+   "rank": 186
+  },
+  "ord_{P_sigma} >= 3  (m = 3, minus half)": {
+   "dim_slice": 0,
+   "n_functionals": 2250,
+   "rank": 189
+  },
+  "ord_{P_sigma} >= 4": {
+   "dim_slice": 0,
+   "n_functionals": 3000,
+   "rank": 189
+  },
+  "ord_{ell_V} >= 6    (cone order r = 6) ALONE": {
+   "dim_slice": 0,
+   "n_functionals": 4500,
+   "rank": 189
+  }
+ },
+ "prime": 199,
+ "saturation_rank": 189,
+ "saturation_slice_dim": 0,
+ "verdict": "PROFILE-SLICE-EMPTY"
+}

@@ -1,0 +1,147 @@
+FIX-P1  PAYLOAD 1 -- the (3,6) line-degree dictionary and the d = 25 verdict
+============================================================================
+
+Derived from the sealed sources only; every step cites one of them.
+Sources:  Thm H1-1 (goal_runs_after_541e12f/FIX_H1_EQUALIZER/payloads/
+PAYLOAD_theorem.txt secs 1-3, 5);  Correction H1-C (theory/FIX_H1_coupling.md
+sec 7);  Thm N2B-2 (goal_runs_after_fa02f05/FIX_N2B_M1_ROW/STATUS.md sec 2.5);
+Note II Lemmas 2.1, 2.3, 2.4 and the cell table (theory/FIX_II_jets.md sec 4);
+Thm H0-1/H0-2;  FIX_IV_closure.md sec 1 (P1)-(P7) and sec 5.28.
+
+
+0.  NOTATION
+------------
+G = PSL(2,11), W the 5-dim Weil rep, X = V(F) the Klein cubic in P(W) = P^4.
+A G-equivariant dominant rational map f : P(W) --> X of degree d has, at every
+V4-triple-line ell_V, one global multi-order (r; m,m,m) with m odd (H0-1) and
+r >= (3m+1)/2 (Note II Lemma 2.1).  Put
+
+        e := r - m ,     n := d - r        ("the line degree").
+
+The leading line datum is Lambda in H^0(ell_V, O(n)) (x) V_m,
+V_m := Hom(Sym^m W^-, W^-),  and Lambda != 0 (H0-2 / (P3)).  The three
+D12-points p_1,p_2,p_3 of ell_V form ONE free C3-orbit; write n_3 for the
+binary cubic on ell_V cutting them (the beta-cubic  beta^3+3beta^2+kp = 0).
+
+
+1.  THE UNIVERSAL ORDER WINDOW  (new, from sealed inputs)
+---------------------------------------------------------
+Let  o := ord_{p_i}(Lambda)  (the same at all three points, since the three
+jets are C3-translates -- H1 sec 5, Lemma 5.2(iii)).
+
+  (i)   o >= 2e                                    [Theorem H1-1(a)]
+  (ii)  3o <= n , i.e. o <= floor(n/3)             [Lambda != 0 : otherwise
+        n_3^{o} | Lambda with 3o > n forces Lambda = 0]
+
+>>> LEMMA P1-1 (the order window).   2e <= o <= floor(n/3).
+>>> In particular  n >= 6e  (which is Theorem H1-1(a)'s degree bound
+>>> d >= 7r - 6m), and:
+>>>
+>>>   n < 6e + 3   ==>  o = 2e exactly  ==>  lambda_{2e} != 0 :
+>>>   THE LEADING-LAYER EQUALIZER IS NONVACUOUS, the evasion channel
+>>>   (Correction H1-C's "w = 0" channel) is ARITHMETICALLY UNAVAILABLE.
+>>>
+>>>   n >= 6e + 3   ==>  o = 2e+1 is arithmetically possible: the evasion
+>>>   channel opens.
+
+Proof of the displayed implication: lambda_{2e} = 0 means o >= 2e+1, so
+n >= 3(2e+1) = 6e+3.  QED
+
+
+2.  THE (3,6) LINE-DEGREE DICTIONARY
+-------------------------------------
+The unique CLASSIFIED family at positive line degree is branch (i) of FIX-H1:
+the (3,6) family.  By Theorem N2B-2 (with the sealed remark that yz is the
+only degree-2 chi_x form) its members are exactly
+
+        T = D_B(X) ,   X = f . yz ,   f = f(s,t) a binary form on ell_V ,
+        B on the trace curve  B^6 - (kp+2) B^3 + 1 = 0 .
+
+D_B is CUBIC in X (Thm N2B-2: T = (-XYZ, 0, X(X^2+BY^2+B^{-1}Z^2), ...),
+Y = Theta X, Z = Theta^2 X).  Hence with mu := deg f :
+
+>>> DICTIONARY P1-2.
+>>>      (x,y,z)-degree of T   = 3 . 2 = 6 = r        (so the cell IS (3,6))
+>>>      (s,t)-degree of T     = 3 . mu = n           (the line degree)
+>>>  ==> n = 3 mu ,  i.e.  THE LINE DEGREE OF ANY (3,6) D_B MEMBER IS
+>>>      DIVISIBLE BY 3, and d = n + 6 = 3(mu+2) is divisible by 3.
+
+Cross-check against FIX-H1's own formula for the leading datum
+(PAYLOAD_theorem.txt sec 5):
+
+    Lambda = om g1^3 (z^3 + Beff y^2 z) E_y + om^2 g2^3 (y^3 + Beff^-1 yz^2) E_z
+    g1 = Theta f ,  g2 = Theta^2 f ,  Beff = B (g2/g1)^2 ,
+
+whose four coefficient forms are  om g1^3,  om B g1 g2^2,  om^2 g2^3,
+om^2 B^-1 g1^2 g2 -- all of degree 3 mu.  So deg Lambda = 3 mu = n.  QED
+(This also re-derives the quadric  S_DB : d1 d2 = c1 c2.)
+
+>>> DICTIONARY P1-3 (the n_3-divisibility evasion requirement, exact).
+With a := ord_{p}(g1), b := ord_{p}(g2),
+        ord_p(Lambda) = min(3a, a+2b, 3b, 2a+b) = 3 min(a,b) ,
+so o is ALWAYS A MULTIPLE OF 3 in this family.  Combining with Lemma P1-1:
+
+    o >= 2e = 6            ==>  min(a,b) >= 2  ==>  n_3^2 | f  ==>  mu >= 6,
+                                 n >= 18  (= H1-1(a), consistent);
+    EVASION  o >= 2e+1 = 7 ==>  o >= 9  ==>  min(a,b) >= 3  ==>  n_3^3 | f
+                                 ==>  mu >= 9,  n >= 27 = 6e + 9 ,  d >= 33 .
+
+The bound n >= 6e+9 reproduces Correction H1-C's "forced d - r >= 6e + 9"
+EXACTLY, which is the independent confirmation that the dictionary n = 3 mu
+(and not n = mu) is the right reading of Theorem N2B-2's loose phrase
+"line degree deg_{s,t} X".
+
+>>> Non-evasive members (o = 6) are DEAD at every line degree:
+>>> FIX-H1-EQ-M3-EMPTY pins  Beff = (-5+nu)/6,  c2/c1 = -Beff^2, forcing
+>>> B^3 + B^-3 = (5 - sqrt 33)/6  against the trace curve's kp+2 -- both
+>>> roots, all four Galois twists.  (Sealed, director-replayed.)
+
+
+3.  THE d = 25 VERDICT
+-----------------------
+At d = 25 the sieve (PAYLOAD SIEVE_TABLE) leaves exactly one profile:
+(m, r) = (3, 6), e = 3, n = 19.
+
+>>> (a)  EVASION CHANNEL, ANY SHAPE.  n = 19 < 6e+3 = 21, so by Lemma P1-1
+>>>      o = 2e = 6 exactly and lambda_6 != 0.  THE EVASION CHANNEL IS
+>>>      CLOSED AT d = 25 for every (3,6) family, classified or not.
+>>>      [If lambda_6 = 0 then n_3^7 | Lambda, deg n_3^7 = 21 > 19 = deg
+>>>       Lambda, so Lambda = 0, contradicting H0-2.]
+>>>
+>>> (b)  CLASSIFIED D_B CHANNEL.  19 is not divisible by 3, so by Dictionary
+>>>      P1-2 THERE IS NO (3,6) D_B MEMBER AT LINE DEGREE 19 AT ALL --
+>>>      the family does not even meet the degree.  (Independently, its
+>>>      evasion sub-family needs n >= 27.)
+>>>
+>>> (c)  Hence every CLASSIFIED shape and the ENTIRE evasion channel are
+>>>      excluded at d = 25.  EXIT: FIX-P1-D25-CLOSED-BY-PROFILE.
+
+RESIDUAL, stated honestly.  What (a)+(b) do NOT exclude is an UNCLASSIFIED
+(3,6) family at line degree 19 sitting in the FIX-D2 "w != 0" jet-solvable
+locus (FIX_IV_closure.md sec 5.28: FIX-D2-TERMINAL-SOLVABLE -- the localized
+machinery does not kill it at ANY degree).  That residual is exactly
+hypothesis [U1], open at every d >= 24; it is attacked globally in Stage 2.
+
+
+4.  TWO FURTHER COROLLARIES OF THE SIEVE
+-----------------------------------------
+>>> THEOREM P1-A (a new unconditional degree bound, profile-arithmetic only).
+>>> Any G-equivariant dominant rational map P(W) --> X has d >= 24, and for
+>>> d = 24, 25, 26 its profile is FORCED to be (m,r) = (3,6).
+>>> Proof: r <= (d-2)/3 (below); enumerate; every (m,r) with 7r-6m <= 23 is a
+>>> cell proved EMPTY at all line degrees -- (1,2),(1,3),(1,4),(1,5) [FIX-N2 /
+>>> V4 Thm 2.12] and (3,5) [FIX-N2, also Lemma 2.4 from (1,2)].
+>>> This is an INDEPENDENT re-derivation of the covariant ladder's "no landing
+>>> covariant in degrees <= 24" (E25/E16) by pure profile arithmetic -- two
+>>> completely different machines agreeing on the same cutoff.
+
+>>> COROLLARY P1-B (the r-bound).  d >= 3r + 2, i.e. r <= (d-2)/3.
+>>> Proof: m <= (2r-1)/3 (cone bound), so 7r-6m >= 7r - (4r-2) = 3r+2. QED
+
+>>> COROLLARY P1-C (the odd-m bottom cells).  For every odd m >= 1 the cell
+>>> (m, (3m+1)/2) is EMPTY at all line degrees.
+>>> Proof: (1,2) is EMPTY [FIX-N2] and (3m+1)/2 <= 2m for all m >= 1, so
+>>> Note II Lemma 2.4 propagates (m, (3m+1)/2) --> (m+2, (3m+7)/2)
+>>> = (m+2, (3(m+2)+1)/2) indefinitely.  QED
+>>> (This is what removes (5,8) -- otherwise the d = 26 window's second
+>>> profile -- and (7,11), (9,14), ... from the sieve.)

@@ -1454,12 +1454,23 @@
    "path": "goal_runs_after_063da5a/FIX_P1_DEGREE25_GUIDED",
    "entry": "E56",
    "kind": "goal_run",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-P1-D25-CLOSED-BY-PROFILE",
+   "superseded_by": null,
+   "char0_scope": "char0 (linear-slice ranks over K, three engines, three primes cross-checked; modular used only in the safe direction)",
+   "tracked": "main",
+   "notes": "landed 2026-08-06, director-replayed 35/35. STAGE 1: d=25 CLOSED BY PROFILE — the (3,6) dictionary: D_B is CUBIC in X = f.yz so n = 3.deg f (3|n always; 19 excluded); H1-1(a) iff n3^2|f (n>=18); evasion iff n3^3|f (n>=27 = 6e+9, reproducing Correction H1-C's bound exactly); Lemma P1-1 (shape-free order window 2e <= ord <= floor(n/3)). Bonus theorems: P1-A (d >= 24 by pure profile arithmetic — independent re-derivation of the sealed ladder cutoff), P1-B (d >= 3r+2), P1-C (odd-m bottom cells empty via the Lemma-2.4 chain). STAGE 2: WINDOW-25-EMPTY — dim M_25 = 189; profile slice 189 -> 59 (ord_P>=1) -> 3 (>=2) -> 0 (>=3); max plane order at d=25 is 2 (need 3), max line order 4 (need 6): NO equivariant dominant map of degree 25, landing equations never needed. The F_67 order-2 branch was NEVER in the admissible profile ((1,2) char-0 empty); order->=4 branch now char-0 empty. SWEEP: **NO equivariant dominant map of degree <= 35 in char 0** (previous sealed cutoff 24); every m>=3 profile zero through d=38 (kills H1-C's evasion sub-family globally at its only degrees <= 38). FIRST OPEN WINDOW: d = 36, (m,r) = (1,6), n = 30, slice dim <= 83 — exactly Note II's (1,6) hole at exactly its H1-1(a) minimal degree. NOT DECIDED: d >= 39; the (1,6) stratum at d >= 36. Scope: dominant maps only. Headline OPEN."
+  },
+  {
+   "path": "goal_runs_after_2666fdb/FIX_P2_GATEWAY_D36",
+   "entry": "E56",
+   "kind": "goal_run",
    "verification_class": "PROPOSAL-UNRUN",
    "primary_exit": "UNDECIDED",
    "superseded_by": null,
    "char0_scope": "in flight",
    "tracked": "main",
-   "notes": "IN-FLIGHT (2026-08-06, opus): FIX-P1 — first packet of the CONSTRUCTION program (user goal directive, Note V): Stage 1 = the d=25 profile sieve ((3,6) is the only admissible profile; line-degree dictionary + n=19 admissibility — closure-by-arithmetic if inadmissible); Stage 2 = the guided search in the minimal open window (E25 F_67-branch transfer sliced by the FIX profile ansatz). Candidate => director verification chain via E17; emptiness => the sieve advances."
+   "notes": "IN-FLIGHT (2026-08-06, opus): FIX-P2 — the gateway window: d=36, unique profile (1,6), n=30, slice dim <= 83. Linear cascade (H1-1 vanishing + jets) first; landing equations on the survivor; sieve advance d=37,38 if empty. Cell implications for the (1,6) hole reported en route. Candidate => director's E17 chain."
   }
  ],
  "known_branches": [

@@ -1,0 +1,159 @@
+{
+ "prime": 67,
+ "range": [
+  34,
+  38
+ ],
+ "rows": [
+  {
+   "d": 34,
+   "dim_M": 576,
+   "profiles": [
+    {
+     "m": 3,
+     "n": 28,
+     "r": 6,
+     "slice_dim": 0
+    },
+    {
+     "m": 3,
+     "n": 27,
+     "r": 7,
+     "slice_dim": 0
+    },
+    {
+     "m": 5,
+     "n": 25,
+     "r": 9,
+     "slice_dim": 0
+    }
+   ],
+   "verdict": "ALL-PROFILE-SLICES-EMPTY"
+  },
+  {
+   "d": 35,
+   "dim_M": 637,
+   "profiles": [
+    {
+     "m": 3,
+     "n": 29,
+     "r": 6,
+     "slice_dim": 0
+    },
+    {
+     "m": 3,
+     "n": 28,
+     "r": 7,
+     "slice_dim": 0
+    },
+    {
+     "m": 5,
+     "n": 26,
+     "r": 9,
+     "slice_dim": 0
+    }
+   ],
+   "verdict": "ALL-PROFILE-SLICES-EMPTY"
+  },
+  {
+   "d": 36,
+   "dim_M": 706,
+   "profiles": [
+    {
+     "m": 1,
+     "n": 30,
+     "r": 6,
+     "slice_dim": 83
+    },
+    {
+     "m": 3,
+     "n": 30,
+     "r": 6,
+     "slice_dim": 0
+    },
+    {
+     "m": 3,
+     "n": 29,
+     "r": 7,
+     "slice_dim": 0
+    },
+    {
+     "m": 5,
+     "n": 27,
+     "r": 9,
+     "slice_dim": 0
+    }
+   ],
+   "verdict": "ALIVE:(1,6):83"
+  },
+  {
+   "d": 37,
+   "dim_M": 786,
+   "profiles": [
+    {
+     "m": 1,
+     "n": 31,
+     "r": 6,
+     "slice_dim": 127
+    },
+    {
+     "m": 3,
+     "n": 31,
+     "r": 6,
+     "slice_dim": 0
+    },
+    {
+     "m": 3,
+     "n": 30,
+     "r": 7,
+     "slice_dim": 0
+    },
+    {
+     "m": 5,
+     "n": 28,
+     "r": 9,
+     "slice_dim": 0
+    }
+   ],
+   "verdict": "ALIVE:(1,6):127"
+  },
+  {
+   "d": 38,
+   "dim_M": 865,
+   "profiles": [
+    {
+     "m": 1,
+     "n": 32,
+     "r": 6,
+     "slice_dim": 173
+    },
+    {
+     "m": 3,
+     "n": 32,
+     "r": 6,
+     "slice_dim": 0
+    },
+    {
+     "m": 3,
+     "n": 31,
+     "r": 7,
+     "slice_dim": 0
+    },
+    {
+     "m": 3,
+     "n": 30,
+     "r": 8,
+     "slice_dim": 0
+    },
+    {
+     "m": 5,
+     "n": 29,
+     "r": 9,
+     "slice_dim": 0
+    }
+   ],
+   "verdict": "ALIVE:(1,6):173"
+  }
+ ],
+ "semantics": "slice_dim 0 for every admissible profile of a degree d proves, in characteristic zero, that no G-equivariant dominant rational map of degree d exists; slice_dim > 0 is only an upper bound on the true slice and decides nothing."
+}

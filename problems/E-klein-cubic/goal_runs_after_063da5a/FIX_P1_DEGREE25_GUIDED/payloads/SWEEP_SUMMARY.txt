@@ -1,0 +1,79 @@
+FIX-P1  PAYLOAD 2 -- the SIEVE x SLICE sweep (p = 67)
+==========================================================================
+
+For each degree d and each profile (m,r) the Stage-1 sieve leaves admissible,
+the dimension of  { T in M_d : ord_{P_sigma}T >= m , ord_{ell_V}T >= r }.
+Every G-equivariant dominant map of degree d with profile (m,r) supplies a
+NONZERO element of that space, so slice_dim = 0 for EVERY admissible profile
+of a degree d proves -- in characteristic zero -- that no such map exists in
+degree d.  A NONZERO slice_dim decides nothing (mod-p kernels only bound the
+char-0 kernel from above).
+
+  d | dim M_d | (m, r) |  n | slice dim | verdict
+--------------------------------------------------------------------------
+ 24 |     161 | (3, 6) | 18 |         0 | EMPTY
+    |         |        |    |           | ALL-PROFILE-SLICES-EMPTY
+ 25 |     189 | (3, 6) | 19 |         0 | EMPTY
+    |         |        |    |           | ALL-PROFILE-SLICES-EMPTY
+ 26 |     217 | (3, 6) | 20 |         0 | EMPTY
+    |         |        |    |           | ALL-PROFILE-SLICES-EMPTY
+ 27 |     245 | (3, 6) | 21 |         0 | EMPTY
+    |         |        |    |           | ALL-PROFILE-SLICES-EMPTY
+ 28 |     284 | (3, 6) | 22 |         0 | EMPTY
+    |         |        |    |           | ALL-PROFILE-SLICES-EMPTY
+ 29 |     320 | (3, 6) | 23 |         0 | EMPTY
+    |         |        |    |           | ALL-PROFILE-SLICES-EMPTY
+ 30 |     361 | (3, 6) | 24 |         0 | EMPTY
+    |         |        |    |           | ALL-PROFILE-SLICES-EMPTY
+ 31 |     410 | (3, 6) | 25 |         0 | EMPTY
+ 31 |     410 | (3, 7) | 24 |         0 | EMPTY
+    |         |        |    |           | ALL-PROFILE-SLICES-EMPTY
+ 32 |     459 | (3, 6) | 26 |         0 | EMPTY
+ 32 |     459 | (3, 7) | 25 |         0 | EMPTY
+    |         |        |    |           | ALL-PROFILE-SLICES-EMPTY
+ 33 |     511 | (3, 6) | 27 |         0 | EMPTY
+ 33 |     511 | (3, 7) | 26 |         0 | EMPTY
+ 33 |     511 | (5, 9) | 24 |         0 | EMPTY
+    |         |        |    |           | ALL-PROFILE-SLICES-EMPTY
+ 34 |     576 | (3, 6) | 28 |         0 | EMPTY
+ 34 |     576 | (3, 7) | 27 |         0 | EMPTY
+ 34 |     576 | (5, 9) | 25 |         0 | EMPTY
+    |         |        |    |           | ALL-PROFILE-SLICES-EMPTY
+ 35 |     637 | (3, 6) | 29 |         0 | EMPTY
+ 35 |     637 | (3, 7) | 28 |         0 | EMPTY
+ 35 |     637 | (5, 9) | 26 |         0 | EMPTY
+    |         |        |    |           | ALL-PROFILE-SLICES-EMPTY
+ 36 |     706 | (1, 6) | 30 |        83 | NOT DECIDED
+ 36 |     706 | (3, 6) | 30 |         0 | EMPTY
+ 36 |     706 | (3, 7) | 29 |         0 | EMPTY
+ 36 |     706 | (5, 9) | 27 |         0 | EMPTY
+    |         |        |    |           | ALIVE:(1,6):83
+ 37 |     786 | (1, 6) | 31 |       127 | NOT DECIDED
+ 37 |     786 | (3, 6) | 31 |         0 | EMPTY
+ 37 |     786 | (3, 7) | 30 |         0 | EMPTY
+ 37 |     786 | (5, 9) | 28 |         0 | EMPTY
+    |         |        |    |           | ALIVE:(1,6):127
+ 38 |     865 | (1, 6) | 32 |       173 | NOT DECIDED
+ 38 |     865 | (3, 6) | 32 |         0 | EMPTY
+ 38 |     865 | (3, 7) | 31 |         0 | EMPTY
+ 38 |     865 | (3, 8) | 30 |         0 | EMPTY
+ 38 |     865 | (5, 9) | 29 |         0 | EMPTY
+    |         |        |    |           | ALIVE:(1,6):173
+
+SUMMARY
+--------------------------------------------------------------------------
+  every admissible profile empty for d = 24 .. 35
+  -> with Theorem P1-A (d >= 24): NO G-equivariant dominant rational map
+     P(W) --> X of degree <= 35 exists, in characteristic zero.
+     (previous characteristic-zero cutoff: 24)
+
+  first nonzero slice anywhere in the sweep: d = 36, (m,r) = (1,6), n = 30,
+  dim <= 83 -- the (1,6) hole of Note II's cell table, at exactly its
+  H1-1(a) minimal degree 7*6 - 6 = 36.
+
+  every m >= 3 profile is EMPTY through d = 38.  In particular the (3,6) D_B
+  n3-divisible EVASION sub-family (Correction H1-C's undecided family), whose
+  first arithmetically possible degree is 33, does not extend to a global
+  equivariant tuple at d = 33 or d = 36 -- its only degrees <= 38.
+
+  d >= 39 and the (1,6) stratum at d >= 36 are NOT DECIDED by this packet.
