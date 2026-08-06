@@ -819,3 +819,69 @@ the discrete stratification the parity-count route runs on; the core
 finiteness still requires the tail/vertex-jet analysis of 5.18-A —
 (T1a) remains the one open theorem, now attackable in the smallest
 coordinates it has ever had.
+
+### 5.20 The conic-bundle reformulation, the factored discriminant, and (T1a) split into parity + height
+
+**Theorem 5.20 (proved).** Project instead from the LINE `L₁ ⊂ X`
+(V4-stable): `π_{L₁}: X ⇢ P² = P(a,b,x)` is the classical conic
+bundle, V4-equivariantly. Then:
+
+**(a) The landing identity is QUADRATIC in the minus data.** In the
+invariant presentation, `E` reads `q_φ(Ỹ, Z̃) = m_φ` with
+
+```
+  q_φ = [[ v·Q₂(Ã,B̃), −c·γ̃/2 ], [ −c·γ̃/2, w·Q₃(Ã,B̃) ]] ,
+  m_φ = −t·( vw·C(Ã,B̃) + Q₁(Ã,B̃)·γ̃² ) ,
+```
+
+where `φ = (yzÃ : yzB̃ : γ̃)` is the composed V4-map
+`π_{L₁} ∘ T : P² ⇢ P²` (the plus-part of the tuple). A pointwise
+element = a base map `φ` together with a SECTION of the pulled-back
+conic bundle of the prescribed degree.
+
+**(b) The discriminant FACTORS, and one factor is the arrangement's
+elliptic curve.** Parameterizing the plane `⟨L₁, (a:b:x)⟩` by
+`(μ; y, z)`: `F = μ·[ F₀(a,b,x)·μ² + Q₂y² + Q₃z² + c·x·yz ]` exactly
+(the `μ`-factor is `L₁ ⊂ X`), so the residual conic has Gram
+`diag(F₀) ⊕ [[Q₂, cx/2],[cx/2, Q₃]]` and the discriminant curve of
+the conic bundle is
+
+```
+    Δ₅  =  F₀(a,b,x) · ( 4·Q₂(a,b)·Q₃(a,b) − c²x² )   —   REDUCIBLE:
+    Δ₅  =  E_{σ₁}  ∪  (a V4-conic) ,
+```
+
+since `F₀ = F|_{P_{σ₁}}` cuts exactly `E_{σ₁} = X ∩ P_{σ₁}`. For a
+GENERIC cubic threefold the quintic discriminant is irreducible; the
+V4-symmetric line splits it, and **the arrangement's elliptic curve
+IS a discriminant component of the classical conic-bundle
+structure** — the FIX geometry and the Clemens–Griffiths geometry are
+one object. ∎ (Derivation exact by inspection of the displayed
+`μ`-factorization; a CAS re-check rides along with (C5).)
+
+**(c) (T1a) splits into a parity half and a height half.**
+- **Parity half:** `φ` admits ANY section over the function field iff
+  the conic `q_φ = m_φ` is solvable over `k(P²)` iff the 2-torsion
+  Brauer class `φ*β` vanishes, where `β` is ramified along the TWO
+  components of `Δ₅`. Residues decompose along `φ*(E_{σ₁})` and
+  `φ*(conic)`: a DISCRETE, degree-uniform parity condition —
+  provable by residue calculus against the factored discriminant.
+  Named derivation **(D1)**; mechanical, near-term.
+- **Height half:** on the parity-admissible locus, the sections of
+  the prescribed polynomial degree `s` must be finite mod torus.
+  Because the discriminant contains the ELLIPTIC component, the
+  associated 2-cover geometry is elliptic, and the section spaces
+  land in the arena of **function-field Mordell–Weil / Lang–Néron
+  finite generation** — the first time (T1a)'s finiteness has a
+  classical finiteness THEOREM to run on rather than a counting
+  heuristic. Named derivation **(D2)**: set up the Lang–Néron
+  application (the trace/torus quotient is exactly the mod-torus
+  statement) and extract the degree-`s` bound. This is the last
+  substantive analytic step of the negative program.
+
+**Status after this section.** (T1a) = (D1) + (D2); NOT closed here,
+and stated so. Everything upstream of it is proved or named-finite;
+(D1) is residue bookkeeping; (D2) is real mathematics with the right
+classical tool now identified and the object (the elliptic
+discriminant component) already sitting inside the verified
+arrangement.

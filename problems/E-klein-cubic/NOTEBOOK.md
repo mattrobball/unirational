@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `4952617` (2026-08-05; the
+Snapshot metadata — notebook parent head: `822d6ff` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2557,7 +2557,28 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   parity count runs on. `FIX-C5` dispatched (in flight): verify
   `Δ_v`, irreducibility, singular locus, the census of `X`-lines
   through the χ-vertex, γ-criterion smoke test on a Chebyshev
-  witness.**** Same-day
+  witness. Tenth wave, at /effort max on "finish (T1a)" (Note IV
+  §5.20, 2026-08-06): **Theorem 5.20 (proved)** — projecting from the
+  V4-stable LINE `L₁ ⊂ X` gives the classical conic bundle
+  equivariantly; (a) the landing identity is QUADRATIC in the minus
+  data (`q_φ(Ỹ,Z̃) = m_φ`, explicit Gram; a pointwise element = base
+  map `φ` + a section of the pulled-back conic bundle); (b) **the
+  discriminant quintic FACTORS: `Δ₅ = F₀·(4Q₂Q₃ − c²x²) = E_{σ₁} ∪ 
+  (V4-conic)`** — the arrangement's elliptic curve IS a discriminant
+  component of the Clemens–Griffiths structure (generic cubics have
+  irreducible Δ₅; the V4-line splits it): the FIX geometry and the
+  classical conic-bundle geometry are one object; (c) **(T1a) splits**
+  into the PARITY half (function-field solvability = vanishing of the
+  2-torsion Brauer class `φ*β`, residues along the two Δ₅-components —
+  discrete, degree-uniform, provable by residue calculus: named (D1),
+  mechanical) and the HEIGHT half (degree-`s` sections finite mod
+  torus on the admissible locus — the elliptic discriminant component
+  puts this in the arena of function-field Mordell–Weil/LANG–NÉRON
+  finite generation, the first theorem-backed route to the finiteness:
+  named (D2), the last substantive analytic step). **(T1a) NOT closed
+  at max effort — split, with (D1) bookkeeping and (D2) the final
+  boss, now carrying a classical finiteness theorem instead of a
+  counting heuristic.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
