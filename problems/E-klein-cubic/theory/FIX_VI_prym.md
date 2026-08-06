@@ -52,37 +52,76 @@ Computed in the explicit normal form
   `τ(t) = (−t−4)/(t+1)`; conjugated to `s ↦ −s` the branch sextic is
   EXACTLY even (all odd coefficients vanish symbolically), so `K̃` is
   bielliptic and `J(K̃) ~ E₊ × E₋`.
-- **`j(E₊) = −32768 = −2¹⁵ exactly** (symbolic, over the exact
-  field), and `E₋` agrees to 40 digits (exact check pending in the
-  machine-verification pass): **the quotients are the elliptic curve
-  with complex multiplication by `Q(√−11)`** — the same field that
-  defines the Weil representation. Hence, modulo the standard
-  bielliptic bookkeeping to be machine-sealed:
+- **`j(E₊) = j(E₋) = −32768 = −2¹⁵ EXACTLY, both symbolically over
+  the exact field** (probes `prym_exact.py`, `prym_exact2.py`; the
+  `E₋` model is the quartic `v² = u·c(u)`): **both quotients are the
+  elliptic curve with complex multiplication by `Q(√−11)`** — the
+  same field that defines the Weil representation. Hence, modulo
+  the standard bielliptic bookkeeping to be machine-sealed:
 
 ```
     J(X)  ~  Prym₃(Ẽ/E_σ)  ×  E_{−11}  ×  E_{−11}     (per involution).
 ```
 
-**Sharp next test:** if the classical expectation `J(X) ~ E_{−11}⁵`
-holds (Adler-type), the 3-dimensional Prym must itself be
-`~ E_{−11}³` — directly checkable by the same machinery on the
-`Ẽ/E_σ` side. If confirmed, the arrangement provides 55 explicit
-CM-coordinatizations of `J(X)`, and the twisted-torsor question over
-`K_proj` becomes concrete CM arithmetic.
+## 2.6 Literature anchor (Roulleau, Adler) — and what is new here
+
+Roulleau, "The Fano surface of the Klein cubic threefold"
+(arXiv:1001.4853; J. Math. Kyoto Univ. 49 (2009) 113–129; PDF
+archived at `external_docs/roulleau_fano_klein_cubic_arxiv1001.4853.pdf`):
+with `ν = (−1+i√11)/2` and `E := C/Z[ν]` (this IS the `j = −32768`
+CM curve), his Theorem 2 computes the period lattice of `J(X)` as an
+explicit `Z[ν]`-lattice `Λ` of rank 5 (two summands scaled by
+`1/(1+2ν) = 1/i√11`, three free), with `NS` of the Fano surface of
+maximal rank `25 = h^{1,1}` and discriminant `11¹⁰`; and he remarks
+`J(X) ≅ E⁵` as abelian varieties (NOT as ppav's), first proved by
+Adler, "On the automorphism group of certain hypersurfaces",
+J. Algebra 72 (1981) 146–165. Beauville's "Les singularités du
+diviseur Θ…" (LNM 947) is the admissible-cover/Prym mechanism §2
+uses.
+
+Consequences and placement of our result:
+
+- **Consistency/validation.** Our exact `j = −32768` on both
+  quotients re-derives two of Adler–Roulleau's five CM factors by a
+  completely different route (degeneration of the Clemens–Griffiths
+  conic-bundle Prym, not the Fano surface). Hitting the CM(−11)
+  invariant twice, exactly, is a strong end-to-end check of the whole
+  Note VI construction (normal form → split discriminant → cover
+  bookkeeping).
+- **`Prym₃ ~ E_{−11}³` is now FORCED**, no computation needed: by
+  `J(X) ≅ E⁵` and Poincaré reducibility, every 3-dimensional isogeny
+  factor of `J(X)` is `~ E³`. (Corollary: the genus-4 curve `Ẽ` has
+  `J(Ẽ) ~ E_σ × E_{−11}³` — the non-CM arrangement elliptic
+  `j = 8192/11` rides with a CM cube.)
+- **What is new relative to the literature:** (i) the geometric
+  LOCALIZATION — the CM factors appear on the conic component of the
+  SPLIT discriminant `Δ₅ = E_σ ∪ K_c`, a degeneration generic cubics
+  do not have; (ii) the 55 D12-covariant such splittings permuted by
+  `G`; (iii) the equivariant upgrade: `H₁(J(X), Q) ≅ W` as a
+  `G`-representation over `Q(√−11)` — i.e. `Λ` is a rank-5
+  `Z[ν][G]`-lattice realizing the Weil representation over its own
+  character field, and `J(X)` is the arithmetic avatar of `W`. The
+  `O = Z[ν]`-multiplication commutes with `G`.
 
 ## 3. Next steps (in order)
 
-1. **Pin the two curves exactly** (small computation, frame data all
-   banked): the binary sextic cutting `K̃` (parameterize `K_c ≅ P¹`,
-   restrict `F₀`) and the six branch points on `E_σ`. Then: does
-   `J(K̃)` split (Igusa invariants / automorphisms — the D12-symmetry
-   makes a split `J(K̃) ~ E′ × E″` plausible)? If it does, `J(X)` is
-   isogenous to `Prym₃ × E′ × E″` in 55 ways — very rigid.
-2. Machine-verify §2's genus/branch arithmetic on the actual frame
-   (the same slice machinery as C5/P2).
-3. The twisted-torsor angle: the problem is a `K_proj`-point on the
-   twisted `V(Φ)`; over such fields the intermediate-Jacobian TORSOR
-   (Benoist–Wittenberg-flavored) is the natural invariant, and the 55
-   explicit Prym presentations give it coordinates. Whether it
-   obstructs points (not just rationality) over `K_proj` is the open
-   question this investigation exists to answer.
+1. ~~Pin the two curves exactly~~ DONE (§2.5–2.6): `K̃`-side fully
+   pinned with CM identification; `Prym₃ ~ E³` forced by the
+   literature anchor; `J(X) ~ E_{−11}⁵` in 55 D12-covariant ways.
+2. Machine-verify §2's genus/branch arithmetic and §2.5's exact
+   claims (restriction identity, evenness, both j-invariants) as a
+   sealed packet with an independent verifier (the H1-D trust rule).
+3. The twisted-torsor angle — NOW THE ACTIVE QUESTION: the headline
+   is equivalent to a `K_proj`-point on the twisted cubic `V(Φ)`
+   (sealed, E16/E37; by Kollár's cubic-hypersurface theorem, point ⟺
+   unirational over the field, which is why the five-way reduction
+   closes). The intermediate Jacobian of the twist is the
+   `Gal`-twist of the Weil abelian fivefold `E_{−11}⁵` by a cocycle
+   in `Aut(J, Θ) ⊇ ±G`; obstruction theory for points
+   (Benoist–Wittenberg CH²-torsors, elementary obstruction, index —
+   note a cubic threefold always has index | 3 via its lines) then
+   lives in Galois cohomology of a CM abelian variety over the
+   C₃-field `K_proj` — class number 1, everything in principle
+   computable. Whether any such invariant can obstruct POINTS (not
+   just rationality) over `K_proj` is the open question this
+   investigation exists to answer.

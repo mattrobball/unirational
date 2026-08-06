@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `2503c2a` (2026-08-05; the
+Snapshot metadata — notebook parent head: `fa7b457` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -2899,13 +2899,28 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   (`F₀|_{K_c} = (κ₊+4)a³+(κ₋+4)b³`, product `= 22 = 2·11`), the
   branch sextic is exactly even after conjugating the conic
   involution to `s ↦ −s`, so `K̃` is bielliptic with
-  `J(K̃) ~ E₊ × E₋`, and `j(E₊) = −32768 = −2¹⁵` EXACTLY
-  (symbolic; `E₋` equal to 40 digits, exact check pending) — the
+  `J(K̃) ~ E₊ × E₋`, and `j(E₊) = j(E₋) = −32768 = −2¹⁵` EXACTLY
+  (both symbolic: `prym_exact.py`, `prym_exact2.py`) — the
   discriminant-(−11) CM j-invariant, the field of the Weil
   representation itself. Modulo the bielliptic bookkeeping to be
   machine-sealed: `J(X) ~ Prym₃(Ẽ/E_σ) × E_{−11}²` per involution.
-  Sharp follow-up: is `Prym₃ ~ E_{−11}³` (Adler-type `J(X) ~
-  E_{−11}⁵`)? Probe-grade until the machine pass.**** Same-day
+  **Wave 21 literature anchor (Note VI §2.6):** Roulleau
+  arXiv:1001.4853 (J. Math. Kyoto 49 (2009); PDF archived in
+  `external_docs/`) Theorem 2 computes the period lattice of `J(X)`
+  as an explicit rank-5 `Z[ν]`-lattice, `ν = (−1+i√11)/2`, and
+  records `J(X) ≅ E⁵` (as abelian varieties, not ppav's; first
+  proved by Adler, J. Algebra 72 (1981) 146–165) for `E = C/Z[ν]` —
+  exactly the `j = −32768` CM(−11) curve. So the probe re-derived
+  two of the five known CM factors by the split-discriminant route
+  (strong end-to-end validation), `Prym₃ ~ E_{−11}³` is FORCED by
+  Poincaré reducibility (no computation needed), and the new
+  content over the literature is the localization (CM factors live
+  on the conic side of the SPLIT discriminant), the 55
+  D12-covariant splittings, and the equivariant statement `H₁(J(X),
+  Q) ≅ W` over `Q(√−11)` (`Λ` a `Z[ν][G]`-lattice; CM commutes
+  with `G`). Note VI §3 rewritten: curve-pinning DONE; next = the
+  machine-seal packet, then the twisted-torsor question. Probe-grade
+  until the machine pass.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
