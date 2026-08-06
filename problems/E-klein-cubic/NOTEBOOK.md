@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `aa68551` (2026-08-05; the
+Snapshot metadata — notebook parent head: `10804b2` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3157,7 +3157,22 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   noncommuting chord-cycle orbits (degrees/collapses/incidences),
   Menelaus axes at special source loci, second-layer canonical
   pairings, reachable degrees mod 3; exits COLLAPSE-FOUND /
-  NO-COLLAPSE / DEVIATION.**** Same-day
+  NO-COLLAPSE / DEVIATION. **Wave 25 packet LANDED (director-run):
+  `FIX-VII-LAND-EMPTY`** (`goal_runs_after_10804b2/FIX_VII_LAND`):
+  the landing cone on GATE's 13-dim (1,6)+Hessian space at d=34
+  is EMPTY — msolve solve-mode returns only the origin at BOTH
+  primes 67/199, and the reduced GB at 67 is exactly
+  `{c0,…,c12}` (the sampled ideal IS the irrelevant ideal —
+  certificate-grade); independent verifier (different seed, 80
+  points, fresh runs, landmine-safe parsing) 3/3 PASS. Note VII
+  §8 records the verdict: no degree-34 equivariant dominant map
+  has a resolution center dominating the Hessian curve (mod-p,
+  two primes; char-0 evidence-grade since the 13-space is
+  mod-p); the canonical-carrier ansatz at the gateway is
+  CLOSED-NEGATIVE; d=34 survives only via moduli-carrier
+  families or tower carriers; next linear-system target = the
+  d=43/(1,7) analogue. The Italian face (Note VIII, MOVES
+  in-flight) is untouched.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

@@ -361,3 +361,19 @@ The two condition systems interact ONLY there — the assembly at
 conditions) + (a finite gluing block supported on the sextets).
 Next after FIX-VII-XRING lands: compute the gluing block's rank at
 the `(1,6)` window.
+
+## 8. The gateway verdict (FIX-VII-LAND, 2026-08-06)
+
+The landing cone on the GATE 13-space is EMPTY at p = 67 and 199,
+with a Groebner CERTIFICATE at 67 (the sampled ideal is the full
+irrelevant ideal; packet `goal_runs_after_10804b2/FIX_VII_LAND`,
+verifier 3/3, director-run). Hence — mod-p at two primes — no
+degree-34 equivariant dominant map has a resolution center
+dominating the Hessian curve: THE CANONICAL-CARRIER ANSATZ AT THE
+d = 34 GATEWAY IS CLOSED-NEGATIVE. The gateway survives only via
+moduli-carrier families (§3 induced ledger; per-family analogues
+of GATE/LAND would be needed) or tower carriers (Hodge-local,
+outside this machinery). The natural next linear-system target is
+the d = 43 analogue, where the (1,7) cell's 27 explicit witnesses
+and the FIX-D2 jet locus already live. The Italian face (Note
+VIII) is untouched by this verdict.

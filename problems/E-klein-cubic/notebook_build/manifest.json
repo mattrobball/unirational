@@ -1515,6 +1515,17 @@
    "char0_scope": "mod-p exploratory (p=67); findings to be re-verified before any consumption",
    "tracked": "main",
    "notes": "IN-FLIGHT (dispatched 2026-08-06): Note VIII sec3 cross-V4 experiments \u2014 noncommuting chord-cycle sweep per pair-orbit (degrees, collapses, canonical-locus incidences, G-orbit structure), Menelaus axes at special source loci (rank drops/incidences), second-layer canonical pairings and reachable degrees mod 3. Exits COLLAPSE-FOUND / NO-COLLAPSE / DEVIATION."
+  },
+  {
+   "path": "goal_runs_after_10804b2/FIX_VII_LAND",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-VII-LAND-EMPTY",
+   "superseded_by": null,
+   "char0_scope": "mod-p two primes (67, 199), GB certificate at 67 (sampled ideal = irrelevant ideal); char-0 emptiness is evidence-grade, not sealed (13-space itself is mod-p)",
+   "tracked": "main",
+   "notes": "Director-executed 2026-08-06. The landing cone on GATE's 13-dim (1,6)+Hessian space at d=34 is EMPTY: msolve solve-mode returns only the origin at both primes; reduced GB at p=67 is {c0..c12} exactly. Independent verifier (different seed, 80 points, fresh msolve, landmine-safe parsing) 3/3 PASS, director-run. Consequence: no degree-34 equivariant dominant map has a resolution center dominating the Hessian curve; the canonical-carrier ansatz at the gateway is closed-negative; d=34 remains open only via moduli-carrier families or tower carriers. Next linear-system target: the d=43/(1,7) analogue."
   }
  ],
  "known_branches": [

@@ -1,0 +1,110 @@
+{
+ "per_orbit": [
+  {
+   "orbit": 0,
+   "size": 165,
+   "hits_per_v": [
+    0,
+    0,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "pairs_always_hitting": 0,
+   "pairs_never_hitting": 164,
+   "pairs_sometimes": 1
+  },
+  {
+   "orbit": 1,
+   "size": 165,
+   "hits_per_v": [
+    15,
+    7,
+    10,
+    2,
+    6,
+    6,
+    5,
+    4
+   ],
+   "pairs_always_hitting": 0,
+   "pairs_never_hitting": 119,
+   "pairs_sometimes": 46
+  },
+  {
+   "orbit": 2,
+   "size": 165,
+   "hits_per_v": [
+    15,
+    3,
+    7,
+    4,
+    5,
+    8,
+    7,
+    4
+   ],
+   "pairs_always_hitting": 0,
+   "pairs_never_hitting": 123,
+   "pairs_sometimes": 42
+  },
+  {
+   "orbit": 3,
+   "size": 330,
+   "hits_per_v": [
+    8,
+    8,
+    12,
+    8,
+    11,
+    12,
+    11,
+    7
+   ],
+   "pairs_always_hitting": 0,
+   "pairs_never_hitting": 260,
+   "pairs_sometimes": 70
+  },
+  {
+   "orbit": 4,
+   "size": 330,
+   "hits_per_v": [
+    6,
+    8,
+    10,
+    6,
+    10,
+    11,
+    6,
+    7
+   ],
+   "pairs_always_hitting": 0,
+   "pairs_never_hitting": 268,
+   "pairs_sometimes": 62
+  },
+  {
+   "orbit": 5,
+   "size": 330,
+   "hits_per_v": [
+    14,
+    5,
+    10,
+    13,
+    8,
+    12,
+    8,
+    11
+   ],
+   "pairs_always_hitting": 0,
+   "pairs_never_hitting": 260,
+   "pairs_sometimes": 70
+  }
+ ],
+ "hits_in_subgroup": [
+  124,
+  138
+ ]
+}

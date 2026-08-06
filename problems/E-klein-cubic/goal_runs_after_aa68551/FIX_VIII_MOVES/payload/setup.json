@@ -1,0 +1,19 @@
+{
+ "p": 67,
+ "order": 660,
+ "profile": {
+  "1": 1,
+  "11": 120,
+  "5": 264,
+  "2": 55,
+  "6": 110,
+  "3": 110
+ },
+ "ninv": 55,
+ "commuting_pairs": 165,
+ "v4": 55,
+ "vertices": 165,
+ "cpoints": 60,
+ "cpoints_on_X": 60,
+ "seconds": 0.1
+}

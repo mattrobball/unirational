@@ -1,0 +1,704 @@
+{
+ "p": 67,
+ "pair_orders": {
+  "2": 165,
+  "3": 330,
+  "5": 660,
+  "6": 330
+ },
+ "orbit_summary": [
+  [
+   2,
+   165
+  ],
+  [
+   3,
+   165
+  ],
+  [
+   3,
+   165
+  ],
+  [
+   5,
+   330
+  ],
+  [
+   5,
+   330
+  ],
+  [
+   6,
+   330
+  ]
+ ],
+ "table": [
+  {
+   "orbit": 0,
+   "prod_order": 2,
+   "size": 165,
+   "size_mod3": 0,
+   "rows": [
+    {
+     "v": [
+      8,
+      8,
+      53,
+      33,
+      39
+     ],
+     "npts": 156,
+     "ndistinct": 146,
+     "undefined": 9,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 146,
+      "triplane": 146,
+      "vertex": 11,
+      "plusplane": 11,
+      "Hquintic": 146,
+      "Hcurve": 0
+     },
+     "collapse": true
+    },
+    {
+     "v": [
+      40,
+      47,
+      1,
+      32,
+      9
+     ],
+     "npts": 162,
+     "ndistinct": 157,
+     "undefined": 3,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 157,
+      "triplane": 157,
+      "vertex": 4,
+      "plusplane": 4,
+      "Hquintic": 157,
+      "Hcurve": 0
+     },
+     "collapse": true
+    },
+    {
+     "v": [
+      26,
+      62,
+      36,
+      4,
+      36
+     ],
+     "npts": 156,
+     "ndistinct": 154,
+     "undefined": 9,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 154,
+      "triplane": 154,
+      "vertex": 11,
+      "plusplane": 11,
+      "Hquintic": 154,
+      "Hcurve": 0
+     },
+     "collapse": true
+    },
+    {
+     "v": [
+      8,
+      50,
+      63,
+      65,
+      41
+     ],
+     "npts": 162,
+     "ndistinct": 154,
+     "undefined": 3,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 154,
+      "triplane": 154,
+      "vertex": 4,
+      "plusplane": 4,
+      "Hquintic": 154,
+      "Hcurve": 0
+     },
+     "collapse": true
+    }
+   ],
+   "Gorbits_met": 12,
+   "max_per_Gorbit": 18
+  },
+  {
+   "orbit": 1,
+   "prod_order": 3,
+   "size": 165,
+   "size_mod3": 0,
+   "rows": [
+    {
+     "v": [
+      8,
+      8,
+      53,
+      33,
+      39
+     ],
+     "npts": 165,
+     "ndistinct": 164,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 14,
+      "triplane": 14,
+      "vertex": 3,
+      "plusplane": 3,
+      "Hquintic": 18,
+      "Hcurve": 0
+     },
+     "collapse": true
+    },
+    {
+     "v": [
+      40,
+      47,
+      1,
+      32,
+      9
+     ],
+     "npts": 165,
+     "ndistinct": 165,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 11,
+      "triplane": 11,
+      "vertex": 0,
+      "plusplane": 1,
+      "Hquintic": 14,
+      "Hcurve": 0
+     },
+     "collapse": false
+    },
+    {
+     "v": [
+      26,
+      62,
+      36,
+      4,
+      36
+     ],
+     "npts": 165,
+     "ndistinct": 165,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 12,
+      "triplane": 12,
+      "vertex": 2,
+      "plusplane": 3,
+      "Hquintic": 17,
+      "Hcurve": 0
+     },
+     "collapse": false
+    },
+    {
+     "v": [
+      8,
+      50,
+      63,
+      65,
+      41
+     ],
+     "npts": 165,
+     "ndistinct": 165,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 13,
+      "triplane": 13,
+      "vertex": 0,
+      "plusplane": 0,
+      "Hquintic": 16,
+      "Hcurve": 0
+     },
+     "collapse": false
+    }
+   ],
+   "Gorbits_met": 115,
+   "max_per_Gorbit": 3
+  },
+  {
+   "orbit": 2,
+   "prod_order": 3,
+   "size": 165,
+   "size_mod3": 0,
+   "rows": [
+    {
+     "v": [
+      8,
+      8,
+      53,
+      33,
+      39
+     ],
+     "npts": 165,
+     "ndistinct": 165,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 12,
+      "triplane": 12,
+      "vertex": 1,
+      "plusplane": 2,
+      "Hquintic": 12,
+      "Hcurve": 0
+     },
+     "collapse": false
+    },
+    {
+     "v": [
+      40,
+      47,
+      1,
+      32,
+      9
+     ],
+     "npts": 165,
+     "ndistinct": 165,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 17,
+      "triplane": 17,
+      "vertex": 0,
+      "plusplane": 0,
+      "Hquintic": 19,
+      "Hcurve": 0
+     },
+     "collapse": false
+    },
+    {
+     "v": [
+      26,
+      62,
+      36,
+      4,
+      36
+     ],
+     "npts": 165,
+     "ndistinct": 165,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 18,
+      "triplane": 18,
+      "vertex": 3,
+      "plusplane": 3,
+      "Hquintic": 21,
+      "Hcurve": 0
+     },
+     "collapse": false
+    },
+    {
+     "v": [
+      8,
+      50,
+      63,
+      65,
+      41
+     ],
+     "npts": 165,
+     "ndistinct": 165,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 10,
+      "triplane": 10,
+      "vertex": 0,
+      "plusplane": 1,
+      "Hquintic": 12,
+      "Hcurve": 0
+     },
+     "collapse": false
+    }
+   ],
+   "Gorbits_met": 117,
+   "max_per_Gorbit": 6
+  },
+  {
+   "orbit": 3,
+   "prod_order": 5,
+   "size": 330,
+   "size_mod3": 0,
+   "rows": [
+    {
+     "v": [
+      8,
+      8,
+      53,
+      33,
+      39
+     ],
+     "npts": 330,
+     "ndistinct": 330,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 28,
+      "triplane": 28,
+      "vertex": 1,
+      "plusplane": 8,
+      "Hquintic": 35,
+      "Hcurve": 0
+     },
+     "collapse": false
+    },
+    {
+     "v": [
+      40,
+      47,
+      1,
+      32,
+      9
+     ],
+     "npts": 330,
+     "ndistinct": 330,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 25,
+      "triplane": 25,
+      "vertex": 0,
+      "plusplane": 4,
+      "Hquintic": 33,
+      "Hcurve": 0
+     },
+     "collapse": false
+    },
+    {
+     "v": [
+      26,
+      62,
+      36,
+      4,
+      36
+     ],
+     "npts": 330,
+     "ndistinct": 330,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 12,
+      "triplane": 12,
+      "vertex": 0,
+      "plusplane": 5,
+      "Hquintic": 21,
+      "Hcurve": 0
+     },
+     "collapse": false
+    },
+    {
+     "v": [
+      8,
+      50,
+      63,
+      65,
+      41
+     ],
+     "npts": 330,
+     "ndistinct": 328,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 27,
+      "triplane": 27,
+      "vertex": 1,
+      "plusplane": 7,
+      "Hquintic": 36,
+      "Hcurve": 0
+     },
+     "collapse": true
+    }
+   ],
+   "Gorbits_met": 182,
+   "max_per_Gorbit": 7
+  },
+  {
+   "orbit": 4,
+   "prod_order": 5,
+   "size": 330,
+   "size_mod3": 0,
+   "rows": [
+    {
+     "v": [
+      8,
+      8,
+      53,
+      33,
+      39
+     ],
+     "npts": 330,
+     "ndistinct": 330,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 28,
+      "triplane": 28,
+      "vertex": 0,
+      "plusplane": 3,
+      "Hquintic": 33,
+      "Hcurve": 0
+     },
+     "collapse": false
+    },
+    {
+     "v": [
+      40,
+      47,
+      1,
+      32,
+      9
+     ],
+     "npts": 328,
+     "ndistinct": 327,
+     "undefined": 2,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 21,
+      "triplane": 21,
+      "vertex": 1,
+      "plusplane": 3,
+      "Hquintic": 29,
+      "Hcurve": 0
+     },
+     "collapse": true
+    },
+    {
+     "v": [
+      26,
+      62,
+      36,
+      4,
+      36
+     ],
+     "npts": 330,
+     "ndistinct": 330,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 17,
+      "triplane": 17,
+      "vertex": 2,
+      "plusplane": 3,
+      "Hquintic": 27,
+      "Hcurve": 0
+     },
+     "collapse": false
+    },
+    {
+     "v": [
+      8,
+      50,
+      63,
+      65,
+      41
+     ],
+     "npts": 330,
+     "ndistinct": 330,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 24,
+      "triplane": 24,
+      "vertex": 0,
+      "plusplane": 7,
+      "Hquintic": 37,
+      "Hcurve": 0
+     },
+     "collapse": false
+    }
+   ],
+   "Gorbits_met": 181,
+   "max_per_Gorbit": 6
+  },
+  {
+   "orbit": 5,
+   "prod_order": 6,
+   "size": 330,
+   "size_mod3": 0,
+   "rows": [
+    {
+     "v": [
+      8,
+      8,
+      53,
+      33,
+      39
+     ],
+     "npts": 330,
+     "ndistinct": 329,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 24,
+      "triplane": 24,
+      "vertex": 3,
+      "plusplane": 4,
+      "Hquintic": 34,
+      "Hcurve": 0
+     },
+     "collapse": true
+    },
+    {
+     "v": [
+      40,
+      47,
+      1,
+      32,
+      9
+     ],
+     "npts": 330,
+     "ndistinct": 330,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 27,
+      "triplane": 27,
+      "vertex": 2,
+      "plusplane": 2,
+      "Hquintic": 31,
+      "Hcurve": 0
+     },
+     "collapse": false
+    },
+    {
+     "v": [
+      26,
+      62,
+      36,
+      4,
+      36
+     ],
+     "npts": 330,
+     "ndistinct": 328,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 37,
+      "triplane": 37,
+      "vertex": 4,
+      "plusplane": 6,
+      "Hquintic": 41,
+      "Hcurve": 0
+     },
+     "collapse": true
+    },
+    {
+     "v": [
+      8,
+      50,
+      63,
+      65,
+      41
+     ],
+     "npts": 330,
+     "ndistinct": 330,
+     "undefined": 0,
+     "coincident_sources": 0,
+     "all_on_X": true,
+     "span_rank": 5,
+     "incidence": {
+      "line": 21,
+      "triplane": 21,
+      "vertex": 1,
+      "plusplane": 2,
+      "Hquintic": 24,
+      "Hcurve": 0
+     },
+     "collapse": false
+    }
+   ],
+   "Gorbits_met": 175,
+   "max_per_Gorbit": 6
+  }
+ ],
+ "sources": [
+  [
+   8,
+   8,
+   53,
+   33,
+   39
+  ],
+  [
+   40,
+   47,
+   1,
+   32,
+   9
+  ],
+  [
+   26,
+   62,
+   36,
+   4,
+   36
+  ],
+  [
+   8,
+   50,
+   63,
+   65,
+   41
+  ]
+ ],
+ "seconds": 1.5
+}
