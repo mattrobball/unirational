@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `47868ff` (2026-08-06; the
+Snapshot metadata — notebook parent head: `222afa3` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3522,7 +3522,23 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   `{8a}`, scaling `a ↦ −2a`. VERDICT: neither killed nor cleared — F55
   reduces at full source scope to the odd-Frobenius chain/weight lemma
   (T2.2 is dihedral-only; new derivation named) or to the E18 trace-
-  cubic decision (pointless ⟹ F55-NO ⟹ ed = 4). Note I
+  cubic decision (pointless ⟹ F55-NO ⟹ ed = 4). **Wave 28 (user:
+  lane assignment + E18 discipline; Note IX §8.2 opened): the
+  odd-Frobenius chain derivation is the DIRECTOR LANE, run to a
+  decision (obstruction OR proved no-go — a no-go leaves E18 as the
+  only F55 route). Derived at opening: (1) ⟨5⟩ = QR ⟹ source/target
+  characters each fill one QR-coset and the whole configuration has
+  ONE discrete modulus t = a/c ∈ units/QR; (2) the first-order germ
+  layer is EMPTY (weights c·{2,3,4,8} generate Z/11 additively) ⟹ any
+  obstruction is GLOBAL (divisor/degree bookkeeping, the H0/H1
+  altitude); (3) structural risk recorded: C₅ acts freely on all
+  C₁₁-fixed data at every level — the exact freedom behind the E14
+  escape — so a no-go is live. E18 protocol per user (think before
+  crunch): NO point searches (can only prove YES); step 1 = derive the
+  bad places and run LOCAL SOLUBILITY only (bounded, both outcomes
+  decisive: an insoluble place ⟹ F55-NO ⟹ ed = 4; soluble everywhere
+  ⟹ the obstruction is global, informing the descent tool choice).**
+  Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant

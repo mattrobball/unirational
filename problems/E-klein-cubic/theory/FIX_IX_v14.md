@@ -478,3 +478,46 @@ It reduces F55 — with total source scope — to (a) the odd-chain
 weight lemma against the explicit `{2,3,4|−3}`-pattern, or (b)
 the E18 twist decision. Either resolves a named CTZ case; a
 negative resolves the headline (`ed = 4`).
+
+### 8.2 The odd-Frobenius chain derivation (opened 2026-08-06; director lane)
+
+Goal: run the machine's DEEP layer (the [I, Thm 2.1] blowup
+calculus with chain bookkeeping) on F55, to a decision: either an
+obstruction, or a proved "closes rather than obstructs" no-go
+(each redirects: a no-go leaves E18/arithmetic as the only F55
+route). First derived facts:
+
+**(1) One discrete modulus.** `⟨5⟩ = {1,3,4,5,9}` = the quadratic
+residues mod 11. The source characters at the five eigenpoints of
+a pure induced source form one coset `c·QR`; the target characters
+at the five `C₁₁`-points form one coset `a·QR`. The C₅-equivariant
+bijection (§8.1(iii)) intertwines the two `×5`-scalings, so the
+entire configuration carries exactly ONE discrete invariant:
+`t = a/c ∈ (Z/11)*/QR` — "t is a residue or not". Any obstruction
+must kill both values of `t`; any construction must choose one.
+
+**(2) The first-order local layer is EMPTY.** At a source
+eigenpoint of character `c`, the local (normal) weights are
+`c·{2, 3, 4, 8}` (computed: `(5^i − 1)c`); the target tangent
+weights are `tc·{4, 8, 9}`. Since `{2,3}` already generate `Z/11`
+as an additive semigroup, every required weight is realizable by
+equivariant jets at every order-1 level, for BOTH values of `t`:
+no per-point germ obstruction exists. Consequence: an F55
+obstruction, if real, lives in GLOBAL divisor/degree bookkeeping
+(profiles along strata, base-locus orders — the altitude of the
+Klein-side H0/H1 theory), not in local weight arithmetic.
+
+**(3) The structural risk, stated up front.** Everything
+`C₁₁`-fixed — on the source, the target, and every blowup level —
+carries a FREE C₅-action (`V₁₄^{F55} = ∅`, `P(V)^{F55} = ∅`, and
+centers stabilized by both groups have their fixed data spread in
+free 5-orbits). This is precisely the freedom by which the Klein
+cubic escaped the original Problem-F transfer (E14: "closes
+rather than obstructs"). A no-go outcome is therefore live; the
+derivation must either find a global invariant that the five
+conjugate towers cannot satisfy simultaneously, or prove
+consistency at every level and record the no-go.
+
+Status: OPEN — derivation in progress (director). Next
+checkpoint: the global bookkeeping layer for one C₅-conjugate
+tower (the F55-analogue of the H0 profile theory), or the no-go.
