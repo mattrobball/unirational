@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `db8e5e8` (2026-08-06; the
+Snapshot metadata — notebook parent head: `6334d37` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3743,7 +3743,26 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   (the Klein's own (−2) again). Remaining: the global Parshin-style
   sum formula for `Σ_O⟨φ,b⟩_O` on the μ₁₁-cover; a forced global
   term ≢ 8 would violate Theorem I ⟹ F55-NO. Active derivation.**
-  Note I
+  **Wave 29 (user: "derive the sum"; Note IX §8.12 + Correction
+  IX-d): the sum derived faithfully.** CORRECTION IX-d: §8.11's
+  "well-defined in Z/11" was overclaimed — over C the divisibility of
+  C* kills every scalar reduction; the pairing lives in
+  `κ(P)*/(κ(P)*)¹¹` and the only true sum formula is the GERSTEN
+  reciprocity for `Br(E)[11]`. Derived exact identities: (1) the
+  b-cover is the torus isogeny with deck μ₁₁ and σ acting on the deck
+  by −2 ⟹ its symmetry group is F55 ITSELF; (2) `Σ(−2)ⁱ = 11` ⟹
+  `N_{E/K}(b)` is an 11th power (norm-trivial); (3) `e₁+e_b` is even
+  ⟹ with `n = r^{(1,1,−2,2,0)}`: `σ⁻¹b = b⁵n⁻¹¹` EXACTLY ⟹
+  `[σ⁻¹b] = [b]⁵` on the nose; (4) under Theorem-I(ii):
+  `A_K = cores(φ,b) = 7·cores(a,b) + cores(r₂⁻¹,b)` in `Br(K)[11]`;
+  (5) THEOREM K: the transported orbit-residue is `[b|_P]^{λ_O}` ⟹
+  (ii) makes `A_K` UNRAMIFIED at all split interior primes — its only
+  possible ramification is σ-invariant primes (Theorem-J jet
+  recursion) and the boundary (where (iii) lives). ENDGAME SHAPE: a
+  bounded residue computation on a σ-stable toric compactification —
+  inconsistency ⟹ F55-NO ⟹ ed = 4; consistency ⟹ the reciprocity
+  route exhausts and F55 rides on construction alone. Analysis-first
+  has carried the route to the last bounded computation.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant

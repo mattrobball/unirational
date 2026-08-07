@@ -1050,6 +1050,66 @@ provably `≢ 8 − (interior contributions forced ≡ 0 by (ii))`,
 Theorem I is violated and F55-NO follows. Status: pairing
 constructed; reciprocity formula = the active derivation.
 
+### 8.12 The sum, derived faithfully (2026-08-07)
+
+**Correction IX-d.** §8.11 said `⟨φ, b⟩_O` is "well-defined in
+`Z/11`". Overclaimed: over `C` the residue data of `b` along a
+divisor is a function, not a number, and `C^*`-divisibility
+kills every bottom-level character — NO numerical per-orbit
+pairing exists. The compensation `5·(−2) ≡ 1` is real, but the
+pairing's true home is the RESIDUE CLASS GROUP: `⟨φ, b⟩_O ∈
+κ(P)^*/(κ(P)^*)^{11}`, and the "sum formula" that exists is the
+Gersten reciprocity for `Br(E)[11]`, not a scalar identity.
+
+**What is actually derived (all exact, hand-checkable):**
+
+1. **The cover is a torus, and its symmetry is F55.** `b` is a
+   unit monomial, so `y^{11} = b` is the isogeny `T′ → T` with
+   `Λ′ = Λ + Z·(e_b/11)`, deck group `μ₁₁ = Λ′/Λ`. Since
+   `σ(e_b/11) = −e₂ − 2(e_b/11) ∈ Λ′`, σ lifts, acts on the
+   deck by `−2`, and `⟨deck, σ⟩ ≅ C₁₁⋊C₅ = F55`: the b-cover's
+   symmetry group is F55 itself.
+2. **Norm triviality.** `σ^i(b) = (11th power)·b^{(−2)^i}` and
+   `Σ_{i=0}^{4}(−2)^i = 11`, so `N_{E/K}(b) ∈ (E^*)^{11}` — the
+   eleven that makes `[b]` a σ-eigenclass of eigenvalue `−2` in
+   `E^*/11` is the same eleven as the cover degree.
+3. **The exact eigen-identity.** `e₁ + e_b = (2,2,−4,4,0)` is
+   even, so with the honest monomial `n := r^{(1,1,−2,2,0)}`:
+   `σ^{-1}(b) = b^5·n^{-11}` EXACTLY (the sign dies: `−1` is an
+   11th power in `C`). Hence `[σ^{-1}b] = [b]^5` on the nose.
+4. **The corestriction identity.** For φ satisfying Theorem-I
+   (ii) (`φ·r₂ = ψ(a)`), in `Br(K)[11]`:
+
+       A_K := cores_{E/K}(φ, b)₁₁
+            = 7·cores(a, b) + cores(r₂^{-1}, b),
+
+   using `(ψ(a), b) = (a,b)²(σa, b)`, `cores∘σ = cores`, and
+   item 3 (`(a, σ^{-1}b) = 5·(a,b) − 11·(a,n) ≡ 5·(a,b)`;
+   `2 + 5 = 7`).
+5. **Theorem K (interior unramifiedness).** The transported
+   residue of `A_K` at a K-prime under a split interior orbit
+   `O` is `[b|_P]^{λ_O(φ)} ∈ κ(P)^*/11`; Theorem-I (ii) forces
+   `λ_O ≡ 0`, so `A_K` is UNRAMIFIED at every such prime. Its
+   only possible ramification: σ-invariant interior primes
+   (where Theorem J's jet-recursion governs) and the boundary
+   (where `v(b) = ⟨w, e_b⟩ ≠ 0` and condition (iii) lives).
+
+**The honest shape of the endgame.** The sum formula is the
+exactness of the Gersten complex for `Br[11]`: residues of
+`A_K` satisfy codim-2 cancellation; there is no scalar shortcut.
+The remaining computation is forced and specific: evaluate the
+BOUNDARY residues of `A_K` on a smooth σ-stable toric
+compactification (input: `e_b`-pairings with the rays, φ's
+boundary patterns constrained by Theorem J and principality) and
+the σ-invariant-prime residues (input: the jet recursion), and
+test whether the class-8 requirement (iii) is consistent with
+`A_K = 7·cores(a,b) + cores(r₂^{-1},b)` having exactly those
+residues. Inconsistency ⟹ F55-NO ⟹ `ed = 4`. Consistency ⟹
+the reciprocity route exhausts with no obstruction, and F55
+rides on construction alone. This is a bounded computation over
+an explicit fan — analysis-first has taken it as far as
+identities go.
+
 **Honest position after the full derivation.** Both flanks of
 F55 are genuinely deep, in matching ways: the geometric machine
 ends at a tropical-to-exact lifting gap (§8.7), and the
