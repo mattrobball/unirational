@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `20a63ee` (2026-08-07; the
+Snapshot metadata — notebook parent head: `b1ca353` (2026-08-07; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -4094,7 +4094,41 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   inequalities are the whole remaining content on mixed fans.**
   The positivity-restored question is a bounded exact LP/ILP on the
   rank-19 solution lattice (`f55_mixedpos.py`, in flight at ledger
-  time). Lemma S (corrected) UNCLAIMED in both directions.** Note I
+  time). Lemma S (corrected) UNCLAIMED in both directions.**
+  **Wave 32 (continuation; Note IX §8.27, probe `f55_mixedpos.py`,
+  director-adjudicated): POSITIVITY DOES NOT RESTORE THE KILL —
+  LEMMA S AS STATED IS FALSE.** Mixed-fan rays enumerated exactly
+  (460, with an INDEPENDENT completeness proof: essential
+  arrangement ⟹ pointed chambers ⟹ every extreme ray has
+  active-set rank 3 ⟹ count = 2×#(rank-3 flats) = 2×230 = 460;
+  cross-checked by exact nonnegative-combination tests at 1500
+  interior points of 550 cells), so `d ≥ 0` everywhere ⟺ at the
+  460 rays. For the witness patterns the positivity cone K⁺ is
+  FULL-DIMENSIONAL (dim K⁺ = 19 = dim ker_Q H) — no Farkas
+  certificate exists — and explicit NONNEGATIVE INTEGRAL witnesses
+  are constructed and verified for P = {0,1} (max|U| = 432),
+  P = {3,4} (max|U| = 845) and 12 (e)-variants, 14 in all: 0/2570
+  wall-integrality failures, 0/436 nonzero zero-cells (≥2 per
+  orbit), 0/460 negative rays, and at 15,986 random lattice points
+  with all σ-translates **d ≥ 0, the TWICE-MIN law, and (ii) all
+  hold with 0 failures**. (15 of 27 (e)-variants die at the mod-11
+  congruence layer alone; all 12 congruence-feasible ones carry
+  witnesses.) **So the honest necessary system of IX-j — (0) d ≥ 0,
+  (1) twice-min zeros, (2) integral slopes, (3) congruence — is
+  SATISFIABLE on a σ-invariant complete fan: the UNIVERSAL
+  quantifier in Lemma S is refuted.** Every §§8.22–8.25 fan kill
+  stands as a theorem about the fan it names; what dies is
+  "infeasible for EVERY fan". NOT a refutation of F55-NO: the value
+  form is a SHADOW of Theorem Q, and a witness counts only if it
+  LIFTS through `2h + h∘σ⁻¹ − e₂* = d + m` (per cone
+  `2U_h(C) + σ_*U_h(σ⁻¹C) − e₂ = U_d(C) + U_m(C)`, m σ-invariant,
+  wall conditions on both) — an 11-torsion global lattice question
+  (det(2+σ) = 11 on Λ) that may carry more than the congruence (3).
+  Lift ⟹ Lemma S false at the honest level, arithmetic flank ends
+  at the lifting wall, F55 OPEN (handoff §4 failure branch); no
+  lift ⟹ the preimage condition is NEW constraint content and the
+  campaign resumes against it. Decisive probe `f55_qpreimage.py` in
+  flight. Lemma S, F55-NO and the headline all UNCLAIMED.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant

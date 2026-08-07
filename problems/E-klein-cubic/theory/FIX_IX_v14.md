@@ -2095,3 +2095,65 @@ new constraint class (inequalities, not congruences — note the
 was the lossy step). If a nonnegative integral witness exists, the
 §4 failure branch of the handoff triggers for the corrected lemma.
 Lemma S (corrected) remains UNCLAIMED in both directions.
+
+### 8.27 Positivity does not restore the kill: the value-form lemma is FALSE on the mixed fan (2026-08-08)
+
+**The test (`f55_mixedpos.py`; director-adjudicated).** Rays of the
+mixed fan enumerated exactly: 460, with an INDEPENDENT completeness
+proof — the arrangement is essential, so chambers are pointed and
+every extreme ray has active-set rank 3, i.e. lies among the 1-dim
+kernels of rank-3 normal triples; their count must be
+2 × #(rank-3 flats) = 2 × 230 = 460, which it is. Hence d ≥ 0
+everywhere ⟺ d ≥ 0 at the 460 rays (cross-checked: 1500 random
+interior points of 550 cells are exact nonnegative rational
+combinations of their cell's rays).
+
+**Verdict: positivity does NOT kill.** For the witness patterns the
+cone K⁺ = {x ∈ ker_Q(H) : d_x ≥ 0 at every ray} is FULL-DIMENSIONAL
+(dim K⁺ = 19 = dim ker_Q H), so no Farkas certificate exists, and
+explicit NONNEGATIVE INTEGRAL witnesses were constructed and
+verified for P = {0,1} (max |U| = 432) and P = {3,4}
+(max |U| = 845), plus 12 more of the (e)-family — 14 in all. Each
+is certified over Z independently of the encoding: 0 of 2570 wall
+jumps fail integrality, 0 of 436 zero cells are nonzero (≥ 2 per
+σ-orbit), 0 of 460 rays are negative, and at 15,986 random lattice
+points with all σ-translates: d ≥ 0 everywhere (0 failures), the
+**TWICE-MIN law holds (0 failures)**, and the congruence (ii) holds
+(0 failures). Of the 27 one-orbit (e)-variants, 15 die at the
+mod-11 congruence layer alone (no residue solves it) and all 12
+congruence-feasible ones carry nonnegative integral witnesses.
+
+**Consequence — Lemma S as stated is FALSE.** The honest necessary
+system of Correction IX-j — (0) d ≥ 0, (1) twice-min zeros,
+(2) integral slopes, (3) the congruence — is SATISFIABLE on a
+σ-invariant complete fan. Restoring the dropped inequalities does
+not recover the kill; T5 cannot be closed at the value-form level
+at all, and no 11-adic depth helps (§8.26: the kernel is
+saturated). Every earlier verdict stands as stated (each fan class
+listed in §§8.22–8.25 really is infeasible); what is refuted is the
+UNIVERSAL quantifier — the value-form system is not infeasible for
+every σ-invariant complete fan, because the mixed fan satisfies it.
+
+**What is NOT settled.** This does not refute F55-NO. The value
+form is a SHADOW of Theorem Q: the honest object is
+F = 2h + h∘σ⁻¹ − e₂* for an integral-sloped PL h, and the witness d
+is its min-normalization, d = F − m with m σ-invariant. A witness
+counts against Theorem Q only if it LIFTS: ∃ integral-sloped PL h
+and σ-invariant integral-sloped PL m with 2h + h∘σ⁻¹ − e₂* = d + m,
+i.e. per cone 2U_h(C) + σ_*U_h(σ⁻¹C) − e₂ = U_d(C) + U_m(C) with
+wall conditions on both. Since det(2+σ) = 11 on Λ, the preimage
+carries an 11-torsion condition — which is where the congruence (3)
+came from, and possibly MORE than it (the σ-twist couples cones, so
+solvability is a global lattice question, not the pointwise
+cokernel condition). Two outcomes: the witnesses lift ⟹ Theorem Q
+is satisfied on the mixed fan ⟹ Lemma S is false at the honest
+level and the arithmetic flank ends at the shadow-feasible/lifting
+wall (the §4 failure branch of the handoff; F55 stays OPEN); or
+they do not lift ⟹ the value-form transcription lost content
+beyond positivity, the preimage condition is a NEW constraint class
+(inequalities plus a global (2+σ)-solvability), and the campaign
+resumes against the corrected system. This is a finite exact
+computation on the same 19-dim lattice (`f55_qpreimage.py`, in
+flight). Until it returns, neither Lemma S nor F55-NO nor the
+headline is claimed — and the §8.22–8.25 fan kills remain valid
+theorems about the objects they name.

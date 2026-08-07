@@ -42,8 +42,17 @@
 > DROPPED POSITIVITY (d ≥ 0, the min-normalization); all kills
 > stand a fortiori, but Lemma S must be restated with (0) d ≥ 0 —
 > the inequalities are the whole remaining content on mixed fans.**
-> The positivity-restored question = bounded exact LP/ILP on the
-> rank-19 lattice (f55_mixedpos.py). Remaining: that verdict;
+> **§8.27 (f55_mixedpos.py): POSITIVITY DOES NOT KILL — LEMMA S AS
+> STATED IS FALSE.** 460 rays (completeness proved), K⁺ FULL-dim
+> (19), and 14 patterns carry NONNEGATIVE INTEGRAL witnesses
+> verified over Z incl. twice-min + (ii) at 15,986 lattice points.
+> The universal quantifier dies; each named fan kill stands. NOT a
+> refutation of F55-NO — the decisive open question is whether a
+> witness LIFTS to Theorem Q proper (∃ integral-sloped PL h, σ-inv
+> m: 2h + h∘σ⁻¹ − e₂* = d + m; an 11-torsion global lattice
+> question since det(2+σ) = 11 on Λ). Lift ⟹ F55 OPEN at the
+> lifting wall (§4 branch); no lift ⟹ preimage = new constraint
+> content. Probe f55_qpreimage.py in flight. Remaining:
 > general ξ*-rigidity proof; the depth-tower induction; a GLOBAL
 > depth-1 aligned argument; non-arrangement fans; then
 > T6-assembly/T7 with the corrected statement.
