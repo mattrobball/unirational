@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `a9f0bcf` (2026-08-06; the
+Snapshot metadata — notebook parent head: `6e8a110` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3655,7 +3655,26 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   per doctrine). Strategic read: feasible degeneration profiles at
   every σ RAISE the odds the inventory is nonempty and the machine's
   F55 run ends in an honest no-go — F55 then rides on E18/arithmetic
-  alone. Rigidity unaffected, still open.** Note I
+  alone. Rigidity unaffected, still open.** **Wave 29 (user: "continue
+  until an answer in either direction for F55"; Note IX §8.8): the
+  DECISION DRIVE.** (i) F55 LANDING LADDER opened (monomial reduction:
+  F55-characters are trivial on C₁₁ ⟹ no h-twist; `T_i = ω^{si}·
+  shift^i(T₀)`; probe `f55_ladder.py`, p = 661 ≡ 1 mod 55, all five
+  C₅-twists, geometric emptiness by saturation): d = 2 EMPTY by hand
+  (unique family `ε_i x_{i+1}x_{i+3}`, five distinct landing
+  monomials); d = 3 EMPTY (full P²(F₆₆₁) scan + saturation); d = 4, 5
+  EMPTY (saturation); d = 6 in flight; stop-rule gate at 7. (ii) THE
+  TWO SIDES MEET: by specialization + D-R 10.5, F55-YES ⟺ the generic
+  F55-twist has a K-point, and that twist is ALREADY SEALED as E18's
+  five-variable cyclic trace cubic `Φ(a) = Tr_{E/K}(r₂⁻¹a²σ(a))` over
+  `K = C(U₁..U₄)` (packet H_11_5_TWIST, order-11 coefficient class
+  sealed, class-alone-insufficient sealed). **The F55 binary on BOTH
+  twins is exactly: does Φ have a nontrivial K-zero? YES ⟺ new
+  positive CTZ case; NO ⟺ headline NEGATIVE, ed = 4.** Next
+  derivation: divisorial/local analysis of Φ at the order-11 class's
+  ramification — the trace-form-specific obstruction the sealed
+  packet stopped short of. No answer yet; both flanks now aimed at
+  one explicit cubic.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant

@@ -830,6 +830,50 @@ the C₅-translate of the same system (corner pair
 `{1,5} = 3·{4,9}`, parameter `3σ`), hence feasible with the same
 `σ`, and the budget is absorbed by large `e`. ∎
 
+### 8.8 The decision drive: the F55 ladder and the exact decisive object (2026-08-06/07)
+
+**The F55 landing ladder (positive side; monomial reduction).**
+In the Klein normalization (`F = Σ x_i²x_{i+1}`, `h` diagonal
+with weights `a = (1,9,4,3,5)`, `c` the coordinate 5-cycle) every
+character of F55 is trivial on `C₁₁`, so an equivariant
+`T : P(W) ⇢ X` has `T_i` of `h`-weight EXACTLY `a_i` and
+`T_i = ω^{si}·shift^i(T₀)` for a twist `s ∈ Z/5`: the ladder at
+degree `d` is `dim ≈ C(d+4,4)/11` coefficients cut by the cubic
+identity `F(T) ≡ 0`. Results (`f55_ladder.py`, p = 661 ≡ 1 mod
+55, all five twists, geometric emptiness by saturation):
+
+- `d = 2`: the unique family is `T_i = ε_i x_{i+1}x_{i+3}`; the
+  five landing terms are DISTINCT monomials — EMPTY, by hand.
+- `d = 3` (3 coefficients): EMPTY (all of `P²(F₆₆₁)` scanned AND
+  saturation); `d = 4, 5`: EMPTY (saturation, dims 0);
+  `d = 6`: running. Gate per the stop-rule: extension past
+  `d = 7` requires a structural argument.
+
+**The exact decisive object (the two sides meet).** By the
+specialization lemma + D-R Thm 10.5 (cubic hypersurface, any
+finite group): F55-YES ⟺ the GENERIC F55-twist of the Klein
+cubic has a K-point. That twist is ALREADY SEALED in-repo (E18,
+packet `goal_runs_after_35fa/H_11_5_TWIST`,
+`H-11_5-NORM-MODEL-PASS`): over
+`E = C(r₀,…,r₄)/(Πr_i = 1)`, `σ(r_i) = r_{i+1}`, `K = E^σ =
+C(U₁,…,U₄)`, the twist is the five-variable cyclic trace cubic
+
+    Φ(a) = Tr_{E/K}(r₂⁻¹·a²σ(a)) = 0,
+
+whose coefficient class `[r₂] ∈ E*/ψ(E*)`, `ψ(d) = d²σ(d)`, has
+EXACT ORDER 11 (sealed; the packet also proves this class alone
+is not a pointlessness certificate). So the F55 question — on
+both twins at once, by IX.7 — IS: does `Φ` have a nontrivial
+K-zero? YES ⟺ F55-unirational (both twins) ⟺ a new positive
+CTZ case; NO ⟺ F55-NO ⟺ the headline is NEGATIVE and
+`ed_C(PSL₂(F₁₁)) = 4`. The ladder is the covariant-side
+height-search of the same binary; the machine campaign (§§8.1–
+8.7) was the geometric-side attack, now exhausted-to-no-go-
+trending. Next derivation: the divisorial/local analysis of `Φ`
+over the supports where the order-11 class ramifies — the
+trace-form-specific obstruction the sealed packet stopped short
+of.
+
 **Verdict of the analytic campaign on the inventory.** The
 necessary-conditions tower (incidence → germ weights →
 endpoint links → span sweep → squares kill → tropical trees)
