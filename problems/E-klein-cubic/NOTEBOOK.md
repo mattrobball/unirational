@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `8e967d7` (2026-08-06; the
+Snapshot metadata — notebook parent head: `317dad6` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3835,7 +3835,34 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   free (`11e₀`-certificates). STATUS: F55-NO ⟺(shadow) no such Q +
   (F3)/b-split closure; an explicit Q ⟹ the arithmetic flank ends at
   the same lifting wall as the geometric flank. Active: structured-Q
-  hunt vs a hoped-for unique-exposure invariant.** Note I
+  hunt vs a hoped-for unique-exposure invariant.** **Wave 29 (user:
+  "keep going, no report until YES/NO"; Note IX §8.17 + probe
+  `f55_cruxlp.py`): the endgame state — ONE NAMED LEMMA from the
+  headline.** **Theorem R (h-free congruence):** `2 + 9 = 11` ⟹
+  `Σ9ⁱF(σⁱn) ≡ −⟨n, c₉⟩ (mod 11)` for ANY integer-valued h, every
+  lattice n; at anchors (`⟨n,c₉⟩ ≢ 0`, e.g. the special orbit
+  `(1,…,1) − 5eⱼ`) the five orbit-values can never be all equal.
+  **Certificate hand-verified:** the LP's four-term mod-11 Farkas
+  vector (coeffs 1,10,3,6 at the special rays) IS Theorem R in
+  consecutive-difference form — all five h-coefficients cancel, the
+  e₂-part survives ≡ ±1. **Sweep:** A₄ fan (unimodular, 30 rays):
+  every uniform pattern (20) and 400 random patterns: solvable over
+  Q and mod 2,3,5 — INFEASIBLE mod 11, every time; stellar
+  refinement (135 cells): 120 random per-cell patterns — all
+  infeasible; invariant rational solution has denominator exactly
+  33. **Structural web:** every chamber contains exactly one special
+  ray; one value-vector V; 120 tie-edges on Z/5; horns: trivial
+  partition ⟹ twice-min fails; total ⟹ Theorem R violated;
+  constant partitions killed by shift-monodromy (d | 5). **LEMMA S
+  (named, finite, OPEN):** the varying-partition escape cannot dodge
+  all anchors on any σ-invariant fan. **Lemma S ⟹ Theorem Q = NO ⟹
+  Φ pointless ⟹ F55-NO on both twins ⟹ HEADLINE NEGATIVE, ed = 4,
+  CSD instance refuted, Beauville classification completed. Lemma S
+  false ⟹ arithmetic flank ends at the lifting wall, F55 open. NOT
+  claimed either way (IX-8 discipline; four prior escapes demand the
+  lemma be decided explicitly). First time in the program: a single
+  named finite statement stands between the state and the
+  headline.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant

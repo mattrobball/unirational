@@ -1327,6 +1327,70 @@ lifting wall as the geometric one. Active: the structured-`Q`
 hunt and, in parallel, a hoped-for invariant proof that the
 `e₂`-defect's unique exposure cannot be doubly covered.
 
+### 8.17 The endgame state: the 9-invariant, the hand-verified certificate, and the one remaining lemma (2026-08-07)
+
+**Theorem R (the h-free congruence).** For any function `h` with
+integer values on lattice points, `F := 2h + h∘σ^{-1} − e₂^*`
+satisfies, at EVERY lattice point `n`:
+
+    Σ_i 9^i·F(σ^i n) ≡ −⟨n, c₉⟩  (mod 11),
+    c₉ := Σ 9^i σ^{-i}e₂,  σ(c₉) ≡ 9·c₉,
+
+because `2 + 9 = 11`. All h-dependence cancels. Consequently the
+five orbit-values of `F` can never be all equal at any anchor
+(`⟨n, c₉⟩ ≢ 0`), e.g. at the special orbit
+`n_j = (1,1,1,1,1) − 5e_j` where `⟨n₀, c₉⟩ ≡ 2`.
+
+**The certificate, hand-verified.** The computed mod-11 Farkas
+certificate for the crux LP has FOUR terms — coefficients
+`(1, 10, 3, 6)` on the tie-equations at the four rays
+`n₁,…,n₄` — and unwinding it (all five h-value coefficients
+cancel: `1−1, 1+10, 10+3−2, 3+6−20, 6−6 ≡ 0 mod 11`; the
+`e₂`-part survives `≡ ±1`) shows it IS Theorem R at the special
+orbit, rewritten through consecutive differences. Verified by
+hand line by line.
+
+**The computational sweep (evidence, not proof).** On the A₄
+Weyl fan (30 rays, 120 chambers, unimodular): the equality
+system of EVERY uniform tie-pattern (20) and 400 random mixed
+patterns is solvable over Q, mod 2, 3, 5 — and INFEASIBLE mod
+11, every single time. On a stellar refinement (135 cells, 35
+unknowns): 120 random per-cell (not even equivariant) patterns —
+all infeasible mod 11. The invariant rational solution has
+denominator exactly 33.
+
+**The structural web.** Every A₄-chamber contains exactly one of
+the five special rays; the special orbit carries ONE value-vector
+`V` (up to shift), and every chamber's tie equates two shifted
+entries of `V`: a 120-edge web on `Z/5`. Two horns: if the
+induced partition of `Z/5` is trivial (all singletons), twice-min
+fails; if total (one class), Theorem R is violated at the
+anchors. A globally CONSTANT tie-partition is killed by the
+shift-monodromy (`d | 5` forces singleton-or-total). What
+remains open is exactly:
+
+**Lemma S (remaining; finite, combinatorial).** For every
+σ-invariant complete fan and every cell-wise tie-assignment
+consistent with twice-min, the accumulated web of tie-equalities
+at the anchor orbits is mod-11 inconsistent (i.e. the varying-
+partition escape — coarsening across walls with shift-monodromy
+— cannot dodge all anchors).
+
+**Consequences, conditional on Lemma S.** Theorem Q = NO ⟹
+(F1)-infeasible ⟹ by Theorem I and Theorem J, NO trace-zero φ
+exists ⟹ Φ is pointless ⟹ **F55-NO on both twins ⟹ the
+headline is NEGATIVE: the Klein cubic is not PSL₂(F₁₁)-
+unirational and `ed_C(PSL₂(F₁₁)) = 4`**, refuting the CSD
+instance (D-R Prop 10.8(b)) and completing Beauville's
+classification negatively. If instead Lemma S FAILS, its failure
+certificate is a feasible shadow and the arithmetic flank ends
+at the lifting wall with F55 open. The verdict is NOT claimed:
+per the IX-8 discipline, the four-times-repeated escape pattern
+of this problem demands Lemma S be proved or refuted explicitly,
+not extrapolated — but for the first time in the program, a
+single named finite lemma stands between the current state and a
+resolution of the headline.
+
 **Honest position after the full derivation.** Both flanks of
 F55 are genuinely deep, in matching ways: the geometric machine
 ends at a tropical-to-exact lifting gap (§8.7), and the
