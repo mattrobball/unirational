@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `4c98357` (2026-08-06; the
+Snapshot metadata — notebook parent head: `a9f0bcf` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3636,7 +3636,26 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   system (finitely many topologies × 10 σ × 6 strata) — infeasible
   ⟹ pentagram inventory EMPTY at all degrees; feasible trees ⟹
   bounded exact solves re-enter legitimately. No claim beyond
-  this.** Note I
+  this.** **Wave 28 (continuation; Note IX §8.7): Lemma G — the tree
+  system is FEASIBLE; the tropical route ends WITHOUT a kill.** In
+  corner coordinates (contact orders p, q against the corner plane)
+  the five proportionality constraints become `q₅ = p₀` plus four
+  twice-min matchings, congruence-consistent in every branch; an
+  explicit certificate at `σ = 7`, `|Z| = 5` (`m = 5`, cascade
+  `q₁ = 2m, p₃ = 3m, q₀ = 5m, E″ = 4m`, free `q₃ = 13, p₁ = 12`)
+  satisfies ALL fifteen four-point conditions (hand-checked), the
+  cascade is congruence-automatic for every σ, certificates exist at
+  all σ for large m, and the ∞-corner is the C₅-translate (pair
+  `{1,5} = 3·{4,9}`). CONSEQUENCE: the necessary-conditions tower
+  (incidence → germs → links → span sweep → squares → trees) is
+  EXHAUSTED — everything provable at these altitudes is proved, and
+  the last layer is satisfiable, so valuations alone cannot decide
+  the pentagram inventory. The decision drops to bounded exact
+  solves at the tree-pinned minimal profiles (legitimate computation
+  per doctrine). Strategic read: feasible degeneration profiles at
+  every σ RAISE the odds the inventory is nonempty and the machine's
+  F55 run ends in an honest no-go — F55 then rides on E18/arithmetic
+  alone. Rigidity unaffected, still open.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant

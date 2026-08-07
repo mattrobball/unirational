@@ -793,6 +793,60 @@ unbounded degree has been eliminated from the problem — but the
 final feasibility verdict is not yet derived; it is the next
 piece of hand analysis, and only if trees survive does bounded
 computation legitimately re-enter.
+[Decided same day — §8.7: FEASIBLE. The tropical route cannot
+kill the inventory.]
+
+### 8.7 Lemma G: the tree system is feasible — the tropical route ends without a kill (2026-08-06)
+
+Corner coordinates: normalize the two rows at `z = 0` against
+the corner plane (`f`-row `= u₄ + Σ z^{p_x}·(…)u_x`, `g`-row
+`= u₉ + Σ z^{q_x}·(…)u_x`, no `u₉`/`u₄` cross-terms). Then
+`w_{4x} = q_x`, `w_{9x} = p_x`, and the four-point conditions on
+`{4,9,x,y}` say each remaining `w_{xy}` twice-min-matches
+`(q_x+p_y, q_y+p_x)`. The five proportionality equalities become
+
+    q₅ = p₀,   p₃ ⋈ (q₀+p₁, q₁+p₀),   p₅ ⋈ (q₀+p₃, q₃+p₀),
+    q₁ ⋈ (q₀+p₅, 2p₀),   q₀ ⋈ (q₁+p₃, q₃+p₁),
+
+all congruence-consistent in every branch (a nontrivial check
+that passes identically — the classes satisfy `3 ≡ 2·7`,
+`10 ≡ 3·7`, `2 ≡ 5·7`, `9 ≡ 4·7` … mod 11 times σ).
+
+**Lemma G (feasibility certificate).** In the `|Z| = 5` stratum
+the full 15-relation system is feasible. For `σ = 7` (classes
+`/σ`: `p₀≡5, p₁≡1, p₃≡4, p₅≡7, q₀≡3, q₁≡10, q₃≡2, A′≡6, E″≡9`)
+take `m = p₀ = 5` and the cascade
+`q₁ = 2m = 10, p₃ = 3m = 15, q₀ = 5m = 25, E″ = 4m = 20,
+q₃ = 13, p₁ = 12, p₅ = q₃+m = 18, A′ = m+p₁ = 17`; derived
+`a = 15, b = 18, c = 25, d = 10, f = 5, B′ = 12, C′ = 13`. All
+fifteen four-point conditions hold (hand-checked: e.g.
+`Q10 = (43,10,10)`, `Q12 = (25,25,25)`, `Q14 = (28,17,17)`,
+`Q3 = (30,30,30)`, `Q11 = (30,30,30)`, `Q2 = (35,35,35)`), and
+all congruences match. The cascade multiples (`2m, 3m, 5m, 4m`)
+are congruence-automatic for EVERY `σ`, and the two free choices
+(`q₃`, `p₁`) live in intervals of length growing with `m`, so
+certificates exist for all `σ` at large `m`; the `∞`-corner is
+the C₅-translate of the same system (corner pair
+`{1,5} = 3·{4,9}`, parameter `3σ`), hence feasible with the same
+`σ`, and the budget is absorbed by large `e`. ∎
+
+**Verdict of the analytic campaign on the inventory.** The
+necessary-conditions tower (incidence → germ weights →
+endpoint links → span sweep → squares kill → tropical trees)
+terminates: everything provable at these altitudes is proved
+(pentagon; u₀-free kill; `|Z| ≥ 4`; exposure), and the last
+necessary layer is SATISFIABLE, so no further kill can come from
+valuations alone. The inventory decision now legitimately drops
+to bounded exact solves: the feasible trees pin the candidate
+degeneration profiles (contact orders, strata, `σ`), each giving
+a finite-dimensional algebraic system over the field; the
+minimal profiles are the place to start. Strategically this
+RAISES the likelihood that the pentagram inventory is nonempty
+(a consistent degeneration profile exists at every σ) — i.e.
+that the machine's F55 run ends in an honest no-go — in which
+case F55 rides entirely on E18/arithmetic, as the twice-burned
+suspicion (E14, IX.8) always suggested. Rigidity (§8.4.2)
+remains the other open half and is unaffected by all of §8.5–8.7.
 
 **What is now genuinely at stake in layer 5.** The source
 complex forces images for coordinate lines of ALL four ratios.
