@@ -1437,6 +1437,66 @@ direction (`adj(2+σ)e₂`) remain to sweep; then the write-up.
 The needle points hard at S-TRUE — i.e. at F55-NO and
 `ed = 4` — but the theorem is not yet claimed.
 
+### 8.19 Corner closure and the two lemmas; the last gap is one renormalization statement (2026-08-07)
+
+**The complete sweep table (every verdict rigorous: infeasibility
+conclusions use only finitely many derived-valid constraints, so
+sampling can only UNDERSTATE the obstruction; pipeline validated
+by the exact rational invariant-point self-tests).**
+
+- A₄ fan (generic walls): 20 uniform + 400 random equivariant
+  patterns — ALL infeasible at level 11.
+- Stellar refinement: 120 random per-cell (non-equivariant)
+  patterns — ALL infeasible at level 11.
+- `G₉`-aligned fan: ALL 26 σ-coherent rank-patterns (complete
+  enumeration) — 9 have no free rays (d ≡ 0 forced, anchors
+  violated); 17 force `v ≡ 0 (mod 11)` and die at level 121.
+- `e_b`-aligned fan (the second 11-cover direction): 4/4 tested
+  patterns — same signature: forced `v ≡ 0`, level-121 death.
+- Isotropic margin designs (12 generators): the (ii)-linear
+  system is solvable (`7P₂ + P₃` + 7-dim kernel) but NO
+  coefficient support satisfies the covering (support analysis +
+  200k samples).
+
+**Lemma T (freezing; proved).** If all wall-normals of Σ lie,
+mod 11, in a subspace `L ⊆ Λ/11`, then every solution has
+`ū := U mod 11` valued in `L` (jumps confined to `L`; zero-cells
+anchor the constant). ∎
+
+**Lemma U (the ker-π₉ case; proved).** If `π₉(L) = 0` (the
+wall-span misses the 9-eigenline projection), the system dies at
+level 1: the 9-eigencomponent of the orbit congruence reads
+`0 ≡ −4 (mod 11)`. ∎ (With Lemma T this settles every fan whose
+wall-classes avoid the 9-direction.)
+
+**The renormalization picture (the last gap, stated exactly).**
+For 9-active aligned fans the level-1 system dissolves
+(`Στ ≡ 7`), but integrality forces the observed regress: the
+aligned geometry has 55-divisible ray-gaps, `v ≡ 0 (mod 11)` is
+forced, and the substituted level-2 system reproduces THE SAME
+system on the 11-refined lattice — computationally verified on
+two independent aligned fans, both dying at level 121. The
+remaining statement to prove:
+
+**Lemma V (self-similarity; OPEN).** For any σ-invariant fan
+whose mod-11 wall-span is 9-active, the level-(t+1) reduction of
+the (1)(2)(3)-system is isomorphic to a level-t system of the
+same form on the 11-isogenous lattice (the `T′`-cover — whose
+deck symmetry is F55), with the SAME anchor inhomogeneity `c₉`
+(a σ-eigenvector, preserved by the isogeny; anchors never die
+under refinement). Lemma V + Lemmas T/U + König-style descent ⟹
+no level ever clears ⟹ Lemma S ⟹ **F55-NO ⟹ headline
+NEGATIVE, `ed_C(PSL₂(F₁₁)) = 4`.**
+
+Also to close for full generality: non-rank (per-orbit free)
+patterns on aligned fans (expected to reduce to the rank case by
+Lemma T's confinement; not yet swept), and genuinely mixed fans
+(expected: a 9-inactive wall-orbit triggers Lemma U locally or
+the generic-part certificate; not yet formalized). The theorem
+is one renormalization lemma and two routine closures away, with
+its mechanism verified at both poles and its every tested
+instance dead.
+
 **Honest position after the full derivation.** Both flanks of
 F55 are genuinely deep, in matching ways: the geometric machine
 ends at a tropical-to-exact lifting gap (§8.7), and the

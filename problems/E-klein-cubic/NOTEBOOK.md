@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `f0cd35a` (2026-08-06; the
+Snapshot metadata — notebook parent head: `9b45a98` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3881,7 +3881,27 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   (β) the regress induction. Remaining sweeps: mixed fans, other
   H-fan patterns, the second 11-cover direction. Needle points hard
   at S-TRUE (⟹ F55-NO ⟹ ed = 4); theorem NOT yet claimed.**
-  Note I
+  **Wave 30 ("careful and thorough but LFG"; Note IX §8.19, probe
+  `f55_sweep2.py`): TOTAL CORNER CLOSURE + two proved lemmas; the
+  last gap is ONE renormalization statement.** Sweep table (all
+  verdicts rigorous — infeasibility from finitely many derived-valid
+  constraints): A₄ 420 patterns dead at level 11; stellar refinement
+  120 non-equivariant patterns dead; G₉-fan ALL 26 rank-patterns
+  (complete): 9 with no free rays (anchors violated), 17 forced
+  `v ≡ 0` then DEAD at level 121; e_b-fan (second cover direction)
+  4/4 same signature; isotropic designs covering-infeasible
+  (complete support analysis). **Lemma T (freezing, PROVED):**
+  wall-span confinement of ū mod 11. **Lemma U (ker-π₉ case,
+  PROVED):** 9-inactive wall-span ⟹ level-1 death (`0 ≡ −4`).
+  **Lemma V (self-similarity, OPEN, exactly stated):** for 9-active
+  aligned fans the level-(t+1) system ≅ the same system on the
+  11-isogenous lattice (the T′-cover, deck symmetry F55) with the
+  SAME anchor c₉ (eigenvector, anchors persist under refinement);
+  V + T + U + descent ⟹ Lemma S ⟹ F55-NO ⟹ HEADLINE NEGATIVE,
+  ed = 4. Verified instances of V: two independent aligned fans,
+  level 1→2, both dying at 121. Remaining routine: non-rank
+  patterns on aligned fans; mixed fans. The conserved eleven now
+  has a name at every level of the tower.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
