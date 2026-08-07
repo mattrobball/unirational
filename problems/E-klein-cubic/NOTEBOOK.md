@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `5548686` (2026-08-07; the
+Snapshot metadata — notebook parent head: `20a63ee` (2026-08-07; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -4028,7 +4028,73 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   86/400 "bad generic" sweep = exactly the union a₃/a₉/a₄ ≡ 0,
   matching). Open territory now exactly: (iv), general ξ*(ℓ)
   nonvanishing, the depth tower, non-order fans beyond the sign-fan
-  ((τ,Ψ)-frame), and mixed wall-systems. Lemma S UNCLAIMED.** Note I
+  ((τ,Ψ)-frame), and mixed wall-systems. Lemma S UNCLAIMED.**
+  **Wave 32 (2026-08-07/08, "delegate and finish"; Note IX
+  §§8.25–8.26 + Corrections IX-i/j; seven delegated worker probes,
+  every headline re-adjudicated by rerunning the committed
+  deterministic scripts): REGIME (iv) SWEPT DEAD, ξ* PROJECTIVELY
+  RIGID, THE TOWER VERIFIED TO 11⁴, THE FLAG-SIGN FAN CLOSED
+  GLOBALLY, LINK 1 REPLAYED — AND THE MIXED FAN DEFEATS THE
+  RELAXATION: POSITIVITY IS LOAD-BEARING.** `f55_verify_all.py`:
+  all wave-31 verdicts re-asserted at fresh seeds (9 items / 40
+  sub-checks, ALL PASS); both link-1 packets replay green
+  (FIX-IX-SEAL end-to-end at fresh prime 353 incl. four M2
+  recomputes; H_11_5_TWIST read-only OK; its ψ-matrix det-33 /
+  denominator-11 block IS the Theorem-R operator and its pinned
+  (2,1,−4,4,0) is e_b). **Correction IX-i:** sweep2's else-branch
+  mod-11 reduction of 11∤L rows is not implied as written (G₉
+  verdicts stand — the unreduced modulus carries the 11; the new
+  level tools derive the reduction cleanly). `f55_midfan.py`:
+  regime (iv) — 8 fans covering all six intermediate active sets,
+  24,568 pattern tests, ZERO feasible; per-orbit row spaces provably
+  saturated (dim = |A|); level-1 forcing is per-pattern (the
+  no-pattern residual = the linear family, dim 4−|A|); 92/896
+  regime-(iv) ℓ are deeper (tower inside (iv), unswept).
+  `f55_alignedsweep.py`: 608 aligned fans, 455 with ξ* — EVERY one
+  equals c·(7,4,2,10,3,9), c ∈ F₁₁*: **projective rigidity ⟹
+  nowhere-vanishing** (the §8.24 open item is now ONE statement);
+  (λ,μ mod 11)-dependence refuted but only through the scalar;
+  deeper strata 135/17/1 at depth 2/3/4; the depth-2 fan G₉+11e₁:
+  all 26 rank patterns DEAD at level 11³ (v ≡ 0 forced at levels
+  1–2, full rank), a depth-3 member dead at 11⁴, killing row count
+  invariantly 2286 — Lemma V's self-similarity has three verified
+  rungs. `f55_mixedfan.py` (T5): the A₄∨G₉ refinement, 1090 cells
+  and 2570 walls both PROVABLY complete (exact Zaslavsky counts),
+  every wall certified by an exact rational facet point: level-1
+  splits exactly — all non-aligned patterns (26 A₄-rank + 500
+  random + saturating) DIE at level 1; 25 G₉-rank + all aligned
+  pullbacks SURVIVE with solution space exactly U ∈ F₁₁·G₉
+  (confinement forced by the zero web THROUGH the generic walls);
+  survival criterion (every G₉-orbit keeps a shadow-free chamber)
+  exact on 1052/1052. `f55_flagsign.py`: the flag-sign fan (480
+  cells, 1080 walls) closed for EVERY pattern by solution-space
+  DFS (83,386 nodes) — and NO local kill exists (0/96 orbits have
+  an inconsistent pair; anchor 7→0 flips feasible): the first
+  GLOBAL kill; the Theorem-X′ local template cannot carry the
+  general aligned case. By-product: the G₉-order fan's (τ,Ψ)
+  shadow dies independently (dim 24, DFS). `f55_mixedlevel2.py`:
+  the mixed survivors' pair-field (dim 62 = 24 + 38 Ψ-slides along
+  generic walls; law Δτ ≡ 0, ΔΨ ∈ F₁₁·ν̄ verified by 8000 integer
+  simulations): 23/25 die — but **P = {0,1} and P = {3,4} are
+  FEASIBLE** (+95 one-orbit variants + a non-pullback witness),
+  twice-certified. `f55_mixedlevel3.py`: validated Z/11ˢ solver
+  (1000 planted systems, Farkas certificates verified); gates: A₄
+  dies at 11¹ (26/26), G₉-order at ≤11² ({1:1, 2:25}); mixed: 23/25
+  die at 11², the two survivors are feasible through 11⁸ AND
+  INTEGRALLY: ker_Z rank exactly 19, 11-SATURATED (⟹ the whole
+  tower ⟺ Z), explicit integer U-field (max|U| = 336) verified
+  over Z on every wall/zero/congruence and ground-truthed at 10⁴
+  lattice points; ≥14 patterns carry integral witnesses; the
+  witness has 81 NEGATIVE cells. **Correction IX-j (MAJOR): the
+  (1)(2)(3)-frame and the handoff's Lemma-S transcription dropped
+  positivity (d ≥ 0, the min-normalization); every recorded kill
+  stands (relaxation, a fortiori), but the relaxation is strictly
+  lossy — Lemma S must be restated with (0) d ≥ 0, and T5 cannot
+  be closed by congruences at any 11-adic depth: the discarded
+  inequalities are the whole remaining content on mixed fans.**
+  The positivity-restored question is a bounded exact LP/ILP on the
+  rank-19 solution lattice (`f55_mixedpos.py`, in flight at ledger
+  time). Lemma S (corrected) UNCLAIMED in both directions.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant

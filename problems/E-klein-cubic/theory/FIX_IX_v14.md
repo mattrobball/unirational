@@ -1918,3 +1918,180 @@ nonzero), and the depth tower for deeper-aligned ℓ. Outside it:
 non-order fans (the sign-fan is closed; the (τ,Ψ)-frame is the
 general tool) and genuinely mixed wall-systems (T5). Lemma S
 remains UNCLAIMED.
+
+### 8.25 The delegated verification round: regime (iv) swept dead, ξ* projectively rigid, the tower verified to 11⁴, the mixed dichotomy split, the flag-sign fan closed globally, link 1 replayed (2026-08-07)
+
+Provenance: six worker runs (Opus-grade, briefs with calibration
+gates), every headline re-adjudicated by the director by re-running
+the committed deterministic probes. New probes: `f55_verify_all.py`,
+`f55_midfan.py`, `f55_alignedsweep.py`, `f55_mixedfan.py`,
+`f55_flagsign.py` (§8.26 adds `f55_mixedlevel2.py`,
+`f55_mixedlevel3.py`).
+
+**Correction IX-i (probe precision; conclusions unaffected).**
+`f55_sweep2.py`'s level-11 else-branch reduces an integrality row
+`row·v ≡ 0 (mod L)` with 11 ∤ L to a mod-11 row — not implied as
+written. On the G₉-fan the unreduced modulus (55-scaled) does carry
+the eleven, so every recorded G₉ verdict stands (and Theorems W/X
+are independent of the probe); the generalized level tools
+(`f55_alignedsweep.py`, `f55_midfan.py`) drop such rows and derive
+the level reduction cleanly: substituting v = 11ˢy into
+`row·v + rhs ≡ 0 (mod M)` yields mod-11 content only when
+v₁₁(M) > s.
+
+**(a) Master verifier and chain link 1.** `f55_verify_all.py`
+re-asserts all wave-31 verdicts (9 items, 40 sub-checks) at fresh
+seeds — ALL PASS, re-run clean at five independent base seeds. Both
+sealed packets of link 1 replay green: FIX-IX-SEAL end-to-end at the
+fresh prime 353 (four M2 recomputes, independent trace-sum 10′
+identification; ALLGREEN) and H_11_5_TWIST read-only
+(H_11_5_INDEPENDENT_VERIFY_OK). Coherence: that packet's ψ-matrix
+block (det 33; the solve of ψ(v) = e₂ with denominator exactly 11)
+is the same conserved-eleven operator as Theorem R, and its pinned
+combine_r((2,1,−4,4,0)) = 11β is the e_b direction of §8.24(iii).
+
+**(b) Regime (iv) is computationally dead (`f55_midfan.py`).**
+Eight fans covering all six intermediate active sets (including two
+with ray gaps 3355 and 3905): per fan, all 26 rank + 26 uniform +
+2000 random + 1019 protected-ray patterns — 24,568 tests, ZERO
+feasible. Methodological gains: (i) the level-1 forcing v ≡ 0
+(mod 11) is per-pattern (without a pattern the residual is exactly
+the linear family v_S = ⟨U, r_S⟩ of dimension 4 − |A|: the zero
+cells are what pin U — a precision on Theorem W's hypotheses); it
+was gated and held on every test. (ii) The per-orbit level-2 row
+spaces have dimension exactly |A| with σ scaling augmented rows by
+5, so attaining |A| at the empty pattern PROVES the sampled
+collection exhaustive for every pattern. (iii) Depth census: 92 of
+896 regime-(iv) covectors are deeper (v₁₁(gap) ≥ 2) — the IX-h
+tower lives inside regime (iv) too; unswept.
+
+**(c) ξ* is projectively rigid; the tower verified to 11⁴
+(`f55_alignedsweep.py`).** Over 608 aligned fans (grid + random +
+λ-variants): 455 admit the level-2 collapse, and every single
+ξ*(ℓ) equals c·(7,4,2,10,3,9) for some c ∈ F₁₁* — ten projective
+representatives, one projective class. Since rank 6 with
+inhomogeneous RHS forces ξ* ≠ 0, RIGIDITY ⟹ NOWHERE-VANISHING: the
+§8.24 open item reduces to one statement (the collapse matrix A(ℓ)
+is a scalar multiple of A(G₉)). The (λ, μ mod 11)-dependence
+conjecture is REFUTED, but every mismatch is a pure scalar change —
+the kill criterion is untouched. The 153 deeper fans stratify as
+depth 2 (135), 3 (17), 4 (one: gap 5·11⁴). Level machinery
+(IX-i-clean): the depth-2 fan G₉ + 11e₁ — all 26 rank patterns DEAD
+at level 11³ with v ≡ 0 forced (full rank, unique zero) at levels 1
+and 2; a depth-3 member dead at 11⁴; the killing row count is
+invariantly 2286 at the final level. Lemma V's self-similarity now
+has three verified rungs: death at level 11^(depth+1), the anchor
+riding up unchanged.
+
+**(d) The mixed fan splits exactly (`f55_mixedfan.py`; T5).** The
+common refinement of the A₄ and G₉ fans: 1090 cells (provably
+complete — the exact Zaslavsky count from the intersection lattice
+{0:1, 1:20, 2:125, 3:230, 4:1}), 2570 walls each certified by an
+exact rational facet point (1400 generic, 1170 aligned; wall count
+also provably complete, §8.26). Level-1 mod-11 verdicts over 1052
+patterns: all 26 A₄-induced rank patterns, all 500 random per-orbit
+patterns, and every saturating pattern DIE; but 25 of 26 G₉-induced
+rank patterns and all aligned pullbacks SURVIVE, with solution space
+exactly U ∈ F₁₁·G₉ and τ constant across every generic wall — the
+Lemma-T confinement here is forced BY THE ZERO WEB THROUGH THE
+GENERIC WALLS (their span is everything; the web forces every
+generic jump to vanish), not by the wall span. Exact survival
+criterion, verified on all 1052: a pattern survives level 1 ⟺ every
+σ-orbit of G₉-chambers keeps a chamber free of zero cells. So the
+§8.19 mixed expectation was half right: the generic sub-web kills
+the non-aligned sector at level 1 and adds no level-1 freedom; the
+aligned sector rides through to level 2 (§8.26).
+
+**(e) The flag-sign fan is closed — and the kill is GLOBAL
+(`f55_flagsign.py`).** The refinement of the G₉-order fan by the
+sign hyperplanes: 480 cells (all realizable), 1080 exactly-certified
+walls, all aligned; new curvature data for the ten order-wall
+classes (e.g. Θ(H₀=H₁) = (0,0,7)). The (τ,Ψ) system has solution
+dimension 47, and — unlike every previously closed fan — NO local
+kill exists: all 96 orbits have all 10 zero-pairs individually
+consistent. A solution-space DFS (state = affine subspace,
+canonical-rref dedup, fail-first branching) closes ALL minimal
+patterns: infeasible, 83,386 nodes, deepest partial commitment 26 of
+96 orbits, every branch death by pair-exhaustion. Controls: the
+anchor 7 → 0 flips the fan to feasible — Στ ≡ 7 is the sole
+obstruction source. Consequences: (i) a fourth fan class is closed
+for every pattern; (ii) the general depth-1 aligned argument CANNOT
+be local (the Theorem X′ template does not transfer); the proof
+shape must be global, as the ξ*/covering arguments are. By-product:
+the G₉-order fan's own (τ,Ψ) shadow dies for every pattern
+independently of the value-frame route.
+
+**Status.** Adjudicated dead for every pattern, exact: the A₄ class,
+the G₉ class, the e_b-fan, the sign-fan, the flag-sign fan, eight
+regime-(iv) fans (sampled patterns beyond the exhaustive families),
+455 rigidity-backed aligned fans, and tower fans to depth 3. Chain
+links 1–5 all re-audited (link 1 by packet replay). The mixed fan's
+aligned sector is the live front — continued in §8.26.
+
+### 8.26 The mixed fan defeats the relaxation: positivity is load-bearing (Correction IX-j) (2026-08-07/08)
+
+**Correction IX-j (MAJOR — the last-gap lemma was transcribed
+lossily).** The (1)(2)(3)-frame of §8.20, and the handoff's link-6
+statement of Lemma S, dropped POSITIVITY: the honest necessary
+system from Theorem Q's min-normalization is on d(w) =
+F(w) − min_i F(σⁱw), which satisfies d ≥ 0 EVERYWHERE in addition
+to (1) zeros, (2) integral jumps, (3) the congruence. Every
+recorded kill is unaffected — each killed the relaxation, a
+fortiori the true system — but the relaxation is now proved
+STRICTLY LOSSY: on the mixed fan it is integrally satisfiable
+(below). Lemma S must be restated with (0) d ≥ 0 included; no
+argument using (1)(2)(3) alone can be complete over all fans.
+
+**The mixed level-2 pair field (`f55_mixedlevel2.py`).** On the
+mixed fan the survivors' shadow system ((τ,Ψ) with the derived
+generic-wall law Δτ ≡ 0, ΔΨ ∈ F₁₁·ν̄ — verified, 8000 integer
+simulations) has dimension 62 = 24 (the pure-G₉ system) + 38
+Ψ-slides along generic walls. Exhaustively over the 25 level-1
+surviving G₉-rank patterns: 23 infeasible, TWO FEASIBLE —
+P = {0,1} and P = {3,4} — plus 95 of 216 one-orbit variants and a
+non-pullback DFS witness; every witness re-certified by an
+independent plain-integer checker (0 violations across 2570 walls,
+218 sums, all zeros) and its τ-layer re-verified as a genuine
+level-1 U-frame solution. Mechanism: the A₄-class walls let Ψ
+slide inside a G₉-chamber — d need not be linear on G₉-chambers —
+exactly the freedom the Theorem-X refinement/transfer argument
+lacks. Ψ is non-constant on 35 G₉-chambers in the P = {3,4}
+witness, as it must be.
+
+**Integral feasibility — the tower is vacuous on the mixed fan
+(`f55_mixedlevel3.py`).** With a validated Z/11ˢ solver (1000
+planted systems, brute-force cross-checks, Farkas certificates
+demanded and verified for every infeasibility): gates reproduce
+the known kills entirely inside the slope frame — the A₄ fan dies
+at 11¹ (all 26 rank patterns; certificate y·b = 4), the G₉-order
+fan at 11² (histogram {1:1, 2:25}; certificates y·b = 88, 55).
+On the mixed fan, 23 of the 25 surviving rank patterns die at 11²;
+the two pair-field survivors P = {0,1}, {3,4} are feasible through
+11⁸ — and INTEGRALLY: ker_Z of the full homogeneous system has
+rank exactly 19 (rational rank pinned by three large primes;
+CRT-reconstructed integer kernel basis, max entry 22) and is
+11-SATURATED, so mod-11ˢ feasibility for all s is equivalent to
+integral feasibility; the mod-11 congruence layer cuts an 11⁸-class
+family, and an explicit integer U-field (max |U| = 336) satisfies
+every wall jump over Z, every zero cell, and the congruence (ii) at
+every lattice point — ground-truthed directly at 10,000 random
+points of N and all their σ-translates (0 failures). At least 14
+patterns carry such integral witnesses. The witness takes 81
+negative cell-values: it is NOT a min-normalized field.
+
+**What this settles and what it opens.** (i) T5 cannot be closed by
+zeros + integral jumps + the congruence at any 11-adic depth: the
+conserved-eleven tower, sufficient on every arrangement fan tested,
+is VACUOUS on the mixed fan. (ii) The discarded ingredients are now
+the whole question: positivity d ≥ 0 (equivalently the twice-MIN
+structure — the zero cells must be minimizers, not just zeros) or a
+value-frame argument on refined cells. The positivity-restored
+question on the mixed witnesses is a bounded exact program: rays of
+the mixed fan + the rank-19 solution lattice + d ≥ 0 at rays — an
+exact LP/ILP (`f55_mixedpos.py`). If positivity kills, T5's true
+mechanism is identified and the corrected Lemma S survives with a
+new constraint class (inequalities, not congruences — note the
+§8.17 crux LP always HAD the inequalities; the (1)(2)(3)-shortcut
+was the lossy step). If a nonnegative integral witness exists, the
+§4 failure branch of the handoff triggers for the corrected lemma.
+Lemma S (corrected) remains UNCLAIMED in both directions.

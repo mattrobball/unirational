@@ -27,9 +27,26 @@
 > criterion — **e_b-fan closed for all patterns**
 > (ξ* = (1,10,5,3,2,6)), G₉+11e₁ = first depth-2 tower inhabitant;
 > intermediate A ⟹ OPEN (rays collapse into the inactive span).
-> Remaining: intermediate-A order fans, general ξ*(ℓ) nonvanishing,
-> the depth tower, non-order fans via (τ,Ψ), mixed fans; then
-> T6-assembly/T7 as written.
+> WAVE 32 (delegated round; §§8.25–8.26, Corrections IX-i/j, seven
+> probes f55_verify_all/midfan/alignedsweep/mixedfan/flagsign/
+> mixedlevel2/mixedlevel3): regime (iv) swept dead (24,568 tests);
+> ξ* PROJECTIVELY RIGID (455 fans, one projective class ⟹
+> nowhere-vanishing reduces to one statement); tower verified to
+> 11⁴ (G₉+11e₁ dies at 11³, depth-3 at 11⁴); flag-sign fan closed
+> for every pattern (GLOBAL kill — no local template); link 1
+> replayed green (both packets). **T5 SPLIT: the mixed A₄∨G₉ fan's
+> non-aligned sector dies at level 1, but P={0,1},{3,4} carry
+> EXPLICIT INTEGER witnesses of the relaxed (1)(2)(3)-system
+> (saturated ker_Z rank 19 ⟹ the whole 11-adic tower is vacuous
+> there). Correction IX-j: the (1)(2)(3) transcription of Lemma S
+> DROPPED POSITIVITY (d ≥ 0, the min-normalization); all kills
+> stand a fortiori, but Lemma S must be restated with (0) d ≥ 0 —
+> the inequalities are the whole remaining content on mixed fans.**
+> The positivity-restored question = bounded exact LP/ILP on the
+> rank-19 lattice (f55_mixedpos.py). Remaining: that verdict;
+> general ξ*-rigidity proof; the depth-tower induction; a GLOBAL
+> depth-1 aligned argument; non-arrangement fans; then
+> T6-assembly/T7 with the corrected statement.
 > New probes: `f55_exact1.py`, `f55_exact2.py`, `f55_eweb.py`,
 > `f55_xistar.py`, `f55_free_sweep.py`, `f55_signfan.py`,
 > `f55_signfan_close.py`, `f55_a4exact.py`, `f55_ellfan.py`.
