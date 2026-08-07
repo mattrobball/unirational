@@ -3348,7 +3348,45 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
   EXACT on all 24 non-rational witnesses (C1 §7 item 1 closed); the H1
   leftover M2 chain's late `hard_r8_om2_*` inputs are moot (H2 decided
-  those leaves) and are committed for completeness of the packet dir.** Note I
+  those leaves) and are committed for completeness of the packet dir.**
+  **Wave 28 (user keystone; Note IX §§5–6): the CENTRALIZER OBSTRUCTION —
+  the V₁₄ linear-source case closes on the measured data.** User-proposed
+  argument, derived as **Cor IX.1** (= Cor T3.1 with `C_G(σ)` replacing
+  the center): if (a) no positive-dim component of `Y^σ` contains a
+  rational curve and (b) `Y^{C_G(σ)} = ∅`, then NO `G`-equivariant
+  rational map `P(V) ⇢ Y` or `V ⇢ Y` exists for ANY faithful LINEAR rep
+  `V` (dominant or not) — proof by RCC-stratum induction up any
+  equivariant resolution tower ([I] Thm 2.1/Lem 4.2/4.3): the σ-eigenspace
+  stratum `P(V₊)` is `C_G(σ)`-stable BECAUSE the rep is linear, survives
+  strict transform/exceptional-eigenbundle replacement, and its resolved
+  image is a single `C_G(σ)`-fixed point in `Y^σ` — empty by (b). On the
+  V₁₄ the in-flight worker's stage-2 data supplies both hypotheses at
+  p=397: `V₁₄^σ` = irreducible degree-6 genus-1 curve ⊔ 2 reduced points
+  (NO rational curve — the exact escape hatch that killed the E14
+  transfer on the Klein, `L_σ ⊂ X^σ`, is ABSENT on the twin) and
+  `V₁₄^{D12} = ∅` (all three character pieces; invariant pencil rank
+  never 2). PENDING SEALS (assigned in Note IX §5): smoothness of the
+  sextic (M2 `g1` is arithmetic genus — a nodal-rational curve would
+  void (a)), exactness at both primes/char-0, stage-1 smooth/deg-14, and
+  the `C_G(σ) = D12` CHECK (already sealed group-side by FIX-A0).
+  **Cor IX.2 (disjunction collapse):** granting the seals,
+  `ed_C(PSL₂(F₁₁)) = 3 ⟺ the Klein cubic is G-unirational` (Prokhorov
+  two-class + versality birational invariance + D-R Thm 10.5); the
+  headline is SINGLE-TARGET — Dolgachev's instance is exactly "Klein
+  negative", CSD's exactly "Klein positive"; the V₁₄ cannot
+  independently supply `ed = 3`. NOT closed — **the spin flank (Note IX
+  §6)**: sources `P(V)` with `V` a faithful `SL₂(F₁₁)`-rep (`−1 ↦ −id`;
+  e.g. the T-Z stable factor `P(U)`): `σ̃` has order 4, the
+  D12-reflections invert it and SWAP the two eigenplanes `P(V_{±i})`
+  (each only `C6`-stable), so the argument forces only a D12-stable
+  PAIR of `C6`-fixed points — and `V₁₄^σ`'s two isolated points ARE
+  such a pair (stab exactly `C6`, 110-orbit, D12-swapped): escape shape
+  and measured geometry MATCH. Spin sources need the V4/Q8-chain
+  analysis (`U|_{Q8}` expected quaternionic ⟹ `P(U)^{V4} = ∅` —
+  combinatorics differs from Problem F); immaterial for weak
+  versality/IX.2, central for the T-Z Brauer face. Ledger discipline:
+  IX.1/IX.2 are DRAFT-FOR-DERIVATION until the seals land; no packet
+  claims an exit yet. Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
