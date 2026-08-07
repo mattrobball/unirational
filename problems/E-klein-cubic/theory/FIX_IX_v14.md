@@ -1109,6 +1109,53 @@ the reciprocity route exhausts with no obstruction, and F55
 rides on construction alone. This is a bounded computation over
 an explicit fan — analysis-first has taken it as far as
 identities go.
+[Superseded same day by §8.13: analysis was NOT done — three
+further derivations sharpen the endgame materially.]
+
+### 8.13 Analysis continued: full interior unramifiedness, the second-order congruence, and the cover loop (2026-08-07)
+
+**Theorem K′ (A_K is unramified on the ENTIRE interior).** Two
+new inputs. (a) σ acts on `T` with exactly FIVE fixed points
+(`r = (t,…,t)`, `t⁵ = 1`) — fixed locus of codimension 4 — so
+`T → T/σ` is étale in codimension 1 and NO interior K-prime
+ramifies in `E/K`: interior places are split or inert only.
+(b) At an inert place (a σ-invariant prime `Q`, common
+multiplicity `v` by Theorem J), the residue of `A_K` is the
+NORM `[N_{κ(Q)/κ(q)}(b|_Q)]^v`; by identity 2
+(`N_{E/K}(b) ∈ (E^*)^{11}`) this norm is an 11th power:
+RESIDUE TRIVIAL, automatically. Together with Theorem K: `A_K`
+is unramified at every interior prime. Since `K = C(U₁,…,U₄)` is
+RATIONAL and the unramified Brauer group of a rational field is
+zero, **`A_K` is faithfully determined by its boundary residues
+alone** — the endgame ledger is purely at infinity.
+
+**Constraint (iv) — the second-order congruence (new).**
+Matching interior residues of the two expressions for `A_K`:
+the left side is residue-free (Theorem K′); the right side's
+`7·cores(a,b)` has residue `[b|_P]^{7λ_O(div a)}` at the orbit
+`O`. Hence at EVERY interior orbit where `b|_P` is not an 11th
+power: `λ_O(div a) ≡ 0 (mod 11)`. Since
+`div(φ) = (2+σ̃)div(a)`, this is a SECOND-ORDER condition on φ:
+
+    λ₂(pattern_O(φ)) := λ((2+σ̃)^{-1} pattern_O(φ)) ≡ 0 (mod 11),
+
+cutting the per-orbit pattern lattice from index 33 to index
+363. The only escape: orbits whose primes are `b`-SPLIT
+(`b|_P ∈ κ(P)^{*11}`), i.e. primes that split completely in the
+cover `T′ → T`.
+
+**The cover loop (structural).** The `b`-split escape localizes
+the residual freedom on `T′` — whose symmetry group is F55
+itself (§8.12.1): the obstruction analysis of the F55-twist
+closes onto an F55-symmetric 4-torus, with the deck `μ₁₁` acting
+by translations and σ by lattice automorphisms. The remaining
+analysis is therefore: (α) the boundary residue ledger of
+`A_K = 7·cores(a,b) + cores(r₂^{-1},b)` on a smooth σ-stable
+fan — with `cores(r₂^{-1},b)` a FULLY EXPLICIT monomial algebra
+whose ledger is derivable by hand; (β) the `b`-split orbit
+analysis up on `T′` with its F55-action. Both are analysis;
+neither is exhausted; the computation threshold has NOT yet
+been reached.
 
 **Honest position after the full derivation.** Both flanks of
 F55 are genuinely deep, in matching ways: the geometric machine

@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `6334d37` (2026-08-06; the
+Snapshot metadata — notebook parent head: `8f0d471` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3762,7 +3762,24 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   bounded residue computation on a σ-stable toric compactification —
   inconsistency ⟹ F55-NO ⟹ ed = 4; consistency ⟹ the reciprocity
   route exhausts and F55 rides on construction alone. Analysis-first
-  has carried the route to the last bounded computation.** Note I
+  has carried the route to the last bounded computation.** **Wave 29
+  (user challenge "are you sure you are done with analysis?" — NO;
+  Note IX §8.13): three further derivations.** **Theorem K′:** σ has
+  exactly FIVE fixed points on T (codim 4) ⟹ T → T/σ étale in codim
+  1 ⟹ interior places split or inert only; at inert places the
+  A_K-residue is a NORM of b-data, killed by N(b) ∈ (E*)¹¹ ⟹ **A_K
+  is unramified on the ENTIRE interior**, and K rational ⟹ Br_ur = 0
+  ⟹ A_K is determined by BOUNDARY residues alone. **Constraint
+  (iv):** interior residue-matching of the two A_K-expressions forces
+  the SECOND-ORDER congruence λ₂ = λ∘(2+σ̃)⁻¹ ≡ 0 on φ's orbit
+  patterns (index 33 → 363) at every orbit whose primes are not
+  b-split; the only escape is complete splitting in the T′-cover.
+  **The cover loop:** the escape localizes on T′, whose symmetry
+  group is F55 itself — the obstruction analysis closes onto an
+  F55-symmetric 4-torus (deck μ₁₁ by translations, σ by lattice
+  maps). Remaining analysis: (α) the boundary ledger, with
+  cores(r₂⁻¹,b) fully explicit; (β) the b-split orbits on T′.
+  Computation threshold NOT yet reached.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
