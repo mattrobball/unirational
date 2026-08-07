@@ -1810,3 +1810,56 @@ IX-h plus general depth-1 combinatorics — the (τ,Ψ)-frame is the
 tool; the two closed types are its base instances) and mixed fans
 (T5, untouched). The A₄-side level-1 kill (§8.17) stands. Lemma S,
 F55-NO, and the headline remain UNCLAIMED.
+
+### 8.23 The A₄-fan dies for every pattern — the ray-point argument; the order-fan criterion (2026-08-07)
+
+**Theorem X″ (the A₄-fan class dies for EVERY pattern; level 1,
+three lines).** On the A₄ Weyl fan (orderings of the coordinates)
+with ANY zero-pattern (≥ 2 zero chambers per σ-orbit), the
+(1)(2)(3)-system is infeasible. *Proof.* (a) For each proper
+nonempty S ⊂ Z/5 the ray generator r_S = 5χ_S − |S|·(1,…,1) is a
+lattice point with r_{S+k} = σᵏr_S, so the congruence (ii) AT the
+point r_S reads Σ_k 9ᵏ d(σᵏr_S) ≡ −⟨r_S, c₉⟩ ≡ −5·c₉(S) (mod 11),
+and the six class values 5·c₉(T_c) = (9,10,3,4,2,7) on
+T_c = ({0},{0,1},{0,2},{0,1,2},{0,1,3},{0,1,2,3}) are all nonzero.
+(b) d vanishes on every closed zero chamber, hence at every bordered
+ray point. (c) By the covering theorem (§8.22(e) — the identical
+count, 0 of 15,625 transversals), some class has all five translates
+bordered; its congruence reads 0 ≡ nonzero. ∎
+
+This upgrades the A₄ record from 420 sampled patterns (§8.17, §8.19)
+to all patterns, and by refinement covers every complete fan whose
+walls lie among the ten hyperplanes {n_a = n_b}. (Completeness of the
+ray-point rows as the full mod-11 level-1 content also holds — the
+coordinate gaps are free mod 11 since the A₄ ray gap is 5 — but only
+necessity is needed for the kill. Verified: `f55_a4exact.py`,
+identity at 200 patterns × 20 points, 20,000 random + all uniform
+patterns infeasible.)
+
+**The order-fan criterion (general σ-orbit order fans).** For a
+primitive linear form ℓ on N with σ-orbit (ℓ∘σᵏ)_k (the five forms
+sum to zero on N automatically), the order fan of the orbit behaves
+by the mod-11 type of ℓ:
+- ℓ generic (ℓ-gaps free mod 11): the level-1 rows collapse to the
+  six class-rows η(T_c) ≡ −⟨ray_ℓ(T_c), c₉⟩; the fan dies for every
+  pattern iff all six pairings are ≢ 0, by the covering theorem
+  (A₄ = the case ℓ = e₀*). If some pairing ≡ 0, patterns dodging the
+  dead classes exist (the drop-one-class counts of §8.22 are
+  positive) and the kill must descend a level.
+- ℓ aligned (ℓ ≡ λ·⟨·,G₉⟩ mod 11): block-equality of the five
+  translated values forces every ray value ≡ 0 (two equal units
+  5ᵏλV₀ would need k = k′), so level 1 forces v ≡ 0 (mod 11) as in
+  Theorem W, and the level-2 E-collapse produces an ℓ-specific
+  ξ*(ℓ) ∈ F₁₁⁶; the fan dies for every pattern iff ξ*(ℓ) is
+  nowhere zero (the G₉-fan: ξ* = (7,4,2,10,3,9)); zeros of ξ*(ℓ)
+  push the kill one 11-adic level deeper — the depth tower of
+  Correction IX-h, now visible inside one fan family.
+
+**Status after §8.23.** Closed for every pattern, exact: the A₄-fan
+class {n_a = n_b} (level 1), the G₉-fan class {H_a = H_b} (level 2),
+the sign-fan {H_a = 0} (level 2, pair-field). The recurring final
+step is one covering statement against one finite nonvanishing
+vector. Remaining for Lemma S: arbitrary fans outside these classes
+(general order fans via the criterion above; general aligned fans
+via the (τ,Ψ)-frame and the depth induction; mixed fans). Lemma S
+remains UNCLAIMED.

@@ -16,11 +16,17 @@
 > IX-h: IX-f overgeneralized — depth-t aligned fans exist for all t,
 > their level-2 shadow is solvable, the aligned proof is an induction
 > on (finite) alignment depth**. T5 NOT STARTED. Lemma S UNCLAIMED.
-> Remaining: general aligned fans (depth induction + general depth-1
-> combinatorics), mixed fans, then T6/T7 as written.
+> ALSO (§8.23): **Theorem X″ — the A₄-fan dies for EVERY pattern**
+> (three lines: (ii) at ray points + covering theorem; upgrades the
+> 420-sample record), and the ORDER-FAN CRITERION (generic ℓ: six
+> pairings ≢ 0; aligned ℓ: ξ*(ℓ) nowhere zero; zeros ⟹ descend).
+> T6 chain links 2–5 re-audited clean (necessity directions).
+> Remaining: fans outside the three closed classes (general order
+> fans via the criterion, general aligned via depth induction,
+> mixed fans), then T6-assembly/T7 as written.
 > New probes: `f55_exact1.py`, `f55_exact2.py`, `f55_eweb.py`,
 > `f55_xistar.py`, `f55_free_sweep.py`, `f55_signfan.py`,
-> `f55_signfan_close.py`.
+> `f55_signfan_close.py`, `f55_a4exact.py`.
 
 For human or fresh-session continuation. Everything referenced is
 committed; theory in `theory/FIX_IX_v14.md` (§8 = the F55 campaign,

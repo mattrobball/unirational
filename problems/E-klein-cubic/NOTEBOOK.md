@@ -3987,7 +3987,29 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   flat wall per σ-orbit (σ-invariance itself generates curvature);
   null walls impossible (content 11). REMAINING for Lemma S: general
   aligned fans (depth induction + general depth-1 combinatorics) and
-  mixed fans (T5). Lemma S / F55-NO / ed = 4 remain UNCLAIMED.** Note I
+  mixed fans (T5). Lemma S / F55-NO / ed = 4 remain UNCLAIMED.**
+  **Wave 31 (continuation; Note IX §8.23, probe `f55_a4exact.py`):
+  THE A₄-FAN DIES FOR EVERY PATTERN — level 1, three lines.** The
+  η-rows are (ii) AT THE RAY POINTS (`ray(S+k) = σᵏray(S)`): six
+  class targets `−5c₉(T_c) = (2,1,8,7,9,4)`, all nonzero; d = 0 at
+  bordered ray points; the SAME covering theorem (0/15,625) forces a
+  fully-bordered class ⟹ 0 ≡ nonzero. **Theorem X″** upgrades A₄
+  from 420 sampled patterns to ALL patterns (+ all coarsenings of
+  the A₄ arrangement); verified: identity at 200 patterns × 20
+  points, 20,000 random + 26 uniform patterns infeasible, T6-audit
+  of chain links 2–5 re-derived clean (Theorem I necessity is
+  immediate; Theorem J one-line; min-normalization sound via
+  Σ9ᵏ = 22 ≡ 0; value ⟺ slope standard). **The order-fan
+  criterion:** for the order fan of any σ-orbit of a primitive form
+  ℓ — generic ℓ: dies for every pattern iff all six
+  ⟨ray_ℓ(T_c), c₉⟩ ≢ 0 (A₄ = ℓ = e₀*); aligned ℓ: level-2 with
+  ℓ-specific ξ*(ℓ), dies iff nowhere zero (G₉-fan: (7,4,2,10,3,9));
+  zeros push one 11-adic level deeper — the IX-h tower visible
+  inside one family. Three fan classes now closed for every pattern
+  (A₄ {n_a=n_b} level 1; G₉ {H_a=H_b} level 2; sign {H_a=0} level 2
+  pair-field); the recurring final step is one covering statement
+  against one finite nonvanishing vector. Lemma S still UNCLAIMED
+  (arbitrary fans outside the three classes; mixed; depth tower).** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
