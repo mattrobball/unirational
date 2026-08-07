@@ -523,7 +523,22 @@ current altitude cannot close F55; proof below.
 
 ### 8.3 The F55 no-go (lane decision, 2026-08-06)
 
-**Theorem IX.8 (no-go for the current calculus).** Every
+**Correction IX-b (2026-08-06, user-caught, same day): Theorem
+IX.8 as first stated is WITHDRAWN.** Its layer-4 "solvable"
+verdict silently ASSUMED the target supplies every weight-
+admissible linking curve; the machine's full form requires the
+target-side curve INVENTORY to be measured, exactly as the
+Klein-transfer verdict (E14) was decided by measuring `X^σ ⊃
+L_σ`. The measurement (below, §8.4) shows the inventory is
+STRICTLY SMALLER than the weight test allows, so the solvability
+proof collapses. Status of the F55 machine question: back to
+OPEN-DERIVATION. What survives of §8.3 unconditionally: layers
+1–3 (incidence matching, germ realizability, harmless contraction
+of pointwise-fixed strata) are correct as stated; the error was
+treating layer 4's necessary weight test as sufficient.
+
+**Theorem IX.8 (original statement, for the record — WITHDRAWN;
+see Correction IX-b).** Every
 constraint system produced by the [I]-calculus layers — incidence
 (going-down on strata), local germ weights, scalar-birth /
 pointwise-fixed-curve forcing, and endpoint weight-negation links
@@ -576,12 +591,53 @@ altitude where the Klein's own negative program also stalled, cf.
 the FIX-D2 terminal verdict) remains logically possible but has
 no candidate. And no map is constructed: F55 remains OPEN.
 
-**Consequence for the program.** Route 1 on F55 is CLOSED-NO-GO.
-F55 now rides on arithmetic alone: the E18 trace-cubic decision
-(protocol: derive the bad places on paper, then LOCAL SOLUBILITY
-only — an insoluble place gives F55-NO and `ed = 4`; solubility
-everywhere pushes to function-field descent tools). The
-symmetric moral of IX.8 + the Klein terminal verdict: for BOTH
-named negative targets (spin-G and F55) the fixed-locus machine
-is now provably insufficient, and every negative road leads
-through arithmetic or a new global invariant.
+**Consequence for the program.** [Paragraph withdrawn with IX.8
+by Correction IX-b; see §8.4 for the live state. E18 remains a
+parallel route with the same protocol regardless.]
+
+### 8.4 Layer 5: the target curve inventory — THE PENTAGON (measured 2026-08-06)
+
+Probe `v14_f55_curves.py`, mod 397, on the exact model.
+
+- **Degree 1.** Of the ten pairs of `C₁₁`-points, the joining
+  line lies ON the V₁₄ exactly for the five pairs of ratio
+  `∈ {5, 9}` — the graph is the 5-CYCLE
+  `2 — 7 — 8 — 6 — 10 — 2` (a pentagon). The five ratio-`{3,4}`
+  pairs (the pentagram diagonals) have NO line. Equivalently:
+  at each point, exactly 2 of its 3 tangent eigendirections
+  integrate to contained lines.
+- **Degree 2.** NO equivariant progression-conic exists for any
+  pair: every candidate already fails the tangency wedge
+  (`y ∧ v_middle ≠ 0` on at least one side).
+- So pentagram pairs are joined by NO stable rational curve of
+  degree ≤ 2; whether ANY degree joins them is the finite
+  eigen-support/wedge-table classification (each degree gives an
+  overdetermined bilinear system in the `λ_i` over the ten
+  eigen-lines; the full 45-pair wedge table is the input) —
+  NAMED NEXT COMPUTATION.
+
+**What is now genuinely at stake in layer 5.** The source
+complex forces images for coordinate lines of ALL four ratios.
+For pentagon ratios the target supplies lines; for pentagram
+ratios it supplies (so far) nothing. Two open sub-questions
+decide the machine's F55 fate:
+
+1. *Inventory:* does the V₁₄ carry ANY equivariant stable
+   rational curve through a pentagram pair (any degree)? If the
+   classification comes back EMPTY, the target chain-graph is
+   the pentagon.
+2. *Forcing:* is some source stratum forced to map
+   NON-constantly with pentagram-linked endpoint values? The
+   currently proved forcings do not pin this: a tower's several
+   fixed components are not yet proved to share one value, so a
+   pentagram source line may a priori contract (its endpoint
+   values connected through pentagon chains — connectivity of
+   the pentagon is what keeps the escape open). A proof that
+   tower values are rigid (all fixed components of one tower ↦
+   one point) would turn an empty pentagram inventory into
+   F55-NO = `ed = 4`; conversely a flexible-value construction
+   plus a nonempty inventory would re-establish the no-go
+   honestly.
+
+Both sub-questions are finite and concrete; neither is decided.
+The E18 arithmetic route runs in parallel, unaffected.

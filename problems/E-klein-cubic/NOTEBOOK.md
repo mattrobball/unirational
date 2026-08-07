@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `e55b380` (2026-08-06; the
+Snapshot metadata — notebook parent head: `184390a` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3557,7 +3557,25 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   invariant. Moral recorded: BOTH named negative targets (spin-G,
   F55) now have provably-insufficient fixed-locus machinery — every
   negative road leads through arithmetic or a genuinely global tool.**
-  Note I
+  **Correction IX-b (same day, user-caught): THEOREM IX.8 WITHDRAWN.**
+  The layer-4 "solvable" verdict assumed the target supplies every
+  weight-admissible linking curve; the machine's full form requires
+  MEASURING the target curve inventory (the exact analogue of the
+  E14-deciding measurement `X^σ ⊃ L_σ`). Measured (Note IX §8.4, probe
+  `v14_f55_curves.py`, mod 397): **THE PENTAGON** — contained lines
+  join exactly the five ratio-{5,9} pairs of the C₁₁-points (the
+  5-cycle 2—7—8—6—10), NO lines on the five pentagram (ratio-{3,4})
+  pairs, and NO equivariant conics anywhere (tangency fails); the
+  inventory is STRICTLY smaller than the abstract weight test's K₅, so
+  IX.8's proof collapses. F55-machine status: OPEN-DERIVATION with two
+  named finite sub-questions — (1) INVENTORY: any equivariant stable
+  rational curve through a pentagram pair at any degree
+  (eigen-support/wedge-table classification, input = the 45-pair
+  table); (2) FORCING: are tower values rigid (all fixed components of
+  one tower ↦ one point)? Rigid + empty inventory ⟹ F55-NO ⟹ ed = 4;
+  flexible + nonempty ⟹ honest no-go. Layers 1–3 of §8.3 stand;
+  §8.3's consequence paragraph is withdrawn with the theorem. E18
+  unaffected, still parallel.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
