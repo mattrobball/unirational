@@ -2233,3 +2233,78 @@ of §8.9.1, untouched by this run. **F55 is OPEN; the headline
 confirmation (Nemo/PARI) was in flight at write-up time; the
 verdict above rests on one engine plus the director's independent
 check of the 33-identity.
+
+### 8.29 (F2)/(F3) tested — and Correction IX-m: the Brauer layer's index flip makes (F2) circular (2026-08-08)
+
+Probe `f55_f2f3.py` (director-adjudicated by rerun). Two results,
+and the second undercuts the first.
+
+**Result 1 — (F2), IF VALID, kills every witness.** Testing the
+5-weighted law `λ_w(div a) ≡ 0 (mod 11)` at the 92 boundary
+ray-orbits of the mixed fan: 77–78 failures per witness; off the
+Theorem-L exempt orbits the pass rate is 10 of 1092. Family-wide
+it is a mod-11 linear system on the same rank-15–19 lattice and is
+**INFEASIBLE for all 14 witness families** under all three
+readings of the b-split exemption, every infeasibility carrying a
+verified Farkas certificate (44 one-row certificates per family).
+Mechanism: at 405 of 460 rays `d(w) ≡ 0 (mod 11)` for every family
+member, and at 52 of 92 orbits this holds at all five conjugates,
+so both λ's vanish and each law collapses to its covector — `c₉`
+is orthogonal to those rays (which is exactly why the witnesses
+satisfy congruence (3)) while `c` is not. Hand-checkable
+certificate: `w = (−27,−12,13,13,13)`, `d = [9900,2310,4070,0,0]`,
+`⟨w,c₉⟩ ≡ 0` but `⟨w,c⟩ ≡ 8`, so (F2) reads `0 ≡ 3`.
+
+**Result 2 — (F3) kills nothing: it is an identity.** With
+`e_b = (2+σ⁻¹)x`, `x = (0,2,−3,2,0)`, the two corestriction
+computations agree term by term for EVERY integer order pattern
+(0 failures over 14 × 92); 6 of 6 perturbations of x break them,
+so the test is live, not vacuous.
+
+**Correction IX-m (the index flip; blast radius across §§8.9–8.16).**
+- **F-1.** §8.9 works in the COMPONENT index (`μ_i = 2s_i +
+  s_{i+1}`, transpose kernel `5ⁱ`; Correction IX-c is right there),
+  while §§8.14–8.16 and all code work in the RAY index
+  (`2g_i + g_{i−1}`, transpose kernel `9ⁱ`). In the pinned
+  convention (σ_M = shift₋₁, verified two independent ways) these
+  give DIFFERENT functionals: `λ∘ψ = 7λ` but `L9∘ψ = 0`. Every
+  statement of the form "pattern ∈ Im(2+σ̃) forces λ ≡ 0" — Theorem
+  I(ii) read per-orbit, Theorem K, §8.13's index 33 → 363, and
+  Theorem N — invokes a property λ has only in the OTHER index.
+- **F-2 (critical).** Hence **Theorem N is not independent of (F2):
+  it IS (F2) at the boundary**, so deriving (F2) from it is
+  circular; substituting the true `λ_w(φ)` collapses Theorem O's
+  per-ray equation to `0 = 0`; and the interior constraint (iv)/(iv′)
+  rests on the same step. **As written, the Brauer layer supplies
+  no (F2).**
+- **F-3.** §8.10's alignment is transposed: `L9(e_b) = 7 ≠ 0`, so
+  `(2+σ̃)x = e_b` has NO solution; what holds is `λ(e_b) = 0` and
+  `e_b = (2+σ⁻¹)x`. Theorem P survives with ψ and ψ* interchanged
+  (`cores(a,b) = cores(ψ(a), r^x)`) — which is the form tested.
+- **F-4.** Theorem O's factor `[ℓ_w(b)]^{…}` is
+  uniformizer-dependent unless `⟨w,e_b⟩ ≡ 0 (mod 11)`; elsewhere
+  the residue involves leading forms of `a`, which `div(a)` does
+  not determine. The strict b-split criterion is EMPTY at the
+  boundary, so (iv′)'s exemption as written never fires there.
+- Also corrected: the gate proposed in the work order (Theorem N ⟺
+  congruence (3)) is FALSE — (3) is the 9-weighted law, N the
+  5-weighted one. Both were run through one code path; the
+  9-weighted is clean 92/92 on 14/14 and serves as the positive
+  control (the same feasibility code returns FEASIBLE 14/14 with
+  9-weights, so Result 1's infeasibility is not a solver artifact).
+
+**STATUS — the programme's fate is now genuinely undetermined.**
+§8.28 stands as a fact about the VALUE-FORM system: Theorem Q is
+satisfied there and Lemma S (as transcribed) is false. But whether
+that defeats the programme depends on (F2), and (F2)'s derivation
+is broken, not disproved. Two branches: **(F2) repairable ⟹ the 14
+witnesses and their whole families die at the boundary, and
+§8.28's "Theorem Q = YES" does NOT by itself defeat F55-NO**;
+**(F2) unrepairable ⟹ the witnesses stand and the value-form route
+is genuinely dead.** Deciding needs an independent reason for the
+residue of `A_K = cores(φ,b)` to vanish at split orbits — a
+derivation, not a computation (in flight:
+`theory/DRAFT_f2_repair_20260808.md`). Scope of Result 1: boundary
+only (Q fixes `v_w(a)` at the 460 rays; the interior of `div(a)`
+is free), the mixed fan only, the 14 recorded patterns only.
+Nothing here moves F55 or the headline.

@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `64c5783` (2026-08-07; the
+Snapshot metadata — notebook parent head: `aca1ad0` (2026-08-07; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -4236,7 +4236,42 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   (Python, Julia/Oscar, PARI) plus the director's own check of the
   33-identity; Lemma S is FALSE as a statement about the value-form
   system, and the caveat is unchanged — the value form is what was
-  refuted, and F55 itself is untouched.** Note I
+  refuted, and F55 itself is untouched.**
+  **Wave 32 (continuation; Note IX §8.29 + Correction IX-m, probe
+  `f55_f2f3.py`, director-adjudicated by rerun): (F2)/(F3) TESTED —
+  AND THE BRAUER LAYER'S INDEX FLIP MAKES (F2) CIRCULAR.** (F2), IF
+  VALID, **kills all 14 witnesses AND their entire families**
+  (77–78 failures each; family-wide mod-11 systems infeasible 14/14
+  under all three b-split readings, every infeasibility with a
+  verified Farkas certificate, 44 one-row ones per family;
+  hand-checkable: w = (−27,−12,13,13,13) gives ⟨w,c₉⟩ ≡ 0 but
+  ⟨w,c⟩ ≡ 8, so (F2) reads 0 ≡ 3). (F3) **kills nothing — it is an
+  identity** (0 failures over 14×92; 6/6 perturbations break it, so
+  the test is live). **Correction IX-m:** §8.9 uses the COMPONENT
+  index (transpose kernel 5ⁱ), §§8.14–8.16 and all code the RAY
+  index (9ⁱ); in the pinned convention λ∘ψ = 7λ but L9∘ψ = 0, so
+  every "pattern ∈ Im(2+σ̃) ⟹ λ ≡ 0" step (Theorem I(ii) per-orbit,
+  Theorem K, §8.13's 33→363, Theorem N) uses a property λ has only
+  in the OTHER index. **Consequently Theorem N IS (F2) at the
+  boundary — deriving (F2) from it is circular — Theorem O's
+  per-ray equation collapses to 0 = 0, and interior (iv′) rests on
+  the same step: as written the Brauer layer supplies NO (F2).**
+  Also: §8.10's alignment is transposed (L9(e_b) = 7 ≠ 0 so
+  (2+σ̃)x = e_b is unsolvable; e_b = (2+σ⁻¹)x with x = (0,2,−3,2,0);
+  Theorem P survives with ψ/ψ* interchanged), and Theorem O's
+  ℓ_w(b) factor is uniformizer-dependent off ⟨w,e_b⟩ ≡ 0 so the
+  strict b-split exemption is EMPTY at the boundary. The work
+  order's proposed gate (N ⟺ (3)) was itself FALSE — (3) is
+  9-weighted, N is 5-weighted; both were run through one code path,
+  the 9-weighted clean 92/92 on 14/14 and FEASIBLE 14/14 as the
+  positive control. **STATUS: §8.28 stands about the VALUE-FORM
+  system, but whether that defeats the programme now hinges on
+  (F2), whose derivation is BROKEN, not disproved. Repairable ⟹ the
+  witnesses die and Theorem-Q-YES does not by itself defeat F55-NO;
+  unrepairable ⟹ the witnesses stand and the route is dead.
+  Deciding is a derivation task (in flight,
+  `theory/DRAFT_f2_repair_20260808.md`). F55 and the headline
+  UNMOVED either way.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
