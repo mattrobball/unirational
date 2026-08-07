@@ -110,6 +110,27 @@ This lemma records the genuine eleven-primary defect of the projective
 isogeny, but it is not itself a pointlessness theorem: additive cancellation
 among several coefficient monomials remains possible.
 
+### Lemma 1.3 — no common exponent-translation gauge
+
+Suppose multiplication by \(\chi^t\) factors out of all five trace summands by
+the same Laurent monomial.  Then \(t=0\).
+
+**Proof.**  Put \(q=(2+\sigma)t\).  Directly,
+
+\[
+\Phi(\chi^ta)=
+\sum_{i=0}^4
+\chi^{\sigma^iq}\,\sigma^i(ca^2\sigma(a)).
+\]
+
+A common monomial factor requires \(\sigma^iq\) to be independent of \(i\),
+so \(q\in M^\sigma=0\) by Lemma 1.1.  Injectivity in Lemma 1.2 then gives
+\(t=0\).  ∎
+
+Thus a common translation of every support exponent is not a symmetry of the
+fixed trace equation.  The safe normalization in §2 is by invariant
+polynomial factors.
+
 ---
 
 ## 2. Item 1: rational solutions reduce to primitive finite Laurent support
@@ -141,13 +162,14 @@ Taking \(b=N(Q)\) proves the result.  ∎
 
 Thus all subsequent arguments may assume finite support.
 
-### Proposition 2.2 — existence of a primitive minimal representative
+### Proposition 2.2 — primitive support-minimal representative
 
-If a Laurent-polynomial zero exists, then one exists with the following two
-properties:
+If a Laurent-polynomial zero exists, then one exists satisfying:
 
-1. its Newton width is minimal;
-2. it has no nonunit divisor in \(R^{\sigma}\).
+1. its Newton width is minimal among all nonzero Laurent-polynomial zeros;
+2. among width-minimal zeros, its support cardinality is minimal, hence no
+   proper sub-support carries a zero;
+3. it has no nonunit divisor in \(R^{\sigma}\).
 
 **Proof.**  Choose a basis \(\ell_1,\ldots,\ell_4\) of
 \(M^\vee\), and define
@@ -161,7 +183,12 @@ W(f)=\sum_{j=1}^4
 Among all nonzero Laurent-polynomial zeros, first minimize the nonnegative
 integer \(W(f)\), then minimize support size.
 
-Suppose the selected \(a\) is divisible by a nonunit
+If a proper subset of the selected support carried a zero \(f\), then
+\(\operatorname{Newt}(f)\subseteq\operatorname{Newt}(a)\), hence
+\(W(f)\le W(a)\).  Strict inequality contradicts width minimality, while
+equality contradicts support-cardinality minimality.  This proves property 2.
+
+Suppose now that the selected \(a\) is divisible by a nonunit
 \(b\in R^\sigma\), say \(a=bd\).  Since \(b\) is invariant,
 
 \[
@@ -180,9 +207,9 @@ Widths are therefore additive.  By Lemma 1.1, a monomial invariant is a
 constant; hence a nonunit invariant \(b\) has positive width in at least one
 basis direction.  Thus \(W(d)<W(a)\), contradicting minimality.  ∎
 
-We call such a zero **primitive**.  This is the correct invariant-factor
-normalization.  It is not a quotient by common exponent translations: the
-fixed lattice is zero, so no nonzero invariant translation exists.
+We call such a zero **primitive support-minimal**.  This is the correct
+invariant-factor normalization.  It is not a quotient by common exponent
+translations, which are excluded by Lemma 1.3.
 
 ### Lemma 2.3 — one-term support is impossible
 
@@ -510,8 +537,8 @@ multinomial row circuits.
 
 A negative proof by polar circuits will follow from the following statement:
 
-> Every connected support-minimal cancellation core for the trace cubic either
-> (i) has a singleton row, (ii) contains a clean polar pair with nonzero
+> Every connected cancellation core of a primitive support-minimal trace zero
+> either (i) has a singleton row, (ii) contains a clean polar pair with nonzero
 > determinant, (iii) contains a binomial subsystem with failed holonomy, or
 > (iv) admits an explicitly bounded sparse polynomial combination of landing
 > rows equal to a nonzero coefficient monomial.
@@ -529,21 +556,21 @@ all Laurent supports -> finite Hilbert basis -> quotient by invariant shifts
 ```
 
 is invalid without an additional pointed cone or a separate finite-generation
-theorem.  There is also no nonzero invariant exponent shift by Lemma 1.1.
-Normaliz may be used for a fixed polynomial degree or a fixed pointed support
-cone, but such calculations are calibration only.
+theorem.  Lemma 1.3 separately rules out a nonzero common exponent-translation
+gauge.  Normaliz may be used for a fixed polynomial degree or a fixed pointed
+support cone, but such calculations are calibration only.
 
 ### Conditional negative theorem
 
 Assume Coverage Theorem C.  Then the generic F55 trace cubic has no nonzero
 \(K\)-point, and the Klein cubic and its V14 twin are not F55-unirational.
 
-**Proof.**  A rational point gives a primitive finite Laurent-polynomial zero
-by Propositions 2.1--2.2.  Choose one with inclusion-minimal support.  Its
-cancellation core is connected by Lemma 6.1.  Coverage Theorem C supplies one
-of alternatives (i)--(iv).  Each places a monomial in the localized support
-ideal: directly for (i), by (4.4) for (ii), by Theorem 5.1 for (iii), or by
-the polynomial identity in (iv).  This contradicts Theorem 3.2.  ∎
+**Proof.**  A rational point gives a primitive support-minimal finite Laurent
+zero by Propositions 2.1--2.2.  Its cancellation core is connected by Lemma
+6.1.  Coverage Theorem C supplies one of alternatives (i)--(iv).  Each places
+a monomial in the localized support ideal: directly for (i), by (4.4) for
+(ii), by Theorem 5.1 for (iii), or by the polynomial identity in (iv).  This
+contradicts Theorem 3.2.  ∎
 
 ---
 
