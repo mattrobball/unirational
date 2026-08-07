@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `89090ba` (2026-08-06; the
+Snapshot metadata — notebook parent head: `c53d89a` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -143,19 +143,36 @@ genuine generic twist pointless.
    must not introduce bare-letter route names, and any historical status line
    keyed to a bare token (e.g. "F terminal") is unresolvable without the
    glossary and must not be consumed as a status.
+8. **Stop-rule (adopted wave 26, 2026-08-06, user-prompted; binding).**
+   Every CAS run must be attached to a NAMED FINITE QUESTION whose both
+   outcomes redirect the program; no unbounded degree/parameter sweeps.
+   Existing runs that violate it are stopped and recorded
+   stopped-not-finished (first application: the (1,6) n = 4/5 modular
+   sweep, E56 wave 26). Bounded ladders state their cap and the
+   structural justification required to extend past it.
 
-## Strategic dashboard (as of 2026-08-05)
+## Strategic dashboard (as of 2026-08-06)
 
 The one-page map. Everything below this section is ledger, provenance, and
-appendix; this is the current mathematical position. **Headline: OPEN.**
+appendix; this is the current mathematical position. **Headline: OPEN —
+and since wave 28 SINGLE-TARGET: `ed_C(G) = 3 ⟺ the Klein cubic is
+G-unirational` (Cor IX.2, sealed via FIX-IX-SEAL: the V₁₄ twin is NOT
+G-unirational). Program placement (Note VIII §8, Note IX): positive face
+= CSD-instances on the twins (A5-ladder, degree-7 closed point, odd-H
+transfers); negative face = Dolgachev's instance `ed = 4`, with two new
+sufficient targets — kill the V₁₄'s spin sources (Cor IX.5) or kill F55
+on either twin (Note IX §8). The 2026-08-05 standing directive ("all
+effort to the FIX negative endgame; positive routes unstaffed") is
+SUPERSEDED by this two-faced placement.** Wave-25–28 route updates:
+the d = 34 canonical-carrier gateway is CLOSED-NEGATIVE
+(FIX-VII-LAND-EMPTY); the A5 ladder attacks a named CTZ open case
+(in-flight); the (1,6) uniform sweep is STOPPED under the wave-26
+stop-rule (binding rule 8).
 
 The logical decision is single (the tree below): the positive exit is a
 generic-twist point ⟺ a primitive landing covariant; the negative exit is
 their universal nonexistence, witnessed either arithmetically (a pointless
-genuine twist) or by an all-degree theorem. **Standing effort directive
-(user, 2026-08-05): all effort goes to the chosen non-unirationality
-strategy — the FIX negative endgame (family 4). The positive routes below
-remain mapped but are UNSTAFFED until further notice.** The *work*
+genuine twist) or by an all-degree theorem. The *work*
 divides into four method families — different ways of forcing that one
 decision, not four parallel alternatives:
 
@@ -207,8 +224,9 @@ decision, not four parallel alternatives:
    `S3`-equalizer at the 55 D12-points, and **both classified branches fail
    it at order 0, unconditionally in `d`** (`D_B` scope-corrected by H1-C:
    the `n₃`-divisible evasion sub-family survives undecided) — plus the
-   unconditional degree bound `d ≥ 7r−6m` and "line-degree-0 data are never
-   map germs". FIX-C1 (the constructive experiment): the seed scheme is
+   unconditional degree bound `d ≥ 3r−2m` (H1-D-corrected; the stronger
+   `7r−6m` rested on the refuted H1-1(a) prose clause and is WITHDRAWN)
+   and "line-degree-0 data are never map germs". FIX-C1 (the constructive experiment): the seed scheme is
    reducible over `K`, with distinguished `K`-rational witnesses where the
    first genuine ladder obstruction `Ob₂ = ℓ₀⊗L` sits (dead at all line
    degrees); its control calibration shows single-stratum "extends" verdicts
@@ -312,10 +330,17 @@ supersessions are listed. Each also appears in the affected entries.
 | later landings L1, G3A, G3P, G4, G7A, G5, H6, G7B-fix (08-02) | `R0-CANONICAL-REFRESH-PASS` (stale on arrival) | E29 |
 | `NOTEBOOK.md` (08-03) | `PROBLEM_E_ATTEMPT_LEDGER_2026-08-02.md`, `GOALS_NEXT_10_ROUTES_2026-08-02.md` as tracking documents | — |
 | FIX-A0/A1 packets (08-04, `goal_runs_after_2880a28/`) | `strata.md`'s "only type-I" sentence (claim 2 — refuted for all 55 V4s); the strata sign-convention hedge on `C2_line.tangent_T_yY_generic` (settled: `(+1)¹⊕(−1)³`); `marked_s3_geometry.json`'s inert regression primes 67/331 (repaired: 397/419); the single-representative caveat of `CLAIM_1_SURVIVES_CLAIM_2_REFUTED` | E34, E17, E56 |
+| Correction H1-D / packet FIX-P2 (08-06) | FIX-P1's `d ≤ 35` cutoff, "window 36", `d ≥ 7r−6m`, Theorem P1-A (all rested on H1-1(a)'s false prose clause); corrected bound `d ≥ 3r−2m`, corrected cutoff ≤ 30, window 34 | E56 |
+| `FIX-VII-LAND-EMPTY` (08-06, `goal_runs_after_10804b2/`) | the d = 34 Hessian canonical-carrier ansatz (CLOSED-NEGATIVE); dequeues the d = 43 linear-system face | E56 |
+| CTZ arXiv:2502.19598 ingestion (08-06) | wave-26's "D12-unirationality is new" claim (it is a CTZ Thm 5.1 instance; our proof is independent + explicit) | E56 |
+| Scavia arXiv:2607.25118 (07-2026, ingested 08-06) | Duncan's Sylow conjecture (D-R 8.8) and E49's conditional route — REFUTED-BY-LITERATURE; D-R trichotomy → CSD/Dolgachev dichotomy | E49, E50, E56 |
+| Correction VIII-a (08-06, FIX-VIII-MOVES) | Note VIII §3's claimed 110-element pair-orbit (all six pair-orbits have size ≡ 0 mod 3) | E56 |
+| Correction IX-a (08-06) | wave-27 triage's "the Fermat-closer" label for section-induction (the Fermat cubic is NOT closed; C₉⋊C₃ remains a CTZ exception) | E56 |
+| FIX-IX-SEAL (08-06, `goal_runs_after_c53d89a/`) | Note IX §5's "pending seals" status of Cor IX.1/IX.2 (hypotheses now sealed: two primes + 353-verifier + char 0) | E56 |
 
 ## Research threads
 
-The 55 records are route-level units; the work itself runs in a small number of
+The 56 records are route-level units; the work itself runs in a small number of
 narrative threads that cross them. Every entry carries a `Thread:` line; this
 section is the map. Reconstructing any of these stories previously required
 stitching entries by hand — that fragility was itself a symptom, cured here.
@@ -414,7 +439,7 @@ tokens.**
 |---|---|
 | `F` | [E13](#e13) Path F fixed-frame genus-one torsor; [E14](#e14) Problem-F technique import / F-engine; [E15](#e15) Fable trisection; Problem F itself (the solved dP example, external to E); `F_{14,T}` the twisted Fano ([E07](#e07)/[E26](#e26)); `f3,f5,f6,f8,f11` the primary invariants; `F` the Klein form. Ledger rows saying "F terminal" are ambiguous (conflict 4). |
 | `dP` / del Pezzo | Problem F's dP (the solved obstruction example, T3); [E24](#e24)'s degree-3 dP *fibration* (Sarkisov target, T5); [E52](#e52) DP-REPLAY (equivalent-object proposal, T3); the OD16 Fermat *quartic* dP2 (session-only claim, unverified). |
-| Fermat cubic | The `C9⋊C3` non-unirationality of the Fermat cubic *threefold* — an example **outside Problem E**, since 2026-08-04 a machine-verified corollary of the central obstruction (`FIX-T34`, [E56](#e56)) holding for 2 of the 3 conjugacy classes of `C₉⋊C₃`-actions (the naive generator class fails). Not the Klein cubic. |
+| Fermat cubic | The `C9⋊C3` non-unirationality of the Fermat cubic *threefold* — an example **outside Problem E**, since 2026-08-04 a machine-verified corollary of the central obstruction (`FIX-T34`, [E56](#e56)) holding for 2 of the 3 conjugacy classes of `C₉⋊C₃`-actions (the naive generator class T4-C03 fails hypothesis (b): `X^G` = 3 points there). Reconciliation with Correction IX-a: CTZ's open exception "C₉⋊C₃ on the Fermat" is the class our obstruction provably cannot touch (T4-C03); the FIX-T34 closures of the other two classes do NOT settle it. Not the Klein cubic. |
 | `G4` | Path G4/G4.1 symbolic free-fibre recurrence ([E16](#e16)); the A5 index-11 transfer run `G4_A5_INDEX11_TRANSFER` + `G4A` projectors (grouped under [E04](#e04)). Conflict 6. |
 | `G7` | Path-G degree-7 exit label `G7-OBSTRUCTION` ([E16](#e16); the REPAIR sample-residual downgrade is documented only for G13/G19); the double-A5 biplane program `G7A/B/C` ([E17](#e17)), whose `G7B` induced-cycle claim was refuted and quarantined. Conflict 7. |
 | `V2` | The "V2 Track" work-order wave labels (process; surfaces in [E07](#e07), [E25](#e25), [E32](#e32); collision explained at [E33](#e33), conflict 8); the exit `V2-FIXED-FRAME-PLACE-NONTRANSFERABLE` ([E33](#e33)). Conflict 8. |
@@ -461,6 +486,11 @@ Chronology and hash anchors from `notebook_build/lens_gitlog.md`.
 - **2026-08-02** — Anchors `141f604`, `0aecc89`, `eb21458`, `ff69434`, `7030dda`, `f1f0be5`, `5899d05`. G2 reduction lands: `23f40f7` finish G/G2 universal all-degree theorem, `6a2ccaa` retire completed G2 structural mission, `5ded147` post-G2 headline reassessment; successors dispatched `5eb1214` G3, `5cb3d11` G3A, `d1f43d6` G3H, `7da4fdf` G3S; `027e002` H6 degree-11 isogeny; `1b764bf` C6 determinantal Fano.
 - **2026-08-02** — B refutation and adjacent close-outs: `5899d05` finish Task B fixed-frame exhaustiveness (→ `B-BRIDGE-REFUTED`); `b77b04c` record V3 residue normal form; `96195e8`/`139ab6c`/`5167255` M3 residual section close-out; `b49fc81`/`74045be`/`823beb1`/`c9d75e1` T3/T3A split into local-runner goals; `30cccfa` index-11 transfer goal.
 - **2026-08-02** — V4 closure wave: `04d1d1c` classify simultaneous V4 odd normal maps; `bc56247` record V4 simultaneous-normal theorem boundary; `ebb5769`/`fb4bcea` genus-two quotient classification; `08859c0` certify exact A4 surface parameters; `72147bd` record degree-25 corollary.
+- **2026-08-03** — The notebook itself lands (`f1f0be5` review round, then the canonical `NOTEBOOK.md` supersedes the 08-02 ledgers); goal-wave disposition sweep of 43 worker roots.
+- **2026-08-04** — FIX program opens (E56): Note I b-complex; FIX-A0/A1 arrangement foundation packets land director-replayed; acceptance gate T1–T5 closes (T2 = Problem-F re-derivation, T3/T4 = OD16/Fermat central-obstruction closures with class-level corrections, FIX-T34).
+- **2026-08-05** — Notes II–V (jets, cosheaf, closure, construction): the cell classification (N2/N2b/N2c, 27-witness Chebyshev branch), FIX-H0 global theorems, FIX-H1 equalizer localization + Correction H1-C, FIX-C1 ladder calibration, FIX-D2 terminal verdict (localized machinery structurally insufficient), FIX-P1 cutoff; source complex FIX-A2; user pivot to construction.
+- **2026-08-06 (first half)** — Correction H1-D (FIX-P2 supersedes P1's cutoff; `d ≥ 3r−2m`); Note VI Prym split executed (`J(X) ~ Prym₃ × J(genus-2)`, CM by `Q(√−11)`); Note VII carrier + `FIX-VII-LAND-EMPTY` closes the d = 34 gateway; Note VIII Italian program: projection move (index 1, L-unirationality), MOVES census + Correction VIII-a, Lemma 4 specialization + D12-unirationality, stop-rule adopted, A5LADDER dispatched; literature events: CTZ 2502.19598 (headline a named open case; Remark 5.4 conditional-YES), D-R §10 in full (Prop 10.8 conjecture-separator; Rem 10.10 V₁₄ twin), Scavia 2607.25118 (Duncan conjecture refuted → dichotomy), T-Z 2409.08392 (twisted-stable twins + Brauer caveat).
+- **2026-08-06 (second half)** — Note IX: V₁₄ openness confirmed, equivariant model built, triage (dP/Fermat toolbox provably insufficient on V₁₄) + Correction IX-a, FIX-IX-V14MODEL dispatched; **the centralizer obstruction (user keystone, Cor IX.1) + the Rem-10.10 collapse (Cor IX.2)**; T-Z consistency → transport lattice (IX.3–IX.5 spin-kill target), D12-shadow (IX.6); **FIX-IX-SEAL (director-run, `c53d89a`) seals both hypotheses char-0 + three primes: the V₁₄ is NOT G-unirational; `ed_C(G) = 3 ⟺ Klein G-unirational`**; odd-order transfer criterion (Lemma IX.7: C₃/C₅/C₁₁/F55 transfer freely; V₁₄ is C₃-unirational; F55-kill on either twin ⟹ headline negative).
 
 ## Index
 
@@ -527,18 +557,18 @@ Each entry carries a `Thread:` line locating it in the Research threads map abov
 | [E46](#e46) | ED-P — prime-local essential dimension | negative | analytic | REJECTED (numerics) | route refuted |
 | [E47](#e47) | SUPERRIGID — birational superrigidity | negative | analytic | REJECTED (wrong statement) | route refuted |
 | [E48](#e48) | CSD — Cassels–Swinnerton-Dyer | conditional (positive) | analytic | CONDITIONAL | conditional |
-| [E49](#e49) | DR88 — Duncan–Reichstein Conjecture 8.8 | conditional (positive) | analytic | CONDITIONAL | conditional |
+| [E49](#e49) | DR88 — Duncan–Reichstein Conjecture 8.8 | conditional (positive) | analytic | REFUTED-BY-LITERATURE (Scavia 2607.25118) | none (route dead) |
 | [E50](#e50) | DOLGACHEV — Crdim(G) ≤ ed(G) | conditional (negative) | analytic | CONDITIONAL | conditional |
 | [E51](#e51) | LIT-AUDIT — literature & tool audit | infrastructure | analytic | ONGOING-CLEARANCE | none |
 | [E52](#e52) | DP-REPLAY — del Pezzo closure-mechanism replay | positive (proposed) | analytic | PROPOSED-UNRUN | both (proposed) |
 | [E53](#e53) | UNKNOWN-EX — hidden intermediate-variety search | positive (proposed) | analytic | PROPOSED-UNRUN | none |
 | [E54](#e54) | CTR-TWIST — counterexample twist target | negative (target) | analytic | OPEN-TARGET | negative |
 | [E55](#e55) | REPAIR — 2026-07-31 theorem-boundary audit | infrastructure | analytic | APPLIED | none |
-| [E56](#e56) | FIX — equivariant fixed-locus b-complex program | dual (reduction + obstruction) | analytic + CAS | ACTIVE — GATE T1–T5 CLOSED; Note II/III + FIX-B cleared | both |
+| [E56](#e56) | FIX — equivariant fixed-locus b-complex program | dual (reduction + obstruction) | analytic + CAS | ACTIVE — Notes I–IX; gate closed; terminal verdict on localized negative; pivot through Italian/V₁₄ program; Cor IX.1/IX.2 SEALED (V₁₄ not G-unirational; headline single-target) | both |
 
 ## Attempts
 
-The 55 records below span nine types — construction, obstruction, reduction, bounded
+The 56 records below span nine types — construction, obstruction, reduction, bounded
 computation, infrastructure, audit/repair, dispatch/process, conditional implication,
 proposal/unrun — recorded per entry on the **Record type:** line. Entries with
 substantial run or certificate provenance also carry a **Verification class:** line
@@ -1894,10 +1924,16 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
 - **Record type:** conditional implication
 - **Thread:** T7 — cohomological/motivic obstruction sweep
 - **Verification class:** LITERATURE-DEPENDENT — a conditional fork on the unproved Duncan–Reichstein Conjecture 8.8; not resolvable without an external proof.
-- **Status:** CONDITIONAL — and raises the stakes of a negative answer.
-  - "would prove that `X` is `G`-unirational and that `ed(G)=3`" (conditional, unproved) [RES `RES-21`]
-  - a negative headline resolution "would also **refute** Duncan–Reichstein Conjecture 8.8 in this example, because every Sylow restriction is already versal" [RES `RES-21`]
-- **What was actually established:** that Condition A holds (every Sylow restriction versal), hence the conditional implication and the refutation stake.
+- **Status:** REFUTED-BY-LITERATURE (2026-08-06) — **Scavia arXiv:2607.25118
+  (July 2026) refutes Conjecture 8.8** (counterexample: `(C₇⋊C₃)×C₂` on a
+  degree-2 del Pezzo surface; the paper explicitly flags the Klein-cubic
+  consequence). The conditional route is DEAD and its refutation-stake
+  bullet is moot: a negative headline no longer refutes 8.8 (already
+  false). The D-R trichotomy of Prop 10.8 is now the DICHOTOMY
+  CSD ⟹ YES vs Dolgachev ⟹ NO ([E56](#e56) wave 27, Note IX §1).
+  - PRE-REFUTATION RECORD: "would prove that `X` is `G`-unirational and that `ed(G)=3`" (conditional, unproved) [RES `RES-21`]
+  - PRE-REFUTATION RECORD: a negative headline resolution "would also **refute** Duncan–Reichstein Conjecture 8.8 in this example, because every Sylow restriction is already versal" [RES `RES-21`]
+- **What was actually established:** that Condition A holds (every Sylow restriction versal); the conditional implication, now vacated by Scavia's refutation of the conjecture itself.
 - **Aliases:** RES `RES-21`
 - **Provenance:** no runs named. Cross-referenced in `sessions_batch3.md` § `klein-cubic-threefold-psl-6a6b6514.md` (`source: external-chatgpt`).
 - **Pointers:** `SPEC.md` "Conditional forks and stakes" (lines ~412-438)
@@ -1917,7 +1953,7 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
 - **Status:** CONDITIONAL — the mirror-image stake to [E49](#e49).
   - "would instead give `ed(G)=4`, which rules out `G`-unirationality of `X`" (conditional, unproved) [RES `RES-22`]
   - "a positive solution would give `ed(G)=3` and a **counterexample to Dolgachev's proposed inequality**" [RES `RES-22`]
-- **What was actually established:** the implication and the symmetric stake. Together with [E49](#e49): whichever way Problem E resolves, a published conjecture falls.
+- **What was actually established:** the implication and the symmetric stake. The former pairing with [E49](#e49) is updated (2026-08-06): E49's conjecture is refuted by Scavia, so the live separator is now [E48](#e48) vs this entry — CSD ⟹ headline YES, Dolgachev ⟹ headline NO, still incompatible (D-R Prop 10.8; E56 wave 27); whichever way Problem E resolves, a published conjecture still falls.
 - **Aliases:** RES `RES-22`
 - **Provenance:** no runs named. Cross-referenced in `sessions_batch3.md` § `klein-cubic-threefold-psl-6a6b6514.md` (`source: external-chatgpt`).
 - **Pointers:** `SPEC.md` "Conditional forks and stakes" (lines ~412-438)
@@ -1935,6 +1971,7 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
 - **Thread:** T8 — process and audits
 - **Verification class:** ANALYTIC-PROOF-REVIEW — a literature and tool-availability audit read and characterized directly; no machine verifier by nature.
 - **Status:** ONGOING-CLEARANCE — no turnkey theorem exists; one absorbed import (Poonen–Stoll).
+  - **2026-08-06 date reconciliation:** the "2026-07-18 CTZ manuscript" and "March-2026 CTZ classification" cited below are both the SAME paper, arXiv:2502.19598 (Feb 2025), now archived in `external_docs/` and read directly (E56 wave 26, Note VIII §7); the "still lists the Klein action as open" claim is VERIFIED from the PDF (Thm 5.1 exception list, p.18). The hallucination-risk flag on this sub-claim is retired (debt item 8); the phantom dates were session-reporting artifacts.
   - "found no recent theorem that closes the headline" [HAND `R32`]
   - Poonen–Stoll "closes those components as local-obstruction places... says nothing about the global torsor"; Jung–Saito "does not compute `Cl(B)` or `Cl(C6)`"; Groebner.jl "the public high-level route is stopped"; BSS/Koszul "generic hyperplane-fan theorems do not apply directly" [HAND `R32`]
   - "no theorem that converts index one or a degree-55 point on a cubic threefold into a rational point"; the 2026-07-18 Cheltsov–Tschinkel–Zhang manuscript "still lists this full action as open" [STAT]
@@ -3122,13 +3159,22 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   all structured candidates at 25–33 (compositions with degree
   products in range, `F̌″(P,Q)`-contractions with
   `deg P + deg Q` in range, Hessian-ideal-structured elements)
-  plus the E25 char-0 completion. **Wave 25 (user redirect: hunt a
+  plus the E25 char-0 completion. **Wave 24 same-day amendment
+  (08-06, relocated here to restore chronology): FIX-C1's
+  detached part-D level-3 run landed — `Ob₃ = 0` on all 25
+  coefficients, rank profile identical to parts B, C;
+  `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now EXACT on all 24
+  non-rational witnesses (C1 §7 item 1 closed); the H1 leftover
+  M2 chain's late `hard_r8_om2_*` inputs are moot (H2 decided
+  those leaves) and are committed for completeness of the packet
+  dir.** **Wave 25 (user redirect: hunt a
   concatenation of CLASSICAL GEOMETRIC MOVES, IJ geometry as the
   hint; Note VIII opened, `theory/FIX_VIII_italian.md`; probes
   `cycle55.py` on GATE's explicit group): THE PROJECTION MOVE.**
   (i) `π_σ = (I−σ)/2` maps `P(W)` onto `L_σ ⊂ X`,
   D12-equivariantly — machine 55/55. Hence: an `L`-point of
-  `X_tw` for the degree-55 field `L = C(P(W))^{D12}`;
+  `X_tw` for the degree-55 field `L = C(P(W))^{D12}`; combined
+  with the degree-3 closed points from line sections,
   `gcd(55,3) = 1` so **`X_tw` has INDEX 1 over `K_proj`** (new);
   by Kollár **`X_tw` is L-UNIRATIONAL**; the headline is now a
   STRUCTURED prime-to-3 descent (55 ≡ 1 mod 3) of the open
@@ -3301,12 +3347,14 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   YES vs Dolgachev ⟹ NO. **Tschinkel–Zhang arXiv:2409.08392
   Thm 1.1: Y × P² × P(V) ~_G X × P² × P(V)** (V = the 6-dim
   SL₂(F₁₁)-irrep; both actions birationally rigid so plainly
-  nonbirational) — with the DERIVED caveat: the P(V)-factor's
-  Schur-class twist is Brauer-nontrivial over K_proj (nonsplit
-  C₂-extension ⟹ the twisted Severi–Brauer P⁵ has no point), so
-  plain (U) does NOT transfer across the equivalence; the twins'
-  questions are linked modulo an order-2 Brauer class = a new
-  invariant handle. MODEL START (probe `v14_model.py`): the
+  nonbirational) — with the caveat, derived here and ALREADY
+  RECORDED in substance at [E07](#e07)'s bridge audit as the
+  "stable-factor trap" (novelty accordingly scoped): the
+  P(V)-factor's Schur-class twist is Brauer-nontrivial over
+  K_proj (nonsplit C₂-extension ⟹ the twisted Severi–Brauer P⁵
+  has no point), so plain (U) does NOT transfer across the
+  equivalence; the twins' questions are linked modulo an order-2
+  Brauer class = a new invariant handle. MODEL START (probe `v14_model.py`): the
   6-dim even-Weil rep of SL₂(F₁₁) built mod 397 (S² = 11·I,
   closure exactly 660 ✓); `1⊕W` provably WRONG (its section
   degenerates to Gr(2,W) — hand proof); packet FIX-IX-V14MODEL
@@ -3342,20 +3390,15 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   that CSD does NOT resolve via the D-R 3-Sylow reduction. Note
   IX §4 corrected in place; the V₁₄ conclusions (three deaths,
   A5/D12 emptiness, K3-section structural death) are
-  unaffected.**** Same-day
-  amendment: FIX-C1's detached part-D
-  level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
-  identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now
-  EXACT on all 24 non-rational witnesses (C1 §7 item 1 closed); the H1
-  leftover M2 chain's late `hard_r8_om2_*` inputs are moot (H2 decided
-  those leaves) and are committed for completeness of the packet dir.**
+  unaffected.**
   **Wave 28 (user keystone; Note IX §§5–6): the CENTRALIZER OBSTRUCTION —
   the V₁₄ linear-source case closes on the measured data.** User-proposed
   argument, derived as **Cor IX.1** (= Cor T3.1 with `C_G(σ)` replacing
-  the center): if (a) no positive-dim component of `Y^σ` contains a
-  rational curve and (b) `Y^{C_G(σ)} = ∅`, then NO `G`-equivariant
-  rational map `P(V) ⇢ Y` or `V ⇢ Y` exists for ANY faithful LINEAR rep
-  `V` (dominant or not) — proof by RCC-stratum induction up any
+  the center): for `σ` an involution with `ρ(σ) ≠ ±id` (automatic for
+  faithful linear reps of centerless `G`), if (a) no positive-dim
+  component of `Y^σ` contains a rational curve and (b)
+  `Y^{C_G(σ)} = ∅`, then NO `G`-equivariant rational map `P(V) ⇢ Y` or
+  `V ⇢ Y` exists for ANY faithful LINEAR rep `V` (dominant or not) — proof by RCC-stratum induction up any
   equivariant resolution tower ([I] Thm 2.1/Lem 4.2/4.3): the σ-eigenspace
   stratum `P(V₊)` is `C_G(σ)`-stable BECAUSE the rep is linear, survives
   strict transform/exceptional-eigenbundle replacement, and its resolved
@@ -3405,12 +3448,64 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   on the twin whose σ-geometry is machine-friendly).** **Cor IX.6
   (D12-shadow): the V₁₄ IS D12-spin-unirational (transport of the
   Klein's D12-theorem) yet NOT D12-lin-unirational (T3.1 with G = D12,
-  σ central; measured (a)+(b)) — the twins DIVERGE at D12 and the
+  σ central, for `ρ(σ)` non-scalar; the `ρ(σ) = −id` reps die
+  separately — σ acts trivially on the source, image inside `V₁₄^σ`,
+  never dominant) — the twins DIVERGE at D12 and the
   C6-pair spin escape is REALIZED, not hypothetical.**
   **Pre-registered prediction (worker blind, in flight): IX.1 ⟹
   FIX-IX-V14MODEL stage 4 (W-side `10′`-ladder = LINEAR source P(W))
   finds EMPTY landing cones at ALL degrees; any verified hit falsifies
-  the loci data or the derivation — a live blind test.** Note I
+  the loci data or the derivation — a live blind test.**
+  **Wave 28 landing (director-run, user directive "seal that problem"):
+  packet `goal_runs_after_c53d89a/FIX_IX_SEAL` — exit
+  `FIX-IX-SEAL-PASS`.** Both Cor IX.1 hypotheses sealed INDEPENDENTLY of
+  the in-flight worker, two engines (exact python linear algebra + M2),
+  primes 397/199, verifier end-to-end at fresh prime 353, and EXACT CHAR
+  0 over `Q(ζ₁₁)` (the model's field; mod-397 shadow for projective
+  orders): (a) `V₁₄^σ` = a SMOOTH irreducible genus-1 SEXTIC (dim 1,
+  deg 6, HP `6i`, radical, prime, Jacobian-minors saturate to
+  irrelevant — the nodal-rational-sextic trap excluded) ⊔ 2 reduced
+  points (stabilizer EXACTLY C6, D12-swapped, measured at 397); (b)
+  `V₁₄^{D12} = ∅` in ALL FOUR character pieces (dims 2,1,1,0) at
+  397/199/353/K. Ambient: the dual Pfaffian-adjoint system `J = (Pf₆) +
+  (adjoint bivector ∈ M)` on `P(Ann M)` is EMPTY at 397/199/353/K ⟹
+  `V₁₄` SMOOTH, PURE DIM 3 in char 0 (tangency argument; rank-≤2 case
+  subsumed), degree 14 by transversality + ESZ connectedness; direct GB
+  cross-check dim 3/deg 14 at three primes. `C_G(σ)` = order 12 with 7
+  projective involutions = D12 (matches FIX-A0); `Λ²U = 5 ⊕ 10′` by
+  χ-averaging AND the verifier's independent trace-sum identification;
+  `Pf₆` on `Ann(M)` is a nonzero G-invariant cubic ⟹ the KLEIN CUBIC by
+  E38 uniqueness (Pfaffian-partner identification machine-verified).
+  Char-0 curve smoothness also follows a priori from ambient char-0
+  smoothness (fixed loci of finite-order automorphisms); char-0
+  connectedness/reducedness by flatness (equal HP) + semicontinuity
+  from the smooth connected mod-p fibers. **CONSEQUENCE (Cor IX.1 now
+  sealed): the V₁₄ PSL₂(F₁₁)-action is NOT G-unirational — no
+  equivariant rational map from any faithful linear source, dominant or
+  not; not weakly versal; generic twist pointless. Cor IX.2 stands on
+  sealed feet: `ed_C(PSL₂(F₁₁)) = 3 ⟺ the Klein cubic is
+  G-unirational` (+ Prokhorov two-class, D-R Thm 10.5). The headline is
+  SINGLE-TARGET.** Remaining cited-not-computed layer: the [I]-lemmas
+  (Thm 2.1, Lem 4.2/4.3, equivariant resolution) — Note I,
+  gate-audited. **Wave 28 (user question "which H ≤ G transfer under
+  T-Z?": Note IX §8): the ODD-ORDER CRITERION.** Lemma IX.7: `2.G → G`
+  splits over `H` ⟺ `|H|` odd (unique involution `−I` in SL₂(F₁₁);
+  Schur–Zassenhaus), and for odd `H` the linear/spin distinction
+  COLLAPSES ⟹ `Y` H-unirational ⟺ `X` H-unirational, both directions,
+  negatives included; for even `H` nothing transfers (D12 = the
+  realized divergence witness). Odd subgroups: `1, C₃, C₅, C₁₁, F55`.
+  NEW: (i) **F55 — Klein-F55 ⟺ V₁₄-F55, and NOT-F55 on either twin ⟹
+  headline NEGATIVE, ed = 4** (F55 restricts any G-map; a named CTZ
+  open case acquires a second geometric model; involution machine
+  inapplicable — odd-element analogue named as next derivation; first
+  cut: faithful F55-reps with `V^{C₁₁} ≠ 0` die on `V₁₄^{F55} = ∅`,
+  which follows from the worker-grade stab-exactly-C₁₁ datum on the 5
+  C₁₁-points); (ii) **the V₁₄ IS C₃-unirational** (Klein
+  D12-unirational ⟹ C₃-unirational ⟹ transfer — the V₁₄'s first
+  unconditional positive equivariant statement); (iii) C₅/C₁₁ open,
+  equivalent across twins, cheap Klein-side targets. V₁₄ scoreboard: G
+  NO (sealed); D12 lin NO / spin YES; C₃ YES; C₅/C₁₁/F55 open ⟺ Klein;
+  spin-G open = the transported headline. Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
@@ -3429,23 +3524,34 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   OD16, and Fermat-cubic closures; certify non-overreach against the V4
   trisection family. **Nothing here is consumable for headline routing
   until the gate passes.**
-- **What was actually established:** definitional so far: Thm 2.1, Thm 4.1,
-  Lemmas 4.2/4.3, Cor 4.4 proved at the stated level in Note I
-  (draft-for-derivation discipline; independent review pending). NOT
-  established: any headline consequence; Cor 5.2 is conditional on
-  FIX-A0/A1.
+- **What was actually established** (refreshed 2026-08-06, wave 28): Note I
+  calculus (Thm 2.1, Thm 4.1, Lemmas 4.2/4.3, Cor 4.4 as scope-corrected by
+  I-C); the T-gate closures (Problem-F re-derivation T2.3; central
+  obstruction T3.1 with FIX-T34's class-corrected OD16/Fermat instances);
+  the profile/equalizer/cell theory and the FIX-D2 terminal verdict on the
+  localized negative; the Note VI Prym split; the Note VIII projection
+  move, index 1, D12-unirationality (independent proof of a CTZ instance),
+  MOVES census; **Note IX: the V₁₄ model, triage, and the SEALED
+  Cor IX.1/IX.2 — the V₁₄ action is not G-unirational and
+  `ed_C(G) = 3 ⟺ Klein G-unirational` (headline single-target; the first
+  sealed unconditional theorem of the program with direct headline
+  content)**; the transport lattice IX.3–IX.5, D12-shadow IX.6, odd-order
+  transfer IX.7 (V₁₄ C₃-unirational; F55 = a transferable sufficient
+  negative target). Headline itself: STILL OPEN, both directions.
 - **Aliases:** FIX; "fixed-locus calculus"; the program-4 head-on attack
-- **Provenance:** `theory/FIX_I_bcomplex.md` (Note I). Foundation packets:
-  FIX-A0 (involution/55-arrangement exact verification: `(3,2)` split from
-  `χ_W(2A)=1`, `X^σ = E_t ⊔ L_t`, `j(E_t)`, normal types `(−1)^{⊕2}`,
-  `C_G(σ) ≅ D12` with residual `S3`) and FIX-A1
-  (`W|_{V4} = triv² ⊕ χ₁ ⊕ χ₂ ⊕ χ₃` ground truth; each involution line =
-  span of the other two isolated V4-points; type-I/type-II incidence
-  repair) dispatched 2026-08-04 to CAS workers; packets to land under
-  `goal_runs_after_*` with ALGEBRAIC-RECOMPUTE verifiers.
-- **Pointers:** `theory/FIX_I_bcomplex.md`; [E14](#e14), [E15](#e15),
-  [E33](#e33), [E34](#e34) (the shadows); Verification debt (the
-  session-claimed OD16/Fermat proofs — to be retired by tests T3/T4).
+- **Provenance:** `theory/FIX_I_bcomplex.md` … `FIX_IX_v14.md` (Notes
+  I–IX) and `theory/FIX_T_gate.md`, `theory/FIX_H1_coupling.md`.
+  Foundation packets FIX-A0/A1 (dispatched and LANDED 2026-08-04,
+  director-replayed: `(3,2)` split from `χ_W(2A)=1`, `X^σ = E_t ⊔ L_t`,
+  `j(E_t)`, normal types `(−1)^{⊕2}`, `C_G(σ) ≅ D12`;
+  `W|_{V4} = triv² ⊕ χ₁ ⊕ χ₂ ⊕ χ₃`; incidence repair); then A2, T34, H0,
+  H1(+C/D corrections), N2/N2b/N2c, C1, C5, D2, P1/P2, L1, GATE, VII-LAND,
+  VIII-MOVES, IX-SEAL under their `goal_runs_after_*` dirs, each with its
+  verifier; in-flight: FIX-VIII-A5LADDER, FIX-IX-V14MODEL.
+- **Pointers:** `theory/FIX_*.md` (nine notes + T-gate); [E14](#e14),
+  [E15](#e15), [E33](#e33), [E34](#e34) (the shadows); Verification debt
+  items 21–22; `HANDOFF_2026-08-06.md` (snapshot predating waves 25–28 —
+  see its banner).
 - *Opened by the director 2026-08-04; the collaborator's surface
   observation is deliberately not ingested — test T1 must reproduce it
   independently.*
@@ -4029,6 +4135,12 @@ claim; 9+ are ordered by route.
 
 ### 8. External-literature citations from in-session web search
 
+**Partial retirement 2026-08-06:** the CTZ sub-claim ("still lists the
+Klein `PSL_2(F_11)` action as an open exceptional case") is VERIFIED from
+the archived arXiv:2502.19598 PDF (Thm 5.1 exception list; E56 wave 26;
+E51 date reconciliation — the "2026-07-18"/"March-2026" artifacts are
+this same Feb-2025 paper). The remaining sub-claims below stand as debt.
+
 - **Claim under test:** all literature assertions produced by ChatGPT web search with connector citations, including: the Cheltsov–Tschinkel–Zhang classification "still lists the Klein `PSL_2(F_11)` action as an open exceptional case"; a "`G`-birationally superrigid" theorem for the Klein cubic; essential-dimension results for Frobenius groups; Jodi Black arXiv 1009.4621 and Gordon-Sarney–Suresh 1702.00516 hypotheses; Kuznetsov–Prokhorov–Shramov Thm 1.1.2.
 - **Why load-bearing:** these carry real hallucination risk and are used both to justify routes (E27's Theorem 5.1, E06's refutation) and to conclude that the headline is *not* already settled in the literature. A fabricated or misapplied citation could either invalidate a sealed result or hide an existing resolution.
 - **Where it lives:** `github-repo-task-update-6a7054fb.md`, `repo-push-request-6a705556.md`, `task-b-in-repo-6a70554b.md`, `klein-cubic-threefold-psl-6a6b6514.md`; downstream in [E06](#e06), [E27](#e27), [E51](#e51).
@@ -4204,7 +4316,8 @@ determines which route owns the certificate.)
   claim does not hold or is out of scope. Until one or the other happens,
   none of these 7 claims may move any entry's headline-relevant status.
 
-### 20. FIX-H1/FIX-C1 open residue (2026-08-05) — adopted live runs and unrun upgrades
+### 21. FIX-H1/FIX-C1 open residue (2026-08-05) — adopted live runs and unrun upgrades
+(renumbered 2026-08-06 from a duplicate "20")
 
 - **Adopted live computations** (worker-detached processes running inside
   the sealed FIX-H1 packet's `msolve/`, `m2/`, `logs/` at integration time;
@@ -4248,6 +4361,32 @@ determines which route owns the certificate.)
   cells unchanged. New M2 landmines (underscore variables parsed as
   indexed subscripts; `saturate(I,{f,g})` successive) recorded in the
   toolchain memory alongside the msolve pair.
+
+### 22. Wave-28 residue (2026-08-06): seal disposition and in-flight adoptions
+
+- **Note IX §5 sealing assignments — RESOLVED SAME DAY** by the
+  director-run packet `goal_runs_after_c53d89a/FIX_IX_SEAL`
+  (`FIX-IX-SEAL-PASS`): sextic smoothness, both-primes + char-0
+  exactness of (a)/(b), ambient smooth/dim-3/deg-14, Klein-Pfaffian
+  identification. Recorded here so the assignment→discharge pair is
+  auditable. Residue: the direct char-0 Jacobian-minors run for the
+  sextic (redundant belt-and-suspenders; smoothness already follows
+  a priori) was still running at ledger time — integrate or discard
+  on completion.
+- **Cited-not-recomputed layer of Cor IX.1:** the Note I lemmas
+  (Thm 2.1, Lem 4.2/4.3, Prop 3.3/equivariant resolution) — gate-audited
+  (T1–T5) but the planned independent Note-review was never done; IX.1's
+  proof consumes them. Any external use of the V₁₄ theorem should cite
+  this dependency explicitly.
+- **Worker-grade inputs awaiting their packet:** the FIX-IX-V14MODEL
+  in-flight data used narratively in Note IX §8 (stab-exactly-C₁₁ on the
+  5 C₁₁-points ⟹ `V₁₄^{F55} = ∅`) and the A5LADDER interim (cones empty
+  through d = 7; "cplus" candidate mid-verification). Neither is
+  load-bearing for IX.1/IX.2; both must be sealed or retired when the
+  workers return (worker-return write-race discipline: wait for quiesce).
+- **Pre-registered blind test:** IX.1 ⟹ V14MODEL stage-4 ladder EMPTY at
+  all degrees — check on landing; a verified hit reopens this item as a
+  contradiction to resolve.
 
 ---
 

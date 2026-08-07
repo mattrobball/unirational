@@ -1,0 +1,14 @@
+kk = ZZ/397;
+S = kk[a0,a1,a2,a3,a4];
+A = matrix{{0,(1)*a4,(396)*a3,(1)*a2,(396)*a1,(1)*a0},{(396)*a4,0,(395)*a1,0,0,(2)*a3},{(1)*a3,(2)*a1,0,0,(2)*a2,0},{(396)*a2,0,0,0,(395)*a0,(2)*a4},{(1)*a1,0,(395)*a2,(2)*a0,0,0},{(396)*a0,(395)*a3,0,(395)*a4,0,0}};
+pf6 = pfaffians(6, A);
+<< "PF6 nonzero " << (pf6 != 0) << endl;
+lv = new MutableHashTable;
+for u from 0 to 5 do for v from u+1 to 5 do lv#(u,v) = (gens pfaffians(4, submatrix'(A, {u,v}, {u,v})))_(0,0);
+q0 = (1)*lv#(0,5)+(395)*lv#(3,4);
+q1 = (396)*lv#(0,4)+(395)*lv#(1,2);
+q2 = (1)*lv#(0,3)+(2)*lv#(2,4);
+q3 = (396)*lv#(0,2)+(2)*lv#(1,5);
+q4 = (1)*lv#(0,1)+(2)*lv#(3,5);
+J = pf6 + ideal(q0,q1,q2,q3,q4);
+<< "JSYS empty " << (saturate(J, ideal vars S) == ideal(1_S)) << endl;

@@ -57,6 +57,9 @@ handle: the `V₁₄`-side computations see the Schur class.
 explicitly mod 397 (`v14_model.py`): even-function model on
 `F₁₁`, Fourier generator normalized by `S² = 11·I` and
 `c² = 11⁻¹`; projective closure of `⟨T₆, S₆⟩` is EXACTLY 660 ✓.
+[Superseded normalization — see §4: the CORRECT Weil
+normalization is `S² = −I`, `c² = −1/11` (SL-closure 1320); this
+§3 first pass gave only the projective closure.]
 Note `1 ⊕ W` FAILS (hand proof: the G-stable codim-5 section of
 `Gr(2, 1⊕W)` degenerates to `Gr(2,W)`), so the central extension
 is forced — consistent with T-Z's `G̃`.
@@ -187,8 +190,14 @@ needs a `G`-fixed point, and `Y^G ⊆ Y^N = ∅`), and any covariant
 or degree data. This is the all-degree, search-free shape the
 program has hunted since E34.
 
-**Instantiation on the V₁₄** (measured mod 397 by the in-flight
-FIX-IX-V14MODEL worker; each hypothesis carries its seal):
+**Instantiation on the V₁₄ — SEALED 2026-08-06** (packet
+`goal_runs_after_c53d89a/FIX_IX_SEAL`, director-run: two engines,
+primes 397/199, verifier at fresh prime 353, exact char 0 over
+`Q(ζ₁₁)`; the sealing assignments below are DISCHARGED — the
+sextic is SMOOTH irreducible genus 1, both hypotheses hold in
+char 0, the ambient is smooth pure-dim-3 degree-14 via the dual
+Pfaffian-adjoint system, and the Pfaffian-partner identification
+with the Klein cubic is machine-verified):
 
 - `N = C_G(σ) = D12`: sealed group fact (FIX-A0; independent of
   the variety).
@@ -208,15 +217,17 @@ FIX-IX-V14MODEL worker; each hypothesis carries its seal):
 - `V₁₄` smooth projective of dim 3, degree 14: stage-1 seal in
   flight.
 
-**Conclusion (pending the seals): the V₁₄ action of PSL₂(F₁₁) is
-not weakly versal** — no equivariant rational map from any
-faithful linear source exists, and the generic twist of `V₁₄` is
-pointless. This is new-theorem territory: CTZ's scope is index
-≥ 2; no literature covers the V₁₄ action.
+**Conclusion (SEALED, modulo only the [I]-lemma layer it cites):
+the V₁₄ action of PSL₂(F₁₁) is not weakly versal** — no
+equivariant rational map from any faithful linear source exists,
+and the generic twist of `V₁₄` is pointless. This is
+new-theorem territory: CTZ's scope is index ≥ 2; no literature
+covers the V₁₄ action.
 
 **Corollary IX.2 (the Remark-10.10 disjunction collapses).**
-Granting IX.1's seals: `ed_C(PSL₂(F₁₁)) = 3 ⟺ the Klein cubic
-is G-unirational.` *Proof.* If `ed = 3`, a 3-dimensional versal
+`ed_C(PSL₂(F₁₁)) = 3 ⟺ the Klein cubic is G-unirational.`
+(Literature inputs: Prokhorov's two-class theorem, D-R Thm 10.5;
+machine inputs: FIX-IX-SEAL.) *Proof.* If `ed = 3`, a 3-dimensional versal
 `G`-variety exists; the standard witness (a compression of a
 faithful representation) is unirational, hence RC, hence by
 Prokhorov `G`-birational to the Klein cubic or the V₁₄; versality
@@ -345,3 +356,64 @@ stage-4 hit would refute the mod-397 loci data or the IX.1
 derivation (one of the two must then be wrong); conversely the
 ladder's emptiness, when it lands, is independent blind
 corroboration of the obstruction.
+
+## 8. Subgroup transfer across the T-Z equivalence: odd order is the criterion (2026-08-06, user question)
+
+Question: for which `H ≤ G` does the twin equivalence transfer
+(non-)unirationality? Answer: EXACTLY the odd-order subgroups —
+and one of them is F55, where the transfer has teeth.
+
+**Lemma IX.7 (odd-order collapse).** The central extension
+`2.G → G` splits over `H ≤ G` iff `|H|` is odd. (Only involution
+in `SL₂(F₁₁)` is `−I`, so an involution of `H` cannot lift to an
+involution — even order obstructs; odd order splits by
+Schur–Zassenhaus.) For odd `H` the preimage is `H × ⟨−1⟩`, so
+every spin source is, as an `H`-variety, `P(linear H-rep)`: the
+linear/spin distinction COLLAPSES over `H`. Restricting T-Z
+Thm 1.1 to `H` and folding (all factors now linear), we get:
+**`Y` is H-unirational ⟺ `X` is H-unirational** — both
+directions, positives and negatives alike. For even-order `H`
+the restricted extension is nonsplit, its Brauer class survives
+(the §2 caveat verbatim), and NOTHING transfers — witnessed
+sharply at `H = D12` by Cor IX.6 (Klein D12-unirational, V₁₄
+not D12-lin-unirational: the twins diverge, consistent only
+because D12 has even order).
+
+The odd-order subgroups of `PSL₂(F₁₁)` up to conjugacy:
+`1, C₃, C₅, C₁₁, F55 = C₁₁⋊C₅`. New situations:
+
+- **F55 (the money case).** `F55` on the Klein cubic is a NAMED
+  CTZ open case, and `X^{F55} = ∅` on both twins (the C₅ cycles
+  the five C₁₁-fixed points). By Lemma IX.7: **Klein-F55 ⟺
+  V₁₄-F55**, one question with two geometric models. And since a
+  G-map restricts to an F55-map: **NOT-F55 on EITHER twin ⟹ the
+  headline is NEGATIVE (`ed = 4`)** — a second sufficient
+  negative target alongside Cor IX.5's spin-kill, and this one
+  transfers freely between the twins. The involution machine
+  cannot touch it (F55 has no involutions); the natural attack
+  is the odd-element analogue of IX.1 on the V₁₄'s C₁₁/C₅ data.
+  Fixed-point inputs (worker-grade, mod 397, to be sealed with
+  its packet): `V₁₄^{C₁₁}` = 5 points with stabilizer EXACTLY
+  C₁₁ (they sit in a 60-orbit), so the C₅ cycles them freely
+  and `V₁₄^{F55} = ∅` — mirroring the Klein side, where
+  `W|_{F55}` is irreducible so `P(W)^{F55} = ∅`. Consequently a
+  faithful F55-rep `V` with `V^{C₁₁} ≠ 0` yields an F55-stable
+  connected rational stratum (`P(V^{C₁₁})`) whose image would be
+  an F55-fixed point — empty — so only sources with
+  `V^{C₁₁} = 0` (the induced 5-dims) survive the first cut; the
+  residual analysis is the named next derivation.
+- **C₃ (first unconditional positive on the V₁₄).** The Klein
+  cubic is D12-unirational, hence C₃-unirational (restrict);
+  C₃ is odd; so **the V₁₄ IS C₃-unirational** — its first
+  unconditional positive equivariant-unirationality statement,
+  by pure transfer.
+- **C₅, C₁₁.** Open on both twins, equivalent across them by
+  IX.7; each is implied by headline-YES and implies nothing
+  back; a Klein-side proof (fixed points + equivariant Kollár
+  tangent-construction, CTZ Prop-3.1-style) would transfer to
+  the V₁₄ for free. Low stakes but cheap.
+
+Scoreboard on the V₁₄ after today: G: NOT unirational (IX.1,
+sealed). D12 (even): lin NO / spin YES. C₃: YES. C₅, C₁₁, F55
+(odd): open ⟺ their Klein twins. Spin-G: open, = the
+transported headline (IX.5).
