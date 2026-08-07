@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `6e8a110` (2026-08-06; the
+Snapshot metadata — notebook parent head: `a1c3773` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3674,7 +3674,19 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   derivation: divisorial/local analysis of Φ at the order-11 class's
   ramification — the trace-form-specific obstruction the sealed
   packet stopped short of. No answer yet; both flanks now aimed at
-  one explicit cubic.** Note I
+  one explicit cubic.** **Wave 29 (continuation; Note IX §8.9,
+  DRAFT-FOR-DERIVATION): the valuation campaign on Φ opened.** Under a
+  monomial valuation the five trace terms have orders `μᵢ = 2sᵢ +
+  sᵢ₊₁ − w₂₊ᵢ`; `det(2I+σ) = 33` yields invariant congruences `Σμᵢ ≡
+  0 (mod 3)` and `Σaᵢμᵢ ≡ −W (mod 11)` — the mod-11 functional is the
+  KLEIN WEIGHT vector `aᵢ = (−2)ⁱ` (transpose kernel), tying the
+  twist arithmetic to the weight calculus of §8.1. Yields: `W ≢ 0
+  (mod 11)` forbids five-way ties; unique-minimum ⟹ `Φ(a) ≠ 0`
+  outright; pointlessness reduces to a FINITE tie-cascade (2/3/4-term
+  residual equations over trdeg-3 residue fields, order-11 class as
+  engine). One closing valuation ⟹ F55-NO ⟹ ed = 4. Route is
+  NO-only; YES stays with the ladder (d = 6 in flight). Active
+  derivation: the tie-cascade.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant

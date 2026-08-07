@@ -874,6 +874,30 @@ over the supports where the order-11 class ramifies — the
 trace-form-specific obstruction the sealed packet stopped short
 of.
 
+### 8.9 The valuation campaign on Φ (opened 2026-08-07; DRAFT-FOR-DERIVATION)
+
+For a monomial valuation `v_w` on `E` (`v(r_i) = w_i`,
+`Σw_i = 0`), the five terms `T_i = r_{2+i}^{-1}·a_i²a_{i+1}` of
+`Φ` have orders `μ_i = 2s_i + s_{i+1} − w_{2+i}` where
+`s_i = v_{σ^{-i}w}(a)`. The lattice operator `2I + σ` has
+determinant `33 = 3·11`, giving two INVARIANT congruences for
+monomial `a`: `Σ_i μ_i ≡ −Σw ≡ 0 (mod 3)` and — the transpose
+kernel being spanned by the KLEIN WEIGHTS `a_i = (−2)^i` —
+`Σ_i a_iμ_i ≡ −W (mod 11)`, `W := Σ_i a_i w_{2+i}`. First
+structural yields: (i) if `W ≢ 0 (mod 11)`, a FIVE-WAY tie of
+the term orders is impossible (`Σa_i = 22 ≡ 0` forces `W ≡ 0`);
+(ii) a unique-minimum configuration forces `Φ(a) ≠ 0` in the
+valued field outright, so any pointlessness proof reduces to
+killing the residual cancellation equations at 2-, 3-, 4-term
+ties — each a smaller trace-type equation over a trdeg-3 residue
+field, where the sealed order-11 class of `r₂` is the candidate
+engine. A single valuation `w` whose full tie-cascade closes
+would prove `Φ` pointless ⟹ F55-NO ⟹ headline NEGATIVE,
+`ed = 4`. Conversely this route can never prove F55-YES (local
+solubility everywhere decides nothing) — the YES-side remains
+the ladder/height search. STATUS: opened; the tie-cascade
+analysis is the active derivation.
+
 **Verdict of the analytic campaign on the inventory.** The
 necessary-conditions tower (incidence → germ weights →
 endpoint links → span sweep → squares kill → tropical trees)
