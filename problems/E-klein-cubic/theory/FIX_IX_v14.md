@@ -1275,6 +1275,58 @@ is the tightest yet and must be genuinely decided. This is the
 next — and plausibly last — analysis block of the arithmetic
 flank.
 
+### 8.16 The crux polytope question (2026-08-07)
+
+Working (F1) at the boundary through Newton polytopes: with
+`Q := Newton(a)` and `g_i(w) := h_Q(σ^i w)` (support function),
+the boundary pattern of `φ = ψ(a)r₂^{-1}` at the ray `w` is
+`(2g_i + g_{i-1} − ⟨σ^i w, e₂⟩)_i` — the `(2+σ̃)`-structure yet
+again, now with the LINEAR defect `t_i = ⟨σ^i w, e₂⟩`.
+
+**Theorem Q (the crux).** The boundary half of the final system
+is equivalent to: *does there exist a lattice polytope `Q` such
+that for EVERY `w`, the minimum of
+`(2h_Q(σ^iw) + h_Q(σ^{i-1}w) − ⟨σ^iw, e₂⟩)_i` is attained at
+least twice?* Established tonight:
+
+- 0-dimensional `Q` (monomial `a`) FAILS at generic rays — the
+  shadow-level echo of "no monomial is trace-zero".
+- σ-INVARIANT `Q` fails identically: the pattern becomes
+  `3g(w)·(1,…,1) − t_i`, whose twice-min needs the unique-max of
+  `t` to degenerate — impossible. Removing the defect exactly
+  would need `(2+σ)t-solvability`, i.e. `λ(e₂) ≡ 0 (mod 11)`:
+  FALSE (`λ(e₂) = 3`). Equivalently the exact solution is the
+  NON-LATTICE point `(2+σ)^{-1}e₂` with denominator exactly 11:
+  **the order-11 class reappears as a non-integrality
+  obstruction on polytopes** — its third guise (multiplicative
+  class → congruence functional → denominator).
+- Honest trace-zero functions satisfy Theorem J through the
+  CHAIN mechanism (consecutive conjugates share Newton faces —
+  e.g. `r₀ − r₁`, whose conjugate segments form the cyclic
+  pentagon chain); a feasible `Q` must orchestrate this chain
+  sharing against the `e₂`-defect. First structured candidates
+  (single segments; the invariant zonotope) fail; asymmetric
+  zonotopes built on the cyclic chain are the next family.
+
+**Two distinct 11-covers.** The refinement `Λ + Z·(2+σ)^{-1}e₂`
+(the crux's denominator) and `Λ′ = Λ + Z·(e_b/11)` (the b-cover,
+the (iv′) escape locus) are DIFFERENT 11-isogeny directions
+(`adj(2+σ)e₂ ≢ unit·e_b mod 11`): the final system's two escape
+hatches live on two independent covers.
+
+**Interior bits are free.** Interior orbits obstruct nothing:
+patterns like `11·e₀` satisfy (F1) (`(2+σ̃)(11e₀) = 11(2,0,0,0,1)`,
+min thrice) and (F2) (`λ = 11 ≡ 0`) simultaneously.
+
+STATUS: the F55-NO question is now Theorem Q's polytope
+existence (+ the still-implicit (F3) transpose layer and b-split
+bookkeeping). A proof that NO such `Q` exists finishes F55
+negatively and sets `ed = 4`; an explicit `Q` closes the shadow
+system feasible and the arithmetic flank ends at the same
+lifting wall as the geometric one. Active: the structured-`Q`
+hunt and, in parallel, a hoped-for invariant proof that the
+`e₂`-defect's unique exposure cannot be doubly covered.
+
 **Honest position after the full derivation.** Both flanks of
 F55 are genuinely deep, in matching ways: the geometric machine
 ends at a tropical-to-exact lifting gap (§8.7), and the

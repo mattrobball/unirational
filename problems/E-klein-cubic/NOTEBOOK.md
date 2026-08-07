@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `a5c55b4` (2026-08-06; the
+Snapshot metadata — notebook parent head: `8e967d7` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3816,7 +3816,26 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   F55-NO ⟹ ed = 4; feasible ⟹ the arithmetic flank ends at the same
   lifting gap as the geometric one. Honest prior: feasible (every
   prior layer escaped), but this is the tightest interlock yet.
-  Next and plausibly last analysis block of the flank.** Note I
+  Next and plausibly last analysis block of the flank.** **Wave 29
+  ("keep going"; Note IX §8.16): the CRUX POLYTOPE QUESTION.**
+  Boundary-(F1) through Newton polytopes: pattern =
+  `(2h_Q(σⁱw) + h_Q(σ^{i−1}w) − ⟨σⁱw, e₂⟩)ᵢ`. **Theorem Q:** the
+  boundary half of the final system ⟺ ∃ lattice polytope Q with that
+  pattern's min attained twice for EVERY w. Proven tonight:
+  0-dim Q fails (shadow echo of "no monomial is trace-zero");
+  σ-invariant Q fails IDENTICALLY, and the exact defect-removal
+  demands the NON-LATTICE point `(2+σ)⁻¹e₂` (denominator exactly 11)
+  — **the order-11 class in its THIRD guise: multiplicative class →
+  congruence functional → polytope non-integrality.** Honest
+  trace-zero functions satisfy J via chain-sharing of Newton faces
+  (the `r₀ − r₁` pentagon chain); a feasible Q must orchestrate the
+  chain against the e₂-defect; first candidates fail; asymmetric
+  zonotopes next. **Two DISTINCT 11-covers** govern the two escape
+  hatches (`adj(2+σ)e₂ ≢ unit·e_b` mod 11). Interior orbits are
+  free (`11e₀`-certificates). STATUS: F55-NO ⟺(shadow) no such Q +
+  (F3)/b-split closure; an explicit Q ⟹ the arithmetic flank ends at
+  the same lifting wall as the geometric flank. Active: structured-Q
+  hunt vs a hoped-for unique-exposure invariant.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
