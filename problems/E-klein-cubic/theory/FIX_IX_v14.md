@@ -1211,6 +1211,70 @@ neighboring rays. Only if all three close consistently does the
 route exhaust; a single unmatchable ray proves F55-NO and
 `ed = 4`.
 
+### 8.15 The per-ray equation collapses: the uniform law, the transpose identity, and the final combinatorial system (2026-08-07)
+
+**Theorem O (per-ray solvability ⟺ the uniform second-order
+law).** With leading units `ℓ_w(·)` along `D_w`, the per-orbit
+residue of a corestricted symbol is
+`∂_q(cores(x,b)) = [ℓ(N_λ(x))^{⟨w,e_b⟩}·ℓ(b)^{−λ_w(x)}]`.
+Substituting Theorem M (`N_λ(φ) = N_λ(a)^7 r^{-c}·(11th
+power)`) and Theorem N (`λ_w(φ) ≡ −⟨w,c⟩`), the ENTIRE per-ray
+consistency equation between the two expressions for `A_K`
+cancels except for one factor:
+
+    [ℓ_w(b)]^{7·λ_w(a)} ≡ 1  in κ(D_w)^*/11.
+
+So no ray is ever unmatchable outright: the Brauer-residue layer
+yields NO direct contradiction; it yields the UNIFORM LAW
+
+    (iv′)  λ_O(div a) ≡ 0 (mod 11) at EVERY orbit — interior
+           and boundary alike — except where ℓ(b) is an 11th
+           power on the divisor (the b-split locus).
+
+The exact cancellation (the `N_λ`- and `r^c`-terms meeting their
+twins from Theorem M) is itself a further coherence check.
+
+**Theorem P (the transpose identity; the tower deepens).** By
+the §8.10 alignment `b = (const)·ψ(r^x)` and the symbol
+adjunction `cores(z, σy) = cores(σ^{-1}z, y)`:
+
+    cores(a, b) = cores(a²·σ^{-1}(a), r^x) = cores(ψ^*(a), r^x),
+
+with `ψ^* = 2 + σ^{-1}` — the TRANSPOSE of ψ. This gives a
+second, independent residue computation of `cores(a,b)` with
+monomial second slot and `⟨σ^iw, x⟩`-weightings in place of
+`5^i`-weightings; equating it with the first yields third-layer
+relations MIXING the two weight systems. The reciprocity tower
+deepens rather than closes.
+
+**The consolidated final system.** All Brauer theory is now
+discharged; what remains is a self-contained combinatorial
+feasibility question about ONE divisor datum `D := div(a)` on
+the compactified torus:
+
+  (F1) `(2+σ̃)D − div(r₂)` obeys the trace-zero laws: Theorem J
+       twice-min at every orbit, jet-recursion at σ-invariant
+       primes (none interior; boundary rays have none either —
+       all orbits size 5);
+  (F2) `λ_O(D) ≡ 0 (mod 11)` at every non-b-split orbit [iv′],
+       with the b-split escape available only on the locus
+       splitting in `T′`;
+  (F3) the transpose-layer relations [P] between the
+       `5^i`-weighted and `⟨σ^iw,x⟩`-weighted invariants of `D`;
+  (F4) principality/polytope closure on a smooth σ-stable fan,
+       with the boundary λ-pattern of `(2+σ̃)D − div(r₂)` pinned
+       to `−⟨w,c⟩` [N].
+
+F55-YES requires (F1)–(F4) satisfiable plus the algebraic
+lifting (the §8.7-type gap); F55-NO follows if (F1)–(F4) are
+INFEASIBLE — and this, at last, is a pure lattice-combinatorics
+question, the arithmetic twin of §8.7's tropical system. Honest
+prior: every prior layer ended feasible, so feasibility is the
+likely outcome; but the interlock here (four laws on one datum)
+is the tightest yet and must be genuinely decided. This is the
+next — and plausibly last — analysis block of the arithmetic
+flank.
+
 **Honest position after the full derivation.** Both flanks of
 F55 are genuinely deep, in matching ways: the geometric machine
 ends at a tropical-to-exact lifting gap (§8.7), and the

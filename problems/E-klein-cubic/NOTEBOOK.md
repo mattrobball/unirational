@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `2f0297d` (2026-08-06; the
+Snapshot metadata — notebook parent head: `a5c55b4` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3796,7 +3796,27 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   Theorem J still binds. Remaining analysis: (α) clean per-ray
   solvability of the full consistency equation; (β) b-split orbits
   on T′; (γ) codim-2 Gersten links. One unmatchable ray ⟹ F55-NO ⟹
-  ed = 4.** Note I
+  ed = 4.** **Wave 29 ("keep pushing"; Note IX §8.15): the per-ray
+  equation COLLAPSES.** **Theorem O:** with leading units, the whole
+  per-ray consistency equation cancels (the N_λ- and r^c-terms meet
+  their Theorem-M twins exactly — another coherence pass) down to
+  `[ℓ_w(b)]^{7λ_w(a)} ≡ 1`: NO ray is unmatchable outright; instead
+  the UNIFORM LAW (iv′): `λ_O(div a) ≡ 0 (mod 11)` at EVERY orbit,
+  interior AND boundary, off the b-split locus. The Brauer-residue
+  layer yields no direct contradiction — it yields the second-order
+  law everywhere. **Theorem P (transpose identity):** via the §8.10
+  alignment, `cores(a,b) = cores(ψ*(a), r^x)` with `ψ* = 2+σ⁻¹` —
+  a second independent residue computation with `⟨σⁱw,x⟩`-weightings;
+  equating the two adds third-layer relations mixing the weight
+  systems. **CONSOLIDATION: all Brauer theory discharged; the
+  arithmetic flank is now ONE self-contained lattice-combinatorics
+  feasibility system (F1)–(F4) on the single datum div(a):** J-laws
+  on `(2+σ̃)D − div(r₂)`, the uniform (iv′), the transpose
+  relations, and pinned-boundary/principality closure. Infeasible ⟹
+  F55-NO ⟹ ed = 4; feasible ⟹ the arithmetic flank ends at the same
+  lifting gap as the geometric one. Honest prior: feasible (every
+  prior layer escaped), but this is the tightest interlock yet.
+  Next and plausibly last analysis block of the flank.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
