@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `41e3ccb` (2026-08-07; the
+Snapshot metadata — notebook parent head: `5548686` (2026-08-07; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -4009,7 +4009,26 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   (A₄ {n_a=n_b} level 1; G₉ {H_a=H_b} level 2; sign {H_a=0} level 2
   pair-field); the recurring final step is one covering statement
   against one finite nonvanishing vector. Lemma S still UNCLAIMED
-  (arbitrary fans outside the three classes; mixed; depth tower).** Note I
+  (arbitrary fans outside the three classes; mixed; depth tower).**
+  **Wave 31 (continuation; Note IX §8.24, probe `f55_ellfan.py`):
+  THE ORDER-FAN EIGEN-CLASSIFICATION (Theorem X‴).** By the active
+  set A(ℓ) ⊆ {3,9,5,4} of mod-11 eigencomponents: (i) 5 ∉ A —
+  Lemma U kills (level 1). (ii) A full — every ray keeps a nonzero
+  v₅-component (block-Fourier lemma: all 24 coefficients 1̂_S(ε) ≢ 0)
+  ⟹ all six class targets ≢ 0 ⟹ ray-point argument + covering kill
+  EVERY pattern at level 1 (A₄ = the instance ℓ = e₀*; sweep 816
+  fully-active ℓ, zero violations). (iii) A = {5} (aligned) — v ≡ 0
+  forced, ξ*(ℓ)-criterion; **the e_b-fan CLOSED for all patterns**
+  (ξ*(e_b) = (1,10,5,3,2,6) nowhere zero; e_b ≡ 8G₉ + 5·diag —
+  upgrading the 4/4-sampled record), likewise G₉+11μ for three μ;
+  the member G₉+11e₁ has 121-divisible ray gaps — the first concrete
+  depth-2 tower inhabitant (level-3 analysis needed). (iv) 5 ∈ A,
+  intermediate — rays collapse mod 11 into the inactive eigenspan,
+  all targets vanish, profile carries |A| parameters: OPEN (the
+  86/400 "bad generic" sweep = exactly the union a₃/a₉/a₄ ≡ 0,
+  matching). Open territory now exactly: (iv), general ξ*(ℓ)
+  nonvanishing, the depth tower, non-order fans beyond the sign-fan
+  ((τ,Ψ)-frame), and mixed wall-systems. Lemma S UNCLAIMED.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant

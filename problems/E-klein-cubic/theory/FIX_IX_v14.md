@@ -1863,3 +1863,58 @@ vector. Remaining for Lemma S: arbitrary fans outside these classes
 (general order fans via the criterion above; general aligned fans
 via the (τ,Ψ)-frame and the depth induction; mixed fans). Lemma S
 remains UNCLAIMED.
+
+### 8.24 The order-fan eigen-classification (2026-08-07)
+
+Eigenframe mod 11: M-side eigencovectors G_ε = (1,ε,ε²,ε³,ε⁴),
+N-side eigenvectors v_ε = (ε^{-j})_j, ε ∈ {3,9,5,4} (G₅ = G₉ is the
+aligned direction); components a_ε(ℓ) with ⟨ℓ, v_ε⟩ = 5·a_ε.
+Two facts, both finite-checked (`f55_ellfan.py` + inline):
+(α) the block-Fourier coefficients 1̂_S(ε) = Σ_{k∈S} εᵏ are nonzero
+for all six subset classes and all four ε (24 checks — sums of ≤ 4
+distinct fifth roots of unity in F₁₁ do not vanish on these
+supports); (β) ⟨v_ε, c₉⟩ = 0 for ε ≠ 5 and ⟨v₅, c₉⟩ ≡ 9.
+
+**Theorem X‴ (classification of order fans of σ-orbits of a
+primitive covector ℓ, by the active set A(ℓ) = {ε : a_ε ≢ 0}).**
+
+(i) 5 ∉ A: the wall-span misses the G₉-line; Lemma U kills every
+pattern at level 1. [Proved, §8.19.]
+
+(ii) A = {3,9,5,4} (fully active): along any ray, the five
+transported values V_k = Σ_ε p_ε εᵏ have p_ε = scale·1̂_S(ε), so by
+(α) every ray keeps a nonzero v₅-component and by (β) all six class
+targets −⟨ray_ℓ(T_c), c₉⟩ are ≢ 0; the ray-point argument + the
+covering theorem (§8.23) kill every pattern at level 1. [The A₄ fan
+is the instance ℓ = e₀*, all components ≡ 1. Sweep: 816 fully-active
+ℓ, zero violations.]
+
+(iii) A = {5} (aligned): every ray value ≡ 0 (mod 11) (a
+degenerate-profile forces scale ≡ 0), v ≡ 0 (mod 11) is forced, and
+the level-2 class system has the unique ξ*(ℓ); the fan dies for
+every pattern iff ξ*(ℓ) is nowhere zero. Instances (all
+nowhere-zero, hence dead for every pattern): the G₉-fan
+(ξ* = 9·(7,4,2,10,3,9) in the −4-normalization), **the e_b-fan
+(ξ*(e_b) = (1,10,5,3,2,6) — upgrading the 4/4-sampled record of
+§8.19 to ALL patterns; e_b ≡ 8·G₉ + 5·diag)**, and
+G₉ + 11μ for μ = e₀, e₀−e₁, e₂+e₃. The member ℓ = G₉ + 11e₁ has
+121-divisible ray gaps — the first concrete depth-2 inhabitant of
+the IX-h tower; its analysis needs level 3.
+
+(iv) 5 ∈ A, {5} ⊊ A ⊊ {3,9,5,4}: some non-5 component dead. Then
+every ray value ≡ 0 (mod 11) and rays collapse mod 11 into the
+inactive eigenspan (verified on samples), all six targets vanish,
+and the chamber profile carries |A| parameters — the single-V₀
+collapse fails, so neither the level-1 class kill nor the aligned
+ξ*-machinery applies as-is. OPEN: the intermediate regimes. [The
+"bad generic" sweep — 86 of 400 small ℓ — is exactly the union of
+the events a₃ = 0, a₉ = 0, a₄ = 0, matching this classification;
+a₅ = 0 alone stays dead via (i).]
+
+**Status after §8.24.** Within the order-fan universe the open
+territory is exactly: (iv)'s intermediate active sets, the general
+nonvanishing of ξ*(ℓ) over aligned ℓ (all computed instances
+nonzero), and the depth tower for deeper-aligned ℓ. Outside it:
+non-order fans (the sign-fan is closed; the (τ,Ψ)-frame is the
+general tool) and genuinely mixed wall-systems (T5). Lemma S
+remains UNCLAIMED.

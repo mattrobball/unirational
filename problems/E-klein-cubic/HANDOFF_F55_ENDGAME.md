@@ -21,12 +21,18 @@
 > 420-sample record), and the ORDER-FAN CRITERION (generic ℓ: six
 > pairings ≢ 0; aligned ℓ: ξ*(ℓ) nowhere zero; zeros ⟹ descend).
 > T6 chain links 2–5 re-audited clean (necessity directions).
-> Remaining: fans outside the three closed classes (general order
-> fans via the criterion, general aligned via depth induction,
-> mixed fans), then T6-assembly/T7 as written.
+> §8.24: **Theorem X‴ — the order-fan eigen-classification** by the
+> active set A(ℓ): 5 ∉ A ⟹ Lemma U; A full ⟹ level-1 kill for every
+> pattern (Fourier lemma, 816-sweep clean); A = {5} ⟹ ξ*(ℓ)
+> criterion — **e_b-fan closed for all patterns**
+> (ξ* = (1,10,5,3,2,6)), G₉+11e₁ = first depth-2 tower inhabitant;
+> intermediate A ⟹ OPEN (rays collapse into the inactive span).
+> Remaining: intermediate-A order fans, general ξ*(ℓ) nonvanishing,
+> the depth tower, non-order fans via (τ,Ψ), mixed fans; then
+> T6-assembly/T7 as written.
 > New probes: `f55_exact1.py`, `f55_exact2.py`, `f55_eweb.py`,
 > `f55_xistar.py`, `f55_free_sweep.py`, `f55_signfan.py`,
-> `f55_signfan_close.py`, `f55_a4exact.py`.
+> `f55_signfan_close.py`, `f55_a4exact.py`, `f55_ellfan.py`.
 
 For human or fresh-session continuation. Everything referenced is
 committed; theory in `theory/FIX_IX_v14.md` (§8 = the F55 campaign,
