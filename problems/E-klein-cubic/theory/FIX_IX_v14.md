@@ -2157,3 +2157,72 @@ computation on the same 19-dim lattice (`f55_qpreimage.py`, in
 flight). Until it returns, neither Lemma S nor F55-NO nor the
 headline is claimed — and the §8.22–8.25 fan kills remain valid
 theorems about the objects they name.
+
+### 8.28 The witness lifts: Theorem Q is SATISFIED, Lemma S is FALSE (Correction IX-k) (2026-08-08)
+
+**Correction IX-k (terminal for this route).** §8.27 left one gap:
+does a value-form witness lift to Theorem Q proper? It does —
+explicitly, for all 14 witnesses, with an honest lattice polytope.
+Lemma S is FALSE, and the conserved-eleven/value-form programme
+CANNOT prove F55-NO.
+
+**The lift is an identity, not a search.** In `Z[x]/(x⁵−1)` with
+`x = σ̃`: `(x+2)·G(x) = x⁵ + 32 ≡ 33`, `G = 16 − 8x + 4x² − 2x³ +
+x⁴` (verified independently). So `2 + σ̃` is INJECTIVE and h is
+UNIQUE: `h = (1/33)·G(σ̃)(d + m + e₂*)`. Hence (*) is solvable ⟺
+`33 | G(σ̃)(d + m + e₂*)` cellwise. Since `G(1) = 11`, a
+σ-invariant m contributes exactly `11·U_m`, and CRT splits the
+criterion:
+- **mod 11**: m drops out and the condition is EXACTLY congruence
+  (3) — verified as an operator identity,
+  `G(U) + G(e₂) ≡ 5(Σ_k 9ᵏ σ_*^{−k}U(σᵏC) + c₉)`;
+- **mod 3**: the condition is `U_m ≡ U_D (mod 3)` with
+  `D := Σ_j d∘σʲ`, satisfied by taking `m = D` (itself σ-invariant,
+  integral-sloped, PL).
+
+The mod-3 layer is load-bearing, not vacuous: with `m = 0` only
+5 of 1090 cells are 3-divisible; with `m = D`, all 1090. This is
+§8.10's "mod-3 surprise" (the 3-part of coker(2+σ)) reappearing —
+and here it is SATISFIABLE, because m is free. **Consequence: on
+the mixed fan the value form and Theorem Q are EQUIVALENT, not
+strictly weaker.** The hoped-for extra content in the preimage
+does not exist; §8.17's virtual-polytope generality was right.
+
+**An actual lattice polytope (Theorem Q proper).** `h₀` is not
+convex, but `Φ(n) := Σ|⟨l, n⟩|` over the 20 σ-stable defining
+forms is σ-invariant, integral-sloped and strictly wall-convex on
+exactly this fan, and `2Φ + Φ∘σ⁻¹ = 3Φ`, so replacing
+`h₀ ↦ h₀ + T·Φ` shifts F by the ORBIT-CONSTANT `3T·Φ` and cannot
+disturb the twice-min structure. `h_T = h₀ + 128Φ` is convex
+(exact ray criterion, 0 failures at all 460 rays), so
+`Q := conv{U_{h_T}(C)}` is a LATTICE POLYTOPE with `h_Q = h_T`.
+
+**Fan-free confirmation.** Evaluating `h_Q` by brute-force
+maximization over Q's lattice points — using no fan, no cell
+indexing, no wall list — at 40,000 random `w ∈ N` (14,249 of them
+non-generic, i.e. on walls or rays): the σ-orbit minimum of
+`(2h_Q(σⁱw) + h_Q(σ^{i−1}w) − ⟨σⁱw, e₂⟩)_i` is attained AT LEAST
+TWICE at 40,000 of 40,000, and Theorem R holds at 40,000 of
+40,000. Non-degenerate: multiplicity exactly 2 at 39,712. And it
+holds at EVERY w, not merely samples: (**) gives `F = d + m` with
+m σ-invariant, so `min_i F(σⁱw) = m(w)`, attained at the ≥ 2
+indices where `d(σⁱw) = 0`.
+
+**Status.** Theorem Q = YES. Lemma S = FALSE. All fan-kill
+theorems of §§8.22–8.25 remain true about the fans they name; what
+is refuted is the universal quantifier, and no 11-adic depth or
+positivity restoration can repair it. This is the §4 failure
+branch of `HANDOFF_F55_ENDGAME.md`: **the arithmetic flank ends at
+the same shadow-feasible/lifting wall as the geometric flank
+(§8.7)** — the two faces of one difficulty, as §8.21 suspected.
+
+**NOT settled: F55 itself.** A feasible Q is NECESSARY, not
+sufficient: it closes only the boundary half (F1) of §8.15's
+system. Still open: the (F3) transpose layer, the b-split
+bookkeeping (F2/iv′), and above all the actual existence of a
+trace-zero φ realizing the shadow — the class-to-form lifting gap
+of §8.9.1, untouched by this run. **F55 is OPEN; the headline
+(ed_C(PSL₂(F₁₁)) = 3 vs 4) is UNDECIDED.** Second-engine
+confirmation (Nemo/PARI) was in flight at write-up time; the
+verdict above rests on one engine plus the director's independent
+check of the 33-identity.

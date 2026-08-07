@@ -52,7 +52,19 @@
 > m: 2h + h∘σ⁻¹ − e₂* = d + m; an 11-torsion global lattice
 > question since det(2+σ) = 11 on Λ). Lift ⟹ F55 OPEN at the
 > lifting wall (§4 branch); no lift ⟹ preimage = new constraint
-> content. Probe f55_qpreimage.py in flight. Remaining:
+> content. **RESOLVED (§8.28, IX-k): THE WITNESS LIFTS. Theorem Q
+> = YES via an explicit LATTICE POLYTOPE; LEMMA S IS FALSE.** The
+> lift is an identity ((x+2)G(x) ≡ 33; mod 11 = congruence (3),
+> mod 3 fixed by m = Σd∘σʲ), so the value form and Theorem Q are
+> EQUIVALENT — the preimage held no extra content. Fan-free
+> oracle: twice-min at 40,000/40,000 points. **This is the §4
+> FAILURE BRANCH: the value-form/conserved-eleven route cannot
+> prove F55-NO, and the arithmetic flank ends at the same lifting
+> wall as the geometric one (§8.7).** F55 is OPEN, headline
+> UNDECIDED — Q-feasibility is necessary only, closing the
+> boundary half (F1); (F3), the b-split bookkeeping, and the
+> class-to-form existence of a trace-zero φ (§8.9.1) remain.
+> Honest next lanes are §4's (a)-(d). Remaining:
 > general ξ*-rigidity proof; the depth-tower induction; a GLOBAL
 > depth-1 aligned argument; non-arrangement fans; then
 > T6-assembly/T7 with the corrected statement.

@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `b1ca353` (2026-08-07; the
+Snapshot metadata — notebook parent head: `8b85679` (2026-08-07; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -4128,7 +4128,42 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   at the lifting wall, F55 OPEN (handoff §4 failure branch); no
   lift ⟹ the preimage condition is NEW constraint content and the
   campaign resumes against it. Decisive probe `f55_qpreimage.py` in
-  flight. Lemma S, F55-NO and the headline all UNCLAIMED.** Note I
+  flight. Lemma S, F55-NO and the headline all UNCLAIMED.**
+  **Wave 32 (terminal; Note IX §8.28 + Correction IX-k, probe
+  `f55_qpreimage.py`, director-adjudicated incl. an independent
+  sympy check of the key identity): THE WITNESS LIFTS — THEOREM Q
+  IS SATISFIED, LEMMA S IS FALSE, THE VALUE-FORM ROUTE CANNOT
+  PROVE F55-NO.** The lift is an IDENTITY, not a search: in
+  `Z[x]/(x⁵−1)`, `(x+2)G(x) = x⁵+32 ≡ 33` with
+  `G = 16−8x+4x²−2x³+x⁴`, so `2+σ̃` is injective, h is UNIQUE
+  (`h = G(σ̃)(d+m+e₂*)/33`), and solvability ⟺ 33 | that, cellwise.
+  `G(1) = 11` ⟹ σ-invariant m contributes `11U_m`, so CRT splits
+  it: **mod 11 the m drops out and the condition IS congruence
+  (3)** (verified as an operator identity); **mod 3 it is
+  `U_m ≡ U_D`**, `D = Σ_j d∘σʲ`, satisfied by `m = D`. Mod 3 is
+  load-bearing (m=0: 5/1090 cells divisible; m=D: 1090/1090) —
+  §8.10's mod-3 surprise returning, here SATISFIABLE since m is
+  free. **So on the mixed fan the value form and Theorem Q are
+  EQUIVALENT, not strictly weaker** (§8.17's virtual-polytope
+  generality vindicated; the preimage carries no extra content).
+  Theorem Q proper delivered with an ACTUAL LATTICE POLYTOPE:
+  `Φ = Σ|⟨l,·⟩|` over the 20 σ-stable forms is σ-invariant and
+  strictly wall-convex with `2Φ+Φ∘σ⁻¹ = 3Φ`, so `h₀ ↦ h₀+128Φ`
+  shifts F by an orbit-constant, is convex (0 failures at all 460
+  rays), and `Q = conv{slopes}` has `h_Q = h_T`. FAN-FREE oracle
+  (brute-force max over Q's lattice points, no fan/cells/walls):
+  40,000 random w — twice-min 40000/40000 (multiplicity exactly 2
+  at 39,712), Theorem R 40000/40000. All 14 witnesses lift.
+  **Every fan-kill theorem of §§8.22–8.25 stands about its own
+  fan; the universal quantifier is dead, and neither 11-adic depth
+  nor positivity can repair it. §4 FAILURE BRANCH: the arithmetic
+  flank ends at the same lifting wall as the geometric flank
+  (§8.7) — two faces of one difficulty, as §8.21 suspected.**
+  NOT settled: F55. Q-feasibility is necessary, not sufficient —
+  it closes only the boundary half (F1); the (F3) transpose layer,
+  the b-split bookkeeping, and the class-to-form existence of a
+  trace-zero φ (§8.9.1) are untouched. **F55 OPEN; the headline
+  UNDECIDED.** Second engine (Nemo/PARI) in flight.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
