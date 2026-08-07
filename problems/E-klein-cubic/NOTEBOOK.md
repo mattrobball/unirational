@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `ef2695f` (2026-08-06; the
+Snapshot metadata — notebook parent head: `3fe17e8` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3936,7 +3936,15 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   predicts. Final list: (1) unwind the certificate ⟹ span-statement
   on the G₉-fan; (2) generalize over aligned fans; (3) two routine
   closures. Nothing else stands before Lemma S ⟹ F55-NO ⟹
-  ed = 4.** Note I
+  ed = 4.** **Wave 30 (user request): `HANDOFF_F55_ENDGAME.md`
+  written — the complete endgame handoff: the reduction chain with
+  per-link status, everything proved toward Lemma S, tasks T0–T7 in
+  order (re-verify certificates; unwind the level-2 certificate;
+  span-statement on the G₉-fan; generalize to aligned fans; free
+  patterns; mixed fans; assemble + re-audit the chain; seal +
+  external review), the failure-branch protocol, parallel items,
+  trust notes (six corrections, conventions that bite), and the
+  file map.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
