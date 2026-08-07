@@ -1,0 +1,1095 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\Urlmuskip=0mu plus 1mu
+\tolerance=1200
+\emergencystretch=3em
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{fact}[theorem]{Fact}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{correction}[theorem]{Correction}
+
+\newcommand{\PSL}{\mathrm{PSL}_2(\mathbb{F}_{11})}
+\newcommand{\SLg}{\mathrm{SL}_2(\mathbb{F}_{11})}
+\newcommand{\edC}{\mathrm{ed}_{\mathbb C}}
+\newcommand{\Grr}{\mathrm{Gr}}
+\DeclareMathOperator{\Ann}{Ann}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\dashto}{\dashrightarrow}
+
+\title{Non-Weak-Versality of the Genus-8 Fano Threefold $V_{14}$\\
+under $\PSL$: The Centralizer Obstruction}
+\author{Transcribed from the E--Klein-Cubic project derivation record}
+\date{August 8, 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We give a self-contained account of the ``centralizer obstruction,'' a
+theorem proved in the derivation notes of an ongoing investigation into
+the essential dimension of $\PSL$, and of its application to the second
+of the two Prokhorov classes of rationally connected $\PSL$-threefolds,
+the genus-$8$ Fano threefold $V_{14}$. We state and prove, transcribing
+faithfully from the source, a general theorem: if $\sigma$ is an
+involution in a finite group $G$ acting faithfully on a smooth projective
+variety $Y$ in characteristic $0$, if no faithful linear representation
+of $G$ sends $\sigma$ to $\pm\mathrm{id}$ (automatic when $G$ is
+centerless), if $N=C_G(\sigma)$, and if (a) no positive-dimensional
+irreducible component of $Y^\sigma$ contains a rational curve, and (b)
+$Y^N=\emptyset$, then $Y$ is not weakly versal: no $G$-equivariant
+rational map from any faithful linear representation of $G$ lands in
+$Y$. We then record the machine-verified instantiation of hypotheses
+(a) and (b) for $Y=V_{14}$, $G=\PSL$, and $\sigma$ an involution: the
+centralizer $N=C_G(\sigma)$ is the dihedral group of order $12$;
+$V_{14}^\sigma$ is a single smooth irreducible genus-$1$ sextic curve
+together with two reduced points, hence contains no rational curve; and
+$V_{14}^{N}$ is empty. Consequently $V_{14}$ is not weakly versal, its
+generic twist has no rational point, and $V_{14}$ is not
+$\PSL$-unirational --- new-theorem territory, since the standard toolbox
+(fixed-point projection, index-two chords, invariant-hyperplane
+induction) provably fails on $V_{14}$, and the Cheltsov--Tschinkel--Zhang
+equivariant-unirationality program is explicitly scoped to Fano index
+$\ge 2$, while $V_{14}$ has index $1$. Combined with Prokhorov's theorem
+that the Klein cubic and $V_{14}$ are the only two equivariant
+birational classes of rationally connected $\PSL$-threefolds, and with
+Duncan--Reichstein's versality theory for invariant cubic hypersurfaces,
+this collapses a disjunction: $\edC(\PSL)=3$ if and only if the Klein
+cubic itself is $G$-unirational. Whether the Klein cubic is
+$G$-unirational remains open. We report exactly what is proved here,
+what is cited from the literature, and what is machine-verified, and we
+record precisely where each dependency of the argument stands.
+\end{abstract}
+
+\section{Introduction}
+
+\subsection{Essential dimension and the versality dictionary}
+
+Let $G$ be a finite group. A \emph{versal $G$-variety} is, informally, a
+$G$-variety that receives an equivariant rational map from every
+sufficiently generic $G$-variety of the same kind; the precise
+definitions are recalled in Section~\ref{sec:prelim}. The
+\emph{essential dimension} $\mathrm{ed}(G)$ is the minimal dimension of
+a versal $G$-variety carrying a faithful (equivalently, generically
+free, for finite $G$) $G$-action~\cite{DR}. Over the base field
+$\mathbb C$ we write $\edC(G)$.
+
+Duncan and Reichstein~\cite{DR} organize several competing notions of
+versality --- \emph{weakly versal}, \emph{versal}, \emph{very versal}
+--- and prove that they correspond exactly to statements about rational
+points on twisted forms:
+\[
+\text{stably birationally linear} \;\Longrightarrow\; \text{very versal}
+\;\Longrightarrow\; \text{versal} \;\Longrightarrow\; \text{weakly
+versal},
+\]
+with weak versality equivalent to the existence, for every twisting pair
+$(T,K)$, of a $K$-point on the twist ${}^TX$; very versality equivalent
+to the existence of a linear representation $G\to GL(V)$ and a
+$G$-equivariant \emph{dominant} rational map $V\dashto X$. In the later
+terminology of Cheltsov--Tschinkel--Zhang~\cite{CTZ}, very versality of
+a projective $G$-variety $X$ is called \emph{$G$-unirationality}:
+existence of a dominant equivariant rational map $\PP(V)\dashto X$ for
+some $G$-representation $V$. The precise statements are recalled in
+Section~\ref{sec:prelim}.
+
+The group $\PSL$ is the automorphism group of the \emph{Klein cubic
+threefold}
+\[
+Y_{\mathrm{Klein}} = \{\, x_0^2x_1+x_1^2x_2+x_2^2x_3+x_3^2x_4+x_4^2x_0=0
+\,\}\subset \PP^4,
+\]
+acting via a linear representation $G\to GL_5(\mathbb C)$~\cite{Adler}.
+Since $G$ is simple, the tautological projection $\mathbb C^5\setminus\{0\}
+\to \PP^4$ exhibits $\PP^4$ (hence $Y_{\mathrm{Klein}}$, once one uses
+that a smooth cubic hypersurface with a rational point is unirational)
+as very versal for $G$, giving $\edC(\PSL)\le 4$; and $\PSL$ cannot act
+faithfully on a unirational surface, giving $\edC(\PSL)\ge 3$
+\cite[Prop.\ 10.8]{DR}. So the headline question of this circle of ideas
+is exactly
+\[
+\edC(\PSL) \in \{3,4\},
+\]
+and Duncan--Reichstein already frame it as a disjunction of open
+conjectures: their Proposition 10.8(b) shows the Cassels--Swinnerton-Dyer
+conjecture on $0$-cycles of degree prime to $3$ on cubic hypersurfaces
+would force $\edC(\PSL)=3$, while part (c) shows Dolgachev's conjecture
+$\mathrm{ed}\ge\mathrm{Crdim}$ would force $\edC(\PSL)=4$ (via
+Prokhorov's theorem that $\PSL$ admits no faithful action on any
+rational complex threefold). Settling the headline would also complete
+Beauville's classification of finite simple groups of essential
+dimension $3$~\cite{Beauville}. This note bears on neither conjecture
+directly; its role is to narrow \emph{which variety} the question is
+really about.
+
+\subsection{The two Prokhorov classes, and where \texorpdfstring{$V_{14}$}{V14} enters}
+
+Prokhorov's classification of finite simple subgroups of the rank-$3$
+Cremona group contains the following fact, central to everything below.
+
+\begin{fact}[Prokhorov's two-class theorem {\cite[Thm.\ 1.5]{Prokhorov}}]
+\label{fact:prokhorov}
+There are exactly two equivariant birational equivalence classes of
+rationally connected complex $\PSL$-threefolds, represented by the
+Klein cubic threefold $Y_{\mathrm{Klein}}$ and by a smooth Fano
+threefold $V_{14}$ of Picard rank $1$, index $1$, and genus $8$ (degree
+$14$).
+\end{fact}
+
+Consequently, if $\edC(\PSL)=3$, the minimal-dimension versal witness is
+(after the standard reduction: a versal variety of minimal dimension is
+very versal, hence unirational, hence rationally connected) equivariantly
+birational to one of these two classes, and \emph{that} class must
+itself be $G$-unirational. The question ``is $\edC(\PSL)=3$?'' therefore
+splits into two sub-questions, one about each class. The Klein cubic's
+own $G$-unirationality is untouched by this note and remains open. The
+present note settles the $V_{14}$ sub-question: $V_{14}$ is \emph{not}
+$G$-unirational, and more --- not even weakly versal. This removes
+$V_{14}$ from the disjunction entirely, leaving the Klein cubic as the
+sole possible witness to $\edC(\PSL)=3$ (Corollary~\ref{cor:ix2} below,
+the collapse of Duncan--Reichstein's Remark 10.10).
+
+It is worth recording immediately why this needed a new argument.
+Tschinkel--Zhang~\cite{TZ} show that the classical (non-equivariant)
+Pfaffian--Grassmannian correspondence between $Y_{\mathrm{Klein}}$ and
+$V_{14}$ upgrades, after stabilizing by $\PP^2\times\PP(V)$ for the
+irreducible $6$-dimensional representation $V$ of the double cover
+$\widetilde G=\SLg$, to a $G$-equivariant birational equivalence; but
+the two actions are separately birationally rigid \cite[Thm.\
+4.3]{BCDP}, so they are \emph{not} equivariantly birational to each
+other, and plain $G$-unirationality of one does not automatically
+transfer to the other. The three standard tools that close most
+comparable cases in the literature --- projection from a $G$-fixed
+point, chords through the fixed pair of an index-$2$ subgroup, and
+induction from a $G$-invariant hyperplane section whose induced action
+is $G$-unirational \cite[Prop.\ 3.5]{CTZ} --- all fail structurally on
+$V_{14}$: the first because the relevant ambient representation is
+irreducible (no fixed points), the second because $G$ is simple (no
+index-$2$ subgroups), and the third both for the full group (no
+invariant hyperplane) and, more strongly, for \emph{every} subgroup
+whatsoever, because $V_{14}$ has Fano index $1$ and its hyperplane
+sections are K3 surfaces, never unirational. Direct computation with
+several subgroups (the $A_5$-fixed locus, the $D_{12}$-fixed pencil)
+confirms that the usual fixed-point tools cannot close any $V_{14}$
+case either. And Cheltsov--Tschinkel--Zhang's own equivariant
+unirationality program~\cite{CTZ} is explicitly scoped to Fano threefolds
+of index $\ge 2$; $V_{14}$, at index $1$, falls outside it entirely.
+Nothing in the literature closes the $V_{14}$ case. What follows is a
+different kind of obstruction --- a \emph{necessary} condition for weak
+versality that requires no dominance, no covariant, and no degree data,
+checked on a single involution.
+
+\subsection{What is proved here}
+
+Section~\ref{sec:prelim} recalls the precise definitions (versality,
+$G$-unirationality, rationally chain connected varieties, fixed loci)
+and the three results from the project's equivariant fixed-locus
+calculus that the main proof invokes. Section~\ref{sec:main} states and
+proves the centralizer obstruction (Theorem~\ref{thm:main} below, called
+Corollary IX.1 in the source project notes, where it appears as a
+variant of an earlier ``central obstruction'' with the centralizer of an
+involution replacing the center of the group). Section~\ref{sec:v14}
+records the three inputs needed to instantiate the theorem on $V_{14}$,
+all machine-verified. Section~\ref{sec:machine} summarizes the
+verification itself: two independent computer-algebra engines, three
+primes, and an exact characteristic-$0$ computation. Section~\ref{sec:cor}
+draws the conclusion that $V_{14}$ is not weakly versal, with a remark
+on what this does and does not say about $V_{14}$ as a bare variety.
+Section~\ref{sec:ix2} proves that this collapses the essential-dimension
+question onto the Klein cubic alone. Section~\ref{sec:status} is a
+frank accounting of what this note actually establishes and what it
+depends on. We emphasize at the outset: \textbf{the Klein cubic's own
+$G$-unirationality is open}; nothing here proves or suggests a value for
+$\edC(\PSL)$, and the note makes no claim about $F_{55}$ or any other
+subgroup beyond what is stated.
+
+\section{Preliminaries}
+\label{sec:prelim}
+
+Throughout, the base field is $\mathbb C$ (or any algebraically closed
+field of characteristic $0$), and $G$ is a finite group.
+
+\begin{definition}[$G$-variety, equivariant rational map]
+A \emph{$G$-variety} is a smooth projective integral variety $X$ with a
+regular faithful $G$-action. For $H\le G$, $X^H=\{x\in X: hx=x\ \forall
+h\in H\}$; in characteristic $0$, with $X$ smooth, $X^H$ is smooth (by
+linearizing the $H$-action at a fixed point), so its irreducible
+components coincide with its connected components and are pairwise
+disjoint for fixed $H$. A rational map $f:X\dashto Y$ of $G$-varieties
+is \emph{$G$-equivariant} if it commutes with the two $G$-actions
+wherever it is defined; it need not be dominant unless stated.
+\end{definition}
+
+\begin{definition}[Versality, following Duncan--Reichstein~\cite{DR}]
+Let $G$ be a finite (or, more generally, linear algebraic) group over a
+field $k$. A $G$-action on an irreducible $k$-variety $X$ is
+\begin{itemize}
+\item \emph{weakly versal} if for every field $K/k$ with $K$ infinite
+and every $G$-torsor $T\to\operatorname{Spec}(K)$, there is a
+$G$-equivariant $k$-morphism $T\to X$;
+\item \emph{versal} if every $G$-invariant dense open subvariety of $X$
+is weakly versal;
+\item \emph{very versal} if there exist a linear representation $G\to
+GL(V)$ and a $G$-equivariant dominant rational map $V\dashto X$.
+\end{itemize}
+Writing $(T,K)$ for a twisting pair and ${}^TX$ for the twist of $X_K$
+by $T$, Duncan--Reichstein's Theorem~1.1 identifies these notions with
+statements about rational points: $X$ is weakly versal iff ${}^TX(K)
+\ne\emptyset$ for every twisting pair $(T,K)$; $X$ is versal iff
+$K$-points are dense in ${}^TX$ for every twisting pair; $X$ is very
+versal iff ${}^TX$ is $K$-unirational for every twisting pair. An
+equivalent, and often more convenient, characterization of weak
+versality (\cite[Remark~2.1]{DR}) is: $X$ is weakly versal if and only
+if for \emph{every} generically free primitive $G$-variety $Z$ with
+$k(Z)^G$ infinite, there is a $G$-equivariant rational map $Z\dashto X$.
+Since every faithful linear representation of a \emph{finite} group is
+automatically generically free (the union of the proper fixed
+subspaces $V^h$, $h\ne 1$, is a proper closed subset, because
+faithfulness forces each $V^h\subsetneq V$), a faithful linear $G$-rep
+$V$ is itself an instance of such a $Z$; consequently, if $X$ fails to
+receive an equivariant rational map from even one faithful linear
+representation of $G$, then $X$ is not weakly versal. This is the
+precise sense in which the source's informal shorthand ``the generic
+twist of $X$ has no rational point'' should be read: by Theorem~1.1(a)
+it packages the assertion that \emph{some} twisting pair $(T,K)$
+produces a twist ${}^TX$ with ${}^TX(K)=\emptyset$.
+\end{definition}
+
+\begin{definition}[$G$-unirationality~\cite{CTZ}]
+A $G$-variety $X$ is \emph{$G$-unirational} if there is a dominant
+$G$-equivariant rational map $\PP(V)\dashto X$ for some
+$G$-representation $V$. Replacing $\PP(V)$ by $V$ shows this notion
+coincides with very versality in the sense above.
+\end{definition}
+
+\begin{definition}[Rationally chain connected]
+A projective variety $Z$ is \emph{rationally chain connected} (RCC) if
+two general closed points of $Z$ can be joined by a connected chain of
+irreducible rational curves on $Z$. RCC is a birational invariant among
+proper varieties, and a projective bundle over an RCC base is RCC.
+\end{definition}
+
+We will also need three results from the project's equivariant
+fixed-locus calculus~\cite{BComplex}, a working framework built to
+track how the fixed-locus structure of a $G$-variety transforms under
+equivariant blowups. We state them exactly as needed for the proof in
+Section~\ref{sec:main}, with pointers to their labels in the source.
+
+\begin{fact}[Blowup calculus, condensed; {\cite[Thm.\ 2.1]{BComplex}}]
+\label{fact:blowup}
+Let $Z\subset X$ be a smooth $G$-stable center of a blowup
+$\pi:X'=\mathrm{Bl}_ZX\to X$ with exceptional divisor
+$E=\PP(N_{Z/X})$. Fix $H\le G$ and an irreducible component $F$ of
+$X^H$.
+\begin{enumerate}[label=(\roman*)]
+\item If $F\not\subset Z$: the strict transform $F'\subset X'$ (the
+blowup of $F$ along $F\cap Z$) is again an irreducible component of
+$(X')^H$, and is equivariantly birational to $F$.
+\item If $F\subseteq Z$: $H$ acts on the normal bundle
+$N_{Z/X}|_F$ covering the identity on $F$; write $N_{Z/X}|_F =
+\bigoplus_\chi N^\chi$ for the decomposition into $H$-eigen-subbundles
+(of rank locally constant along $F$, hence constant since $F$ is
+irreducible). For each nontrivial character $\chi$, the closure
+$\PP(N^\chi)\subseteq E$ is an irreducible component of $(X')^H$, a
+projective subbundle of $E$ over $F$.
+\end{enumerate}
+\end{fact}
+
+\begin{lemma}[Rational-chain going-down; {\cite[Lem.\ 4.2]{BComplex}}]
+\label{lem:goingdown}
+Let $q:X\to Y$ be a proper $G$-morphism and $F\subseteq X$ an
+irreducible closed RCC subvariety fixed pointwise by some $H\le G$.
+Then $q(F)$ is an irreducible closed RCC subvariety of $Y^H$. In
+particular, if the irreducible component of $Y^H$ containing $q(F)$
+contains no rational curve (e.g.\ is a point, or a curve of geometric
+genus $\ge 1$), then $q(F)$ is a single point of it.
+\end{lemma}
+
+\begin{proof}
+Chains of rational curves push forward under $q$ to chains of rational
+curves or points, so a connecting chain between general points of $F$
+maps to a connecting chain between general points of $q(F)$; this
+shows $q(F)$ is RCC. Pointwise $H$-fixedness of $F$ gives $q(F)\subseteq
+Y^H$ by equivariance. If the component of $Y^H$ containing $q(F)$
+contains no rational curve, an RCC subvariety of it cannot have
+positive dimension (a positive-dimensional RCC variety is covered by
+rational curves), so $q(F)$ is a point.
+\end{proof}
+
+\begin{lemma}[RCC propagation through the calculus; {\cite[Lem.\
+4.3]{BComplex}}] \label{lem:rccprop} In the setting of
+Fact~\ref{fact:blowup}, every exceptional stratum $\PP(N^\chi)$ is a
+projectivized bundle over $F$ (there written $F_Z$), hence RCC whenever
+$F$ is; and strict transforms preserve RCC-ness (being equivariantly
+birational to $F$).
+\end{lemma}
+
+\begin{correction}[Scope of Lemma~\ref{lem:rccprop}, recorded in the
+source as ``Correction I-C,'' 2026-08-05]
+\label{corr:ic}
+Lemma~\ref{lem:rccprop} is stated above exactly as it should be used:
+\emph{a single} exceptional stratum, or strict transform, over \emph{a
+single already-RCC} $F$, remains RCC after one blowup. The source
+project's notes record that a stronger global consequence once drawn
+from it --- that \emph{every} stratum of the fixed-locus decomposition
+of \emph{every} $G$-model of $X$ is RCC, as soon as this holds on one
+model --- is \textbf{false} for arbitrary towers of equivariant
+blowups. Two counterexamples are recorded: one due to A.\ Duncan
+(blowing up an isolated fixed point with weights $(-1,-1,-1)$, then a
+smooth plane quartic curve inside the resulting exceptional $\PP^2$,
+produces a genus-$3$ fixed component on that model); and one found
+in-house (blowing up the $G$-orbit of a generic quartic curve inside a
+fixed hyperplane of $\PP(W)$ itself produces, over that curve, an
+exceptional locus whose fixed part has a section isomorphic to the
+quartic, again genus $3$). The per-blowup statement of
+Lemma~\ref{lem:rccprop} is unaffected by these examples; what fails is
+only the inductive closure of that statement across \emph{arbitrary}
+models. The induction does close --- and the stronger global statement
+is recovered --- when the blowup centers used are (unions of
+components of) strata of the running model, so-called
+\emph{stabilizer-stratified towers}. We record this correction because
+it is exactly the kind of scope restriction that must be checked
+against any argument citing Lemma~\ref{lem:rccprop} across a multi-step
+induction; see Remark~\ref{rem:correction-check} below for how the
+proof of Theorem~\ref{thm:main} fares against it.
+\end{correction}
+
+\begin{fact}[Equivariant resolution / weak factorization; {\cite[Prop.\
+3.3]{BComplex}}] \label{fact:resolution} In characteristic $0$, any
+$G$-equivariant proper birational morphism (in particular, the
+resolution of the graph of a $G$-equivariant rational map $X\dashto Y$
+of $G$-varieties) can be dominated by a tower of blowups of smooth
+projective $G$-varieties along smooth $G$-invariant centers, resolving
+it to a morphism. This rests on Hironaka's resolution of singularities
+made canonical (hence automatically equivariant) in characteristic $0$,
+together with the equivariant form of the Abramovich--Karu--Matsuki--
+Wlodarczyk weak factorization theorem, which the source cites under the
+abbreviation ``AKMW.'' Concretely: if $f:X\dashto Y$ is $G$-equivariant
+and $\Gamma\subseteq X\times Y$ is the closure of its graph with the
+diagonal $G$-action, an equivariant resolution $\widetilde\Gamma\to
+\Gamma$ has first projection $\widetilde\pi:\widetilde\Gamma\to X$ a
+tower of blowups along smooth $G$-invariant centers, and second
+projection $\widetilde f:\widetilde\Gamma\to Y$ an honest (everywhere
+defined) $G$-morphism extending $f$.
+\end{fact}
+
+Finally, we fix notation for fixed loci used throughout: for $H\le G$
+and a $G$-variety $Y$, $Y^H$ denotes the (smooth, by the definition
+above) fixed locus; $Y^\sigma:=Y^{\langle\sigma\rangle}$ for an element
+$\sigma$; and for a subgroup $N\le G$, $Y^N$ is the locus fixed
+pointwise by all of $N$. Since $N\le G$ implies $Y^G\subseteq Y^N$
+(anything fixed by all of $G$ is in particular fixed by all of $N$),
+$Y^N=\emptyset$ is a strictly stronger statement than $Y^G=\emptyset$.
+
+\section{The centralizer obstruction}
+\label{sec:main}
+
+The theorem below is Corollary IX.1 of the source project notes. It is
+recorded there under that name because it descends from an earlier
+result in the same project, the ``central obstruction'' (Corollary
+T3.1): the special case where $\sigma=z$ is taken to be a nontrivial
+\emph{central} element of $G$, where $N=C_G(z)=G$ automatically, and
+where hypothesis (b) reads $Y^G=\emptyset$. Corollary T3.1 was designed
+for groups with nontrivial center; Theorem~\ref{thm:main} below is the
+variant anticipated for \emph{local} stabilizers, replacing the center
+by the centralizer of a single involution. The trade-off is that the
+eigenspace splitting of a representation is only stable under $N=C_G
+(\sigma)$ rather than under all of $G$, so the conclusion is
+correspondingly narrower: it applies specifically to \emph{linear}
+sources (where a single global $N$-stable eigenspace is available
+before any resolution is performed), rather than to arbitrary
+rationally connected sources carrying a $G$-stable fixed stratum on
+some model.
+
+\begin{theorem}[Centralizer obstruction]
+\label{thm:main}
+Let $G$ be a finite group acting faithfully on a smooth projective
+variety $Y$ over an algebraically closed field of characteristic $0$,
+and let $\sigma\in G$ be an involution such that no faithful linear
+representation $\rho:G\to GL(V)$ under consideration degenerates to
+$\rho(\sigma)=\pm\mathrm{id}$. (This is automatic whenever $G$ is
+centerless: if $\rho(\sigma)=\mathrm{id}$ then $\sigma\in\ker\rho=\{1\}$
+by faithfulness, contradicting that $\sigma$ is an involution; and if
+$\rho(\sigma)=-\mathrm{id}$, then since $-\mathrm{id}$ is central in
+$GL(V)$, for every $g\in G$ we get $\rho(g\sigma g^{-1})=\rho(g)(-
+\mathrm{id})\rho(g)^{-1}=-\mathrm{id}=\rho(\sigma)$, so $g\sigma
+g^{-1}=\sigma$ by faithfulness, i.e.\ $\sigma\in Z(G)$; if $Z(G)=1$ this
+again forces $\sigma=1$, a contradiction.) Set $N=C_G(\sigma)$. Assume:
+\begin{enumerate}[label=(\alph*)]
+\item no positive-dimensional irreducible component of $Y^\sigma$
+contains a rational curve;
+\item $Y^N=\emptyset$.
+\end{enumerate}
+Then for every faithful linear representation $V$ of $G$, there is no
+$G$-equivariant rational map $\PP(V)\dashto Y$ --- dominant or not ---
+and none $V\dashto Y$ either (the second follows from the first by
+embedding $V\subset\PP(V\oplus\mathrm{triv})$, again linear and
+faithful). In particular $Y$ is not weakly versal: some twist of $Y$
+has no rational point.
+\end{theorem}
+
+\begin{proof}
+Fix a faithful linear representation $\rho:G\to GL(V)$. Since $\sigma$
+is an involution, $\rho(\sigma)^2=\mathrm{id}$, so $\rho(\sigma)$ is
+diagonalizable with eigenvalues in $\{+1,-1\}$; by hypothesis it is
+neither $+\mathrm{id}$ nor $-\mathrm{id}$, so both eigenspaces $V_+$
+and $V_-$ are nonzero, giving $V=V_+\oplus V_-$. Consider $\PP(V_+)
+\subset\PP(V)$: it is nonempty (as $V_+\ne 0$), irreducible and
+rational (a linear subspace of projective space), pointwise fixed by
+$\sigma$ (by definition of the $+1$-eigenspace, so certainly RCC), and
+$N$-\emph{stable}: for $n\in N$ and $v\in V_+$, since $n$ commutes with
+$\sigma$ in $G$ we have $\sigma\cdot(n\cdot v)=n\cdot(\sigma\cdot v)=n
+\cdot v$, so $n\cdot v\in V_+$ too. This is exactly the point at which
+the \emph{linearity} of the representation is used: it supplies a
+single subspace $V_+$, stable under $N$, valid at every point of
+$\PP(V)$ simultaneously, rather than a subvariety that would have to be
+located after the fact.
+
+Suppose, for contradiction, that $\varphi:\PP(V)\dashto Y$ is a
+$G$-equivariant rational map (we do not assume it is dominant, or even
+non-constant). By Fact~\ref{fact:resolution}, resolve the graph of
+$\varphi$ equivariantly: there is a tower of blowups $\pi:\widetilde X
+\to\PP(V)$ along smooth $G$-invariant centers, together with an honest
+$G$-morphism $\widetilde\varphi:\widetilde X\to Y$ extending $\varphi$.
+
+\smallskip
+\noindent\textbf{Claim.} $\widetilde X$ carries an irreducible,
+$N$-stable, pointwise-$\sigma$-fixed, RCC closed subvariety
+$\widetilde F$.
+
+\smallskip
+\noindent\textit{Proof of Claim, by induction up the tower.} Set
+$F_0=\PP(V_+)\subseteq\PP(V)$, the base of the tower; by the paragraph
+above it is irreducible, RCC (being rational), $N$-stable, and
+pointwise $\sigma$-fixed. Suppose $F$ has been constructed with these
+four properties at some intermediate stage $X_i$ of the tower, and let
+$Z\subset X_i$ be the (smooth, $G$-invariant, hence also
+$\sigma$-invariant and $N$-invariant) center of the next blowup $X_{i+1}
+=\mathrm{Bl}_ZX_i\to X_i$, with exceptional divisor $E=\PP(N_{Z/X_i})$.
+
+\emph{Case $F\not\subset Z$.} Let $F'\subset X_{i+1}$ be the strict
+transform of $F$, i.e.\ the blowup of $F$ along $F\cap Z$ (equivalently,
+the closure of the preimage of $F\setminus Z$). By
+Fact~\ref{fact:blowup}(i), $F'$ is irreducible and equivariantly
+birational to $F$, hence RCC by Lemma~\ref{lem:rccprop}. It is
+$N$-stable, since $N$ preserves both $F$ (inductive hypothesis) and $Z$
+($G$-invariance), hence preserves $F\cap Z$ and the blowup construction.
+It is pointwise $\sigma$-fixed: the open dense subset $F\setminus Z$ of
+$F'$ (via the isomorphism $F\setminus Z\xrightarrow{\sim}F'\setminus E$)
+is pointwise $\sigma$-fixed by the inductive hypothesis, and being
+pointwise fixed by a fixed automorphism is a closed condition, so it
+persists on the closure $F'$.
+
+\emph{Case $F\subseteq Z$.} Since $\sigma$ fixes $F$ pointwise and
+preserves $Z$, it acts on the total space of the normal bundle
+$N_{Z/X_i}|_F$ covering the identity map on $F$; being an involution in
+characteristic $0$, this action splits the bundle into eigen-subbundles
+$N_{Z/X_i}|_F = N_+\oplus N_-$ (ranks constant along the irreducible
+base $F$). As $Z$ has positive codimension in $X_i$, at least one of
+$N_+,N_-$ is nonzero; choose $\lambda\in\{+,-\}$ with $N_\lambda\ne 0$
+(if both are nonzero, take $\lambda=+$, fixing a convention), and set
+\[
+F' \;=\; \PP(N_\lambda|_F) \;\subset\; E|_F \;\subset\; X_{i+1}.
+\]
+This is a projective subbundle of $E$ over $F$ (Fact~\ref{fact:blowup}
+(ii), applied to the eigen-character $\lambda$), hence irreducible, and
+RCC by Lemma~\ref{lem:rccprop} (a projective bundle over the RCC base
+$F$). It is pointwise $\sigma$-fixed: a point of $\PP(N_\lambda|_F)$ is
+a line in a fiber of $N_\lambda$, and $\sigma$ scales every vector in
+that fiber by the fixed scalar $\lambda=\pm1$, hence fixes the
+\emph{line} regardless of the sign. It is $N$-stable: $N$ preserves $F$
+and $Z$, hence acts on $N_{Z/X_i}|_F$ covering its action on $F$; since
+every $n\in N$ commutes with $\sigma$, $n$ carries the $\lambda$-
+eigenspace of $\sigma$ at a point $p\in F$ to the $\lambda$-eigenspace
+at $n\cdot p$ (exactly the same commuting argument as for $V_+$ above),
+so $n$ preserves the subbundle $N_\lambda$ and hence the subvariety
+$F'=\PP(N_\lambda|_F)$.
+
+In both cases $F'$ again has all four properties, completing the
+induction; after finitely many steps (the tower is finite) we obtain
+$\widetilde F\subseteq\widetilde X$ with all four properties, proving
+the Claim.
+
+\smallskip
+Now apply $\widetilde\varphi$. Since $\widetilde F$ is pointwise
+$\sigma$-fixed and $\widetilde\varphi$ is $G$-equivariant, every $x\in
+\widetilde F$ satisfies $\widetilde\varphi(x)=\widetilde\varphi(\sigma
+x)=\sigma\widetilde\varphi(x)$, so $\widetilde\varphi(\widetilde F)
+\subseteq Y^\sigma$. Since $\widetilde\varphi$ is a morphism of
+projective varieties (proper) and $\widetilde F$ is irreducible and
+closed, $\widetilde\varphi(\widetilde F)$ is irreducible and closed;
+since $\widetilde F$ is RCC, Lemma~\ref{lem:goingdown} shows $\widetilde
+\varphi(\widetilde F)$ is an RCC closed subvariety of $Y^\sigma$, lying
+(by irreducibility, and smoothness of $Y^\sigma$) inside a single
+irreducible component of $Y^\sigma$. By hypothesis (a), if that
+component has positive dimension it contains no rational curve, so by
+Lemma~\ref{lem:goingdown} $\widetilde\varphi(\widetilde F)$ is forced to
+be a single point $y\in Y^\sigma$.
+
+Finally, $\widetilde F$ is $N$-stable and $\widetilde\varphi$ is
+$G$-equivariant (in particular $N$-equivariant), so for every $n\in N$:
+\[
+n\cdot y \;=\; n\cdot\widetilde\varphi(\widetilde F) \;=\;
+\widetilde\varphi(n\cdot\widetilde F) \;=\; \widetilde\varphi
+(\widetilde F) \;=\; \{y\},
+\]
+using $n\cdot\widetilde F=\widetilde F$ as sets. Hence $y\in Y^N$,
+contradicting hypothesis (b), $Y^N=\emptyset$. This contradiction shows
+no such $\varphi$ can exist, for any faithful linear $V$, proving the
+theorem.
+\end{proof}
+
+\begin{remark}[What is not used]
+The proof never assumes $\varphi$ is dominant; a would-be
+\emph{constant} equivariant map is excluded too, by the same argument
+(its image would be a single $G$-fixed point, and $Y^G\subseteq Y^N=
+\emptyset$). No covariant or degree data of any kind enters. The source
+remarks that this is the ``all-degree, search-free'' obstruction shape
+its broader investigation had been pursuing since an earlier stage of
+the project (there labeled ``E34''): a single finite verification, on
+one involution, ruling out every faithful linear source of every
+dimension and every degree at once.
+\end{remark}
+
+\begin{remark}[The proof and Correction~\ref{corr:ic}]
+\label{rem:correction-check}
+It is worth checking explicitly that the induction above survives
+Correction~\ref{corr:ic}, since it invokes Lemma~\ref{lem:rccprop}
+inside a multi-step induction along a tower that is an arbitrary
+equivariant resolution of a graph (not manifestly a stabilizer-
+stratified tower in the sense of the correction). On inspection it
+does: at each step the induction tracks a \emph{single} stratum $F$,
+and in the case $F\subseteq Z$ it applies Lemma~\ref{lem:rccprop} with
+the base of the projective bundle equal to $F$ itself, whose RCC-ness
+was already established at the previous stage. This is precisely the
+per-blowup statement that Correction~\ref{corr:ic} leaves intact; the
+proof never needs the stronger (and, in general, false) global claim
+that \emph{every} fixed-locus stratum of \emph{every} model is RCC. We
+record this because it is exactly the sort of check a citation of a
+scope-corrected lemma demands; the source project notes do not make
+this observation explicitly at the point where Theorem~\ref{thm:main}
+is stated, so we flag it here as an editorial addition rather than a
+transcribed claim.
+\end{remark}
+
+\section{The \texorpdfstring{$V_{14}$}{V14} instantiation}
+\label{sec:v14}
+
+To apply Theorem~\ref{thm:main} to $Y=V_{14}$ and $G=\PSL$, three facts
+must be verified: the identification of $N=C_G(\sigma)$, hypothesis (a),
+and hypothesis (b). Since $G$ is simple (in particular centerless), the
+degeneracy hypothesis on $\rho(\sigma)$ in Theorem~\ref{thm:main} holds
+automatically for \emph{every} faithful linear representation of $G$,
+so verifying (a) and (b) once, for $V_{14}$ itself, rules out every
+linear source simultaneously.
+
+\subsection{The ambient realization of \texorpdfstring{$V_{14}$}{V14}}
+
+The computations below realize $V_{14}$ concretely as a linear section
+of a Grassmannian, following the classical Pfaffian--Grassmannian
+correspondence (recalled in Section~\ref{sec:cor}). Let $\widetilde
+G=\SLg$ be the double cover of $G$, and let $U$ be its irreducible
+$6$-dimensional (``even Weil'') representation. The central element
+$-1\in\widetilde G$ acts as $-\mathrm{id}$ on $U$, so $U$ does
+\emph{not} descend to a linear representation of $G$ itself (only
+$\PP(U)$ carries a genuine, projectively linear, $G$-action; this is
+the ``spin'' source discussed and explicitly set aside in
+Remark~\ref{rem:spin} below). Its exterior square $\Lambda^2U$ is
+$15$-dimensional, and since $-1$ acts on $\Lambda^2U$ as $(-1)^2=+1$,
+\emph{this} representation is center-trivial and does descend to a
+genuine linear representation of $G=\PSL$. It decomposes as
+\[
+\Lambda^2U \;\cong\; W_5 \oplus M,
+\]
+with $W_5$ a $5$-dimensional and $M$ a $10$-dimensional (denoted
+``$10'$'' in the source, to distinguish it from the other $10$-
+dimensional irreducible of $G$) summand. The variety
+\[
+V_{14} \;:=\; \Grr(2,U)\cap\PP(M) \;\subset\; \PP(M)=\PP^9
+\]
+is then the $G$-invariant linear section of the Grassmannian
+$\Grr(2,6)\subset\PP(\Lambda^2U)=\PP^{14}$ cut by the linear subspace
+$\PP(M)$; its expected dimension is $8-5=3$ (the Grassmannian has
+dimension $8$, and $\PP(M)$ has codimension $5$ in $\PP^{14}$), and its
+degree, once smoothness holds, is $14$ by transversality of a linear
+section of the (arithmetically Cohen--Macaulay) Grassmannian.
+
+\subsection{Input 1: \texorpdfstring{$N=C_G(\sigma)=D_{12}$}{N = centralizer of sigma = D12}}
+
+The class of involutions in $G=\PSL$ is a single conjugacy class of
+size $55$. Fixing a representative $\sigma$, the centralizer $N=C_G
+(\sigma)$ has order $12$, and its structure --- the dihedral group of
+order $12$ (the symmetry group of a hexagon; equivalently, $7$ of its
+$11$ nonidentity elements are involutions: $6$ ``reflections'' and one
+further involution in the order-$6$ cyclic subgroup) --- is a fact about
+the abstract group $G$ alone, independent of any variety it acts on.
+
+\subsection{Input 2: hypothesis (a)}
+
+Since $V_{14}\subset\PP(M)$ is $\sigma$-stable (as $\sigma\in G$ acts
+linearly on $M$, preserving $V_{14}$ setwise), and $M=M_+\oplus M_-$
+splits into $\sigma$-eigenspaces of dimensions $6$ and $4$ respectively,
+\[
+V_{14}^\sigma \;=\; \bigl(V_{14}\cap\PP(M_+)\bigr) \;\sqcup\;
+\bigl(V_{14}\cap\PP(M_-)\bigr).
+\]
+The sealed computation (Section~\ref{sec:machine}) finds:
+\begin{itemize}
+\item $V_{14}\cap\PP(M_+)$ is a curve of degree $6$ with Hilbert
+polynomial $6i$ (so arithmetic genus $p_a=1$), whose saturated ideal is
+radical with a single associated prime (i.e.\ the curve is reduced and
+irreducible) and whose Jacobian minors saturate to the irrelevant
+ideal, i.e.\ the curve is \emph{smooth}. A smooth irreducible curve of
+arithmetic genus $1$ has geometric genus $1$ and is therefore not
+rational.
+\item $V_{14}\cap\PP(M_-)$ is a reduced, $0$-dimensional scheme of
+degree $2$ --- two points.
+\end{itemize}
+So $V_{14}^\sigma$ consists of one smooth irreducible genus-$1$ sextic
+curve together with two reduced points, and \textbf{contains no
+rational curve}: hypothesis (a) holds.
+
+\begin{remark}[Why smoothness is load-bearing]
+The Hilbert polynomial $6i$ only certifies the \emph{arithmetic} genus
+$p_a=1$ of the sextic; it says nothing about whether the curve is
+smooth. An arithmetic-genus-$1$ curve with a single node has geometric
+genus $0$ --- its normalization is $\PP^1$ --- and is therefore
+\emph{rational}. Had the sextic in $V_{14}\cap\PP(M_+)$ turned out to
+be such a nodal curve, hypothesis (a) would fail outright (a rational
+curve would sit inside a positive-dimensional component of $V_{14}^
+\sigma$), and the entire argument of this section would collapse. This
+is exactly the trap the source project notes flag explicitly when
+setting up the verification: dimension, degree, and Hilbert polynomial
+alone do not suffice; the smoothness of the sextic must be checked
+directly (via the Jacobian criterion), and it was.
+\end{remark}
+
+\subsection{Input 3: hypothesis (b)}
+
+The subgroup $N=D_{12}$ acts on $M$ ($10$-dimensional); a point of
+$\PP(M)$ is fixed pointwise by all of $N$ exactly when it spans a line
+on which $N$ acts by some (possibly nontrivial) character, so $V_{14}^N$
+decomposes across the isotypic pieces of $M|_N$ for the four
+$1$-dimensional characters of $D_{12}$ (the two-dimensional
+irreducibles of the nonabelian group $D_{12}$ contain no $N$-stable
+lines, hence contribute nothing). These four pieces have dimensions
+$2,1,1,0$ (the dimension-$2$ piece is the space of $N$-invariants
+proper, i.e.\ the trivial-character piece, matching the pencil found in
+earlier, exploratory computation on the same group action). The sealed
+computation finds $V_{14}\cap\PP(\text{piece})=\emptyset$ in \emph{all
+four} pieces (the fourth, being already $0$-dimensional, is vacuously
+empty). Equivalently: restricted to the pencil spanned by the trivial-
+character piece, the relevant Plücker data has rank $6$ at all but
+three points of the pencil, and rank $4$ (never rank $2$, which is what
+membership in $\Grr(2,6)$ would additionally require there) at those
+three special points. Hence
+\[
+V_{14}^{D_{12}} \;=\; \emptyset,
+\]
+and hypothesis (b) holds.
+
+\section{Machine verification}
+\label{sec:machine}
+
+The three inputs above were sealed by a director-run verification
+(project packet \url{goal_runs_after_c53d89a/FIX_IX_SEAL}, 2026-08-06),
+using two independent computational engines --- exact
+rational/modular linear algebra in Python, and Macaulay2 for the ideal-
+theoretic computations (saturation, primary decomposition markers,
+Jacobian criteria, Hilbert polynomials) --- run at two primes, $397$
+and $199$, with an independently-written verifier replaying the entire
+computation end-to-end at a third, fresh prime, $353$, and finally an
+exact characteristic-$0$ computation over the cyclotomic field $K=
+\mathbb Q(\zeta_{11})$ (entries of the explicit matrices lie in
+$\mathbb Z[\zeta_{11},1/11]$).
+
+\subsection{The group model}
+
+The representation $U$ is constructed explicitly (an ``even-function''
+model on $\mathbb F_{11}$ with a normalized Fourier/Weil generator) via
+two $6\times6$ matrix generators, called $T_6,S_6$ in the packet. At
+every prime and in the exact field $K$, the following were checked and
+passed:
+\begin{itemize}
+\item $\langle T_6,S_6\rangle$ closes to a group of order exactly
+$1320=2\cdot 660$, i.e.\ (the double cover) $\SLg$;
+\item the Weil normalization $S_6^2=-I$ and (writing $\mathrm{gauss}$
+for the quadratic Gauss sum entering the construction) $\mathrm{gauss}
+^2=-11$;
+\item the \emph{projective} order profile of the $1320$ elements of the
+model --- i.e.\ the multiset of orders of their images in
+$G=\PSL$ --- is
+\[
+(\text{order }1: 2),\ (2: 110),\ (3: 220),\ (5: 528),\ (6: 220),\ (11:
+240),
+\]
+summing to $1320$ as required; this matches $G$'s known element-order
+spectrum $\{1,2,3,5,6,11\}$.
+\end{itemize}
+The isotypic projector onto the $10$-dimensional summand $M$ of
+$\Lambda^2U$ has rank exactly $10$ and is idempotent on its own column
+space; $\Ann(M)\subset\Lambda^4U$ (under the natural pairing $\Lambda^2U
+\times\Lambda^4U\to\Lambda^6U\cong k$) has dimension exactly $5$. The
+identification $\Lambda^2U\cong W_5\oplus M$, with $M$ the ``$10'$''
+summand rather than the other $10$-dimensional irreducible of $G$, was
+confirmed by \emph{two independent methods}: character (isotypic-
+projector) averaging, and, in the fresh-prime verifier, an independent
+trace-sum method that compares the sum of $\mathrm{tr}(\Lambda^2g)$
+over each projective-order class of the $1320$-element model against
+the banked character table of $\PSL$ for all four candidate
+decompositions ($W_5$ or its Galois twin, paired with either
+$10$-dimensional irreducible); only the pairing with the ``$10'$''
+candidate matches at every class.
+
+\subsection{The fixed loci and the ambient variety}
+
+At each prime and in $K$: the $\sigma$-eigenspace splitting of $M$ has
+dimensions $(6,4)$; the sextic curve $V_{14}\cap\PP(M_+)$ has Hilbert
+polynomial $6i$, is radical with one associated prime, and is smooth
+(Jacobian minors saturate to the irrelevant ideal); $V_{14}\cap\PP(M_-)$
+is a reduced degree-$2$ zero-dimensional scheme. (As a small but
+genuine cross-check of independence between primes: the two points of
+$V_{14}\cap\PP(M_-)$ are individually rational over $\mathbb F_{397}$
+and $\mathbb F_{353}$, but only Galois-conjugate over $\mathbb F_{199}$
+--- the scheme is degree-$2$ reduced at every prime regardless, which is
+all hypothesis (a) requires.) The centralizer $N=C_G(\sigma)$ has order
+$12$ with exactly $7$ projective involutions, matching $D_{12}$; the
+four linear-character pieces of $M|_N$ have dimensions $(2,1,1,0)$, and
+$V_{14}$ meets none of them.
+
+The ambient variety itself was independently confirmed smooth of pure
+dimension $3$: a dual system $J$, consisting of the Pfaffian sextic
+(``$\mathrm{Pf}_6$'') together with an adjoint-bivector condition on
+$\Ann(M)$, is empty at every prime and over $K$. Since any singular or
+excess-dimension point of $\Grr(2,U)\cap\PP(M)$ would produce a point of
+$J$, emptiness of $J$ proves $V_{14}$ is smooth of pure dimension $3$;
+degree $14$ then follows by transversality, and irreducibility from the
+Enriques--Severi--Zariski principle for linear sections of the
+(projectively normal) Grassmannian. A direct Gr\"obner-basis computation
+of $\Grr(2,U)\cap\PP(M)$ cross-checks dimension $3$ and degree $14$
+directly, at all three primes. Finally, the cubic $\mathrm{Pf}_6$ on
+$\PP(\Ann M)\cong\PP^4$ is $G$-invariant and nonzero at every prime; by
+the (separately sealed) uniqueness of the $G$-invariant cubic on the
+$5$-dimensional representation $W_5$, the hypersurface $\{\mathrm{Pf}_6
+=0\}$ \emph{is} the Klein cubic threefold. This is the Pfaffian-partner
+identification underlying the classical correspondence invoked in
+Section~\ref{sec:cor}.
+
+\subsection{Status of the seal}
+
+The packet's own exit marker is \texttt{FIX-IX-SEAL-PASS}. All checks
+above appear, with explicit \texttt{PASS} markers, in the packet's log
+files (\url{results/checks_397.log}, \url{checks_199.log},
+\url{checks_353.log}, \url{checks_K.log}, and the per-prime
+\url{m2_sigma_*.out}, \url{m2_d12_*.out}, \url{m2_smooth_*.out},
+\url{m2_ambient_*.out} Macaulay2 transcripts), and the independent
+end-to-end verifier at the fresh prime $353$ reports
+\texttt{ALLGREEN}.
+
+\section{Corollary: \texorpdfstring{$V_{14}$}{V14} is not weakly versal}
+\label{sec:cor}
+
+\begin{corollary}
+\label{cor:v14}
+The action of $G=\PSL$ on $V_{14}$ is not weakly versal: no
+$G$-equivariant rational map from any faithful linear representation of
+$G$ lands in $V_{14}$, and (by the Duncan--Reichstein dictionary,
+Theorem~1.1(a) of~\cite{DR}) some twist of $V_{14}$ has no rational
+point. In particular $V_{14}$ is not $G$-unirational.
+\end{corollary}
+
+\begin{proof}
+$G=\PSL$ is simple, hence centerless, so the degeneracy hypothesis of
+Theorem~\ref{thm:main} holds automatically for every faithful linear
+representation of $G$ (Section~\ref{sec:v14}). Section~\ref{sec:v14}
+verifies $N=C_G(\sigma)=D_{12}$ and hypotheses (a) and (b) of
+Theorem~\ref{thm:main} for $Y=V_{14}$, at two primes, a fresh verifying
+prime, and in exact characteristic $0$ (Section~\ref{sec:machine}).
+Theorem~\ref{thm:main} applies directly.
+\end{proof}
+
+This is new-theorem territory: as recalled in the introduction,
+Cheltsov--Tschinkel--Zhang's equivariant unirationality program is
+scoped to Fano threefolds of index $\ge 2$, and $V_{14}$ has index $1$,
+so no result in that literature addresses the $V_{14}$ action at all;
+and the standard fixed-point toolbox fails on $V_{14}$ structurally, as
+recalled in the introduction.
+
+\begin{remark}[The obstruction is purely equivariant]
+\label{rem:bare}
+It is important to be precise about what Corollary~\ref{cor:v14} does,
+and does not, say about $V_{14}$ as a bare variety, forgetting the
+$G$-action. By the classical Pfaffian--Grassmannian correspondence
+recalled in Section~\ref{sec:machine} (of which the $G$-equivariant
+identification $\{\mathrm{Pf}_6=0\}=Y_{\mathrm{Klein}}$ is the
+$G$-invariant instance), $V_{14}$ and $Y_{\mathrm{Klein}}$ are
+\emph{birational to each other as bare varieties} --- Tschinkel--Zhang
+state this explicitly as ``well-known classically''~\cite{TZ}, and it
+is the non-equivariant shadow of their Theorem~1.1. Since birational
+invariants transfer across this equivalence: $V_{14}$ \emph{is
+unirational} as a bare variety (Kollár's theorem \cite{Kollar}, that a
+smooth cubic hypersurface of dimension $\ge 2$ with a rational point is
+unirational (recalled as \cite[Thm.\ 10.3]{DR}), applied to $Y_{\mathrm
+{Klein}}$ and transported across the birational equivalence), in
+particular rationally connected
+--- consistent with Fact~\ref{fact:prokhorov} quantifying over
+``rationally connected $\PSL$-threefolds.'' But $V_{14}$ is \emph{not
+rational}: $Y_{\mathrm{Klein}}$, being a smooth cubic threefold, is
+never rational, by the Clemens--Griffiths intermediate-Jacobian
+obstruction~\cite{CG}, a theorem with no exceptions among smooth cubic
+threefolds; rationality is a birational invariant, so $V_{14}$ is not
+rational either. This is exactly Duncan--Reichstein's own summary of
+the pair: ``they are unirational \dots\ but not rational''
+\cite[Remark~10.10]{DR}.
+
+So Corollary~\ref{cor:v14} is emphatically \emph{not} a repackaging of
+the Clemens--Griffiths obstruction, and does not assert that $V_{14}$
+is rational --- it is not. What Theorem~\ref{thm:main} adds is strictly
+finer, and genuinely equivariant: even restricting attention to sources
+$\PP(V)$ for faithful linear representations $V$ of $G$ --- sources
+that are themselves rational, so that the bare-variety obstruction to
+rationality is simply not in play on the source side either --- no
+$G$-\emph{equivariant} map to $V_{14}$ exists. Weak versality is a
+strictly $G$-equivariant refinement of unirationality: a variety can be
+perfectly unirational as a bare variety (as $V_{14}$ is) while its
+$G$-action fails to be weakly versal, exactly as Theorem~\ref{thm:main}
+shows here. Nothing in this note bears on the (settled, negative)
+question of whether $V_{14}$ is rational as a bare variety; the content
+is entirely about the nonexistence of \emph{equivariant} maps.
+\end{remark}
+
+\begin{remark}[The spin flank is not addressed here]
+\label{rem:spin}
+Theorem~\ref{thm:main} quantifies only over \emph{linear} representations
+of $G$ itself. The $6$-dimensional $U$ used to build the ambient space
+in Section~\ref{sec:v14} is not such a representation: $-1\in\widetilde
+G=\SLg$ acts on $U$ as $-\mathrm{id}$, so only $\PP(U)$ carries a
+(projectively linear) $G$-action, and $U$ itself is not a source
+Theorem~\ref{thm:main} rules out. The source project notes examine this
+``spin flank'' separately and find that, at the level of a single
+involution $\sigma$, it is \emph{not} obstructed by the same argument:
+the lift $\widetilde\sigma\in\widetilde G$ has order $4$, and the
+$D_{12}$-stable pair of isolated points in $V_{14}^\sigma$ found in
+Section~\ref{sec:v14} matches exactly the shape the spin argument would
+require rather than forbid. This does not affect
+Corollary~\ref{cor:v14} or Corollary~\ref{cor:ix2} below, both of which
+quantify only over honest linear representations of $G$; but it does
+mean that this note says nothing about whether $\PP(U)$, or other
+projectively-linear ``spin'' sources, admit equivariant maps to
+$V_{14}$. That question is left open by the source project notes as
+well.
+\end{remark}
+
+\section{Corollary IX.2: the disjunction collapses}
+\label{sec:ix2}
+
+\begin{corollary}[{Corollary IX.2 of the source}]
+\label{cor:ix2}
+$\edC(\PSL)=3$ if and only if the Klein cubic threefold $Y_{\mathrm
+{Klein}}$ is $G$-unirational.
+\end{corollary}
+
+This corollary's inputs are, explicitly: Prokhorov's two-class theorem
+(Fact~\ref{fact:prokhorov}); Duncan--Reichstein's Theorem~10.5, that for
+a finite group $G$ acting on a smooth $G$-invariant cubic hypersurface
+$X\subset\PP(V)$ with $\dim V\ge 4$, the three properties very versal,
+versal, and weakly versal are \emph{equivalent} (unconditionally, with
+no conjectural input needed for just this equivalence); and
+Corollary~\ref{cor:v14} of this note.
+
+\begin{proof}
+($\Rightarrow$) Suppose $\edC(\PSL)=3$. Then there is a $3$-dimensional
+versal $G$-variety; the standard witness realizing the minimal
+dimension (a suitable compression of a generically free linear
+representation) is unirational, hence rationally connected
+(\cite[Remark~2.6]{DR}). By Fact~\ref{fact:prokhorov}, a rationally
+connected $\PSL$-threefold is $G$-birational to either $Y_{\mathrm
+{Klein}}$ or $V_{14}$; since versality is a $G$-birational invariant,
+one of these two threefolds is itself versal. It cannot be $V_{14}$: a
+versal variety is in particular weakly versal, and Corollary~\ref{cor:v14}
+shows $V_{14}$ is not weakly versal. So $Y_{\mathrm{Klein}}$ is versal,
+hence (Duncan--Reichstein Theorem~10.5, since $Y_{\mathrm{Klein}}
+\subset\PP^4=\PP(W_5)$ with $\dim W_5=5\ge 4$ is a smooth $G$-invariant
+cubic hypersurface) very versal, i.e.\ $G$-unirational.
+
+($\Leftarrow$) The source records the converse direction as established
+separately in the project notes (there labeled ``E37''); we do not
+reproduce it here, in keeping with this note's brief to transcribe
+Note~IX faithfully rather than to re-derive. We note only, for
+orientation, that Duncan--Reichstein's own Proposition~10.8 already
+records the unconditional bound $3\le\edC(\PSL)\le 4$ (Section~1.1
+above), which is visibly compatible with --- though does not by itself
+prove --- this direction.
+\end{proof}
+
+As the source puts it, the essential-dimension question becomes
+\emph{single-target}: Dolgachev's conjectural route to $\edC(\PSL)=4$
+is exactly the assertion ``Klein cubic negative,'' and the
+Cassels--Swinnerton-Dyer route to $\edC(\PSL)=3$ is exactly ``Klein
+cubic positive''; $V_{14}$ can no longer independently supply an
+$\edC=3$ witness. \textbf{We emphasize again: whether $Y_{\mathrm
+{Klein}}$ is $G$-unirational is open.} This note proves nothing about
+it, in either direction.
+
+\section{Status and dependencies}
+\label{sec:status}
+
+We record here, as plainly as possible, what this note establishes and
+what it rests on, distinguishing throughout between what is proved in
+this note (by transcription from the source), what is cited from
+published literature, and what is machine-verified.
+
+\begin{itemize}
+\item \textbf{Proved here (transcribed).} Theorem~\ref{thm:main} (the
+centralizer obstruction) and its proof; Corollary~\ref{cor:v14} and
+Corollary~\ref{cor:ix2} and their proofs (with the converse direction of
+Corollary~\ref{cor:ix2} explicitly not reproduced, see above). These are
+faithful transcriptions of Corollary IX.1 and Corollary IX.2 of the
+source project note \texttt{theory/FIX\_IX\_v14.md}, itself marked
+``DRAFT-FOR-DERIVATION'' at the top of that document.
+
+\item \textbf{Depends on a project-internal lemma layer, not published
+literature.} The proof of Theorem~\ref{thm:main} rests on
+Fact~\ref{fact:resolution} (equivariant resolution/weak
+factorization), Lemma~\ref{lem:goingdown} (rational-chain going-down),
+and Lemma~\ref{lem:rccprop} (RCC propagation, together with its scope
+correction, Correction~\ref{corr:ic}), all from the same project's
+\texttt{theory/FIX\_I\_bcomplex.md}. That note is itself explicitly
+marked, at its own top: ``Status: DRAFT-FOR-DERIVATION --- every
+statement here is to be treated as claimed-until-derived-or-checked,''
+with an internal acceptance-test suite (its Section~6, tests T1--T5)
+serving as its own validation gate. This is derivation-grade project
+work, not peer-reviewed or published mathematics; Fact~\ref{fact:resolution}
+rests in turn on genuinely standard results (Hironaka resolution made
+canonical in characteristic $0$, and the Abramovich--Karu--Matsuki--
+Wlodarczyk equivariant weak factorization theorem), but the specific
+formulations of Lemma~\ref{lem:goingdown} and Lemma~\ref{lem:rccprop},
+and their packaging into Theorem~\ref{thm:main}, have not been
+externally reviewed. We verified directly (Remark~\ref{rem:correction-check})
+that the one place Lemma~\ref{lem:rccprop} is used inside a nontrivial
+induction survives its own recorded scope correction; we did not
+independently re-derive Fact~\ref{fact:resolution},
+Lemma~\ref{lem:goingdown}, or the unmarked parts of
+Lemma~\ref{lem:rccprop} from first principles.
+
+\item \textbf{Machine-verified.} The geometric inputs of
+Section~\ref{sec:v14} --- $N=C_G(\sigma)=D_{12}$, hypothesis (a), and
+hypothesis (b) --- are verified computationally, as detailed in
+Section~\ref{sec:machine}: two independent engines, two primes ($397$,
+$199$) plus an independently-coded fresh-prime verifier ($353$), and an
+exact characteristic-$0$ computation over $K=\mathbb Q(\zeta_{11})$.
+This is strong evidence by the standards of computer-algebra
+verification (independent engines, independent prime, exact
+characteristic $0$, and a genuinely independent second method for the
+$\Lambda^2U=W_5\oplus M$ identification), but it is a director-run
+verification internal to the project, not an independently reproduced
+or peer-reviewed computation.
+
+\item \textbf{Cited, not reproved.} Fact~\ref{fact:prokhorov}
+(Prokhorov's two-class theorem), Duncan--Reichstein's Theorem~10.5 and
+the versality dictionary of Theorem~1.1, Kollár's unirationality
+theorem for cubic hypersurfaces, the Clemens--Griffiths non-rationality
+theorem, and the identification of $G=\PSL$ as the automorphism group
+of the Klein cubic via a linear representation~\cite{Adler}, are all
+taken from the literature as stated, without independent re-proof. The
+Pfaffian--Grassmannian correspondence and the equivariant birationality
+of Tschinkel--Zhang~\cite{TZ} are likewise cited, used here only for
+the (non-equivariant) fact that $V_{14}$ and $Y_{\mathrm{Klein}}$ are
+birational as bare varieties (Remark~\ref{rem:bare}).
+
+\item \textbf{Consequence, for context.} Corollary~\ref{cor:ix2} makes
+the essential-dimension question ``$\edC(\PSL)=3$ or $4$?'' single-
+target on the Klein cubic threefold: it is now exactly the question of
+whether $Y_{\mathrm{Klein}}$ is $G$-unirational. \textbf{This question
+is open.} This note does not claim, suggest, or make progress toward a
+value of $\edC(\PSL)$; it does not establish $\edC(\PSL)=4$, and it says
+nothing whatsoever about $F_{55}$ or any other subgroup of $G$ beyond
+$N=D_{12}=C_G(\sigma)$ and the group $G$ itself. Any claim that the
+Klein cubic case, or the value of $\edC(\PSL)$, is resolved would go
+beyond what is proved here and beyond what the source project notes
+claim.
+\end{itemize}
+
+\begin{thebibliography}{S9}
+\small
+
+\bibitem{Adler} A.~Adler, \emph{On the automorphism group of a certain
+cubic threefold}, Amer.\ J.\ Math.\ \textbf{100} (1978), no.~6,
+1275--1280.
+
+\bibitem{Beauville} A.~Beauville, \emph{On finite simple groups of
+essential dimension~3}, arXiv:1101.1372.
+
+\bibitem{BCDP} J.~Blanc, I.~Cheltsov, A.~Duncan, Yu.~Prokhorov,
+\emph{Finite quasisimple groups acting on rationally connected
+threefolds}, arXiv:1809.09226. Cited here, via Tschinkel--Zhang
+\cite{TZ}, for their Theorem~4.3: birational rigidity of the
+$G$-actions on $Y_{\mathrm{Klein}}$ and $V_{14}$.
+
+\bibitem{CG} C.~H.~Clemens, P.~A.~Griffiths, \emph{The intermediate
+Jacobian of the cubic threefold}, Ann.\ of Math.\ (2) \textbf{95}
+(1972), 281--356. Citation details as given in Duncan--Reichstein's own
+bibliography \cite{DR}; not independently consulted here.
+
+\bibitem{CTZ} I.~Cheltsov, Yu.~Tschinkel, Zh.~Zhang, \emph{Equivariant
+unirationality of Fano threefolds}, arXiv:2502.19598.
+
+\bibitem{DR} A.~Duncan, Z.~Reichstein, \emph{Versality of algebraic
+group actions and rational points on twisted varieties},
+arXiv:1109.6093.
+
+\bibitem{Kollar} J.~Koll\'ar, \emph{Unirationality of cubic
+hypersurfaces}, J.\ Inst.\ Math.\ Jussieu \textbf{1} (2002), no.~3,
+467--476. Citation details as given in Duncan--Reichstein's own
+bibliography \cite{DR}; not independently consulted here.
+
+\bibitem{Prokhorov} Yu.~Prokhorov, \emph{Simple finite subgroups of the
+Cremona group of rank~3}, J.\ Algebraic Geom.\ \textbf{21} (2012),
+no.~3, 563--600.
+
+\bibitem{TZ} Yu.~Tschinkel, Zh.~Zhang, \emph{Stable equivariant
+birationalities of cubic and degree~14 Fano threefolds},
+arXiv:2409.08392.
+
+\bibitem[S1]{v14note} \emph{In-repo project source.}
+\texttt{problems/E-klein-cubic/theory/FIX\_IX\_v14.md}, Section~5
+(``The centralizer obstruction --- the keystone, and the linear-source
+case''), the primary source for
+Theorem~\ref{thm:main}--Corollary~\ref{cor:ix2}; Sections~1--4 and~6
+for surrounding context.
+
+\bibitem[S2]{BComplex} \emph{In-repo project source.}
+\texttt{problems/E-klein-cubic/theory/FIX\_I\_bcomplex.md}, the source
+for Fact~\ref{fact:resolution} (Prop.\ 3.3), Lemma~\ref{lem:goingdown}
+(Lemma~4.2), Lemma~\ref{lem:rccprop} (Lemma~4.3), and its scope
+correction (``Correction I-C'').
+
+\bibitem[S3]{Tgate} \emph{In-repo project source.}
+\texttt{problems/E-klein-cubic/theory/FIX\_T\_gate.md}, the source for
+Corollary T3.1 (the ``central obstruction''), the antecedent of
+Theorem~\ref{thm:main} discussed at the start of
+Section~\ref{sec:main}.
+
+\bibitem[S4]{SEAL} \emph{In-repo machine verification packet.}
+\url{problems/E-klein-cubic/goal_runs_after_c53d89a/FIX_IX_SEAL/}
+(\texttt{REPORT.md}, \texttt{brief.md}, \texttt{results/},
+\texttt{scripts/}, \texttt{verifier.py}), underlying
+Section~\ref{sec:machine}.
+
+\end{thebibliography}
+
+\end{document}
+
