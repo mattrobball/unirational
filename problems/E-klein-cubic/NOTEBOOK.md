@@ -3724,7 +3724,26 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   modulo this, any YES-construction can exploit it. Named next:
   reciprocity pairing against the b-cover on a compactification
   (NO); the (i)-(iii) interpolation problem (YES; bounded search now
-  legitimate).** Note I
+  legitimate).** **Wave 29 (continuation; Note IX §8.11): the
+  reciprocity layer.** **Theorem J (trace-zero twice-min law):** for
+  trace-zero φ, EVERY σ-orbit of primes on any equivariant model
+  (zeros and poles alike) attains its multiplicity-minimum at least
+  twice (leading-jet cancellation in `Σφ∘σ⁻ⁱ = 0`); at σ-invariant
+  primes the trace-zero condition RECURS on the leading jet. The
+  arithmetic twin of §8.6's tropical Plücker twice-min — the two F55
+  flanks obey the SAME shadow law (one lifting problem, two
+  costumes). **Corollary J.1:** Theorem-I image-patterns with unique
+  minimum (e.g. `(5,2,0,1,4)`) are FORBIDDEN; `(1,2,0,0,0)` survives
+  — the feasible set is a proper computable refinement, not yet
+  empty. **The anchored pairing exists:** the naive per-orbit
+  `λ = Σ5ⁱvᵢ mod 11` is base-point-ambiguous by ×5; the SEALED
+  Kummer recursion `σ(b) = r₂⁻¹¹b⁻²` twists b's residue character by
+  ×(−2); `5·(−2) ≡ 1 (mod 11)` ⟹ `⟨φ, b⟩_O` is WELL-DEFINED — the
+  11-cover's (−2)-cocycle exactly compensates the weight ambiguity
+  (the Klein's own (−2) again). Remaining: the global Parshin-style
+  sum formula for `Σ_O⟨φ,b⟩_O` on the μ₁₁-cover; a forced global
+  term ≢ 8 would violate Theorem I ⟹ F55-NO. Active derivation.**
+  Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
