@@ -1391,6 +1391,52 @@ not extrapolated — but for the first time in the program, a
 single named finite lemma stands between the current state and a
 resolution of the headline.
 
+### 8.18 The conserved eleven: both poles of the escape space die (2026-08-07)
+
+The one candidate escape from the mod-11 obstruction was
+identified and constructed: work on the `G₉`-FAN — the fan of
+orderings of `(H₀,…,H₄)`, `H_k(w) = ⟨σᵏw, G₉⟩`, `G₉ = (1,5,3,4,9)`
+the mod-11 eigenvector with `c₉ = 4·G₉` — where EVERY wall-normal
+is `≡ (multiple of) G₉ (mod 11)`, so the level-1 obstruction
+dissolves into the trivially-satisfiable `Στ ≡ 7 (mod 11)`.
+The canonical construction there: zero-set = "H₀ ranks 4th or
+5th" (a perfect 2-cover), leaving exactly ELEVEN free ray-values
+`v_S` (`S ∋ 0`, `|S| ≤ 3`); isotropic margin designs solve the
+(ii)-congruence linearly (particular solution `7·P₂ + P₃`) but
+provably fail the covering (support analysis); the free design
+is the 11-unknown system. Its fate, computed exactly (15,892
+sampled integrality + congruence conditions):
+
+- mod 5: consistent, unique solution `v ≡ 0`;
+- mod 11: consistent, unique solution `v ≡ 0` — because the
+  ray-gaps of the `G₉`-fan are divisible by 55: the wall
+  degeneracy that dissolves the level-1 obstruction IMPORTS
+  11-divisibility into the lattice geometry and forces
+  `v ≡ 0 (mod 11)` through integrality;
+- substituting `v = 11w`, the level-121 system for `w` is
+  **INCONSISTENT** (3,614 rows, rank 5, infeasible): the anchor
+  inhomogeneity, invisible mod 11 on this fan, reappears intact
+  one level up.
+
+**The conserved-eleven mechanism.** On generic fans the anchor
+obstruction (Theorem R) kills at level 1 — hand-verified
+four-term certificate. On 11-degenerate fans the same eleven
+that clears level 1 re-enters through the ray-gap divisibility
+and kills at level 11². Dodge the class and it returns as the
+congruence; dodge the congruence and it returns as the
+denominator; dodge the denominator and it returns as the gap;
+dodge the gap and it returns one 11-adic level up.
+
+**Proof plan for Lemma S (now concrete).** (α) Dichotomy lemma:
+every σ-invariant complete fan either has an anchor-obstructed
+wall-structure (level-1 Farkas as on A₄) or is `G₉`-aligned with
+55-divisible gaps (level-(k+1) regress). (β) The regress
+induction. Status: both poles verified computationally; mixed
+fans, other H-fan zero-patterns, and the second 11-cover
+direction (`adj(2+σ)e₂`) remain to sweep; then the write-up.
+The needle points hard at S-TRUE — i.e. at F55-NO and
+`ed = 4` — but the theorem is not yet claimed.
+
 **Honest position after the full derivation.** Both flanks of
 F55 are genuinely deep, in matching ways: the geometric machine
 ends at a tropical-to-exact lifting gap (§8.7), and the

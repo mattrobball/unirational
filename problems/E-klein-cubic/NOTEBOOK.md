@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `317dad6` (2026-08-06; the
+Snapshot metadata — notebook parent head: `f0cd35a` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3862,7 +3862,26 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   claimed either way (IX-8 discipline; four prior escapes demand the
   lemma be decided explicitly). First time in the program: a single
   named finite statement stands between the state and the
-  headline.** Note I
+  headline.** **Wave 30 ("go get it"; Note IX §8.18, probes
+  `f55_design.py`, `f55_hfan.py`): THE CONSERVED ELEVEN — both poles
+  of the escape space die.** The one identified escape: the G₉-fan
+  (orderings of `Hₖ = ⟨σᵏ·, G₉⟩`; every wall-normal ≡ G₉ mod 11;
+  `c₉ = 4G₉`) dissolves the level-1 obstruction into `Στ ≡ 7`.
+  There: isotropic margin designs solve (ii) (particular `7P₂+P₃`,
+  kernel dim 7) but PROVABLY fail covering (200k samples + support
+  analysis); the free design reduces to ELEVEN ray-unknowns
+  (bottom-2 zero-pattern = perfect 2-cover). Exact fate (15,892
+  conditions): mod 5 and mod 11 both force `v ≡ 0` — the wall
+  degeneracy imports 55-divisible ray-gaps, re-importing 11 through
+  INTEGRALITY — and at level 121 the substituted system is
+  **INCONSISTENT**: the anchor content reappears one 11-adic level
+  up. Mechanism now end-to-end: class → congruence → denominator →
+  gap → next level; the eleven is conserved. **Proof plan for Lemma
+  S:** (α) dichotomy (anchor-obstructed vs G₉-aligned-with-regress);
+  (β) the regress induction. Remaining sweeps: mixed fans, other
+  H-fan patterns, the second 11-cover direction. Needle points hard
+  at S-TRUE (⟹ F55-NO ⟹ ed = 4); theorem NOT yet claimed.**
+  Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
