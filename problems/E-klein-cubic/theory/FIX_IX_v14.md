@@ -253,3 +253,95 @@ is the V4/Q8-chain analysis (the D12-endpoint system on
 1-dim summands ⟹ `P(U)^{V4} = ∅`), so the chain combinatorics
 differs from Problem F's — named next derivation after the
 seals.
+
+## 7. Consistency with the T-Z stable equivalence, and the transport lattice (2026-08-06, user-prompted)
+
+The user's check: "aren't the twins G-stably birational?" They
+are (§2, T-Z Thm 1.1) — and IX.1 coexists with that for exactly
+the reason §2 recorded before IX.1 existed: the stable factor is
+not an innocent projective space; it is the SPIN `P(V)` carrying
+the order-2 Schur–Brauer class. Mechanically, at both levels:
+
+**(i) Why weak versality does not cross the equivalence.** Twist
+Thm 1.1 by a `G`-torsor `T` over `K`:
+`Y_T × P² × SB_T ~_bir X_T × P² × SB_T`, where `SB_T` (the
+twisted `P(V)`) is a Severi–Brauer fivefold with class
+`β_T ∈ Br(K)[2]` = the image of the nonsplit extension class
+under `T`'s classifying map. For the generic (versal) torsor
+`β_T ≠ 0` (§2), so `SB_T(K) = ∅` and BOTH products are pointless
+regardless of `Y_T`, `X_T`: Lang–Nishimura transfers nothing.
+"V₁₄'s generic twist is pointless" (IX.1) and "the Klein's
+generic twist has a point" (= headline YES, what CSD would give)
+can coexist. Sharp complement, for the record: on the liftable
+locus `β_T = 0` (torsors lifting to `SL₂(F₁₁)`), `SB_T ≅ P⁵` and
+points DO cross both ways (Lang–Nishimura + projection):
+`Y_T(K) ≠ ∅ ⟺ X_T(K) ≠ ∅` for every liftable `T`. IX.1 says
+nothing about liftable twists — only the generic one, which is
+not liftable.
+
+**(ii) Lemma IX.3 (folding; hand, elementary).** (1) Same
+central character: `P(C ⊕ C′) ⇢ P(C) × P(C′)`, `[c : c′] ↦
+([c], [c′])`, is dominant equivariant. (2) Character flip: for
+`B` linear and `D` spin, `(B ⊗ D*) ⊕ D` is SPIN and
+`P((B ⊗ D*) ⊕ D) ⇢ P(B) × P(D)`, `[f : v] ↦ ([f(v)], [v])`
+(`f ∈ Hom(D, B)`), is dominant equivariant. (3) Hence any product
+of linear factors, trivial `P²`s, and at least one spin factor is
+equivariantly dominated by a single SPIN source; and on a fixed
+variety any linear source is dominated by a spin one
+(`P((A ⊗ V*) ⊕ V) ⇢ P(A)`, `[f : v] ↦ [f(v)]`), so
+lin-unirational ⟹ spin-unirational always.
+
+**(iii) Proposition IX.4 (transport lattice).** Composing a
+dominant equivariant map with Thm 1.1 over `C` (no twisting — the
+Brauer class is invisible here) and folding by IX.3:
+
+- `Y` lin-unirational ⟹ `X` SPIN-unirational (and `X` lin ⟹ `Y`
+  spin) — absorbing the `P(V)`-factor flips the central
+  character;
+- `Y` spin-unirational ⟺ `X` spin-unirational (spin ⊕ spin stays
+  spin);
+- on each twin, lin ⟹ spin (IX.3(3)).
+
+The four plain questions collapse to: one shared SPIN question on
+top, the two lin-questions feeding it. IX.1 = "`X`-lin FALSE";
+the headline = "`Y`-lin". No arrow runs from "`X`-lin FALSE" to
+any other node: the theorem sits exactly at the boundary the
+stable equivalence enforces. It HAD to leave spin open — a
+spin-kill by the same σ-argument would transport to a refutation
+of the CSD instance, which no fixed-locus computation alone
+should be able to deliver.
+
+**Corollary IX.5 (new sufficient negative target).** Headline
+YES ⟹ `V₁₄` is spin-unirational. Contrapositive: KILLING SPIN
+SOURCES ON THE V₁₄ (the §6 flank) proves the headline NEGATIVE —
+`ed_C(PSL₂(F₁₁)) = 4`, refuting the CSD instance (D-R Prop
+10.8(b)) and confirming Dolgachev's. The §6 flank is therefore
+not a loose end: it is the HEADLINE, transported to the twin
+where the σ-geometry is machine-friendly (no rational curves in
+`V₁₄^σ`). Sufficient, not necessary: `V₁₄`-spin could survive
+even if the headline is NO.
+
+**Corollary IX.6 (the D12-shadow: the spin escape is REALIZED).**
+The Klein cubic is D12-lin-unirational (Note VIII §6, dominant
+map from `P(W)`). Restricting Thm 1.1 to `D12` and folding
+(everything restricts): the `V₁₄` IS D12-SPIN-unirational. Yet
+every faithful linear D12-source dies on the `V₁₄`: for
+`ρ(σ)` non-scalar this is the IX.1 argument with `G := D12`
+(σ is the center of D12, so this is literally Cor T3.1; (a) and
+`V₁₄^{D12} = ∅` are the measured hypotheses); for the
+`ρ(σ) = −id` reps, σ acts trivially on `P(V)`, so the image
+lies in `V₁₄^σ` — 1-dimensional, never dominant. So on the
+`V₁₄` at D12 level: spin TRUE, lin FALSE — the twins DIVERGE at
+D12 (on the Klein both are true), the §6 C6-pair escape is not
+hypothetical but REALIZED by an existing dominant D12-map, and
+the full-`G` spin flank is structurally confirmed hard.
+
+**Pre-registration (falsification test; recorded while the
+worker is in flight and blind to IX.1).** Stage 4 of
+FIX-IX-V14MODEL hunts `10′`-valued landing covariants in
+`S^d W*` = `G`-maps `P(W) ⇢ V₁₄` — a LINEAR source. IX.1
+predicts EVERY landing cone is EMPTY, at all degrees. A verified
+stage-4 hit would refute the mod-397 loci data or the IX.1
+derivation (one of the two must then be wrong); conversely the
+ladder's emptiness, when it lands, is independent blind
+corroboration of the obstruction.

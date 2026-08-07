@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `2b340e0` (2026-08-05; the
+Snapshot metadata — notebook parent head: `89090ba` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3386,7 +3386,31 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   combinatorics differs from Problem F); immaterial for weak
   versality/IX.2, central for the T-Z Brauer face. Ledger discipline:
   IX.1/IX.2 are DRAFT-FOR-DERIVATION until the seals land; no packet
-  claims an exit yet. Note I
+  claims an exit yet. **Wave 28 addendum (user consistency challenge —
+  "aren't the twins stably birational?" — answered; Note IX §7):** no
+  contradiction with T-Z Thm 1.1, and the check yields the TRANSPORT
+  LATTICE. (i) Twisting the equivalence by the generic torsor makes the
+  `P(V)`-factor a POINTLESS Severi–Brauer fivefold (`β_T ≠ 0`, §2), so
+  both twisted products are pointless regardless of the twins —
+  Lang–Nishimura transfers nothing; on the liftable locus `β_T = 0`
+  twist-points DO cross both ways (recorded). (ii) Folding lemma IX.3:
+  absorbing the `P(V)`-factor into a single source flips linear↔spin
+  central character; hence Prop IX.4: Klein-lin ⟹ V₁₄-SPIN, V₁₄-lin ⟹
+  Klein-spin, spin ⟺ spin across the twins, lin ⟹ spin on each. IX.1
+  ("V₁₄-lin FALSE") sits exactly at the boundary the equivalence
+  enforces — a same-method spin-kill would transport to a CSD
+  refutation, which fixed-locus data alone should not deliver. **Cor
+  IX.5: headline YES ⟹ V₁₄ spin-unirational; so killing the V₁₄ spin
+  flank ⟹ headline NEGATIVE, `ed = 4` (new sufficient negative target,
+  on the twin whose σ-geometry is machine-friendly).** **Cor IX.6
+  (D12-shadow): the V₁₄ IS D12-spin-unirational (transport of the
+  Klein's D12-theorem) yet NOT D12-lin-unirational (T3.1 with G = D12,
+  σ central; measured (a)+(b)) — the twins DIVERGE at D12 and the
+  C6-pair spin escape is REALIZED, not hypothetical.**
+  **Pre-registered prediction (worker blind, in flight): IX.1 ⟹
+  FIX-IX-V14MODEL stage 4 (W-side `10′`-ladder = LINEAR source P(W))
+  finds EMPTY landing cones at ALL degrees; any verified hit falsifies
+  the loci data or the derivation — a live blind test.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
