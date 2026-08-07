@@ -644,6 +644,81 @@ systems, named next); (ii) character-reusing curves of degree
 ≥ 11 spanning 9–10 eigenlines (needs a structural lemma; open);
 (iii) the rigidity sub-question (§8.4 item 2) is untouched by
 all of this and remains the other half of any F55 kill.
+[Superseded same day by §8.5, which replaces (i)+(ii) by proofs
+plus one reduced finite system.]
+
+### 8.5 The inventory by analysis (2026-08-06; proofs first, computation reduced)
+
+Setup. Lift `C₁₁ = ⟨ĥ⟩` to SL₂(F₁₁); on the Weil 6-space,
+`U = ⊕ u_a`, `a ∈ {0} ∪ QR = {0,1,3,4,5,9}`, each weight once
+(classical). Then in `Λ²U` the weight of `u_a∧u_b` is `a+b`; the
+non-residue weights occur ONCE (pure decomposables), the residue
+weights `q` TWICE (`u_0∧u_q` and `u_{c_q}∧u_{d_q}`,
+`c_q+d_q ≡ q`); `Λ²U = W₅ ⊕ M` puts one weight-q line in each.
+
+**Theorem A (the pentagon, now a theorem).** The five C₁₁-points
+of the V₁₄ are exactly the five pure decomposables:
+`y ↔` the edges `{4,9}, {1,5}, {3,4}, {3,5}, {1,9}` — the pairs
+in `{1,3,4,5,9}` with NON-residue sum (`u_0` unused). Two points
+span a contained line iff their edges SHARE a vertex; the
+"shared-vertex" graph of these five edges is 2-regular on five
+vertices, i.e. a 5-cycle. The pentagon and the absence of
+diagonal lines follow with no computation.
+
+**Lemma B (nondegeneracy).** For `q ∈ QR` the M-eigenvector
+`v_q` is a mix of `u_0∧u_q` and `u_{c_q}∧u_{d_q}` with BOTH
+coefficients nonzero. Proof: a pure `v_q` would be decomposable,
+i.e. a SIXTH C₁₁-fixed point of the V₁₄. But `|V₁₄^{C₁₁}| = 5`:
+topological Lefschetz gives `χ(V₁₄^{ĥ}) = 4 − tr(ĥ|H³)`, and
+`H³(V₁₄) ≅ H³(Klein cubic)` (Pfaffian partners) carries ALL ten
+nontrivial characters (Griffiths residues: `H^{2,1}` has the
+five coordinate weights, `H^{1,2}` the conjugates), so
+`tr = −1`, `χ = 5`; the fixed locus is finite reduced (nonzero
+tangent weights), hence exactly five points. ∎ Consequently the
+V₁₄-membership condition for a family of planes is, per residue
+weight `q`, ONE bilinear identity
+`E_q : κ_q D_{0q} + μ_q D_{c_qd_q} ≡ 0` with `κ_q, μ_q ≠ 0`,
+where `D_{ab}` are the Plücker coordinates in the `u`-basis.
+
+**Theorem C (the u₀-free kill; all degrees, all genera,
+equivariance not needed).** No irreducible curve on the V₁₄
+whose planes lie in `U₅ = ⟨u_1,u_3,u_4,u_5,u_9⟩` passes through
+two diagonal points. Proof: planes in `U₅` means `D_{0q} ≡ 0`
+along the curve, so by `E_q` (Lemma B) ALL five diagonal minors
+`D_{39}, D_{59}, D_{13}, D_{14}, D_{45}` vanish along the curve.
+The Plücker relation on `{1,4,5,9}` reads
+`D_{14}D_{59} − D_{15}D_{49} + D_{19}D_{45} = 0`, whose first
+and last terms are zero, so `D_{15}·D_{49} ≡ 0`; the coordinate
+ring of an irreducible curve is a domain, so `D_{15} ≡ 0` or
+`D_{49} ≡ 0` — i.e. the curve misses `y_{{1,5}}` or `y_{{4,9}}`
+(and the same for every diagonal pair by symmetry). ∎
+(Both degree-13 curves use `u_0` — consistent.)
+
+**Reduction D (what is left, exactly).** Any remaining candidate
+through a diagonal pair uses `u_0`: some `D_{0q} ≢ 0`. Writing
+the normalization's equivariant parametrization with binary
+forms `F_a, G_b` per `u`-weight, every Plücker coordinate is
+LACUNARY: `D_{ab}` is supported on exponents
+`k ≡ (a+b−c₀)/w (mod 11)`. Substituting `ζ = z^{11}` (the
+C₁₁-quotient coordinate) turns the fifteen Plücker relations
+plus the five `E_q` into a SHIFTED-PLÜCKER SYSTEM: ten
+one-variable polynomials `P_X(ζ)` satisfying the Grassmann
+relations with `ζ^{0/1}`-shifts determined by the carry
+arithmetic of `σ = 1/w`, endpoint units `P_{49}(0) ≠ 0` and
+top-coefficient of `P_{15} ≠ 0`. Character reuse is now just
+ζ-degree: the FULL remaining inventory question — spans 9/10,
+all degrees — is this ONE system, finite per ζ-degree, with
+ζ-degree 0 the old "no-reuse" case. Per the program doctrine the
+residual computation is now legitimate: it has been reduced
+analytically to a stratified finite solve (ζ-degree 0, 1, 2, …)
+with the uniform-in-degree closure the one remaining analytic
+gap (a valuation-descent argument on relations #4/#14 of the
+shifted system is the named candidate).
+
+Status: pentagon = theorem; diagonal kill proved on the
+`u_0`-free locus; survivors confined to the shifted-Plücker
+system. Rigidity (§8.4 item 2) untouched and still required for
+any F55 kill.
 
 **What is now genuinely at stake in layer 5.** The source
 complex forces images for coordinate lines of ALL four ratios.

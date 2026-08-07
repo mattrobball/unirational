@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `729ad8e` (2026-08-06; the
+Snapshot metadata — notebook parent head: `cc09106` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3592,7 +3592,29 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   systems (degrees 8, 9 — finite, named), the degree-≥11
   character-reuse lemma (open), and the §8.4 rigidity sub-question
   (untouched). Probes `v14_f55_sweep.py` + inline follow-ups,
-  mod 397.** Note I
+  mod 397.** **Wave 28 (user doctrine: reduce to computation through
+  analytic proofs; Note IX §8.5): the inventory by analysis.** Weil
+  weights `U = {0} ∪ QR`, each once ⟹ **Theorem A**: the five
+  C₁₁-points are the five pure decomposables = the edges of `{1,3,4,5,9}`
+  with non-residue sum; contained lines ⟺ shared vertex; the
+  shared-vertex graph is 2-regular ⟹ THE PENTAGON IS A THEOREM (no
+  computation). **Lemma B**: `|V₁₄^{C₁₁}| = 5` via topological
+  Lefschetz (`χ = 4 − tr(ĥ|H³)`, `H³ ≅ H³(Klein)` = all ten nontrivial
+  characters by Griffiths residues ⟹ `tr = −1`) ⟹ the M-eigenvectors
+  `v_q` (q ∈ QR) are nondecomposable ⟹ the V₁₄-condition is one
+  bilinear identity `E_q` per residue weight with BOTH coefficients
+  nonzero. **Theorem C (u₀-free kill, all degrees and genera, no
+  equivariance needed)**: a curve whose planes avoid `u_0` has all five
+  diagonal Plücker minors ≡ 0 (by `E_q`), and the `{1,4,5,9}` Plücker
+  relation then forces `D₁₅·D₄₉ ≡ 0` — a domain ⟹ the curve misses one
+  of the two diagonal endpoints. NO u₀-free curve joins any diagonal
+  pair (subsumes/explains the two deg-13 curves, which use u₀).
+  **Reduction D**: all survivors factor through ONE shifted-Plücker
+  system on the C₁₁-quotient (`ζ = z¹¹`; ten one-variable polynomials,
+  Grassmann relations with carry-shifts in `ζ^{0/1}`, two endpoint
+  units), finite per ζ-degree, ζ-degree 0 = the old span-9/10 cases;
+  uniform closure = one remaining analytic gap (valuation descent,
+  named). Rigidity still open and still required.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
