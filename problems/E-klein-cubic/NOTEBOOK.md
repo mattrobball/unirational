@@ -3779,7 +3779,24 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   F55-symmetric 4-torus (deck μ₁₁ by translations, σ by lattice
   maps). Remaining analysis: (α) the boundary ledger, with
   cores(r₂⁻¹,b) fully explicit; (β) the b-split orbits on T′.
-  Computation threshold NOT yet reached.** Note I
+  Computation threshold NOT yet reached.** **Wave 29 ("keep pushing";
+  Note IX §8.14): the boundary ledger lands.** `c := Σ5ⁱe_{2−i} ≡
+  3·(−2)ⁱ` — the Klein weight vector's THIRD role. No σ-invariant
+  rays exist (N^σ = 0) ⟹ all boundary orbits size 5. **Theorem L:**
+  `∂_q(B) = ∂_w(r^{−c}, b) = [r^{⟨w,c⟩e_b − ⟨w,e_b⟩c}]`, vanishing
+  iff both pairings ≡ 0 mod 11; e_b, c independent mod 11 ⟹ **B =
+  cores(r₂⁻¹,b) ≠ 0 in Br(K)[11]** — the obstruction algebra
+  genuinely lives, with a fully explicit ledger. **Theorem M:** the
+  λ-twisted norm `N_λ(x) = Πσ⁻ⁱ(x)^{5ⁱ}` satisfies `N_λ(ψa) =
+  N_λ(a)⁷`, `N_λ(r₂) = r^c` — the SAME 7 and c as the §8.12
+  corestriction identity: independent computations agree (coherence
+  check passed). **Theorem N:** `λ_w(φ) ≡ −⟨w,c⟩` at EVERY boundary
+  orbit — φ's boundary λ-invariants are PINNED to c, no freedom; at
+  rays with ⟨w,c⟩ ≢ 0 the boundary pattern exits Im(2+σ̃) while
+  Theorem J still binds. Remaining analysis: (α) clean per-ray
+  solvability of the full consistency equation; (β) b-split orbits
+  on T′; (γ) codim-2 Gersten links. One unmatchable ray ⟹ F55-NO ⟹
+  ed = 4.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
