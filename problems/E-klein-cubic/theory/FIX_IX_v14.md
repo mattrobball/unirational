@@ -2308,3 +2308,91 @@ derivation, not a computation (in flight:
 only (Q fixes `v_w(a)` at the 460 rays; the interior of `div(a)`
 is free), the mixed fan only, the 14 recorded patterns only.
 Nothing here moves F55 or the headline.
+
+### 8.30 TERMINAL: the repair provably fails, the lift is two-engine confirmed and convex — the arithmetic flank ends (Correction IX-n) (2026-08-08)
+
+Two results close the campaign, both director-adjudicated by rerun.
+
+**(A) The lift is confirmed by a second, independent engine — and
+can be taken CONVEX.** Julia/Nemo (FLINT), rebuilding the fan from
+convention-free sign-vector data alone: 1090 chambers, 2570 walls
+(equal to the independently computed one-form-differs adjacency,
+2570/2570), 218 free σ-orbits — no discrepancy. It derived
+`σ_* = shift₋₁` itself, verified the slope-frame reduction (**)
+before use (and reports it failed loudly first on an inverted
+orientation — the check works), then solved the full 19780 × 5232
+integer system: soluble mod every prime tested, rank dropping only
+at 11 (5173 vs 5217), rational denominator exactly 11, kernel rank
+15, saturation PROVED by an explicit integer left inverse.
+Certificate: substitution into ALL 19780 rows, 0 violations; wall
+conditions 0/2570 for both h and m; σ-invariance of m 0/1090;
+pointwise `F = d + m` at 20,374 lattice points × 5 translates, 0
+failures. **And the lift can be made convex:** adding
+`t·Σ_k g∘σᵏ` (g = Σ_t|⟨ν_t,·⟩|, strictly convex, wall multiplier
+exactly 10) at `t = 15,241,389` gives 0/2570 convexity violations
+and `h(n) = max_C ⟨U_h(C), n⟩` at 2421/2421 points — **h IS the
+support function of an honest lattice polytope Q** (1085 distinct
+slopes). Both negative controls behave (a continuity-breaking
+perturbation is insoluble mod every prime; a synthetic liftable d″
+lifts and correctly fails twice-min). Engine lesson, measured: 80 s
+per pattern versus an estimated 10–30 min per prime in Python —
+two to three orders of magnitude, from a streaming modular echelon
+with no modulus in the inner loop.
+
+**(B) Correction IX-n — the (F2) repair FAILS, with a proof.**
+
+**Theorem D (eigen-exhaustion; proved).** `E*/(E*)ⁿ` is semisimple
+over `F_n[C₅]`. For β in the ε-eigencomponent,
+`cores(φ,β) = (2+ε⁻¹)·cores(a,β) − cores(r₂,β)`. If `2+ε⁻¹` is a
+unit the identity merely DEFINES `cores(a,β)` and yields no
+constraint — precisely why Theorems K and (iv) fail. If
+`2+ε⁻¹ ≡ 0` the a-term is annihilated, so the comparison is
+genuine but says nothing about `a`. And `2+ε⁻¹ ≡ 0` holds for
+EXACTLY ONE ε: mod 11 it is ε = 5, whose eigencomponent is spanned
+by `c` — **not** by `e_b`, which has ε = 9 and factor 7 — and mod 3
+the trivial component. Its output is exactly Theorem I(ii) in the
+interior and **Theorem R = congruence (3)** at the boundary. ∎
+**So the Brauer/corestriction layer's ENTIRE output is what
+§§8.17–8.28 already used: `b` was the wrong element to pair
+against.** Routes checked and rejected in the draft: other Kummer
+elements, non-eigen/non-monomial β, "unramified ⟹ zero" (the ε = 5
+class is itself boundary-ramified: `∂(cores(r₂⁻¹,r^c)) = −6·∂(B)`),
+Gersten reciprocity, and the mod-3 layer. One route left open but
+unpromising: a multiplicative shadow of trace-zero — symbols cannot
+see it, since 11th powers preserve the symbol and destroy
+trace-zero.
+
+**Blast radius, settled.** FAIL: Theorem K, Theorem K′ as a whole,
+Constraint (iv), the cover loop, Theorem N, Theorem O's conclusion,
+(iv′)/(F2). CORRECTED: Theorem I(ii) per-orbit (`L9 ≡ 0`, not
+`λ ≡ 0`), I(iii) (`L9(m) ≡ 7`, not `λ(m) ≡ 8`), §8.10's alignment
+(ψ ↔ ψ*), Theorem P (an identity — hence (F3) is vacuous, as
+measured), §8.16's σ-invariant-Q obstruction (`L9(e₂) = 4`;
+conclusion unchanged). SURVIVE UNTOUCHED: Theorems H, I(i), J,
+J.1, L, M, K′(a), K′(b), Q, and the entire 9-weighted line — §8.9's
+`W` is literally `⟨w,c₉⟩`, so §8.9's congruence already IS
+Theorem R. **New — Correction IX-o (F-5):** §8.16's "two distinct
+11-covers" is FALSE; `adj(2+σ)e₂ ≡ 8·e_b (mod 11)`, so the crux
+denominator and the b-cover are ONE isogeny.
+
+**Witness re-test.** The repaired (i.e. actually derivable)
+condition holds at 1288/1288 witness × boundary-orbit pairs, as
+does `λ_w(φ) = 7λ_w(div a) − ⟨w,c⟩`; (F2) as printed holds at only
+206/1288 — independently reproducing `f55_f2f3.py`. **The 14
+witnesses SURVIVE.**
+
+**TERMINAL STATUS OF THE ARITHMETIC FLANK.** The corrected system
+collapses from (F1)–(F4) to (F1)+(F4) = Theorem Q alone; Theorem Q
+is SATISFIED on the mixed fan by an explicit lattice polytope,
+confirmed on two independent engines. **Lemma S is FALSE, and the
+value-form / conserved-eleven route to F55-NO is genuinely dead —
+not stalled, structurally exhausted.** The arithmetic flank ends at
+the same shadow-feasible/lifting wall as the geometric flank
+(§8.7), which is what §8.21 suspected and what the §4 failure
+branch of the handoff prescribed. **F55 remains OPEN and
+`ed_C(PSL₂(F₁₁))` remains UNDECIDED.** The live lanes are those of
+handoff §4: the bounded exact solves at the pinned degeneration
+profiles, the rigidity sub-question (§8.4 item 2), the YES-side
+ladder past the d ≤ 7 gate, and construction via Theorem I's
+interpolation problem. The V₁₄ theorem (Cor IX.1/IX.2) and every
+fan-kill theorem of §§8.22–8.25 are untouched by all of this.

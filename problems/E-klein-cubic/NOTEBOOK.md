@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `aca1ad0` (2026-08-07; the
+Snapshot metadata — notebook parent head: `c54f937` (2026-08-07; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -4271,7 +4271,51 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   unrepairable ⟹ the witnesses stand and the route is dead.
   Deciding is a derivation task (in flight,
   `theory/DRAFT_f2_repair_20260808.md`). F55 and the headline
-  UNMOVED either way.** Note I
+  UNMOVED either way.**
+  **Wave 32 (TERMINAL; Note IX §8.30 + Corrections IX-n/o; probes
+  `f55_qpre_nemo.jl`, `f55_f2repair_adjudicate.py`; both
+  director-adjudicated by rerun): THE REPAIR PROVABLY FAILS AND THE
+  LIFT IS TWO-ENGINE CONFIRMED — THE ARITHMETIC FLANK ENDS.**
+  (A) Julia/Nemo, rebuilding the fan from convention-free data
+  (1090/2570/218 all matching, σ_* derived, reduction (**) verified
+  before use and reported failing loudly first on a wrong
+  orientation), solves the full 19780×5232 integer system: soluble
+  mod every prime, rank drop only at 11, denominator exactly 11,
+  kernel rank 15, saturation PROVED by an integer left inverse;
+  certificate = substitution into ALL 19780 rows, 0 violations,
+  plus 20,374 pointwise checks. **And the lift can be taken
+  CONVEX** — h + 15,241,389·Σ_k g∘σᵏ has 0/2570 convexity
+  violations and h = max_C⟨U_h(C),·⟩ at 2421/2421, so **h is the
+  support function of an honest lattice polytope**. Both negative
+  controls behave. Engine lesson measured: 80 s vs an estimated
+  10–30 min/prime in Python. (B) **Correction IX-n — Theorem D
+  (eigen-exhaustion, PROVED):** for β in the ε-eigencomponent,
+  cores(φ,β) = (2+ε⁻¹)cores(a,β) − cores(r₂,β); if 2+ε⁻¹ is a unit
+  the identity merely DEFINES cores(a,β) (why Theorem K and (iv)
+  fail), and 2+ε⁻¹ ≡ 0 holds for EXACTLY ONE ε — mod 11 that is
+  ε = 5, spanned by c, NOT by e_b (ε = 9, factor 7). Its output is
+  exactly Theorem I(ii) and **Theorem R = congruence (3)**. So the
+  Brauer layer's ENTIRE output is what §§8.17–8.28 already used:
+  **b was the wrong element to pair against, and (F2) is not
+  repairable.** Rejected routes recorded (other Kummer elements,
+  non-eigen β, unramified⟹zero — the ε=5 class is itself
+  boundary-ramified, Gersten, mod-3). Blast radius settled: FAIL =
+  K, K′, (iv), the cover loop, N, O's conclusion, (iv′)/(F2);
+  CORRECTED = I(ii) (L9≡0), I(iii) (L9(m)≡7), §8.10 alignment,
+  P (identity ⟹ F3 vacuous), §8.16's σ-invariant-Q obstruction;
+  SURVIVE = H, I(i), J, J.1, L, M, K′(a), K′(b), Q and the whole
+  9-weighted line (§8.9's W IS ⟨w,c₉⟩, so §8.9's congruence already
+  IS Theorem R). **Correction IX-o:** §8.16's "two distinct
+  11-covers" is FALSE — adj(2+σ)e₂ ≡ 8·e_b, one isogeny. Witness
+  re-test: the derivable condition holds 1288/1288, (F2) as printed
+  206/1288 — the 14 witnesses SURVIVE. **TERMINAL: the corrected
+  system collapses to (F1)+(F4) = Theorem Q, which is SATISFIED by
+  an explicit lattice polytope on two engines. LEMMA S IS FALSE and
+  the value-form route to F55-NO is structurally exhausted, not
+  stalled. F55 OPEN, ed_C(PSL₂(F₁₁)) UNDECIDED.** Live lanes =
+  handoff §4: exact solves at pinned profiles, rigidity (§8.4.2),
+  the YES-side ladder, construction via Theorem I. The V₁₄ theorem
+  and every §§8.22–8.25 fan kill are untouched.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
