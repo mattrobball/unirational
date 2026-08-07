@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `a1c3773` (2026-08-06; the
+Snapshot metadata — notebook parent head: `631b34a` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3686,7 +3686,26 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   residual equations over trdeg-3 residue fields, order-11 class as
   engine). One closing valuation ⟹ F55-NO ⟹ ed = 4. Route is
   NO-only; YES stays with the ladder (d = 6 in flight). Active
-  derivation: the tie-cascade.** Note I
+  derivation: the tie-cascade.** **Wave 29 (analytic derivation
+  completed while the ladder runs; Note IX §8.9.1 + Correction
+  IX-c):** the mod-11 functional corrected to `λᵢ = 5ⁱ = (−2)^{−i}`
+  (conjugate Weil vector; consequences unchanged). **Proposition
+  (ψ-structure):** `Φ = Tr(r₂⁻¹ψ(a))`, `ψ(a) = a²σa`; if `[r₂]` died
+  in `E*/ψ(E*)·C*` the form WOULD have zeros (untwist to the Klein
+  trace form, which vanishes on `X(C)`) ⟹ any pointlessness proof
+  must essentially use the sealed order-11 class; no generic
+  argument can work. **Tempering theorem:** leading-term cancellation
+  at any single tie/cone is always coefficient-solvable (face
+  restrictions of one Newton polytope, chain-coupled slots) ⟹ the
+  obstruction, if real, is a GLOBAL lifting obstruction across the
+  normal fan — same difficulty class as §8.7's tropical-to-exact gap.
+  The §8.9 quick-cascade hope is WITHDRAWN (correction discipline).
+  **Honest position: both F55 flanks end at matching lifting gaps
+  (geometric §8.7, arithmetic §8.9.1) — presumably why the case is
+  named-open. Live decisive assets: ladder hit (d = 6 running, gate
+  7); a new class-to-form idea; machine inventory+rigidity against
+  trend. No elementary closure either way — the analytic conclusion
+  of the campaign.**** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant

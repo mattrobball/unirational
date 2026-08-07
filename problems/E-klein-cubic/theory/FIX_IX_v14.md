@@ -898,6 +898,57 @@ solubility everywhere decides nothing) — the YES-side remains
 the ladder/height search. STATUS: opened; the tie-cascade
 analysis is the active derivation.
 
+**Correction IX-c (2026-08-07, caught on full derivation).** The
+mod-11 functional is `λ_i = 5^i = (−2)^{−i}` — the CONJUGATE
+Weil weight vector — not `(−2)^i` as first written (the
+transpose-kernel recursion is `λ_{i−1} = −2λ_i`). The
+consequences stand unchanged (`Σλ_i = 22 ≡ 0`, so `W ≢ 0 mod 11`
+still forbids five-way ties, now with `W = Σ 5^i w_{2+i}`).
+
+**8.9.1 The derivation, continued: what the campaign actually
+proves (2026-08-07).**
+
+- **Proposition (ψ-structure).** `Φ(a) = Tr_{E/K}(r₂^{-1}·ψ(a))`
+  with `ψ(a) = a²σ(a)` — the twist is the ψ-image cone paired
+  against the class of `r₂`. If `r₂ ∈ ψ(E^*)·C^*`, then `Φ` HAS
+  zeros: untwisting by `d` with `ψ(d) = r₂·(const)` turns `Φ`
+  into the untwisted Klein trace form, which vanishes at the
+  constant points `X(C) ⊂ X(K)`. Hence ANY pointlessness proof
+  must essentially use the sealed fact `[r₂] ≠ 0` in
+  `E^*/ψ(E^*)` (order 11); no genericity or dimension-count
+  argument can possibly work. The entire difficulty is the
+  "sums slack": `a` ranges over `E`, not `E^*`-units, and the
+  class obstruction sees only the multiplicative layer.
+- **Tempering theorem (the cascade hope withdrawn).** Working
+  with initial forms along the full normal fan (the associated
+  graded of a monomial valuation is the Laurent ring itself, so
+  leading terms are FACE RESTRICTIONS of the Newton polytope of
+  `a`, coupled in a chain: the vertex `p^{(i+1)}` feeds both the
+  linear slot of `T_i` and the squared slot of `T_{i+1}`): at
+  any 2-term tie of leading exponents, the leading-coefficient
+  cancellation equation involves free coefficients of `a` and is
+  ALWAYS solvable locally. The leading layer never obstructs at
+  any single cone; a pointlessness proof must be a GLOBAL
+  LIFTING obstruction — the same coefficient of `a` appears in
+  the equations of many cones simultaneously — which is the same
+  difficulty class as the tropical-to-exact gap of §8.7. The
+  §8.9 hope of a quick finite tie-cascade kill is hereby
+  WITHDRAWN as too optimistic; recorded per the correction
+  discipline.
+
+**Honest position after the full derivation.** Both flanks of
+F55 are genuinely deep, in matching ways: the geometric machine
+ends at a tropical-to-exact lifting gap (§8.7), and the
+arithmetic twist ends at a multiplicative-class-to-form lifting
+gap (§8.9.1) — two faces of one difficulty, which is presumably
+WHY this case is a named open problem of the literature. The
+decisive assets that remain live: a ladder hit (mechanical,
+d = 6 in flight, gate at 7); a genuinely new idea bridging
+class-to-form (the E18 packet's own stopping point since
+2026-08-01); or the machine's inventory/rigidity pair closing
+against the trend. No elementary closure exists on either side —
+that is the analytic conclusion of the campaign.
+
 **Verdict of the analytic campaign on the inventory.** The
 necessary-conditions tower (incidence → germ weights →
 endpoint links → span sweep → squares kill → tropical trees)
