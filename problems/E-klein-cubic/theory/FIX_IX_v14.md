@@ -1497,6 +1497,55 @@ is one renormalization lemma and two routine closures away, with
 its mechanism verified at both poles and its every tested
 instance dead.
 
+### 8.20 The U-frame: the level-2 system identified exactly (2026-08-07)
+
+**The clean frame (all proved).** Parametrize by per-cone slopes
+`U(C) ∈ Λ` (equivalent to integer values on `N`: every full-dim
+cone's lattice points generate `N`, via `n = (n + tc) − tc`).
+Then: (1) zero-pattern `U = 0` on ≥ 2 cells per σ-orbit;
+(2) wall-jumps `U − U′ = m_W·ν_W`, `m_W ∈ Z`; (3) the orbit
+congruence `Σ9ᵏσ⁻ᵏU(σᵏC) ≡ −c₉ (mod 11Λ)` — and (3) is
+EXACTLY equivalent to (ii); it carries NO content beyond mod 11.
+
+**Correction IX-e (precision).** Earlier prose ("the anchor
+reappears at level 121", "(ii) at mod 121") was imprecise: (ii)
+has no mod-121 content. The computations were nonetheless sound
+— they tested derived-valid consequences — and what they
+actually detected is the following exactly-identified level-2
+system. On a fully aligned fan write `U = τ·G₉ + 11V` (Lemma T;
+zero-cells force `τ = 0 ∧ V = 0` since `G₉` is primitive). Then:
+level 1 fixes `Στ ≡ 7 (mod 11)` per orbit and `m_W ≡
+Δτ/λ_W (mod 11)`; the residual integer freedom `m_W ↦ m_W + 11`
+changes the `V`-jump by exactly `ν_W` — the recursion in
+miniature. The V-field satisfies
+
+    V − V′ = m_W·ρ_W − k_W·G₉   (ν_W = λ_W G₉ + 11ρ_W),
+
+with `k_W` determined, and the binding constraints are the
+**V-WEB SYSTEM**: `V` must VANISH on every zero-cell, i.e. all
+`V`-path-sums between zero-cells — inhomogeneous terms driven by
+the τ-field and the lift data `ρ_W` — must die modulo the
+`ν`-lattice of path-freedoms. Since `Στ ≡ 7 ≠ 0` forces `τ ≢ 0`,
+the inhomogeneity of the V-web is NONZERO: the τ-field is the
+RENORMALIZED ANCHOR. This is the precise content of Lemma V:
+
+**Lemma V (final form).** On a 9-active aligned fan, the V-web
+system is again a system of type (1)(2)(3) — same fan, same
+zero-web, jump data `ρ_W`, anchor = the τ-class — and its anchor
+is nontrivial whenever the level above it was. Granting this and
+iterating: `U ≡ 0 (mod 11^t)` for all `t`, so `U = 0`,
+contradicting the level-1 anchor. With Lemmas T and U (which
+settle all 9-inactive spans) and the generic-case certificates,
+Lemma S follows.
+
+**Status.** The V-web infeasibility is COMPUTED on both aligned
+fans for every σ-coherent pattern (that is what "level-121
+death" was); what remains for the theorem is the self-similarity
+statement in its final form above — now a precise claim about an
+explicitly constructed system — plus the two routine closures
+(free patterns; mixed fans). The proof of Lemma V (final form)
+is the single task left.
+
 **Honest position after the full derivation.** Both flanks of
 F55 are genuinely deep, in matching ways: the geometric machine
 ends at a tropical-to-exact lifting gap (§8.7), and the

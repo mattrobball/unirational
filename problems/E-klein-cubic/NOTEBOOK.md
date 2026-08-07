@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `9b45a98` (2026-08-06; the
+Snapshot metadata — notebook parent head: `7747f8d` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3901,7 +3901,25 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   ed = 4. Verified instances of V: two independent aligned fans,
   level 1→2, both dying at 121. Remaining routine: non-rank
   patterns on aligned fans; mixed fans. The conserved eleven now
-  has a name at every level of the tower.** Note I
+  has a name at every level of the tower.** **Wave 30 (continuation;
+  Note IX §8.20 + Correction IX-e): the U-FRAME and the exact level-2
+  system.** Working with per-cone slopes `U(C) ∈ Λ` (equivalent to
+  integer values — full-dim cones' lattice points generate N):
+  (3) ⟺ (ii) EXACTLY, purely mod 11 — **Correction IX-e:** the
+  "anchor at mod 121" prose was imprecise; the computations were
+  sound (derived-valid conditions) and what they detected is now
+  identified exactly: on aligned fans `U = τG₉ + 11V`; level 1 fixes
+  `Στ ≡ 7` and `m_W` mod 11; the residual freedom `m_W ↦ m_W + 11`
+  shifts V-jumps by exactly `ν_W` (the recursion in miniature); the
+  binding level-2 constraints are the **V-WEB SYSTEM** — V-path-sums
+  between zero-cells must vanish, with inhomogeneity DRIVEN BY the
+  τ-field (`Στ ≡ 7 ≠ 0` ⟹ τ ≢ 0 ⟹ nonzero renormalized anchor).
+  **Lemma V (final form):** the V-web is again a (1)(2)(3)-type
+  system with anchor = the τ-class, nontrivial whenever the level
+  above was ⟹ induction ⟹ `U ≡ 0 mod 11^∞` ⟹ contradiction ⟹
+  Lemma S. V-web infeasibility COMPUTED on both aligned fans, all
+  coherent patterns; the self-similarity proof + two routine
+  closures = the single remaining task.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
