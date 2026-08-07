@@ -1001,6 +1001,55 @@ compactification where `b` acquires zeros/poles; (YES-side) the
 interpolation problem for φ satisfying (i)–(iii) — now a
 bounded, legitimate search space per the doctrine.
 
+### 8.11 The reciprocity layer: the trace-zero twice-min law and the anchored pairing (2026-08-07)
+
+**Theorem J (trace-zero twice-min law).** Let `φ ∈ E*` be
+trace-zero and let `{σ^iP}` be any σ-orbit of prime divisors on
+any σ-equivariant model (interior or boundary, zeros or poles).
+Then the multiplicity pattern `v_i = ord_{σ^iP}(φ)` attains its
+minimum AT LEAST TWICE. At a σ-INVARIANT prime `Q`, all five
+transported orders coincide and the leading normal jets satisfy
+the transported-sum-zero — the trace-zero condition RECURS on
+the jet along `Q`. *Proof.* `Σ_i φ∘σ^{-i} = 0`; the order of
+`φ∘σ^{-i}` along `P` is `v_{-i}`; a sum of functions vanishing
+identically has no unique term of minimal order along any prime
+(its leading jet would survive). ∎
+
+This is the arithmetic twin of the tropical Plücker twice-min of
+§8.6 — the two flanks of F55 obey the SAME shadow law, which is
+strong evidence they are one lifting problem in two costumes.
+
+**Corollary J.1 (the constraint web tightens).** The Theorem-I
+condition (ii) and Theorem J genuinely interact: image patterns
+of `(2+σ̃)` with a unique minimum — e.g. `(2+σ̃)(2,1,0,0,1) =
+(5,2,0,1,4)` — are FORBIDDEN for trace-zero φ, while e.g.
+`(2+σ̃)e₁ = (1,2,0,0,0)` (min thrice) survives both laws. The
+Theorem-I feasible set is a proper, explicitly computable
+refinement; neither law alone nor their single-orbit
+conjunction kills it.
+
+**The anchored pairing (the object asked for).** The naive
+per-orbit invariant `λ_O(φ) = Σ 5^i v_i (mod 11)` is defined
+only up to the base-point rotation, which scales it by
+`5 = (−2)^{-1}`. But the Kummer generator satisfies the SEALED
+recursion `σ(b) = r₂^{-11} b^{-2}`, so along an orbit of points
+the 11-th-power-residue data of `b` transforms by `×(−2)` —
+and `5·(−2) ≡ 1 (mod 11)`: anchoring λ by the residue character
+of `b` at the chosen base-point makes
+
+    ⟨φ, b⟩_O := λ_O(φ) anchored by χ₁₁(b)
+
+WELL-DEFINED in `Z/11` at every orbit where `b` is a unit with
+nonvanishing residue character. The 11-cover's `(−2)`-cocycle is
+exactly the compensator of the weight ambiguity — the same
+`(−2)` that runs the Klein cubic itself. What remains to derive:
+the GLOBAL formula `Σ_O ⟨φ, b⟩_O ≡ (explicit boundary/invariant
+term)` for trace-zero φ — a Parshin-style reciprocity along the
+μ₁₁-cover `y^{11} = b` with its σ-twist; if the global term is
+provably `≢ 8 − (interior contributions forced ≡ 0 by (ii))`,
+Theorem I is violated and F55-NO follows. Status: pairing
+constructed; reciprocity formula = the active derivation.
+
 **Honest position after the full derivation.** Both flanks of
 F55 are genuinely deep, in matching ways: the geometric machine
 ends at a tropical-to-exact lifting gap (§8.7), and the
