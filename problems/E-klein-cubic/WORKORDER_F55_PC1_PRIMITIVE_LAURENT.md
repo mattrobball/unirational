@@ -45,23 +45,36 @@ Newt(f*g)=Newt(f)+Newt(g).
 
 ## Exact coordinate frame
 
-Use the quotient basis
+Use the integral quotient basis
 
 ```text
-b0 = e0-e4, b1 = e1-e4, b2 = e2-e4, b3 = e3-e4.
+q0 = [e0], q1 = [e1], q2 = [e2], q3 = [e3],
+[e4] = -q0-q1-q2-q3.
 ```
 
-Construct the integral `4 x 4` matrix `S` induced by `sigma`.  Every output
-must state this matrix explicitly.  Do not import a matrix from an older
-packet without rebuilding it from the quotient definition.
-
-The mod-11 functional is represented in five-coordinate notation by
+Equivalently, canonicalize a five-vector by subtracting its fifth coordinate
+from all coordinates and retaining the first four.  Construct the integral
+`4 x 4` matrix `S` induced by `sigma`.  It must be rebuilt from the quotient
+definition and should equal
 
 ```text
-lambda = (1,9,4,3,5).
+S = [[ 0, 0, 0,-1],
+     [ 1, 0, 0,-1],
+     [ 0, 1, 0,-1],
+     [ 0, 0, 1,-1]].
 ```
 
-It is well-defined because its coordinate sum is `0 mod 11`.
+Do **not** use `(e0-e4,...,e3-e4)` as an integral basis: that sublattice has
+index five in `M`.
+
+The mod-11 functional in this quotient basis is
+
+```text
+lambda = (1,9,4,3).
+```
+
+Its implied value on `e4` is `5 mod 11`, agreeing with the five-coordinate
+vector `(1,9,4,3,5)`.
 
 ## Tasks
 
@@ -81,42 +94,35 @@ floating point.
 
 ### PC1.2 — defect functional
 
-Translate `lambda` to the quotient basis and verify
+Verify
 
 ```text
 lambda*(2I+S) = 0 mod 11;
-lambda(e2-e4) != 0 mod 11.
+lambda(q2) = 4 mod 11 != 0.
 ```
 
-Record the resulting nonzero residue.
+Record the resulting residue and the Smith diagonal.
 
 ### PC1.3 — denominator-clearing regression
 
 Implement sparse Laurent polynomials as dictionaries `exponent -> rational
 coefficient`.  On at least 100 deterministic random sparse pairs `(P,Q)` with
-`Q != 0`, verify by literal expansion that
+`Q != 0`, form
 
 ```text
-A = P * sigma(Q) * sigma^2(Q) * sigma^3(Q) * sigma^4(Q)
-    / Q
+NQ = Q*sigma(Q)*sigma^2(Q)*sigma^3(Q)*sigma^4(Q)
+aL = NQ*(P/Q) = P*sigma(Q)*sigma^2(Q)*sigma^3(Q)*sigma^4(Q).
 ```
 
-reduces to the Laurent polynomial
+Verify after clearing denominators that
 
 ```text
-P * sigma(Q) * sigma^2(Q) * sigma^3(Q) * sigma^4(Q) / Q
-= P * product_{i=1}^4 sigma^i(Q),
+Phi(NQ*P/Q) = NQ^3 * Phi(P/Q).
 ```
 
-and verify the polynomial identity
-
-```text
-Phi(N(Q)*P/Q) = N(Q)^3 * Phi(P/Q)
-```
-
-by clearing denominators on both sides.  The random tests are regression only;
-the certificate must also include a symbolic derivation string identifying the
-three occurrences of the invariant factor.
+The random tests are regression only; the certificate must also include a
+symbolic derivation string identifying the three occurrences of the invariant
+factor in `a^2*sigma(a)`.
 
 ### PC1.4 — primitive-factor interface
 
@@ -161,7 +167,7 @@ F55-PC1-PRIMITIVE-LAURENT-OK
 
 It must reject any payload that:
 
-- uses a five-dimensional matrix without quotienting the diagonal;
+- uses the index-five difference sublattice as the quotient lattice;
 - reports only a modular rank for a lattice claim;
 - treats multiplication by an invariant polynomial as a common exponent
   translation;

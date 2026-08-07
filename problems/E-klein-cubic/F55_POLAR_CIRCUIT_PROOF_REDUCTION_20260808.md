@@ -513,8 +513,8 @@ A negative proof by polar circuits will follow from the following statement:
 > Every connected support-minimal cancellation core for the trace cubic either
 > (i) has a singleton row, (ii) contains a clean polar pair with nonzero
 > determinant, (iii) contains a binomial subsystem with failed holonomy, or
-> (iv) admits an explicitly bounded sparse consequence whose initial form is a
-> monomial.
+> (iv) admits an explicitly bounded sparse polynomial combination of landing
+> rows equal to a nonzero coefficient monomial.
 
 For any finite core, alternatives (i)--(iv) are decidable and have tiny exact
 certificates.  What is not yet proved is a uniform bound or a theorem forcing
@@ -543,7 +543,7 @@ by Propositions 2.1--2.2.  Choose one with inclusion-minimal support.  Its
 cancellation core is connected by Lemma 6.1.  Coverage Theorem C supplies one
 of alternatives (i)--(iv).  Each places a monomial in the localized support
 ideal: directly for (i), by (4.4) for (ii), by Theorem 5.1 for (iii), or by
-the stated sparse consequence for (iv).  This contradicts Theorem 3.2.  ∎
+the polynomial identity in (iv).  This contradicts Theorem 3.2.  ∎
 
 ---
 
