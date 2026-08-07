@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `8b85679` (2026-08-07; the
+Snapshot metadata — notebook parent head: `64c5783` (2026-08-07; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -4163,7 +4163,80 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   it closes only the boundary half (F1); the (F3) transpose layer,
   the b-split bookkeeping, and the class-to-form existence of a
   trace-zero φ (§8.9.1) are untouched. **F55 OPEN; the headline
-  UNDECIDED.** Second engine (Nemo/PARI) in flight.** Note I
+  UNDECIDED.** Second engine (Nemo/PARI) in flight.**
+  **Wave 32 (continuation; probe `f55_core.gp`): TWO-ENGINE
+  CONFIRMATION OF THE ALGEBRAIC CORE (PARI/GP 2.17.4, BLIND).** An
+  independent PARI implementation, written without reading the
+  Python probes or Note IX and only afterwards compared, reproduces
+  every §§8.22–8.24 value: ray gap 55 with profile
+  (11(5−|S|), −11|S|) and the 30 rays themselves; Theorem R at 3000
+  random (h,n) with 0 failures, plus the symbolic reason (h-part
+  coefficient 2+9 = 11 ≡ 0; twisted e₂-vector ≡ −c₉); rank(E) = 6;
+  **the twist base 5 determined BY TEST, not assumption** (ker P₅ ⊆
+  ker E holds, ker P₉ fails, 0 vs 500 mismatches); unique
+  **ξ* = (7,4,2,10,3,9), nowhere zero**; covering 0/15625 at ≥2 and
+  15625/15625 at ≥1; drop-one counts (3125,350,350,350,350,3125);
+  A₄ targets (2,1,8,7,9,4). NO disagreements. Two extras: the
+  covering failure is uniformly a SINGLE orbit (min survivors = 1
+  for all 15,625; best transversal reaches 23 of 24 orbits), with
+  a structural reason — within an orbit chamber π+d dies iff
+  d ≡ u[c_j] − m_j (mod 5), so #survivors = 5 − #distinct{...},
+  making "≥1" automatic and "≥2" a simultaneous-collision demand.
+  **Correction IX-l (labelling, no math affected):** §8.23 printed
+  `5·c₉(T_c) = (9,10,3,4,2,7)`, correct as labelled but the
+  NEGATIVE of the actual targets `η(T_c) = (2,1,8,7,9,4)`; §8.23
+  now carries an explicit sign note, since the wrong tuple would
+  propagate into any later note or formalization.
+  **ENGINE VERDICT (scale test, sparse 3000×4000, 6 nnz/row):**
+  PARI is excellent for the F_p layer — rank/kernel/image mod p all
+  ~4–5 s — and WRONG for the integral layer: `matker` over Q died
+  at 118 s (e_STACKTHREAD, 8 GB), `matkerint` still running at
+  600 s, `mathnf` grew the PARI stack 8→16→32→64 GB (43 GB RSS)
+  before being killed. So the modular + CRT/rational-reconstruction
+  design used by `f55_mixedlevel3.py`/`f55_qpreimage.py` was the
+  right one; future heavy work should use PARI for mod-p passes and
+  keep the integral layer modular, never dense HNF.**
+  **Wave 32 (continuation; probes `f55_witness_dump.py`,
+  `f55_verify.jl`): THE MIXED-FAN WITNESS SURVIVES A FULLY
+  INDEPENDENT ENGINE (Julia + Oscar/polymake + Nemo) — and the
+  positivity claim is upgraded from SAMPLED to EXACT.** The witness
+  crossed the engine boundary as convention-free data only (20
+  normals; sign-vector → slope; zero-cell sign vectors) — no cell
+  indices, orbit numbering, wall list or ray list — and the Julia
+  side rebuilt adjacency, rays, the σ-action, the orbit structure
+  and the intersection lattice from the definitions. Results, both
+  G₉-rank patterns, ZERO failures throughout: (B) all **2570**
+  walls have `U − U′ = m·ν` exactly (1400 A₄ / 1170 G₉, adjacency
+  recomputed as Hamming-distance 1 on sign vectors) — and since
+  that IMPLIES continuity, check (A) is settled exactly rather than
+  at samples; (C) own exact ray enumeration gives **460 rays**,
+  intersection lattice {1,20,125,230,1}, Zaslavsky chambers
+  **1090 = the cell count**, with d ≥ 0 at every ray; **(C2), added
+  by the worker: an exact Rational{BigInt} phase-1 simplex
+  certificate that `U_C` lies in the cell's dual cone for all 1090
+  cells — so `d ≥ 0` holds on ALL of N⊗R exactly, bypassing rays
+  and Minkowski–Weyl entirely** (control: `−U_C` in the dual cone
+  for 0 of 654 nonzero cells); (D) 1,000,000 lattice points per
+  pattern across boxes 5/20/100/1000 — d < 0: 0, twice-min: 0,
+  congruence: 0; **(D2), added: the on-wall 27% that (D) discards,
+  closed by ±push-off at 200,000 points — 0 disagreements**;
+  (E) 218 free σ-orbits, exactly 2 zero cells per orbit, 0 of 436
+  zero cells with U ≠ 0. **Oscar/polymake independently built the
+  fan as the normal fan of a zonotope (nothing from the JSON
+  entering) and returned 460 rays and 1090 maximal cones whose SIGN
+  VECTORS EQUAL THE EXPORTED KEYS EXACTLY.** All three negative
+  controls fire (perturbed cell: 289 congruence failures; c₉→0:
+  46,100; broken jump: non-integral on 4/4 of its walls, 4/2570
+  discontinuities, 48 push-off disagreements). Also two-engine
+  confirmed by the director's own PARI run: ξ* = (7,4,2,10,3,9),
+  rank(E) = 6, twist base 5 by test, covering 0/15625 and
+  15625/15625, min-survivors histogram [0,15625,0,0,0,0] (the
+  failure is uniformly ONE orbit; best transversal 23 of 24).
+  **Correction IX-k therefore rests on three independent engines
+  (Python, Julia/Oscar, PARI) plus the director's own check of the
+  33-identity; Lemma S is FALSE as a statement about the value-form
+  system, and the caveat is unchanged — the value form is what was
+  refuted, and F55 itself is untouched.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant

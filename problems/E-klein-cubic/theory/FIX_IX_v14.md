@@ -1822,6 +1822,13 @@ lattice point with r_{S+k} = σᵏr_S, so the congruence (ii) AT the
 point r_S reads Σ_k 9ᵏ d(σᵏr_S) ≡ −⟨r_S, c₉⟩ ≡ −5·c₉(S) (mod 11),
 and the six class values 5·c₉(T_c) = (9,10,3,4,2,7) on
 T_c = ({0},{0,1},{0,2},{0,1,2},{0,1,3},{0,1,2,3}) are all nonzero.
+**SIGN (added 2026-08-08 after the PARI cross-check — a labelling
+hazard, not an error):** the tuple (9,10,3,4,2,7) is `+⟨r_S,c₉⟩`.
+The TARGETS appearing on the right of the congruence, and used by
+the order-fan criterion below and everywhere downstream, are the
+NEGATIVES: `η(T_c) = −⟨ray(T_c),c₉⟩ = (2,1,8,7,9,4)`. Both are
+nowhere zero so the kill is unaffected, but quote (2,1,8,7,9,4)
+— not (9,10,3,4,2,7) — in any later note or formalization.
 (b) d vanishes on every closed zero chamber, hence at every bordered
 ray point. (c) By the covering theorem (§8.22(e) — the identical
 count, 0 of 15,625 transversals), some class has all five translates
