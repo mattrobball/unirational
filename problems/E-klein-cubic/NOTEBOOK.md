@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `cc09106` (2026-08-06; the
+Snapshot metadata — notebook parent head: `4c98357` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3614,7 +3614,29 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   Grassmann relations with carry-shifts in `ζ^{0/1}`, two endpoint
   units), finite per ζ-degree, ζ-degree 0 = the old span-9/10 cases;
   uniform closure = one remaining analytic gap (valuation descent,
-  named). Rigidity still open and still required.** Note I
+  named). Rigidity still open and still required.** **Wave 28 (user:
+  "close the remaining analytic gap faithfully"; Note IX §8.6): the
+  gap is closed AS A REDUCTION — unbounded degree is eliminated —
+  but the final verdict is honestly NOT yet derived. Proved tonight:
+  **Theorem E (squares kill)**: after diagonal elimination each
+  `D₀q²` sits in one Plücker relation; support analysis kills every
+  `|Z| ≤ 3` (Z = the set of nonzero u₀-minors; Z = ∅ is Theorem C) ⟹
+  survivors use u₀ in ≥ 4 of the 5 residue weights, with forced
+  nonzero pentagon coordinates per stratum. **Tropical layer**: at
+  each endpoint the valuation vector of the ten forms is a tropical
+  Plücker (tree) vector on six leaves with mod-11 congruence
+  rigidity, exact proportionality equalities, corner normalization,
+  and a shared degree budget. **Lemma F (exposure)**: in the six
+  quadruples through the corner pair the corner unit exposes one
+  coordinate each; exposed coordinates can never attain the global
+  minimum ⟹ the minimum lives only on the three pairs meeting the
+  corner plane once (`{w₀₉ = w₄₅, w₁₉, w₃₄}` at 0; primed twins at
+  ∞); `|Z| = 4` strata degenerate quadruples to EXACT two-term
+  equalities. REMAINING: feasibility of the doubly-constrained tree
+  system (finitely many topologies × 10 σ × 6 strata) — infeasible
+  ⟹ pentagram inventory EMPTY at all degrees; feasible trees ⟹
+  bounded exact solves re-enter legitimately. No claim beyond
+  this.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant

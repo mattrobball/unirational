@@ -720,6 +720,80 @@ Status: pentagon = theorem; diagonal kill proved on the
 system. Rigidity (§8.4 item 2) untouched and still required for
 any F55 kill.
 
+### 8.6 Closing the uniformity gap: the squares kill and the tropical reduction (2026-08-06)
+
+Work over the ten possibly-nonzero Plücker forms of a candidate
+curve: `D₀₁, D₀₃, D₀₄, D₀₅, D₀₉` (the `u₀`-minors) and the
+pentagon forms `D₁₅, D₁₉, D₃₄, D₃₅, D₄₉`, with the five
+diagonals eliminated by `E_q`: `D₃₉ = a₁D₀₁`, `D₅₉ = a₃D₀₃`,
+`D₁₃ = a₄D₀₄`, `D₁₄ = a₅D₀₅`, `D₄₅ = a₉D₀₉` (all `a_q ≠ 0`,
+Lemma B). Let `Z := {q : D₀q ≢ 0}`.
+
+**Theorem E (the squares kill: `|Z| ≤ 3` is impossible; contains
+Theorem C as the case `Z = ∅`).** After eliminating diagonals,
+each `D₀q²` appears in exactly one Grassmann–Plücker relation
+whose other two terms are `D₀q′·(pentagon)` or `D₀q′·D₀q″`:
+
+    R{0,1,3,9}: a₁D₀₁² = D₀₃·D₁₉ − a₄D₀₉·D₀₄
+    R{0,3,5,9}: a₃D₀₃² = a₁D₀₅·D₀₁ − D₀₉·D₃₅
+    R{0,1,3,4}: a₄D₀₄² = a₅D₀₃·D₀₅ − D₀₁·D₃₄
+    R{0,1,4,5}: a₅D₀₅² = D₀₄·D₁₅ − a₉D₀₁·D₀₉
+    R{0,4,5,9}: a₉D₀₉² = D₀₅·D₄₉ − a₃D₀₄·D₀₃
+
+Reading these as support conditions (`q ∈ Z` needs a nonzero
+right side), a case sweep of all subsets kills every `Z` with
+`1 ≤ |Z| ≤ 3` (each singleton dies on its own square; every pair
+and triple fails some member's support), and `Z = ∅` is Theorem
+C. **Every surviving candidate has `|Z| ≥ 4`** — the plane
+family must use `u₀` in at least four of the five residue
+weights; the five surviving patterns also force specific
+pentagon forms nonzero (`|Z∖{9}|`-type cases force `D₁₉`, etc.).
+
+**The tropical layer.** For a nonzero lacunary form,
+`ord₀ ≡ t̂ (mod 11)` and `ord_∞ ≡ ê (mod 11)`; proportional
+pairs have EQUAL valuations, so the diagonal identifications
+above are exact equalities of valuations. In every three-term
+Plücker relation the minimum valuation is attained at least
+twice, at both `z = 0` and `z = ∞`: the two valuation vectors
+are TROPICAL Plücker vectors (tree vectors on the six leaves
+`{0,1,3,4,5,9}`) with (i) mod-11 congruence rigidity per
+coordinate, (ii) the five proportionality equalities, (iii)
+corner normalizations `w₄₉ = 0` (at 0) and `w′₁₅ = 0` (at ∞),
+all other coordinates ≥ 1, and (iv) the budget
+`w_{ab} + w′_{ab} ≤ e ≡ 4σ (mod 11)`.
+
+**Lemma F (exposure).** At the `z = 0` corner, in each of the
+six quadruples containing the pair `{4,9}` the `w₄₉`-term
+degenerates and exposes a single coordinate; the four-point
+condition then shows an exposed coordinate can never attain the
+global minimum of the nine (its two companions are sums of two
+positives, hence strictly larger, so the minimum would be
+attained once). Consequently the minimal valuation at `z = 0` is
+attained only among `{w₀₉ (= w₄₅), w₁₉, w₃₄}` — exactly the
+pairs meeting the corner plane `{4,9}` once — and symmetrically
+at `∞` only among `{w′₀₅ (= w′₁₄), w′₁₉, w′₃₅}`. In the `|Z| = 4`
+strata the vanished coordinate turns its quadruples into EXACT
+two-term equalities (e.g. `Z ∌ 9` forces `w₀₅ = w₀₃ + w₀₄` on
+the nose), further rigidifying the system.
+
+**Honest status of the gap.** What remains open is precisely:
+*is the doubly-constrained tree system — four-point conditions
+at both corners, congruence rigidity, proportionality
+equalities, exposure, budget — feasible for some
+`σ ∈ (Z/11)^*` and some `|Z| ≥ 4` stratum?* This is now a FINITE
+combinatorial feasibility problem (finitely many tree topologies
+on six leaves; heights in fixed mod-11 classes; per-topology
+linear systems), no longer a question about curves of unbounded
+degree: tropical infeasibility for all cases would prove the
+pentagram inventory EMPTY at all degrees; a feasible tree is not
+yet a curve (tropical necessity only) and would send us back to
+the corresponding bounded stratum with an exact solve. The
+uniformity-in-degree gap is thereby closed AS A REDUCTION —
+unbounded degree has been eliminated from the problem — but the
+final feasibility verdict is not yet derived; it is the next
+piece of hand analysis, and only if trees survive does bounded
+computation legitimately re-enter.
+
 **What is now genuinely at stake in layer 5.** The source
 complex forces images for coordinate lines of ALL four ratios.
 For pentagon ratios the target supplies lines; for pentagram
