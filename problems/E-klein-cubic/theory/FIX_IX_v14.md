@@ -1546,6 +1546,49 @@ explicitly constructed system — plus the two routine closures
 (free patterns; mixed fans). The proof of Lemma V (final form)
 is the single task left.
 
+### 8.21 The level-2 certificate and the corrected endgame shape (2026-08-07)
+
+**Correction IX-f (the induction was wrong-shaped — and the
+truth is simpler).** §8.20's Lemma V ended "granting this and
+iterating". Wrong shape: there is no infinite descent. The
+computed structure is: level 1 is SOLVABLE (the τ-layer exists,
+`Στ ≡ 7`), and it is LEVEL 2 — the V-web — that is infeasible
+OUTRIGHT, for every pattern on both aligned fans. So the
+remaining task is smaller than stated: prove the V-web's direct
+infeasibility for all 9-active aligned fans; no renormalization
+tower is needed.
+
+**The τ/Θ-curvature reformulation (derived).** With
+`ν_W = λ_W G₉ + 11ρ_W` and `Θ_W := ρ_W/λ_W mod L₉` (a class in
+the 3-dim quotient `(Λ/11)/L₉`), the V-web reduces mod 11 to:
+for every path `P` between zero-cells,
+`Σ_{W∈P} Δτ_W·Θ_W ≡ 0`; by summation by parts (τ vanishes at
+both ends) this pairs the τ-field against the CURVATURE of Θ
+(its wall-to-wall variation across cells). The full aligned
+system is therefore: `Στ ≡ 7` per orbit, `τ = 0` on the
+zero-web, and τ ⊥ the Θ-curvature web — and Lemma S (aligned
+case) is EQUIVALENT to: *the orbit-sum functional lies in the
+span of the Θ-curvature relations* (then `7 ≡ 0`, absurd).
+Seed data: on the `G₉`-fan the lift vectors are integral and
+clean, e.g. `ν₀₁ = G₀ − G₁` gives `ρ₀₁ = −(1,3,2,3,5)` exactly.
+
+**The level-2 certificate (extracted).** The V-web's Farkas
+certificate is again FOUR terms — coefficients `(6,6,2,1)` on
+congruence rows at four lattice points with anchors
+`(8,5,1,6) mod 11` — but unlike the level-1 certificate (one
+σ-orbit, hand-unwound as Theorem R) it spans four DIFFERENT
+rank-chambers: a genuine web identity through the zero-set, as
+the curvature picture predicts. Unwinding it by hand into the
+span-statement is the opening move of the proof.
+
+**The remaining list, final.** (1) Unwind the level-2
+certificate ⟹ prove the span-statement for the `G₉`-fan class;
+(2) generalize to all 9-active aligned fans (the ρ-data is
+canonical); (3) the two routine closures (free patterns — expected
+to follow from Lemma T confinement; mixed fans — expected from
+Lemma U + the generic certificate). Nothing else stands between
+the program and Lemma S ⟹ F55-NO ⟹ **ed_C(PSL₂(F₁₁)) = 4**.
+
 **Honest position after the full derivation.** Both flanks of
 F55 are genuinely deep, in matching ways: the geometric machine
 ends at a tropical-to-exact lifting gap (§8.7), and the

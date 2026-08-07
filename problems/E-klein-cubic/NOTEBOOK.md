@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `7747f8d` (2026-08-06; the
+Snapshot metadata — notebook parent head: `ef2695f` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3919,7 +3919,24 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   above was ⟹ induction ⟹ `U ≡ 0 mod 11^∞` ⟹ contradiction ⟹
   Lemma S. V-web infeasibility COMPUTED on both aligned fans, all
   coherent patterns; the self-similarity proof + two routine
-  closures = the single remaining task.** Note I
+  closures = the single remaining task.** **Wave 30 (continuation;
+  Note IX §8.21 + Correction IX-f): the level-2 certificate and the
+  SIMPLER endgame.** **Correction IX-f:** §8.20's "iterate the
+  descent" was wrong-shaped — there is NO infinite descent: level 1
+  is solvable and LEVEL 2 (the V-web) dies OUTRIGHT on both aligned
+  fans, every pattern; the remaining task shrinks to direct V-web
+  infeasibility. **Derived: the τ/Θ-curvature reformulation** —
+  `Θ_W = ρ_W/λ_W mod L₉`; the V-web mod 11 ⟺ τ ⊥ the Θ-curvature
+  web (summation by parts; τ dies at zero-cells); Lemma S (aligned)
+  ⟺ **the orbit-sum functional lies in the span of the Θ-curvature
+  relations** (⟹ 7 ≡ 0 absurd). Seed: `ρ₀₁ = −(1,3,2,3,5)` exact.
+  **Level-2 Farkas certificate extracted: FOUR terms again**
+  (coeffs 6,6,2,1; anchors 8,5,1,6) but spanning four DIFFERENT
+  rank-chambers — a genuine web identity, as the curvature picture
+  predicts. Final list: (1) unwind the certificate ⟹ span-statement
+  on the G₉-fan; (2) generalize over aligned fans; (3) two routine
+  closures. Nothing else stands before Lemma S ⟹ F55-NO ⟹
+  ed = 4.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
