@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `631b34a` (2026-08-06; the
+Snapshot metadata — notebook parent head: `6dd4043` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3705,7 +3705,26 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   named-open. Live decisive assets: ladder hit (d = 6 running, gate
   7); a new class-to-form idea; machine inventory+rigidity against
   trend. No elementary closure either way — the analytic conclusion
-  of the campaign.**** Note I
+  of the campaign.**** **Wave 29 (user: "work on the class-to-form
+  bridge"; Note IX §8.10): the bridge derivation session.** **Theorem
+  H:** Φ is LOCALLY SOLUBLE at every split place (exact-tie
+  realizability on the index-33 lattice + free residue solutions +
+  Hensel; σ-invariant places PARTIAL-sketch soluble) ⟹ no
+  one-bad-place proof exists; pointlessness is irreducibly global.
+  **Theorem I (bridge, exact form):** F55-YES ⟺ ∃ trace-zero φ
+  (= ρ−σρ, additive H90) with div_T(φ) ∈ Im(2+σ) and monomial
+  λ-class ≡ 8 mod 11; per-orbit invariants = (sum mod 3,
+  5ⁱ-weighted sum mod 11). **Mod-3 surprise:** the naive families
+  `(r^m − r^{σm})k³` die at the MOD-3 orbit-sum (cube corrections
+  cannot fix it), while the mod-11 defect is correctable — the first
+  tooth of the bridge is the 3-part of coker(2+σ) (the cubic-ness),
+  not the 11-part. **Alignment:** the Kummer generator b satisfies
+  λ(e_b) ≡ 0 (11) and Σe_b ≡ 0 (3) ⟹ b = c·ψ(monomial): the
+  11-cover and ψ are aligned; any reciprocity NO-argument must work
+  modulo this, any YES-construction can exploit it. Named next:
+  reciprocity pairing against the b-cover on a compactification
+  (NO); the (i)-(iii) interpolation problem (YES; bounded search now
+  legitimate).** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant

@@ -936,6 +936,71 @@ proves (2026-08-07).**
   WITHDRAWN as too optimistic; recorded per the correction
   discipline.
 
+### 8.10 The class-to-form bridge (2026-08-07; derivation session)
+
+**Theorem H (local solubility at split places).** At every place
+`v` of `K` split in `E/K` (in particular every generic monomial
+valuation), `Φ` has `K_v`-zeros. Proof: over `E ⊗ K_v ≅ K_v^5`
+the form splits as `Σ c_i x_i² x_{i+1}` with independent
+variables; the order-pattern lattice is `(2+σ̃)Z⁵` of index
+`33`, cut out exactly by the two congruences `Σμ_i ≡ 0 (3)` and
+`Σ5^iμ_i ≡ −W (11)`; the coordinate-difference functional is
+SURJECTIVE on that sublattice (adjust three free coordinates by
+CRT), so an exact two-term tie `{i, j}` with `{i,i+1} ∩ {j,j+1}
+= ∅` and all other terms strictly larger is always realizable;
+the residue equation `c̄_iA_i²A_{i+1} + c̄_jA_j²A_{j+1} = 0` has
+solutions with all entries nonzero (four independent residue
+unknowns), and the point is smooth (`∂/∂A_{i+1}` is a unit), so
+Hensel lifts. ∎ At σ-invariant (inert/ramified) places the
+five coefficient orders coincide (the `r_i` are one σ-orbit),
+forcing a five-way tie whose leading ω-average vanishes for
+`s ≢ 0 (mod 5)` and whose order-by-order corrections are
+linearly solvable — solubility there too (PARTIAL: sketch, not
+sealed). CONSEQUENCE: no one-bad-place proof exists; any
+pointlessness proof is irreducibly global. This sharpens §8.9.1.
+
+**Theorem I (the bridge, exact form).** By additive Hilbert 90
+for `E/K` (trace-zero = `(1−σ)`-image) and the toric
+factorization of ψ-classes:
+
+    F55-YES ⟺ there exists φ ∈ E* with
+      (i)   φ = ρ − σ(ρ) for some ρ ∈ E   (trace zero),
+      (ii)  div_T(φ) ∈ Im(2+σ) on divisors of the torus,
+      (iii) the unit (monomial) part of φ has λ-class
+            ≡ −λ(e₂) ≡ 8 (mod 11),  λ(m) = Σ 5^i m_i.
+
+(Sufficiency: solve `div(φ) = (2+σ)div(a₀)`; then `φr₂/ψ(a₀)`
+is a unit `c·r^m` with `λ(m) ≡ 0` and `Σm ≡ 0 (3)`, hence a
+ψ-value — scalars are cubes in `C*`.) The per-orbit invariants
+of (ii): for a full σ-orbit of primes, TWO congruences — sum
+≡ 0 (mod 3) and `5^i`-weighted sum ≡ 0 (mod 11); for
+σ-invariant primes, multiplicity ≡ 0 (mod 3).
+
+**The mod-3 surprise.** The naive trace-zero families fail (ii)
+at THREE, not eleven: `φ = (r^m − r^{σm})·k³` (`k ∈ K`) has
+binomial divisor pattern `(1,0,0,0,0)` per orbit — the mod-11
+defect `λ = 5^{i₀}` COULD be corrected by cube-multiples
+(`3λ(x) ≡ −5^{i₀}` is solvable), but the mod-3 orbit-sum
+(`≡ 1`) can NEVER be (cube corrections are `≡ 0`). First
+genuine tooth of the bridge: the obstruction layer that bites
+first is the 3-part of `coker(2+σ)`, i.e. the CUBIC-ness, not
+the 11-part the class narrative emphasized.
+
+**The alignment observation.** The Kummer generator of the
+11-layer, `b = r₀²r₁r₃⁴r₂⁻⁴`, satisfies `λ(e_b) = 2+5−12+16 =
+11 ≡ 0 (mod 11)` AND `Σe_b = 3 ≡ 0 (mod 3)`: `e_b ∈ Im(2+σ)`
+on the monomial lattice, so `b = c·ψ(r^x)` — the degree-11
+cover and the ψ-structure are ALIGNED, not independent. Any
+Weil-reciprocity pairing of φ against `b` (the candidate global
+NO-argument) must be built modulo this alignment; conversely
+the alignment is exactly what a YES-construction can exploit.
+
+Named next steps: (NO-side) the reciprocity pairing of
+trace-zero elements against the `b`-cover, on the
+compactification where `b` acquires zeros/poles; (YES-side) the
+interpolation problem for φ satisfying (i)–(iii) — now a
+bounded, legitimate search space per the doctrine.
+
 **Honest position after the full derivation.** Both flanks of
 F55 are genuinely deep, in matching ways: the geometric machine
 ends at a tropical-to-exact lifting gap (§8.7), and the
