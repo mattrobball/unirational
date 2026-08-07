@@ -1157,6 +1157,60 @@ analysis up on `T′` with its F55-action. Both are analysis;
 neither is exhausted; the computation threshold has NOT yet
 been reached.
 
+### 8.14 The boundary ledger of B, the λ-twisted norm, and the forced boundary pattern (2026-08-07)
+
+Notation: `c := Σ_i 5^i e_{2−i} = (3,5,1,9,4) ≡ 3·((−2)^i)_i
+(mod 11)` — the Klein weight vector, now in its THIRD role.
+There are no σ-invariant rays (`N^σ = 0` in the cocharacter
+lattice), so every boundary orbit has size 5.
+
+**Theorem L (the ledger of `B = cores(r₂^{-1}, b)`; `B ≠ 0`).**
+Transporting the five conjugate residues along a boundary orbit
+and using `[σ^{-i}b] = [b]^{5^i}`:
+
+    ∂_q(B) = ∂_w(r^{-c}, b)
+           = [ r^{ ⟨w,c⟩·e_b − ⟨w,e_b⟩·c } ]  ∈ κ(D_w)^*/11,
+
+a boundary-torus character class; it vanishes iff
+`⟨w,c⟩ ≡ ⟨w,e_b⟩ ≡ 0 (mod 11)` (since `e_b ≡ (2,1,7,4,0)` and
+`c ≡ (3,5,1,9,4)` are independent mod 11). Rays with
+`⟨w,c⟩ ≢ 0` exist, so **`B` is ramified and nonzero in
+`Br(K)[11]`** — the first proof that the corestricted
+obstruction algebra genuinely lives.
+
+**Theorem M (the λ-twisted norm; coherence of the 7 and the
+c).** Define `N_λ(x) := Π_i σ^{-i}(x)^{5^i}` (mod 11th powers).
+Then `N_λ(ψ(a)) = N_λ(a)^{2+5} = N_λ(a)^7` and
+`N_λ(r₂) = r^c`. Hence Theorem-I(ii) forces
+`N_λ(φ) = N_λ(a)^7·r^{-c}` — the SAME `7` and the SAME `c` as
+the corestriction identity of §8.12: two independent
+computations agree, a strong coherence check of the whole
+apparatus.
+
+**Theorem N (the forced boundary pattern).** Applying λ to
+`pattern(φ) + pattern(r₂) = (2+σ̃)pattern(a)` at a boundary
+orbit: `Σ_i 5^i⟨σ^i w, e₂⟩ = ⟨w, c⟩`, so
+
+    λ_w(φ) ≡ −⟨w, c⟩  (mod 11)   at EVERY boundary ray-orbit:
+
+φ's boundary λ-invariants carry NO freedom — they are pinned to
+the covector `c`. In particular at every ray with `⟨w,c⟩ ≢ 0`
+the boundary pattern of φ lies OUTSIDE `Im(2+σ̃)`, while
+Theorem J's twice-min law still binds it; the two coexist
+per-orbit but jointly rigidify the compactified divisor of any
+Theorem-I solution.
+
+**Remaining analysis (not yet computation).** (α) The clean
+per-ray assembly of the full consistency equation (unit-part
+bookkeeping of the three residue contributions — `A_K` from
+φ-data, `7·cores(a,b)`, and Theorem L's ledger) and its
+solvability test in `(w^⊥∩Λ)/11` per ray; (β) the b-split
+orbits on the cover `T′` (the Constraint-(iv) escape) under the
+F55-symmetry; (γ) the codim-2 Gersten compatibilities linking
+neighboring rays. Only if all three close consistently does the
+route exhaust; a single unmatchable ray proves F55-NO and
+`ed = 4`.
+
 **Honest position after the full derivation.** Both flanks of
 F55 are genuinely deep, in matching ways: the geometric machine
 ends at a tropical-to-exact lifting gap (§8.7), and the
