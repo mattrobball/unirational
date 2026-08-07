@@ -613,8 +613,37 @@ Probe `v14_f55_curves.py`, mod 397, on the exact model.
   degree ≤ 2; whether ANY degree joins them is the finite
   eigen-support/wedge-table classification (each degree gives an
   overdetermined bilinear system in the `λ_i` over the ten
-  eigen-lines; the full 45-pair wedge table is the input) —
-  NAMED NEXT COMPUTATION.
+  eigen-lines; the full 45-pair wedge table is the input).
+
+**Span classification (same day, probes `v14_f55_sweep.py` +
+follow-ups, mod 397).** Any `C₁₁`-stable curve spans a
+`C₁₁`-stable subspace = a sum of eigen-lines; sweeping ALL 256
+subsets containing the pentagram pair `(2,6)` (one C₅-orbit
+covers all five diagonal pairs) and decomposing `V₁₄ ∩ P(S)`:
+
+- Through-components exist only at span ≥ 8. At span 8, exactly
+  two subsets hit (`{1..7,9}` and `{1..6,8,9}`, both missing
+  char 10); each section is (one pentagon line) ∪ (an
+  irreducible `C₁₁`-stable curve of DEGREE 13, `p_a = 6`,
+  through both diagonal points).
+- **Lemma IX.9 (equivariant fixed-point count).** An irreducible
+  curve with nontrivial `C₁₁`-action and ≥ 3 fixed points, each
+  of multiplicity < 11, is NOT rational (the normalization would
+  be a `P¹` with ≥ 3 fixed points; it has exactly 2).
+- Both degree-13 curves have exactly THREE fixed points on them
+  (A: `y₂` mult-2 singular, `y₆`, `y₇` smooth; B: `y₂`, `y₆`
+  smooth, `y₈` singular) ⟹ both NON-RATIONAL by IX.9.
+- **Conclusion at span ≤ 8: the inventory of stable rational
+  curves through the five points is EXACTLY the pentagon — five
+  lines, nothing else; no rational curve joins any diagonal
+  pair.**
+
+Remaining for the complete inventory: (i) span-9 and span-10
+no-reuse parametrizations (degrees 8 and 9 — two FINITE bilinear
+systems, named next); (ii) character-reusing curves of degree
+≥ 11 spanning 9–10 eigenlines (needs a structural lemma; open);
+(iii) the rigidity sub-question (§8.4 item 2) is untouched by
+all of this and remains the other half of any F55 kill.
 
 **What is now genuinely at stake in layer 5.** The source
 complex forces images for coordinate lines of ALL four ratios.

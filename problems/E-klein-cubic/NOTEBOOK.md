@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `184390a` (2026-08-06; the
+Snapshot metadata — notebook parent head: `729ad8e` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3575,7 +3575,24 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   one tower ↦ one point)? Rigid + empty inventory ⟹ F55-NO ⟹ ed = 4;
   flexible + nonempty ⟹ honest no-go. Layers 1–3 of §8.3 stand;
   §8.3's consequence paragraph is withdrawn with the theorem. E18
-  unaffected, still parallel.** Note I
+  unaffected, still parallel.** **Wave 28 (user pace-challenge "Days?"
+  — inventory sub-question largely resolved same evening; Note IX §8.4
+  span classification): any stable curve spans a stable sum of
+  eigen-lines; the full 256-subset sweep (one C₅-orbit covers all five
+  diagonal pairs) shows through-components only at span ≥ 8; at span 8
+  exactly two sections hit, each = (pentagon line) ∪ (irreducible
+  C₁₁-stable DEGREE-13 curve, p_a = 6, through both diagonal points).
+  **Lemma IX.9 (equivariant fixed-point count): an irreducible curve
+  with nontrivial C₁₁-action and ≥ 3 fixed points of multiplicity < 11
+  is not rational.** Both deg-13 curves carry exactly THREE fixed
+  points (A: y₂ mult-2 + y₆, y₇; B: y₂, y₆ + y₈ singular) ⟹ both
+  NON-RATIONAL. **Span-≤8 verdict: the rational-curve inventory
+  through the five C₁₁-points is EXACTLY the pentagon; no rational
+  curve joins any diagonal pair.** Remaining: span-9/10 no-reuse
+  systems (degrees 8, 9 — finite, named), the degree-≥11
+  character-reuse lemma (open), and the §8.4 rigidity sub-question
+  (untouched). Probes `v14_f55_sweep.py` + inline follow-ups,
+  mod 397.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
