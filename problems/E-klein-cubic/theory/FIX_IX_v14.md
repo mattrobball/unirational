@@ -1645,3 +1645,168 @@ decide the machine's F55 fate:
 
 Both sub-questions are finite and concrete; neither is decided.
 The E18 arithmetic route runs in parallel, unaffected.
+
+### 8.22 The aligned kill, exact: every pattern on the G₉-fan class and on the sign-fan dies; the (τ,Ψ)-frame and the depth tower (2026-08-07)
+
+**Correction IX-g (bookkeeping, two items).** (i) §8.19's sweep table
+said "9 with no free rays, 17 dead at level 121". The rerun and the
+exact derivation below give the split 8 + 18 (the no-free-ray patterns
+are exactly the P ⊇ {0,4} together with {0,1,4}, {0,2,4}, {0,3,4},
+{0,1,2,4}, {0,1,3,4}, {0,2,3,4}, {0,1,2,3,4}); all 26 die either way.
+(ii) `f55_sweep2.py`'s advertised part (B) — random per-orbit
+patterns — never executed; that gap is closed below for EVERY per-orbit
+pattern at once (Theorem P), not by sampling.
+
+**Correction IX-h (IX-f overgeneralized; the tower is real).**
+Correction IX-f inferred "level 2 dies outright; no renormalization
+tower is needed" from the two tested fans. That is a feature of
+DEPTH-1 aligned combinatorics, not of the aligned case: for every
+t ≥ 2 there exist σ-invariant complete fans all of whose wall normals
+are ≡ λ·G₉⁽ᵗ⁾ (mod 11ᵗ), where G₉⁽ᵗ⁾ is the mod-11ᵗ Hensel lift of
+the 9-eigenvector (take the arrangement fan of the σ-orbit of a
+hyperplane with such a normal; the orbit stays deep because G₉⁽ᵗ⁾ is
+σ-eigen mod 11ᵗ). On such fans the level-2 shadow below is SOLVABLE
+(all curvatures Θ_W equal the fixed point Θ*; the pair field
+(τ,Ψ) = f·(1,Θ*) with per-orbit sums 7 exists), so the kill must come
+one level deeper: the corrected proof shape for Lemma S (aligned) is
+an induction on alignment depth. Each individual fan has FINITE depth:
+the 11-adic eigenvector has irrational coordinate ratios (its
+eigenvalue is the 5th root of unity 9̂ ∈ Z₁₁ ∖ Q), so no integer
+normal is aligned to all orders. Both depth-1 base types are now
+closed completely (Theorems P and X).
+
+**Setup.** N = {n ∈ Z⁵ : Σnᵢ = 0}, H_a(n) = ⟨σᵃn, G₉⟩,
+V₀ := H₀(n) = ⟨n, G₉⟩. Everything below kills the value-form system:
+integral-sloped PL d on a σ-invariant complete fan, d = 0 on ≥ 2
+cells per σ-orbit of maximal cones, and (ii):
+Σ_k 9ᵏ d(σᵏn) + ⟨n,c₉⟩ ≡ 0 (mod 11) at every n ∈ N. (The min-
+normalization that produces this from Theorem Q's twice-min is sound
+because m(w) = min_i F(σⁱw) is σ-invariant with integral slopes and
+Σ_k 9ᵏ m(σᵏn) = 22·m(n) ≡ 0 — the eleven again. Positivity d ≥ 0 is
+discarded; the kill is a fortiori.)
+
+**Lemma K (profile).** σ⁻¹G₉ ≡ 5·G₉ (mod 11), hence
+H_a(n) ≡ 5ᵃ·V₀ (mod 11) and G₉ = (5⁰,…,5⁴) mod 11. At a lattice
+point with H-ranking π (descending) and sorted gaps g_j the gaps obey
+g_j ≡ (G₉[π[j−1]] − G₉[π[j]])·V₀ =: ΔG₉_j(π)·V₀ (mod 11), and
+⟨n,c₉⟩ ≡ 4V₀. ∎ (One line: σ⁻¹G₉ = (5,3,4,9,1) = 5·G₉ − 11·(0,2,1,1,4).)
+
+**Lemma M (G₉-fan geometry).** On the G₉-fan (orderings of H₀…H₄;
+this is the arrangement fan of the ten hyperplanes {H_a = H_b}, so it
+refines every complete fan whose walls lie in those hyperplanes):
+every ray r_S (S the top-block) has H-profile (11(5−|S|) on S,
+−11|S| off S); in particular every ray gap is 55 and ⟨G₉, r_S⟩ ≡ 0
+(mod 11). For lattice n in the chamber of π,
+n = Σ_j (g_j/55)·r_{π[:j]}, so a PL function with ray values v has
+d(n) = Σ_j g_j·v_{π[:j]}/55. ∎ (H is injective; both sides have equal
+H-profiles.)
+
+**Theorem N (level-1 death on the G₉-fan; hand grade).** Any solution
+has v ≡ 0 (mod 11) at every ray. Proof: all wall normals of the fan
+are ≡ (5ᵃ−5ᵇ)·G₉ (mod 11), so Lemma T confines U(C) mod 11 to
+F₁₁·G₉: U(C) ≡ τ_C·G₉; then v_S = ⟨U(C), r_S⟩ ≡ τ_C·⟨G₉,r_S⟩ ≡ 0 by
+Lemma M. ∎ (Machine cross-check `f55_exact1.py`: the exact 144–192-row
+level-1 system has full rank = #free rays for all 18 surviving rank
+patterns.)
+
+**Theorem P (the G₉-fan class dies for EVERY pattern).** Let the
+zero-pattern be ANY assignment of ≥ 2 zero chambers per σ-orbit of
+the 120 chambers (rank patterns are the special case). Then the
+system is infeasible. Proof in five steps, each finite:
+
+(a) *E-collapse.* Write w = v/11 ∈ Z^{rays} (Theorem N), w_S = 0 for
+every ray bordering a zero chamber. For n interior to the chamber of
+π with V₀ ≢ 0, the congruence (ii), divided by V₀, becomes
+Σ_{q ∈ O, q ∉ 𝒵} D(q)·w ≡ −4·5 ≡ 2 (mod 11), where O is the
+chamber-orbit of n, D(q)·w := Σ_j ΔG₉_j(q)·w_{prefix_j(q)}, using
+d(σᵏn) = (Σ_j g_j w_{π[:j]−k})/5, Lemma K, ΔG₉_j(π) = 5ᵏΔG₉_j(π−k),
+and 9ᵏ5ᵏ = 45ᵏ ≡ 1. A zero chamber's four prefixes are all bordered,
+so D(q)·w = 0 for q ∈ 𝒵 and the row is pattern-independent:
+**E(O)·w ≡ 2 for each of the 24 orbits**, E(O) := Σ_{q∈O} D(q).
+(Verified against the sampled `f55_sweep2.py` pipeline at 3,636
+interior lattice points per pattern, fresh seed; `f55_exact2.py`.)
+
+(b) *Closed form.* E(O)_S = 5ᵗ·ΔG₉_j(π) for S = π[:j] + t
+(j = |S|), else 0: the unique chamber of O with j-prefix S is π + t,
+and G₉[a+t] ≡ 5ᵗG₉[a]. 
+
+(c) *Twisted-sum collapse.* With ξ(T) := Σ_t 5ᵗ w_{T+t} one has
+ξ(T+1) = 9·ξ(T) (5⁵ ≡ 1), so E(O)·w = Σ_j ΔG₉_j(π)·9^{s_j}·ξ_{c_j}
+where π[:j] = T_{c_j} + s_j and c ranges over the SIX translation
+classes of proper nonempty subsets of Z/5 (sizes 1,2,2,3,3,4). The
+24×6 matrix A has rank 6 (`f55_xistar.py`), so A·ξ = 2·(1,…,1) has
+the UNIQUE solution ξ* = (7,4,2,10,3,9) on the classes
+({0},{0,1},{0,2},{0,1,2},{0,1,3},{0,1,2,3}) — nowhere zero.
+
+(d) *Feasibility criterion.* w free on non-bordered rays makes the
+coordinates ξ_c independent except that ξ_c = 0 whenever ALL five
+rays of class c are bordered. Hence the pattern is feasible iff ξ*
+vanishes on every fully-bordered class — i.e., since ξ* is nowhere
+zero, iff every class keeps at least one free ray.
+
+(e) *Covering theorem.* No admissible pattern keeps a free ray in
+every class: for each of the 5⁶ = 15,625 transversals (one target
+ray per class) some σ-orbit has ≤ 1 chamber avoiding all six targets
+among its prefixes (exhaustive count: 0 of 15,625 succeed;
+`f55_xistar.py`). So some class is fully bordered and the system is
+infeasible. ∎
+
+Sharpness: with only ≥ 1 zero per orbit ALL 15,625 transversals
+succeed — the twice-min "2" is exactly load-bearing; and dropping any
+one of the six classes reopens 350–3,125 transversals — all six are
+load-bearing. By refinement the theorem kills every complete fan
+whose walls lie in the ten hyperplanes {H_a = H_b} (solutions
+transfer to the G₉-fan with ≥ 2 zeros surviving per orbit).
+
+**Hand certificates (rank patterns).** In the R-normalization
+(R(π) := 9·E(π)-rows restricted to free rays; R·w ≡ −4): for the
+canonical P = {3,4}, 4·R(0,1,4,2,3) + 5·R(0,1,4,3,2) + 1·R(0,4,3,1,2)
+has free-ray column sums 77, 77, 55, 55, 55, 55 ≡ 0 while the
+right side sums to 10·(−4) ≡ 4 ≢ 0. For sixteen of the eighteen
+surviving rank patterns two rows suffice: the bottom-swap chamber
+pairs have PROPORTIONAL rows with ratio −5, e.g.
+(G₉₂−G₉₄)/(G₉₂−G₉₃) = (1−5²)/(1−5) = 6 ≡ −5 ≡ −9⁻¹ — both
+instances of 54 + 1 = 55: the conserved eleven. All minimal
+certificates enumerated in `f55_exact2.py`.
+
+**Theorem X (the sign-fan dies for EVERY pattern).** The arrangement
+fan of the five hyperplanes {H_k = 0} (30 sign cells, 6 orbits, 70
+walls; wall normals μ_k = (σᵀ)ᵏG₉ ≡ 5ᵏG₉ — an aligned fan NOT
+refined by the G₉-fan). Level 1 is solvable (aligned signature). The
+level-2 shadow is the pair field (τ,Ψ): cells → F₁₁ × Q,
+Q := (Λ/11)/⟨G₉⟩ ≅ F₁₁³, with wall jumps in the lines F₁₁·(1,Θ_k),
+Θ_k = ((μ_k − 5ᵏG₉)/11)/5ᵏ ∈ Q, vanishing on zero cells, and
+Στ ≡ 7 per orbit. Computed exactly (`f55_signfan.py`,
+`f55_signfan_close.py`): Θ = (0, (0,0,10), (0,2,10), (7,2,10),
+(3,7,5)); the jump+sum system has a 7-dimensional solution space; ANY
+two zero cells on the corank-1 orbit (rep (+,+,+,+,−); dually
+(+,−,−,−,−)) are already inconsistent — all 10 pairs on each of
+those two orbits, 5 of 10 on the middle orbits, single cells always
+consistent. Since every admissible pattern must place two zeros on
+the corank-1 orbit, every pattern is infeasible. ∎ (DFS over all 10⁶
+minimal patterns confirms; it prunes at the first orbit.)
+
+**The (τ,Ψ)-frame for general aligned fans (the T3 core, derived).**
+On any aligned fan, Lemma T gives the canonical decomposition
+U = τ̃G₉ + 11V; the pair (τ, Ψ) := (τ̃ mod 11, V mod (11,G₉)) is
+lift-independent; wall jumps obey Δ(τ,Ψ) ∈ F₁₁·(1, Θ_W) with
+Θ_W = ρ_W/λ̃_W mod (11,G₉) canonical in the wall (ν_W = λ̃G₉ + 11ρ);
+zero cells force (τ,Ψ) = 0; and (3) is exactly Στ ≡ 7 per orbit.
+Null walls cannot occur (a primitive ν with ν ≡ 0 in Λ/11 would have
+content 11). The curvature transport law is AFFINE:
+**Θ_{σW} = 5·σΘ_W + 5γ′**, γ′ = (σ_*G₉ − 9G₉)/11 = (0,−4,−2,−3,−7),
+and γ′ ∉ ⟨G₉, diag⟩ mod 11; consequently at most one wall per
+σ-orbit is flat (Θ = 0), the five partial sums s₁…s₄ are the sign-fan
+Θ-list (all nonzero), and the unique transport-fixed curvature Θ* is
+exactly the mod-121 Hensel direction of Correction IX-h. σ-invariance
+itself generates curvature: this is the structural reason the aligned
+escape keeps dying.
+
+**Status after §8.22.** Closed completely, every pattern, exact and
+sample-free: (α) all complete fans with walls among {H_a = H_b} (the
+G₉-fan class, Theorem P); (β) the sign-fan {H_a = 0} (Theorem X).
+Still open for Lemma S: general aligned fans (the depth-t tower of
+IX-h plus general depth-1 combinatorics — the (τ,Ψ)-frame is the
+tool; the two closed types are its base instances) and mixed fans
+(T5, untouched). The A₄-side level-1 kill (§8.17) stands. Lemma S,
+F55-NO, and the headline remain UNCLAIMED.

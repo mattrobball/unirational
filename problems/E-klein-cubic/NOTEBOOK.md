@@ -3944,7 +3944,50 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   patterns; mixed fans; assemble + re-audit the chain; seal +
   external review), the failure-branch protocol, parallel items,
   trust notes (six corrections, conventions that bite), and the
-  file map.** Note I
+  file map.** **Wave 31 (2026-08-07, "complete the endgame"; Note IX
+  §8.22 + Corrections IX-g/h; probes `f55_exact1.py`, `f55_exact2.py`,
+  `f55_eweb.py`, `f55_xistar.py`, `f55_free_sweep.py`,
+  `f55_signfan.py`, `f55_signfan_close.py`): T0–T2 and T4 CLOSED; the
+  aligned kill made exact and pattern-complete on two fan classes.**
+  T0: level-1 certificate reproduced exactly ((1,10,3,6) at the
+  special orbit, b·y = 10; Theorem R re-derived by hand); G₉-fan
+  sweep reproduced — **Correction IX-g**: the §8.19 split is 8
+  no-free-rays + 18 level-2 deaths (not 9+17; all 26 dead), and
+  `f55_sweep2.py`'s part (B) never ran. T1–T2: the sampled "level-121"
+  system collapses exactly (profile lemma `H_a ≡ 5^a V₀`; ray gaps
+  all 55; `9·5 ≡ 1`) to 24 σ-invariant chamber rows `E(O)·w ≡ 2`
+  that are PATTERN-INDEPENDENT (zero chambers' functionals die on
+  bordered rays), factor through SIX twisted translate-sums
+  (`rank(E) = 6`), and admit the unique solution ξ* = (7,4,2,10,3,9),
+  nowhere zero. Feasibility ⟺ every subset-class keeps a free ray;
+  exhaustive transversal count: 0 of 15,625 admissible ⟹ **Theorem P:
+  EVERY pattern (rank or free, any ≥2-per-orbit zero web) on every
+  fan with walls among {H_a = H_b} is infeasible** — level-1 forcing
+  by hand via Lemma T + 11-divisible ray values (Theorem N; machine
+  rank cross-check), hand certificates: 3-row canonical with column
+  sums 77,77,55,55,55,55 vs RHS 4; sixteen patterns die by 2-row
+  proportional pairs (ratio −5 = −9⁻¹; 54+1 = 55). Sharp: with ≥1
+  zero/orbit all 15,625 transversals survive — twice-min is exactly
+  load-bearing. T4 (unswept free patterns): closed by the same
+  theorem; 4,000-random + hill-climb + all-uniform sweeps confirm.
+  **Theorem X: the sign-fan** (arrangement {H_a = 0}, first aligned
+  fan NOT refined by the G₉-fan) **dies for every pattern**: the
+  (τ,Ψ) pair-field shadow (Θ-list (0,(0,0,10),(0,2,10),(7,2,10),
+  (3,7,5)), 7-dim jump+sum space) is inconsistent for ANY two zeros
+  on the corank-1 orbit (10/10 pairs; middle orbits 5/10; singles
+  consistent); DFS over all 10⁶ minimal patterns prunes at orbit one.
+  **Correction IX-h: IX-f's "no tower needed" overgeneralized** —
+  depth-t aligned fans (walls ≡ λG₉⁽ᵗ⁾ mod 11ᵗ, Hensel lifts; σ-orbit
+  arrangement construction) exist for all t and their level-2 shadow
+  is SOLVABLE (all Θ = Θ*, the transport-fixed point): the corrected
+  Lemma-S-aligned shape is induction on alignment depth, finite per
+  fan (9̂ ∉ Q ⟹ no integer normal is deep to all orders). Derived
+  for T3: the canonical (τ,Ψ)-frame with affine transport
+  **Θ_{σW} = 5σΘ_W + 5γ′**, γ′ = (0,−4,−2,−3,−7) ∉ ⟨G₉,diag⟩ ⟹ ≤1
+  flat wall per σ-orbit (σ-invariance itself generates curvature);
+  null walls impossible (content 11). REMAINING for Lemma S: general
+  aligned fans (depth induction + general depth-1 combinatorics) and
+  mixed fans (T5). Lemma S / F55-NO / ed = 4 remain UNCLAIMED.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant

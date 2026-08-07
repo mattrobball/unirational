@@ -1,10 +1,32 @@
 # Handoff: the F55 endgame (written 2026-08-07)
 
+> **STATUS UPDATE (2026-08-07, wave 31; see §8.22 + NOTEBOOK).**
+> T0 DONE (both certificates re-verified; Correction IX-g: the §8.19
+> split is 8+18, not 9+17; sweep2's part (B) had never run).
+> T1+T2 DONE-EXCEEDED: the level-2 system collapses exactly to 24
+> pattern-independent rows ⟹ six twisted sums ⟹ unique nowhere-zero
+> ξ* ⟹ transversal covering count 0/15,625 ⟹ **Theorem P: every
+> pattern on every fan with walls among {H_a = H_b} dies** (hand
+> certificates: 3-row / 2-row-proportional, ratio −5 = −9⁻¹).
+> T4 DONE (subsumed by Theorem P; plus sweeps).
+> NEW: **Theorem X — the sign-fan {H_a = 0} dies for every pattern**
+> (corank-1-orbit pair kill), first aligned fan beyond the G₉ class.
+> T3 PARTIAL: canonical (τ,Ψ)-frame + affine curvature transport
+> Θ_{σW} = 5σΘ_W + 5γ′ derived; ≤1 flat wall per orbit; **Correction
+> IX-h: IX-f overgeneralized — depth-t aligned fans exist for all t,
+> their level-2 shadow is solvable, the aligned proof is an induction
+> on (finite) alignment depth**. T5 NOT STARTED. Lemma S UNCLAIMED.
+> Remaining: general aligned fans (depth induction + general depth-1
+> combinatorics), mixed fans, then T6/T7 as written.
+> New probes: `f55_exact1.py`, `f55_exact2.py`, `f55_eweb.py`,
+> `f55_xistar.py`, `f55_free_sweep.py`, `f55_signfan.py`,
+> `f55_signfan_close.py`.
+
 For human or fresh-session continuation. Everything referenced is
 committed; theory in `theory/FIX_IX_v14.md` (§8 = the F55 campaign,
-§§8.1–8.21), probes in `director_probes_20260806/f55_*.py`, sealed
+§§8.1–8.22), probes in `director_probes_20260806/f55_*.py`, sealed
 packets under `goal_runs_after_*/`. The ledger is `NOTEBOOK.md`
-(waves 28–30). Read §0 and §3 before doing anything.
+(waves 28–31). Read §0 and §3 before doing anything.
 
 ## 0. The one question and what hangs on it
 
