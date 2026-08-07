@@ -147,6 +147,15 @@ class Fq:
         return np.array(out) if out else np.zeros((0, cols, k))
 
 
+def fq_rows_to_fp(rows, tab, p):
+    """rows: (n, m, k) equations over F_{p^k}.  Returns the (n*k, m*k) F_p
+    matrix of all theta^j-multiples, whose F_p-rank is k times the F_q-rank of
+    the original rows (multiplying an equation by a field element is legal)."""
+    k = tab.shape[0]
+    out = [np.einsum('nmi,il->nml', rows, tab[:, j, :]) % p for j in range(k)]
+    return np.concatenate(out, axis=0).reshape(-1, rows.shape[1] * k) % p
+
+
 def subfield_of(S, fq):
     """smallest block-subfield of fq containing all entries of S -> (k_eff, idx)"""
     used = set(np.nonzero(np.any(np.abs(S) > 0, axis=tuple(range(S.ndim - 1))))[0])

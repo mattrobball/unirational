@@ -1,0 +1,459 @@
+{
+ "8": {
+  "K": 45,
+  "branches_nonzero": 30,
+  "verdicts": {
+   "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z": {
+    "dim": 1,
+    "k_eff": 1,
+    "nvars": 1,
+    "verdict": "EMPTY-IDENTITY",
+    "grid_nonzero": 9588812,
+    "grid_points": 9765625
+   },
+   "V+:Wchi1|V-:Z|Ew:Z|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Z|Ew:Z|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Z|Ew:r0|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Z|Ew:r0|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Z|Ew:r0|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Z|Ew:r1|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Z|Ew:r1|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Z|Ew:r1|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Z|Ew:r1|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Wchi1|Ew:Z|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Wchi1|Ew:Z|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Wchi1|Ew:Z|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Wchi1|Ew:r0|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Wchi1|Ew:r0|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Wchi1|Ew:r0|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Wchi1|Ew:r1|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Wchi1|Ew:r1|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Wchi1|Ew:r1|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Wchi1|Ew:r1|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r0|Ew:Z|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r0|Ew:Z|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r0|Ew:Z|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r0|Ew:r0|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r0|Ew:r0|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r0|Ew:r0|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1|V-:Z|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Z|Ew:Z|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:Z|Ew:Z|Ew2:r1"
+   },
+   "V+:Wchi1|V-:Z|Ew:r0|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:Z|Ew:r0|Ew2:r1"
+   },
+   "V+:Wchi1|V-:Z|Ew:r2|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:Z|Ew:r1|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Z|Ew:r2|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:Z|Ew:r1|Ew2:r0"
+   },
+   "V+:Wchi1|V-:Z|Ew:r2|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:Z|Ew:r1|Ew2:r2"
+   },
+   "V+:Wchi1|V-:Z|Ew:r2|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:Z|Ew:r1|Ew2:r1"
+   },
+   "V+:Wchi1|V-:Wchi1|Ew:Z|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:Wchi1|Ew:Z|Ew2:r1"
+   },
+   "V+:Wchi1|V-:Wchi1|Ew:r0|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:Wchi1|Ew:r0|Ew2:r1"
+   },
+   "V+:Wchi1|V-:Wchi1|Ew:r2|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:Wchi1|Ew:r1|Ew2:Z"
+   },
+   "V+:Wchi1|V-:Wchi1|Ew:r2|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:Wchi1|Ew:r1|Ew2:r0"
+   },
+   "V+:Wchi1|V-:Wchi1|Ew:r2|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:Wchi1|Ew:r1|Ew2:r2"
+   },
+   "V+:Wchi1|V-:Wchi1|Ew:r2|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:Wchi1|Ew:r1|Ew2:r1"
+   },
+   "V+:Wchi1|V-:W0r0|Ew:Z|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:Z|Ew2:r1"
+   },
+   "V+:Wchi1|V-:W0r0|Ew:r0|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r0|Ew2:r1"
+   },
+   "V+:Wchi1|V-:W0r0|Ew:r2|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r0|Ew:r2|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r0"
+   },
+   "V+:Wchi1|V-:W0r0|Ew:r2|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r2"
+   },
+   "V+:Wchi1|V-:W0r0|Ew:r2|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r1"
+   },
+   "V+:Wchi1|V-:W0r1|Ew:Z|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r1|Ew:Z|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:Z|Ew2:r0"
+   },
+   "V+:Wchi1|V-:W0r1|Ew:Z|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:Z|Ew2:r1"
+   },
+   "V+:Wchi1|V-:W0r1|Ew:Z|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:Z|Ew2:r1"
+   },
+   "V+:Wchi1|V-:W0r1|Ew:r0|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r0|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r1|Ew:r0|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r0|Ew2:r0"
+   },
+   "V+:Wchi1|V-:W0r1|Ew:r0|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r0|Ew2:r1"
+   },
+   "V+:Wchi1|V-:W0r1|Ew:r0|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r0|Ew2:r1"
+   },
+   "V+:Wchi1|V-:W0r1|Ew:r1|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r1|Ew:r1|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r0"
+   },
+   "V+:Wchi1|V-:W0r1|Ew:r1|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r1"
+   },
+   "V+:Wchi1|V-:W0r1|Ew:r1|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r2"
+   },
+   "V+:Wchi1|V-:W0r1|Ew:r2|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r1|Ew:r2|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r0"
+   },
+   "V+:Wchi1|V-:W0r1|Ew:r2|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r2"
+   },
+   "V+:Wchi1|V-:W0r1|Ew:r2|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r1"
+   },
+   "V+:Wchi1|V-:W0r2|Ew:Z|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:Z|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r2|Ew:Z|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:Z|Ew2:r0"
+   },
+   "V+:Wchi1|V-:W0r2|Ew:Z|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:Z|Ew2:r1"
+   },
+   "V+:Wchi1|V-:W0r2|Ew:Z|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:Z|Ew2:r1"
+   },
+   "V+:Wchi1|V-:W0r2|Ew:r0|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r0|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r2|Ew:r0|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r0|Ew2:r0"
+   },
+   "V+:Wchi1|V-:W0r2|Ew:r0|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r0|Ew2:r1"
+   },
+   "V+:Wchi1|V-:W0r2|Ew:r0|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r0|Ew2:r1"
+   },
+   "V+:Wchi1|V-:W0r2|Ew:r1|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r2|Ew:r1|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r0"
+   },
+   "V+:Wchi1|V-:W0r2|Ew:r1|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r1"
+   },
+   "V+:Wchi1|V-:W0r2|Ew:r1|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r2"
+   },
+   "V+:Wchi1|V-:W0r2|Ew:r2|Ew2:Z": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:Z"
+   },
+   "V+:Wchi1|V-:W0r2|Ew:r2|Ew2:r0": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r0"
+   },
+   "V+:Wchi1|V-:W0r2|Ew:r2|Ew2:r1": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r2"
+   },
+   "V+:Wchi1|V-:W0r2|Ew:r2|Ew2:r2": {
+    "dim": 1,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:Wchi1|V-:W0r0|Ew:r1|Ew2:r1"
+   }
+  },
+  "unresolved": [],
+  "secs": 2.7
+ },
+ "9": {
+  "K": 62,
+  "branches_nonzero": 3,
+  "verdicts": {
+   "V+:Wchi1": {
+    "dim": 12,
+    "k_eff": 1,
+    "nvars": 12,
+    "quadric_rank": 77,
+    "quadric_space": 78,
+    "n_cubics": 245,
+    "n_points": 480,
+    "n_cubic_monomials": 364,
+    "n_generators": 245,
+    "msolve": "OK",
+    "secs": 0.0,
+    "verdict": "EMPTY",
+    "gb_head": "[1*c11^1,\n1*c10^1,\n1*c9^1,\n1*c8^1,\n1*c7^1,\n1*c6^1,\n1*c5^1,\n1*c4^1,\n1*c3^1,\n1*c2^1,\n1*c1^1,\n1*c0^1]:"
+   },
+   "V+:W0r0": {
+    "dim": 9,
+    "k_eff": 3,
+    "nvars": 10,
+    "quadric_rank": 135,
+    "quadric_space": 135,
+    "verdict": "EMPTY-QUADRICS"
+   },
+   "V+:Z": {
+    "dim": 2,
+    "verdict": "EMPTY-SUBSPACE",
+    "covered_by": "V+:Wchi1"
+   },
+   "V+:W0r1": {
+    "dim": 9,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:W0r0"
+   },
+   "V+:W0r2": {
+    "dim": 9,
+    "verdict": "EMPTY-GALOIS-CONJUGATE",
+    "conjugate_of": "V+:W0r0"
+   }
+  },
+  "unresolved": [],
+  "secs": 3.4
+ }
+}

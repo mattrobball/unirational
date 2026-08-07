@@ -5,7 +5,7 @@ import numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from a5lib import *
 from loci import *
-from fq import subfield_of, sub_fq
+from fq import subfield_of, sub_fq, fq_rows_to_fp
 
 p = int(sys.argv[1]); d = int(sys.argv[2]); NTOP = int(sys.argv[3]) if len(sys.argv) > 3 else 6
 HERE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -49,7 +49,8 @@ for key, Sb, contr in sorted(spaces, key=lambda t: -t[1].shape[0])[:NTOP]:
                                           2 * (r * (r + 1) // 2) + 40, rng)
         Q.append(rq)
     allq = np.concatenate(Q, axis=0)
-    flat = allq[:, :, 0] if keff == 1 else allq.reshape(allq.shape[0], -1)
+    sub = sub_fq(idx, fq) if keff > 1 else None
+    flat = allq[:, :, 0] if keff == 1 else fq_rows_to_fp(allq[:, :, idx], sub.tab, p)
     Rq, _ = rref(flat, p)
     full = len(monsq) * (1 if keff == 1 else keff)
     ok = Rq.shape[0] >= full

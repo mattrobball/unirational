@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `d0ab8d0` (2026-08-05; the
+Snapshot metadata — notebook parent head: `2b340e0` (2026-08-05; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3333,7 +3333,16 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   arithmetic), 10′-ladder with QUADRATIC landing cones (a
   verified stage-4 hit = a K_proj-point of the twisted V₁₄ =
   the HEADLINE POSITIVE — triple-verify protocol in
-  brief).**** Same-day
+  brief). **Correction IX-a (user-caught): the wave-27 triage
+  prose called the section-induction tool "the Fermat-closer" —
+  WRONG: the Fermat cubic is NOT closed. CTZ's Clebsch-section
+  induction closed C₃×S₅, C₃×A₅, C₃×F₅ on the Fermat; C₉⋊C₃ on
+  the Fermat remains open in the same exception list as the
+  Klein cases — and being a 3-group it is exactly the open case
+  that CSD does NOT resolve via the D-R 3-Sylow reduction. Note
+  IX §4 corrected in place; the V₁₄ conclusions (three deaths,
+  A5/D12 emptiness, K3-section structural death) are
+  unaffected.**** Same-day
   amendment: FIX-C1's detached part-D
   level-3 run landed — `Ob₃ = 0` on all 25 coefficients, rank profile
   identical to parts B, C; `FIX-C1-LADDER-M1-EXTENDS-THROUGH-3` is now

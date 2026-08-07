@@ -37,7 +37,7 @@ from loci import (Loci, restrict, apply_condition, jac_values, first_order_rows,
                   apply_fq_rows, second_order_quadrics, enumerate_branches)
 from land import (cubic_rows, write_ms, write_ms_ext, run_msolve, gb_verdict,
                   full_identity, write_quadrics)
-from fq import subfield_of, sub_fq
+from fq import subfield_of, sub_fq, fq_rows_to_fp
 
 FAILS = []
 LOG = open(os.path.join(HERE, 'results', 'verifier.log'), 'w')
@@ -192,13 +192,13 @@ def verify_prime(p, seed):
             subs.append({'name': name, 'U': U, 'opts': opts})
         spaces = enumerate_branches(S0, subs, fq)
         bad, ident, nz = [], 0, 0
-        for key, Sb, contr in spaces:
+        for key, Sb, contr, _combo in spaces:
             nz += 1
             v = land_branch(d, basis, mons, Sb, contr, fq, p, rng, key)
             if v['verdict'] == 'EMPTY-IDENTITY':
                 ident += 1
             if v['verdict'] not in ('EMPTY', 'EMPTY-IDENTITY', 'EMPTY-ALL-CUBICS',
-                                    'EMPTY-QUADRICS', 'ZEROMAP'):
+                                    'EMPTY-QUADRICS', 'ZEROMAP'):  # noqa
                 bad.append((key, v))
         summary[d] = {'K': K, 'branches': nz, 'unresolved': len(bad),
                       'dim1_identity': ident, 'secs': round(time.time() - t0, 1)}
@@ -209,8 +209,8 @@ def verify_prime(p, seed):
 
 
 def land_branch(d, basis, mons, S, contr, fq, p, rng, key):
-    """Independent LAND on one branch: fresh seeds, MORE sample points than the
-    main run, own msolve invocation."""
+    """Independent LAND on one branch: fresh seeds, MORE samples than the main
+    run, own msolve invocation."""
     r = S.shape[0]
     keff, idx = subfield_of(S, fq)
     sub = sub_fq(idx, fq) if keff > 1 else None
@@ -224,42 +224,42 @@ def land_branch(d, basis, mons, S, contr, fq, p, rng, key):
         return {'verdict': 'HIT' if ok else 'EMPTY-IDENTITY', 'grid_nonzero': nz}
     nvar = r if keff == 1 else r + 1
     quads = []
-    if r > 25 and contr:
+    if contr:
+        nq = 2 * (r * (r + 1) // 2) + 80          # MORE than the main run
         Q, monsq = [], None
         for U, qW in contr:
-            rq, monsq = second_order_quadrics(basis, mons, U, qW, S, fq,
-                                              2 * (r * (r + 1) // 2) + 60, rng)
-            Q.append(rq)
+            rq, monsq = second_order_quadrics(basis, mons, U, qW, S, fq, nq, rng)
+            Q.append(rq[:, :, idx] if keff > 1 else rq)
         allq = np.concatenate(Q, axis=0)
-        if keff == 1:
-            Rq, _ = rref(allq[:, :, 0] if allq.ndim == 3 else allq, p)
-            if Rq.shape[0] == len(monsq):
-                return {'verdict': 'EMPTY-QUADRICS', 'quadric_rank': int(Rq.shape[0])}
-            quads = write_quadrics(Rq, monsq, r, p, None)
-        else:
-            Rq, _ = rref(allq.reshape(allq.shape[0], -1), p)
-            quads = write_quadrics(Rq.reshape(Rq.shape[0], -1, keff), monsq, r, p, sub.tab)
-    budget = 4000 if r <= 25 else 900          # MORE than the main run
+        flat = allq[:, :, 0] if keff == 1 else fq_rows_to_fp(allq, sub.tab, p)
+        Rq, _ = rref(flat, p)
+        if Rq.shape[0] >= len(monsq) * keff:
+            return {'verdict': 'EMPTY-QUADRICS', 'quadric_rank': int(Rq.shape[0])}
+        quads = write_quadrics(Rq if keff == 1 else Rq.reshape(Rq.shape[0], -1, keff),
+                               monsq, r, p, None if keff == 1 else sub.tab)
+    budget = 4000 if r <= 25 else 900             # MORE than the main run
     blk = max(160, 4 * r)
     R, monsl, tot = None, None, 0
     while tot < budget:
         rows, monsl = cubic_rows(Bm[:, :, :, 0] if keff == 1 else Bm, mons, p, blk,
                                  rng, tab=None if keff == 1 else sub.tab)
         M = np.array(rows, dtype=np.float64)
-        if keff > 1:
-            M = M.reshape(M.shape[0], -1)
+        M = M if keff == 1 else fq_rows_to_fp(M, sub.tab, p)
         M = M if R is None else np.concatenate([R, M], axis=0)
         new, _ = rref(M, p)
         tot += blk
         stop = R is not None and new.shape[0] == R.shape[0]
         R = new
-        if stop or R.shape[0] >= len(monsl) * (1 if keff == 1 else keff):
+        if stop or R.shape[0] >= len(monsl) * keff:
             break
-    if R.shape[0] >= len(monsl) * (1 if keff == 1 else keff):
+    if R.shape[0] >= len(monsl) * keff:
         return {'verdict': 'EMPTY-ALL-CUBICS', 'n_cubics': int(R.shape[0])}
     if R.shape[0] == 0 and not quads:
         return {'verdict': 'ALL-CUBICS-VANISH'}
-    nuse = min(R.shape[0], max(350, 7 * r))       # generic generators for msolve
+    import math
+    nuse = min(R.shape[0], max(350, int(1.5 * math.comb(r + 3, 4) / max(r, 1)) + 1))
+    while nuse * len(monsl) * keff > 3_000_000 and nuse > 200:
+        nuse = nuse // 2
     if nuse < R.shape[0]:
         Cmix = rng.integers(0, p, size=(nuse, R.shape[0])).astype(np.float64)
         R = mm(Cmix, R, p)

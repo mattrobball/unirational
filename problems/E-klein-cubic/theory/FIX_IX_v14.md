@@ -77,11 +77,22 @@ where hyperplane degree 14 ≡ 2 mod 3 changes the game).
 
 ## 4. Can the dP/Fermat toolbox close V₁₄? NO — with proofs (2026-08-06)
 
-The tools that closed del Pezzos (Duncan) and the Fermat cubic
-(CTZ): (i) projection from a G-fixed point; (ii) chords through
-the fixed pair of an index-2 subgroup; (iii) induction from a
-G-invariant UNIRATIONAL hyperplane section (CTZ Prop 3.5 — the
-Fermat-closer, via the Clebsch cubic surface). On V₁₄:
+The tools that closed the del Pezzos (Duncan) and most cubic-
+threefold actions (CTZ): (i) projection from a G-fixed point;
+(ii) chords through the fixed pair of an index-2 subgroup; (iii)
+induction from a G-invariant hyperplane section whose induced
+action is G-unirational (CTZ Prop 3.5). [Correction IX-a,
+2026-08-06, user-caught: the first committed version called (iii)
+"the Fermat-closer" — WRONG. The Fermat cubic is NOT closed: the
+Clebsch-section induction closed C₃×S₅, C₃×A₅, C₃×F₅ on the
+Fermat (section = the Clebsch cubic surface, residual
+S₅/A₅/F₅-actions G-unirational by Duncan-type surface results),
+while C₉⋊C₃ on the Fermat REMAINS OPEN — in the same Theorem-5.1
+exception list as the Klein cases. Note the asymmetry: C₉⋊C₃ is
+a 3-GROUP, so it is the one open cubic-threefold case that the
+CSD conjecture does NOT resolve via D-R's 3-Sylow reduction —
+the Klein cases would follow from CSD, the Fermat one would
+not.] On V₁₄:
 
 - Full G: (i) dies (M = 10′ irreducible ⟹ no ambient fixed
   points), (ii) dies (G simple), (iii) dies (no invariant
