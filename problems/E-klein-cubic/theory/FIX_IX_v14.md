@@ -518,6 +518,70 @@ derivation must either find a global invariant that the five
 conjugate towers cannot satisfy simultaneously, or prove
 consistency at every level and record the no-go.
 
-Status: OPEN — derivation in progress (director). Next
-checkpoint: the global bookkeeping layer for one C₅-conjugate
-tower (the F55-analogue of the H0 profile theory), or the no-go.
+Status: DECIDED same day — NO-GO, §8.3. The machine at its
+current altitude cannot close F55; proof below.
+
+### 8.3 The F55 no-go (lane decision, 2026-08-06)
+
+**Theorem IX.8 (no-go for the current calculus).** Every
+constraint system produced by the [I]-calculus layers — incidence
+(going-down on strata), local germ weights, scalar-birth /
+pointwise-fixed-curve forcing, and endpoint weight-negation links
+— for an F55-equivariant map from a surviving source to either
+twin is SOLVABLE. The machine as built cannot close F55.
+
+*Proof (the four layers, each checked on the V₁₄; the Klein is
+conjugate by IX.7 and was checked independently — the agreement
+is itself a consistency test of the framework).*
+
+1. *Incidence.* §8.1(iii): the five eigenstrata land bijectively
+   and C₅-equivariantly on the five `C₁₁`-points; a matching
+   assignment exists (5 conjugate choices). Solvable.
+2. *Local germs.* §8.2(2): source local weights `c·{2,3,4,8}`
+   generate `Z/11` additively, so every target tangent weight
+   `tc·{4,8,9}` is realizable by equivariant jets at every level,
+   for both values of the modulus `t`. Solvable.
+3. *Scalar-birth.* Towers can force pointwise-`C₁₁`-fixed
+   positive-dimensional strata (weight collisions at deep
+   levels). On Problem F these were lethal because the TARGET
+   fixed loci contained genus-≥1 CURVES and nonconstancy could be
+   forced. Here `V₁₄^{C₁₁}` (and `X^{C₁₁}`) is FINITE, so every
+   pointwise-fixed source stratum maps CONSTANTLY — always
+   satisfiable by contraction. The very hypothesis that made the
+   σ-machine sharp (0-dimensional fixed data) makes the
+   `C₁₁`-machine toothless. Solvable.
+4. *Links.* A `C₁₁`-stable rational curve linking fixed points
+   carries tangent weights `w` and `−w` at its two ends
+   (normalize to `P¹`). Allowed edges between points `a, b` (all
+   in one QR-coset, `b/a ∈ {3,4,5,9}`): need `−s/t` with
+   `s, t ∈ {4,8,9}` (V₁₄); the ratio set is
+   `−{1,2,5,6,7,8,9} = {2,3,4,5,6,9,10}`, which CONTAINS
+   `{3,4,5,9}`: EVERY pair of the five points is weight-
+   admissible — the link graph is the complete `K₅`, no self-
+   links (`{4,8,9} ∩ −{4,8,9} = ∅`). Klein check: tangent
+   `{2,3,4}` gives ratio set `−{1,2,5,6,7,8,9}` again — the SAME
+   `K₅`, as IX.7 demands. No linking constraint; no constraint
+   on `t` (both source and target link-graphs complete). Solvable.
+
+Finally, the C₅ acts freely on every piece of `C₁₁`-fixed data at
+every level on both sides (§8.2(3)), so the global system
+decomposes into five conjugate independent subsystems with no
+F55-fixed gluing loci; layers 1–4 solve each subsystem, and
+C₅-conjugation glues the solutions. ∎
+
+**Scope.** This is a no-go for the machine's current layers, not
+an unprovability theorem: a genuinely global invariant (degree /
+divisor-class bookkeeping across the five towers at once — the
+altitude where the Klein's own negative program also stalled, cf.
+the FIX-D2 terminal verdict) remains logically possible but has
+no candidate. And no map is constructed: F55 remains OPEN.
+
+**Consequence for the program.** Route 1 on F55 is CLOSED-NO-GO.
+F55 now rides on arithmetic alone: the E18 trace-cubic decision
+(protocol: derive the bad places on paper, then LOCAL SOLUBILITY
+only — an insoluble place gives F55-NO and `ed = 4`; solubility
+everywhere pushes to function-field descent tools). The
+symmetric moral of IX.8 + the Klein terminal verdict: for BOTH
+named negative targets (spin-G and F55) the fixed-locus machine
+is now provably insufficient, and every negative road leads
+through arithmetic or a new global invariant.

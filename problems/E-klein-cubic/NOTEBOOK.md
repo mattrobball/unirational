@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `222afa3` (2026-08-06; the
+Snapshot metadata — notebook parent head: `e55b380` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3538,6 +3538,25 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   bad places and run LOCAL SOLUBILITY only (bounded, both outcomes
   decisive: an insoluble place ⟹ F55-NO ⟹ ed = 4; soluble everywhere
   ⟹ the obstruction is global, informing the descent tool choice).**
+  **Wave 28 lane decision (same day; Note IX §8.3): Theorem IX.8 —
+  the F55 NO-GO.** All four calculus layers are SOLVABLE for F55 on
+  either twin: incidence (bijective matching exists), germs
+  (`c·{2,3,4,8}` generates `Z/11` — both `t`-values realizable),
+  scalar-birth (target `C₁₁`-fixed loci are FINITE ⟹ forced
+  pointwise-fixed source strata contract consistently — the
+  0-dimensionality that would have armed the σ-machine DISARMS the
+  odd one), and links (the endpoint weight-negation graph is the full
+  `K₅` on both twins — computed independently on each, agreement =
+  IX.7 consistency test; no self-links; no constraint on `t`). The
+  C₅-freeness decomposes the global system into five conjugate
+  independent subsystems ⟹ solvable. THE MACHINE AT ITS CURRENT
+  ALTITUDE CANNOT CLOSE F55 (mirror of the Klein FIX-D2 terminal
+  verdict; scope: no-go, not unprovability; no map constructed — F55
+  stays OPEN). Route 1 CLOSED-NO-GO; F55 rides on E18 arithmetic
+  (bad-places derivation next, local solubility only) or a new global
+  invariant. Moral recorded: BOTH named negative targets (spin-G,
+  F55) now have provably-insufficient fixed-locus machinery — every
+  negative road leads through arithmetic or a genuinely global tool.**
   Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
