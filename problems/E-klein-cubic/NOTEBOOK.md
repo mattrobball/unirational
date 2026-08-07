@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `c53d89a` (2026-08-06; the
+Snapshot metadata — notebook parent head: `e35034f` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -3505,7 +3505,24 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   unconditional positive equivariant statement); (iii) C₅/C₁₁ open,
   equivalent across twins, cheap Klein-side targets. V₁₄ scoreboard: G
   NO (sealed); D12 lin NO / spin YES; C₃ YES; C₅/C₁₁/F55 open ⟺ Klein;
-  spin-G open = the transported headline. Note I
+  spin-G open = the transported headline. **Wave 28 (user: "what does
+  the machine say about F55?"; Note IX §8.1): the machine's F55 pass.**
+  (i) TOTAL SCOPE: `M(F55) = 1` + odd order ⟹ every F55-source is
+  linear ⟹ no spin-type escape — a machine close of F55 closes it
+  outright on both twins and settles the headline NEGATIVE. (ii) First
+  cut: sources with `V^{C₁₁} ≠ 0` die on `V₁₄^{F55} = ∅`; survivors =
+  pure induced `a·ρ₅ ⊕ b·ρ₅′`. (iii) BIJECTIVITY RIGIDITY (derived):
+  the five C₁₁-eigenstrata map bijectively + C₅-equivariantly onto the
+  five points of `V₁₄^{C₁₁}` (a shared image manufactures an F55-fixed
+  point — none exists); incidence alone CANNOT kill F55. (iv) Weight
+  tables (probe `v14_f55_weights.py`, mod 397): V₁₄ — exactly one
+  C₅-orbit of the ten `C₁₁`-eigenpoints of `P(M)` lies on V₁₄; tangent
+  pattern `{4a, 8a, 9a}`, normal `{a,2a,3a,5a,6a,7a}`, C₅-scaling
+  `a ↦ 5a`; Klein — coordinate points, tangent `{2a,3a,4a}`, normal
+  `{8a}`, scaling `a ↦ −2a`. VERDICT: neither killed nor cleared — F55
+  reduces at full source scope to the odd-Frobenius chain/weight lemma
+  (T2.2 is dihedral-only; new derivation named) or to the E18 trace-
+  cubic decision (pointless ⟹ F55-NO ⟹ ed = 4). Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant

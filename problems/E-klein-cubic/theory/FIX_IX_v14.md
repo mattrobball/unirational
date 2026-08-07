@@ -417,3 +417,64 @@ Scoreboard on the V₁₄ after today: G: NOT unirational (IX.1,
 sealed). D12 (even): lin NO / spin YES. C₃: YES. C₅, C₁₁, F55
 (odd): open ⟺ their Klein twins. Spin-G: open, = the
 transported headline (IX.5).
+
+### 8.1 The machine on F55 — first derivation pass (2026-08-06)
+
+**(i) Full scope — no spin flank.** `M(F55) = 1` (Frobenius
+`C_p⋊C_q`, faithful action, trivial Schur multiplier) and the
+`2.G`-preimage splits (odd order), so EVERY projective F55-source
+is `P(linear F55-rep)`: the machine's source class is everything.
+If the machine closes F55, F55 is closed OUTRIGHT — and by IX.7 +
+restriction, the headline is NEGATIVE. No escape hatch of the
+spin or C6-pair kind exists at the level of source types.
+
+**(ii) First cut (recorded above).** Faithful sources with
+`V^{C₁₁} ≠ 0` die on `V^{F55}₁₄ = ∅`. Survivors: pure induced
+`V = a·ρ₅ ⊕ b·ρ₅′`.
+
+**(iii) Bijectivity rigidity (new).** For a surviving source,
+the five `C₁₁`-eigenspace strata `P(V_χ)` (one C₅-orbit; each
+only `C₁₁`-stable) push, through any equivariant resolution
+(IX.1 template with `N = C₁₁`), to single `C₁₁`-fixed points of
+`V₁₄`. If two strata in one C₅-orbit shared an image point `y`,
+the `c ∈ C₅` carrying one stratum to the other would fix `y`,
+making `y` fixed by `⟨C₁₁, c⟩ = F55` — but `V₁₄^{F55} = ∅`. So
+the five strata map BIJECTIVELY and C₅-equivariantly onto the
+five points of `V₁₄^{C₁₁}` (worker-grade datum: exactly 5, stab
+exactly `C₁₁`). No contradiction — a rigidity: the incidence
+level CANNOT kill F55; the obstruction, if any, lives in the
+weight calculus.
+
+**(iv) The weight data — closed-form on the Klein, measured on
+the V₁₄** (probe `v14_f55_weights.py`, mod 397). By IX.7 the
+analysis may run on either twin.
+
+- Klein: the five `C₁₁`-points are the coordinate points with
+  weights `a_i = (−2)^i = (1, 9, 4, 3, 5) mod 11`; at weight
+  `a`: tangent `{2a, 3a, 4a}`, normal (in `P(W)`) `{8a}`;
+  C₅-linkage `a ↦ −2a`.
+- V₁₄: `M|_{C₁₁}` = all ten nontrivial characters once; of the
+  ten eigenpoints of `P(M)`, EXACTLY ONE C₅-orbit of five lies
+  on the V₁₄ (= `V₁₄^{C₁₁}`, confirming the worker datum
+  independently); at the point of character `a`: tangent
+  `{4a, 8a, 9a}`, normal (in `P⁹`) `{a, 2a, 3a, 5a, 6a, 7a}`;
+  C₅-linkage `a ↦ 5a`. All weights nonzero (isolated fixed
+  points, consistent with smoothness). Patterns uniform over
+  the orbit; the multiset `{tangent}/a` is presentation-
+  independent.
+
+So the residual F55 question is a FINITE weight-matching
+problem: which C₅-linked assignments of source-tower data to
+`{2,3,4 | 8}·a` (Klein) / `{4,8,9 | 1,2,3,5,6,7}·a` (V₁₄) are
+consistent under the [I, Thm 2.1] blowup calculus. MISSING
+PIECE: the chain lemma for ODD Frobenius linkage (T2.2 is
+V4/dihedral-specific; nothing in the T-gate covers `C₅⋉C₁₁`) —
+deriving it is the named next step. The arithmetic shortcut
+remains E18 (the sealed `11:5` trace-cubic model: a pointless
+verdict there = F55-NO directly).
+
+**Verdict tonight: the machine neither kills nor clears F55.**
+It reduces F55 — with total source scope — to (a) the odd-chain
+weight lemma against the explicit `{2,3,4|−3}`-pattern, or (b)
+the E18 twist decision. Either resolves a named CTZ case; a
+negative resolves the headline (`ed = 4`).
