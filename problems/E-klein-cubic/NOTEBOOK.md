@@ -50,7 +50,7 @@ families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
 Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `e35034f` (2026-08-06; the
+Snapshot metadata — notebook parent head: `47868ff` (2026-08-06; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -4386,10 +4386,10 @@ determines which route owns the certificate.)
   (`FIX-IX-SEAL-PASS`): sextic smoothness, both-primes + char-0
   exactness of (a)/(b), ambient smooth/dim-3/deg-14, Klein-Pfaffian
   identification. Recorded here so the assignment→discharge pair is
-  auditable. Residue: the direct char-0 Jacobian-minors run for the
-  sextic (redundant belt-and-suspenders; smoothness already follows
-  a priori) was still running at ledger time — integrate or discard
-  on completion.
+  auditable. Residue CLOSED same day: the direct char-0
+  Jacobian-minors run completed (36 min) — SIGPLUS and SIGMINUS both
+  `smooth true` over `Q(ζ₁₁)` (`results/m2_sigma_K.out`); hypothesis
+  (a) is now char-0-certified both a priori and directly.
 - **Cited-not-recomputed layer of Cor IX.1:** the Note I lemmas
   (Thm 2.1, Lem 4.2/4.3, Prop 3.3/equivariant resolution) — gate-audited
   (T1–T5) but the planned independent Note-review was never done; IX.1's

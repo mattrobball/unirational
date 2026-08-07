@@ -49,10 +49,12 @@ verifier at fresh prime 353, and EXACT CHAR 0 over K = Q(z)/Phi11
    cubic threefold: the Pfaffian-partner identification.
 
 (*) Char-0 status of item 2: dim/deg/p_a computed exactly over K.
-Smoothness over K follows a priori from item 4 (the fixed locus
-of a finite-order automorphism of a smooth projective variety in
-char 0 is smooth); the direct minors computation over K was also
-launched (slow; its completion is not load-bearing).
+Smoothness over K holds TWICE OVER: a priori from item 4 (the
+fixed locus of a finite-order automorphism of a smooth projective
+variety in char 0 is smooth), AND by the direct Jacobian-minors
+saturation over K, which completed after the initial seal
+(results/m2_sigma_K.out, ~36 min: SIGPLUS smooth true, SIGMINUS
+smooth true).
 Connectedness/reducedness over K: the saturated K-ideal and its
 mod-397 reduction have the SAME Hilbert polynomial 6i, so the
 O_K-model is flat at 397; the fiber there is smooth, reduced,
