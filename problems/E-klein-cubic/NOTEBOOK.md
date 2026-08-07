@@ -3960,17 +3960,17 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   bordered rays), factor through SIX twisted translate-sums
   (`rank(E) = 6`), and admit the unique solution ξ* = (7,4,2,10,3,9),
   nowhere zero. Feasibility ⟺ every subset-class keeps a free ray;
-  exhaustive transversal count: 0 of 15,625 admissible ⟹ **Theorem P:
+  exhaustive transversal count: 0 of 15,625 admissible ⟹ **Theorem X:
   EVERY pattern (rank or free, any ≥2-per-orbit zero web) on every
   fan with walls among {H_a = H_b} is infeasible** — level-1 forcing
-  by hand via Lemma T + 11-divisible ray values (Theorem N; machine
+  by hand via Lemma T + 11-divisible ray values (Theorem W; machine
   rank cross-check), hand certificates: 3-row canonical with column
   sums 77,77,55,55,55,55 vs RHS 4; sixteen patterns die by 2-row
   proportional pairs (ratio −5 = −9⁻¹; 54+1 = 55). Sharp: with ≥1
   zero/orbit all 15,625 transversals survive — twice-min is exactly
   load-bearing. T4 (unswept free patterns): closed by the same
   theorem; 4,000-random + hill-climb + all-uniform sweeps confirm.
-  **Theorem X: the sign-fan** (arrangement {H_a = 0}, first aligned
+  **Theorem X′: the sign-fan** (arrangement {H_a = 0}, first aligned
   fan NOT refined by the G₉-fan) **dies for every pattern**: the
   (τ,Ψ) pair-field shadow (Θ-list (0,(0,0,10),(0,2,10),(7,2,10),
   (3,7,5)), 7-dim jump+sum space) is inconsistent for ANY two zeros

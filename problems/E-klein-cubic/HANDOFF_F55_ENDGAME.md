@@ -5,11 +5,11 @@
 > split is 8+18, not 9+17; sweep2's part (B) had never run).
 > T1+T2 DONE-EXCEEDED: the level-2 system collapses exactly to 24
 > pattern-independent rows ⟹ six twisted sums ⟹ unique nowhere-zero
-> ξ* ⟹ transversal covering count 0/15,625 ⟹ **Theorem P: every
+> ξ* ⟹ transversal covering count 0/15,625 ⟹ **Theorem X: every
 > pattern on every fan with walls among {H_a = H_b} dies** (hand
 > certificates: 3-row / 2-row-proportional, ratio −5 = −9⁻¹).
-> T4 DONE (subsumed by Theorem P; plus sweeps).
-> NEW: **Theorem X — the sign-fan {H_a = 0} dies for every pattern**
+> T4 DONE (subsumed by Theorem X; plus sweeps).
+> NEW: **Theorem X′ — the sign-fan {H_a = 0} dies for every pattern**
 > (corank-1-orbit pair kill), first aligned fan beyond the G₉ class.
 > T3 PARTIAL: canonical (τ,Ψ)-frame + affine curvature transport
 > Θ_{σW} = 5σΘ_W + 5γ′ derived; ≤1 flat wall per orbit; **Correction
