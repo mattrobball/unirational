@@ -71,7 +71,7 @@ G_g=D_{2g}\times\langle j\rangle.
 > \]
 > Consequently \(S_g\) is not \(G_g\)-unirational.
 
-This answers the conic-bundle test posed by the application program: Condition (A) is not sufficient for equivariant unirationality even on rational \(G\)-Mori conic-bundle surfaces.
+This answers the conic-bundle test posed by the application program: Condition (A) is not sufficient for equivariant unirationality even on rational exceptional conic-bundle surfaces.
 
 ## 4. Fixed locus of the central involution
 
