@@ -54,14 +54,30 @@ order-two Schur factor is conceptual: `V_+` is a linear module for
 the projective factor becomes a Severi--Brauer form carrying that order-two
 class.
 
-## What is not produced
+## Averaging hyperplanes: the exact parity obstruction
 
-The universal incidence has positive-dimensional fibers over the hyperplane
-parameter.  Without a rational equivariant section it is neither:
+The universal incidence does produce controlled correspondences after one
+cuts the common Palatini quartic by a `G`-stable divisor `D` of degree `d`.
+Both projections then have generic degree `d`, because the ruling and center
+fibers are lines.
 
-- a dominant equivariant rational map `V14 -->> K`;
-- a finite correspondence of controlled degree;
-- nor an odd-degree zero-cycle on the generic Klein twist.
+However, `d` is necessarily even.  The equation of a stable divisor spans a
+one-dimensional representation of `SL2(F11)`.  This group is perfect, so the
+character is trivial, while its central element acts on a degree-`d` equation
+as `(-1)^d`.  Hence `d` is even.  An orbit product of hyperplanes therefore
+replaces the noninvariant degree-one slice by an even-degree multisection.
+The Palatini quartic itself contains every relevant line and gives no finite
+cut.  See `UNIVERSAL_INCIDENCE_PARITY.md` for the full argument and the
+generic Severi--Brauer interpretation.
 
-No such section or degree calculation is supplied by Gross--Popescu's
-construction.
+## What is and is not produced
+
+The uncut universal incidence has positive-dimensional fibers.  It is not a
+dominant equivariant rational map `V14 -->> K`.  Stable divisor cuts can give
+finite correspondences, but this construction forces both degrees to be even,
+so it gives neither an odd-degree zero-cycle on the generic Klein twist nor a
+secant/residual route that cancels the order-two Schur obstruction.
+
+This parity theorem concerns the Gross--Popescu/Palatini universal incidence;
+it does not exclude every conceivable correspondence between the two
+threefolds.
