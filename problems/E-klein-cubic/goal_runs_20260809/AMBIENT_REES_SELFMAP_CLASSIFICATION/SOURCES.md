@@ -7,12 +7,20 @@
 - `goal_runs_20260809/FULL_G_SELFMAP_CLASSIFICATION/AMBIENT_EXTENDABILITY.md`
 - `goal_runs_20260809/FULL_G_SELFMAP_CLASSIFICATION/DEGREE_ONE_RETRACTION.md`
 - `goal_runs_20260809/FIXED_NETWORK_MAP_CLASSIFICATION/STATUS.md`
+- `goal_runs_20260809/EXCEPTIONAL_CARRIER_RIGIDITY/STATUS.md`
+- `goal_runs_20260809/EXCEPTIONAL_CARRIER_RIGIDITY/THEOREM.md`
+- `goal_runs_20260809/EXCEPTIONAL_CARRIER_RIGIDITY/AMBIENT_REES_COMPARISON.md`
 - `certificates/STRATA_EXACT.md`
 - `certificates/NORMAL_CHARACTERS.md`
 
 These provide the accepted tangent-residual selfmap theorem, generic torsor
 classification, ambient-vs-modulo-`F` distinction, retraction normal form,
-corrected fixed-network boundary, exact V4 incidence, and normal characters.
+corrected fixed-network boundary, exact V4 incidence and normal characters,
+and the later binding normalized-Rees carrier theorem: the restricted graph is
+the normalized dominant transform inside the genuine ambient normalized
+blowup; ordinary fixed-curve valuations have canonical centers; point-centered
+curve-valued divisors are contracted; and the canonical ordinary carrier over
+`E_t` is line-valued because its accepted first normal order is odd.
 
 ## Literature
 
@@ -52,6 +60,7 @@ corrected fixed-network boundary, exact V4 incidence, and normal characters.
 4. At a type-II V4 point, forced vanishing on the three plus-planes gives
    `I_P subset (bc,bd,cd)` and the quadratic initial landing equation gives
    `alpha beta gamma=0`.
-5. Along an involution plus-plane, parity of the first normal order determines
-   whether a defined first-layer map lands in the fixed elliptic or fixed line,
-   but does not canonically identify the normalized-Rees carrier.
+5. The binding carrier theorem identifies the canonical ordinary carrier over
+   `E_t`; the accepted odd first normal order makes it line-valued. Any
+   elliptic-target carrier must be secondary, among normalized point-fibre
+   curves or fixed slices inside retained surface-valued carriers.
