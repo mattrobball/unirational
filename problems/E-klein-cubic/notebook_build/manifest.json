@@ -1552,11 +1552,13 @@
  ],
  "known_branches": [
   "agent/close-profile327-n3",
+  "agent/f55-audit-obstruction",
   "agent/formalize-conic-bundle-and-audit-klein-cubic",
   "agent/g2-universal-all-degree-20260802",
   "agent/g3p-a5-semilinear-20260802",
   "agent/klein-b-exhaustiveness-refutation",
   "agent/klein-bd610a-closure-goals",
+  "agent/klein-cubic-august-research-notebook",
   "agent/l1-full-polar-range-20260802",
   "agent/m3-sarkisov-section-residual",
   "agent/m3-section-closeout-20260802",

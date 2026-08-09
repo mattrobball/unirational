@@ -1,0 +1,11 @@
+{
+  "schema": "full_g_v4_second_layer_csp_seal_v1",
+  "date": "2026-08-08",
+  "files": {
+    "REPLAY.md": "97175436b3643f443a3268bde1b4b29316d5581fb019c49fdf691c1002de404f",
+    "SOURCES.md": "47a8826f1a65717290faad503b76c92d1ab66afe5df17b927ba65276c70e9db3",
+    "STATUS.md": "9e8437e4f424ddc3d688ed8c9397e8a23ed5b2ff1017fa1f307743e5b2de6eb9",
+    "THEOREM.md": "c0d79f565936e238277dbb7b9519e08504049d846c92aebeca6ff014cc5bad95",
+    "verify.py": "d78d0fd2534cf9e76b2c4e261dd91bc08831b1e531cd09ea9dc49452b54517c5"
+  }
+}

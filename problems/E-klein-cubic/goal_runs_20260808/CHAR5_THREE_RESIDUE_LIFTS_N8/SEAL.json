@@ -1,0 +1,27 @@
+{
+  "packet": "CHAR5_THREE_RESIDUE_LIFTS_N8",
+  "date": "2026-08-08",
+  "scope": "one fixed three-Frobenius-residue pattern, root degrees zero through eight",
+  "headline": "OPEN",
+  "n8_certificate": "exact pinned-solver replay; no DRAT/RUP proof",
+  "sha256": {
+    "REPLAY.md": "39bceab235ef9aa7bcc5550e37444ca2da769739626325962846a213240a0019",
+    "STATUS.md": "1a45968a82f1df28acc9cf7373a84e9179f59f59729496d357072dfc4439e6d5",
+    "THEOREM.md": "71dbe4188b8e2c46e7d5aa2c06c5db538ef9e9db005432176ab76dcd83699612",
+    "reconstruct.py": "4c3acfb17fb975cf9be373eef9b14363fa634504588b843722d79233fc941539",
+    "vendor/pycosat-0.6.6.dist-info/INSTALLER": "ceebae7b8927a3227e5303cf5e0f1f7b34bb542ad7250ac03fbcde36ec2f1508",
+    "vendor/pycosat-0.6.6.dist-info/METADATA": "4597592acae4a07753bbe9258b209ac309e6453b8e2cba2be01fd16c863734dd",
+    "vendor/pycosat-0.6.6.dist-info/RECORD": "761a920924807573518dd179975e97eaf15b85bbd78c8b6a81d6d27fe298790e",
+    "vendor/pycosat-0.6.6.dist-info/REQUESTED": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "vendor/pycosat-0.6.6.dist-info/WHEEL": "0aa388f6d2d7d7bafbd602b3bfdc0b18422431fff733599fe40cd41de895df74",
+    "vendor/pycosat-0.6.6.dist-info/direct_url.json": "5b4f6d0e68186aa408c67dd679e05b2abe47af52d9e542beee62f144e27923ff",
+    "vendor/pycosat-0.6.6.dist-info/licenses/AUTHORS.md": "dcfd08cd98556e3290de96243f007831474328706e58fb2edc0118ebdb28d55e",
+    "vendor/pycosat-0.6.6.dist-info/licenses/LICENSE": "233d9a3b1d9e0d8afb120ee76b98e65c55ede04162fe37c2e803a3d38968021e",
+    "vendor/pycosat-0.6.6.dist-info/top_level.txt": "47df40ce884f9595883a39b54562bd8afea8e1dfd82b39165099c771ccd838d1",
+    "vendor/pycosat.cpython-314-darwin.so": "b41545dfc38f29d6b9f8aaa49d330383d597e673c2cd66d93a28b175dc00cecf",
+    "verify_all.py": "d1d931e6fee8444593a0dffd43d3eb7b6776fd6418c6949862eaaec384509cdd",
+    "verify_dpll_n2_n7.py": "db868d1cc9156671131e7512557bc02ea60efce1d486f3f460757fc1741c75a0",
+    "verify_n8_solver_replay.py": "78c30a00787bc4d947e13131323aac4da9d289530e79d5dc5af8b3f2ad9b721d",
+    "verify_seal.py": "6ba24804985163d5753e366491273864ecd2aee58695eed9233eb343827e1f69"
+  }
+}

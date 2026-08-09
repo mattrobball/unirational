@@ -33,8 +33,9 @@ recorded); (vi) `tmp/` — fully inventoried in
 `notebook_build/tmp_disposition.md` (362 dirs: 245 corpus-cited, 117 triaged,
 19 previously unrecorded now in [E16](#e16)/[E35](#e35)); checker-enforced;
 (vii) deleted-in-history paths — swept, closed (233 regenerable msolve inputs
-+ 2 accounted files); (viii) remote branches — swept (13; 2 unique packets
-archived); (ix) PRs/issues — swept (6 PRs all recorded, 0 issues); (x) other
++ 2 accounted files); (viii) remote branches — inventoried (15 after this
+publication; 2 unique packets archived); (ix) PRs/issues — swept (6 PRs all
+recorded, 0 issues); (x) other
 problems' directories — swept (no substantive E work; only cross-references
 and the F-side source of E14's transfer story, `F-dp2-psl27/RESOLUTION.md`);
 (xi) NON-ENUMERABLE remainder, permanently outside any sweep: scratch trees
@@ -49,16 +50,19 @@ deletions, cross-problem placement, or semantic drift inside packets — those
 families require periodic manual resweeps. The non-enumerable remainder is a
 disclosed boundary, not a coverage claim.
 
-Last rebuilt: 2026-08-03. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `c54f937` (2026-08-07; the
+Core manifest last rebuilt: 2026-08-03. Research supplement last updated:
+2026-08-09. Headline status: **OPEN**.
+Snapshot metadata — notebook parent head: `851e9ac` (2026-08-08; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
 verifies at pre-commit time that this stated parent equals the current HEAD.
 Manifest snapshot: the `as_of_commit` block inside
-`notebook_build/manifest.json`. Branch inventory: 2026-08-03, pinned heads
-`086e0892…` (G3P) and `6fdac74f…` (M3). This file's own commit is the child of
-the audited state.
+`notebook_build/manifest.json`. Branch inventory: 2026-08-09, including the
+additional `agent/f55-audit-obstruction` head `851e9ac…` and this notebook's
+publication branch; previously archived unique heads remain `086e0892…`
+(G3P) and `6fdac74f…` (M3). This file's own commit is the child of the audited
+state.
 
 Citation-verified 2026-08-03: a four-agent sweep checked 92 status labels, 279 cited
 paths, and 103 commit hashes against artifacts. **Paths, labels, and hashes were
@@ -84,6 +88,119 @@ ed_C(PSL(2,11)) = 3 or 4. A positive route must produce a verified generic twist
 point or primitive landing covariant. A negative route must rule out all
 characteristic-zero homogeneous self-covariants/landing mechanisms or prove the
 genuine generic twist pointless.
+
+## 2026-08-08--09 finite-target and full-group supplement
+
+This supplement records the dependency-closed finite-target and full-group
+portion of the dated research wave under `goal_runs_20260808/`.  It postdates
+the frozen E01--E55 manifest and does not silently alter the verification
+classes of the legacy entries.  Its synthesis and replay inventory are in
+`goal_runs_20260808/FINITE_TARGETS_HEADLINE_AUDIT/`.
+
+**Verdict: OPEN.**  The wave did not prove that the Klein cubic is not
+`PSL(2,11)`-unirational.  It did deploy CAS on the named theorem-forced finite
+targets isolated in the audit.  Those calculations yielded scoped theorems,
+counterconfigurations, and exact reductions, but no universal pointlessness or
+all-degree landing obstruction.
+
+### Exact `F55` arithmetic gate
+
+For `H=C11:C5`, with
+
+\[
+ E=\mathbf C(r_0,\ldots,r_4)/(r_0\cdots r_4-1),
+ \qquad K=E^{C_5},
+\]
+
+the genuine generic twist has a point exactly when there is \(0\ne a\in E\)
+with
+
+\[
+ \Phi(a)=\operatorname {Tr}_{E/K}(r_2^{-1}a^2\sigma(a))=0.
+\]
+
+The old conserved-eleven/polyhedral contradiction is withdrawn: an explicit
+integral convex support function satisfies its boundary system.  Denominator
+clearing to finite Laurent support and the support-ideal saturation criterion
+are exact, but no theorem bounds the support.  The rank-four
+incidence/Newton reduction reaches the original Klein-cover descent again;
+local, Brauer, logarithmic, toroidal, and finite-flag packages do not
+distinguish the actual unit coefficient from soluble countermodels.
+
+The authoritative correction and reduction corpus is
+`F55_AUDIT_20260808.md`, `F55_REPLACEMENT_OBSTRUCTION_20260808.md`,
+`F55_POLAR_CIRCUIT_PROOF_REDUCTION_20260808.md`, and
+`NOTEBOOK_F55_POLAR_CIRCUIT_20260808.md`.  Its five bounded implementation
+lanes are recorded in `WORKORDER_F55_PC1_PRIMITIVE_LAURENT.md`,
+`WORKORDER_F55_PC2_TRACE_SUPPORT_COMPILER.md`,
+`WORKORDER_F55_PC3_POLAR_EDGE_HOLONOMY.md`,
+`WORKORDER_F55_PC4_MINIMAL_CORE_SEARCH.md`, and
+`WORKORDER_F55_PC5_EXACT_SATURATION_CERTIFICATES.md`.  These documents preserve
+the exact reductions and scoped certificates; none supplies the missing
+all-support coverage theorem.
+
+Characteristic-five calculations close the exact two-Frobenius-residue
+families through covariant degree 45.  One fixed three-residue pattern is
+closed through degree 45 by dependency-free support replay and through degree
+50 by a separately labelled pinned-solver replay without a DRAT/RUP proof.
+Other residue patterns, four-or-more residues, and all higher degrees remain
+unbounded.  These are bounded theorems, not an `F55` or headline verdict.
+
+### Full-group selfmap reduction
+
+Every hypothetical dominant \(G=\operatorname {PSL}_2(\mathbf F_{11})\)
+map \(\mathbf P(W)\dashrightarrow X\) restricts to a dominant generically
+finite \(G\)-selfmap of \(X\), of degree \(\delta>0\).
+
+The following consequences are exact.
+
+1. Degree two is impossible.  Its unique deck involution centralizes \(G\),
+   hence belongs to \(\operatorname {Bir}^G(X)\); full-\(G\)
+   superrigidity identifies this with \(\operatorname {Aut}^G(X)=Z(G)=1\).
+   The same argument excludes every cyclic Galois restriction.  Minimal
+   faithful permutation degree 11 excludes every Galois degree from 2 through
+   11.  This is a **centralizer** argument, not a normalizer claim.
+2. The normalizer-coupled `C3`, `C5`, `C11`, and `V4` fixed-graph equations
+   eliminate no degree residue.  The first two exceptional `V4` layers have
+   explicit compatible formal states; these are not genuine graphs.
+3. If \(\delta=1\), superrigidity normalizes the restriction to the identity.
+   Every primitive ambient retraction then has
+
+   \[
+   T=Hx+FQ,\qquad
+   F(x+tQ)=(Ht-F)(St^2-Rt-1).
+   \]
+
+   A square \(R^2+4S\) produces two degree-\((d-3)\) landing covariants.  The
+   nonsquare branch is genuine and unbounded: an exact degree-nine retraction
+   onto an irreducible singular cubic supplies a boundary countermodel.  The
+   ordinary minimal-class obstruction and every named direct finite test of
+   the equivariant diagonal also pass; neither fact constructs a Klein
+   retraction.
+4. The first deckless branch, \(\delta=3\), survives each audited screen
+   separately: its `S3` extension, auxiliary double covers, a clean
+   intermediate-Jacobian norm screen, and the fixed-graph equations.  The
+   auxiliary cover, CM endomorphism, and formal localization vector are not
+   claimed to arise jointly from one geometric selfmap.
+
+Thus the full-group route stops at a \(G\)-equivariant rational retraction in
+degree one or a deckless non-Galois selfmap of degree at least three.  The
+missing input is an all-degree theorem controlling the actual ambient landing
+base ideal.  In parallel, the `F55` route still requires pointlessness of the
+unrestricted trace cubic over \(K\).  A finite computation becomes decisive
+only after a theorem supplies a universal degree/support/base-ideal cutoff.
+
+Principal replay markers:
+
+```text
+FULL-G-RESTRICTION-DEGREE-TWO-EXCLUDED
+FULL-G-GALOIS-DEGREES-TWO-THROUGH-ELEVEN-EXCLUDED
+DELTA1-RETRACTION-POLAR-IDENTITY-PACKET-OK
+DELTA1-EQUIVARIANT-DIAGONAL-FINITE-AUDIT-OK
+DELTA3-S3-RESOLVENT-AUDIT-OK
+F55-TRACE-CUBIC-K-POINT-UNDECIDED
+KLEIN-PSL2(11)-NONUNIRATIONALITY-NOT-PROVED
+```
 
 ## Binding rules (read before trusting any status below)
 
@@ -5253,4 +5370,3 @@ determines which route owns the certificate.)
 [E03](#e03) (CERT only by lens count — **no longer an orphan**: the packet was read and characterized on 2026-08-03 as a second theorem-boundary correction layer), [E20](#e20) (WORK only — fully specified Elo path with no execution trace), [E23](#e23) (DIR only — carries a PASS no other lens records), [E52](#e52), [E53](#e53) (WORK only — proposed, unrun), [E54](#e54) (HAND only — the canonical negative target).
 
 [E43](#e43), [E44](#e44), [E46](#e46), [E47](#e47), [E48](#e48), [E49](#e49), [E50](#e50) are single-lens (RES) only because `RESOLUTION.md`/`SPEC.md` are the sole carriers of the "Other audited boundaries" and "Conditional forks and stakes" sections. That is a document-structure artifact, **not** weak evidence.
-

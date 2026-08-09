@@ -1,0 +1,22 @@
+{
+  "conclusion": "EXACT-SCOPED-UNSAT",
+  "files": {
+    "REPLAY.md": "c9a62d15552aa11306d171df2140893271504d34ace558e560d6c8af79724ecd",
+    "STATUS.md": "4a4e42a221564e64c6a93dbf38d5655584554bd1dfd3a3116df4eb39579b3a1c",
+    "THEOREM.md": "7852f86864d117916e03bb85a3d008210d0d31f87a6252c5fdbab6d480812879",
+    "annotate_core_1_1.py": "f6ac0e5a8cffb9fcd2cd0ef743ba62a87c88b717aa08e371d878e88cf8455ddf",
+    "audit.py": "be6dc07fa41f4b60b177a75c3cbac018d4fb1ff9df735a46eef70ee670d1cb1e",
+    "core_1_1_annotation.json": "8fb0878f82859df0b1d470965bf6c38f2619ce2305cab5359801505264b2c4d6",
+    "proof.bin": "ea3f7897a1c9147dd3748fad45b7a239c529b5e5932f3f347e2726fd9ccf92de",
+    "search_n7.cpp": "9a8be9be7f2e75e2c13557f217eb73c829877c6c487df4f4a5e621edd8814953",
+    "verify.py": "61dab2cd507b05f57656ad505d0e285ffc487bea16ce9984d289455c26f46128",
+    "verify_seal.py": "0d7cb623fd976690a08b827d189b56b8b74e6cc033b117c2db01ebce49567f97"
+  },
+  "headline": "OPEN",
+  "packet": "CHAR5_PROGRESSION_CLOSE/N7_STATIC_CERTIFICATE",
+  "schema": "char5-progression-n7-static-seal-v1",
+  "strict_scope": "All sixteen exact-two-residue progression families are support-UNSAT at root degree seven, hence covariant degree 45. Root degree at least eight, three-or-more residues, the full characteristic-five problem, and non-PSL2(11)-unirationality remain open.",
+  "upstream_files": {
+    "../N7_SUPPORT/cadical_core_1_1.json": "77a3b53be3e786f1a1ae1b5a97be6b5422542cf50f14fa158053dc462097770e"
+  }
+}

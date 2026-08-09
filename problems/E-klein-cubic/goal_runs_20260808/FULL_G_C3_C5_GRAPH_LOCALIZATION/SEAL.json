@@ -1,0 +1,11 @@
+{
+  "schema": "full_g_c3_c5_graph_localization_seal_v1",
+  "date": "2026-08-08",
+  "files": {
+    "REPLAY.md": "b5ad11b27a8df3fd12bf1042544d2246310ac5aca621f378e5a8873b8a76f2e4",
+    "SOURCES.md": "5baaa057720c3a0d33bdb5d9cdf2cafbf44c5b81441b95cd7b305e4e00a74e06",
+    "STATUS.md": "3d302e8cafdd293496256db9b26df4c0ff9adac3b5102df1ed5a356398eb980d",
+    "THEOREM.md": "dad17a32a9db106a25aa3611d7a09c0377cf323d693bfca3e933a48225b4eb16",
+    "verify.py": "a4413241d4322282bf0e1a8bb4bad1290241f0cdf1bdd47f7a6d7f5322756833"
+  }
+}

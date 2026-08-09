@@ -1,0 +1,13 @@
+{
+  "schema": "full_g_graph_degree_localization_seal_v1",
+  "date": "2026-08-08",
+  "headline": "OPEN",
+  "scope": "formal localization equations and first-layer CSP only; no genuine graph",
+  "files": {
+    "THEOREM.md": "b8ec8fe2854b40b3df55ec71c3a77cd866ada50d0454be2832ce88c68f6e55fb",
+    "STATUS.md": "36d8c62ff1cc16dbd379513e01e64df7636fa6757f82725e590e434862ff9261",
+    "SOURCES.md": "56fffed95d98ba4990f26b920beaa20bbf31b71b7cbd5a7b7b51b6e3e3970bb3",
+    "REPLAY.md": "845a2b6879f58ca91ec24fe1ccddc89f1e3438fe5a68f3bc8e7ebfc85a3c3eb4",
+    "verify.py": "530e3ab23889c96774cf35ce4945aba4831f5955abd653c1e298e942bcf0b122"
+  }
+}
