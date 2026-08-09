@@ -53,8 +53,8 @@ In particular, conditional on nonemptiness, all three requested rigidity
 exits are false:
 
 ```text
-FULL-G-AMBIENT-SELFMAP-IDENTITY-THEOREM          FALSE IF NONEMPTY
-FULL-G-AMBIENT-SELFMAP-DEGREE-ONE-THEOREM        FALSE IF NONEMPTY
+FULL-G-AMBIENT-SELFMAP-IDENTITY-THEOREM           FALSE IF NONEMPTY
+FULL-G-AMBIENT-SELFMAP-DEGREE-ONE-THEOREM         FALSE IF NONEMPTY
 FULL-G-AMBIENT-SELFMAP-FINITE-TYPE-CLASSIFICATION FALSE IF NONEMPTY
 ```
 
@@ -66,6 +66,12 @@ theorem would actually prove **emptiness** of the ambient landing set, hence
 solve the headline non-unirationality problem directly. There is no separate
 nonempty degree-one/retraction branch compatible with the accepted arbitrary
 selfmaps.
+
+This packet also consumes the later binding packet
+`EXCEPTIONAL_CARRIER_RIGIDITY/`: the normalized graph of the restricted base
+ideal is canonically the normalization of the dominant transform of `X` inside
+the ambient normalized blowup, and ordinary fixed-curve valuations have
+canonical centers there. The new result below does not regress that theorem.
 
 ## Required checkpoint
 
@@ -86,30 +92,29 @@ technology does not linearize this basic cubic condition.
 
 ### Q2 — generic involution plus-plane layer?
 
-Let `t` have `W=W_+ plus W_-`, dimensions `(3,2)`, and let `(u,v)` be normal
-coordinates to `W_+`. Since every landing tuple vanishes on `W_+`, write its
-first nonzero normal term as `P^(r)`. Equivariance gives
+The later `EXCEPTIONAL_CARRIER_RIGIDITY` packet answers the integration part.
+For `S=E_t`, the ordinary blowup valuation of the fixed elliptic has a canonical
+residual-`S3`-stable center `K_{E,t}` on the normalized graph
 
 \[
-P^{(r)}(x,-u,-v)=tP^{(r)}(x,u,v).
+\Gamma=\operatorname{Proj}_X\overline{\mathcal R(J)},
 \]
 
-Hence an even layer takes values in `W_+` and an odd layer takes values in
-`W_-`. The leading term of `F(P)=0` gives `F(P^(r))=0` after passing to the
-corresponding associated graded quotient, so a defined first-layer exceptional
-map lands in
+and the accepted transition theorem says that the first nonzero ordinary normal
+order is **odd**. Since the involution acts by `-1` on both normal directions,
+the first initial map takes values in `W_-(t)` and hence in
 
 \[
-X cap P(W_+)=E_t \quad (r\text{ even}),
-\qquad
-P(W_-)=L_t \quad (r\text{ odd}).
+L_t=\mathbf P(W_-(t)).
 \]
 
-This does **not** canonically produce the elliptic carrier. The ordinary order
-valuation need not be a Rees valuation, its initial tuple may retain base
-points on the exceptional `P^1`, and the normalized blowup may have several
-Rees valuations above the plane. The actual elliptic carrier may therefore
-occur only at a higher normalized-Rees component.
+Thus the canonical ordinary carrier over `E_t` exists and is **line-valued**;
+it is not the desired elliptic selfcarrier and cannot realize `[-5]`.
+
+The exact normalized-Rees boundary is therefore sharper than the older first
+blowup question: any elliptic-target carrier must be a **secondary** fixed curve
+component of `Gamma`, or a fixed slice inside a higher-dimensional retained
+carrier. The ordinary carrier has already been integrated and classified.
 
 ### Q3 — type-II V4 relation?
 
@@ -152,17 +157,25 @@ so
 
 Thus the first point-exceptional `P^2` cannot simultaneously carry all three
 nonzero character directions. At least one direction is pushed to higher
-Rees order. This is a genuine simultaneous local consequence of one landing
-ideal, but it does not classify the higher layers.
+order. Combined with the joint-residue survival theorem, any point-centered
+divisor whose target image is only a curve is contracted on the normalized
+graph; only surface-valued point-centered divisors survive as Rees divisors.
+The remaining data are therefore curve components of normalized point fibres
+and involution-fixed slices inside retained surface carriers.
 
 ### Q4 — degree one or finite profiles?
 
 **No from these local constraints, and finite nonempty classification is
 impossible globally.** If one ambient landing exists, postcomposition with the
 accepted intrinsic selfmap and its iterates yields ambient restrictions of
-unbounded degree. Therefore local Rees constraints can force `delta=1` only by
-forcing the ambient landing set to be empty; they cannot produce a nonempty
-finite profile list containing global degree.
+unbounded degree. Therefore local Rees constraints can force `delta=1` for all
+ambient maps only by forcing the ambient landing set to be empty; they cannot
+produce a nonempty finite profile list containing global degree.
+
+Mapwise finiteness remains true: for each fixed landing ideal there are only
+finitely many Rees valuations and normalized-fibre components. What is
+impossible is the requested **uniform finite list over all ambient maps** with
+global degree included.
 
 ## Smallest remaining theorem
 
@@ -176,10 +189,13 @@ Normalized Rees geometry remains potentially useful for proving emptiness, but
 it can no longer support the proposed classification of a nonempty rigid
 ambient submonoid.
 
-The most concrete unresolved local-to-global statement is:
+The most concrete unresolved local-to-global statement combines the previous
+carrier theorem with the new type-II relation:
 
-> classify the higher normalized-Rees valuations forced after the type-II
-> product-zero relation, and show that their globally synchronized occurrence
-> over all 55 V4 configurations is impossible.
+> enumerate the curve components of the actual normalized type-I/type-II point
+> fibres and the involution-fixed curve slices inside retained surface-valued
+> Rees divisors, subject to the type-II product-zero initial relation, and show
+> that their globally synchronized occurrence over all 55 V4 configurations is
+> impossible.
 
 No such theorem is proved in this packet.
