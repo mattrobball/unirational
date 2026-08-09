@@ -63,12 +63,39 @@ Condition (A)                                      PROVED
 G-birational linearizability                        FALSE
 universal-torsor obstruction                       ZERO
 all higher Amitsur groups                          ZERO
+G-fixed locus                                      EMPTY
 G-unirationality / weak versality                   UNDECIDED
 ```
 
 The current targeted literature search found no paper deciding the last line.
 
-## 3. Involution-centralizer target
+## 3. The full group has no fixed point
+
+A point of
+
+\[
+X_{22}=\operatorname{VSP}(C_K,6)
+\]
+
+is represented by a length-six subscheme of the dual projective plane giving a six-term power-sum presentation of the Klein quartic. If a point of `X22` were fixed by `G`, that length-six subscheme would be `G`-stable.
+
+The standard three-dimensional Klein representation is irreducible, so the dual projective plane has no `G`-fixed point. Every orbit in it therefore has cardinality equal to the index of a proper subgroup of `G`. The smallest index of a proper subgroup of
+
+\[
+G=\operatorname{PSL}_2(\mathbf F_7)
+\]
+
+is seven: a subgroup of index at most six would give a nontrivial homomorphism `G→S_6`, impossible since `G` is simple of order 168 and `168∤|S_6|=720`; equivalently, the familiar index-seven subgroup is `S4`.
+
+The support of a nonempty `G`-stable zero-dimensional subscheme is a union of `G`-orbits. A length-six subscheme cannot contain an orbit of length at least seven. Hence no `G`-stable length-six subscheme exists, and
+
+\[
+\boxed{X_{22}^{G}=\varnothing.}
+\]
+
+This closes the first fixed-point gate without a computer calculation. It does not determine the fixed locus of an involution or its centralizer.
+
+## 4. Involution-centralizer target
 
 For an involution `σ∈PSL2(F7)`,
 
@@ -106,7 +133,7 @@ Two finite presentations are available.
 
 The required calculation is substantially smaller than a covariant search: one involution class and one centralizer class suffice.
 
-## 4. Acceptance table for the fixed-scheme audit
+## 5. Acceptance table for the fixed-scheme audit
 
 For every irreducible component `F⊂X22^σ`, record:
 
@@ -128,7 +155,7 @@ X_{22}^{\sigma}=C\sqcup\{\text{points}\},
 
 Rational components do not automatically end the route: the generalized theorem only asks that none be `D8`-stable.
 
-## 5. Secondary genus-12 target: Mukai–Umemura
+## 6. Secondary genus-12 target: Mukai–Umemura
 
 The Mukai–Umemura `V22` has
 
@@ -151,7 +178,7 @@ This remains a legitimate fixed-locus computation, but it is weaker than the Kle
 
 The Mukai–Umemura action is retained as a lower-ranked backup rather than the primary work order.
 
-## 6. Other index-one directions
+## 7. Other index-one directions
 
 ### Double-cover families
 
@@ -165,7 +192,7 @@ Special symmetric complete intersections and linear sections exist, but the sear
 
 A central involution may fix a positive-genus multisection. No explicit rational index-one del Pezzo fibration with the full residual fixed-network data tabulated was found in this pass.
 
-## 7. Answer to the `V14` question
+## 8. Answer to the `V14` question
 
 > Does the `V14` centralizer phenomenon plausibly recur on another index-one Fano threefold?
 
@@ -178,7 +205,7 @@ Yes. The strongest current candidate is
 }
 \]
 
-It is rational, satisfies Condition (A), and has vanishing universal-torsor and all higher-Amitsur obstructions. Its status is separated from a theorem by the finite pair
+It is rational, satisfies Condition (A), has no global `G`-fixed point, and has vanishing universal-torsor and all higher-Amitsur obstructions. Its status is separated from a theorem by the finite pair
 
 \[
 (X_{22}^{\sigma},X_{22}^{D_8}).
@@ -186,7 +213,7 @@ It is rational, satisfies Condition (A), and has vanishing universal-torsor and 
 
 No new all-degree machinery is required unless those fixed schemes contain residual-stable rational components.
 
-## 8. Work order
+## 9. Work order
 
 ```text
 V22-PSL27-INVOLUTION-CENTRALIZER-AUDIT
