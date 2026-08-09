@@ -1,119 +1,94 @@
 # New applications of the fixed-locus obstruction machinery
 
-**Date:** 2026-08-09  
-**Status:** two new negative theorems proved; one general obstruction theorem proved; broader audit remains open-ended.
+**Search cutoff:** 2026-08-09  
+**Packet:** `research/equivariant-unirationality-new-applications/`
 
-## Exits
+## Executive verdict
+
+This audit produces two new non-weak-versality theorems and one reusable strengthening of the repository obstruction.
 
 ```text
-FIXED-LOCUS-OBSTRUCTION-GENERALIZED
 NEW-EQUIVARIANT-NONUNIRATIONALITY-THEOREM
+FIXED-LOCUS-OBSTRUCTION-GENERALIZED
 NEW-APPLICATIONS-TOP-CANDIDATES-CLASSIFIED
 ```
 
-The `NEW-EQUIVARIANT-NONUNIRATIONALITY-THEOREM` exit is obtained for two independent classes.
+The new theorems are:
 
-## Theorem 1 — a smooth quartic double solid
+1. an infinite family of rational exceptional conic-bundle surfaces
+   \[
+   (S_g,G_g),\qquad G_g=D_{2g}\times C_2,\qquad g\ge3\text{ odd},
+   \]
+   where `D_{2g}` has order `2g`; every abelian subgroup has a fixed point, but `S_g` is not weakly `G_g`-versal;
+2. the smooth quartic double solid branched over the unique primitive
+   `PSL2(F7)`-invariant quartic, with
+   \[
+   G=(C_7\rtimes C_3)\times C_2^{\rm deck},
+   \]
+   which is classically unirational, satisfies Condition (A), has vanishing equivariant universal-torsor and all higher-Amitsur obstructions, but is not weakly `G`-versal.
 
-Let
+The second theorem is the sharpest comparison with current obstruction theory: all presently available Amitsur-type invariants are silent, while the residual action on the deck-fixed K3 surface excludes every positive-dimensional stable RCC image.
 
-\[
-B=\{2x_0^4+6x_0x_1x_2x_3+x_1x_3^3+x_1^3x_2+x_2^3x_3=0\}\subset\mathbf P^3
-\]
+## General theorem proved
 
-be the unique smooth quartic invariant under the primitive
-\(\operatorname{PSL}_2(\mathbf F_7)\)-action, and let
+`GENERALIZATIONS.md` proves the **residual-RCC centralizer obstruction**. For `N=C_G(σ)`, it replaces
 
-\[
-X=\{w^2=B(x)\}\subset\mathbf P(1,1,1,1,2).
-\]
+> `Y^σ` contains no rational curve
 
-Put \(H=C_7\rtimes C_3\), acting by
+by the strictly weaker condition
 
-\[
-a=[1,\zeta^4,\zeta^2,\zeta],\qquad
-b(x_0,x_1,x_2,x_3)=(x_0,x_2,x_3,x_1),
-\]
+> every irreducible `N`-stable RCC subvariety of `Y^σ` is a point.
 
-and let \(\tau\) be the deck involution. For
+Together with `Y^N=∅`, this excludes every rational map from a faithful linear source and therefore excludes weak versality. The proof follows one controlled eigenspace survivor through an equivariant resolution; it does not use the withdrawn assertion that every fixed stratum on every model remains RCC.
 
-\[
-G=H\times\langle\tau\rangle
-\]
+## Ranked outcome
 
-the action satisfies Condition (A), its equivariant universal-torsor obstruction vanishes, and hence all higher Amitsur groups vanish. Nevertheless
+| rank | action | status after this packet | feasibility |
+|---:|---|---|---:|
+| 1 | smooth Klein-invariant quartic double solid, `(C7:C3)×C2deck` | **new theorem** | 100 |
+| 2 | odd exceptional conic bundles, `D_{2g}×C2`, `g≥3` odd | **new infinite family** | 99 |
+| 3 | rational genus-12 `V22=VSP(Klein quartic,6)`, `PSL2(F7)` | best remaining open target | 94 |
+| 4 | rational Mori–Mukai No. 2.18 with Fermat discriminant and an explicit finite subgroup | finite threefold-network target | 78 |
+| 5 | non-Q8 subgroup on the special Kummer quartic double solid | residual-curve audit target | 71 |
 
-\[
-\boxed{X\text{ is not weakly }G\text{-versal}.}
-\]
-
-In particular, the smooth unirational quartic double solid \(X\) is not \(G\)-unirational. The proof uses the new residual-RCC central obstruction: \(X^\tau=B\) is a K3 surface with no \(H\)-stable rational curve and \(B^H=\varnothing\).
-
-See `THEOREM_KLEIN_QUARTIC_DOUBLE_SOLID.md`.
-
-## Theorem 2 — an infinite family of rational conic-bundle surfaces
-
-For every odd \(g\ge3\), let \(S_g\) be the minimal resolution of
+The improved third-place target is the rational `V22` of Cheltsov–Shramov. It is a smooth index-one Fano threefold of degree 22 with `PSL2(F7)`-action. The entire deformation family satisfies Condition (A), `Pic(V22)=Z[-K]`, the canonical generator is equivariantly linearized, and hence all higher Amitsur obstructions vanish. The literature search found no decision of its `G`-unirationality or weak versality. The finite missing calculation is
 
 \[
-T_0T_1(T_0^{2g}+T_1^{2g})+T_2T_3=0
-\subset\mathbf P(1,1,g+1,g+1).
+V_{22}^{\sigma}
+\quad\text{and}\quad
+V_{22}^{C_G(\sigma)}=V_{22}^{D_8}
 \]
 
-This is a rational exceptional conic bundle. Let \(D_{2g}\) act on the base by
+for an involution `σ`.
 
-\[
-r(T_0,T_1)=(\xi T_0,\xi^{-1}T_1),\qquad
-s(T_0,T_1)=(T_1,T_0),
-\]
+## Answers to the eight required questions
 
-where \(\xi\) is a primitive \(2g\)-th root, and let
+1. **Additional degree-1/2 del Pezzo path cases?** No second verbatim Problem-F path application was found. The strongest degree-2 cases are already closed by Problem F, the repository central theorem, or nonzero third Amitsur groups. Degree-1 surfaces have a global anticanonical base point, so non-weak-versality needs a different, dominance-sensitive theorem.
+2. **Rational conic-bundle surfaces passing Condition (A) but not `G`-unirational?** Yes: the family `(S_g,D_{2g}×C2)` proved here.
+3. **Central fiber involutions on conic-bundle threefolds?** They naturally produce a discriminant-cover fixed surface. The residual-RCC theorem applies when that surface is non-uniruled and has no residual-stable rational curve. In Mori–Mukai No. 2.18 the fixed surface is rational, so a three-dimensional network theorem is required.
+4. **Special rational Fano conic bundles with enlarged groups?** Yes: Abe's Fermat- and Klein-discriminant members of No. 2.18. The Fermat member is the best finite target.
+5. **Kummer double solids?** Q8-containing actions are already detected by the third Amitsur group. A specific non-Q8 subgroup is isolated here, but its Condition-(A) and 32-curve residual permutation audits remain open.
+6. **A second `V14`-type index-one phenomenon?** The best current candidate is the rational `V22` with `PSL2(F7)`; its involution/D8 fixed schemes are the exact missing data.
+7. **Published silent-invariant examples still unresolved?** Yes: `V22` has Condition (A) and vanishing universal-torsor/higher-Amitsur obstructions, while no equivariant-unirationality decision was found. The Abe No. 2.18 special actions are additional partially audited cases.
+8. **Best single remaining case?** `V22` with `PSL2(F7)`, because the variety is rational, the group/action are exact, Condition (A) is published, the cohomological hierarchy vanishes, and only one involution-centralizer fixed-scheme calculation is missing.
 
-\[
-j(T_2,T_3)=(T_3,T_2).
-\]
+## Verification
 
-For
+```text
+cd research/equivariant-unirationality-new-applications
+python3 verify_klein_quartic_double_solid.py
+python3 verify_odd_exceptional_conic_bundle.py --g 5
+```
 
-\[
-G_g=D_{2g}\times\langle j\rangle
-\]
+Expected markers:
 
-the action satisfies Condition (A), while
+```text
+KLEIN_PSL27_QUARTIC_DOUBLE_SOLID_VERIFY_OK
+ODD_EXCEPTIONAL_CONIC_BUNDLE_VERIFY_OK g=5
+```
 
-\[
-S_g^j=\{U^2=-T_0T_1(T_0^{2g}+T_1^{2g})\}
-\]
+`verification_output.txt` records successful runs for the quartic double solid and for `g=3,5,7,9`.
 
-is a smooth hyperelliptic curve of genus \(g\), and \(S_g^{G_g}=\varnothing\). Therefore
+## Honest boundary
 
-\[
-\boxed{S_g\text{ is not weakly }G_g\text{-versal}}
-\]
-
-for every odd \(g\ge3\). This gives an infinite family of rational \(G\)-conic bundles for which Condition (A) is not sufficient for equivariant unirationality.
-
-See `THEOREM_ODD_EXCEPTIONAL_CONIC_BUNDLES.md`.
-
-## General theorem
-
-The original central and centralizer criteria required that positive-dimensional components of \(Y^\sigma\) contain no rational curve. The proof only needs the following weaker condition:
-
-> every \(C_G(\sigma)\)-stable irreducible rationally chain connected subvariety of \(Y^\sigma\) is a point.
-
-Together with \(Y^{C_G(\sigma)}=\varnothing\), this excludes every equivariant rational map from a faithful linear source and proves non-weak-versality. This is proved in `GENERALIZATIONS.md` using the accepted fixed-stratum survivor argument from the repository.
-
-## Best unresolved target after the two theorems
-
-The highest-ranked remaining case is the special rational Fano threefold of Mori–Mukai family No. 2.18 whose conic-bundle discriminant is the Fermat quartic. Abe gives an explicit model and computes an automorphism group of order \(192\). The deck-fixed surface is rational, so the one-stratum central theorem cannot apply; the missing theorem is a residual-network classification of invariant rational curves on that surface together with the fixed curves of nondeck involutions.
-
-## Exact limits
-
-This packet does **not** prove:
-
-- a complete classification of equivariantly unirational degree-1 or degree-2 del Pezzo actions;
-- a Kummer-double-solid theorem beyond the cases already excluded by higher Amitsur groups;
-- a second index-one Fano-threefold theorem beyond the repository's \(V_{14}\) result;
-- a general three-dimensional exceptional-network theorem.
-
-Those boundaries and the finite next computations are recorded in the thematic files and `TOP5.md`.
+No theorem is claimed for the `V22`, Abe No. 2.18, or non-Q8 Kummer candidates. Their exact finite gaps are recorded in `TOP5.md`, `INDEX1_FANO_THREEFOLDS.md`, `CONIC_BUNDLES.md`, and `KUMMER_DOUBLE_SOLIDS.md`.
