@@ -1,0 +1,51 @@
+name: Append Problem E fixed-network notebook supplement
+
+on:
+  push:
+    branches:
+      - agent/fixed-network-map-classification-20260809
+    paths:
+      - .github/workflows/append-problem-e-notebook.yml
+
+permissions:
+  contents: write
+
+jobs:
+  append-notebook:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+          fetch-depth: 0
+
+      - name: Append supplement once
+        shell: bash
+        run: |
+          set -euo pipefail
+          notebook="problems/E-klein-cubic/NOTEBOOK.md"
+          supplement="problems/E-klein-cubic/goal_runs_20260809/FIXED_NETWORK_MAP_CLASSIFICATION/NOTEBOOK_UPDATE.md"
+          marker="FIXED_NETWORK_MAP_CLASSIFICATION_20260809"
+          if grep -Fq "$marker" "$notebook"; then
+            echo "Notebook supplement already present"
+            exit 0
+          fi
+          {
+            printf '\n\n---\n\n'
+            printf '<!-- %s -->\n\n' "$marker"
+            cat "$supplement"
+            printf '\n'
+          } >> "$notebook"
+
+      - name: Commit notebook update
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet -- problems/E-klein-cubic/NOTEBOOK.md; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add problems/E-klein-cubic/NOTEBOOK.md
+          git commit -m "Problem E: update notebook with fixed-network boundary"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
