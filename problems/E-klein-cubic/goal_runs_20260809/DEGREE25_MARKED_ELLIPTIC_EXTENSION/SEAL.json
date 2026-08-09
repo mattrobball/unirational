@@ -1,0 +1,23 @@
+{
+  "base_commit": "091d4f5d4314c556da96d1804c49be13f48a78c8",
+  "exit": "DEGREE25-BOUNDARY-EXTENSION-OBSTRUCTED",
+  "files": {
+    "BOUNDARY_MAP.md": "83f1892109b2ef90535f3b1c977ca8955a380a1c9f918808029322acfb95a188",
+    "DEGREE25_COMPARISON.md": "9c21ac4107b49f064e7902e2ae46155db6cc01df6e28c89bda7d65799aaeb0ca",
+    "EXTENSION_COMPLEX.md": "29618e5a7cdbd395d76128904dc7e404e8018ed6ac495a26f64404047e9007a4",
+    "GLUING.md": "508b703f64505ca5540c5c539f6402efd6cce8fbd33933032d16b0ce69095af4",
+    "NOTEBOOK_SUPPLEMENT.md": "cbefcad20acc927e710269514e6f9f1a4bbdb2b62e970a62386dcf0c9296007b",
+    "POLARIZATION.md": "3a8ef5af26da0dde6a9d032feace0efdd3cc0d3901edf7a2f9e6644b49293262",
+    "REPLAY.md": "63f1526bd8dfcfdbfeba335555eb6cd750c38c1ef4ff168a3115924d515a7702",
+    "SHA256SUMS": "7f1e43fa5ff7ff49fa56406b78cb26ca80274250abf81b65c0c9eca01c7e2538",
+    "SOURCE_AUDIT.md": "c417001bac8d49e1bfcc766113ac091b62e40408bd02679262c94cfe27f43a72",
+    "STATUS.md": "795e88b765263d74b579c812e9fe8ddb0304c3cef9f668e747eb606262bbe86a",
+    "THEOREM.md": "8e0dc7fe9d311efbfb73dc5349848556166c9d09e0aa46c99b6ff179d47cf2f9",
+    "obstruction_payload.json": "2f7121b62288f274efd9374df0c67706f4653ce8638da6c9f2f95eaa68f9fe3c",
+    "verify_boundary_obstruction.py": "175f42a926643437865e85f0db683600bf39e887696b715ef6e97f8e7dac3380",
+    "verify_seal.py": "2b0c478de1ff9be97c728d773cd794b596812229826cd41c8328b0e5ca35aad0"
+  },
+  "headline": "OPEN",
+  "repository": "mattrobball/unirational",
+  "schema": "degree25-marked-elliptic-extension-seal-v1"
+}

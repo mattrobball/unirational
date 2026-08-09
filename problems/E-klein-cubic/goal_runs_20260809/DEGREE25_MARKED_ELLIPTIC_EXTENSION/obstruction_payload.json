@@ -1,0 +1,79 @@
+{
+  "base_commit": "091d4f5d4314c556da96d1804c49be13f48a78c8",
+  "boundary_map_exists": true,
+  "component_counts": {
+    "elliptics": 55,
+    "lines": 55
+  },
+  "degree25_equivariant_spaces": {
+    "ambient_source_invariants": 189,
+    "elliptic_normalization_invariants": 38,
+    "line_normalization_invariants": 9,
+    "network_target_invariants": 41,
+    "plus_plane_arrangement_kernel": 59,
+    "strict_tower_space": 43,
+    "type_II_node_quotient_invariants": 4,
+    "type_I_node_quotient_invariants": 2
+  },
+  "exit": "DEGREE25-BOUNDARY-EXTENSION-OBSTRUCTED",
+  "headline": "OPEN",
+  "landing_order_zero": {
+    "all_landing_covariants_restrict_zero_to_each_plus_space": true,
+    "boundary_fiber_intersects_landing_locus": false,
+    "canonical_elliptic_boundary_is_nonzero_order_zero": true
+  },
+  "marked_group": {
+    "exponent": 6,
+    "model": "(Z/2)^2 x Z/3",
+    "multiplier": -5,
+    "order": 12,
+    "origin_correction": 6,
+    "type_II_count": 9,
+    "type_I_count": 3
+  },
+  "minimal_obstruction_certificate": {
+    "class_nonzero": true,
+    "landing_restriction_image_dimension": 0,
+    "name": "beta_t",
+    "normal_order": 0,
+    "space": "H0(E_t,O_E_t(25) tensor W_+(t)) / res_E_t(Z_25)"
+  },
+  "node_orbits": {
+    "type_I": {
+      "branches": [
+        "elliptic",
+        "line",
+        "line"
+      ],
+      "count": 165
+    },
+    "type_II": {
+      "branches": [
+        "elliptic",
+        "elliptic",
+        "elliptic"
+      ],
+      "count": 165
+    }
+  },
+  "polarization": {
+    "common_basepoint_free_degree_exists": false,
+    "elliptic_basepoint_free_degree": 25,
+    "elliptic_comparison_degree_formula": "3*(d-25)",
+    "elliptic_embedding_degree": 3,
+    "line_basepoint_free_degree": 1,
+    "line_comparison_degree_formula": "d-1",
+    "multiplier_square": 25
+  },
+  "repository": "mattrobball/unirational",
+  "schema": "degree25-marked-elliptic-extension-obstruction-v1",
+  "tower_comparison": {
+    "canonical_ordinary_plus_plane_restriction": "nonzero on E_t",
+    "classification": "unrelated",
+    "stored_bidegree": [
+      1,
+      25
+    ],
+    "stored_ordinary_plus_plane_restriction": "zero"
+  }
+}
