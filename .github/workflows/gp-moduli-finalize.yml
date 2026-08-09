@@ -37,9 +37,30 @@ jobs:
             --audit-base "${audit_base}"
 
       - name: Validate repository contracts
+        shell: bash
         run: |
-          python3 problems/E-klein-cubic/scripts/check_manifest_parity.py
-          git diff --check
+          set +e
+          python3 problems/E-klein-cubic/scripts/check_manifest_parity.py \
+            > /tmp/gp-parity.log 2>&1
+          parity_rc=$?
+          git diff --check > /tmp/gp-diff.log 2>&1
+          diff_rc=$?
+          set -e
+
+          cat /tmp/gp-parity.log
+          cat /tmp/gp-diff.log
+
+          if (( parity_rc != 0 || diff_rc != 0 )); then
+            message="$(
+              {
+                echo "manifest parity rc=${parity_rc}; diff rc=${diff_rc};"
+                tail -n 80 /tmp/gp-parity.log
+                tail -n 40 /tmp/gp-diff.log
+              } | tr '\n' ' ' | sed 's/%/%25/g; s/\r/%0D/g'
+            )"
+            echo "::error file=problems/E-klein-cubic/NOTEBOOK.md::${message}"
+            exit 1
+          fi
 
       - name: Commit finalized ledger
         shell: bash
