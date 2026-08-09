@@ -13,7 +13,7 @@ where `u` is a polarized automorphism and, up to the chosen right/left
 convention, its action on the polarization kernel satisfies
 
 ```text
-u_* o alpha = alpha o sigma_tilde.
+alpha^{-1} o u_* o alpha = sigma_tilde.
 ```
 
 Because `sigma_tilde^2=-I`, the generic cocycle relation is
