@@ -31,9 +31,9 @@ jobs:
 
           git merge origin/main --no-commit || true
 
-          # The two PRs touch disjoint theorem packets; NOTEBOOK.md is the
-          # intentional overlap.  Start from current main (#11 already landed),
-          # then append the carrier refinement exactly once.
+          # The theorem packets are disjoint. NOTEBOOK.md is the intentional
+          # overlap: current main carries the intrinsic-selfmap correction,
+          # and the carrier supplement is the ambient-extendable refinement.
           git show origin/main:"$NOTEBOOK" > "$NOTEBOOK"
           MAIN_SHA="$MAIN_SHA" python3 - <<'PY'
           import os, re
@@ -57,7 +57,6 @@ jobs:
 
           rm -f .github/workflows/reconcile_exceptional_carrier.yml
           git add -A
-          git diff --cached --check
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git commit -m 'Merge current main into exceptional-carrier packet'
