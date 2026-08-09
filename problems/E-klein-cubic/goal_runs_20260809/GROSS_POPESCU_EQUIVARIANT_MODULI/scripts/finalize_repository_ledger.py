@@ -59,12 +59,19 @@ Exit: `GP-MODULI-NON-G-UNIRATIONAL`.
 For the hyperplane-dependent map `chi_Pi:V14 -->> K`,
 `g chi_Pi = chi_{gPi} g`.  The irreducible six-dimensional Weil module has no
 invariant hyperplane.  Retaining the projective/vector-bundle parameter gives
-the Tschinkel--Zhang twisted stable birationality, not an equivariant map or
-finite odd-degree correspondence.  Rigidity proves that the transported
-modular action and standard regular Klein action are not `G`-birationally
-conjugate, even after an automorphism of `G`.  The visible involution mismatch
-is elliptic-sextic-plus-points on `V14` versus `E_sigma disjoint union
-L_sigma` with a rational fixed line on the standard Klein cubic.
+the Tschinkel--Zhang twisted stable birationality, not an equivariant map.
+
+The universal incidence does yield controlled correspondences after cutting
+the Palatini quartic by a `G`-stable divisor of degree `d`: both projection
+degrees are `d`.  But `SL2(F11)` is perfect and its center acts on a degree
+`d` equation by `(-1)^d`, so every such `d` is even.  Hyperplane averaging
+therefore cannot produce an odd-degree zero-cycle or bridge.
+
+Rigidity proves that the transported modular action and standard regular
+Klein action are not `G`-birationally conjugate, even after an automorphism of
+`G`.  The visible involution mismatch is elliptic-sextic-plus-points on
+`V14` versus `E_sigma disjoint union L_sigma` with a rational fixed line on
+the standard Klein cubic.
 
 Exit: `GP-MODULAR-ACTION-IS-V14-NOT-KLEIN`.
 
@@ -92,7 +99,10 @@ def main() -> None:
 
     for path in packet.glob("*.md"):
         text = path.read_text(encoding="utf-8")
-        path.write_text(text.replace("AUDIT_BASE_COMMIT", args.audit_base), encoding="utf-8")
+        path.write_text(
+            text.replace("AUDIT_BASE_COMMIT", args.audit_base),
+            encoding="utf-8",
+        )
 
     text = notebook.read_text(encoding="utf-8")
     if BEGIN in text:
