@@ -1,0 +1,73 @@
+name: Apply ambient Rees selfmap packet
+
+on:
+  push:
+    branches:
+      - automation/ambient-rees-selfmap-20260809
+    paths:
+      - .github/workflows/apply-ambient-rees-selfmap-20260809.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Materialize and verify packet
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat \
+            .automation/ambient_rees/chunk_00 \
+            .automation/ambient_rees/chunk_01a \
+            .automation/ambient_rees/chunk_01b0 \
+            .automation/ambient_rees/chunk_01b1 \
+            .automation/ambient_rees/chunk_01b2 \
+            .automation/ambient_rees/chunk_01b3 \
+            .automation/ambient_rees/chunk_01c \
+            .automation/ambient_rees/chunk_01d \
+            .automation/ambient_rees/chunk_02 \
+            .automation/ambient_rees/chunk_03 \
+            .automation/ambient_rees/chunk_04a \
+            .automation/ambient_rees/chunk_04b \
+            .automation/ambient_rees/chunk_04c \
+            .automation/ambient_rees/chunk_04d \
+            .automation/ambient_rees/chunk_05 \
+            .automation/ambient_rees/chunk_06 \
+            .automation/ambient_rees/chunk_07 \
+            | base64 -d > /tmp/ambient_rees_packet.tar.gz
+          echo '9470b8989e2c1e757f897ee78be3355b42a62c1f32f4a3831acb4e85ce2fa2b5  /tmp/ambient_rees_packet.tar.gz' | sha256sum -c -
+          tar -xzf /tmp/ambient_rees_packet.tar.gz
+          python3 - <<'PY'
+          from pathlib import Path
+          notebook = Path('problems/E-klein-cubic/NOTEBOOK.md')
+          append_file = Path('AMBIENT_REES_NOTEBOOK_APPEND.md')
+          marker = '<!-- AMBIENT_REES_SELFMAP_CLASSIFICATION_20260809 -->'
+          current = notebook.read_text()
+          if marker not in current:
+              notebook.write_text(current.rstrip() + append_file.read_text())
+          append_file.unlink()
+          PY
+          python3 problems/E-klein-cubic/goal_runs_20260809/AMBIENT_REES_SELFMAP_CLASSIFICATION/verify_lift_identity.py | tee /tmp/verification.txt
+          cmp /tmp/verification.txt problems/E-klein-cubic/goal_runs_20260809/AMBIENT_REES_SELFMAP_CLASSIFICATION/verification_output.txt
+          test -f problems/E-klein-cubic/goal_runs_20260809/AMBIENT_REES_SELFMAP_CLASSIFICATION/STATUS.md
+          grep -q FULL-G-AMBIENT-SELFMAP-CLASSIFICATION-UNDECIDED problems/E-klein-cubic/goal_runs_20260809/AMBIENT_REES_SELFMAP_CLASSIFICATION/STATUS.md
+          grep -q AMBIENT_REES_SELFMAP_CLASSIFICATION_20260809 problems/E-klein-cubic/NOTEBOOK.md
+          rm -rf .automation/ambient_rees
+          rm -f .github/workflows/apply-ambient-rees-selfmap-20260809.yml
+          rmdir .automation 2>/dev/null || true
+          rmdir .github/workflows 2>/dev/null || true
+          rmdir .github 2>/dev/null || true
+      - name: Commit packet
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "openai-codex[bot]"
+          git config user.email "openai-codex[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "Problem E: add ambient Rees selfmap classification packet"
+          git push origin HEAD:automation/ambient-rees-selfmap-20260809
