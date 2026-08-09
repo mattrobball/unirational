@@ -1,4 +1,4 @@
-# Involution plus-plane and the first Rees layers
+# Involution plus-plane and canonical ordinary carrier
 
 Fix an involution `t`. Write
 
@@ -6,31 +6,26 @@ Fix an involution `t`. Write
 W_5=W_+\oplus W_-,\qquad \dim W_+=3,\quad \dim W_-=2.
 \]
 
-The accepted ambient landing theorem gives
+Every ambient landing tuple satisfies
 
 \[
 P|_{W_+}=0.
 \]
 
-At the generic point of `P(W_+)`, choose normal parameters `(u,v)` spanning
-`W_-`. Expand
+The later binding packet `EXCEPTIONAL_CARRIER_RIGIDITY/` supplies the correct
+normalized-Rees integration theorem for the fixed elliptic
+`E_t=X\cap P(W_+)`.
+
+## 1. Parity of an ordinary normal layer
+
+Choose normal parameters `(u,v)` spanning `W_-` and write the first nonzero
+ordinary normal term as `P^(r)`. Equivariance gives
 
 \[
-P=P^{(r)}+P^{(r+1)}+\cdots
+P^{(r)}(x,-u,-v)=tP^{(r)}(x,u,v),
 \]
 
-by ordinary normal order, with `P^(r)` the first nonzero term.
-
-## Parity theorem
-
-Since `t` is `+1` on `W_+` and `-1` on the two normal variables,
-`G`-equivariance implies
-
-\[
-P^{(r)}(x,-u,-v)=tP^{(r)}(x,u,v).
-\]
-
-Therefore
+hence
 
 \[
 r\text{ even}\Rightarrow P^{(r)}\in W_+,
@@ -38,46 +33,50 @@ r\text{ even}\Rightarrow P^{(r)}\in W_+,
 r\text{ odd}\Rightarrow P^{(r)}\in W_-.
 \]
 
-Passing the exact landing identity to the lowest nonzero normal degree gives
+The lowest part of `F(P)=0` gives `F(P^(r))=0`, so an even layer is
+elliptic-valued and an odd layer is line-valued.
+
+## 2. The accepted order is odd
+
+The accepted transition theorem used by `EXCEPTIONAL_CARRIER_RIGIDITY` proves
+that the first nonzero ordinary normal order along `E_t` is odd. Therefore its
+first target lies in
 
 \[
-F(P^{(r)})=0.
+L_t=P(W_-).
 \]
 
-Consequently any defined ordinary first-exceptional map lands in
+This is not merely formal: the ordinary valuation `v_{E_t}` has a canonical
+residual-`S3`-stable center
 
 \[
-E_t=X\cap\mathbf P(W_+)\quad\text{if }r\text{ is even},
+K_{E,t}\subset
+\Gamma=\operatorname{Proj}_X\overline{\mathcal R(J)},
 \]
 
-and in
+where `J` is the primitive restricted base ideal. The joint-residue carrier
+theorem proves that `K_{E,t}` is irreducible, refinement-invariant, and carries
+a nonconstant actual morphism to `X^t`. The accepted odd jet integrates to
+that morphism.
+
+Hence
 
 \[
-L_t=\mathbf P(W_-)\subset X\quad\text{if }r\text{ is odd}.
+\boxed{q(K_{E,t})\subset L_t.}
 \]
 
-This gives a sharp boundary condition on the first normal map.
+The canonical ordinary carrier over the fixed elliptic is **line-valued**. It
+is not the elliptic `[-5]` carrier.
 
-## Why this is not yet a canonical elliptic carrier
+## 3. Where an elliptic carrier could still occur
 
-The ordinary blowup of the plus-plane is not in general the normalized blowup
-of `I_P`. At the generic two-dimensional regular local ring transverse to the
-plane, an `m`-primary ideal can have multiple Rees valuations. The ordinary
-order valuation need not be among them, and the leading forms may have common
-zeros on the exceptional `P^1`, so the rational map can remain indeterminate.
+Any carrier mapping dominantly to `E_t` must be secondary: a curve component
+of a normalized exceptional fibre, or an involution-fixed curve slice inside
+a retained surface-valued Rees divisor. Point-centered divisors mapping only
+to `E_t` are excluded by the joint-residue survival theorem, because a
+point-centered divisor survives on the normalized graph only when its target
+initial ratios have transcendence degree two.
 
-Thus the parity theorem does not prove that an elliptic carrier exists on the
-first blowup, nor that it is unique, irreducible, birational over `E_t`, or has
-zero base correction. An elliptic horizontal fixed curve may first occur on a
-higher normalized-Rees divisor.
-
-## Canonical replacement
-
-For every Rees valuation `v` above the generic plus-plane, normalize the five
-coordinates by `m=v(I_P)` and take their residue vector. The global identity
-forces that residue vector to lie on the affine cone over `X`. This gives the
-canonical map from the associated Rees divisor to `X`.
-
-The still-missing theorem is to identify the `t`-fixed horizontal curves on
-these canonical divisors and compute their source degree and base
-intersection. No such computation follows from parity alone.
+Thus the remaining elliptic problem is not to identify the first ordinary
+carrier. It is to enumerate secondary fixed curves on the actual normalized
+type-I/type-II fibres and compute their source degrees and base corrections.
