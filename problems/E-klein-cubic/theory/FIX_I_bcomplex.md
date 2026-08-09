@@ -10,6 +10,17 @@ is to be treated as claimed-until-derived-or-checked; the acceptance tests
 T1–T5 in §6 are the validation gate. No claim in this note is consumable for
 headline routing until the gate passes.
 
+> **Binding correction — 2026-08-09 (`FIX-I-BINDING-CORRECTION-20260809`).**
+> The per-blowup character calculation in Theorem 2.1 and graph
+> functoriality in Theorem 4.1 remain valid. The every-model conclusion
+> formerly attached to Lemma 4.3 and the arbitrary-resolved-graph Klein
+> funnel formerly stated as Corollary 5.2 are withdrawn. A legal smooth
+> equivariant center can have positive-genus fixed part, and a type-I or
+> type-II blowup in dimension three creates an exceptional `P^2` with
+> disconnected subgroup-fixed loci and rational bypass lines. The corrected
+> scope is stated below and in
+> `goal_runs_20260809/FIXED_NETWORK_MAP_CLASSIFICATION/RESOLUTION_CATEGORY.md`.
+
 ---
 
 ## 0. Conventions
@@ -203,11 +214,15 @@ chains between general points of `q̃(F)`. ∎
 This is the session-asserted "going-down principle"; at this level it is a
 two-line standard fact. Its power comes from pairing with:
 
-**Lemma 4.3 (RCC propagation through the calculus).** In Theorem 2.1, every
-exceptional stratum `P(N^χ)` is a projectivized bundle over `F_Z`, hence RCC
-whenever `F_Z` is; strict transforms preserve `δ_bir`. Consequently: **if
-every stratum of `𝔽(X)` on one model is RCC, then every stratum of `𝔽_b(X)`
-on every model is RCC.**
+**Lemma 4.3 (RCC propagation along a controlled tower).** In Theorem 2.1,
+every exceptional stratum `P(N^χ)` is a projectivized bundle over `F_Z`,
+hence RCC whenever `F_Z` is; strict transforms preserve `δ_bir`.
+Consequently RCC propagates along a chosen equivariant blowup tower
+**provided every fixed component of every center used in that tower is
+RCC**. It does not follow that every fixed stratum on every equivariant
+model is RCC. A later smooth invariant center may have fixed part of
+arbitrary genus; see Correction I-C and the binding correction at the head
+of this note.
 
 **Corollary 4.4 (linear sources funnel into the rational part of the
 target) — SCOPE-CORRECTED 2026-08-05, see the correction block below.**
@@ -246,9 +261,10 @@ points **by such strata**.
 > isomorphic to `C`** — a genus-3 stratum of `𝔽_b(P(W))` on a legitimate
 > model. Consequences audited 2026-08-05: Thm 2.1, Thm 4.1, Lem 4.2,
 > the per-blowup half of Lem 4.3, the gate T1–T5, FIX-H0/N2/H1 (all
-> jet-theoretic, resolution-free) are untouched; Cor 4.4/5.2 hold on the
-> stabilizer-stratified cofinal class (which suffices for every use made
-> of them in T1/T2, whose towers blow up orbit-strata only); Note III §1's
+> jet-theoretic, resolution-free) are untouched; Cor 4.4 holds on the
+> stabilizer-stratified towers used in T1/T2 (these towers are **not** a
+> cofinal class of arbitrary equivariant models); the former Cor 5.2 is
+> withdrawn for actual graph resolutions; Note III §1's
 > site justification is re-based on H0-2 (see the correction there). The
 > fibre-based repair for arbitrary models is exactly Duncan's machinery
 > (his Thm 3.10 + Prop 3.24 need no stratum-global RCC — only tree fibres
@@ -287,16 +303,16 @@ cubic, unsolvability is the negative headline.
 **Boundary conditions the theory is already known to satisfy (repo ground
 truth):**
 
-1. **The escape is real (no cheap Klein contradiction).** Modulo the FIX-A0
-   verification: for an involution `σ` (class 2A, 55 of them; `χ_W(2A) = 1`
-   forces the `(3,2)` eigensplit), `X^σ = E_t ⊔ L_t` — a plane cubic and a
-   line, with the derived normal types both `(−1)^{⊕2}` in `X`. Corollary
-   4.4 then funnels the entire source complex into the **55-line/point
-   arrangement**: the elliptic curves `E_t` receive only points. But the
-   lines are rational, so line-valued images are permitted — and Fable's
-   A4-trisection ([E15]) realizes them. The obstruction content therefore
-   cannot be local-constancy; it must be global compatibility over the
-   arrangement (Note III's cosheaf `H⁰`).
+1. **The escape is real (no cheap Klein contradiction).** For an involution
+   `σ`, `X^σ = E_t ⊔ L_t` is a plane cubic and a line. RCC strata on a
+   chosen stabilizer-stratified source tower map only to points of `E_t`,
+   while line-valued images are permitted. This does **not** funnel the
+   fixed strata of an arbitrary resolved graph away from `E_t`: legal
+   centers can create positive-genus fixed carriers, and the actual landing
+   ideal can create exceptional horizontal carriers over the forced
+   plus-plane base. Any Klein obstruction must therefore classify those
+   carriers and their global compatibility, not invoke local RCC for the
+   entire b-complex.
 2. **The V4 trisection counterexample bounds the method.** The computed
    family behind `V4-LOCAL-PATH-HEADLINE-ROUTE-REFUTED` ([E33]) solves every
    purely local path-style constraint; any draft obstruction theorem must be
@@ -306,13 +322,21 @@ truth):**
    degree-scaling escapes of the `4ⁿd` kind cannot restore any finite-degree
    argument.
 
-**Corollary 5.2 (Klein funnel, conditional on FIX-A0/A1).** For any
-equivariant dominant `f: P(W) ⇢ X_Klein`: every fixed stratum of every model
-of `P(W)` maps to a point of the arrangement or onto (part of) a line of the
-55-line configuration, compatibly with incidences and residual `D12`/`A4`
-symmetries. The headline-relevant unknown is exactly the constraint
-satisfaction problem on this finite decorated complex — connecting this
-program to the common-line geometry of method family 3 from a new direction.
+**Withdrawn Corollary 5.2 (arbitrary-model Klein funnel).** The former
+statement quantified over every fixed stratum of every model and is false.
+The exact replacement is conditional:
+
+> On a specified stabilizer-stratified tower whose center-fixed components
+> are RCC, each RCC fixed stratum maps to a point of an elliptic target
+> component or to an RCC subvariety of a rational target component.
+
+This conditional statement does not classify the fixed components of an
+actual principalization of a landing base ideal and supplies no finite
+fixed-network theorem. In dimension three the first blowup of a `V4` type-I
+or type-II point has exceptional `P^2`; its involution-fixed lines can map
+to the rational target lines, its `V4` fixed locus is disconnected, and it
+contains rational curves with faithful `V4` action. The missing replacement
+is a refinement-invariant normalized-Rees carrier theorem.
 
 ## 6. Acceptance tests (the validation gate)
 
