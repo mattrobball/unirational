@@ -61,8 +61,9 @@ is proper birational and
 q\colon Z\to X
 \]
 
-is a morphism. An ambient principalization can be chosen so that its
-restriction dominates this graph resolution.
+is a morphism. The strict transform of \(X\) on an ambient
+principalization and this graph resolution admit a common
+\(G\)-equivariant refinement.
 
 The actual component-map problem belongs to the quadruple
 
