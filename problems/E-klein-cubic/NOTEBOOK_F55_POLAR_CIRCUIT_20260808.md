@@ -1,176 +1,174 @@
-# Research notebook supplement — F55 polar-circuit reduction
+# Research notebook supplement — F55 coefficient-circuit programme
 
 **Date:** 2026-08-08  
-**Branch:** `agent/f55-audit-obstruction`  
+**Branch:** `agent/f55-coverage-c-adjudication`  
 **Canonical parent:** `NOTEBOOK.md`  
 **Status:** branch supplement pending later notebook compaction  
 **Headline:** `F55-QUESTION-OPEN`
 
-This supplement records the proof reduction and runner dispatch that followed
-the F55/V14 audit.  It is intentionally theorem-oriented rather than an event
-log.  The detailed proof is in
-`F55_POLAR_CIRCUIT_PROOF_REDUCTION_20260808.md`.
-
-## 1. Corrected research state
-
-The replacement obstruction must distinguish support-function compatibility
-from exact coefficient realizability.  The corrected F55 boundary/PL system
-has an integral convex solution, so divisorial valuations alone cannot close
-the problem.  The degree-7 calculation demonstrates the missing altitude:
-exact squared-slot multiplicities produce a two-row monomial identity even
-when the generator-level support shadow survives.
-
-The authoritative equation is used directly:
-
-\[
-\Phi(a)=\sum_{i=0}^4\sigma^i\!\left(\chi^{-e_2}a^2\sigma(a)\right)=0
-\]
-
-in the rank-four group algebra.  This removes the five projective twists from
-the all-degree analysis.  The trace-support coefficients are positive
-integers; cyclotomic phases are needed only in bounded covariant comparisons.
-
-## 2. Proven reduction
-
-The following steps are now proved.
-
-### R1 — finite primitive Laurent support
-
-Every rational solution can be multiplied by the invariant norm of its
-denominator to obtain a Laurent-polynomial solution.  Choosing minimal Newton
-width then removes every nonunit invariant polynomial divisor.  Because the
-cyclic action has no nonzero fixed lattice vector, this normalization is a
-factor normalization, not a common exponent-translation quotient.
-
-### R2 — exact support ideal
-
-For finite support \(S\), the coefficient rows are
-
-\[
-F_\gamma=
-\sum_{T_i(p,q;r)=\gamma}\mu(p,q)A_pA_qA_r,
-\qquad
-\mu=1\text{ or }2.
-\]
-
-An exact-support zero exists precisely when
-
-\[
-I_S:(\prod_{s\in S}A_s)^\infty\ne(1).
-\]
-
-The smallest general negative artifact is one sparse identity placing a
-monomial in \(I_S\).
-
-### R3 — polar candidates have one affine form
-
-Every two-row polar pattern comes from adjacent cyclic slots and
-
-\[
-2w=\sigma u+\sigma^2v+e_2-\sigma e_2.
-\]
-
-For clean rows
-
-\[
-f=\alpha X_u^2X_v+\beta X_uX_w^2,
-\quad
-g=\alpha'X_uX_vX_z+\beta'X_zX_w^2,
-\]
-
-the determinant
-\(\Delta=\alpha\beta'-\alpha'\beta\) gives
-
-\[
-\alpha X_ug-\alpha'X_zf
- =\Delta X_uX_zX_w^2.
-\]
-
-Thus the runner searches one affine parity relation, not arbitrary
-quadruples.
-
-### R4 — binomial holonomy is complete
-
-For binomial rows, integer relations among exponent differences are the only
-compatibility conditions.  Smith/Hermite normal form plus exact rational
-return products gives a complete torus decision for an all-binomial support
-and an immediate obstruction whenever one cycle product is nontrivial.
-
-### R5 — minimal core and remaining gap
-
-An inclusion-minimal support zero has a connected variable/row incidence graph,
-and minimal zero-sum row circuits cover every support variable.  The sole
-all-degree structural gap is a coverage theorem forcing one of:
+This supplement records the audit, proof reductions, and the subsequent
+adjudication of Coverage C. The current governing documents are:
 
 ```text
-singleton row;
-nonzero clean polar determinant;
-failed binomial holonomy;
-bounded sparse monomial consequence.
+F55_AUDIT_20260808.md
+F55_REPLACEMENT_OBSTRUCTION_20260808.md
+F55_POLAR_CIRCUIT_PROOF_REDUCTION_20260808.md
+F55_COVERAGE_C_ADJUDICATION_20260808.md
 ```
 
-No finite support bound has been proved.  In particular, unrestricted Laurent
-collision lattices cannot be replaced automatically by a finite Hilbert-basis
-census.  Normaliz calculations are valid only after a pointed cone or bounded
-degree has been fixed.
+The adjudication note supersedes §6 of the proof-reduction note wherever the
+latter treats Coverage C as a smaller residual theorem.
 
-## 3. Minimized computational interface
+## 1. Authoritative state
 
-Only three computational operations remain:
+The F55 question on the Klein cubic and its V14 twin is still open. It is
+equivalent to the existence of a nonzero \(K\)-point of
+
+\[
+\Phi(a)=\sum_{i=0}^4
+ \sigma^i\!\left(\chi^{-e_2}a^2\sigma(a)\right)=0.
+\]
+
+The corrected boundary/PL system has an integral convex lift. Divisorial
+orders therefore do not obstruct. Exact coefficient multiplicities can
+obstruct supports that survive that shadow: the degree-7 covariant packet and
+the new degree-4 trace-support identities are exact examples.
+
+## 2. Proven reductions retained
+
+The following remain valid.
+
+1. Every rational zero clears invariant denominators to a finite Laurent zero.
+2. A Newton-width-minimal Laurent zero has no nonunit invariant factor and may
+   be taken inclusion-minimal in support.
+3. For finite support \(S\), the exact trace rows are integer cubics
+   \(F_\gamma\), and exact-support zeros are precisely the torus points of
+   \(I_S=(F_\gamma)\).
+4. Finite-support nonexistence is equivalent to one monomial identity in the
+   localized support ideal.
+5. Every clean two-row polar pair is generated by
+   \[
+   2w=\sigma u+\sigma^2v+e_2-\sigma e_2.
+   \]
+6. Binomial support systems are decided completely by an integral
+   Smith/Hermite holonomy test.
+7. A support-minimal zero has connected variable/row incidence.
+
+These are exact reductions and useful finite-support machinery. None supplies
+the universal quantifier over Laurent supports.
+
+## 3. Coverage C adjudication
+
+Coverage C formerly said that every primitive connected core has a singleton,
+a nonzero clean polar determinant, failed binomial holonomy, or a bounded
+monomial consequence.
+
+Under the natural nonuniform reading, the fourth alternative is exactly
+
+\[
+I_S:(\prod A_s)^\infty=(1).
+\]
+
+Consequently Coverage C is equivalent to F55 pointlessness:
 
 ```text
-C0  compile exact integer trace rows and cross-check direct expansion;
-C1  inspect classified polar pairs and one integral holonomy kernel;
-C2  saturate only the finite supports that survive C1, retaining one exact
-    monomial identity or one exact torus point.
+Coverage C
+  <=> every finite support torus is empty
+  <=> no Laurent zero
+  <=> no rational zero of the generic F55 trace cubic.
 ```
 
-The coverage theorem itself is a mathematical gate.  PC4 performs bounded
-falsification and locates the smallest exceptional core; bounded emptiness is
-not promotable.
+Under a uniform reading, no bound was stated. A precise uniform circuit bound
+would be a valid new proof, but it would be a direct solution of the F55
+binary, not a reduced computational gate.
 
-## 4. Runner dispatch
-
-The five staged work orders are:
+The previous marker
 
 ```text
-WORKORDER_F55_PC1_PRIMITIVE_LAURENT.md
-WORKORDER_F55_PC2_TRACE_SUPPORT_COMPILER.md
-WORKORDER_F55_PC3_POLAR_EDGE_HOLONOMY.md
-WORKORDER_F55_PC4_MINIMAL_CORE_SEARCH.md
-WORKORDER_F55_PC5_EXACT_SATURATION_CERTIFICATES.md
-```
-
-Dependency DAG:
-
-```text
-PC1 -----> shared lattice conventions
-             |
-PC2 ---------+----> PC3 ----> PC4 first exception ----> PC5
-                         \----> direct finite-support NO
-```
-
-PC5 has an asymmetric theorem boundary:
-
-- a monomial certificate kills only the supplied support unless coverage has
-  been proved;
-- an exact torus coefficient point gives a Laurent solution of the
-  authoritative trace equation and triggers immediate `F55-YES` assembly.
-
-## 5. Supersession note
-
-This supplement and
-`F55_POLAR_CIRCUIT_PROOF_REDUCTION_20260808.md` supersede the unrestricted
-finite-Hilbert-basis and invariant-translation language in §8 of
-`F55_REPLACEMENT_OBSTRUCTION_20260808.md`.  The coefficient-holonomy program
-itself remains live; only its proposed route to all-support finiteness is
-corrected.
-
-## 6. Current markers
-
-```text
-F55-PC-PROOF-REDUCTION-COMPLETE
-F55-PC-DISPATCH-COMPLETE
 F55-PC-COVERAGE-THEOREM-OPEN
+```
+
+is superseded by
+
+```text
+F55-PC-COVERAGE-C-EQUIVALENT-TO-HEADLINE
+```
+
+## 4. Exact higher-circuit results
+
+The checked-in adjudication verifier supplies two exact finite advances.
+
+### 4.1 Deletion-minimal 16-term core
+
+A homogeneous degree-four support \(S_{16}\):
+
+- has no singleton row;
+- becomes singleton-killed after deletion of any support point;
+- has no clean polar determinant;
+- has eleven independent saturated binomial rows and therefore no initial
+  holonomy relation.
+
+It is killed by the four-row identity
+
+\[
+A_0A_6h-2A_2A_6f_2-2A_0A_3f_3+4A_2A_3f_1
+ =2A_0^2A_4A_6A_8.
+\]
+
+This proves that singleton/diamond/initial-holonomy coverage is false.
+
+### 4.2 Three-row completion
+
+A second 26-term core passes the same cheap filters and is killed by
+
+\[
+A_{23}^2H-2A_{13}A_{23}R+2A_{10}A_{13}B
+ =2A_{10}A_{23}^3A_{25}.
+\]
+
+Both are instances of universal polar-rectangle identities recorded and
+proved in `F55_COVERAGE_C_ADJUDICATION_20260808.md`.
+
+They enlarge the finite circuit library. No theorem currently forces every
+primitive support to contain one of them.
+
+## 5. Corrected computational interface
+
+The finite runner DAG is now:
+
+```text
+C0   exact trace compiler;
+C1   singleton + clean polar + complete binomial holonomy;
+C1R  four-row rectangle + three-row completion;
+C2   saturation only on genuine survivors.
+```
+
+Negative output remains support-scoped unless a separate all-support theorem
+is proved. A positive exact torus point is globally decisive and must be
+assembled immediately into `F55-YES`.
+
+The work orders PC1--PC5 remain valid as finite-support instructions, with this
+correction: PC4 is discovery/falsification only, and PC5 cannot supply the
+global negative conclusion by accumulating bounded negative packets.
+
+## 6. Exact reproducer
+
+```text
+director_probes_20260808/f55_coverage_c_adjudicate.py
+```
+
+Terminal marker:
+
+```text
+F55_COVERAGE_C_ADJUDICATION_OK
+```
+
+## 7. Current markers
+
+```text
+F55-PC-PROOF-REDUCTIONS-RETAINED
+F55-PC-CHEAP-COVERAGE-REFUTED
+F55-PC-HIGHER-CIRCUITS-PASS
+F55-PC-COVERAGE-C-EQUIVALENT-TO-HEADLINE
 F55-QUESTION-OPEN
 ```
