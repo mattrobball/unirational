@@ -1,0 +1,54 @@
+name: Finalize Gross-Popescu equivariant moduli audit
+
+on:
+  push:
+    branches:
+      - audit/gross-popescu-equivariant-moduli-20260809
+
+permissions:
+  contents: write
+
+jobs:
+  finalize:
+    if: contains(github.event.head_commit.message, '[gp-moduli-stage]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Exact representation verification
+        run: |
+          python3 -m py_compile \
+            problems/E-klein-cubic/goal_runs_20260809/GROSS_POPESCU_EQUIVARIANT_MODULI/scripts/*.py
+          python3 problems/E-klein-cubic/goal_runs_20260809/GROSS_POPESCU_EQUIVARIANT_MODULI/scripts/verify_v14_identification.py
+
+      - name: Finalize notebook and audit pins
+        shell: bash
+        run: |
+          git fetch origin main
+          audit_base="$(git merge-base HEAD origin/main)"
+          python3 problems/E-klein-cubic/goal_runs_20260809/GROSS_POPESCU_EQUIVARIANT_MODULI/scripts/finalize_repository_ledger.py \
+            --parent-head "${GITHUB_SHA}" \
+            --audit-base "${audit_base}"
+
+      - name: Validate repository contracts
+        run: |
+          python3 problems/E-klein-cubic/scripts/check_manifest_parity.py
+          git diff --check
+
+      - name: Commit finalized ledger
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add \
+            problems/E-klein-cubic/NOTEBOOK.md \
+            problems/E-klein-cubic/goal_runs_20260809/GROSS_POPESCU_EQUIVARIANT_MODULI
+          git diff --cached --check
+          git commit -m "[gp-moduli-finalize] Finalize Gross-Popescu equivariant moduli audit"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
