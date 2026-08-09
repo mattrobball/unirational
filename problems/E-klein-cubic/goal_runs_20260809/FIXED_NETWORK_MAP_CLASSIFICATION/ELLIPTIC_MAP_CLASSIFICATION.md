@@ -176,7 +176,7 @@ Let `e_P` be the local degree.
   e_P\equiv1\pmod2.
   \]
 - Zeros and poles away from reflection-fixed points occur in `<q>`-orbits and are exchanged by reflection.
-- A generic degree-three example has one free `S_3` orbit of six simple ramification points.
+- For degree three the total ramification is six. If no reflection-fixed point is ramified, the ramification divisor is necessarily one free `S_3`-orbit of six simple points; other decompositions must use reflection-fixed points with even ramification contribution.
 
 These conditions do not reduce the maps to a finite list.
 
