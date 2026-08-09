@@ -5,6 +5,22 @@
 **Exit:** `EXCEPTIONAL-CARRIER-INTEGRATION-UNDECIDED`  
 **Headline:** Problem E remains **OPEN**.
 
+## Compatibility with the full-G selfmap theorem
+
+Current `main` now contains `goal_runs_20260809/FULL_G_SELFMAP_CLASSIFICATION/`,
+which proves that arbitrary intrinsic dominant `G`-equivariant rational
+selfmaps of `X` exist in unbounded degree.  There is no conflict with this
+packet.  The carrier theorem starts only after assuming an **ambient landing
+map** `P(W_5) ⇢ X` and studies the normalized Rees algebra of its genuine
+landing base ideal.  Thus its object is the ambient-extendable subclass singled
+out by the polynomial identity `F(P)=0`, not the full monoid
+`End_G^{rat,dom}(X)`.
+
+Accordingly, no statement below should be read as a finite or degree-one
+classification of arbitrary intrinsic selfmaps.  The selfmap packet is the
+binding correction for that question; this packet is its ambient-normal-extension
+successor.
+
 ## What is proved
 
 This packet replaces arbitrary exceptional sections by intrinsic objects on the
