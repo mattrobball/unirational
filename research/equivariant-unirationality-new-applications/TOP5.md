@@ -2,59 +2,46 @@
 
 ## 1. Smooth quartic double solid with `(C7:C3) × C2deck`
 
-### A. Exact action
-
 Let
 
 \[
-B=2x_0^4+6x_0x_1x_2x_3+x_1x_3^3+x_1^3x_2+x_2^3x_3
-\]
-
-and
-
-\[
+B=2x_0^4+6x_0x_1x_2x_3+x_1x_3^3+x_1^3x_2+x_2^3x_3,
+\qquad
 X=\{w^2=B\}\subset\mathbf P(1,1,1,1,2).
 \]
 
-For a primitive seventh root `ζ`, put
+For a primitive seventh root `ζ`, set
 
 \[
-a=[1,\zeta^4,\zeta^2,\zeta],
+a=\operatorname{diag}(1,\zeta^4,\zeta^2,\zeta),
 \qquad
 b(x_0,x_1,x_2,x_3)=(x_0,x_2,x_3,x_1).
 \]
 
 Then `bab^{-1}=a^4`, so `H=<a,b>=C7:C3`. Let `τ:w↦-w` and `G=H×<τ>`.
 
-### B. Subgroup configuration
-
-Use the central deck involution `τ`. Its residual group on the fixed K3 surface is `H`.
-
-### C. Fixed geometry
+Use the central deck involution. Its fixed locus is the smooth K3 surface `B`, with
 
 \[
-X^\tau=B,\qquad B^H=\varnothing,
-\qquad B^{C_7}=\{e_1,e_2,e_3\}.
+B^H=\varnothing,
+\qquad
+B^{C_7}=\{e_1,e_2,e_3\}.
 \]
 
-If an `H`-stable rational curve existed on `B`, the induced action on its normalization `P1` would have kernel containing the normal `C7`, because `C7:C3` is not a finite subgroup of `PGL2`. The curve would then lie in the finite set `B^{C7}`, a contradiction. Since a K3 surface is not RCC, `B` has no positive-dimensional `H`-stable RCC subvariety.
-
-### D. Obstruction test
+An `H`-stable rational curve would induce an action of `H` on its normalization. The kernel must contain the normal `C7`, because the nonabelian group of order 21 is not a finite subgroup of `PGL2`; the curve would lie in the finite set `B^{C7}`, a contradiction. Thus the K3 has no positive-dimensional `H`-stable RCC subvariety.
 
 ```text
 Condition (A)                                      PROVED
 residual-RCC fixed-locus hypothesis                PROVED
-X^G = empty                                        PROVED
+X^G                                                 EMPTY
 equivariant universal-torsor obstruction           ZERO
 all higher Amitsur groups                          ZERO
 ```
 
-### E. Outcome
-
-Closed in this packet:
+The residual-RCC central theorem gives
 
 \[
-X\text{ is not weakly }G\text{-versal}.
+\boxed{X\text{ is not weakly }G\text{-versal}.}
 \]
 
 The underlying smooth quartic double solid is classically unirational. See `THEOREM_KLEIN_QUARTIC_DOUBLE_SOLID.md`.
@@ -62,8 +49,6 @@ The underlying smooth quartic double solid is classically unirational. See `THEO
 ---
 
 ## 2. Odd exceptional conic bundles with `D_{2g} × C2`
-
-### A. Exact action
 
 For odd `g≥3`, let `S_g` be the minimal resolution of
 
@@ -84,45 +69,35 @@ j(T_2,T_3)=(T_3,T_2).
 
 In the weighted projective action, `r` has order `g`, `<r,s>=D_{2g}` of order `2g`, and `j` is central. Put `G_g=D_{2g}×<j>`.
 
-### B. Subgroup configuration
-
-Use `j∈Z(G_g)`.
-
-### C. Fixed geometry
+The fixed locus of `j` is
 
 \[
 S_g^j=C_g:\ U^2=-T_0T_1(T_0^{2g}+T_1^{2g}),
-\qquad g(C_g)=g,
+\qquad g(C_g)=g.
 \]
 
-and `C_g^{D_{2g}}=∅`. Thus `S_g^{G_g}=∅`.
-
-### D. Obstruction test
+Moreover `C_g^{D_{2g}}=∅`, hence `S_g^{G_g}=∅`. Every abelian subgroup fixes a point: rotation subgroups fix the two ramification points over `0,∞`, and reflection subgroups fix points over their base eigendirections because `g+1` is even.
 
 ```text
 S_g rational exceptional conic bundle              PROVED
 Condition (A)                                      PROVED
 central fixed locus has no rational component       PROVED
-S_g^G = empty                                      PROVED
+S_g^G                                               EMPTY
 ```
 
-### E. Outcome
-
-Closed for every odd `g≥3`:
+Thus for every odd `g≥3`,
 
 \[
-S_g\text{ is not weakly }G_g\text{-versal}.
+\boxed{S_g\text{ is not weakly }G_g\text{-versal}.}
 \]
 
-This is an infinite rational conic-bundle family for which Condition (A) is not sufficient. See `THEOREM_ODD_EXCEPTIONAL_CONIC_BUNDLES.md`.
+See `THEOREM_ODD_EXCEPTIONAL_CONIC_BUNDLES.md`.
 
 ---
 
 ## 3. Rational genus-12 `V22` with `PSL2(F7)`
 
-**Literature status:** `OPEN-CONFIRMED` through the search cutoff for equivariant unirationality/weak versality.
-
-### A. Exact action
+**Literature status:** `OPEN-CONFIRMED` through the search cutoff for equivariant unirationality and weak versality.
 
 Let `C⊂P2` be the Klein quartic and
 
@@ -138,7 +113,15 @@ G=\operatorname{PSL}_2(\mathbf F_7)
 
 action. The action is `G`-birationally superrigid.
 
-### B. Subgroup configuration
+The Mori–Mukai family No. 1.10 containing `X` satisfies Condition (A) for every smooth member. Since
+
+\[
+\operatorname{Pic}(X)=\mathbf Z[-K_X]
+\]
+
+and `-K_X` is canonically `G`-linearized, the equivariant universal-torsor obstruction and every higher Amitsur obstruction vanish.
+
+The global fixed locus is empty by a short VSP argument. A `G`-fixed point of `VSP(C,6)` would give a `G`-stable length-six subscheme of the dual Klein plane. The irreducible three-dimensional representation has no projective fixed point, and every nontrivial projective orbit has size at least seven: an orbit of size at most six would give an injection of the simple group of order 168 into `S_6`, impossible by Lagrange. Hence no such length-six subscheme exists.
 
 For an involution `σ∈G`,
 
@@ -146,30 +129,7 @@ For an involution `σ∈G`,
 N=C_G(\sigma)\simeq D_8.
 \]
 
-This is the closest uncomputed analogue of the successful `V14` involution-centralizer configuration.
-
-### C. Published preliminary gates
-
-The Mori–Mukai family No. 1.10 containing `X` satisfies Condition (A) for every smooth member. Moreover,
-
-\[
-\operatorname{Pic}(X)=\mathbf Z[-K_X].
-\]
-
-The canonical bundle has its natural `G`-linearization, so the equivariant universal-torsor obstruction vanishes. The 2026 higher-Amitsur theorem then gives vanishing of every higher Amitsur obstruction.
-
-```text
-ordinary rationality                                PROVED IN LITERATURE
-Condition (A)                                       PROVED IN LITERATURE
-universal-torsor obstruction                        ZERO
-all higher Amitsur groups                           ZERO
-G-fixed point                                       ABSENT IN LITERATURE MODEL
-G-unirationality / weak versality                    UNDECIDED
-```
-
-### D. Exact missing calculation
-
-Compute scheme-theoretically
+The exact missing calculation is
 
 \[
 X^\sigma
@@ -180,29 +140,23 @@ X^{D_8}.
 The VSP model and the anticanonical representation
 
 \[
-H^0(X,-K_X)\simeq\mathbf 1\oplus W_6\oplus W_7
+H^0(X,-K_X)\simeq\mathbf1\oplus W_6\oplus W_7
 \]
 
-make this a finite invariant-theory calculation. The acceptance test is:
+make this finite. The acceptance test is:
 
 ```text
 (a) every D8-stable irreducible RCC subvariety of X^sigma is a point;
 (b) X^D8 is empty.
 ```
 
-If both pass, the residual-RCC centralizer theorem proves that `X` is not weakly `G`-versal.
-
-### E. Assessment
-
-This is the best remaining action: rational target, exact simple group, Condition (A) proved, all known cohomological invariants silent, and one finite fixed-scheme calculation separating the problem from a theorem.
+If both pass, the residual-RCC centralizer theorem proves that `X` is not weakly `G`-versal. This is the best remaining target: rational, explicit, Condition (A) verified, all known cohomological invariants silent, no global fixed point, and one involution-centralizer computation between the question and a theorem.
 
 ---
 
 ## 4. Fermat-discriminant Fano conic bundle No. 2.18
 
 **Literature status:** `PARTIALLY-COVERED`—automorphisms and projective linearizability are studied; equivariant unirationality is not decided.
-
-### A. Exact action/model
 
 Abe considers the rational double cover
 
@@ -222,45 +176,31 @@ Its conic-bundle discriminant is the Fermat quartic
 \Delta_F=\{x^4+y^4+z^4=0\}\subset\mathbf P^2,
 \]
 
-and `|Aut(X_F)|=192`. Abe also gives the specific subgroup
+and `|Aut(X_F)|=192`. Abe's explicit subgroup
 
 \[
-G_1=\langle\alpha,\tau\rangle\simeq C_4\times C_2,
+G_1=\langle\alpha,\tau\rangle\simeq C_4\times C_2^{\rm deck}
 \]
 
-where `τ` is the covering involution and
+is not projectively linearizable, but it has a fixed point and is therefore weakly versal. Its `G_1`-unirationality remains a dominance question.
 
-\[
-\alpha([t_0:t_1],[x:y:z],w)
-=
-([it_0:-it_1],[ix:iy:z],w).
-\]
-
-This action is not projectively linearizable, although it has fixed points and is therefore weakly versal. Its `G_1`-unirationality remains a dominance question rather than an application of the central obstruction.
-
-### B. Better nonabelian target
-
-The full order-192 action, or a nonabelian subgroup mapping onto `S_3⊂Aut(Δ_F)` and containing the deck involution, is the relevant obstruction target. The deck-fixed surface is the branch surface, a degree-2 del Pezzo surface and therefore rational; the whole fixed surface is an allowed residual-stable RCC image.
-
-### C. Exact missing work
+The relevant obstruction target is instead the full order-192 action or a nonabelian subgroup mapping onto `S3⊂Aut(Δ_F)` and containing the deck involution. The deck-fixed branch surface is a rational degree-2 del Pezzo, so the whole fixed surface is an allowed residual-stable RCC image. The needed work is:
 
 ```text
-(a) choose and certify a nonabelian subgroup G with Condition (A) and X^G=empty;
+(a) freeze a nonabelian subgroup with Condition (A) and X^G=empty;
 (b) enumerate involution classes and centralizers;
 (c) compute fixed curves and surfaces;
 (d) classify residual-stable rational curves on the deck-fixed del Pezzo;
 (e) prove connected exceptional-fiber/network propagation in dimension three.
 ```
 
-The central fiber involution therefore supplies useful fixed geometry, but not a one-stratum contradiction. This is the best test bed for a genuinely three-dimensional fixed-network theorem.
+This is the best test bed for a genuinely three-dimensional fixed-network theorem.
 
 ---
 
 ## 5. Kummer double solid `X1` with a non-Q8 subgroup
 
-**Literature status:** `PARTIALLY-COVERED`—Q8-containing actions are already cohomologically obstructed; the subgroup below is not.
-
-### A. Exact action
+**Literature status:** `PARTIALLY-COVERED`—Q8-containing actions are already cohomologically obstructed; the subgroup below is not covered by that criterion.
 
 Let
 
@@ -278,20 +218,12 @@ C_2^{\rm deck}\times(C_4^2\rtimes S_4).
 Take
 
 \[
-G_0=C_2^{\rm deck}\times(C_4^2\rtimes C_3),
+G_0=C_2^{\rm deck}\times(C_4^2\rtimes C_3).
 \]
 
-where `C3⊂S4` is generated by a 3-cycle. Its 2-Sylow is abelian, so it contains none of the Q8 subgroups responsible for the known nonzero third Amitsur obstruction.
+Its 2-Sylow is abelian, so it contains none of the Q8 subgroups responsible for the published nonzero third Amitsur obstruction. The deck-fixed locus is the resolved Kummer K3 surface with the classical 16 exceptional and 16 trope rational curves.
 
-### B. Subgroup configuration and fixed geometry
-
-Use the central deck involution. Its fixed locus on the smooth model is the resolved Kummer K3 surface with the classical `16_6` configuration of 16 exceptional and 16 trope rational curves.
-
-### C. Why the simple theorem fails
-
-The fixed K3 contains distinguished rational curves. A residual-stable curve or fixed slice may receive the RCC source survivor, so the original no-rational-curves criterion is unavailable.
-
-### D. Exact finite target
+The exact finite target is:
 
 ```text
 (a) verify Condition (A) for G0;
@@ -301,7 +233,7 @@ The fixed K3 contains distinguished rational curves. A residual-stable curve or 
 (e) test \widetilde X_1^G0.
 ```
 
-This is the cleanest remaining test of whether residual-RCC geometry improves on the published Kummer higher-Amitsur results.
+This is the cleanest remaining stress test of the residual-RCC refinement in the presence of many rational curves.
 
 ## Final ordering
 
@@ -309,4 +241,4 @@ The first two actions are theorems. The unresolved order is:
 
 1. rational `V22` with `PSL2(F7)`—best direct centralizer calculation;
 2. Fermat-discriminant No. 2.18—best three-dimensional network laboratory;
-3. the non-Q8 Kummer subgroup—best residual-rational-curve stress test.
+3. non-Q8 Kummer subgroup—best residual-rational-curve stress test.
