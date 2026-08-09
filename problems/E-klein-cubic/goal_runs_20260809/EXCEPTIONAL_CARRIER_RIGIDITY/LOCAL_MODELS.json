@@ -1,0 +1,118 @@
+{
+  "checks": {
+    "characters": {
+      "bypass_p_r": [
+        1,
+        1
+      ],
+      "bypass_p_s": [
+        0,
+        1
+      ],
+      "conic_p_r": [
+        1,
+        1
+      ],
+      "conic_p_s": [
+        0,
+        1
+      ],
+      "expected_p_r": [
+        1,
+        1
+      ],
+      "expected_p_s": [
+        0,
+        1
+      ]
+    },
+    "coprimality": {
+      "bypass_gcd": "1",
+      "conic_gcd": "1"
+    },
+    "newton_normals_I_N": {
+      "3": [
+        [
+          1,
+          1
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "4": [
+        [
+          1,
+          1
+        ],
+        [
+          3,
+          1
+        ]
+      ],
+      "5": [
+        [
+          1,
+          1
+        ],
+        [
+          4,
+          1
+        ]
+      ],
+      "6": [
+        [
+          1,
+          1
+        ],
+        [
+          5,
+          1
+        ]
+      ],
+      "7": [
+        [
+          1,
+          1
+        ],
+        [
+          6,
+          1
+        ]
+      ],
+      "8": [
+        [
+          1,
+          1
+        ],
+        [
+          7,
+          1
+        ]
+      ]
+    },
+    "normalized_power_samples": {
+      "all_pass": true,
+      "inequality": "a+b>=3n",
+      "sample_count": 935
+    },
+    "weak_determinants": {
+      "bypass": "-(V - W)*(V + W)*(V**2 + W**2)",
+      "bypass_expected": "-V**4 + W**4",
+      "conic": "U**3*(V - W)*(V + W)",
+      "conic_expected": "U**3*(V**2 - W**2)"
+    }
+  },
+  "claims_not_made": [
+    "the local pairs extend to a global G-covariant",
+    "the genuine Klein base ideal contains a bypass or conic carrier",
+    "the exact type-I or type-II normalized fiber is classified"
+  ],
+  "exit": "LOCAL-REES-MODELS-EXACT",
+  "geometric_interpretation_proved_in_markdown": [
+    "line-valued point-centered weak divisors contract by joint residue dimension",
+    "ordinary (v,w) bypass is a curve fiber of a curve-centered Rees divisor",
+    "normalized blowup of (v^3,w^3) is the ordinary blowup via normalized powers and Veronese Proj"
+  ]
+}
