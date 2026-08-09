@@ -39,16 +39,30 @@ Klein class.
 
 ## Correspondence audit
 
-Retaining the hyperplane or tautological vector-bundle parameter gives a
-canonical equivariant stable correspondence.  It has positive-dimensional
-fibers and supplies no rational section.  No projection in the construction
-has been shown to have odd finite degree; no odd-degree zero-cycle on the
-generic standard Klein twist follows; and no secant/residual operation removes
-the Schur obstruction.
+Retaining the tautological projective-line parameter gives the canonical
+`SL2(F11)`-equivariant birationality
 
-Averaging hyperplanes does not help: a formal sum or invariant linear system
-is not a selected hyperplane, and the Fano--Iskovskikh map requires an actual
-rational point of the parameter space.
+```text
+P(E_K^vee) -->> P(U_V14),
+```
+
+not a map between the bases.  Cutting the common Palatini quartic by a
+`G`-stable divisor `D` of degree `d` does produce a finite `G`-correspondence
+of bidegree `(d,d)`.  This is the strongest controlled correspondence supplied
+by the universal construction.
+
+The degree is always even.  A stable degree-`d` divisor equation spans a
+character of the perfect group `SL2(F11)`, but the central element acts on it
+as `(-1)^d`; hence `d` is even.  Orbit-averaging a hyperplane therefore cannot
+produce an odd-degree projection.  On the generic twist, the same statement
+is the restriction-corestriction obstruction for the nonzero order-two Schur
+class of the Severi--Brauer hyperplane parameter.
+
+Consequently this construction supplies no odd-degree zero-cycle on the
+generic standard Klein twist, and no secant/residual operation in the
+universal Palatini family removes the Schur obstruction.  The argument is
+specific to this incidence construction and does not classify all possible
+`G`-correspondences.
 
 ## Headline conclusion
 
