@@ -56,7 +56,7 @@ The action is faithful and generically free.
 > \]
 > In particular, \(X\) is not \(G\)-unirational.
 
-The underlying threefold is a smooth Fano threefold of index \(2\) and degree \(2\). It is classically unirational, although not rational. Thus the theorem is a genuinely equivariant failure of unirationality.
+The underlying threefold is a smooth Fano threefold of index \(2\) and degree \(2\). It is classically unirational. Thus the theorem is a genuinely equivariant failure of unirationality.
 
 ## 3. Exact fixed loci
 
