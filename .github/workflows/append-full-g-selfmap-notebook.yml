@@ -1,0 +1,40 @@
+name: Append full-G selfmap notebook supplement
+
+on:
+  push:
+    branches:
+      - agent/full-g-selfmap-classification-20260809
+    paths:
+      - .github/workflows/append-full-g-selfmap-notebook.yml
+
+permissions:
+  contents: write
+
+jobs:
+  append:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/full-g-selfmap-classification-20260809
+          fetch-depth: 0
+      - name: Append supplement once
+        shell: bash
+        run: |
+          set -euo pipefail
+          notebook='problems/E-klein-cubic/NOTEBOOK.md'
+          supplement='problems/E-klein-cubic/goal_runs_20260809/FULL_G_SELFMAP_CLASSIFICATION/NOTEBOOK_UPDATE.md'
+          marker='FULL_G_SELFMAP_CLASSIFICATION_20260809'
+          if grep -q "$marker" "$notebook"; then
+            echo 'Notebook marker already present.'
+            exit 0
+          fi
+          {
+            printf '\n\n---\n\n<!-- %s -->\n\n' "$marker"
+            cat "$supplement"
+          } >> "$notebook"
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add "$notebook"
+          git commit -m 'Update Problem E notebook with selfmap boundary'
+          git push origin HEAD:agent/full-g-selfmap-classification-20260809
