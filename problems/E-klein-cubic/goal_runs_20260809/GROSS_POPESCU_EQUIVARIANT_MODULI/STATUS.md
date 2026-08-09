@@ -15,6 +15,11 @@ Established exits:
 - **GP-MODULI-NON-G-UNIRATIONAL**;
 - **GP-MODULAR-ACTION-IS-V14-NOT-KLEIN**.
 
+Auxiliary structural theorem:
+
+- every proper finite correspondence obtained by cutting the universal
+  Palatini incidence with a `G`-stable divisor has even bidegree.
+
 Not established, and not implied by this packet:
 
 - `GP-BRIDGE-KLEIN-NONUNIRATIONAL`;
@@ -46,7 +51,11 @@ Consequently the Problem-E headline remains **OPEN**.
    hyperplane in `P(V_+^*)` is fixed.  No invariant hyperplane exists.
    Retaining the hyperplane/vector-bundle parameter gives the twisted stable
    correspondence of Tschinkel--Zhang, not an equivariant birational map.
-8. The standard Klein action and the transported modular action are not
+8. Cutting the universal Palatini incidence by a stable divisor of degree
+   `d` gives bidegree `(d,d)`, and `d` must be even because `SL2(F11)` is
+   perfect while its center acts by `(-1)^d`.  Thus hyperplane averaging
+   cannot supply the desired odd-degree bridge.
+9. The standard Klein action and the transported modular action are not
    `G`-birationally conjugate, even after relabeling by an automorphism of
    `G`.  Birational superrigidity is the decisive invariant; the differing
    involution strata are a visible diagnostic, not by themselves the proof.
@@ -76,3 +85,7 @@ modular point at which the rational map `Theta_11` may be undefined.  The
 non-unirationality theorem instead uses the proved equivariant birational
 identification and the sealed smooth projective `V14` compactification, so no
 unproved statement about boundary fixed strata enters the theorem.
+
+The even-degree theorem is specific to correspondences produced from the
+universal Palatini incidence.  It does not exclude every possible
+`G`-correspondence between `V14` and the standard Klein cubic.
