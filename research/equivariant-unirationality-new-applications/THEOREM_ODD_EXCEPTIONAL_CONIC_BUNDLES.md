@@ -158,9 +158,9 @@ S_g^A\neq\varnothing
 
 ## 7. Central obstruction
 
-The involution \(j\) is central, its fixed locus is the genus-\(g\) curve \(C_g\), and \(S_g^{G_g}=\varnothing\). The original central fixed-locus theorem from `problems/E-klein-cubic/theory/FIX_T_gate.md` applies directly: a surviving projectivized \(j\)-eigenspace from any faithful linear source is rationally chain connected, so its image in \(C_g\) is a point; equivariance would make that point \(G_g\)-fixed, contradicting (5.1).
+Apply the central form of the residual-RCC theorem in `GENERALIZATIONS.md` to \(j\). The fixed locus \(S_g^j=C_g\) is a smooth curve of genus \(g\ge3\), so every irreducible rationally chain connected subvariety of it is a point. Equation (5.1) gives \(S_g^{G_g}=\varnothing\). The two hypotheses of the theorem therefore hold.
 
-Therefore no faithful linear source maps equivariantly to \(S_g\), and the action is not weakly versal.
+Consequently no faithful linear source admits a \(G_g\)-equivariant rational map to \(S_g\), even a nondominant one. Since \(S_g\) is complete, it is not weakly \(G_g\)-versal.
 
 ## 8. Literature boundary and novelty
 
