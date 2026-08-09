@@ -69,6 +69,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
             problems/E-klein-cubic/NOTEBOOK.md \
+            problems/E-klein-cubic/notebook_build/manifest.json \
             problems/E-klein-cubic/goal_runs_20260809/GROSS_POPESCU_EQUIVARIANT_MODULI
           git diff --cached --check
           git commit -m "[gp-moduli-finalize] Finalize Gross-Popescu equivariant moduli audit"
