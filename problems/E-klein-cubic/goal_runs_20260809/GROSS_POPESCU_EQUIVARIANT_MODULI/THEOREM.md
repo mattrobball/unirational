@@ -42,9 +42,13 @@ Let `G=PSL2(F11)`, let `M=A_11^lev` be the coarse moduli variety of
 
    and no invariant hyperplane `Pi` exists.  The universal construction gives
    the known twisted stable birationality, not a `G`-birational map.
-7. The natural modular/`X` action is not `G`-birationally conjugate to the
+7. Cutting the universal Palatini incidence by a `G`-stable divisor of degree
+   `d` gives, when proper, a correspondence of bidegree `(d,d)`.  Necessarily
+   `d` is even.  Thus averaging hyperplanes cannot produce an odd-degree
+   bridge or an odd-degree zero-cycle on the generic Klein twist.
+8. The natural modular/`X` action is not `G`-birationally conjugate to the
    standard regular Klein action, even after an automorphism of `G`.
-8. No conclusion on `G`-unirationality of the standard Klein action follows
+9. No conclusion on `G`-unirationality of the standard Klein action follows
    from the abstract Gross--Popescu birational equivalence.  That headline
    remains open.
 
@@ -57,5 +61,7 @@ Let `G=PSL2(F11)`, let `M=A_11^lev` be the coarse moduli variety of
   `FIX_IX_SEAL`'s multiplicity-free `5+10'` decomposition;
 - (5): (4) plus the sealed `V14` involution/centralizer theorem;
 - (6): Palatini incidence transformation law and irreducibility of `V_+`;
-- (7): equivariant birational superrigidity/nonbirationality;
-- (8): the correspondence-versus-map and b-complex scope checks.
+- (7): perfectness of `SL2(F11)`, the central `-1` on `V_+`, and the fact that
+  both incidence fibers are lines;
+- (8): equivariant birational superrigidity/nonbirationality;
+- (9): the correspondence-versus-map and b-complex scope checks.
