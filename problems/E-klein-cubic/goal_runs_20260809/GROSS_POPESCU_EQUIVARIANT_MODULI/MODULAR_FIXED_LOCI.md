@@ -10,10 +10,10 @@ SL2(F11)`.  A coarse fixed point of the natural level action is represented by
 ```
 
 where `u` is a polarized automorphism and, up to the chosen right/left
-convention,
+convention, its action on the polarization kernel satisfies
 
 ```text
-u|_{K(lambda)} o alpha = alpha o sigma_tilde.
+u_* o alpha = alpha o sigma_tilde.
 ```
 
 Because `sigma_tilde^2=-I`, the generic cocycle relation is
