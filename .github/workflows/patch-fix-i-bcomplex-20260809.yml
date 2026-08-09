@@ -6,6 +6,7 @@ on:
       - agent/fixed-network-map-classification-20260809
     paths:
       - .github/workflows/patch-fix-i-bcomplex-20260809.yml
+      - problems/E-klein-cubic/goal_runs_20260809/FIXED_NETWORK_MAP_CLASSIFICATION/patch_fix_i_bcomplex.py
 
 permissions:
   contents: write
