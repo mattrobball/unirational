@@ -1,6 +1,6 @@
 # Gross--Popescu equivariant moduli audit -- status
 
-Audit base: `AUDIT_BASE_COMMIT`.
+Audit base: `ee0a9011c4deb304424be3578e5aef7e9818d346`.
 
 ## Verdict
 
