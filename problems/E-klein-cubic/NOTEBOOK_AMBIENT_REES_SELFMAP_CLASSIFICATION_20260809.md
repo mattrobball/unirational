@@ -60,6 +60,12 @@ the first two would already prove that no ambient landing map exists and hence
 solve the negative headline directly. There is no separate surviving
 retraction branch after such a theorem.
 
+This supplement also incorporates the later binding packet
+`goal_runs_20260809/EXCEPTIONAL_CARRIER_RIGIDITY/`. In particular, the
+normalized graph of the restricted ideal is canonically the normalized
+dominant transform inside the ambient normalized blowup, and ordinary
+fixed-curve valuations have canonical centers there.
+
 ## Required checkpoint
 
 ### Q1
@@ -71,19 +77,25 @@ types.
 
 ### Q2
 
-Along an involution plus-plane, if `r` is the first nonzero normal order then
-equivariance gives
+For the fixed elliptic `E_t`, the ordinary valuation has a canonical
+residual-`S3`-stable center `K_{E,t}` on
 
 \[
-r\text{ even}\Rightarrow P^{(r)}\in W_+,
-\qquad
-r\text{ odd}\Rightarrow P^{(r)}\in W_-.
+\Gamma=\operatorname{Proj}_X\overline{\mathcal R(J)}.
 \]
 
-The leading landing equation sends a defined first exceptional map to `E_t`
-in even order and to `L_t` in odd order. But the ordinary first blowup need not
-be a normalized Rees component and may retain base points; no canonical
-elliptic carrier follows.
+The accepted first nonzero ordinary normal order is odd. Since the involution
+acts by `-1` in both normal directions, the first target lies in `W_-(t)`, and
+the carrier integration theorem gives
+
+\[
+q(K_{E,t})\subset L_t.
+\]
+
+Thus the canonical ordinary carrier over `E_t` is **line-valued**, not an
+elliptic `[-5]` carrier. Any elliptic-target carrier must be secondary: a curve
+component of a normalized exceptional fibre or an involution-fixed curve slice
+inside a retained surface-valued carrier.
 
 ### Q3
 
@@ -113,14 +125,19 @@ so the global landing identity forces
 
 Thus the first point-exceptional `P^2` cannot simultaneously carry all three
 nonzero character directions; at least one direction is deferred to higher
-Rees order.
+order. Combined with the joint-residue survival theorem, a point-centered
+divisor with only curve-valued target is contracted on the normalized graph.
+The unresolved objects are therefore curve components of normalized point
+fibres and involution-fixed curve slices inside retained surface carriers.
 
 ### Q4
 
 These local constraints do not prove degree one or a finite nonempty profile
 list. Globally, postcomposition proves that if one ambient landing exists then
 restriction degrees are unbounded. Local Rees rigidity can therefore force
-`delta=1` for all ambient maps only by forcing **emptiness**.
+`delta=1` for all ambient maps only by forcing **emptiness**. Mapwise finiteness
+for one fixed landing ideal remains valid, but no uniform finite classification
+including global degree can exist in a nonempty ambient category.
 
 ## Exact remaining theorem
 
@@ -132,10 +149,11 @@ NO-DOMINANT-G-AMBIENT-LANDING-MAP
 
 rather than classification of a nonempty degree-one ambient subclass.
 
-The most concrete remaining Rees theorem is to classify the higher normalized
-Rees valuations forced after the type-II product-zero relation and prove that
-their synchronized occurrence across all 55 `V4` configurations is
-impossible.
+The most concrete remaining Rees theorem is to enumerate the curve components
+of the actual normalized type-I/type-II point fibres and the involution-fixed
+curve slices inside retained surface-valued Rees divisors, subject to the
+type-II product-zero relation, and prove that their synchronized occurrence
+across all 55 `V4` configurations is impossible.
 
 No such theorem is proved in the packet.
 
