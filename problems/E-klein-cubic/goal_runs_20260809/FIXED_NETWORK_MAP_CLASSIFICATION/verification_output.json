@@ -1,0 +1,96 @@
+{
+  "all_marked_pointwise_classes": [
+    {
+      "a": [
+        0,
+        0
+      ],
+      "n_mod_6": 1
+    }
+  ],
+  "corrected_S3_relations": "PASS",
+  "equivariant_affine_residue_classes": [
+    {
+      "a": [
+        0,
+        0
+      ],
+      "n_mod_6": 1
+    },
+    {
+      "a": [
+        0,
+        1
+      ],
+      "n_mod_6": 1
+    },
+    {
+      "a": [
+        1,
+        0
+      ],
+      "n_mod_6": 1
+    },
+    {
+      "a": [
+        1,
+        1
+      ],
+      "n_mod_6": 1
+    },
+    {
+      "a": [
+        0,
+        0
+      ],
+      "n_mod_6": 4
+    },
+    {
+      "a": [
+        0,
+        1
+      ],
+      "n_mod_6": 4
+    },
+    {
+      "a": [
+        1,
+        0
+      ],
+      "n_mod_6": 4
+    },
+    {
+      "a": [
+        1,
+        1
+      ],
+      "n_mod_6": 4
+    }
+  ],
+  "first_nonidentity_marked_elliptic_n": -5,
+  "first_nonidentity_type_I_pointwise_monomial_degree": 5,
+  "marked_union_size": 12,
+  "marker": "FIXED_NETWORK_PROFILE_VERIFY_OK",
+  "old_nonzero_E2_reflection_model": "REFUTED",
+  "reflection_fixed_counts": [
+    4,
+    4,
+    4
+  ],
+  "type_I_preserving_classes": [
+    {
+      "a": [
+        0,
+        0
+      ],
+      "n_mod_6": 1
+    },
+    {
+      "a": [
+        0,
+        0
+      ],
+      "n_mod_6": 4
+    }
+  ]
+}
