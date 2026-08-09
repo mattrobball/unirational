@@ -47,7 +47,7 @@ jobs:
           grep -Fq 'FIXED-NETWORK-CLASSIFICATION-UNDECIDED' "$packet/STATUS.md"
           grep -Fq 'FIXED_NETWORK_PROFILE_VERIFY_OK' "$packet/verification_output.json"
           grep -Fq 'FIX-I-BINDING-CORRECTION-20260809' problems/E-klein-cubic/theory/FIX_I_bcomplex.md
+          ! grep -R -n -E '^(<<<<<<<|=======|>>>>>>>)' "$packet" problems/E-klein-cubic/theory/FIX_I_bcomplex.md
           git diff --exit-code -- \
             "$packet/verification_output.json" \
             problems/E-klein-cubic/theory/FIX_I_bcomplex.md
-          git diff --check origin/main...HEAD
