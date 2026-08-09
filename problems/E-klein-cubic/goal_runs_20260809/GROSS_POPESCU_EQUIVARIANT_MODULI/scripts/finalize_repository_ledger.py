@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
-"""Finalize the dated GP packet in NOTEBOOK.md (outside frozen E01--E55)."""
+"""Finalize the dated GP packet and repair the live notebook ledger."""
 from __future__ import annotations
 
 import argparse
+import json
 import re
 from pathlib import Path
 
@@ -12,6 +13,9 @@ SECTION = r'''<!-- GP-EQUIVARIANT-MODULI-BEGIN -->
 ## 2026-08-09 Gross--Popescu equivariant modular audit
 
 Packet: `goal_runs_20260809/GROSS_POPESCU_EQUIVARIANT_MODULI/`.
+The separately landed dated supplement
+`NOTEBOOK_DEGREE25_MARKED_ELLIPTIC_EXTENSION_20260809.md` remains part of the
+August 9 research record.
 
 **Headline status: OPEN.**  The audit identifies the natural level symmetry
 but supplies no bridge to the standard regular Klein action.
@@ -81,6 +85,40 @@ Not claimed: `GP-BRIDGE-KLEIN-NONUNIRATIONAL`,
 <!-- GP-EQUIVARIANT-MODULI-END -->
 '''
 
+NEW_KNOWN_BRANCHES = {
+    "agent/degree25-marked-elliptic-extension-20260809",
+    "agent/f55-coverage-c-adjudication",
+    "agent/fixed-network-map-classification-20260809",
+    "audit/gross-popescu-equivariant-moduli-20260809",
+}
+
+
+def repair_manifest(root: Path) -> None:
+    manifest_path = root / "notebook_build" / "manifest.json"
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+
+    stale = [
+        record
+        for record in manifest.get("records", [])
+        if record.get("path") == "certificates/fold_normalization_t3"
+    ]
+    if len(stale) != 1:
+        raise SystemExit(
+            "expected exactly one certificates/fold_normalization_t3 record"
+        )
+    stale[0]["tracked"] = "history-only"
+    stale[0]["notes"] = (
+        "Historical certificate index entry; the directory is absent from "
+        "the current tree and is not a tracked-main artifact."
+    )
+
+    known = set(manifest.get("known_branches", []))
+    manifest["known_branches"] = sorted(known | NEW_KNOWN_BRANCHES)
+    manifest_path.write_text(
+        json.dumps(manifest, indent=1, ensure_ascii=False) + "\n",
+        encoding="utf-8",
+    )
+
 
 def main() -> None:
     parser = argparse.ArgumentParser()
@@ -131,6 +169,7 @@ def main() -> None:
         raise SystemExit("parent-head line missing")
 
     notebook.write_text(text, encoding="utf-8")
+    repair_manifest(root)
 
     required = [
         "GP-NATURAL-PSL2-ACTION-PASS",
@@ -146,6 +185,7 @@ def main() -> None:
     )
     print("NOTEBOOK supplement finalized against", args.audit_base)
     print("notebook parent head set to", args.parent_head)
+    print("manifest historical path and branch inventory repaired")
 
 
 if __name__ == "__main__":
