@@ -4,113 +4,77 @@
 **Group:** `G=PSL2(F11)`  
 **Target:** the Klein cubic `X=V(F) subset P(W_5)`
 
-## 1. Retraction setup and the intrinsic line ideal
+## 1. Setup
 
-Assume that a primitive homogeneous `G`-covariant tuple `T` defines a rational
-retraction
-
-\[
-T:\mathbf P(W_5)\dashrightarrow X,
-\qquad F(T)=0,
-\qquad [T]|_X=\operatorname{id}_X.
-\]
-
-Use the accepted normal form
+Assume that a primitive homogeneous ambient landing tuple is a rational
+`G`-retraction:
 
 \[
 T=Hx+FQ,
-\qquad \deg H=d-1,
-\qquad \deg Q=d-3,
-\qquad \gcd(H,F)=1,
+\qquad F(T)=0,
+\qquad [T]|_X=\operatorname{id}_X,
 \tag{1.1}
 \]
 
-and put
+with
+
+\[
+\deg T=d,\qquad \deg H=d-1,\qquad \deg Q=d-3,\qquad\gcd(H,F)=1.
+\]
+
+Put
 
 \[
 B=V_X(H).
 \tag{1.2}
 \]
 
-The gauge change
+The gauge transformation
 
 \[
-(H,Q)\longmapsto(H+FU,Q-Ux)
+(H,Q)\mapsto(H+FU,Q-Ux)
+\]
+
+leaves invariant the ten Pluecker forms
+
+\[
+\Pi_{ij}=x_iQ_j-x_jQ_i
+          =\frac{x_iT_j-x_jT_i}{F}.
 \tag{1.3}
-\]
-
-does not change the ten Pluecker forms
-
-\[
-\Pi_{ij}=x_iQ_j-x_jQ_i.
-\tag{1.4}
-\]
-
-They are intrinsic to the actual landing tuple because
-
-\[
-x_iT_j-x_jT_i=F\Pi_{ij}.
-\tag{1.5}
 \]
 
 Let
 
 \[
-J_{\rm line}=(\Pi_{ij})\mathcal O_B
-\]
-
-and define
-
-\[
+J_{\rm line}=(\Pi_{ij})\mathcal O_B,
+\qquad
 \Gamma_{\rm line}
 =\operatorname{Proj}_B\overline{\mathcal R(J_{\rm line})}.
-\tag{1.6}
+\tag{1.4}
 \]
 
-This is the normalization of the graph of the rational line map
+Then `Gamma_line` is the normalization of the graph of the actual line map
 
 \[
-\lambda:B\dashrightarrow\operatorname{Gr}(2,W_5),
-\qquad
-x\longmapsto\langle x,Q(x)\rangle.
-\tag{1.7}
+\lambda:B\dashrightarrow S=F(X),
+\qquad x\longmapsto\langle x,Q(x)\rangle.
+\tag{1.5}
 \]
 
-The complete polar identities give, on the noncollapsed locus of `B`,
+The complete polar identities imply that the selected line is contained in
+`X`.  Thus (1.4) is a canonical normalized-Rees carrier attached to the
+genuine landing tuple.
 
-\[
-F(ux+vQ(x))=0
-\qquad\text{for all }[u:v]\in\mathbf P^1.
-\tag{1.8}
-\]
+## 2. Fixed Fano curve theorem
 
-Hence `lambda` lands in the Fano surface `S=F(X)` of lines on `X`.  The
-carrier model (1.6) is selected by the actual tuple and is independent of a
-chosen resolution.
-
-## 2. The involution-fixed genus-four Fano curve
-
-Fix an involution `t` and write
+Fix an involution `t`, with
 
 \[
 W_5=W_+(t)\oplus W_-(t),
-\qquad \dim W_+=3,\quad \dim W_-=2.
-\]
-
-Put
-
-\[
-E_t=X\cap\mathbf P(W_+),
 \qquad
-L_t=\mathbf P(W_-).
-\]
-
-Cubic parity gives
-
-\[
-F(x+y)=F(x)+3\Phi(x,y,y)
-\qquad(x\in W_+,\ y\in W_-).
-\tag{2.1}
+E_t=X\cap\mathbf P(W_+(t)),
+\qquad
+L_t=\mathbf P(W_-(t)).
 \]
 
 Define
@@ -118,7 +82,7 @@ Define
 \[
 R_t=
 \{([x],[y])\in E_t\times L_t:\Phi(x,y,y)=0\}.
-\tag{2.2}
+\tag{2.1}
 \]
 
 ### Theorem 2.1
@@ -127,120 +91,70 @@ The map
 
 \[
 ([x],[y])\longmapsto[\mathbf P(\langle x,y\rangle)]
+\]
+
+identifies `R_t` with the one-dimensional component of `S^t`; the only other
+fixed component is the isolated point represented by `L_t`.  Moreover
+
+\[
+R_t\to E_t\text{ has degree }2,
+\qquad
+R_t\to L_t\text{ has degree }3,
+\qquad
+g(R_t)=4.
+\tag{2.2}
+\]
+
+The curve is smooth and connected because it is the fixed curve of a
+finite-order automorphism on the smooth Fano surface and is an ample
+`(3,2)`-divisor on `E_t x P1`.
+
+It is the residual genus-four component in Roulleau's decomposition
+
+\[
+C_{L_t}=D_t+R_t,
 \tag{2.3}
 \]
 
-identifies `R_t` with the curve component of the fixed locus `S^t`.  The only
-other fixed component is the isolated point represented by `L_t`.  The curve
-`R_t` is smooth, connected, and irreducible, and
-
-\[
-\deg(R_t/E_t)=2,
-\qquad
-\deg(R_t/L_t)=3,
-\qquad
-g(R_t)=4.
-\tag{2.4}
-\]
-
-### Proof
-
-A `t`-stable two-dimensional vector subspace is either contained in an
-eigenspace or is a sum of one plus and one minus eigenline.  The smooth plane
-cubic `E_t` contains no line, while `P(W_-)=L_t`.  Thus every non-isolated
-`t`-fixed line is uniquely mixed and is governed by (2.1).
-
-The fixed locus of a finite-order automorphism on the smooth surface `S` is
-smooth.  Equation (2.2) is a section of
-
-\[
-\mathcal O_{E_t}(1)\boxtimes\mathcal O_{\mathbf P^1}(2),
-\]
-
-an ample line bundle, so the zero divisor is connected.  Its class on
-`E_t x P1` is `3A+2B`; adjunction with `K=-2B` gives genus four.  The
-projection degrees are the two bidegrees.  `square`
-
-Roulleau's harmonic-inversion calculation decomposes the incidence divisor of
-lines meeting `L_t` as
-
-\[
-C_{L_t}=D_t+R_t.
-\tag{2.5}
-\]
-
-Here `D_t` is the smooth genus-two component.  It parametrizes lines exchanged
-in pairs by `t`; it is not the retraction fixed-line carrier.  The residual
-component is the genus-four curve (2.2), whose lines contain a point of `E_t`
-and are fixed setwise by `t`.
-
-Numerically, if `C` is an incidence class on `S`, then
-
-\[
-C^2=5,\qquad C\cdot D_t=2,\qquad D_t^2=-4,\qquad K_S=3C,
-\]
-
-so
+not the genus-two component `D_t`.  Numerically
 
 \[
 R_t=C-D_t,\qquad R_t^2=-3,\qquad K_S\cdot R_t=9.
-\tag{2.6}
+\tag{2.4}
 \]
 
-## 3. The base surface is forced to be singular along all fixed elliptics
+## 3. Forced singularity of the base
 
 Every ambient landing tuple vanishes on every involution plus-plane.  On `X`,
-`T=Hx`; therefore
+`T=Hx`; hence
 
 \[
 E_t\subset B
+\qquad\text{for all 55 involutions}.
 \tag{3.1}
 \]
 
-for all 55 involutions.
-
-### Proposition 3.1
+Since `H` is invariant and `t` acts by `-1` on the two normal directions to
+`E_t` in `X`, the differential of `H|_X` vanishes both tangentially and
+normally along `E_t`.  Therefore
 
 \[
-E_t\subset\operatorname{Sing}(B)
-\qquad\text{for every }t.
+\boxed{E_t\subset\operatorname{Sing}(B)\text{ for all }t.}
 \tag{3.2}
 \]
 
-### Proof
+The retraction base is necessarily nonnormal in codimension one.
 
-The differential of `H|_X` vanishes on `T_xE_t` because `H` vanishes
-identically on `E_t`.  The involution acts as `-1` on the two normal
-directions in `T_xX`.  Since `H` is invariant,
-
-\[
-dH_x(v)=dH_x(tv)=dH_x(-v)=-dH_x(v),
-\]
-
-so it vanishes normally as well.  `square`
-
-Thus every hypothetical retraction base is singular in codimension one along
-the complete 55-elliptic arrangement.
-
-## 4. Exact carrier alternatives above `E_t`
+## 4. Carrier theorem above `E_t`
 
 Let `C_0` be an irreducible component of the inverse image of `E_t` in
 `Gamma_line` which dominates `E_t`, and let `C_0^nu` be its normalization.
-The graph morphism gives a nonconstant map
 
-\[
-\beta:C_0^\nu\longrightarrow S.
-\tag{4.1}
-\]
-
-It is nonconstant because a single line cannot contain a general point of
-`E_t`.
-
-### Theorem 4.1 — fixed versus paired carriers
+### Theorem 4.1
 
 Exactly one of the following occurs.
 
-1. `C_0` is fixed by `t`.  Then `beta` factors through `R_t`, and for some
+1. `C_0` is fixed by `t`.  Then its line image lies on `R_t`, and for some
    `k>=1`,
    \[
    \deg(C_0^\nu/E_t)=2k,
@@ -248,214 +162,146 @@ Exactly one of the following occurs.
    \deg(C_0^\nu/R_t)=k,
    \qquad
    g(C_0^\nu)\ge3k+1.
-   \tag{4.2}
+   \tag{4.1}
    \]
-2. `C_0` is not fixed by `t`.  Then `C_0` and `tC_0` are distinct components
-   with the same source degree and exchanged line images.
+2. `C_0` is exchanged with a distinct component `tC_0`.
 
-No component above `E_t` has source degree one.
+No component above `E_t` has source degree one.  Such a component would give
+a nonconstant elliptic curve on the Klein Fano surface; the latter contains
+neither rational nor elliptic curves.
 
-### Proof
-
-In the fixed case, the image lies in `S^t`.  It cannot be the isolated point
-`[L_t]`, since `L_t` does not contain a general point of `E_t`.  Hence it lies
-on `R_t`.  The source point of the selected mixed line is its plus-plane
-intersection, so the diagram
+Thus the previously tempting assumptions
 
 \[
-\begin{CD}
-C_0^\nu @>>> R_t\\
-@VVV @VVV\\
-E_t @= E_t
-\end{CD}
+\epsilon=1,\qquad B\cdot C=0
 \]
 
-commutes.  Degree multiplication gives the first two equations in (4.2), and
-Riemann--Hurwitz over the genus-four curve gives the genus bound.
-
-If a component had source degree one, it would be birational to `E_t` and
-would give a nonconstant map from an elliptic curve to `S`.  The Albanese
-embedding excludes rational curves on a Fano surface.  Roulleau's
-elliptic-curve/involution correspondence excludes elliptic curves on the Klein
-Fano surface: an elliptic curve would give a type-I involution of trace `-3`,
-whereas every involution of `G` has trace `1`.  Thus degree one is impossible.
-`square`
-
-The theorem retains the genuine paired-component escape.  It does **not**
-relabel every component as a cover of `R_t`.
+are false for the canonical line carriers in the retraction branch.
 
 ## 5. Noncollapse for an irreducible base
 
 ### Proposition 5.1
 
-If `B` is irreducible, the line map (1.7) is nonconstant on a dense open set.
+If `B` is irreducible, the line map (1.5) is nonconstant on a dense open set.
 
 ### Proof
 
-Assume all `Pi_ij` vanish on `B`.  The homogeneous ideal of the integral
-complete intersection `B` is `(F,H)`.  Since
+If all Pluecker minors vanished on `B`, then, since
 
 \[
 \deg\Pi_{ij}=d-2<d-1=\deg H,
 \]
 
-every `Pi_ij` is divisible by `F`.  Hence `Q|_X` is pointwise proportional to
-`x`.  The scalar is a section of `O_X(d-4)` and lifts by projective normality
-to a polynomial `U`; thus
+and the homogeneous ideal of the integral complete intersection `B` is
+`(F,H)`, every `Pi_ij` would be divisible by `F`.  Hence `Q|_X` would be
+proportional to `x`.  Projective normality and a gauge change would give
+`Q=FV`.  Reducing the exact cubic landing identity modulo `F` would then force
+`F|H`, contradicting primitivity.  `square`
 
-\[
-Q=Ux+FV.
-\]
+## 6. Exclusion of the one-dimensional image branch
 
-After the gauge transformation (1.3), `Q'=FV` and
+Assume `B` is irreducible and the image of `Gamma_line -> S` is a curve
+`Sigma`.  The normalized graph is then birational to the universal line
+surface over `Sigma^nu`.
 
-\[
-T=H'x+FQ',\qquad \gcd(H',F)=1.
-\]
-
-In the cubic landing identity
-
-\[
-H'^3+3H'^2\Phi(x,x,Q')
-+3H'F\Phi(x,Q',Q')+F^2F(Q')=0,
-\]
-
-every term except `H'^3` is divisible by `F`.  Reduction modulo `F` forces
-`F|H'`, a contradiction.  `square`
-
-For a reducible base, an individual component can remain a fixed component of
-the Pluecker system; no componentwise noncollapse is asserted.
-
-## 6. Global dichotomy for an irreducible base
-
-Assume from now on that `B` is irreducible and let `Y` be a smooth model of
-`Gamma_line`.  By Proposition 5.1, the image of
-
-\[
-\lambda_Y:Y\longrightarrow S
-\]
-
-has dimension one or two.
-
-### Branch A — dominant Fano image
-
-If the image is `S`, then `lambda_Y` is generically finite.  Pullback gives
-
-\[
-H^0(S,\Omega_S^p)\hookrightarrow H^0(Y,\Omega_Y^p)
-\qquad(p=1,2),
-\]
-
-and an injection on `NS(-)_Q`.  Since the Klein Fano surface has
-
-\[
-q(S)=5,\qquad p_g(S)=10,\qquad \rho(S)=25,
-\]
-
-one obtains
-
-\[
-q(Y)\ge5,\qquad p_g(Y)\ge10,\qquad \rho(Y)\ge25.
-\tag{6.1}
-\]
-
-The existence of a single fixed carrier in Theorem 4.1 forces this branch.
-Indeed, equivariance then puts all 55 distinct curves `R_t` in the image, and
-an irreducible curve cannot contain them.
-
-### Branch B — ruled curve image
-
-Suppose the image is an irreducible curve `Sigma subset S`.  For a general
-`ell in Sigma`, the fibre of `Y -> Sigma` is one-dimensional and its source
-points lie on `ell`.  Hence the fibre maps birationally onto `ell`, and
-
-\[
-Y\sim_{\rm bir}\mathbf P(T_S)|_{\Sigma^\nu}.
-\tag{6.2}
-\]
-
-The induced `G`-action on `Sigma^nu` is faithful.  Its kernel is normal in the
-simple group `G`; a trivial action would make every line in `Sigma` a
-`G`-stable two-dimensional subspace of the irreducible module `W_5`.
-
-The smallest faithful genus is 26.  Indeed, the element orders are
-`2,3,5,6,11`; the smallest positive hyperbolic signature is `(2,3,11)`, with
-orbifold Euler characteristic `5/66`.  Four or more branch points, or positive
-quotient genus, gives no smaller positive value; the Euclidean zero cases do
-not admit the nonabelian simple group.  Hence
+The action of `G` on `Sigma^nu` is faithful, so Riemann--Hurwitz gives
 
 \[
 g(\Sigma^\nu)\ge26.
+\tag{6.1}
+\]
+
+The invariant Neron--Severi lattice of the Klein Fano surface is generated by
+an incidence class `C`, hence
+
+\[
+[\Sigma]=nC.
+\tag{6.2}
+\]
+
+Adjunction excludes `n=1`.  The tangent-bundle theorem gives
+
+\[
+\deg B=K_S\cdot\Sigma=15n=3(d-1),
+\]
+
+so
+
+\[
+d=5n+1,\qquad n\ge2.
 \tag{6.3}
 \]
 
-Roulleau's 55 genus-two curves span `NS(S)_Q`, and their permutation module
-has a one-dimensional invariant subspace.  Thus
+Now fix `t`.  Since `E_t subset B`, a curve above `E_t` must dominate
+`Sigma`; otherwise the plane cubic `E_t` would lie in a finite union of fibre
+lines.  Thus every general line of the family meets `E_t`, and
 
 \[
-NS(S)^G=\mathbf Z[C],
+\Sigma\subset
+M_t:=\{[\ell]\in S:\ell\cap E_t\ne\varnothing\}.
 \tag{6.4}
 \]
 
-where `C` is an incidence class.  Integrality follows because a class `qC`
-has intersections `5q` with `C` and `2q` with every genus-two curve.
-Consequently
-
-\[
-[\Sigma]=nC
-\qquad(n\ge1).
-\tag{6.5}
-\]
-
-Adjunction gives
-
-\[
-p_a(\Sigma)=1+\frac{5n^2+15n}{2}.
-\tag{6.6}
-\]
-
-For `n=1` this is 11, contradicting (6.3); hence `n>=2`.  If `n=2`, equality
-forces `Sigma` to be smooth of genus 26 with signature `(2,3,11)`.
-
-Let
+For the universal family
 
 \[
 \pi:\mathcal I=\mathbf P(T_S)\to S,
 \qquad e:\mathcal I\to X,
-\qquad \xi=e^*H_X.
+\qquad \xi=e^*H_X,
 \]
 
-The tangent-bundle theorem gives
+one has
 
 \[
-\pi_*(\xi^2)=c_1(\Omega_S)=K_S.
+[M_t]=\pi_*e^*[E_t]
+      =\pi_*(\xi^2)
+      =c_1(\Omega_S)
+      =K_S
+      =3C.
+\tag{6.5}
 \]
 
-Since (6.2) is birational both to the universal family over `Sigma` and to
-`B`,
+Since `Sigma` is an irreducible component of the effective curve `M_t`,
 
 \[
-\deg B=K_S\cdot\Sigma=3C\cdot nC=15n.
+n\le3.
+\tag{6.6}
 \]
 
-But `B sim (d-1)H_X` on the cubic, so `deg B=3(d-1)`.  Therefore
+Therefore the curve-image branch can occur only for
 
 \[
-\boxed{d=5n+1,\qquad n\ge2.}
+(n,d)=(2,11)\quad\text{or}\quad(3,16).
 \tag{6.7}
 \]
 
-In this branch
+The repository's durable characteristic-zero self-covariant certificates
+exclude every landing tuple through degree 24.  Hence both cases are
+impossible.
+
+### Theorem 6.1 — irreducible-base dominance
+
+For every hypothetical rational `G`-retraction with irreducible base,
 
 \[
-q(Y)=g(\Sigma^\nu)\ge26,\qquad p_g(Y)=0,
+\boxed{
+\Gamma_{\rm line}\longrightarrow F(X)
+\text{ is dominant and generically finite}.}
 \tag{6.8}
 \]
 
-and every carrier above every `E_t` must be nonfixed and paired; a fixed
-carrier would force Branch A.
+Consequently, for every smooth model `Y`,
 
-## 7. Residual Hodge representation of `R_t`
+\[
+q(Y)\ge5,
+\qquad
+p_g(Y)\ge10,
+\qquad
+\rho(Y)\ge25.
+\tag{6.9}
+\]
+
+## 7. Hodge representation of the fixed carrier
 
 The residual group is
 
@@ -463,23 +309,8 @@ The residual group is
 N_G(\langle t\rangle)/\langle t\rangle\simeq S_3.
 \]
 
-The order-three element acts freely on `R_t` because it translates `E_t` by a
-nonzero 3-torsion point.  Its quotient has genus two.  A residual reflection
-has two fixed points on `R_t`: its isolated fixed line and the unique point of
-`R_t cap R_s` for the commuting involution `s`.  The latter uniqueness follows
-from
-
-\[
-R_t\cdot R_s=(C-D_t)(C-D_s)=5-2-2+0=1.
-\]
-
-Thus the reflection quotient also has genus two, and
-
-\[
-\chi_{H^0(R_t,\Omega^1)}=(4,0,1)
-\]
-
-on `(1, reflection, 3-cycle)`.  Therefore
+Its character on `H^0(R_t,Omega^1)` is `(4,0,1)` on
+`(1,reflection,3-cycle)`, so
 
 \[
 H^0(R_t,\Omega^1)
@@ -488,7 +319,7 @@ H^0(R_t,\Omega^1)
 \tag{7.1}
 \]
 
-The exact centralizer restriction of the Klein module is
+The centralizer restriction of the Klein module is
 
 \[
 W_5|_{D_{12}}
@@ -497,7 +328,7 @@ W_5|_{D_{12}}
 \tag{7.2}
 \]
 
-Hence
+Therefore
 
 \[
 \dim\operatorname{Hom}_{D_{12}}
@@ -506,29 +337,17 @@ Hence
 \]
 
 By Frobenius reciprocity, the orbit of the 55 curves `R_t` carries two copies
-of `W_5`.  Every fixed source carrier covering `R_t` inherits these
-differentials.
-
-By contrast,
+of `W_5`.  In contrast,
 
 \[
-H^0(E_t,\Omega^1)\simeq\operatorname{sgn},
+H^0(E_t,\Omega^1)\simeq\operatorname{sgn}
 \]
 
-so
-
-\[
-\operatorname{Hom}_{D_{12}}
-\bigl(W_5,H^0(E_t,\Omega^1)\bigr)=0.
-\tag{7.4}
-\]
-
-The original 55 elliptics cannot themselves supply the Weil Hodge summand;
-the genus-four Fano carriers can.
+and the orbit of the original 55 elliptics carries no copy of `W_5`.
 
 ## 8. Exact theorem boundary
 
-The packet proves
+Proved:
 
 ```text
 DELTA1-CANONICAL-PLUECKER-REES-GRAPH
@@ -537,11 +356,20 @@ DELTA1-FIXED-FANO-GENUS4-CURVES
 DELTA1-NO-DEGREE-ONE-ELLIPTIC-CARRIER
 DELTA1-FIXED-CARRIERS-EVEN-DEGREE
 DELTA1-IRREDUCIBLE-BASE-NONCOLLAPSE
-DELTA1-GLOBAL-FANO-OR-RULED-DICHOTOMY
-DELTA1-RULED-BRANCH-d-EQUIV-1-MOD-5
+DELTA1-IRREDUCIBLE-BASE-RULED-BRANCH-EXCLUDED
+DELTA1-IRREDUCIBLE-BASE-DOMINATES-FANO-SURFACE
 DELTA1-GENUS4-CARRIERS-SUPPLY-WEIL-HODGE-MODULE
 ```
 
-It does not prove that either global branch is empty.  The smallest remaining
-retraction theorem is a conductor/Hurwitz incompatibility for the singular
-Cartier divisor `B` and its normalized Pluecker graph.
+Not proved:
+
+```text
+DELTA1-RETRACTION-EXCLUDED
+NO-DOMINANT-G-AMBIENT-LANDING-MAP
+KLEIN-PSL2(11)-NONUNIRATIONAL
+```
+
+The remaining irreducible-base theorem is a conductor/Hurwitz contradiction
+for a nonnormal Cartier divisor whose normalized Pluecker graph is generically
+finite over the Klein Fano surface.  The reducible-base branch requires an
+orbitwise component and conductor analysis.
