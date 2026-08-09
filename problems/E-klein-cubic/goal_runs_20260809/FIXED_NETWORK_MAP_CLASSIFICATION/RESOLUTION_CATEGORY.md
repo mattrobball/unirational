@@ -1,161 +1,242 @@
-# Resolution category for actual fixed-component maps
+# The resolved-map category
 
-## 1. Principalize the actual base ideal
+## 1. Ambient principalization
 
-Represent a hypothetical dominant `G`-equivariant map
+Let \(Y=\mathbf P(W_5)\). Choose a primitive homogeneous representative of a
+hypothetical map
 
 \[
-f:P(W_5)\dashrightarrow X
+f=[f_0:\cdots:f_4]\colon Y\dashrightarrow X\subset\mathbf P(W_5)
 \]
 
-by a primitive six-tuple of homogeneous forms of common degree `d`, subject to the equation of the Klein cubic. Let `I` be their common base ideal. It is `G`-stable.
+of degree \(d\). The tuple spans a \(G\)-stable linear system and defines a
+\(G\)-stable coherent base ideal \(\mathcal I\subset\mathcal O_Y\).
 
-In characteristic zero, functorial principalization can be chosen equivariantly for a finite group. Thus there is a sequence
+Canonical principalization in characteristic zero may be applied
+equivariantly because the construction is functorial for automorphisms.
+Thus there is a sequence
 
 \[
-\widetilde Y=Y_r\to Y_{r-1}\to\cdots\to Y_0=P(W_5)
+Y_r\stackrel{\pi_r}{\longrightarrow}Y_{r-1}
+\longrightarrow\cdots\longrightarrow Y_0=Y
 \]
 
 such that:
 
-- every center is smooth and `G`-stable;
-- every center has normal crossings with the accumulated exceptional boundary;
-- `I O_{\widetilde Y}=O_{\widetilde Y}(-F)` for an effective SNC divisor `F`;
-- the rational map lifts to a `G`-morphism `q:\widetilde Y->X`.
+- each center \(C_i\subset Y_i\) is smooth and \(G\)-stable;
+- a center may be disconnected, but its connected components form
+  \(G\)-orbits;
+- \(C_i\) has normal crossings with the accumulated exceptional divisor;
+- after including the strict transform of any chosen boundary, the centers
+  can be taken to have normal crossings with that boundary as well;
+- \(\mathcal I\mathcal O_{Y_r}=\mathcal O_{Y_r}(-F)\) for an effective
+  SNC divisor \(F\);
+- the transformed linear system is base-point-free and defines
+  \(\widetilde f\colon Y_r\to\mathbf P(W_5)\);
+- because the cubic equation vanishes on the rational-map image, it vanishes
+  identically after pullback, so \(\widetilde f\) factors through \(X\).
 
-Equivalently, one may normalize and equivariantly resolve the graph. For the component analysis, principalizing the actual ideal is preferable because it retains the base multiplicities needed for polarization.
+One may instead resolve the normalized graph. The two constructions have a
+common \(G\)-equivariant refinement.
 
-No claim is made that the centers are unions of fixed strata. Canonical principalization chooses centers from the singularity data of the ideal, and their fixed parts can have positive genus.
+## 2. Restriction to the cubic
 
-## 2. Exact fixed-locus blowup formula
-
-Let `pi:Bl_C(Y)->Y` be one blowup in the tower, with `C` smooth and `G`-stable. Fix an abelian subgroup `H` and a connected component `S` of `C^H`. Along `S`, decompose the normal bundle into character subbundles
-
-\[
-N_{C/Y}|_S=\bigoplus_{\chi\in H^\vee}N_\chi.
-\]
-
-The exceptional divisor is `P(N_{C/Y})`. A projective point is fixed by `H` exactly when its line lies in one character subbundle. Therefore the exceptional fixed locus over `S` is
-
-\[
-\coprod_{N_\chi\ne0}P(N_\chi).
-\]
-
-The `chi=1` term is the exceptional divisor inside the blowup of the old fixed component and is not an additional irreducible fixed component. Each nontrivial character contributes a genuinely new fixed projective bundle.
-
-At a point represented by a line `ell subset N_chi`, the tangent characters are obtained from
+The installed `FULL_G_RESTRICTION_DOMINANCE` theorem gives a dominant
+rational self-map
 
 \[
-T P(N)|_{[\ell]}=T S\oplus Hom(\ell,N/\ell)
+\varphi=f|_X\colon X\dashrightarrow X.
 \]
 
-together with the exceptional normal line `ell`. Thus the normal characters are the nontrivial characters among
+Let \(\Gamma^\nu\) be the normalized closure of its graph and let
+\(Z\to\Gamma^\nu\) be a smooth \(G\)-equivariant resolution. Then
 
 \[
-\chi^{-1}\mu\quad(\mu\text{ occurring in }N,\ \mu\ne\chi),
-\qquad \chi,
+p\colon Z\to X
 \]
 
-plus the normal characters of `S` in `C`. This is the rigorous part of the calculus in `FIX_I_bcomplex.md`.
-
-For a nonabelian subgroup, a projective fixed point corresponds to a one-dimensional subrepresentation. The present type-I/type-II applications use `C_2` and `V_4`, so the character formula is sufficient.
-
-## 3. First `V_4` blowup
-
-At every type-I or type-II point `x`, the installed tangent calculation is
+is proper birational and
 
 \[
-T_xX=\chi_z\oplus\chi_s\oplus\chi_r.
+q\colon Z\to X
 \]
 
-Blowing up `x` creates
+is a morphism. An ambient principalization can be chosen so that its
+restriction dominates this graph resolution.
+
+The actual component-map problem belongs to the quadruple
 
 \[
-D=P(\chi_z\oplus\chi_s\oplus\chi_r)=P^2.
+(Z,p,q,\operatorname{Exc}(p)),
 \]
 
-For an involution `z`, one character has `z`-eigenvalue `+1` and the other two have the common eigenvalue `-1`, hence
+not to an associated-graded transition state.
+
+## 3. Fixed-locus blowup formula
+
+Let \(H\le G\) be abelian, let \(C\subset Y_i\) be a smooth \(H\)-stable
+center, and let \(S\) be a connected component of \(C^H\). Since \(H\) is
+linearly reductive,
 
 \[
-D^z=P(\chi_z)\sqcup P(\chi_s\oplus\chi_r).
+N_{C/Y_i}|_S=\bigoplus_{\chi\in H^\vee}N_\chi
 \]
 
-For the whole `V_4`,
+as vector bundles. The exceptional divisor is
+\(\mathbf P(N_{C/Y_i})\). A point \([v]\) over \(S\) is fixed by \(H\)
+exactly when the line \(\langle v\rangle\) is an \(H\)-subrepresentation.
+Therefore
 
 \[
-D^{V_4}=\{P(\chi_z),P(\chi_s),P(\chi_r)\}.
+\mathbf P(N_{C/Y_i})^H|_S
+=
+\coprod_{\chi:\,N_\chi\ne0}\mathbf P(N_\chi).
 \]
 
-This fixed locus is disconnected even though `D` is connected and rationally connected.
-
-## 4. Why arbitrary-model RCC propagation is false
-
-The per-blowup assertion
-
-> `P(N_chi)` is a projective bundle over `S`, hence RCC whenever `S` is RCC`
-
-is correct. The induction to all equivariant models is false because a later legal smooth `G`-stable center may have a fixed component `S` of arbitrary genus. Blowing up that center creates a fixed projective bundle over `S`.
-
-This is the correction already inserted into `FIX_I_bcomplex.md`. It has two consequences here:
-
-1. one cannot claim that every fixed component on every resolution is rationally connected;
-2. the requested literal finite list of all components on all resolutions is not a meaningful refinement-invariant object.
-
-## 5. Correct morphisms to classify
-
-On any fixed principalization, every irreducible component `C` of `\widetilde Y^H` has an actual morphism
+The trivial-character piece is part of the blowup of the old fixed locus.
+Each nontrivial-character piece is a new fixed component, with dimension
 
 \[
-q|_C:C\to X^H.
+\dim S+\operatorname{rk}N_\chi-1.
 \]
 
-These maps are honest and can be classified when `C` is a known elliptic or rational curve. Under a further equivariant blowup, however, new vertical components are inserted. A theorem invariant under refinement should therefore distinguish:
+For a nonabelian \(H\), the same statement uses the one-dimensional
+\(H\)-subrepresentations of the normal bundle; higher-dimensional
+irreducibles do not contribute projectively fixed points.
 
-- **horizontal carriers:** components or valuations on which the induced function field map is nonconstant and which persist birationally under refinement;
-- **vertical refinements:** components created inside fibers solely to resolve indeterminacy or SNC intersections;
-- **incidence connectors:** fixed curves or surfaces joining horizontal carriers.
+This is the valid part of the blowup calculus in
+`theory/FIX_I_bcomplex.md`.
 
-The pushforward of a fixed component to the containing component of `X^H` is refinement-invariant. Its genus, number of inserted components, and dual complex are not.
+## 4. What cannot be assumed about centers
 
-## 6. Essential-carrier formulation
+Principalization centers are smooth and \(G\)-stable, but one cannot assume
+without proof that they are:
 
-A viable all-resolution theorem should be phrased using the normalized Rees algebra
+- unions of pre-existing fixed strata;
+- rational;
+- rationally connected;
+- pointwise fixed by their stabilizers;
+- contained in the positive-dimensional fixed-curve network;
+- chosen only from the first normal cone.
+
+This distinction is decisive. If a later center has a genus-\(g\) fixed
+component \(S\), then \(\mathbf P(N_\chi)\to S\) is not rationally chain
+connected for \(g>0\). The correction already recorded in
+`FIX_I_bcomplex.md` gives genus-three examples.
+
+Accordingly, the global assertion in that draft that every fixed component
+on every model of a linear source is rationally chain connected is false.
+Only the following conditional statement is valid:
+
+> If every fixed component of every chosen center is rationally chain
+> connected, then the newly born projective fixed bundles are rationally
+> chain connected.
+
+This closes under stabilizer-stratified towers, not under arbitrary
+principalizations.
+
+## 5. Refinement category
+
+Define \(\mathsf{Res}_G(\varphi)\) as follows.
+
+An object is a smooth resolved graph
 
 \[
-\overline{\bigoplus_{m\ge0} I^m t^m}
+(X\stackrel p\longleftarrow Z\stackrel q\longrightarrow X)
 \]
 
-and its `H`-stable divisorial valuations. A one-dimensional carrier is essential when the restriction of the resolved map to its normalization is nonconstant and the associated valuation/divisorial component is not created solely by further refinement.
+together with an SNC divisor containing \(\operatorname{Exc}(p)\), such
+that \(p\) is proper birational and \(q\) is a \(G\)-morphism.
 
-Acceptance conditions for an essential-carrier theorem are:
-
-1. existence and uniqueness up to common domination;
-2. compatibility with `N_G(H)/H`;
-3. functorial identification of marked specializations at type-I and type-II strata;
-4. computation of the multiplicity of `F` on the carrier;
-5. stability under further equivariant blowups.
-
-None of the formal transition-state packages proves these conditions. They classify possible associated-graded leading terms, not horizontal components of the normalized Rees algebra.
-
-## 7. Polarized resolved-map identity
-
-Principalization gives the base-point-free line bundle defining `q`:
+A morphism
 
 \[
-q^*O_X(1)
-\simeq
-p^*O_{P(W_5)}(d)\otimes O_{\widetilde Y}(-F).
+(Z',p',q')\longrightarrow(Z,p,q)
 \]
 
-This identity is invariant under further blowup: both `F` and the carrier transform, and their intersection records the same pullback degree. It is the correct bridge between component maps and ambient degree.
+is a sequence of smooth \(G\)-equivariant blowups
+\(\rho\colon Z'\to Z\) satisfying
 
-## 8. Boundary
+\[
+p'=p\circ\rho,\qquad q'=q\circ\rho.
+\]
 
-The resolved-map category is therefore rigorous at the level of:
+The category is cofiltered: two graph resolutions admit a common
+equivariant refinement.
 
-- existence of an equivariant principalization;
-- the fixed-locus blowup formula;
-- actual component restrictions on a chosen model;
-- the base-corrected polarization identity.
+## 6. Why raw component lists are not invariants
 
-It does not supply a finite all-model list. The missing input is a theorem identifying the essential horizontal carriers of the actual base ideal and controlling the exceptional `P^2` bypasses.
+A further blowup can create new fixed projective bundles and fixed curves.
+The map on each new component is simply the restriction of \(q\circ\rho\),
+but the number, dimension, genus, and residual action of these pieces need
+not be bounded by the original network data. Therefore a “profile” listing
+every component on one selected resolution is not invariant.
+
+A resolution-independent profile must instead be formulated using one of:
+
+- divisorial valuations over \(X\);
+- generic horizontal components over a fixed source stratum;
+- a minimal carrier extracted from the principalized Rees algebra;
+- an equivalence class of component diagrams under refinement.
+
+The repository's formal inverse-limit states record leading characters, but
+they do not construct any of these objects.
+
+## 7. Essential carrier definition and missing existence theorem
+
+For a fixed involution \(t\), call an irreducible \(N_G(\langle
+t\rangle)\)-stable subvariety \(C\subset Z^t\) an **elliptic carrier** if:
+
+1. \(p(C)\) dominates \(E_t\);
+2. the generic fiber of \(C\to E_t\) is connected;
+3. \(q(C)\) dominates \(E_t\).
+
+Define a **line carrier** similarly with \(L_t\).
+
+These definitions are invariant under strict transform, but existence,
+uniqueness, and dimension are not automatic. In particular, blowing up
+\(E_t\) produces an exceptional ruled surface, not a preferred section.
+
+The missing theorem must prove that the actual base ideal singles out a
+canonical carrier (usually a curve or a factorization through one) and that
+all other fixed exceptional pieces are subordinate to it. Without that
+theorem there is no well-defined finite global profile.
+
+## 8. Forced plus-plane base and its consequence
+
+`LOCAL_TRANSITION_MODULES.md` proves that every involution plus-plane
+
+\[
+\mathbf P(E_+(t))\simeq\mathbf P^2
+\]
+
+is an ambient base component and that the first nonzero transverse order is
+odd with leading image in \(L_t\). Hence \(E_t\subset X\cap\mathbf
+P(E_+(t))\) is not a base-free strict source curve for the ambient map.
+
+This prevents a direct use of the strict classification as the headline
+classification. The desired \([-5]\) map, if it occurs, must be recovered
+from a later exceptional carrier and coupled to the first normal map. That
+is precisely the unproved carrier problem.
+
+## 9. Resolution invariance actually established
+
+The following statements survive every further equivariant blowup:
+
+- the morphism \(q\) on the resolved graph;
+- the image component of any fixed irreducible component under \(q\);
+- the pullback identity
+  \(q^*H=d\,p^*H-F\);
+- strict residual-equivariance equations whenever a stable carrier curve
+  exists;
+- the local fixed-projective-bundle formula above.
+
+The following do not survive without an equivalence relation:
+
+- the number of fixed exceptional components;
+- their genera;
+- their dual complex;
+- a selected path through a three-dimensional fiber;
+- a componentwise degree list.
+
+This is the exact resolved-map category used in the rest of the packet.
