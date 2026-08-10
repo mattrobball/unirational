@@ -68,9 +68,49 @@ the basis of the claim.
 
 (pending)
 
-## 3. The A5 landing ladder, rungs d = 11 and d = 12
+## 3. The A5 landing ladder, rungs d = 11 and d = 12 — UNDECIDED, boxed
 
-(pending)
+Full detail in the companion packet's `REPORT.md`.  Summary:
+
+* `d = 2 .. 10` are EMPTY at both primes and the independent verifier is
+  `ALL PASS` at `VDMAX=10`, re-landing on every branch rather than one per
+  Galois orbit.  There is no nonzero A5-equivariant `T` of degree `<= 10`
+  with `F(T) == 0` at either prime.
+* `d = 11` and `d = 12` are UNDECIDED.  The stopping point is structural and
+  measured.  The packet's second-order linear certificate needs the landing
+  quadrics to span all `r(r+1)/2` quadrics in the branch coordinates; the
+  achieved rank saturates far below that and is independent of the sample
+  count (400, 800, 1600 points give the same rank):
+
+  ```
+  d=10 top branch dim 19  quadric rank  190 / 190   certificate fires
+  d=11 top branch dim 45  quadric rank  291 / 1035  deficit  744
+  d=12 top branch dim 60  quadric rank  398 / 1830  deficit 1432
+  ```
+
+  `0 of 80` branches at `d = 11` and `0 of 25` at `d = 12` are settled by the
+  certificate at `p = 199`.  The required span grows like `r^2/2`, the
+  available second-order rank roughly linearly in `r`.
+* msolve does not cover the gap: the top `d = 11` branch times out at the
+  packet's 900 s cap on both the quadrics-only system (291 quadrics, 45
+  variables) and the mixed cubic system (40 MB input) at both primes, and an
+  uncapped run was stopped after 48 min wall, 60 min CPU, 8.6 GB resident,
+  with no output.
+
+**The boxed remaining statement.**
+
+> Is there a nonzero A5-equivariant `T : W -> W` of degree 11 or 12 with
+> `F(T) == 0`?  Equivalently, is the landing cone empty inside each of the 80
+> (resp. 25) branch subspaces of `M_11^{A5}` (resp. `M_12^{A5}`), the largest
+> of dimension 45 (resp. 60)?  Deciding it needs a certificate that is neither
+> the second-order quadric span (provably insufficient from `d = 11`) nor a
+> Groebner basis of the sampled ideal in 45-60 variables (not returning at the
+> effort spent).
+
+A `HIT` at either degree would be a point of `X_tw` over the degree-11 field
+and would collapse the descent gap from 55 to 11; emptiness at 11 and 12 would
+only extend a bounded search, and the brief's own exit
+`FIX-VIII-A5LADDER-EMPTY-THROUGH-12` is therefore *not* claimed.
 
 ## 4. The coefficient (polar-circuit) obstruction — no gate remains
 
@@ -84,4 +124,29 @@ that line can close the branch.
 
 ## 5. What this does and does not change
 
-(pending)
+**Closed.**  One branch of the coefficient obstruction is closed: the F55
+landing ladder has no degree-6 solution, for any of the five projective
+twists, in characteristic zero.  Combined with the `d = 2, 3, 4, 5` rungs this
+means
+
+> there is no F55-equivariant rational map `P(W) --> X` of degree `<= 6`.
+
+The stale "`d = 6`: running" flag in Note IX Sec 8.8 and the wave-32
+stopped-not-finished record are superseded by a verdict.
+
+**Not closed.**  The headline is untouched.  Note IX's own stop-rule gates the
+ladder at `d = 7`; degrees above that need a structural argument, and no such
+argument exists.  A bounded ladder cannot become an all-degree theorem, which
+is the same boundary the Coverage-C adjudication drew for the polar-circuit
+line.  The A5 route is likewise open at `d = 11, 12`.
+
+So:
+
+```text
+F55-QUESTION-OPEN
+TRACE-CUBIC-K-POINT-UNDECIDED
+V14-F55-UNIRATIONALITY-UNDECIDED
+```
+
+unchanged.  What this branch changes is the bookkeeping: two rungs that were
+recorded as "running" were in fact dead, and one of them now has a verdict.
