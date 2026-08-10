@@ -242,3 +242,4 @@ The first two actions are theorems. The unresolved order is:
 1. rational `V22` with `PSL2(F7)`—best direct centralizer calculation;
 2. Fermat-discriminant No. 2.18—best three-dimensional network laboratory;
 3. non-Q8 Kummer subgroup—best residual-rational-curve stress test.
+A further completed action with a *ruled* central fixed divisor, the conic-bundle threefold over `F1` with `G=C2×S3`, is in `THEOREM_RULED_CONIC_BUNDLE_THREEFOLD.md`.
