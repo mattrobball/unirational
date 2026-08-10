@@ -1,25 +1,50 @@
-# Sources and binding inputs
+# Sources and dependency ledger
 
-## Repository inputs
+## Binding repository inputs
 
-- `goal_runs_20260810/AMBIENT_HODGE_REES_BRIDGE/THEOREM.md`: Theorems A, B, and D; canonical actual class on both normalized graphs.
-- `goal_runs_20260810/AMBIENT_HODGE_REES_BRIDGE/AMBIENT_SUPPORT.md`: strict support, perverse indexing, Auto-CM boundary, and the no-Chow-projector warning.
-- `goal_runs_20260810/AMBIENT_HODGE_REES_BRIDGE/RESTRICTED_TRANSFER.md`: CT1, CT2, CT3 and the raw-base-change boundary.
-- `goal_runs_20260810/AMBIENT_HODGE_REES_BRIDGE/ADVERSARIAL_TESTS.md`: free support, point support, contraction, and restricted-graph tests.
-- `goal_runs_20260809/FULL_G_SELFMAP_CLASSIFICATION/INTERMEDIATE_JACOBIAN.md`: graph correspondence, exceptional correction, and the degree-three CM witness.
-- `goal_runs_20260809/FULL_G_SELFMAP_CLASSIFICATION/THEOREM.md`: degree ledger for the actual full-group selfmaps.
-- `goal_runs_20260808/DELTA3_S3_RESOLVENT_AUDIT/THEOREM.md`: Roulleau lattice, Rosati conjugation, and `N(nu)=3`.
-- `goal_runs_20260809/AMBIENT_REES_SELFMAP_CLASSIFICATION/STATUS.md`: live coordinate ranges `d>=22` and retraction `d>=24`.
-- `goal_runs_20260809/EXCEPTIONAL_CARRIER_RIGIDITY/LOCAL_REES_MODEL.md`: joint-residue criterion and the exact `(v,w)`, weak-line, and weak-conic examples.
-- `goal_runs_20260809/EXCEPTIONAL_CARRIER_RIGIDITY/AMBIENT_REES_COMPARISON.md`: normalization of the dominant transform.
+- `goal_runs_20260810/AMBIENT_HODGE_REES_BRIDGE/THEOREM.md`
+- `goal_runs_20260810/AMBIENT_HODGE_REES_BRIDGE/AMBIENT_SUPPORT.md`
+- `goal_runs_20260810/AMBIENT_HODGE_REES_BRIDGE/RESTRICTED_TRANSFER.md`
+- `goal_runs_20260810/AMBIENT_HODGE_REES_BRIDGE/ADVERSARIAL_TESTS.md`
+- `goal_runs_20260809/EXCEPTIONAL_CARRIER_RIGIDITY/THEOREM.md`
+- `goal_runs_20260809/EXCEPTIONAL_CARRIER_RIGIDITY/LOCAL_REES_MODEL.md`
+- `goal_runs_20260809/EXCEPTIONAL_CARRIER_RIGIDITY/AMBIENT_REES_COMPARISON.md`
+- `goal_runs_20260809/FULL_G_SELFMAP_CLASSIFICATION/`
+- `NOTEBOOK.md`, including the ambient-Hodge precedence note and the later
+  unconditional cutoff through degree 30.
 
-## Primary mathematical references
+## External mathematical sources
 
-- M. A. de Cataldo and L. Migliorini, *The Decomposition Theorem and the topology of algebraic maps*, Bull. Amer. Math. Soc. 46 (2009), 535--633, arXiv:0712.0349.
-- M. Saito, *Mixed Hodge Modules*, Publ. RIMS Kyoto Univ. 26 (1990), 221--333; and *Some remarks on decomposition theorem for proper Kaehler morphisms*, arXiv:2204.09026.
-- A. Beilinson, J. Bernstein, P. Deligne, *Faisceaux pervers*, Asterisque 100 (1982): strict support, Artin vanishing, nearby and vanishing cycles.
-- X. Roulleau, *The Fano surface of the Klein cubic threefold*, Kyoto J. Math. 49 (2009), 113--129: the period lattice and the CM elliptic factor of discriminant `-11`.
-- W. Fulton, *Intersection Theory*, 2nd ed., Springer, 1998, Chapter 6 and the distinguished-variety/refined-Bezout formalism used in the mixed-dimensional degree bounds.
-- C. Huneke and I. Swanson, *Integral Closure of Ideals, Rings, and Modules*, LMS Lecture Note Series 336, Cambridge Univ. Press, 2006: normalized Rees algebras and Rees valuations.
+- A. Beilinson, J. Bernstein, P. Deligne, *Faisceaux pervers*, Astérisque 100
+  (1982): perverse sheaves, intermediate extension, strict supports, and the
+  decomposition theorem framework.
+- M. Saito, *Modules de Hodge polarisables*, Publ. RIMS 24 (1988), and
+  *Mixed Hodge Modules*, Publ. RIMS 26 (1990): polarizable Hodge modules,
+  weights, proper direct image, duality, and strictness.
+- M. A. de Cataldo and L. Migliorini, *The Decomposition Theorem and the
+  topology of algebraic maps*, Bull. AMS 46 (2009): decomposition theorem and
+  perverse Leray filtration conventions.
+- X. Roulleau, *The Fano surface of the Klein cubic threefold*, J. Math. Kyoto
+  Univ. 49 (2009), arXiv:1001.4853: explicit period lattice of the Klein
+  intermediate Jacobian and the `Z[(-1+sqrt(-11))/2]` action.
+- W. Fulton, *Intersection Theory*, 2nd ed.: refined Bézout, excess
+  intersection, and the Gysin calculation in the smooth rank-two local model.
+- Standard toric normalization of monomial blowups: the normalized Rees fan is
+  the normal fan of the Newton polyhedron; this is used only in the explicitly
+  checked ideals `(x,y)(x,y,t)` and `(F,h^m)`.
 
-No source is used to promote a Hodge-module projector to a Chow projector, and no source is cited for a nonexistent automatic base-change theorem for normalized Rees graphs.
+## Accepted inputs not reproved here
+
+- relatively ample splitting and injectivity of target pullback;
+- irreducibility of `V` over `Q` as a `G`-module;
+- Auto-CM and the `E_{-11}`-isotypic conclusion;
+- PR #15 Theorems A, B, and D;
+- the exact `V4` joint-residue theorem and local landing ideals;
+- the selfmap-classification packet's degree-one, degree-two, and
+  tangent-residual conclusions.
+
+## Tool boundary
+
+Load-bearing finite checks use `python3` with exact integer/polynomial
+arithmetic.  No floating-point computation and no unavailable GAP, Sage,
+Magma, PARI, Macaulay2, or msolve claim is used.

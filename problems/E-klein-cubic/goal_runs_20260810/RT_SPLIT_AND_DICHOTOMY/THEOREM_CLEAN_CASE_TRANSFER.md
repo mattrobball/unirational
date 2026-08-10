@@ -1,192 +1,177 @@
-# Ambient support not contained in the cubic: what the Artin argument proves
+# Clean-case ambient-to-restricted transfer: exact partial theorem and CT1 countermodel
 
-## 1. Statement actually proved
+## 1. Setup
 
 Let
-
 \[
-i:X\hookrightarrow\mathbf P^4,
-\qquad
+p:Y\longrightarrow \mathbf P^4
+\]
+be the ambient normalized Rees graph and let
+\[
+M=\mathcal M_{S,j_0}
+\subset {}^pH^{j_0}(Rp_*IC_Y^H)
+\]
+be a selected strict-support perverse Hodge-module block satisfying `(AHS)`.
+Assume
+\[
+S\not\subset X.
+\]
+Write
+\[
 j:U=\mathbf P^4\setminus X\hookrightarrow\mathbf P^4,
-\]
-
-and let
-
-\[
-\mathcal M=\mathcal M_{S,j_0}
-\subset{}^pH^{j_0}(Rp_*IC_Y^H)
-\]
-
-be an ambient strict-support block receiving the actual copy of `V`.  Assume
-
-\[
-S\not\subset X,
 \qquad
-j_0\ge0.
-\tag{1.1}
+i:X\hookrightarrow\mathbf P^4.
 \]
+The complement `U` is affine because `X` is a hypersurface.
 
-Put `k=-1-j0`.  Then the restriction map
+## 2. The perverse-degree injection is proved
 
+### Proposition 2.1
+
+For every perverse Hodge module `M` on `P4`, the restriction map
 \[
-H^k(\mathbf P^4,\mathcal M)
-\longrightarrow
-H^k(X,i^*\mathcal M)
-\tag{1.2}
-\]
-
-is injective.  Consequently the selected `V`-class is nonzero after **raw
-derived base change** to
-
-\[
-Y_X=Y\times_{\mathbf P^4}X.
-\tag{1.3}
-\]
-
-This closes the proposed Artin-vanishing step, including its exact perverse
-range.  It does not by itself close dominant-component selection.
-
-## 2. Artin-vanishing proof
-
-The triangle
-
-\[
-j_!j^*\mathcal M\longrightarrow\mathcal M
-\longrightarrow i_*i^*\mathcal M\xrightarrow{+1}
+H^k(\mathbf P^4,M)\longrightarrow H^k(X,i^*M)
 \tag{2.1}
 \]
+is injective for `k<=-1`.
 
-gives
+#### Proof
 
+Apply hypercohomology to
 \[
-H_c^k(U,\mathcal M|_U)
-\longrightarrow H^k(\mathbf P^4,\mathcal M)
-\longrightarrow H^k(X,i^*\mathcal M).
+j_!j^*M\longrightarrow M\longrightarrow i_*i^*M\xrightarrow{+1}.
+\]
+Since `U` is affine and `j^*M` is perverse, Artin vanishing gives
+\[
+H_c^k(U,j^*M)=0\qquad(k<0).
+\]
+The term immediately to the left of (2.1) is therefore zero for `k<=-1`,
+which proves injectivity.  ∎
+
+For the ambient block, the relevant degree is
+\[
+k=-1-j_0.
+\]
+Thus the hypothesis is **exactly**
+\[
+j_0\ge0.
 \tag{2.2}
 \]
+Under (2.2), a nonzero ambient `(AHS)` class remains nonzero after derived
+restriction to `X`.  The point-support channel `j_0=-1` lies exactly outside
+this statement and is treated separately.
 
-The complement `U` is affine and `M|U` is perverse.  Artin vanishing gives
+## 3. The normalization statement is proved in the required form
 
-\[
-H_c^r(U,\mathcal M|_U)=0
-\qquad(r<0).
-\tag{2.3}
-\]
-
-Because `k=-1-j0<=-1`, (1.2) is injective.  This is the exact reason for the
-hypothesis `j0>=0`.  When `j0=-1`, one has `k=0`, and (2.3) supplies no
-injectivity; that is the point/curve-support channel treated separately in
-`DEGREE_ACCOUNTING.md`.
-
-Proper base change identifies the target of (1.2) with the corresponding
-summand in
-
-\[
-R(p_X)_*\widetilde i^*IC_Y^H.
-\tag{2.4}
-\]
-
-Thus CT2's possible total vanishing is excluded on the raw fiber product in
-this degree range.
-
-## 3. The requested CT1 assertion is false without another hypothesis
-
-Let `F=0` define `X`.  If an exceptional prime `E` dominates a support
-`S not subset X`, then
-
-\[
-\operatorname{ord}_E(F)=0.
-\tag{3.1}
-\]
-
-This proves that `E` itself is not an irreducible component of the Cartier
-pullback `p^{-1}(X)`.  It does **not** prove that
-
-\[
-E\cap p^{-1}(X)
-\]
-
-meets the component dominating `X`.
-
-A local iterated-blowup model gives the obstruction.  On a smooth fourfold,
-let `S` be a smooth codimension-two center not contained in `X`, blow up `S`,
-and call the exceptional divisor `E1`.  The strict transform `D1` of `X`
-meets `E1` over `T=S cap X`.  Now blow up the smooth codimension-two
-intersection
-
-\[
-C=E_1\cap D_1.
-\]
-
-On the resulting normal model, the strict transforms `E1'` and `D2` are
-disjoint; the new exceptional divisor `E2`, which maps into `T`, lies between
-them:
-
-\[
-E_1'\cap p^{-1}(X)=E_1'\cap E_2,
-\qquad
-E_1'\cap D_2=\varnothing.
-\tag{3.2}
-\]
-
-The composite projective birational morphism is, after choosing a relatively
-ample exceptional divisor and a Veronese, the normalized blowup of a coherent
-ideal.  Hence (3.2) is a normalized-Rees local model, not merely a forbidden
-arbitrary resolution.  It shows:
-
-```text
-ord_E(F)=0
-```
-
-does not imply direct incidence with the dominant transform.  A selected
-strict-support class can first specialize to a component centered in `T`; an
-additional Hodge comparison is needed to show that it crosses that component
-to `D2`.
-
-Thus the proposed CT1 sentence, as stated in the work order, cannot be used as
-a theorem for every landing ideal.
-
-## 4. Normalization does not repair the missing comparison
-
-Let `D` denote the component of the raw fiber product dominating `X`, and let
-
+Let `D` be an irreducible dominant component of the scheme-theoretic base
+change of the ambient graph and let
 \[
 \nu:\Gamma\longrightarrow D
 \]
-
-be its finite normalization.  The correct statement is that
-
+be its finite normalization.  Because `nu` is finite, `nu_*` is perverse
+`t`-exact.  Proper direct image of the pure object `IC_Gamma^H` is semisimple,
+and because `nu` is birational it has a unique full-support constituent
+`IC_D^H`.  Hence
 \[
 \nu_*IC_\Gamma^H
+\simeq IC_D^H\oplus K_{\rm br},
+\tag{3.1}
 \]
+where every simple constituent of `K_br` has proper support contained in the
+branch/non-normal locus.  No assertion that a finite or small map “preserves
+`IC`” is made.  The possible extra summands are harmless for a theorem whose
+conclusion only asks for proper support on `Gamma`.
 
-is semisimple perverse, contains `IC_D^H`, and can contain additional proper-
-support summands recording branch separation.  No statement that a finite or
-small map simply preserves `IC` is used.
+## 4. CT1 is false under `S not subset X`
 
-However, semisimplicity only describes the target **after** a nonzero map to
-the dominant component has been constructed.  It does not supply a morphism
-from a class supported on an intervening vertical component such as `E2` in
-(3.2).  Therefore it cannot turn the raw-base-change injection (1.2) into the
-required comparison with `Gamma`.
+The missing geometric assertion was:
 
-A sufficient additional hypothesis would be any one of the following, stated
-at the selected strict-support generic point:
+> base change by `X` cannot create a component over `S cap X` that separates
+> the exceptional divisor dominating `S` from the dominant transform.
 
-1. the closure carrying the selected local system meets `D` directly;
-2. the base-changed normalized Rees algebra has no intervening minimal prime
-   centered in `S cap X` on that block; or
-3. an explicitly constructed specialization/Gysin morphism is nonzero on the
-   selected `V`-isotypic class through every intervening component.
+The following exact normalized-Rees model disproves it.
 
-None is presently proved for an arbitrary ambient landing ideal.
+### Proposition 4.1 — toric CT1 countermodel
 
-## Exit
+Work on
+\[
+\mathbf A^4=\operatorname{Spec}k[x,y,t,s],
+\qquad
+X=(t),
+\qquad
+S=(x,y).
+\]
+Then `S` is not contained in `X` and `T=S cap X=(x,y,t)` is a line.  Take the
+monomial ideal
+\[
+I=(x,y)(x,y,t)=(x^2,xy,y^2,xt,yt).
+\tag{4.1}
+\]
+Its Newton polyhedron has the noncoordinate facet inequalities
+\[
+a+b\ge1,
+\qquad
+a+b+c\ge2.
+\]
+The normalized blowup has rays
+\[
+r_S=(1,1,0),
+\qquad
+r_T=(1,1,1),
+\]
+and maximal cones
+\[
+\begin{aligned}
+&\langle e_x,r_S,r_T\rangle,
+&&\langle e_y,r_S,r_T\rangle,\\
+&\langle e_x,r_T,e_t\rangle,
+&&\langle e_y,r_T,e_t\rangle.
+\end{aligned}
+\tag{4.2}
+\]
+Every determinant in (4.2) has absolute value one, so this is already a smooth
+normal toric model.
+
+The ray `r_S` is the exceptional divisor dominating `S`; the ray `e_t` is the
+strict transform of `X`.  No cone in (4.2) contains both rays.  Therefore
+\[
+E_S\cap\widetilde X=\varnothing.
+\tag{4.3}
+\]
+The ray `r_T`, centered over `T`, lies between them and separates them.  On
+restriction to `t=0`, the ideal is
+\[
+I|_X=(x,y)^2,
+\]
+whose normalized blowup is the ordinary blowup of `(x,y)`.  Thus the
+restricted graph has exceptional geometry over `T`, but it does not receive
+the ambient divisor over the generic point of `S`.
+
+The extra coordinate `s` makes the model four-dimensional and makes `S` a
+surface, exactly matching the ambient codimension-two geometry.  ∎
+
+This countermodel does not assert that the selected Klein block actually
+occurs in (4.1).  It proves the logically necessary point: `S not subset X`
+and `j_0>=0` do **not** imply CT1.  Any positive transfer theorem needs an
+additional hypothesis excluding intervening Rees valuations centered on
+`S cap X`, or it must prove such exclusion from the global landing identity.
+
+## 5. Exit
+
+The Artin and finite-normalization parts are proved, but the requested theorem
+fails at CT1 under its stated hypotheses.  Therefore the honest exit is
 
 ```text
 CLEAN-CASE-TRANSFER-UNDECIDED
 ```
 
-Exact failing step: Artin vanishing proves nonzero raw restriction, but
-`S not subset X` does not prove CT1 for the selected component, and finite
-normalization does not manufacture the missing CT3 map.
+Exact failing step:
+
+```text
+CT1 (dominant-component incidence) is false for the normalized Rees algebra
+of I=(x,y)(x,y,t): the divisor over S=(x,y) and the strict transform X=(t)
+share no cone and are disjoint.
+```
+
+`verify_local_rees.py` checks the primitive rays, the four unimodular cones,
+and the nonincidence (4.3) exactly.

@@ -1,71 +1,129 @@
 # Adversarial tests
 
-## Test 1 — arbitrary selfmaps with exceptional correction
+## A. Restricted dichotomy
 
-The full-group selfmap packet constructs nonidentity maps of degree at least three and proves that a universal identity `u^dagger u=[delta]` is false. The restricted dichotomy retains `r^dagger r` and removes it only under the CLEAN hypothesis `r=0`.
+### A1. Does the proof choose a decomposition-theorem splitting?
 
-**Verdict:** PASS.
+No.  The full-support idempotent is the canonical unit--trace composite
+`e_0=i_pi t_pi`; the exceptional idempotent is `1-e_0`.  The perverse
+filtration and grouping by strict support are canonical.  No Chow projector
+is used.
 
-## Test 2 — dependence on a derived decomposition-theorem splitting
+### A2. Could a full-support summand occur in another perverse degree?
 
-A noncanonical derived splitting cannot define CARRIER or CLEAN. The packet uses only the canonical full-support constituent in perverse cohomology and the canonical pullback/trace maps on middle intersection cohomology. The orthogonal projector
+No.  Over the generic locus where `pi` is an isomorphism,
+`Rpi_*IC_Gamma` restricts to `IC_X`, concentrated in perverse degree zero.
+Any full-support constituent must restrict nontrivially there, so the unique
+one is `IC_X` in degree zero.
 
+### A3. Does `q_*q^*=delta` by itself imply the norm identity?
+
+No.  In general
 \[
-e_0=\pi^*\pi_*
+\delta-u_\varphi^\dagger u_\varphi
+=t_qe_{\rm exc}i_q.
 \]
+The identity follows only in the CLEAN branch `e_exc i_q|_V=0`.  This is
+consistent with the earlier warning in `INTERMEDIATE_JACOBIAN.md`.
 
-is canonical on `IH^3(Gamma)(1)`. A relatively ample decomposition is used only to display the proper strict-support blocks after the nonzero complementary class has been detected.
+### A4. Does a nonnorm degree contradict the known nonidentity selfmap?
 
-**Verdict:** PASS at the Hodge/cohomological level. No canonical derived splitting and no Chow projector are claimed.
+No.  The tangent-residual construction records only `delta>=3`, not an exact
+degree.  If its actual degree is not represented, the dichotomy puts it in the
+CARRIER branch.  The sieve is conditional on CLEAN.
 
-## Test 3 — degree-three CM solution
+### A5. Is `[-5]` incorrectly counted as degree five?
 
-The form `x^2+xy+3y^2` represents three, with scalar `nu=(-1+sqrt(-11))/2`. Thus the sieve does not incorrectly exclude the already-audited degree-three branch.
+No.  The elliptic multiplier is the scalar integer `-5`, whose field norm and
+square are 25.  The fixed-carrier formula begins with `3*25=75`.
 
-**Verdict:** PASS.
+## B. Task 2 transfer
 
-## Test 4 — the `[-5]` elliptic line
+### B1. Is the Artin range one degree too large?
 
-Multiplication by five has field norm 25, but the existing local carrier identity is `75=3d delta_t-B.C_t`. The packet does not infer `d=25` and does not identify a secondary carrier degree with the global restriction degree.
+No.  Injection uses only vanishing of the term to the left,
+`H_c^k(U,j^*M)=0` for `k<0`; hence `k<=-1`.  Substituting
+`k=-1-j_0` gives exactly `j_0>=0`.  It says nothing about `j_0=-1`.
 
-**Verdict:** PASS.
+### B2. Is “finite normalization preserves IC” asserted?
 
-## Test 5 — Artin vanishing beyond its range
+No.  The statement is
+`nu_*IC_Gamma=IC_D plus proper-support semisimple summands`.
+Branch-separation summands are explicitly allowed.
 
-For the ambient block, the relevant degree is `k=-1-j0`. Injection holds only for `k<0`, hence `j0>=0`. The point/curve-center channel `j0=-1` is not folded into the theorem.
+### B3. Could CT1 still follow just from `S not subset X`?
 
-**Verdict:** PASS after retaining the exact range.
+No.  For `I=(x,y)(x,y,t)`, the normalized toric fan has no cone containing
+both the ray over `S=(x,y)` and the strict-transform ray of `X=(t)`.  The
+intervening ray over `S cap X` separates them.  The finite exact script checks
+all cones.
 
-## Test 6 — intervening vertical component
+## C. Degree accounting and point support
 
-Blow up a smooth center `S not subset X`, then blow up the intersection of its exceptional divisor with the strict transform of `X`. The old exceptional divisor becomes disjoint from the dominant transform and meets only the new vertical divisor. This refutes the proposed unconditional direct-incidence inference from `ord_E(F)=0`.
+### C1. Is the live window `d>=22`?
 
-**Verdict:** CLEAN-CASE transfer remains UNDECIDED; no false theorem recorded.
+No.  The later notebook precedence correction proves the unconditional
+no-map statement only through `d=30`.  Degrees 31--33 have additional partial
+screens but are not fully closed.  The conservative live range is `d>=31`.
 
-## Test 7 — finite normalization
+### C2. Does Bézout kill a free surface orbit in that live window?
 
-The packet does not say a finite or small map preserves `IC`. It records that `nu_*IC` is semisimple and can contain branch-separation summands, but this helps only after a nonzero comparison to the dominant component exists.
+No.  The threshold is `ceil(sqrt(660))=26`; hence a free surface-component
+orbit is already compatible with the crude bound at every live degree.
 
-**Verdict:** PASS.
+### C3. Do component degree bounds count arbitrary strict-support strata?
 
-## Test 8 — free support versus the live degree range
+No.  A decomposition-theorem support can lie inside a larger base component.
+The tables apply to actual irreducible base components and residual isolated
+points only.  This prevents a false claim of support-escape closure.
 
-The only free cells killed for ambient `d>=22` are surfaces in degrees 22--25. Free curves and points survive throughout, and free surfaces return at degree 26. No all-degree exclusion is claimed.
+### C4. Is point support ordinary `H^3` of the fiber without hypotheses?
 
-**Verdict:** PASS; SUPPORT-ESCAPE remains UNDECIDED.
+No.  The unconditional object is
+`H^{-1}(Y_x,IC_Y)`, pure of weight three.  It becomes ordinary `H^3(Y_x)` only
+when `Y` is smooth near the fiber.
 
-## Test 9 — point fiber assumed finite
+### C5. Is the fiber-to-target map finite?
 
-The target-limit map `p^{-1}(x)->Z_x` is recorded only as proper and onto its image. The point Hodge block is placed in perverse-normalized fiber intersection cohomology and is not replaced by cohomology of a finite cover.
+No.  Properness gives only surjectivity onto its image `Z_x`.
 
-**Verdict:** PASS.
+## D. The `S subset X` local model
 
-## Test 10 — local monomial Rees geometry versus Hodge specialization
+### D1. Does a unit cross-difference really give `(F,h^m)`?
 
-For `(F,h^m)` the normalized Rees valuation is explicit, but a strict-support module on the vertical `h=0` component has zero `psi_h`; transfer depends on the gluing of the total IC object. The `(v,w)` model shows attachment can be nonzero, while the weak-line and weak-conic models show refinement divisors can contract.
+Yes.  Cross differences give `F`; then the unit `a_0` gives `h^m`.  The
+reverse containment is immediate.
 
-**Verdict:** SXX specialization remains UNDECIDED; the exact gap is exposed.
+### D2. Is the normalized second chart actually normal?
 
-## Consolidated verdict
+Yes.  `K[[F,h,w]]/(Fw-h^m)` is the two-dimensional affine toric
+`A_{m-1}` singularity and is normal.  The cone determinant is `m`, as checked
+exactly.
 
-The restricted CARRIER/CLEAN dichotomy and CLEAN CM norm equation survive all tests. The proposed automatic ambient-to-restricted transfer and the `S subset X` specialization criterion do not.
+### D3. Does the vertical strict-support block have nonzero `psi_h`?
+
+No.  Once isolated as a module supported on `h=0`, its restriction to
+`h!=0` is zero and so is its usual nearby cycle.  The relevant map is gluing
+inside the total direct-image object; in the unit-minor branch its
+cohomological realization is Gysin.
+
+### D4. Does geometric incidence force nonzero Hodge transfer?
+
+No.  Even though `D cap E` is nonempty in the rank-two chart, the selected
+class transfers exactly when its Gysin image is nonzero.  No local equation
+forces that nonvanishing.
+
+### D5. Do the weak `V4` determinants imply Rees-divisor survival?
+
+No.  The weak line and conic divisors have nonzero generic determinants but
+joint target residue transcendence degree one, so both contract.  The exact
+`(v,w)` model survives because its joint residue and normalized source carrier
+are both genuine.
+
+## E. Held work
+
+No fixed-carrier/type-I/type-II enumeration is performed.  The future target
+is exclusion of actual landing data—source/target degree, monodromy, base
+multiplicity, conductor correction, and compatibility across the 55
+configurations—not the false blanket vanishing
+`Hom_H(V,H^1(C))=0`.
