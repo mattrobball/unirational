@@ -1,0 +1,37 @@
+--- p = 331 ---
+CHECK T0 centre: 940 points (expect 940): PASS
+CHECK T1 centre: 220 lines (expect 220): PASS
+CHECK T2 centre: 55 planes (expect 55): PASS
+CHECK T0 is smooth: the 940 points are pairwise distinct: PASS
+      stabilizer orders of the T0 points: [4, 5, 6, 10, 11, 12]
+CHECK T1: every intersection point of two of the 220 lines is a T0 point (1540 incident pairs, stabilizer orders {4: 165, 6: 110, 12: 1265}): PASS
+CHECK T2: plus-plane pairs meet in dim {1: 1320, 2: 165} (vector dims; 2 = an ell_V, 1 = a point), and every such locus is a centre of an earlier stage: PASS
+CHECK transversality identity dim(U+V) = dim U + dim V - dim(U cap V) for plus-plane pairs (sampled): PASS
+CHECK the T1 lines through a common T0 point are distinct linear subspaces, so their strict transforms hit the exceptional P^3 in distinct points: PASS
+      through a A4pt    point: 5 of the 220 T1 lines and 3 of the 55 T2 planes
+      through a C11pt   point: 0 of the 220 T1 lines and 0 of the 55 T2 planes
+      through a C5pt    point: 0 of the 220 T1 lines and 0 of the 55 T2 planes
+      through a C6pt    point: 1 of the 220 T1 lines and 1 of the 55 T2 planes
+      through a D10pt   point: 0 of the 220 T1 lines and 5 of the 55 T2 planes
+      through a D12pt   point: 3 of the 220 T1 lines and 7 of the 55 T2 planes
+      through a V4-I    point: 2 of the 220 T1 lines and 1 of the 55 T2 planes
+
+--- p = 661 ---
+CHECK T0 centre: 940 points (expect 940): PASS
+CHECK T1 centre: 220 lines (expect 220): PASS
+CHECK T2 centre: 55 planes (expect 55): PASS
+CHECK T0 is smooth: the 940 points are pairwise distinct: PASS
+      stabilizer orders of the T0 points: [4, 5, 6, 10, 11, 12]
+CHECK T1: every intersection point of two of the 220 lines is a T0 point (1540 incident pairs, stabilizer orders {4: 165, 6: 110, 12: 1265}): PASS
+CHECK T2: plus-plane pairs meet in dim {1: 1320, 2: 165} (vector dims; 2 = an ell_V, 1 = a point), and every such locus is a centre of an earlier stage: PASS
+CHECK transversality identity dim(U+V) = dim U + dim V - dim(U cap V) for plus-plane pairs (sampled): PASS
+CHECK the T1 lines through a common T0 point are distinct linear subspaces, so their strict transforms hit the exceptional P^3 in distinct points: PASS
+      through a A4pt    point: 5 of the 220 T1 lines and 3 of the 55 T2 planes
+      through a C11pt   point: 0 of the 220 T1 lines and 0 of the 55 T2 planes
+      through a C5pt    point: 0 of the 220 T1 lines and 0 of the 55 T2 planes
+      through a C6pt    point: 1 of the 220 T1 lines and 1 of the 55 T2 planes
+      through a D10pt   point: 0 of the 220 T1 lines and 5 of the 55 T2 planes
+      through a D12pt   point: 3 of the 220 T1 lines and 7 of the 55 T2 planes
+      through a V4-I    point: 2 of the 220 T1 lines and 1 of the 55 T2 planes
+
+S4_LEGALITY_OK
