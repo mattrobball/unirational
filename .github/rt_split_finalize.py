@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 from pathlib import Path
+import json
 import re
 import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
-NOTEBOOK = ROOT / "problems/E-klein-cubic/NOTEBOOK.md"
+PROBLEM_ROOT = ROOT / "problems/E-klein-cubic"
+NOTEBOOK = PROBLEM_ROOT / "NOTEBOOK.md"
+MANIFEST = PROBLEM_ROOT / "notebook_build/manifest.json"
 HEAD = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip()
 HEADING = "## 2026-08-10 RT split, restricted dichotomy, and support-escape audit"
 ENTRY = r'''## 2026-08-10 RT split, restricted dichotomy, and support-escape audit
@@ -91,6 +94,14 @@ if HEADING in text:
 else:
     text = text.rstrip() + "\n\n" + ENTRY.rstrip() + "\n"
 NOTEBOOK.write_text(text, encoding="utf-8")
+
+manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
+known = manifest.setdefault("known_branches", [])
+concurrent_branch = "integrate/v22-gates-20260810"
+if concurrent_branch not in known:
+    known.append(concurrent_branch)
+    known.sort()
+MANIFEST.write_text(json.dumps(manifest, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
 
 for rel in (".github/workflows/rt_split_finalize.yml", ".github/rt_split_finalize.py"):
     path = ROOT / rel
