@@ -164,6 +164,33 @@ Not claimed: `GP-BRIDGE-KLEIN-NONUNIRATIONAL`,
 `GP-BRIDGE-KLEIN-HEADLINE-POSITIVE`.
 <!-- GP-EQUIVARIANT-MODULI-END -->
 
+## 2026-08-10 V14 map dichotomy (session import, sealed)
+
+Packet: `goal_runs_20260810/V14_MAP_DICHOTOMY/`; imported from the ChatGPT
+session "Existence Of A Map"
+(https://chatgpt.com/share/6a7a121d-0994-83ea-9e1f-510064072ea6),
+director-adjudicated; verifier ALLGREEN at p = 397, 199.
+
+**Theorem A.** No `alpha`-twisted `G`-equivariant rational map `Klein --> V14`
+exists, for any `alpha` in `Aut(G)`, dominant or not. The involution line
+`L_sigma` on `X` survives equivariant resolution as an RCC `D12`-stable
+carrier, whose image would be a `D12`-fixed point of the empty `V14^{D12}`.
+
+**Theorem B.** A nonconstant `G`-equivariant `Phi: V14 --> Klein` exists
+unconditionally: the generic `V14`-point forces the degree-6 Brauer class to
+index dividing 2, and over the quadratic splitting field
+Pfaffian--Grassmannian birationality, Nishimura and the cubic secant residual
+give a base-field point.
+
+Corollaries: `(^T V14)(K)` nonempty implies `(^T Klein)(K)` nonempty for every
+twisting pair; and both comparison routes are dead as headline tests.
+
+Exits: `V14MAP-DICHOTOMY-SEALED`, `V14MAP-KLEIN-TO-V14-EMPTY`,
+`V14MAP-V14-TO-KLEIN-EXISTS`, `V14MAP-TRANSFER-POINTED-TWISTS`,
+`V14MAP-DEGREE12-REPLAYED`, `V14MAP-DEGREE-3-4-5-IMPORT-UNREPLAYED`.
+
+Not claimed: dominance or any explicit `Phi`. Headline status unchanged: OPEN.
+
 ## 2026-08-08--09 finite-target and full-group supplement
 
 This supplement records the dependency-closed finite-target and full-group
@@ -778,7 +805,7 @@ Each entry carries a `Thread:` line locating it in the Research threads map abov
 | [E53](#e53) | UNKNOWN-EX — hidden intermediate-variety search | positive (proposed) | analytic | PROPOSED-UNRUN | none |
 | [E54](#e54) | CTR-TWIST — counterexample twist target | negative (target) | analytic | OPEN-TARGET | negative |
 | [E55](#e55) | REPAIR — 2026-07-31 theorem-boundary audit | infrastructure | analytic | APPLIED | none |
-| [E56](#e56) | FIX — equivariant fixed-locus b-complex program | dual (reduction + obstruction) | analytic + CAS | ACTIVE — Notes I–IX; gate closed; terminal verdict on localized negative; pivot through Italian/V₁₄ program; Cor IX.1/IX.2 SEALED (V₁₄ not G-unirational; headline single-target) | both |
+| [E56](#e56) | FIX — equivariant fixed-locus b-complex program | dual (reduction + obstruction) | analytic + CAS | ACTIVE — Notes I–IX; gate closed; terminal verdict on localized negative; pivot through Italian/V₁₄ program; Cor IX.1/IX.2 SEALED (V₁₄ not G-unirational; headline single-target); V14 map dichotomy sealed (2026-08-10) | both |
 
 ## Attempts
 

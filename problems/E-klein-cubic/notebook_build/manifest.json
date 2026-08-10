@@ -1549,6 +1549,28 @@
    "char0_scope": "mod-p two primes (397, 199); exact rank/locus computations; ladder cones by LAND method",
    "tracked": "main",
    "notes": "IN-FLIGHT (dispatched 2026-08-06): the equivariant V14 model (Gr(2,U) cap P(10'), corrected Weil normalization), sigma/V4/cyclic fixed-locus arrangement (Condition A census; A5/D12 emptiness replayed as checks), curve-orbit census (55-conic transfer, lines Fano scheme, index arithmetic with 14 = 2 mod 3), and the 10'-valued ladder with QUADRATIC landing cones. A stage-4 verified hit would be a K_proj-point of the twisted V14 = the headline positive - flagged for triple verification."
+  },
+  {
+   "path": "goal_runs_20260810/V14_MAP_DICHOTOMY",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "analytic + CAS replay (two primes)",
+   "primary_exit": "V14MAP-DICHOTOMY-SEALED",
+   "superseded_by": null,
+   "char0_scope": "the two theorems and both corollaries are analytic and char 0; the machine layer (verifier.py) is a mod-p replay at 397 and 199 only — evidence-grade for char 0, no char-0 or exact-field computation was run",
+   "tracked": "main",
+   "notes": "Sealed 2026-08-10 from the external ChatGPT session \"Existence Of A Map\" (share link and verbatim extract in the packet), director-reviewed and adjudicated: Theorem A, no alpha-twisted G-equivariant rational map Klein --> V14 for any alpha in Aut(G) (V14MAP-KLEIN-TO-V14-EMPTY, residual-RCC centralizer obstruction with initial carrier L_sigma, consuming FIX-A0-ARRANGEMENT-PASS and FIX-IX-SEAL-PASS); Theorem B, a nonconstant G-equivariant rational map V14 --> Klein EXISTS unconditionally (V14MAP-V14-TO-KLEIN-EXISTS, generic torsor + 2-torsion Brauer class of index dividing 2 + Pfaffian-Grassmannian birationality over the quadratic splitting field + Nishimura + cubic-secant descent + Duncan-Reichstein adjunction); Corollaries: transfer of pointed twists (V14MAP-TRANSFER-POINTED-TWISTS) and both Klein/V14 comparison routes are dead as headline tests; verifier ALLGREEN at 397 and 199 (V14MAP-DEGREE12-REPLAYED: model, V14 point generator + Plucker, Hom_G(M,A)=0, Sym^2(10') multiplicities, the quadratic covariant into A vanishing on V14, cubic-secant identity over F_{p^2}, A^G=0, repo pins); degrees 3-5 of the session's covariant sweep stay V14MAP-DEGREE-3-4-5-IMPORT-UNREPLAYED. New in-packet correction: Sym^2(10') has TWO 5-dim slots (session said one and mis-stated the decomposition as dim 26); the second covariant, into A^dual, does NOT vanish on V14 but its image misses the conjugate Klein cubic, so degree 2 is closed on both targets. Headline unchanged: OPEN."
+  },
+  {
+   "path": "goal_runs_after_c53d89a/FIX_IX_SEAL",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-IX-SEAL-PASS",
+   "superseded_by": null,
+   "char0_scope": "exact char 0 over K = Q(z)/Phi_11 for the model, the D12 emptiness, the ambient dual system and the sigma-curve invariants (with the direct char-0 Jacobian saturation completed after the initial seal), corroborated at primes 397, 199 and by a fresh-prime 353 verifier",
+   "tracked": "main",
+   "notes": "record added 2026-08-10 to close a parity gap; packet sealed 2026-08-06. Director-run seal of the Corollary IX.1 hypotheses on the V14, two engines (python exact linear algebra + Macaulay2): model <T6,S6> = SL(2,11) of order 1320 with S^2 = -I and gauss^2 = -11, Lambda^2 U = 5 + 10', M the 10-dim isotypic column space, Ann(M) 5-dim; V14^sigma = smooth irreducible genus-1 sextic + 2 reduced points (smoothness explicit, so no rational curve); V14^{D12} empty in all four D12-character pieces; V14 smooth, pure dim 3, degree 14 via the empty dual Pfaffian-adjoint system; C_G(sigma) = D12 and the two isolated sigma-points have stabilizer exactly C6; Pf6 on Ann(M) is the Klein cubic (E38 uniqueness). Consequence: the V14 action is not G-unirational and not weakly versal, hence ed_C(PSL(2,11)) = 3 iff the Klein cubic is G-unirational. Note the packet's verifier is named verifier.py, which the parity checker's verify*.py glob does not match — the reason this record was missing."
   }
  ],
  "known_branches": [
