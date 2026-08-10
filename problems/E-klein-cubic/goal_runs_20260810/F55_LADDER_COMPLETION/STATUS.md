@@ -11,12 +11,16 @@ Problem E remains **OPEN**.
 
 ```text
 F55-LADDER-D6-EMPTY-ALL-TWISTS
-F55-LADDER-D7-<pending>
-A5-LADDER-EMPTY-THROUGH-10
-A5-LADDER-D11-D12-<pending>
+F55-LADDER-D7-UNDECIDED
+FIX-VIII-A5LADDER-EMPTY-THROUGH-10
+FIX-VIII-A5LADDER-D11-D12-UNDECIDED
 F55-PC-COVERAGE-C-EQUIVALENT-TO-HEADLINE
 F55-QUESTION-OPEN
 ```
+
+Overall exit for this branch: **`F55-LADDER-PARTIAL`** — one gate family
+(`d = 6`, five twists, two primes) run to completion with a verdict, the rest
+stopped at recorded blowup points.
 
 ## 1. The F55 landing ladder, rung d = 6 — CLOSED
 
@@ -64,9 +68,32 @@ the generic point and hence, being closed, the whole base — including that
 prime.  So the generic fibre is empty.  The second prime is redundancy, not
 the basis of the claim.
 
-## 2. The F55 landing ladder, rung d = 7
+## 2. The F55 landing ladder, rung d = 7 — UNDECIDED, blowup point recorded
 
-(pending)
+`d = 7` is the last rung inside Note IX Sec 8.8's own stop-rule gate, so it was
+attempted.  The system is 30 unknowns and 1125 cubics over `F_661` — a 900 KB
+msolve generator file, against 19 unknowns and 640 cubics at `d = 6`.
+
+Twist `s = 0` was run twice.  Both runs were `msolve -g 2` on two threads, and
+neither returned:
+
+```text
+run 1: 58 min wall, no output, terminated externally
+run 2: 60 min wall, no output, terminated externally (before its own 3600 s cap fired)
+```
+
+The `.out` file is 0 bytes in both cases, which under the packet's msolve
+landmine rule is an error, not a verdict; `GB_CERTIFICATES.md` records it as
+`NO-OUTPUT`.  Per the stop-rule, the rung is left here rather than ground on:
+
+```text
+F55-LADDER-D7-UNDECIDED
+```
+
+with the blowup point being *this*: the same F4 computation that finishes in
+248-430 s at 19 unknowns does not return within an hour at 30 unknowns, and
+twists `s = 1..4` were not started.  Note that the jump `19 -> 30` unknowns is
+also the jump at which the M2 form stopped being tractable at all.
 
 ## 3. The A5 landing ladder, rungs d = 11 and d = 12 — UNDECIDED, boxed
 

@@ -140,3 +140,15 @@ V+:W0r0|Ew:r1|Ew2:Z                        dim  33 k 3  rank 1392 / 3366  -> QUA
 V+:W0r0|Ew:r1|Ew2:r0                       dim  33 k 3  rank 1488 / 3366  -> QUADRIC-DEFICIT-1878
 ```
 
+## p = 67, d = 12 -- PARTIAL (4 of 11 Galois orbits)
+
+Same interruption.  Again every measured representative shows a deficit,
+and the complete `p = 199` census above settles none of the 25 branches.
+
+```
+V+:Wchi1|V-:Wchi1                          dim  60 k 1  rank  398 / 1830  -> QUADRIC-DEFICIT-1432
+V+:Wchi1|V-:W0r0                           dim  59 k 3  rank 1176 / 5310  -> QUADRIC-DEFICIT-4134
+V+:W0r0|V-:Wchi1                           dim  55 k 3  rank 1056 / 4620  -> QUADRIC-DEFICIT-3564
+V+:Wchi1|V-:Z                              dim  54 k 1  rank  323 / 1485  -> QUADRIC-DEFICIT-1162
+```
+
