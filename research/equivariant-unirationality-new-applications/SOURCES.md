@@ -40,7 +40,7 @@ Primary papers are listed by the role they play in the theorem and candidate bou
 5. Yuri Tschinkel and Zhijia Zhang, **Cohomological obstructions to equivariant unirationality**, arXiv:2504.10204; *International Mathematics Research Notices* (2026).  
    Ordinary and third Amitsur calculations for del Pezzo surfaces and Kummer quartic double solids.
 
-6. Federico Scavia, Yuri Tschinkel, and Zhijia Zhang, **Cohomological invariants from the equivariant universal torsor**, arXiv:2605.02763.  
+6. Federico Scavia, Yuri Tschinkel, and Zhijia Zhang, **Birational invariance of higher Amitsur groups**, arXiv:2605.02763.  
    Stable equivariant birational invariance of the universal-torsor class and the equivalence between its vanishing and simultaneous vanishing of all higher Amitsur groups in the stated geometric setting.
 
 7. Hamid Abban, Ivan Cheltsov, Takashi Kishimoto, and Frédéric Mangolte, **Smooth Fano 3-folds satisfying Condition (A)**, arXiv:2505.13684.  

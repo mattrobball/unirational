@@ -12,3 +12,18 @@ ODD_EXCEPTIONAL_CONIC_BUNDLE_VERIFY_OK g=7
 
 $ python3 verify_odd_exceptional_conic_bundle.py --g 9
 ODD_EXCEPTIONAL_CONIC_BUNDLE_VERIFY_OK g=9
+
+$ python3 verify_cubic_surface_bundle_family.py --n 3
+CUBIC_SURFACE_BUNDLE_FAMILY_VERIFY_OK n=3
+
+$ python3 verify_cubic_surface_bundle_family.py --n 5
+CUBIC_SURFACE_BUNDLE_FAMILY_VERIFY_OK n=5
+
+$ python3 verify_cubic_surface_bundle_family.py --n 7
+CUBIC_SURFACE_BUNDLE_FAMILY_VERIFY_OK n=7
+
+$ python3 verify_cubic_surface_bundle_family.py --n 9
+CUBIC_SURFACE_BUNDLE_FAMILY_VERIFY_OK n=9
+
+$ python3 verify_double_quadric_c4_screen.py
+DOUBLE_QUADRIC_C4_SCREEN_OK fixed_points=4
