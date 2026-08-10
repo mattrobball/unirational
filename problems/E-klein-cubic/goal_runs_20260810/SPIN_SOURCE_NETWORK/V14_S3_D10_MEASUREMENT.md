@@ -260,8 +260,9 @@ forced, exactly where route 2 lives.
 > 220 points with `Stab_G(x) = S_3`. If `Bl_x P(U) --> V14` is defined at
 > `s_x`, its value is one of the **two** points of `V14^{S_3(x)}`. That value
 > has stabiliser exactly `S_3`, lies on the genus-1 sextic `E_rho` of each of
-> the three involutions of `S_3(x)`, and is **different from all four carrier
-> points** at `x` (the carriers have stabiliser exactly `C_6`, Thm K2).
+> the three involutions of `S_3(x)`, and is **different from all three carrier
+> points** at `x` — an `S_3`-point lies on 3 planes, one per involution of its
+> `S_3`, and their carriers have stabiliser exactly `C_6` (Thm K2).
 
 *Proof.* The same contraction argument gives a common value `y` with
 `Stab_G(y) >= S_3`, so `y in V14^{S_3}`, a set of exactly two points; §4 gives
