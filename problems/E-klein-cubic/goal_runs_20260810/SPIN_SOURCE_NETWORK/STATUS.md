@@ -16,6 +16,16 @@ SPIN-CHAIN-OBSTRUCTION-UNDECIDED
 
 NEW-EXAMPLE-ASSESSED
 SPIN-DP2-PSL27-UNDECIDED
+
+V14-S3-NONEMPTY                 (2026-08-10)
+V14-D10-EMPTY                   (2026-08-10)
+V14-A4-NONEMPTY                 (2026-08-10)
+V14-A5-EMPTY                    (2026-08-10)
+V14-S3-D10-MEASUREMENT-OK       (2026-08-10)
+
+SPIN-MULTIPLICITY-REFUTED       (2026-08-10)
+SPIN-LINKING-LEMMA-FALSE        (2026-08-10)
+D10-FIXED-POINT-ROUTE-DEAD      (2026-08-10)
 ```
 
 `SPIN-CHAIN-OBSTRUCTION-PROVED` is **NOT** claimed. The chain system does not
@@ -62,20 +72,37 @@ its naive form is FALSE at first order.
 * `S^{C_2}` = genus-1 curve + 2 points —
   `problems/F-dp2-psl27/certificates/wp1_fixed_loci.py` / `WP1_FIXED_LOCI.md`.
 
-## Named next tasks (both cheap, both decisive for the box)
+## Named next tasks — BOTH NOW DONE, BOTH NEGATIVE (2026-08-10)
 
-1. **`V14^{S_3}` and `V14^{D_10}`** — not measured by any sealed packet. One
-   FIX-IX-SEAL-style run each. `V14^{S_3} = empty` converts the
-   second-generation route of `KLEIN_SPIN_COMPLEX.md` §7 into a contradiction.
-2. **Multiplicity 2.** Re-run the local analysis on `P(U (+) U)`; Thm 7.4
-   makes this legitimate (it dominates `P(U)`) and Thm 7.3 shows the
-   first-order separation obstruction vanishes there.
+1. ~~**`V14^{S_3}` and `V14^{D_10}`**~~ — measured
+   (`V14_S3_D10_MEASUREMENT.md`, exits `V14-S3-NONEMPTY`, `V14-D10-EMPTY`,
+   `V14-A4-NONEMPTY`, `V14-A5-EMPTY`). `V14^{S_3}` is **not** empty, so route 2
+   cannot close by emptiness; Thm V3 then rules the second-generation strata
+   out as chain links.
+2. ~~**Multiplicity 2**~~ — executed for all `m >= 1`
+   (`MULTIPLICITY_ROUTE.md`, `THEOREM_SPIN_MULTIPLICITY.md`, exits
+   `SPIN-MULTIPLICITY-REFUTED`, `SPIN-LINKING-LEMMA-FALSE`,
+   `D10-FIXED-POINT-ROUTE-DEAD`). The linking Thm 7.4 predicts at `m >= 2`
+   **does not exist**: the trivial multiplicity `m - 1` in `T_x` is exactly
+   `dim Z` for the `K`-fixed component `Z` through the incidence point, so the
+   normal representation `N_Z` has **zero** `K`-invariants at every `m`, and one
+   `G`-equivariant blowup separates all 110 carriers into 110 distinct
+   connected components of the involution-fixed locus. Separately, the
+   resolution-free form of the `V14^{D_10} = empty` datum is also refuted: an
+   explicit `G`-invariant centre makes the `D_10`-fixed locus empty.
+
+**Net state of the box.** The SPIN-LINKING LEMMA is FALSE as boxed, both named
+routes are closed, and the fixed-point flank is exhausted (Cor C of
+`THEOREM_SPIN_MULTIPLICITY.md`): any future attack on the spin flank needs an
+invariant that is not of fixed-point type.
 
 ## Exact checks
 
 ```text
 python3 verify_spin_klein_network.py     -> SPIN_SOURCE_NETWORK_OK
 python3 verify_spin_dp2_psl27.py         -> SPIN_DP2_PSL27_OK
+python3 verify_v14_s3_d10.py             -> V14-S3-D10-MEASUREMENT-OK
+python3 verify_spin_multiplicity.py      -> SPIN_MULTIPLICITY_OK
 ```
 
 Both are exact, characteristic 0, integer / `Q(i)` arithmetic in dimension
