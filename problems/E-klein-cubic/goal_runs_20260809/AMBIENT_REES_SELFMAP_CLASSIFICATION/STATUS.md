@@ -5,197 +5,264 @@
 
 ## Executive verdict
 
-The requested ambient identity / degree-one / finite-profile program is not the
-correct theorem target once the accepted existence of nontrivial intrinsic
-`G`-selfmaps is combined with a simple composition lemma.
+The ambient problem has two binding structural conclusions.
 
-Let
-
-\[
-A:\mathbf P(W_5)\dashrightarrow X
-\]
-
-be any dominant `G`-equivariant ambient landing map, represented by a
-homogeneous tuple `P` with `F(P)=0`. Let
+First, ambient landing maps are closed under postcomposition by every dominant
+rational \(G\)-selfmap of \(X\). Since the accepted tangent-residual theorem
+produces a nonidentity selfmap of degree at least \(3\) with iterates of
+unbounded degree,
 
 \[
-\sigma:X\dashrightarrow X
+\boxed{
+\text{the ambient landing set is empty, or its restriction degrees are
+unbounded.}
+}
 \]
 
-be any dominant `G`-equivariant rational selfmap. Choose homogeneous ambient
-lifts `S=(S_0,...,S_4)` of its coordinate sections. Since `sigma` lands in `X`,
+Consequently the requested identity, degree-one, and uniform finite-profile
+theorems are false conditional on nonemptiness. The correct headline target is
+
+```text
+NO-DOMINANT-G-AMBIENT-LANDING-MAP
+```
+
+Second, the new theorem-forced good-reduction calculation proves genuine
+bounded progress:
+
+```text
+AMBIENT-LANDING-COORDINATE-DEGREE-AT-LEAST-22
+DELTA1-RETRACTION-COORDINATE-DEGREE-AT-LEAST-24
+```
+
+No nonzero homogeneous landing tuple exists in coordinate degree at most
+\(21\). A primitive \(G\)-retraction has coordinate degree at least \(24\).
+
+The headline emptiness theorem is not yet proved.
+
+## 1. Postcomposition theorem
+
+Let \(A\) be represented by \(P\) with \(F(P)=0\), and let
+\(\sigma:X\dashrightarrow X\) have ambient coordinate lifts \(S\). Since
+\(\sigma\) lands on \(X\),
 
 \[
-F(S)=F\,B
+F(S)=FB
 \]
 
-for a homogeneous polynomial `B`. Substitution gives the exact polynomial
-identity
+for a polynomial \(B\). Therefore
 
 \[
 F(S(P))=F(P)B(P)=0.
 \]
 
-Hence `S(P)` is another ambient landing tuple and represents `sigma o A`.
-After removing any common factor it remains a primitive landing tuple.
-Therefore the set of ambient landing maps is closed under postcomposition by
-**every** rational `G`-selfmap of `X`.
-
-The preceding `FULL_G_SELFMAP_CLASSIFICATION` packet proves a nonidentity
-selfmap `sigma` of degree at least 3, with iterates of unbounded degree. It
-follows:
-
-> **Dichotomy.** Either no dominant ambient landing map
-> `P(W_5) --> X` exists, or ambient-extendable restrictions contain maps of
-> unbounded degree.
-
-In particular, conditional on nonemptiness, all three requested rigidity
-exits are false:
-
-```text
-FULL-G-AMBIENT-SELFMAP-IDENTITY-THEOREM           FALSE IF NONEMPTY
-FULL-G-AMBIENT-SELFMAP-DEGREE-ONE-THEOREM         FALSE IF NONEMPTY
-FULL-G-AMBIENT-SELFMAP-FINITE-TYPE-CLASSIFICATION FALSE IF NONEMPTY
-```
-
-The third statement uses the requested meaning of finite type, which includes
-the global restriction degree in the profile.
-
-Thus proving either the ambient identity theorem or the ambient degree-one
-theorem would actually prove **emptiness** of the ambient landing set, hence
-solve the headline non-unirationality problem directly. There is no separate
-nonempty degree-one/retraction branch compatible with the accepted arbitrary
-selfmaps.
-
-This packet also consumes the later binding packet
-`EXCEPTIONAL_CARRIER_RIGIDITY/`: the normalized graph of the restricted base
-ideal is canonically the normalization of the dominant transform of `X` inside
-the ambient normalized blowup, and ordinary fixed-curve valuations have
-canonical centers there. The new result below does not regress that theorem.
-
-## Required checkpoint
-
-### Q1 — finite syzygy module?
-
-**No, not in the stated sense.** The set
+Thus \(\sigma\circ A\) is again an ambient landing map. If \(A|_X=\varphi\),
+then
 
 \[
-\mathcal L=\{P:F(P)=0\}
+(\sigma\circ A)|_X=\sigma\circ\varphi,
+\qquad
+\deg((\sigma\circ A)|_X)=\deg(\sigma)\deg(\varphi).
 \]
 
-inside the graded covariant module is a cubic nonlinear cone, not an additive
-submodule: polarization of `F` shows that `F(P+Q)` has mixed terms even when
-`F(P)=F(Q)=0`. Hilbert-Noether finite generation applies to the ambient
-covariant module over `C[W]^G`, but the landing locus is a closed nonlinear
-subscheme in that finite module, not a syzygy module. Matrix factorization / MCM
-technology does not linearize this basic cubic condition.
+This is the exact reason a nonempty ambient category cannot have bounded
+restriction degree.
 
-### Q2 — generic involution plus-plane layer?
+## 2. Low-degree ambient landing theorem
 
-The later `EXCEPTIONAL_CARRIER_RIGIDITY` packet answers the integration part.
-For `S=E_t`, the ordinary blowup valuation of the fixed elliptic has a canonical
-residual-`S3`-stable center `K_{E,t}` on the normalized graph
+Every landing tuple vanishes on every involution plus-plane. At the split good
+prime \(67\), exact Reynolds averaging and the characteristic-zero Molien
+dimensions give the following kernels for restriction to one representative
+plus-plane:
+
+| coordinate degree | covariant dimension | plus-plane kernel |
+|---:|---:|---:|
+| 15 | 32 | 0 |
+| 16 | 41 | 0 |
+| 17 | 49 | 2 |
+| 18 | 59 | 3 |
+| 19 | 73 | 7 |
+| 20 | 86 | 11 |
+| 21 | 100 | 16 |
+
+For degrees \(17,18,19\), the exact coefficients of \(F(P)\) span all cubic
+coefficient monomials. For degrees \(20,21\), the degree-four Macaulay ranks
+are respectively
 
 \[
-\Gamma=\operatorname{Proj}_X\overline{\mathcal R(J)},
+1001=\dim \operatorname{Sym}^4(\mathbf F_{67}^{11})^\vee
 \]
 
-and the accepted transition theorem says that the first nonzero ordinary normal
-order is **odd**. Since the involution acts by `-1` on both normal directions,
-the first initial map takes values in `W_-(t)` and hence in
+and
 
 \[
-L_t=\mathbf P(W_-(t)).
+3876=\dim \operatorname{Sym}^4(\mathbf F_{67}^{16})^\vee.
 \]
 
-Thus the canonical ordinary carrier over `E_t` exists and is **line-valued**;
-it is not the desired elliptic selfcarrier and cannot realize `[-5]`.
-
-The exact normalized-Rees boundary is therefore sharper than the older first
-blowup question: any elliptic-target carrier must be a **secondary** fixed curve
-component of `Gamma`, or a fixed slice inside a higher-dimensional retained
-carrier. The ordinary carrier has already been integrated and classified.
-
-### Q3 — type-II V4 relation?
-
-At a type-II point use local character coordinates `(b,c,d)` for the three
-nontrivial characters. The three involution plus-planes have local ideals
+Hence all five projective landing loci are empty. Proper specialization gives
+the characteristic-zero result. Combined with the sealed exclusion through
+degree \(14\),
 
 \[
-(c,d),\quad (b,d),\quad (b,c).
+\boxed{\text{every nonzero ambient landing tuple has degree at least }22.}
 \]
 
-Forced vanishing on all three gives
+See `LOW_DEGREE_DOMINANT_MAPS.md` and
+`verify_low_degree_dominant_maps.py`.
+
+## 3. New retraction transform and degree bound
+
+For a hypothetical retraction use the accepted normal form
 
 \[
-I_P\subset (c,d)\cap(b,d)\cap(b,c)=(bc,bd,cd)
+T=Hx+FQ
 \]
 
-on the local slice. Consequently the quadratic initial tuple has no trivial
-character component and has the form
+and polar invariants \(R,S\), with \(\Delta=R^2+4S\). Define
 
 \[
-P_B^{(2)}=\alpha\,cd,\qquad
-P_C^{(2)}=\beta\,bd,\qquad
-P_D^{(2)}=\gamma\,bc.
+J=2H+FR,
+\qquad
+V=2Q-Rx.
 \]
 
-The Klein cubic restricted to `P(B plus C plus D)` vanishes on the three
-coordinate lines (the V4 minus-triangle) and is not identically zero, hence is
-`kappa BCD` with `kappa != 0`. Therefore the degree-six initial term of the
-global landing identity is
+The polar system gives the exact identity
 
 \[
-\kappa\alpha\beta\gamma\,b^2c^2d^2=0,
+\boxed{F(V)=J\Delta.}
 \]
 
-so
+It also gives
+
+\[
+F^4\Delta=
+9\Phi(x,x,T)^2-12F\Phi(x,T,T).
+\]
+
+On every involution plus-plane, \(T=0\) forces
+
+\[
+H=Fu,\qquad Q=-ux,\qquad R=-2u
+\]
+
+after restricting \(F\) to that plane. Therefore
+
+\[
+J|_{W_+(t)}=V|_{W_+(t)}=0.
+\]
+
+The exact invariant restriction map is injective in every degree at most
+\(22\); its first special-fibre kernel is one-dimensional in degree \(23\).
+If the retraction degree satisfied \(d\le23\), then \(J\) would have degree at
+most \(22\), hence \(J=0\), and \(H=-FR/2\), contradicting
+\(\gcd(H,F)=1\). Thus
+
+\[
+\boxed{d\ge24.}
+\]
+
+At \(d=24\), the problem is the finite divisibility locus
+
+\[
+0\ne V\in K_{21},
+\qquad
+J_{23}\mid F(V),
+\]
+
+where the good-reduction covariant kernel has dimension \(16\) and the scalar
+degree-\(23\) kernel is one-dimensional. Its discriminant must be nonsquare,
+because a square would give a degree-\(21\) landing tuple, now excluded.
+
+See `RETRACTION_DEGREE_BOUND.md`.
+
+## 4. Normalized-Rees carrier boundary
+
+The later binding packet `EXCEPTIONAL_CARRIER_RIGIDITY/` remains in force.
+
+The normalized graph of the restricted ideal is canonically the normalization
+of the component dominating \(X\) inside the ambient normalized blowup. The
+joint-residue theorem characterizes which higher divisors survive as Rees
+divisors.
+
+For an involution-fixed elliptic \(E_t\), the ordinary valuation has a
+canonical residual-\(S_3\)-stable center on the normalized graph. Its accepted
+first nonzero normal order is odd, so its actual integrated target is the fixed
+line \(L_t\), not \(E_t\). Any elliptic-target carrier is therefore secondary:
+a normalized point-fibre curve or an involution-fixed slice in a retained
+surface-valued carrier.
+
+At a type-II \(V_4\) point, in character coordinates \((b,c,d)\),
+
+\[
+I_P\subset(c,d)\cap(b,d)\cap(b,c)=(bc,bd,cd),
+\]
+
+and the quadratic initial tuple has
+
+\[
+P_B^{(2)}=\alpha cd,\qquad
+P_C^{(2)}=\beta bd,\qquad
+P_D^{(2)}=\gamma bc.
+\]
+
+The global landing identity forces
 
 \[
 \boxed{\alpha\beta\gamma=0.}
 \]
 
-Thus the first point-exceptional `P^2` cannot simultaneously carry all three
-nonzero character directions. At least one direction is pushed to higher
-order. Combined with the joint-residue survival theorem, any point-centered
-divisor whose target image is only a curve is contracted on the normalized
-graph; only surface-valued point-centered divisors survive as Rees divisors.
-The remaining data are therefore curve components of normalized point fibres
-and involution-fixed slices inside retained surface carriers.
+Point-centered curve-valued divisors are contracted by the joint-residue
+criterion; the remaining local objects are curve components of normalized
+point fibres and fixed slices inside surface-valued Rees divisors.
 
-### Q4 — degree one or finite profiles?
+## 5. Required checkpoint, updated
 
-**No from these local constraints, and finite nonempty classification is
-impossible globally.** If one ambient landing exists, postcomposition with the
-accepted intrinsic selfmap and its iterates yields ambient restrictions of
-unbounded degree. Therefore local Rees constraints can force `delta=1` for all
-ambient maps only by forcing the ambient landing set to be empty; they cannot
-produce a nonempty finite profile list containing global degree.
+### Q1
 
-Mapwise finiteness remains true: for each fixed landing ideal there are only
-finitely many Rees valuations and normalized-fibre components. What is
-impossible is the requested **uniform finite list over all ambient maps** with
-global degree included.
+The landing locus \(\{P:F(P)=0\}\) is a nonlinear cubic cone in the finitely
+generated covariant module, not an additive syzygy module.
 
-## Smallest remaining theorem
+### Q2
 
-The correct remaining problem is now the headline existence problem itself:
+The ordinary carrier over \(E_t\) is canonical and integrated, but line-valued.
+It does not provide an elliptic selfcarrier.
 
-> **Ambient landing emptiness theorem.** Prove that no primitive homogeneous
-> `G`-covariant tuple `P` with `F(P)=0` defines a dominant map
-> `P(W_5) --> X`.
+### Q3
 
-Normalized Rees geometry remains potentially useful for proving emptiness, but
-it can no longer support the proposed classification of a nonempty rigid
-ambient submonoid.
+The simultaneous type-II relation is
+\(\alpha\beta\gamma=0\), together with contraction of every point-centered
+curve-valued divisor.
 
-The most concrete unresolved local-to-global statement combines the previous
-carrier theorem with the new type-II relation:
+### Q4
 
-> enumerate the curve components of the actual normalized type-I/type-II point
-> fibres and the involution-fixed curve slices inside retained surface-valued
-> Rees divisors, subject to the type-II product-zero initial relation, and show
-> that their globally synchronized occurrence over all 55 V4 configurations is
-> impossible.
+The local constraints do not force a finite nonempty profile list.
+Postcomposition makes such a list impossible if one ambient map exists.
+They now do force the concrete coordinate bounds \(d\ge22\) for all landing
+tuples and \(d\ge24\) for retractions.
 
-No such theorem is proved in this packet.
+## 6. Smallest remaining targets
+
+The first unrestricted ambient coordinate degree is now \(22\).
+
+The first retraction coordinate degree is \(24\), reduced to the finite
+divisibility problem
+
+\[
+J_{23}\mid F(V),\qquad V\in K_{21}\setminus\{0\},
+\]
+
+with nonsquare quotient.
+
+For the Rees route, the smallest local theorem is still to enumerate the
+actual normalized type-I/type-II point-fibre curves and fixed slices inside
+retained surface carriers, subject to the product-zero relation, and prove
+that their synchronized occurrence over all \(55\) \(V_4\)-configurations is
+impossible.
+
+Current honest exits:
+
+```text
+AMBIENT-LANDING-COORDINATE-DEGREE-AT-LEAST-22
+DELTA1-RETRACTION-COORDINATE-DEGREE-AT-LEAST-24
+FULL-G-AMBIENT-SELFMAP-CLASSIFICATION-UNDECIDED
+KLEIN-PSL2(11)-NONUNIRATIONAL-NOT-PROVED
+```
