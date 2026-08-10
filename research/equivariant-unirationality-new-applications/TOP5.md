@@ -324,3 +324,10 @@ surface candidate, but it does not enter the top five. Its singular target,
 unsettled Condition-(A) audit, and uncertain ordinary-unirationality boundary
 outweigh the attractive fact that `A6` cannot act faithfully on a rational
 curve. See `QUADRATIC_DOUBLE_SOLIDS.md`.
+
+## Ruled-divisor addendum
+
+A further completed action with a *ruled* central fixed divisor, the
+conic-bundle threefold over `F1` with `G=C2xS3`, is in
+`THEOREM_RULED_CONIC_BUNDLE_THREEFOLD.md` (adjudication:
+`ADJUDICATION_PR13.md`).

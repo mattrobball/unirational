@@ -195,3 +195,5 @@ large-group double-quadric candidates. Their exact finite or geometric gaps
 are recorded in `TOP5.md`, `INDEX1_FANO_THREEFOLDS.md`,
 `CONIC_BUNDLES.md`, `KUMMER_DOUBLE_SOLIDS.md`, and
 `QUADRATIC_DOUBLE_SOLIDS.md`.
+
+A third completed application, the rational conic-bundle threefold over `F1` with a *ruled* central fixed divisor and `G=C2×S3`, is in `THEOREM_RULED_CONIC_BUNDLE_THREEFOLD.md` (adjudication: `ADJUDICATION_PR13.md`).
