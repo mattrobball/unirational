@@ -1,0 +1,8 @@
+CHECK gauss_sq_m11_K PASS gauss^2 = -11
+CHECK S_sq_minusI_K PASS S^2 = -I
+CHECK group_order_SL_K PASS |<T,S>| = 1320
+CHECK SL_order_profile_K PASS proj-order counts [(1, 2), (2, 110), (3, 220), (5, 528), (6, 220), (11, 240)]
+CHECK M_rank10_K PASS rank 10' projector = 10
+CHECK annM_dim5_K PASS dim Ann(M) in Lambda^4 = 5
+CHECK sigma_split_6_4_K PASS dims (M+, M-) = (6, 4)
+CHECK centralizer_order12_K PASS |C_G(sigma)| = 12

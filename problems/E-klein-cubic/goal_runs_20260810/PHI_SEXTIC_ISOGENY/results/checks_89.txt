@@ -1,0 +1,51 @@
+CHECK gauss_sq_m11_89 PASS gauss^2 = -11
+CHECK S_sq_minusI_89 PASS S^2 = -I
+CHECK group_order_SL_89 PASS |<T,S>| = 1320
+CHECK SL_order_profile_89 PASS proj-order counts [(1, 2), (2, 110), (3, 220), (5, 528), (6, 220), (11, 240)]
+CHECK M_rank10_89 PASS rank 10' projector = 10
+CHECK annM_dim5_89 PASS dim Ann(M) in Lambda^4 = 5
+CHECK sigma_split_6_4_89 PASS dims (M+, M-) = (6, 4)
+CHECK centralizer_order12_89 PASS |C_G(sigma)| = 12
+CHECK residual_S3_order6_89 PASS |image of C_G(sigma) on M+| = 6
+CHECK residual_S3_structure_89 PASS order-2 elements 3, order-3 elements 2 (S3: 3 and 2)
+CHECK tau_eigensplit_M+_89 PASS tau on M+ splits (4, 2)
+CHECK quadrics_rank9_89 PASS dim of quadrics through C_sigma = 9
+CHECK quadric_parity_split_6_3_89 PASS (tau-even, tau-odd) quadrics = (6, 3)
+CHECK nu_is_cubic_89 PASS nu_i(s,t) are binary cubics
+CHECK nu_in_kernel_89 PASS A(nu(s,t)).(s,t)^T = 0 identically
+CHECK branch_quartic_consistent_89 PASS R(s,t) agrees from w0^2, w0w1, w1^2 normalisations
+CHECK branch_quartic_separable_89 PASS 4 I^3 - J^2 != 0 (4 distinct branch points)
+CHECK sigma_on_ann_involution_89 PASS Lambda^4(sigma)^2 = 1 on Ann(M)
+CHECK klein_sigma_split_3_2_89 PASS dims of sigma-eigenspaces on the 5-rep = (3, 2)
+CHECK L_sigma_lies_on_X_89 PASS Pf6 vanishes identically on P(W^-): the line is on X
+CHECK E_sigma_is_a_cubic_89 PASS Pf6 restricted to P(W^+) is a nonzero cubic
+CHECK tau_rho_on_W3_orders_89 PASS gtau, grho act on W^+ with orders 2 and 3
+CHECK tau_on_W3_split_2_1_89 PASS tau on W^+ splits (2, 1)
+CHECK E_cubic_tau_normal_form_89 PASS cubic has the form z^2*L(u) + C(u) in tau-adapted coordinates
+CHECK E_cubic_L_is_linear_89 PASS L(u) has degree 1 (2 terms)
+CHECK E_L_normalised_89 PASS L normalised to U0 (1)
+CHECK E_cubic_leading_nonzero_89 PASS leading coefficient of the Weierstrass cubic is nonzero
+CHECK E_nonsingular_89 PASS c4^3 - c6^2 != 0
+CHECK S3_on_line_faithful_89 PASS image of C_G(sigma) in PGL(W^-) has order 6 (6 = faithful S3)
+CHECK S3_no_fixed_point_on_line_89 PASS rho and tau do not commute on W^-, so S3 has no fixed point on L_sigma
+CHECK C_meets_2dim_eigenspace_emptily_89 PASS the ww-parts of the even quadrics span all 3 monomials, so C cap P(W-block) = empty
+CHECK tau_diagonal_in_adapted_basis_89 PASS tau = diag(1,1,1,1,-1,-1) in the adapted basis
+CHECK T_E_on_curve_89 PASS rho(O_E) lies on E_sigma
+CHECK T_E_order3_89 PASS rho(O_E) is a point of order 3 on E_sigma
+CHECK branch_root_simple_89 PASS chosen root of R is simple
+CHECK j_C_two_routes_89 PASS j(C) from the binary-quartic invariants = 57 = j(C) from the Weierstrass cubic 57
+CHECK T_C_not_tau_fixed_89 PASS rho(O_C) is not a tau-fixed point
+CHECK T_C_lies_on_twisted_cubic_89 PASS v-part of rho(O_C) is proportional to nu(w0,w1)
+CHECK T_C_on_double_cover_89 PASS c^2 = R(u,1) at rho(O_C)
+CHECK T_C_on_weierstrass_89 PASS rho(O_C) satisfies Y^2 = h(X)
+CHECK T_C_order3_89 PASS rho(O_C) is a point of order 3 on C_sigma
+CHECK C_and_E_geometrically_isomorphic_89 PASS u^4 = A_E/A_C for u^2 = B_E A_C /(B_C A_E)
+CHECK S3_structures_match_89 PASS psi(T_C) x-coord = 52, T_E x-coord = 52, MATCH=True
+CHECK phi_matches_T_C_to_T_E_89 PASS phi(T_C) = T_E exactly (sign 1)
+CHECK F_lands_on_E_89 PASS the constructed map sends C_sigma into E_sigma
+CHECK equivariant_isomorphism_pointwise_89 PASS F(g.P) = g.F(P) for g = rho and tau at 189 tests, 0 failures
+CHECK isolated_sigma_points_deg2_89 PASS V14 cap P(M-) has 2 F_p-points (degree-2 reduced scheme: 2 if split, 0 if the pair is Frobenius-conjugate)
+CHECK isolated_points_orbit_type_89 PASS the residual S3 fixes each of the two isolated points under rho and swaps them under tau: one orbit of size 2, stabiliser A3
+CHECK hasse_C_89 PASS #C(F_p) = 99, a_p(C) = -9
+CHECK hasse_E_89 PASS #E(F_p) = 99, a_p(E) = -9
+ALLGREEN

@@ -1,0 +1,1 @@
+{"decls":{},"directImports":[["Mathlib.NumberTheory.GaussSum",false,false,false]],"module":"V14Formalization.probe_gauss","references":{"{\"c\":{\"m\":\"Mathlib.NumberTheory.GaussSum\",\"n\":\"gaussSum\"}}":{"definition":null,"usages":[[1,7,1,15,"_check"]]}},"version":5}

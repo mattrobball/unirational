@@ -1,0 +1,19 @@
+name = "V14Formalization"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["V14Formalization"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "v4.32.1"
+
+[[lean_lib]]
+name = "V14Formalization"
+
+[[lean_lib]]
+name = "AxiomAudit"

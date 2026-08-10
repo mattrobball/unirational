@@ -1,0 +1,16 @@
+prime   #C(F_p)  a_p(C)  #E(F_p)  a_p(E)   j(C) mod p  j(E) mod p  8192/11 mod p  S3-match  equiv-tests
+   23       27      -3       27      -3           15          15             15         -  -/- ok/bad
+   67       69      -1       69      -1           26          26             26      True  129/0 ok/bad
+   89       99      -9       99      -9           57          57             57      True  189/0 ok/bad
+  199      192       8      192       8            3           3              3      True  366/0 ok/bad
+  331      339      -7      339      -7          173         173            173      True  675/0 ok/bad
+  353      375     -21      375     -21          135         135            135      True  741/0 ok/bad
+  397      432     -34      432     -34           59          59             59      True  852/0 ok/bad
+  419      408      12      408      12           21          21             21      True  804/0 ok/bad
+  463      441      23      441      23          408         408            408      True  879/0 ok/bad
+  617      600      18      600      18          296         296            296      True  1188/0 ok/bad
+  661      645      17      645      17          264         264            264      True  1281/0 ok/bad
+  683      636      48      636      48          248         248            248      True  1260/0 ok/bad
+  727      711      17      711      17          216         216            216      True  1419/0 ok/bad
+
+consistency: True True True True

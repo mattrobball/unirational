@@ -38,7 +38,7 @@ spaces = enumerate_branches(S0, subs, fq)
 print('branches:', len(spaces))
 t0 = time.time()
 fired = done = 0
-for key, Sb, contr in sorted(spaces, key=lambda t: -t[1].shape[0])[:NTOP]:
+for key, Sb, contr, _c in sorted(spaces, key=lambda t: -t[1].shape[0])[:NTOP]:
     r = Sb.shape[0]
     if r == 1 or not contr:
         continue

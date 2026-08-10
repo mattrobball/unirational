@@ -1,0 +1,56 @@
+CHECK gauss_sq_m11_23 PASS gauss^2 = -11
+CHECK S_sq_minusI_23 PASS S^2 = -I
+CHECK group_order_SL_23 PASS |<T,S>| = 1320
+CHECK SL_order_profile_23 PASS proj-order counts [(1, 2), (2, 110), (3, 220), (5, 528), (6, 220), (11, 240)]
+CHECK M_rank10_23 PASS rank 10' projector = 10
+CHECK annM_dim5_23 PASS dim Ann(M) in Lambda^4 = 5
+CHECK sigma_split_6_4_23 PASS dims (M+, M-) = (6, 4)
+CHECK centralizer_order12_23 PASS |C_G(sigma)| = 12
+CHECK residual_S3_order6_23 PASS |image of C_G(sigma) on M+| = 6
+CHECK residual_S3_structure_23 PASS order-2 elements 3, order-3 elements 2 (S3: 3 and 2)
+CHECK tau_eigensplit_M+_23 PASS tau on M+ splits (4, 2)
+CHECK quadrics_rank9_23 PASS dim of quadrics through C_sigma = 9
+CHECK quadric_parity_split_6_3_23 PASS (tau-even, tau-odd) quadrics = (6, 3)
+CHECK nu_is_cubic_23 PASS nu_i(s,t) are binary cubics
+CHECK nu_in_kernel_23 PASS A(nu(s,t)).(s,t)^T = 0 identically
+CHECK branch_quartic_consistent_23 PASS R(s,t) agrees from w0^2, w0w1, w1^2 normalisations
+CHECK branch_quartic_separable_23 PASS 4 I^3 - J^2 != 0 (4 distinct branch points)
+CHECK sigma_on_ann_involution_23 PASS Lambda^4(sigma)^2 = 1 on Ann(M)
+CHECK klein_sigma_split_3_2_23 PASS dims of sigma-eigenspaces on the 5-rep = (3, 2)
+CHECK L_sigma_lies_on_X_23 PASS Pf6 vanishes identically on P(W^-): the line is on X
+CHECK E_sigma_is_a_cubic_23 PASS Pf6 restricted to P(W^+) is a nonzero cubic
+CHECK tau_rho_on_W3_orders_23 PASS gtau, grho act on W^+ with orders 2 and 3
+CHECK tau_on_W3_split_2_1_23 PASS tau on W^+ splits (2, 1)
+CHECK E_cubic_tau_normal_form_23 PASS cubic has the form z^2*L(u) + C(u) in tau-adapted coordinates
+CHECK E_cubic_L_is_linear_23 PASS L(u) has degree 1 (2 terms)
+CHECK E_L_normalised_23 PASS L normalised to U0 (1)
+CHECK E_cubic_leading_nonzero_23 PASS leading coefficient of the Weierstrass cubic is nonzero
+CHECK E_nonsingular_23 PASS c4^3 - c6^2 != 0
+CHECK S3_on_line_faithful_23 PASS image of C_G(sigma) in PGL(W^-) has order 6 (6 = faithful S3)
+CHECK S3_no_fixed_point_on_line_23 PASS rho and tau do not commute on W^-, so S3 has no fixed point on L_sigma
+CHECK C_meets_2dim_eigenspace_emptily_23 PASS the ww-parts of the even quadrics span all 3 monomials, so C cap P(W-block) = empty
+CHECK tau_diagonal_in_adapted_basis_23 PASS tau = diag(1,1,1,1,-1,-1) in the adapted basis
+CHECK T_E_on_curve_23 PASS rho(O_E) lies on E_sigma
+CHECK T_E_order3_23 PASS rho(O_E) is a point of order 3 on E_sigma
+CHECK isolated_sigma_points_deg2_23 PASS V14 cap P(M-) has 0 F_p-points (degree-2 reduced scheme: 2 if split, 0 if the pair is Frobenius-conjugate)
+CHECK hasse_C_23 PASS #C(F_p) = 27, a_p(C) = -3
+CHECK hasse_E_23 PASS #E(F_p) = 27, a_p(E) = -3
+mode = 23
+tau_eigensplit_Mplus = [4, 2]
+tau_sign_on_2dim_block = -1
+branch_quartic_R = ['0', '21', '12', '9', '16']
+I_quartic = 14
+J_quartic = 2
+j_C_sigma = 15
+weierstrass_E_sigma = ['1', '18', '19', '15']
+j_E_sigma = 15
+S3_on_line_projective_order = 6
+counts = {'nC': 27, 'aC': -3, 'nE': 27, 'aE': -3}
+torsion = {'x_TE_short': '18', 'A_E': '3', 'B_E': '11'}
+isolated_sigma_points = {}
+quadrics_adapted = [['1', '0', '0', '0', '0', '0', '0', '0', '9', '0', '0', '10', '1', '0', '0', '19', '0', '0', '12', '18', '21'], ['0', '1', '0', '0', '0', '0', '0', '0', '9', '0', '0', '1', '0', '0', '0', '8', '0', '0', '2', '15', '11'], ['0', '0', '1', '0', '0', '0', '0', '0', '13', '0', '0', '14', '14', '0', '0', '22', '0', '0', '22', '22', '16'], ['0', '0', '0', '1', '0', '0', '0', '0', '2', '0', '0', '6', '4', '0', '0', '21', '0', '0', '6', '13', '2'], ['0', '0', '0', '0', '1', '0', '0', '0', '0', '0', '12', '0', '0', '15', '4', '0', '14', '17', '0', '0', '0'], ['0', '0', '0', '0', '0', '1', '0', '0', '0', '0', '10', '0', '0', '3', '6', '0', '9', '12', '0', '0', '0'], ['0', '0', '0', '0', '0', '0', '1', '0', '11', '0', '0', '7', '5', '0', '0', '8', '0', '0', '7', '21', '10'], ['0', '0', '0', '0', '0', '0', '0', '1', '1', '0', '0', '1', '15', '0', '0', '11', '0', '0', '6', '2', '13'], ['0', '0', '0', '0', '0', '0', '0', '0', '0', '1', '5', '0', '0', '20', '21', '0', '15', '20', '0', '0', '0']]
+monomials = [[0, 0], [0, 1], [0, 2], [0, 3], [0, 4], [0, 5], [1, 1], [1, 2], [1, 3], [1, 4], [1, 5], [2, 2], [2, 3], [2, 4], [2, 5], [3, 3], [3, 4], [3, 5], [4, 4], [4, 5], [5, 5]]
+plane_cubic_Ebasis = {'1,2,0': '13', '0,3,0': '13', '0,1,2': '3', '3,0,0': '7', '2,1,0': '21', '1,0,2': '7'}
+Mplus_basis_in_Lambda2 = [['1', '0', '0', '0', '0', '0', '0', '19', '0', '17', '0', '11', '0', '11', '22'], ['0', '1', '0', '0', '0', '0', '0', '16', '12', '21', '0', '17', '0', '0', '10'], ['0', '0', '1', '0', '0', '0', '0', '17', '0', '6', '11', '8', '0', '0', '12'], ['0', '0', '0', '1', '0', '11', '0', '15', '0', '16', '0', '12', '0', '0', '6'], ['0', '0', '0', '0', '1', '0', '0', '2', '0', '9', '0', '21', '12', '0', '19'], ['0', '0', '0', '0', '0', '0', '1', '22', '0', '22', '0', '1', '0', '0', '22']]
+plucker_quadrics_Mplus = [['11', '19', '12', '9', '18', '21', '0', '0', '0', '0', '21', '0', '22', '0', '0', '0', '0', '0', '0', '0', '0'], ['0', '8', '22', '0', '0', '0', '14', '12', '16', '19', '2', '0', '0', '0', '0', '22', '0', '0', '0', '0', '0'], ['22', '11', '16', '1', '19', '2', '22', '0', '0', '0', '0', '0', '0', '0', '0', '0', '22', '0', '0', '0', '0'], ['0', '0', '8', '0', '1', '0', '0', '14', '0', '0', '0', '12', '16', '19', '2', '0', '0', '2', '0', '0', '0'], ['22', '0', '0', '0', '0', '0', '0', '22', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '2', '0'], ['21', '20', '1', '12', '7', '21', '0', '0', '22', '9', '0', '0', '0', '11', '0', '0', '7', '0', '4', '21', '0'], ['0', '0', '0', '11', '0', '0', '0', '0', '19', '1', '0', '1', '12', '0', '0', '9', '18', '21', '0', '0', '0'], ['0', '22', '1', '0', '11', '0', '0', '12', '0', '19', '0', '7', '22', '16', '21', '0', '9', '0', '18', '21', '0'], ['0', '21', '0', '1', '0', '0', '20', '1', '1', '15', '21', '0', '7', '22', '0', '22', '4', '21', '0', '0', '0'], ['0', '0', '21', '1', '0', '0', '0', '20', '0', '0', '0', '1', '12', '15', '21', '0', '0', '0', '1', '0', '0'], ['2', '8', '1', '14', '19', '20', '5', '9', '15', '4', '18', '20', '11', '8', '1', '20', '0', '7', '13', '1', '2'], ['0', '17', '0', '12', '0', '1', '21', '6', '16', '9', '11', '0', '0', '0', '7', '0', '0', '22', '0', '4', '21'], ['19', '14', '12', '20', '9', '7', '8', '5', '16', '19', '2', '4', '7', '13', '5', '2', '16', '18', '8', '15', '2'], ['19', '16', '17', '15', '2', '20', '0', '0', '0', '12', '20', '0', '0', '0', '1', '0', '0', '12', '0', '15', '21'], ['12', '22', '16', '11', '18', '14', '6', '3', '20', '6', '7', '6', '19', '15', '10', '8', '15', '2', '18', '14', '2']]
+ALLGREEN

@@ -77,21 +77,67 @@ def land_on_branch(d, basis, mons, S, label, tag, contractions=(), quad=True):
     ms = os.path.join(RES, 'land_d%d_%s_p%d.ms' % (d, tag, p))
     quads = []
     if quad and contractions:
-        nq = int(1.6 * (r * (r + 1) // 2)) + 60
-        Q, monsq = [], None
-        for U, qW in contractions:
-            rq, monsq = second_order_quadrics(basis, mons, U, qW, S, fq, nq, rng)
-            Q.append(rq[:, :, idx] if keff > 1 else rq)
-        allq = np.concatenate(Q, axis=0)
-        flat = allq[:, :, 0] if keff == 1 else fq_rows_to_fp(allq, sub.tab, p)
-        Rq, _ = rref(flat, p)
-        full = len(monsq) * keff
-        info['quadric_rank'], info['quadric_space'] = int(Rq.shape[0]), full
-        if Rq.shape[0] >= full:
+        # work in the effective subfield (k_eff x k_eff multiplication instead
+        # of k x k) and stop as soon as the quadrics span everything
+        wfq, wS = fq, S
+        ok_sub = keff > 1 and all(
+            not np.any(np.delete(qW, idx, axis=1) % p) for _, qW in contractions)
+        if ok_sub:
+            wfq, wS = sub, S[:, :, idx]
+        elif keff == 1:
+            wfq, wS = sub_fq([0], fq), S[:, :, [0]]
+        nmon2 = r * (r + 1) // 2
+        # the full-rank certificate needs an rref with nmon2*k_eff columns; do
+        # it only while that is cheap, otherwise hand the quadrics to msolve
+        # (a few hundred quadrics in r+1 variables solve at degree 3)
+        cheap = nmon2 * wfq.k <= 2500
+        nq = int(1.2 * nmon2) + 60 if cheap else max(600, 15 * r)
+        Q, monsq, Rq = [], None, np.zeros((0, 0))
+        full, ci = None, 0
+        for ci, (U, qW) in enumerate(contractions):
+            qq = qW[:, idx] if ok_sub else (qW[:, [0]] if keff == 1 else qW)
+            rq, monsq = second_order_quadrics(basis, mons, U, qq, wS, wfq, nq, rng)
+            Q.append(rq)
+            if not cheap:
+                break                      # one contraction is plenty for msolve
+            allq = np.concatenate(Q, axis=0)
+            flat = (allq[:, :, 0] if wfq.k == 1
+                    else fq_rows_to_fp(allq, wfq.tab, p))
+            Rq, _ = rref(flat, p)
+            full = len(monsq) * wfq.k
+            if Rq.shape[0] >= full:
+                break
+        info['quadric_rank'] = int(Rq.shape[0])
+        info['quadric_space'] = full
+        info['quadric_contractions'] = ci + 1
+        if cheap and Rq.shape[0] >= full:
             info['verdict'] = 'EMPTY-QUADRICS'
             return info
-        quads = write_quadrics(Rq if keff == 1 else Rq.reshape(Rq.shape[0], -1, keff),
-                               monsq, r, p, None if keff == 1 else sub.tab)
+        rows_q = (Rq if cheap else np.concatenate(Q, axis=0))
+        if not cheap:
+            rows_q = rows_q[:, :, 0] if wfq.k == 1 else rows_q
+        if wfq.k == keff or keff == 1:
+            quads = write_quadrics(
+                rows_q if keff == 1 else rows_q.reshape(rows_q.shape[0], -1, keff),
+                monsq, r, p, None if keff == 1 else sub.tab)
+        if quads:
+            # try the quadrics ALONE first: a few hundred quadrics in r(+1)
+            # variables solve at low degree and the input is ~10x smaller than
+            # the cubic system, which is what msolve actually chokes on
+            info['n_quadric_generators'] = len(quads)
+            ms2 = ms.replace('.ms', '_q.ms')
+            if keff == 1:
+                write_ms([], [], nvar, p, ms2, extra_gens=quads)
+            else:
+                write_ms_ext(np.zeros((0, 0, keff)), [], r, p, sub.tab, ms2,
+                             extra_gens=quads)
+            t0 = time.time()
+            st, body = run_msolve(ms2, ms2.replace('.ms', '.out'), CAP, gb=True)
+            info['msolve_quadrics'] = st
+            info['secs_quadrics'] = round(time.time() - t0, 1)
+            if st == 'OK' and gb_verdict(body, r) == 'EMPTY':
+                info['verdict'] = 'EMPTY-QUADRICS-GB'
+                return info
     # saturate the degree-3 part of the sampled landing ideal
     budget = 3000 if r <= 25 else 600
     blk = max(120, 3 * r)
@@ -160,7 +206,7 @@ for d in range(DLO, DHI + 1):
         J = jac_values(basis, mons, U, p, rng)
         opts = [('Z', R, None, None, None)]
         for lab, q in cands:
-            qW = np.einsum('nk,nj->jk', q, np.array(Tg, dtype=np.float64)) % p
+            qW = np.einsum('nk,nj->jk', q, np.array(Tg, dtype=np.float64), optimize=True) % p
             opts.append((lab, R, q, first_order_rows(J, qW, fq), qW))
         subs.append({'name': name, 'U': U, 'opts': opts})
     # collect the surviving branch subspaces (label, space, contracted loci)
@@ -209,8 +255,8 @@ for d in range(DLO, DHI + 1):
         print('  d=%2d %-42s dim %2d k %d vars %3d -> %-16s %s'
               % (d, key, info['dim'], info['k_eff'], info['nvars'], info['verdict'],
                  info.get('msolve', '')), flush=True)
-    GOOD = ('EMPTY', 'EMPTY-ALL-CUBICS', 'EMPTY-QUADRICS', 'EMPTY-IDENTITY',
-            'EMPTY-SUBSPACE', 'ZEROMAP')
+    GOOD = ('EMPTY', 'EMPTY-ALL-CUBICS', 'EMPTY-QUADRICS', 'EMPTY-QUADRICS-GB',
+            'EMPTY-IDENTITY', 'EMPTY-SUBSPACE', 'ZEROMAP')
     bad = [k for k, v in verdicts.items() if v['verdict'] not in GOOD]
     out[d] = {'K': K, 'branches_nonzero': len(verdicts), 'verdicts': verdicts,
               'unresolved': bad, 'secs': round(time.time() - t0, 1)}
@@ -224,6 +270,10 @@ for d in range(DLO, DHI + 1):
                                'conjugate_of': bycombo[rep][0]}
     GOOD = GOOD + ('EMPTY-GALOIS-CONJUGATE',)
     bad = [k for k, v in verdicts.items() if v['verdict'] not in GOOD]
+    kinds = {}
+    for v in verdicts.values():
+        kinds[v['verdict']] = kinds.get(v['verdict'], 0) + 1
+    check('land_verdicts_d%d_p%d' % (d, p), not bad, str(sorted(kinds.items())))
     check('land_d%d_p%d' % (d, p), not bad,
           'all %d branches EMPTY' % len(verdicts) if not bad else 'unresolved: %s' % bad)
     json.dump(out, open(os.path.join(HERE, 'payload', 'land_p%d_%d_%d%s.json'

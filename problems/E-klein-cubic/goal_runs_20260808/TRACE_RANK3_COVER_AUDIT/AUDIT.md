@@ -1,0 +1,256 @@
+# Structural audit of the rank-three cyclic cover
+
+**Date:** 2026-08-08  
+**Scope:** the fixed five-line Fourier arrangement and its degree-eleven
+monomial cover; no curve-degree or Laurent-support search  
+**Result:** canonical-cover structure and boundary countercurves, but no
+all-degree nonboundary rational-curve theorem
+
+This note audits the cyclic-cover continuation proposed after
+`TRACE_COBOUNDARY/RANK_THREE_BOUNDARY.md`.  It records exactly what the cover
+geometry supplies and what remains unproved.
+
+## 1. The Fourier plane and its monomial cover
+
+Fix a primitive fifth root `zeta` and one omitted nontrivial Fourier
+character `q in {1,2,3,4}`.  The four choices are cyclotomic-Galois
+conjugate.  Put
+
+\[
+ P_k(x)=\sum_{i=0}^4\zeta^{ki}x_i^2x_{i+1},
+ \qquad i\pmod5,
+\]
+
+and
+
+\[
+ S_q=\{P_0=P_q=0\}\subset\mathbf P^4.                 \tag{1.1}
+\]
+
+On the dense projective torus, the monomial map
+
+\[
+ \psi:[x_i]\longmapsto[b_i]=[x_i^2x_{i+1}]            \tag{1.2}
+\]
+
+has degree
+
+\[
+ \det(2+\sigma\mid \mathbf Z^5/\mathbf Z\mathbf1)
+ =\Phi_5(-2)=11.                                      \tag{1.3}
+\]
+
+Its image on `S_q` is the Fourier plane
+
+\[
+ W_q=\left\{\sum_i b_i=\sum_i\zeta^{qi}b_i=0\right\}
+ \simeq\mathbf P^2.                                   \tag{1.4}
+\]
+
+The coordinate sections `b_i=0` give five lines in `W_q`.  Any three of
+their defining rows are independent, so the lines are in general position:
+there are ten double points and no triple point.  On the torus, (1.2) is the
+cyclic eleven-cover encoded by the cokernel row
+`mu=(1,5,3,4,9)`.
+
+Equation (1.1) is a useful projective compactification, but (1.2) has base
+curves on its coordinate boundary.  Boundary curves on `S_q` must therefore
+not be mistaken for nonconstant rank-three curves in the Fourier plane.
+
+## 2. The compactification is canonical and singular
+
+The surface `S_q` is a `(3,3)` complete intersection.  Hence
+
+\[
+ K_{S_q}=\mathcal O_{S_q}(1),\qquad K_{S_q}^2=9.        \tag{2.1}
+\]
+
+It is not smooth.  Its singular locus consists exactly of the five
+coordinate vertices `e_i`.
+
+To see that there is no torus singularity, suppose the two gradients are
+dependent and put `d_i=zeta^(qi)-lambda`.  After multiplying the `i`-th
+gradient equation by `x_i`, the nonzero monomials
+`b_i=x_i^2x_(i+1)` satisfy
+
+\[
+ 2d_i b_i+d_{i-1}b_{i-1}=0.                            \tag{2.2}
+\]
+
+If every `d_i` is nonzero, multiplying the five recurrences gives
+`1=(-1/2)^5`, impossible.  If one `d_i` vanishes, (2.2) forces its distinct
+neighbor to vanish as well, also impossible.  Points with exactly one zero
+coordinate are smooth by the same endpoint equation.  A generic point of a
+nonadjacent coordinate line is smooth because the two relevant Fourier
+gradient columns are independent.  Only the vertices remain.
+
+At `e_0`, set `x_0=1` and use `P_0=0` to eliminate `x_1`.  With
+
+\[
+ X=x_2,\qquad Y=x_3,\qquad Z=x_4,
+\]
+
+the second local equation has weighted principal part
+
+\[
+ A Z^2+B X^2Y+C Y^2Z,                                  \tag{2.3}
+\]
+
+where
+
+\[
+ A=\zeta^{4q}-1,\quad B=\zeta^{2q}-1,\quad
+ C=\zeta^{3q}-1
+\]
+
+are all nonzero.  Completing the square in `Z` gives
+
+\[
+ Z'^2+uX^2Y+vY^4,\qquad uv\ne0.                        \tag{2.4}
+\]
+
+The omitted terms have weight greater than eight for
+`wt(X,Y,Z')=(3,2,4)`.  Thus every vertex is a rational double point of type
+`D_5`.  The minimal resolution has five `D_5` exceptional configurations,
+twenty-five exceptional `(-2)`-curves in total.
+
+The five nonadjacent coordinate lines
+
+\[
+ \overline{e_i e_{i+2}}\subset S_q                    \tag{2.5}
+\]
+
+are the evident one-dimensional base locus of the compactified monomial
+map.
+
+## 3. Five additional rational boundary quartics
+
+The coordinate lines are not the full list of rational curves visible on
+the boundary.  For `q=1`, intersect with `x_0=0` and write
+
+\[
+ A=x_1^2x_2,\qquad B=x_2^2x_3,\qquad C=x_3^2x_4.
+\]
+
+The two Fourier equations give exactly
+
+\[
+ A=\zeta C,\qquad B=-(1+\zeta)C.                       \tag{3.1}
+\]
+
+Choose constants `rho,kappa` satisfying
+
+\[
+ \rho^2=-(1+\zeta),\qquad \kappa^2\rho=\zeta.
+\]
+
+Then
+
+\[
+ [s:t]\longmapsto
+ [x_0:x_1:x_2:x_3:x_4]
+ = [0:\kappa s^3t:\rho s^2t^2:s^4:t^4]               \tag{3.2}
+\]
+
+is a rational monomial quartic on `S_1`.  Cyclic shift gives five such
+quartics, and cyclotomic conjugacy gives them for every `q`.
+
+These curves do not produce rank-three variation.  Along (3.2),
+
+\[
+ [b_0:b_1:b_2:b_3:b_4]
+ =[0:\zeta:-(1+\zeta):1:0],                            \tag{3.3}
+\]
+
+so the Fourier-plane image is the constant double point
+`b_0=b_4=0`.  They are exact boundary/compactification countercurves, not
+nonboundary rational lifts.
+
+In particular, an assertion that the only visible rational curves are the
+five coordinate lines and the `D_5` exceptional curves is false as stated.
+Any Neron-Severi/effective-cone argument must account for the quartics as
+well, even if their classes lie in the lattice generated by the proposed
+boundary configuration.
+
+## 4. The analytically minimal conic contact type is empty
+
+This fixed calculation is included only as a boundary check, not as the
+start of a degree ladder.
+
+Away from the two Laurent-unit places `0,infinity`, a rational lift must
+satisfy
+
+\[
+ \mu_i a+\mu_j b=0\pmod {11}                            \tag{4.1}
+\]
+
+at a double point of the five-line arrangement.  In degree two, the only
+positive contact below three is the directed adjacent pair `(a,b)=(1,2)`.
+Capacity two on each of the five lines forces, up to cyclic relabeling,
+exactly two disjoint adjacent contacts.  The residual contacts at the two
+unit places have types `(2)` and `(1,1)`.
+
+After sending the four parameter points to `0,infinity,1,lambda`, the five
+line sections must therefore have the shapes
+
+\[
+ h_0=A t^2,\quad h_1=B(t-1),\quad h_2=C(t-1)^2,
+ \quad h_3=D(t-\lambda),\quad h_4=E(t-\lambda)^2.       \tag{4.2}
+\]
+
+The coefficient matrices for
+
+\[
+ \sum h_i=\sum\zeta^i h_i=0                             \tag{4.3}
+\]
+
+have size `6 by 5`.  Exact reduction of their six maximal minors together
+with `Phi_5(zeta)` gives the unit ideal.  Hence the unique minimal conic
+contact type is empty.
+
+There is a similarly natural fully internal cubic pattern consisting of
+the five adjacent `(1,2)` contacts.  Writing
+
+\[
+ h_i=c_iD_iD_{i-1}^2                                   \tag{4.4}
+\]
+
+and normalizing three of the five roots to `0,1,infinity`, its fixed
+`8 by 5` Fourier coefficient matrix also has unit maximal-minor ideal.  This
+excludes that one symmetric cubic pattern only.  It is not a classification
+of cubic contacts and is not used as evidence for an all-degree result.
+
+## 5. Exact boundary of the cover route
+
+The cover is a canonical surface, not a Fano or rational surface.  The
+present audit found no nonboundary rational curve, but it also proved no
+theorem saying that every rational curve meeting the dense torus is
+constant.  Establishing that statement would require, for example,
+
+1. a proved Neron-Severi description of the `D_5` resolution; and
+2. an effective-cone/adjunction classification excluding every rational
+   class not supported on or contracted to the boundary.
+
+Neither follows merely from `K^2=9`, the five `D_5` points, or the visible
+boundary curves.  Standard hyperbolicity of the five-line complement is
+also insufficient: a lifted rational curve may meet the boundary at
+arbitrarily many pair-common divisor points.
+
+Accordingly the honest conclusions are:
+
+```text
+RANK3-COVER-CANONICAL-3-3-WITH-FIVE-D5
+RANK3-COVER-BOUNDARY-RATIONAL-QUARTICS
+RANK3-COVER-MINIMAL-CONIC-CONTACT-EMPTY
+RANK3-COVER-NONBOUNDARY-RATIONAL-CURVES-UNDECIDED
+F55-GLOBAL-QUESTION-OPEN
+```
+
+The exact fixed replay is:
+
+```sh
+cd /Users/worker/unirational/problems/E-klein-cubic
+/opt/homebrew/bin/python3 \
+  goal_runs_20260808/TRACE_RANK3_COVER_AUDIT/verify.py
+```
+

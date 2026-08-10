@@ -1,0 +1,11 @@
+kk = ZZ/199;
+S = kk[z0,z1,z2,z3,z4];
+pf = -4*z0^2*z2 - 4*z0*z3^2 - 38809*z1^2*z4 + 394*z1*z2^2 + 394*z3*z4^2;
+Csing = ideal(pf, -8*z0*z2 - 4*z3^2, -77618*z1*z4 + 394*z2^2, -4*z0^2 + 788*z1*z2, -8*z0*z3 + 394*z4^2, -38809*z1^2 + 788*z3*z4);
+print("sing_locus_dim " | toString dim Csing);
+Krank2 = ideal(-4*z0*z2, -38809*z1*z4, 394*z1*z2, -4*z0*z3, 394*z3*z4, -2*z0*z3 + 197*z4^2, -2*z2*z4, 2*z0*z1, -197*z1*z4 + 2*z2^2, -197*z1*z3, -2*z0^2 + 197*z1*z2, 197*z0*z4, -197*z1^2 + 2*z3*z4, -2*z0*z2 - 2*z3^2, 2*z2*z3);
+print("rank2_locus_dim " | toString dim Krank2);
+Kl = ideal(pf);
+print("klein_dim " | toString dim Kl);
+print("klein_deg " | toString degree Kl);
+print("klein_singdim " | toString dim (Kl + ideal jacobian Kl));

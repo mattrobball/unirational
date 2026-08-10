@@ -1,0 +1,58 @@
+--- C2  |H|=2  fixed pieces: [6, 4]
+    P^5  C2[1]|dim 1|deg 6|ncomp 1|(d1 e6 g1)   F_p-points: 0
+    P^3  C2[396]|dim 0|deg 2|ncomp 2|(d0 e1)|(d0 e1)   F_p-points: 2
+--- C3  |H|=3  fixed pieces: [4, 3, 3]
+    P^3  C3[1]|dim 1|deg 2|ncomp 1|(d1 e2 g0)   F_p-points: 398
+    P^2  C3[34]|dim 0|deg 2|ncomp 2|(d0 e1)|(d0 e1)   F_p-points: 2
+    P^2  C3[362]|dim 0|deg 2|ncomp 2|(d0 e1)|(d0 e1)   F_p-points: 2
+--- C5  |H|=5  fixed pieces: [2]
+    P^1  C5[1]|EMPTY   F_p-points: 0
+--- C6  |H|=6  fixed pieces: [2, 2, 1, 2, 1, 2]
+    P^1  C6[1]|EMPTY   F_p-points: 0
+    P^1  C6[34]|EMPTY   F_p-points: 0
+    P^0  C6[35]|EMPTY   F_p-points: 0
+    P^1  C6[362]|EMPTY   F_p-points: 0
+    P^0  C6[363]|EMPTY   F_p-points: 0
+    P^1  C6[396]|dim 0|deg 2|ncomp 2|(d0 e1)|(d0 e1)   F_p-points: 2
+--- C11  |H|=11  fixed pieces: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    P^0  C11[16]|EMPTY   F_p-points: 0
+    P^0  C11[31]|EMPTY   F_p-points: 0
+    P^0  C11[99]|EMPTY   F_p-points: 0
+    P^0  C11[126]|EMPTY   F_p-points: 0
+    P^0  C11[167]|ALL|dim 0|deg 1   F_p-points: 1
+    P^0  C11[256]|ALL|dim 0|deg 1   F_p-points: 1
+    P^0  C11[273]|ALL|dim 0|deg 1   F_p-points: 1
+    P^0  C11[290]|EMPTY   F_p-points: 0
+    P^0  C11[333]|ALL|dim 0|deg 1   F_p-points: 1
+    P^0  C11[393]|ALL|dim 0|deg 1   F_p-points: 1
+--- V4  |H|=4  fixed pieces: [4, 2, 2, 2]
+    P^3  V4[1,1]|dim 0|deg 4|ncomp 4|(d0 e1)|(d0 e1)|(d0 e1)|(d0 e1)   F_p-points: 4
+    P^1  V4[1,396]|EMPTY   F_p-points: 0
+    P^1  V4[396,1]|EMPTY   F_p-points: 0
+    P^1  V4[396,396]|EMPTY   F_p-points: 0
+--- D12  |H|=12  fixed pieces: [2, 1, 1]
+    P^1  D12[1,1,1,1,1,1]|EMPTY   F_p-points: 0
+    P^0  D12[1,396,1,396,1,1]|EMPTY   F_p-points: 0
+    P^0  D12[1,396,1,396,1,396]|EMPTY   F_p-points: 0
+--- A5  |H|=60  fixed pieces: [1]
+    P^0  A5[1,1]|EMPTY   F_p-points: 0
+    detC2|dim 1|deg 6
+    detC3|dim 1|deg 2
+    detC5|dim 0|deg 4
+    detC6|dim 0|deg 2
+    detC11|dim 0|deg 5
+CHECK lefschetz_C2_p397 PASS chi(V^C2) = 2, Lefschetz 4-(chi5+chi5bar) = 2
+CHECK lefschetz_C3_p397 PASS chi(V^C3) = 6, Lefschetz 4-(chi5+chi5bar) = 6
+CHECK lefschetz_C6_p397 PASS chi(V^C6) = 2, Lefschetz 4-(chi5+chi5bar) = 2
+CHECK lefschetz_C11_p397 PASS chi(V^C11) = 5, Lefschetz 4-(chi5+chi5bar) = 5
+CHECK lefschetz_C5_p397 PASS det fixed locus of C5 on V14: detC5|dim 0|deg 4 (Lefschetz predicts 4 points)
+CHECK condition_A_p397 PASS V14^H nonempty for every abelian H: C2=Y, C3=Y, C5=Y, C6=Y, C11=Y, V4=Y
+CHECK A5_fixed_empty_p397 PASS V14^A5 = empty (1 character pieces, all empty)
+CHECK D12_fixed_empty_p397 PASS V14^D12 = empty (3 character pieces, all empty)
+
+  special F_p-points: 415
+   orbit size   55 (stab order  12):  5 of the found points; from ['C3[1]', 'V4[1,1]']
+   orbit size   60 (stab order  11):  5 of the found points; from ['C11[167]', 'C11[256]', 'C11[273]', 'C11[333]', 'C11[393]']
+   orbit size  110 (stab order   6):  10 of the found points; from ['C2[396]', 'C3[1]', 'C6[396]']
+   orbit size  165 (stab order   4):  3 of the found points; from ['V4[1,1]']
+   orbit size  220 (stab order   3):  392 of the found points; from ['C3[1]', 'C3[34]', 'C3[362]']

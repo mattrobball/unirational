@@ -257,7 +257,7 @@ def first_order_rows(J, qW, fq):
     n = gradF(qW, fq)                                     # (5,k)
     K, _, _, M = J.shape
     # A[i, s, t] = sum_r n[r] * J[i,r,s,t]
-    A = np.einsum('rk,irst->istk', n, J) % fq.p
+    A = np.einsum('rk,irst->istk', n, J, optimize=True) % fq.p
     return A.reshape(K, 5 * M, fq.k).transpose(1, 0, 2) % fq.p     # (rows, K, k)
 
 
@@ -311,14 +311,14 @@ def second_order_quadrics(basis, mons, U, qW, S, fq, nsamp, rng, batch=64):
         u = rng.integers(0, p, size=(B, 5)).astype(np.float64)
         pts = (v[:, None, :] + eps[None, :, None] * u[:, None, :]) % p
         MX = monmat(pts.reshape(-1, 5), mons, p).reshape(B, d + 1, -1)
-        vals = np.einsum('linj,ben->belij', Bm, MX) % p          # B x (d+1) x r x 5 x k
+        vals = np.einsum('linj,ben->belij', Bm, MX, optimize=True) % p          # B x (d+1) x r x 5 x k
         coef = np.tensordot(VDi[:3], vals, axes=([1], [1])) % p  # 3 x B x r x 5 x k
         T0, T1, T2 = coef[0], coef[1], coef[2]
         h = fq.mul(T0[:, :, j0, :], qinv[None, None, :])         # B x r x k
-        nT2 = np.einsum('rk,blrm,kmt->blt', n, T2, fq.tab) % p   # B x r x k
+        nT2 = np.einsum('rk,blrm,kmt->blt', n, T2, fq.tab, optimize=True) % p   # B x r x k
         A = fq.mul(h[:, :, None, :], nT2[:, None, :, :]) % p     # B x r x r x k
-        HT = np.einsum('ijk,bljm,kmt->blit', Hq, T1, fq.tab) % p # B x r x 5 x k
-        Bq = np.einsum('blik,bjim,kmt->bljt', T1, HT, fq.tab) % p
+        HT = np.einsum('ijk,bljm,kmt->blit', Hq, T1, fq.tab, optimize=True) % p # B x r x 5 x k
+        Bq = np.einsum('blik,bjim,kmt->bljt', T1, HT, fq.tab, optimize=True) % p
         Cq = (A + Bq * half) % p
         Cq = (Cq + np.transpose(Cq, (0, 2, 1, 3))) % p           # symmetrise
         vv = Cq[:, I, J, :] % p

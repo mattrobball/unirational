@@ -157,18 +157,20 @@ def verify_prime(p, seed):
     check('v_cplus_smooth_p%d' % p, *m2_smooth(L, p))
     check('v_orbit15_p%d' % p, *orbit_facts(L, H, p))
 
+    DM = int(os.environ.get('VDMAX', '12'))
     bases, dims = {}, {}
-    for d in range(1, 13):
+    for d in range(1, DM + 1):
         bs, mons, _ = covariant_basis(d, p, a, b, rng, target=mol_ref[d])
         ok, tot = check_equivariance(bs, mons, a, b, p, rng, ntest=3)
         assert ok == tot, (d, ok, tot)
         bases[d] = bs
         dims[d] = bs.shape[0]
-    check('v_dims_p%d' % p, [dims[d] for d in range(1, 13)] == mol_ref[1:],
-          'dims %s (each basis element passes T(gx)=gT(x))' % [dims[d] for d in range(1, 13)])
+    check('v_dims_p%d' % p, [dims[d] for d in range(1, DM + 1)] == mol_ref[1:DM + 1],
+          'dims %s (each basis element passes T(gx)=gT(x))'
+          % [dims[d] for d in range(1, DM + 1)])
 
     summary = {}
-    for d in range(2, 13):
+    for d in range(2, int(os.environ.get('VDMAX', '12')) + 1):
         t0 = time.time()
         basis = bases[d].astype(np.float64)
         mons = monlist(d)
@@ -344,7 +346,7 @@ def orbit_facts(L, H, p):
 
 
 if __name__ == '__main__':
-    primes = [int(x) for x in sys.argv[1:]] or [67, 199]
+    primes = [int(x) for x in sys.argv[1:] if x.isdigit()] or [67, 199]
     allsum = {}
     for i, p in enumerate(primes):
         allsum[p] = verify_prime(p, seed=101 + 7 * i)

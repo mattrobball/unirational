@@ -50,7 +50,7 @@ class Fq:
         for t in tabs:
             m = t.shape[0]
             K = tab.shape[0]
-            new = np.einsum('abc,ijl->aibjcl', tab, t).reshape(K * m, K * m, K * m)
+            new = np.einsum('abc,ijl->aibjcl', tab, t, optimize=True).reshape(K * m, K * m, K * m)
             tab = new % p
         self.tab = tab % p
 
@@ -79,10 +79,10 @@ class Fq:
         return out
 
     def mul(self, a, b):
-        return np.einsum('...i,...j,ijl->...l', a, b, self.tab) % self.p
+        return np.einsum('...i,...j,ijl->...l', a, b, self.tab, optimize=True) % self.p
 
     def mulmat(self, a):
-        return np.einsum('i,ijl->lj', a, self.tab) % self.p
+        return np.einsum('i,ijl->lj', a, self.tab, optimize=True) % self.p
 
     def inv(self, a):
         Mi = inv_p(self.mulmat(a), self.p)
@@ -152,7 +152,7 @@ def fq_rows_to_fp(rows, tab, p):
     matrix of all theta^j-multiples, whose F_p-rank is k times the F_q-rank of
     the original rows (multiplying an equation by a field element is legal)."""
     k = tab.shape[0]
-    out = [np.einsum('nmi,il->nml', rows, tab[:, j, :]) % p for j in range(k)]
+    out = [np.einsum('nmi,il->nml', rows, tab[:, j, :], optimize=True) % p for j in range(k)]
     return np.concatenate(out, axis=0).reshape(-1, rows.shape[1] * k) % p
 
 
