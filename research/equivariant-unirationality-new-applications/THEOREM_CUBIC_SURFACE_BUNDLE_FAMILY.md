@@ -157,6 +157,12 @@ is smooth. It has ample bidegree \((2n,3)\), hence is connected; smoothness
 then makes it irreducible. Intersecting the two nonempty Bertini-open sets
 defines \(\mathcal U_n\).
 
+(The second condition is in fact implied by the first: by (5.1) the curve
+(3.4) is a connected component of \(\mathcal X^z\), and in characteristic
+zero the fixed locus of a finite-order automorphism of a smooth variety is
+smooth. The two Bertini arguments are kept separate only because they are
+independent of each other.)
+
 ## 4. Ordinary unirationality
 
 The projection to \(\mathbf P^1\) has cubic-surface generic fiber. It has
@@ -247,12 +253,29 @@ a rotation \(r^k\) commutes with a reflection, then
 \(r^k=r^{-k}\), so \(2k=0\pmod n\), hence \(k=0\).
 
 Let \(A\le G_n\) be abelian, and let \(B\) be its projection to
-\(D_{2n}\). The cyclic group \(B\) fixes a point \(b\in\mathbf P^1\).
-Above \(b\), equation (3.4) is a homogeneous binary cubic, hence has a
-projective root over \(\mathbf C\) (or vanishes identically). Choose such a
-point \(c\in C_{n,F_0,F_1}\). The dihedral group acts trivially on the
-fiber coordinates, and \(z\) acts trivially on the curve. Therefore
-\(c\in\mathcal X^A\). This proves
+\(D_{2n}\); then \(B\) is abelian, hence cyclic, and
+\(A\subseteq C_3\times B\). It therefore suffices to produce a point fixed
+by all of \(C_3\times B\).
+
+Every cyclic subgroup of \(D_{2n}\) fixes a point of \(\mathbf P^1\): a
+rotation subgroup fixes \([1:0]\) and \([0:1]\), and a reflection
+\(h=sr^{k}\) acts on the affine coordinate \(u=S/T\) by
+\(u\mapsto\epsilon^{-2k}/u\), whose two fixed points are
+\(u=\pm\epsilon^{-k}\). (For \(h=s\) these are \([1:1]\) and \([1:-1]\).)
+Fix such a point \(b\in(\mathbf P^1)^{B}\).
+
+Above \(b\), equation (3.4) is a homogeneous binary cubic in \((X,Y)\),
+hence has a projective root over \(\mathbf C\) (or vanishes identically);
+let \([X_0:Y_0]\) be such a root and put
+\(c=(b,[0:0:X_0:Y_0])\in C_{n,F_0,F_1}\subset\mathcal X\).
+
+By construction (1.1)--(1.3) the group \(D_{2n}\) acts on
+\(\mathbf P^1\times\mathbf P^3\) only through the base factor and acts
+trivially on the fiber coordinates \(U,V,X,Y\); in particular the
+reflections do, so \(B\) fixes \(c\) as soon as it fixes \(b\). The
+generator \(z\) fixes \(X,Y\) and acts trivially on the base, so it fixes
+\(c\) as well. Hence \(c\in\mathcal X^{C_3\times B}\subseteq\mathcal X^{A}\).
+This proves
 
 \[
 \mathcal X^A\ne\varnothing
@@ -262,20 +285,32 @@ fiber coordinates, and \(z\) acts trivially on the curve. Therefore
 
 ## 8. Fixed-locus obstruction
 
-The element \(z\) is central in \(G_n\). By (5.1)--(5.3), every
-positive-dimensional component of \(\mathcal X^z\) is a curve of genus
-\(4n-2\), and by (6.1) the full fixed locus is empty. The central form of
-the residual-RCC obstruction in `GENERALIZATIONS.md` therefore excludes
-every \(G_n\)-equivariant rational map from a faithful linear source.
-Thus \(\mathcal X\) is not weakly \(G_n\)-versal.
+The element \(z\) is central in \(G_n\), so its centralizer is
+\(N=G_n\). We check the two hypotheses of the central form of the
+residual-RCC obstruction in `GENERALIZATIONS.md`.
+
+*Hypothesis 1.* By (5.1), \(\mathcal X^z\) is the disjoint union of the
+smooth curve \(C_{n,F_0,F_1}\) and the finite sets \(P_U,P_V\). By (5.3)
+that curve has genus \(4n-2\ge10\), hence carries no rational curve and is
+not itself rationally chain connected. Therefore every irreducible
+rationally chain connected closed subvariety of \(\mathcal X^z\) — in
+particular every \(G_n\)-stable one — is a point.
+
+*Hypothesis 2.* Equation (6.1) gives \(\mathcal X^{G_n}=\varnothing\).
+
+The theorem therefore excludes every \(G_n\)-equivariant rational map from a
+faithful linear source. Thus \(\mathcal X\) is not weakly \(G_n\)-versal.
 
 Notice that dominance is not used: the obstruction kills even
 nondominant maps from faithful linear sources.
 
 ## 9. Cohomological obstruction audit
 
-The divisor \(\mathcal X\subset\mathbf P^1\times\mathbf P^3\) has ample
-class \((2n,3)\). Grothendieck--Lefschetz gives
+The divisor \(\mathcal X\subset\mathbf P^1\times\mathbf P^3\) is smooth and
+has ample class \((2n,3)\). The ambient variety has dimension \(4\), which
+is exactly the threshold in the Grothendieck--Lefschetz theorem for the
+Picard group of an ample divisor (SGA 2, Exp. XII); restriction is therefore
+an isomorphism and
 
 \[
 \operatorname{Pic}(\mathcal X)
@@ -285,10 +320,16 @@ class \((2n,3)\). Grothendieck--Lefschetz gives
 \tag{9.1}
 \]
 
-Both generators carry honest \(G_n\)-linearizations induced by the two
-linear representations (1.1) and (1.2). Hence a \(G_n\)-equivariant
-universal torsor exists and its obstruction class is zero. By the theorem
-of Scavia--Tschinkel--Zhang,
+Both generators carry honest \(G_n\)-linearizations. The base action (1.1)
+is the projectivization of the genuine two-dimensional representation
+\(r=\operatorname{diag}(\epsilon,\epsilon^{-1})\), \(s=\begin{pmatrix}0&1\\1&0\end{pmatrix}\)
+of \(D_{2n}\), which linearizes \(\mathcal O(1,0)\); the fiber action (1.2)
+is the projectivization of the genuine four-dimensional representation
+\(\operatorname{diag}(\omega,\omega^2,1,1)\) of \(C_3\), which linearizes
+\(\mathcal O(0,1)\). Hence a \(G_n\)-equivariant universal torsor exists and
+its obstruction class is zero. Since \(\operatorname{Pic}(\mathcal X)\) is
+free and finitely generated, the theorem of Scavia--Tschinkel--Zhang
+(arXiv:2605.02763) applies and gives
 
 \[
 \operatorname{Am}^m(\mathcal X,G_n)=0
