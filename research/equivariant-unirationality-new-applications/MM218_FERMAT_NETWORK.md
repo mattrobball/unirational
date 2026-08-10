@@ -200,15 +200,20 @@ cheapest place to test any candidate network lemma.
 | class | `\|class\|` | `\|C_G(s)\|` | `X^s` | `X^{C_G(s)}` |
 |---|---:|---:|---|---|
 | `tau` | 1 | 192 | `Z` (dP2, rational) | empty |
-| `s_0` | 3 | 64 | rational curve `\sqcup` a `(2,2)`-curve in `P^1 x P^1` | empty |
-| `s_1` | 3 | 64 | `2` points `\sqcup` a degree-4 del Pezzo surface | empty |
-| `s_2` | 24 | 8 | `2` points `\sqcup` `1` point `\sqcup` a rational curve | empty |
+| `s_0` | 3 | 64 | rational curve component(s) over `P^1 x pt` `\sqcup` a `(2,2)`-curve in `P^1 x P^1` (arithmetic genus 1) | empty |
+| `s_1` | 3 | 64 | a finite set `\sqcup` a **degree-4 del Pezzo surface** | empty |
+| `s_2` | 24 | 8 | `2` points off `Z` `\sqcup` a finite set on `Z` `\sqcup` rational curve component(s) | empty |
 
 Every involution has `X^{C_G(s)} = \varnothing`, so hypothesis 2 of the
-residual-RCC centralizer theorem always holds; but every `X^s` carries a
-positive-dimensional rational (indeed RCC) piece, so hypothesis 1 fails for
-every involution class. The centralizer form gives nothing here — the deck
-class is not a special failure, it is the general situation on this threefold.
+residual-RCC centralizer theorem always holds. Hypothesis 1 demonstrably fails
+for `tau` (the stable RCC surface `Z`) and for `s_1` (the degree-4 del Pezzo is
+the unique two-dimensional component of `X^{s_1}`, hence `C_G(s_1)`-stable, and
+it is rational). For `s_0` and `s_2` the fixed locus again carries rational
+curve components; their `C_G(s)`-stability was not audited separately, because
+the deck class is the one the network programme needs and it is already blocked.
+So the centralizer form contributes nothing beyond the central form here: the
+deck class is not a special failure, it is the general situation on this
+threefold.
 
 ---
 
