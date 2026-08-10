@@ -151,10 +151,11 @@ At a fixed eigenline with eigenvalue `lambda`, the tautological fiber of
 `O_Q(-1)` has character `lambda`; therefore `O_Q(4)` has character
 `lambda^{-4}=1`. Applying the screening lemma gives:
 
-> **Proposition.** Let `B in |O_Q(4)|` be a smooth `c`-invariant quartic
-> section, and let `X -> Q` be the associated smooth double quadric. Let
-> `tau` be the deck involution, and lift `c` so that it commutes with `tau`
-> and fixes the covering coordinate. Then
+> **Proposition.** Let `s in H^0(Q,O_Q(4))` satisfy `c*s = s` — a genuinely
+> invariant section, not merely one with `c`-invariant zero divisor — and
+> suppose `B=(s=0)` is smooth. Let `X -> Q` be the associated smooth double
+> quadric, let `tau` be the deck involution, and lift `c` so that it commutes
+> with `tau` and fixes the covering coordinate. Then
 > 
 > \[
 > B^{\langle c\rangle}=\varnothing,
@@ -165,13 +166,37 @@ At a fixed eigenline with eigenvalue `lambda`, the tautological fiber of
 > Thus Condition (A) fails for the abelian subgroup
 > `C4 x C2deck`.
 
-This is an exact rejection, not a generic heuristic. It explains why the
-most obvious `S5` and Frobenius-subgroup attempts in the natural permutation
-model never reach the residual-RCC obstruction.
+This is an exact rejection for the invariant-section model, not a generic
+heuristic. It explains why the most obvious `S5` and Frobenius-subgroup
+attempts in the natural permutation model never reach the residual-RCC
+obstruction.
 
-The conclusion uses an invariant branch section and the natural
-linearization. A semi-invariant section carrying a nontrivial character
-changes the derivative target character and must be checked separately.
+### Exact boundary of the rejection
+
+A divisor `B` that is only `c`-*stable* is cut by a semi-invariant section,
+`c*s = chi(c) s` for a character `chi` of `C4`. This changes the target
+character of `ds_p` and the rejection can fail. The exact finite data are the
+`c`-characters of the tangent spaces `T_p Q` at the four fixed points, which
+the verifier computes:
+
+| fixed point | `c`-eigenvalue on the eigenline | characters of `T_p Q` |
+|---|---|---|
+| the two points of `P(+1-eigenspace) cap Q` | `1` | `-1, i, -i` |
+| the `i`-eigenline | `i` | `i, -i, -i` |
+| the `-i`-eigenline | `-i` | `i, i, -i` |
+
+The trivial character is absent from all three rows, which is exactly the
+screening lemma. But `chi=i` or `chi=-i` occurs at every fixed point, and
+`chi=-1` occurs at the two `+1`-eigenspace points, so a smooth
+semi-invariant branch divisor with one of those characters may pass through
+the corresponding fixed points. Two remarks bound how much this matters:
+
+- for the double cover `w^2=s` to carry a lift of `c` commuting with `tau`,
+  the character `chi` must be a square in the character group of the lifted
+  group; a `chi` of order four forces the lift to have order eight, so the
+  abelian subgroup under test is then `C8`, not `C4 x C2deck`;
+- no such semi-invariant model is analyzed here. The `chi != 1` cases are
+  recorded as open, not as rejected.
 
 Replay:
 
