@@ -6614,6 +6614,12 @@ as the spin packet warned.
   `<C_6(sigma), S_3> = G`, and `V14^G <= V14^{A_5} = empty` — which is why
   the "optional" `A_5` computation turned out to be load-bearing.)
 
+Per subgroup, source against target: `P(U)^{S_3}` = 2 points and
+`V14^{S_3}` = 2 points, but `P(U)^{D_10}` = 2 points against
+`V14^{D_10}` = empty. That asymmetry is what Theorem V1 runs on; the `S_3`
+agreement is why route 2 cannot close by emptiness there and Thm V3 has to do
+the work instead.
+
 Net: the box is **not** closed and `SPIN-CHAIN-OBSTRUCTION-UNDECIDED` stands;
 route 2 is now closed off as a route to the lemma but yields Theorem V1 as a
 by-product, and route 1 (multiplicity, engine Thm 7.4) is the remaining named

@@ -301,15 +301,20 @@ remains open; route 1 (multiplicity, Thm 7.4 of the engine) is the remaining
 named route, and it is also the only one that can discharge the "all faithful
 spin sources" quantifier the headline needs.
 
-**A note on numerology.** The source `P(U)` has exactly 220 forced points with
-stabiliser `S_3` (2 orbits of 110) and 132 with stabiliser `D_10`; the target
-`V14` has exactly 220 points with stabiliser `S_3` (2 orbits of 110) and
-**none** with stabiliser `D_10`. The `S_3` match is a coincidence of the same
-group theory on both sides — 110 `S_3` subgroups in two classes, two points
-each — and carries no map: Theorem K4 puts all 352 source points in the
-indeterminacy locus of every equivariant rational map, so nothing is being
-sent anywhere. The asymmetry at `D_10` (132 source points, 0 target points) is
-what Theorem V1 runs on.
+**Source against target, per subgroup.** Dividing the packet's counts by the
+number of subgroups (220 points over 110 `S_3`s, 132 over 66 `D_10`s) gives
+the source side of this table; this file supplies the target side.
+
+| `H` | `P(U)^H` | `V14^H` |
+|---|---|---|
+| `S_3` | 2 points | **2 points** |
+| `D_10` | 2 points | **empty** |
+
+The `S_3` agreement carries no map — Theorem K4 puts all 352 source points in
+the indeterminacy locus of every equivariant rational map, so nothing is being
+sent anywhere — but it is why route 2 cannot close by emptiness there, and
+Thm V3 has to do the work instead. The `D_10` asymmetry is exactly what
+Theorem V1 runs on.
 
 ## 6. Verification standard
 
@@ -336,8 +341,11 @@ Matches FIX-IX-SEAL exactly:
   three primes for `A_4`), and derived in characteristic 0 from the subgroup
   lattice plus `V14^{D_12} = empty` (sealed) and `V14^{A_5} = empty` (new).
 
-No sampling, no search, no numerical approximation. Every emptiness claim is
-an ideal-membership statement (`saturation = unit ideal`) or a rank equality.
+No sampling and no numerical approximation. Every emptiness claim is an
+ideal-membership statement (`saturation = unit ideal`) or a rank equality; the
+only search anywhere is the **exhaustive** enumeration of `P(M_chi)(F_p)` used
+at the primes to exhibit the points and measure their stabilisers, and no
+verdict depends on it.
 
 ## 7. Replay
 
