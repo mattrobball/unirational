@@ -1,0 +1,25 @@
+--------------------------------------------------------------------------
+RUN  S1 level-0 atlas of P(W)        (both primes)
+OK   S1 level-0 atlas of P(W)        (both primes)  [S1_LEVEL0_OK]  (84 CHECK lines)
+--------------------------------------------------------------------------
+RUN  S2 nonabelian point strata      (both primes)
+OK   S2 nonabelian point strata      (both primes)  [S2_NONABELIAN_OK]  (20 CHECK lines)
+--------------------------------------------------------------------------
+RUN  S3 automaton run to acceptance  (exact characters)
+OK   S3 automaton run to acceptance  (exact characters)  [S3_AUTOMATON_OK]  (8 CHECK lines)
+--------------------------------------------------------------------------
+RUN  S4 legality of every stage      (both primes)
+OK   S4 legality of every stage      (both primes)  [S4_LEGALITY_OK]  (16 CHECK lines)
+--------------------------------------------------------------------------
+RUN  S5 terminus tables              (both primes)
+OK   S5 terminus tables              (both primes)  [S5_TERMINUS_OK]  (6 CHECK lines)
+--------------------------------------------------------------------------
+RUN  S6 Macaulay2 charts             (exact over QQ)
+OK   S6 Macaulay2 charts             (exact over QQ)  [S6_CHARTS_OK]  (24 CHECK lines)
+==========================================================================
+all steps passed; 158 CHECK lines, 0 failures
+group and geometry at the two split primes 331 and 661;
+the automaton is exact character arithmetic (prime independent);
+the Macaulay2 charts are exact over QQ.
+ALLGREEN
+STANDARD_FORM_PW_VERIFY_OK

@@ -1,0 +1,173 @@
+--- p = 331 ---
+
+=== (a) BOUNDARY DIVISOR CLASSES OF THE TERMINUS ===
+stage centre     #centres   H_C          normal rep as H_C-module   G_E  Stab_G(E)    #E
+T0    D12pt            55   D12    2 (+) eps.2 (two 2-dim irreps)     1        D12    55
+T0    A4pt             55    A4                          1' (+) 3     1         A4    55
+T0    A4pt             55    A4                          1' (+) 3     1         A4    55
+T0    C11pt            60   C114 distinct characters, multiplicities [1, 1, 1, 1]     1        C11    60
+T0    D10pt            66   D10    2_a (+) 2_b (two 2-dim irreps)     1        D10    66
+T0    C6pt            110    C64 distinct characters, multiplicities [1, 1, 1, 1]     1         C6   110
+T0    C6pt            110    C64 distinct characters, multiplicities [1, 1, 1, 1]     1         C6   110
+T0    C5pt            132    C54 distinct characters, multiplicities [1, 1, 1, 1]     1         C5   132
+T0    C5pt            132    C54 distinct characters, multiplicities [1, 1, 1, 1]     1         C5   132
+T0    V4-I            165    V43 distinct characters, multiplicities [2, 1, 1]     1         V4   165
+T1    ell_V            55    V43 distinct characters, multiplicities [1, 1, 1]     1         A4    55
+T1    C3line          110    C32 distinct characters, multiplicities [2, 1]     1         C6   110
+T1    L'_sigma         55    C2        isotypic C2-character^{+3}    C2        D12    55
+T2    P_sigma          55    C2        isotypic C2-character^{+2}    C2        D12    55
+TOTAL boundary divisors on the terminus: 1215 in 14 G-orbits
+CHECK total = 1215 = 940 (T0) + 220 (T1) + 55 (T2): PASS
+CHECK boundary divisors with NONTRIVIAL pointwise stabilizer: 110 in 2 orbits, all with G_E = C2 (expect 110 in 2 orbits): PASS
+CHECK no C3-, C5-, C6-, C11- or V4-stabilized boundary divisor: PASS
+
+=== (c) NEW FIXED STRATA CREATED INSIDE EACH EXCEPTIONAL DIVISOR ===
+for a centre C with generic pointwise stabilizer H and normal bundle N,
+E = P(N) and, over the generic point of C, Fix(A) cap E = P(N^{A,lam})
+for each character lam of A <= H occurring in N|_A.
+  centre D12pt     (H = D12, dim 0, normal rank 4):
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 4, G-orbit size 165
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 12, G-orbit size 55
+        Fix(C3  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 6, G-orbit size 110
+        Fix(V4  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 4, G-orbit size 165
+        Fix(C6  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 6, G-orbit size 110
+  centre A4pt      (H = A4, dim 0, normal rank 4):
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 4, G-orbit size 165
+        Fix(C3  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 3, G-orbit size 220
+        Fix(C3  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 3, G-orbit size 220
+        Fix(V4  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 4, G-orbit size 165
+  centre A4pt      (H = A4, dim 0, normal rank 4):
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 4, G-orbit size 165
+        Fix(C3  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 3, G-orbit size 220
+        Fix(C3  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 3, G-orbit size 220
+        Fix(V4  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 4, G-orbit size 165
+  centre C11pt     (H = C11, dim 0, normal rank 4):
+        Fix(C11 ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 11, G-orbit size 60
+  centre D10pt     (H = D10, dim 0, normal rank 4):
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 2, G-orbit size 330
+        Fix(C5  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 5, G-orbit size 132
+  centre C6pt      (H = C6, dim 0, normal rank 4):
+        Fix(C6  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 6, G-orbit size 110
+        Fix(C2  ) piece: normal eigen-piece of rank 3 -> a locus of dim 2 inside E, setwise stab order 6, G-orbit size 110
+        Fix(C3  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 6, G-orbit size 110
+  centre C6pt      (H = C6, dim 0, normal rank 4):
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 6, G-orbit size 110
+        Fix(C6  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 6, G-orbit size 110
+        Fix(C3  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 6, G-orbit size 110
+  centre C5pt      (H = C5, dim 0, normal rank 4):
+        Fix(C5  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 5, G-orbit size 132
+  centre C5pt      (H = C5, dim 0, normal rank 4):
+        Fix(C5  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 5, G-orbit size 132
+  centre V4-I      (H = V4, dim 0, normal rank 4):
+        Fix(V4  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 4, G-orbit size 165
+        Fix(C2  ) piece: normal eigen-piece of rank 3 -> a locus of dim 2 inside E, setwise stab order 4, G-orbit size 165
+        Fix(V4  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 4, G-orbit size 165
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 4, G-orbit size 165
+  centre ell_V     (H = V4, dim 1, normal rank 3):
+        Fix(V4  ) piece: normal eigen-piece of rank 1 -> a locus of dim 1 inside E, setwise stab order 4, G-orbit size 165
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 2 inside E, setwise stab order 4, G-orbit size 165
+  centre C3line    (H = C3, dim 1, normal rank 3):
+        Fix(C3  ) piece: normal eigen-piece of rank 2 -> a locus of dim 2 inside E, setwise stab order 6, G-orbit size 110
+        Fix(C3  ) piece: normal eigen-piece of rank 1 -> a locus of dim 1 inside E, setwise stab order 6, G-orbit size 110
+  centre L'_sigma  (H = C2, dim 1, normal rank 3):
+        Fix(C2  ) piece: normal eigen-piece of rank 3 -> a locus of dim 3 inside E, setwise stab order 12, G-orbit size 55
+  centre P_sigma   (H = C2, dim 2, normal rank 2):
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 3 inside E, setwise stab order 12, G-orbit size 55
+
+=== (b)/(d) FIXED-LOCUS DIMENSION PROFILE, BY ABELIAN CLASS ===
+  A = C2   loci created inside exceptional divisors: dim -> number of components {1: 1155, 2: 440, 3: 110}
+  A = C3   loci created inside exceptional divisors: dim -> number of components {0: 440, 1: 880, 2: 110}
+  A = V4   loci created inside exceptional divisors: dim -> number of components {0: 660, 1: 330}
+  A = C5   loci created inside exceptional divisors: dim -> number of components {0: 396}
+  A = C6   loci created inside exceptional divisors: dim -> number of components {0: 330}
+  A = C11  loci created inside exceptional divisors: dim -> number of components {0: 60}
+
+(the level-0 components of Fix(A) are all themselves centres of the tower, so on the terminus they have been replaced by the exceptional divisors of the table in (a); the loci listed here are the ones the tower CREATES.)
+
+--- p = 661 ---
+
+=== (a) BOUNDARY DIVISOR CLASSES OF THE TERMINUS ===
+stage centre     #centres   H_C          normal rep as H_C-module   G_E  Stab_G(E)    #E
+T0    D12pt            55   D12    2 (+) eps.2 (two 2-dim irreps)     1        D12    55
+T0    A4pt             55    A4                          1' (+) 3     1         A4    55
+T0    A4pt             55    A4                          1' (+) 3     1         A4    55
+T0    C11pt            60   C114 distinct characters, multiplicities [1, 1, 1, 1]     1        C11    60
+T0    D10pt            66   D10    2_a (+) 2_b (two 2-dim irreps)     1        D10    66
+T0    C6pt            110    C64 distinct characters, multiplicities [1, 1, 1, 1]     1         C6   110
+T0    C6pt            110    C64 distinct characters, multiplicities [1, 1, 1, 1]     1         C6   110
+T0    C5pt            132    C54 distinct characters, multiplicities [1, 1, 1, 1]     1         C5   132
+T0    C5pt            132    C54 distinct characters, multiplicities [1, 1, 1, 1]     1         C5   132
+T0    V4-I            165    V43 distinct characters, multiplicities [2, 1, 1]     1         V4   165
+T1    ell_V            55    V43 distinct characters, multiplicities [1, 1, 1]     1         A4    55
+T1    C3line          110    C32 distinct characters, multiplicities [2, 1]     1         C6   110
+T1    L'_sigma         55    C2        isotypic C2-character^{+3}    C2        D12    55
+T2    P_sigma          55    C2        isotypic C2-character^{+2}    C2        D12    55
+TOTAL boundary divisors on the terminus: 1215 in 14 G-orbits
+CHECK total = 1215 = 940 (T0) + 220 (T1) + 55 (T2): PASS
+CHECK boundary divisors with NONTRIVIAL pointwise stabilizer: 110 in 2 orbits, all with G_E = C2 (expect 110 in 2 orbits): PASS
+CHECK no C3-, C5-, C6-, C11- or V4-stabilized boundary divisor: PASS
+
+=== (c) NEW FIXED STRATA CREATED INSIDE EACH EXCEPTIONAL DIVISOR ===
+for a centre C with generic pointwise stabilizer H and normal bundle N,
+E = P(N) and, over the generic point of C, Fix(A) cap E = P(N^{A,lam})
+for each character lam of A <= H occurring in N|_A.
+  centre D12pt     (H = D12, dim 0, normal rank 4):
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 4, G-orbit size 165
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 12, G-orbit size 55
+        Fix(C3  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 6, G-orbit size 110
+        Fix(V4  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 4, G-orbit size 165
+        Fix(C6  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 6, G-orbit size 110
+  centre A4pt      (H = A4, dim 0, normal rank 4):
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 4, G-orbit size 165
+        Fix(C3  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 3, G-orbit size 220
+        Fix(C3  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 3, G-orbit size 220
+        Fix(V4  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 4, G-orbit size 165
+  centre A4pt      (H = A4, dim 0, normal rank 4):
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 4, G-orbit size 165
+        Fix(C3  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 3, G-orbit size 220
+        Fix(C3  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 3, G-orbit size 220
+        Fix(V4  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 4, G-orbit size 165
+  centre C11pt     (H = C11, dim 0, normal rank 4):
+        Fix(C11 ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 11, G-orbit size 60
+  centre D10pt     (H = D10, dim 0, normal rank 4):
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 2, G-orbit size 330
+        Fix(C5  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 5, G-orbit size 132
+  centre C6pt      (H = C6, dim 0, normal rank 4):
+        Fix(C6  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 6, G-orbit size 110
+        Fix(C2  ) piece: normal eigen-piece of rank 3 -> a locus of dim 2 inside E, setwise stab order 6, G-orbit size 110
+        Fix(C3  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 6, G-orbit size 110
+  centre C6pt      (H = C6, dim 0, normal rank 4):
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 6, G-orbit size 110
+        Fix(C6  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 6, G-orbit size 110
+        Fix(C3  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 6, G-orbit size 110
+  centre C5pt      (H = C5, dim 0, normal rank 4):
+        Fix(C5  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 5, G-orbit size 132
+  centre C5pt      (H = C5, dim 0, normal rank 4):
+        Fix(C5  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 5, G-orbit size 132
+  centre V4-I      (H = V4, dim 0, normal rank 4):
+        Fix(V4  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 4, G-orbit size 165
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 1 inside E, setwise stab order 4, G-orbit size 165
+        Fix(V4  ) piece: normal eigen-piece of rank 1 -> a locus of dim 0 inside E, setwise stab order 4, G-orbit size 165
+        Fix(C2  ) piece: normal eigen-piece of rank 3 -> a locus of dim 2 inside E, setwise stab order 4, G-orbit size 165
+  centre ell_V     (H = V4, dim 1, normal rank 3):
+        Fix(V4  ) piece: normal eigen-piece of rank 1 -> a locus of dim 1 inside E, setwise stab order 4, G-orbit size 165
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 2 inside E, setwise stab order 4, G-orbit size 165
+  centre C3line    (H = C3, dim 1, normal rank 3):
+        Fix(C3  ) piece: normal eigen-piece of rank 2 -> a locus of dim 2 inside E, setwise stab order 6, G-orbit size 110
+        Fix(C3  ) piece: normal eigen-piece of rank 1 -> a locus of dim 1 inside E, setwise stab order 6, G-orbit size 110
+  centre L'_sigma  (H = C2, dim 1, normal rank 3):
+        Fix(C2  ) piece: normal eigen-piece of rank 3 -> a locus of dim 3 inside E, setwise stab order 12, G-orbit size 55
+  centre P_sigma   (H = C2, dim 2, normal rank 2):
+        Fix(C2  ) piece: normal eigen-piece of rank 2 -> a locus of dim 3 inside E, setwise stab order 12, G-orbit size 55
+
+=== (b)/(d) FIXED-LOCUS DIMENSION PROFILE, BY ABELIAN CLASS ===
+  A = C2   loci created inside exceptional divisors: dim -> number of components {1: 1155, 2: 440, 3: 110}
+  A = C3   loci created inside exceptional divisors: dim -> number of components {0: 440, 1: 880, 2: 110}
+  A = V4   loci created inside exceptional divisors: dim -> number of components {0: 660, 1: 330}
+  A = C5   loci created inside exceptional divisors: dim -> number of components {0: 396}
+  A = C6   loci created inside exceptional divisors: dim -> number of components {0: 330}
+  A = C11  loci created inside exceptional divisors: dim -> number of components {0: 60}
+
+(the level-0 components of Fix(A) are all themselves centres of the tower, so on the terminus they have been replaced by the exceptional divisors of the table in (a); the loci listed here are the ones the tower CREATES.)
+
+S5_TERMINUS_OK
