@@ -22,6 +22,7 @@ def main() -> None:
     )
     if count != 1:
         raise SystemExit("could not update notebook parent-head pin")
+
     old_pr = "Draft PR: **#16**."
     new_pr = "Initial packet PR: **#16**; continuation draft PR: **#18**."
     if old_pr not in notebook:
@@ -30,17 +31,13 @@ def main() -> None:
     NOTEBOOK.write_text(notebook, encoding="utf-8")
 
     theorem = THEOREM.read_text(encoding="utf-8")
-    typo = r"\nu_\varphi"
-    occurrences = theorem.count(typo)
-    if occurrences == 0:
-        raise SystemExit("expected u_phi notation typo not found")
-    theorem = theorem.replace(typo, r"u_\varphi")
-    if typo in theorem:
-        raise SystemExit("u_phi notation typo remains")
-    THEOREM.write_text(theorem, encoding="utf-8")
+    if r"u_\varphi" not in theorem:
+        raise SystemExit("expected u_phi notation not found")
+    if r"\nu_\varphi" in theorem:
+        raise SystemExit("unexpected Greek-nu notation found")
 
     print(f"NOTEBOOK_PR_REFERENCE_CORRECTED_OK ({old_pr} -> {new_pr})")
-    print(f"U_PHI_NOTATION_CORRECTED_OK ({occurrences} replacements)")
+    print("U_PHI_NOTATION_ALREADY_CORRECT_OK")
 
 
 if __name__ == "__main__":
