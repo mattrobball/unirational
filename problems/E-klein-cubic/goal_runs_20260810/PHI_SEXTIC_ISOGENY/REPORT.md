@@ -130,7 +130,7 @@ Computed exactly over `K = Q(zeta_11)` (`results/model_K.json`,
 Corroboration at 13 split primes `p = 1 mod 11` (§7): `j(C) = j(E) = 8192/11
 mod p` and `a_p(C) = a_p(E)` at every one, with `#E_sigma(F_p)` independently
 re-counted by sweeping `P^2(F_p)` against the Pfaffian cubic, and
-`#C_sigma(F_23) = 27` independently re-counted by sweeping all 6 731 271 points
+`#C_sigma(F_23) = 27` independently re-counted by sweeping all 6 728 904 points
 of `P^5(F_23)` against the 15 Plucker quadrics in the *un-adapted* basis of
 `M_+`.
 

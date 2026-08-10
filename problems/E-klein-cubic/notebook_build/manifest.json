@@ -1582,6 +1582,28 @@
    "char0_scope": "exact QQ (Macaulay2 blowup charts, isPrime/codim on the corner ideal); exact Z (Duncan's toric H_tau formula); group/geometry recomputed mod two split primes 331 and 661; char-0 target facts pinned to STRATA_EXACT / NORMAL_CHARACTERS / FIX-A1 rather than reduced",
    "tracked": "main",
    "notes": "Operationalizes external_docs/duncan_higher_obstruction_20260805.tex for the source P(W). Proposition A: V4 is the ONLY non-cyclic abelian subgroup of PSL(2,11), so every fabulous corner pairs two COMMUTING involutions. Lemma B: only the plus-planes and minus-lines have isotypic normal bundles, so all deeper boundary divisors are created by the tower. Lemma C: A4-irreducibility forces ell_V to be blown up first. Stabilizer-stratified tower T0-T3 produces an explicit fabulous corner D_ij = E_s^V n E~_z with G_{D_ij} = V4, verified twice (M2 charts, 45/45; Duncan's own toric formula). W1 discharges the load-bearing irreducibility conditional: D_ij is a P^1-bundle over ell_V. W3: exhaustive inventory, 330 corners in 2 G-orbits, no other fabulous type possible. NEW constraint (F2): the deep divisor E_s^V is never contracted to a type-II point. W7 (mandatory T5 test vs the E33 trisection witness): (F2) SURVIVES, vacuously. Verdict DUNCAN-NO-CLOSURE-AT-I2: at every fabulous corner z,s commute and L_z n L_s is nonempty, so the chain the theorem demands always exists. CONDITIONAL on two EXTERNAL-UNVERIFIED imports (thm:pairs, prop:rcc_total) per NOTEBOOK.md:4660-4670. Marker DUNCAN_CORNER_F2_VERIFY_OK."
+  },
+  {
+   "path": "goal_runs_20260810/PHI_SEXTIC_ISOGENY",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "PHI-SEXTIC-ISOGENY-VERDICT-POS",
+   "superseded_by": null,
+   "char0_scope": "Theorem 1 (j(C_sigma) = j(E_sigma) = 8192/11) is EXACT char 0 over K = Q(zeta_11), both curves, two independent j routes each; Theorems 2-4 are analytic plus a mod-p decision at 12 split primes p = 1 mod 11 (67..727), which is decisive for Theorem 2 by the good-reduction / 3-torsion-injectivity / Isom-torsor argument stated in REPORT.md section 4; independent brute-force sweeps of P^2(F_p) at every prime and of P^5(F_23) for the sextic",
+   "tracked": "main",
+   "notes": "Rebuilds BOTH genus-one curves inside one program from the FIX-IX-SEAL Weil model: C_sigma = V14 cap P(M_+) via a tau-adapted 4+2 split of M_+, the 3 tau-odd quadrics as a 3x2 matrix A(v), Cramer parametrisation nu(s,t) of the twisted cubic C_sigma/tau, and the branch quartic R(s,t) (three independent normalisations agree), giving C_sigma: c^2 = R(s,t); E_sigma = {Pf6 = 0} cap P(Ann(M)^{sigma,+}) in tau-adapted coordinates, where Pf6 = z^2 L(u) + C(u) IS a Weierstrass equation. VERDICT POSITIVE and stronger than isogeny: the two curves are ISOMORPHIC (j equal exactly), and S3-equivariantly so. Consequences: Phi|_{C_sigma} is never constant (X^sigma has no S3-fixed point); its degree is n^2 with 3 not dividing n onto E_sigma, or divisible by 3 onto L_sigma; and the two isolated sigma-points of V14 are forced onto the two rho-fixed points of L_sigma. The task's conditional PHI-ODD-DEGREE-RAMIFICATION-FORCED corollary is explicitly NOT claimed, its non-isogeny hypothesis having failed. By-products: independent re-derivation of FIX-A0's j = 8192/11, of L_sigma lying on X, and of the faithful S3 on P(W^-). Formula layer self-tested on known curves (binary-quartic j vs cross-ratio, Weierstrass j, the whole extraction pipeline on |6.O| models of y^2 = x^3+ax+b, Phi_2 on genuine 2-isogenous pairs). Headline unchanged: OPEN."
+  },
+  {
+   "path": "goal_runs_20260810/SPIN_SOURCE_NETWORK",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "SPIN-SOURCE-NETWORK-COMPUTED",
+   "superseded_by": null,
+   "char0_scope": "source side (verify_spin_klein_network.py, verify_spin_dp2_psl27.py): exact characteristic 0 throughout, integer / Q(i) arithmetic in dimension <= 12, no modular reduction. Target side (verify_v14_s3_d10.py, added 2026-08-10): exact char 0 over K = Q(z)/Phi_11 AND two independent primes 397, 199 with 353 as replay, matching the FIX-IX-SEAL standard.",
+   "tracked": "main",
+   "notes": "Spin-source fixed-locus engine plus the Klein spin complex. Source side (PR #23): P(U)^{V_4} = empty for all 55 four-groups (U|_{Q_8} = 3H); the complete incidence table of the 110 eigenplanes (1980 meeting pairs, 352 incidence points = 220 with Stab = S_3 and 132 with Stab = D_10, 36-regular connected graph); Theorems K1-K4 (carriers, Stab = C_6 exactly, rigidity, mandatory base locus at all 352 points) unconditional on top of FIX-IX-SEAL-PASS; K5/K6 show the naive form of the boxed SPIN-LINKING LEMMA is FALSE at first order. Exits SPIN-SOURCE-NETWORK-COMPUTED and SPIN-CHAIN-OBSTRUCTION-UNDECIDED (PROVED is NOT claimed). Third part: PSL(2,7) on the Klein dP2, SPIN-DP2-PSL27-UNDECIDED, no new essential-dimension statement. Target side added 2026-08-10 (V14_S3_D10_MEASUREMENT.md, verify_v14_s3_d10.py, marker V14-S3-D10-MEASUREMENT-OK): the two missing inputs for route 2 of the box, measured exactly and as schemes. V14^{D_10} = EMPTY (all 66 subgroups; the trivial character piece is a P^1 on which the 15 Pluecker quadrics already span every binary quadratic, so no Groebner basis is needed) and V14^{A_5} = EMPTY (both G-classes), hence V14^G = empty; but V14^{S_3} = TWO reduced points for each of the 110 S_3 subgroups (both G-classes of 55), with Stab_G = S_3 exactly, swapped by N_G(S_3) = D_12, giving 2 G-orbits of 110 points, each lying on the sealed genus-1 sextic of all three involutions of its S_3; and V14^{A_4} = ONE reduced point per A_4 (55, one orbit), Stab = A_4 exactly. Consequences recorded as Thms V1-V3: V1, for each of the 132 D_10-points the induced map Bl_x P(U) --> V14 is undefined at the sign-point, extending K4's mandatory base locus one blowup deeper; V2, over the 220 S_3-points the sign-point value, when defined, is one of exactly two points with stabiliser S_3, different from all three carriers at an S_3-point (Stab = C_6); V3, no chain of the boxed lemma's type can contain a carrier together with second-generation strata of two distinct involutions, so ROUTE 2 CANNOT SUPPLY THE CHAIN. The box stays open, SPIN-CHAIN-OBSTRUCTION-UNDECIDED stands, and route 1 (multiplicity, engine Thm 7.4) is the remaining named route. Regression: the new pipeline reproduces the sealed sigma-sextic (dim 2 degree 6), the two isolated sigma-points (dim 1 degree 2) and V14 itself (dim 4 degree 14) in all four modes, the last of these over K for the first time. Headline unchanged: OPEN."
   }
  ],
  "known_branches": [
@@ -1617,11 +1639,13 @@
   "agent/m3-sarkisov-section-residual",
   "agent/m3-section-closeout-20260802",
   "agent/mm218-fermat-network-20260810",
+  "agent/phi-sextic-isogeny-20260810",
   "agent/rt-split-dichotomy-20260810",
   "agent/salvage-pr13-ruled-conic-bundle",
   "agent/spin-source-network-20260810",
   "agent/t3-normalization-clpic3-20260802",
   "agent/v14-map-dichotomy-20260810",
+  "agent/v14-s3-d10-measurement-20260810",
   "agent/v22-psl27-involution-gates",
   "agent/v3-valuation-residue-closeout-20260802",
   "agent/weaken-hypotheses",
