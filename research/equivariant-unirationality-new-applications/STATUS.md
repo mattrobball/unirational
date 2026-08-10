@@ -115,7 +115,7 @@ out several natural permutation `C4 x C2deck` attempts at Condition (A).
 | 2 | cubic-surface bundles `X_n`, `C3xD_{2n}`, odd `n>=3` | **new infinite theorem family** | 99 |
 | 3 | odd exceptional conic bundles, `D_{2g}xC2`, odd `g>=3` | **new infinite theorem family** | 98 |
 | 4 | rational genus-12 `V22=VSP(Klein quartic,6)`, `PSL2(F7)` | **computed 2026-08-10: gate (a) FAILS, gate (b) holds — route BLOCKED** (`EXIT_KLEIN_V22.md`, marker `V22-D8-GATE-FAILS`) | — |
-| 5 | rational Mori–Mukai No. 2.18 with Fermat discriminant | finite threefold-network target | 78 |
+| 5 | rational Mori–Mukai No. 2.18 with Fermat discriminant | **computed 2026-08-10: the full order-192 action FAILS Condition (A), so it is not weakly versal — a new theorem, but by the abelian gate, not the network. The order-96 index-2 subgroup is the frozen network laboratory: Condition (A) holds, `X^H` empty, and the carrier is proved to surject onto the deck-fixed del Pezzo** (`MM218_FERMAT_NETWORK.md`, markers `MM218-FERMAT-CONDITION-A-FAILS`, `MM218-NETWORK-GAP`) | 78 |
 
 The nodal `A6` double quadric enters the broader table at score 61: its group
 theory is attractive, but singular-target resolution, Condition (A), and

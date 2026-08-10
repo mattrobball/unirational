@@ -320,17 +320,33 @@ the target. The relevant action must be a nonabelian subgroup with Condition
 
 The deck-fixed branch surface is a rational degree-2 del Pezzo. Hence the
 whole fixed surface is an allowed RCC image and the single-carrier central
-theorem cannot fire. The remaining work is:
+theorem cannot fire.
+
+**COMPUTED 2026-08-10** (`MM218_FERMAT_NETWORK.md`, verifiers
+`verify_mm218_*.py` and `verify_mm218_smoothness.m2`):
 
 ```text
-(a) freeze a nonabelian subgroup with Condition (A) and X^G=empty;
-(b) enumerate involution classes and centralizers;
-(c) classify residual-stable rational curves on the branch del Pezzo;
-(d) prove connected exceptional-fiber propagation in dimension three.
+(a) DONE, negatively for the full group: Condition (A) FAILS for G of
+    order 192 -- six conjugate (Z/2)^3 subgroups containing tau have empty
+    fixed locus -- so X is not weakly G-versal and not G-unirational.
+    Marker MM218-FERMAT-CONDITION-A-FAILS.
+    The frozen laboratory is the unique maximal Condition-(A) subgroup with
+    empty fixed locus: H of order 96, index 2, Z(H)=<tau>.
+(b) DONE: four involution classes; every X^{C_G(s)} is empty but every X^s
+    carries a rational component, so the centralizer form never fires.
+(c) DONE: there is NO Hbar-stable irreducible rational curve on the branch
+    del Pezzo. Pic(Z)^Hbar has rank 2 (spanned by -K_Z and the conic-bundle
+    fibre class), no stable (-1)-curve, no stable member of |-K_Z|.
+(d) REDUCED to one boxed implication. Proved: every tau-carrier surjects onto
+    the whole deck-fixed del Pezzo, and the resolved image is Z or X. Also
+    proved: Condition (A) fails for the residual Hbar-action on Z, so the
+    surface branch is closed for Hbar-linear sources. What remains is the
+    transfer to an H-linear source. Marker MM218-NETWORK-GAP.
 ```
 
-This is the best test bed for a genuinely three-dimensional fixed-network
-theorem.
+Abe's order-12 example (non-Fermat discriminant) has the same profile —
+Condition (A) holds, global fixed locus empty, rational deck-fixed del Pezzo —
+and is the cheapest place to test any candidate network lemma.
 
 ## Double-quadric note
 
