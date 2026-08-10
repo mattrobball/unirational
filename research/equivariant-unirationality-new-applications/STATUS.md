@@ -47,19 +47,26 @@ Together with `Y^N=∅`, this excludes every rational map from a faithful linear
 |---:|---|---|---:|
 | 1 | smooth Klein-invariant quartic double solid, `(C7:C3)×C2deck` | **new theorem** | 100 |
 | 2 | odd exceptional conic bundles, `D_{2g}×C2`, `g≥3` odd | **new infinite family** | 99 |
-| 3 | rational genus-12 `V22=VSP(Klein quartic,6)`, `PSL2(F7)` | best remaining open target | 94 |
+| 3 | rational genus-12 `V22=VSP(Klein quartic,6)`, `PSL2(F7)` | **computed 2026-08-10: gate (a) FAILS, gate (b) holds — route BLOCKED** (`EXIT_KLEIN_V22.md`, marker `V22-D8-GATE-FAILS`) | — |
 | 4 | rational Mori–Mukai No. 2.18 with Fermat discriminant and an explicit finite subgroup | finite threefold-network target | 78 |
 | 5 | non-Q8 subgroup on the special Kummer quartic double solid | residual-curve audit target | 71 |
 
-The improved third-place target is the rational `V22` of Cheltsov–Shramov. It is a smooth index-one Fano threefold of degree 22 with `PSL2(F7)`-action. The entire deformation family satisfies Condition (A), `Pic(V22)=Z[-K]`, the canonical generator is equivariantly linearized, and hence all higher Amitsur obstructions vanish. The literature search found no decision of its `G`-unirationality or weak versality. The finite missing calculation is
+The former third-place target, the rational `V22` of Cheltsov–Shramov, has now been computed and is **blocked** (2026-08-10, `EXIT_KLEIN_V22.md`). Exactly over `Q(√−7)` in Mukai's model `X=Gr(3,7)∩P^13` built on the 7-dimensional irreducible of `PSL2(F7)`:
 
-\[
-V_{22}^{\sigma}
-\quad\text{and}\quad
-V_{22}^{C_G(\sigma)}=V_{22}^{D_8}
-\]
+```text
+X^σ   =  (smooth rational curve, anticanonical degree 6, Hilbert polynomial 6i+1)
+         ⊔ (2 points, one D8-orbit with stabilizer C4)          χ = 2 + 2 = 4
+X^{D8} = ∅
+gate (a) FAILS  — the curve is an irreducible D8-stable rational curve
+gate (b) HOLDS
+```
 
-for an involution `σ`.
+The failure is character-forced: `χ7(2A)=χ3(2A)=−1` gives eigenvalue profiles `(3,4)` on the 7-dimensional module and `(1,2)` on the net, and with that profile the positive-dimensional part of `X^σ` is always a plane conic in `P(A_+)≅P²`, hence always rational. Two further facts recorded there generalize:
+
+* **Euler rigidity.** On any Fano threefold with `b₂=1, b₃=0` (`P³, Q³, V₅, V₂₂`) every finite-order automorphism has `χ(X^g)=4`, so `X^g≠∅` always and gate (b) forces a **non-cyclic** centralizer. In `PSL2(F7)` only the involution qualifies, so no other element can be substituted.
+* The escape shape is the `FIX_IX §6` one: `D8/⟨σ⟩≅V4` acts on the fixed curve as the Klein four-group in `PGL2`, fixed-point free. Named open theory task `V22-D8-NORMAL-CHAIN`; if it were closed, gate (b) alone would suffice.
+
+`G`-unirationality and weak `G`-versality of the Klein `V22` remain **open**; no literature computes either fixed locus.
 
 ## Answers to the eight required questions
 
@@ -68,9 +75,9 @@ for an involution `σ`.
 3. **Central fiber involutions on conic-bundle threefolds?** They naturally produce a discriminant-cover fixed surface. The residual-RCC theorem applies when that surface is non-uniruled and has no residual-stable rational curve. In Mori–Mukai No. 2.18 the fixed surface is rational, so a three-dimensional network theorem is required.
 4. **Special rational Fano conic bundles with enlarged groups?** Yes: Abe's Fermat- and Klein-discriminant members of No. 2.18. The Fermat member is the best finite target.
 5. **Kummer double solids?** Q8-containing actions are already detected by the third Amitsur group. A specific non-Q8 subgroup is isolated here, but its Condition-(A) and 32-curve residual permutation audits remain open.
-6. **A second `V14`-type index-one phenomenon?** The best current candidate is the rational `V22` with `PSL2(F7)`; its involution/D8 fixed schemes are the exact missing data.
-7. **Published silent-invariant examples still unresolved?** Yes: `V22` has Condition (A) and vanishing universal-torsor/higher-Amitsur obstructions, while no equivariant-unirationality decision was found. The Abe No. 2.18 special actions are additional partially audited cases.
-8. **Best single remaining case?** `V22` with `PSL2(F7)`, because the variety is rational, the group/action are exact, Condition (A) is published, the cohomological hierarchy vanishes, and only one involution-centralizer fixed-scheme calculation is missing.
+6. **A second `V14`-type index-one phenomenon?** The candidate was the rational `V22` with `PSL2(F7)`. Its involution and `D8` fixed schemes are now computed (`EXIT_KLEIN_V22.md`): `X^{D8}=∅` but `X^σ` contains a `D8`-stable smooth rational curve, so the `V14` phenomenon does **not** recur there. No second index-one instance is currently in hand.
+7. **Published silent-invariant examples still unresolved?** Yes: `V22` has Condition (A) and vanishing universal-torsor/higher-Amitsur obstructions, and no equivariant-unirationality decision exists — the centralizer machine is now known not to supply one (gate (a) fails). The Abe No. 2.18 special actions are additional partially audited cases.
+8. **Best single remaining case?** After the `V22` block, the Fermat-discriminant Mori-Mukai No. 2.18 action (`TOP5.md` #4), followed by the non-`Q8` Kummer subgroup (#5). Both need new theory, not just a fixed-scheme computation; the selection criterion extracted from the `V22` run is to read the involution's eigenvalue profiles off the character table first, since they decide both gates up to one sign.
 
 ## Verification
 
@@ -78,6 +85,7 @@ for an involution `σ`.
 cd research/equivariant-unirationality-new-applications
 python3 verify_klein_quartic_double_solid.py
 python3 verify_odd_exceptional_conic_bundle.py --g 5
+python3 verify_klein_v22.py                 # the V22 exit, exact over Q(sqrt(-7))
 ```
 
 Expected markers:
@@ -85,10 +93,11 @@ Expected markers:
 ```text
 KLEIN_PSL27_QUARTIC_DOUBLE_SOLID_VERIFY_OK
 ODD_EXCEPTIONAL_CONIC_BUNDLE_VERIFY_OK g=5
+VERDICT: V22-D8-GATE-FAILS
 ```
 
 `verification_output.txt` records successful runs for the quartic double solid and for `g=3,5,7,9`.
 
 ## Honest boundary
 
-No theorem is claimed for the `V22`, Abe No. 2.18, or non-Q8 Kummer candidates. Their exact finite gaps are recorded in `TOP5.md`, `INDEX1_FANO_THREEFOLDS.md`, `CONIC_BUNDLES.md`, and `KUMMER_DOUBLE_SOLIDS.md`.
+No theorem is claimed for the `V22`, Abe No. 2.18, or non-Q8 Kummer candidates. For the `V22` the gates are now decided negatively and the route is closed (`EXIT_KLEIN_V22.md`); this decides the applicability of the machine, **not** the `G`-unirationality or weak `G`-versality of the Klein `V22`, both of which remain open. The remaining exact finite gaps are recorded in `TOP5.md`, `INDEX1_FANO_THREEFOLDS.md`, `CONIC_BUNDLES.md`, and `KUMMER_DOUBLE_SOLIDS.md`.
