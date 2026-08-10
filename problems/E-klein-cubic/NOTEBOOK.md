@@ -52,7 +52,7 @@ disclosed boundary, not a coverage claim.
 
 Core manifest last rebuilt: 2026-08-03. Research supplement last updated:
 2026-08-09. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `215e538f5345be6f260b99bcfd25ca5754ca270d` (2026-08-08; the
+Snapshot metadata — notebook parent head: `d963f17da77b23f80c9bb256aeb7effa1c488be2` (2026-08-08; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -4574,7 +4574,36 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   own two smallest-remaining targets: the d = 24 finite divisibility
   problem, and the carrier enumeration plus 55-configuration synchronization
   statement. **Recorded so future proposals are checked against these
-  adjudications before development.** Note I
+  adjudications before development.**
+  **Wave 32 (status corrections, 2026-08-10).** (i) THE d = 6 LADDER
+  RUNG IS STOPPED, NOT FINISHED: the M2 run (`f55land_d6_s0..s4.m2`)
+  was killed mid-flight during the 2026-08-08 usage interruption
+  after ~45 h CPU on s0, left NO output files, and was never
+  restarted; the "d = 6 running / in flight" phrases in the wave-30
+  entries above and in Note IX §8.8 are stale as of this note. Per
+  the stop-rule's own bookkeeping the rung is recorded
+  stopped-not-finished; no verdict at d = 6 exists, and under the
+  2026-08-10 allocation decision (no further effort on the positive
+  side) it stays parked unless deliberately reopened. (ii)
+  ADJUDICATION OF THE SCAVIA MECHANISM (extraction, director
+  spot-checked): Scavia's non-versality proof is a bare
+  essential-dimension bound — (C₇⋊C₃)×C₂ has no faithful 2-dim
+  complex representation (the σρσ⁻¹ = ρ⁴ relation forces three
+  distinct ρ-eigenvalues), so ed = 3 > 2 = dim S — NOT a computable
+  obstruction class on S. Consequence: the refutation of Conjecture
+  8.8 exports NO transportable machinery; the analogous move for the
+  Klein cubic ("prove ed > 3 by pure group theory") IS the headline,
+  not a tool. E49's verdict (conditional route vacated) stands
+  unchanged; no "Scavia-type obstruction evaluation on the Klein
+  twist" exists as a task, and any proposal so phrased should be
+  rejected as shapeless. (iii) VERIFICATION DEBT (Beauville Sylow
+  fixed points on the Klein cubic, the input to D-R Cor 10.6): in
+  NOTEBOOK + theory/, Sylow-2 (V₄: six points) is independently
+  derived and packet-certified; Sylow-3 is cited from CTZ, not
+  re-derived; Sylow-11 is consistent-but-not-shown-in-place;
+  **Sylow-5 has no in-repo record at all**; FIX_VIII's parenthetical
+  "our vertex/eigenpoint checks reproduce this" carries no script
+  pointer. Recorded as debt, not as doubt.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant

@@ -846,7 +846,10 @@ identity `F(T) ≡ 0`. Results (`f55_ladder.py`, p = 661 ≡ 1 mod
   five landing terms are DISTINCT monomials — EMPTY, by hand.
 - `d = 3` (3 coefficients): EMPTY (all of `P²(F₆₆₁)` scanned AND
   saturation); `d = 4, 5`: EMPTY (saturation, dims 0);
-  `d = 6`: running. Gate per the stop-rule: extension past
+  `d = 6`: running. [Status 2026-08-10: the d = 6 M2 run was killed
+mid-flight in the 2026-08-08 usage interruption, produced no
+outputs, and is recorded stopped-not-finished per the stop-rule;
+see NOTEBOOK wave 32.] Gate per the stop-rule: extension past
   `d = 7` requires a structural argument.
 
 **The exact decisive object (the two sides meet).** By the
