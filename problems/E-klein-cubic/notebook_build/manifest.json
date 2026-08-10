@@ -1532,12 +1532,12 @@
    "path": "goal_runs_after_88f0967/FIX_VIII_A5LADDER",
    "entry": "E56",
    "kind": "goal_run",
-   "verification_class": "PROPOSAL-UNRUN",
-   "primary_exit": "UNDECIDED",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "FIX-VIII-A5LADDER-EMPTY-THROUGH-10",
    "superseded_by": null,
-   "char0_scope": "mod-p (67 primary, 199 on hits); LAND-method semantics (sampled cone contains true cone; EMPTY decisive mod p, hits verified by full identity)",
+   "char0_scope": "mod-p two primes (67, 199); LAND-method semantics (sampled cone contains true cone; EMPTY decisive mod p, hits verified by full identity). The A5 < G660 realization and the eigenspace/branch data are built mod p, so d <= 10 emptiness is evidence for char 0, not sealed.",
    "tracked": "main",
-   "notes": "IN-FLIGHT (dispatched 2026-08-06): the A5 landing ladder d = 2..12 — A5-covariant map-type spaces (dims vs A5-Molien), landing cone per degree by the LAND method, full-identity verification and Jacobian-rank on hits, second prime, rational reconstruction attempt. ANY hit = a point of X_tw over the degree-11 field = L11-unirationality (Kollar), descent gap 55 -> 11. Exits HIT-D<d> / EMPTY-THROUGH-12 / DEVIATION."
+   "notes": "CLOSED 2026-08-10 (wave 33), dispatched 2026-08-06. The A5 landing ladder d = 2..12. d = 2..10 EMPTY at both primes: d = 2..7 by the fixed-locus linear certificate alone (every branch space is 0), d = 8, 9, 10 by the second-order quadric certificate plus subspace/Galois propagation, no branch left UNDECIDED-TIMEOUT and no HIT. Independent verifier ALL PASS at VDMAX=10, both primes, re-landing on every branch rather than one per Galois orbit. d = 11 and d = 12 are UNDECIDED, exit FIX-VIII-A5LADDER-D11-D12-UNDECIDED: quadric_census.py proves the second-order certificate cannot fire from d = 11 on (top-branch rank 291/1035 at d = 11 and 398/1830 at d = 12, sample-independent; 0 of 80 and 0 of 25 branches settled), and msolve times out at the 900 s cap on both the quadrics-only and the mixed cubic system at the top d = 11 branch. The 2026-08-06 session was killed mid-msolve inside that branch; PROVENANCE_20260810.md adjudicates the working-tree state it left. ANY hit would have been a point of X_tw over the degree-11 field, descent gap 55 -> 11; none was found through d = 10."
   },
   {
    "path": "goal_runs_after_d0ab8d0/FIX_IX_V14MODEL",
