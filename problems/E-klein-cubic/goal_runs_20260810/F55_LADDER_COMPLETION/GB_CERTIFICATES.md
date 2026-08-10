@@ -99,11 +99,17 @@ all coordinates nilpotent and the projective cone is empty.
 
 ## d = 6, twist s = 0, p = 1301
 
-- length of basis: 0
-- verdict: `NOT-EMPTY-OR-UNRESOLVED`
-- reduced GB (leading monomials): ``
+- #length of basis:      19 elements sorted by increasing leading monomials
+- verdict: `EMPTY`
+- reduced GB (leading monomials): `1*c18^1, 1*c17^1, 1*c16^1, 1*c15^1, 1*c14^1, 1*c13^1, 1*c12^1, 1*c11^1, 1*c10^1, 1*c9^1, 1*c8^1, 1*c7^1, 1*c6^1, 1*c5^1, 1*c4^1, 1*c3^1, 1*c2^1, 1*c1^1, 1*c0^1`
 
 ## d = 6, twist s = 0, p = 661
+
+- #length of basis:      19 elements sorted by increasing leading monomials
+- verdict: `EMPTY`
+- reduced GB (leading monomials): `1*c18^1, 1*c17^1, 1*c16^1, 1*c15^1, 1*c14^1, 1*c13^1, 1*c12^1, 1*c11^1, 1*c10^1, 1*c9^1, 1*c8^1, 1*c7^1, 1*c6^1, 1*c5^1, 1*c4^1, 1*c3^1, 1*c2^1, 1*c1^1, 1*c0^1`
+
+## d = 6, twist s = 1, p = 1301
 
 - #length of basis:      19 elements sorted by increasing leading monomials
 - verdict: `EMPTY`
@@ -115,13 +121,31 @@ all coordinates nilpotent and the projective cone is empty.
 - verdict: `EMPTY`
 - reduced GB (leading monomials): `1*c18^1, 1*c17^1, 1*c16^1, 1*c15^1, 1*c14^1, 1*c13^1, 1*c12^1, 1*c11^1, 1*c10^1, 1*c9^1, 1*c8^1, 1*c7^1, 1*c6^1, 1*c5^1, 1*c4^1, 1*c3^1, 1*c2^1, 1*c1^1, 1*c0^1`
 
+## d = 6, twist s = 2, p = 1301
+
+- #length of basis:      19 elements sorted by increasing leading monomials
+- verdict: `EMPTY`
+- reduced GB (leading monomials): `1*c18^1, 1*c17^1, 1*c16^1, 1*c15^1, 1*c14^1, 1*c13^1, 1*c12^1, 1*c11^1, 1*c10^1, 1*c9^1, 1*c8^1, 1*c7^1, 1*c6^1, 1*c5^1, 1*c4^1, 1*c3^1, 1*c2^1, 1*c1^1, 1*c0^1`
+
 ## d = 6, twist s = 2, p = 661
 
 - #length of basis:      19 elements sorted by increasing leading monomials
 - verdict: `EMPTY`
 - reduced GB (leading monomials): `1*c18^1, 1*c17^1, 1*c16^1, 1*c15^1, 1*c14^1, 1*c13^1, 1*c12^1, 1*c11^1, 1*c10^1, 1*c9^1, 1*c8^1, 1*c7^1, 1*c6^1, 1*c5^1, 1*c4^1, 1*c3^1, 1*c2^1, 1*c1^1, 1*c0^1`
 
+## d = 6, twist s = 3, p = 1301
+
+- #length of basis:      19 elements sorted by increasing leading monomials
+- verdict: `EMPTY`
+- reduced GB (leading monomials): `1*c18^1, 1*c17^1, 1*c16^1, 1*c15^1, 1*c14^1, 1*c13^1, 1*c12^1, 1*c11^1, 1*c10^1, 1*c9^1, 1*c8^1, 1*c7^1, 1*c6^1, 1*c5^1, 1*c4^1, 1*c3^1, 1*c2^1, 1*c1^1, 1*c0^1`
+
 ## d = 6, twist s = 3, p = 661
+
+- #length of basis:      19 elements sorted by increasing leading monomials
+- verdict: `EMPTY`
+- reduced GB (leading monomials): `1*c18^1, 1*c17^1, 1*c16^1, 1*c15^1, 1*c14^1, 1*c13^1, 1*c12^1, 1*c11^1, 1*c10^1, 1*c9^1, 1*c8^1, 1*c7^1, 1*c6^1, 1*c5^1, 1*c4^1, 1*c3^1, 1*c2^1, 1*c1^1, 1*c0^1`
+
+## d = 6, twist s = 4, p = 1301
 
 - #length of basis:      19 elements sorted by increasing leading monomials
 - verdict: `EMPTY`
@@ -135,7 +159,6 @@ all coordinates nilpotent and the projective cone is empty.
 
 ## d = 7, twist s = 0, p = 661
 
-- length of basis: 0
-- verdict: `NOT-EMPTY-OR-UNRESOLVED`
-- reduced GB (leading monomials): ``
+- verdict: `NO-OUTPUT` (0-byte msolve output: unfinished or
+  errored; under the packet landmine rule this is not a verdict)
 

@@ -22,6 +22,14 @@ for path in sorted(glob.glob(os.path.join(outdir, 'f55land_d*_s*_p*.out'))):
     name = os.path.basename(path)
     m = re.fullmatch(r'f55land_d(\d+)_s(\d+)_p(\d+)\.out', name)
     d, s, p = m.groups()
+    if os.path.getsize(path) == 0:
+        # msolve landmine rule: a 0-byte output is an error or an unfinished
+        # run, never a verdict.  Record it as such and move on.
+        lines += ['## d = %s, twist s = %s, p = %s' % (d, s, p), '',
+                  '- verdict: `NO-OUTPUT` (0-byte msolve output: unfinished or',
+                  '  errored; under the packet landmine rule this is not a verdict)',
+                  '']
+        continue
     raw = open(path).read()
     body = ''.join(l for l in raw.splitlines(True) if not l.startswith('#')).strip()
     hdr = [l.strip() for l in raw.splitlines() if l.startswith('#length')]
