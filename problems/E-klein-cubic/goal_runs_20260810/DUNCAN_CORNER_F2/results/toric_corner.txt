@@ -1,0 +1,15 @@
+E_V      (ray v0 = ell_V)        |H_tau| = 1  H = [0]   (saturated rank captured: 3/3)  OK
+E_z      (ray v1 = P~_z)         |H_tau| = 2  H = [0, 2]   (saturated rank captured: 3/3)  OK
+E_s      (ray v2 = M~_s)         |H_tau| = 2  H = [0, 1]   (saturated rank captured: 3/3)  OK
+cone(v0,e3) = M_s before T3      |H_tau| = 2  H = [0, 1]   (saturated rank captured: 2/2)  OK
+CORNER   tau = cone(v1,v2)       |H_tau| = 4  H = [0, 1, 2, 3]   (saturated rank captured: 2/2)  OK
+
+ker(a) = ker(chi_z) = <z> = {0,2};  ker(b) = ker(chi_s) = <s> = {0,1};  encoding: g in F_2^2
+G_{E_z} = [0, 2] (order 2), G_{E_s} = [0, 1] (order 2), G_{D_ij} = [0, 1, 2, 3] (order 4)
+G_{E_z} != G_{E_s}: True   G_{D_ij} = whole V4: True
+corner cone 2x2 minors [0, 0, 0, -1, -1, -1]; unimodular (smooth cone): True
+
+CONCLUSION: Duncan's own toric formula gives G_{D_ij} = V4, NON-CYCLIC,
+so the corner is FABULOUS by thm:pairs (line 728).  This agrees with the
+independent chart computation in w1_corner_charts.m2.
+TORIC_CORNER_OK

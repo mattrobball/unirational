@@ -1,0 +1,64 @@
+                                           2
+composite phi(u1,u2,u3,u4) = {c1, c2*c3, c2 c3*c4, c2*c3*c4}
+  [ u1 , k*v , k^2*v*m4 , k*v*m4 ]
+OK   z transported correctly through the T1 chart
+OK   s transported correctly through the T1 chart
+OK   z transported correctly through the T2 chart
+OK   s transported correctly through the T2 chart
+OK   z transported correctly through the T3 chart
+OK   s transported correctly through the T3 chart
+OK   V4 relations hold in the final chart
+
+--- level 0 : A^4, the local model at a general point of ell_V ---
+OK   Fix(z) = V(u3,u4) = plus-plane P_z (codim 2)
+OK   Fix(s) = V(u2,u4) = plus-plane P_s (codim 2)
+OK   Fix(r) = V(u2,u3) = plus-plane P_r (codim 2)
+OK   Fix(V4) = V(u2,u3,u4) = ell_V has codim 3 (NO fabulous corner on P(W))
+OK   no divisor is fixed pointwise on P(W): every Fix has codim >= 2
+
+--- after T1 (blow up ell_V), chart u2 ---
+OK   Fix(z) = V(a3,a4) = P~_z (strict transform of the plus-plane)
+OK   Fix(s) = V(a2,a3) = M_s, a NEW codim-2 component inside E_V
+OK   Fix(r) = V(a2,a4) = M_r, a NEW codim-2 component inside E_V
+OK   Fix(V4) = V(a2,a3,a4) = the section S_z = P~_z n E_V, still codim 3
+OK   G_{E_V} = 1 : neither z nor s acts trivially on R1/(a2), so E_V is DISCARDED
+OK   M_s n P~_z = S_z, and S_z is a Cartier divisor on the smooth surface M_s
+OK   M_s n M_r = S_z as well (so blowing up P~_z separates them)
+
+--- after T2 (blow up P~_z), chart m4 ---
+OK   strict transform of E_V is V(b2)
+OK   strict transform of M_s is V(b2,b3) =: M~_s
+OK   M~_s is smooth irreducible of codim 2
+OK   Fix(z) = V(b4) = E_z is now a DIVISOR, so G_{E_z} is nontrivial
+OK   G_{E_z} = <z> : z acts trivially on R2/(b4), s does not
+OK   Fix(s) = V(b2,b3) = M~_s, still codim 2
+OK   C' := M~_s n E_z is irreducible of codim 3 (a curve =~ ell_V)
+OK   Fix(V4) = C', still codim 3 -- no corner yet
+
+--- after T3 (blow up M~_s), chart k ---
+OK   strict transform of E_z is V(c4) =: E~_z
+OK   strict transform of E_V is V(c3)
+OK   Fix(s) = V(c2) = E_s is now a DIVISOR
+OK   Fix(z) = V(c4) = E~_z is a DIVISOR
+OK   Fix(r) = V(c2,c4) has codim 2
+
+--- THE CORNER ---
+OK   D_ij = E_s n E~_z = V(c2,c4)
+OK   codim D_ij = 2
+OK   ideal of D_ij is PRIME
+OK   Fix(V4) = D_ij : a CODIM-2 V4-FIXED LOCUS has appeared
+OK   G_{E_s}  = <s>
+OK   G_{E~_z} = <z>
+OK   G_{D_ij} = V4 -- NON-CYCLIC -- so D_ij is FABULOUS by Duncan thm:pairs
+OK   G_{E_V} = 1 (E_V stays discarded after T3)
+
+--- Duncan def:toroidal, checked locally at the corner ---
+OK   (b) local X_nt = V(c2*c4) is exactly the boundary divisor E_s u E~_z
+OK   (c) V4 acts faithfully on the conormal (c2,c4)/(c2,c4)^2: z fixes c2 and negates c4, s negates c2 and fixes c4, r negates both
+OK   the two normal characters are DISTINCT and NONTRIVIAL (they generate V4^)
+
+--- fibration of the corner over ell_V ---
+OK   the fibre of D_ij over a point of ell_V (c1 = const) is an irreducible line
+OK   coordinate ring of D_ij is QQ[c1,c3] : dim 2 (D_ij -> ell_V has 1-dim fibres)
+
+W1_CORNER_CHARTS_OK
