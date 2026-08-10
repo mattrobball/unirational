@@ -1,0 +1,37 @@
+{
+ "0": {
+  "n_unknowns": 7,
+  "n_cubics": 160,
+  "msolve": "OK",
+  "secs": 0.2,
+  "verdict": "EMPTY"
+ },
+ "1": {
+  "n_unknowns": 7,
+  "n_cubics": 160,
+  "msolve": "OK",
+  "secs": 0.0,
+  "verdict": "EMPTY"
+ },
+ "2": {
+  "n_unknowns": 7,
+  "n_cubics": 160,
+  "msolve": "OK",
+  "secs": 0.0,
+  "verdict": "EMPTY"
+ },
+ "3": {
+  "n_unknowns": 7,
+  "n_cubics": 160,
+  "msolve": "OK",
+  "secs": 0.0,
+  "verdict": "EMPTY"
+ },
+ "4": {
+  "n_unknowns": 7,
+  "n_cubics": 160,
+  "msolve": "OK",
+  "secs": 0.4,
+  "verdict": "EMPTY"
+ }
+}

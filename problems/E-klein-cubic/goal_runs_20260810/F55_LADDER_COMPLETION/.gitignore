@@ -1,0 +1,6 @@
+# msolve generator files: deterministic output of scripts/f55_ladder_msolve.py
+# (no randomness anywhere in the pipeline), regenerated in seconds, and
+# verified term-for-term against the original Macaulay2 artifacts by
+# scripts/check_against_m2.py.  The decisive artifacts -- the reduced Groebner
+# bases -- are transcribed into GB_CERTIFICATES.md, which is tracked.
+results/*.ms
