@@ -1,0 +1,24 @@
+=== W5/W6 at p = 331 ===
+F vanishes identically on every minus-line: True
+W5 edges: 165; edges == commuting pairs: True
+W5 degrees: {6}; connected: True; diameter: 3
+W5 edge-point (|stab|, #lines, #plus-planes, on X) -> count: {(4, 2, 1, True): 165}
+W5 VERDICT: PASS
+W6 |Stab(P_sigma)| = {12}; |Stab(L'_sigma)| = {12}; |Stab(ell_V)| = {12}
+W6 |Stab(M_tau^V)| = |N_G(V) n C_G(tau)| over all 165 pairs: {4}
+W6 |C_G(z) n C_G(s)| for commuting z != s (= Stab(D_i) n Stab(D_j) upper bound): {4}
+W6 VERDICT: PASS
+W5 wrote results/w5_line_graph.json
+
+=== W5/W6 at p = 661 ===
+F vanishes identically on every minus-line: True
+W5 edges: 165; edges == commuting pairs: True
+W5 degrees: {6}; connected: True; diameter: 3
+W5 edge-point (|stab|, #lines, #plus-planes, on X) -> count: {(4, 2, 1, True): 165}
+W5 VERDICT: PASS
+W6 |Stab(P_sigma)| = {12}; |Stab(L'_sigma)| = {12}; |Stab(ell_V)| = {12}
+W6 |Stab(M_tau^V)| = |N_G(V) n C_G(tau)| over all 165 pairs: {4}
+W6 |C_G(z) n C_G(s)| for commuting z != s (= Stab(D_i) n Stab(D_j) upper bound): {4}
+W6 VERDICT: PASS
+
+W5_W6_OK

@@ -1571,6 +1571,17 @@
    "char0_scope": "exact char 0 over K = Q(z)/Phi_11 for the model, the D12 emptiness, the ambient dual system and the sigma-curve invariants (with the direct char-0 Jacobian saturation completed after the initial seal), corroborated at primes 397, 199 and by a fresh-prime 353 verifier",
    "tracked": "main",
    "notes": "record added 2026-08-10 to close a parity gap; packet sealed 2026-08-06. Director-run seal of the Corollary IX.1 hypotheses on the V14, two engines (python exact linear algebra + Macaulay2): model <T6,S6> = SL(2,11) of order 1320 with S^2 = -I and gauss^2 = -11, Lambda^2 U = 5 + 10', M the 10-dim isotypic column space, Ann(M) 5-dim; V14^sigma = smooth irreducible genus-1 sextic + 2 reduced points (smoothness explicit, so no rational curve); V14^{D12} empty in all four D12-character pieces; V14 smooth, pure dim 3, degree 14 via the empty dual Pfaffian-adjoint system; C_G(sigma) = D12 and the two isolated sigma-points have stabilizer exactly C6; Pf6 on Ann(M) is the Klein cubic (E38 uniqueness). Consequence: the V14 action is not G-unirational and not weakly versal, hence ed_C(PSL(2,11)) = 3 iff the Klein cubic is G-unirational. Note the packet's verifier is named verifier.py, which the parity checker's verify*.py glob does not match — the reason this record was missing."
+  },
+  {
+   "path": "goal_runs_20260810/DUNCAN_CORNER_F2",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "ALGEBRAIC-RECOMPUTE",
+   "primary_exit": "DUNCAN-CORNER-FABULOUS-VERIFIED",
+   "superseded_by": null,
+   "char0_scope": "exact QQ (Macaulay2 blowup charts, isPrime/codim on the corner ideal); exact Z (Duncan's toric H_tau formula); group/geometry recomputed mod two split primes 331 and 661; char-0 target facts pinned to STRATA_EXACT / NORMAL_CHARACTERS / FIX-A1 rather than reduced",
+   "tracked": "main",
+   "notes": "Operationalizes external_docs/duncan_higher_obstruction_20260805.tex for the source P(W). Proposition A: V4 is the ONLY non-cyclic abelian subgroup of PSL(2,11), so every fabulous corner pairs two COMMUTING involutions. Lemma B: only the plus-planes and minus-lines have isotypic normal bundles, so all deeper boundary divisors are created by the tower. Lemma C: A4-irreducibility forces ell_V to be blown up first. Stabilizer-stratified tower T0-T3 produces an explicit fabulous corner D_ij = E_s^V n E~_z with G_{D_ij} = V4, verified twice (M2 charts, 45/45; Duncan's own toric formula). W1 discharges the load-bearing irreducibility conditional: D_ij is a P^1-bundle over ell_V. W3: exhaustive inventory, 330 corners in 2 G-orbits, no other fabulous type possible. NEW constraint (F2): the deep divisor E_s^V is never contracted to a type-II point. W7 (mandatory T5 test vs the E33 trisection witness): (F2) SURVIVES, vacuously. Verdict DUNCAN-NO-CLOSURE-AT-I2: at every fabulous corner z,s commute and L_z n L_s is nonempty, so the chain the theorem demands always exists. CONDITIONAL on two EXTERNAL-UNVERIFIED imports (thm:pairs, prop:rcc_total) per NOTEBOOK.md:4660-4670. Marker DUNCAN_CORNER_F2_VERIFY_OK."
   }
  ],
  "known_branches": [

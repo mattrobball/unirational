@@ -1,0 +1,24 @@
+------------------------------------------------------------------------
+RUN  W1 global   (module inputs, both primes)
+OK   W1 global   (module inputs, both primes)  [W1_CORNER_GLOBAL_OK]
+------------------------------------------------------------------------
+RUN  W1 charts   (Macaulay2, exact over QQ)
+OK   W1 charts   (Macaulay2, exact over QQ)  [W1_CORNER_CHARTS_OK]
+------------------------------------------------------------------------
+RUN  corner via Duncan's toric formula
+OK   corner via Duncan's toric formula  [TORIC_CORNER_OK]
+------------------------------------------------------------------------
+RUN  W2 orbit disjointness (both primes)
+OK   W2 orbit disjointness (both primes)  [W2_ORBIT_DISJOINTNESS_OK]
+------------------------------------------------------------------------
+RUN  W3 corner inventory (both primes)
+OK   W3 corner inventory (both primes)  [W3_CORNER_INVENTORY_OK]
+------------------------------------------------------------------------
+RUN  W5/W6 line graph and stabilizers
+OK   W5/W6 line graph and stabilizers  [W5_W6_OK]
+------------------------------------------------------------------------
+RUN  W7 (F2) vs the [E33] trisection family
+OK   W7 (F2) vs the [E33] trisection family  [W7_F2_VS_E33_SURVIVES]
+========================================================================
+all steps passed at primes 331 and 661 (plus exact QQ and exact Z parts)
+DUNCAN_CORNER_F2_VERIFY_OK

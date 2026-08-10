@@ -1,0 +1,43 @@
+=== W1 (global module inputs) at p = 331 ===
+  ('A+B+C+D=W', True): 55
+  ('N_{P~z}|S_z multiplicity free', True): 55
+  ('N_{S_z/M_s} = chi-piece present in N_{P~z}|S_z', True): 55
+  ('S_r in M_s', True): 55
+  ('S_s NOT in M_s', True): 55
+  ('S_z in M_s', True): 55
+  ('S_z=P(B), M_z=P(C+D)', True): 55
+  ('charA_trivial', True): 55
+  ('chars_distinct_nontrivial', True): 55
+  ('codim S_z in M_s = 1', True): 55
+  ('dimA', 2): 55
+  ('dimB', 1): 55
+  ('dimC', 1): 55
+  ('dimD', 1): 55
+  ('rank N n W+', 1): 165
+  ('rank N n W-', 2): 165
+  ('that piece is the OTHER one (injective, canonical section)', True): 55
+=== W1 global inputs at p=331: PASS ===
+
+=== W1 (global module inputs) at p = 661 ===
+  ('A+B+C+D=W', True): 55
+  ('N_{P~z}|S_z multiplicity free', True): 55
+  ('N_{S_z/M_s} = chi-piece present in N_{P~z}|S_z', True): 55
+  ('S_r in M_s', True): 55
+  ('S_s NOT in M_s', True): 55
+  ('S_z in M_s', True): 55
+  ('S_z=P(B), M_z=P(C+D)', True): 55
+  ('charA_trivial', True): 55
+  ('chars_distinct_nontrivial', True): 55
+  ('codim S_z in M_s = 1', True): 55
+  ('dimA', 2): 55
+  ('dimB', 1): 55
+  ('dimC', 1): 55
+  ('dimD', 1): 55
+  ('rank N n W+', 1): 165
+  ('rank N n W-', 2): 165
+  ('that piece is the OTHER one (injective, canonical section)', True): 55
+=== W1 global inputs at p=661: PASS ===
+
+CONCLUSION (W1 global): D_ij = P(N_{M~_s}|_{C'}) is a P^1-bundle over
+C' =~ ell_V =~ P^1, hence IRREDUCIBLE, smooth, connected, codim 2.
+W1_CORNER_GLOBAL_OK
