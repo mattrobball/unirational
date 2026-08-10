@@ -1,0 +1,46 @@
+name: Correct RT split publication metadata
+
+on:
+  push:
+    branches:
+      - agent/rt-split-dichotomy-20260810
+
+permissions:
+  contents: write
+
+jobs:
+  correct:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/rt-split-dichotomy-20260810
+          fetch-depth: 0
+
+      - name: Fetch complete branch inventory
+        run: |
+          git config remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'
+          git fetch --prune origin
+
+      - name: Correct theorem notation and PR provenance
+        run: python3 .github/rt_publication_fix.py
+
+      - name: Replay exact packet verifiers
+        run: |
+          python3 problems/E-klein-cubic/goal_runs_20260810/RT_SPLIT_AND_DICHOTOMY/verify_norm_sieve.py
+          python3 problems/E-klein-cubic/goal_runs_20260810/RT_SPLIT_AND_DICHOTOMY/verify_degree_accounting.py
+          python3 problems/E-klein-cubic/goal_runs_20260810/RT_SPLIT_AND_DICHOTOMY/verify_local_rees.py
+
+      - name: Remove one-shot files and verify manifest parity
+        run: |
+          git rm .github/workflows/append-problem-e-notebook.yml .github/rt_publication_fix.py
+          python3 problems/E-klein-cubic/scripts/check_manifest_parity.py | tee /tmp/manifest-parity.log
+          grep -F 'RESULT: PASS (all checks passed)' /tmp/manifest-parity.log
+
+      - name: Commit publication corrections
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add problems/E-klein-cubic/NOTEBOOK.md problems/E-klein-cubic/goal_runs_20260810/RT_SPLIT_AND_DICHOTOMY/THEOREM_RESTRICTED_DICHOTOMY.md
+          git commit -m 'Correct RT split publication metadata and notation'
+          git push origin HEAD:agent/rt-split-dichotomy-20260810
