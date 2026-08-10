@@ -1,0 +1,59 @@
+CHECK PASS  group_660_elements
+CHECK PASS  element_order_profile  {1: 1, 2: 55, 3: 110, 5: 264, 6: 110, 11: 120}
+CHECK PASS  F_invariant_under_generator_1
+CHECK PASS  F_invariant_under_generator_2
+CHECK PASS  subgroup_conjugacy_classes_16  got 16
+CHECK PASS  total_subgroups_620  got 620
+--- ambient strata built  14.3s
+CHECK PASS  C2_minus_line_inside_X
+CHECK PASS  C2_plus_plane_Hesse_shape  [(0, 0, 3), (0, 3, 0), (1, 1, 1), (3, 0, 0)]
+CHECK PASS  C2_hesse_parameter_rational  ['-16/11']
+CHECK PASS  C2_hesse_parameter_is_-16/11  -16/11
+CHECK PASS  C2_j_invariant_8192_over_11  8192/11
+CHECK PASS  C2_plus_plane_cubic_smooth_since_t_ne_1  t = -16/11
+CHECK PASS  C2_j_not_an_algebraic_integer_so_E_sigma_has_no_CM
+CHECK PASS  C3_ambient_shape_pt_plus_two_lines  pts 1 lines 2
+CHECK PASS  C3_isolated_point_stabiliser_is_D12  D12 order 12
+CHECK PASS  C3_isolated_point_OFF_X  F = -5,-12,-15,-12,-5,0,-7,-18,-18,-7
+CHECK PASS  C3_each_eigenline_meets_X_in_3_reduced_points
+CHECK PASS  C3_each_eigenline_carries_exactly_one_C6_point_of_X
+CHECK PASS  N_C3_outside_C6_inverts_C3_and_swaps_the_two_eigenlines
+CHECK PASS  C5_five_eigenpoints
+CHECK PASS  C5_four_on_X_one_off
+CHECK PASS  C11_five_eigenpoints_all_on_X
+CHECK PASS  V4_ambient_line_plus_three_points
+CHECK PASS  V4_line_not_in_X_and_reduced
+CHECK PASS  V4_three_type_I_points_on_X
+CHECK PASS  C6_five_eigenpoints
+CHECK PASS  C6_two_on_X
+CHECK PASS  S3_no_fixed_point_on_X  [[False], [False]]
+CHECK PASS  D10_no_fixed_point_on_X  [[False]]
+CHECK PASS  D12_no_fixed_point_on_X  [[False]]
+CHECK PASS  A4_no_fixed_point_on_X  [[False, False]]
+CHECK PASS  C11:C5_ambient_fixed_locus_empty  [0]
+CHECK PASS  A5_ambient_fixed_locus_empty  [0, 0]
+CHECK PASS  PSL(2,11)_ambient_fixed_locus_empty  [0]
+CHECK PASS  C2_plane_setwise_D12_pointwise_C2
+CHECK PASS  C2_line_setwise_D12_pointwise_C2
+CHECK PASS  C3_eigenline_setwise_C6_pointwise_C3_orbit_110
+CHECK PASS  V4_line_setwise_A4_pointwise_V4_orbit_55
+CHECK PASS  V4_line_two_A4_points_off_X  [{'on_X': False, 'stab': 'A4'}, {'on_X': False, 'stab': 'A4'}]
+CHECK PASS  C6_cube_is_an_involution
+CHECK PASS  C6_on_X_points_are_exactly_the_minus_eigenvalue_ones  [{'on_X': False, 'involution_eigenvalue': '+1'}, {'on_X': True, 'involution_eigenvalue': '-1'}, {'on_X': False, 'involution_eigenvalue': '+1'}, {'on_X': False, 'involution_eigenvalue': '+1'}, {'on_X': True, 'involution_eigenvalue': '-1'}]
+CHECK PASS  five_cycle_P_is_in_the_group
+CHECK PASS  F_at_[1:1:1:1:1]_equals_5  ['5']
+CHECK PASS  F_vanishes_at_the_four_primitive_C5_eigenpoints  [True, True, True, True]
+CHECK PASS  F55_residual_C5_is_a_single_5_cycle_on_X_C11  [2, 0, 3, 4, 1]
+CHECK PASS  D10_reflection_has_no_fixed_point_on_X_C5  [0, 4, 3, 2, 1]
+CHECK PASS  V4_each_type_I_vertex_is_plus_for_one_involution_minus_for_two  [['+', '-', '-'], ['-', '+', '-'], ['-', '-', '+']]
+CHECK PASS  V4_line_ell_V_lies_in_all_three_plus_planes_and_meets_no_minus_line  [(2, 0), (2, 0), (2, 0)]
+CHECK PASS  C3_orbits_on_11_points_class0  11,5
+CHECK PASS  C3_orbits_on_11_points_class1  11,5
+CHECK PASS  C3_orbits_on_12_points  12,4
+CHECK PASS  dim_W_C3_equals_1  1
+CHECK PASS  F55_orbits_on_G_mod_C3_is_4  220,4
+CHECK PASS  sum_mult_times_degree_is_220  220
+CHECK PASS  every_irreducible_has_nonzero_C3_invariants  {'10_0': 4, '10_1': 4, '11': 3, '1': 1, '5': 1, '5*': 1, '12': 4, '12*': 4}
+
+55 checks, 0 failures, 113.5s
+PRODUCE_LEDGER_OK

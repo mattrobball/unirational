@@ -4718,6 +4718,40 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
 
 ---
 
+
+> **Receiver ledger landed 2026-08-10** (`goal_runs_20260810/RECEIVER_LEDGER_X`,
+> `RECEIVER-LEDGER-X-PASS`; markers `PRODUCE_LEDGER_OK` 55 checks,
+> `RECEIVER_LEDGER_X_VERIFY_OK` + `ALLGREEN` 101 checks,
+> `LEDGER_IDEALS_M2_OK` 32/32): the **target-side** companion of FIX-A2 —
+> one row per conjugacy class of subgroups for `X^H`, all 16 closed. New exact
+> rows: **`X^{C3}` is six reduced points** (the isolated `C3`-fixed point of
+> `P⁴` is the `D12`-point and is **off `X`**; each of the two eigenlines meets
+> `X` in 3 distinct points = 1 `C6`-point + 2 with exact stabiliser `C3`;
+> residual `D12/C3 ≅ V4` acts with orbits `2 + 4`); **`X^{C6}` = 2 points, both
+> on the minus-line `L_t`** (the two `C6`-eigenpoints with involution eigenvalue
+> `−1`), one free residual 2-orbit; **`X^{S3} = ∅` for both `S3` classes**
+> (`P(W)^{S3}` is the single `D12`-point, off `X`); **`X^{C11}` = 5 points, all
+> on `X`, one free `F55/C11` 5-cycle**. Sealed rows replayed by two further
+> independent routes (`p = 331, 661` brute-force point counts, and a Macaulay2
+> ideal route `X^H = V(F) + Σ minors₂(x | g·x)` that also certifies **every** row
+> radical, closing the `C3`-reducedness remainder named in `STRATA_EXACT.md §6.1`
+> and `NORMAL_CHARACTERS.md §5.1`). Consequences: **Corollary C3** — for every
+> representation `V` and every `G`-equivariant `φ : P(V) ⇢ X`, the linear
+> subspace `P(V^{C3})` lies in the indeterminacy locus (hypotheses: `X^{C3}`
+> finite, `X^{D12} = ∅`, and `dim V^{C3} ≥ 1` for all eight irreducibles, with
+> multiplicities `1,1,1,4,4,3,4,4` derived without a character table and checked
+> against `Σ mᵢdᵢ = 220`); and the **receiver dichotomy** — `X^{N_G(H)} = ∅` for
+> **every** `H`, and `X^H` is finite for every `H` except `H = 1` and `H = C2`,
+> so exactly two rows are blocked: `1` (by `X` itself, RCC and `G`-stable) and
+> `C2` (**by `L_σ ≅ P¹` only**; `E_σ` with `j = 8192/11` is non-CM elliptic and
+> therefore not RCC). The 55-orbit of minus-lines is the **only**
+> positive-dimensional rational target anywhere in the equivariant fixed-locus
+> system of `X`. No contradiction with any sealed certificate; FIX-A2's 16-class
+> layer, FIX-A0's `X^σ = E_σ ⊔ L_σ` with `j = 8192/11`, and FIX-A1's six reduced
+> `V4`-points with `X^{A4} = ∅` are all re-derived independently and agree
+> exactly (including FIX-A1's inert-prime finding: 0 `F_p`-rational type-II
+> points at 331 **and** 661, 3 geometric).
+
 ## External sessions
 
 **External documents.** `external_docs/duncan_higher_obstruction_20260805.tex`

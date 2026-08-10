@@ -1,0 +1,110 @@
+--- PART A : exact characteristic zero (Q(zeta_11) and combinatorics) ---
+CHECK PASS  A0_gauss_sum_squares_to_minus_11
+CHECK PASS  A0_S_is_an_involution
+CHECK PASS  A0_T_has_order_11
+CHECK PASS  A0_ST_has_order_3
+CHECK PASS  A0_F_invariant_under_S
+CHECK PASS  A0_F_invariant_under_T
+CHECK PASS  A1_T_has_five_distinct_eigenvalues  [1, 3, 4, 5, 9]
+CHECK PASS  A1_F_has_no_pure_power_monomial  all five coordinate points lie on X
+CHECK PASS  A2_C5_exponents_are_a_full_residue_system  so F(v(w)) = 1+w+w^2+w^3+w^4 = 0 for every 5th root of unity w != 1
+CHECK PASS  A2_F_at_all_ones_is_5  F(1,1,1,1,1) = sum of five 1s = 5 != 0
+CHECK PASS  A3_involution_trace_is_1  trace(S) = 1 so dim W+ = 3, dim W- = 2
+CHECK PASS  A3_eigenspace_dims_3_and_2  3,2
+CHECK PASS  A3_minus_line_lies_inside_X  F|_{W-} has 0 nonzero coefficients
+CHECK PASS  A3_plus_plane_cubic_is_not_identically_zero  10 monomials
+--- PART B : split prime p = 331 ---
+CHECK PASS  B331_group_has_660_distinct_matrices
+CHECK PASS  B331_F_is_G_invariant_mod_p
+CHECK PASS  B331_sixteen_subgroup_classes_620_subgroups  16 classes, 620 subgroups
+CHECK PASS  B331_1_ambient_shape  got [5] None expected [5]
+CHECK PASS  B331_C2_ambient_shape  got [2, 3] None expected [2, 3]
+CHECK PASS  B331_C3_ambient_shape  got [1, 2, 2] None expected [1, 2, 2]
+CHECK PASS  B331_V4_ambient_shape  got [1, 1, 1, 2] None expected [1, 1, 1, 2]
+CHECK PASS  B331_C5_ambient_shape  got [1, 1, 1, 1, 1] None expected [1, 1, 1, 1, 1]
+CHECK PASS  B331_S3_ambient_shape  got [1] [1] expected [1]
+CHECK PASS  B331_C6_ambient_shape  got [1, 1, 1, 1, 1] None expected [1, 1, 1, 1, 1]
+CHECK PASS  B331_D10_ambient_shape  got [1] None expected [1]
+CHECK PASS  B331_C11_ambient_shape  got [1, 1, 1, 1, 1] None expected [1, 1, 1, 1, 1]
+CHECK PASS  B331_A4_ambient_shape  got [1, 1] None expected [1, 1]
+CHECK PASS  B331_D12_ambient_shape  got [1] None expected [1]
+CHECK PASS  B331_C11:C5_ambient_shape  got [] None expected []
+CHECK PASS  B331_A5_ambient_shape  got [] [] expected []
+CHECK PASS  B331_PSL(2,11)_ambient_shape  got [] None expected []
+CHECK PASS  B331_C3_X_fixed_points_6  got 6
+CHECK PASS  B331_V4_X_fixed_points_6  got 6
+CHECK PASS  B331_C5_X_fixed_points_4  got 4
+CHECK PASS  B331_S3_X_fixed_points_0  got 0
+CHECK PASS  B331_S3#2_X_fixed_points_0  got 0
+CHECK PASS  B331_C6_X_fixed_points_2  got 2
+CHECK PASS  B331_D10_X_fixed_points_0  got 0
+CHECK PASS  B331_C11_X_fixed_points_5  got 5
+CHECK PASS  B331_A4_X_fixed_points_0  got 0
+CHECK PASS  B331_D12_X_fixed_points_0  got 0
+CHECK PASS  B331_C11:C5_X_fixed_points_0  got 0
+CHECK PASS  B331_A5_X_fixed_points_0  got 0
+CHECK PASS  B331_A5#2_X_fixed_points_0  got 0
+CHECK PASS  B331_PSL(2,11)_X_fixed_points_0  got 0
+CHECK PASS  B331_C2_minus_line_inside_X
+CHECK PASS  B331_C2_plus_plane_has_331_plus_1_points_or_so  #E(F_331) = 339
+CHECK PASS  B331_plus_plane_cubic_is_smooth  339 points, 0 singular
+CHECK PASS  B331_plus_plane_curve_matches_j_8192_over_11_up_to_twist  a_sigma = -7, a_ref = -7
+CHECK PASS  B331_off_X_nonvanishing_certificates_present  saw ['A4', 'C3', 'C5', 'C6', 'D10', 'D12', 'S3', 'S3#2']
+--- PART B : split prime p = 661 ---
+CHECK PASS  B661_group_has_660_distinct_matrices
+CHECK PASS  B661_F_is_G_invariant_mod_p
+CHECK PASS  B661_sixteen_subgroup_classes_620_subgroups  16 classes, 620 subgroups
+CHECK PASS  B661_1_ambient_shape  got [5] None expected [5]
+CHECK PASS  B661_C2_ambient_shape  got [2, 3] None expected [2, 3]
+CHECK PASS  B661_C3_ambient_shape  got [1, 2, 2] None expected [1, 2, 2]
+CHECK PASS  B661_V4_ambient_shape  got [1, 1, 1, 2] None expected [1, 1, 1, 2]
+CHECK PASS  B661_C5_ambient_shape  got [1, 1, 1, 1, 1] None expected [1, 1, 1, 1, 1]
+CHECK PASS  B661_S3_ambient_shape  got [1] [1] expected [1]
+CHECK PASS  B661_C6_ambient_shape  got [1, 1, 1, 1, 1] None expected [1, 1, 1, 1, 1]
+CHECK PASS  B661_D10_ambient_shape  got [1] None expected [1]
+CHECK PASS  B661_C11_ambient_shape  got [1, 1, 1, 1, 1] None expected [1, 1, 1, 1, 1]
+CHECK PASS  B661_A4_ambient_shape  got [1, 1] None expected [1, 1]
+CHECK PASS  B661_D12_ambient_shape  got [1] None expected [1]
+CHECK PASS  B661_C11:C5_ambient_shape  got [] None expected []
+CHECK PASS  B661_A5_ambient_shape  got [] [] expected []
+CHECK PASS  B661_PSL(2,11)_ambient_shape  got [] None expected []
+CHECK PASS  B661_C3_X_fixed_points_6  got 6
+CHECK PASS  B661_V4_X_fixed_points_6  got 6
+CHECK PASS  B661_C5_X_fixed_points_4  got 4
+CHECK PASS  B661_S3_X_fixed_points_0  got 0
+CHECK PASS  B661_S3#2_X_fixed_points_0  got 0
+CHECK PASS  B661_C6_X_fixed_points_2  got 2
+CHECK PASS  B661_D10_X_fixed_points_0  got 0
+CHECK PASS  B661_C11_X_fixed_points_5  got 5
+CHECK PASS  B661_A4_X_fixed_points_0  got 0
+CHECK PASS  B661_D12_X_fixed_points_0  got 0
+CHECK PASS  B661_C11:C5_X_fixed_points_0  got 0
+CHECK PASS  B661_A5_X_fixed_points_0  got 0
+CHECK PASS  B661_A5#2_X_fixed_points_0  got 0
+CHECK PASS  B661_PSL(2,11)_X_fixed_points_0  got 0
+CHECK PASS  B661_C2_minus_line_inside_X
+CHECK PASS  B661_C2_plus_plane_has_661_plus_1_points_or_so  #E(F_661) = 645
+CHECK PASS  B661_plus_plane_cubic_is_smooth  645 points, 0 singular
+CHECK PASS  B661_plus_plane_curve_matches_j_8192_over_11_up_to_twist  a_sigma = 17, a_ref = -17
+CHECK PASS  B661_off_X_nonvanishing_certificates_present  saw ['A4', 'C3', 'C5', 'C6', 'D10', 'D12', 'S3', 'S3#2']
+--- PART C : residual actions, orbit sizes, containments ---
+CHECK PASS  C_normaliser_and_centraliser_table
+CHECK PASS  C_every_normaliser_is_one_of_the_empty_rows  normalisers seen: ['A4', 'A5', 'C11:C5', 'D10', 'D12', 'PSL(2,11)']
+CHECK PASS  C_residual_orbit_sizes_from_stabiliser_orders
+CHECK PASS  C_C2_is_contained_in_the_expected_overgroups  ['A4', 'A5', 'C6', 'D10', 'D12', 'PSL(2,11)', 'S3', 'V4']
+CHECK PASS  C_C3_is_contained_in_the_expected_overgroups  ['A4', 'A5', 'C6', 'D12', 'PSL(2,11)', 'S3']
+CHECK PASS  C_A4_contains_V4_and_C3_only_among_proper_rows  ['A4', 'A5', 'D12', 'PSL(2,11)']
+CHECK PASS  C_C3_invariants_multiplicities_sum_to_220  {'1': 1, '10_0': 4, '10_1': 4, '11': 3, '5': 1, '5*': 1, '12': 4, '12*': 4}
+CHECK PASS  C_every_irreducible_has_a_nonzero_C3_invariant_subspace  {'1': 1, '10_0': 4, '10_1': 4, '11': 3, '5': 1, '5*': 1, '12': 4, '12*': 4}
+CHECK PASS  D_exact_and_modular_ambient_shapes_agree
+CHECK PASS  D_producer_reported_all_pass
+--- PART E : Macaulay2 ideal-theoretic route ---
+CHECK PASS  E_M2_ideal_route_p=331_all_16_rows  mismatches: []
+CHECK PASS  E_M2_all_rows_radical_p=331
+CHECK PASS  E_M2_ideal_route_p=661_all_16_rows  mismatches: []
+CHECK PASS  E_M2_all_rows_radical_p=661
+CHECK PASS  E_M2_marker_OK
+
+101 checks, 0 failures
+RECEIVER_LEDGER_X_VERIFY_OK
+ALLGREEN
