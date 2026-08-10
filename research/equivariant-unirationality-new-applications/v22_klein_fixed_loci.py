@@ -307,7 +307,9 @@ def run():
 
     return dict(q=q, d=d, conic_rank=conic_rank, chars=chars, radchar=radchar,
                 rk_plus=rk_plus, rk_minus=rk_minus, minors=minors,
-                lines=lines, others=others)
+                lines=lines, others=others, pfaff=pfaffian4(om0_minus),
+                om0_char=(co[r], co[s]), nplus=len(Nplus), nminus=len(Nminus),
+                dimAplus=len(Aplus), dimAminus=len(Aminus), sizeD8=len(D8))
 
 
 if __name__ == "__main__":

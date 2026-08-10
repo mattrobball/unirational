@@ -170,17 +170,19 @@ def main():
         W(f'print("   dim(affine cone) = " | toString dim J{name} | '
           f'"   degree = " | toString degree J{name}); << flush;')
         W(f'print("   projective dim = " | toString(dim J{name} - 1));')
-        W(f'print("   Hilbert polynomial = " | toString hilbertPolynomial(J{name}, Projective => false));')
+        if want_smooth:
+            return   # for X itself dim/degree suffice; decompose is not needed
+        W(f'print("   Hilbert polynomial = " | toString hilbertPolynomial(J{name}, Projective => false)); << flush;')
         if PRIME is not None:
             W(f'comps = decompose J{name};')
             W(f'print("   number of minimal primes = " | toString(#comps));')
             W(f'scan(comps, P -> print("     component: projective dim = " | toString(dim P - 1) | '
-              f'"  degree = " | toString degree P));')
+              f'"  degree = " | toString degree P)); << flush;')
         _ = want_smooth  # smoothness of X is Mukai / Cheltsov-Shramov, not recomputed
 
     block("X", V14, "X = Gr(3,7) cap P^13", True)
     for nm, B in strata:
-        block(nm, B, f"X^sigma stratum {nm}", True)
+        block(nm, B, f"X^sigma stratum {nm}", False)
     for nm, er, es, B in d8:
         block(nm, B, f"X^D8 character (eps(r),eps(s)) = ({er},{es})", False)
     W('print("DONE");')
