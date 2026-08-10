@@ -1,333 +1,277 @@
-# Restricted-graph dichotomy and the clean CM norm equation
+# Restricted-graph dichotomy and the CM norm equation
 
-## 1. Setup and conventions
+## 1. Setup
 
 Let
+
 \[
-\phi:X\dashrightarrow X
-\]
-be the dominant `G`-equivariant rational selfmap obtained by restricting a
-hypothetical ambient landing map.  Let `J` be its primitive base ideal and
-\[
-\Gamma=\operatorname{Proj}_{X}\overline{\mathcal R(J)}
-\]
-the normalized graph, with source and target maps
-\[
-\pi:\Gamma\to X,
+\Gamma=\operatorname{Proj}_{X}\overline{\mathcal R(J)},
 \qquad
-q:\Gamma\to X.
+\pi,q:\Gamma\longrightarrow X
 \]
-The degree of `q` is the degree `delta` of `phi`.  Put
+
+be the normalized graph of the primitive restricted ideal of a hypothetical ambient landing map. Thus `pi` is birational, `q` is generically finite, and
+
 \[
-V=H^3(X,\mathbf Q)(1).
+\delta=\deg(q)>0.
 \]
-We use intersection complexes normalized to be perverse.  Thus
-`IC_X^H=Q_X^H[3]`, and
+
+Put
+
 \[
-IH^3(\Gamma,\mathbf Q)=
-\mathbb H^0\bigl(X,R\pi_*IC_\Gamma^H\bigr).
-\]
-All maps and decompositions below are in polarizable rational Hodge modules or
-on their Hodge-theoretic hypercohomology.  No Chow-correspondence projector is
-used.
-
-## 2. Canonical unit and trace maps
-
-### Lemma 2.1 — birational unit--trace splitting
-
-There are canonical `G`-equivariant morphisms
-\[
-\eta_\pi:IC_X^H\longrightarrow R\pi_*IC_\Gamma^H,
+V=H^3(X,\mathbf Q)(1),
 \qquad
-\tau_\pi:R\pi_*IC_\Gamma^H\longrightarrow IC_X^H
+K_\Gamma=R\pi_*IC_\Gamma^H.
 \]
-whose restrictions to the largest open set on which `pi` is an isomorphism are
-the identity, and
+
+All projectors and correspondence identities below are in polarizable Hodge modules or the induced rational Hodge structures. No Chow-correspondence projector is asserted.
+
+## 2. Strict support and the canonical middle-cohomology projector
+
+Because `pi` is birational and `X` is smooth, strict-support decomposition gives
+
 \[
-\tau_\pi\eta_\pi=\operatorname{id}_{IC_X^H}.
+{}^pH^j(K_\Gamma)=
+\begin{cases}
+IC_X^H\oplus \mathcal Q_{0,\mathrm{prop}},&j=0,\\
+\mathcal Q_{j,\mathrm{prop}},&j\ne0,
+\end{cases}
 \tag{2.1}
 \]
-Consequently
+
+where every simple constituent of every `Q_{j,prop}` has proper support and the full-support constituent `IC_X^H=Q_X^H[3]` occurs with multiplicity one. Equation (2.1) is canonical inside each semisimple perverse cohomology object. We do **not** claim a canonical splitting of the entire derived object `K_Gamma`.
+
+The birational map supplies canonical pullback and trace maps on middle intersection cohomology,
+
 \[
-e_X:=\eta_\pi\tau_\pi,
+\pi^*:V\hookrightarrow IH^3(\Gamma,\mathbf Q)(1),
 \qquad
-e_{\mathrm{exc}}:=1-e_X
+\pi_*:IH^3(\Gamma,\mathbf Q)(1)\longrightarrow V,
 \tag{2.2}
 \]
-are canonical complementary idempotents.  The image of `e_X` is the unique
-full-support summand `IC_X^H`; every strict support in the image of
-`e_exc` is proper and is contained in `Bs(J)`.
 
-#### Proof
+normalized by
 
-On the common isomorphism locus, use the identity of the two constant Hodge
-modules.  Intermediate extension gives the full-support map `eta_pi`.
-Verdier duality and the fixed polarizations give `tau_pi`, normalized to be the
-identity on that open set.  The composite is an endomorphism of the simple
-Hodge module `IC_X^H` and restricts to the identity on a dense open set, so it
-is the identity globally.  The idempotents follow.  Over `X\Bs(J)`, `pi` is an
-isomorphism; therefore every support in the complementary image lies in the
-base locus.  Since `J` is primitive, the base locus has no divisorial
-component, hence these supports have dimension at most one.  This construction
-uses only Hodge-module morphisms, not a chosen splitting of the decomposition
-theorem.  ∎
-
-### Lemma 2.2 — generically finite unit and trace
-
-There are canonical `G`-equivariant morphisms
 \[
-\eta_q:IC_X^H\longrightarrow Rq_*IC_\Gamma^H,
-\qquad
-\tau_q:Rq_*IC_\Gamma^H\longrightarrow IC_X^H
-\]
-with
-\[
-\tau_q\eta_q=\delta\operatorname{id}_{IC_X^H}.
+\pi_*\pi^*=\operatorname{id}_V.
 \tag{2.3}
 \]
-On a dense open set where `q` is finite étale, these are the diagonal pullback
-and the usual trace.  Equation (2.3) follows there and hence everywhere by
-simplicity of `IC_X^H`.
 
-Taking degree-zero hypercohomology, write the induced maps as
+The trace is the polarized adjoint of pullback. Hence
+
 \[
-i_\pi,t_\pi,i_q,t_q.
-\]
-The canonical class called `q_Gamma^*V` in the ambient bridge packet is
-`i_q(V)`.  The graph-correspondence action and its polarization adjoint are
-\[
-u_\phi:=t_\pi i_q:V\to V,
+e_0=\pi^*\pi_*,
 \qquad
-u_\phi^\dagger:=t_q i_\pi:V\to V.
+e_{\mathrm{exc}}=1-e_0
 \tag{2.4}
 \]
-On a common smooth resolution these are respectively `pi_*q^*` and `q_*pi^*`,
-so (2.4) is the Hodge realization of the graph and transpose-graph
-correspondences.
 
-## 3. The restricted dichotomy
+are canonical self-adjoint idempotents on `IH^3(Gamma)(1)`, and
 
-Define the canonical exceptional projection of the actual class by
 \[
-c_\phi:=e_{\mathrm{exc}}i_q|_V:
-V\longrightarrow IH^3(\Gamma)(1).
+IH^3(\Gamma)(1)=\pi^*V\ \widehat\oplus\ E_\Gamma,
+\qquad
+E_\Gamma=\ker(\pi_*)=(\pi^*V)^\perp.
+\tag{2.5}
+\]
+
+By (2.1) and the decomposition theorem, every constituent of `E_Gamma` is contributed by proper strict supports. This assertion is independent of a choice of derived decomposition; a relatively ample splitting may be used only to display those proper-support constituents.
+
+## 3. The dichotomy
+
+The generically finite map `q` has canonical diagonal pullback and trace on the middle summand,
+
+\[
+q^*:V\hookrightarrow IH^3(\Gamma,\mathbf Q)(1),
+\qquad
+q_*:IH^3(\Gamma,\mathbf Q)(1)\longrightarrow V,
+\]
+
+with
+
+\[
+q_*q^*=\delta\,\operatorname{id}_V.
 \tag{3.1}
 \]
-This definition is independent of any decomposition-theorem splitting.
-Because `V` is irreducible over `Q` as a `G`-module, `c_phi` is either zero or
-injective.
 
-### Theorem 3.1 — CARRIER/CLEAN dichotomy
+On the finite-etale locus this is the diagonal inclusion and trace in the degree-`delta` local system; middle extension gives the canonical actual class of PR #15, Theorem D.
 
-Exactly one of the following alternatives holds.
+Define
 
-#### (i) CARRIER branch
-
-If `c_phi` is nonzero, then an intrinsic restricted carrier exists.  More
-precisely, there are
-
-- a perverse degree `j_0`,
-- a proper irreducible strict support `T subset Bs(J)` with `dim T<=1`, and
-- its stabilizer `H=Stab_G(T)`,
-
-such that, for a strict-support block
 \[
-\mathcal M_{T,j_0}\subset
-{}^pH^{j_0}(R\pi_*IC_\Gamma^H),
-\]
-one has
-\[
-\operatorname{Hom}_{\mathrm{HS},H}
-\left(
- \operatorname{Res}^G_H V,
- H^{-j_0}(X,\mathcal M_{T,j_0})(1)
-\right)\ne0.
-\tag{AHS-Gamma}
-\]
-If a simple constituent is
-`IC_{\overline T}^H(L)` and `s=dim T`, this can be written
-\[
-\operatorname{Hom}_{\mathrm{HS},H'}
-\left(
- \operatorname{Res}^G_{H'}V,
- IH^{s-j_0}(\overline T,L)(1)
-\right)\ne0
+r=e_{\mathrm{exc}}q^*:V\longrightarrow E_\Gamma,
+\qquad
+u_\varphi=\pi_*q^*:V\longrightarrow V.
 \tag{3.2}
 \]
-for the stabilizer `H'` of that constituent.  The statement is intrinsic to
-`Gamma`: `e_exc`, the perverse filtration, and strict-support decomposition are
-canonical, although no individual decomposition-theorem splitting is chosen.
 
-#### Proof of the CARRIER branch
+Exactly one of the following occurs.
 
-The nonzero map (3.1) is injective by irreducibility.  Give its target the
-perverse Leray filtration induced by `Rpi_*IC_Gamma^H`; strictness of morphisms
-of Hodge structures gives a unique jump on the irreducible source.  The
-associated graded map is nonzero in some perverse degree.  The canonical
-strict-support decomposition of that perverse cohomology then gives a nonzero
-map to at least one `G`-orbit of proper support blocks.  Frobenius reciprocity
-for that orbit gives (AHS-Gamma).  The shift is `-j_0`, rather than the ambient
-`-1-j_0`, because `Gamma` has dimension three and `IH^3(Gamma)` is degree-zero
-hypercohomology.  The support and dimension assertions follow from Lemma 2.1.
-∎
+### CARRIER branch
 
-#### (ii) CLEAN branch
+If `r` is nonzero, then `r` is injective because its kernel is a rational `G`-submodule of the irreducible module `V`. Filter `E_Gamma` by the perverse filtration. At the first degree `j_Gamma` in which the image of `r` is nonzero, the map to the associated graded is injective. Choose a proper strict support `T` whose `G`-orbit receives a nonzero projection, let
 
-If `c_phi=0`, then
 \[
-i_q|_V=i_\pi u_\phi.
-\tag{3.3}
+\mathcal N_{T,j_\Gamma}\subset\mathcal Q_{j_\Gamma,\mathrm{prop}}
 \]
-The exceptional correction to graph--transpose-graph composition is
-\[
-C_{\mathrm{exc}}
-:=t_qe_{\mathrm{exc}}i_q|_V.
-\tag{3.4}
-\]
-It vanishes, and on `V`
+
+be the maximal strict-support block on `T`, and put `H=Stab_G(T)`. Then
+
 \[
 \boxed{
- u_\phi^\dagger u_\phi
- =\delta\operatorname{id}_V.
+\operatorname{Hom}_{\mathrm{HS},H}
+\left(
+\operatorname{Res}_H V,
+H^{-j_\Gamma}(X,\mathcal N_{T,j_\Gamma})(1)
+\right)\ne0.
 }
+\tag{3.3}
+\]
+
+Moreover
+
+\[
+T\subset\operatorname{Bs}(J),
+\qquad
+\dim T\le1.
+\tag{3.4}
+\]
+
+Indeed, `pi` is an isomorphism off the primitive restricted base locus, and primitive reduction removes every divisorial common factor on the smooth threefold `X`. Equation (3.3) is the intrinsic restricted analogue of (AHS). It allows local systems, point support, and nonsemismall perverse degrees.
+
+### CLEAN branch
+
+If `r=0`, then
+
+\[
+q^*=\pi^*u_\varphi
+\quad\text{on }V.
 \tag{3.5}
 \]
 
-#### Proof of the CLEAN branch
+Taking polarized adjoints gives the exact correction identity
 
-The equation `e_exc i_q=0` and `e_X=i_pi t_pi` give (3.3).  By (2.3),
 \[
-\delta\operatorname{id}_V=t_qi_q.
+\boxed{
+u_\varphi^\dagger u_\varphi+r^\dagger r
+=\delta\,\operatorname{id}_V.
+}
+\tag{3.6}
 \]
-Using (3.3) and (2.4),
+
+Indeed,
+
 \[
-t_qi_q=t_qi_\pi u_\phi=u_\phi^\dagger u_\phi.
-\]
-Equivalently,
-\[
-\delta\operatorname{id}_V-u_\phi^\dagger u_\phi
-=t_q(1-i_\pi t_\pi)i_q=C_{\mathrm{exc}},
-\]
-which is zero in the CLEAN branch.  This is a Hodge-level identity; no cycle
-projector onto intersection cohomology is asserted.  ∎
-
-The dichotomy and both conditional conclusions prove the exit
-
-```text
-RESTRICTED-DICHOTOMY-PROVED
-CARRIER-INTRINSIC-RESTRICTED-AHS
-CLEAN-CORRECTION-VANISHES
-```
-
-## 4. The `G`-Hodge commutant and its integral order
-
-Let
-\[
-K=\mathbf Q(\sqrt{-11}),
+u_\varphi^\dagger u_\varphi
+=q_*\pi^*\pi_*q^*,
 \qquad
-\omega=\frac{1+\sqrt{-11}}2,
-\qquad
-\nu=\omega-1=\frac{-1+\sqrt{-11}}2.
+r^\dagger r=q_*(1-\pi^*\pi_*)q^*,
+\tag{3.7}
 \]
-The accepted representation-theoretic decomposition is
+
+and their sum is `q_*q^*`. In the CLEAN branch the exceptional correction vanishes, so
+
 \[
-V_{\mathbf C}=W_5\oplus\overline{W}_5,
+\boxed{
+u_\varphi^\dagger u_\varphi=[\delta]
+\quad\text{on }V.
+}
+\tag{3.8}
 \]
-with two nonisomorphic conjugate irreducible representations.  Hence
+
+This is conditional on CLEAN; it is not the false universal selfmap identity rejected in the prior packet.
+
+## 4. The rational and integral commutants
+
+The complexification of the rational Klein Hodge representation is
+
 \[
-\operatorname{End}_{\mathbf Q[G]}(V)\otimes_{\mathbf Q}\mathbf C
-\simeq\mathbf C\oplus\mathbf C.
+V_{\mathbf C}\simeq W_5\oplus\overline W_5,
 \]
-Rational irreducibility and Schur's lemma therefore make the commutant a
-quadratic field; its character field is `K`.  Each element acts separately on
-the two Hodge summands, so it preserves the Hodge decomposition.  Thus
+
+and the two absolutely irreducible halves have character field
+
 \[
-\operatorname{End}_{G\text{-HS}}(V)=K.
+K=\mathbf Q(\sqrt{-11}).
+\]
+
+Schur's lemma together with the accepted Auto-CM input gives
+
+\[
+\operatorname{End}_{G\text{-}\mathrm{HS}}(V)=K.
 \tag{4.1}
 \]
 
-For the integral lattice
+Roulleau's period lattice is stable under
+
 \[
-V_{\mathbf Z}=H^3(X,\mathbf Z)(1)/\mathrm{tors},
+\nu=\frac{-1+\sqrt{-11}}2.
 \]
-its `G`-Hodge endomorphism ring is an order in `K`.  Roulleau's explicit period
-lattice for the Klein intermediate Jacobian is a rank-five
-`Z[nu]`-lattice; in particular scalar multiplication by `nu` preserves the
-actual integral lattice and commutes with `G`.  Since
+
+Since
+
 \[
-\mathbf Z[\nu]=\mathbf Z[\omega]=\mathcal O_K
-\]
-is already the maximal order, one obtains
-\[
-\operatorname{End}_{G\text{-HS}}(V_{\mathbf Z})=\mathcal O_K.
+\mathbf Z[\nu]
+=\mathbf Z\left[\frac{1+\sqrt{-11}}2\right]
+=\mathcal O_K
 \tag{4.2}
 \]
 
-The Rosati involution on `K` is complex conjugation.  Indeed the identity
-involution would violate positivity on `sqrt(-11)`, while conjugation is the
-unique positive involution on this imaginary quadratic field.  Since the graph
-correspondence is integral, `u_phi` lies in `O_K`; write
+is the maximal order, the integral scalar commutant is exactly `O_K`. Rosati restricts to complex conjugation. Therefore in the CLEAN branch
+
 \[
-u_\phi=x+y\omega,
-\qquad x,y\in\mathbf Z.
-\]
-Equation (3.5) becomes
-\[
-\delta=u_\phi\overline{u_\phi}
-=x^2+xy+3y^2.
+u_\varphi=[\alpha],
+\qquad
+\alpha\in\mathcal O_K,
+\qquad
+\delta=\alpha\bar\alpha.
 \tag{4.3}
 \]
-This proves the clean arithmetic record
 
-```text
-CLEAN-CM-NORM-EQUATION
-```
+Writing
 
-### Class number
-
-The discriminant of `O_K` is `-11`.  Minkowski's bound says that every ideal
-class contains an integral ideal of norm at most
 \[
-\frac2\pi\sqrt{11}<3.
+\omega=\frac{1+\sqrt{-11}}2,
+\qquad
+\alpha=x+y\omega,
+\qquad x,y\in\mathbf Z,
 \]
-The only possible nontrivial norm would be `2`.  But the minimal polynomial
-`T^2-T+3` of `omega` reduces to `T^2+T+1`, irreducible over `F_2`; hence `2` is
-inert and there is no ideal of norm `2`.  Therefore
+
+gives
+
 \[
-h(K)=1.
+\boxed{
+\delta=N_{K/\mathbf Q}(\alpha)=x^2+xy+3y^2.
+}
 \tag{4.4}
 \]
-Equivalently, an integer is represented by (4.3) exactly when every inert prime
-has even valuation.
 
-## 5. Degree sieve and mandatory consistency audit
+The field has discriminant `-11` and class number one. The imaginary-quadratic Minkowski bound is `(2/pi)sqrt(11)<2.12`; two is inert because `t^2-t+3` is irreducible modulo two, so no nonprincipal ideal class can survive the bound. Equivalently, a positive integer is represented by (4.4) exactly when every inert prime occurs to even exponent.
 
-Immediate values are
-\[
-N(\nu)=3,
-\qquad
-N(1+\omega)=5,
-\qquad
-N(5)=25.
-\]
-Thus `2` is not represented, while `3` and `5` are represented.  The notation
-`[-5]` on an elliptic carrier means the scalar integer `-5`, whose CM norm is
-`25`; it does **not** assert that the threefold selfmap degree is `5`.
+## 5. Mandatory consistency audit
 
-The complete consistency comparison with
-`FULL_G_SELFMAP_CLASSIFICATION` is:
-
-| classified selfmap datum | CM-norm comparison | verdict |
+| degree/bookkeeping entry | norm-form result | consistency verdict |
 |---|---|---|
-| `delta=1` identity branch | `1=N(1)` | compatible |
-| `delta=2` | not represented; independently excluded in the classification packet | compatible |
-| the constructed nonidentity map has an unspecified `delta>=3` | if its degree is represented it may be CLEAN; if not, Theorem 3.1 forces its CARRIER branch | no mismatch |
-| iterates of a CLEAN map, degrees `delta^m` | `delta^m=N(u_phi^m)` | compatible |
-| elliptic boundary multiplier `[-5]` | `N(-5)=25`; the carrier formula remains `75=3d delta_t-B.C_t` | compatible; no identification with selfmap degree `5` |
+| `1`, identity | `1=N(1)` | CLEAN allowed |
+| `2` | not represented | CLEAN impossible; independently excluded |
+| `3` | `3=N(omega-1)=N(nu)` | audited degree-three branch passes |
+| `5` | `5=N(1+omega)` | CLEAN allowed by the sieve |
+| unknown `delta>=3` | conditional | represented degrees may be CLEAN; nonrepresented degrees are forced CARRIER |
+| iterates `delta^m` | conditional | a CLEAN scalar iterates to `alpha^m`; no claim is made for a CARRIER map |
+| elliptic `[-5]` line | `N(5)=25` | compatible, but this local degree is not identified with global `delta` |
 
-The classification packet does not assign any further exact degree to its
-constructed tangent-residual selfmap.  Therefore the norm sieve is a
-conditional CLEAN-branch sieve, not an unconditional exclusion of all
-selfmaps whose degree is not represented.  The exact script
-`verify_norm_sieve.py` checks the norm form, the examples, powers, and every
-numeric datum actually recorded in the classification packet.
+The final row respects the existing carrier identity
+
+\[
+75=3d\delta_t-B\cdot C_t.
+\]
+
+It does not replace that identity by `d=25`. The exact verifier `verify_norm_sieve.py` finds no mismatch with any degree statement in `FULL_G_SELFMAP_CLASSIFICATION`.
+
+## Exit
+
+```text
+RESTRICTED-DICHOTOMY-PROVED
+RESTRICTED-CARRIER-BRANCH-PROVED
+RESTRICTED-CLEAN-CM-NORM-PROVED
+```
