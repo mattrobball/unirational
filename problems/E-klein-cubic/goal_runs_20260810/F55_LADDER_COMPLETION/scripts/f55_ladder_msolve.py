@@ -136,7 +136,8 @@ def gb_verdict(body, n):
     return 'EMPTY' if pure >= set(range(n)) else 'NONEMPTY-OR-UNRESOLVED'
 
 
-def run(d, p, outdir, twists, cap=7200, threads=2):
+def run(d, p, outdir, twists, cap=None, threads=2):
+    cap = int(os.environ.get('LADDER_CAP', '7200')) if cap is None else cap
     os.makedirs(outdir, exist_ok=True)
     res = {}
     for s in twists:
