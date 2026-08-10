@@ -52,7 +52,7 @@ disclosed boundary, not a coverage claim.
 
 Core manifest last rebuilt: 2026-08-03. Research supplement last updated:
 2026-08-10. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `b05cf667b232f4f63760b41ca3eac4fe471e0b6d` (2026-08-10; the
+Snapshot metadata — notebook parent head: `4af8be438c1a9c1231af21c1916fb3561786cf73` (2026-08-10; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -5937,3 +5937,31 @@ as stated may be unprovable without new input on the landing ideal.  Decide
 (perverse weak Lefschetz along the ample inclusion `X` in `P4`) and routing
 around it (arrangement localization via degree/orbit-size bounds on
 `Bs(I_A)`; CM-rigidity upgrade of the Tate hypothesis).
+
+<!-- RT_SPLIT_AND_DICHOTOMY_20260810 -->
+
+## 2026-08-10 RT split and restricted dichotomy: packet opened
+
+Packet:
+
+`goal_runs_20260810/RT_SPLIT_AND_DICHOTOMY/`
+
+**Exit:** `RESTRICTED-DICHOTOMY-UNDECIDED`, `CLEAN-CASE-TRANSFER-UNDECIDED`,
+`SUPPORT-ESCAPE-UNDECIDED`, `SXX-LOCAL-REES-UNDECIDED`.
+**Headline:** Problem E remains **OPEN**.  Work in flight (PR #16 opened the
+packet; branch `agent/rt-split-dichotomy-20260810`).
+
+This packet executes the director work order implementing the ambient-Hodge
+precedence note: Task 1 the restricted-graph dichotomy (intrinsic restricted
+Hodge carrier versus the clean CM norm equation `u^t u = [delta]` in the
+order of `Q(sqrt(-11))`, norm form `x^2+xy+3y^2`, with the mandatory sieve
+consistency check against `FULL_G_SELFMAP_CLASSIFICATION` degrees before any
+claim); Task 2 the clean-case transfer theorem (`S` not contained in `X`,
+perverse-degree hypothesis exactly `j_0 >= 0` via Artin vanishing on the
+affine complement); Task 3 point-support and free-orbit closure by
+degree/orbit-size accounting on `Bs(I_A)` (660 versus refined Bezout) before
+any fiber characterization; Task 4 the `S` contained in `X` local Rees model
+(`P_i = h^m a_i + F b_i`, nearby-cycle specialization from the vertical to
+the dominant component, validated against the two exact `V4`-equivariant
+landing ideals).  Task 5 (fixed-carrier resumption) is held under the
+precedence rule.  No theorem is claimed at packet creation.
