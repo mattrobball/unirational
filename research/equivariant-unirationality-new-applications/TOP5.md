@@ -1,6 +1,6 @@
 # Top five actions: exact obstruction tests
 
-## 1. Smooth quartic double solid with `(C7:C3) × C2deck`
+## 1. Smooth quartic double solid with `(C7:C3) x C2deck`
 
 Let
 
@@ -10,7 +10,7 @@ B=2x_0^4+6x_0x_1x_2x_3+x_1x_3^3+x_1^3x_2+x_2^3x_3,
 X=\{w^2=B\}\subset\mathbf P(1,1,1,1,2).
 \]
 
-For a primitive seventh root `ζ`, set
+For a primitive seventh root `zeta`, set
 
 \[
 a=\operatorname{diag}(1,\zeta^4,\zeta^2,\zeta),
@@ -18,9 +18,11 @@ a=\operatorname{diag}(1,\zeta^4,\zeta^2,\zeta),
 b(x_0,x_1,x_2,x_3)=(x_0,x_2,x_3,x_1).
 \]
 
-Then `bab^{-1}=a^4`, so `H=<a,b>=C7:C3`. Let `τ:w↦-w` and `G=H×<τ>`.
+Then `bab^{-1}=a^4`, so `H=<a,b>=C7:C3`. Let `tau:w->-w` and
+`G=H x <tau>`.
 
-Use the central deck involution. Its fixed locus is the smooth K3 surface `B`, with
+The deck involution is central. Its fixed locus is the smooth K3 surface
+`B`, with
 
 \[
 B^H=\varnothing,
@@ -28,7 +30,11 @@ B^H=\varnothing,
 B^{C_7}=\{e_1,e_2,e_3\}.
 \]
 
-An `H`-stable rational curve would induce an action of `H` on its normalization. The kernel must contain the normal `C7`, because the nonabelian group of order 21 is not a finite subgroup of `PGL2`; the curve would lie in the finite set `B^{C7}`, a contradiction. Thus the K3 has no positive-dimensional `H`-stable RCC subvariety.
+An `H`-stable rational curve would induce an action of `H` on its
+normalization. The kernel is `1`, `C7`, or `H`. The faithful case is
+impossible because the nonabelian group of order 21 is not a finite subgroup
+of `PGL2`; the other two cases force the curve into `B^{C7}` or `B^H`.
+Thus `B` has no positive-dimensional `H`-stable RCC subvariety.
 
 ```text
 Condition (A)                                      PROVED
@@ -38,26 +44,137 @@ equivariant universal-torsor obstruction           ZERO
 all higher Amitsur groups                          ZERO
 ```
 
-The residual-RCC central theorem gives
+Therefore
 
 \[
 \boxed{X\text{ is not weakly }G\text{-versal}.}
 \]
 
-The underlying smooth quartic double solid is classically unirational. See `THEOREM_KLEIN_QUARTIC_DOUBLE_SOLID.md`.
+The underlying smooth quartic double solid is ordinarily unirational. See
+`THEOREM_KLEIN_QUARTIC_DOUBLE_SOLID.md`.
 
 ---
 
-## 2. Odd exceptional conic bundles with `D_{2g} × C2`
+## 2. Cubic-surface bundles with `C3 x D_{2n}`
 
-For odd `g≥3`, let `S_g` be the minimal resolution of
+For every odd `n>=3`, let
+
+\[
+A_0=S^{2n}+T^{2n},\qquad A_1=(ST)^n
+\]
+
+on `P1`, let `D_{2n}` act by
+
+\[
+r[S:T]=[\epsilon S:\epsilon^{-1}T],
+\qquad s[S:T]=[T:S],
+\]
+
+and let the central element `z` of `C3` act on the fiber `P3` by
+
+\[
+z[U:V:X:Y]=[\omega U:\omega^2V:X:Y].
+\]
+
+For general binary cubics `F0,F1`, define
+
+\[
+\begin{aligned}
+\mathcal X_n:\quad
+0={}&A_0(U^3+V^3)+UV(A_0X+A_1Y)\\
+&+A_0F_0(X,Y)+A_1F_1(X,Y)
+\end{aligned}
+\]
+
+inside `P1 x P3`. The action is
+
+\[
+G_n=C_3\times D_{2n}.
+\]
+
+### Target fixed locus
+
+The projective `z`-fixed locus in the fiber is the line `P<X,Y>` and the
+two eigenpoints `[1:0:0:0]`, `[0:1:0:0]`. Hence
+
+\[
+\mathcal X_n^z=C_n\sqcup P_U\sqcup P_V,
+\]
+
+where
+
+\[
+C_n:\ A_0F_0+A_1F_1=0
+\subset\mathbf P^1\times\mathbf P^1
+\]
+
+is a smooth bidegree-`(2n,3)` curve and
+
+\[
+g(C_n)=4n-2,
+\qquad |P_U|=|P_V|=2n.
+\]
+
+The full group has no fixed point because the dihedral base action has none:
+the rotation fixes `0,infinity`, and the reflection swaps them.
+
+### Condition (A)
+
+Every abelian subgroup of `D_{2n}` is cyclic when `n` is odd. It fixes a
+base point. Over that point the binary cubic `A0F0+A1F1` has a root, and
+the resulting point of `C_n` is fixed by the central `C3` and by the
+projected dihedral subgroup. Thus every abelian subgroup of `G_n` fixes a
+point.
+
+### Ordinary geometry and silent invariants
+
+The bundle has three sections
+
+\[
+[U:V:X:Y]=[1:-\rho:0:0],\qquad \rho^3=1.
+\]
+
+Its smooth generic cubic surface therefore has a rational point and is
+unirational by Kollár; spreading out proves that the total threefold is
+unirational. Grothendieck--Lefschetz gives
+
+\[
+\operatorname{Pic}(\mathcal X_n)=
+\mathbf Z\mathcal O(1,0)\oplus\mathbf Z\mathcal O(0,1),
+\]
+
+and both generators are genuinely linearized. Hence the universal-torsor
+obstruction and every higher Amitsur group vanish.
+
+```text
+smoothness                                         PROVED BY BERTINI + BASE-LOCUS CHECK
+ordinary unirationality                            PROVED
+Condition (A)                                      PROVED
+central fixed curve genus 4n-2                     PROVED
+X_n^{G_n}                                          EMPTY
+higher Amitsur hierarchy                           ZERO
+```
+
+The central theorem gives
+
+\[
+\boxed{\mathcal X_n\text{ is not weakly }G_n\text{-versal}.}
+\]
+
+See `THEOREM_CUBIC_SURFACE_BUNDLE_FAMILY.md`.
+
+---
+
+## 3. Odd exceptional conic bundles with `D_{2g} x C2`
+
+For odd `g>=3`, let `S_g` be the minimal resolution of
 
 \[
 T_0T_1(T_0^{2g}+T_1^{2g})+T_2T_3=0
 \subset\mathbf P(1,1,g+1,g+1).
 \]
 
-Let `ξ` be a primitive `2g`-th root and define
+Let `xi` be a primitive `2g`-th root and define
 
 \[
 r(T_0,T_1)=(\xi T_0,\xi^{-1}T_1),
@@ -67,7 +184,8 @@ s(T_0,T_1)=(T_1,T_0),
 j(T_2,T_3)=(T_3,T_2).
 \]
 
-In the weighted projective action, `r` has order `g`, `<r,s>=D_{2g}` of order `2g`, and `j` is central. Put `G_g=D_{2g}×<j>`.
+In the weighted projective action, `r` has order `g`, `<r,s>=D_{2g}` of
+order `2g`, and `j` is central. Put `G_g=D_{2g} x <j>`.
 
 The fixed locus of `j` is
 
@@ -76,7 +194,10 @@ S_g^j=C_g:\ U^2=-T_0T_1(T_0^{2g}+T_1^{2g}),
 \qquad g(C_g)=g.
 \]
 
-Moreover `C_g^{D_{2g}}=∅`, hence `S_g^{G_g}=∅`. Every abelian subgroup fixes a point: rotation subgroups fix the two ramification points over `0,∞`, and reflection subgroups fix points over their base eigendirections because `g+1` is even.
+Moreover `C_g^{D_{2g}}=empty`, hence `S_g^{G_g}=empty`. Every abelian
+subgroup fixes a point: rotation subgroups fix the ramification points over
+`0,infinity`, and reflection subgroups fix points over their base
+eigendirections because `g+1` is even.
 
 ```text
 S_g rational exceptional conic bundle              PROVED
@@ -85,45 +206,39 @@ central fixed locus has no rational component       PROVED
 S_g^G                                               EMPTY
 ```
 
-Thus for every odd `g≥3`,
+Thus
 
 \[
-\boxed{S_g\text{ is not weakly }G_g\text{-versal}.}
+\boxed{S_g\text{ is not weakly }G_g\text{-versal}}
 \]
 
-See `THEOREM_ODD_EXCEPTIONAL_CONIC_BUNDLES.md`.
+for every odd `g>=3`. See `THEOREM_ODD_EXCEPTIONAL_CONIC_BUNDLES.md`.
 
 ---
 
-## 3. Rational genus-12 `V22` with `PSL2(F7)`
+## 4. Rational genus-12 `V22` with `PSL2(F7)`
 
-**Literature status:** `OPEN-CONFIRMED` through the search cutoff for equivariant unirationality and weak versality.
+**Literature status:** `OPEN-CONFIRMED` through the search cutoff for
+equivariant unirationality and weak versality.
 
-Let `C⊂P2` be the Klein quartic and
+Let `C subset P2` be the Klein quartic and
 
 \[
 X=\operatorname{VSP}(C,6).
 \]
 
-Cheltsov–Shramov identify `X` as a smooth rational prime Fano threefold of genus 12, degree 22, and Picard rank one, with faithful
+Cheltsov--Shramov identify `X` as a smooth rational prime Fano threefold of
+genus 12 and degree 22 with faithful
 
 \[
 G=\operatorname{PSL}_2(\mathbf F_7)
 \]
 
-action. The action is `G`-birationally superrigid.
+action. The entire Mori--Mukai No. 1.10 family satisfies Condition (A).
+Since `Pic(X)=Z[-K_X]` and `-K_X` is canonically linearized, the universal
+torsor and all higher Amitsur obstructions vanish.
 
-The Mori–Mukai family No. 1.10 containing `X` satisfies Condition (A) for every smooth member. Since
-
-\[
-\operatorname{Pic}(X)=\mathbf Z[-K_X]
-\]
-
-and `-K_X` is canonically `G`-linearized, the equivariant universal-torsor obstruction and every higher Amitsur obstruction vanish.
-
-The global fixed locus is empty by a short VSP argument. A `G`-fixed point of `VSP(C,6)` would give a `G`-stable length-six subscheme of the dual Klein plane. The irreducible three-dimensional representation has no projective fixed point, and every nontrivial projective orbit has size at least seven: an orbit of size at most six would give an injection of the simple group of order 168 into `S_6`, impossible by Lagrange. Hence no such length-six subscheme exists.
-
-For an involution `σ∈G`,
+For an involution `sigma`,
 
 \[
 N=C_G(\sigma)\simeq D_8.
@@ -137,26 +252,23 @@ X^\sigma
 X^{D_8}.
 \]
 
-The VSP model and the anticanonical representation
-
-\[
-H^0(X,-K_X)\simeq\mathbf1\oplus W_6\oplus W_7
-\]
-
-make this finite. The acceptance test is:
+The acceptance test is:
 
 ```text
 (a) every D8-stable irreducible RCC subvariety of X^sigma is a point;
 (b) X^D8 is empty.
 ```
 
-If both pass, the residual-RCC centralizer theorem proves that `X` is not weakly `G`-versal. This is the best remaining target: rational, explicit, Condition (A) verified, all known cohomological invariants silent, no global fixed point, and one involution-centralizer computation between the question and a theorem.
+If both pass, the residual-RCC centralizer theorem proves that `X` is not
+weakly `G`-versal. This remains the best unresolved direct-centralizer
+target.
 
 ---
 
-## 4. Fermat-discriminant Fano conic bundle No. 2.18
+## 5. Fermat-discriminant Fano conic bundle No. 2.18
 
-**Literature status:** `PARTIALLY-COVERED`—automorphisms and projective linearizability are studied; equivariant unirationality is not decided.
+**Literature status:** `PARTIALLY-COVERED`--automorphisms and projective
+linearizability are studied; equivariant unirationality is not classified.
 
 Abe considers the rational double cover
 
@@ -164,81 +276,43 @@ Abe considers the rational double cover
 X_F\longrightarrow\mathbf P^1\times\mathbf P^2
 \]
 
-branched over the smooth `(2,2)` divisor determined by
+branched over a smooth `(2,2)` divisor determined by
 
 \[
-Q_1=ix^2+y^2,\qquad Q_2=z^2,\qquad Q_3=ix^2-y^2.
+Q_1=ix^2+y^2,
+\qquad Q_2=z^2,
+\qquad Q_3=ix^2-y^2.
 \]
 
 Its conic-bundle discriminant is the Fermat quartic
 
 \[
-\Delta_F=\{x^4+y^4+z^4=0\}\subset\mathbf P^2,
+\Delta_F=\{x^4+y^4+z^4=0\},
 \]
 
-and `|Aut(X_F)|=192`. Abe's explicit subgroup
+and the total automorphism group has order 192. The displayed abelian
+subgroup `C4 x C2deck` has a fixed point and is weakly versal, so it is not
+the target. The relevant action must be a nonabelian subgroup with Condition
+(A) and empty global fixed locus.
 
-\[
-G_1=\langle\alpha,\tau\rangle\simeq C_4\times C_2^{\rm deck}
-\]
-
-is not projectively linearizable, but it has a fixed point and is therefore weakly versal. Its `G_1`-unirationality remains a dominance question.
-
-The relevant obstruction target is instead the full order-192 action or a nonabelian subgroup mapping onto `S3⊂Aut(Δ_F)` and containing the deck involution. The deck-fixed branch surface is a rational degree-2 del Pezzo, so the whole fixed surface is an allowed residual-stable RCC image. The needed work is:
+The deck-fixed branch surface is a rational degree-2 del Pezzo. Hence the
+whole fixed surface is an allowed RCC image and the single-carrier central
+theorem cannot fire. The remaining work is:
 
 ```text
 (a) freeze a nonabelian subgroup with Condition (A) and X^G=empty;
 (b) enumerate involution classes and centralizers;
-(c) compute fixed curves and surfaces;
-(d) classify residual-stable rational curves on the deck-fixed del Pezzo;
-(e) prove connected exceptional-fiber/network propagation in dimension three.
+(c) classify residual-stable rational curves on the branch del Pezzo;
+(d) prove connected exceptional-fiber propagation in dimension three.
 ```
 
-This is the best test bed for a genuinely three-dimensional fixed-network theorem.
+This is the best test bed for a genuinely three-dimensional fixed-network
+theorem.
 
----
+## Double-quadric note
 
-## 5. Kummer double solid `X1` with a non-Q8 subgroup
-
-**Literature status:** `PARTIALLY-COVERED`—Q8-containing actions are already cohomologically obstructed; the subgroup below is not covered by that criterion.
-
-Let
-
-\[
-X_1=\{w^2=x_1^4+x_2^4+x_3^4+x_4^4-4i x_1x_2x_3x_4\}
-\subset\mathbf P(2,1,1,1,1),
-\]
-
-and let `\widetilde X_1` be the blowup of its 16 nodes. The known automorphism group is
-
-\[
-C_2^{\rm deck}\times(C_4^2\rtimes S_4).
-\]
-
-Take
-
-\[
-G_0=C_2^{\rm deck}\times(C_4^2\rtimes C_3).
-\]
-
-Its 2-Sylow is abelian, so it contains none of the Q8 subgroups responsible for the published nonzero third Amitsur obstruction. The deck-fixed locus is the resolved Kummer K3 surface with the classical 16 exceptional and 16 trope rational curves.
-
-The exact finite target is:
-
-```text
-(a) verify Condition (A) for G0;
-(b) compute G0-orbits and stabilizers of the 32 distinguished curves;
-(c) decide whether any irreducible rational curve is G0-stable;
-(d) compute deeper fixed loci and normal characters at curve intersections;
-(e) test \widetilde X_1^G0.
-```
-
-This is the cleanest remaining stress test of the residual-RCC refinement in the presence of many rational curves.
-
-## Final ordering
-
-The first two actions are theorems. The unresolved order is:
-
-1. rational `V22` with `PSL2(F7)`—best direct centralizer calculation;
-2. Fermat-discriminant No. 2.18—best three-dimensional network laboratory;
-3. non-Q8 Kummer subgroup—best residual-rational-curve stress test.
+The nodal `A6` double quadric is the strongest additional large-group fixed
+surface candidate, but it does not enter the top five. Its singular target,
+unsettled Condition-(A) audit, and uncertain ordinary-unirationality boundary
+outweigh the attractive fact that `A6` cannot act faithfully on a rational
+curve. See `QUADRATIC_DOUBLE_SOLIDS.md`.
