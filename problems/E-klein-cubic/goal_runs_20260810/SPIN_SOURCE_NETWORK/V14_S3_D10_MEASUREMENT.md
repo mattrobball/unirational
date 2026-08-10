@@ -94,8 +94,9 @@ Linear characters used: `S_3 -> {triv, sign}`, `D_10 -> {triv, sign}`,
 `A_5 -> {triv}` (perfect), `A_4 -> {triv, omega, omega^2}`.
 
 The two `omega`-characters of `A_4` are handled **without adjoining
-`zeta_3`**: they span the rational `A_4`-stable plane
-`N = M^{V_4} (-) M^{A_4}` (dimensions 4 and 2, so `dim N = 2`), and inside
+`zeta_3`**: together they span the rational `A_4`-stable plane `N`, the
+`A_4`-stable complement of `M^{A_4}` (dimension 2) inside `M^{V_4}`
+(dimension 4), computed as the image of `1 - P_{A_4}` on `M^{V_4}`. Inside
 `P(N) = P^1` the two `omega`-eigenpoints are cut by the rational binary
 quadratic `det[v ; r.v]`, `r` of order 3. So `V14 cap (P(M_omega) u
 P(M_omega^2)) = V(quadrics|_N , det[v ; r.v])` in `P^1`, entirely over the
@@ -186,7 +187,9 @@ are not both rational over the base field in general — at `p = 397` and
 closed point of degree 2. Hence over `K = Q(zeta_11)` they are **not** both
 `K`-rational (a `K`-rational pair would split at every good prime); they are
 conjugate over a quadratic extension of `K`, while their sum is defined over
-`K`.
+`K`. A fourth prime, `p = 463`, was spot-checked outside the sealed standard
+and agrees throughout, with the pair inert there as at 199 (any
+`p = 1 mod 11` is a legal mode: `python3 verify_v14_s3_d10.py 463`).
 
 *Stabilisers.* Measured directly at `p = 397` and `p = 353` (where the points
 are rational) by acting with all 660 elements of `G`: `Stab_G(y)` has order 6

@@ -52,7 +52,7 @@ disclosed boundary, not a coverage claim.
 
 Core manifest last rebuilt: 2026-08-03. Research supplement last updated:
 2026-08-10. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `61c2e7786225fb0013c598440cf524c393a8e214` (2026-08-10; the
+Snapshot metadata — notebook parent head: `eaaf80e44623a4c26a048032434fcb371fb34f3c` (2026-08-10; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -6647,4 +6647,4 @@ rational.
 `verify_v14_s3_d10.py` (`V14-S3-D10-MEASUREMENT-OK`) and
 `scripts/check_manifest_parity.py` pass. The packet is on
 `agent/v14-s3-d10-measurement-20260810`. This notebook revision was authored
-against parent head `61c2e7786225fb0013c598440cf524c393a8e214`.
+against parent head `eaaf80e44623a4c26a048032434fcb371fb34f3c`.
