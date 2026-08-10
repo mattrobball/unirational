@@ -48,7 +48,51 @@ Every branch is a linear subspace; the cone lies in their union; Galois
 conjugate branches have conjugate verdicts, so one per orbit is tested.
 
 ## Verdicts
-(placeholder)
+
+`payload/verdicts.json` carries the per-degree ledger and `results/checks.log`
+every `CHECK` line.
+
+```
+ d    K    branches  max branch dim   verdict (both primes)
+ 2    2      0            0           EMPTY (linear certificate: every branch space is 0)
+ 3    3      0            0           EMPTY (linear certificate)
+ 4    8      0            0           EMPTY (linear certificate)
+ 5   12      0            0           EMPTY (linear certificate)
+ 6   19      0            0           EMPTY (linear certificate)
+ 7   31      0            0           EMPTY (linear certificate)
+ 8   45     80            1           EMPTY
+ 9   62      5           12           EMPTY
+10   90    400           19           EMPTY
+11  119     80           45           UNDECIDED — see below
+12  157     25           60           UNDECIDED — see below
+```
+
+For d = 2..7 the exact conditions already collapse every branch space to zero,
+so no solve is needed.  For d = 8, 9, 10 the ledger lines are
+
+```
+CHECK land_verdicts_d8_p67    PASS  [('EMPTY-GALOIS-CONJUGATE', 50), ('EMPTY-IDENTITY', 1), ('EMPTY-SUBSPACE', 29)]
+CHECK land_d8_p67             PASS  all 80 branches EMPTY
+CHECK land_verdicts_d9_p67    PASS  [('EMPTY', 1), ('EMPTY-GALOIS-CONJUGATE', 2), ('EMPTY-QUADRICS', 1), ('EMPTY-SUBSPACE', 1)]
+CHECK land_d9_p67             PASS  all 5 branches EMPTY
+CHECK land_verdicts_d10_p67   PASS  [('EMPTY-ALL-CUBICS', 1), ('EMPTY-GALOIS-CONJUGATE', 290), ('EMPTY-QUADRICS', 80), ('EMPTY-SUBSPACE', 29)]
+CHECK land_d10_p67            PASS  all 400 branches EMPTY
+CHECK land_verdicts_d8_p199   PASS  [('EMPTY-GALOIS-CONJUGATE', 30), ('EMPTY-IDENTITY', 1), ('EMPTY-SUBSPACE', 49)]
+CHECK land_d8_p199            PASS  all 80 branches EMPTY
+CHECK land_verdicts_d9_p199   PASS  [('EMPTY', 1), ('EMPTY-QUADRICS', 3), ('EMPTY-SUBSPACE', 1)]
+CHECK land_d9_p199            PASS  all 5 branches EMPTY
+CHECK land_verdicts_d10_p199  PASS  [('EMPTY-ALL-CUBICS', 1), ('EMPTY-GALOIS-CONJUGATE', 150), ('EMPTY-QUADRICS', 200), ('EMPTY-SUBSPACE', 49)]
+CHECK land_d10_p199           PASS  all 400 branches EMPTY
+```
+
+No branch through d = 10 produced a `HIT`, and none was left
+`UNDECIDED-TIMEOUT`.  There is no nonzero A5-equivariant `T` of degree
+`d <= 10` with `F(T) == 0`, at either prime.
+
+## d = 11 and d = 12: where the method stops
+
+(pending)
 
 ## Semantics and scope
-(placeholder)
+
+(pending)
