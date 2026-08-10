@@ -1,0 +1,26 @@
+# verifier.py verifier.py   (primes 397 199)
+CHECK model_397 PASS gauss^2=-11 True, S6^2=-I True, |<T,S>|=1320, proj-order profile [(1, 2), (2, 110), (3, 220), (5, 528), (6, 220), (11, 240)]
+CHECK summands_397 PASS rank(10'-projector)=10, dim Ann(M) in Lambda^4=5, M and A are G-stable: True
+CHECK v14points_397 PASS 60 distinct V14 points: all in M, all decomposable, all satisfy the 15 wedge-square (Plucker) equations (0 failures)
+CHECK hom1_397 PASS rank of the G-averaging projector on Hom(M,A) = 0; <chi_M, chi_A> = 0 (no degree-1 covariant)
+CHECK sym2char_397 PASS Sym^2(10'): dim 55, mult(1)=1, mult(5)=1, mult(5bar)=1, mult(10')=2, <chi,chi>=9  =>  1 + 5 + 5bar + 10' + 10' + 12 + 12' (55), NOT the session's 1+5+10+10' (26)
+CHECK invcubic_397 PASS trivial multiplicity in Sym^3(A) = 1 and in Sym^3(A^dual) = 1 (a unique G-invariant cubic on each 5-space); the invariant cubic on A equals 198 * Pf6 on 24/25 random points (sealed Klein identification X = {Pf=0})
+CHECK quadcov_A_397 PASS q: Sym^2(M) -> A nonzero (seed (0, 0, 2)), 2 independent averages proportional (True), generator-equivariant (True), nonzero at 20/20 random points of P(M); q VANISHES at 60/60 sampled V14 points => no degree-2 covariant map V14 --> P(A)
+CHECK quadcov_Adual_397 PASS q: Sym^2(M) -> Adual nonzero (seed (2, 0, 9)), 3 independent averages proportional (True), generator-equivariant (True), nonzero at 20/20 random points of P(M); q does NOT vanish on V14 (60/60 points nonzero) but the unique invariant cubic of P(A^dual) is nonzero at 60/60 image points => the degree-2 map V14 --> P(A^dual) misses the conjugate Klein cubic
+CHECK secant_397 PASS 12 conjugate pairs x, x^iota on the cyclic Klein cubic over F_{p^2}: F(sx+ux^iota) = 3su(as+bu) exactly, r = b.x - a.x^iota is nonzero, iota-anti-invariant (hence F_p-rational) and lies on the cubic; 0 degenerate samples skipped; failures []
+CHECK noinvariant_397 PASS rank of the averaging projector onto A^G = 0 and onto M^G = 0; G is simple so a fixed point of P(A) needs an invariant vector: X^G = P(A)^G = empty
+CHECK model_199 PASS gauss^2=-11 True, S6^2=-I True, |<T,S>|=1320, proj-order profile [(1, 2), (2, 110), (3, 220), (5, 528), (6, 220), (11, 240)]
+CHECK summands_199 PASS rank(10'-projector)=10, dim Ann(M) in Lambda^4=5, M and A are G-stable: True
+CHECK v14points_199 PASS 60 distinct V14 points: all in M, all decomposable, all satisfy the 15 wedge-square (Plucker) equations (0 failures)
+CHECK hom1_199 PASS rank of the G-averaging projector on Hom(M,A) = 0; <chi_M, chi_A> = 0 (no degree-1 covariant)
+CHECK sym2char_199 PASS Sym^2(10'): dim 55, mult(1)=1, mult(5)=1, mult(5bar)=1, mult(10')=2, <chi,chi>=9  =>  1 + 5 + 5bar + 10' + 10' + 12 + 12' (55), NOT the session's 1+5+10+10' (26)
+CHECK invcubic_199 PASS trivial multiplicity in Sym^3(A) = 1 and in Sym^3(A^dual) = 1 (a unique G-invariant cubic on each 5-space); the invariant cubic on A equals 149 * Pf6 on 25/25 random points (sealed Klein identification X = {Pf=0})
+CHECK quadcov_A_199 PASS q: Sym^2(M) -> A nonzero (seed (0, 0, 2)), 2 independent averages proportional (True), generator-equivariant (True), nonzero at 20/20 random points of P(M); q VANISHES at 60/60 sampled V14 points => no degree-2 covariant map V14 --> P(A)
+CHECK quadcov_Adual_199 PASS q: Sym^2(M) -> Adual nonzero (seed (2, 0, 9)), 3 independent averages proportional (True), generator-equivariant (True), nonzero at 20/20 random points of P(M); q does NOT vanish on V14 (60/60 points nonzero) but the unique invariant cubic of P(A^dual) is nonzero at 60/60 image points => the degree-2 map V14 --> P(A^dual) misses the conjugate Klein cubic
+CHECK secant_199 PASS 12 conjugate pairs x, x^iota on the cyclic Klein cubic over F_{p^2}: F(sx+ux^iota) = 3su(as+bu) exactly, r = b.x - a.x^iota is nonzero, iota-anti-invariant (hence F_p-rational) and lies on the cubic; 0 degenerate samples skipped; failures []
+CHECK noinvariant_199 PASS rank of the averaging projector onto A^G = 0 and onto M^G = 0; G is simple so a fixed point of P(A) needs an invariant vector: X^G = P(A)^G = empty
+CHECK pin_exit_FIX-IX-SEAL-PASS PASS 4 file(s) outside this packet carry the exit string, e.g. notebook_build/manifest.json
+CHECK pin_exit_FIX-A0-ARRANGEMENT-PASS PASS 3 file(s) outside this packet carry the exit string, e.g. notebook_build/manifest.json
+CHECK pin_doc_tschinkel PASS external_docs/tschinkel_zhang_stable_equivariant_arxiv2409.08392.pdf present (237863 bytes)
+CHECK pin_doc_duncan PASS external_docs/duncan_reichstein_versality_arxiv1109.6093.pdf present (342848 bytes)
+V14MAP-DICHOTOMY-VERIFIER: ALLGREEN
