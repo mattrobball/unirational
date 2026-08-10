@@ -95,7 +95,42 @@ The support of a nonempty `G`-stable zero-dimensional subscheme is a union of `G
 
 This closes the first fixed-point gate without a computer calculation. It does not determine the fixed locus of an involution or its centralizer.
 
-## 4. Involution-centralizer target
+## 4. Involution-centralizer target — EXECUTED 2026-08-10, VERDICT `V22-D8-GATE-FAILS`
+
+> **Result of the work order in section 9** (details, certificates and replay in
+> `EXIT_KLEIN_V22.md` / `REPLAY_KLEIN_V22.md`; one-command check
+> `python3 verify_klein_v22.py`). Exact over `Q(sqrt(-7))`, independently
+> confirmed in Macaulay2 over `Q(sqrt(-7))` and mod 11 and mod 23.
+>
+> ```text
+> X^sigma  = C  disjoint-union  {p1, p2}
+>            C  irreducible, anticanonical degree 6, Hilbert polynomial 6i+1,
+>               p_a = 0  =>  a SMOOTH RATIONAL curve (image of a smooth plane
+>               conic in P(A_+) = P^2), canonically D8-stable
+>            p1, p2  one D8-orbit of length 2, stabiliser C4
+>            chi(X^sigma) = 2 + 2 = 4, matching the Lefschetz number
+> X^{D8}   = empty   (all four D8-character linear sections are empty)
+>
+> gate (A) FAILS ,  gate (B) HOLDS
+> ```
+>
+> So the residual-RCC centralizer theorem does **not** apply to this action, and
+> nothing follows about its `G`-unirationality or weak versality, both of which
+> remain open. The failure is character-forced, not an accident of the model:
+> `chi_7(2A) = chi_3(2A) = -1` fixes the eigenvalue profile `(3,4)` on the
+> 7-dimensional module and `(1,2)` on the net, and with that profile the
+> positive-dimensional part of `X^sigma` is always a plane conic in `P(A_+)`,
+> hence always rational.
+>
+> **Euler rigidity (no substitute element exists).** For a Fano threefold with
+> `b_2 = 1` and `b_3 = 0` — Mukai's list `P^3, Q^3, V_5, V_22` — every
+> finite-order automorphism acts trivially on `H^0, H^2, H^4, H^6` and `H^3 = 0`,
+> so `chi(X^g) = L(g) = 4` and `X^g` is never empty. Gate (B) therefore requires a
+> **non-cyclic** centralizer. In `PSL2(F7)` the centralizers of elements of order
+> 3, 4, 7 are `C3, C4, C7`, so only the involution qualifies — and it is exactly
+> the case computed above.
+
+
 
 For an involution `σ∈PSL2(F7)`,
 
@@ -145,7 +180,7 @@ For every irreducible component `F⊂X22^σ`, record:
 | incidence with `X22^{D8}` | test the deeper fixed locus |
 | normal characters | prepare an exceptional-network fallback |
 
-The ideal successful output is
+The ideal successful output was
 
 \[
 X_{22}^{\sigma}=C\sqcup\{\text{points}\},
@@ -153,7 +188,7 @@ X_{22}^{\sigma}=C\sqcup\{\text{points}\},
 \qquad X_{22}^{D_8}=\varnothing.
 \]
 
-Rational components do not automatically end the route: the generalized theorem only asks that none be `D8`-stable.
+Rational components do not automatically end the route: the generalized theorem only asks that none be `D8`-stable. **Measured output (2026-08-10):** the second and third boxes hold — `X_{22}^{D_8}=\varnothing`, and the two isolated points form a single `D8`-orbit — but `g(C)=0` and `C` *is* `D8`-stable (the residual `V_4` acts on it as the Klein four-group in `PGL_2`, with no fixed point, but it does not move `C`). Gate (A) fails on exactly that component.
 
 ## 6. Secondary genus-12 target: Mukai–Umemura
 
@@ -205,19 +240,28 @@ Yes. The strongest current candidate is
 }
 \]
 
-It is rational, satisfies Condition (A), has no global `G`-fixed point, and has vanishing universal-torsor and all higher-Amitsur obstructions. Its status is separated from a theorem by the finite pair
+It is rational, satisfies Condition (A), has no global `G`-fixed point, and has vanishing universal-torsor and all higher-Amitsur obstructions. **Answer as of 2026-08-10: NO — the phenomenon does not recur there.** The finite pair
 
 \[
-(X_{22}^{\sigma},X_{22}^{D_8}).
+(X_{22}^{\sigma},X_{22}^{D_8})
 \]
 
-No new all-degree machinery is required unless those fixed schemes contain residual-stable rational components.
+has been computed exactly: `X_{22}^{D_8}=\varnothing`, but `X_{22}^{\sigma}` contains a `D8`-stable smooth rational curve, which is precisely the "residual-stable rational component" the last sentence of this section flagged as the one thing that would force new machinery. New machinery is therefore required; it is the named theory task `V22-D8-NORMAL-CHAIN` (`EXIT_KLEIN_V22.md` section 6), and if it were closed, gate (B) — which holds — would suffice on its own.
 
 ## 9. Work order
 
 ```text
-V22-PSL27-INVOLUTION-CENTRALIZER-AUDIT
+V22-PSL27-INVOLUTION-CENTRALIZER-AUDIT      EXECUTED 2026-08-10 -> V22-D8-GATE-FAILS
 ```
+
+Steps 1-7 below were all carried out; step 7 returns "theorem does not apply".
+Artifacts: `EXIT_KLEIN_V22.md`, `REPLAY_KLEIN_V22.md`, `verify_klein_v22.py`,
+`v22_klein_model.py`, `v22_klein_fixed_loci.py`, `v22_klein_crosscheck.py`,
+`v22_klein_m2gen.py`, `v22_klein_verify{,_p11,_p23}.m2`. Deviation from the plan
+as written: the equations were taken in the **Mukai net form** rather than the
+anticanonical `1+W6+W7` form, because isotropy is *linear* in Plucker
+coordinates, so `X = Gr(3,7) cap P^13` and every fixed-locus stratum is a linear
+section — which is what made the exact `Q(sqrt(-7))` computation cheap.
 
 1. Freeze the VSP or anticanonical equations over an exact splitting field.
 2. Write one involution and its `D8` centralizer.

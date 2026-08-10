@@ -216,7 +216,25 @@ for every odd `g>=3`. See `THEOREM_ODD_EXCEPTIONAL_CONIC_BUNDLES.md`.
 
 ---
 
-## 4. Rational genus-12 `V22` with `PSL2(F7)`
+## 4. Rational genus-12 `V22` with `PSL2(F7)` — DECIDED 2026-08-10: ROUTE BLOCKED
+
+```text
+V22-D8-GATE-FAILS      see EXIT_KLEIN_V22.md, verify with python3 verify_klein_v22.py
+gate (a)  FAILS   X^sigma contains an irreducible D8-stable SMOOTH RATIONAL curve
+gate (b)  HOLDS   X^{D8} = empty
+```
+
+Exact over `Q(sqrt(-7))` in Mukai's model `X = Gr(3,7) cap P^13` on the 7-dimensional irreducible of `PSL2(F7)` (the Cheltsov-Shramov net, arXiv:1010.1918 App. A + Thm 4.5), independently confirmed in Macaulay2 over `Q(sqrt(-7))` and mod 11, 23:
+
+\[
+X^{\sigma} = C \sqcup \{p_1,p_2\},\qquad
+C\cong\mathbf P^1\ (\deg 6,\ \text{Hilbert polynomial }6i+1),\qquad
+\chi(X^\sigma)=4 .
+\]
+
+`C` is the image of the smooth plane conic `(-32-32s)u1^2 + (48-16s)u2^2 - 64 u3^2 = 0` in `P(A_+) = P^2`, `s = sqrt(-7)`; the residual `D8/<sigma> = V4` acts on it as the Klein four-group in `PGL2`, fixed-point free, and swaps `p_1, p_2` (stabilizer `C4`) — hence `X^{D8} = empty`, but `C` is a `D8`-stable rational curve and gate (a) dies. The failure is character-forced (`chi_7(2A) = chi_3(2A) = -1`), and by Euler rigidity (`b_2 = 1, b_3 = 0` implies `chi(X^g) = 4` for every automorphism) no other element of `PSL2(F7)` can be substituted: its centralizer would be cyclic and gate (b) would fail outright. **`G`-unirationality and weak `G`-versality of this action remain open.**
+
+The original work order is preserved below for the record.
 
 **Literature status:** `OPEN-CONFIRMED` through the search cutoff for
 equivariant unirationality and weak versality.
@@ -252,24 +270,21 @@ For an involution `sigma`,
 N=C_G(\sigma)\simeq D_8.
 \]
 
-The exact missing calculation is
-
-\[
-X^\sigma
-\quad\text{and}\quad
-X^{D_8}.
-\]
-
-The acceptance test is:
+The calculation was performed 2026-08-10, exactly over `Q(sqrt(-7))`, with
+the acceptance test
 
 ```text
 (a) every D8-stable irreducible RCC subvariety of X^sigma is a point;
 (b) X^D8 is empty.
 ```
 
-If both pass, the residual-RCC centralizer theorem proves that `X` is not
-weakly `G`-versal. This remains the best unresolved direct-centralizer
-target.
+Gate (b) HOLDS but gate (a) FAILS: the positive-dimensional component of
+`X^sigma` is a smooth rational curve and is canonically `D8`-stable. The
+residual-RCC centralizer theorem therefore does not apply; see
+`EXIT_KLEIN_V22.md` and the verdict block above. The only remaining route
+from gate (b) alone is the named theory task `V22-D8-NORMAL-CHAIN`
+(tracking a single `N`-fixed point up the resolution tower), which stops at
+the same spin-flank boundary as `FIX_IX` §6 and was not attempted.
 
 ---
 
