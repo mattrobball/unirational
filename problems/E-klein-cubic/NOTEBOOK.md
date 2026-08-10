@@ -52,7 +52,7 @@ disclosed boundary, not a coverage claim.
 
 Core manifest last rebuilt: 2026-08-03. Research supplement last updated:
 2026-08-10. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `abae318a649a3601dc87aa1d6b6abdf7b0ec2e70` (2026-08-10; the
+Snapshot metadata — notebook parent head: `88345c7f90e76916d989294cbac33b68bdfa3dd1` (2026-08-10; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -5971,7 +5971,7 @@ precedence rule.  No theorem is claimed at packet creation.
 This entry supersedes the earlier same-day `RT split and restricted dichotomy:
 packet opened` entry. Packet:
 `goal_runs_20260810/RT_SPLIT_AND_DICHOTOMY/`. Branch:
-`agent/rt-split-dichotomy-20260810`. Draft PR: **#16**.
+`agent/rt-split-dichotomy-20260810`. Initial packet PR: **#16**; continuation draft PR: **#18**.
 
 **Headline:** Problem E remains **OPEN**.
 
