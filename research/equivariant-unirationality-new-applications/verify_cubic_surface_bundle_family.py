@@ -67,12 +67,72 @@ def verify(n: int) -> None:
     commuting_rotation_exponents = [k for k in range(n) if (2 * k) % n == 0]
     assert commuting_rotation_exponents == [0]
 
-    # The displayed sections use a cube root rho and satisfy
-    # U^3+V^3=0 modulo rho^3-1.
+    # ---------------------------------------------------------------
+    # Exact symbolic checks on the actual defining equation Phi.
+    # ---------------------------------------------------------------
+    S, T, U, V, X, Y = sp.symbols("S T U V X Y")
+    c0 = sp.symbols("c0_0 c0_1 c0_2 c0_3")
+    c1 = sp.symbols("c1_0 c1_1 c1_2 c1_3")
+
+    A0 = S ** (2 * n) + T ** (2 * n)
+    A1 = (S * T) ** n
+    F0 = sum(c0[k] * X ** (3 - k) * Y ** k for k in range(4))
+    F1 = sum(c1[k] * X ** (3 - k) * Y ** k for k in range(4))
+
+    Phi = sp.expand(
+        A0 * (U ** 3 + V ** 3)
+        + U * V * (A0 * X + A1 * Y)
+        + A0 * F0
+        + A1 * F1
+    )
+
+    # (1.5) is homogeneous of bidegree (2n,3).
+    assert sp.Poly(Phi, S, T).is_homogeneous
+    assert sp.total_degree(sp.Poly(Phi, S, T)) == 2 * n
+    assert sp.Poly(Phi, U, V, X, Y).is_homogeneous
+    assert sp.total_degree(sp.Poly(Phi, U, V, X, Y)) == 3
+
+    # Invariance under the rotation r[S:T]=[eS:e^{-1}T], modulo e^n-1.
+    e = sp.symbols("e")
+    rotated = sp.expand(Phi.subs({S: e * S, T: e ** (n - 1) * T}, simultaneous=True))
+    assert sp.rem(sp.expand(rotated - Phi), e ** n - 1, e) == 0
+
+    # Invariance under the reflection s[S:T]=[T:S].
+    reflected = sp.expand(Phi.subs({S: T, T: S}, simultaneous=True))
+    assert sp.expand(reflected - Phi) == 0
+
+    # Invariance under the central z[U:V:X:Y]=[wU:w^2V:X:Y], modulo w^3-1.
+    w = sp.symbols("w")
+    twisted = sp.expand(Phi.subs({U: w * U, V: w ** 2 * V}, simultaneous=True))
+    assert sp.rem(sp.expand(twisted - Phi), w ** 3 - 1, w) == 0
+
+    # Restriction of Phi to the three components of the z-fixed locus.
+    on_line = sp.expand(Phi.subs({U: 0, V: 0}))
+    assert sp.expand(on_line - (A0 * F0 + A1 * F1)) == 0
+    assert sp.expand(Phi.subs({V: 0, X: 0, Y: 0}) - A0 * U ** 3) == 0
+    assert sp.expand(Phi.subs({U: 0, X: 0, Y: 0}) - A0 * V ** 3) == 0
+
+    # The base-locus derivative identities of Section 3, on Z={X=Y=0}.
+    def on_base_locus(expression):
+        return sp.expand(expression.subs({X: 0, Y: 0}))
+
+    assert on_base_locus(sp.diff(Phi, X)) == sp.expand(U * V * A0)
+    assert on_base_locus(sp.diff(Phi, Y)) == sp.expand(U * V * A1)
+    assert on_base_locus(sp.diff(Phi, U)) == sp.expand(3 * A0 * U ** 2)
+    assert on_base_locus(sp.diff(Phi, V)) == sp.expand(3 * A0 * V ** 2)
+    assert on_base_locus(sp.diff(Phi, S)) == sp.expand(
+        sp.diff(A0, S) * (U ** 3 + V ** 3)
+    )
+    assert sp.expand(Phi.subs({X: 0, Y: 0}) - A0 * (U ** 3 + V ** 3)) == 0
+
+    # A0 and A1 have no common zero: resultant in the affine chart T=1.
+    assert sp.resultant(A0.subs(T, 1), A1.subs(T, 1), S) != 0
+
+    # The three displayed sections lie on Phi=0, modulo rho^3-1.
     rho = sp.symbols("rho")
-    section_remainder = sp.rem(1 + (-rho) ** 3, rho ** 3 - 1, domain=sp.QQ)
-    assert sp.expand(section_remainder) == 0
-    assert len([0, 1, 2]) == 3
+    section_value = sp.expand(Phi.subs({U: 1, V: -rho, X: 0, Y: 0}))
+    assert sp.rem(section_value, rho ** 3 - 1, rho) == 0
+    assert len(sp.roots(sp.Poly(rho ** 3 - 1, rho))) == 3
 
 
 def main() -> None:

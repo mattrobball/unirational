@@ -80,7 +80,14 @@ The script checks:
 3. the exact central-\(C_3\)-invariant cubic monomial support in \((U,V,X,Y)\);
 4. the fixed curve genus \(4n-2\) and the count of the \(4n\) isolated fixed points;
 5. the odd-dihedral abelian-subgroup calculation;
-6. the three rational sections.
+6. that the displayed \(\Phi\) of (1.5), with symbolic cubic coefficients, is
+   exactly invariant under \(r\) (modulo \(e^n-1\)), under \(s\), and under
+   \(z\) (modulo \(w^3-1\)), and is of bidegree \((2n,3)\);
+7. that \(\Phi\) restricted to the three components of the \(z\)-fixed locus
+   equals \(A_0F_0+A_1F_1\), \(A_0U^3\), and \(A_0V^3\) respectively;
+8. the five base-locus derivative identities of Section 3 and the fact that
+   \(A_0,A_1\) have no common zero;
+9. that the three displayed rational sections lie on \(\Phi=0\).
 
 The nonempty smooth parameter-open set is proved by the Bertini and base-locus derivative argument in `THEOREM_CUBIC_SURFACE_BUNDLE_FAMILY.md`; it is not inferred from finite sampling.
 
@@ -96,13 +103,13 @@ Expected terminal marker:
 DOUBLE_QUADRIC_C4_SCREEN_OK fixed_points=4
 ```
 
-The script checks the exact eigenspace decomposition of the standard four-cycle on
+The script builds the permutation matrix of the four-cycle on \(\mathbf C^5\), verifies that it has order four, that it preserves the Fermat form, and computes its eigenvalues exactly as \(\{1,1,-1,i,-i\}\). It then verifies each eigenline, evaluates
 
 \[
-Q=\{x_0^2+\cdots+x_4^2=0\}\subset\mathbf P^4,
+Q=\{x_0^2+\cdots+x_4^2=0\}\subset\mathbf P^4
 \]
 
-that its fixed locus consists of four isolated points, and that the natural character on every \(\mathcal O_Q(4)\)-fiber is trivial. The geometric screening lemma then proves that a smooth invariant quartic branch avoids all four points, so Condition (A) fails for the direct `C4 x C2deck` extension.
+on it, checks that the \(+1\)-eigenspace restriction \(4a^2+b^2\) is squarefree of degree two, concludes that the fixed locus consists of four isolated points, and checks that the natural character on every \(\mathcal O_Q(4)\)-fiber is trivial. Finally it computes the exact `c`-character of \(T_pQ\) at each of the four points and verifies that the trivial character does not occur. The geometric screening lemma then proves that a smooth **invariant** quartic branch section avoids all four points, so Condition (A) fails for the direct `C4 x C2deck` extension. The semi-invariant boundary is recorded in `QUADRATIC_DOUBLE_SOLIDS.md`, Section 4.
 
 ## Recorded output
 

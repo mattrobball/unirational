@@ -26,7 +26,13 @@ The verifier checks only finite exact inputs:
 - the genus `4n-2` of the fixed bidegree-`(2n,3)` curve;
 - the `4n` isolated central fixed points;
 - the odd-dihedral abelian-subgroup calculation;
-- the three rational sections.
+- exact `r`-, `s`- and `z`-invariance of the displayed equation `Phi`, with
+  symbolic binary-cubic coefficients, and its bidegree;
+- the restriction of `Phi` to each of the three components of the `z`-fixed
+  locus;
+- the five base-locus derivative identities of Section 3 and the fact that
+  `A0`, `A1` have no common zero;
+- the three rational sections, checked against the full equation `Phi`.
 
 The general-member smoothness statement is not delegated to sampling. It is the Bertini and base-locus derivative argument in `THEOREM_CUBIC_SURFACE_BUNDLE_FAMILY.md`, Section 3.
 
