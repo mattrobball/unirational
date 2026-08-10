@@ -238,6 +238,14 @@ action. The entire Mori--Mukai No. 1.10 family satisfies Condition (A).
 Since `Pic(X)=Z[-K_X]` and `-K_X` is canonically linearized, the universal
 torsor and all higher Amitsur obstructions vanish.
 
+The global fixed locus is empty by a short VSP argument. A `G`-fixed point of
+`VSP(C,6)` would give a `G`-stable length-six subscheme of the dual Klein
+plane. The irreducible three-dimensional representation has no projective
+fixed point, and every nontrivial projective orbit has size at least seven: an
+orbit of size at most six would give an injection of the simple group of
+order 168 into `S6`, impossible by Lagrange. Hence no such length-six
+subscheme exists.
+
 For an involution `sigma`,
 
 \[

@@ -168,13 +168,25 @@ python3 verify_cubic_surface_bundle_family.py --n 5
 python3 verify_cubic_surface_bundle_family.py --n 7
 ```
 
-New expected markers:
+and
 
 ```text
+python3 verify_double_quadric_c4_screen.py
+```
+
+Expected markers:
+
+```text
+KLEIN_PSL27_QUARTIC_DOUBLE_SOLID_VERIFY_OK
+ODD_EXCEPTIONAL_CONIC_BUNDLE_VERIFY_OK g=5
 CUBIC_SURFACE_BUNDLE_FAMILY_VERIFY_OK n=3
 CUBIC_SURFACE_BUNDLE_FAMILY_VERIFY_OK n=5
 CUBIC_SURFACE_BUNDLE_FAMILY_VERIFY_OK n=7
+DOUBLE_QUADRIC_C4_SCREEN_OK fixed_points=4
 ```
+
+`verification_output.txt` records successful runs for the quartic double
+solid, for `g=3,5,7,9`, for `n=3,5,7,9`, and for the double-quadric screen.
 
 ## Honest boundary
 
