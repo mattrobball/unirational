@@ -5,138 +5,240 @@
 
 ## 1. Equivariant unirationality, versality, and current obstructions
 
-Duncan–Reichstein supply the versality dictionary used throughout. For a complete `G`-variety, a rational point on every twist is weak versality; a dominant rational map from a linear representation is very versality, called `G`-unirationality in the recent Fano literature. To disprove weak versality it is enough to obstruct the point on the generic linear twist, equivalently every equivariant rational map from a faithful linear source.
+Duncan--Reichstein supply the versality dictionary used throughout. For a
+complete `G`-variety, weak versality is equivalent to rational points on all
+twists, while very versality is equivalent to a dominant rational map from a
+linear representation and is called `G`-unirationality in the recent Fano
+literature. To disprove weak versality it is enough to obstruct the point on
+the generic linear twist, equivalently every equivariant rational map from a
+faithful linear source.
 
-Duncan proves Condition-(A) sufficiency for broad del Pezzo classes of degree at least 3. His degree-2 example with `(C7:C3)×C2` already shows that Condition (A) is not sufficient in lower degree. Scavia's 2026 theorem places that example in the sharper essential-dimension/Sylow-detection framework.
+Duncan proves Condition-(A) sufficiency for broad del Pezzo classes of degree
+at least 3. His degree-2 Geiser-factor example already shows that Condition
+(A) is not sufficient in lower degree, and Scavia's 2026 theorem places that
+example in the sharper Sylow-detection framework.
 
-Cheltsov–Tschinkel–Zhang's current Fano-threefold program is strongest for index at least 2. It supplies positive constructions for many actions and an explicit exception list, but does not classify the smooth quartic-double-solid action proved negative here and does not cover most prime index-one Fanos.
+Cheltsov--Tschinkel--Zhang's current Fano-threefold program proves strong
+positive results for quadrics, cubics, intersections of two quadrics, and
+other index-at-least-two cases. It explicitly identifies smooth quadric
+threefold actions satisfying Condition (A) as stably linearizable. This
+settles one possible meaning of “quadratic double solid” positively.
 
-Tschinkel–Zhang compute ordinary and third Amitsur obstructions for del Pezzo surfaces and Kummer quartic double solids. In particular, specified Q8 actions pass Condition (A) but have nonzero `Am^3`; those actions are already decided and are not new fixed-geometry targets.
+Tschinkel--Zhang compute ordinary and third Amitsur obstructions for del Pezzo
+surfaces and Kummer quartic double solids. Specified `Q8` actions pass
+Condition (A) but have nonzero `Am^3`; those actions are already decided and
+are not new fixed-geometry targets.
 
-Scavia–Tschinkel–Zhang prove that the equivariant universal-torsor obstruction controls the entire hierarchy: when the equivariant universal torsor exists, every higher Amitsur group vanishes. This is applied both to the smooth quartic double solid proved here and to the rational Klein `V22` candidate.
+Scavia--Tschinkel--Zhang prove that an equivariant universal torsor controls
+the whole hierarchy: when its obstruction vanishes and the Picard group is
+free and finitely generated, every higher Amitsur group vanishes. This is
+applied to the smooth quartic double solid, the cubic-surface-bundle family,
+and the rational Klein `V22` candidate.
 
 ## 2. Del Pezzo surfaces of degrees 1 and 2
 
-The equivariant birational classification is now very detailed, including the 2026 classification of actions on del Pezzo surfaces. The classification literature usually asks rigidity, conjugacy, or linearizability rather than weak versality.
-
-The audit found no second degree-2 action for which the Problem-F exceptional path can simply be copied:
+The equivariant birational classification is detailed, but generally asks
+rigidity, conjugacy, or linearizability rather than weak versality. The audit
+found no second degree-2 action for which the Problem-F exceptional path can
+simply be copied:
 
 - the Klein `PSL2(F7)` action is already closed by Problem F;
-- 13 class-named order-16 actions on the Fermat degree-2 surface are already closed by the repository central theorem;
-- the Q8 actions isolated by current cohomology are already closed by nonzero `Am^3`;
-- remaining actions either fail Condition (A), have a global fixed point, or require a new endpoint/incidence calculation.
+- 13 class-named order-16 actions on the Fermat degree-2 surface are already
+  closed by the repository central theorem;
+- the `Q8` actions isolated by current cohomology are already closed by
+  nonzero `Am^3`;
+- remaining actions either fail Condition (A), have a global fixed point, or
+  require a new endpoint/incidence calculation.
 
-Degree-1 actions have the common anticanonical base point, fixed by the full automorphism group. Thus weak versality is automatic. They may still fail very versality, but that requires a dominance-sensitive theorem rather than the current fixed-point contradiction.
+Degree-1 actions have the common anticanonical base point, fixed by the full
+automorphism group. Thus weak versality is automatic. They may still fail
+very versality, but that requires a dominance-sensitive theorem rather than
+the current fixed-point contradiction.
 
 ## 3. Rational conic-bundle surfaces
 
-Dolgachev–Iskovskikh give the weighted model and automorphism structure of exceptional conic bundles. Modern equivariant Sarkisov work and the classification of projectively linearizable plane Cremona subgroups determine their birational position, but do not decide weak versality.
+Dolgachev--Iskovskikh give the weighted model and automorphism structure of
+exceptional conic bundles. Modern equivariant Sarkisov work determines their
+birational position but does not decide weak versality.
 
 No source found treats the explicit family
 
 \[
-(S_g,D_{2g}\times C_2),
-\qquad g\ge3\text{ odd},
+(S_g,D_{2g}\times C_2),\qquad g\ge3\text{ odd},
 \]
 
-constructed in this packet. Nonlinearizability follows from the positive-genus de Jonquières fixed curve, but nonlinearizability alone is weaker than non-`G`-unirationality. The central fixed hyperelliptic curve and empty full-group fixed locus produce the new theorem.
+constructed in this packet. Nonlinearizability follows from the
+positive-genus de Jonquieres fixed curve, but nonlinearizability alone is
+weaker than non-`G`-unirationality. The central fixed hyperelliptic curve and
+empty full-group fixed locus give the theorem.
 
-This answers the conic-bundle branch of the rational-surface `G`-MMP affirmatively: Condition (A) is not sufficient even on explicit rational conic bundles, for an infinite family of groups and genera.
+This answers the conic-bundle branch of the rational-surface `G`-MMP
+affirmatively: Condition (A) is not sufficient even on explicit rational
+conic bundles, for an infinite family of groups and genera.
 
-## 4. Rational Fano conic-bundle threefolds
+## 4. Cubic-surface bundles
 
-Abe studies rational Fano threefolds of Mori–Mukai family No. 2.18, extends the equivariant intermediate-Jacobian torsor obstruction, computes automorphism groups, and proves linearizability for the general member. Special members have much larger automorphism groups.
+Kollár proves that a smooth cubic hypersurface with a rational point is
+unirational over any field. Auel--Böhning--Pirutka study stable rationality of
+quadric and cubic surface bundle fourfolds, including bidegree-`(2,3)`
+hypersurfaces, while Pirutka studies Brauer and unramified-cohomological data
+for cubic-surface bundles over rational surfaces.
 
-The two most useful discriminants are:
+This literature is primarily nonequivariant and obstruction-oriented. The
+targeted search found no treatment of the exact family
 
-- the Fermat quartic, for which the total-space automorphism group has order 192;
-- the Klein quartic, for which the automorphism-lifting problem itself is nontrivial.
+\[
+\mathcal X_{n,F_0,F_1}\subset\mathbf P^1\times\mathbf P^3,
+\qquad
+G_n=C_3\times D_{2n},
+\qquad n\ge3\text{ odd},
+\]
 
-For the Fermat member, Abe gives explicit generators and a subgroup `C4×C2deck` that is not projectively linearizable. That subgroup has a fixed point, hence is weakly versal; its `G`-unirationality is a dominance question. The more relevant target is a nonabelian subgroup of the full order-192 group with Condition (A) and empty global fixed locus.
+constructed in `THEOREM_CUBIC_SURFACE_BUNDLE_FAMILY.md`. The three displayed
+sections put ordinary unirationality on the positive side of Kollár's
+theorem. The central order-three element fixes a curve of genus `4n-2`, the
+full group has no fixed point, and Condition (A) passes. This yields an
+infinite new non-weak-versality theorem family.
 
-The covering involution fixes the branch `(2,2)` surface, a degree-2 del Pezzo surface and therefore rational. Thus the basic central obstruction fails for a structural reason: the fixed surface itself is an allowed residual-stable RCC image. This is the cleanest current setting for a genuinely three-dimensional connected-fiber/fixed-network theorem.
+The Picard group is generated by the two ambient hyperplane classes, both
+honestly linearized, so the universal-torsor and all higher-Amitsur
+obstructions vanish. No intermediate-Jacobian-torsor vanishing is claimed.
+The pre-packet status remains conservatively
+`LITERATURE-STATUS-UNCERTAIN`, because targeted absence is not proof that an
+exact construction never appeared.
 
-## 5. Smooth quartic double solids
+## 5. Rational Fano conic-bundle threefolds
 
-Avila–Ortiz–Troncoso classify smooth quartic surfaces invariant under primitive finite subgroups of `PGL4`, including the unique `PSL2(F7)`-invariant quartic used here. Smooth quartic double solids are classically unirational.
+Abe studies rational Fano threefolds of Mori--Mukai family No. 2.18, extends
+the equivariant intermediate-Jacobian torsor obstruction, computes
+automorphism groups, and proves linearizability for the general member.
+Special members have much larger automorphism groups.
 
-The current equivariant literature focuses on positive constructions for broad Fano families, birational rigidity, automorphisms, singular Kummer double solids, and cohomological linearizability obstructions. The targeted search found no treatment of weak versality for
+The two most useful discriminants are the Fermat quartic, with total-space
+automorphism group of order 192, and the Klein quartic, where the
+lifting problem is nontrivial. The covering involution fixes the branch
+`(2,2)` surface, a rational degree-2 del Pezzo surface. Hence the elementary
+central obstruction fails structurally: the fixed surface itself is an
+allowed residual-stable RCC image. This is the cleanest current setting for
+a genuinely three-dimensional connected-fiber/fixed-network theorem.
+
+## 6. Quartic double solids
+
+Avila--Ortiz--Troncoso classify smooth quartic surfaces invariant under
+primitive finite subgroups of `PGL4`, including the unique
+`PSL2(F7)`-invariant quartic used here. Smooth quartic double solids are
+classically unirational.
+
+The search found no prior weak-versality treatment of
 
 \[
 (C_7:C_3)\times C_2^{\rm deck}
 \]
 
-on this smooth double solid.
+on this smooth double solid. The action passes Condition (A), has an
+equivariant universal torsor and vanishing higher Amitsur groups, yet the
+residual action on the deck-fixed K3 excludes every positive-dimensional
+stable RCC image. This is the sharpest completed comparison with current
+cohomological obstruction theory.
 
-This action is especially valuable because:
+## 7. Quadratic double solids and genuine double quadrics
 
-```text
-Condition (A)                              passes;
-equivariant universal torsor               exists;
-all higher Amitsur groups                  vanish;
-residual stable RCC geometry               obstructs weak versality.
-```
+The terminology must be split.
 
-It is therefore a genuine application beyond the current cohomological hierarchy.
+A double cover of `P3` branched over a quadric is itself a smooth quadric
+threefold. Cheltsov--Tschinkel--Zhang prove that Condition (A) is sufficient
+for stable linearizability in this class. It is therefore
+`ALREADY-DECIDED` positively and cannot furnish a negative theorem once the
+necessary fixed-point test passes.
 
-## 6. Kummer quartic double solids
+A genuine **double quadric** is a double cover of a smooth quadric threefold
+branched over a quartic section. Smooth members are index-one degree-four
+Fano threefolds, and the deck-fixed branch surface is canonical and
+non-uniruled. Przyjalkowski--Shramov classify nodal models with large simple
+groups and identify `A5`/`A6` actions; Kuznetsova isolates nodal families
+with Artin--Mumford obstructions; the K-moduli literature places smooth
+double quadrics in the anticanonical-volume-four family with quartic
+threefolds.
 
-Cheltsov develops their equivariant birational geometry, and Tschinkel–Zhang compute third-Amitsur obstructions for special models. Under Condition (A), the published nonzero `Am^3` cases are controlled by specified Q8 subgroups.
+The geometry is promising but the candidate boundary is worse than for the
+completed families: the largest simple-group model is singular, ordinary
+unirationality is not uniform, and natural permutation `C4` attempts can
+fail Condition (A). `QUADRATIC_DOUBLE_SOLIDS.md` proves the local reason: an
+invariant smooth branch divisor cannot pass through an isolated subgroup
+fixed point when the quartic line-bundle fiber character is trivial.
 
-The geometric opening is a subgroup without those Q8s. On the resolved double solid, the deck-fixed Kummer K3 contains the classical 16 exceptional and 16 trope rational curves. The simple no-rational-curves theorem cannot apply, but the residual-RCC theorem reduces the question to finite data:
+## 8. Kummer quartic double solids
 
-- permutation orbits of the 32 distinguished curves;
-- their stabilizers and normal characters;
-- the existence of any irreducible residual-stable rational curve;
-- the deeper full-group fixed locus.
+Cheltsov develops their equivariant birational geometry, and
+Tschinkel--Zhang compute third-Amitsur obstructions for special models. Under
+Condition (A), the published nonzero `Am^3` cases are controlled by specified
+`Q8` subgroups.
 
-Natural very large Kummer groups often fail Condition (A) through their elementary-abelian translation subgroup, while the Q8 groups that pass it are already cohomologically obstructed. This is why Kummer double solids rank below the two new theorems and the Klein `V22`.
+The geometric opening is a subgroup without those `Q8`s. On the resolved
+double solid, the deck-fixed Kummer K3 contains the classical 16 exceptional
+and 16 trope rational curves. The residual-RCC theorem reduces the remaining
+question to permutation orbits, stabilizers, normal characters, deeper fixed
+loci, and the existence of any residual-stable rational curve. Natural very
+large Kummer groups often fail Condition (A), while the `Q8` groups that pass
+are already cohomologically obstructed.
 
-## 7. Index-one Fano threefolds
+## 9. Index-one Fano threefolds
 
-The repository's `V14` theorem is the benchmark: an involution fixes a smooth genus-one sextic plus two points, and its `D12` centralizer has empty fixed locus.
+The repository's `V14` theorem is the benchmark: an involution fixes a smooth
+genus-one sextic plus two points, and its `D12` centralizer has empty fixed
+locus.
 
-The strongest second target is not the Mukai–Umemura member but the rational Klein threefold
+The strongest second target is the rational Klein threefold
 
 \[
 X_{22}=\operatorname{VSP}(C_{\rm Klein},6)
 \]
 
-with `G=PSL2(F7)`. Cheltsov–Shramov prove:
-
-- `X22` is smooth and rational;
-- `Pic(X22)=Z[-K]` and `(-K)^3=22`;
-- the action is `G`-birationally superrigid.
-
-The 2025 Condition-(A) classification proves that every smooth member of Mori–Mukai family No. 1.10 satisfies Condition (A). Since `-K` is naturally `G`-linearized, the equivariant universal-torsor obstruction and all higher Amitsur groups vanish. The targeted search found no theorem deciding the exact action's `G`-unirationality or weak versality.
-
-For an involution,
+with `G=PSL2(F7)`. Cheltsov--Shramov prove smoothness, rationality,
+`Pic(X22)=Z[-K]`, degree 22, and birational superrigidity. The current
+Condition-(A) classification covers the entire family No. 1.10. Since `-K`
+is naturally linearized, the universal-torsor and higher-Amitsur obstructions
+vanish. The exact remaining finite target is
 
 \[
-C_G(\sigma)=D_8.
+(X_{22}^{\sigma},X_{22}^{D_8})
 \]
 
-Thus the exact remaining finite target is
+for an involution `sigma`.
 
-\[
-(X_{22}^{\sigma},X_{22}^{D_8}).
-\]
+## 10. Singular rational Fanos and moduli spaces
 
-The Mukai–Umemura `V22` with `A5⊂PGL2` remains a secondary candidate, but the Klein action has a larger simple group, published Condition (A), a silent cohomological hierarchy, and a more structured `D8` residual action.
+The Segre cubic, Burkhardt quartic, and related singular rational Fanos have
+extensive equivariant-birational analyses. They remain useful test beds, but
+singular exceptional divisors enlarge the fixed b-complex, and many subgroups
+already have Burnside, Picard, or cohomological obstructions.
 
-## 8. Singular rational Fanos and moduli spaces
+The Gross--Popescu level-11 moduli space is represented in the repository by
+the `V14` action and its centralizer theorem. The Klein `V22` is a second
+moduli-flavored target with a finite fixed-locus gap.
 
-The Segre cubic, Burkhardt quartic, and related singular rational Fanos have extensive equivariant-birational analyses. They remain useful test beds, but singular exceptional divisors enlarge the fixed b-complex, and many subgroups already have Burnside, Picard, or cohomological obstructions.
+## 11. Exact status labels
 
-The Gross–Popescu level-11 moduli space is already represented in the repository by the natural `V14` action and its centralizer theorem. The Klein `V22` is itself a compactification of a moduli space of `(1,7)`-polarized abelian surfaces, giving a second moduli-flavored target with a finite fixed-locus gap.
+- `OPEN-CONFIRMED`: original model, standard birational models, current
+  preprints, and direct equivariant-unirationality terminology were searched;
+  no decision was found through the cutoff.
+- `PARTIALLY-COVERED`: some subgroups or stronger/weaker properties are
+  decided, but the named action is not.
+- `ALREADY-DECIDED`: an existing theorem settles equivariant unirationality
+  or weak versality.
+- `LITERATURE-STATUS-UNCERTAIN`: the construction is explicit, but absence
+  from targeted search is not treated as proof of openness or novelty.
 
-## 9. Exact status labels
+## 12. Search conclusion
 
-- `OPEN-CONFIRMED`: the original model, standard birational models, current preprints, and direct equivariant-unirationality terminology were searched; no decision was found through the cutoff.
-- `PARTIALLY-COVERED`: some subgroups or stronger/weaker properties are decided, but the named action is not.
-- `ALREADY-DECIDED`: an existing theorem settles equivariant unirationality or weak versality.
-- `LITERATURE-STATUS-UNCERTAIN`: the construction is explicit, but the citation or lift/fixed-locus chain is not yet complete.
+The literature is not exhausted. The packet closes three actions/families:
 
-## 10. Search conclusion
+1. the smooth quartic-double-solid action;
+2. the odd exceptional-conic-bundle surface family;
+3. the odd-dihedral cubic-surface-bundle threefold family.
 
-The literature is not exhausted. It contains at least one published rational action—Klein `V22` with `PSL2(F7)`—where Condition (A) and the full higher-Amitsur hierarchy are silent and the fixed-centralizer computation has not been performed. The two new theorems in this packet show that the repository obstruction is already strong enough to produce new results without waiting for that calculation.
+The rational Klein `V22` remains the best next direct-centralizer target.
+The Fermat No. 2.18 action remains the best three-dimensional fixed-network
+laboratory. Genuine double quadrics have the right deck-fixed non-uniruled
+surface, but the explicit large-group examples currently lose on ordinary
+geometry, singularities, or Condition (A).
