@@ -1,0 +1,170 @@
+{
+ "397": {
+  "t": {
+   "1": 199,
+   "3": 198,
+   "4": 199,
+   "5": 198,
+   "9": 198
+  },
+  "wt_of": [
+   0,
+   1,
+   4,
+   9,
+   5,
+   3
+  ],
+  "pentagon": {
+   "2,7": {
+    "line_on_V14": true
+   },
+   "7,8": {
+    "line_on_V14": true
+   },
+   "8,6": {
+    "line_on_V14": true
+   },
+   "6,10": {
+    "line_on_V14": true
+   },
+   "10,2": {
+    "line_on_V14": true
+   }
+  },
+  "diagonal": {
+   "2,6": {
+    "line_on_V14": false,
+    "note": "edges disjoint: the joining line of the two points is not in Gr(2,U)"
+   },
+   "2,8": {
+    "line_on_V14": false,
+    "note": "edges disjoint: the joining line of the two points is not in Gr(2,U)"
+   },
+   "7,6": {
+    "line_on_V14": false,
+    "note": "edges disjoint: the joining line of the two points is not in Gr(2,U)"
+   },
+   "7,10": {
+    "line_on_V14": false,
+    "note": "edges disjoint: the joining line of the two points is not in Gr(2,U)"
+   },
+   "8,10": {
+    "line_on_V14": false,
+    "note": "edges disjoint: the joining line of the two points is not in Gr(2,U)"
+   }
+  }
+ },
+ "199": {
+  "t": {
+   "1": 100,
+   "3": 99,
+   "4": 100,
+   "5": 99,
+   "9": 99
+  },
+  "wt_of": [
+   0,
+   1,
+   4,
+   9,
+   5,
+   3
+  ],
+  "pentagon": {
+   "2,7": {
+    "line_on_V14": true
+   },
+   "7,8": {
+    "line_on_V14": true
+   },
+   "8,6": {
+    "line_on_V14": true
+   },
+   "6,10": {
+    "line_on_V14": true
+   },
+   "10,2": {
+    "line_on_V14": true
+   }
+  },
+  "diagonal": {
+   "2,6": {
+    "line_on_V14": false,
+    "note": "edges disjoint: the joining line of the two points is not in Gr(2,U)"
+   },
+   "2,8": {
+    "line_on_V14": false,
+    "note": "edges disjoint: the joining line of the two points is not in Gr(2,U)"
+   },
+   "7,6": {
+    "line_on_V14": false,
+    "note": "edges disjoint: the joining line of the two points is not in Gr(2,U)"
+   },
+   "7,10": {
+    "line_on_V14": false,
+    "note": "edges disjoint: the joining line of the two points is not in Gr(2,U)"
+   },
+   "8,10": {
+    "line_on_V14": false,
+    "note": "edges disjoint: the joining line of the two points is not in Gr(2,U)"
+   }
+  }
+ },
+ "331": {
+  "t": {
+   "1": 166,
+   "3": 165,
+   "4": 166,
+   "5": 165,
+   "9": 165
+  },
+  "wt_of": [
+   0,
+   1,
+   4,
+   9,
+   5,
+   3
+  ],
+  "pentagon": {
+   "2,7": {
+    "line_on_V14": true
+   },
+   "7,8": {
+    "line_on_V14": true
+   },
+   "8,6": {
+    "line_on_V14": true
+   },
+   "6,10": {
+    "line_on_V14": true
+   },
+   "10,2": {
+    "line_on_V14": true
+   }
+  },
+  "diagonal": {
+   "2,6": {
+    "line_on_V14": false,
+    "note": "edges disjoint: the joining line of the two points is not in Gr(2,U)"
+   },
+   "2,8": {
+    "line_on_V14": false,
+    "note": "edges disjoint: the joining line of the two points is not in Gr(2,U)"
+   },
+   "7,6": {
+    "line_on_V14": false,
+    "note": "edges disjoint: the joining line of the two points is not in Gr(2,U)"
+   },
+   "7,10": {
+    "line_on_V14": false,
+    "note": "edges disjoint: the joining line of the two points is not in Gr(2,U)"
+   },
+   "8,10": {
+    "line_on_V14": false,
+    "note": "edges disjoint: the joining line of the two points is not in Gr(2,U)"
+   }
+  }
+ }
+}

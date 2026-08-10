@@ -1,0 +1,5 @@
+ring r = 397,(xx,yy),dp;
+ideal I = xx*yy-1;
+ideal G = std(I);
+"ctrlNONUNIT SINGULAR leadone=" + string(size(G)==1 && lead(G[1])==1);
+quit;

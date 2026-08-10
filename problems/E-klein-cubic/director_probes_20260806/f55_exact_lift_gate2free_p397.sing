@@ -1,0 +1,33 @@
+ring r = 397,(c01a,c03a,c04a,c05a,c09a,c15a,c19a,c19b,c34a,c34b,c35a,c49a,c49b),dp;
+ideal I = 1*c01a*c34a+199*c04a*c04a,
+  1*c01a*c34b+199*c03a*c05a,
+  1*c01a*c35a+396*c03a*c15a+199*c04a*c05a,
+  199*c01a*c01a+396*c03a*c19a+199*c04a*c09a,
+  396*c03a*c19b,
+  198*c01a*c09a+396*c04a*c15a,
+  198*c05a*c05a,
+  1*c01a*c49a+396*c04a*c19a,
+  1*c01a*c49b+396*c04a*c19b+198*c05a*c09a,
+  198*c01a*c03a+396*c05a*c19a+1*c09a*c15a,
+  396*c05a*c19b,
+  198*c03a*c09a+396*c04a*c35a+1*c05a*c34a,
+  1*c05a*c34b,
+  198*c01a*c04a+1*c03a*c49a+1*c09a*c34a,
+  1*c03a*c49b+1*c09a*c34b,
+  198*c01a*c05a+198*c03a*c03a+1*c09a*c35a,
+  198*c03a*c04a+396*c05a*c49a+198*c09a*c09a,
+  396*c05a*c49b,
+  99*c04a*c09a+1*c15a*c34a,
+  199*c05a*c35a+1*c15a*c34b,
+  199*c04a*c49a+1*c19a*c34a,
+  298*c01a*c05a+199*c04a*c49b+1*c19a*c34b+1*c19b*c34a,
+  1*c19b*c34b,
+  198*c01a*c15a+99*c03a*c04a+1*c19a*c35a,
+  1*c19b*c35a,
+  198*c09a*c19a+396*c15a*c49a,
+  298*c03a*c05a+198*c09a*c19b+396*c15a*c49b,
+  99*c01a*c09a+198*c03a*c34a+396*c35a*c49a,
+  198*c03a*c34b+396*c35a*c49b;
+ideal G = std(I);
+"gate2free_p397 SINGULAR leadone=" + string(size(G)==1 && lead(G[1])==1) + " size=" + string(size(G)) + " dim=" + string(dim(G));
+quit;
