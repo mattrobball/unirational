@@ -1,0 +1,23 @@
+group_order=660 plus_dimension=3 minus_dimension=2
+scalar_plus_plane_kernel_degrees_0_22=0
+scalar_plus_plane_kernel_degree_23=1
+degree=15 covariant_dimension=32 plus_plane_kernel=0
+degree=16 covariant_dimension=41 plus_plane_kernel=0
+degree=17 covariant_dimension=49 plus_plane_kernel=2
+degree=17 cubic_equation_rank=4 cubic_coefficient_dimension=4
+degree=18 covariant_dimension=59 plus_plane_kernel=3
+degree=18 cubic_equation_rank=10 cubic_coefficient_dimension=10
+degree=19 covariant_dimension=73 plus_plane_kernel=7
+degree=19 cubic_equation_rank=84 cubic_coefficient_dimension=84
+degree=20 covariant_dimension=86 plus_plane_kernel=11
+degree=20 cubic_equation_rank=169 cubic_coefficient_dimension=286
+degree=21 covariant_dimension=100 plus_plane_kernel=16
+degree=21 cubic_equation_rank=269 cubic_coefficient_dimension=816
+degree=17 projective_landing_locus=EMPTY_AT_CUBIC_LEVEL
+degree=18 projective_landing_locus=EMPTY_AT_CUBIC_LEVEL
+degree=19 projective_landing_locus=EMPTY_AT_CUBIC_LEVEL
+degree=20 quartic_macaulay_rank=1001 quartic_dimension=1001 projective_landing_locus=EMPTY
+degree=21 quartic_macaulay_rank=3876 quartic_dimension=3876 projective_landing_locus=EMPTY
+LANDING_COVARIANTS_DEGREES_15_THROUGH_21_EXCLUDED
+INVARIANT_PLUS_PLANE_RESTRICTION_INJECTIVE_THROUGH_DEGREE_22
+DOMINANT_MAP_LOW_DEGREE_CERTIFICATE_OK
