@@ -52,7 +52,7 @@ disclosed boundary, not a coverage claim.
 
 Core manifest last rebuilt: 2026-08-03. Research supplement last updated:
 2026-08-10. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `61b4bef3e4a9dae1729bbe19cc61ff127556ccbc` (2026-08-10; the
+Snapshot metadata — notebook parent head: `d9bcd995bcc6b03cbdd164366f11e8175dedf696` (2026-08-10; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -6037,7 +6037,7 @@ vanishing `Hom_H(V,H^1(C))=0`.
 `verify_norm_sieve.py`, `verify_degree_accounting.py`,
 `verify_local_rees.py`, and `scripts/check_manifest_parity.py` all pass.  The
 packet is on `agent/rt-split-dichotomy-20260810`, draft PR #18.  This notebook
-revision was authored against parent head `eb1926a11f9a7ef378fe01b090bd27361e9aa89d`.
+revision was authored against parent head `d9bcd995bcc6b03cbdd164366f11e8175dedf696`.
 
 # Notebook supplement — 2026-08-10: the Klein `V22` twin of the sealed `V14` centralizer theorem
 
