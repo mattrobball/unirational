@@ -1552,14 +1552,27 @@
   }
  ],
  "known_branches": [
+  "agent/cleanup-probe-will-delete",
   "agent/close-profile327-n3",
   "agent/degree25-marked-elliptic-extension-20260809",
+  "agent/double-quadrics-cubic-bundle-family",
+  "agent/equivariant-unirationality-applications-20260809",
+  "agent/equivariant-unirationality-applications-final",
+  "agent/equivariant-unirationality-applications-packet",
+  "agent/equivariant-unirationality-new-applications",
+  "agent/equivariant-unirationality-new-applications-main",
+  "agent/equivariant-unirationality-new-applications-packet",
+  "agent/equivariant-unirationality-new-applications-v2",
+  "agent/equivariant-unirationality-new-applications-v3",
+  "agent/exceptional-carrier-rigidity",
   "agent/f55-audit-obstruction",
   "agent/f55-coverage-c-adjudication",
   "agent/fixed-network-map-classification-20260809",
   "agent/formalize-conic-bundle-and-audit-klein-cubic",
+  "agent/full-g-selfmap-classification-20260809",
   "agent/g2-universal-all-degree-20260802",
   "agent/g3p-a5-semilinear-20260802",
+  "agent/gross-popescu-equivariant-moduli-audit",
   "agent/klein-b-exhaustiveness-refutation",
   "agent/klein-bd610a-closure-goals",
   "agent/klein-cubic-august-research-notebook",
@@ -1570,6 +1583,8 @@
   "agent/v3-valuation-residue-closeout-20260802",
   "agent/weaken-hypotheses",
   "audit/gross-popescu-equivariant-moduli-20260809",
-  "main"
+  "automation/ambient-rees-selfmap-20260809",
+  "main",
+  "research/equivariant-unirationality-new-applications-20260809"
  ]
 }

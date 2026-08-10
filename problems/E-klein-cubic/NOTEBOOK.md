@@ -52,7 +52,7 @@ disclosed boundary, not a coverage claim.
 
 Core manifest last rebuilt: 2026-08-03. Research supplement last updated:
 2026-08-09. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `8c885b7b39863ace28398e04b6c8b6ceee4b7a15` (2026-08-08; the
+Snapshot metadata — notebook parent head: `215e538f5345be6f260b99bcfd25ca5754ca270d` (2026-08-08; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -211,8 +211,30 @@ lanes are recorded in `WORKORDER_F55_PC1_PRIMITIVE_LAURENT.md`,
 `WORKORDER_F55_PC3_POLAR_EDGE_HOLONOMY.md`,
 `WORKORDER_F55_PC4_MINIMAL_CORE_SEARCH.md`, and
 `WORKORDER_F55_PC5_EXACT_SATURATION_CERTIFICATES.md`.  These documents preserve
-the exact reductions and scoped certificates; none supplies the missing
-all-support coverage theorem.
+the exact reductions and scoped certificates; the all-support coverage
+question they left open was superseded same day by the Coverage-C
+adjudication below.
+
+Same day, merged, `F55_COVERAGE_C_ADJUDICATION_20260808.md` adjudicated
+Coverage Theorem C, the gate those work orders were aiming at.  Verdict:
+under its natural reading, Coverage C's fourth alternative is exactly the
+assertion that the relevant exact-support torus is empty, so Coverage C is
+equivalent to the original `F55` pointlessness problem, not a smaller
+reduction of it (`F55-PC-COVERAGE-C-EQUIVALENT-TO-HEADLINE`).  A
+uniform-bound reading was never stated: "A precise uniform circuit theorem
+would be a valid new proof strategy, but it would itself be a direct proof
+of F55 pointlessness."  The cheap coverage candidate — singleton, clean
+polar diamond, initial binomial holonomy — is refuted outright by two
+explicit higher-circuit identities, a 16-term deletion-minimal core and a
+26-term core, verified by
+`director_probes_20260808/f55_coverage_c_adjudicate.py`
+(`F55-PC-CHEAP-COVERAGE-REFUTED`, `F55-PC-HIGHER-CIRCUITS-PASS`); the
+proof-reduction lemmas themselves are retained
+(`F55-PC-PROOF-REDUCTIONS-RETAINED`).  A noncircular negative proof now
+needs one of: (1) a stated universal circuit list with an independently
+proved coverage theorem; (2) a genuine finite-generation theorem for
+primitive cores; (3) a direct arithmetic or geometric obstruction to the
+trace cubic.  Status stays `F55-QUESTION-OPEN`.
 
 Characteristic-five calculations close the exact two-Frobenius-residue
 families through covariant degree 45.  One fixed three-residue pattern is
@@ -4507,7 +4529,52 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   stalled. F55 OPEN, ed_C(PSL₂(F₁₁)) UNDECIDED.** Live lanes =
   handoff §4: exact solves at pinned profiles, rigidity (§8.4.2),
   the YES-side ladder, construction via Theorem I. The V₁₄ theorem
-  and every §§8.22–8.25 fan kill are untouched.** Note I
+  and every §§8.22–8.25 fan kill are untouched.**
+  **Wave 32 (continuation; work-in-progress commit `215e538`, probes
+  `director_probes_20260806/f55_exact_lift_*`): HARNESS VALIDATED, MAIN
+  COMPUTATION UNDECIDED.** Parser controls pass both ways (unit ideal →
+  `[1]`; non-unit → `[xx*yy-1]`); GATE-1 PASS; GATE-2 PASS — the
+  free-support NON-EMPTY control at sigma = 7, e = 13, where the
+  pentagon-line covers live, reported NON-UNIT independently by M2, Singular
+  and msolve (M2 `unit=false ngens=94 dim=4`, Singular `leadone=0 size=94
+  dim=4`, msolve `NONUNIT`). The MAIN computation is UNDECIDED: Lemma G
+  profiles at sigma = 7, e = 39, count = 3; profile 0 timed out in M2 after
+  7200 s; identified bottleneck: a degree-20 Rabinowitsch generator. **NO
+  emptiness or non-emptiness claim is made; the run was interrupted by an
+  external usage limit, and outputs are gitignored (regenerate by rerunning
+  the scripts).** Cross-reference handoff §4 lane (a).
+  **Cross-reference (2026-08-08/09 parallel line, independent of waves
+  31–32): AN INDEPENDENT PROGRAM LANDS ON THE SAME OPEN VERDICT.** The F55
+  audit + polar-circuit reduction + Coverage-C adjudication recorded in the
+  supplement above, and the ambient-Rees/selfmap/carrier program of
+  `goal_runs_20260809/*` with its packet ledger
+  `NOTEBOOK_AMBIENT_REES_SELFMAP_CLASSIFICATION_20260809.md`, reached
+  conclusions consistent with the wave-32 terminal state: the old
+  Lemma-S/conserved-eleven negative claims are withdrawn by audit on the one
+  side, refuted by explicit witnesses on the other, and both lines agree the
+  question is OPEN. The ambient-Rees line's own named open targets: the
+  refinement-invariant normalized-Rees carrier theorem (named in
+  `theory/FIX_I_bcomplex.md`), the finite d = 24 divisibility problem (0 ≠ V
+  ∈ K_21, J_23 | F(V)), and the type-I/type-II carrier enumeration with the
+  55-configuration synchronization statement. **Its proved boundary: ambient
+  landing coordinate degree ≥ 22 and retraction coordinate degree ≥ 24, with
+  `NO-DOMINANT-G-AMBIENT-LANDING-MAP` and `KLEIN-PSL2(11)-NONUNIRATIONAL`
+  both explicitly NOT PROVED.**
+  **Director adjudication (2026-08-10): TWO PROPOSED THEOREM TARGETS CHECKED
+  AGAINST THE REPO — NEITHER IS A NEW REDUCTION.** (i) A "bounded-circuit
+  theorem for F55" is Coverage Theorem C territory, already adjudicated
+  `F55-PC-COVERAGE-C-EQUIVALENT-TO-HEADLINE` (see the supplement entry
+  above) — rejected as a reduction; the noncircular residue is the
+  adjudication's own routes (1)–(3) (a proved universal circuit list; a
+  finite-generation theorem for primitive cores; a direct
+  arithmetic/geometric obstruction to the trace cubic). (ii) A
+  "coordinate-minimal Rees reduction lemma" is, nearly verbatim, the
+  ambient-Rees line's own named gap, not a new discovery; as stated it names
+  the summit, not a step toward it. The viable next theorems are that line's
+  own two smallest-remaining targets: the d = 24 finite divisibility
+  problem, and the carrier enumeration plus 55-configuration synchronization
+  statement. **Recorded so future proposals are checked against these
+  adjudications before development.** Note I
   (`theory/FIX_I_bcomplex.md`) drafted: definitions (decorated complex,
   Def 1.1), blowup calculus (Thm 2.1, checked against the classical
   dimension-2 weight calculus), b-complex over `Mod_G(X)` with equivariant
