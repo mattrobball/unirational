@@ -6,21 +6,23 @@
 - `goal_runs_20260809/FULL_G_SELFMAP_CLASSIFICATION/THEOREM.md`
 - `goal_runs_20260809/FULL_G_SELFMAP_CLASSIFICATION/AMBIENT_EXTENDABILITY.md`
 - `goal_runs_20260809/FULL_G_SELFMAP_CLASSIFICATION/DEGREE_ONE_RETRACTION.md`
+- `goal_runs_20260808/DELTA1_RETRACTION_POLAR_IDENTITY/THEOREM.md`
 - `goal_runs_20260809/FIXED_NETWORK_MAP_CLASSIFICATION/STATUS.md`
 - `goal_runs_20260809/EXCEPTIONAL_CARRIER_RIGIDITY/STATUS.md`
 - `goal_runs_20260809/EXCEPTIONAL_CARRIER_RIGIDITY/THEOREM.md`
 - `goal_runs_20260809/EXCEPTIONAL_CARRIER_RIGIDITY/AMBIENT_REES_COMPARISON.md`
 - `certificates/STRATA_EXACT.md`
 - `certificates/NORMAL_CHARACTERS.md`
+- `certificates/exact_weil_check.py`
+- `certificates/exact_molien.py`
+- `certificates/modular_covariant_scan.py`
 
 These provide the accepted tangent-residual selfmap theorem, generic torsor
-classification, ambient-vs-modulo-`F` distinction, retraction normal form,
-corrected fixed-network boundary, exact V4 incidence and normal characters,
-and the later binding normalized-Rees carrier theorem: the restricted graph is
-the normalized dominant transform inside the genuine ambient normalized
-blowup; ordinary fixed-curve valuations have canonical centers; point-centered
-curve-valued divisors are contracted; and the canonical ordinary carrier over
-`E_t` is line-valued because its accepted first normal order is odd.
+classification, ambient-vs-modulo-`F` distinction, retraction polar normal
+form, corrected fixed-network boundary, exact `V4` incidence and normal
+characters, the normalized-Rees carrier theorem, the exact five-dimensional
+Weil representation, Molien/Hironaka dimensions, and the earlier modular
+proper-specialization method.
 
 ## Literature
 
@@ -55,12 +57,19 @@ curve-valued divisors are contracted; and the canonical ordinary carrier over
    rational `G`-selfmaps of `X`.
 2. Hence the ambient landing set is empty or its restrictions have unbounded
    degree.
-3. The proposed landing "syzygy module" is nonlinear: `{P:F(P)=0}` is a cubic
+3. The proposed landing “syzygy module” is nonlinear: `{P:F(P)=0}` is a cubic
    cone in the finitely generated covariant module, not an additive submodule.
-4. At a type-II V4 point, forced vanishing on the three plus-planes gives
-   `I_P subset (bc,bd,cd)` and the quadratic initial landing equation gives
+4. At a type-II `V4` point, forced vanishing on the three plus-planes gives
+   `I_P subset (bc,bd,cd)` and the initial landing equation gives
    `alpha beta gamma=0`.
 5. The binding carrier theorem identifies the canonical ordinary carrier over
-   `E_t`; the accepted odd first normal order makes it line-valued. Any
-   elliptic-target carrier must be secondary, among normalized point-fibre
-   curves or fixed slices inside retained surface-valued carriers.
+   `E_t`; the accepted odd first normal order makes it line-valued.
+6. Exact good reduction at `67` excludes every landing tuple in degrees
+   `15,...,21`. Combined with the sealed degree-`<=14` result, every ambient
+   landing tuple has coordinate degree at least `22`.
+7. For a retraction, the transform
+   `J=2H+FR`, `V=2Q-Rx` satisfies `F(V)=J(R^2+4S)`. Both `J` and `V` vanish on
+   every involution plus-plane.
+8. Scalar invariant restriction to a plus-plane is injective through degree
+   `22`. Hence every primitive `G`-retraction has coordinate degree at least
+   `24`.
