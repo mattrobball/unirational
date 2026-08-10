@@ -26,7 +26,7 @@ def ext_table(Th, k, p):
 
 def emul(a, b, tab, p):
     """product of ext elements given as (..., k) coefficient arrays"""
-    return np.einsum('...i,...j,ijl->...l', a, b, tab) % p
+    return np.einsum('...i,...j,ijl->...l', a, b, tab, optimize=True) % p
 
 
 # ---------------------------------------------------------- the cubic system
@@ -59,10 +59,10 @@ def cubic_rows(Bmaps, mons, p, npts, rng, tab=None):
             C3 = np.zeros((r, r, r))
             for i in range(5):
                 u, v = M[:, i], M[:, (i + 1) % 5]
-                C3 = (C3 + np.einsum('u,v,w->uvw', u, u, v)) % p
+                C3 = (C3 + np.einsum('u,v,w->uvw', u, u, v, optimize=True)) % p
         else:
             k = Bmaps.shape[3]
-            M = np.einsum('linj,n->lij', Bmaps, mx) % p                   # r x 5 x k
+            M = np.einsum('linj,n->lij', Bmaps, mx, optimize=True) % p                   # r x 5 x k
             C3 = np.zeros((r, r, r, k))
             for i in range(5):
                 u, v = M[:, i, :], M[:, (i + 1) % 5, :]
@@ -83,7 +83,7 @@ def cubic_rows(Bmaps, mons, p, npts, rng, tab=None):
 def write_ms(rows, monsl, r, p, path, extra_gens=()):
     names = ','.join('c%d' % i for i in range(r))
     polys = []
-    for row in rows:
+    for row in (rows if len(monsl) else []):
         terms = ['%d*c%d*c%d*c%d' % (int(c) % p, u, v, w)
                  for c, (u, v, w) in zip(row, monsl) if int(c) % p]
         if terms:
@@ -114,7 +114,7 @@ def write_ms_ext(rows, monsl, r, p, tab, path, extra_gens=()):
     k = tab.shape[0]
     names = ','.join('c%d' % i for i in range(r)) + ',th'
     polys = []
-    for row in rows:                                  # row: (nmons, k)
+    for row in (rows if len(monsl) else []):                                  # row: (nmons, k)
         terms = []
         for co, (u, v, w) in zip(row, monsl):
             for j in range(k):
