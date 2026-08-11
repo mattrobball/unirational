@@ -93,6 +93,21 @@ sufficiently large degrees, closes every degree.** Corollary 3.3's
 one-half-per-pair criterion remains as the fallback formulation when an
 exclusion is only available in restricted form.
 
+**Remark 3.5 (the X-side ladder; added 2026-08-11 after PR #49).** The
+restricted-degree ledger (`RT_ACTUAL_LANDING`: objects
+`B ∈ ((S/F)_{d′} ⊗ W)^G`, currently "nonidentity restricted degree ≥ 6")
+carries its own transport: multiplication by `F` is dead mod `F`, but an
+invariant of degree `e` survives mod `F` exactly when `I(e) > I(e−3)`,
+which by the §7 table holds for **every** `e ≥ 5`. So X-side existence is
+closed under `d′ ↦ d′ + e` for all `e ≥ 5`: per-`d′` exclusions (like the
+sealed `d′ = 2,3,4,5`) do not propagate, but any future tail exclusion
+("no restricted object for all large `d′`") collapses to a hard bound five
+below its threshold. PR #49's cell dimensions `C(d′) − C(d′−3)` also
+reproduce on the §7 table (`A(4)−A(1) = 1`, `A(5)−A(2) = 1`) — an
+independent cross-anchor between the two lanes. Level audit of PR #49: its
+objects live in `S/F` by construction, so invariant content is quotiented
+away and the claims are transport-safe.
+
 ## 4. What this makes of the residue-table program
 
 `STAGE1_TIGHTEN` Theorem S makes the σ-band verdicts degree-saturated: a
@@ -205,7 +220,10 @@ is two-method confirmed.
 
 1. ~~Stage-2 pinning level audit~~ DONE (map-level; §6 row updated with the
    packet's own normalization sentence as evidence).
-2. `Φ_F` row-data derivation and the inclusion test — workorder §F.
+2. ~~`Φ_F` row-data derivation and the inclusion test~~ DELIVERED by
+   `goal_runs_20260811/STAGE1_STRATIFIED` §5/§12 (row data machine-checked;
+   raw inclusion fails as the §5.2 correction explains; positivity shadow
+   passes).
 3. ~~Fill §7 from the probe~~ DONE (quintic invariant exists; Corollary 3.4
    stated unconditionally; anchors all pass).
 4. Optional upgrade: restate the Stage-2 weight congruences tuple-level by

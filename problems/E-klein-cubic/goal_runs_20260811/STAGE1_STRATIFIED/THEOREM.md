@@ -263,4 +263,5 @@ Check groups: **A** anchors (5), **B** ODDZERO old/new (6), **C** Theorem S′
    stratification was not computed and is superseded.
 5. **Director replay:** `python3 verifier.py` re-run from a clean shell —
    47 checks, 0 failures, both primes (`STAGE1_STRATIFIED_VERIFY_OK` /
-   `ALLGREEN`), replay log archived with the session.
+   `ALLGREEN`); replay log archived at
+   `results/replay_director_stdout.txt`.
