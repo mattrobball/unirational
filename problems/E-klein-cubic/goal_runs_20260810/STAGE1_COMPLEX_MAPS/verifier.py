@@ -182,9 +182,9 @@ def run_prime(p):
     for r in E.rows:
         if len(E.dom[r["id"]]) > 1 and r["id"] not in inb:
             total *= len(E.dom[r["id"]])
-    check("C11 total Stage-1 classes = 69686233329838325760000 (p=%d)" % p,
-          total == 69686233329838325760000, total)
-    check("C12 total factors as 2^9 . 84 . 23 . 6^8 . 4^10 . 2^6 . 5^4 (p=%d)" % p,
+    check("C11 ARC-CONSISTENT (pre-coherence) count = 69686233329838325760000 "
+          "(p=%d)" % p, total == 69686233329838325760000, total)
+    check("C12 that count factors as 2^9 . 84 . 23 . 6^8 . 4^10 . 2^6 . 5^4 (p=%d)" % p,
           total == 2 ** 9 * 84 * 23 * 6 ** 8 * 4 ** 10 * 2 ** 6 * 5 ** 4)
 
     # ---------------- D. witness section -----------------------------------
@@ -197,12 +197,13 @@ def run_prime(p):
     check("D3 witness lands on NO type-II point and NO E-cell point (p=%d)" % p,
           not any(W[i][1] == "PII" for i in W) and
           not any(W[i][0] == "gen" and W[i][1] == "E" for i in W))
-    # minimal-sweep witness: only the three forced rows sweep
+    # minimal-sweep witness: BEFORE coherence, only the three order-0 forced rows
+    # sweep.  (Evaluation coherence removes this section -- see H7.)
     dom2 = {r["id"]: ([v for v in E.dom[r["id"]] if v[0] != "dom"]
                       if r["id"] in may and r["id"] not in fs else E.dom[r["id"]])
             for r in E.rows}
     ok2 = try_solve(E, dom2)
-    check("D4 a section exists in which ONLY the 3 forced rows sweep (p=%d)" % p, ok2)
+    check("D4 arc-consistency alone admits a 3-sweep section (p=%d)" % p, ok2)
     # a section with no elliptic landing anywhere
     dom3 = {r["id"]: [v for v in E.dom[r["id"]] if not (v[0] == "gen" and v[1] == "E")]
             for r in E.rows}
@@ -278,7 +279,161 @@ def run_prime(p):
             ok = ok and (want in dd.values())
     check("F6 Layer-2 module dims = Layer-3 character dims on the P_sigma row "
           "(p=%d)" % p, ok)
+
+    # ---------------- H. evaluation coherence (audit repair) ----------------
+    from s1recount import build_tables, coherent_count, sweep_rows
+    from produce_coherence import verdicts as coh_verdicts
+    tables, cmeta = build_tables(E)
+    check("H1 RIGIDITY: the evaluation of every component of every M_S at every "
+          "child is 0- or 1-dimensional, never 2 (p=%d)" % p,
+          sum(m["rigid_fail"] for m in cmeta.values()) == 0)
+    vd = coh_verdicts(E, tables)
+    nonsurj = sorted(k for k, v in vd.items() if not v["surjective"])
+    check("H2 exactly two evaluation maps are NOT surjective, and they are the "
+          "two dim-3 divisors (p=%d)" % p,
+          len(nonsurj) == 2 and all(
+              [q for q in E.rows if q["id"] == k][0]["dim"] == 3 and
+              [q for q in E.rows if q["id"] == k][0]["setwise"] == "D12"
+              for k in nonsurj), nonsurj)
+    check("H3 the other 13 evaluation maps ARE surjective onto their "
+          "arc-consistent products (p=%d)" % p,
+          all(v["surjective"] for k, v in vd.items() if k not in nonsurj))
+    img = {k: (vd[k]["n_image"], vd[k]["n_arc_consistent"]) for k in nonsurj}
+    check("H4 the two proper images have sizes 128 (of 262144) and 64 (of 128) "
+          "(p=%d)" % p, sorted(img.values()) == [(64, 128), (128, 262144)], img)
+    ctotal, cblocks = coherent_count(E, tables)
+    check("H5 COHERENT count = 1088847395778723840000 (p=%d)" % p,
+          ctotal == 1088847395778723840000, ctotal)
+    check("H6 it factors as 2^11 . 21 . 23 . 6^8 . 4^10 . 5^4 (p=%d)" % p,
+          ctotal == 2 ** 11 * 21 * 23 * 6 ** 8 * 4 ** 10 * 5 ** 4)
+    check("H7 coherence divides the arc-consistent count by exactly 64 = 2^6 "
+          "(p=%d)" % p, total == 64 * ctotal)
+    core = max(cblocks, key=lambda b: b["size"])
+    check("H8 the coupled core is one block of 51 rows with 43008 = 2^11 . 21 "
+          "patterns (p=%d)" % p,
+          core["size"] == 51 and core["solutions"] == 43008,
+          (core["size"], core["solutions"]))
+    imm = [b for b in cblocks if b["size"] == 1]
+    immprod = 1
+    for b in imm:
+        immprod *= b["solutions"]
+    check("H9 the coherence-immune factor is 23 . 6^8 . 4^10 . 5^4 -- the D10 row "
+          "and the odd-order point rows (p=%d)" % p,
+          immprod == 23 * 6 ** 8 * 4 ** 10 * 5 ** 4, immprod)
+    check("H10 every coherence-immune row has the free stratum as its only "
+          "proper parent (p=%d)" % p,
+          all(all(E.byoid[E.S.orbit_of[j]]["id"] == 0
+                  for j in E.above[b["rows"][0]]) for b in imm))
+    # the newly forced rows
+    newforced = coherent_forced(E, tables, core["rows"])
+    swept5 = [i for i in newforced if E.dom[i][0][0] == "dom" or
+              any(v[0] == "dom" for v in E.dom[i])]
+    nf_sweep = [i for i in newforced
+                if all(v[0] == "dom" for v in [newforced[i]])]
+    check("H11 coherence forces 15 more rows to a single value: 5 C2-rows to "
+          "sweep and 10 V4-rows to one vertex (p=%d)" % p,
+          len(newforced) == 15 and
+          sum(1 for i, v in newforced.items() if v[0] == "dom") == 5 and
+          sum(1 for i, v in newforced.items() if v[1] == "PI") == 10,
+          sorted(newforced))
+    check("H12 hence 8 rows sweep in EVERY coherent section (3 by order 0 + 5 by "
+          "coherence) and 12 of the 18 V4-rows are pinned (p=%d)" % p,
+          len(fs) + sum(1 for i, v in newforced.items() if v[0] == "dom") == 8)
+    # the witness section must still be coherent
+    okW = all(any(all(W.get(r0) == v for r0, v in a.items()) for a in tables[s])
+              for s in sweep_rows(E)
+              if W[s][0] == "dom" and W[s][1] == "L")
+    check("H13 the maximal-sweep witness section is evaluation-coherent (p=%d)" % p,
+          okW)
+    check("H14 the pre-coherence 3-sweep section is NOT coherent (5 more rows "
+          "must sweep) (p=%d)" % p,
+          not coherent_solvable(E, tables, fs, may))
     return E
+
+
+def coherent_forced(E, tables, coreids):
+    """rows of the coupled core whose value is unique once coherence is imposed."""
+    from s1recount import forced_sweeps
+    ids = sorted(coreids)
+    idset = set(ids)
+    cons = [(a, ta, b, tb) for (a, ta, b, tb) in E.cons if a in idset and b in idset]
+    forced = set(forced_sweeps(E))
+    rel = [rid for rid, tab in tables.items()
+           if (set().union(*[set(a) for a in tab]) | {rid}) & idset]
+    order = sorted(ids, key=lambda i: (0 if i in tables else 1, len(E.dom[i]), i))
+    val, seen = {}, {i: set() for i in ids}
+
+    def sweeping(s):
+        if s in forced:
+            return True
+        if s not in val:
+            return None
+        return val[s][0] == "dom" and val[s][1] == "L"
+
+    def tok():
+        for s in rel:
+            if sweeping(s) is not True:
+                continue
+            if not any(all(val.get(r0) in (None, v) for r0, v in a.items())
+                       for a in tables[s]):
+                return False
+        return True
+
+    def rec(k):
+        if k == len(order):
+            for i in ids:
+                seen[i].add(val[i])
+            return
+        i = order[k]
+        for v in E.dom[i]:
+            val[i] = v
+            if all(E.img_contains(val[a], ta, val[b], tb) for (a, ta, b, tb) in cons
+                   if a in val and b in val and (a == i or b == i)) and tok():
+                rec(k + 1)
+            val.pop(i, None)
+
+    rec(0)
+    return {i: next(iter(seen[i])) for i in ids
+            if len(seen[i]) == 1 and len(E.dom[i]) > 1}
+
+
+def coherent_solvable(E, tables, fs, may):
+    """is there a coherent section in which only the rows `fs` sweep?"""
+    from s1recount import forced_sweeps
+    dom = {r["id"]: ([v for v in E.dom[r["id"]] if v[0] != "dom"]
+                     if r["id"] in may and r["id"] not in fs else E.dom[r["id"]])
+           for r in E.rows}
+    if any(not d for d in dom.values()):
+        return False
+    forced = set(forced_sweeps(E))
+    rel = list(tables)
+    order = sorted(dom, key=lambda i: len(dom[i]))
+    val = {}
+
+    def tok():
+        for s in rel:
+            sw = (s in forced) or (s in val and val[s][0] == "dom")
+            if not sw:
+                continue
+            if not any(all(val.get(r0) in (None, v) for r0, v in a.items())
+                       for a in tables[s]):
+                return False
+        return True
+
+    def rec(k):
+        if k == len(order):
+            return True
+        i = order[k]
+        for v in dom[i]:
+            val[i] = v
+            if all(E.img_contains(val[a], ta, val[b], tb) for (a, ta, b, tb) in E.cons
+                   if a in val and b in val) and tok():
+                if rec(k + 1):
+                    return True
+            val.pop(i, None)
+        return False
+
+    return rec(0)
 
 
 def fs_row(E, chainname):

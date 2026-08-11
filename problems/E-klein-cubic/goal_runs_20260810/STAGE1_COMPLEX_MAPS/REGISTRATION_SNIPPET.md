@@ -18,11 +18,14 @@ Paste into the repository manifest. Fields follow the manifest schema
     quantification is two-prime; only the two divisorial rows carry
     model-free conclusions -- see THEOREM.md sec. 2 preamble and sec. 14); Theorem 9(i) (the H0-1 parity, exact in
     Z[zeta_6]); Theorem 9(ii) for d <= 45 (exact in Z[zeta_6]).
+    Also char-0 unconditional: Theorem 15.1 (EVALUATION RIGIDITY) -- a two-line
+    character argument, no computation.
     Two-prime (331, 661, both coprime to 660, identical row-for-row): the
     component-level rebuild of the terminus census, the 145 closure relations,
-    the section-moduli table, Theorems 4, 5, 6, the block structure, the total
-    count 69686233329838325760000, the witness sections, the Layer-2 dimension
-    tables.
+    the section-moduli table, Theorems 4, 5, 6, 8, the block structure, BOTH
+    counts (arc-consistent 69686233329838325760000 and stratum-coherent
+    1088847395778723840000), the per-chain evaluation-surjectivity verdicts,
+    Theorems 3' and 5', the witness sections, the Layer-2 dimension tables.
     NOT char 0: nothing is claimed beyond order 0; no jets, no algebraization,
     no map.
   tracked: true
@@ -33,14 +36,48 @@ Paste into the repository manifest. Fields follow the manifest schema
     STANDARD_FORM_PW tower to the complex of the Klein cubic X, under the sealed
     constraint rows, for a dominant equivariant P(W) --> X.
 
-    Headline: Problem E remains OPEN. Stage 1 does NOT close it: the moduli is
-    non-empty, 69686233329838325760000 classes (63626560866374123520000 rigid,
-    6059672463464202240000 in one-parameter families).
+    Headline: Problem E remains OPEN. Stage 1 does NOT close it: the set of
+    STRATUM-COHERENT ORDER-0 BOUNDARY PATTERNS is non-empty, with
+    1088847395778723840000 patterns (994165013537095680000 rigid,
+    94682382241628160000 in one-parameter families), factoring as
+    2^11 * 21 * 23 * 6^8 * 4^10 * 5^4.
+
+    THE COUNT IS OF BOUNDARY PATTERNS, NOT A MODULI OF MAPS (THEOREM.md sec.
+    15.4). Imposing only value-set consistency (arc consistency) gives
+    69686233329838325760000; evaluation coherence -- the requirement that the
+    value of every row below a swept row be the EVALUATION of one and the same
+    Layer-2 component -- divides that by exactly 64 = 2^6. The earlier figure
+    69686233329838325760000 is superseded as the headline number and retained
+    only as the pre-coherence intermediate.
 
     New unconditional results:
       * Theorem 3 -- THREE forced sweeps, not one: D_{P_sigma}, D_{L^-_sigma}
         and the central-involution line over the D12-point all map ONTO L_sigma.
         Contains and strengthens the sealed H0-2.
+      * Theorem 15.1 (EVALUATION RIGIDITY) -- for every sweep row S and every
+        connected component of its Layer-2 moduli M_S, the value at each deeper
+        row is CONSTANT on that component (an eigenline of W^-_sigma pinned by
+        characters).  Machine-confirmed: 0 rigidity failures over all rows, all
+        components, all children, both primes.
+      * Theorem 3' -- FIVE MORE forced sweeps from evaluation coherence, so
+        EIGHT rows sweep in every coherent section: M^V_tau (the corner packet's
+        T3 centre), the two C2-curves over the A4-points and the two over the
+        D12-points.  Arc consistency alone admitted a 3-sweep section; no such
+        section is stratum-coherent.
+      * Theorem 5' -- 12 of the 18 V4-rows are RIGID (a unique type-I vertex);
+        only two of them were rigid before coherence.
+      * Evaluation-surjectivity verdicts: 13 of the 15 sweep rows have surjective
+        joint evaluation maps; the two dim-3 divisors do NOT (images 128 of
+        262144 and 64 of 128).  Separately, 38 of the 48 computed components of
+        M_{D_{P_sigma}} are legal equivariant sweeps of L_sigma that cannot be
+        the restriction of ANY global section -- a cut on Layer 2, not on the
+        pattern count.
+      * The COHERENCE-IMMUNE factor is isolated: 6^8 * 4^10 * 5^4 =
+        1100753141760000 (the 22 rows whose exact stabilizer has ODD order --
+        8 C3-rows, 10 C5-rows, 4 C11-rows -- whose only proper parent is the
+        free stratum), plus the factor 23 from the D10 C2-line.  Nothing at
+        order 0 can pin them; that is the measurement of where Stage-2's work
+        lives.
       * Theorem 4 -- the type-II exclusion holds at ALL 18 V4-rows of the
         terminus (2970 components), with no external import. (F2) concerned Z+'s new divisor E_s^V -- zero rows of Z; Theorem 4
         proves the same exclusion for all 18 V4-rows of Z with no external
@@ -82,14 +119,27 @@ Paste into the repository manifest. Fields follow the manifest schema
     agent/receiver-ledger-x-20260810). Both were read read-only; the two derived
     data files this packet needs are carried in inputs/ with provenance.
 
-    Exits: STAGE1-COMPLEX-MAPS-CLASSIFIED, STAGE1-SECTION-MODULI-SEALED,
-    STAGE1-TYPE-II-EXCLUSION-ON-Z, STAGE1-THREE-FORCED-SWEEPS,
-    STAGE1-NO-GENUS-BUYING-ADMISSIBLE, STAGE1-WITNESS-SECTION-VERIFIED,
-    TERMINUS-CENSUS-INDEPENDENTLY-REPRODUCED, STAGE1-ORDER0-WINDOW-PARITY-ONLY.
-    Machine markers: STAGE1_COMPLEX_MAPS_VERIFY_OK, ALLGREEN (95 checks,
-    0 failures).
+    Exits: STAGE1-COMPLEX-MAPS-CLASSIFIED, STAGE1-BOUNDARY-PATTERNS-SEALED,
+    STAGE1-EVALUATION-RIGIDITY, STAGE1-TYPE-II-EXCLUSION-ON-Z,
+    STAGE1-EIGHT-FORCED-SWEEPS, STAGE1-NO-GENUS-BUYING-ADMISSIBLE,
+    STAGE1-WITNESS-SECTION-VERIFIED, TERMINUS-CENSUS-INDEPENDENTLY-REPRODUCED,
+    STAGE1-ORDER0-WINDOW-PARITY-ONLY,
+    STAGE1-COHERENCE-IMMUNE-FACTOR-ISOLATED.
+    (STAGE1-SECTION-MODULI-SEALED and STAGE1-THREE-FORCED-SWEEPS are RENAMED,
+    not withdrawn: the first because the count is of boundary patterns, not a
+    moduli; the second because the coherence layer raises three to eight.)
+    Machine markers: STAGE1_COMPLEX_MAPS_VERIFY_OK, ALLGREEN (123 checks,
+    0 failures; 61 per prime including the 14-check evaluation-coherence
+    series H1-H14, plus one cross-prime identity check).
 ```
 
 Audit note (2026-08-10): adversarial audit verdict REGISTER-WITH-EDITS; all
-required edits applied (THEOREM.md sec. 14). This snippet reflects the
-post-audit state.
+required edits applied (THEOREM.md sec. 14).
+
+Second correction order (2026-08-10, user-mandated): the published count treated
+the constraint blocks as independent, which is correct for value-set consistency
+but not for the stratum-local part of single-morphism coherence. The evaluation
+layer is now imposed and the count re-issued (THEOREM.md sec. 15); the headline
+number changes from 69686233329838325760000 to 1088847395778723840000 and is
+re-labelled "stratum-coherent order-0 boundary patterns". This snippet reflects
+the post-correction state.

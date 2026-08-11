@@ -18,19 +18,21 @@ literal name `REPORT.md`.)*
 
 ```text
 STAGE1-COMPLEX-MAPS-CLASSIFIED
-STAGE1-SECTION-MODULI-SEALED
+STAGE1-BOUNDARY-PATTERNS-SEALED
+STAGE1-EVALUATION-RIGIDITY
 STAGE1-TYPE-II-EXCLUSION-ON-Z
-STAGE1-THREE-FORCED-SWEEPS
+STAGE1-EIGHT-FORCED-SWEEPS
 STAGE1-NO-GENUS-BUYING-ADMISSIBLE
 STAGE1-WITNESS-SECTION-VERIFIED
 TERMINUS-CENSUS-INDEPENDENTLY-REPRODUCED
 STAGE1-ORDER0-WINDOW-PARITY-ONLY
+STAGE1-COHERENCE-IMMUNE-FACTOR-ISOLATED
 ```
 
 Machine markers: `STAGE1_COMPLEX_MAPS_VERIFY_OK` / `ALLGREEN`
-(`python3 verifier.py` — **95 checks, 0 failures**: 47 per prime at
-`p = 331, 661`, including the exact `Z[ζ₆]` route, plus one cross-prime
-identity check).
+(`python3 verifier.py` — **123 checks, 0 failures**: 61 per prime at
+`p = 331, 661`, including the exact `Z[ζ₆]` route and the 14-check
+evaluation-coherence series, plus one cross-prime identity check).
 
 ---
 
@@ -111,27 +113,42 @@ derivation. **(F2)** is re-derived unconditionally on `Z` (Theorem 4).
 
 ## 1. The classification (Layer 1)
 
-> **Theorem A (the section moduli).** The set of Stage-1 morphisms
-> `𝔽(Z) → 𝔽(X)` is
+> **Theorem A (the boundary-pattern count).** The set of **stratum-coherent
+> order-0 boundary patterns** — Stage-1 morphisms `𝔽(Z) → 𝔽(X)` in which the
+> value of every row lying in the closure of a swept row is the *evaluation* of
+> one and the same Layer-2 component (§15) — is
 >
 > ```
 >    N₀ · ( 21 isolated classes  ⊔  2 one-parameter families ) ,
->    N₀ = 2⁹ · 84 · 6⁸ · 4¹⁰ · 2⁶ · 5⁴ = 3 029 836 231 732 101 120 000 ,
+>    N₀ = 2¹¹ · 21 · 6⁸ · 4¹⁰ · 5⁴ = 47 341 191 120 814 080 000 ,
 > ```
 >
-> i.e. **69 686 233 329 838 325 760 000** classes in all, of which
-> **63 626 560 866 374 123 520 000** are rigid and
-> **6 059 672 463 464 202 240 000** move in a one-parameter family. In
-> particular the set is **non-empty**: Stage 1 does not close Problem E.
+> i.e. **1 088 847 395 778 723 840 000** patterns in all, of which
+> **994 165 013 537 095 680 000** are rigid and
+> **94 682 382 241 628 160 000** move in a one-parameter family. In particular
+> the set is **non-empty**: Stage 1 does not close Problem E.
 
-The count is a product over the connected components of the constraint graph:
+**This is not a moduli of maps.** It counts order-0 boundary data — see §15 for
+the reframing, for the coherence layer that produces it, and for what the
+remaining global cut is. Imposing only the weaker *value-set* consistency
+(arc consistency) gives `69 686 233 329 838 325 760 000`; evaluation coherence
+divides that by exactly **64 = 2⁶** (§15).
 
-| block | rows | free product | joint values |
-|---|---|---:|---:|
-| eight triangles `{C2-row, V4-row, V4-row}` + one `{C3-row, C6-row, C6-row}` | 3 each | 8 | **2** each |
-| the `C6`-band | 18 | 884 736 | **84** |
-| six `C6`-rows, four `C11`-rows, ten `C5`-rows, eight `C3`-rows | 1 each | — | 2, 5, 4, 6 |
-| the `D10` `C2`-line | 1 | — | **23** (21 points + 2 one-parameter) |
+The count is a product over the connected components of the **augmented**
+constraint graph — the closure constraints together with the coherence
+hyper-edges joining each swept row to every row in its closure:
+
+| block | rows | joint values |
+|---|---|---:|
+| the coupled core (the whole `σ`-band: the two dim-3 divisors, the eight `V4`-stabilised and three `C6`-stabilised `C2`-rows, sixteen `V4`-rows, the `C6`-band) | 51 | **43 008 = 2¹¹ · 21** |
+| the `D10` `C2`-line | 1 | **23** (21 points + 2 one-parameter) |
+| eight `C3`-rows, ten `C5`-rows, four `C11`-rows — the **coherence-immune** factor | 1 each | 6, 4, 5 |
+
+Before coherence the core was nine 3-row blocks (2 each), one 18-row block (84)
+and six free `C6`-rows (2 each): `2⁹ · 84 · 2⁶ = 2 752 512`. After coherence it
+is one 51-row block with `43 008 = 2⁹ · 84` — the six `C6`-rows inside
+`D_{P_σ}` lose their independence, and fifteen further rows lose all freedom
+(Theorems 3′, 5′).
 
 The full row-by-row table is `results/section_moduli_331.txt` (identical at
 `p = 661`). *Row-index caveat:* the `#nn` indices in the results files are
@@ -143,7 +160,7 @@ which is prime-independent and is what the verifier compares. Compressed:
 |---|---|---|---:|---|
 | free stratum | `1` | `G` | 1 | `X`, dominant — **forced** |
 | `D_{P_σ}`, `D_{L⁻_σ}`, the central-involution line over `pt_D12` | `C2` | `D12` | 3 | `L_σ`, **onto** — **forced, unique** |
-| `C2`-rows over `V4`-, `A4`-, `D12`-, type-I centres and on `ell_V` | `C2` | `V4` | 8 | `L_σ` onto **or** one type-I vertex — **2** |
+| `C2`-rows over `V4`-, `A4`-, `D12`-, type-I centres and on `ell_V` | `C2` | `V4` | 8 | `L_σ` onto **or** one type-I vertex — **2** (five of the eight collapse to **`L_σ` onto** under coherence, Thm 3′) |
 | `C2`-rows over `C6`-centres | `C2` | `C6` | 3 | `L_σ` onto **or** one of the two `X^{C6}` points — **3** |
 | the `C2`-line in `E_{pt_D10}` | `C2` | `C2` | 1 | `L_σ` onto; a generic point of `E_σ` or of `L_σ` (1-parameter each); 9 type-I; 9 type-II; 2 `C6`-points — **23** |
 | `C3`-rows with `Stab = C6` | `C3` | `C6` | 5 | one of the two `X^{C6}` points — **2** |
@@ -247,6 +264,41 @@ external import; it does **not** cover `Z⁺`'s new divisor (§7).
 argument gives `im ⊆ L_σ`. Two constraints for two distinct involutions
 `σ ≠ σ′` of the same `V4` leave `L_σ ∩ L_{σ′}` = the single remaining vertex. ∎
 
+### Theorem 3′ (five more forced sweeps, from evaluation coherence)
+
+> Impose evaluation coherence (§15). Then **five further rows sweep in every
+> Stage-1 morphism**, so that **eight** rows sweep unconditionally:
+>
+> * the three of Theorem 3, plus
+> * `M^V_τ`, the `C2`-surface on `ℓ_V` (dim 2, 165 components, `Stab = V4`) —
+>   the corner packet's T3 centre;
+> * the two `C2`-curves over the `A4`-points (dim 1, 165 each);
+> * the two `C2`-curves over the `D12`-points with `Stab = V4` (dim 1, 165 each).
+>
+> The remaining three sweep-capable `V4`-stabilised `C2`-rows are not free
+> either: the two over the type-I `V4`-points are **locked to each other**
+> (both sweep, or both contract), and only 4 of the 2⁸ sweep-patterns on the
+> eight `V4`-stabilised `C2`-rows survive.
+
+*Proof (machine, both primes).* `D_{P_σ}` sweeps `L_σ` (Theorem 3) via some
+component of `M_{D_{P_σ}}`; §15's rigidity theorem makes the value of each of
+its 18 multi-valued children a determinate function of that component; the
+resulting joint image has 128 elements out of the 2¹⁸ that value-set
+consistency allows. Intersecting with the closure constraints of the eight
+triangle blocks leaves, for each of the five rows listed, only the sweeping
+value. `verifier.py` H11, H12. ∎
+
+### Theorem 5′ (twelve of the eighteen `V4`-rows are rigid)
+
+> Under evaluation coherence, **12 of the 18 `V4`-rows have a unique value** — a
+> single type-I vertex: the two on `ℓ_V < P_σ`, the four over `A4`-points in
+> `P_σ`, and six of the eight over `D12`-points in `P_σ` (Theorem 5 already gave
+> two of those six by pure order-0 reasoning). Only six `V4`-rows retain a
+> binary choice, and they are correlated: the twelve multi-valued `V4`-children
+> of `D_{P_σ}` realize **2** joint tuples, not 2¹².
+
+---
+
 ### Theorem 6 (the `C6` pinning = the isogeny packet's Theorem 4, on the nose)
 
 > `X^{C6}` is exactly the pair of `ρ`-fixed points of `L_t` (`C6 = ⟨t⟩ × ⟨ρ⟩`),
@@ -285,8 +337,12 @@ necessary; among the 80 rows only the `D10` row satisfies it. ∎
 
 > The only positive-dimensional images occurring in any Stage-1 morphism are
 > `X` (from the free stratum, by dominance) and the 55 lines `L_σ`. Exactly 15
-> rows *may* sweep — precisely the 15 `C2`-rows — and at least 3 *must*
-> (Theorem 3). Both extremes are realized (`verifier.py` D2, D4).
+> rows *may* sweep — precisely the 15 `C2`-rows — and at least **8** *must*:
+> three by pure order-0 reasoning (Theorem 3) and five more by evaluation
+> coherence (Theorem 3′). The maximum, 15, is realized by the witness section;
+> the minimum, 8, is realized too. **Value-set consistency alone would have
+> admitted a 3-sweep section; no such section is stratum-coherent**
+> (`verifier.py` D2, D4, H12, H14).
 
 ---
 
@@ -419,10 +475,17 @@ corrected window is left open for Stage 2.
   4 rows `→ X^{C11}`;
 * **no** stratum lands in the `E` cell; **no** stratum lands on a type-II point.
 
+The maximal-sweep witness is **evaluation-coherent** (`verifier.py` H13): for
+each of its 15 sweeping rows there is a component of that row's Layer-2 moduli
+whose evaluations reproduce the witness's values at every row below it.
+
 Two further sections are verified to exist:
 
-* a **minimal-sweep** section in which *only* the three forced rows sweep (D4);
-* a section with **no** landing on any `E_σ` (D5).
+* a section with **no** landing on any `E_σ` (D5);
+* a **minimal-sweep** section — but the minimum is **eight** rows, not three.
+  Value-set consistency alone admits a 3-sweep section (D4); evaluation
+  coherence does not (H14), because `M^V_τ`, the two `A4`-point curves and the
+  two `D12`-point curves are forced to sweep (Theorem 3′).
 
 The witness realizes the sealed local data where they apply: the sweep of
 `D_{P_σ}` is `H0-2`; the sweep of the `D12`-point line is the order-0 shadow of
@@ -511,7 +574,8 @@ No anchor failed; nothing was adjusted.
 ## 9. Verification
 
 ```sh
-python3 scripts/produce.py 331 661     # classification + tables + witness (~5 min)
+python3 scripts/produce.py 331 661            # classification + tables + witness
+python3 scripts/produce_coherence.py 331 661  # the evaluation-coherence layer
 python3 scripts/run_layer2.py <cache> results/layer2_moduli_331.txt
 python3 verifier.py                    # 47 checks per prime + exact route; ALLGREEN
 ```
@@ -533,18 +597,33 @@ python3 verifier.py                    # 47 checks per prime + exact route; ALLG
   rule; exactly 3 forced sweeps and 15 possible ones; no row dominates `E`;
   exactly one row with an `E`-cell option; no constant value for a
   `D12`-stabilized row; the `C6` pinning; the block structure
-  `9 × (3 rows, 2 values) + 1 × (18 rows, 84 values)`; the total
-  `69 686 233 329 838 325 760 000` and its factorization.
-* **D1–D5** the witness sections (0 violations; maximal, minimal, `E`-free).
+  `9 × (3 rows, 2 values) + 1 × (18 rows, 84 values)`; and the
+  **pre-coherence** total `69 686 233 329 838 325 760 000` with its
+  factorization (retained as the intermediate against which H7 measures the
+  coherence cut).
+* **D1–D5** the witness sections (0 violations; maximal, `E`-free; and D4 records
+  that arc consistency *alone* would have admitted a 3-sweep section).
 * **E1–E7** the four anchors.
 * **F1–F6** Layer 2 / Layer 3: the parity theorem in both directions; `N(d,m) > 0`
   for all odd `m ≤ d ≤ 45`; the quoted window values; **agreement between the
   mod-`p` character route and the exact `Z[ζ₆]` route**; and agreement between
   the Layer-2 `F_p` linear-algebra module dimensions and the Layer-3 character
   dimensions on the `P_σ` row (two entirely independent implementations).
+* **H1–H14** evaluation coherence (§15): **rigidity** (no evaluation span is ever
+  2-dimensional — 0 failures over every sweep row, component and child); the
+  per-chain surjectivity verdicts (exactly two fail, and they are the two dim-3
+  divisors, with images 128 of 262 144 and 64 of 128); the coherent count
+  `1 088 847 395 778 723 840 000` and its factorization; the reduction factor
+  `64 = 2⁶` against the arc-consistent count; the 51-row coupled core with
+  43 008 patterns; the coherence-immune factor and the proof that each of its
+  rows has the free stratum as its only proper parent; the fifteen newly rigid
+  rows (5 forced sweeps + 10 pinned `V4`-rows); the witness section's coherence;
+  and the non-coherence of the 3-sweep section.
 * **G1** the two primes give identical classifications.
 
-Artifacts: `results/layer1_331.json`, `results/layer1_661.json`,
+Artifacts: `results/coherence_331.json`, `results/coherence_661.json`,
+`results/coherence_331.txt`, `results/coherence_661.txt`,
+`results/layer1_331.json`, `results/layer1_661.json`,
 `results/section_moduli_331.txt`, `results/section_moduli_661.txt`,
 `results/witness_331.txt`, `results/witness_661.txt`,
 `results/layer2_moduli_331.txt`, `results/verifier_stdout.txt`.
@@ -583,16 +662,20 @@ above. What Stage 2 needs, against a *specific* section:
 ## 11. Honesty tiering
 
 **Tier 1 — complete and exact, independent of any prime.** The definition of a
-Stage-1 morphism and constraints (A1)–(A5); Theorems 1, 2, 3, 7, 8 (their proofs
+Stage-1 morphism and constraints (A1)–(A5); Theorems 1, 2, 3, 7 (their proofs
 use only rationality, the receiver dichotomy, `X^{D12} = ∅` and closure);
-Theorem 9(i) (the parity, pure character theory, exact in `Z[ζ₆]`).
+Theorem 9(i) (the parity, pure character theory, exact in `Z[ζ₆]`);
+**Theorem 15.1 (evaluation rigidity)** — a two-line character argument, no
+computation.
 
 **Tier 2 — complete over all rows, read off at two split primes (331, 661,
 both coprime to 660) and agreeing row-for-row.** The component-level rebuild of
 the census; the 145 relations; every entry of the section-moduli table; Theorems
-4, 5, 6; the block structure and the total count; the witness sections; the
-Layer-2 dimension tables; Theorem 9(ii) for `d ≤ 45` (exact in `Z[ζ₆]`, so
-Tier 1 for the listed range, but the range itself is finite).
+4, 5, 6, 8; the block structure and both counts (arc-consistent and coherent);
+the witness sections; the Layer-2 dimension tables; the per-chain surjectivity
+verdicts of §15.2 and Theorems 3′, 5′; Theorem 9(ii) for `d ≤ 45` (exact in
+`Z[ζ₆]`, so Tier 1 for the listed range, but the range itself is finite —
+§14 removes the range restriction).
 
 **Tier 3 — flagged.**
 
@@ -612,6 +695,10 @@ Tier 1 for the listed range, but the range itself is finite).
    coordinates.
 4. Anchor 3 is an order-0 consistency check with `T5`/`FIX-D2`, not a lift of
    their jets.
+4b. The coherence layer carries its own Tier-3 items — the degree bound on the
+   Layer-2 tables, the sampled generic points of `π(F_R)`, and the fact that
+   coherence is imposed stratum-locally rather than globally. They are stated
+   in §15.6 and are **the** honest limit of the new count.
 5. `N(d,m) > 0` is verified for `d ≤ 45`; we have no proof for all `d`.
 
 ---
@@ -663,3 +750,179 @@ intersection-closed by construction); it is a regression guard, not a proof.
 `c(m) = 1, −1, 0` for `m ≡ 0, 1, 2 (mod 3)`; since `C(d−m+2,2)(m+1) ≥ 2`
 for `m ≥ 1` and `ε ≤ 1`, `N(d,m) ≥ 1` for every odd `m ≤ d`. Tier 3(5) is
 withdrawn. Audit verdict: REGISTER-WITH-EDITS; all required edits applied.
+
+## 15. Coherence addendum (2026-08-10, second director correction order)
+
+### 15.1 The gap, and the repair
+
+The count of §1 as first published treated the blocks of the constraint graph as
+independent. That is right for the constraint that was imposed — **value-set**
+consistency, `im(F) ⊆ closure(im(F'))` — but every stratum-level assignment in a
+Stage-1 morphism is the *restriction of a single morphism*, and the
+stratum-local part of that coherence is stronger:
+
+> if a row `S` sweeps its line via a Layer-2 morphism `φ`, then the value at
+> every deeper row `R ⊂ cl(S)` is the **evaluation** `φ|_R`, not a free choice
+> inside `L_σ`.
+
+That is now imposed. `scripts/s1coherence.py` computes the evaluations exactly,
+two independent ways; `scripts/s1recount.py` recounts.
+
+> **Theorem 15.1 (evaluation rigidity).** Let `S` be a sweep-capable row,
+> `Γ = Stab_G(F_S)`, and let `R ⊂ cl(F_S)` be a deeper row with pointwise
+> stabilizer `H_R`. Fix a connected component `M_S(a, ψ)` of the Layer-2 moduli
+> (multidegree `a`, linear character `ψ` of `Γ`). Then `ev_R` is **constant** on
+> that component: for every `s ∈ M_S(a, ψ)`, `s(q)` lies in the single
+> `Λ`-eigenline of `W⁻_σ` of character `ψ^{-1}·∏_r μ_r^{a_r}`, where
+> `Λ = Γ ∩ H_R`, `q` is any point of `π(F_R)` and `μ_r` is the `Λ`-character on
+> its `r`-th coordinate line — or `s(q) = 0`, in which case `φ` is undefined
+> along `R` ("degenerate").
+>
+> *Proof.* `Λ` fixes `π(F_R)` pointwise, so `h·q̃_r = μ_r(h) q̃_r`. Equivariance
+> `s(h·q) = ψ(h)·h·s(q)` and multi-homogeneity give
+> `h·s(q̃) = ψ(h)^{-1}(∏_r μ_r(h)^{a_r})·s(q̃)`, so `s(q̃)` is a `Λ`-eigenvector
+> of prescribed character. `W⁻_σ|_Λ` splits into two **distinct** characters in
+> every case that occurs (`Λ ⊇ V4` or `Λ ⊇ C6`), so the eigenline is unique. ∎
+>
+> **Machine confirmation:** over all 15 sweep-capable rows, all components in
+> the computed range, and all 100 child components, the span of the evaluated
+> basis is 0- or 1-dimensional — **never 2**. 0 rigidity failures, both primes
+> (`verifier.py` H1).
+
+So the joint evaluation map `M_S → ∏_R (values of R)` is constant on each
+connected component of `M_S`; the image of the whole moduli is the *union* over
+components, and surjectivity onto the arc-consistent product is a real question.
+
+### 15.2 Task (a): the per-chain evaluation-surjectivity verdicts
+
+`results/coherence_331.txt` (identical at 661). "image" is taken over the
+multi-valued rows below the sweep row, with a degenerate child expanded over its
+full domain.
+
+| swept row | children | multi-valued | \|image\| | \|arc-consistent\| | surjective? |
+|---|---|---:|---:|---:|---|
+| `D_{P_σ}` (dim 3) | 20 rows / 54 comps | 18 | **128** | 262 144 | **NO** |
+| `D_{L⁻_σ}` (dim 3) | 7 rows / 18 comps | 7 | **64** | 128 | **NO** |
+| `pt_D12` line (`Stab D12`) | 3 rows / 8 comps | 1 | 2 | 2 | yes |
+| `pt_C6*` (`Stab C6`) | 4 | 4 | 16 | 16 | yes |
+| `pt_C6`, `pt_C6<C3line` | 2 each | 2 | 4 | 4 | yes |
+| the eight `V4`-stabilised `C2`-rows | 2 each | 2 | 1 | 1 | yes (image = the unique arc-consistent tuple) |
+| the `D10` `C2`-line | 0 | 0 | — | — | vacuous |
+
+**Two of the fifteen evaluation maps are not surjective, and they are exactly
+the two dimension-3 divisors.** The proper images are recorded explicitly in
+`results/coherence_331.json`; their structure is:
+
+* `D_{P_σ}`: the image factors as (2 joint tuples on the twelve multi-valued
+  `V4`-children) × (all 64 tuples on the six `C6`-children in `D_{P_σ}`). The
+  `V4`-part is the binding cut.
+* `D_{L⁻_σ}`: the image is exactly half of the arc-consistent product.
+
+A second, sharper cut appears at the same time and is worth recording on its
+own: **38 of the 48 computed components of `M_{D_{P_σ}}` evaluate some child
+outside its arc-consistent domain.** Those are legitimate `D12`-equivariant
+surjections `D_{P_σ} → L_σ` that **cannot be the restriction of any global
+section**. Likewise 9 of 12 for each `V4`-stabilised `C2`-row and 38 of 48 for
+`M^V_τ`. This is a cut on the Layer-2 moduli, not on the pattern count, and it
+is the sharpest thing this packet says about Layer 2.
+
+### 15.3 Task (b): the re-issued count
+
+The evaluation maps are **not** all surjective, so the number changes:
+
+```
+  arc-consistent (value-set) patterns   69 686 233 329 838 325 760 000
+  stratum-coherent patterns              1 088 847 395 778 723 840 000
+  ratio                                                 64  =  2⁶
+```
+
+with the fibered-product structure
+
+```
+  1 088 847 395 778 723 840 000
+     =  43 008          (the coupled core: 51 rows, one block)
+      x  23             (the D10 C2-line: 21 points + 2 one-parameter families)
+      x  6⁸ · 4¹⁰ · 5⁴  (the coherence-immune odd-order point rows)
+     =  2¹¹ · 21 · 23 · 6⁸ · 4¹⁰ · 5⁴ .
+```
+
+The factor removed is `2⁶`: the six `C6`-rows lying inside `D_{P_σ}` (four over
+the plus-plane `C6`-points, two over the `D12`-points) were counted as free
+singletons and are in fact tied to the `σ`-band. Fifteen further rows lose all
+freedom without changing the total (they were already correlated): five `C2`-rows
+become forced sweeps (Theorem 3′) and ten `V4`-rows become rigid (Theorem 5′).
+
+**Within-block confirmation.** Re-running the pre-coherence blocks with the
+coherence tables switched off reproduces `2 752 512 = 2⁹ · 84 · 2⁶` on the same
+51 rows, i.e. the published block counts; switching them on gives
+`43 008 = 2⁹ · 84`. The old within-block correlations are therefore confirmed,
+not revised (`verifier.py` H7, H8).
+
+### 15.4 (i) The reframing
+
+**The number counts stratum-coherent order-0 boundary patterns. It is not a
+moduli of maps, and it is not a moduli of Stage-1 morphisms-with-their-Layer-2-
+data.** Three separate things must be kept apart:
+
+1. the **boundary pattern** — which target stratum receives each source stratum,
+   and, for a constant row, which point. That is what Theorem A counts.
+2. the **Layer-2 datum** on each swept row — a point of `M_S`, a positive-
+   dimensional variety in each multidegree. §15.2 cuts this hard (most
+   components are not restrictions of any section) but does not count it.
+3. an actual **map** `P(W) ⇢ X`. Stage 2.
+
+The only further *order-0* cut available is global single-map coherence: every
+stratum lies in the closure of the free stratum, so the whole section is the
+boundary datum of **one** morphism `q̃` on `Z̃`, and the values at the deep rows
+are evaluations of `q̃` itself, not merely of the germs along the swept
+divisors. That cut is **Stage 2 by definition** — it needs the map, or at least
+its jets, and there is no order-0 surrogate for it. A `Z`-stratum whose only
+proper parent is the free stratum is untouched by anything at order 0.
+
+### 15.5 (ii) The coherence-immune factor — where Stage 2's work lives
+
+Exactly 22 rows have the free stratum as their **only** proper parent
+(`verifier.py` H10), so no sweep evaluation can ever reach them:
+
+| rows | count | values each | factor |
+|---|---:|---:|---|
+| `C3`-rows with `Stab = C3` (over the `A4`-points and their `ell_V` crossings) | 8 | 6 | `6⁸` |
+| `C5`-rows (over the `C5`- and `D10`-points) | 10 | 4 | `4¹⁰` |
+| `C11`-rows (over the `C11`-points) | 4 | 5 | `5⁴` |
+
+```
+  6⁸ · 4¹⁰ · 5⁴  =  1 100 753 141 760 000  ≈  1.1 × 10¹⁵ .
+```
+
+These are precisely the rows whose exact stabilizer has **odd order**. Their
+strata are the isolated eigen-direction points over the `A4`-, `C5`-, `D10`- and
+`C11`-centres; they lie in no `E_σ` and no `L_σ` (odd-order stabilizer), in no
+positive-dimensional stratum but the free one, and in each other's closures not
+at all. **Nothing at order 0 can pin them** — not the sweeps, not the closure
+poset, not (F2), not the window arithmetic. They are pinned only by the jets of
+an actual map at those points, i.e. by the first-order character-containment
+conditions of `[I, Lem 4.5]` and what follows.
+
+So `1.1 × 10¹⁵` is a **measurement of where Stage 2's work lives**: the order-0
+theory has, by construction, nothing to say about `6⁸ · 4¹⁰ · 5⁴` of the
+freedom, and the `D10` `C2`-line contributes a further factor 23 (including the
+two one-parameter families) for the same reason. Everything else — the entire
+`σ`-band, 51 rows — is now down to 43 008 patterns.
+
+### 15.6 Honesty on the coherence layer (Tier 3)
+
+1. **Degree bound.** The tables are computed for multidegrees up to 4 (two-slot
+   rows) / 6 (one-slot rows). Theorem 15.1 makes the *value* depend on `a` only
+   through `a mod 6` per slot, so every character class is represented; what can
+   still change with larger `a` is which children are degenerate. Empirically
+   the image of `D_{P_σ}` is constant from maxdeg 3 and that of `D_{L⁻_σ}` from
+   maxdeg 4, and **the total is unchanged at maxdeg 3, 4, 5 and 6**. We do not
+   have a proof of saturation.
+2. The identification of `π(F_R)` (the image of a child stratum in the
+   product-of-projective-spaces model of the swept row) uses the wonderful-model
+   chart form of `TERMINUS_STRATA_PW` Thm 1; generic points of `π(F_R)` are
+   sampled (four independent random points per coordinate, with the constancy of
+   the evaluation checked across them, which is exactly Theorem 15.1's assertion).
+3. The coherence layer is imposed **stratum-locally**, per swept row. Coherence
+   between two different swept rows is imposed only through the values they
+   share. Full single-map coherence is Stage 2 (§15.4).

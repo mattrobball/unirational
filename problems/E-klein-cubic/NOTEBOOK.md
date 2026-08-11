@@ -7128,24 +7128,41 @@ scratch. Sampled and flagged: global irreducibility of every crossing `D_I`.
 Classifies every morphism of decorated complexes of groups from the terminus
 complex `F(Z)` (plus the `Z⁺` order-0 delta) to the Klein cubic's complex, under
 the sealed rows, for a dominant equivariant `P(W) ⇢ X`. The section moduli is
-NONEMPTY: 69 686 233 329 838 325 760 000 order-0 classes over independent
-blocks — **Stage 1 does not close the headline.** Forced features sealed:
-three forced sweeps onto `L_σ` (strengthens H0-2; the two divisorial cases are
-model-free), type-II exclusion at all 18 `V4`-rows of `Z` with no external
+NONEMPTY — **Stage 1 does not close the headline.** Coherence revision
+(user-mandated, 2026-08-10): imposing evaluation-coherence along closure
+chains (Theorem 15.1, evaluation rigidity: sweep evaluations are constant per
+moduli component, char-0) cuts the raw arc-consistent count
+69 686 233 329 838 325 760 000 by 2⁶ to
+**1 088 847 395 778 723 840 000 stratum-coherent order-0 boundary patterns**;
+two of the fifteen sweeps (the two dim-3 divisors) are NOT evaluation-
+surjective (images 128/262144 and 64/128), the six `C6`-rows inside `D_{P_σ}`
+are pinned, and most Layer-2 components (e.g. 38 of 48 for `D_{P_σ}`) are
+legal equivariant surjections that cannot restrict from any global section.
+Forced features sealed: EIGHT forced sweeps onto `L_σ` (was three; the five
+new ones forced by coherence; the two divisorial cases are model-free;
+strengthens H0-2), twelve of eighteen `V4`-rows rigid, the two type-I
+`C2`-rows locked together (4 of 2⁸ sweep patterns survive), type-II exclusion at all 18 `V4`-rows of `Z` with no external
 import, no genus from admissible refinements, exactly one elliptic door with
 every section still meeting each `E_σ` at a type-I vertex, the `v_σ` rule with
 two pinned rows, the `C6` pinning, the image inventory (only `X` and the 55
 lines are positive-dimensional images), and the order-0 window verdict: parity
-only, `N(d,m) > 0` for all `d` (audit-strengthened closed formula). Model
+only, `N(d,m) > 0` for all `d` (audit-strengthened closed formula). The
+coherence-immune factor is exactly the 22 odd-order rows (`C3`, `C5`, `C11`;
+≈ 1.1 × 10¹⁵ plus the D10-line's 23), reachable only by jets of the actual
+map — the measured location of Stage-2's work. Model
 scope per the adversarial audit (verdict REGISTER-WITH-EDITS, edits applied,
 addendum §14): non-divisorial claims quantify over maps factoring through `Z`
 or admissible refinements (Correction I-C boundary). Correction H1-D consumed;
 stale pre-correction numbers flagged in `FIX_V_construction.md` §§1–2 and
 `HANDOFF_2026-08-06.md:55-63`.
 
-Exits: `STAGE1-COMPLEX-MAPS-CLASSIFIED`, `STAGE1-SECTION-MODULI-SEALED`,
-`STAGE1-TYPE-II-EXCLUSION-ON-Z`, `STAGE1-THREE-FORCED-SWEEPS`,
-`STAGE1-NO-GENUS-BUYING-ADMISSIBLE`, `STAGE1-WITNESS-SECTION-VERIFIED`,
-`TERMINUS-CENSUS-INDEPENDENTLY-REPRODUCED`, `STAGE1-ORDER0-WINDOW-PARITY-ONLY`.
-Markers: `STAGE1_COMPLEX_MAPS_VERIFY_OK` / `ALLGREEN` (95 checks; director
-replay + independent adversarial audit).
+Exits: `STAGE1-COMPLEX-MAPS-CLASSIFIED`, `STAGE1-BOUNDARY-PATTERNS-SEALED`,
+`STAGE1-EVALUATION-RIGIDITY`, `STAGE1-TYPE-II-EXCLUSION-ON-Z`,
+`STAGE1-EIGHT-FORCED-SWEEPS`, `STAGE1-NO-GENUS-BUYING-ADMISSIBLE`,
+`STAGE1-WITNESS-SECTION-VERIFIED`, `TERMINUS-CENSUS-INDEPENDENTLY-REPRODUCED`,
+`STAGE1-ORDER0-WINDOW-PARITY-ONLY`, `STAGE1-COHERENCE-IMMUNE-FACTOR-ISOLATED`.
+(`STAGE1-SECTION-MODULI-SEALED` and `STAGE1-THREE-FORCED-SWEEPS` renamed by the
+coherence revision; the pre-coherence count is retained in the packet as the
+arc-consistent intermediate.) Markers: `STAGE1_COMPLEX_MAPS_VERIFY_OK` /
+`ALLGREEN` (123 checks incl. the 14-check coherence series; director replay +
+independent adversarial audit + user-mandated coherence revision).
