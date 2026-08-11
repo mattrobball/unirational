@@ -285,3 +285,33 @@ cross-prime; **E** ≥ 20 random dead branches and EVERY survivor.
    1754 checks, 0 failures, both primes
    (`PAIR_ATTACK_D35_VERIFY_OK` / `ALLGREEN`); replay log archived at
    `results/replay_director_stdout.txt`.
+
+## 11. Director addendum (2026-08-11, same day): the value layer, engaged
+
+Supersedes the deferral recorded in §3.2/§10.3. The director derived the
+frame alignment and imposed the value layer directly; full plain-language
+account and check instructions in `WORKED_EXAMPLE.md`; script
+`scripts/director_worked_example.py`; results
+`results/worked_example_p{331,661}.json`. Summary, identical at both
+primes:
+
+1. The six forced flips have rank 2 on the 39-dim slice: every live cell
+   is at most 37-dimensional. (Anchors: 3 822 rigidity zeros; 702 profile
+   zeros; ambient rank exactly 2 = the sealed ODDZERO corank.)
+2. Pattern 0 imposed end to end (rid-1 row): its flip demands cut to 36;
+   ALL its keep demands fail identically — DEAD.
+3. Pattern-independent: at 14 of the 18 value-defined rid-1 rows the
+   level-0 reading vanishes identically on the slice — keeping is
+   impossible there for every candidate.
+4. Census over all 756 stored patterns: 336 dead by multidegree (§3),
+   420 dead by impossible keeps, **0 alive at this layer**.
+
+**FLAGGED, NOT CLAIMED** (campaign rule §G): the all-dead census is
+window-closure-adjacent. Promotion gate: an ODDZERO-standard adversarial
+audit that (a) repairs the tagged-table nondeterminism this work exposed
+(pattern-to-demand linkage must be by content, not index — the defect is
+recorded in `WORKED_EXAMPLE.md` §4.1), (b) independently rebuilds the
+14-row vanishing table, and (c) rebuilds the blueprint enumeration with
+the forced-deeper rows imposed, deciding whether deeper coherent patterns
+exist at d = 35 or the window closes. The headline stays: Problem E
+remains OPEN; no degree is excluded by this packet.
