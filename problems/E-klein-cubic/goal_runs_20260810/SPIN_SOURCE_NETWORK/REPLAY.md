@@ -500,3 +500,87 @@ only, self-contained.
 A failing assertion is printed with its name and the script exits `1` with
 `TOTAL_DEGENERATION_FAILED` / `O3_ODD_ORDER_FAILED` / `MIN_DEGREE_FAILED`
 instead of the marker.
+
+---
+
+## Residuals campaign layer (2026-08-11)
+
+```text
+python3 verify_r0_dependency.py     -> R0_DEPENDENCY_OK      (323 assertions)
+python3 verify_r1_degeneration.py   -> R1_DEGENERATION_OK    (117 assertions)
+python3 verify_r2_covers.py         -> R2_COVERS_OK          (179 assertions)
+python3 verify_r3_cm.py             -> R3_CM_OK              ( 90 assertions)
+```
+
+All four run in well under a second, Python 3 standard library only, exact
+integer / `Fraction` / cyclotomic arithmetic, no sampling and no modular
+reduction.  `verify_r0_dependency.py` is self-contained and the other three
+import its cyclotomic engine and metacyclic character-table builder, so the
+arithmetic layer is self-tested once and shared.
+
+`verify_r0_dependency.py` (`DEPENDENCY_MAP.md`):
+
+* Section A builds `Z[zeta_N]` from `Phi_N` by exact integer polynomial
+  division and self-tests it (degree `= phi(N)`, `Phi_N | x^N-1`, the root
+  sum, conjugation).
+* Section B validates the `PSL(2,11)` class data from scratch (class sizes
+  summing to 660, the order profile reconstructed from the 55 nonsplit tori,
+  66 split tori and 12 Sylow 11-subgroups) and `chi_T` against
+  `<chi_T,chi_T> = 2`, `<chi_T,1> = 0`, and Lefschetz at orders 2 and 11.
+* Section C builds `Irr(H)` for every `H in Sigma_spin` and for `D_12` by
+  Clifford theory from `H = C_m x| C_k`, validating each table by
+  orthonormality, `sum d^2 = |H|` and the regular character.
+* Section D recomputes every `Res_H T`, `dim T^H`, floor `k(H)` and dead
+  channel — an independent code path reproducing
+  `verify_spin_hodge_census.py` and `verify_total_degeneration.py`.
+* Section E checks the perverse ledger and Proposition D2 for `n = 5..12`.
+* Section F computes the closure of the dependency table under `{R1,R2,R3}`
+  rather than asserting it.
+
+`verify_r1_degeneration.py` (`R1_TOTAL_DEGENERATION.md`):
+
+* Section A computes the arc-limit set of `[u^2 : v]` at the origin over an
+  exact rational grid and the initial map, exhibiting total degeneration with
+  a constant initial map.
+* Section B expands `(dL - Xi)^k L^{5-k}` symbolically under the vanishing
+  table `L^{5-j}Xi^j = 0` for `j + b < 5`, giving `14 delta_F = d^3` at
+  `b = 1`, the divisibility `14 | d`, the low-degree window and three
+  regressions (linear projection, four quadrics, the ambient `n = 5` case).
+* Section C is the `F_55` representation theory: quadratic residues, the
+  duality `theta_1^* = theta_2`, `Res_{F_55}M^* = theta_1 (+) theta_2`, and
+  the `C_11`-weight multiplicities of `S^k(theta_1^*)`.
+* Section D is the `C_11` eigen-point bookkeeping in `P(M)` and on `V14`.
+* Section E audits going-down: every abelian subgroup of every occurring
+  stabiliser has nonempty fixed locus on the `V14`.
+
+`verify_r2_covers.py` (`R2_AMPLE_COVERS.md`):
+
+* Section A: index one, degree 14, the anticanonical Hilbert function
+  (`h^0(-K) = 10`, `h^0(-2K) = 40`, so exactly 15 quadrics through `V14` —
+  the Pluecker quadrics), genus 8, and adjunction for `Z in |kH|`.
+* Section B: the cyclic-cover ledger `q(Y) = sum_i h^1(-iL)` term by term,
+  with the positivity of `K_Z + iL` checked numerically for `k = 1,2,3` and
+  `e = 1,2,3`.
+* Section C: linear characters in `Res_H M^*` for every `H in Sigma_spin` —
+  `F_55` has none, so no `F_55`-stable hyperplane section exists.
+* Section D: `(S^2M)^{C_11}` is 5-dimensional and is the regular
+  `C_5`-representation, so `k = 2` is not excluded at `F_55`.
+* Sections E, F: the `Cor S4` floors, and the linear-system count that rules
+  out a 16-nodal member of `|H|`.
+
+`verify_r3_cm.py` (`R3_CM_RIGIDITY.md`):
+
+* Section A: the CM-type period domain is finite (`2^g` types).
+* Section B: exact search for algebraic integers of norm one in
+  `Q(sqrt(-11))` (only `+-1`), plus Hilbert-90 witnesses showing the
+  integral-structure hypothesis is load-bearing.
+* Section C: Hurwitz for `E -> E/[-1]`, the Euler characteristic of `j_*L`,
+  and `h^1 = 2 = dim H^1(E_{-11})`.
+* Section D: the cross-ratio identity `lambda = ((a-b)/(a+b))^2` for
+  `C_2`-stable configurations, verified on exact rational samples, and the
+  degree-six equation `j(lambda) = -32768`.
+* Section E: the nonzero `Hom`, and that the proposed reduction lands on
+  `FRONTIER-1`.
+
+A failing assertion prints its name and the script exits `1` without its
+marker.
