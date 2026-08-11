@@ -29,6 +29,7 @@ Exit 0 = resolved, nonzero = leave it to a human (then: run reconcile.py).
 
 from __future__ import annotations
 
+import os
 import subprocess
 import sys
 import tempfile
@@ -110,16 +111,35 @@ def part_order(name: str) -> tuple[int, str]:
     return (0 if name.startswith(SECTIONS_DIRNAME + "/") else 1, name)
 
 
+def other_head(head: str | None) -> str | None:
+    """The revision being merged in.
+
+    `.git/MERGE_HEAD` does not exist yet while merge drivers run, so the
+    primary source is git's own `GITHEAD_<sha>=<name>` environment, which the
+    merge machinery sets for each head it is merging. The refs are fallbacks
+    for rebase/cherry-pick and for older git.
+    """
+    candidates = {k[len("GITHEAD_"):] for k in os.environ
+                  if k.startswith("GITHEAD_")}
+    candidates.discard(head or "")
+    if len(candidates) == 1:
+        return candidates.pop()
+    for alt in ("MERGE_HEAD", "REBASE_HEAD", "CHERRY_PICK_HEAD", "REVERT_HEAD"):
+        r = rev(alt)
+        if r:
+            return r
+    if len(candidates) > 1:
+        raise RuntimeError(f"octopus merge ({len(candidates)} heads) is not "
+                           f"supported by the notebook merge driver")
+    return None
+
+
 def merged_parts(pathname: str) -> list[tuple[str, str]]:
     prefix = source_prefix(pathname)
-    head, other = rev("HEAD"), rev("MERGE_HEAD")
-    if other is None:
-        for alt in ("REBASE_HEAD", "CHERRY_PICK_HEAD", "REVERT_HEAD"):
-            other = rev(alt)
-            if other:
-                break
+    head = rev("HEAD")
+    other = other_head(head)
     if head is None or other is None:
-        raise RuntimeError("no HEAD/MERGE_HEAD pair to merge sources from")
+        raise RuntimeError("could not identify the revision being merged in")
     base = subprocess.run(["git", "merge-base", head, other],
                           capture_output=True, text=True).stdout.strip() or None
 

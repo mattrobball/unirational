@@ -24,6 +24,7 @@ not have it yet.
 from __future__ import annotations
 
 import argparse
+import os
 import subprocess
 import sys
 from pathlib import Path
@@ -43,6 +44,8 @@ def git(*args: str, check: bool = True) -> subprocess.CompletedProcess:
 
 
 def ensure_merge_driver() -> None:
+    if os.environ.get("NOTEBOOK_SKIP_DRIVER_SETUP"):
+        return
     r = git("config", "--get", "merge.notebook.driver", check=False)
     if r.returncode == 0 and r.stdout.strip():
         return
