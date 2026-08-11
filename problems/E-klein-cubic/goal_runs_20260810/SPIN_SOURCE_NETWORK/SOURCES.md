@@ -64,3 +64,33 @@ PARI was used or needed: the permitted envelope (exact character theory and
 exact linear algebra in dimension `<= 12`) covers the entire computation,
 because the integral model `Ind_B^{SL(2,q)}(chi)` has dimension `q+1 <= 12`
 for `q in {7, 11}`.
+
+---
+
+## Added 2026-08-10 — the ported Hodge-support obstruction
+
+| source | what is taken from it |
+|---|---|
+| `goal_runs_20260810/AMBIENT_HODGE_REES_BRIDGE/THEOREM.md`, `AMBIENT_SUPPORT.md`, `ADVERSARIAL_TESTS.md` | the whole construction being ported: the normalized graph, Theorem A (canonical pure lift), Theorem B (canonical proper strict support, (AHS)), Cor C and its non-claim, the weight-one abelian factor, and every boundary (no canonical splitting, no Chow projectors, point supports and local systems allowed).  Exit `AMBIENT-HODGE-SUPPORT-PROVED` |
+| same, `SOURCES.md` | Saito (Hodge modules), de Cataldo--Migliorini (decomposition theorem, perverse filtration), Hanamura--Saito (middle-weight injection), AKMW (weak factorization) — the external stack is inherited unchanged |
+| `goal_runs_20260810/RT_SPLIT_AND_DICHOTOMY/THEOREM_POINT_SUPPORT.md` | the point-support channel (`j_0` forced, fibre-cohomology characterization), reproduced here as the `n = 5` regression of Prop S5 |
+| same, `DEGREE_ACCOUNTING.md` | the refined-Bezout capacity template, redone on `P^{n-1}` in `SUPPORT_CENSUS.md` §3 and reproduced exactly at `n = 5` as a regression |
+| same, `THEOREM_RESTRICTED_DICHOTOMY.md` §4 | `End_{G-HS}(V) = Q(sqrt(-11))` and the maximal-order commutant on the Klein side |
+| `certificates/hodge_centers/HODGE_CENTER_NECESSITY.md`, `character_screen.json` | SEALED `chi_W = (5, A, Abar, 1, -1, 1, 0, 0)` and `H^{2,1}(X) = W^*`; exit `WP_H1_HODGE_VERIFY_OK`.  This is the only external ingredient of Theorem S0 besides the seal |
+| `goals_2026-08-01/D_EQUIVARIANT_MOTIVE/TARGET_INVARIANTS.md` | SEALED `b(X) = (1,0,1,10,1,0,1)`, `h^{2,1} = 5`; exit `D-INVARIANT-REPRODUCIBLE` |
+| `theory/FIX_VII_carrier.md` §1 Lemma 1 | the Auto-CM Lemma, applied to `T` in Theorem S0(2) |
+| `goals_2026-08-01/J_FIXED_CENTRE_PRYM/HODGE_ISOGENY.md` §§80-92 | `j(E_t) = 8192/11` non-CM, `Hom(E_t, E_{-11}) = 0`, `j(E_{-11}) = -32768` |
+| `goal_runs_after_576ad77/FIX_VI_PRYM_SEAL/REPORT.md`, `goal_runs_20260810/PHI_SEXTIC_ISOGENY/REPORT.md` | `j(E_sigma) = 8192/11` on the `V14` side, two independent constructions |
+| `REPAIR.md` §8 | the corrected relatively-ample split injection, run here at relative dimension `e = n-4 >= 2` |
+| `certificates/schur_krylov/orbit_code.g`, `.json` | GAP-certified irreducible degrees `{1,5,5,10,10,11,12,12}` of `PSL(2,11)` |
+
+**Literature values used and flagged, not sealed in-repo:** `b_3(V14) = 10`,
+`h^{2,1}(V14) = 5`, `rho(V14) = 1`, `b_1(V14) = 0` (Iskovskikh; prime Fano
+threefold of genus 8, index 1).  These are the same values
+`MULTIPLICITY_ROUTE.md` §5 flags.  Sealing `b_3(V14)` in-repo would leave
+Theorem S0 with no cited input at all.
+
+**Explicitly NOT used:** the Tschinkel--Zhang equivalence, in either
+direction, for the identification of `T`.  It is only twisted-stable, and
+[BCDP23] Thm 4.3 (cited in `FIX_IX_v14.md` §2) rules out a plain
+`G`-birational map between the twins.

@@ -26,6 +26,10 @@ V14-S3-D10-MEASUREMENT-OK       (2026-08-10)
 SPIN-MULTIPLICITY-REFUTED       (2026-08-10)
 SPIN-LINKING-LEMMA-FALSE        (2026-08-10)
 D10-FIXED-POINT-ROUTE-DEAD      (2026-08-10)
+
+SPIN-HODGE-SUPPORT-PROVED           (2026-08-10)
+SPIN-SUPPORT-CENSUS-TABLED          (2026-08-10)
+SPIN-HODGE-SUPPORT-ESCAPE-UNDECIDED (2026-08-10)
 ```
 
 `SPIN-CHAIN-OBSTRUCTION-PROVED` is **NOT** claimed. The chain system does not
@@ -119,3 +123,34 @@ wherever they are stated to (Cor 2.3, Thms 4.1, 5.1, 5.2 are
 multiplicity-free); where a statement is specific to the multiplicity-free
 source `U`, that is said explicitly (Thm 7.3, K5, F4), and Thm 7.4 records
 that killing `P(U)` alone is **not** the headline.
+
+---
+
+## Added 2026-08-10 — the non-fixed-point invariant: Hodge support
+
+The fixed-point flank is exhausted (Cor N4 above).  The one non-fixed-point
+invariant the repository owns — the ambient normalized-graph Hodge-support
+theorem of `goal_runs_20260810/AMBIENT_HODGE_REES_BRIDGE/` — has now been
+**ported to spin sources and onto the `V14`**:
+
+* `THEOREM_SPIN_HODGE_SUPPORT.md` — Theorems S0-S3, Corollaries S4-S6.
+  Exit `SPIN-HODGE-SUPPORT-PROVED`.
+* `SUPPORT_CENSUS.md` — the exact 18-cell admissible-support table, five
+  boxed OPEN families.  Exit `SPIN-SUPPORT-CENSUS-TABLED`.
+* `verify_spin_hodge_census.py` — `SPIN_HODGE_CENSUS_OK`, 206 exact
+  assertions, ~30 s, stdlib only.
+* `ADVERSARIAL_TESTS.md` §§S1-S10, including the MANDATORY `D_12` test
+  (PASSED) against Cor IX.6.
+
+**What is new.**  `T = H^3(V14,Q)(1)` is identified for the first time
+(`T = W_Q`, `End_G = Q(sqrt(-11))`, `J(V14) ~ E_{-11}^5`) from sealed data
+plus one Lefschetz count — *not* by transport across Tschinkel--Zhang, which
+would have been invalid.  The obstruction survives the fixed-point exhaustion
+by construction: it lives on the normalized graph of `phi`, which equivariant
+blowups of the source do not change.
+
+**What is not.**  No census cell dies for all degrees and all spin sources,
+so the headline consequence chain of Cor IX.5 is **not** triggered.  Problem
+E's spin flank remains **OPEN**, now with a non-fixed-point invariant, an
+exact necessary condition, and five boxed OPEN cells instead of no named
+route.

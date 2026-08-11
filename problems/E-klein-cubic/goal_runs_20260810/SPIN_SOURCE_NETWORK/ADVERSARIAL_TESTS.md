@@ -192,3 +192,200 @@ is recorded here as unsupported. `V14^{C_6}` is decidable by one run of
 `verify_v14_s3_d10.py`'s machinery: `M|_{C_6}` has character multiplicities
 `(2,1,2,2,2,1)`, so the pieces are one `P^1` per multiplicity-2 character and
 one point per multiplicity-1 character.
+
+---
+
+# Adversarial tests — the ported Hodge-support obstruction (2026-08-10)
+
+Tests against `THEOREM_SPIN_HODGE_SUPPORT.md` and `SUPPORT_CENSUS.md`.  The
+standing risks here are the mirror image of the ones above: this packet proves
+a *positive* necessary condition and then a census with DEAD cells, so the
+danger is (i) contradicting the realised `D_12` map of Cor IX.6, (ii) porting
+a proof step whose hypothesis silently fails on a spin source, and (iii)
+asserting an identification of the target Hodge structure that the repository
+has not earned.  All three are tested.
+
+## S1. The MANDATORY `D_12` test — PASSED
+
+**Requirement.**  Cor IX.6 (`FIX_IX_v14.md` §7) proves the `V14` **is**
+`D_12`-spin-unirational: a dominant `D_12`-equivariant map from a spin source
+exists.  The ported theorem applied with `G := D_12` must be *satisfiable* by
+that map, and the census must leave the cells it occupies OPEN.
+
+**Which cells it can occupy.**  `Res_{D_12} T = 2.(1(x)triv) (+) 2.(1(x)std)
+(+) 2.(eps(x)std)` (verifier §D, §I).  All three channels have multiplicity
+`2`; the census marks **none** of them DEAD.  The map may therefore run
+through a free `D_12`-orbit of supports (`H = 1`, cell O1), through an
+`S_3`-point support (`D_12` does contain two `S_3`s, so it does see the
+`S_3` layer of the 352 — the correction already recorded in §A1 above), or
+through an eigenplane-curve support with `H <= C_6`.  Every one of these is
+OPEN.
+
+**Three ways this test could have failed, and did not.**
+
+1. *Irreducibility.*  The unique-jump step of Theorem S3(2) needs `T`
+   irreducible over `Q` as a `G`-module.  At `G := D_12` that hypothesis is
+   **false** (`Res_{D_12}T` has three distinct isotypic pieces), so the
+   theorem correctly weakens to "some isotypic piece jumps somewhere and
+   projects to a proper support".  Had the packet asserted a unique jump at
+   every level, it would have been wrong.  Recorded explicitly in §I.
+2. *The sign kill.*  Theorem C4 kills the `S_3`-sign channel.  That kill is a
+   restriction of `T` to `S_3` and is therefore *also* in force at `D_12`
+   level.  It is consistent because the realised map simply does not use that
+   channel; `Res_{S_3}T` still has `2.triv (+) 4.std` available.  A kill that
+   had emptied `Res_{S_3}T` would have refuted Cor IX.6 and would have been
+   wrong.
+3. *The degree-parity theorem.*  Theorem C6 ("`d` is even") is proved from
+   `Gtilde` perfect.  At `D_12` level the relevant group is the dicyclic
+   preimage `D_12tilde` of order 24, which is **not** perfect — so the proof
+   does not restrict.  But `-I in [D_12tilde, D_12tilde]` (verified, order 6),
+   so every linear character of `D_12tilde` is trivial on `-I` and the parity
+   conclusion survives verbatim at `D_12` level too.  No contradiction either
+   way.  For contrast, at a spin-**admissible** level such as `S_3` the
+   preimage `Q_12` does have spin linear characters and the parity argument
+   genuinely fails there — checked, so that the theorem's scope is exactly
+   recorded.
+
+**What the full-`G` question adds that `D_12` cannot see.**  `D_12` contains
+no `D_10`, `C_5`, `C_11` or `F_55` (verified: its subgroups are
+`1, C_2, C_3, C_6, V_4, S_3, D_12`).  So the cells `P3, P6, P7, P8` — in
+particular the two sharpest ones, `C_11` and `F_55`, where `Res_H T` is
+`Q`-irreducible and a single support must carry all five `E_{-11}` copies —
+are invisible at `D_12` level.  So are the orbit-size and capacity rows,
+whose whole content is that a `G`-orbit has 660 or 110 or 66 members.
+**PASS**, and informative in the same sense as §A1: the realised map is
+positive evidence that the obstruction, if it exists, must live in exactly
+those `D_12`-invisible cells.
+
+## S2. Does the census prove too much? — NO, by construction
+
+No cell is DEAD for all spin sources and all degrees (verifier §H asserts
+this).  Five positive-dimensional cells (`S4`-`S8`) are DEAD for the
+multiplicity-free source `U` only, because the corresponding fixed loci of
+`P(U)` are finite; they revive at `m >= 2` (Lemma M0), and this is stated in
+the table rather than swept into a uniform claim.  The eight cross-cutting
+kills are all conditional on a channel, a fibre dimension, an orbit size or a
+degree, never on "there is no support".  `SPIN-SUPPORT-CENSUS-CLOSED` is
+**not** claimed and the headline consequence chain is **not** triggered.
+
+## S3. Is the identification of `T` circular, or smuggled through
+Tschinkel--Zhang? — NO
+
+**Risk.**  The obvious way to get `H^3(V14)` is to transport `H^3(X)` across
+the twin equivalence.  That would be wrong twice: the T-Z equivalence is
+*twisted-stable*, not birational ([BCDP23] Thm 4.3 proves both threefolds
+birationally rigid), and even a stable birational equivalence changes `H^3`
+by `H^1` of blowup centres under weak factorization.
+
+**What is actually used.**  Theorem S0 uses (a) the literature Hodge numbers
+of a prime Fano threefold of genus 8, flagged; (b) the *sealed* Klein
+character value `chi_W(sigma) = 1`; (c) the *sealed* `V14^sigma` = genus-one
+sextic `| |` two points, i.e. `chi_top = 2`; and (d) topological Lefschetz.
+No T-Z, no birational transport.  The Klein side enters only through the
+character table of `PSL(2,11)`, which is group theory.
+
+**Independent corroboration.**  `chi_T(11) = -1` predicts
+`chi_top(V14^{C_11}) = 5`, and `FIX_IX_v14.md` §8 records `V14^{C_11}` = 5
+points.  This is a second, independent agreement beyond the `sigma` datum
+that fixed the identification — and it also re-derives, with no slack, the
+`V14^{C_11} != empty` that `MULTIPLICITY_ROUTE.md` §5 could only get from a
+Lefschetz *congruence* using the flagged literature `b_3`.
+
+## S4. Falsifiable predictions — REGISTERED, not yet tested
+
+`chi_top(V14^g) = 4 - chi_T(o)` for `g` of order `o` gives
+
+```text
+o =  2 :  2     SEALED, agrees
+o =  3 :  6     NOT measured
+o =  5 :  4     NOT measured
+o =  6 :  2     NOT measured
+o = 11 :  5     recorded in FIX_IX_v14.md sec.8, agrees
+```
+
+The rejected alternative (`H^3(V14,Q) = 10'`, the discrete series that shares
+`chi(sigma) = 2` and `chi(11) = -1` with `T` and is therefore the only near
+miss) predicts `3` at `o = 3` and `5` at `o = 6`.  So the `o = 3` and `o = 6`
+rows are a **sharp two-sided test** of Theorem S0, decidable by one run of
+`verify_v14_s3_d10.py`'s machinery (`M|_{C_6}` has character multiplicities
+`(2,1,2,2,2,1)`; `M|_{C_3}` is equally explicit).  A disagreement would
+refute Theorem S0 — but note Step 1 of its proof already excludes `10'` on
+purely Hodge-theoretic grounds (`H^{2,1}` is a `G`-stable 5-dimensional
+subspace, so `H^3 (x) C` cannot be irreducible), so a disagreement would more
+likely indict the literature Hodge numbers.
+
+## S5. Does the fixed-point destructibility of Thm N3 destroy the Hodge
+support too? — NO, and this is the whole point
+
+**Risk.**  `MULTIPLICITY_ROUTE.md` Thm N3 exhibits an explicit `G`-invariant
+centre making `X_0^{D_10} = empty`; if the same move could destroy a Hodge
+support block, the port would be vacuous.
+
+**Outcome.**  It cannot.  `Y`, `alpha_phi`, the perverse filtration for `p`
+and the strict-support package are attached to the **normalized graph of
+`phi`**, not to any chosen resolution; blowing up further changes none of
+them (`AMBIENT_SUPPORT.md` §10, Test 2 of the ambient packet, both of which
+port unchanged because they use only properness and normality).  Thm N3
+changes the birational model of the source; it does not change `I_phi`, hence
+not `Y`.  **This is precisely why the invariant survives the exhaustion
+recorded in Cor N4** — it is not of fixed-point type.
+
+## S6. The `n = 5` regression — PASSED
+
+Every formula is checked against the ambient packet at `n = 5`
+(verifier §F, §G): the point-support degree `j_0 = -1`
+(`THEOREM_POINT_SUPPORT.md` (2.1)), the classical channels `(s,j_0) =
+(1,-1)` and `(2,0)` (`AMBIENT_SUPPORT.md` §8), the refinement exponent
+`s-1-j_0` in (2.7) of `THEOREM.md`, and the whole orbit-size/degree cell
+table of `DEGREE_ACCOUNTING.md` §3.  All reproduce exactly.  Where the `n = 6`
+answer differs (point supports at `j_0 = -2`, a threefold support channel that
+does not exist at `n = 5`), that is a genuine consequence of `dim P(V) = 5`,
+not a transcription error.
+
+## S7. Does the two-dimensional generic fibre break `q^*` injectivity? — NO
+
+**Risk flagged in the brief.**  On `P^4 --> X` the landing morphism has
+one-dimensional generic fibres; on `P(V) --> V14` it has `e = n-4 >= 2`.
+
+**Outcome.**  The relatively-ample splitting is
+`s(beta) = N^{-1} g_*(eta^e cup beta)` with
+`N = deg(eta^e|_F) > 0`, and the projection formula
+`g_*(eta^e cup g^*alpha) = g_*(eta^e) cup alpha` holds for every `e >= 0`.
+Nothing in it wants `g` generically finite, flat or equidimensional.  What
+does **not** port is the *restricted*-graph statement (`THEOREM.md` Thm D),
+whose proof uses generic finiteness and a trace identity; that theorem is not
+used anywhere in this packet, and no restricted transfer is claimed.
+
+## S8. Does the sign-channel kill contradict Theorem V1? — NO
+
+Thm V1 says the `D_10` sign point `s_x` of `Bl_x P(U)` is forced base locus.
+Theorem C4 says a *sign-isotypic* point-supported Hodge block at `x` carries
+no `T`-projection.  These are statements about different objects (a fixed
+point of a blowup versus a strict-support summand of `Rp_*IC_Y^H`) and there
+is no tension: the census conclusion is that the direction the fixed-point
+analysis pinned is exactly the direction the Hodge obstruction cannot exploit.
+That is a limitation of the Hodge route at those points, recorded as such, not
+a contradiction.
+
+## S9. Correction recorded: the spin block of `SL(2,11)`
+
+`MULTIPLICITY_ROUTE.md` §7 lists the faithful spin irreducibles as
+"`6, 6, 10, 10, 12`".  The correct list is `6, 6, 10, 10, 10, 12, 12`
+(two Weil reps; three discrete series of degree `q-1 = 10`, from the
+characters of `C_12` of order 4 or 12; two principal series of degree
+`q+1 = 12`, from the characters of `C_10` of order 10), and
+`36+36+100+100+100+144+144 = 660 = 1320 - 660`.  Nothing in that file depends
+on the list — its statements quantify over `U^{(+)m}` — but the "all faithful
+spin sources" quantifier is one irreducible wider than recorded, and cell
+`(O5)` of the census reflects that.
+
+## S10. Is anything here a fixed-point statement in disguise? — NO
+
+Audited step by step.  Theorem S1 is a projection-formula identity; S2 is
+weight strictness plus Hanamura--Saito; S3 is `H^3(P^{n-1}) = 0` plus the
+decomposition theorem; S4-S6 are Hodge-structure and stalk-degree arithmetic.
+The only inputs that mention fixed loci are the *measured* ones used to
+populate the census (the 110 eigenplanes, the 352 points, `V14^{D_10} =
+empty`), and they are used to enumerate cells, never to derive the
+obstruction.  No Chow projector, no canonical splitting, no "every stratum
+stays RCC" claim, no chain argument.

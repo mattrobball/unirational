@@ -209,3 +209,95 @@ C_11` all have nonempty fixed loci on `P(U)`.
 
 A failing assertion is printed with its name and the script exits `1` with
 `SPIN_MULTIPLICITY_FAILED` instead of the marker.
+
+---
+
+# Replay — the ported Hodge-support obstruction and its census (added 2026-08-10)
+
+From this directory:
+
+```text
+python3 verify_spin_hodge_census.py
+```
+
+Final marker:
+
+```text
+SPIN_HODGE_CENSUS_OK
+```
+
+Runtime about 30 s on one core, 206 assertions.  Python 3 standard library
+only (`fractions`, `itertools`).  Self-contained: it does **not** import
+`spin_network_lib`, and it builds `SL(2,F_11)` from `2x2` matrices mod 11.
+No Macaulay2, no msolve, no network access, no data files.
+
+## What it asserts
+
+Section A, the group layer, from scratch:
+
+* `|SL(2,11)| = 1320`, `-I` its unique involution, `|PSL(2,11)| = 660` and
+  the projective order profile `(1,55,110,264,110,120)`;
+* the **whole subgroup lattice** recomputed by cyclic extension from one
+  representative of each cyclic class: 620 subgroups in 16 conjugacy classes
+  and 14 isomorphism types, matching Dickson — in particular `S_3` and `A_5`
+  each falling in two `G`-classes, as `V14_S3_D10_MEASUREMENT.md` §1 records.
+
+Section B, the spin layer: for a representative of every one of the 16
+classes, the derived subgroup of its `SL(2,11)`-preimage, and the verdict
+`-I in [Htilde,Htilde]?`.  Result:
+`Sigma_spin = {1, C_2, C_3, C_5, C_6, C_11, S_3, D_10, F_55}` can fix a point
+of a faithful spin source and `{V_4, A_4, A_5, D_12, G}` cannot, with
+`|[Htilde,Htilde]| = 2, 8, 120, 6, 1320`.  Hence the point-support orbit
+sizes are exactly `{12, 60, 66, 110, 132, 220, 330, 660}` and **11 and 55 are
+impossible**.
+
+Section B', the support-stabiliser classification: `N_G(H_0)` for every
+`H_0 in Sigma_spin`, and the full list of `H` with `H_0` normal in `H` and
+`H <= N_G(H_0)`; dually, the possible pointwise kernels of a spin-blocked
+setwise stabiliser (`A_4`, `A_5`, `G` force `H_0 = 1`).
+
+Section C, the character layer: `<chi_W, chi_W> = 1` from the sealed
+5-dimensional Klein character, `chi_T = (10,2,-2,0,2,-1)` on element orders,
+`<chi_T,chi_T> = 2`, `<chi_T,1> = 0`, and `<chi_T, chi_{10}> =
+<chi_T, chi_{10'}> = 0` — so `T` is the third rational 10-dimensional
+irreducible and is **not** the `10'` that carries the sealed `V14`-model.
+
+Section D, the restriction layer: `Res_H T` for all fourteen isomorphism
+types, computed from **order-summed** character tables `s(psi,o) =
+sum_{ord h = o} psi(h)` (integers, because Galois permutes the elements of a
+given order).  Each table self-validates against three exact identities —
+`sum psi(1)^2 = |H|`, `sum_psi psi(1) s(psi,o) = |H| delta_{o,1}`, and
+`sum_psi s(psi,o) s(psi,o') = delta_{oo'} |H| n_o` — **before** any
+multiplicity is read, and every multiplicity is asserted to be a nonnegative
+integer summing to `dim T = 10`.  The corollaries: sign multiplicity `0` in
+`Res_{S_3}T` and `Res_{D_10}T`, `psi_3` multiplicity `0` in `Res_{C_6}T`, no
+invariants and `Q`-irreducibility for `C_11` and `F_55`, and
+`Res_{D_12}T = 2.(1(x)triv) (+) 2.(1(x)std) (+) 2.(eps(x)std)`.
+
+Section E, the target layer: the Lefschetz identification of `T` on the
+`V14` — `chi_top(V14) = -6`, the three candidates for `H^{2,1}` in dimension
+5, the sealed `chi_top(V14^sigma) = 2` selecting `W`/`Wbar`, and the five
+fixed-locus Euler-characteristic predictions `(2,6,4,2,5)` at orders
+`(2,3,5,6,11)`, two of which reproduce known values.
+
+Section F, the perverse ledger: `i = s+4-n-j_0`, the `n = 5` regression
+against `THEOREM_POINT_SUPPORT.md` and `AMBIENT_SUPPORT.md` §8, the new
+`n = 6` values, and the point-support stalk-degree identity
+`j_0 + dim Y = 3` forcing `dim Y_x >= 2`.
+
+Section G, the degree layer: the parity statement and the refined-Bezout
+capacity table on `P^{n-1}` for all admissible orbit sizes, plus a regression
+that reproduces `DEGREE_ACCOUNTING.md` §3's table exactly at `n = 5`.
+
+Section H, the census: 18 primary cells, each cross-checked against sections
+A-G (orbit sizes are `660/|H|`; the five cells DEAD for `V = U` are exactly
+those whose `P(U)^{H_0}` is zero-dimensional; **no** cell is DEAD uniformly),
+plus the eight cross-cutting kills, each asserted against its backing fact.
+
+Section I, the mandatory `D_12` consistency test against Cor IX.6, including
+the check that the degree-parity theorem holds at `D_12` level (because
+`-I in [D_12tilde, D_12tilde]`) but would **not** be forced at a
+spin-admissible level such as `S_3`.
+
+A failing assertion is printed with its name and the script exits `1` with
+`SPIN_HODGE_CENSUS_FAILED` instead of the marker.
