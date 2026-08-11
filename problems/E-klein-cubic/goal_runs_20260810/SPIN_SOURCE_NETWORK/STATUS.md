@@ -270,3 +270,90 @@ route.
   not committed.
 
 Headline unchanged: **OPEN**.
+
+---
+
+## Added 2026-08-11 — the residuals campaign: `RESIDUALS-PARTIAL`
+
+The three residuals boxed in `TOTAL_DEGENERATION.md` §6 were attacked.  Step 0
+was a dependency map, done and pushed first, and it re-scoped the campaign.
+
+### Exit ledger (campaign layer)
+
+```text
+DEPENDENCY-MAP-COMPUTED               (2026-08-11)
+O4-BLOCKS-HEADLINE-REGARDLESS         (2026-08-11)
+FREE-LAYER-BLOCKS-HEADLINE-REGARDLESS (2026-08-11)
+UNIQUE-JUMP-DIMENSION-RULE            (2026-08-11)
+R2-SCOPE-IS-ALL-POINT-CELLS           (2026-08-11)
+REDUCED-FRONTIER-BOXED                (2026-08-11)
+
+R1-OPEN                               (2026-08-11)
+R1-INDUCTION-REFUTED                  (2026-08-11)
+R1-INITIAL-MAP-LANDS-IN-TARGET        (2026-08-11)
+R1-TOTAL-DEGENERATION-RIGIDITY        (2026-08-11)
+BASE-LOCUS-DIMENSION-BOUND-2          (2026-08-11)
+R1-F55-FILTRATION-NARROWED            (2026-08-11)
+
+R2-NARROWED-NOT-CLOSED                (2026-08-11)
+R2-CYCLIC-COVERS-DEAD                 (2026-08-11)
+R2-FIBRATION-REFORMULATION            (2026-08-11)
+R2-F55-NO-HYPERPLANE-SECTION          (2026-08-11)
+
+R3-METHOD-INSUFFICIENT                (2026-08-11)
+CM-RIGIDITY-LEMMA-PROVED              (2026-08-11)
+R3-HORIZONTAL-CM-SUBCASE-DEAD         (2026-08-11)
+O4G-WITNESSED                         (2026-08-11)
+
+RESIDUALS-PARTIAL                     (2026-08-11, campaign exit)
+```
+
+### One line per residual
+
+* **Step 0** (`DEPENDENCY_MAP.md`) — `O4` **blocks the headline regardless**.
+  `R1`/`R2` constrain the fibres of `p` over a point support; `R3` constrains
+  nonconstant local systems; the Thm O4-5 witness is a constant-coefficient
+  block on a positive-dimensional support, so all three miss it, and so does
+  the positive-dimensional layer of the free cell `S0`/`(O1)`.  What `R1`-`R3`
+  buy is the point layer plus the nonconstant-coefficient layer, leaving one
+  boxed frontier organised by Prop D2 (one jump, one dimension).
+* **`R1`** (`R1_TOTAL_DEGENERATION.md`) — **OPEN**, and the proposed unlock is
+  **refuted**: total degeneration does not force a dominant induced map on the
+  exceptional divisor, by an explicit `C_2`-equivariant counterexample
+  `[u^2 : v]` whose graph fibre is the whole target while its initial map is
+  constant.  New: the initial map always exists and lands in the `V14`
+  (Lem R1-1); total degeneration pins `Y_x` completely (`= V14`
+  anticanonically, analytic spread `4`); and, unconditionally,
+  `dim Bs(phi) >= 2` for every even `d < 14` (Thm R1-4).
+* **`R2`** (`R2_AMPLE_COVERS.md`) — **NARROWED, NOT CLOSED**, the only residual
+  of the three whose status is genuinely undetermined.  New: every cyclic
+  cover of a smooth `Z_x` branched along a nef-and-big class has `q = 0`
+  (Thm R2-2), and at the 12 `F_55`-points `Z_x` cannot be a hyperplane section
+  (Prop R2-4).  The residual is a singular image divisor, a non-cyclic cover,
+  or a branch class outside the restriction of `Pic(V14)`.
+* **`R3`** (`R3_CM_RIGIDITY.md`) — **METHOD-INSUFFICIENT**, with a two-line
+  witness.  The CM-rigidity lemma is proved in the right generality
+  (Lem R3-1, with the integral-structure hypothesis made explicit), but its
+  hypothesis — CM acting on the *variation* — is not what the package forces;
+  the package puts the CM on `IH^1`.  Witness: `L` = the anti-invariant
+  summand of `f_*Q` for `f : E_{-11} -> P^1`, a nonconstant rank-one system of
+  monodromy order two with `IH^1(P^1,L) = H^1(E_{-11})`.  Even granting the
+  lemma's conclusion, "pass to the finite cover" lands on `FRONTIER-1`.
+
+### Cascade
+
+One census entry changes: subcell `O4g` becomes **witnessed**, so cells `S2`,
+`S3` are "dead in the constant channel, residual `O4g` witnessed".  Two kills
+are added (`K-p`, `K-q`), neither emptying anything.  The mandatory `D_12`
+test passes on every verdict.  Headline unchanged: **OPEN**, and
+`SPIN-ROUTE-CLOSED-METHOD-INSUFFICIENT` stands and is **not** upgradable by
+this campaign.
+
+### Exact checks (campaign layer)
+
+```text
+python3 verify_r0_dependency.py    -> R0_DEPENDENCY_OK     (323 assertions)
+python3 verify_r1_degeneration.py  -> R1_DEGENERATION_OK   (117 assertions)
+python3 verify_r2_covers.py        -> R2_COVERS_OK         (179 assertions)
+python3 verify_r3_cm.py            -> R3_CM_OK             ( 90 assertions)
+```

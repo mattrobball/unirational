@@ -410,8 +410,8 @@ capacity row.  At multiplicity `m >= 2` it drops to `d = 2`.
 |---|---|---|---:|---|---|
 | **S0** | `1` | any of the 14 types | `n-3` | **OPEN** | **OPEN** — the large escape |
 | **S1** | `C_2` | `C_2, C_6` exactly (`H_0 = C_2` exactly, Thm O4-2) | 2 | **OPEN**, and **not closable**: whole-plane DEAD in the constant channel (C8); genus-0 curves DEAD; nonzero-weight plane cubics DEAD (`j = 0`, Thm O4-4); the Hesse channel is **WITNESSED** (Thm O4-5) | OPEN |
-| **S2** | `C_3` | `C_3, C_6, S_3, D_12`; realised: `C_6` (orbit 110) and `D_12` (orbit 55) | 1 | **DEAD in the constant-coefficient channel** — the only curve inside a `C_3`-eigen-line is the line, `IH^1(P^1) = 0` (Prop O4-7); residual: nonconstant local systems only | OPEN |
-| **S3** | `C_5` | `C_5, D_10`; realised: `D_10` (orbit 66) | 1 | **DEAD in the constant-coefficient channel** (Prop O4-7); residual: nonconstant local systems only | OPEN |
+| **S2** | `C_3` | `C_3, C_6, S_3, D_12`; realised: `C_6` (orbit 110) and `D_12` (orbit 55) | 1 | **DEAD in the constant-coefficient channel** — the only curve inside a `C_3`-eigen-line is the line, `IH^1(P^1) = 0` (Prop O4-7); residual: nonconstant local systems only, now **WITNESSED** (`R3_CM_RIGIDITY.md` Thm R3-4, Cor R3-5) | OPEN |
+| **S3** | `C_5` | `C_5, D_10`; realised: `D_10` (orbit 66) | 1 | **DEAD in the constant-coefficient channel** (Prop O4-7); residual: nonconstant local systems only, now **WITNESSED** (Thm R3-4, Cor R3-5) | OPEN |
 | **S4** | `C_6` | `C_6, D_12` | — | **DEAD** (`P(U)^{C_6}` is 6 points) | OPEN for `m >= 2` (`P(V)^{C_6}` is `6` copies of `P^{m-1}`) |
 | **S5** | `C_11` | `C_11, F_55` | — | **DEAD** (`P(U)^{C_11}` is 6 points) | OPEN for `m >= 2`, but the **constant-coefficient channel is DEAD** (kill `K-m`, new); must carry `E_{-11}^5` |
 | **S6** | `S_3` | `S_3, D_12` | — | **DEAD** (`P(U)^{S_3}` is 2 points) | OPEN for `m >= 2`; sign channel DEAD |
@@ -572,3 +572,90 @@ constant-coefficient channel only), none dead uniformly, and all five boxed
 OPEN families carrying explicit witnesses.  What *is* claimed is
 `SPIN-SUPPORT-CENSUS-CLOSED-TO-ATTACK`: every cell has been adjudicated and
 the adjudication is negative for the method.
+
+---
+
+## 9. Residuals campaign layer (2026-08-11) — the cascade
+
+`DEPENDENCY_MAP.md`, `R1_TOTAL_DEGENERATION.md`, `R2_AMPLE_COVERS.md`,
+`R3_CM_RIGIDITY.md`, verifiers `R0_DEPENDENCY_OK` (323), `R1_DEGENERATION_OK`
+(117), `R2_COVERS_OK` (179), `R3_CM_OK` (90).
+
+### 9.1 What changed in the table
+
+Exactly one entry.  Subcell `O4g` — nonconstant local systems, the only
+survivor of cells `S2` and `S3` for `V = U` and one of the three survivors of
+`S1` — is now **WITNESSED**: for `E = E_{-11}` and the quotient
+`f : E -> E/[-1] = P^1` branched at the four 2-torsion points, the
+anti-invariant summand `L` of `f_*Q` is a nonconstant rank-one local system
+with `IH^1(P^1, L) = H^1(E_{-11},Q)`, satisfying (AHS-spin) exactly
+(`R3_CM_RIGIDITY.md` Thm R3-4, Cor R3-5).  Its monodromy has order **two**, so
+the residual is not a wild object.
+
+No cell dies.  Two kills are added and neither empties anything:
+
+* **`K-p`** *(new)*: a cyclic cover `Y_x -> Z_x` of a smooth `Z_x` in `|kH|`,
+  branched along a divisor whose class is nef and big, has `q(Y_x) = 0`, so it
+  cannot supply the `E_{-11}` of Cor C5.  (`R2_AMPLE_COVERS.md` Thm R2-2.)
+* **`K-q`** *(new)*: a strict-support local system carrying **horizontal**
+  `Q(sqrt(-11))`-multiplication is isotrivial with finite monodromy
+  (`R3_CM_RIGIDITY.md` Lemma R3-1, Cor R3-2), so that sub-case of `O4g` is
+  dead; the surviving sub-case is witnessed by Thm R3-4.
+
+Two narrowings are added at cell `P8`: `Z_x in |kH|` needs `k >= 2` there,
+because `Res_{F_55}M^*` contains no linear character (Prop R2-4); and the
+order filtration of the landing tuple at an `F_55`-point has
+`Lambda_{m+1} in \{0, theta_1, theta_2\}` with `Lambda_2 = theta_1` forced at
+`m = 1` (Prop R1-5).
+
+### 9.2 The structural rule that reorganises the open cells
+
+> **Proposition D2 (`DEPENDENCY_MAP.md` §2).**  In the constant-coefficient
+> channel the carrier `IH^{s+4-n-j_0}` is pure of that weight and must be
+> weight one, so `j_0 = s+3-n`; and `j_0` is unique (Thm S3(2)).  Hence all
+> constant-coefficient carrying supports of a given `phi` have the **same**
+> dimension, point supports coexist with **curve** supports and with nothing
+> else, and surfaces and threefolds exclude everything but themselves.
+
+This does not kill a cell, but it partitions the open ones into three
+mutually exclusive scenarios and is what makes §9.3 a single line.
+
+### 9.3 The reduced frontier
+
+```text
++---------------------------------------------------------------------------+
+| If R1, R2 and R3 all closed, this is what the census would still say.      |
+|                                                                           |
+|   A G-orbit of irreducible S subset Bs(phi), 1 <= s = dim S <= n-3, with   |
+|   pointwise kernel H_0 in Sigma_spin, carrying a CONSTANT-COEFFICIENT      |
+|   block whose IH^1(Sbar,Q) = H^1(Stilde,Q) has E_{-11} as an isogeny       |
+|   factor of Jac / Alb, in a channel surviving K-d, K-f, K-i, K-j, K-k,     |
+|   K-l, K-m, K-n, K-p, K-q.                                                |
+|                                                                           |
+|   By Prop D2 this splits into FRONTIER-1 (s = 1, curves), FRONTIER-2       |
+|   (s = 2, surfaces) and FRONTIER-3 (s = 3, threefolds), exactly one of     |
+|   which occurs for a given phi.                                           |
+|                                                                           |
+|   FRONTIER-1 IS OCCUPIED, twice: by the 110 Hesse cubics of Thm O4-5 and   |
+|   by the Thm R3-4 double-cover system, whose finite cover is the same      |
+|   curve.  So R1-R3 buy a REDUCTION and never a closure, and the exit       |
+|   SPIN-ROUTE-CLOSED-METHOD-INSUFFICIENT is not upgradable this way.       |
++---------------------------------------------------------------------------+
+```
+
+### 9.4 Two unconditional by-products, recorded here because they are census-adjacent
+
+* **`dim Bs(phi) >= 2` for every even `d < 14`** (`R1_TOTAL_DEGENERATION.md`
+  Thm R1-4).  On a smooth resolution, `H^4 = 0` on the threefold target gives
+  `14\,\delta_F = d^3` whenever `dim Bs(phi) <= 1`, and `14` is squarefree, so
+  `dim Bs = 1` forces `14 | d`.  At the minimal live degree `d = 4` — and at
+  `d = 6, 8, 10, 12` — the base locus therefore has a component of dimension
+  at least two.  This strengthens Lemma W0' (`dim Bs >= n-5 = 1`) throughout
+  the low-degree window and is consistent with §3.2's own reading at `d = 2`.
+* **The initial map lands in the target** (Lemma R1-1): the degree-`m` initial
+  forms of the landing tuple at any base point define a `K`-equivariant
+  rational map `P(T_x) --> V14`, whose image is the set of limits of `phi`
+  along straight lines.  It is **not** dominant in general — Prop R1-2 gives an
+  explicit equivariant counterexample with total degeneration and a constant
+  initial map — which upgrades Remark W0'' from an assertion to a theorem with
+  a witness.

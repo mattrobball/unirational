@@ -52,7 +52,7 @@ disclosed boundary, not a coverage claim.
 
 Core manifest last rebuilt: 2026-08-03. Research supplement last updated:
 2026-08-10. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `4cb21fc02968861735b05abc193bd56fe5e9e91a` (2026-08-11; the
+Snapshot metadata — notebook parent head: `770ecbc0f5b6f66b57670e3873fa62ecee0725c1` (2026-08-11; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -7454,3 +7454,323 @@ All three verifiers, plus `verify_spin_hodge_census.py`, `verify_o4_census.py`,
 is on `agent/spin-route-campaign-20260810`. This notebook revision was
 authored against parent head
 `4cb21fc02968861735b05abc193bd56fe5e9e91a`.
+
+# Notebook supplement — 2026-08-11: residuals campaign, step 0 — the dependency map. `O4` blocks the headline regardless of `R1`, `R2`, `R3`
+
+## What was asked
+
+Close the three boxed residuals of `TOTAL_DEGENERATION.md` §6 and cascade.
+Step 0, to be done and pushed *before* any attack: for each census cell, state
+which of `R1`/`R2`/`R3` controls it, and decide whether closing all three would
+close the cell — in particular whether `O4`'s Hesse-cubic witness survives
+regardless. If it does, say so immediately and re-scope.
+
+Packet: `DEPENDENCY_MAP.md`, `verify_r0_dependency.py`.
+
+## The answer
+
+**It does.** `R1` and `R2` are constraints on the fibres of `p` over a **point**
+support (the quantity `delta(x) = dim q(p^{-1}(x))`, forced into `{2,3}`).
+`R3` is a constraint on **nonconstant** local systems. The Theorem O4-5 witness
+is a constant-coefficient block on a positive-dimensional **support** — a plane
+cubic isomorphic to `E_{-11}` in each of the 110 eigenplanes — which is the one
+combination none of the three addresses. All three hypotheses fail on it, and
+they fail structurally, not by an accident of statement.
+
+A second family survives for the same reason and had not been named: the
+positive-dimensional layer of the free cell `S0`/`(O1)` (`H_0 = 1`,
+`1 <= s <= n-3`, constant coefficients). The `(O1)` box records a witness only
+for its **point** layer `P0`; its positive-dimensional layer is open,
+unwitnessed and uncontrolled by all three residuals.
+
+So `RESIDUALS-ALL-CLOSED => SPIN-ROUTE-CLOSED-NEGATIVE` is **false as an
+implication**, and the Cor IX.5 consequence chain cannot be triggered by this
+campaign however the residuals come out. The campaign is re-scoped at its start.
+
+## What `R1`-`R3` actually buy — the reduced frontier
+
+They remove the entire **point layer** (nine cells, `R1` and `R2` jointly —
+neither alone kills anything, since `delta(x) in {2,3}` is exhaustive) and the
+entire **nonconstant-coefficient layer** (`R3`). What remains is one line:
+
+> a `G`-orbit of irreducible `S subset Bs(phi)`, `1 <= dim S <= n-3`, carrying
+> a constant-coefficient block whose `IH^1(Sbar,Q) = H^1(Stilde,Q)` has
+> `E_{-11}` as an isogeny factor of `Jac`/`Alb`, in a channel surviving
+> `K-d, K-f, K-i, K-j, K-k, K-l, K-m, K-n`.
+
+New structural input that organises this (**Proposition D2**, one jump, one
+dimension): in the constant-coefficient channel the carrier `IH^{s+4-n-j_0}` is
+pure of that weight and must be weight one, so `j_0 = s+3-n`. Since the
+perverse jump `j_0` is **unique** (Thm S3(2), from the `Q`-irreducibility of
+`T`), *all* carrying supports of a given `phi` have the *same* dimension, and
+points can coexist only with curves. The frontier therefore splits into three
+mutually exclusive scenarios `FRONTIER-1/2/3` by `s = 1, 2, 3` — and
+`FRONTIER-1` is occupied by the O4-5 curve, which is why the reduction is a
+reduction and never a closure.
+
+Two corrections to the `TOTAL_DEGENERATION.md` §6 box are recorded in place.
+**Observation D1**: `R2` is not confined to the 352 mandatory points — its
+proof (Prop O2-3) uses only `rho(V14) = 1` and `b_1(V14) = 0`, so it applies at
+all nine point cells. And `R1`/`R2` must be proved for an **arbitrary** base
+point of a dominant equivariant spin map, not only at the 364 mandatory ones: a
+carrying point support may be a free point (cell `P0`) that no theorem places
+in `Bs(phi)` in advance. That is a strictly larger demand than the box states.
+
+## Exits
+
+```text
+DEPENDENCY-MAP-COMPUTED
+O4-BLOCKS-HEADLINE-REGARDLESS
+FREE-LAYER-BLOCKS-HEADLINE-REGARDLESS
+UNIQUE-JUMP-DIMENSION-RULE
+R2-SCOPE-IS-ALL-POINT-CELLS
+REDUCED-FRONTIER-BOXED
+R0_DEPENDENCY_OK
+```
+
+Headline unchanged: **OPEN**.
+
+## Verification
+
+`verify_r0_dependency.py` (`R0_DEPENDENCY_OK`), 323 exact assertions, well
+under a second, Python standard library only, and an **independent code path**
+from `verify_spin_hodge_census.py` / `verify_total_degeneration.py`: a
+cyclotomic engine `Z[zeta_N]` built from `Phi_N` by exact integer polynomial
+division and self-tested (degree, divisibility, root sums, conjugation); the
+`PSL(2,11)` class data self-validated (`sum` of class sizes, the order profile
+reconstructed from the 55 nonsplit tori, the 66 split tori and the 12 Sylow
+11-subgroups, `<chi_T,chi_T> = 2`, `<chi_T,1> = 0`, and Lefschetz agreement at
+orders 2 and 11); a **metacyclic character-table builder** which constructs
+`Irr(H)` for every `H in Sigma_spin` and for `D_12` by Clifford theory from
+`H = C_m x| C_k` and validates each table by orthonormality, the
+sum-of-squares identity and the vanishing of the regular character off the
+identity; the full `Res_H T` decomposition recomputed from `chi_T` alone,
+reproducing `dim T^H`, the floors `k(H)`, and every dead channel (`K-d` at
+`S_3`, `D_10`, `C_6`; `K-m` at `C_11`; `K-n` at `F_55`, together with the
+`Q`-irreducibility of both odd-order restrictions); the perverse ledger and
+Proposition D2 for `n = 5..12` with the ambient `n = 5` regression; and the
+dependency table itself, whose closure under `{R1,R2,R3}` is computed rather
+than asserted.
+
+`scripts/check_manifest_parity.py` passes. The packet is on
+`agent/residuals-campaign-20260811`. This notebook revision was authored
+against parent head `770ecbc0f5b6f66b57670e3873fa62ecee0725c1`.
+
+# Notebook supplement — 2026-08-11: the residuals campaign — `RESIDUALS-PARTIAL`. `R1` refuted at its unlock, `R2` narrowed, `R3` witnessed
+
+## What was asked
+
+Close the three boxed residuals of `TOTAL_DEGENERATION.md` §6 — the exact
+statements a stronger-than-Hodge-support method must supply — then cascade and
+re-derive the route verdict. Step 0 first: the dependency map (recorded in the
+previous supplement, exit `O4-BLOCKS-HEADLINE-REGARDLESS`).
+
+Packet: `R1_TOTAL_DEGENERATION.md`, `R2_AMPLE_COVERS.md`, `R3_CM_RIGIDITY.md`,
+`verify_r1_degeneration.py`, `verify_r2_covers.py`, `verify_r3_cm.py`, with
+updates to `SUPPORT_CENSUS.md` §9, `ADVERSARIAL_TESTS.md` §§R0-R5, `REPLAY.md`,
+`STATUS.md`.
+
+## `R1` — the proposed unlock is FALSE
+
+The director's key unlock was: if every fibre closure of `phi` passes through
+`x`, the exceptional divisor of the blowup at `x` inherits an induced
+`K`-equivariant **dominant** rational map `P(T_x) --> V14`, which one then
+kills at `K`-level. The first half is false and the second half would not fire.
+
+*First half.* What does exist, and is new, is the initial map: the degree-`m`
+initial forms of the landing tuple at `x` define a `K`-equivariant rational map
+`psi_x : P(T_x) --> P(M)` whose image lies in `V14` — because a homogeneous
+form vanishing on `V14` has vanishing lowest-order part when composed with the
+tuple (Lemma R1-1). Its image is exactly the set of limits of `phi` along
+**straight lines** through `x`. It is not dominant in general:
+
+    phi : A^2 --> P^1,   (u,v) |-> [u^2 : v],   C_2 acting by u |-> -u
+
+is equivariant, has `Gamma_0 = P^1` (along `(t^a, c t^{2a})` the limit is
+`[1:c]`, and the two unbalanced regimes give the remaining two points), and has
+`m = 1`, `in_1(u^2) = 0`, so `psi_0` is **constant**. So total degeneration
+holds with a constant induced map. This upgrades `TOTAL_DEGENERATION.md`
+Remark W0'' from an assertion to a theorem with a witness. The example is
+repaired at depth **two** (a second blowup gives `[1 : w]`, dominant), but
+`[u^N : v]` needs depth `N` and nothing bounds `N`, since `d` is unbounded on
+the spin lane.
+
+*Second half.* Even granting the induced map, the only available tool is
+going-down for **abelian** groups, and every abelian subgroup of every
+occurring stabiliser has nonempty fixed locus on the `V14` (`C_2`: the sealed
+sextic plus two points; `C_11`: five points; `C_3`, `C_5`, `C_6`: nonempty by
+Lefschetz, `chi = 6, 4, 2`). The two emptiness statements — `V14^{D_10}` and
+`V14^{F_55}` — are at **nonabelian** groups and are unusable. That is Cor N4
+(the fixed-point exhaustion) restated one level down.
+
+*What total degeneration does pin.* `Y_x -> Gamma_x` is finite and birational
+onto a normal variety, so `Y_x` **is** the `V14` in its own anticanonical
+embedding with the given `K`-action, and the fibre cone has degree-one piece
+`Res_K M^*` twisted by a character and dimension 4 (analytic spread
+`l(I_x) = 4`). There is nothing left to constrain — which is the precise sense
+in which the package is spent. `R1` therefore asks for an upper bound on the
+analytic spread of the landing ideal at a base point: a commutative-algebra
+statement, not a Hodge-theoretic one.
+
+*Unconditional by-product.* On a smooth resolution, `H^4 = 0` on the threefold
+target gives `(g^*H)^4 = 0` and `(g^*H)^3 = 14 g^*[pt]`; with `L = pi^*O(1)`
+and `g^*H = dL - Xi`, the vanishing `L^{5-j}Xi^j = 0` for `j + dim Bs < 5`
+collapses the second identity to `14 delta_F = d^3` whenever
+`dim Bs(phi) <= 1`. Since `14` is squarefree and `delta_F` is a positive
+integer, `dim Bs(phi) = 1` forces `14 | d`. Hence **`dim Bs(phi) >= 2` for
+every even `d < 14`** — in particular at the minimal live degree `d = 4`. This
+strengthens Lemma W0' (`dim Bs >= n-5 = 1`) throughout the low-degree window.
+Regressions: the same computation gives `delta_F = 1` for the projection of
+`P^5` from a line and `delta_F = 8` for four general quadrics.
+
+## `R2` — narrowed, not closed; the only genuinely undetermined residual
+
+Cor C5 asks for `E_{-11}` in `Alb` of a finite cover `Y_x` of an ample divisor
+`Z_x`. Equivalently (Prop R2-1) the cover fibres over an elliptic curve
+isogenous to `E_{-11}`. Two new results:
+
+* **Cyclic covers are dead.** For a smooth `Z` with `q(Z) = 0` and `K_Z` nef —
+  both hold for every smooth `Z_x in |kH|`, since the index-one identity
+  `-K = H` makes a hyperplane section a K3 and `|kH|` for `k >= 2` of general
+  type — and a branch divisor in `|nL|` with `L` nef and big, the splitting of
+  the pushforward into `O_Z(-iL)` plus Serre duality and Kawamata–Viehweg give
+  `h^1(-iL) = h^1(K_Z + iL) = 0`, so `q = 0`. The box's own remark ("branched
+  covers of regular surfaces have unbounded irregularity") is true but needs a
+  branch class outside the positive cone; Theorem R2-2 locates the escape.
+* **No `F_55`-stable hyperplane section.** `H^0(-K) = M^*` and
+  `Res_{F_55}M^* = theta_1 + theta_2` contains no linear character, so at the
+  12 mandatory `F_55`-points `Z_x` lies in `|kH|` with `k >= 2` and is of
+  general type, never a K3. (`k = 2` is not excluded: the `C_11`-invariants of
+  `S^2 M` are 5-dimensional and form the regular `C_5`-representation.)
+
+Residual: a **singular** `Z_x`, a **non-cyclic** cover, or a branch class
+outside the restriction of `Pic(V14)`. The natural candidate shape — a nodal
+member of `|kH|` resolving to a Kummer surface of `E_{-11}` squared, covered by
+the abelian surface itself — is recorded and explicitly **not** claimed; a
+16-nodal member of `|H| = P^9` cannot exist on a count, and `|kH|` for `k >= 2`
+is an unresolved projective-geometry question.
+
+## `R3` — method-insufficient, with a two-line witness
+
+The CM-rigidity lemma is proved in the generality it was wanted in: a
+polarizable weight-one variation of rank `2g` with an **integral structure**
+and a horizontal action of a CM field of degree `2g` has constant CM type
+(finitely many types, connected base), hence flat Hodge filtration; its
+monodromy lies in the norm-one subgroup intersected with the units of an
+order, hence consists of roots of unity by Kronecker, hence is finite; so the
+variation is isotrivial and becomes constant on a finite `K`-equivariant étale
+cover. The integral-structure hypothesis is load-bearing — Hilbert 90 makes the
+rational norm-one group infinite without it — and stating it is the "exact
+hypotheses" the residual asked for.
+
+It does not apply. The package puts the `E_{-11}`-isotypic structure on the
+**global** intersection cohomology, never on the variation, and the implication
+"`IH^1` contains a CM structure, therefore the local system has CM" is false.
+Witness, entirely explicit: let `f` be the degree-two quotient of `E_{-11}` by
+the inversion, branched at the four 2-torsion points, with quotient `P^1`, and
+let `L` be the anti-invariant summand of the pushforward of `Q` — a
+**nonconstant** rank-one local system with monodromy of order **two**. Then
+`IH^1(P^1, L) = H^1(E_{-11},Q)`, checked twice (by the splitting of the
+pushforward, and by the Euler characteristic `1.(2-4) = -2` with `h^0 = h^2 = 0`),
+so (AHS-spin) is satisfied. Equivariantly: the four branch points can be chosen
+stable under the residual `C_2` on a `C_3`- or `C_5`-eigen-line, and the
+cross-ratio of `(a,-a,b,-b)` is the square of `(a-b)/(a+b)`, which sweeps the
+whole `lambda`-line, so `j = -32768` is attained.
+
+The proposed reduction therefore fails at its **last** step, not its first:
+granting finite monodromy for free, "pass to the finite cover" lands on
+`E_{-11}` itself, whose `H^1` is the carrier — i.e. on `FRONTIER-1` of the
+dependency map, the frontier that blocks the headline anyway. What the lemma
+does close is the sub-case where the CM is horizontal (kill `K-q`).
+
+## Cascade
+
+Exactly one census entry moves: subcell `O4g` — nonconstant local systems, the
+only survivor of cells `S2`, `S3` for `V = U` — becomes **witnessed**. Two
+kills are added (`K-p` cyclic covers, `K-q` horizontal CM) and neither empties
+anything. The mandatory `D_12` test passes on every verdict, in each case with
+the informative sign: the surviving subcell is the one the realised
+`D_12`-equivariant map of Cor IX.6 is free to occupy, and Theorem R1-4 has no
+`D_12` analogue at all because it rests on the perfectness of `Gtilde`.
+
+## Exits
+
+```text
+RESIDUALS-PARTIAL                     (the campaign exit)
+R1-OPEN
+R1-INDUCTION-REFUTED
+R1-INITIAL-MAP-LANDS-IN-TARGET
+R1-TOTAL-DEGENERATION-RIGIDITY
+BASE-LOCUS-DIMENSION-BOUND-2
+R1-F55-FILTRATION-NARROWED
+R2-NARROWED-NOT-CLOSED
+R2-CYCLIC-COVERS-DEAD
+R2-FIBRATION-REFORMULATION
+R2-F55-NO-HYPERPLANE-SECTION
+R3-METHOD-INSUFFICIENT
+CM-RIGIDITY-LEMMA-PROVED
+R3-HORIZONTAL-CM-SUBCASE-DEAD
+O4G-WITNESSED
+R1_DEGENERATION_OK
+R2_COVERS_OK
+R3_CM_OK
+```
+
+`SPIN-ROUTE-CLOSED-METHOD-INSUFFICIENT` stands and is **not** upgradable by
+this campaign; `SPIN-CHAIN-OBSTRUCTION-UNDECIDED` is unchanged. Headline:
+**OPEN**.
+
+## Named next task left behind
+
+One Macaulay2 run: the two `F_55`-invariant `P^4` inside `P^9 = P(M)` are the
+`theta_1`- and `theta_2`-isotypic eigenspaces; exactly one contains the five
+sealed `C_11`-fixed points of `V14`. Compute the intersection of `V14` with
+**both** in the sealed model. If the one without the five points is empty,
+Prop R1-5 pins the order filtration of the landing tuple at every `F_55`-point
+of every equivariant spin map. The model and the `C_11`-eigenbasis are already
+built by `verify_v14_s3_d10.py`.
+
+## Verification
+
+`verify_r1_degeneration.py` (`R1_DEGENERATION_OK`), 117 exact assertions;
+`verify_r2_covers.py` (`R2_COVERS_OK`), 179; `verify_r3_cm.py` (`R3_CM_OK`),
+90; all well under a second, Python standard library only, sharing the
+self-tested cyclotomic engine and metacyclic character-table builder of
+`verify_r0_dependency.py`. Between them they compute: the arc-limit set of
+`[u^2:v]` over an exact rational grid; the symbolic expansion of
+`(dL - Xi)^k L^{5-k}` under the vanishing table, with three regressions; the
+`F_55` representation theory (`theta_1` dual to `theta_2`, from `-1` being a
+non-residue mod 11; `Res_{F_55}M^* = theta_1 + theta_2`; the `C_11`-weight
+multiplicities of the symmetric powers); the going-down audit; the
+anticanonical Hilbert function of the `V14` with the 15 Plücker quadrics
+recovered as `55 - 40`; the cyclic-cover irregularity ledger term by term;
+linear characters in `Res_H M^*` for all nine pointwise kernels; the CM-type
+count; an exact search for norm-one algebraic integers in `Q(sqrt(-11))`
+together with Hilbert-90 witnesses showing the integral-structure hypothesis is
+load-bearing; Hurwitz and the Euler characteristic of the middle extension; and
+the cross-ratio identity with the degree-six equation for `j = -32768`.
+
+All four campaign verifiers plus `scripts/check_manifest_parity.py` pass. The
+packet is on `agent/residuals-campaign-20260811` (PR #36). This notebook
+revision was authored against parent head
+`6e7c73b7a58f158f25ecd74b379dd8ec2ea539b8`.
+
+<!-- WAVE34_ROUTING_20260811 -->
+
+## 2026-08-11 Wave-34 routing (director): the spin-support wall is fully mapped
+
+Three independent witnesses now block the support package and every refinement
+attempted (PR #34 total degeneration; PR #36 R1-R3): the O4 Hesse-cubic
+curve support, the free-cell positive-dimensional layer, and the R3
+monodromy-two system on the sextic quotient — all landing on FRONTIER-1
+(constant-coefficient positive-dimensional supports).  Closing R1-R3 cannot
+reach the headline (dependency map, PR #36).  Standing unconditional gains:
+dim Bs(phi) >= 2 for every even d < 14; the CM-rigidity lemma (proved, with
+its integral hypothesis explicit); cyclic covers of smooth ample divisors
+excluded; 14 delta_F = d^3 when dim Bs <= 1.  The R1 induced-map recursion
+was REFUTED by counterexample — initial forms exist (Lemma R1-1) but can be
+constant.  Queued CAS task: V14 cap P^4 for the two F55-invariant eigen-P^4s
+(Prop R1-5).  The spin lane's remaining content is FRONTIER-1: whether an
+equivariant map can carry an E_{-11}-type constant-coefficient curve
+support.  No refinement of the support decomposition can decide this; a
+genuinely map-theoretic invariant is required.  Headline OPEN.

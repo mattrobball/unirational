@@ -683,3 +683,83 @@ independent test of Theorem S0, on which the whole census rests.  They are
 carried forward unchanged.  Two of the five predictions (`o = 2`, `o = 11`)
 agree with sealed measurements; the other three are one run of
 `verify_v14_s3_d10.py`'s machinery away.
+
+---
+
+# Residuals campaign (2026-08-11): tests R0-R5
+
+## R0. Step 0 — is the dependency map's headline right?
+
+Claim under test: `O4`'s Hesse-cubic witness survives `R1`, `R2` and `R3`.
+
+The audit is `DEPENDENCY_MAP.md` §4, run against the witness rather than
+against the cell label.  `R1` and `R2` both carry "the block is supported at a
+**point**" in their hypotheses — they bound `delta(x) = dim q(p^{-1}(x))`, a
+quantity attached to a fibre of `p` over a point — while the witness is
+`IC_{\overline S}(Q)` on a curve, so there is no `Y_x` and no `delta` in the
+statement at all.  `R3` carries "the local system is **nonconstant**"; the
+witness uses `L = Q`.  Three hypotheses, three misses.  **CONFIRMED.**
+
+The same audit applied to the free cell `S0` at any `s >= 1` gives the same
+answer, and there the miss is wider still: `S0` has no eigen-stratum structure
+for even a strengthened `R3` to reach.
+
+## R1-T*.  See `R1_TOTAL_DEGENERATION.md` §7
+
+The mandatory `D_12` test is R1-T1 and it **PASSES**, with the informative
+sign.  §2 refutes the induced-map recursion outright, so it kills nothing
+anywhere; and §3's going-down audit shows that every abelian subgroup of every
+occurring stabiliser — in particular of `D_12` — has nonempty fixed locus on
+the `V14`, so a kill could never have fired at a `D_12`-visible point.  The
+mission's own consistency requirement ("the induced-map recursion at
+`D_12`-visible points must NOT be killable, or the induction is wrong") is met
+twice over: the induction is wrong, and independently the kill machinery is
+unavailable.
+
+Theorem R1-4 (`14 | d` when `dim Bs(phi) = 1`) uses the parity theorem C6 and
+the identification `Lambda ~= M^*`, both of which rest on the **perfectness**
+of `Gtilde`.  `D_12tilde` is not perfect, so the statement has no `D_12`
+analogue and cannot interact with Cor IX.6.
+
+## R2-T*.  See `R2_AMPLE_COVERS.md` §5
+
+R2-T1 is the mandatory `D_12` test and it **PASSES**.  Theorem R2-2 is a
+genuine kill, so it is checked: it removes cyclic covers with
+positively-branched divisors at cells `P4`, `P5` (the ones `D_12` sees),
+leaving the non-cyclic and singular cases and, more importantly, leaving the
+entire `delta(x) = 3` branch, which Thm W1 witnesses.  `dim T^{D_12} = 2 > 0`,
+so the channel the realised map needs stays open.  Prop R2-4 is about `F_55`
+(order 55, coprime to 12) and is invisible at `D_12` level.
+
+## R3-T*.  See `R3_CM_RIGIDITY.md` §5
+
+R3-T1 is the mandatory `D_12` test and it **PASSES**.  The only kill in that
+file is Cor R3-2 (variations with **horizontal** CM), and the realised
+`D_12`-map may instead route through the Thm R3-4 witness, whose eigen-line
+has stabiliser `D_12` in the orbit-55 case, with `dim T^{D_12} = 2 > 0`.
+
+## R4. Cascade audit: does anything proved here change a census verdict?
+
+| result | is it a kill? | which cell | does the cell change status? |
+|---|---|---|---|
+| Prop D2 (one jump, one dimension) | no — a structural rule | all | no; it partitions the open cells by `s` |
+| Thm R1-4 (`dim Bs >= 2` for even `d < 14`) | no — a statement about `Bs(phi)` | none | no |
+| Prop R1-5 (`F_55` filtration) | narrowing | `P8` | no |
+| Thm R2-2 (cyclic covers dead) | **yes** | the `delta = 2` branch of `P0`-`P8` | no — the `delta = 3` branch is witnessed by W1 |
+| Prop R2-4 (`k >= 2` at `F_55`) | narrowing | `P8` | no |
+| Cor R3-2 (horizontal CM dead) | **yes** | part of `O4g` | no — the rest of `O4g` is now witnessed |
+| Thm R3-4 / Cor R3-5 (`O4g` witness) | witness | `O4g`, cells `S1`, `S2`, `S3` | **yes**: `O4g` moves from OPEN to OPEN-WITH-WITNESS |
+
+Exactly one census entry changes: subcell `O4g` gains a witness, upgrading
+cells `S2` and `S3` from "DEAD in the constant-coefficient channel, residual
+`O4g` only" to "DEAD in the constant-coefficient channel, residual `O4g`
+**witnessed**".  Nothing else moves, and no cell dies.
+
+## R5. Is `RESIDUALS-ALL-CLOSED` still worth pursuing?
+
+No, and the reason is recorded before the attacks rather than after.
+`DEPENDENCY_MAP.md` §5 shows the reachable prize is a reduction to
+`FRONTIER-1/2/3`, and `FRONTIER-1` is now occupied twice — by the Thm O4-5
+Hesse cubic (constant coefficients) and by the Thm R3-4 double-cover system
+(nonconstant coefficients, reducing to the same curve).  A campaign that
+closed all three residuals would still face both.
