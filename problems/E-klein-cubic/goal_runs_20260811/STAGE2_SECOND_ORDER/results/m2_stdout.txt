@@ -1,0 +1,75 @@
+collected 96 M2 cases
+cases with a landing jet (dim >= 0): 32 / 72
+  p=331|omega2|d0|mu=4|row_dim0|w=2|C6pt                     dim = -1  -> NOT realised
+  p=331|omega2|d0|mu=4|row_dim0|w=2|exactC3                  dim = -1  -> NOT realised
+  p=331|omega2|d0|mu=4|row_dim1|w=1|C6pt                     dim = -1  -> NOT realised
+  p=331|omega2|d0|mu=4|row_dim1|w=1|exactC3                  dim = -1  -> NOT realised
+  p=331|omega2|d0|mu=5|row_dim0|w=1|C6pt                     dim = 0  -> REALISED
+  p=331|omega2|d0|mu=5|row_dim0|w=1|exactC3                  dim = 0  -> REALISED
+  p=331|omega2|d0|mu=5|row_dim1|w=2|C6pt                     dim = 0  -> REALISED
+  p=331|omega2|d0|mu=5|row_dim1|w=2|exactC3                  dim = 0  -> REALISED
+  p=331|omega2|d1|mu=3|row_dim0|w=2|C6pt                     dim = -1  -> NOT realised
+  p=331|omega2|d1|mu=3|row_dim0|w=2|exactC3                  dim = 0  -> REALISED
+  p=331|omega2|d1|mu=3|row_dim1|w=2|C6pt                     dim = -1  -> NOT realised
+  p=331|omega2|d1|mu=3|row_dim1|w=2|exactC3                  dim = 0  -> REALISED
+  p=331|omega2|d1|mu=4|row_dim0|w=1|C6pt                     dim = -1  -> NOT realised
+  p=331|omega2|d1|mu=4|row_dim0|w=1|exactC3                  dim = -1  -> NOT realised
+  p=331|omega2|d1|mu=5|row_dim1|w=1|C6pt                     dim = 0  -> REALISED
+  p=331|omega2|d1|mu=5|row_dim1|w=1|exactC3                  dim = 0  -> REALISED
+  p=331|omega2|d2|mu=3|row_dim0|w=1|C6pt                     dim = -1  -> NOT realised
+  p=331|omega2|d2|mu=3|row_dim0|w=1|exactC3                  dim = 0  -> REALISED
+  p=331|omega2|d2|mu=3|row_dim1|w=1|C6pt                     dim = -1  -> NOT realised
+  p=331|omega2|d2|mu=3|row_dim1|w=1|exactC3                  dim = 0  -> REALISED
+  p=331|omega2|d2|mu=4|row_dim1|w=2|C6pt                     dim = -1  -> NOT realised
+  p=331|omega2|d2|mu=4|row_dim1|w=2|exactC3                  dim = -1  -> NOT realised
+  p=331|omega2|d2|mu=5|row_dim0|w=2|C6pt                     dim = 0  -> REALISED
+  p=331|omega2|d2|mu=5|row_dim0|w=2|exactC3                  dim = 0  -> REALISED
+  p=331|omega|d0|mu=4|row_dim0|w=2|C6pt                      dim = -1  -> NOT realised
+  p=331|omega|d0|mu=4|row_dim0|w=2|exactC3                   dim = -1  -> NOT realised
+  p=331|omega|d0|mu=4|row_dim1|w=1|C6pt                      dim = -1  -> NOT realised
+  p=331|omega|d0|mu=4|row_dim1|w=1|exactC3                   dim = -1  -> NOT realised
+  p=331|omega|d0|mu=5|row_dim0|w=1|C6pt                      dim = 0  -> REALISED
+  p=331|omega|d0|mu=5|row_dim0|w=1|exactC3                   dim = 0  -> REALISED
+  p=331|omega|d0|mu=5|row_dim1|w=2|C6pt                      dim = 0  -> REALISED
+  p=331|omega|d0|mu=5|row_dim1|w=2|exactC3                   dim = 0  -> REALISED
+  p=331|omega|d1|mu=3|row_dim0|w=1|C6pt                      dim = -1  -> NOT realised
+  p=331|omega|d1|mu=3|row_dim0|w=1|exactC3                   dim = 0  -> REALISED
+  p=331|omega|d1|mu=3|row_dim1|w=1|C6pt                      dim = -1  -> NOT realised
+  p=331|omega|d1|mu=3|row_dim1|w=1|exactC3                   dim = 0  -> REALISED
+  p=331|omega|d1|mu=4|row_dim1|w=2|C6pt                      dim = -1  -> NOT realised
+  p=331|omega|d1|mu=4|row_dim1|w=2|exactC3                   dim = -1  -> NOT realised
+  p=331|omega|d1|mu=5|row_dim0|w=2|C6pt                      dim = 0  -> REALISED
+  p=331|omega|d1|mu=5|row_dim0|w=2|exactC3                   dim = 0  -> REALISED
+  p=331|omega|d2|mu=3|row_dim0|w=2|C6pt                      dim = -1  -> NOT realised
+  p=331|omega|d2|mu=3|row_dim0|w=2|exactC3                   dim = 0  -> REALISED
+  p=331|omega|d2|mu=3|row_dim1|w=2|C6pt                      dim = -1  -> NOT realised
+  p=331|omega|d2|mu=3|row_dim1|w=2|exactC3                   dim = 0  -> REALISED
+  p=331|omega|d2|mu=4|row_dim0|w=1|C6pt                      dim = -1  -> NOT realised
+  p=331|omega|d2|mu=4|row_dim0|w=1|exactC3                   dim = -1  -> NOT realised
+  p=331|omega|d2|mu=5|row_dim1|w=1|C6pt                      dim = 0  -> REALISED
+  p=331|omega|d2|mu=5|row_dim1|w=1|exactC3                   dim = 0  -> REALISED
+  p=661|omega2|d0|mu=4|row_dim0|w=2|C6pt                     dim = -1  -> NOT realised
+  p=661|omega2|d0|mu=4|row_dim1|w=1|C6pt                     dim = -1  -> NOT realised
+  p=661|omega2|d0|mu=5|row_dim0|w=1|C6pt                     dim = 0  -> REALISED
+  p=661|omega2|d0|mu=5|row_dim1|w=2|C6pt                     dim = 0  -> REALISED
+  p=661|omega2|d1|mu=3|row_dim0|w=2|C6pt                     dim = -1  -> NOT realised
+  p=661|omega2|d1|mu=3|row_dim1|w=2|C6pt                     dim = -1  -> NOT realised
+  p=661|omega2|d1|mu=4|row_dim0|w=1|C6pt                     dim = -1  -> NOT realised
+  p=661|omega2|d1|mu=5|row_dim1|w=1|C6pt                     dim = 0  -> REALISED
+  p=661|omega2|d2|mu=3|row_dim0|w=1|C6pt                     dim = -1  -> NOT realised
+  p=661|omega2|d2|mu=3|row_dim1|w=1|C6pt                     dim = -1  -> NOT realised
+  p=661|omega2|d2|mu=4|row_dim1|w=2|C6pt                     dim = -1  -> NOT realised
+  p=661|omega2|d2|mu=5|row_dim0|w=2|C6pt                     dim = 0  -> REALISED
+  p=661|omega|d0|mu=4|row_dim0|w=2|C6pt                      dim = -1  -> NOT realised
+  p=661|omega|d0|mu=4|row_dim1|w=1|C6pt                      dim = -1  -> NOT realised
+  p=661|omega|d0|mu=5|row_dim0|w=1|C6pt                      dim = 0  -> REALISED
+  p=661|omega|d0|mu=5|row_dim1|w=2|C6pt                      dim = 0  -> REALISED
+  p=661|omega|d1|mu=3|row_dim0|w=1|C6pt                      dim = -1  -> NOT realised
+  p=661|omega|d1|mu=3|row_dim1|w=1|C6pt                      dim = -1  -> NOT realised
+  p=661|omega|d1|mu=4|row_dim1|w=2|C6pt                      dim = -1  -> NOT realised
+  p=661|omega|d1|mu=5|row_dim0|w=2|C6pt                      dim = 0  -> REALISED
+  p=661|omega|d2|mu=3|row_dim0|w=2|C6pt                      dim = -1  -> NOT realised
+  p=661|omega|d2|mu=3|row_dim1|w=2|C6pt                      dim = -1  -> NOT realised
+  p=661|omega|d2|mu=4|row_dim0|w=1|C6pt                      dim = -1  -> NOT realised
+  p=661|omega|d2|mu=5|row_dim1|w=1|C6pt                      dim = 0  -> REALISED
+S3_M2_OK

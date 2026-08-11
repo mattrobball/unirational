@@ -1,0 +1,24 @@
+[p=331] 36 cases
+[p=661] 36 cases
+S3_LEVER1_OK
+[p=331] 12 cases
+[p=661] 12 cases
+S3_LEVER1B_OK
+p=331 omega    d1 mu=3 row_dim1  eig=True  w=1  {'(1:15) = exact-C3 point': 'REALISED (gcd degree 1)', '(1:19) = exact-C3 point': 'REALISED (gcd degree 1)', '(1:205) = X^{C6} point': 'NOT realised'}
+p=331 omega    d1 mu=3 row_dim0  eig=True  w=1  {'(1:15) = exact-C3 point': 'REALISED (gcd degree 1)', '(1:19) = exact-C3 point': 'REALISED (gcd degree 1)', '(1:205) = X^{C6} point': 'NOT realised'}
+p=331 omega    d2 mu=3 row_dim1  eig=True  w=2  {'(1:48) = X^{C6} point': 'NOT realised', '(1:308) = exact-C3 point': 'REALISED (gcd degree 1)', '(1:327) = exact-C3 point': 'REALISED (gcd degree 1)'}
+p=331 omega    d2 mu=3 row_dim0  eig=True  w=2  {'(1:48) = X^{C6} point': 'NOT realised', '(1:308) = exact-C3 point': 'REALISED (gcd degree 1)', '(1:327) = exact-C3 point': 'REALISED (gcd degree 1)'}
+p=331 omega^2  d1 mu=3 row_dim1  eig=True  w=2  {'(1:48) = X^{C6} point': 'NOT realised', '(1:308) = exact-C3 point': 'REALISED (gcd degree 1)', '(1:327) = exact-C3 point': 'REALISED (gcd degree 1)'}
+p=331 omega^2  d1 mu=3 row_dim0  eig=True  w=2  {'(1:48) = X^{C6} point': 'NOT realised', '(1:308) = exact-C3 point': 'REALISED (gcd degree 1)', '(1:327) = exact-C3 point': 'REALISED (gcd degree 1)'}
+p=331 omega^2  d2 mu=3 row_dim1  eig=True  w=1  {'(1:15) = exact-C3 point': 'REALISED (gcd degree 1)', '(1:19) = exact-C3 point': 'REALISED (gcd degree 1)', '(1:205) = X^{C6} point': 'NOT realised'}
+p=331 omega^2  d2 mu=3 row_dim0  eig=True  w=1  {'(1:15) = exact-C3 point': 'REALISED (gcd degree 1)', '(1:19) = exact-C3 point': 'REALISED (gcd degree 1)', '(1:205) = X^{C6} point': 'NOT realised'}
+p=661 omega    d1 mu=3 row_dim1  eig=True  w=1  {'(1:211) = X^{C6} point': 'NOT realised'}
+p=661 omega    d1 mu=3 row_dim0  eig=True  w=1  {'(1:211) = X^{C6} point': 'NOT realised'}
+p=661 omega    d2 mu=3 row_dim1  eig=True  w=2  {'(1:460) = X^{C6} point': 'NOT realised'}
+p=661 omega    d2 mu=3 row_dim0  eig=True  w=2  {'(1:460) = X^{C6} point': 'NOT realised'}
+p=661 omega^2  d1 mu=3 row_dim1  eig=True  w=2  {'(1:460) = X^{C6} point': 'NOT realised'}
+p=661 omega^2  d1 mu=3 row_dim0  eig=True  w=2  {'(1:460) = X^{C6} point': 'NOT realised'}
+p=661 omega^2  d2 mu=3 row_dim1  eig=True  w=1  {'(1:211) = X^{C6} point': 'NOT realised'}
+p=661 omega^2  d2 mu=3 row_dim0  eig=True  w=1  {'(1:211) = X^{C6} point': 'NOT realised'}
+S3_LEVER1C_OK
+S3_LEVER2_OK
