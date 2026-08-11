@@ -17,7 +17,7 @@ Expected terminal markers:
 PRODUCE_LEDGER_OK                 (55 checks, 0 failures)
 LEDGER_IDEALS_M2_OK               (32 row checks, 0 failures)
 RECEIVER_LEDGER_X_VERIFY_OK
-ALLGREEN                          (101 checks, 0 failures)
+ALLGREEN                          (107 checks, 0 failures)
 ```
 
 `verifier.py` reads `results/ledger_exact.json` and `results/m2_ledger_ideals.txt`

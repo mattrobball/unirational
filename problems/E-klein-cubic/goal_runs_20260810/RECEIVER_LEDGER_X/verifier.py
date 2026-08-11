@@ -913,6 +913,64 @@ def main():
     else:
         check('E_M2_output_present', False, 'run M2 --script scripts/ledger_ideals.m2')
 
+    # -------------------------------- PART F : topological Lefschetz cross-check
+    #
+    # A route that touches none of the machinery above: it uses only TRACES.
+    #
+    # Standard inputs, not recomputed here.  X is a smooth cubic threefold, so
+    # H^i(X,Q) = Q for i = 0,2,4,6 and rank H^3 = 10.  G = PSL(2,11) is perfect,
+    # hence acts trivially on every 1-dimensional H^{even}.  Griffiths' residue
+    # calculus gives H^{2,1}(X) = (Sym(W^*)/Jac(F))_1 = W^* as a G-module (no
+    # character twist is possible: G is simple), and H^{1,2} is its conjugate,
+    # so chi_{H^3}(g) = chi_W(g) + conj(chi_W(g)) = tr(g|W) + tr(g^{-1}|W).
+    # Hence the topological Lefschetz number is
+    #
+    #     L(g) = 4 - ( tr(g|W) + tr(g^{-1}|W) ) ,
+    #
+    # and X^g is smooth for a finite-order automorphism, so L(g) = chi_top(X^g)
+    # with every isolated fixed point contributing exactly 1.  Predicted values,
+    # by element order: 1 -> -6 (= chi_top of a smooth cubic threefold),
+    # 2 -> 2, 3 -> 6, 5 -> 4, 6 -> 2, 11 -> 5.  Compare with the ledger:
+    # X^{C3} = 6 pts, X^{C5} = 4 pts, X^{C6} = 2 pts, X^{C11} = 5 pts, and
+    # X^{C2} = E_sigma (genus 1, chi = 0) disjoint L_sigma = P^1 (chi = 2).
+    print('--- PART F : topological Lefschetz cross-check (traces only) ---')
+    LEF = {1: -6, 2: 2, 3: 6, 5: 4, 6: 2, 11: 5}
+    for p in (331, 661):
+        MGl = ModGroup(p)
+        got, uniform = {}, True
+        for gi in range(660):
+            t = (sum(MGl.rho[gi][i][i] for i in range(5))
+                 + sum(MGl.rho[MGl.inv[gi]][i][i] for i in range(5))) % p
+            L = (4 - t) % p
+            L = L - p if L > p // 2 else L
+            o = MGl.ordr[gi]
+            if o in got and got[o] != L:
+                uniform = False
+            got[o] = L
+        check('F%d_lefschetz_number_depends_only_on_element_order' % p, uniform)
+        check('F%d_lefschetz_numbers_are_the_predicted_ones' % p, got == LEF,
+              'L by order = %s' % got)
+        # ... and they equal the ledger's own row data, recomputed from Part B
+        ledger_chi = {}
+        for nm, order in (('C3', 3), ('C5', 5), ('C6', 6), ('C11', 11)):
+            n = 0
+            for s in modres[p][nm]['strata']:
+                if s['dim'] == 1:
+                    n += 1 if s['F_value_zero'] else 0
+                elif s['dim'] == 2:
+                    g = s['geometric_points']
+                    n += g if isinstance(g, int) else 0
+            ledger_chi[order] = n
+        # C2: chi(E_sigma) + chi(L_sigma) = 0 + 2, from the row's own shape
+        st = modres[p]['C2']['strata']
+        lin = [s for s in st if s['dim'] == 2][0]
+        pln = [s for s in st if s['dim'] == 3][0]
+        ledger_chi[2] = 2 if (lin['F_identically_zero'] is True
+                              and pln['singular_points'] == 0) else None
+        ledger_chi[1] = -6  # X itself; the b_3 = 10 input, stated above
+        check('F%d_ledger_rows_reproduce_the_lefschetz_numbers' % p,
+              ledger_chi == LEF, 'ledger chi = %s' % ledger_chi)
+
     os.makedirs(RES, exist_ok=True)
     with open(os.path.join(RES, 'verifier_output.json'), 'w') as fh:
         json.dump({'checks': [{'name': n, 'pass': p, 'detail': d} for n, p, d in CHECKS],

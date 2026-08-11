@@ -4,7 +4,7 @@
 **Problem E headline: OPEN.** Nothing here changes it.
 
 Machine markers: `PRODUCE_LEDGER_OK` (55 checks), `RECEIVER_LEDGER_X_VERIFY_OK` +
-`ALLGREEN` (101 checks), `LEDGER_IDEALS_M2_OK` (32 row checks over two primes).
+`ALLGREEN` (107 checks), `LEDGER_IDEALS_M2_OK` (32 row checks over two primes).
 
 ---
 
@@ -357,7 +357,7 @@ the table shows they hold for **fourteen of the sixteen rows**:
 
 > **Theorem (receiver dichotomy).** Let `H ≤ G` be any subgroup other than the
 > trivial subgroup and other than a `C2`. Then `X^H` is a finite set (empty for
-> ten of the twelve such classes) and `X^{N_G(H)} = ∅`. Consequently, for every
+> nine of the fourteen such classes) and `X^{N_G(H)} = ∅`. Consequently, for every
 > representation `V` with `V^H ≠ 0` and every `G`-equivariant rational map
 > `phi : P(V) ⇢ X`, the linear subspace `P(V^H)` lies in the indeterminacy locus
 > of `phi`.
@@ -406,7 +406,7 @@ Three genuinely different routes; every number is produced by at least two.
 | route | file | what it does | marker |
 |---|---|---|---|
 | exact char-0 eigen-analysis | `scripts/produce_ledger.py` (+ `scripts/klein_core.py`) | `K = Q(zeta_165)` degree-80 exact arithmetic; character eigenspaces; binary/ternary cubics; Hesse `j`; stabilisers; subgroup lattice | `PRODUCE_LEDGER_OK`, 55 checks |
-| exact char-0 (independent) + two split primes, brute-force point counts | `verifier.py` | Part A: independent `Q(zeta_11)` rebuild, all "lies on `X`" claims exactly (plus purely combinatorial arguments for the `C5` and `C11` eigenpoints). Part B: `p = 331, 661` (both `≡ 1 mod 165`); fixed loci by intersecting kernels over **tuples of generator eigenvalues** (no character theory); `X`-points by **brute-force enumeration** of `P^1(F_p)` / `P^2(F_p)`; every "off `X`" claim certified by one non-vanishing mod `p` (a char-0 proof). Part C: residual actions, orbit sizes, containments. Part E: ingests the M2 output | `RECEIVER_LEDGER_X_VERIFY_OK`, `ALLGREEN`, 101 checks |
+| exact char-0 (independent) + two split primes, brute-force point counts | `verifier.py` | Part A: independent `Q(zeta_11)` rebuild, all "lies on `X`" claims exactly (plus purely combinatorial arguments for the `C5` and `C11` eigenpoints). Part B: `p = 331, 661` (both `≡ 1 mod 165`); fixed loci by intersecting kernels over **tuples of generator eigenvalues** (no character theory); `X`-points by **brute-force enumeration** of `P^1(F_p)` / `P^2(F_p)`; every "off `X`" claim certified by one non-vanishing mod `p` (a char-0 proof). Part C: residual actions, orbit sizes, containments. Part E: ingests the M2 output. Part F: the Lefschetz cross-check below | `RECEIVER_LEDGER_X_VERIFY_OK`, `ALLGREEN`, 107 checks |
 | ideal-theoretic (Macaulay2) | `scripts/emit_m2.py` → `scripts/ledger_ideals.m2` | `X^H = V(F) + sum_g minors_2( x \| g·x )`, saturated; reports projective dimension, degree and **radicality** for all 16 rows over `GF(331)` and `GF(661)` | `LEDGER_IDEALS_M2_OK`, 32/32 |
 
 M2 row results (identical at both primes):
@@ -420,6 +420,38 @@ S3(a), S3(b), D10, D12, A4, F55, A5(a), A5(b), G: empty (unit ideal after satura
 and **every** row's ideal equals its own radical — so every point count above is
 a count of *reduced* points, verified a second way (the first being the
 non-vanishing of binary-cubic discriminants exactly in `K`).
+
+### 6.1 A fourth route to the five cyclic rows: topological Lefschetz (added 2026-08-11 in adjudication)
+
+`verifier.py` Part F closes the five cyclic rows a fourth time using **only
+traces** — no eigenspace, no discriminant, no ideal, no point enumeration.
+
+*Inputs, standard and not recomputed:* `X` is a smooth cubic threefold, so
+`H^i(X,Q) = Q` for `i = 0,2,4,6` and `rank H^3 = 10`; `G` is perfect, so it acts
+trivially on every 1-dimensional `H^{even}` (no character twist is available);
+and Griffiths' residue calculus gives `H^{2,1}(X) = (Sym(W^*)/Jac F)_1 = W^*`,
+with `H^{1,2}` its conjugate. Hence
+`chi_{H^3}(g) = tr(g|W) + tr(g^{-1}|W)` and
+
+```
+L(g)  =  4 − ( tr(g|W) + tr(g^{-1}|W) )  =  chi_top(X^g),
+```
+
+the last equality because `X^g` is smooth for a finite-order automorphism, so
+every isolated fixed point contributes exactly `+1`. Computed over `F_331` and
+`F_661` from the group matrices alone, `L` depends only on the element order and
+equals
+
+| element order | 1 | 2 | 3 | 5 | 6 | 11 |
+|---|---:|---:|---:|---:|---:|---:|
+| `L(g) = chi_top(X^g)` | −6 | 2 | **6** | **4** | **2** | **5** |
+
+`−6` is `chi_top` of a smooth cubic threefold; `2 = chi(E_sigma) + chi(L_sigma)
+= 0 + 2` is the `C2` row's shape; and `6, 4, 2, 5` are exactly the `C3`, `C5`,
+`C6`, `C11` point counts of §2. In particular the decisive `C3` claim gets an
+independent proof: `X^{C3}` is finite with `#X^{C3} = 6`, each eigenline meets
+`X` in a length-3 scheme, and `3 + 3 = 6` leaves **no room** for the isolated
+`D12`-point — so it is off `X` whatever the exact evaluation of §3.1 says.
 
 Replay:
 

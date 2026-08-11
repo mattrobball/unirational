@@ -504,6 +504,36 @@
    "detail": "",
    "name": "E_M2_marker_OK",
    "pass": true
+  },
+  {
+   "detail": "",
+   "name": "F331_lefschetz_number_depends_only_on_element_order",
+   "pass": true
+  },
+  {
+   "detail": "L by order = {1: -6, 2: 2, 11: 5, 3: 6, 5: 4, 6: 2}",
+   "name": "F331_lefschetz_numbers_are_the_predicted_ones",
+   "pass": true
+  },
+  {
+   "detail": "ledger chi = {3: 6, 5: 4, 6: 2, 11: 5, 2: 2, 1: -6}",
+   "name": "F331_ledger_rows_reproduce_the_lefschetz_numbers",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "F661_lefschetz_number_depends_only_on_element_order",
+   "pass": true
+  },
+  {
+   "detail": "L by order = {1: -6, 2: 2, 11: 5, 3: 6, 5: 4, 6: 2}",
+   "name": "F661_lefschetz_numbers_are_the_predicted_ones",
+   "pass": true
+  },
+  {
+   "detail": "ledger chi = {3: 6, 5: 4, 6: 2, 11: 5, 2: 2, 1: -6}",
+   "name": "F661_ledger_rows_reproduce_the_lefschetz_numbers",
+   "pass": true
   }
  ],
  "modular": {
@@ -1204,6 +1234,6 @@
    }
   }
  },
- "n_checks": 101,
+ "n_checks": 107,
  "n_fail": 0
 }

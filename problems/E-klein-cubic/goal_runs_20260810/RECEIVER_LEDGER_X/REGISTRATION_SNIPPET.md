@@ -1,10 +1,13 @@
 # Proposed registration for `goal_runs_20260810/RECEIVER_LEDGER_X`
 
-**Not applied.** This session was told not to edit `NOTEBOOK.md` or
-`notebook_build/manifest.json` (concurrent sessions race on them). The text
-below is ready to paste by whoever holds the notebook lock; it should ride the
-same commit as the packet, and `scripts/check_manifest_parity.py` should be run
-before that commit lands.
+**APPLIED** (2026-08-11, in adjudication). The text below is the record of what
+was registered; it now lives in the `E56` **Status** paragraph of `NOTEBOOK.md`
+and in `notebook_build/manifest.json`, and both carry the adjudication
+amendments (107 verifier checks, the explicit scope disclaimer, the §5.2
+arithmetic correction). `scripts/check_manifest_parity.py` passes at the
+registering commit. The original note read "Not applied — this session was told
+not to edit `NOTEBOOK.md` or `notebook_build/manifest.json` (concurrent sessions
+race on them)."
 
 ---
 
@@ -12,7 +15,7 @@ before that commit lands.
 
 > **Receiver ledger landed 2026-08-10** (`goal_runs_20260810/RECEIVER_LEDGER_X`,
 > `RECEIVER-LEDGER-X-PASS`; markers `PRODUCE_LEDGER_OK` 55 checks,
-> `RECEIVER_LEDGER_X_VERIFY_OK` + `ALLGREEN` 101 checks,
+> `RECEIVER_LEDGER_X_VERIFY_OK` + `ALLGREEN` 107 checks,
 > `LEDGER_IDEALS_M2_OK` 32/32): the **target-side** companion of FIX-A2 —
 > one row per conjugacy class of subgroups for `X^H`, all 16 closed. New exact
 > rows: **`X^{C3}` is six reduced points** (the isolated `C3`-fixed point of
@@ -55,7 +58,7 @@ before that commit lands.
  "superseded_by": null,
  "char0_scope": "Exact characteristic zero throughout for the geometry: producer works in K = Q(zeta_165) = Q(zeta_3) (x) Q(zeta_5) (x) Q(zeta_11), degree 80, exact Fraction arithmetic, no modular reduction; verifier Part A rebuilds the representation independently over Q(zeta_11) and establishes every 'lies on X' claim exactly (with purely combinatorial arguments for the C5 and C11 eigenpoints). Two split primes p = 331 and p = 661 (both = 1 mod 165, so every element of G is diagonalisable over F_p) are used only for (i) regression of the exact results by brute-force enumeration of P^1(F_p)/P^2(F_p), and (ii) non-vanishing certificates for every 'off X' point, which are themselves char-0 proofs. Macaulay2 ideal route over GF(331) and GF(661) confirms dimension, degree and radicality of all 16 rows.",
  "tracked": "main",
- "notes": "Target-side fixed-locus ledger: X^H for every one of the 16 conjugacy classes of subgroups of G = PSL(2,11) acting on the Klein cubic threefold. Receiver companion of FIX-A2's source-side P(W)^H. NEW rows: X^{C3} = 6 reduced points with the isolated C3-fixed point (= the D12-point) OFF X, residual D12/C3 = V4 acting with orbits 2+4; X^{C6} = 2 points, both on the involution minus-line L_t, one free residual 2-orbit; X^{S3} = empty for BOTH S3 classes (P(W)^{S3} is the single D12-point); X^{C11} = 5 points all on X, a single free F55/C11 5-cycle. Sealed rows replayed: X^{C2} = E_sigma (smooth, j = 8192/11 via the exact Hesse parameter t = -16/11, non-CM, plus a_p twist match at 331/661) disjoint union L_sigma = P^1 in X; X^{V4} = 3 type-I + 3 type-II reduced points, two free residual C3-orbits, X^{A4} = empty; X^{C5} = 4 points paired freely by the D10 reflection; X^{D10} = X^{D12} = X^{F55} = X^{A5} = X^G = empty. Consequences: Corollary C3 (P(V^{C3}) is in the indeterminacy locus of every equivariant P(V) --> X, non-vacuous because dim V^{C3} >= 1 for all eight irreducibles) and the receiver dichotomy (X^{N_G(H)} = empty for EVERY H; X^H finite for every H except 1 and C2; the only blockers are X itself and the rational curve L_sigma). Closes the C3-reducedness remainder named in STRATA_EXACT.md 6.1 and NORMAL_CHARACTERS.md 5.1. Markers PRODUCE_LEDGER_OK (55 checks), RECEIVER_LEDGER_X_VERIFY_OK + ALLGREEN (101 checks), LEDGER_IDEALS_M2_OK (32 row checks). No contradiction with any sealed certificate."
+ "notes": "Target-side fixed-locus ledger: X^H for every one of the 16 conjugacy classes of subgroups of G = PSL(2,11) acting on the Klein cubic threefold. Receiver companion of FIX-A2's source-side P(W)^H. NEW rows: X^{C3} = 6 reduced points with the isolated C3-fixed point (= the D12-point) OFF X, residual D12/C3 = V4 acting with orbits 2+4; X^{C6} = 2 points, both on the involution minus-line L_t, one free residual 2-orbit; X^{S3} = empty for BOTH S3 classes (P(W)^{S3} is the single D12-point); X^{C11} = 5 points all on X, a single free F55/C11 5-cycle. Sealed rows replayed: X^{C2} = E_sigma (smooth, j = 8192/11 via the exact Hesse parameter t = -16/11, non-CM, plus a_p twist match at 331/661) disjoint union L_sigma = P^1 in X; X^{V4} = 3 type-I + 3 type-II reduced points, two free residual C3-orbits, X^{A4} = empty; X^{C5} = 4 points paired freely by the D10 reflection; X^{D10} = X^{D12} = X^{F55} = X^{A5} = X^G = empty. Consequences: Corollary C3 (P(V^{C3}) is in the indeterminacy locus of every equivariant P(V) --> X, non-vacuous because dim V^{C3} >= 1 for all eight irreducibles) and the receiver dichotomy (X^{N_G(H)} = empty for EVERY H; X^H finite for every H except 1 and C2; the only blockers are X itself and the rational curve L_sigma). Closes the C3-reducedness remainder named in STRATA_EXACT.md 6.1 and NORMAL_CHARACTERS.md 5.1. Markers PRODUCE_LEDGER_OK (55 checks), RECEIVER_LEDGER_X_VERIFY_OK + ALLGREEN (107 checks), LEDGER_IDEALS_M2_OK (32 row checks). No contradiction with any sealed certificate. SCOPE: fixed-locus computation plus an indeterminacy-locus consequence only; nothing is proved about the EXISTENCE of G-equivariant maps into X, and neither Corollary C3 nor the receiver dichotomy is an obstruction to equivariant unirationality. Adjudicated 2026-08-11 (ADJUDICATION_PR27.md): full pipeline replayed byte-identically; the arithmetic slip 'empty for ten of the twelve such classes' in THEOREM.md 5.2 corrected to 'nine of the fourteen'; verifier Part F added, an independent topological-Lefschetz cross-check using traces only, which reproduces every cyclic row (L = -6, 2, 6, 4, 2, 5 at element orders 1, 2, 3, 5, 6, 11)."
 }
 ```
 

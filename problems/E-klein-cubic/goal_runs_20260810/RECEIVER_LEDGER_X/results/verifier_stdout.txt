@@ -104,7 +104,14 @@ CHECK PASS  E_M2_all_rows_radical_p=331
 CHECK PASS  E_M2_ideal_route_p=661_all_16_rows  mismatches: []
 CHECK PASS  E_M2_all_rows_radical_p=661
 CHECK PASS  E_M2_marker_OK
+--- PART F : topological Lefschetz cross-check (traces only) ---
+CHECK PASS  F331_lefschetz_number_depends_only_on_element_order
+CHECK PASS  F331_lefschetz_numbers_are_the_predicted_ones  L by order = {1: -6, 2: 2, 11: 5, 3: 6, 5: 4, 6: 2}
+CHECK PASS  F331_ledger_rows_reproduce_the_lefschetz_numbers  ledger chi = {3: 6, 5: 4, 6: 2, 11: 5, 2: 2, 1: -6}
+CHECK PASS  F661_lefschetz_number_depends_only_on_element_order
+CHECK PASS  F661_lefschetz_numbers_are_the_predicted_ones  L by order = {1: -6, 2: 2, 11: 5, 3: 6, 5: 4, 6: 2}
+CHECK PASS  F661_ledger_rows_reproduce_the_lefschetz_numbers  ledger chi = {3: 6, 5: 4, 6: 2, 11: 5, 2: 2, 1: -6}
 
-101 checks, 0 failures
+107 checks, 0 failures
 RECEIVER_LEDGER_X_VERIFY_OK
 ALLGREEN
