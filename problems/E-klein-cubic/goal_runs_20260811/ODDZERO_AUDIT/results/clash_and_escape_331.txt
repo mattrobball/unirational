@@ -1,0 +1,48 @@
+pt B_K in P(W+_z);  W-_z contains the two type-I vertices:
+   (1, 190)   = v_t   (the +1-eigenline of that involution)
+   (1, 38)   = v_t   (the +1-eigenline of that involution)
+
+(pt_V4I, P_sigma) V4-rows under D_{P_z}: 6 components
+   comp: attaches at (u=[B_K],v=(1, 166))  C2-parent sweeps L_w  -> arc consistency needs (1, 156)
+   comp: attaches at (u=[B_K],v=(1, 156))  C2-parent sweeps L_w  -> arc consistency needs (1, 166)
+   comp: attaches at (u=[B_K],v=(1, 276))  C2-parent sweeps L_w  -> arc consistency needs (1, 220)
+   comp: attaches at (u=[B_K],v=(1, 220))  C2-parent sweeps L_w  -> arc consistency needs (1, 276)
+   comp: attaches at (u=[B_K],v=(1, 38))  C2-parent sweeps L_w  -> arc consistency needs (1, 190)
+   comp: attaches at (u=[B_K],v=(1, 190))  C2-parent sweeps L_w  -> arc consistency needs (1, 38)
+
+ d   m   N(d,m)  dim V0  |  child 1: generic k / value  ->  needed   |  V0-section: k / value  -> needed
+  2   1      2        1  |  k=0 val=(1, 156) OK          |  k=1 val=(1, 166) CLASH
+  3   1      4        2  |  k=0 val=(1, 166) CLASH       |  k=1 val=(1, 156) OK
+  3   3      1        0  |  k=0 val=(1, 166) CLASH       |  -
+  4   1      7        5  |  k=0 val=(1, 156) OK          |  k=1 val=(1, 166) CLASH
+  4   3      4        2  |  k=0 val=(1, 156) OK          |  k=1 val=(1, 166) CLASH
+  5   1     10        8  |  k=0 val=(1, 166) CLASH       |  k=1 val=(1, 156) OK
+  5   3      8        6  |  k=0 val=(1, 166) CLASH       |  k=1 val=(1, 156) OK
+  5   5      2        0  |  k=0 val=(1, 166) CLASH       |  -
+  6   1     14       12  |  k=0 val=(1, 156) OK          |  k=1 val=(1, 166) CLASH
+  6   3     13       11  |  k=0 val=(1, 156) OK          |  k=1 val=(1, 166) CLASH
+  6   5      6        4  |  k=0 val=(1, 156) OK          |  k=1 val=(1, 166) CLASH
+  7   1     19       17  |  k=0 val=(1, 166) CLASH       |  k=1 val=(1, 156) OK
+  7   3     20       18  |  k=0 val=(1, 166) CLASH       |  k=1 val=(1, 156) OK
+  7   5     12       10  |  k=0 val=(1, 166) CLASH       |  k=1 val=(1, 156) OK
+  7   7      3        1  |  k=0 val=(1, 166) CLASH       |  -
+  8   1     24       22  |  k=0 val=(1, 156) OK          |  k=1 val=(1, 166) CLASH
+  8   3     28       26  |  k=0 val=(1, 156) OK          |  k=1 val=(1, 166) CLASH
+  8   5     20       18  |  k=0 val=(1, 156) OK          |  k=1 val=(1, 166) CLASH
+  8   7      8        6  |  k=0 val=(1, 156) OK          |  k=1 val=(1, 166) CLASH
+  9   1     30       28  |  k=0 val=(1, 166) CLASH       |  k=1 val=(1, 156) OK
+  9   3     37       35  |  k=0 val=(1, 166) CLASH       |  k=1 val=(1, 156) OK
+  9   5     30       28  |  k=0 val=(1, 166) CLASH       |  k=1 val=(1, 156) OK
+  9   7     16       14  |  k=0 val=(1, 166) CLASH       |  k=1 val=(1, 156) OK
+  9   9      3        1  |  k=0 val=(1, 166) CLASH       |  -
+ 10   1     37       35  |  k=0 val=(1, 156) OK          |  k=1 val=(1, 166) CLASH
+ 10   3     48       46  |  k=0 val=(1, 156) OK          |  k=1 val=(1, 166) CLASH
+ 10   5     42       40  |  k=0 val=(1, 156) OK          |  k=1 val=(1, 166) CLASH
+ 10   7     27       25  |  k=0 val=(1, 156) OK          |  k=1 val=(1, 166) CLASH
+ 10   9     10        8  |  k=0 val=(1, 156) OK          |  k=1 val=(1, 166) CLASH
+ 11   1     44       42  |  k=0 val=(1, 166) CLASH       |  k=1 val=(1, 156) OK
+ 11   3     60       58  |  k=0 val=(1, 166) CLASH       |  k=1 val=(1, 156) OK
+ 11   5     56       54  |  k=0 val=(1, 166) CLASH       |  k=1 val=(1, 156) OK
+ 11   7     40       38  |  k=0 val=(1, 166) CLASH       |  k=1 val=(1, 156) OK
+ 11   9     20       18  |  k=0 val=(1, 166) CLASH       |  k=1 val=(1, 156) OK
+ 11  11      4        2  |  k=0 val=(1, 166) CLASH       |  -

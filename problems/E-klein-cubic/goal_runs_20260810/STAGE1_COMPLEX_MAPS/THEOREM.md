@@ -812,6 +812,14 @@ components, and surjectivity onto the arc-consistent product is a real question.
 
 ### 15.2 Task (a): the per-chain evaluation-surjectivity verdicts
 
+> **2026-08-11 correction (`goal_runs_20260811/ODDZERO_AUDIT`):** the
+> degeneracy test behind these verdicts (`s1coherence.py:293-296`) uses the
+> rank of the evaluated basis of the whole module, where Theorem 15.1's
+> `s(q) = 0` branch is per-section; individual sections in a
+> positive-dimensional subspace can escape a non-degenerate module's pinned
+> value. Verdicts of the form "evaluates outside its arc-consistent domain"
+> are therefore module-level, not section-level, statements.
+
 `results/coherence_331.txt` (identical at 661). "image" is taken over the
 multi-valued rows below the sweep row, with a degenerate child expanded over its
 full domain.
@@ -844,6 +852,12 @@ section**. Likewise 9 of 12 for each `V4`-stabilised `C2`-row and 38 of 48 for
 is the sharpest thing this packet says about Layer 2.
 
 ### 15.3 Task (b): the re-issued count
+
+> **2026-08-11 correction (`goal_runs_20260811/ODDZERO_AUDIT`):** by the
+> §15.2 banner, the stratum-coherent total `1 088 847 395 778 723 840 000` is
+> a **lower bound**, not the count, and the `2⁶` cut against arc consistency
+> is an upper bound on the true cut, until the degeneracy test is stratified
+> by order of vanishing.
 
 The evaluation maps are **not** all surjective, so the number changes:
 

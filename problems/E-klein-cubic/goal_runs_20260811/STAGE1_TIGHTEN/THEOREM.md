@@ -168,6 +168,11 @@ the error of §0.
 
 ### 2.2 The `σ`-band factor, per residue
 
+> **2026-08-11 correction (`goal_runs_20260811/ODDZERO_AUDIT`):** the odd rows
+> below are **not determined** by this enumeration (the `0` is an artifact of a
+> module-level degeneracy test; see the verdict banner in §2.5), and the even
+> rows are **lower bounds**, not exact counts.
+
 Running `STAGE1`'s coherent enumeration with the two degree-restricted tables:
 
 | `d mod 6` | `σ`-band factor `K(d)` | coherent total with `STAGE1`'s immune factor |
@@ -204,6 +209,10 @@ congruence reaches it.
 
 ### 2.4 The table, `d mod 330`
 
+> **2026-08-11 correction (`goal_runs_20260811/ODDZERO_AUDIT`):** odd-residue
+> cells are **not determined** (the `0` is an artifact; §2.5), even-residue
+> cells are **lower bounds**.
+
 `330 = lcm(165, 2)`. Combining §2.2, §2.3 and `STAGE2`'s odd-order collapse
 (`6⁸·4¹⁰·5⁴ = 1 100 753 141 760 000 → 3⁸ = 6 561`, all residues):
 
@@ -239,6 +248,19 @@ this packet they are the multidegree bookkeeping `Σ_r a_r = d` on the two
 full-flag rows.
 
 ### 2.5 The odd residues: FLAGGED, NOT CLAIMED
+
+> **2026-08-11 verdict (`goal_runs_20260811/ODDZERO_AUDIT`):
+> `ODD-ZERO-ARTIFACT`.** The zero is not an exclusion, and this section was
+> right to withhold the claim. The located error: `s3sat.py:72-78` decides
+> degeneracy from `s3sweep.py:271-276`, the rank of the evaluated basis of the
+> **whole module**, while Theorem 15.1's second branch (`s(q) = 0`) is a
+> property of the **individual section**. Sections vanishing at the six V4
+> attaching points over a type-I plus-plane point form a codimension-2 subspace
+> (`dim = N(d,m) - 2`), every non-zero member is still a dominant sweep, and
+> its next-order value carries exactly the character closure demands at odd
+> `d` — machine witnesses at every odd `d` in `[3, 11]`, both primes. No odd
+> degree is excluded; the first open window stays at `d = 35`. Repair (queued):
+> stratify the degeneracy test by order of vanishing at `π(F_R)`.
 
 The enumeration returns **0** for `d ≡ 1, 3, 5 (mod 6)`. Taken at face value that
 would exclude every odd degree at order 0 — a headline-adjacent claim. **It is

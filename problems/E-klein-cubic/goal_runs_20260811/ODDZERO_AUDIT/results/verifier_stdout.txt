@@ -1,0 +1,60 @@
+
+=== p = 331 =====================================================
+CHECK A1[p=331]  OK   |G|=660, #involutions=55
+CHECK A2[p=331]  OK   |C_G(sigma)|=12, dim W+=3, dim W-=2
+CHECK A3[p=331]  OK   Gamma is block diagonal in the sigma-adapted frame (u0,u1,u2 | v0,v1)
+CHECK A4[p=331]  OK   linear characters of Gamma = D12: 4
+CHECK A5[p=331]  OK   Gamma-stable lines in W^-_sigma: 0  =>  every non-zero equivariant multiform sweeps
+CHECK B1[p=331]  OK   every computed section satisfies f(A_g u, B_g v) = B_g f(u,v) for all g in Gamma (direct test, 0 failures)
+CHECK B2[p=331]  OK   H0-1 / STAGE1 Thm 9(i): dim V((d-m,m),psi=1) = 0 for every EVEN m, d <= 12 (0 violations)
+CHECK B3[p=331]  OK   sealed Layer-3 table: dim V((d-m,m),1) = N(d,m) for every odd m, d <= 12 (0 mismatches)
+CHECK B4[p=331]  OK   sealed sample values N(1,1)=1 N(3,1)=4 N(3,3)=1 N(5,1)=10 N(7,1)=19 N(12,3)=73 reproduced in sigma-adapted coordinates
+CHECK B5[p=331]  OK   STAGE2 Prop 1.4(ii) re-derived as module non-vanishing on D_{L-_sigma}: ord_{L_sigma}(T) = d+1 (mod 2) (0 violations)
+CHECK C1[p=331]  OK   level-0 arrangement 940 points / 220 lines / 55 planes
+CHECK C2[p=331]  OK   children of D_{P_sigma} / D_{L-_sigma}: 54 / 18 (STAGE1 sec.15.2: 54 / 18)
+CHECK C3[p=331]  OK   no minus-line lies in any plus-plane => the two divisor rows share NO child component; the coupling is 2-step, through the V4-stabilised C2-rows
+CHECK C4[p=331]  OK   independent census: 11076 components / 80 rows, row multiset (K,dim,#comp,Stab) == sealed TERMINUS_STRATA_PW
+CHECK D1[p=331]  OK   the (pt_V4I, P_sigma) V4-rows contribute 6 components under one D_{P_sigma}; each has exactly one sweeping C2 parent, and arc consistency (im in L_z cap L_w) pins its vertex uniquely
+CHECK D2[p=331]  OK   Thm 15.1 evaluation rigidity: the span of the evaluated module basis is 0 or 1 dimensional at every child, never 2 (max = 1)
+CHECK D3[p=331]  OK   the character rule chi = mu_0^a mu_1^b agrees with the explicit evaluation wherever the latter is non-zero
+CHECK E1[p=331]  OK   d ODD: the generic section of EVERY available class (d-m,m), m odd, evaluates all 6 children to the FORBIDDEN vertex (120 clashes, 0 agreements)
+CHECK E2[p=331]  OK   d EVEN: the generic section evaluates all 6 children to the REQUIRED vertex (0 clashes, 90 agreements)
+CHECK E3[p=331]  OK   => STAGE1_TIGHTEN scripts/s3residue.py:55 drops every class at every odd residue, giving K(1)=K(3)=K(5)=0.  MECHANISM REPRODUCED.
+CHECK F1[p=331]  OK   the six vanishing conditions f(q) = 0 have rank exactly 2 on V((d-m,m),1) whenever dim >= 3, so dim V0 = N(d,m) - 2 (0 rank / 0 dim exceptions)
+CHECK F2[p=331]  OK   d ODD: every V0 section vanishes at all six children (k >= 1) and every odd-order term lands on the REQUIRED vertex (0 exceptions)
+CHECK F3[p=331]  OK   ESCAPE WITNESS for every odd d in [3,11]: a section of V0 whose leading order at all six children is k = 1 with the REQUIRED vertex.  (d -> m) = {3: 1, 5: 1, 7: 1, 9: 1, 11: 1}
+CHECK F4[p=331]  OK   character identity: the k-th term has Lambda-character chi_B^{a+k} mu_1 ; a = d-m is even for odd d, so k=0 gives mu_1 (forbidden) and k=1 gives chi_B.mu_1 = the other vertex (required)
+CHECK F5[p=331]  OK   every non-zero f in V0 is still a DOMINANT sweep (A5), so it is a legitimate Layer-2 datum for the forced sweep of D_{P_sigma}
+CHECK F6[p=331]  OK   the escape section changes NO other child's value (0 changed; 1 children outside the six acquire an incidental extra degeneracy, which only widens the contribution) => the corrected contribution tuple at odd d equals the tuple at the even residue with the same d mod 3
+
+=== p = 661 =====================================================
+CHECK A1[p=661]  OK   |G|=660, #involutions=55
+CHECK A2[p=661]  OK   |C_G(sigma)|=12, dim W+=3, dim W-=2
+CHECK A3[p=661]  OK   Gamma is block diagonal in the sigma-adapted frame (u0,u1,u2 | v0,v1)
+CHECK A4[p=661]  OK   linear characters of Gamma = D12: 4
+CHECK A5[p=661]  OK   Gamma-stable lines in W^-_sigma: 0  =>  every non-zero equivariant multiform sweeps
+CHECK B1[p=661]  OK   every computed section satisfies f(A_g u, B_g v) = B_g f(u,v) for all g in Gamma (direct test, 0 failures)
+CHECK B2[p=661]  OK   H0-1 / STAGE1 Thm 9(i): dim V((d-m,m),psi=1) = 0 for every EVEN m, d <= 12 (0 violations)
+CHECK B3[p=661]  OK   sealed Layer-3 table: dim V((d-m,m),1) = N(d,m) for every odd m, d <= 12 (0 mismatches)
+CHECK B4[p=661]  OK   sealed sample values N(1,1)=1 N(3,1)=4 N(3,3)=1 N(5,1)=10 N(7,1)=19 N(12,3)=73 reproduced in sigma-adapted coordinates
+CHECK B5[p=661]  OK   STAGE2 Prop 1.4(ii) re-derived as module non-vanishing on D_{L-_sigma}: ord_{L_sigma}(T) = d+1 (mod 2) (0 violations)
+CHECK C1[p=661]  OK   level-0 arrangement 940 points / 220 lines / 55 planes
+CHECK C2[p=661]  OK   children of D_{P_sigma} / D_{L-_sigma}: 54 / 18 (STAGE1 sec.15.2: 54 / 18)
+CHECK C3[p=661]  OK   no minus-line lies in any plus-plane => the two divisor rows share NO child component; the coupling is 2-step, through the V4-stabilised C2-rows
+CHECK C4[p=661]  OK   independent census: 11076 components / 80 rows, row multiset (K,dim,#comp,Stab) == sealed TERMINUS_STRATA_PW
+CHECK D1[p=661]  OK   the (pt_V4I, P_sigma) V4-rows contribute 6 components under one D_{P_sigma}; each has exactly one sweeping C2 parent, and arc consistency (im in L_z cap L_w) pins its vertex uniquely
+CHECK D2[p=661]  OK   Thm 15.1 evaluation rigidity: the span of the evaluated module basis is 0 or 1 dimensional at every child, never 2 (max = 1)
+CHECK D3[p=661]  OK   the character rule chi = mu_0^a mu_1^b agrees with the explicit evaluation wherever the latter is non-zero
+CHECK E1[p=661]  OK   d ODD: the generic section of EVERY available class (d-m,m), m odd, evaluates all 6 children to the FORBIDDEN vertex (120 clashes, 0 agreements)
+CHECK E2[p=661]  OK   d EVEN: the generic section evaluates all 6 children to the REQUIRED vertex (0 clashes, 90 agreements)
+CHECK E3[p=661]  OK   => STAGE1_TIGHTEN scripts/s3residue.py:55 drops every class at every odd residue, giving K(1)=K(3)=K(5)=0.  MECHANISM REPRODUCED.
+CHECK F1[p=661]  OK   the six vanishing conditions f(q) = 0 have rank exactly 2 on V((d-m,m),1) whenever dim >= 3, so dim V0 = N(d,m) - 2 (0 rank / 0 dim exceptions)
+CHECK F2[p=661]  OK   d ODD: every V0 section vanishes at all six children (k >= 1) and every odd-order term lands on the REQUIRED vertex (0 exceptions)
+CHECK F3[p=661]  OK   ESCAPE WITNESS for every odd d in [3,11]: a section of V0 whose leading order at all six children is k = 1 with the REQUIRED vertex.  (d -> m) = {3: 1, 5: 1, 7: 1, 9: 1, 11: 1}
+CHECK F4[p=661]  OK   character identity: the k-th term has Lambda-character chi_B^{a+k} mu_1 ; a = d-m is even for odd d, so k=0 gives mu_1 (forbidden) and k=1 gives chi_B.mu_1 = the other vertex (required)
+CHECK F5[p=661]  OK   every non-zero f in V0 is still a DOMINANT sweep (A5), so it is a legitimate Layer-2 datum for the forced sweep of D_{P_sigma}
+CHECK F6[p=661]  OK   the escape section changes NO other child's value (0 changed; 0 children outside the six acquire an incidental extra degeneracy, which only widens the contribution) => the corrected contribution tuple at odd d equals the tuple at the even residue with the same d mod 3
+
+checks: 52   failures: 0   (176 s)
+ODDZERO_AUDIT_VERIFY_OK
+ALLGREEN

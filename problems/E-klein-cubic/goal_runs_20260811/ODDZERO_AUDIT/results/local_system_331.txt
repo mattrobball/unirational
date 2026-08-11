@@ -1,0 +1,31 @@
+K0 = {1,z,s,r};  pt = [B] = the z-plus type-I vertex
+   A : dim 2
+   B : dim 1
+   C : dim 1
+   D : dim 1
+   W+_z = A + B      W-_z = C + D
+   W+_s = A + C      W-_s = B + D
+   W+_r = A + D      W-_r = B + C
+
+--- the six V4 components over pt, their divisor parent, their C2 parent,
+--- and the value ARC CONSISTENCY forces on them ---
+  oid=32 dim=1  divisor parent=['P_z']  C2 parent sweeps L_r  -> forced value ['C']
+  oid=33 dim=1  divisor parent=['P_z']  C2 parent sweeps L_s  -> forced value ['D']
+  oid=36 dim=1  divisor parent=['L_s']  C2 parent sweeps L_r  -> forced value ['B']
+  oid=34 dim=1  divisor parent=['L_r']  C2 parent sweeps L_s  -> forced value ['B']
+  oid=37 dim=0  divisor parent=['L_s']  C2 parent sweeps L_z  -> forced value ['D']
+  oid=35 dim=0  divisor parent=['L_r']  C2 parent sweeps L_z  -> forced value ['C']
+
+--- what the divisor row's OWN sections evaluate to, by degree d ---
+  d= 1 : oid32[P_z]D  <-- CLASH(need ['C'])  oid33[P_z]C  <-- CLASH(need ['D'])  oid36[L_s]B  oid34[L_r]B  oid37[L_s]B  <-- CLASH(need ['D'])  oid35[L_r]B  <-- CLASH(need ['C'])
+  d= 2 : oid32[P_z]C  oid33[P_z]D  oid36[L_s]B  oid34[L_r]B  oid37[L_s]D  oid35[L_r]C
+  d= 3 : oid32[P_z]D  <-- CLASH(need ['C'])  oid33[P_z]C  <-- CLASH(need ['D'])  oid36[L_s]B  oid34[L_r]B  oid37[L_s]B  <-- CLASH(need ['D'])  oid35[L_r]B  <-- CLASH(need ['C'])
+  d= 4 : oid32[P_z]C  oid33[P_z]D  oid36[L_s]B  oid34[L_r]B  oid37[L_s]D  oid35[L_r]C
+  d= 5 : oid32[P_z]D  <-- CLASH(need ['C'])  oid33[P_z]C  <-- CLASH(need ['D'])  oid36[L_s]B  oid34[L_r]B  oid37[L_s]B  <-- CLASH(need ['D'])  oid35[L_r]B  <-- CLASH(need ['C'])
+  d= 6 : oid32[P_z]C  oid33[P_z]D  oid36[L_s]B  oid34[L_r]B  oid37[L_s]D  oid35[L_r]C
+  d= 7 : oid32[P_z]D  <-- CLASH(need ['C'])  oid33[P_z]C  <-- CLASH(need ['D'])  oid36[L_s]B  oid34[L_r]B  oid37[L_s]B  <-- CLASH(need ['D'])  oid35[L_r]B  <-- CLASH(need ['C'])
+  d= 8 : oid32[P_z]C  oid33[P_z]D  oid36[L_s]B  oid34[L_r]B  oid37[L_s]D  oid35[L_r]C
+  d= 9 : oid32[P_z]D  <-- CLASH(need ['C'])  oid33[P_z]C  <-- CLASH(need ['D'])  oid36[L_s]B  oid34[L_r]B  oid37[L_s]B  <-- CLASH(need ['D'])  oid35[L_r]B  <-- CLASH(need ['C'])
+  d=10 : oid32[P_z]C  oid33[P_z]D  oid36[L_s]B  oid34[L_r]B  oid37[L_s]D  oid35[L_r]C
+  d=11 : oid32[P_z]D  <-- CLASH(need ['C'])  oid33[P_z]C  <-- CLASH(need ['D'])  oid36[L_s]B  oid34[L_r]B  oid37[L_s]B  <-- CLASH(need ['D'])  oid35[L_r]B  <-- CLASH(need ['C'])
+  d=12 : oid32[P_z]C  oid33[P_z]D  oid36[L_s]B  oid34[L_r]B  oid37[L_s]D  oid35[L_r]C
