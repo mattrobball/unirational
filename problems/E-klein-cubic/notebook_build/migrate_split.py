@@ -273,9 +273,9 @@ def migrate_branches(build_dir: Path, dry_run: bool) -> int:
                 continue
             written += 1
             if not dry_run:
-                marker.write_text(
-                    f"branch: {b}\nregistered: migrated from "
-                    f"manifest.json known_branches\n", encoding="utf-8")
+                # deterministic content: two sessions registering the same
+                # branch write identical bytes, so add/add never conflicts
+                marker.write_text(f"branch: {b}\n", encoding="utf-8")
         del obj["known_branches"]
         note = obj.get("as_of_commit", {}).get("note")
         if note and "only in NOTEBOOK.md" in note:

@@ -74,9 +74,11 @@ python3 problems/E-klein-cubic/notebook_build/register_branch.py agent/foo  # a 
 python3 problems/E-klein-cubic/notebook_build/register_branch.py --missing  # what is unregistered
 ```
 
-One new file per branch, so registration never conflicts. The file *name* is
-authoritative (`/` encoded as `%2F`, `%` as `%25`). The checker reads this
-directory; the old `manifest.json` `known_branches` array is gone, and if a
+One new file per branch, so registration never conflicts — and the content is
+deterministic (`branch: <name>`), so two sessions registering the *same* branch
+write identical bytes and git resolves that add/add silently too. The file
+*name* is authoritative (`/` encoded as `%2F`, `%` as `%25`). The checker reads
+this directory; the old `manifest.json` `known_branches` array is gone, and if a
 merge ever brings it back the checker unions it in and warns until
 `migrate_split.py` moves it out again.
 

@@ -76,13 +76,15 @@ def main(argv: list[str] | None = None) -> int:
 
     names = args.names or [current_branch()]
     BRANCHES_DIR.mkdir(exist_ok=True)
-    today = datetime.date.today().isoformat()
     for name in names:
         marker = BRANCHES_DIR / encode(name)
         if marker.exists():
             print(f"already registered: {name}")
             continue
-        body = f"branch: {name}\nregistered: {today}\n"
+        # Deterministic content on purpose: if two sessions register the same
+        # branch, both write the same bytes and git resolves the add/add
+        # without a conflict.
+        body = f"branch: {name}\n"
         if args.note:
             body += f"note: {args.note}\n"
         marker.write_text(body, encoding="utf-8")
