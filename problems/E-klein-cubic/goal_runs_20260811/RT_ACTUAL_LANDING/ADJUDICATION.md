@@ -415,3 +415,231 @@ unreliable about *scope*.
    lies on `X`. The `R_0 = 1` normalization of the sealed retraction identity
    (`DELTA1_RETRACTION_POLAR_IDENTITY`, `B = x`) is therefore the opposite
    extreme of the same system, not a generic case.
+
+---
+
+# ROUND 4 — adjudication of the external round-4 report (interpolation,
+# forced foliation, defect identity)
+
+Source: external round 4, a single report in five sections plus a PROVED /
+UNDECIDED ledger. **External and unaudited**, from the same session whose
+rounds 2–3 were largely right but each needed supplied proofs, and one of which
+carried an overclaimed headline. Same verdict vocabulary as above, with one
+addition: **DEFLATED** (true, replayable, and inert — ported with its emptiness
+stated rather than dressed up).
+
+Ported into `INTERPOLATION_THEOREM.md`, `THEOREM_FORCED_FOLIATION.md`,
+`DEFECT_IDENTITY.md`, `FOLIATION_REFORMULATION.md`, sections 3–5 of the revised
+`BOXED_GLOBAL_COVARIANT.md`, and the new verifiers
+`forced_foliation_witness.m2`, `verify_forced_foliation.py`,
+`verify_interpolation_scope.py`, `verify_covariant_dimensions.py`.
+
+## R4 summary table
+
+| # | claim | verdict |
+|---|---|---|
+| R24 | the equivalence chain (1): covariant `<=>` equivariant dominant map `<=>` `X_gen(K_proj) != ∅` | **CONFIRMED** — sealed in repo, `G2-FINITE-GENERATION-PASS` + `G3-DOMINANCE-AUTOMATIC`; **one accepted input flagged** |
+| R25 | proving nonexistence proves `ed_C(PSL(2,11)) = 4` | **CONFIRMED**, conditional on the citations assembled in `RESOLUTION.md` |
+| R26 | the direct-arithmetic exit is `G3D-UNDECIDED` | **CONFIRMED**, cited correctly; `SEAL.json` governs |
+| R27 | interpolation theorem (2)/(3): Serre + Reynolds | **CONFIRMED WITH SUPPLIED PROOF**, and **SCOPE SHARPENED** (R28) |
+| R28 | "finite local/cluster/incidence/attachment data can never give all-degree nonexistence" | **CONFIRMED for FIXED data**; the boundary (data growing with `d`; stabiliser compatibility; nonlinearity of `F(T)=0`) is supplied here and machine-checked |
+| R29 | (5) chain rule `Q_T^t J_T = 0` | **CONFIRMED** (immediate) |
+| R30 | pulled-back gradient is primitive | **CONFIRMED WITH SUPPLIED PROOF** |
+| R31 | (6)(7) adjugate factorization, existence and uniqueness of a **polynomial** `P_T` | **CONFIRMED WITH SUPPLIED PROOF** — the content step is the only non-formal step and the source compresses it to a clause |
+| R32 | `deg P_T = 2d-4` | **CONFIRMED**, and generalized to `(n-1)(d-1)-(e-1)d` |
+| R33 | (8) `J_T P_T = 0`; (10) the `T_i` are first integrals | **CONFIRMED** |
+| R34 | (9) equivariance, character killed by perfectness | **CONFIRMED WITH SUPPLIED PROOF** — the source omits `adj(gJg^{-1}) = g adj(J) g^{-1}`, which is where the two `det(g)` factors cancel |
+| R35 | (11) Piola, (12) `div P_T = 0` | **CONFIRMED**; (11) is a general identity, checked with no landing hypothesis |
+| R36 | (14) the foliation is `O(5-2d) -> T_{P^4}` | **WEAKENED** — `P_T` need not be primitive; in the exact witness the content has degree `8` of `10` and the saturated foliation has degree `2` |
+| R37 | (13) as a package | **CONFIRMED**, and **shown CONSISTENT**: an exact non-equivariant witness satisfies all of (5)–(13), so no contradiction is available from the package alone |
+| R38 | (15)(16) K-theory and the global complex | **CONFIRMED** as a statement about `K`-classes; exactness of (16) **NOT RE-PROVED** (scope flag; nothing depends on it) |
+| R39 | (17) the `ch_2` defect identity | **CONFIRMED** — replayed symbolically, exact |
+| R40 | "an exact compatibility law, not an effectivity contradiction" | **CONFIRMED and DEFLATED** — recorded as a negative exit |
+| R41 | (18) socle degree 5, first-order gate vacuous in degree `>= 6` | **CONFIRMED AND SHARPENED** — exactly one linear condition at degree 5; survives equivariance; moot in the surviving retraction range |
+| R42 | the nonsquare residual quadratic remains as recorded | **CONFIRMED** — `Delta = R^2+4S`, `DELTA1-KLEIN-RETRACTION-BRANCH-OPEN` |
+| R43 | the minimality/conductor program reached the same boundary | **CONFIRMED** — `KLS2-NO-FINITE-REDUCTION` |
+| R44 | §5(b): nonequivariant unirational parametrizations exhibit the same structure | **CONFIRMED and UPGRADED** from assertion to an exact worked instance |
+| R45 | new here, not in the source: the covariant/divergence-free dimension table and `d >= 4` | added, `LANDING-DEGREE-AT-LEAST-FOUR-PROVED` |
+
+## R24 — the equivalence chain, and the one input that is accepted not proved
+
+The chain is sealed, in three artifacts, and section 3 of
+`BOXED_GLOBAL_COVARIANT.md` tabulates them. The audit point is that
+`G3A_EXACT_ARITHMETIC_DOMINANCE/DOMINANCE_BRIDGE.md`'s own seven-step ledger
+marks step 6 — `dim Z >= ed_C(G) >= 3` — as `ACCEPTED_INPUT` (Beauville), not as
+a repository proof, and that `RESOLUTION.md`'s `ed_C(G)=4 <=> not G-unirational`
+rests on Duncan–Reichstein, Prokhorov and Tschinkel–Zhang as cited. The source
+states (1) flatly. It is right, but "sealed" here means "sealed modulo those
+citations", and this packet does not re-derive them. Also recorded: the earlier
+`G_UNIVERSAL/DECISION.md` asserts the opposite about dominance and is
+superseded by `G3A` (`NOTEBOOK.md` §17).
+
+## R27/R28 — the interpolation theorem, and the boundary that matters
+
+The theorem is two standard steps and the source gets both right. What the
+source does **not** state, and what decides which obstruction programs remain
+legal, is the quantifier order: `d_0` depends on `Z`, and is unbounded over `Z`.
+`verify_interpolation_scope.py` pins this exactly.
+
+* `d_0(Z) = m` for `Z` the order-`m` jet at a point of `P^n` (`n = 2,4`,
+  `m = 1..4`): surjective **iff** `d >= m`.
+* With `Z_d :=` the order-`(d+1)` jet, the map is non-surjective for **every**
+  `d`, with strictly increasing deficiency `2,3,4,5,6,7,8`.
+* At a point with nontrivial stabiliser the achievable values are `W^{G_p}` in
+  **every** degree — so the word "compatible" in the source's statement is
+  load-bearing, not decoration.
+* The theorem constrains a **linear** restriction map and is blind to
+  `F(T) = 0`.
+
+So the correct reading of the source's boxed (3) is: *fixed finite* data cannot
+obstruct. Data that grows with `d` is untouched, and that is where a legal
+obstruction program must now live. Ported as `INTERPOLATION_THEOREM.md` §3 and
+Corollary 4.1, with the explicit statement that this is the **third lane to
+bottom out at the headline**, after the F55 coefficient circuits
+(`F55-PC-COVERAGE-C-EQUIVALENT-TO-HEADLINE`) and the CLEAN arithmetic sieve
+(`COMBINED-SIEVE-NO-PERIODIC-CLOSURE-PROVED`).
+
+## R31 — the content step, in full, because the source compresses it
+
+The source writes: "with (5) and `Q_T` primitive there is a unique polynomial
+vector `P_T`". Two distinct facts are hiding in that clause and only one is
+formal.
+
+*Formal.* Over `Frac(R)`, generic rank `4` makes the left kernel of `J_T`
+one-dimensional, spanned by `Q_T^t`; every row of `adj(J_T)` lies in it; so
+`adj(J_T) = P Q_T^t` with `P` a vector of **rational functions**, uniquely
+determined because `R` is a domain and `Q_T != 0`.
+
+*Not formal.* Polynomiality. Write `p_i = A/B` in lowest terms in the UFD `R`.
+From `p_i F_j(T) in R` for every `j` one gets `B | F_j(T)` for every `j`, hence
+`B | gcd_j F_j(T) = 1`. This is Gauss's lemma applied to the *content of the
+pulled-back gradient*, and it is exactly where primitivity of `T` — via
+Lemma 2.1, via smoothness of `X` — is consumed.
+
+The step is not removable at the level at which it is used:
+`verify_forced_foliation.py` (C2) exhibits a polynomial rank-one matrix
+`[[x0x1, x1^2],[x0^2, x0x1]] = P Q^t` with `Q` non-primitive and `P` not
+polynomial. It is however only **sufficient**: (C1) records that rescaling a
+tuple by a form makes `Q` non-primitive while `P` stays polynomial. The source's
+phrasing invites the stronger reading; the weaker one is what is true.
+
+(C1) also records a fact worth keeping: `P_{hT} != h P_T`. Rescaling changes the
+cone-level fibration, since `J(hT) = h J_T + T grad(h)^t`. The forced object is
+attached to the cone map, not to the projective map.
+
+## R34 — the equivariance step needs one identity the source omits
+
+The source says `P_T(gx)` and `g P_T(x)` "differ by a character; `G` perfect
+=> trivial". The step that makes this work is
+`adj(g J g^{-1}) = adj(g^{-1}) adj(J) adj(g) = g adj(J) g^{-1}`, in which the
+`det(g^{-1})` and `det(g)` cancel exactly; without it one would expect a
+`det(g)`-twist and the conclusion would not be a clean character statement. The
+identity is checked symbolically with `det g = 13 != 1` (block B1), and on exact
+`5x5` integer data (B1').
+
+The character is then genuinely there and genuinely needs perfectness. Blocks
+(9a)–(9e) run the entire chain on a `mu_3`-covariant tuple landing on a conic
+that `G` only *semi*-invariates (`chi = w^2`): there `P(gx) = chi(g)^{-1} g P(x)`
+holds and `P(gx) = g P(x)` **fails**. This is the case in which the source's
+argument could have gone wrong, and it does not.
+
+## R36 — the one correction
+
+(14) is stated by the source as though `O(5-2d)` were the foliation's canonical
+bundle. `P_T` may have content. In the packet's exact witness
+
+```
+P_T = 336 x_0^2 x_1^2 x_2 (x_1 x_3^2 - x_0 x_4^2) (0,0,0, x_0 x_4, x_1 x_3),
+```
+
+so `deg P_T = 10 = 2d-4` with `d = 7` as (7) predicts, while the saturated
+foliation has degree `2`. The forced covariant has pinned degree; the forced
+*foliation* does not. `FOLIATION_REFORMULATION.md` states the classification
+target for the covariant for this reason, and flags (F4) so that a future search
+does not normalize to primitive fields and miss members.
+
+## R37 — the consistency finding, which is this round's most useful negative
+
+The source asserts in §5(b) that nonequivariant polynomial unirational
+parametrizations of cubic threefolds exhibit the same structure. That is right,
+and it is worth more as an exact object than as a remark, so the packet builds
+one: a smooth cubic threefold, an explicit primitive dominant tuple of degree
+`7` from the Segre conic-bundle construction, and machine verification of every
+one of (4), (5), (6), (7), (8), (10), (11), (12) symbolically over `Q`
+(`forced_foliation_witness.m2`, `RESULT: PASS`).
+
+Consequence, recorded as
+`FORCED-FOLIATION-CONDITIONS-CONSISTENT-NON-EQUIVARIANTLY`:
+**no argument can derive a contradiction from (5)–(13) alone.** Any exclusion
+must consume the equivariance (9), or the specific module
+`(Sym^{2d-4}W^v ⊗ W)^G`, or the Klein `F`. This is the same shape as the round-3
+refutation and as the `O4` witness: the structure is real, and the structure
+alone is not an obstruction.
+
+Related, and worth stating because it is easy to misread: the first-integral
+field containing a cubic-threefold function field is **not** paradoxical, since
+cubic threefolds are unirational. The whole content of the forced-foliation
+theorem beyond the classical Jacobian-derivation picture is the word
+*`G`-invariant*.
+
+## R41 — the socle corollary, sharpened in three ways
+
+The source's argument is right: the five partials of a smooth cubic in five
+variables are a regular sequence, the Jacobian ring is an Artinian complete
+intersection with Hilbert series `(1+t)^5`, socle degree `5`, so every form of
+degree `>= 6` is in the Jacobian ideal, and (18) `H + sum F_i Q_i = F R` says
+`H in J + (F) = J` (Euler), hence is vacuous. Verified twice for the **actual**
+Klein cubic: Macaulay2 Hilbert function `(1,5,10,10,5,1,0,0,0)` with the socle
+spanned by the degree-five Hessian, and an independent exact mod-`p` rank bound.
+It also agrees with the sealed Griffiths-residue computation in
+`certificates/hodge_centers/HODGE_CENTER_NECESSITY.md` §3.
+
+Three sharpenings the source does not make:
+
+1. In degree exactly `5` the gate is **one** linear condition, not none and not
+   many, since `dim (R/J)_5 = 1`; the Hessian is an explicit form violating it.
+2. The vacuity **survives equivariance**. `H` must be invariant and `Q`
+   covariant; the map `Q |-> sum_i F_i(x) Q_i` is a `G`-map onto `J_{d-1}`, so
+   for `d >= 7` a covariant solution exists by the same Reynolds exactness the
+   interpolation theorem uses. (Proposition 4.2 of `DEFECT_IDENTITY.md`.)
+3. In the retraction branch it is **moot**: the sealed floor there is `d >= 24`
+   (`DELTA1-RETRACTION-COORDINATE-DEGREE-AT-LEAST-24`), so `deg H >= 23`. The
+   first of the three sealed identities carries no information about any
+   surviving retraction, and the branch's content is entirely in `F(Q) = HS`,
+   `HR + 3Phi(x,Q,Q) + FS = 0`, and the recorded `Delta = R^2 + 4S` nonsquare
+   residual.
+
+## R45 — added here, absent from the source
+
+`verify_covariant_dimensions.py` computes `dim (Sym^k W^v)^G` and
+`dim (Sym^k W^v ⊗ W)^G` exactly by character theory for `k <= 24`
+(reproduced by a second independent implementation), and
+`FOLIATION_REFORMULATION.md` Lemma 2.1 shows `div` is onto the invariants, so
+the divergence-free dimension is `C(k) - I(k-1)` exactly. Two consequences the
+source does not have:
+
+* `C(2) = C(3) = 0` and `C(1) = 1` (spanned by `x`, with `F(x) = F != 0`), so
+  **every landing tuple has `d >= 4`** — a floor with no branch hypothesis,
+  from nothing but the character table.
+* the divergence-free spaces at the bottom are tiny: dimension `1` for
+  `d = 4` and `d = 5`, then `4` and `7`. The first cases of the new lane are
+  finite and small.
+
+## R4 — exit-name mapping
+
+The source's exit vocabulary is renamed to repository style. For the record:
+
+| source name | recorded as |
+|---|---|
+| `FINITE-G-EQUIVARIANT-JET-DATA-ASYMPTOTICALLY-INTERPOLABLE` | `FINITE-EQUIVARIANT-JET-DATA-ASYMPTOTICALLY-INTERPOLABLE-PROVED` |
+| `LOCAL-CLUSTER-CONDITIONS-NOT-AN-ALL-DEGREE-OBSTRUCTION` | `FIXED-FINITE-LOCAL-DATA-NOT-AN-ALL-DEGREE-OBSTRUCTION-PROVED` (**"fixed" added**, per R28) |
+| `GLOBAL-JACOBIAN-ADJUGATE-FACTORIZATION` | `GLOBAL-JACOBIAN-ADJUGATE-FACTORIZATION-PROVED` |
+| `GLOBAL-RIGHT-KERNEL-COVARIANT-DEGREE-2D-MINUS-4` + `GLOBAL-RIGHT-KERNEL-DIVERGENCE-FREE` | `FORCED-DIVERGENCE-FREE-COVARIANT-DEGREE-2D-MINUS-4-PROVED` |
+| `GLOBAL-LANDING-COORDINATES-ARE-FIRST-INTEGRALS` | `LANDING-COORDINATES-ARE-FIRST-INTEGRALS-PROVED` |
+| `GLOBAL-JACOBIAN-COMPLEX-DEFECT-IDENTITY` | `GLOBAL-JACOBIAN-COMPLEX-DEFECT-IDENTITY-PROVED`, plus the negative `DEFECT-IDENTITY-IMPOSES-NO-EFFECTIVITY-CONSTRAINT` |
+| — | `FORCED-FOLIATION-WITNESS-EXACT`, `FORCED-FOLIATION-CONDITIONS-CONSISTENT-NON-EQUIVARIANTLY`, `JACOBIAN-SOCLE-DEGREE-FIVE-EXACT`, `FIRST-ORDER-TANGENT-EXTENSION-GATE-VACUOUS-ABOVE-DEGREE-FIVE-PROVED`, `LANDING-DEGREE-AT-LEAST-FOUR-PROVED`, `BOXED-OBJECT-IS-THE-HEADLINE-OBJECT`, `RT-OBSTRUCTION-LADDER-CLOSED`, `DECORATED-CLUSTER-OBSTRUCTION-PROGRAM-BOTTOMED-OUT`, `FOLIATION-CLASSIFICATION-TARGET-REGISTERED`, `COVARIANT-AND-DIVERGENCE-FREE-DIMENSIONS-EXACT` (all new here) |
+
+The source's UNDECIDED list — `NO-SINGLE-HOMOGENEOUS-G-COVARIANT-LANDING-TUPLE`,
+`X_GEN(K_PROJ)-EMPTY`, `KLEIN-PSL2(11)-NON-G-UNIRATIONAL` — is confirmed, and by
+R24 all three are the **same** statement. The repository records it once, as
+`PROBLEM-E-HEADLINE-OPEN`.

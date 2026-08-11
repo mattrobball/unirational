@@ -14,8 +14,14 @@ python3 verify_landing_identity.py
 python3 verify_normal_surface_countermodel.py
 python3 verify_slice_universality.py
 
+# round 4
+python3 verify_forced_foliation.py
+python3 verify_interpolation_scope.py
+python3 verify_covariant_dimensions.py
+
 M2 --script eckardt_klein.m2
 M2 --script cone_surface_countermodel.m2
+M2 --script forced_foliation_witness.m2
 ```
 
 Each python script prints one `[ok  ]`/`[FAIL]` line per assertion and exits
@@ -26,6 +32,10 @@ verify_conic_slice.py                    RESULT: PASS
 verify_landing_identity.py               RESULT: PASS
 verify_normal_surface_countermodel.py    RESULT: PASS
 verify_slice_universality.py             RESULT: PASS
+verify_forced_foliation.py               RESULT: PASS
+verify_interpolation_scope.py            RESULT: PASS
+verify_covariant_dimensions.py           RESULT: PASS
+forced_foliation_witness.m2              RESULT: PASS
 ```
 
 Runtimes on the reference machine: a few seconds each for the python scripts,
@@ -174,6 +184,66 @@ RESULT: PASS
 
 ---
 
+## Round 4 scripts
+
+### `forced_foliation_witness.m2` — the exact worked instance
+
+Macaulay2, symbolic over `Q` throughout. Sections 0/0b/0c: smoothness of the
+witness cubic and of the **actual Klein cubic**, and the Jacobian-ring Hilbert
+function `(1,5,10,10,5,1,0,0,0)` for both, with the socle spanned by the
+degree-five Hessian. Sections 1–8: the degree-7 Segre tuple `T` on a smooth
+cubic threefold, and every identity of `THEOREM_FORCED_FOLIATION.md` —
+`F(T)=0`, primitivity of `T` and of `Q_T`, the chain rule (5), `det J_T = 0`,
+rank `4` at an exact point, `adj(J_T)` of degree `24`, exact division by `Q_T`
+from **every** column with the same answer, `deg P_T = 10 = 2d-4`, (6), (8),
+(10), Piola (11), and `div P_T = 0`. Runtime a few minutes.
+
+Key printed output:
+
+```
+  Klein Jacobian ring Hilbert function, degrees 0..8: {1, 5, 10, 10, 5, 1, 0, 0, 0}
+  ok   Klein: the degree-5 Hessian is not in the Jacobian ideal, ...
+  ok   (6) adj(J_T) = P_T Q_T^t  (all 25 entries)
+  ok   (7) deg P_T = 2d-4 = 10
+  div P_T = 0
+  ok   (12) div P_T = 0
+  gcd of the components of P_T has degree 8
+RESULT: PASS
+```
+
+The last line is the content of `ADJUDICATION.md` R36: the covariant has degree
+`10`, the saturated foliation has degree `2`.
+
+### `verify_forced_foliation.py` — the equivariant instance and the lemmas
+
+46 exact sympy checks in five blocks. (A) the entire chain (5)–(12) on a
+`mu_3`-**covariant** tuple landing on a conic that is only semi-invariant, so
+that the character in (9) is nontrivial: `P(gx) = chi(g)^{-1} g P(x)` holds and
+`P(gx) = g P(x)` fails. (B) `adj(gJg^{-1}) = g adj(J) g^{-1}` symbolically with
+`det g = 13`, the rank-one adjugate, and Piola for generic maps. (C) the content
+step: it is not removable, and it is only sufficient. (D) the `ch_2` defect
+identity replayed symbolically in `d`. (E) an independent mod-`p` rank bound on
+the Klein Jacobian ring.
+
+### `verify_interpolation_scope.py` — the scope boundary
+
+Exact `Fraction` rank computations. `d_0(Z) = m` for the order-`m` jet in `P^2`
+and `P^4`; non-surjectivity for **every** `d` when `Z_d` is the order-`(d+1)`
+jet, with deficiency `2,3,4,5,6,7,8`; the achievable values at a `G`-fixed point
+are `W^{G_p}` in every degree `0..8`; and the Reynolds construction exhibited on
+free orbits, where `d_0` rises from `1` to `3` as `Z` grows.
+
+### `verify_covariant_dimensions.py` — the dimension table
+
+Exact character arithmetic in `Q(zeta_330)` for the eight classes of
+`PSL(2,11)` on `W`, giving `dim (Sym^k W^v)^G` and `dim (Sym^k W^v ⊗ W)^G` for
+`k <= 24`, with an mpmath cross-check to 25 digits and internal consistency
+checks (class sizes, character values, orthonormality, `I(3) = 1`, `C(1) = 1`).
+The table was reproduced by a second, independently written implementation
+before being recorded in `FOLIATION_REFORMULATION.md`.
+
+---
+
 ## What is *not* machine-checked
 
 The sheaf-theoretic content — the transfer morphism `Theta`, the `j`-inequalities,
@@ -193,3 +263,12 @@ machine-checked inputs are the Klein-specific ones — no Eckardt points
 input is flagged in `SOURCES.md` item 4 and `ADJUDICATION.md` item 2: the
 object-level "weights ≤ 0" statement, taken from Saito's weight formalism, whose
 cohomological shadow we verified against Weber's theorem.
+
+For round 4 the corresponding boundary is: the interpolation theorem consumes
+**Serre vanishing** (Hartshorne III.5.2) as a citation and is not re-proved;
+the exactness of the global complex (16) is **not** re-proved and nothing
+depends on it; and "dominance is automatic" is inherited from
+`G3-DOMINANCE-AUTOMATIC`, whose own step 6 is an accepted external input
+(`ed_C(G) >= 3`, Beauville). Everything else in round 4 — the whole chain
+(4)–(13), the degree arithmetic, the socle statement, the `ch_2` identity and
+the covariant dimensions — is machine-verified exactly.

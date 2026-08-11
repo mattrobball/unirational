@@ -28,6 +28,25 @@ GENERIC-COMMON-FACTOR-LINE-NORMAL-FORM-REFUTED
 NORMAL-SURFACE-IH1-VANISHING-REFUTED
 SLICE-LOCAL-POINTED-RATIONAL-CURVE-FULL-SUPPORT-EXCLUSION-REFUTED
 
+FINITE-EQUIVARIANT-JET-DATA-ASYMPTOTICALLY-INTERPOLABLE-PROVED
+FIXED-FINITE-LOCAL-DATA-NOT-AN-ALL-DEGREE-OBSTRUCTION-PROVED
+DECORATED-CLUSTER-OBSTRUCTION-PROGRAM-BOTTOMED-OUT
+GLOBAL-JACOBIAN-ADJUGATE-FACTORIZATION-PROVED
+FORCED-DIVERGENCE-FREE-COVARIANT-DEGREE-2D-MINUS-4-PROVED
+LANDING-COORDINATES-ARE-FIRST-INTEGRALS-PROVED
+FORCED-FOLIATION-WITNESS-EXACT
+FORCED-FOLIATION-CONDITIONS-CONSISTENT-NON-EQUIVARIANTLY
+GLOBAL-JACOBIAN-COMPLEX-DEFECT-IDENTITY-PROVED
+JACOBIAN-SOCLE-DEGREE-FIVE-EXACT
+FIRST-ORDER-TANGENT-EXTENSION-GATE-VACUOUS-ABOVE-DEGREE-FIVE-PROVED
+COVARIANT-AND-DIVERGENCE-FREE-DIMENSIONS-EXACT
+LANDING-DEGREE-AT-LEAST-FOUR-PROVED
+BOXED-OBJECT-IS-THE-HEADLINE-OBJECT
+RT-OBSTRUCTION-LADDER-CLOSED
+FOLIATION-CLASSIFICATION-TARGET-REGISTERED
+
+DEFECT-IDENTITY-IMPOSES-NO-EFFECTIVITY-CONSTRAINT
+
 LINE-INCIDENCE-FACTOR-TWO-CONDITIONAL
 GLOBAL-COVARIANT-POINTED-RATIONAL-CURVE-EXCLUSION-UNDECIDED
 RESTRICTED-TRANSFER-IN-THE-COMMON-FACTOR-BRANCH-UNDECIDED
@@ -35,8 +54,10 @@ PROBLEM-E-HEADLINE-OPEN
 ```
 
 Terminal verifier markers: `verify_conic_slice.py`,
-`verify_landing_identity.py`, `verify_normal_surface_countermodel.py` and
-`verify_slice_universality.py` each print `RESULT: PASS`; `eckardt_klein.m2`
+`verify_landing_identity.py`, `verify_normal_surface_countermodel.py`,
+`verify_slice_universality.py`, `verify_forced_foliation.py`,
+`verify_interpolation_scope.py`, `verify_covariant_dimensions.py` and
+`forced_foliation_witness.m2` each print `RESULT: PASS`; `eckardt_klein.m2`
 prints `ideal 1`.
 
 **Not ported** (the external round-3 headline):
@@ -61,6 +82,15 @@ right — with several proofs supplied and one step corrected in the direction o
 strength — and its **headline is overclaimed**: it refutes only the slice-local
 form of the boxed exclusion, not the boxed exclusion itself, which is sharpened
 rather than deleted.
+
+A fourth external round (adjudicated on branch `agent/rt-foliation-20260811`,
+verdicts `R24`–`R45`) supplied the equivariant interpolation theorem, the
+forced foliation, the Chern-character defect identity and the Jacobian-socle
+corollary. Its mathematics is right, with two proofs supplied, one claim
+weakened (the foliation's degree is not pinned), two results deflated to
+negative exits, and the interpolation theorem's **scope boundary** — which is
+the part that decides what obstruction programs remain legal — supplied and
+machine-checked here rather than by the source. See "What round 4 added".
 
 ## What is proved
 
@@ -161,6 +191,67 @@ rather than deleted.
     **witness for** `CLEAN-IMPLIES-NON-RATIONAL-SINGULAR-RECEIVER-PROVED`, not a
     counterexample to it.
 
+## What round 4 added
+
+**(a) The box's object is the headline object.** The equivalence chain
+"covariant in some degree `<=>` `G`-equivariant dominant rational map `<=>`
+`X_gen(K_proj) != ∅`" is sealed in the repository
+(`G2-FINITE-GENERATION-PASS` + `G3-DOMINANCE-AUTOMATIC`), and
+`ed_C(PSL(2,11)) = 4 <=> ` the Klein cubic is not `G`-unirational
+(`RESOLUTION.md`). So proving "no single homogeneous `G`-covariant landing
+tuple" **is** proving the headline — not reducing it. One input inside that
+chain is accepted rather than proved here: `ed_C(G) >= 3` (Beauville), flagged
+as `ACCEPTED_INPUT` in the dominance bridge's own ledger.
+(`BOXED_GLOBAL_COVARIANT.md` §3.)
+
+**(b) The equivariant interpolation theorem, and the third lane to bottom out.**
+For a *fixed* `G`-stable `Z`, every compatible invariant jet package on `Z` is
+realised by a global `G`-covariant in all sufficiently large degree (Serre
+vanishing + Reynolds). Hence no obstruction program built from fixed finite
+local, cluster, incidence or attachment data can give all-degree nonexistence —
+which is why the decorated-cluster classification came out empty. The boundary
+is stated exactly and machine-checked: `d_0` depends on `Z` and is unbounded;
+data that **grows with `d`** is not covered; only stabiliser-**compatible** data
+is interpolable in any degree; and the theorem is blind to the nonlinear
+condition `F(T) = 0`. This is the third lane to reduce to the headline itself,
+after the F55 coefficient circuits and the CLEAN arithmetic sieve.
+(`INTERPOLATION_THEOREM.md`.)
+
+**(c) The forced foliation.** Every primitive landing tuple of degree `d`
+forces a nonzero `G`-covariant `P_T` of degree exactly `2d-4` with
+`adj(J_T) = P_T grad F(T)^t`, `J_T P_T = 0` and `div P_T = 0`, of which all five
+landing coordinates are first integrals — a `G`-invariant divergence-free
+rank-one algebraically integrable foliation on `P^4`. Every step is proved here,
+including the two the source compresses (the content/primitivity step, and the
+adjugate conjugation identity behind the character bookkeeping).
+(`THEOREM_FORCED_FOLIATION.md`.)
+
+**(d) An exact witness, and what it costs.** A smooth cubic threefold and an
+explicit primitive dominant degree-7 tuple satisfy every one of those identities
+symbolically over `Q`. Consequence: **no contradiction is available from the
+forced structure alone** — any exclusion must consume the equivariance, the
+specific `G`-module, or the Klein `F` itself. The witness also corrects the
+source: `P_T` need not be primitive (here the content has degree `8` of `10`),
+so the *foliation*'s degree is not pinned, only the covariant's.
+
+**(e) Two deflations.** The `ch_2` defect identity replays exactly and
+constrains nothing, because its terms carry opposite signs — recorded as a
+negative exit. And the first-order tangent-extension gate of the retraction
+branch is vacuous: the Klein Jacobian ring has socle degree `5`, the gate is
+exactly one linear condition in degree `5`, nothing at all above it, and the
+vacuity survives passage to the equivariant category — so in the surviving range
+(`d >= 24`) that identity carries no information. The branch's content is
+entirely the recorded `Delta = R^2 + 4S` nonsquare residual.
+(`DEFECT_IDENTITY.md`.)
+
+**(f) A new lane, with the first cases small.** Exact character arithmetic gives
+`dim (Sym^k W^v ⊗ W)^G` and, via a divergence surjectivity lemma, the
+divergence-free dimensions. Two consequences: every landing tuple has `d >= 4`
+(from `C(2) = C(3) = 0`, with no branch hypothesis), and the divergence-free
+space is **one-dimensional** for `d = 4` and for `d = 5`, then `4` and `7`. So
+the bottom of the foliation lane is a finite question about one named vector
+field. (`FOLIATION_REFORMULATION.md`.)
+
 ## What remains
 
 12. The boxed remaining theorem is a statement about the **single global
@@ -172,6 +263,21 @@ rather than deleted.
     of any pointed rational-curve family satisfying the identities — is now
     **known false**, so no argument that forgets the tuple can work.
     (`BOXED_GLOBAL_COVARIANT.md`, section 2.3 lists what a proof must consume.)
+
+13. After round 4 the lane's live content is **two boxed alternatives**, and
+    nothing else (`BOXED_GLOBAL_COVARIANT.md` §5):
+
+    * **(A)** prove `X_gen(K_proj) = ∅` by completing the direct arithmetic on
+      the explicit normalized cubic `V(Phi)` — current state `G3D-UNDECIDED`,
+      with the Clifford/spinor-discriminant and 27-line gates `*-PARTIAL`;
+    * **(B)** classify the `G`-invariant divergence-free rank-one foliations of
+      `FOLIATION_REFORMULATION.md` and exclude a Klein-cubic first-integral
+      field.
+
+    The obstruction ladder between the box and the headline is closed from both
+    sides: forgetting the tuple gives a false statement (round 3), and fixed
+    finite local data can never suffice (round 4). What survives must be global,
+    or grow with `d`, or consume `F(T) = 0`.
 
 ## Structural note
 

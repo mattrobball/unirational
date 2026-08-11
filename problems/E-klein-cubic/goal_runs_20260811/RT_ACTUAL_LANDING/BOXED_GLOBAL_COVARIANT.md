@@ -1,10 +1,21 @@
 # The boxed remaining theorem: global-covariant pointed-rational-curve classification
 
-Exit: `GLOBAL-COVARIANT-POINTED-RATIONAL-CURVE-EXCLUSION-UNDECIDED`.
+Exits: `GLOBAL-COVARIANT-POINTED-RATIONAL-CURVE-EXCLUSION-UNDECIDED`,
+`BOXED-OBJECT-IS-THE-HEADLINE-OBJECT`,
+`RT-OBSTRUCTION-LADDER-CLOSED`.
 
 Provenance: external message `[20]` section 6, **sharpened** after external
-round 3 (`[21]`). The landing-identity system is verified exactly here
+round 3 (`[21]`), and **re-sited** after external round 4 (section 5 below).
+The landing-identity system is verified exactly here
 (`verify_landing_identity.py`, `RESULT: PASS`).
+
+**Read section 5 first.** Round 4 does not attack the box; it relocates it. The
+object the box constrains — a single global homogeneous `G`-covariant landing
+tuple — is, by the repository's own sealed all-degree theorem, exactly the
+object whose nonexistence is the Problem E headline and is equivalent to
+`ed_C(PSL(2,11)) = 4`. So the box is not a reduction of the headline to
+something smaller. It is one proposed route to the headline, and both known
+families of route to it are now closed from opposite sides.
 
 **Revision note (this branch).** Round 3 attacked this box from two sides. Both
 attacks land, and neither hits the box:
@@ -221,4 +232,97 @@ Conversely, three things are now known **not** to obstruct: the curve type
 (automatic for any integral element of `O_K`, `K = Q(sqrt(-11))`).
 
 Exit `GLOBAL-COVARIANT-POINTED-RATIONAL-CURVE-EXCLUSION-UNDECIDED`.
-**Problem E headline: OPEN.**
+
+---
+
+## 3. The box's object is the headline object
+
+Round 4's first claim is that the equivalences
+
+```
+exists 0 != T in (Sym^d W^v (x) W)^G primitive with F(T) = 0, some d
+   <=>  exists a G-equivariant dominant rational map P(W) --> X
+   <=>  X_gen(K_proj) nonempty                                       (1)
+```
+
+are already sealed in this repository. **Adjudicated: they are**, with one
+named accepted input. The chain, with its artifacts:
+
+| step | artifact | exit |
+|---|---|---|
+| covariant in *some* degree `<=>` `G`-equivariant rational map `<=>` `X_T(K_proj)` `<=>` a rational point of the explicit normalized cubic `V(Phi)` | `goal_runs_after_35fa/G_UNIVERSAL/ALL_DEGREE_THEOREM.md` ("All-degree landing theorem", five canonically equivalent sets), `SEAL.json` `G2_UNIVERSAL_SEAL_V2` | `G2-FINITE-GENERATION-PASS` |
+| such a map is **automatically dominant** — no separate Jacobian-rank-four gate | `goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/DOMINANCE_BRIDGE.md`, seven-step ledger | `G3A-ARITHMETIC-DOMINANCE-PASS`, `G3-DOMINANCE-AUTOMATIC` |
+| `C` is `G`-unirational `<=>` `ed_C(G) = 3`; and `3 <= ed_C(G) <= 4`, so not `G`-unirational `<=>` `ed_C(G) = 4` | `RESOLUTION.md`, "Exact reduction to essential dimension"; restated in `SPEC.md` as `ed_C(G)=4 <=> C_gen(K_proj)=∅` | — |
+
+**Audit note, and it matters.** The dominance bridge's step 6 is recorded in its
+own ledger as `ACCEPTED_INPUT`, not as a repository proof: it is the lower bound
+`ed_C(PSL(2,11)) >= 3` (Beauville, *On finite simple groups of essential
+dimension 3*). The `ed_C(G) = 4` consequence likewise rests on the cited
+Duncan–Reichstein / Prokhorov / Tschinkel–Zhang inputs assembled in
+`RESOLUTION.md`. So (1) is sealed **modulo exactly those citations**, and this
+packet does not re-derive them. Also note the earlier
+`G_UNIVERSAL/DECISION.md` states the opposite about dominance; `G3A` is the
+later packet that removed the rank-four gate, and `NOTEBOOK.md` §17 records that
+supersession. `G3A` governs.
+
+> **Consequence.** Proving "there is no single homogeneous `G`-covariant landing
+> tuple, in any degree" **is** proving the Problem E headline, and with it
+> `ed_C(PSL(2,11)) = 4`. It is not a reduction to a smaller statement, and no
+> proof of it can be cheaper than a proof of the headline.
+
+Exit `BOXED-OBJECT-IS-THE-HEADLINE-OBJECT`.
+
+## 4. The obstruction ladder is closed
+
+The box of section 2 is a *route*: constrain the tuple through its own slice
+and incidence data. Section 2.1 already listed the routes known to be dead.
+Round 4 closes the ladder in both remaining directions.
+
+* **Downward (forget the tuple): closed since round 3.** Dropping items 1, 2 or
+  5 of the box gives a statement that is **false**
+  (`REFUTATION_POINTED_CURVE_EXCLUSION.md` Cor. 4.2,
+  `SLICE-LOCAL-POINTED-RATIONAL-CURVE-FULL-SUPPORT-EXCLUSION-REFUTED`).
+* **Sideways (keep the tuple, use finite local data): closed by round 4.**
+  `INTERPOLATION_THEOREM.md` Corollary 4.1: for any *fixed* `G`-stable finite
+  package of jet, cluster, incidence or attachment data, every compatible
+  invariant section is realised by a global `G`-covariant in all sufficiently
+  large degree. So no argument whose input is fixed finite local data can give
+  all-degree nonexistence. The decorated-cluster classification of
+  `SLICE_CLASSIFICATION.md` is exactly such an input, which is why it came out
+  empty of constraint.
+
+What survives is the intersection: data that is **global**, or that **grows with
+`d`**, or that uses the **nonlinear** condition `F(T) = 0` — the three things
+`INTERPOLATION_THEOREM.md` §3 records as outside the theorem's reach. The list
+in section 2.3 of what a proof must consume is unchanged and is now known to be
+not merely advisable but necessary.
+
+Exit `RT-OBSTRUCTION-LADDER-CLOSED`. This is a **negative** structural finding:
+it removes routes, it proves nothing about the tuple.
+
+## 5. The lane's live content
+
+Two boxed alternatives remain, and they are the whole of it.
+
+> **(A) Arithmetic.** Prove `X_gen(K_proj) = ∅` — equivalently that the explicit
+> normalized cubic `V(Phi) ⊂ P^4_{K_proj}` of the all-degree packet has no
+> `K_proj`-point. Current state: `G3D-UNDECIDED`
+> (`goal_runs_after_ff69434/G3D_DIRECT_ARITHMETIC/`), with the `K_proj` line
+> algebra, the Hessian cube class and the Clifford/spinor-discriminant gate all
+> recorded as `*-PARTIAL`. `SEAL.json` governs over that packet's inconsistent
+> internal phase ledger (`NOTEBOOK.md` verification-debt item 17).
+
+> **(B) Geometry.** Classify the `G`-invariant divergence-free rank-one
+> foliations satisfying `adj(J_T) = P grad F(T)^t` for some landing tuple, and
+> exclude a Klein-cubic first-integral field. New lane, registered in
+> `FOLIATION_REFORMULATION.md`, with the forced object proved in
+> `THEOREM_FORCED_FOLIATION.md` and an exact non-equivariant witness showing
+> the necessary conditions are consistent, so that only the equivariance can
+> obstruct.
+
+The box of section 2 remains stated and remains undecided; it is now understood
+as a **special route inside (B)**'s ambit rather than as the lane's target.
+
+**Problem E headline: OPEN.** Nothing in sections 3–5 changes it. Section 3 is a
+relocation of an existing question, section 4 removes routes, and section 5
+names what is left.
