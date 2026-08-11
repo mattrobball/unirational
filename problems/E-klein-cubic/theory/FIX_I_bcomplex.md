@@ -240,6 +240,13 @@ component of Y^H.
 In particular, all genus-≥ 1 components of all `Y^H` are hit only in
 points **by such strata**.
 
+> **Citation-drift correction (2026-08-11, `DUNCAN_IMPORTS_REVIEW`).** The
+> Duncan numbers in Correction I-C are from an EARLIER draft; in the current
+> `duncan_higher_obstruction_20260805.tex`: "Def. 6.3" = `def:stratified_tower`
+> 4.14, "Lemma 6.4" = `lem:rational_strata_propagate` 4.15, "Prop. 3.12" (the
+> genus-3 remark) = the remark after `prop:rcc` 3.9, "Thm 3.10" = `thm:fabulous`
+> 3.8, "Prop 3.24" = `prop:rcc_total` 4.11. **Cite BY LABEL, not by number.**
+
 > **Correction I-C (director, 2026-08-05; prompted by A. Duncan's notes
 > "Obstructions to equivariant rational maps",
 > `external_docs/duncan_higher_obstruction_20260805.tex`).** Lemma 4.3's

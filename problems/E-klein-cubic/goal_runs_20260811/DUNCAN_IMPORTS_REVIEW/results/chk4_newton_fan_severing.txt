@@ -1,0 +1,10 @@
+(a,b) coprime pairs tested for the Newton/normal-fan claims: 91
+cyclic (H, chi_1, chi_2) configurations severed, m <= 40: 940
+non-cyclic (H, chi_1, chi_2) configurations checked: 6366
+
+worked instance -- ex:not_a_complex, H = Z/6, (chi_1,chi_2) = (2,3)
+   (a,b) = (1, 1): interior rays [(1, 1)], E_v inside W_nt? [False], ends separated: True
+   (a,b) = (5, 11): interior rays [(5, 11)], E_v inside W_nt? [False], ends separated: True
+
+failures: 0
+RESULT: PASS

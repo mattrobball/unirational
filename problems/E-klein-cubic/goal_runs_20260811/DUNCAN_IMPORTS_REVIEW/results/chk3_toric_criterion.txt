@@ -1,0 +1,38 @@
+groups with an admissible (chi_1, chi_2): 81
+  (chi_1,chi_2) configurations, cyclic H, a free wall exists: 1936
+  (chi_1,chi_2) configurations, non-cyclic H, NO free wall:   6366
+failures: 0
+
+ex:not_a_complex (3.13), G = Z/6 x Z/2 on P^3
+    G_D0 = 1
+    G_D1 = Z/3
+    G_D2 = Z/2
+    G_D3 = Z/2
+    G_D01 = Z/6
+    G_D02 = Z/2
+    G_D03 = Z/2
+    G_D12 = Z/6
+    G_D13 = Z/6
+    G_D23 = Z/2 x Z/2
+    G_D012 = Z/2 x Z/6
+    G_D013 = Z/2 x Z/6
+    G_D023 = Z/2 x Z/6
+    G_D123 = Z/2 x Z/6
+
+ex:no_converse (4.8), G = (Z/2)^2 x (Z/3)^2 on P^3
+    G_D0 = 1
+    G_D1 = Z/3
+    G_D2 = Z/2
+    G_D3 = Z/6
+    G_D01 = Z/6
+    G_D02 = Z/6
+    G_D03 = Z/6
+    G_D12 = Z/6
+    G_D13 = Z/3 x Z/6
+    G_D23 = Z/2 x Z/6
+    G_D012 = Z/6 x Z/6
+    G_D013 = Z/6 x Z/6
+    G_D023 = Z/6 x Z/6
+    G_D123 = Z/6 x Z/6
+example-group mismatches vs the tex: none
+RESULT: PASS
