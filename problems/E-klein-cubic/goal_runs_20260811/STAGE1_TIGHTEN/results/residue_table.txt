@@ -1,0 +1,18 @@
+STAGE1_TIGHTEN -- the residue-indexed boundary-pattern count
+
+saturation threshold Theta = 6 (Theorem S)
+degree enters only through the two full-flag rows D_{P_sigma}, D_{L^-_sigma}
+
+d mod 6    sigma-band K     STAGE1-immune total        tightened E      tightened L      status
+0          10752            272211848944680960000      917070336        705438720        tightened
+1          0                0                          0                0                FLAGGED-NOT-CLAIMED (see THEOREM.md 2.5)
+2          672              17013240559042560000       57316896         44089920         tightened
+3          0                0                          0                0                FLAGGED-NOT-CLAIMED (see THEOREM.md 2.5)
+4          672              17013240559042560000       57316896         44089920         tightened
+5          0                0                          0                0                FLAGGED-NOT-CLAIMED (see THEOREM.md 2.5)
+
+count(d) = K(d mod 6) * D10(13 or 10) * 3^8
+d mod 3, 5, 11 refinements are already inside the 3^8 (STAGE2 sec. 4);
+so the mod-330 table has three non-trivial rows, indexed by d mod 6.
+
+reference: STAGE1 alone 1088847395778723840000 ; STAGE1 x STAGE2 degree-blind 6490036224
