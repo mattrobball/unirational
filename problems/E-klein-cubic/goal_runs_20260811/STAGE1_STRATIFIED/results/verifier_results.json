@@ -1,0 +1,288 @@
+{
+  "checks": [
+    [
+      "A1 census: 15 sweep rows, 80 rows, 145 relations (p=331)",
+      true,
+      ""
+    ],
+    [
+      "A2 N(d,m) for d<=12 equals sealed Layer-3 table, incl N(12,3)=73 (p=331)",
+      true,
+      "N(12,3)=73"
+    ],
+    [
+      "A3 H0-1 parity: dim V((d-m,m),1)=0 for even m, d<=12 (p=331)",
+      true,
+      ""
+    ],
+    [
+      "A4 H0-1 on D_P and Prop 1.4(ii) on D_L re-derived (p=331)",
+      true,
+      ""
+    ],
+    [
+      "A5 module-nonvanishing saturation: g_r | 6 for every slot (p=331)",
+      true,
+      "max g_r=6"
+    ],
+    [
+      "B1 six flippable V4-children over type-I plus-plane points (p=331)",
+      true,
+      "6"
+    ],
+    [
+      "B2 OLD semantics: at odd d, level-0 value differs from level-1 (the ODDZERO clash) (p=331)",
+      true,
+      "agree_odd=0 clash_odd=120"
+    ],
+    [
+      "B3 OLD semantics: at even d, level-0 value lies in the arc-consistent domain (p=331)",
+      true,
+      "agree_even=84 clash_even=0"
+    ],
+    [
+      "B4 NEW: joint vanishing at the six special kids has corank 2 (dim V0 = N-2) for a=(2,1) (p=331)",
+      true,
+      "nV=4 dimV0=2"
+    ],
+    [
+      "B5 NEW: stratified contribution at odd d=3 includes the level-1 escape on the special V4 rows (p=331)",
+      true,
+      "n_usable=3 flipped=True"
+    ],
+    [
+      "B6 OLD residue table: K(1)=K(3)=K(5)=0 reproduced (p=331)",
+      true,
+      ""
+    ],
+    [
+      "C1 Theorem S': per-class stratified contribution stabilises along a |-> a+6 e_r; observed Theta' >= 6 (p=331)",
+      true,
+      "Theta'=9"
+    ],
+    [
+      "C2 Theorem S': attainable-assignment sets are non-decreasing along +6 e_r (old monotone-exclusion direction is FALSE) (p=331)",
+      true,
+      ""
+    ],
+    [
+      "D1 stratified K(rho) > 0 for every residue mod 6 (p=331)",
+      true,
+      "{0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756}"
+    ],
+    [
+      "D2 stratified K dominates the old even-residue lower bounds K(0)>=10752, K(2)>=672, K(4)>=672 (p=331)",
+      true,
+      "{0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756}"
+    ],
+    [
+      "D3 odd residues are non-zero under stratified semantics (ODDZERO escape) (p=331)",
+      true,
+      "{0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756}"
+    ],
+    [
+      "E1 Phi_F: ord_L F = 1 on both full-flag rows (p=331)",
+      true,
+      ""
+    ],
+    [
+      "E2 Phi_F: F nonvanishing on plus-planes of full-flag rows (p=331)",
+      true,
+      ""
+    ],
+    [
+      "E3 Phi_F positivity transport: K(rho)>0 => K(rho+3)>0 (p=331)",
+      true,
+      "[]"
+    ],
+    [
+      "E4 Phi_F would have caught the odd-zero artifact (old K fails positivity transport) (p=331)",
+      true,
+      "[(0, 3), (2, 5), (4, 1)]"
+    ],
+    [
+      "F1 stratified coherent count >= old STAGE1 count 1088847395778723840000 (p=331)",
+      true,
+      "new=1088847395778723840000 old=1088847395778723840000"
+    ],
+    [
+      "F2 degree-blind coherent count is at least the old STAGE1 total; the residue-indexed odd-zero is repaired independently (p=331)",
+      true,
+      "new=1088847395778723840000 old=1088847395778723840000 delta=0"
+    ],
+    [
+      "A1 census: 15 sweep rows, 80 rows, 145 relations (p=661)",
+      true,
+      ""
+    ],
+    [
+      "A2 N(d,m) for d<=12 equals sealed Layer-3 table, incl N(12,3)=73 (p=661)",
+      true,
+      "N(12,3)=73"
+    ],
+    [
+      "A3 H0-1 parity: dim V((d-m,m),1)=0 for even m, d<=12 (p=661)",
+      true,
+      ""
+    ],
+    [
+      "A4 H0-1 on D_P and Prop 1.4(ii) on D_L re-derived (p=661)",
+      true,
+      ""
+    ],
+    [
+      "A5 module-nonvanishing saturation: g_r | 6 for every slot (p=661)",
+      true,
+      "max g_r=6"
+    ],
+    [
+      "B1 six flippable V4-children over type-I plus-plane points (p=661)",
+      true,
+      "6"
+    ],
+    [
+      "B2 OLD semantics: at odd d, level-0 value differs from level-1 (the ODDZERO clash) (p=661)",
+      true,
+      "agree_odd=0 clash_odd=120"
+    ],
+    [
+      "B3 OLD semantics: at even d, level-0 value lies in the arc-consistent domain (p=661)",
+      true,
+      "agree_even=84 clash_even=0"
+    ],
+    [
+      "B4 NEW: joint vanishing at the six special kids has corank 2 (dim V0 = N-2) for a=(2,1) (p=661)",
+      true,
+      "nV=4 dimV0=2"
+    ],
+    [
+      "B5 NEW: stratified contribution at odd d=3 includes the level-1 escape on the special V4 rows (p=661)",
+      true,
+      "n_usable=3 flipped=True"
+    ],
+    [
+      "B6 OLD residue table: K(1)=K(3)=K(5)=0 reproduced (p=661)",
+      true,
+      ""
+    ],
+    [
+      "C1 Theorem S': per-class stratified contribution stabilises along a |-> a+6 e_r; observed Theta' >= 6 (p=661)",
+      true,
+      "Theta'=9"
+    ],
+    [
+      "C2 Theorem S': attainable-assignment sets are non-decreasing along +6 e_r (old monotone-exclusion direction is FALSE) (p=661)",
+      true,
+      ""
+    ],
+    [
+      "D1 stratified K(rho) > 0 for every residue mod 6 (p=661)",
+      true,
+      "{0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756}"
+    ],
+    [
+      "D2 stratified K dominates the old even-residue lower bounds K(0)>=10752, K(2)>=672, K(4)>=672 (p=661)",
+      true,
+      "{0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756}"
+    ],
+    [
+      "D3 odd residues are non-zero under stratified semantics (ODDZERO escape) (p=661)",
+      true,
+      "{0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756}"
+    ],
+    [
+      "E1 Phi_F: ord_L F = 1 on both full-flag rows (p=661)",
+      true,
+      ""
+    ],
+    [
+      "E2 Phi_F: F nonvanishing on plus-planes of full-flag rows (p=661)",
+      true,
+      ""
+    ],
+    [
+      "E3 Phi_F positivity transport: K(rho)>0 => K(rho+3)>0 (p=661)",
+      true,
+      "[]"
+    ],
+    [
+      "E4 Phi_F would have caught the odd-zero artifact (old K fails positivity transport) (p=661)",
+      true,
+      "[(0, 3), (2, 5), (4, 1)]"
+    ],
+    [
+      "F1 stratified coherent count >= old STAGE1 count 1088847395778723840000 (p=661)",
+      true,
+      "new=1088847395778723840000 old=1088847395778723840000"
+    ],
+    [
+      "F2 degree-blind coherent count is at least the old STAGE1 total; the residue-indexed odd-zero is repaired independently (p=661)",
+      true,
+      "new=1088847395778723840000 old=1088847395778723840000 delta=0"
+    ],
+    [
+      "G1 the two primes give identical stratified K tables",
+      true,
+      "({0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756}, {0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756})"
+    ],
+    [
+      "G2 the two primes give identical stratified coherent counts",
+      true,
+      ""
+    ],
+    [
+      "G3 the two primes give identical Theta'",
+      true,
+      ""
+    ]
+  ],
+  "fails": [],
+  "results": {
+    "331": {
+      "K": {
+        "0": 11068,
+        "1": 1178,
+        "2": 1512,
+        "3": 6216,
+        "4": 1344,
+        "5": 756
+      },
+      "totals": {
+        "0": 280212122778992640000,
+        "1": 29823805622845440000,
+        "2": 38279791257845760000,
+        "3": 157372475171143680000,
+        "4": 34026481118085120000,
+        "5": 19139895628922880000
+      },
+      "Theta_prime": 9,
+      "Phi_F": true,
+      "coherent_stratified": 1088847395778723840000,
+      "coherent_old": 1088847395778723840000,
+      "n_special": 6
+    },
+    "661": {
+      "K": {
+        "0": 11068,
+        "1": 1178,
+        "2": 1512,
+        "3": 6216,
+        "4": 1344,
+        "5": 756
+      },
+      "totals": {
+        "0": 280212122778992640000,
+        "1": 29823805622845440000,
+        "2": 38279791257845760000,
+        "3": 157372475171143680000,
+        "4": 34026481118085120000,
+        "5": 19139895628922880000
+      },
+      "Theta_prime": 9,
+      "Phi_F": true,
+      "coherent_stratified": 1088847395778723840000,
+      "coherent_old": 1088847395778723840000,
+      "n_special": 6
+    }
+  }
+}

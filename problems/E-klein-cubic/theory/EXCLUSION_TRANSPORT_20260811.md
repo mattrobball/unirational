@@ -140,6 +140,18 @@ Operational rules, effective immediately:
    reason the repair must carry it. Deriving `F`'s row data
    (`ord_{L_σ}F = 1`, the behavior at the type-I vertices, etc.) is a
    deliverable of the workorder, §F.
+
+   > **Correction (2026-08-11, same day — from the repair packet's
+   > execution).** The raw inclusion above is OVERSTATED, and it genuinely
+   > fails on the corrected table (`STAGE1_STRATIFIED` §12.1): `Φ_F`
+   > injects **realized** patterns only; the tables are relaxations, and a
+   > coherent-but-unrealizable pattern may shift outside the arc-consistent
+   > domains (failure is already forced by `K(0) > K(3)` plus injectivity).
+   > What transport forces: (i) per-class attainable-set transport,
+   > (ii) realized-pattern transport, (iii) the pair-zero rule of item 1.
+   > The positivity shadow `K(ρ) > 0 ⇒ K(ρ+3) > 0` is an AUDIT TRIGGER
+   > when it fails — never a constraint to be "fixed" into passing, since a
+   > genuine zero fails it legitimately and is a closure event.
 3. **The general principle.** A constraint layer participates in transport
    iff it is tuple-level, or is explicitly closed under the shift action
    `Φ_J` of the invariants (`J` running over generators of the invariant

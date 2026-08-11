@@ -172,6 +172,10 @@ the error of §0.
 > below are **not determined** by this enumeration (the `0` is an artifact of a
 > module-level degeneracy test; see the verdict banner in §2.5), and the even
 > rows are **lower bounds**, not exact counts.
+>
+> **2026-08-11 repair (`goal_runs_20260811/STAGE1_STRATIFIED`):** stratified
+> re-run, both primes: `K = 11 068 / 1 178 / 1 512 / 6 216 / 1 344 / 756` for
+> `d ≡ 0…5 (mod 6)` — all six residues positive, no degree excluded.
 
 Running `STAGE1`'s coherent enumeration with the two degree-restricted tables:
 
@@ -212,6 +216,9 @@ congruence reaches it.
 > **2026-08-11 correction (`goal_runs_20260811/ODDZERO_AUDIT`):** odd-residue
 > cells are **not determined** (the `0` is an artifact; §2.5), even-residue
 > cells are **lower bounds**.
+>
+> **2026-08-11 repair (`goal_runs_20260811/STAGE1_STRATIFIED`):** corrected
+> `K` per the §2.2 repair banner; all six residues positive.
 
 `330 = lcm(165, 2)`. Combining §2.2, §2.3 and `STAGE2`'s odd-order collapse
 (`6⁸·4¹⁰·5⁴ = 1 100 753 141 760 000 → 3⁸ = 6 561`, all residues):

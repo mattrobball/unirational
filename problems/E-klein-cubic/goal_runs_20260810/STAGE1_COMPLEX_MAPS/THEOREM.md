@@ -819,6 +819,12 @@ components, and surjectivity onto the arc-consistent product is a real question.
 > positive-dimensional subspace can escape a non-degenerate module's pinned
 > value. Verdicts of the form "evaluates outside its arc-consistent domain"
 > are therefore module-level, not section-level, statements.
+>
+> **2026-08-11 repair (`goal_runs_20260811/STAGE1_STRATIFIED`):** the
+> per-section (order-stratified) semantics are implemented and re-run; on
+> the full-flag rows the six flippable `V4` children acquire their level-1
+> escape values. Residue-level effects live in the repair packet; the
+> degree-blind total is unchanged (see the §15.3 repair banner).
 
 `results/coherence_331.txt` (identical at 661). "image" is taken over the
 multi-valued rows below the sweep row, with a degenerate child expanded over its
@@ -858,6 +864,12 @@ is the sharpest thing this packet says about Layer 2.
 > a **lower bound**, not the count, and the `2⁶` cut against arc consistency
 > is an upper bound on the true cut, until the degeneracy test is stratified
 > by order of vanishing.
+>
+> **2026-08-11 repair (`goal_runs_20260811/STAGE1_STRATIFIED`):** stratified:
+> the degree-blind total is **unchanged** (`1 088 847 395 778 723 840 000`) —
+> the free choice at module-degenerate children already contained the escape
+> values — and it remains a lower bound with respect to stratification of the
+> non-full-flag rows.
 
 The evaluation maps are **not** all surjective, so the number changes:
 

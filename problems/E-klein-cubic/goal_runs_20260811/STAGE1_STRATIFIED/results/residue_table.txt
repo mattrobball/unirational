@@ -1,0 +1,12 @@
+STAGE1_STRATIFIED -- corrected sigma-band residue table
+Theta' = 9
+Phi_F gate: PASS
+d mod 6    K           status
+0          11068        Tier-2 two-prime
+1          1178         Tier-2 two-prime
+2          1512         Tier-2 two-prime
+3          6216         Tier-2 two-prime
+4          1344         Tier-2 two-prime
+5          756          Tier-2 two-prime
+coherent stratified = 1088847395778723840000
+coherent old        = 1088847395778723840000

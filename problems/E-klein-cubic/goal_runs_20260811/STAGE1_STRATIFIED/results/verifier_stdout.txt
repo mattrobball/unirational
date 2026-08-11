@@ -1,0 +1,51 @@
+CHECK A1 census: 15 sweep rows, 80 rows, 145 relations (p=331)                 : PASS  
+CHECK A2 N(d,m) for d<=12 equals sealed Layer-3 table, incl N(12,3)=73 (p=331) : PASS  N(12,3)=73
+CHECK A3 H0-1 parity: dim V((d-m,m),1)=0 for even m, d<=12 (p=331)             : PASS  
+CHECK A4 H0-1 on D_P and Prop 1.4(ii) on D_L re-derived (p=331)                : PASS  
+CHECK A5 module-nonvanishing saturation: g_r | 6 for every slot (p=331)        : PASS  max g_r=6
+CHECK B1 six flippable V4-children over type-I plus-plane points (p=331)       : PASS  6
+CHECK B2 OLD semantics: at odd d, level-0 value differs from level-1 (the ODDZERO clash) (p=331) : PASS  agree_odd=0 clash_odd=120
+CHECK B3 OLD semantics: at even d, level-0 value lies in the arc-consistent domain (p=331) : PASS  agree_even=84 clash_even=0
+CHECK B4 NEW: joint vanishing at the six special kids has corank 2 (dim V0 = N-2) for a=(2,1) (p=331) : PASS  nV=4 dimV0=2
+CHECK B5 NEW: stratified contribution at odd d=3 includes the level-1 escape on the special V4 rows (p=331) : PASS  n_usable=3 flipped=True
+CHECK B6 OLD residue table: K(1)=K(3)=K(5)=0 reproduced (p=331)                : PASS  
+CHECK C1 Theorem S': per-class stratified contribution stabilises along a |-> a+6 e_r; observed Theta' >= 6 (p=331) : PASS  Theta'=9
+CHECK C2 Theorem S': attainable-assignment sets are non-decreasing along +6 e_r (old monotone-exclusion direction is FALSE) (p=331) : PASS  
+CHECK D1 stratified K(rho) > 0 for every residue mod 6 (p=331)                 : PASS  {0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756}
+CHECK D2 stratified K dominates the old even-residue lower bounds K(0)>=10752, K(2)>=672, K(4)>=672 (p=331) : PASS  {0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756}
+CHECK D3 odd residues are non-zero under stratified semantics (ODDZERO escape) (p=331) : PASS  {0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756}
+CHECK E1 Phi_F: ord_L F = 1 on both full-flag rows (p=331)                     : PASS  
+CHECK E2 Phi_F: F nonvanishing on plus-planes of full-flag rows (p=331)        : PASS  
+CHECK E3 Phi_F positivity transport: K(rho)>0 => K(rho+3)>0 (p=331)            : PASS  []
+CHECK E4 Phi_F would have caught the odd-zero artifact (old K fails positivity transport) (p=331) : PASS  [(0, 3), (2, 5), (4, 1)]
+CHECK F1 stratified coherent count >= old STAGE1 count 1088847395778723840000 (p=331) : PASS  new=1088847395778723840000 old=1088847395778723840000
+CHECK F2 degree-blind coherent count is at least the old STAGE1 total; the residue-indexed odd-zero is repaired independently (p=331) : PASS  new=1088847395778723840000 old=1088847395778723840000 delta=0
+CHECK A1 census: 15 sweep rows, 80 rows, 145 relations (p=661)                 : PASS  
+CHECK A2 N(d,m) for d<=12 equals sealed Layer-3 table, incl N(12,3)=73 (p=661) : PASS  N(12,3)=73
+CHECK A3 H0-1 parity: dim V((d-m,m),1)=0 for even m, d<=12 (p=661)             : PASS  
+CHECK A4 H0-1 on D_P and Prop 1.4(ii) on D_L re-derived (p=661)                : PASS  
+CHECK A5 module-nonvanishing saturation: g_r | 6 for every slot (p=661)        : PASS  max g_r=6
+CHECK B1 six flippable V4-children over type-I plus-plane points (p=661)       : PASS  6
+CHECK B2 OLD semantics: at odd d, level-0 value differs from level-1 (the ODDZERO clash) (p=661) : PASS  agree_odd=0 clash_odd=120
+CHECK B3 OLD semantics: at even d, level-0 value lies in the arc-consistent domain (p=661) : PASS  agree_even=84 clash_even=0
+CHECK B4 NEW: joint vanishing at the six special kids has corank 2 (dim V0 = N-2) for a=(2,1) (p=661) : PASS  nV=4 dimV0=2
+CHECK B5 NEW: stratified contribution at odd d=3 includes the level-1 escape on the special V4 rows (p=661) : PASS  n_usable=3 flipped=True
+CHECK B6 OLD residue table: K(1)=K(3)=K(5)=0 reproduced (p=661)                : PASS  
+CHECK C1 Theorem S': per-class stratified contribution stabilises along a |-> a+6 e_r; observed Theta' >= 6 (p=661) : PASS  Theta'=9
+CHECK C2 Theorem S': attainable-assignment sets are non-decreasing along +6 e_r (old monotone-exclusion direction is FALSE) (p=661) : PASS  
+CHECK D1 stratified K(rho) > 0 for every residue mod 6 (p=661)                 : PASS  {0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756}
+CHECK D2 stratified K dominates the old even-residue lower bounds K(0)>=10752, K(2)>=672, K(4)>=672 (p=661) : PASS  {0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756}
+CHECK D3 odd residues are non-zero under stratified semantics (ODDZERO escape) (p=661) : PASS  {0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756}
+CHECK E1 Phi_F: ord_L F = 1 on both full-flag rows (p=661)                     : PASS  
+CHECK E2 Phi_F: F nonvanishing on plus-planes of full-flag rows (p=661)        : PASS  
+CHECK E3 Phi_F positivity transport: K(rho)>0 => K(rho+3)>0 (p=661)            : PASS  []
+CHECK E4 Phi_F would have caught the odd-zero artifact (old K fails positivity transport) (p=661) : PASS  [(0, 3), (2, 5), (4, 1)]
+CHECK F1 stratified coherent count >= old STAGE1 count 1088847395778723840000 (p=661) : PASS  new=1088847395778723840000 old=1088847395778723840000
+CHECK F2 degree-blind coherent count is at least the old STAGE1 total; the residue-indexed odd-zero is repaired independently (p=661) : PASS  new=1088847395778723840000 old=1088847395778723840000 delta=0
+CHECK G1 the two primes give identical stratified K tables                     : PASS  ({0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756}, {0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756})
+CHECK G2 the two primes give identical stratified coherent counts              : PASS  
+CHECK G3 the two primes give identical Theta'                                  : PASS  
+
+47 checks, 0 failures
+STAGE1_STRATIFIED_VERIFY_OK
+ALLGREEN
