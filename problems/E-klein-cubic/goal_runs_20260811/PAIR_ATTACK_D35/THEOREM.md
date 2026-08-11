@@ -315,3 +315,28 @@ recorded in `WORKED_EXAMPLE.md` §4.1), (b) independently rebuilds the
 the forced-deeper rows imposed, deciding whether deeper coherent patterns
 exist at d = 35 or the window closes. The headline stays: Problem E
 remains OPEN; no degree is excluded by this packet.
+
+## 12. Director correction and completion (2026-08-11, supersedes §11's census)
+
+1. **Retraction.** §11.2–11.4's keep-kill census ("all 756 dead") is
+   RETRACTED: the inference "level-0 reading vanishes identically ⟹ the
+   kept value is unattainable" is valid only where the value alternates
+   with the level (arc character of period 2) — exactly the six universal
+   flip children and nowhere else; at period-1 rows a vanishing level-0
+   reading delivers the SAME value deeper. §11.1 (the 39 → 37 universal
+   cut), the vanishing table (reinterpreted), and the anchors stand.
+2. **The sound finisher** (`scripts/director_finish_d35.py`, both primes,
+   saturation-checked): `ord ≥ 2` along the minus-lines has rank 39 on
+   the slice — dimension 0. Every pattern whose L-row options all have
+   transverse order ≥ 2 is dead: **398 of the 420**.
+3. **Survivors** (`scripts/director_survivors22.py`): the **22** patterns
+   with a `(35,0)` L-branch; their line assignments impose no flips, so
+   each cell stands at dim ≤ 37 (universal cut only). Final census:
+   **336 + 398 dead, 22 live** — identical at both primes.
+4. **Promotion gate for the kills and the residue of the window:** an
+   ODDZERO-standard adversarial audit of (a) the ord-≥2 impossibility
+   (rank-39) computation, (b) the corrected depth-parity semantics and
+   the open-condition analysis on the 22, (c) the content-addressed
+   linkage repair (§11's defect), then the realization layer (C4/C6,
+   dominance) on whatever remains. Problem E remains OPEN; d = 35 is not
+   closed; the window statement is unchanged.

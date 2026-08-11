@@ -1,0 +1,318 @@
+{
+ "n_in": 22,
+ "n_dead": 0,
+ "n_live": 22,
+ "live_dims": [
+  37
+ ],
+ "detail": [
+  {
+   "id": 5,
+   "hash": "bdbc702f4f11afa8",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 7,
+   "hash": "2c7513acc00d7368",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 13,
+   "hash": "2f9b8e8ba5ba6288",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 15,
+   "hash": "6fb4d2d4d5a56413",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 21,
+   "hash": "c197d9761918cc70",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 23,
+   "hash": "29bd5a4e397c0790",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 29,
+   "hash": "8b6af44c6a58b736",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 31,
+   "hash": "f24058be9349945b",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 37,
+   "hash": "6ae7ffa6dbd79c50",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 39,
+   "hash": "cbc5e8bf02feaf22",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 45,
+   "hash": "a51f1461a34945c2",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 47,
+   "hash": "aac84803b75ad54e",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 53,
+   "hash": "6635c24184e4be43",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 55,
+   "hash": "88ca456f7d4537e6",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 61,
+   "hash": "f2639db1fe05652f",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 63,
+   "hash": "be7f55ce39e664a6",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 69,
+   "hash": "337226b957ffdc34",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 71,
+   "hash": "2955f30c0593ff1d",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 697,
+   "hash": "a6a8ab1ae0fdfe22",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 699,
+   "hash": "e87fb26421304593",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 701,
+   "hash": "b357be64b49d4511",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 703,
+   "hash": "d743d7a4fc7d0414",
+   "branches": [
+    {
+     "branch": 0,
+     "n_line_flips": 0,
+     "rank": 2,
+     "dim": 37
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  }
+ ]
+}

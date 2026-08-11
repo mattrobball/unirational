@@ -1,0 +1,10 @@
+{
+ "p": 661,
+ "npts": 40,
+ "rank_ord1": 10,
+ "dim_after_ord1": 29,
+ "rank_ord2": 39,
+ "dim_after_ord2": 0,
+ "rank_with_universal": 39,
+ "dim_final": 0
+}

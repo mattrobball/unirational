@@ -12,6 +12,12 @@ candidate blueprints is now ruled out at the current depth of the analysis
 Problem E remains OPEN; the window statement does not change until that
 audit passes.**
 
+> **CORRECTED SAME DAY — read §6 before this document.** The census
+> behind the bottom line above is retracted (its keep-kill inference was
+> valid only at the six value-alternating locations). The sound final
+> state, §6: **336 + 398 of the 756 dead by certain closed conditions;
+> 22 survivors at dimension ≤ 37 each.**
+
 ## 1. The objects, in plain words
 
 A **candidate formula** `T` is a possible way to write the map we are
@@ -136,3 +142,49 @@ census 336 / 420 / 0. Then, independently: load
 `results/worked_example_p331.json`, take the 6×39 matrix stored under
 `universal_matrix_6x39`, and row-reduce it modulo 331 in any system you
 trust — the rank must be 2.
+
+---
+
+## 6. CORRECTION AND COMPLETION (same day, later)
+
+**Correction (retraction of the census in §2 steps 3–4 and the "bottom
+line").** The census argument killed blueprints for KEEPING a location
+where the surface reading vanishes for all candidates. That inference is
+only valid where a deeper reading CHANGES the demanded value — which
+happens exactly at the six special locations (where the value alternates
+with depth) and nowhere else. At the other locations the value is the
+same at every depth, so a vanishing surface reading just means "delivered
+deeper", not "impossible". Since every blueprint already flips the six,
+the 420-kill claimed in §2 step 4 is **retracted**. What stands from
+§§1–2: the 39 → 37 universal cut with all its checks; the vanishing table
+itself (true, reinterpreted: readings live deeper at those 14 locations);
+blueprint 0's cut to dimension 36. The all-dead headline is withdrawn.
+
+**Completion (the sound finisher).** The blueprints' own line-row data
+split them by the order of vanishing demanded along the 55 special lines:
+0, 2, or 4 (`scripts/director_finish_d35.py`). Two computations, both
+primes, saturation-checked:
+
+- Vanishing to order ≥ 2 along the lines is **impossible**: imposing it
+  on the 39-dimensional space leaves dimension exactly **0**.
+  Consequently the **398** blueprints all of whose line-branches demand
+  order ≥ 2 are dead — certainly, with no depth-semantics caveats.
+- The **22** blueprints with an order-0 line branch survive; their
+  line-branch assignments impose no further certain (closed) demands
+  (`scripts/director_survivors22.py`), leaving each at dimension ≤ 37.
+
+**Final census for degree 35, this session (both primes identical):**
+
+| fate | count | mechanism |
+|---|---:|---|
+| dead | 336 | wrong vanishing orders on the plus-row (packet §3) |
+| dead | 398 | line vanishing order ≥ 2 impossible in the 39-space |
+| **live** | **22** | order-0 line branch; dim ≤ 37 each |
+
+What remains to close the window, and belongs to the audit cycle: the
+open-condition analysis on the 22 (nonzero-reading demands, with the
+correct depth-parity semantics — the subtlety that sank the census), the
+jet and realization layers, an independent hostile rebuild of the
+order-2-impossibility and vanishing tables, and the reproducibility
+repair from §4.1. Problem E remains OPEN; degree 35 is not closed; it is
+now a fight over 22 explicit cells instead of 756.
