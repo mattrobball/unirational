@@ -143,17 +143,19 @@ A point cell dies **iff both** branches die: `delta(x) in {2,3}` is exhaustive
 by C4 and C5, so excluding only one branch leaves the cell witnessed by the
 other.  `R1` alone kills nothing; `R2` alone kills nothing.
 
-The mandatory orbits are the ones at which `R1`/`R2` need only be proved for a
-*single* `phi`-independent reason: the 220 `S_3`-points and 132 `D_10`-points
-(Thm K4) and the 12 `F_55`-points (Thm O3-3) are in `Bs(phi)` for **every**
-`G`-equivariant map.  At the other six cells the point is not known to be in
-`Bs(phi)` at all, so those cells are conditional on the configuration and die
-for free once the mandatory ones do — *no*: they do not.  A carrying point
-support may be a free point (`P0`) that no theorem places in `Bs(phi)` in
-advance.  So `R1`/`R2` must be proved **for an arbitrary base point of a
-dominant equivariant spin map**, not merely at the 364 mandatory ones.  This
-is a strictly larger demand than the `TOTAL_DEGENERATION.md` §6 box states,
-and it is recorded here as a correction to that box.
+Three of the nine orbits are **mandatory**: the 220 `S_3`-points and 132
+`D_10`-points (Thm K4) and the 12 `F_55`-points (Thm O3-3) lie in `Bs(phi)`
+for *every* `G`-equivariant map, so at cells `P5`, `P6`, `P8` there is a base
+point to argue about before anything else is assumed.  At the other six cells
+there is not: a carrying point support may be a free point (`P0`) that no
+theorem places in `Bs(phi)` in advance.
+
+> **Correction to the `TOTAL_DEGENERATION.md` §6 box.**  `R1` and `R2` must
+> therefore be proved **at an arbitrary base point of a dominant equivariant
+> spin map**, not merely at the 364 mandatory ones.  Closing them only at the
+> mandatory orbits leaves cells `P0`-`P4` and `P7` untouched, and each of those
+> is on its own sufficient to carry `alpha_phi(T)`.  That is a strictly larger
+> demand than the box states.
 
 ### 3.2 The nine positive-dimensional cells (`SUPPORT_CENSUS.md` §5.2)
 

@@ -85,22 +85,20 @@ Two consequences worth stating separately.
 > `Lambda_{m+1}` is a `K`-submodule `P` of `Res_K M^*` for which
 > `V14 cap P(Ann P) = empty`, then that filtration jump cannot occur.
 
-> **Corollary R1-1b.**  `psi_x` is dominant onto `V14` if and only if `phi` is
-> constant along the general line through `x`, in which case `phi` factors
-> through the linear projection `P(V) --> P(V/ell_x) = P(T_x)` and the factored
-> map is dominant and `K`-equivariant.
+> **Corollary R1-1b (one direction only).**  If `phi` is constant along the
+> general line through `x`, then `phi` factors through the linear projection
+> `P(V) --> P(V/ell_x) = P(T_x)`, the factored map coincides with `psi_x`, and
+> `psi_x` is dominant and `K`-equivariant — the director's induced map, in its
+> strongest form.
 
-*Proof of R1-1b.*  If `phi` is constant on general lines through `x` then it
-is constant on the fibres of the projection, hence factors; the factored map
-agrees with `psi_x` off the base locus.  Conversely if `psi_x` is dominant
-onto the threefold `V14` then, for general `u`, `phi|_{ell_u}` and `psi_x(u)`
-agree at `x`; that alone does **not** give constancy, so the "only if" needs
-the other direction: if `phi` is not constant on the general line, the general
-line maps to a *curve*, and the general fibre closure `F_v` of `phi` is not a
-cone with vertex `x`.  That is exactly the second alternative of §2 and is
-consistent with `psi_x` non-dominant; the equivalence as stated is therefore
-proved only in the direction "constant on lines `=>` dominant", and the
-converse is **not** claimed.  `QED` (partial, as marked)
+*Proof.*  Constancy on the fibres of the projection is exactly the condition
+for factoring through it; the factored map agrees with `psi_x` wherever both
+are defined, and it is dominant because `phi` is.  `QED`
+
+The **converse is not claimed and is false**: §2 exhibits a map whose general
+line through `x` is not contracted and whose `psi_x` is nevertheless constant,
+with `Gamma_x` the whole target.  Dominance of `psi_x` is a sufficient route to
+total degeneration, never a necessary one. (partial, as marked)
 
 ---
 
