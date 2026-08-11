@@ -143,8 +143,8 @@ closure is a plane through `x = (1:0:\dots:0)` and the graph fibre over `x`
 is the **whole target**.  Any map whose defining forms all vanish at `x`
 with leading terms sweeping the target behaves the same way.  Nothing in the
 spin situation makes it exotic: the maps in question are given by forms of
-even degree `d` vanishing on a base locus that provably contains 364
-prescribed points (`O3_ODD_ORDER_POINTS.md` Thm O3-2).
+even degree `d >= 4` vanishing on a base locus that provably contains 364
+prescribed points (Thm K4 plus `O3_ODD_ORDER_POINTS.md` Thm O3-3).
 
 Two structural facts, both new, both consequences of C5 and worth recording
 because they show the package's own geometry is compatible with total
