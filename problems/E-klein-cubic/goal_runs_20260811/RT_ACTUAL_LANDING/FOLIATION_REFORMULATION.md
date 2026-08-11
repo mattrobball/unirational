@@ -3,7 +3,13 @@
 Exit: `FOLIATION-CLASSIFICATION-TARGET-REGISTERED`,
 `COVARIANT-AND-DIVERGENCE-FREE-DIMENSIONS-EXACT`,
 `LANDING-DEGREE-AT-LEAST-FOUR-PROVED`,
-`DEGREE-FOUR-DIVERGENCE-FREE-COVARIANT-EXPLICIT`.
+`DEGREE-FOUR-DIVERGENCE-FREE-COVARIANT-EXPLICIT`,
+`TANGENCY-SURJECTIVITY-KILLS-THE-ISOLATED-DELTA-LANE`,
+`SATURATED-FOLIATION-INVARIANT-UNDER-POSTCOMPOSITION-PROVED`,
+`FOLIATION-QUOTIENT-CLASSIFICATION-REGISTERED`.
+
+Sections 5–7 were added by the round-5 port; see `ADJUDICATION.md` items `R5-*`
+and `THEOREM_SOURCE_TANGENCY.md`.
 
 This file states the classification target, records the exact dimension
 arithmetic that makes the first cases finite and small, scopes the first
@@ -265,7 +271,118 @@ known to us that takes a `G`-invariant divergence-free rank-one foliation on
 `P^4` and decides whether its first-integral field can be that of a Klein
 cubic. This lane is open work, not a citation away from closing.
 
-## 5. Non-claims
+## 5. The divergence splitting, and why the tangency invariant alone is empty
+
+`div : (Sym^m W^v ⊗ W)^G -> (Sym^{m-1} W^v)^G` is surjective and **split**, by
+`f |-> f·x/(m+4)` (Lemma 2.1 above, read as a splitting). At `d = 35`,
+`m = 2d-4 = 66`, and the exact dimensions are
+
+```
+C(66) = 6992,   I(65) = 1357,   dim ker(div)^G = 5635,
+```
+
+recomputed in `verify_d35_dimensions.py`. Divergence-freeness alone is
+therefore far too weak to be an obstruction, which is the source's (50) and is
+confirmed.
+
+Stronger, and worth stating because it closes a lane rather than measuring one:
+
+> **Proposition 5.1.** For every `m >= 4` the map
+> ```
+> ker(div)^G ∩ (Sym^m W^v ⊗ W)^G  -->  H^0(X, O_X(m+2))^G,
+> P |-> grad F · P  (mod F),
+> ```
+> is **surjective**. So the source-tangency invariant `Delta`, considered as an
+> object in its own right and detached from any `T`, imposes no condition at
+> all.
+
+*Proof.* The Jacobian ideal `J = (F_0,...,F_4)` of the smooth Klein cubic is a
+complete intersection of five quadrics with socle degree `5`, so `J_n = S_n`
+for every `n >= 6` (`JACOBIAN-SOCLE-DEGREE-FIVE-EXACT`, re-verified in
+`forced_foliation_witness.m2`). Hence for `m >= 4` the map
+`(Sym^m W^v ⊗ W) -> S_{m+2}`, `P |-> grad F · P`, is surjective; it is a
+`G`-map, and taking `G`-invariants is exact in characteristic zero, so it is
+surjective on invariants; composing with the surjection
+`(S_{m+2})^G -> H^0(X,O_X(m+2))^G` keeps surjectivity. Finally correct `P` to
+be divergence-free without changing the image: put
+`P' = P - (div P/(m+4))·x`. Then `div P' = 0` by the splitting computation, and
+`grad F · P' = grad F·P - (div P/(m+4))·3F ≡ grad F·P (mod F)` by Euler. ∎
+
+What is restrictive is therefore not `Delta` and not `div P = 0`, but the
+**simultaneous coupling** `adj(J_T) = P_T grad F(T)^t` together with
+`Delta_T|_X = (d/d')H^2 j_phi` for one and the same `T` — the source's (51).
+See `BOXED_GLOBAL_COVARIANT.md` §(54) for the assembled statement.
+
+## 6. The foliation quotient, and the postcomposition caveat resolved
+
+Let `K = C(P^4)` and `L = T^*C(X) ⊂ K`. `D_{P_T}` kills `L`
+(`LANDING-COORDINATES-ARE-FIRST-INTEGRALS-PROVED`), `trdeg L = 3`, and a
+rank-one foliation on a `4`-fold has constant field of transcendence degree
+`3`, so the constant field of `D_{P_T}` is algebraic over `L`. Its relative
+algebraic closure `L^{alg} ⊂ K` defines a normal `G`-threefold `Y_T` and a
+factorization
+
+```
+P^4 --> Y_T --rho_T--> X                                            (32)
+```
+
+with the first map having geometrically connected generic leaves and `rho_T`
+finite. So a landing tuple is classified by: a `G`-invariant algebraically
+integrable rank-one foliation on `P^4`; its normal leaf quotient `Y_T`; a
+finite `G`-equivariant `Y_T -> X`; and a homogeneous realisation of the
+composite by one tuple.
+
+> **Proposition 6.1 (postcomposition invariance).** Let `psi : X --> X` be a
+> dominant generically finite `G`-selfmap, represented by ambient forms `Psi`.
+> Then, generically on `P^4`,
+> ```
+> ker d(Psi o T) = ker dT,
+> ```
+> so the **saturated** kernel foliation is unchanged; only the unsaturated
+> generator changes, by `P_{Psi o T} = a · P_T` for a form `a` of degree
+> `2d(deg Psi - 1)`.
+
+*Proof.* `J_{Psi o T}(x) = J_Psi(T(x)) J_T(x)`, so
+`ker J_{Psi o T} = J_T^{-1}(ker J_Psi ∩ im J_T)`. Now
+`im J_T(x) = ker Q_T^t = T_y C(X)` with `y = T(x)`, and
+`J_Psi(y)|_{T_yC(X)}` is the derivative of the cone selfmap `psi~` at `y`,
+whose determinant is nonzero at the generic point because `psi` is dominant
+generically finite and the characteristic is zero. So
+`ker J_Psi(y) ∩ T_yC(X) = 0` generically and the two kernels coincide. The
+degree statement follows by comparing `deg P_{Psi o T} = 2(d·deg Psi)-4` with
+`deg P_T = 2d-4`. ∎
+
+This resolves the repository's postcomposition caveat
+(`theory/CONSTRAINT_ADDITIONS_20260811.md`, item **C12**: "All classifications
+… must be stated up to postcomposition"). A classification by **saturated**
+foliations automatically quotients the infinite postcomposition semigroup, so
+C12 is not an obstruction to a finite all-degree profile classification *in this
+lane*; it remains one in every lane indexed by the tuple itself.
+
+**A near-miss to keep straight.** Rescaling `T |-> h·T` by an ambient form is
+**not** postcomposition, and it genuinely does change the cone-level foliation:
+`J(hT) = h J_T + T (grad h)^t`, and block (C1) of `verify_forced_foliation.py`
+exhibits `P_{hT} != h P_T`. Proposition 6.1 does not contradict that observation
+and does not extend to it.
+
+## 7. Two scope corrections carried over from round 5
+
+1. **Interpolation does not preserve the nonlinear conditions.** Theorem 1.1 of
+   `INTERPOLATION_THEOREM.md` applies to a section on one fixed `G`-stable
+   closed subscheme. It does **not** preserve `F(T) = 0`, primitivity,
+   dominance, `rank J_T = 4`, `I_4(J_T) = I_P I_Q`, an exact normalized Rees
+   algebra, an exact integral-closure type, or `Delta_T|_X = H^2 j_phi`. This
+   is already §3.4 and §5 of that file; the round-5 source states it
+   independently and it is confirmed.
+2. **The line `O(5-2d) -> T_{P^4}` need not be saturated.** Already recorded as
+   `THEOREM_FORCED_FOLIATION.md` §3 and (F4) above, with the packet's exact
+   witness (`deg P_T = 10`, content `8`, saturated degree `2`) showing it is not
+   a corner case. `BASE_GRADIENT_PACKAGE.md` §5 adds what the saturation
+   carries: `a_T = gcd(P_T)` is a `G`-invariant of degree `0` or `>= 5` whose
+   every irreducible factor is a Darboux hypersurface of the saturated
+   foliation.
+
+## 8. Non-claims
 
 * `D_4` is **not** a landing foliation. It is the unique candidate the linear
   shadow permits at `d = 4`; whether it is realised is (F1), and (F1) is open.
@@ -277,5 +394,12 @@ cubic. This lane is open work, not a citation away from closing.
   this file, and it is weaker than the branch-specific sealed floors wherever
   those apply.
 * The literature pointers in section 4 are orientation only.
+* Proposition 5.1 is a **negative** result: it says the tangency invariant on
+  its own is unobstructed. It is not evidence that a coupled package exists.
+* Proposition 6.1 quotients the postcomposition semigroup **in this lane only**.
+  It does not make the classification of saturated foliations finite, and it
+  says nothing about precomposition or about rescaling `T |-> hT`.
+* `Y_T` in (32) is constructed as a normal model of a function field; nothing
+  is claimed about its singularities, its rationality, or `rho_T`'s degree.
 
 **Problem E headline: OPEN.**

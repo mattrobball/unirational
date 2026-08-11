@@ -48,6 +48,31 @@ FOLIATION-CLASSIFICATION-TARGET-REGISTERED
 
 DEFECT-IDENTITY-IMPOSES-NO-EFFECTIVITY-CONSTRAINT
 
+PULLED-GRADIENT-BASE-RADICAL-IDENTITY-PROVED
+JACOBIAN-MAXIMAL-MINOR-PRODUCT-PROVED
+BASE-POINT-JACOBIAN-RANK-AT-MOST-TWO-PROVED
+KLEIN-NAMBU-WEDGE-IDENTITIES-PROVED
+SATURATED-CRITICAL-DIVISOR-IS-A-DARBOUX-INVARIANT
+SATURATED-FOLIATION-NEVER-NONSINGULAR-PROVED
+SOURCE-TANGENCY-IS-THE-CONE-JACOBIAN-PROVED
+SOURCE-TANGENCY-RAMIFICATION-FACTORIZATION-PROVED
+TANGENCY-EXPONENT-IS-CODIMENSION-WEIGHT-NOT-TWO
+SOURCE-TANGENCY-WITNESS-EXACT
+RESTRICTED-COORDINATE-DEGREE-TWO-AND-THREE-EXCLUDED-ALL-DEGREES
+NONIDENTITY-RESTRICTED-COORDINATE-DEGREE-AT-LEAST-FOUR
+COMMON-FACTOR-CELLS-K-EQUALS-D-MINUS-2-AND-D-MINUS-3-EXCLUDED
+D35-BRANCH-TABLE-EXACT
+D35-COMMON-FACTOR-CELLS-K32-AND-K33-EXCLUDED
+D35-ONE-DIMENSIONAL-RAMIFICATION-CELLS-IDENTIFIED
+CODIMENSION-ONE-SMITH-DEFECT-CLASSIFICATION-PROVED
+DIVISORIAL-DEFECT-LENGTHS-CANCEL-PROVED
+CODIMENSION-TWO-BALANCE-COEFFICIENT-EXACT
+TANGENCY-SURJECTIVITY-KILLS-THE-ISOLATED-DELTA-LANE
+SATURATED-FOLIATION-INVARIANT-UNDER-POSTCOMPOSITION-PROVED
+FOLIATION-QUOTIENT-CLASSIFICATION-REGISTERED
+GENERIC-FIBRE-INDEX-DIVIDES-DELTA-PROVED
+CLEAN-EVEN-DELTA-IS-DIVISIBLE-BY-FOUR-PROVED
+
 LINE-INCIDENCE-FACTOR-TWO-CONDITIONAL
 GLOBAL-COVARIANT-POINTED-RATIONAL-CURVE-EXCLUSION-UNDECIDED
 RESTRICTED-TRANSFER-IN-THE-COMMON-FACTOR-BRANCH-UNDECIDED
@@ -58,9 +83,10 @@ Terminal verifier markers: `verify_conic_slice.py`,
 `verify_landing_identity.py`, `verify_normal_surface_countermodel.py`,
 `verify_slice_universality.py`, `verify_forced_foliation.py`,
 `verify_interpolation_scope.py`, `verify_covariant_dimensions.py`,
-`verify_low_degree_covariants.py`, `verify_d4_covariant.py` and
-`forced_foliation_witness.m2` each print `RESULT: PASS`; `eckardt_klein.m2`
-prints `ideal 1`.
+`verify_low_degree_covariants.py`, `verify_d4_covariant.py`,
+`verify_source_tangency.py`, `verify_d35_dimensions.py`,
+`verify_source_tangency.m2` and `forced_foliation_witness.m2` each print
+`RESULT: PASS`; `eckardt_klein.m2` prints `ideal 1`.
 
 **Not ported** (the external round-3 headline):
 `POINTED-RATIONAL-CURVE-FULL-SUPPORT-EXCLUSION-REFUTED`. The construction that
@@ -93,6 +119,32 @@ weakened (the foliation's degree is not pinned), two results deflated to
 negative exits, and the interpolation theorem's **scope boundary** — which is
 the part that decides what obstruction programs remain legal — supplied and
 machine-checked here rather than by the source. See "What round 4 added".
+
+A fifth external round (adjudicated on branch `agent/rt-tangency-20260811`,
+verdicts `R5-1`–`R5-21`) classified the structures forced by a landing tuple.
+Its one load-bearing new step — the source-tangency identity
+`Delta_T|_X = c H^2 j_phi` — is stated there with a one-phrase justification;
+the proof is supplied in `THEOREM_SOURCE_TANGENCY.md` and the identity comes out
+**sharpened** (`c = d/d'` exactly, and the exponent is the residue weight
+`n - e`, not universally `2`) and **conditioned** (it needs restricted
+dominance, which the source omits and the repository proves). Its one genuine
+exclusion — `d' = 2` and `d' = 3` are impossible in every ambient degree — is
+confirmed and sealed in `EXCLUSION_DPRIME_2_3.md`; it removes the common-factor
+cells `k = d-2, d-3` everywhere, including `k = 32, 33` at `d = 35`. Everything
+numerical is recomputed exactly. No branch closes and the headline is
+untouched. See "What round 5 added".
+
+## What round 5 added
+
+| file | content |
+|---|---|
+| `THEOREM_SOURCE_TANGENCY.md` | the supplied proof of `Delta_T\|_X = (d/d')H^{n-e} j_phi`, via the residue form; `Delta_T` **is** the cone Jacobian of the restricted map; exact worked instances at `w = 1,2,3` and on a genuine cubic threefold |
+| `EXCLUSION_DPRIME_2_3.md` | **sealed:** `d' in {2,3}` impossible in every degree; sharpness; composition with the sealed sieve; the `d'` vs `delta` guard |
+| `BASE_GRADIENT_PACKAGE.md` | socle sandwich, `I_4(J_T)=I_P I_Q`, rank `<= 2` at base points, Klein–Nambu wedges, `a_T` invariant and Darboux, `19 266 655` |
+| `D35_BRANCH_TABLE.md` | the complete `d = 35` table, exact; the **two one-dimensional actionable cells** `k = 30, 31`; `ind(C) \| delta` and `4 \| delta` |
+| `DEFECT_SMITH_CLASSIFICATION.md` | codim-one Smith partitions, why the divisorial lengths cancel, the `340` threshold |
+| `FOLIATION_REFORMULATION.md` §§5–7 | tangency-map surjectivity (the isolated-`Delta` lane is empty), the foliation quotient, postcomposition invariance, the two scope corrections |
+| `BOXED_GLOBAL_COVARIANT.md` §6 | the coupled-package form (54): the geometric alternative as one condition on one object |
 
 ## What is proved
 

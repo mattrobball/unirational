@@ -286,6 +286,51 @@ section C they carry no weight.
   the `ed_C(G) >= 3` lower bound is the single accepted external input inside
   the `G3-DOMINANCE-AUTOMATIC` bridge on which "dominance is automatic" rests.
 
+## C5. Round 5 — the forced-structure classification (external, unaudited)
+
+Transcript `transcript3.md`, message `[10]`, sections 1–10. Adjudicated in
+`ADJUDICATION.md` items `R5-1` … `R5-21`. Ported to
+`THEOREM_SOURCE_TANGENCY.md`, `EXCLUSION_DPRIME_2_3.md`,
+`BASE_GRADIENT_PACKAGE.md`, `D35_BRANCH_TABLE.md`,
+`DEFECT_SMITH_CLASSIFICATION.md`, and sections 5–7 of
+`FOLIATION_REFORMULATION.md`, section 6 of `BOXED_GLOBAL_COVARIANT.md`.
+
+Repository inputs newly consumed or re-linked by this round:
+
+* `goal_runs_20260808/FULL_G_RESTRICTION_DOMINANCE/THEOREM.md`, Theorem 1.1 —
+  the restricted selfmap `phi = f|_X` is dominant, hence generically finite of
+  degree `delta >= 1`. This is the hypothesis the external source omits and
+  everything in round 5 needs. Its own accepted external input is
+  `ed_C(PSL_2(F_11)) >= 3` (Beauville; Duncan–Reichstein), already recorded in
+  section B.
+* `goal_runs_20260810/COMBINED_DEGREE_SIEVE/THEOREM_COMBINED_SIEVE.md`,
+  Lemma 2.3 — `dim H^0(X,O_X(k))^G = I(k) - I(k-3)` and the invariant-degree
+  set `k in {0} ∪ {5,6,...}`; the exclusion of round 5 is the same kind of
+  computation performed at `2d'-2` instead of at `k`.
+* `goal_runs_20260810/RT_SPLIT_AND_DICHOTOMY/THEOREM_RESTRICTED_DICHOTOMY.md`
+  (4.4) — the CLEAN norm form `delta = x^2 + xy + 3y^2`, consumed by the
+  `4 | delta` parity observation.
+* `theory/CONSTRAINT_ADDITIONS_20260811.md` item **C12**, the postcomposition
+  caveat, resolved *within the foliation lane* by
+  `FOLIATION_REFORMULATION.md` Proposition 6.1.
+
+Classical inputs used in the supplied proofs, none of them cited from the
+source:
+
+* the **Gelfand–Leray / Poincaré residue** form of a hypersurface,
+  `dF ^ eta = Omega`, and its scaling weight `n - e`. Standard; see e.g.
+  Arnold–Gusein-Zade–Varchenko, *Singularities of Differentiable Maps* II, §12,
+  or Griffiths, *On the periods of certain rational integrals*, Ann. of Math. 90
+  (1969), §3, where the residue is set up in exactly this homogeneous form.
+* **Generic étaleness** of a dominant generically finite morphism in
+  characteristic zero (so `Jac != 0`). Standard.
+* **Smith normal form** over a discrete valuation ring, and the Cramer
+  description of the kernel of a rank-`(m-1)` map `R^m -> R^{m-1}` by signed
+  maximal minors. Standard.
+* **No plane in a smooth cubic threefold** — proved from scratch in
+  `BASE_GRADIENT_PACKAGE.md` §3 (two conics in a plane always meet), rather
+  than cited.
+
 ## D. Machine tools
 
 Macaulay2 and `python3`/`sympy` only, per the repository toolchain. No GAP,

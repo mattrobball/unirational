@@ -668,3 +668,148 @@ The source's UNDECIDED list — `NO-SINGLE-HOMOGENEOUS-G-COVARIANT-LANDING-TUPLE
 `X_GEN(K_PROJ)-EMPTY`, `KLEIN-PSL2(11)-NON-G-UNIRATIONAL` — is confirmed, and by
 R24 all three are the **same** statement. The repository records it once, as
 `PROBLEM-E-HEADLINE-OPEN`.
+
+---
+
+# Round 5 — the classification of structures forced by a landing tuple
+
+Source: the same external ChatGPT session, transcript message `[10]` of
+`transcript3.md` (sections 1–10 plus a consequences ledger). **External and
+unaudited.** Provenance note carried forward: the source's previous rounds were
+largely right but every one needed supplied proofs, and two carried overclaimed
+headlines that were dropped on adjudication. Round 5 carries no dropped
+headline; it carries one **missing hypothesis** (dominance of the restricted
+selfmap) and one **overgeneralised exponent** (the square on `H`), both
+repaired below.
+
+## Summary table
+
+| # | claim | verdict |
+|---|---|---|
+| R5-1 | socle sandwich `I_T^6 ⊂ I_Q ⊂ I_T^2`, `sqrt(I_Q)=sqrt(I_T)` (19)(20) | **CONFIRMED**, substitution step written out |
+| R5-2 | `I_4(J_T) = I_P I_Q` (21) | **CONFIRMED** |
+| R5-3 | `rank J_T <= 2` at base points (22) | **CONFIRMED**, plane exclusion proved rather than cited |
+| R5-4 | Klein–Nambu wedge identities (23)(24) | **CONFIRMED**, signs checked |
+| R5-5 | `a_T in S^G`, `F ∤ a_T`, `e = 0` or `e >= 5` (25)(26) | **CONFIRMED**; `F ∤ a_T` needs restricted dominance, supplied |
+| R5-6 | Darboux property of `a_T` (28) | **CONFIRMED** |
+| R5-7 | `c_4(T(m-1)) = m^4+m^3+m^2+m+1`; never nonsingular; `19 266 655` (29)(30)(31) | **CONFIRMED**, exact |
+| R5-8 | foliation quotient `P^4 --> Y_T -> X` (32) | **CONFIRMED** |
+| R5-9 | postcomposition leaves the saturated foliation fixed | **CONFIRMED WITH SUPPLIED PROOF**; the generic-étaleness step is the content |
+| **R5-10** | **`Delta_T\|_X = c H^2 j_phi` (34)** | **CONFIRMED WITH SUPPLIED PROOF, SHARPENED AND CONDITIONED** |
+| R5-11 | `div_X(Delta_T) = 2D_X + R_phi` (35), `div_X(a_T) <= 2D_X+R_phi` (36) | **CONFIRMED** |
+| **R5-12** | **`d' = 2, 3` impossible (37)–(40)** | **CONFIRMED WITH SUPPLIED HYPOTHESIS** — sealed |
+| R5-13 | `d = 35` branch table; `254`; `160,145,131,117,105`; the two `1`s (41)(42)(43) | **CONFIRMED**, exact; (42) and (43) are **one table**, not two |
+| R5-14 | Smith-form defect classification (46)(47), `ch_1` cancellation (45) | **CONFIRMED WITH SUPPLIED PROOF** |
+| R5-15 | codim-two balance (48)(49), threshold `340` | **CONFIRMED, DEFINITION-DEPENDENT** — the coefficient is exact, `[Q_T]_2` is undefined in the source |
+| R5-16 | divergence splitting, `5635` (50) | **CONFIRMED**, exact |
+| R5-17 | tangency-map surjectivity for `m >= 4` | **CONFIRMED WITH SUPPLIED PROOF** |
+| R5-18 | `ind(C) \| delta` (52) | **CONFIRMED** |
+| R5-19 | even CLEAN `delta` is divisible by `4` (53) | **CONFIRMED** (2 inert, `-11 ≡ 5 mod 8`) |
+| R5-20 | coupled-package form (54) as the geometric headline | **CONFIRMED** as a statement of the alternative, not as progress |
+| R5-21 | the two self-corrections to round 4 | **CONFIRMED**; both were already in the repo, now cross-linked |
+
+## R5-10 — the key identity, in detail
+
+**What the source says.** "Comparison of the cone Jacobian with the projective
+differential gives `Delta_T|_X = c H^2 j_phi` for a nonzero scalar `c`." That is
+the entire justification for the load-bearing step of the round.
+
+**Verdict: CONFIRMED WITH SUPPLIED PROOF, SHARPENED AND CONDITIONED.** The proof
+is supplied in full in `THEOREM_SOURCE_TANGENCY.md` §§1–4: a pointwise
+linear-algebra lemma identifying the determinant of the restricted differential
+with `grad F(x)^t adj(J_T)(x) w_0` (Lemma 2.1), which upgrades against the
+Gelfand–Leray form to `Delta_T|_X = Jac(T|_{C(X)})` (Lemma 2.2, "Lemma A"),
+followed by an exact scaling lemma for `Jac(h beta)` (Lemma 3.1). Three
+corrections:
+
+1. **The exponent is the residue weight `w = n - e`, not universally `2`.** For
+   `n = 5` variables and `e = 3` (cubic threefold) `w = 2`, so the source's
+   statement is right in the case that matters. `verify_source_tangency.py`
+   exhibits exact instances with `w = 1` and `w = 3` where the exponent is `1`
+   and `3`, and checks that the neighbouring exponents **fail**. The reason is
+   `K_X = O_X(e-n)`; the source's "squared" is a coincidence of the cubic
+   threefold.
+2. **The constant is `c = d/d'`, not an unspecified nonzero scalar.** It comes
+   from `(a+k)/a` in Lemma 3.1 and is where characteristic zero enters the
+   identity itself. Verified on every instance, with `1, 2, 1/2, d, d'` all
+   failing when they differ from `d/d'`.
+3. **The identity needs the restricted selfmap to be dominant, which the source
+   never states.** If it is not, both sides vanish and the true content is that
+   `X` is an invariant (Darboux) hypersurface of the kernel foliation. Supplied
+   from `goal_runs_20260808/FULL_G_RESTRICTION_DOMINANCE/THEOREM.md`,
+   Theorem 1.1 — see R5-A.
+
+**A trap the exact witness exposes.** On the packet's genuine cubic-threefold
+witness (degree `7`), `Delta_T` visibly contains `x_0^2 x_1^2`, and yet `T|_X`
+is **primitive**: `H = 1`, `k = 0`, `d' = 7`. Square factors of `Delta_T` are
+*not* evidence of a common factor — they can be doubled ramification
+components. (34) must not be read backwards. Verified in
+`verify_source_tangency.m2`.
+
+## R5-12 — the exclusion, and its sealing
+
+The source's argument is: `j_phi` would live in `H^0(X,O_X(2))^G = 0` resp.
+`H^0(X,O_X(4))^G = 0`, but a dominant generically finite map has nonzero
+Jacobian in characteristic zero. Correct, and it **does not use (34)** — it is a
+statement about the restricted selfmap alone. The dimension inputs agree with
+the sealed sieve table (`1,0,0,0,0,1,1,1,1,1,2,2,3` for `n = 0..12`,
+independently recomputed). Sealed in `EXCLUSION_DPRIME_2_3.md`, together with
+the sharpness statement that `d' = 2, 3` are the **only** values this argument
+kills.
+
+Two guards recorded there: `d'` is the coordinate degree, **not** the
+topological degree `delta`, so the sealed sieve's `delta = 3` survivor cell
+(`k = 0`, `d' = d`, every `d >= 31`) is untouched; and the exclusion is
+conditional on restricted dominance, hence on `ed_C(G) >= 3`, exactly as the
+rest of the repository's dominance chain is.
+
+## R5-A — citation audit: restricted dominance
+
+**Finding, not a claim of the source.** The repository *proves* restricted
+dominance in `goal_runs_20260808/FULL_G_RESTRICTION_DOMINANCE/THEOREM.md`
+(Theorem 1.1: `phi = f|_X` is dominant, hence generically finite of degree
+`delta >= 1`; the proof excludes `dim Y = 0` by `X^G = ∅` and `dim Y in {1,2}`
+by `ed_C(PSL_2(F_11)) >= 3`). That theorem is cited as installed through the
+2026-08-09 packets. From 2026-08-10 onwards the RT machinery restates the same
+fact as an unproved standing hypothesis —
+`RT_SPLIT_AND_DICHOTOMY/THEOREM_RESTRICTED_DICHOTOMY.md` §1,
+`COMBINED_DEGREE_SIEVE/THEOREM_COMBINED_SIEVE.md` §0 and its `STATUS.md`
+("Dominance of `phi` is an **inherited hypothesis, not proved here**") —
+without linking back. The link is restored in `THEOREM_SOURCE_TANGENCY.md` §5.
+Nothing downstream changes; "inherited hypothesis" should now read "proved in
+`FULL_G_RESTRICTION_DOMINANCE`, conditional on the accepted input
+`ed_C(G) >= 3`".
+
+## R5-B — presentational corrections
+
+* The source's tables (42) and (43) are the **same** table: `68 - 2k =
+  2(35-k) - 2 = 2d'-2`, so the space `Delta_T/H^2` lives in *is* the space
+  `j_phi` lives in. Recorded once, in `D35_BRANCH_TABLE.md`.
+* The source's `[Q_T]_2` in (48) is never defined. The coefficient `-10(d-1)`
+  is exactly re-derived; the rest is recorded as a named base-locus correction.
+* `(53)` is presented by the source as a constraint. It is honestly a
+  **positive** pointer: a genus-zero `delta = 3` survivor would give a rational
+  generic fibre and a stable birational factorization of `P^4` over `X`, and
+  `delta = 3` is exactly the sealed sieve's surviving cell. Recorded that way in
+  `D35_BRANCH_TABLE.md` §5.
+
+## R5 — exit-name mapping
+
+| source name | recorded as |
+|---|---|
+| `PULLED-GRADIENT-BASE-RADICAL-IDENTITY` | `PULLED-GRADIENT-BASE-RADICAL-IDENTITY-PROVED` |
+| `JACOBIAN-MAXIMAL-MINOR-PRODUCT` | `JACOBIAN-MAXIMAL-MINOR-PRODUCT-PROVED` |
+| `BASE-POINT-JACOBIAN-RANK-AT-MOST-TWO` | `BASE-POINT-JACOBIAN-RANK-AT-MOST-TWO-PROVED` |
+| `KLEIN-NAMBU-FOLIATION-PACKAGE` | `KLEIN-NAMBU-WEDGE-IDENTITIES-PROVED` |
+| `SATURATED-CRITICAL-DIVISOR-INVARIANT` | `SATURATED-CRITICAL-DIVISOR-IS-A-DARBOUX-INVARIANT`, `SATURATED-FOLIATION-NEVER-NONSINGULAR-PROVED` |
+| `SOURCE-TANGENCY-RAMIFICATION-FACTORIZATION` | `SOURCE-TANGENCY-RAMIFICATION-FACTORIZATION-PROVED`, plus `SOURCE-TANGENCY-IS-THE-CONE-JACOBIAN-PROVED`, `TANGENCY-EXPONENT-IS-CODIMENSION-WEIGHT-NOT-TWO`, `SOURCE-TANGENCY-WITNESS-EXACT` |
+| `NONIDENTITY-RESTRICTED-COORDINATE-DEGREE-AT-LEAST-FOUR` | kept, plus `RESTRICTED-COORDINATE-DEGREE-TWO-AND-THREE-EXCLUDED-ALL-DEGREES` |
+| `D35-COMMON-FACTOR-CELLS-K32-AND-K33-EXCLUDED` | kept, plus `D35-BRANCH-TABLE-EXACT`, `D35-ONE-DIMENSIONAL-RAMIFICATION-CELLS-IDENTIFIED` |
+| `CODIMENSION-ONE-SMITH-DEFECT-CLASSIFICATION` | `CODIMENSION-ONE-SMITH-DEFECT-CLASSIFICATION-PROVED`, `DIVISORIAL-DEFECT-LENGTHS-CANCEL-PROVED` |
+| `NO-DIVISOR-DEFECT-CODIMENSION-TWO-BALANCE` | `CODIMENSION-TWO-BALANCE-COEFFICIENT-EXACT` |
+| — | `TANGENCY-SURJECTIVITY-KILLS-THE-ISOLATED-DELTA-LANE`, `SATURATED-FOLIATION-INVARIANT-UNDER-POSTCOMPOSITION-PROVED`, `FOLIATION-QUOTIENT-CLASSIFICATION-REGISTERED`, `GENERIC-FIBRE-INDEX-DIVIDES-DELTA-PROVED`, `CLEAN-EVEN-DELTA-IS-DIVISIBLE-BY-FOUR-PROVED` (all new here) |
+
+The source's UNDECIDED list is **unchanged and confirmed**:
+`NO-SINGLE-HOMOGENEOUS-G-COVARIANT-LANDING-TUPLE`, `X_GEN(K_PROJ)-EMPTY`,
+`KLEIN-PSL2(11)-NON-G-UNIRATIONAL`, `ed_C(PSL2(F11)) = 4` — all the same
+statement by R24, recorded once as `PROBLEM-E-HEADLINE-OPEN`.
