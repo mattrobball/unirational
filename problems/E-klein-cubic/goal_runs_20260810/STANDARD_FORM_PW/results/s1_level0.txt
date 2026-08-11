@@ -1,0 +1,135 @@
+--- p = 331 ---
+CHECK subgroup conjugacy classes = 16 (expected 16): PASS
+CHECK abelian subgroup types = ['1', 'C2', 'C3', 'C5', 'C6', 'V4', 'C11']: PASS
+CHECK stratum A4pt      projdim 0 H=A4 orbits [55, 55] (expect dim 0, A4, [55, 55]): PASS
+CHECK stratum C11pt     projdim 0 H=C11 orbits [60] (expect dim 0, C11, [60]): PASS
+CHECK stratum C3line    projdim 1 H=C3 orbits [110] (expect dim 1, C3, [110]): PASS
+CHECK stratum C5pt      projdim 0 H=C5 orbits [132, 132] (expect dim 0, C5, [132, 132]): PASS
+CHECK stratum C6pt      projdim 0 H=C6 orbits [110, 110] (expect dim 0, C6, [110, 110]): PASS
+CHECK stratum D10pt     projdim 0 H=D10 orbits [66] (expect dim 0, D10, [66]): PASS
+CHECK stratum D12pt     projdim 0 H=D12 orbits [55] (expect dim 0, D12, [55]): PASS
+CHECK stratum L'_sigma  projdim 1 H=C2 orbits [55] (expect dim 1, C2, [55]): PASS
+CHECK stratum P_sigma   projdim 2 H=C2 orbits [55] (expect dim 2, C2, [55]): PASS
+CHECK stratum V4-I      projdim 0 H=V4 orbits [165] (expect dim 0, V4, [165]): PASS
+CHECK stratum ell_V     projdim 1 H=V4 orbits [55] (expect dim 1, V4, [55]): PASS
+CHECK the stratification has exactly 11 labels: PASS
+CHECK an S3 (one of the TWO classes) fixes 1 point(s) of P(W), all of type [(1, 'D12')]: no stratum has pointwise stabilizer S3: PASS
+CHECK an S3 (one of the TWO classes) fixes 1 point(s) of P(W), all of type [(1, 'D12')]: no stratum has pointwise stabilizer S3: PASS
+CHECK 11:5 has no fixed point on P(W): PASS
+CHECK A5 has no fixed point on P(W): PASS
+CHECK A5 has no fixed point on P(W): PASS
+
+Lemma B (Duncan corner packet): for a centre with generic pointwise
+stabilizer H and normal representation N, G_E = ker(H -> PGL(N)); so
+G_E != 1 iff N is H-isotypic.
+CHECK P_sigma   H=C2   normal weights [(1,), (1,)] isotypic=True (expect True): PASS
+CHECK L'_sigma  H=C2   normal weights [(1,), (1,), (1,)] isotypic=True (expect True): PASS
+CHECK C3line    H=C3   normal weights [(1,), (1,), (2,)] isotypic=False (expect False): PASS
+CHECK C3line    H=C3   normal weights [(1,), (2,), (2,)] isotypic=False (expect False): PASS
+CHECK ell_V     H=V4   normal weights [(0, 1), (1, 0), (1, 1)] isotypic=False (expect False): PASS
+CHECK V4-I      H=V4   normal weights [(0, 1), (0, 1), (1, 0), (1, 1)] isotypic=False (expect False): PASS
+CHECK V4-I      H=V4   normal weights [(0, 1), (1, 0), (1, 0), (1, 1)] isotypic=False (expect False): PASS
+CHECK V4-I      H=V4   normal weights [(0, 1), (1, 0), (1, 1), (1, 1)] isotypic=False (expect False): PASS
+CHECK C5pt      H=C5   normal weights [(1,), (2,), (3,), (4,)] isotypic=False (expect False): PASS
+CHECK C5pt      H=C5   normal weights [(1,), (2,), (3,), (4,)] isotypic=False (expect False): PASS
+CHECK C5pt      H=C5   normal weights [(1,), (2,), (3,), (4,)] isotypic=False (expect False): PASS
+CHECK C5pt      H=C5   normal weights [(1,), (2,), (3,), (4,)] isotypic=False (expect False): PASS
+CHECK C6pt      H=C6   normal weights [(1,), (3,), (4,), (5,)] isotypic=False (expect False): PASS
+CHECK C6pt      H=C6   normal weights [(2,), (3,), (4,), (5,)] isotypic=False (expect False): PASS
+CHECK C6pt      H=C6   normal weights [(1,), (2,), (3,), (4,)] isotypic=False (expect False): PASS
+CHECK C6pt      H=C6   normal weights [(1,), (2,), (3,), (5,)] isotypic=False (expect False): PASS
+CHECK C11pt     H=C11  normal weights [(2,), (3,), (4,), (8,)] isotypic=False (expect False): PASS
+CHECK C11pt     H=C11  normal weights [(1,), (2,), (6,), (9,)] isotypic=False (expect False): PASS
+CHECK C11pt     H=C11  normal weights [(1,), (5,), (8,), (10,)] isotypic=False (expect False): PASS
+CHECK C11pt     H=C11  normal weights [(4,), (7,), (9,), (10,)] isotypic=False (expect False): PASS
+CHECK C11pt     H=C11  normal weights [(3,), (5,), (6,), (7,)] isotypic=False (expect False): PASS
+
+INCIDENCE A4pt(a)   lies on C3line x4, P_sigma x3, ell_V x1
+INCIDENCE A4pt(b)   lies on C3line x4, P_sigma x3, ell_V x1
+INCIDENCE C11pt     lies on (no positive-dim stratum)
+INCIDENCE C5pt(a)   lies on (no positive-dim stratum)
+INCIDENCE C5pt(b)   lies on (no positive-dim stratum)
+INCIDENCE C6pt(a)   lies on C3line x1, P_sigma x1
+INCIDENCE C6pt(b)   lies on C3line x1, L'_sigma x1
+INCIDENCE D10pt     lies on P_sigma x5
+INCIDENCE D12pt     lies on P_sigma x7, ell_V x3
+INCIDENCE V4-I      lies on L'_sigma x2, P_sigma x1
+INCIDENCE C3line    contains A4pt(a) x2, A4pt(b) x2, C6pt(a) x1, C6pt(b) x1; sits inside -
+INCIDENCE L'_sigma  contains C6pt(b) x2, V4-I x6; sits inside -
+INCIDENCE P_sigma   contains A4pt(a) x3, A4pt(b) x3, C6pt(a) x2, D10pt x6, D12pt x7, V4-I x3; sits inside -
+INCIDENCE ell_V     contains A4pt(a) x1, A4pt(b) x1, D12pt x3; sits inside P_sigma x3
+SIBLINGS  C3line    pairwise intersection vector-dims {0: 97, 1: 12}
+SIBLINGS  L'_sigma  pairwise intersection vector-dims {0: 48, 1: 6}
+SIBLINGS  P_sigma   pairwise intersection vector-dims {1: 48, 2: 6}
+SIBLINGS  ell_V     pairwise intersection vector-dims {0: 48, 1: 6}
+CHECK the 55 ell_V meet 6 siblings in a point, 48 not at all: PASS
+CHECK ell_V is disjoint from every minus-line (all 55): PASS   [re-derives DUNCAN_CORNER_F2 W2.3b]
+
+--- p = 661 ---
+CHECK subgroup conjugacy classes = 16 (expected 16): PASS
+CHECK abelian subgroup types = ['1', 'C2', 'C3', 'C5', 'C6', 'V4', 'C11']: PASS
+CHECK stratum A4pt      projdim 0 H=A4 orbits [55, 55] (expect dim 0, A4, [55, 55]): PASS
+CHECK stratum C11pt     projdim 0 H=C11 orbits [60] (expect dim 0, C11, [60]): PASS
+CHECK stratum C3line    projdim 1 H=C3 orbits [110] (expect dim 1, C3, [110]): PASS
+CHECK stratum C5pt      projdim 0 H=C5 orbits [132, 132] (expect dim 0, C5, [132, 132]): PASS
+CHECK stratum C6pt      projdim 0 H=C6 orbits [110, 110] (expect dim 0, C6, [110, 110]): PASS
+CHECK stratum D10pt     projdim 0 H=D10 orbits [66] (expect dim 0, D10, [66]): PASS
+CHECK stratum D12pt     projdim 0 H=D12 orbits [55] (expect dim 0, D12, [55]): PASS
+CHECK stratum L'_sigma  projdim 1 H=C2 orbits [55] (expect dim 1, C2, [55]): PASS
+CHECK stratum P_sigma   projdim 2 H=C2 orbits [55] (expect dim 2, C2, [55]): PASS
+CHECK stratum V4-I      projdim 0 H=V4 orbits [165] (expect dim 0, V4, [165]): PASS
+CHECK stratum ell_V     projdim 1 H=V4 orbits [55] (expect dim 1, V4, [55]): PASS
+CHECK the stratification has exactly 11 labels: PASS
+CHECK an S3 (one of the TWO classes) fixes 1 point(s) of P(W), all of type [(1, 'D12')]: no stratum has pointwise stabilizer S3: PASS
+CHECK an S3 (one of the TWO classes) fixes 1 point(s) of P(W), all of type [(1, 'D12')]: no stratum has pointwise stabilizer S3: PASS
+CHECK 11:5 has no fixed point on P(W): PASS
+CHECK A5 has no fixed point on P(W): PASS
+CHECK A5 has no fixed point on P(W): PASS
+
+Lemma B (Duncan corner packet): for a centre with generic pointwise
+stabilizer H and normal representation N, G_E = ker(H -> PGL(N)); so
+G_E != 1 iff N is H-isotypic.
+CHECK P_sigma   H=C2   normal weights [(1,), (1,)] isotypic=True (expect True): PASS
+CHECK L'_sigma  H=C2   normal weights [(1,), (1,), (1,)] isotypic=True (expect True): PASS
+CHECK C3line    H=C3   normal weights [(1,), (1,), (2,)] isotypic=False (expect False): PASS
+CHECK C3line    H=C3   normal weights [(1,), (2,), (2,)] isotypic=False (expect False): PASS
+CHECK ell_V     H=V4   normal weights [(0, 1), (1, 0), (1, 1)] isotypic=False (expect False): PASS
+CHECK V4-I      H=V4   normal weights [(0, 1), (0, 1), (1, 0), (1, 1)] isotypic=False (expect False): PASS
+CHECK V4-I      H=V4   normal weights [(0, 1), (1, 0), (1, 0), (1, 1)] isotypic=False (expect False): PASS
+CHECK V4-I      H=V4   normal weights [(0, 1), (1, 0), (1, 1), (1, 1)] isotypic=False (expect False): PASS
+CHECK C5pt      H=C5   normal weights [(1,), (2,), (3,), (4,)] isotypic=False (expect False): PASS
+CHECK C5pt      H=C5   normal weights [(1,), (2,), (3,), (4,)] isotypic=False (expect False): PASS
+CHECK C5pt      H=C5   normal weights [(1,), (2,), (3,), (4,)] isotypic=False (expect False): PASS
+CHECK C5pt      H=C5   normal weights [(1,), (2,), (3,), (4,)] isotypic=False (expect False): PASS
+CHECK C6pt      H=C6   normal weights [(1,), (3,), (4,), (5,)] isotypic=False (expect False): PASS
+CHECK C6pt      H=C6   normal weights [(2,), (3,), (4,), (5,)] isotypic=False (expect False): PASS
+CHECK C6pt      H=C6   normal weights [(1,), (2,), (3,), (4,)] isotypic=False (expect False): PASS
+CHECK C6pt      H=C6   normal weights [(1,), (2,), (3,), (5,)] isotypic=False (expect False): PASS
+CHECK C11pt     H=C11  normal weights [(2,), (3,), (4,), (8,)] isotypic=False (expect False): PASS
+CHECK C11pt     H=C11  normal weights [(1,), (2,), (6,), (9,)] isotypic=False (expect False): PASS
+CHECK C11pt     H=C11  normal weights [(1,), (5,), (8,), (10,)] isotypic=False (expect False): PASS
+CHECK C11pt     H=C11  normal weights [(4,), (7,), (9,), (10,)] isotypic=False (expect False): PASS
+CHECK C11pt     H=C11  normal weights [(3,), (5,), (6,), (7,)] isotypic=False (expect False): PASS
+
+INCIDENCE A4pt(a)   lies on C3line x4, P_sigma x3, ell_V x1
+INCIDENCE A4pt(b)   lies on C3line x4, P_sigma x3, ell_V x1
+INCIDENCE C11pt     lies on (no positive-dim stratum)
+INCIDENCE C5pt(a)   lies on (no positive-dim stratum)
+INCIDENCE C5pt(b)   lies on (no positive-dim stratum)
+INCIDENCE C6pt(a)   lies on C3line x1, P_sigma x1
+INCIDENCE C6pt(b)   lies on C3line x1, L'_sigma x1
+INCIDENCE D10pt     lies on P_sigma x5
+INCIDENCE D12pt     lies on P_sigma x7, ell_V x3
+INCIDENCE V4-I      lies on L'_sigma x2, P_sigma x1
+INCIDENCE C3line    contains A4pt(a) x2, A4pt(b) x2, C6pt(a) x1, C6pt(b) x1; sits inside -
+INCIDENCE L'_sigma  contains C6pt(b) x2, V4-I x6; sits inside -
+INCIDENCE P_sigma   contains A4pt(a) x3, A4pt(b) x3, C6pt(a) x2, D10pt x6, D12pt x7, V4-I x3; sits inside -
+INCIDENCE ell_V     contains A4pt(a) x1, A4pt(b) x1, D12pt x3; sits inside P_sigma x3
+SIBLINGS  C3line    pairwise intersection vector-dims {0: 97, 1: 12}
+SIBLINGS  L'_sigma  pairwise intersection vector-dims {0: 48, 1: 6}
+SIBLINGS  P_sigma   pairwise intersection vector-dims {1: 48, 2: 6}
+SIBLINGS  ell_V     pairwise intersection vector-dims {0: 48, 1: 6}
+CHECK the 55 ell_V meet 6 siblings in a point, 48 not at all: PASS
+CHECK ell_V is disjoint from every minus-line (all 55): PASS   [re-derives DUNCAN_CORNER_F2 W2.3b]
+
+S1_LEVEL0_OK

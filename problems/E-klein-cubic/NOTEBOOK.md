@@ -7074,3 +7074,50 @@ consistency test.
 The packet is on `agent/spin-hodge-support-20260810`. This notebook revision
 was authored against parent head
 `91ee67947f54c6a346cfea520c56a11abf75854e`.
+
+### `STANDARD_FORM_PW` (08-10, `goal_runs_20260810/`) — the source-side atlas
+
+Exit: `SOURCE-STANDARD-FORM-TOWER-SEALED` (marker `STANDARD_FORM_PW_VERIFY_OK`, ALLGREEN, 158 checks).
+
+**No headline claim; source-side normal form only.** Problem E remains OPEN.
+
+The complete standard (toroidal) reduction of the source `P(W) = P⁴`,
+`G = PSL(2,11)`. The tower is **three blowups** — the 940 points of the point
+strata, then the 220 lines, then the 55 plus-planes, i.e. *every stratum of the
+level-0 stabilizer stratification in order of increasing dimension, and nothing
+else*. Terminus: **1215 boundary divisors in 14 `G`-orbits**, exactly **110 in
+2 orbits** with pointwise stabilizer (always `C2`); point stabilizers exactly
+the seven abelian types `{1, C2, C3, V4, C5, C6, C11}` in 42 local models;
+crossings up to `|I| = 3` with stabilizer `1` or `C2`.
+
+Four things worth carrying forward:
+
+1. **`A4` is the hard case, and it is a terminal cycle.** Blowing up an
+   `A4`-point regenerates it forever (`T_q = 1' ⊕ 3 ↦ 1' ⊕ 3`); the only
+   eliminating centre is a curve tangent to the `1'`-line — which is `ℓ_V`,
+   because `W^{V4} = 1' ⊕ 1''` as an `A4`-module, so `ℓ_V` joins the two
+   `A4`-points and they are its residual-`C3` eigenpoints. `D12` and `D10` need
+   one round; **no stratum of `P(W)` has stabilizer `S3`** (both `S3`-classes fix
+   only `D12`-points).
+2. **The minimal standard form has no fabulous corner.** Every crossing of the
+   terminus has cyclic generic stabilizer. `DUNCAN_CORNER_F2`'s 330 `V4`-corners
+   need **one further legal blowup** (their T3). That packet's inventory is
+   confirmed complete — `V4` is the only non-cyclic crossing stabilizer reachable
+   at all — but any argument using the corners must say "pass to a further
+   toroidal model", which `cor:cofinal` licenses.
+3. **`C5`-, `C6`- and `C11`-fixed loci stay zero-dimensional** through the whole
+   recursion (their tangent weights are four distinct nontrivial characters and
+   twisting never yields a trivial one), while **`Fix(C2)` is not purely
+   divisorial** at the terminus — it has components of dimension 1 and 2 as well
+   as the 110 divisors.
+4. **The `V4` row is the source-class invariant.** It is the unique non-cyclic
+   entry of the permanent abelian atlas, hence the whole reason the Duncan corner
+   mechanism has purchase here — and it is exactly what a spin source lacks
+   (`P(U)^{V4} = ∅`, `Q8` preimage; `SPIN_SOURCE_NETWORK/KLEIN_SPIN_COMPLEX.md`
+   §1, closing `theory/FIX_IX_v14.md:261–266`).
+
+Machine: `python3 verifier.py` → `STANDARD_FORM_PW_VERIFY_OK`, `ALLGREEN`,
+158 CHECK lines, 0 failures; both split primes 331 and 661, exact character
+arithmetic for the automaton, exact `QQ` in Macaulay2 for the charts.
+Re-verifies `STRATA_EXACT.md:108–123` and `NORMAL_CHARACTERS.md:71–90` from
+scratch. Sampled and flagged: global irreducibility of every crossing `D_I`.
