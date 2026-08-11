@@ -1,0 +1,8 @@
+sweep rows: [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+maxdeg=3  total=1088847395778723840000  core=(51 rows, 43008 patterns)  rigid_fail=0  48s
+maxdeg=4  total=1088847395778723840000  core=(51 rows, 43008 patterns)  rigid_fail=0  71s
+maxdeg=5  total=1088847395778723840000  core=(51 rows, 43008 patterns)  rigid_fail=0  170s
+maxdeg=6  total=1088847395778723840000  core=(51 rows, 43008 patterns)  rigid_fail=0  561s
+
+STABLE ACROSS maxdeg 3,4,5,6: True
+equals the packet's published total 1088847395778723840000: True

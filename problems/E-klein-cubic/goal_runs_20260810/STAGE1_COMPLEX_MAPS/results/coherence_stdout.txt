@@ -1,0 +1,13 @@
+{
+ "p": 331,
+ "coherent_total": 1088847395778723840000,
+ "seconds": 230,
+ "rigidity_failures": 0
+}
+{
+ "p": 661,
+ "coherent_total": 1088847395778723840000,
+ "seconds": 224,
+ "rigidity_failures": 0
+}
+EXIT=0

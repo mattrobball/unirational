@@ -1,0 +1,1579 @@
+{
+ "p": 331,
+ "arrangement": {
+  "1": 940,
+  "2": 220,
+  "3": 55
+ },
+ "source_rows": 80,
+ "source_components": 11076,
+ "orbit_relations": 145,
+ "target_cells": {
+  "X": 1,
+  "E": 55,
+  "L": 55,
+  "PI": 165,
+  "PII": 165,
+  "P6": 110,
+  "P3": 220,
+  "P5a": 132,
+  "P5b": 132,
+  "P11": 60
+ },
+ "rows": [
+  {
+   "id": 0,
+   "K": "1",
+   "dim": 4,
+   "n": 1,
+   "setwise": "PSL(2,11)",
+   "chain": "(free)",
+   "nvals": 1,
+   "cells": {
+    "X": 1
+   }
+  },
+  {
+   "id": 1,
+   "K": "C2",
+   "dim": 3,
+   "n": 55,
+   "setwise": "D12",
+   "chain": "P_sigma",
+   "nvals": 1,
+   "cells": {
+    "L(onto)": 1
+   }
+  },
+  {
+   "id": 2,
+   "K": "C2",
+   "dim": 3,
+   "n": 55,
+   "setwise": "D12",
+   "chain": "Lminus_sigma",
+   "nvals": 1,
+   "cells": {
+    "L(onto)": 1
+   }
+  },
+  {
+   "id": 3,
+   "K": "C2",
+   "dim": 2,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6*",
+   "nvals": 3,
+   "cells": {
+    "L(onto)": 1,
+    "P6": 2
+   }
+  },
+  {
+   "id": 4,
+   "K": "C2",
+   "dim": 2,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "ell_V",
+   "nvals": 2,
+   "cells": {
+    "L(onto)": 1,
+    "PI": 1
+   }
+  },
+  {
+   "id": 5,
+   "K": "C2",
+   "dim": 2,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_V4*",
+   "nvals": 2,
+   "cells": {
+    "L(onto)": 1,
+    "PI": 1
+   }
+  },
+  {
+   "id": 6,
+   "K": "C2",
+   "dim": 2,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_V4*",
+   "nvals": 2,
+   "cells": {
+    "L(onto)": 1,
+    "PI": 1
+   }
+  },
+  {
+   "id": 7,
+   "K": "C3",
+   "dim": 2,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "C3line",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 8,
+   "K": "C2",
+   "dim": 1,
+   "n": 55,
+   "setwise": "D12",
+   "chain": "pt_D12",
+   "nvals": 1,
+   "cells": {
+    "L(onto)": 1
+   }
+  },
+  {
+   "id": 9,
+   "K": "C2",
+   "dim": 1,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6",
+   "nvals": 3,
+   "cells": {
+    "L(onto)": 1,
+    "P6": 2
+   }
+  },
+  {
+   "id": 10,
+   "K": "C2",
+   "dim": 1,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6<C3line",
+   "nvals": 3,
+   "cells": {
+    "L(onto)": 1,
+    "P6": 2
+   }
+  },
+  {
+   "id": 11,
+   "K": "C2",
+   "dim": 1,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_A4",
+   "nvals": 2,
+   "cells": {
+    "L(onto)": 1,
+    "PI": 1
+   }
+  },
+  {
+   "id": 12,
+   "K": "C2",
+   "dim": 1,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_A4",
+   "nvals": 2,
+   "cells": {
+    "L(onto)": 1,
+    "PI": 1
+   }
+  },
+  {
+   "id": 13,
+   "K": "C2",
+   "dim": 1,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_V4*",
+   "nvals": 2,
+   "cells": {
+    "L(onto)": 1,
+    "PI": 1
+   }
+  },
+  {
+   "id": 14,
+   "K": "C2",
+   "dim": 1,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_D12",
+   "nvals": 2,
+   "cells": {
+    "L(onto)": 1,
+    "PI": 1
+   }
+  },
+  {
+   "id": 15,
+   "K": "C2",
+   "dim": 1,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_D12",
+   "nvals": 2,
+   "cells": {
+    "L(onto)": 1,
+    "PI": 1
+   }
+  },
+  {
+   "id": 16,
+   "K": "C2",
+   "dim": 1,
+   "n": 330,
+   "setwise": "C2",
+   "chain": "pt_D10",
+   "nvals": 23,
+   "cells": {
+    "L(onto)": 1,
+    "gen.E": 1,
+    "gen.L": 1,
+    "PI": 9,
+    "PII": 9,
+    "P6": 2
+   }
+  },
+  {
+   "id": 17,
+   "K": "C3",
+   "dim": 1,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "C3line",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 18,
+   "K": "C3",
+   "dim": 1,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 19,
+   "K": "C3",
+   "dim": 1,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_D12",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 20,
+   "K": "C3",
+   "dim": 1,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6*",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 21,
+   "K": "C3",
+   "dim": 1,
+   "n": 220,
+   "setwise": "C3",
+   "chain": "pt_A4",
+   "nvals": 6,
+   "cells": {
+    "P6": 2,
+    "P3": 4
+   }
+  },
+  {
+   "id": 22,
+   "K": "C3",
+   "dim": 1,
+   "n": 220,
+   "setwise": "C3",
+   "chain": "pt_A4",
+   "nvals": 6,
+   "cells": {
+    "P6": 2,
+    "P3": 4
+   }
+  },
+  {
+   "id": 23,
+   "K": "V4",
+   "dim": 1,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "ell_V<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "PI": 2
+   }
+  },
+  {
+   "id": 24,
+   "K": "V4",
+   "dim": 1,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "ell_V<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "PI": 2
+   }
+  },
+  {
+   "id": 25,
+   "K": "V4",
+   "dim": 1,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_V4*<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "PI": 2
+   }
+  },
+  {
+   "id": 26,
+   "K": "V4",
+   "dim": 1,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_V4*<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "PI": 2
+   }
+  },
+  {
+   "id": 27,
+   "K": "V4",
+   "dim": 1,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_V4*<Lminus_sigma",
+   "nvals": 2,
+   "cells": {
+    "PI": 2
+   }
+  },
+  {
+   "id": 28,
+   "K": "V4",
+   "dim": 1,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_V4*<Lminus_sigma",
+   "nvals": 2,
+   "cells": {
+    "PI": 2
+   }
+  },
+  {
+   "id": 29,
+   "K": "C3",
+   "dim": 0,
+   "n": 220,
+   "setwise": "C3",
+   "chain": "pt_A4",
+   "nvals": 6,
+   "cells": {
+    "P6": 2,
+    "P3": 4
+   }
+  },
+  {
+   "id": 30,
+   "K": "C3",
+   "dim": 0,
+   "n": 220,
+   "setwise": "C3",
+   "chain": "pt_A4",
+   "nvals": 6,
+   "cells": {
+    "P6": 2,
+    "P3": 4
+   }
+  },
+  {
+   "id": 31,
+   "K": "C3",
+   "dim": 0,
+   "n": 220,
+   "setwise": "C3",
+   "chain": "pt_A4<ell_V",
+   "nvals": 6,
+   "cells": {
+    "P6": 2,
+    "P3": 4
+   }
+  },
+  {
+   "id": 32,
+   "K": "C3",
+   "dim": 0,
+   "n": 220,
+   "setwise": "C3",
+   "chain": "pt_A4<ell_V",
+   "nvals": 6,
+   "cells": {
+    "P6": 2,
+    "P3": 4
+   }
+  },
+  {
+   "id": 33,
+   "K": "C3",
+   "dim": 0,
+   "n": 220,
+   "setwise": "C3",
+   "chain": "pt_A4<ell_V",
+   "nvals": 6,
+   "cells": {
+    "P6": 2,
+    "P3": 4
+   }
+  },
+  {
+   "id": 34,
+   "K": "C3",
+   "dim": 0,
+   "n": 220,
+   "setwise": "C3",
+   "chain": "pt_A4<ell_V",
+   "nvals": 6,
+   "cells": {
+    "P6": 2,
+    "P3": 4
+   }
+  },
+  {
+   "id": 35,
+   "K": "V4",
+   "dim": 0,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_A4<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "PI": 2
+   }
+  },
+  {
+   "id": 36,
+   "K": "V4",
+   "dim": 0,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_A4<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "PI": 2
+   }
+  },
+  {
+   "id": 37,
+   "K": "V4",
+   "dim": 0,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_A4<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "PI": 2
+   }
+  },
+  {
+   "id": 38,
+   "K": "V4",
+   "dim": 0,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_A4<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "PI": 2
+   }
+  },
+  {
+   "id": 39,
+   "K": "V4",
+   "dim": 0,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_V4*<Lminus_sigma",
+   "nvals": 2,
+   "cells": {
+    "PI": 2
+   }
+  },
+  {
+   "id": 40,
+   "K": "V4",
+   "dim": 0,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_V4*<Lminus_sigma",
+   "nvals": 2,
+   "cells": {
+    "PI": 2
+   }
+  },
+  {
+   "id": 41,
+   "K": "V4",
+   "dim": 0,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_D12<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "PI": 2
+   }
+  },
+  {
+   "id": 42,
+   "K": "V4",
+   "dim": 0,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_D12<P_sigma",
+   "nvals": 1,
+   "cells": {
+    "PI": 1
+   }
+  },
+  {
+   "id": 43,
+   "K": "V4",
+   "dim": 0,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_D12<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "PI": 2
+   }
+  },
+  {
+   "id": 44,
+   "K": "V4",
+   "dim": 0,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_D12<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "PI": 2
+   }
+  },
+  {
+   "id": 45,
+   "K": "V4",
+   "dim": 0,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_D12<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "PI": 2
+   }
+  },
+  {
+   "id": 46,
+   "K": "V4",
+   "dim": 0,
+   "n": 165,
+   "setwise": "V4",
+   "chain": "pt_D12<P_sigma",
+   "nvals": 1,
+   "cells": {
+    "PI": 1
+   }
+  },
+  {
+   "id": 47,
+   "K": "C5",
+   "dim": 0,
+   "n": 132,
+   "setwise": "C5",
+   "chain": "pt_D10",
+   "nvals": 4,
+   "cells": {
+    "P5a": 2,
+    "P5b": 2
+   }
+  },
+  {
+   "id": 48,
+   "K": "C5",
+   "dim": 0,
+   "n": 132,
+   "setwise": "C5",
+   "chain": "pt_D10",
+   "nvals": 4,
+   "cells": {
+    "P5a": 2,
+    "P5b": 2
+   }
+  },
+  {
+   "id": 49,
+   "K": "C5",
+   "dim": 0,
+   "n": 132,
+   "setwise": "C5",
+   "chain": "pt_C5*",
+   "nvals": 4,
+   "cells": {
+    "P5a": 2,
+    "P5b": 2
+   }
+  },
+  {
+   "id": 50,
+   "K": "C5",
+   "dim": 0,
+   "n": 132,
+   "setwise": "C5",
+   "chain": "pt_C5*",
+   "nvals": 4,
+   "cells": {
+    "P5a": 2,
+    "P5b": 2
+   }
+  },
+  {
+   "id": 51,
+   "K": "C5",
+   "dim": 0,
+   "n": 132,
+   "setwise": "C5",
+   "chain": "pt_C5*",
+   "nvals": 4,
+   "cells": {
+    "P5a": 2,
+    "P5b": 2
+   }
+  },
+  {
+   "id": 52,
+   "K": "C5",
+   "dim": 0,
+   "n": 132,
+   "setwise": "C5",
+   "chain": "pt_C5*",
+   "nvals": 4,
+   "cells": {
+    "P5a": 2,
+    "P5b": 2
+   }
+  },
+  {
+   "id": 53,
+   "K": "C5",
+   "dim": 0,
+   "n": 132,
+   "setwise": "C5",
+   "chain": "pt_C5*",
+   "nvals": 4,
+   "cells": {
+    "P5a": 2,
+    "P5b": 2
+   }
+  },
+  {
+   "id": 54,
+   "K": "C5",
+   "dim": 0,
+   "n": 132,
+   "setwise": "C5",
+   "chain": "pt_C5*",
+   "nvals": 4,
+   "cells": {
+    "P5a": 2,
+    "P5b": 2
+   }
+  },
+  {
+   "id": 55,
+   "K": "C5",
+   "dim": 0,
+   "n": 132,
+   "setwise": "C5",
+   "chain": "pt_C5*",
+   "nvals": 4,
+   "cells": {
+    "P5a": 2,
+    "P5b": 2
+   }
+  },
+  {
+   "id": 56,
+   "K": "C5",
+   "dim": 0,
+   "n": 132,
+   "setwise": "C5",
+   "chain": "pt_C5*",
+   "nvals": 4,
+   "cells": {
+    "P5a": 2,
+    "P5b": 2
+   }
+  },
+  {
+   "id": 57,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 58,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_D12",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 59,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6*",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 60,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6*",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 61,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 62,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 63,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 64,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 65,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6<C3line",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 66,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6<C3line",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 67,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6<C3line",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 68,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_D12<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 69,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_D12<P_sigma",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 70,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6*<C3line",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 71,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6*<C3line",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 72,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6*<C3line",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 73,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6*<Lminus_sigma",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 74,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6*<Lminus_sigma",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 75,
+   "K": "C6",
+   "dim": 0,
+   "n": 110,
+   "setwise": "C6",
+   "chain": "pt_C6*<Lminus_sigma",
+   "nvals": 2,
+   "cells": {
+    "P6": 2
+   }
+  },
+  {
+   "id": 76,
+   "K": "C11",
+   "dim": 0,
+   "n": 60,
+   "setwise": "C11",
+   "chain": "pt_C11*",
+   "nvals": 5,
+   "cells": {
+    "P11": 5
+   }
+  },
+  {
+   "id": 77,
+   "K": "C11",
+   "dim": 0,
+   "n": 60,
+   "setwise": "C11",
+   "chain": "pt_C11*",
+   "nvals": 5,
+   "cells": {
+    "P11": 5
+   }
+  },
+  {
+   "id": 78,
+   "K": "C11",
+   "dim": 0,
+   "n": 60,
+   "setwise": "C11",
+   "chain": "pt_C11*",
+   "nvals": 5,
+   "cells": {
+    "P11": 5
+   }
+  },
+  {
+   "id": 79,
+   "K": "C11",
+   "dim": 0,
+   "n": 60,
+   "setwise": "C11",
+   "chain": "pt_C11*",
+   "nvals": 5,
+   "cells": {
+    "P11": 5
+   }
+  }
+ ],
+ "V4_rows": 18,
+ "V4_rows_with_typeII_option": [],
+ "V4_rows_all_typeI": true,
+ "V4_kill_rule_v_sigma": true,
+ "forced_rows": [
+  0,
+  1,
+  2,
+  8,
+  42,
+  46
+ ],
+ "rows_forced_to_sweep": [
+  1,
+  2,
+  8
+ ],
+ "rows_that_may_sweep": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16
+ ],
+ "rows_with_E_cell_option": [
+  16
+ ],
+ "rows_that_can_dominate_E": [],
+ "positive_dimensional_images": [
+  "X (free stratum)",
+  "L_sigma (55 lines)"
+ ],
+ "blocks": [
+  {
+   "rows": [
+    16
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 23,
+   "free_product": 23
+  },
+  {
+   "rows": [
+    21
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 6,
+   "free_product": 6
+  },
+  {
+   "rows": [
+    22
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 6,
+   "free_product": 6
+  },
+  {
+   "rows": [
+    29
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 6,
+   "free_product": 6
+  },
+  {
+   "rows": [
+    30
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 6,
+   "free_product": 6
+  },
+  {
+   "rows": [
+    31
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 6,
+   "free_product": 6
+  },
+  {
+   "rows": [
+    32
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 6,
+   "free_product": 6
+  },
+  {
+   "rows": [
+    33
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 6,
+   "free_product": 6
+  },
+  {
+   "rows": [
+    34
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 6,
+   "free_product": 6
+  },
+  {
+   "rows": [
+    47
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 4,
+   "free_product": 4
+  },
+  {
+   "rows": [
+    48
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 4,
+   "free_product": 4
+  },
+  {
+   "rows": [
+    49
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 4,
+   "free_product": 4
+  },
+  {
+   "rows": [
+    50
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 4,
+   "free_product": 4
+  },
+  {
+   "rows": [
+    51
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 4,
+   "free_product": 4
+  },
+  {
+   "rows": [
+    52
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 4,
+   "free_product": 4
+  },
+  {
+   "rows": [
+    53
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 4,
+   "free_product": 4
+  },
+  {
+   "rows": [
+    54
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 4,
+   "free_product": 4
+  },
+  {
+   "rows": [
+    55
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 4,
+   "free_product": 4
+  },
+  {
+   "rows": [
+    56
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 4,
+   "free_product": 4
+  },
+  {
+   "rows": [
+    61
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 2,
+   "free_product": 2
+  },
+  {
+   "rows": [
+    63
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 2,
+   "free_product": 2
+  },
+  {
+   "rows": [
+    64
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 2,
+   "free_product": 2
+  },
+  {
+   "rows": [
+    68
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 2,
+   "free_product": 2
+  },
+  {
+   "rows": [
+    74
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 2,
+   "free_product": 2
+  },
+  {
+   "rows": [
+    75
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 2,
+   "free_product": 2
+  },
+  {
+   "rows": [
+    76
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 5,
+   "free_product": 5
+  },
+  {
+   "rows": [
+    77
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 5,
+   "free_product": 5
+  },
+  {
+   "rows": [
+    78
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 5,
+   "free_product": 5
+  },
+  {
+   "rows": [
+    79
+   ],
+   "size": 1,
+   "constraints": 0,
+   "solutions": 5,
+   "free_product": 5
+  },
+  {
+   "rows": [
+    4,
+    23,
+    24
+   ],
+   "size": 3,
+   "constraints": 2,
+   "solutions": 2,
+   "free_product": 8
+  },
+  {
+   "rows": [
+    5,
+    25,
+    28
+   ],
+   "size": 3,
+   "constraints": 2,
+   "solutions": 2,
+   "free_product": 8
+  },
+  {
+   "rows": [
+    6,
+    26,
+    27
+   ],
+   "size": 3,
+   "constraints": 2,
+   "solutions": 2,
+   "free_product": 8
+  },
+  {
+   "rows": [
+    11,
+    35,
+    36
+   ],
+   "size": 3,
+   "constraints": 2,
+   "solutions": 2,
+   "free_product": 8
+  },
+  {
+   "rows": [
+    12,
+    37,
+    38
+   ],
+   "size": 3,
+   "constraints": 2,
+   "solutions": 2,
+   "free_product": 8
+  },
+  {
+   "rows": [
+    13,
+    39,
+    40
+   ],
+   "size": 3,
+   "constraints": 2,
+   "solutions": 2,
+   "free_product": 8
+  },
+  {
+   "rows": [
+    14,
+    43,
+    45
+   ],
+   "size": 3,
+   "constraints": 2,
+   "solutions": 2,
+   "free_product": 8
+  },
+  {
+   "rows": [
+    15,
+    41,
+    44
+   ],
+   "size": 3,
+   "constraints": 2,
+   "solutions": 2,
+   "free_product": 8
+  },
+  {
+   "rows": [
+    19,
+    58,
+    69
+   ],
+   "size": 3,
+   "constraints": 2,
+   "solutions": 2,
+   "free_product": 8
+  },
+  {
+   "rows": [
+    3,
+    7,
+    9,
+    10,
+    17,
+    18,
+    20,
+    57,
+    59,
+    60,
+    62,
+    65,
+    66,
+    67,
+    70,
+    71,
+    72,
+    73
+   ],
+   "size": 18,
+   "constraints": 18,
+   "solutions": 84,
+   "free_product": 884736
+  }
+ ],
+ "total_stage1_classes": 69686233329838325760000,
+ "rows_with_continuous_modulus": [
+  16
+ ],
+ "discrete_classes": 63626560866374123520000,
+ "one_parameter_families": 6059672463464202240000,
+ "witness_maximal_sweep": {
+  "violations": 0,
+  "sweeping_rows": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16
+  ],
+  "cells": {
+   "X": 1,
+   "L(onto)": 15,
+   "PI": 18,
+   "P6": 24,
+   "P5a": 10,
+   "P11": 4,
+   "P3": 8
+  },
+  "lands_on_E_cell": false,
+  "lands_on_typeII": false
+ },
+ "witness_rows": {
+  "0": "X",
+  "1": "L(onto)",
+  "2": "L(onto)",
+  "3": "L(onto)",
+  "4": "L(onto)",
+  "5": "L(onto)",
+  "6": "L(onto)",
+  "7": "P6",
+  "8": "L(onto)",
+  "9": "L(onto)",
+  "10": "L(onto)",
+  "11": "L(onto)",
+  "12": "L(onto)",
+  "13": "L(onto)",
+  "14": "L(onto)",
+  "15": "L(onto)",
+  "16": "L(onto)",
+  "17": "P6",
+  "18": "P6",
+  "19": "P6",
+  "20": "P6",
+  "21": "P3",
+  "22": "P3",
+  "23": "PI",
+  "24": "PI",
+  "25": "PI",
+  "26": "PI",
+  "27": "PI",
+  "28": "PI",
+  "29": "P3",
+  "30": "P3",
+  "31": "P3",
+  "32": "P3",
+  "33": "P3",
+  "34": "P3",
+  "35": "PI",
+  "36": "PI",
+  "37": "PI",
+  "38": "PI",
+  "39": "PI",
+  "40": "PI",
+  "41": "PI",
+  "42": "PI",
+  "43": "PI",
+  "44": "PI",
+  "45": "PI",
+  "46": "PI",
+  "47": "P5a",
+  "48": "P5a",
+  "49": "P5a",
+  "50": "P5a",
+  "51": "P5a",
+  "52": "P5a",
+  "53": "P5a",
+  "54": "P5a",
+  "55": "P5a",
+  "56": "P5a",
+  "57": "P6",
+  "58": "P6",
+  "59": "P6",
+  "60": "P6",
+  "61": "P6",
+  "62": "P6",
+  "63": "P6",
+  "64": "P6",
+  "65": "P6",
+  "66": "P6",
+  "67": "P6",
+  "68": "P6",
+  "69": "P6",
+  "70": "P6",
+  "71": "P6",
+  "72": "P6",
+  "73": "P6",
+  "74": "P6",
+  "75": "P6",
+  "76": "P11",
+  "77": "P11",
+  "78": "P11",
+  "79": "P11"
+ },
+ "witness_minimal_sweep": {
+  "violations": 0,
+  "sweeping_rows": [
+   1,
+   2,
+   3,
+   8
+  ],
+  "lands_on_E_cell": false,
+  "lands_on_typeII": false
+ }
+}

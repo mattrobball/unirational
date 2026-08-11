@@ -52,7 +52,7 @@ disclosed boundary, not a coverage claim.
 
 Core manifest last rebuilt: 2026-08-03. Research supplement last updated:
 2026-08-10. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `ff390836df8321fff510ff52283d9507102a868b` (2026-08-11; the
+Snapshot metadata — notebook parent head: `913220f507611f1626520e3471f7e8a6909e537c` (2026-08-11; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -7295,6 +7295,75 @@ was stale (PR #29); and the branch was missing from `known_branches`, which had
 parity failing. The §5(d) correction is now recorded inside `STANDARD_FORM_PW`
 itself. Not independently replicated: the 145 closure-poset relations
 (packet-verified only). Headline unchanged: **OPEN**.
+
+### STAGE1_COMPLEX_MAPS — the Stage-1 classification (2026-08-10)
+
+`goal_runs_20260810/STAGE1_COMPLEX_MAPS/THEOREM.md`. **Problem E remains OPEN.**
+Classifies every morphism of decorated complexes of groups from the terminus
+complex `F(Z)` (plus the `Z⁺` order-0 delta) to the Klein cubic's complex, under
+the sealed rows, for a dominant equivariant `P(W) ⇢ X`. The boundary-pattern
+space is NONEMPTY — **Stage 1 does not close the headline.** Coherence revision
+(user-mandated, 2026-08-10): imposing evaluation-coherence along closure
+chains (Theorem 15.1, evaluation rigidity: sweep evaluations are constant per
+moduli component, char-0) cuts the raw arc-consistent count
+69 686 233 329 838 325 760 000 by 2⁶ to
+**1 088 847 395 778 723 840 000 stratum-coherent order-0 boundary patterns**;
+two of the fifteen sweeps (the two dim-3 divisors) are NOT evaluation-
+surjective (images 128/262144 and 64/128), the six `C6`-rows inside `D_{P_σ}`
+are pinned, and most Layer-2 components (e.g. 38 of 48 for `D_{P_σ}`) are
+legal equivariant surjections that cannot restrict from any global section.
+Forced features sealed: EIGHT forced sweeps onto `L_σ` (was three; the five
+new ones forced by coherence; the two divisorial cases are model-free;
+strengthens H0-2), twelve of eighteen `V4`-rows rigid, the two type-I
+`C2`-rows locked together (4 of 2⁸ sweep patterns survive), type-II exclusion at all 18 `V4`-rows of `Z` with no external
+import, no genus from admissible refinements, exactly one elliptic door with
+every section still meeting each `E_σ` at a type-I vertex, the `v_σ` rule with
+two pinned rows, the `C6` pinning, the image inventory (only `X` and the 55
+lines are positive-dimensional images), and the order-0 window verdict: parity
+only, `N(d,m) > 0` for all `d` (audit-strengthened closed formula). The
+coherence-immune factor is exactly the 22 odd-order rows (`C3`, `C5`, `C11`;
+≈ 1.1 × 10¹⁵ plus the D10-line's 23), reachable only by jets of the actual
+map — the measured location of Stage-2's work. Model
+scope per the adversarial audit (verdict REGISTER-WITH-EDITS, edits applied,
+addendum §14): non-divisorial claims quantify over maps factoring through `Z`
+or admissible refinements (Correction I-C boundary). Correction H1-D consumed;
+stale pre-correction numbers flagged in `FIX_V_construction.md` §§1–2 and
+`HANDOFF_2026-08-06.md:55-63`.
+
+Exits: `STAGE1-COMPLEX-MAPS-CLASSIFIED`, `STAGE1-BOUNDARY-PATTERNS-SEALED`,
+`STAGE1-EVALUATION-RIGIDITY`, `STAGE1-TYPE-II-EXCLUSION-ON-Z`,
+`STAGE1-EIGHT-FORCED-SWEEPS`, `STAGE1-NO-GENUS-BUYING-ADMISSIBLE`,
+`STAGE1-WITNESS-SECTION-VERIFIED`, `TERMINUS-CENSUS-INDEPENDENTLY-REPRODUCED`,
+`STAGE1-ORDER0-WINDOW-PARITY-ONLY`, `STAGE1-COHERENCE-IMMUNE-FACTOR-ISOLATED`.
+(`STAGE1-SECTION-MODULI-SEALED` and `STAGE1-THREE-FORCED-SWEEPS` renamed by the
+coherence revision; the pre-coherence count is retained in the packet as the
+arc-consistent intermediate.) Markers: `STAGE1_COMPLEX_MAPS_VERIFY_OK` /
+`ALLGREEN` (127 checks incl. the 14-check coherence series; director replay +
+independent adversarial audit + user-mandated coherence revision).
+
+**Adjudicated 2026-08-11** (`ADJUDICATION_PR32.md`, PR #32). The coherence
+revision is a genuine **correction, not a silent weakening**: the count moved
+*down* by 2⁶ (a stronger cut), and the thing that weakened — "the set of Stage-1
+morphisms" became "order-0 boundary patterns" — is stated more loudly than the
+number, with the superseded figure, the two renamed exits and the killed
+3-sweep witness (D4, now paired with the new H14) all recorded in place. The
+123-check verifier replays identically to the stored stdout. Independently
+re-derived here: the entire target-cell census (`165/165/110/220/264/60`, the
+55 `D12`- and `ℓ_V`-, 66 `D10`-, 110 `A4`-loci) from PSL(2,11) subgroup
+arithmetic alone, and the full 80-row and block accounting
+(`51+1+8+10+4+6 = 80`). Three defects fixed in place and two gaps closed:
+§14's audit-derived closed formula for `N(d,m)` — the sole basis for dropping
+the `d ≤ 45` restriction on Thm 9(ii) — was **asserted with no machine check**,
+so it was verified against the exact `Z[ζ₆]` route on 1 122 odd-`m` cases per
+prime to `d = 66` and is now checks **F7/F8** (verifier 123 → 127); §15.6(1)'s
+"the total is unchanged at maxdeg 3, 4, 5, 6" had **no artifact**, so it was run
+(`scripts/s1saturation.py`, `results/saturation_probe_331.txt`: same total, same
+`(51, 43 008)` core, 0 rigidity failures at all four cutoffs — evidence, not a
+proof of saturation, and the Tier-3 flag stands); §1's block table wrongly put
+the two dim-3 divisors inside the 51-row core (they are forced-unique and sit in
+no block); §11 Tier 3(5) still contradicted §14's withdrawal; §9's replay line
+was stale. **PR #32 must merge before PR #37**, which inherits `43 008` and the
+22-row identification from here.
 
 # Notebook supplement — 2026-08-11: the spin packet's last cited input is sealed, and census cell (O4) splits — with a witness that closes the cell to attack
 
