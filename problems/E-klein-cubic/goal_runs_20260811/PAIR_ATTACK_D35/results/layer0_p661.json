@@ -1,0 +1,26 @@
+{
+ "C13": "automatic (Reynolds G-orbit support on seeds)",
+ "C4_C6": "deferred to survivor jet stage (bilinear / tangent)",
+ "d": 35,
+ "d34_exact_match": true,
+ "d34_match": true,
+ "dim_M": 637,
+ "dim_layer0_plus_A4mu2": 39,
+ "dim_profile_only_(1,r0)": 46,
+ "dim_structure_only": 375,
+ "dim_structure_plus_(1,r0)": 39,
+ "m0": 1,
+ "nullspace_dim": 39,
+ "prime": 661,
+ "r0": 6,
+ "rank_layer0": 598,
+ "rules_fired": {
+  "C11_points": true,
+  "C5_points": true,
+  "C6_points": false,
+  "E_eigenlines": "contract to ell_{2 w}",
+  "M_minus_lines": false
+ },
+ "sealed_target_d34": 39,
+ "wall_s": 33.84
+}

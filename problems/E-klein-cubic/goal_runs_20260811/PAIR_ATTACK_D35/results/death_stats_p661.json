@@ -1,0 +1,84 @@
+{
+ "GLOBAL_COHERENCE_cite": "goal_runs_20260811/GLOBAL_COHERENCE/results/vectors_d35.json; G_corrected(35)=630352558080",
+ "RT_ACTUAL_LANDING_cite": "goal_runs_20260811/RT_ACTUAL_LANDING/D35_BRANCH_TABLE.md: 27 open T-side cells; d' in {2,3,4,5} excluded; k=32,33 excluded. r-side packet does not recompute.",
+ "all_dead_linear": false,
+ "dim_histogram": {
+  "39": 420
+ },
+ "layer0": {
+  "C13": "automatic (Reynolds G-orbit support on seeds)",
+  "C4_C6": "deferred to survivor jet stage (bilinear / tangent)",
+  "d": 35,
+  "d34_exact_match": true,
+  "d34_match": true,
+  "dim_M": 637,
+  "dim_layer0_plus_A4mu2": 39,
+  "dim_profile_only_(1,r0)": 46,
+  "dim_structure_only": 375,
+  "dim_structure_plus_(1,r0)": 39,
+  "m0": 1,
+  "nullspace_dim": 39,
+  "prime": 661,
+  "r0": 6,
+  "rank_layer0": 598,
+  "rules_fired": {
+   "C11_points": true,
+   "C5_points": true,
+   "C6_points": false,
+   "E_eigenlines": "contract to ell_{2 w}",
+   "M_minus_lines": false
+  },
+  "sealed_target_d34": 39,
+  "wall_s": 33.84
+ },
+ "layer1_death": {
+  "layer1_alive": 420,
+  "layer1_dead": 336,
+  "layer1_mclass_dead": 336,
+  "layer1_value_dead": 0,
+  "m_class_dims": {
+   "1": 39,
+   "3": 0,
+   "5": 0
+  },
+  "n_groups": 12,
+  "n_mclass": 3,
+  "n_patterns": 756,
+  "per_m_alive": {
+   "1": 420
+  },
+  "per_m_dead": {
+   "3": 252,
+   "5": 84
+  },
+  "value_linearization": "DEFERRED_FRAME_ALIGNMENT: pointwise child evaluation needs STAGE1 qs coords in the D34 Weil frame; global multi-target annihilators are unsound and are not used.",
+  "wall_s": 19.87
+ },
+ "layer2": {
+  "D10_branch": "D10 per_center n=4; B(D10) already in Layer 0; mu0-parity selects E/L branch of C2-line (both open on T-side linear layer)",
+  "F_odd": 36252160,
+  "G": 315176279040,
+  "GLOBAL_COHERENCE_present": true,
+  "G_corrected_cite": "GLOBAL_COHERENCE/results/G_table_corrected.txt: G_corrected(35)=630352558080",
+  "K": 756,
+  "n_in": 420,
+  "n_out": 420,
+  "note": "Consumed vectors_d35.json menus (symbolic).  No additional linear cut on the Layer-1 T-slice: value labels are eigenpoint weights already compatible with the sealed base-locus.  Realization tests on survivors must match the menus.",
+  "odd_order_mode": "consume_value_vectors",
+  "per_center_sizes": {
+   "A4a": 238,
+   "A4b": 238,
+   "C11": 10,
+   "C5a": 4,
+   "C5b": 4,
+   "D10": 4
+  },
+  "vectors_d35_present": true
+ },
+ "n_survivors": 420,
+ "prime": 661,
+ "survivor_dims": [
+  39
+ ],
+ "wall_s": 243.05
+}

@@ -1,0 +1,1777 @@
+PAIR_ATTACK_D35 verifier
+============================================================
+
+-- A. slice-dimension cross-check vs sealed <= 39 --
+CHECK [OK] A1 sealed ladder d=35 ALIVE:39  ALIVE:39
+CHECK [OK] A2 sealed dim_structure_plus_(1,r0) == 39  39
+CHECK [OK] A3 layer0_p331 present
+CHECK [OK] A4 p=331 dim_structure_plus_(1,r0) <= 39  39
+CHECK [OK] A5 p=331 dim_structure_plus_(1,r0) == 39 (exact sealed)  39
+CHECK [OK] A6 p=331 dim_M == 637  637
+CHECK [OK] A7 p=331 C5_points fired
+CHECK [OK] A8 p=331 C11_points fired
+CHECK [OK] A9 p=331 M_minus free (odd d)
+CHECK [OK] A10 p=331 E contracts to ell_2w (35=2 mod 3)
+CHECK [OK] A3 layer0_p661 present
+CHECK [OK] A4 p=661 dim_structure_plus_(1,r0) <= 39  39
+CHECK [OK] A5 p=661 dim_structure_plus_(1,r0) == 39 (exact sealed)  39
+CHECK [OK] A6 p=661 dim_M == 637  637
+CHECK [OK] A7 p=661 C5_points fired
+CHECK [OK] A8 p=661 C11_points fired
+CHECK [OK] A9 p=661 M_minus free (odd d)
+CHECK [OK] A10 p=661 E contracts to ell_2w (35=2 mod 3)
+
+-- B. anchor replays of sealed constraints --
+CHECK [OK] B1 dim M_35 = 637 (D34 dimension_ledger pathA)  637
+CHECK [OK] B1b cite: D34_GUIDED_SWEEP/results/dimension_ledger.json  pathA[35]=637
+CHECK [OK] B2 cite STAGE2_ODD_ORDER_PINNING THEOREM.md §1.3 B(C5): 5|35  all 264 C5-points in Bs
+CHECK [OK] B3 cite STAGE2 §1.3 B(C11): 35=2 non-residue mod 11  all 60 C11-points in Bs, mu>=1
+CHECK [OK] B4 cite STAGE2 §1.5 Prop 1.6: 35=2 mod 3 => contract to other line  E_eigenlines contract to ell_{2 w}
+CHECK [OK] B5 cite STAGE2 Cor 1.5: 35=5 mod 6 => X^C6 swap (not based)  C6_points free
+CHECK [OK] B6 cite STAGE2_SECOND_ORDER: mu>=2 at A4-points  a4_mu2_block in layer0
+CHECK [OK] B7 cite STAGE1_STRATIFIED: K(5)=756  patterns_r5
+CHECK [OK] B8 cite CONSTRAINT_ADDITIONS C4/C6 deferred, C13 automatic  layer0 rec C4_C6 / C13 fields
+CHECK [OK] B9 cite D34_GUIDED_SWEEP THEOREM.md §4 ladder d=35 dim<=39  structure+(1,6)
+CHECK [OK] B10 cite RT_ACTUAL_LANDING/D35_BRANCH_TABLE.md (cite only)  27 open T-cells; d'={2,3,4,5} dead
+CHECK [OK] B11 layer0 rules match residue profile of 35
+
+-- C. per-layer branch counts --
+CHECK [OK] C1 p=331 patterns K=756
+CHECK [OK] C2 p=331 layer1 alive+dead = 756  alive=420 dead=336
+CHECK [OK] C3 p=331 layer2 recorded
+CHECK [OK] C4 p=331 n_survivors field present  420
+CHECK [OK] C5 p=331 regenerated K=756  756
+CHECK [OK] C6 p=331 core solutions=756  756
+CHECK [OK] C1 p=661 patterns K=756
+CHECK [OK] C2 p=661 layer1 alive+dead = 756  alive=420 dead=336
+CHECK [OK] C3 p=661 layer2 recorded
+CHECK [OK] C4 p=661 n_survivors field present  420
+CHECK [OK] C5 p=661 regenerated K=756  756
+CHECK [OK] C6 p=661 core solutions=756  756
+
+-- D. cross-prime agreement --
+CHECK [OK] D1 both primes dim_structure_plus equal  39 vs 39
+CHECK [OK] D2 both primes dim_layer0_plus_A4mu2 equal  39 vs 39
+CHECK [OK] D3 both primes rules_fired equal  {'C11_points': True, 'C5_points': True, 'C6_points': False, 'E_eigenlines': 'contract to ell_{2 w}', 'M_minus_lines': False} vs {'C11_points': True, 'C5_points': True, 'C6_points': False, 'E_eigenlines': 'contract to ell_{2 w}', 'M_minus_lines': False}
+CHECK [OK] D4 both primes n_survivors equal  420 vs 420
+CHECK [OK] D5 both primes all_dead flag equal
+CHECK [OK] D6 both primes survivor_dims equal  [39] vs [39]
+
+-- E. spot re-verification of dead/survivor branches --
+CHECK [OK] E1 survivors list length matches n_survivors  420 vs 420
+CHECK [OK] E2 survivor[0] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[0] dim >= 0
+CHECK [OK] E4 survivor[0] has pattern_id
+CHECK [OK] E2 survivor[1] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[1] dim >= 0
+CHECK [OK] E4 survivor[1] has pattern_id
+CHECK [OK] E2 survivor[2] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[2] dim >= 0
+CHECK [OK] E4 survivor[2] has pattern_id
+CHECK [OK] E2 survivor[3] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[3] dim >= 0
+CHECK [OK] E4 survivor[3] has pattern_id
+CHECK [OK] E2 survivor[4] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[4] dim >= 0
+CHECK [OK] E4 survivor[4] has pattern_id
+CHECK [OK] E2 survivor[5] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[5] dim >= 0
+CHECK [OK] E4 survivor[5] has pattern_id
+CHECK [OK] E2 survivor[6] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[6] dim >= 0
+CHECK [OK] E4 survivor[6] has pattern_id
+CHECK [OK] E2 survivor[7] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[7] dim >= 0
+CHECK [OK] E4 survivor[7] has pattern_id
+CHECK [OK] E2 survivor[8] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[8] dim >= 0
+CHECK [OK] E4 survivor[8] has pattern_id
+CHECK [OK] E2 survivor[9] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[9] dim >= 0
+CHECK [OK] E4 survivor[9] has pattern_id
+CHECK [OK] E2 survivor[10] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[10] dim >= 0
+CHECK [OK] E4 survivor[10] has pattern_id
+CHECK [OK] E2 survivor[11] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[11] dim >= 0
+CHECK [OK] E4 survivor[11] has pattern_id
+CHECK [OK] E2 survivor[12] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[12] dim >= 0
+CHECK [OK] E4 survivor[12] has pattern_id
+CHECK [OK] E2 survivor[13] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[13] dim >= 0
+CHECK [OK] E4 survivor[13] has pattern_id
+CHECK [OK] E2 survivor[14] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[14] dim >= 0
+CHECK [OK] E4 survivor[14] has pattern_id
+CHECK [OK] E2 survivor[15] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[15] dim >= 0
+CHECK [OK] E4 survivor[15] has pattern_id
+CHECK [OK] E2 survivor[16] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[16] dim >= 0
+CHECK [OK] E4 survivor[16] has pattern_id
+CHECK [OK] E2 survivor[17] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[17] dim >= 0
+CHECK [OK] E4 survivor[17] has pattern_id
+CHECK [OK] E2 survivor[18] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[18] dim >= 0
+CHECK [OK] E4 survivor[18] has pattern_id
+CHECK [OK] E2 survivor[19] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[19] dim >= 0
+CHECK [OK] E4 survivor[19] has pattern_id
+CHECK [OK] E2 survivor[20] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[20] dim >= 0
+CHECK [OK] E4 survivor[20] has pattern_id
+CHECK [OK] E2 survivor[21] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[21] dim >= 0
+CHECK [OK] E4 survivor[21] has pattern_id
+CHECK [OK] E2 survivor[22] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[22] dim >= 0
+CHECK [OK] E4 survivor[22] has pattern_id
+CHECK [OK] E2 survivor[23] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[23] dim >= 0
+CHECK [OK] E4 survivor[23] has pattern_id
+CHECK [OK] E2 survivor[24] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[24] dim >= 0
+CHECK [OK] E4 survivor[24] has pattern_id
+CHECK [OK] E2 survivor[25] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[25] dim >= 0
+CHECK [OK] E4 survivor[25] has pattern_id
+CHECK [OK] E2 survivor[26] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[26] dim >= 0
+CHECK [OK] E4 survivor[26] has pattern_id
+CHECK [OK] E2 survivor[27] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[27] dim >= 0
+CHECK [OK] E4 survivor[27] has pattern_id
+CHECK [OK] E2 survivor[28] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[28] dim >= 0
+CHECK [OK] E4 survivor[28] has pattern_id
+CHECK [OK] E2 survivor[29] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[29] dim >= 0
+CHECK [OK] E4 survivor[29] has pattern_id
+CHECK [OK] E2 survivor[30] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[30] dim >= 0
+CHECK [OK] E4 survivor[30] has pattern_id
+CHECK [OK] E2 survivor[31] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[31] dim >= 0
+CHECK [OK] E4 survivor[31] has pattern_id
+CHECK [OK] E2 survivor[32] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[32] dim >= 0
+CHECK [OK] E4 survivor[32] has pattern_id
+CHECK [OK] E2 survivor[33] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[33] dim >= 0
+CHECK [OK] E4 survivor[33] has pattern_id
+CHECK [OK] E2 survivor[34] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[34] dim >= 0
+CHECK [OK] E4 survivor[34] has pattern_id
+CHECK [OK] E2 survivor[35] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[35] dim >= 0
+CHECK [OK] E4 survivor[35] has pattern_id
+CHECK [OK] E2 survivor[36] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[36] dim >= 0
+CHECK [OK] E4 survivor[36] has pattern_id
+CHECK [OK] E2 survivor[37] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[37] dim >= 0
+CHECK [OK] E4 survivor[37] has pattern_id
+CHECK [OK] E2 survivor[38] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[38] dim >= 0
+CHECK [OK] E4 survivor[38] has pattern_id
+CHECK [OK] E2 survivor[39] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[39] dim >= 0
+CHECK [OK] E4 survivor[39] has pattern_id
+CHECK [OK] E2 survivor[40] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[40] dim >= 0
+CHECK [OK] E4 survivor[40] has pattern_id
+CHECK [OK] E2 survivor[41] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[41] dim >= 0
+CHECK [OK] E4 survivor[41] has pattern_id
+CHECK [OK] E2 survivor[42] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[42] dim >= 0
+CHECK [OK] E4 survivor[42] has pattern_id
+CHECK [OK] E2 survivor[43] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[43] dim >= 0
+CHECK [OK] E4 survivor[43] has pattern_id
+CHECK [OK] E2 survivor[44] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[44] dim >= 0
+CHECK [OK] E4 survivor[44] has pattern_id
+CHECK [OK] E2 survivor[45] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[45] dim >= 0
+CHECK [OK] E4 survivor[45] has pattern_id
+CHECK [OK] E2 survivor[46] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[46] dim >= 0
+CHECK [OK] E4 survivor[46] has pattern_id
+CHECK [OK] E2 survivor[47] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[47] dim >= 0
+CHECK [OK] E4 survivor[47] has pattern_id
+CHECK [OK] E2 survivor[48] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[48] dim >= 0
+CHECK [OK] E4 survivor[48] has pattern_id
+CHECK [OK] E2 survivor[49] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[49] dim >= 0
+CHECK [OK] E4 survivor[49] has pattern_id
+CHECK [OK] E2 survivor[50] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[50] dim >= 0
+CHECK [OK] E4 survivor[50] has pattern_id
+CHECK [OK] E2 survivor[51] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[51] dim >= 0
+CHECK [OK] E4 survivor[51] has pattern_id
+CHECK [OK] E2 survivor[52] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[52] dim >= 0
+CHECK [OK] E4 survivor[52] has pattern_id
+CHECK [OK] E2 survivor[53] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[53] dim >= 0
+CHECK [OK] E4 survivor[53] has pattern_id
+CHECK [OK] E2 survivor[54] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[54] dim >= 0
+CHECK [OK] E4 survivor[54] has pattern_id
+CHECK [OK] E2 survivor[55] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[55] dim >= 0
+CHECK [OK] E4 survivor[55] has pattern_id
+CHECK [OK] E2 survivor[56] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[56] dim >= 0
+CHECK [OK] E4 survivor[56] has pattern_id
+CHECK [OK] E2 survivor[57] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[57] dim >= 0
+CHECK [OK] E4 survivor[57] has pattern_id
+CHECK [OK] E2 survivor[58] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[58] dim >= 0
+CHECK [OK] E4 survivor[58] has pattern_id
+CHECK [OK] E2 survivor[59] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[59] dim >= 0
+CHECK [OK] E4 survivor[59] has pattern_id
+CHECK [OK] E2 survivor[60] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[60] dim >= 0
+CHECK [OK] E4 survivor[60] has pattern_id
+CHECK [OK] E2 survivor[61] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[61] dim >= 0
+CHECK [OK] E4 survivor[61] has pattern_id
+CHECK [OK] E2 survivor[62] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[62] dim >= 0
+CHECK [OK] E4 survivor[62] has pattern_id
+CHECK [OK] E2 survivor[63] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[63] dim >= 0
+CHECK [OK] E4 survivor[63] has pattern_id
+CHECK [OK] E2 survivor[64] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[64] dim >= 0
+CHECK [OK] E4 survivor[64] has pattern_id
+CHECK [OK] E2 survivor[65] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[65] dim >= 0
+CHECK [OK] E4 survivor[65] has pattern_id
+CHECK [OK] E2 survivor[66] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[66] dim >= 0
+CHECK [OK] E4 survivor[66] has pattern_id
+CHECK [OK] E2 survivor[67] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[67] dim >= 0
+CHECK [OK] E4 survivor[67] has pattern_id
+CHECK [OK] E2 survivor[68] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[68] dim >= 0
+CHECK [OK] E4 survivor[68] has pattern_id
+CHECK [OK] E2 survivor[69] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[69] dim >= 0
+CHECK [OK] E4 survivor[69] has pattern_id
+CHECK [OK] E2 survivor[70] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[70] dim >= 0
+CHECK [OK] E4 survivor[70] has pattern_id
+CHECK [OK] E2 survivor[71] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[71] dim >= 0
+CHECK [OK] E4 survivor[71] has pattern_id
+CHECK [OK] E2 survivor[72] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[72] dim >= 0
+CHECK [OK] E4 survivor[72] has pattern_id
+CHECK [OK] E2 survivor[73] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[73] dim >= 0
+CHECK [OK] E4 survivor[73] has pattern_id
+CHECK [OK] E2 survivor[74] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[74] dim >= 0
+CHECK [OK] E4 survivor[74] has pattern_id
+CHECK [OK] E2 survivor[75] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[75] dim >= 0
+CHECK [OK] E4 survivor[75] has pattern_id
+CHECK [OK] E2 survivor[76] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[76] dim >= 0
+CHECK [OK] E4 survivor[76] has pattern_id
+CHECK [OK] E2 survivor[77] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[77] dim >= 0
+CHECK [OK] E4 survivor[77] has pattern_id
+CHECK [OK] E2 survivor[78] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[78] dim >= 0
+CHECK [OK] E4 survivor[78] has pattern_id
+CHECK [OK] E2 survivor[79] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[79] dim >= 0
+CHECK [OK] E4 survivor[79] has pattern_id
+CHECK [OK] E2 survivor[80] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[80] dim >= 0
+CHECK [OK] E4 survivor[80] has pattern_id
+CHECK [OK] E2 survivor[81] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[81] dim >= 0
+CHECK [OK] E4 survivor[81] has pattern_id
+CHECK [OK] E2 survivor[82] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[82] dim >= 0
+CHECK [OK] E4 survivor[82] has pattern_id
+CHECK [OK] E2 survivor[83] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[83] dim >= 0
+CHECK [OK] E4 survivor[83] has pattern_id
+CHECK [OK] E2 survivor[84] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[84] dim >= 0
+CHECK [OK] E4 survivor[84] has pattern_id
+CHECK [OK] E2 survivor[85] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[85] dim >= 0
+CHECK [OK] E4 survivor[85] has pattern_id
+CHECK [OK] E2 survivor[86] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[86] dim >= 0
+CHECK [OK] E4 survivor[86] has pattern_id
+CHECK [OK] E2 survivor[87] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[87] dim >= 0
+CHECK [OK] E4 survivor[87] has pattern_id
+CHECK [OK] E2 survivor[88] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[88] dim >= 0
+CHECK [OK] E4 survivor[88] has pattern_id
+CHECK [OK] E2 survivor[89] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[89] dim >= 0
+CHECK [OK] E4 survivor[89] has pattern_id
+CHECK [OK] E2 survivor[90] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[90] dim >= 0
+CHECK [OK] E4 survivor[90] has pattern_id
+CHECK [OK] E2 survivor[91] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[91] dim >= 0
+CHECK [OK] E4 survivor[91] has pattern_id
+CHECK [OK] E2 survivor[92] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[92] dim >= 0
+CHECK [OK] E4 survivor[92] has pattern_id
+CHECK [OK] E2 survivor[93] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[93] dim >= 0
+CHECK [OK] E4 survivor[93] has pattern_id
+CHECK [OK] E2 survivor[94] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[94] dim >= 0
+CHECK [OK] E4 survivor[94] has pattern_id
+CHECK [OK] E2 survivor[95] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[95] dim >= 0
+CHECK [OK] E4 survivor[95] has pattern_id
+CHECK [OK] E2 survivor[96] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[96] dim >= 0
+CHECK [OK] E4 survivor[96] has pattern_id
+CHECK [OK] E2 survivor[97] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[97] dim >= 0
+CHECK [OK] E4 survivor[97] has pattern_id
+CHECK [OK] E2 survivor[98] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[98] dim >= 0
+CHECK [OK] E4 survivor[98] has pattern_id
+CHECK [OK] E2 survivor[99] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[99] dim >= 0
+CHECK [OK] E4 survivor[99] has pattern_id
+CHECK [OK] E2 survivor[100] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[100] dim >= 0
+CHECK [OK] E4 survivor[100] has pattern_id
+CHECK [OK] E2 survivor[101] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[101] dim >= 0
+CHECK [OK] E4 survivor[101] has pattern_id
+CHECK [OK] E2 survivor[102] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[102] dim >= 0
+CHECK [OK] E4 survivor[102] has pattern_id
+CHECK [OK] E2 survivor[103] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[103] dim >= 0
+CHECK [OK] E4 survivor[103] has pattern_id
+CHECK [OK] E2 survivor[104] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[104] dim >= 0
+CHECK [OK] E4 survivor[104] has pattern_id
+CHECK [OK] E2 survivor[105] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[105] dim >= 0
+CHECK [OK] E4 survivor[105] has pattern_id
+CHECK [OK] E2 survivor[106] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[106] dim >= 0
+CHECK [OK] E4 survivor[106] has pattern_id
+CHECK [OK] E2 survivor[107] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[107] dim >= 0
+CHECK [OK] E4 survivor[107] has pattern_id
+CHECK [OK] E2 survivor[108] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[108] dim >= 0
+CHECK [OK] E4 survivor[108] has pattern_id
+CHECK [OK] E2 survivor[109] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[109] dim >= 0
+CHECK [OK] E4 survivor[109] has pattern_id
+CHECK [OK] E2 survivor[110] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[110] dim >= 0
+CHECK [OK] E4 survivor[110] has pattern_id
+CHECK [OK] E2 survivor[111] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[111] dim >= 0
+CHECK [OK] E4 survivor[111] has pattern_id
+CHECK [OK] E2 survivor[112] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[112] dim >= 0
+CHECK [OK] E4 survivor[112] has pattern_id
+CHECK [OK] E2 survivor[113] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[113] dim >= 0
+CHECK [OK] E4 survivor[113] has pattern_id
+CHECK [OK] E2 survivor[114] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[114] dim >= 0
+CHECK [OK] E4 survivor[114] has pattern_id
+CHECK [OK] E2 survivor[115] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[115] dim >= 0
+CHECK [OK] E4 survivor[115] has pattern_id
+CHECK [OK] E2 survivor[116] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[116] dim >= 0
+CHECK [OK] E4 survivor[116] has pattern_id
+CHECK [OK] E2 survivor[117] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[117] dim >= 0
+CHECK [OK] E4 survivor[117] has pattern_id
+CHECK [OK] E2 survivor[118] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[118] dim >= 0
+CHECK [OK] E4 survivor[118] has pattern_id
+CHECK [OK] E2 survivor[119] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[119] dim >= 0
+CHECK [OK] E4 survivor[119] has pattern_id
+CHECK [OK] E2 survivor[120] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[120] dim >= 0
+CHECK [OK] E4 survivor[120] has pattern_id
+CHECK [OK] E2 survivor[121] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[121] dim >= 0
+CHECK [OK] E4 survivor[121] has pattern_id
+CHECK [OK] E2 survivor[122] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[122] dim >= 0
+CHECK [OK] E4 survivor[122] has pattern_id
+CHECK [OK] E2 survivor[123] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[123] dim >= 0
+CHECK [OK] E4 survivor[123] has pattern_id
+CHECK [OK] E2 survivor[124] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[124] dim >= 0
+CHECK [OK] E4 survivor[124] has pattern_id
+CHECK [OK] E2 survivor[125] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[125] dim >= 0
+CHECK [OK] E4 survivor[125] has pattern_id
+CHECK [OK] E2 survivor[126] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[126] dim >= 0
+CHECK [OK] E4 survivor[126] has pattern_id
+CHECK [OK] E2 survivor[127] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[127] dim >= 0
+CHECK [OK] E4 survivor[127] has pattern_id
+CHECK [OK] E2 survivor[128] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[128] dim >= 0
+CHECK [OK] E4 survivor[128] has pattern_id
+CHECK [OK] E2 survivor[129] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[129] dim >= 0
+CHECK [OK] E4 survivor[129] has pattern_id
+CHECK [OK] E2 survivor[130] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[130] dim >= 0
+CHECK [OK] E4 survivor[130] has pattern_id
+CHECK [OK] E2 survivor[131] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[131] dim >= 0
+CHECK [OK] E4 survivor[131] has pattern_id
+CHECK [OK] E2 survivor[132] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[132] dim >= 0
+CHECK [OK] E4 survivor[132] has pattern_id
+CHECK [OK] E2 survivor[133] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[133] dim >= 0
+CHECK [OK] E4 survivor[133] has pattern_id
+CHECK [OK] E2 survivor[134] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[134] dim >= 0
+CHECK [OK] E4 survivor[134] has pattern_id
+CHECK [OK] E2 survivor[135] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[135] dim >= 0
+CHECK [OK] E4 survivor[135] has pattern_id
+CHECK [OK] E2 survivor[136] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[136] dim >= 0
+CHECK [OK] E4 survivor[136] has pattern_id
+CHECK [OK] E2 survivor[137] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[137] dim >= 0
+CHECK [OK] E4 survivor[137] has pattern_id
+CHECK [OK] E2 survivor[138] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[138] dim >= 0
+CHECK [OK] E4 survivor[138] has pattern_id
+CHECK [OK] E2 survivor[139] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[139] dim >= 0
+CHECK [OK] E4 survivor[139] has pattern_id
+CHECK [OK] E2 survivor[140] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[140] dim >= 0
+CHECK [OK] E4 survivor[140] has pattern_id
+CHECK [OK] E2 survivor[141] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[141] dim >= 0
+CHECK [OK] E4 survivor[141] has pattern_id
+CHECK [OK] E2 survivor[142] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[142] dim >= 0
+CHECK [OK] E4 survivor[142] has pattern_id
+CHECK [OK] E2 survivor[143] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[143] dim >= 0
+CHECK [OK] E4 survivor[143] has pattern_id
+CHECK [OK] E2 survivor[144] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[144] dim >= 0
+CHECK [OK] E4 survivor[144] has pattern_id
+CHECK [OK] E2 survivor[145] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[145] dim >= 0
+CHECK [OK] E4 survivor[145] has pattern_id
+CHECK [OK] E2 survivor[146] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[146] dim >= 0
+CHECK [OK] E4 survivor[146] has pattern_id
+CHECK [OK] E2 survivor[147] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[147] dim >= 0
+CHECK [OK] E4 survivor[147] has pattern_id
+CHECK [OK] E2 survivor[148] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[148] dim >= 0
+CHECK [OK] E4 survivor[148] has pattern_id
+CHECK [OK] E2 survivor[149] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[149] dim >= 0
+CHECK [OK] E4 survivor[149] has pattern_id
+CHECK [OK] E2 survivor[150] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[150] dim >= 0
+CHECK [OK] E4 survivor[150] has pattern_id
+CHECK [OK] E2 survivor[151] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[151] dim >= 0
+CHECK [OK] E4 survivor[151] has pattern_id
+CHECK [OK] E2 survivor[152] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[152] dim >= 0
+CHECK [OK] E4 survivor[152] has pattern_id
+CHECK [OK] E2 survivor[153] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[153] dim >= 0
+CHECK [OK] E4 survivor[153] has pattern_id
+CHECK [OK] E2 survivor[154] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[154] dim >= 0
+CHECK [OK] E4 survivor[154] has pattern_id
+CHECK [OK] E2 survivor[155] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[155] dim >= 0
+CHECK [OK] E4 survivor[155] has pattern_id
+CHECK [OK] E2 survivor[156] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[156] dim >= 0
+CHECK [OK] E4 survivor[156] has pattern_id
+CHECK [OK] E2 survivor[157] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[157] dim >= 0
+CHECK [OK] E4 survivor[157] has pattern_id
+CHECK [OK] E2 survivor[158] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[158] dim >= 0
+CHECK [OK] E4 survivor[158] has pattern_id
+CHECK [OK] E2 survivor[159] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[159] dim >= 0
+CHECK [OK] E4 survivor[159] has pattern_id
+CHECK [OK] E2 survivor[160] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[160] dim >= 0
+CHECK [OK] E4 survivor[160] has pattern_id
+CHECK [OK] E2 survivor[161] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[161] dim >= 0
+CHECK [OK] E4 survivor[161] has pattern_id
+CHECK [OK] E2 survivor[162] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[162] dim >= 0
+CHECK [OK] E4 survivor[162] has pattern_id
+CHECK [OK] E2 survivor[163] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[163] dim >= 0
+CHECK [OK] E4 survivor[163] has pattern_id
+CHECK [OK] E2 survivor[164] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[164] dim >= 0
+CHECK [OK] E4 survivor[164] has pattern_id
+CHECK [OK] E2 survivor[165] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[165] dim >= 0
+CHECK [OK] E4 survivor[165] has pattern_id
+CHECK [OK] E2 survivor[166] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[166] dim >= 0
+CHECK [OK] E4 survivor[166] has pattern_id
+CHECK [OK] E2 survivor[167] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[167] dim >= 0
+CHECK [OK] E4 survivor[167] has pattern_id
+CHECK [OK] E2 survivor[168] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[168] dim >= 0
+CHECK [OK] E4 survivor[168] has pattern_id
+CHECK [OK] E2 survivor[169] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[169] dim >= 0
+CHECK [OK] E4 survivor[169] has pattern_id
+CHECK [OK] E2 survivor[170] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[170] dim >= 0
+CHECK [OK] E4 survivor[170] has pattern_id
+CHECK [OK] E2 survivor[171] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[171] dim >= 0
+CHECK [OK] E4 survivor[171] has pattern_id
+CHECK [OK] E2 survivor[172] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[172] dim >= 0
+CHECK [OK] E4 survivor[172] has pattern_id
+CHECK [OK] E2 survivor[173] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[173] dim >= 0
+CHECK [OK] E4 survivor[173] has pattern_id
+CHECK [OK] E2 survivor[174] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[174] dim >= 0
+CHECK [OK] E4 survivor[174] has pattern_id
+CHECK [OK] E2 survivor[175] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[175] dim >= 0
+CHECK [OK] E4 survivor[175] has pattern_id
+CHECK [OK] E2 survivor[176] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[176] dim >= 0
+CHECK [OK] E4 survivor[176] has pattern_id
+CHECK [OK] E2 survivor[177] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[177] dim >= 0
+CHECK [OK] E4 survivor[177] has pattern_id
+CHECK [OK] E2 survivor[178] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[178] dim >= 0
+CHECK [OK] E4 survivor[178] has pattern_id
+CHECK [OK] E2 survivor[179] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[179] dim >= 0
+CHECK [OK] E4 survivor[179] has pattern_id
+CHECK [OK] E2 survivor[180] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[180] dim >= 0
+CHECK [OK] E4 survivor[180] has pattern_id
+CHECK [OK] E2 survivor[181] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[181] dim >= 0
+CHECK [OK] E4 survivor[181] has pattern_id
+CHECK [OK] E2 survivor[182] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[182] dim >= 0
+CHECK [OK] E4 survivor[182] has pattern_id
+CHECK [OK] E2 survivor[183] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[183] dim >= 0
+CHECK [OK] E4 survivor[183] has pattern_id
+CHECK [OK] E2 survivor[184] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[184] dim >= 0
+CHECK [OK] E4 survivor[184] has pattern_id
+CHECK [OK] E2 survivor[185] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[185] dim >= 0
+CHECK [OK] E4 survivor[185] has pattern_id
+CHECK [OK] E2 survivor[186] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[186] dim >= 0
+CHECK [OK] E4 survivor[186] has pattern_id
+CHECK [OK] E2 survivor[187] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[187] dim >= 0
+CHECK [OK] E4 survivor[187] has pattern_id
+CHECK [OK] E2 survivor[188] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[188] dim >= 0
+CHECK [OK] E4 survivor[188] has pattern_id
+CHECK [OK] E2 survivor[189] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[189] dim >= 0
+CHECK [OK] E4 survivor[189] has pattern_id
+CHECK [OK] E2 survivor[190] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[190] dim >= 0
+CHECK [OK] E4 survivor[190] has pattern_id
+CHECK [OK] E2 survivor[191] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[191] dim >= 0
+CHECK [OK] E4 survivor[191] has pattern_id
+CHECK [OK] E2 survivor[192] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[192] dim >= 0
+CHECK [OK] E4 survivor[192] has pattern_id
+CHECK [OK] E2 survivor[193] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[193] dim >= 0
+CHECK [OK] E4 survivor[193] has pattern_id
+CHECK [OK] E2 survivor[194] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[194] dim >= 0
+CHECK [OK] E4 survivor[194] has pattern_id
+CHECK [OK] E2 survivor[195] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[195] dim >= 0
+CHECK [OK] E4 survivor[195] has pattern_id
+CHECK [OK] E2 survivor[196] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[196] dim >= 0
+CHECK [OK] E4 survivor[196] has pattern_id
+CHECK [OK] E2 survivor[197] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[197] dim >= 0
+CHECK [OK] E4 survivor[197] has pattern_id
+CHECK [OK] E2 survivor[198] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[198] dim >= 0
+CHECK [OK] E4 survivor[198] has pattern_id
+CHECK [OK] E2 survivor[199] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[199] dim >= 0
+CHECK [OK] E4 survivor[199] has pattern_id
+CHECK [OK] E2 survivor[200] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[200] dim >= 0
+CHECK [OK] E4 survivor[200] has pattern_id
+CHECK [OK] E2 survivor[201] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[201] dim >= 0
+CHECK [OK] E4 survivor[201] has pattern_id
+CHECK [OK] E2 survivor[202] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[202] dim >= 0
+CHECK [OK] E4 survivor[202] has pattern_id
+CHECK [OK] E2 survivor[203] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[203] dim >= 0
+CHECK [OK] E4 survivor[203] has pattern_id
+CHECK [OK] E2 survivor[204] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[204] dim >= 0
+CHECK [OK] E4 survivor[204] has pattern_id
+CHECK [OK] E2 survivor[205] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[205] dim >= 0
+CHECK [OK] E4 survivor[205] has pattern_id
+CHECK [OK] E2 survivor[206] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[206] dim >= 0
+CHECK [OK] E4 survivor[206] has pattern_id
+CHECK [OK] E2 survivor[207] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[207] dim >= 0
+CHECK [OK] E4 survivor[207] has pattern_id
+CHECK [OK] E2 survivor[208] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[208] dim >= 0
+CHECK [OK] E4 survivor[208] has pattern_id
+CHECK [OK] E2 survivor[209] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[209] dim >= 0
+CHECK [OK] E4 survivor[209] has pattern_id
+CHECK [OK] E2 survivor[210] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[210] dim >= 0
+CHECK [OK] E4 survivor[210] has pattern_id
+CHECK [OK] E2 survivor[211] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[211] dim >= 0
+CHECK [OK] E4 survivor[211] has pattern_id
+CHECK [OK] E2 survivor[212] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[212] dim >= 0
+CHECK [OK] E4 survivor[212] has pattern_id
+CHECK [OK] E2 survivor[213] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[213] dim >= 0
+CHECK [OK] E4 survivor[213] has pattern_id
+CHECK [OK] E2 survivor[214] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[214] dim >= 0
+CHECK [OK] E4 survivor[214] has pattern_id
+CHECK [OK] E2 survivor[215] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[215] dim >= 0
+CHECK [OK] E4 survivor[215] has pattern_id
+CHECK [OK] E2 survivor[216] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[216] dim >= 0
+CHECK [OK] E4 survivor[216] has pattern_id
+CHECK [OK] E2 survivor[217] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[217] dim >= 0
+CHECK [OK] E4 survivor[217] has pattern_id
+CHECK [OK] E2 survivor[218] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[218] dim >= 0
+CHECK [OK] E4 survivor[218] has pattern_id
+CHECK [OK] E2 survivor[219] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[219] dim >= 0
+CHECK [OK] E4 survivor[219] has pattern_id
+CHECK [OK] E2 survivor[220] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[220] dim >= 0
+CHECK [OK] E4 survivor[220] has pattern_id
+CHECK [OK] E2 survivor[221] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[221] dim >= 0
+CHECK [OK] E4 survivor[221] has pattern_id
+CHECK [OK] E2 survivor[222] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[222] dim >= 0
+CHECK [OK] E4 survivor[222] has pattern_id
+CHECK [OK] E2 survivor[223] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[223] dim >= 0
+CHECK [OK] E4 survivor[223] has pattern_id
+CHECK [OK] E2 survivor[224] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[224] dim >= 0
+CHECK [OK] E4 survivor[224] has pattern_id
+CHECK [OK] E2 survivor[225] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[225] dim >= 0
+CHECK [OK] E4 survivor[225] has pattern_id
+CHECK [OK] E2 survivor[226] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[226] dim >= 0
+CHECK [OK] E4 survivor[226] has pattern_id
+CHECK [OK] E2 survivor[227] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[227] dim >= 0
+CHECK [OK] E4 survivor[227] has pattern_id
+CHECK [OK] E2 survivor[228] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[228] dim >= 0
+CHECK [OK] E4 survivor[228] has pattern_id
+CHECK [OK] E2 survivor[229] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[229] dim >= 0
+CHECK [OK] E4 survivor[229] has pattern_id
+CHECK [OK] E2 survivor[230] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[230] dim >= 0
+CHECK [OK] E4 survivor[230] has pattern_id
+CHECK [OK] E2 survivor[231] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[231] dim >= 0
+CHECK [OK] E4 survivor[231] has pattern_id
+CHECK [OK] E2 survivor[232] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[232] dim >= 0
+CHECK [OK] E4 survivor[232] has pattern_id
+CHECK [OK] E2 survivor[233] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[233] dim >= 0
+CHECK [OK] E4 survivor[233] has pattern_id
+CHECK [OK] E2 survivor[234] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[234] dim >= 0
+CHECK [OK] E4 survivor[234] has pattern_id
+CHECK [OK] E2 survivor[235] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[235] dim >= 0
+CHECK [OK] E4 survivor[235] has pattern_id
+CHECK [OK] E2 survivor[236] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[236] dim >= 0
+CHECK [OK] E4 survivor[236] has pattern_id
+CHECK [OK] E2 survivor[237] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[237] dim >= 0
+CHECK [OK] E4 survivor[237] has pattern_id
+CHECK [OK] E2 survivor[238] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[238] dim >= 0
+CHECK [OK] E4 survivor[238] has pattern_id
+CHECK [OK] E2 survivor[239] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[239] dim >= 0
+CHECK [OK] E4 survivor[239] has pattern_id
+CHECK [OK] E2 survivor[240] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[240] dim >= 0
+CHECK [OK] E4 survivor[240] has pattern_id
+CHECK [OK] E2 survivor[241] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[241] dim >= 0
+CHECK [OK] E4 survivor[241] has pattern_id
+CHECK [OK] E2 survivor[242] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[242] dim >= 0
+CHECK [OK] E4 survivor[242] has pattern_id
+CHECK [OK] E2 survivor[243] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[243] dim >= 0
+CHECK [OK] E4 survivor[243] has pattern_id
+CHECK [OK] E2 survivor[244] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[244] dim >= 0
+CHECK [OK] E4 survivor[244] has pattern_id
+CHECK [OK] E2 survivor[245] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[245] dim >= 0
+CHECK [OK] E4 survivor[245] has pattern_id
+CHECK [OK] E2 survivor[246] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[246] dim >= 0
+CHECK [OK] E4 survivor[246] has pattern_id
+CHECK [OK] E2 survivor[247] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[247] dim >= 0
+CHECK [OK] E4 survivor[247] has pattern_id
+CHECK [OK] E2 survivor[248] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[248] dim >= 0
+CHECK [OK] E4 survivor[248] has pattern_id
+CHECK [OK] E2 survivor[249] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[249] dim >= 0
+CHECK [OK] E4 survivor[249] has pattern_id
+CHECK [OK] E2 survivor[250] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[250] dim >= 0
+CHECK [OK] E4 survivor[250] has pattern_id
+CHECK [OK] E2 survivor[251] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[251] dim >= 0
+CHECK [OK] E4 survivor[251] has pattern_id
+CHECK [OK] E2 survivor[252] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[252] dim >= 0
+CHECK [OK] E4 survivor[252] has pattern_id
+CHECK [OK] E2 survivor[253] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[253] dim >= 0
+CHECK [OK] E4 survivor[253] has pattern_id
+CHECK [OK] E2 survivor[254] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[254] dim >= 0
+CHECK [OK] E4 survivor[254] has pattern_id
+CHECK [OK] E2 survivor[255] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[255] dim >= 0
+CHECK [OK] E4 survivor[255] has pattern_id
+CHECK [OK] E2 survivor[256] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[256] dim >= 0
+CHECK [OK] E4 survivor[256] has pattern_id
+CHECK [OK] E2 survivor[257] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[257] dim >= 0
+CHECK [OK] E4 survivor[257] has pattern_id
+CHECK [OK] E2 survivor[258] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[258] dim >= 0
+CHECK [OK] E4 survivor[258] has pattern_id
+CHECK [OK] E2 survivor[259] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[259] dim >= 0
+CHECK [OK] E4 survivor[259] has pattern_id
+CHECK [OK] E2 survivor[260] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[260] dim >= 0
+CHECK [OK] E4 survivor[260] has pattern_id
+CHECK [OK] E2 survivor[261] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[261] dim >= 0
+CHECK [OK] E4 survivor[261] has pattern_id
+CHECK [OK] E2 survivor[262] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[262] dim >= 0
+CHECK [OK] E4 survivor[262] has pattern_id
+CHECK [OK] E2 survivor[263] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[263] dim >= 0
+CHECK [OK] E4 survivor[263] has pattern_id
+CHECK [OK] E2 survivor[264] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[264] dim >= 0
+CHECK [OK] E4 survivor[264] has pattern_id
+CHECK [OK] E2 survivor[265] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[265] dim >= 0
+CHECK [OK] E4 survivor[265] has pattern_id
+CHECK [OK] E2 survivor[266] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[266] dim >= 0
+CHECK [OK] E4 survivor[266] has pattern_id
+CHECK [OK] E2 survivor[267] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[267] dim >= 0
+CHECK [OK] E4 survivor[267] has pattern_id
+CHECK [OK] E2 survivor[268] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[268] dim >= 0
+CHECK [OK] E4 survivor[268] has pattern_id
+CHECK [OK] E2 survivor[269] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[269] dim >= 0
+CHECK [OK] E4 survivor[269] has pattern_id
+CHECK [OK] E2 survivor[270] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[270] dim >= 0
+CHECK [OK] E4 survivor[270] has pattern_id
+CHECK [OK] E2 survivor[271] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[271] dim >= 0
+CHECK [OK] E4 survivor[271] has pattern_id
+CHECK [OK] E2 survivor[272] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[272] dim >= 0
+CHECK [OK] E4 survivor[272] has pattern_id
+CHECK [OK] E2 survivor[273] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[273] dim >= 0
+CHECK [OK] E4 survivor[273] has pattern_id
+CHECK [OK] E2 survivor[274] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[274] dim >= 0
+CHECK [OK] E4 survivor[274] has pattern_id
+CHECK [OK] E2 survivor[275] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[275] dim >= 0
+CHECK [OK] E4 survivor[275] has pattern_id
+CHECK [OK] E2 survivor[276] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[276] dim >= 0
+CHECK [OK] E4 survivor[276] has pattern_id
+CHECK [OK] E2 survivor[277] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[277] dim >= 0
+CHECK [OK] E4 survivor[277] has pattern_id
+CHECK [OK] E2 survivor[278] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[278] dim >= 0
+CHECK [OK] E4 survivor[278] has pattern_id
+CHECK [OK] E2 survivor[279] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[279] dim >= 0
+CHECK [OK] E4 survivor[279] has pattern_id
+CHECK [OK] E2 survivor[280] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[280] dim >= 0
+CHECK [OK] E4 survivor[280] has pattern_id
+CHECK [OK] E2 survivor[281] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[281] dim >= 0
+CHECK [OK] E4 survivor[281] has pattern_id
+CHECK [OK] E2 survivor[282] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[282] dim >= 0
+CHECK [OK] E4 survivor[282] has pattern_id
+CHECK [OK] E2 survivor[283] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[283] dim >= 0
+CHECK [OK] E4 survivor[283] has pattern_id
+CHECK [OK] E2 survivor[284] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[284] dim >= 0
+CHECK [OK] E4 survivor[284] has pattern_id
+CHECK [OK] E2 survivor[285] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[285] dim >= 0
+CHECK [OK] E4 survivor[285] has pattern_id
+CHECK [OK] E2 survivor[286] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[286] dim >= 0
+CHECK [OK] E4 survivor[286] has pattern_id
+CHECK [OK] E2 survivor[287] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[287] dim >= 0
+CHECK [OK] E4 survivor[287] has pattern_id
+CHECK [OK] E2 survivor[288] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[288] dim >= 0
+CHECK [OK] E4 survivor[288] has pattern_id
+CHECK [OK] E2 survivor[289] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[289] dim >= 0
+CHECK [OK] E4 survivor[289] has pattern_id
+CHECK [OK] E2 survivor[290] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[290] dim >= 0
+CHECK [OK] E4 survivor[290] has pattern_id
+CHECK [OK] E2 survivor[291] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[291] dim >= 0
+CHECK [OK] E4 survivor[291] has pattern_id
+CHECK [OK] E2 survivor[292] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[292] dim >= 0
+CHECK [OK] E4 survivor[292] has pattern_id
+CHECK [OK] E2 survivor[293] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[293] dim >= 0
+CHECK [OK] E4 survivor[293] has pattern_id
+CHECK [OK] E2 survivor[294] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[294] dim >= 0
+CHECK [OK] E4 survivor[294] has pattern_id
+CHECK [OK] E2 survivor[295] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[295] dim >= 0
+CHECK [OK] E4 survivor[295] has pattern_id
+CHECK [OK] E2 survivor[296] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[296] dim >= 0
+CHECK [OK] E4 survivor[296] has pattern_id
+CHECK [OK] E2 survivor[297] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[297] dim >= 0
+CHECK [OK] E4 survivor[297] has pattern_id
+CHECK [OK] E2 survivor[298] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[298] dim >= 0
+CHECK [OK] E4 survivor[298] has pattern_id
+CHECK [OK] E2 survivor[299] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[299] dim >= 0
+CHECK [OK] E4 survivor[299] has pattern_id
+CHECK [OK] E2 survivor[300] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[300] dim >= 0
+CHECK [OK] E4 survivor[300] has pattern_id
+CHECK [OK] E2 survivor[301] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[301] dim >= 0
+CHECK [OK] E4 survivor[301] has pattern_id
+CHECK [OK] E2 survivor[302] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[302] dim >= 0
+CHECK [OK] E4 survivor[302] has pattern_id
+CHECK [OK] E2 survivor[303] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[303] dim >= 0
+CHECK [OK] E4 survivor[303] has pattern_id
+CHECK [OK] E2 survivor[304] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[304] dim >= 0
+CHECK [OK] E4 survivor[304] has pattern_id
+CHECK [OK] E2 survivor[305] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[305] dim >= 0
+CHECK [OK] E4 survivor[305] has pattern_id
+CHECK [OK] E2 survivor[306] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[306] dim >= 0
+CHECK [OK] E4 survivor[306] has pattern_id
+CHECK [OK] E2 survivor[307] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[307] dim >= 0
+CHECK [OK] E4 survivor[307] has pattern_id
+CHECK [OK] E2 survivor[308] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[308] dim >= 0
+CHECK [OK] E4 survivor[308] has pattern_id
+CHECK [OK] E2 survivor[309] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[309] dim >= 0
+CHECK [OK] E4 survivor[309] has pattern_id
+CHECK [OK] E2 survivor[310] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[310] dim >= 0
+CHECK [OK] E4 survivor[310] has pattern_id
+CHECK [OK] E2 survivor[311] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[311] dim >= 0
+CHECK [OK] E4 survivor[311] has pattern_id
+CHECK [OK] E2 survivor[312] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[312] dim >= 0
+CHECK [OK] E4 survivor[312] has pattern_id
+CHECK [OK] E2 survivor[313] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[313] dim >= 0
+CHECK [OK] E4 survivor[313] has pattern_id
+CHECK [OK] E2 survivor[314] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[314] dim >= 0
+CHECK [OK] E4 survivor[314] has pattern_id
+CHECK [OK] E2 survivor[315] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[315] dim >= 0
+CHECK [OK] E4 survivor[315] has pattern_id
+CHECK [OK] E2 survivor[316] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[316] dim >= 0
+CHECK [OK] E4 survivor[316] has pattern_id
+CHECK [OK] E2 survivor[317] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[317] dim >= 0
+CHECK [OK] E4 survivor[317] has pattern_id
+CHECK [OK] E2 survivor[318] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[318] dim >= 0
+CHECK [OK] E4 survivor[318] has pattern_id
+CHECK [OK] E2 survivor[319] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[319] dim >= 0
+CHECK [OK] E4 survivor[319] has pattern_id
+CHECK [OK] E2 survivor[320] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[320] dim >= 0
+CHECK [OK] E4 survivor[320] has pattern_id
+CHECK [OK] E2 survivor[321] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[321] dim >= 0
+CHECK [OK] E4 survivor[321] has pattern_id
+CHECK [OK] E2 survivor[322] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[322] dim >= 0
+CHECK [OK] E4 survivor[322] has pattern_id
+CHECK [OK] E2 survivor[323] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[323] dim >= 0
+CHECK [OK] E4 survivor[323] has pattern_id
+CHECK [OK] E2 survivor[324] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[324] dim >= 0
+CHECK [OK] E4 survivor[324] has pattern_id
+CHECK [OK] E2 survivor[325] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[325] dim >= 0
+CHECK [OK] E4 survivor[325] has pattern_id
+CHECK [OK] E2 survivor[326] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[326] dim >= 0
+CHECK [OK] E4 survivor[326] has pattern_id
+CHECK [OK] E2 survivor[327] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[327] dim >= 0
+CHECK [OK] E4 survivor[327] has pattern_id
+CHECK [OK] E2 survivor[328] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[328] dim >= 0
+CHECK [OK] E4 survivor[328] has pattern_id
+CHECK [OK] E2 survivor[329] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[329] dim >= 0
+CHECK [OK] E4 survivor[329] has pattern_id
+CHECK [OK] E2 survivor[330] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[330] dim >= 0
+CHECK [OK] E4 survivor[330] has pattern_id
+CHECK [OK] E2 survivor[331] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[331] dim >= 0
+CHECK [OK] E4 survivor[331] has pattern_id
+CHECK [OK] E2 survivor[332] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[332] dim >= 0
+CHECK [OK] E4 survivor[332] has pattern_id
+CHECK [OK] E2 survivor[333] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[333] dim >= 0
+CHECK [OK] E4 survivor[333] has pattern_id
+CHECK [OK] E2 survivor[334] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[334] dim >= 0
+CHECK [OK] E4 survivor[334] has pattern_id
+CHECK [OK] E2 survivor[335] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[335] dim >= 0
+CHECK [OK] E4 survivor[335] has pattern_id
+CHECK [OK] E2 survivor[336] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[336] dim >= 0
+CHECK [OK] E4 survivor[336] has pattern_id
+CHECK [OK] E2 survivor[337] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[337] dim >= 0
+CHECK [OK] E4 survivor[337] has pattern_id
+CHECK [OK] E2 survivor[338] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[338] dim >= 0
+CHECK [OK] E4 survivor[338] has pattern_id
+CHECK [OK] E2 survivor[339] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[339] dim >= 0
+CHECK [OK] E4 survivor[339] has pattern_id
+CHECK [OK] E2 survivor[340] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[340] dim >= 0
+CHECK [OK] E4 survivor[340] has pattern_id
+CHECK [OK] E2 survivor[341] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[341] dim >= 0
+CHECK [OK] E4 survivor[341] has pattern_id
+CHECK [OK] E2 survivor[342] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[342] dim >= 0
+CHECK [OK] E4 survivor[342] has pattern_id
+CHECK [OK] E2 survivor[343] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[343] dim >= 0
+CHECK [OK] E4 survivor[343] has pattern_id
+CHECK [OK] E2 survivor[344] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[344] dim >= 0
+CHECK [OK] E4 survivor[344] has pattern_id
+CHECK [OK] E2 survivor[345] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[345] dim >= 0
+CHECK [OK] E4 survivor[345] has pattern_id
+CHECK [OK] E2 survivor[346] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[346] dim >= 0
+CHECK [OK] E4 survivor[346] has pattern_id
+CHECK [OK] E2 survivor[347] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[347] dim >= 0
+CHECK [OK] E4 survivor[347] has pattern_id
+CHECK [OK] E2 survivor[348] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[348] dim >= 0
+CHECK [OK] E4 survivor[348] has pattern_id
+CHECK [OK] E2 survivor[349] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[349] dim >= 0
+CHECK [OK] E4 survivor[349] has pattern_id
+CHECK [OK] E2 survivor[350] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[350] dim >= 0
+CHECK [OK] E4 survivor[350] has pattern_id
+CHECK [OK] E2 survivor[351] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[351] dim >= 0
+CHECK [OK] E4 survivor[351] has pattern_id
+CHECK [OK] E2 survivor[352] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[352] dim >= 0
+CHECK [OK] E4 survivor[352] has pattern_id
+CHECK [OK] E2 survivor[353] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[353] dim >= 0
+CHECK [OK] E4 survivor[353] has pattern_id
+CHECK [OK] E2 survivor[354] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[354] dim >= 0
+CHECK [OK] E4 survivor[354] has pattern_id
+CHECK [OK] E2 survivor[355] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[355] dim >= 0
+CHECK [OK] E4 survivor[355] has pattern_id
+CHECK [OK] E2 survivor[356] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[356] dim >= 0
+CHECK [OK] E4 survivor[356] has pattern_id
+CHECK [OK] E2 survivor[357] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[357] dim >= 0
+CHECK [OK] E4 survivor[357] has pattern_id
+CHECK [OK] E2 survivor[358] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[358] dim >= 0
+CHECK [OK] E4 survivor[358] has pattern_id
+CHECK [OK] E2 survivor[359] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[359] dim >= 0
+CHECK [OK] E4 survivor[359] has pattern_id
+CHECK [OK] E2 survivor[360] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[360] dim >= 0
+CHECK [OK] E4 survivor[360] has pattern_id
+CHECK [OK] E2 survivor[361] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[361] dim >= 0
+CHECK [OK] E4 survivor[361] has pattern_id
+CHECK [OK] E2 survivor[362] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[362] dim >= 0
+CHECK [OK] E4 survivor[362] has pattern_id
+CHECK [OK] E2 survivor[363] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[363] dim >= 0
+CHECK [OK] E4 survivor[363] has pattern_id
+CHECK [OK] E2 survivor[364] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[364] dim >= 0
+CHECK [OK] E4 survivor[364] has pattern_id
+CHECK [OK] E2 survivor[365] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[365] dim >= 0
+CHECK [OK] E4 survivor[365] has pattern_id
+CHECK [OK] E2 survivor[366] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[366] dim >= 0
+CHECK [OK] E4 survivor[366] has pattern_id
+CHECK [OK] E2 survivor[367] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[367] dim >= 0
+CHECK [OK] E4 survivor[367] has pattern_id
+CHECK [OK] E2 survivor[368] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[368] dim >= 0
+CHECK [OK] E4 survivor[368] has pattern_id
+CHECK [OK] E2 survivor[369] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[369] dim >= 0
+CHECK [OK] E4 survivor[369] has pattern_id
+CHECK [OK] E2 survivor[370] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[370] dim >= 0
+CHECK [OK] E4 survivor[370] has pattern_id
+CHECK [OK] E2 survivor[371] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[371] dim >= 0
+CHECK [OK] E4 survivor[371] has pattern_id
+CHECK [OK] E2 survivor[372] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[372] dim >= 0
+CHECK [OK] E4 survivor[372] has pattern_id
+CHECK [OK] E2 survivor[373] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[373] dim >= 0
+CHECK [OK] E4 survivor[373] has pattern_id
+CHECK [OK] E2 survivor[374] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[374] dim >= 0
+CHECK [OK] E4 survivor[374] has pattern_id
+CHECK [OK] E2 survivor[375] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[375] dim >= 0
+CHECK [OK] E4 survivor[375] has pattern_id
+CHECK [OK] E2 survivor[376] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[376] dim >= 0
+CHECK [OK] E4 survivor[376] has pattern_id
+CHECK [OK] E2 survivor[377] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[377] dim >= 0
+CHECK [OK] E4 survivor[377] has pattern_id
+CHECK [OK] E2 survivor[378] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[378] dim >= 0
+CHECK [OK] E4 survivor[378] has pattern_id
+CHECK [OK] E2 survivor[379] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[379] dim >= 0
+CHECK [OK] E4 survivor[379] has pattern_id
+CHECK [OK] E2 survivor[380] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[380] dim >= 0
+CHECK [OK] E4 survivor[380] has pattern_id
+CHECK [OK] E2 survivor[381] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[381] dim >= 0
+CHECK [OK] E4 survivor[381] has pattern_id
+CHECK [OK] E2 survivor[382] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[382] dim >= 0
+CHECK [OK] E4 survivor[382] has pattern_id
+CHECK [OK] E2 survivor[383] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[383] dim >= 0
+CHECK [OK] E4 survivor[383] has pattern_id
+CHECK [OK] E2 survivor[384] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[384] dim >= 0
+CHECK [OK] E4 survivor[384] has pattern_id
+CHECK [OK] E2 survivor[385] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[385] dim >= 0
+CHECK [OK] E4 survivor[385] has pattern_id
+CHECK [OK] E2 survivor[386] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[386] dim >= 0
+CHECK [OK] E4 survivor[386] has pattern_id
+CHECK [OK] E2 survivor[387] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[387] dim >= 0
+CHECK [OK] E4 survivor[387] has pattern_id
+CHECK [OK] E2 survivor[388] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[388] dim >= 0
+CHECK [OK] E4 survivor[388] has pattern_id
+CHECK [OK] E2 survivor[389] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[389] dim >= 0
+CHECK [OK] E4 survivor[389] has pattern_id
+CHECK [OK] E2 survivor[390] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[390] dim >= 0
+CHECK [OK] E4 survivor[390] has pattern_id
+CHECK [OK] E2 survivor[391] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[391] dim >= 0
+CHECK [OK] E4 survivor[391] has pattern_id
+CHECK [OK] E2 survivor[392] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[392] dim >= 0
+CHECK [OK] E4 survivor[392] has pattern_id
+CHECK [OK] E2 survivor[393] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[393] dim >= 0
+CHECK [OK] E4 survivor[393] has pattern_id
+CHECK [OK] E2 survivor[394] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[394] dim >= 0
+CHECK [OK] E4 survivor[394] has pattern_id
+CHECK [OK] E2 survivor[395] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[395] dim >= 0
+CHECK [OK] E4 survivor[395] has pattern_id
+CHECK [OK] E2 survivor[396] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[396] dim >= 0
+CHECK [OK] E4 survivor[396] has pattern_id
+CHECK [OK] E2 survivor[397] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[397] dim >= 0
+CHECK [OK] E4 survivor[397] has pattern_id
+CHECK [OK] E2 survivor[398] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[398] dim >= 0
+CHECK [OK] E4 survivor[398] has pattern_id
+CHECK [OK] E2 survivor[399] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[399] dim >= 0
+CHECK [OK] E4 survivor[399] has pattern_id
+CHECK [OK] E2 survivor[400] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[400] dim >= 0
+CHECK [OK] E4 survivor[400] has pattern_id
+CHECK [OK] E2 survivor[401] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[401] dim >= 0
+CHECK [OK] E4 survivor[401] has pattern_id
+CHECK [OK] E2 survivor[402] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[402] dim >= 0
+CHECK [OK] E4 survivor[402] has pattern_id
+CHECK [OK] E2 survivor[403] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[403] dim >= 0
+CHECK [OK] E4 survivor[403] has pattern_id
+CHECK [OK] E2 survivor[404] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[404] dim >= 0
+CHECK [OK] E4 survivor[404] has pattern_id
+CHECK [OK] E2 survivor[405] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[405] dim >= 0
+CHECK [OK] E4 survivor[405] has pattern_id
+CHECK [OK] E2 survivor[406] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[406] dim >= 0
+CHECK [OK] E4 survivor[406] has pattern_id
+CHECK [OK] E2 survivor[407] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[407] dim >= 0
+CHECK [OK] E4 survivor[407] has pattern_id
+CHECK [OK] E2 survivor[408] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[408] dim >= 0
+CHECK [OK] E4 survivor[408] has pattern_id
+CHECK [OK] E2 survivor[409] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[409] dim >= 0
+CHECK [OK] E4 survivor[409] has pattern_id
+CHECK [OK] E2 survivor[410] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[410] dim >= 0
+CHECK [OK] E4 survivor[410] has pattern_id
+CHECK [OK] E2 survivor[411] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[411] dim >= 0
+CHECK [OK] E4 survivor[411] has pattern_id
+CHECK [OK] E2 survivor[412] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[412] dim >= 0
+CHECK [OK] E4 survivor[412] has pattern_id
+CHECK [OK] E2 survivor[413] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[413] dim >= 0
+CHECK [OK] E4 survivor[413] has pattern_id
+CHECK [OK] E2 survivor[414] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[414] dim >= 0
+CHECK [OK] E4 survivor[414] has pattern_id
+CHECK [OK] E2 survivor[415] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[415] dim >= 0
+CHECK [OK] E4 survivor[415] has pattern_id
+CHECK [OK] E2 survivor[416] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[416] dim >= 0
+CHECK [OK] E4 survivor[416] has pattern_id
+CHECK [OK] E2 survivor[417] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[417] dim >= 0
+CHECK [OK] E4 survivor[417] has pattern_id
+CHECK [OK] E2 survivor[418] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[418] dim >= 0
+CHECK [OK] E4 survivor[418] has pattern_id
+CHECK [OK] E2 survivor[419] dim <= layer0 dim  dim=39 L0=39
+CHECK [OK] E3 survivor[419] dim >= 0
+CHECK [OK] E4 survivor[419] has pattern_id
+CHECK [OK] E5 survivors exist; no degree exclusion claimed  n=420
+CHECK [OK] E6 pattern 36 classified (alive or dead)  alive
+CHECK [OK] E6 pattern 114 classified (alive or dead)  dead
+CHECK [OK] E6 pattern 336 classified (alive or dead)  dead
+CHECK [OK] E6 pattern 160 classified (alive or dead)  alive
+CHECK [OK] E6 pattern 653 classified (alive or dead)  dead
+CHECK [OK] E6 pattern 314 classified (alive or dead)  alive
+CHECK [OK] E6 pattern 754 classified (alive or dead)  alive
+CHECK [OK] E6 pattern 282 classified (alive or dead)  alive
+CHECK [OK] E6 pattern 680 classified (alive or dead)  alive
+CHECK [OK] E6 pattern 85 classified (alive or dead)  dead
+CHECK [OK] E6 pattern 451 classified (alive or dead)  alive
+CHECK [OK] E6 pattern 354 classified (alive or dead)  alive
+CHECK [OK] E6 pattern 614 classified (alive or dead)  alive
+CHECK [OK] E6 pattern 322 classified (alive or dead)  alive
+CHECK [OK] E6 pattern 584 classified (alive or dead)  alive
+CHECK [OK] E6 pattern 258 classified (alive or dead)  alive
+CHECK [OK] E6 pattern 61 classified (alive or dead)  alive
+CHECK [OK] E6 pattern 221 classified (alive or dead)  alive
+CHECK [OK] E6 pattern 102 classified (alive or dead)  alive
+CHECK [OK] E6 pattern 606 classified (alive or dead)  dead
+  re-running layer0 p=331 for independent dim check...
+[frame] p=331  |G|=660  involutions=55  dim W+=3 dim W-=2 dim W^{V4}=2
+[adapted] p=331  |C_G(sigma)|=12  self-tests ALL OK
+    [seeds] tried 2500, independent 230 / 637  [3 s]
+    [seeds] tried 5000, independent 455 / 637  [7 s]
+    [seeds] tried 7500, independent 637 / 637  [11 s]
+CHECK [OK] E7 independent layer0 D34 dim == 39  39
+CHECK [OK] E8 independent nullspace dim == reported layer0  39 vs 39
+CHECK [OK] E9 survivor[0] dim recorded
+CHECK [OK] E9 survivor[1] dim recorded
+CHECK [OK] E9 survivor[2] dim recorded
+CHECK [OK] E9 survivor[3] dim recorded
+CHECK [OK] E9 survivor[4] dim recorded
+CHECK [OK] E9 survivor[5] dim recorded
+CHECK [OK] E9 survivor[6] dim recorded
+CHECK [OK] E9 survivor[7] dim recorded
+CHECK [OK] E9 survivor[8] dim recorded
+CHECK [OK] E9 survivor[9] dim recorded
+CHECK [OK] E9 survivor[10] dim recorded
+CHECK [OK] E9 survivor[11] dim recorded
+CHECK [OK] E9 survivor[12] dim recorded
+CHECK [OK] E9 survivor[13] dim recorded
+CHECK [OK] E9 survivor[14] dim recorded
+CHECK [OK] E9 survivor[15] dim recorded
+CHECK [OK] E9 survivor[16] dim recorded
+CHECK [OK] E9 survivor[17] dim recorded
+CHECK [OK] E9 survivor[18] dim recorded
+CHECK [OK] E9 survivor[19] dim recorded
+CHECK [OK] E9 survivor[20] dim recorded
+CHECK [OK] E9 survivor[21] dim recorded
+CHECK [OK] E9 survivor[22] dim recorded
+CHECK [OK] E9 survivor[23] dim recorded
+CHECK [OK] E9 survivor[24] dim recorded
+CHECK [OK] E9 survivor[25] dim recorded
+CHECK [OK] E9 survivor[26] dim recorded
+CHECK [OK] E9 survivor[27] dim recorded
+CHECK [OK] E9 survivor[28] dim recorded
+CHECK [OK] E9 survivor[29] dim recorded
+CHECK [OK] E9 survivor[30] dim recorded
+CHECK [OK] E9 survivor[31] dim recorded
+CHECK [OK] E9 survivor[32] dim recorded
+CHECK [OK] E9 survivor[33] dim recorded
+CHECK [OK] E9 survivor[34] dim recorded
+CHECK [OK] E9 survivor[35] dim recorded
+CHECK [OK] E9 survivor[36] dim recorded
+CHECK [OK] E9 survivor[37] dim recorded
+CHECK [OK] E9 survivor[38] dim recorded
+CHECK [OK] E9 survivor[39] dim recorded
+CHECK [OK] E9 survivor[40] dim recorded
+CHECK [OK] E9 survivor[41] dim recorded
+CHECK [OK] E9 survivor[42] dim recorded
+CHECK [OK] E9 survivor[43] dim recorded
+CHECK [OK] E9 survivor[44] dim recorded
+CHECK [OK] E9 survivor[45] dim recorded
+CHECK [OK] E9 survivor[46] dim recorded
+CHECK [OK] E9 survivor[47] dim recorded
+CHECK [OK] E9 survivor[48] dim recorded
+CHECK [OK] E9 survivor[49] dim recorded
+CHECK [OK] E9 survivor[50] dim recorded
+CHECK [OK] E9 survivor[51] dim recorded
+CHECK [OK] E9 survivor[52] dim recorded
+CHECK [OK] E9 survivor[53] dim recorded
+CHECK [OK] E9 survivor[54] dim recorded
+CHECK [OK] E9 survivor[55] dim recorded
+CHECK [OK] E9 survivor[56] dim recorded
+CHECK [OK] E9 survivor[57] dim recorded
+CHECK [OK] E9 survivor[58] dim recorded
+CHECK [OK] E9 survivor[59] dim recorded
+CHECK [OK] E9 survivor[60] dim recorded
+CHECK [OK] E9 survivor[61] dim recorded
+CHECK [OK] E9 survivor[62] dim recorded
+CHECK [OK] E9 survivor[63] dim recorded
+CHECK [OK] E9 survivor[64] dim recorded
+CHECK [OK] E9 survivor[65] dim recorded
+CHECK [OK] E9 survivor[66] dim recorded
+CHECK [OK] E9 survivor[67] dim recorded
+CHECK [OK] E9 survivor[68] dim recorded
+CHECK [OK] E9 survivor[69] dim recorded
+CHECK [OK] E9 survivor[70] dim recorded
+CHECK [OK] E9 survivor[71] dim recorded
+CHECK [OK] E9 survivor[72] dim recorded
+CHECK [OK] E9 survivor[73] dim recorded
+CHECK [OK] E9 survivor[74] dim recorded
+CHECK [OK] E9 survivor[75] dim recorded
+CHECK [OK] E9 survivor[76] dim recorded
+CHECK [OK] E9 survivor[77] dim recorded
+CHECK [OK] E9 survivor[78] dim recorded
+CHECK [OK] E9 survivor[79] dim recorded
+CHECK [OK] E9 survivor[80] dim recorded
+CHECK [OK] E9 survivor[81] dim recorded
+CHECK [OK] E9 survivor[82] dim recorded
+CHECK [OK] E9 survivor[83] dim recorded
+CHECK [OK] E9 survivor[84] dim recorded
+CHECK [OK] E9 survivor[85] dim recorded
+CHECK [OK] E9 survivor[86] dim recorded
+CHECK [OK] E9 survivor[87] dim recorded
+CHECK [OK] E9 survivor[88] dim recorded
+CHECK [OK] E9 survivor[89] dim recorded
+CHECK [OK] E9 survivor[90] dim recorded
+CHECK [OK] E9 survivor[91] dim recorded
+CHECK [OK] E9 survivor[92] dim recorded
+CHECK [OK] E9 survivor[93] dim recorded
+CHECK [OK] E9 survivor[94] dim recorded
+CHECK [OK] E9 survivor[95] dim recorded
+CHECK [OK] E9 survivor[96] dim recorded
+CHECK [OK] E9 survivor[97] dim recorded
+CHECK [OK] E9 survivor[98] dim recorded
+CHECK [OK] E9 survivor[99] dim recorded
+CHECK [OK] E9 survivor[100] dim recorded
+CHECK [OK] E9 survivor[101] dim recorded
+CHECK [OK] E9 survivor[102] dim recorded
+CHECK [OK] E9 survivor[103] dim recorded
+CHECK [OK] E9 survivor[104] dim recorded
+CHECK [OK] E9 survivor[105] dim recorded
+CHECK [OK] E9 survivor[106] dim recorded
+CHECK [OK] E9 survivor[107] dim recorded
+CHECK [OK] E9 survivor[108] dim recorded
+CHECK [OK] E9 survivor[109] dim recorded
+CHECK [OK] E9 survivor[110] dim recorded
+CHECK [OK] E9 survivor[111] dim recorded
+CHECK [OK] E9 survivor[112] dim recorded
+CHECK [OK] E9 survivor[113] dim recorded
+CHECK [OK] E9 survivor[114] dim recorded
+CHECK [OK] E9 survivor[115] dim recorded
+CHECK [OK] E9 survivor[116] dim recorded
+CHECK [OK] E9 survivor[117] dim recorded
+CHECK [OK] E9 survivor[118] dim recorded
+CHECK [OK] E9 survivor[119] dim recorded
+CHECK [OK] E9 survivor[120] dim recorded
+CHECK [OK] E9 survivor[121] dim recorded
+CHECK [OK] E9 survivor[122] dim recorded
+CHECK [OK] E9 survivor[123] dim recorded
+CHECK [OK] E9 survivor[124] dim recorded
+CHECK [OK] E9 survivor[125] dim recorded
+CHECK [OK] E9 survivor[126] dim recorded
+CHECK [OK] E9 survivor[127] dim recorded
+CHECK [OK] E9 survivor[128] dim recorded
+CHECK [OK] E9 survivor[129] dim recorded
+CHECK [OK] E9 survivor[130] dim recorded
+CHECK [OK] E9 survivor[131] dim recorded
+CHECK [OK] E9 survivor[132] dim recorded
+CHECK [OK] E9 survivor[133] dim recorded
+CHECK [OK] E9 survivor[134] dim recorded
+CHECK [OK] E9 survivor[135] dim recorded
+CHECK [OK] E9 survivor[136] dim recorded
+CHECK [OK] E9 survivor[137] dim recorded
+CHECK [OK] E9 survivor[138] dim recorded
+CHECK [OK] E9 survivor[139] dim recorded
+CHECK [OK] E9 survivor[140] dim recorded
+CHECK [OK] E9 survivor[141] dim recorded
+CHECK [OK] E9 survivor[142] dim recorded
+CHECK [OK] E9 survivor[143] dim recorded
+CHECK [OK] E9 survivor[144] dim recorded
+CHECK [OK] E9 survivor[145] dim recorded
+CHECK [OK] E9 survivor[146] dim recorded
+CHECK [OK] E9 survivor[147] dim recorded
+CHECK [OK] E9 survivor[148] dim recorded
+CHECK [OK] E9 survivor[149] dim recorded
+CHECK [OK] E9 survivor[150] dim recorded
+CHECK [OK] E9 survivor[151] dim recorded
+CHECK [OK] E9 survivor[152] dim recorded
+CHECK [OK] E9 survivor[153] dim recorded
+CHECK [OK] E9 survivor[154] dim recorded
+CHECK [OK] E9 survivor[155] dim recorded
+CHECK [OK] E9 survivor[156] dim recorded
+CHECK [OK] E9 survivor[157] dim recorded
+CHECK [OK] E9 survivor[158] dim recorded
+CHECK [OK] E9 survivor[159] dim recorded
+CHECK [OK] E9 survivor[160] dim recorded
+CHECK [OK] E9 survivor[161] dim recorded
+CHECK [OK] E9 survivor[162] dim recorded
+CHECK [OK] E9 survivor[163] dim recorded
+CHECK [OK] E9 survivor[164] dim recorded
+CHECK [OK] E9 survivor[165] dim recorded
+CHECK [OK] E9 survivor[166] dim recorded
+CHECK [OK] E9 survivor[167] dim recorded
+CHECK [OK] E9 survivor[168] dim recorded
+CHECK [OK] E9 survivor[169] dim recorded
+CHECK [OK] E9 survivor[170] dim recorded
+CHECK [OK] E9 survivor[171] dim recorded
+CHECK [OK] E9 survivor[172] dim recorded
+CHECK [OK] E9 survivor[173] dim recorded
+CHECK [OK] E9 survivor[174] dim recorded
+CHECK [OK] E9 survivor[175] dim recorded
+CHECK [OK] E9 survivor[176] dim recorded
+CHECK [OK] E9 survivor[177] dim recorded
+CHECK [OK] E9 survivor[178] dim recorded
+CHECK [OK] E9 survivor[179] dim recorded
+CHECK [OK] E9 survivor[180] dim recorded
+CHECK [OK] E9 survivor[181] dim recorded
+CHECK [OK] E9 survivor[182] dim recorded
+CHECK [OK] E9 survivor[183] dim recorded
+CHECK [OK] E9 survivor[184] dim recorded
+CHECK [OK] E9 survivor[185] dim recorded
+CHECK [OK] E9 survivor[186] dim recorded
+CHECK [OK] E9 survivor[187] dim recorded
+CHECK [OK] E9 survivor[188] dim recorded
+CHECK [OK] E9 survivor[189] dim recorded
+CHECK [OK] E9 survivor[190] dim recorded
+CHECK [OK] E9 survivor[191] dim recorded
+CHECK [OK] E9 survivor[192] dim recorded
+CHECK [OK] E9 survivor[193] dim recorded
+CHECK [OK] E9 survivor[194] dim recorded
+CHECK [OK] E9 survivor[195] dim recorded
+CHECK [OK] E9 survivor[196] dim recorded
+CHECK [OK] E9 survivor[197] dim recorded
+CHECK [OK] E9 survivor[198] dim recorded
+CHECK [OK] E9 survivor[199] dim recorded
+CHECK [OK] E9 survivor[200] dim recorded
+CHECK [OK] E9 survivor[201] dim recorded
+CHECK [OK] E9 survivor[202] dim recorded
+CHECK [OK] E9 survivor[203] dim recorded
+CHECK [OK] E9 survivor[204] dim recorded
+CHECK [OK] E9 survivor[205] dim recorded
+CHECK [OK] E9 survivor[206] dim recorded
+CHECK [OK] E9 survivor[207] dim recorded
+CHECK [OK] E9 survivor[208] dim recorded
+CHECK [OK] E9 survivor[209] dim recorded
+CHECK [OK] E9 survivor[210] dim recorded
+CHECK [OK] E9 survivor[211] dim recorded
+CHECK [OK] E9 survivor[212] dim recorded
+CHECK [OK] E9 survivor[213] dim recorded
+CHECK [OK] E9 survivor[214] dim recorded
+CHECK [OK] E9 survivor[215] dim recorded
+CHECK [OK] E9 survivor[216] dim recorded
+CHECK [OK] E9 survivor[217] dim recorded
+CHECK [OK] E9 survivor[218] dim recorded
+CHECK [OK] E9 survivor[219] dim recorded
+CHECK [OK] E9 survivor[220] dim recorded
+CHECK [OK] E9 survivor[221] dim recorded
+CHECK [OK] E9 survivor[222] dim recorded
+CHECK [OK] E9 survivor[223] dim recorded
+CHECK [OK] E9 survivor[224] dim recorded
+CHECK [OK] E9 survivor[225] dim recorded
+CHECK [OK] E9 survivor[226] dim recorded
+CHECK [OK] E9 survivor[227] dim recorded
+CHECK [OK] E9 survivor[228] dim recorded
+CHECK [OK] E9 survivor[229] dim recorded
+CHECK [OK] E9 survivor[230] dim recorded
+CHECK [OK] E9 survivor[231] dim recorded
+CHECK [OK] E9 survivor[232] dim recorded
+CHECK [OK] E9 survivor[233] dim recorded
+CHECK [OK] E9 survivor[234] dim recorded
+CHECK [OK] E9 survivor[235] dim recorded
+CHECK [OK] E9 survivor[236] dim recorded
+CHECK [OK] E9 survivor[237] dim recorded
+CHECK [OK] E9 survivor[238] dim recorded
+CHECK [OK] E9 survivor[239] dim recorded
+CHECK [OK] E9 survivor[240] dim recorded
+CHECK [OK] E9 survivor[241] dim recorded
+CHECK [OK] E9 survivor[242] dim recorded
+CHECK [OK] E9 survivor[243] dim recorded
+CHECK [OK] E9 survivor[244] dim recorded
+CHECK [OK] E9 survivor[245] dim recorded
+CHECK [OK] E9 survivor[246] dim recorded
+CHECK [OK] E9 survivor[247] dim recorded
+CHECK [OK] E9 survivor[248] dim recorded
+CHECK [OK] E9 survivor[249] dim recorded
+CHECK [OK] E9 survivor[250] dim recorded
+CHECK [OK] E9 survivor[251] dim recorded
+CHECK [OK] E9 survivor[252] dim recorded
+CHECK [OK] E9 survivor[253] dim recorded
+CHECK [OK] E9 survivor[254] dim recorded
+CHECK [OK] E9 survivor[255] dim recorded
+CHECK [OK] E9 survivor[256] dim recorded
+CHECK [OK] E9 survivor[257] dim recorded
+CHECK [OK] E9 survivor[258] dim recorded
+CHECK [OK] E9 survivor[259] dim recorded
+CHECK [OK] E9 survivor[260] dim recorded
+CHECK [OK] E9 survivor[261] dim recorded
+CHECK [OK] E9 survivor[262] dim recorded
+CHECK [OK] E9 survivor[263] dim recorded
+CHECK [OK] E9 survivor[264] dim recorded
+CHECK [OK] E9 survivor[265] dim recorded
+CHECK [OK] E9 survivor[266] dim recorded
+CHECK [OK] E9 survivor[267] dim recorded
+CHECK [OK] E9 survivor[268] dim recorded
+CHECK [OK] E9 survivor[269] dim recorded
+CHECK [OK] E9 survivor[270] dim recorded
+CHECK [OK] E9 survivor[271] dim recorded
+CHECK [OK] E9 survivor[272] dim recorded
+CHECK [OK] E9 survivor[273] dim recorded
+CHECK [OK] E9 survivor[274] dim recorded
+CHECK [OK] E9 survivor[275] dim recorded
+CHECK [OK] E9 survivor[276] dim recorded
+CHECK [OK] E9 survivor[277] dim recorded
+CHECK [OK] E9 survivor[278] dim recorded
+CHECK [OK] E9 survivor[279] dim recorded
+CHECK [OK] E9 survivor[280] dim recorded
+CHECK [OK] E9 survivor[281] dim recorded
+CHECK [OK] E9 survivor[282] dim recorded
+CHECK [OK] E9 survivor[283] dim recorded
+CHECK [OK] E9 survivor[284] dim recorded
+CHECK [OK] E9 survivor[285] dim recorded
+CHECK [OK] E9 survivor[286] dim recorded
+CHECK [OK] E9 survivor[287] dim recorded
+CHECK [OK] E9 survivor[288] dim recorded
+CHECK [OK] E9 survivor[289] dim recorded
+CHECK [OK] E9 survivor[290] dim recorded
+CHECK [OK] E9 survivor[291] dim recorded
+CHECK [OK] E9 survivor[292] dim recorded
+CHECK [OK] E9 survivor[293] dim recorded
+CHECK [OK] E9 survivor[294] dim recorded
+CHECK [OK] E9 survivor[295] dim recorded
+CHECK [OK] E9 survivor[296] dim recorded
+CHECK [OK] E9 survivor[297] dim recorded
+CHECK [OK] E9 survivor[298] dim recorded
+CHECK [OK] E9 survivor[299] dim recorded
+CHECK [OK] E9 survivor[300] dim recorded
+CHECK [OK] E9 survivor[301] dim recorded
+CHECK [OK] E9 survivor[302] dim recorded
+CHECK [OK] E9 survivor[303] dim recorded
+CHECK [OK] E9 survivor[304] dim recorded
+CHECK [OK] E9 survivor[305] dim recorded
+CHECK [OK] E9 survivor[306] dim recorded
+CHECK [OK] E9 survivor[307] dim recorded
+CHECK [OK] E9 survivor[308] dim recorded
+CHECK [OK] E9 survivor[309] dim recorded
+CHECK [OK] E9 survivor[310] dim recorded
+CHECK [OK] E9 survivor[311] dim recorded
+CHECK [OK] E9 survivor[312] dim recorded
+CHECK [OK] E9 survivor[313] dim recorded
+CHECK [OK] E9 survivor[314] dim recorded
+CHECK [OK] E9 survivor[315] dim recorded
+CHECK [OK] E9 survivor[316] dim recorded
+CHECK [OK] E9 survivor[317] dim recorded
+CHECK [OK] E9 survivor[318] dim recorded
+CHECK [OK] E9 survivor[319] dim recorded
+CHECK [OK] E9 survivor[320] dim recorded
+CHECK [OK] E9 survivor[321] dim recorded
+CHECK [OK] E9 survivor[322] dim recorded
+CHECK [OK] E9 survivor[323] dim recorded
+CHECK [OK] E9 survivor[324] dim recorded
+CHECK [OK] E9 survivor[325] dim recorded
+CHECK [OK] E9 survivor[326] dim recorded
+CHECK [OK] E9 survivor[327] dim recorded
+CHECK [OK] E9 survivor[328] dim recorded
+CHECK [OK] E9 survivor[329] dim recorded
+CHECK [OK] E9 survivor[330] dim recorded
+CHECK [OK] E9 survivor[331] dim recorded
+CHECK [OK] E9 survivor[332] dim recorded
+CHECK [OK] E9 survivor[333] dim recorded
+CHECK [OK] E9 survivor[334] dim recorded
+CHECK [OK] E9 survivor[335] dim recorded
+CHECK [OK] E9 survivor[336] dim recorded
+CHECK [OK] E9 survivor[337] dim recorded
+CHECK [OK] E9 survivor[338] dim recorded
+CHECK [OK] E9 survivor[339] dim recorded
+CHECK [OK] E9 survivor[340] dim recorded
+CHECK [OK] E9 survivor[341] dim recorded
+CHECK [OK] E9 survivor[342] dim recorded
+CHECK [OK] E9 survivor[343] dim recorded
+CHECK [OK] E9 survivor[344] dim recorded
+CHECK [OK] E9 survivor[345] dim recorded
+CHECK [OK] E9 survivor[346] dim recorded
+CHECK [OK] E9 survivor[347] dim recorded
+CHECK [OK] E9 survivor[348] dim recorded
+CHECK [OK] E9 survivor[349] dim recorded
+CHECK [OK] E9 survivor[350] dim recorded
+CHECK [OK] E9 survivor[351] dim recorded
+CHECK [OK] E9 survivor[352] dim recorded
+CHECK [OK] E9 survivor[353] dim recorded
+CHECK [OK] E9 survivor[354] dim recorded
+CHECK [OK] E9 survivor[355] dim recorded
+CHECK [OK] E9 survivor[356] dim recorded
+CHECK [OK] E9 survivor[357] dim recorded
+CHECK [OK] E9 survivor[358] dim recorded
+CHECK [OK] E9 survivor[359] dim recorded
+CHECK [OK] E9 survivor[360] dim recorded
+CHECK [OK] E9 survivor[361] dim recorded
+CHECK [OK] E9 survivor[362] dim recorded
+CHECK [OK] E9 survivor[363] dim recorded
+CHECK [OK] E9 survivor[364] dim recorded
+CHECK [OK] E9 survivor[365] dim recorded
+CHECK [OK] E9 survivor[366] dim recorded
+CHECK [OK] E9 survivor[367] dim recorded
+CHECK [OK] E9 survivor[368] dim recorded
+CHECK [OK] E9 survivor[369] dim recorded
+CHECK [OK] E9 survivor[370] dim recorded
+CHECK [OK] E9 survivor[371] dim recorded
+CHECK [OK] E9 survivor[372] dim recorded
+CHECK [OK] E9 survivor[373] dim recorded
+CHECK [OK] E9 survivor[374] dim recorded
+CHECK [OK] E9 survivor[375] dim recorded
+CHECK [OK] E9 survivor[376] dim recorded
+CHECK [OK] E9 survivor[377] dim recorded
+CHECK [OK] E9 survivor[378] dim recorded
+CHECK [OK] E9 survivor[379] dim recorded
+CHECK [OK] E9 survivor[380] dim recorded
+CHECK [OK] E9 survivor[381] dim recorded
+CHECK [OK] E9 survivor[382] dim recorded
+CHECK [OK] E9 survivor[383] dim recorded
+CHECK [OK] E9 survivor[384] dim recorded
+CHECK [OK] E9 survivor[385] dim recorded
+CHECK [OK] E9 survivor[386] dim recorded
+CHECK [OK] E9 survivor[387] dim recorded
+CHECK [OK] E9 survivor[388] dim recorded
+CHECK [OK] E9 survivor[389] dim recorded
+CHECK [OK] E9 survivor[390] dim recorded
+CHECK [OK] E9 survivor[391] dim recorded
+CHECK [OK] E9 survivor[392] dim recorded
+CHECK [OK] E9 survivor[393] dim recorded
+CHECK [OK] E9 survivor[394] dim recorded
+CHECK [OK] E9 survivor[395] dim recorded
+CHECK [OK] E9 survivor[396] dim recorded
+CHECK [OK] E9 survivor[397] dim recorded
+CHECK [OK] E9 survivor[398] dim recorded
+CHECK [OK] E9 survivor[399] dim recorded
+CHECK [OK] E9 survivor[400] dim recorded
+CHECK [OK] E9 survivor[401] dim recorded
+CHECK [OK] E9 survivor[402] dim recorded
+CHECK [OK] E9 survivor[403] dim recorded
+CHECK [OK] E9 survivor[404] dim recorded
+CHECK [OK] E9 survivor[405] dim recorded
+CHECK [OK] E9 survivor[406] dim recorded
+CHECK [OK] E9 survivor[407] dim recorded
+CHECK [OK] E9 survivor[408] dim recorded
+CHECK [OK] E9 survivor[409] dim recorded
+CHECK [OK] E9 survivor[410] dim recorded
+CHECK [OK] E9 survivor[411] dim recorded
+CHECK [OK] E9 survivor[412] dim recorded
+CHECK [OK] E9 survivor[413] dim recorded
+CHECK [OK] E9 survivor[414] dim recorded
+CHECK [OK] E9 survivor[415] dim recorded
+CHECK [OK] E9 survivor[416] dim recorded
+CHECK [OK] E9 survivor[417] dim recorded
+CHECK [OK] E9 survivor[418] dim recorded
+CHECK [OK] E9 survivor[419] dim recorded
+CHECK [OK] E11 p=331 pattern count 756
+CHECK [OK] E11 p=661 pattern count 756
+
+============================================================
+TOTAL 1754  PASS 1754  FAIL 0  [28.0s]
+PAIR_ATTACK_D35_VERIFY_OK
+ALLGREEN

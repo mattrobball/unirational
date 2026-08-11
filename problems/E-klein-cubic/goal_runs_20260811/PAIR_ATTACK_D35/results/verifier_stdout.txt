@@ -1,0 +1,20 @@
+CHECK [OK] E9 survivor[407] dim recorded
+CHECK [OK] E9 survivor[408] dim recorded
+CHECK [OK] E9 survivor[409] dim recorded
+CHECK [OK] E9 survivor[410] dim recorded
+CHECK [OK] E9 survivor[411] dim recorded
+CHECK [OK] E9 survivor[412] dim recorded
+CHECK [OK] E9 survivor[413] dim recorded
+CHECK [OK] E9 survivor[414] dim recorded
+CHECK [OK] E9 survivor[415] dim recorded
+CHECK [OK] E9 survivor[416] dim recorded
+CHECK [OK] E9 survivor[417] dim recorded
+CHECK [OK] E9 survivor[418] dim recorded
+CHECK [OK] E9 survivor[419] dim recorded
+CHECK [OK] E11 p=331 pattern count 756
+CHECK [OK] E11 p=661 pattern count 756
+
+============================================================
+TOTAL 1754  PASS 1754  FAIL 0  [28.1s]
+PAIR_ATTACK_D35_VERIFY_OK
+ALLGREEN
