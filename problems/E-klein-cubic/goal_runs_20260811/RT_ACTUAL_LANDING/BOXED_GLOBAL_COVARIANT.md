@@ -323,6 +323,58 @@ Two boxed alternatives remain, and they are the whole of it.
 The box of section 2 remains stated and remains undecided; it is now understood
 as a **special route inside (B)**'s ambit rather than as the lane's target.
 
-**Problem E headline: OPEN.** Nothing in sections 3–5 changes it. Section 3 is a
-relocation of an existing question, section 4 removes routes, and section 5
-names what is left.
+## 6. The coupled-package form of alternative (B)
+
+Round 5 (`THEOREM_SOURCE_TANGENCY.md`, `BASE_GRADIENT_PACKAGE.md`,
+`DEFECT_SMITH_CLASSIFICATION.md`) makes alternative (B) precise enough to state
+as one closed condition on one object. Every primitive landing tuple carries a
+**coupled package**
+
+```
+( T, I_T, Q_T, J_T, P_T, a_T, F_T, Y_T, Delta_T, H, j_phi, H_0, H_1 )   (54)
+```
+
+— tuple, base ideal, pulled gradient, Jacobian, kernel covariant, its content,
+the saturated foliation, its leaf quotient, the source-tangency invariant, the
+common divisorial factor of `T|_X`, the ramification section of the restricted
+selfmap, and the two homology sheaves of the Jacobian complex — satisfying
+simultaneously
+
+```
+   F(T) = 0,
+   I_T^6 ⊂ I_Q ⊂ I_T^2,           sqrt(I_Q) = sqrt(I_T),
+   I_4(J_T) = I_P I_Q,            adj(J_T) = P_T grad F(T)^t,
+   J_T P_T = 0,                   div(P_T) = 0,
+   a_T in S^G,  deg a_T in {0} ∪ {5,6,...},  a_T Darboux for the saturation,
+   Delta_T|_X = (d/d') H^2 j_phi,      0 != j_phi in H^0(X,O_X(2d'-2))^G,
+   [H_1]_2 - [H_0]_2 = [Q_T]_2 - 10(d-1) H^2,
+```
+
+together with all orbit, attachment, representation and normalized-Rees
+constraints already in the ledger.
+
+> **The correct geometric form of the headline.** Alternative (B) is: *prove
+> that no single package (54) exists in any degree*.
+
+Why this is the right statement of (B), and not a decoration:
+
+* it is **strictly stronger** than classifying local decorated clusters —
+  those are asymptotically prescribable (`INTERPOLATION_THEOREM.md`,
+  Corollary 4.1);
+* it is **strictly stronger** than classifying divergence-free covariants —
+  `dim ker(div)^G = 5635` at `d = 35`, and the tangency map onto
+  `H^0(X,O_X(m+2))^G` is *surjective* for every `m >= 4`
+  (`FOLIATION_REFORMULATION.md`, Proposition 5.1), so neither condition alone
+  obstructs anything;
+* what is restrictive is that **one** `T` must satisfy the adjugate
+  factorization and the ramification factorization at once. Both are exactly
+  the conditions no single-invariant argument sees.
+
+Round 5's own concrete progress inside (54) is `EXCLUSION_DPRIME_2_3.md`:
+`d' in {2,3}` is impossible, removing two cells from every ambient degree,
+including `k = 32, 33` at `d = 35`. It does not close (B).
+
+**Problem E headline: OPEN.** Nothing in sections 3–6 changes it. Section 3 is a
+relocation of an existing question, section 4 removes routes, section 5 names
+what is left, and section 6 states the geometric alternative as a single
+condition on a single object.

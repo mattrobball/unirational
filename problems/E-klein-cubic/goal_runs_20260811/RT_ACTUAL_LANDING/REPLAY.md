@@ -293,6 +293,46 @@ input is flagged in `SOURCES.md` item 4 and `ADJUDICATION.md` item 2: the
 object-level "weights ≤ 0" statement, taken from Saito's weight formalism, whose
 cohomological shadow we verified against Weber's theorem.
 
+## Round 5
+
+```
+cd problems/E-klein-cubic/goal_runs_20260811/RT_ACTUAL_LANDING
+python3 verify_source_tangency.py      # RESULT: PASS   (192 checks, sympy/QQ)
+python3 verify_d35_dimensions.py       # RESULT: PASS   (112 checks, exact)
+M2 --script verify_source_tangency.m2  # RESULT: PASS   (Macaulay2, symbolic/QQ)
+```
+
+`verify_source_tangency.py` checks: the pointwise linear-algebra lemma behind
+`Delta_T = Jac(T|_cone)` on exact integer data in dimensions `3,4,5,6`; six
+exact landing instances on smooth quadrics with `(n,e)` giving residue weights
+`w = 1, 2, 3`, common-factor degrees `k = 1,2,3` and restricted degrees
+`d' = 1,2,3`; for each, `deg P_T`, `J_T P_T = 0`, `div P_T = 0`, Lemma A,
+`T|_X = H B`, `F(B) = 0` on `X`, `deg j_phi = w(d'-1)`, the identity
+`Delta_T|_X = (d/d') H^w j_phi`, **and** that both neighbouring exponents and
+five alternative constants fail; the scaling lemma `Jac(h beta) =
+((k+a)/a) h^w Jac(beta)` directly; the ramification reading of `j_phi` for the
+power maps on `P^1 x P^1`; and the degenerate branch where the restricted map is
+not dominant.
+
+`verify_d35_dimensions.py` computes `I(k)`, `C(k)` and
+`dim H^0(X,O_X(n))^G = I(n)-I(n-3)` by exact linear recurrences over `Z` and
+`Z[(1+sqrt(-11))/2]` — an **independent implementation**, different in method
+from `verify_covariant_dimensions.py`'s `Q(zeta_330)` route. It re-derives the
+`2A/3A/5A/6A` eigenvalue multisets by enumeration against the character values
+on all powers, re-derives `e_i` of the quadratic residues mod `11`, and checks
+`charpoly(11A)·charpoly(11B) = 1+t+...+t^10`. It then reproduces the packet's
+`k <= 24` table, the sealed sieve's `n <= 12` table, and confirms `254`,
+`160,145,131,117,105`, the two `1`s at `d' = 4,5`, `C(66) = 6992`,
+`I(65) = 1357`, `5635`, `19 266 655`, the `ch_1` cancellation, the
+`-10(d-1)` codim-two coefficient, the `340` threshold, and that `2` is inert in
+`Q(sqrt(-11))`.
+
+`verify_source_tangency.m2` runs the whole chain on the packet's genuine
+degree-`7` cubic-threefold witness and verifies Lemma A there, in the case
+`(n,e) = (5,3)` that the repository actually needs. It also establishes that the
+witness's restricted map is **primitive** (`H = 1`, `k = 0`, `d' = 7`), so its
+`x_0^2 x_1^2` factor is doubled ramification and not a common factor.
+
 For round 4 the corresponding boundary is: the interpolation theorem consumes
 **Serre vanishing** (Hartshorne III.5.2) as a citation and is not re-proved;
 the exactness of the global complex (16) is **not** re-proved and nothing
@@ -301,3 +341,16 @@ depends on it; and "dominance is automatic" is inherited from
 (`ed_C(G) >= 3`, Beauville). Everything else in round 4 — the whole chain
 (4)–(13), the degree arithmetic, the socle statement, the `ch_2` identity and
 the covariant dimensions — is machine-verified exactly.
+
+For round 5 the boundary is: **dominance of the restricted selfmap** is taken
+from `goal_runs_20260808/FULL_G_RESTRICTION_DOMINANCE/THEOREM.md`, Theorem 1.1,
+whose own accepted external input is `ed_C(G) >= 3`; the residue-form
+formalism (`dF ^ eta = Omega`) and generic étaleness in characteristic zero are
+used as standard facts; `Pic X = Z·H_X` and projective normality of the smooth
+cubic threefold (used to write `D_X = div(H|_X)`) are standard and not
+re-proved; and the sheaf `E_T` and the excess term `[Q_T]_2` of
+`DEFECT_SMITH_CLASSIFICATION.md` §3 are **not** constructed — only the
+Chern-class coefficient is exact there. The Smith-form classification is proved
+by hand and is not machine-checked. No `H != 1` instance on a cubic threefold is
+exhibited; the `H`-dependence is machine-checked on quadrics at the three
+relevant weights, and Lemma A is machine-checked on the cubic threefold.
