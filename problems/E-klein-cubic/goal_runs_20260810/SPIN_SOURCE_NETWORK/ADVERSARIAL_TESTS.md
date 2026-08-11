@@ -379,6 +379,28 @@ on the list — its statements quantify over `U^{(+)m}` — but the "all faithfu
 spin sources" quantifier is one irreducible wider than recorded, and cell
 `(O5)` of the census reflects that.
 
+## S9'. The `b_3` flag of §B9 is DISCHARGED (2026-08-11)
+
+§B9 above records the one place the multiplicity packet depended on a value
+not derived in-repo: `V14^{C_5}` and `V14^{C_11}` argued nonempty from
+`chi(V14^{C_p}) = chi(V14) mod p` with `chi(V14) = -6`, which used the
+literature `b_3(V14) = 10`.  `SEAL_V14_BETTI.md` (exit `V14-BETTI-SEALED`,
+41 assertions, `V14_BETTI_OK`) derives `chi_top(V14) = -6` from the sealed
+model by exact Schubert calculus on `Gr(2,6)`, and `b_3 = 10`,
+`h^{2,1} = 5`, `rho = 1` with it.  The flag is removed; the argument of
+`MULTIPLICITY_ROUTE.md` §5 is unchanged and now rests on in-repo data.
+
+**Adversarial check on the seal itself.**  The obvious failure mode is a
+Schubert computation that silently computes something else.  Five independent
+regressions pin it: `int sigma_1^8 = 14` (the degree of `Gr(2,6)`),
+`int c_8(T_{Gr}) = 15` (`chi_top(Gr(2,6)) = binom(6,2)`),
+`c_1(T_{Gr}) = 6 sigma_1` (index `n` of `Gr(2,n)`), `deg V14 = 14` and
+`(-K)^3 = 14` (matching the sealed Macaulay2 `REG V14 dim 4 degree 14`), and
+`h^0(-K) = 10` by Hirzebruch--Riemann--Roch — the last identifying the sealed
+`P(M) = P^9` as the anticanonical space, i.e. confirming that the model is
+the classical `X_14` that the literature table describes.  A transcription
+error would have to survive all six.
+
 ## S10. Is anything here a fixed-point statement in disguise? — NO
 
 Audited step by step.  Theorem S1 is a projection-formula identity; S2 is
@@ -389,3 +411,355 @@ populate the census (the 110 eigenplanes, the 352 points, `V14^{D_10} =
 empty`), and they are used to enumerate cells, never to derive the
 obstruction.  No Chow projector, no canonical splitting, no "every stratum
 stays RCC" claim, no chain argument.
+
+---
+
+# Adversarial tests — the `b_3` seal and the `(O4)` split (2026-08-11)
+
+Tests against `SEAL_V14_BETTI.md` and `O4_EIGENPLANE_CURVES.md`.  The
+standing risks are different again: Task 1 replaces a citation by a
+computation, so the risk is a wrong computation dressed as a seal (§S9' above
+and §T1 below); Task 2 ends in a **non**-kill supported by an explicit
+witness, so the risk is a witness that does not satisfy the condition it
+claims to, or a kill that proves too much and collides with the realised
+`D_12`-map (§§T2-T5).
+
+## T1. Does the seal quietly assume what it proves? — NO
+
+The chain is: sealed model (`V14 = Gr(2,U) cap P(M)`, smooth, `dim 3`,
+`deg 14` — all from `FIX-IX-SEAL-PASS` / `V14-S3-D10-MEASUREMENT-OK`) →
+Sommese's Lefschetz theorem, whose four hypotheses are checked one at a time
+in `SEAL_V14_BETTI.md` §2 → `b_1 = 0`, `b_2 = 1` → Kodaira vanishing →
+`rho = b_2 = 1`; and separately, Schubert calculus → `chi_top = -6` →
+`b_3 = 10` → `h^{2,1} = 5`.  Nowhere is `b_3`, `h^{2,1}` or `rho` used as an
+input, and the literature is not consulted at any step: §1's citation is
+placed first for the record and marked not load-bearing, then the values are
+recomputed.  The seal is not circular, but it *is* conditional on the sealed
+model being what the seal says it is (smooth, of the expected dimension) —
+flagged in `SEAL_V14_BETTI.md` §6.1.
+
+## T2. The mandatory `D_12` test for the `(O4)` kills — PASSED
+
+Cor IX.6 (`theory/FIX_IX_v14.md` §7) proves a dominant `D_12`-equivariant map
+from a spin source to the `V14` **exists**.  The four new kills must be
+compatible with it.
+
+*Which `(O4)` supports that map's graph could occupy.*  `sigma` is the centre
+of `D_12`; its two eigenplanes are `D_12`-stable as a pair, each stabilised by
+`C_6 <= D_12`; `Res_{D_12}T = 2.(1(x)triv) (+) 2.(1(x)std) (+) 2.(eps(x)std)`,
+all of multiplicity 2, and `dim T^{D_12} = 2`.  So the realised map is free to
+have an eigenplane-curve strict support with `H = C_6` in the trivial
+channel — precisely the channel of the witness (Thm O4-5).  It is equally free
+to use free supports (`O1`) or `S_3`-point supports, as §S1 already recorded.
+
+*Why no kill can bite.*  `K-i`, `K-k` and the `s = 2` case of C8 say a
+specific carrier is **zero** (`IH^1` of `P^1`, of `P^2`, of a rational curve).
+A vanishing cohomology group cannot contradict the existence of a map; it says
+only that the map's Hodge bookkeeping does not route through that object.
+`K-j` says a plane cubic with a `C_3`-fixed point has `j = 0`, hence CM by
+`Q(sqrt(-3))`, hence receives no nonzero morphism from an `E_{-11}`-isotypic
+Hodge structure; the Hesse alternative, in the same plane, is untouched and is
+exactly what remains available.  `K-l` is the `psi_j`-refinement of the
+already `D_12`-tested `K-d`.
+
+**PASS**, with the informative sign: the one subcell of `(O4)` that survives
+is the one the realised map can occupy.  Had the analysis emptied the trivial
+channel at `C_6`, it would have refuted Cor IX.6 and been wrong.
+
+## T3. Is the witness real, or an existence claim in disguise? — REAL
+
+Thm O4-5 is constructive twice over.
+
+* Structurally: `(E_{-11}, tau in E[3], L = O_E(3.0))`.  `t_tau^*L ~= L`
+  because `deg L = 3` and `3 tau = 0`; the translation therefore acts linearly
+  on `P(H^0(L)^dual) = P^2`, with a lift of order 3; its fixed locus cannot be
+  a point-plus-line, since that line would meet the cubic in three points
+  fixed by a fixed-point-free translation; so the action is `diag(1,w,w^2)`,
+  which Thm O4-1(3) shows is exactly the residual `C_3`-action on an
+  eigenplane.
+* Concretely: the `C_3`-invariant cubics of the plane are exactly the Hesse
+  family (exact monomial-weight computation, §D1 of the verifier); the pencil
+  has singular members (`x^3+y^3+z^3-3xyz` factors as a triangle over `Z[w]`,
+  expanded exactly in §D13) and smooth ones (`lambda = 0`), so its `j`-map is
+  a nonconstant rational function of the parameter and attains `-32768`.
+
+And it satisfies the condition it claims: `dim T^{C_6} = 2` and every
+sub-Hodge structure of `T` is `E_{-11}`-isotypic (Thm S0(2)), so
+`T^{C_6} ~= H^1(E_{-11})` and the projection
+`Res_{C_6}T -> T^{C_6} ~= H^1(S)` is a nonzero `C_6`-equivariant morphism of
+Hodge structures.  Cor S4's floor `k(C_6) = 1` is met exactly — the witness is
+the cheapest admissible support, not an extravagant one.
+
+## T4. Does the `eps != 0` kill (K-j) prove too much? — NO
+
+Sharpest test: apply the same reasoning at `delta >= 4`, where it must fail.
+It does.  The mechanism is that at `delta = 3` a fixed point of the `C_3` on
+the curve makes it an elliptic curve *with an order-3 automorphism fixing the
+origin*, which forces `j = 0`.  At genus `>= 3` an order-3 automorphism
+carries no CM information at all, and indeed Prop O4-3' shows all three
+`C_3`-channels of `H^1` are nonzero for every `delta >= 4` and every weight.
+A version of K-j that survived to higher degree would have been wrong.
+
+Second test: does K-j accidentally kill the Hesse case?  No — the two are
+disjoint by exact monomial arithmetic (§D1, §D2, §D15): the coordinate cubes
+`x^3, y^3, z^3` all have weight 0, so a weight-`eps != 0` cubic contains all
+three coordinate points, while a Hesse member contains none of them (its value
+at each coordinate point is `1`, for every `lambda`).
+
+## T5. The `j = 8192/11` trap — NOT ENTERED
+
+The tempting argument — "`sigma` fixes `S` pointwise, so the image lies in
+`V14^sigma`, whose curve part is `E_sigma`, which has no map to `E_{-11}`" —
+is wrong three times: the carrier is `IH^1` of the **support**, not of any
+image; by Thm K1 the image of the whole plane is a single **point**, so there
+is no target curve at all; and `S` lies in `Bs(phi)`, where `phi` is not
+defined.  `O4_EIGENPLANE_CURVES.md` §8 records this explicitly, and no step of
+the split uses `E_sigma`.
+
+## T6. Does the split contradict Thm K1, K4, C6 or Prop S5? — NO
+
+* K1 (each eigenplane contracts to `y(Pi) in V14^sigma`): compatible.  A
+  strict support inside `Pi` lies in `Bs(phi)`, and `phi|_{Pi}` being constant
+  where defined says nothing about the fibres of `p` over the base locus.
+* K4 (the 352 incidence points are mandatory base locus): no interaction — the
+  witness curve is neither forced through them nor away from them.
+* C6 (`d` even) and Prop O4-6 (`d >= 6` for a cubic orbit that is a base
+  component): both satisfiable, since `d` is unbounded on this lane.
+* Prop S5 (point supports need `dim Y_x >= 2`): the curve-support analogue,
+  computed the same way, is `dim p^{-1}(y) >= 1` for `y` in the support —
+  automatic for a codimension-4 curve that is blown up, hence not a
+  constraint.  No claim is made beyond that.
+
+## T7. Is `(O4)` *unclosable*, or only *unclosed*? — UNCLOSABLE BY THIS
+MACHINERY, and that is the exact claim
+
+What is proved: there exists a pair `(S, L)` — `S` a `C_6`-stable plane cubic
+isomorphic to `E_{-11}` in each eigenplane, `L` constant with equivariant
+character `psi_j`, `j != 3` — satisfying **every** necessary condition the
+Hodge-support package imposes ((AHS-spin), the refinement (5.2), Cor S4's
+multiplicity floor, the perverse-degree ledger, and the orbit/capacity screen
+for `d >= 6`).  What is **not** proved: that such a support occurs in an
+actual dominant map.  The package supplies necessary conditions only, and no
+map is exhibited.  The correct reading is "no obstruction can come from this
+cell via the Hodge-support census", never "a map exists".
+
+---
+
+# W. The campaign layer (2026-08-11): total degeneration, and the METHOD-INSUFFICIENT exit
+
+New in this layer: `TOTAL_DEGENERATION.md` (Thms W1, W2, W3; Lemmas W0,
+W0'), `O3_ODD_ORDER_POINTS.md` (Thms O3-1…O3-5),
+`O2_MANDATORY_POINTS.md` (Prop O2-3), `O1_O5_FREE_AND_MULTIPLICITY.md`
+(Thm O1-0; kills `K-m`, `K-n`).  Verifiers `TOTAL_DEGENERATION_OK` (87),
+`O3_ODD_ORDER_OK` (86), `MIN_DEGREE_OK` (114).
+
+## W1. The MANDATORY `D_12` test, on every verdict of the layer — PASSED
+
+The layer records exactly **three** kills and two structural theorems; each
+is tested against Cor IX.6 (the `V14` **is** `D_12`-spin-unirational, by a
+realised dominant map).
+
+| verdict | visible at `D_12`? | could it contradict Cor IX.6? |
+|---|---|---|
+| `K-m` (`C_11`-stratum, constant channel DEAD) | **no** — `11` does not divide `12` | no |
+| `K-n` (`F_55`-stratum, all rank-one channels DEAD) | **no** — `11` and `55` do not divide `12` | no |
+| `K-o` / Thm O1-0 (minimal live degree `d = 4` on `P(U)`) | yes, degrees are group-blind | no: it *restricts* which degrees carry a `G`-equivariant map, and the realised map of Cor IX.6 is only `D_12`-equivariant, so no `G`-degree bound applies to it |
+| Thm O3-2 (`V14^{F_55} = empty`) | **no** — `D_12` contains no element of order 5 or 11 | no |
+| Thm O3-3 (`P(V)^{F_55} subset Ind(phi)`) | **no**, same reason | no |
+| W1, W2 (witnesses) | — | a witness is a non-exclusion; it cannot contradict an existence theorem |
+
+`dim T^{D_12} = 2 > 0` and the channel the realised map needs is left OPEN by
+every verdict here (`verify_total_degeneration.py` §H2, §H6).  **PASS.**
+
+Informative, as in §S1 and §T2: the one cell `D_12` can see in full — `P5`,
+the `S_3`-points — is left open, which is the correct sign.  A kill covering
+`P5` in the trivial channel would have refuted Cor IX.6.
+
+## W2. Does the total-degeneration witness prove too much? — NO, and the ambient transfer is recorded rather than hidden
+
+W1's proof uses only `n >= 4`, `dim V14 = 3` and purity of `H^3` of the
+target.  Run at `n = 5` against the Klein cubic it gives the same verdict for
+the point cells of `RT_SPLIT_AND_DICHOTOMY/THEOREM_POINT_SUPPORT.md`.  That
+is a real consequence and is recorded as Cor W2.2.  It damages nothing: that
+file's exit is `POINT-SUPPORT-CHARACTERIZED`, and its §1 already states that
+`FREE-SUPPORT-EXCLUDED` is unavailable.  W1 upgrades "unavailable" to
+"unavailable in principle".
+
+What W1 does **not** prove: that no obstruction exists.  It proves that no
+obstruction of the *support-census shape* exists.  Residuals 1-3 of
+`TOTAL_DEGENERATION.md` §6 are exactly the shapes that survive, and each is a
+statement about the **map** `phi` rather than about `Rp_*IC_Y`.
+
+## W3. Is the witness real, or an existence claim in disguise? — REAL, to the same standard as §T3
+
+Proved: the datum `(Y_x, q|_{Y_x}, W_x) = (V14, id, H^3(V14,Q))` is an honest
+projective variety with an honest `H`-action and an honest polarizable
+weight-three Hodge structure, and it satisfies **C1-C8**, the complete list of
+what the package imposes at a point support, in all nine cells.  Not proved:
+that it occurs as `p^{-1}(x)` for an actual dominant `phi`, or that a
+dominant `phi` exists at all.  The correct reading is *"no obstruction can
+come from any point cell via this census"*, never *"a map exists"* — exactly
+the reading §T7 fixed for `(O4)`.
+
+## W4. Do the new kills `K-m`, `K-n` contradict Cor S4 or each other? — NO
+
+`K-n` says the equivariant structure at an `F_55`-stratum must be
+five-dimensional; Cor S4 says the abelian factor must contain five copies of
+`E_{-11}`.  Both are shadows of the same fact — `Res_{F_55}T` is
+`Q`-irreducible of dimension 10 — and they agree.  `K-m` and `K-n` are
+disjoint in scope (`C_11`-strata vs `F_55`-strata) and both are strictly
+weaker than the point-level statement they sit above, which is why neither
+empties its cell.
+
+Scope check: Theorem W3 is an `H_0`-level rule and is applied only where
+`H_0` acts trivially on the support, i.e. inside a fixed locus.  It is **not**
+applied at `(O4)`, where `H_0 = C_2` and the interesting group `C_3` acts
+nontrivially on the eigenplane; there Prop O4-3 governs and W3 correctly
+yields nothing.  No overlap, no contradiction.
+
+## W5. Does `V14^{F_55} = empty` (Thm O3-2) contradict any measured locus? — NO
+
+The fixed-point law (`mu(H) > 3 => V14^H = empty`) fires at exactly two
+subgroups, `F_55` and `G`, and is silent at all others
+(`verify_o3_odd_order.py` §D5, §D9).  It is consistent with every measured
+**non**empty locus — no subgroup with `V14^H != empty` has `mu(H) > 3` (§D6)
+— and it does not pretend to explain `V14^{V_4}`, `V14^{D_12}`,
+`V14^{D_10}` or `V14^{A_5}` being empty, which stay genuine measurements
+(`mu = 2, 2, 2, 3`).  It replaces a worker-grade mod-397 input of
+`FIX_IX_v14.md` §8 with a proof, and uses none of that input.
+
+## W6. Does Thm O3-3 (the `F_55` stratum is mandatory) collide with Thm K4 or Thm K5? — NO
+
+K4's 352 incidence points have stabilisers `S_3` and `D_10`; the 12 `F_55`
+points have stabiliser `F_55`.  Disjoint sets, disjoint arguments (K4 goes
+through the rational-curve-free `V14^sigma`; O3-3 through
+`V14^{F_55} = empty`).  K5's first-order separation is a statement about the
+tangent representation at an incidence point and is untouched.  The only
+joint consequence is quantitative: `Bs(phi)` contains at least
+`352 + 12 = 364` prescribed points, which fits comfortably under the
+codimension-5 capacity at the minimal live degree (`4^5 = 1024 >= 364`).
+
+## W7. Is the minimal-degree result consistent with the capacity table and with the `(O4)` witness? — YES, and it sharpens both
+
+* `d = 2` is **not live** for `V = U` (`S^2 U = 10 (+) 11` carries the
+  *other* absolutely irreducible 10), so kill `K-g` is vacuous there.  It
+  becomes live at `m >= 2`, where `S^2(U^{(+)m})` contains
+  `Lambda^2 U (x) Lambda^2(C^m)`, hence `10'` with multiplicity `C(m,2)`.
+  Both branches are asserted (`verify_min_degree.py` §G).
+* At the minimal live degree `d = 4`, refined Bézout gives `4^5 = 1024 >= 660`
+  but `4^4 = 256 < 660`: free **positive-dimensional component** orbits die at
+  `d = 4` and revive at `d = 6`.  Recorded, and it changes no cell verdict,
+  because a strict support need not be a base component.
+* Prop O4-6 requires `d >= 6` for an orbit of 110 eigenplane cubics that are
+  base **components**.  At `d = 4` the `(O4)` witness therefore cannot be a
+  base component — it can still be a strict support inside a larger
+  component.  No contradiction; the caveat of `THEOREM_POINT_SUPPORT.md` §1
+  is doing exactly the work it was flagged for.
+
+## W8. Is the campaign exit honest? — the three-exit test
+
+The mission's exits were NEGATIVE (every cell dead), METHOD-INSUFFICIENT
+(an unremovable witness at every remaining choke point), or HANDOFF.
+
+* NEGATIVE would require all 18 cells dead.  Nine point cells and `S1` carry
+  witnesses; `S0` (free, positive-dimensional) has no character obstruction
+  at all.  So NEGATIVE is not merely unattained, it is **unattainable**
+  (Thm W2, Cor W2.1).
+* HANDOFF would be right if a cell were merely *unresolved*.  None is: every
+  one of the five boxed families has an explicit witness or an explicit
+  reason it cannot be emptied.
+* METHOD-INSUFFICIENT is therefore the correct exit, and it comes with the
+  boxed statement of what a stronger method must see
+  (`TOTAL_DEGENERATION.md` §6, Residuals 1-3).
+
+Nothing here decides Problem E.  The headline `ed_C(PSL_2(F_11))` remains
+**OPEN**, and `SPIN-CHAIN-OBSTRUCTION-UNDECIDED` is unchanged.
+
+## W9. Falsifiable predictions — STILL REGISTERED, still untested
+
+§S4's predictions `chi_top(V14^g) = 6, 4, 2` at element orders `3, 5, 6` are
+**not** measured by this campaign and remain the sharpest available
+independent test of Theorem S0, on which the whole census rests.  They are
+carried forward unchanged.  Two of the five predictions (`o = 2`, `o = 11`)
+agree with sealed measurements; the other three are one run of
+`verify_v14_s3_d10.py`'s machinery away.
+
+---
+
+# Residuals campaign (2026-08-11): tests R0-R5
+
+## R0. Step 0 — is the dependency map's headline right?
+
+Claim under test: `O4`'s Hesse-cubic witness survives `R1`, `R2` and `R3`.
+
+The audit is `DEPENDENCY_MAP.md` §4, run against the witness rather than
+against the cell label.  `R1` and `R2` both carry "the block is supported at a
+**point**" in their hypotheses — they bound `delta(x) = dim q(p^{-1}(x))`, a
+quantity attached to a fibre of `p` over a point — while the witness is
+`IC_{\overline S}(Q)` on a curve, so there is no `Y_x` and no `delta` in the
+statement at all.  `R3` carries "the local system is **nonconstant**"; the
+witness uses `L = Q`.  Three hypotheses, three misses.  **CONFIRMED.**
+
+The same audit applied to the free cell `S0` at any `s >= 1` gives the same
+answer, and there the miss is wider still: `S0` has no eigen-stratum structure
+for even a strengthened `R3` to reach.
+
+## R1-T*.  See `R1_TOTAL_DEGENERATION.md` §7
+
+The mandatory `D_12` test is R1-T1 and it **PASSES**, with the informative
+sign.  §2 refutes the induced-map recursion outright, so it kills nothing
+anywhere; and §3's going-down audit shows that every abelian subgroup of every
+occurring stabiliser — in particular of `D_12` — has nonempty fixed locus on
+the `V14`, so a kill could never have fired at a `D_12`-visible point.  The
+mission's own consistency requirement ("the induced-map recursion at
+`D_12`-visible points must NOT be killable, or the induction is wrong") is met
+twice over: the induction is wrong, and independently the kill machinery is
+unavailable.
+
+Theorem R1-4 (`14 | d` when `dim Bs(phi) = 1`) uses the parity theorem C6 and
+the identification `Lambda ~= M^*`, both of which rest on the **perfectness**
+of `Gtilde`.  `D_12tilde` is not perfect, so the statement has no `D_12`
+analogue and cannot interact with Cor IX.6.
+
+## R2-T*.  See `R2_AMPLE_COVERS.md` §5
+
+R2-T1 is the mandatory `D_12` test and it **PASSES**.  Theorem R2-2 is a
+genuine kill, so it is checked: it removes cyclic covers with
+positively-branched divisors at cells `P4`, `P5` (the ones `D_12` sees),
+leaving the non-cyclic and singular cases and, more importantly, leaving the
+entire `delta(x) = 3` branch, which Thm W1 witnesses.  `dim T^{D_12} = 2 > 0`,
+so the channel the realised map needs stays open.  Prop R2-4 is about `F_55`
+(order 55, coprime to 12) and is invisible at `D_12` level.
+
+## R3-T*.  See `R3_CM_RIGIDITY.md` §5
+
+R3-T1 is the mandatory `D_12` test and it **PASSES**.  The only kill in that
+file is Cor R3-2 (variations with **horizontal** CM), and the realised
+`D_12`-map may instead route through the Thm R3-4 witness, whose eigen-line
+has stabiliser `D_12` in the orbit-55 case, with `dim T^{D_12} = 2 > 0`.
+
+## R4. Cascade audit: does anything proved here change a census verdict?
+
+| result | is it a kill? | which cell | does the cell change status? |
+|---|---|---|---|
+| Prop D2 (one jump, one dimension) | no — a structural rule | all | no; it partitions the open cells by `s` |
+| Thm R1-4 (`dim Bs >= 2` for even `d < 14`) | no — a statement about `Bs(phi)` | none | no |
+| Prop R1-5 (`F_55` filtration) | narrowing | `P8` | no |
+| Thm R2-2 (cyclic covers dead) | **yes** | the `delta = 2` branch of `P0`-`P8` | no — the `delta = 3` branch is witnessed by W1 |
+| Prop R2-4 (`k >= 2` at `F_55`) | narrowing | `P8` | no |
+| Cor R3-2 (horizontal CM dead) | **yes** | part of `O4g` | no — the rest of `O4g` is now witnessed |
+| Thm R3-4 / Cor R3-5 (`O4g` witness) | witness | `O4g`, cells `S1`, `S2`, `S3` | **yes**: `O4g` moves from OPEN to OPEN-WITH-WITNESS |
+
+Exactly one census entry changes: subcell `O4g` gains a witness, upgrading
+cells `S2` and `S3` from "DEAD in the constant-coefficient channel, residual
+`O4g` only" to "DEAD in the constant-coefficient channel, residual `O4g`
+**witnessed**".  Nothing else moves, and no cell dies.
+
+## R5. Is `RESIDUALS-ALL-CLOSED` still worth pursuing?
+
+No, and the reason is recorded before the attacks rather than after.
+`DEPENDENCY_MAP.md` §5 shows the reachable prize is a reduction to
+`FRONTIER-1/2/3`, and `FRONTIER-1` is now occupied twice — by the Thm O4-5
+Hesse cubic (constant coefficients) and by the Thm R3-4 double-cover system
+(nonconstant coefficients, reducing to the same curve).  A campaign that
+closed all three residuals would still face both.

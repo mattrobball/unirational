@@ -10,6 +10,20 @@ Every number is machine-checked by `verify_spin_hodge_census.py`
 (`SPIN_HODGE_CENSUS_OK`, 206 assertions, exact integers, about 30 s).  Section
 references `§A`-`§I` point at that script's sections.
 
+The 2026-08-11 layer — the `(O4)` split of §5.2/§6 and the kills K-i…K-l — is
+checked by `verify_o4_census.py` (`O4_CENSUS_OK`, 92 assertions), and the
+Betti/Hodge inputs by `verify_v14_betti.py` (`V14_BETTI_OK`, 41 assertions).
+
+**The 2026-08-11 campaign layer** — the total-degeneration witness, the
+pointwise-kernel selection rule, the `(O1)`, `(O2)`, `(O3)`, `(O5)` verdicts,
+the new kills `K-m`, `K-n`, and the minimal live coordinate degree — is
+checked by `verify_total_degeneration.py` (`TOTAL_DEGENERATION_OK`, 87
+assertions), `verify_o3_odd_order.py` (`O3_ODD_ORDER_OK`, 86 assertions) and
+`verify_min_degree.py` (`MIN_DEGREE_OK`, 114 assertions).  Its analysis files
+are `TOTAL_DEGENERATION.md`, `O3_ODD_ORDER_POINTS.md`,
+`O2_MANDATORY_POINTS.md`, `O1_O5_FREE_AND_MULTIPLICITY.md`.  **Every cell is
+now adjudicated, and the census is CLOSED TO ATTACK: see §6 and §8.**
+
 Notation: `S` an irreducible strict support, `H = Stab_G(S)` its setwise
 stabilizer, `H_0` the **pointwise** stabilizer (the kernel of `H` acting on
 `S`), `s = dim S`, `j_0` the perverse jump, `n = dim V >= 6`.
@@ -333,6 +347,25 @@ and `Hom(E_sigma, E_{-11}) = 0` (sealed).  Consequently:
 > Capacity: the orbit has `<= 110` members (one per plane), needing even
 > `d >= 4` (`c = 4`).
 
+**Superseded in detail by `O4_EIGENPLANE_CURVES.md` (2026-08-11, exit
+`O4-SPLIT`).**  Three corrections and one refutation:
+
+* `H_0 = C_2` **exactly** and `H in {C_2, C_6}`, with orbit `110` or `330`;
+  the residual action on `Pi` is the diagonal `C_3 = diag(1,w,w^2)` with
+  exactly three fixed points (Thm O4-1, proved from the `C_12`-decomposition
+  of `U`).
+* the `sigma`-**sign** structures are not excluded — for each of them exactly
+  one `C_3`-channel dies, and the `psi_3` case is the already-recorded kill
+  K-d (Prop O4-3).
+* capacity by **total degree** (refined Bézout bounds `sum deg`, not the
+  component count): an orbit of 110 plane cubics needs even `d >= 6`, not
+  `d >= 4` (Prop O4-6).
+* the proposed closing move is **refuted**: every eigenplane carries a
+  `C_3`-stable plane cubic isomorphic to `E_{-11}` satisfying (AHS-spin)
+  exactly (Thm O4-5).  What *does* die at `delta = 3` is the nonzero-weight
+  case, where the `C_3`-action has a fixed point on the cubic, forcing
+  `j(S) = 0`, CM by `Q(sqrt(-3))`, and `Hom(S, E_{-11}) = 0` (Thm O4-4).
+
 (That `H <= C_6` for a positive-dimensional `S subset Pi` is because two
 distinct eigenplanes meet in at most a point, so any `h` with `h(S) = S`
 must fix `Pi`; and `Stab_G(Pi) = C_6` exactly, the six `D_12`-reflections
@@ -347,31 +380,43 @@ measured geometry; "general spin `V`" is the uniform verdict.
 
 ### 5.1 Zero-dimensional supports (`H = H_0`, nine cells)
 
-| cell | `H` | orbit `N` | `j_0` | min even `d` | verdict | killing constraint / what would close it |
+| cell | `H` | orbit `N` | `j_0` | min live `d` | verdict | note |
 |---|---|---:|---|---:|---|---|
-| **P0** | `1` | 660 | `4-n` | 4 | **OPEN** | dies only for `d = 2`; no character obstruction (`Res_1 T = 10.triv`) |
-| **P1** | `C_2` | 330 | `4-n` | 4 | **OPEN** | `Res T = 6.triv (+) 4.sign`; both channels live |
-| **P2** | `C_3` | 220 | `4-n` | 4 | **OPEN** | `2.triv (+) 4.omega (+) 4.omega^2` |
-| **P3** | `C_5` | 132 | `4-n` | 4 | **OPEN** | `2.triv (+) 2.psi_k` each `k` |
-| **P4** | `C_6` | 110 | `4-n` | 4 | **OPEN**, `psi_3` channel **DEAD** | a `psi_3`-isotypic fibre carries nothing |
-| **P5** | `S_3` | 110 (x2) | `4-n` | 4 | **OPEN**, sign channel **DEAD** | MANDATORY (K4).  Closing it needs: no `S_3`-surface fibre with `E_{-11}` in `Alb`, in the triv or std channel |
-| **P6** | `D_10` | 66 (x2) | `4-n` | 4 | **OPEN**, sign channel **DEAD** | MANDATORY (K4).  Closing it needs: no `D_10`-surface fibre with `E_{-11}` in `Alb`; note `V14^{D_10} = empty`, so `Z_x` carries a fixed-point-free `D_10` |
-| **P7** | `C_11` | 60 | `4-n` | 4 | **OPEN**, but must carry `E_{-11}^5` | `Res_{C_11}T` is `Q`-irreducible, no invariants |
-| **P8** | `F_55` | 12 | `4-n` | 2 | **OPEN**, but must carry `E_{-11}^5` | `Res_{F_55}T` is `Q`-irreducible, no trivial and no linear character |
+| **P0** | `1` | 660 | `4-n` | 4 | **OPEN, WITNESSED** (W1) | no character obstruction (`Res_1 T = 10.triv`); capacity satisfied at the minimal live degree |
+| **P1** | `C_2` | 330 | `4-n` | 4 | **OPEN, WITNESSED** (W1) | `Res T = 6.triv (+) 4.sign`; both channels live |
+| **P2** | `C_3` | 220 | `4-n` | 4 | **OPEN, WITNESSED** (W1) | `2.triv (+) 4.omega (+) 4.omega^2` |
+| **P3** | `C_5` | 132 | `4-n` | 4 | **OPEN, WITNESSED** (W1) | `2.triv (+) 2.psi_k` each `k` |
+| **P4** | `C_6` | 110 | `4-n` | 4 | **OPEN, WITNESSED** (W1); `psi_3` channel **DEAD** | a `psi_3`-isotypic fibre carries nothing |
+| **P5** | `S_3` | 110 (x2) | `4-n` | 4 | **OPEN, WITNESSED** (W1); sign channel **DEAD** | MANDATORY (K4).  Residual: bound `dim q(p^{-1}(x)) <= 1` |
+| **P6** | `D_10` | 66 (x2) | `4-n` | 4 | **OPEN, WITNESSED** (W1); sign channel **DEAD** | MANDATORY (K4).  `V14^{D_10} = empty` is *satisfied* by the witness `Z_x = V14` |
+| **P7** | `C_11` | 60 | `4-n` | 4 | **OPEN, WITNESSED** (W1) | must carry `E_{-11}^5`; the demand is met **exactly** by `J(V14)` |
+| **P8** | `F_55` | 12 | `4-n` | 4 | **OPEN, WITNESSED** (W1) | **MANDATORY** (Thm O3-3, new): `V14^{F_55} = empty` unconditionally |
+
+`W1` = the total-degeneration witness, `TOTAL_DEGENERATION.md` Theorem W1:
+the single datum `(Y_x, q|_{Y_x}, W_x) = (V14, id, H^3(V14,Q))` satisfies
+every necessary condition the package imposes, in **all nine cells at once**,
+with the Hom of (AHS-spin) an isomorphism and the Cor S4 floor met exactly at
+`P7`, `P8`.  Hence **no point cell is closable by this machinery**
+(Theorem W2).
+
+The "min live `d`" column is now the true minimum: `d = 4` is the smallest
+degree at which a `G`-equivariant map `P(U) --> V14` exists at all
+(`O1_O5_FREE_AND_MULTIPLICITY.md` Theorem O1-0), which dominates every
+capacity row.  At multiplicity `m >= 2` it drops to `d = 2`.
 
 ### 5.2 Positive-dimensional supports (nine cells, indexed by `H_0`)
 
 | cell | `H_0` | possible `H` | max `s` for `V=U` | verdict for `V = U` | verdict for general spin `V` |
 |---|---|---|---:|---|---|
 | **S0** | `1` | any of the 14 types | `n-3` | **OPEN** | **OPEN** — the large escape |
-| **S1** | `C_2` | `C_2, C_6` (`H <= Stab(Pi) = C_6`) | 2 | **OPEN**; whole-plane support DEAD in the constant-coefficient channel (C8); curve supports need `deg >= 3` (C9) | OPEN |
-| **S2** | `C_3` | `C_3, C_6, S_3, D_12` | 1 | **OPEN**; whole-line support DEAD in the constant-coefficient channel (C8) | OPEN |
-| **S3** | `C_5` | `C_5, D_10` | 1 | **OPEN**; whole-line support DEAD in the constant-coefficient channel (C8) | OPEN |
+| **S1** | `C_2` | `C_2, C_6` exactly (`H_0 = C_2` exactly, Thm O4-2) | 2 | **OPEN**, and **not closable**: whole-plane DEAD in the constant channel (C8); genus-0 curves DEAD; nonzero-weight plane cubics DEAD (`j = 0`, Thm O4-4); the Hesse channel is **WITNESSED** (Thm O4-5) | OPEN |
+| **S2** | `C_3` | `C_3, C_6, S_3, D_12`; realised: `C_6` (orbit 110) and `D_12` (orbit 55) | 1 | **DEAD in the constant-coefficient channel** — the only curve inside a `C_3`-eigen-line is the line, `IH^1(P^1) = 0` (Prop O4-7); residual: nonconstant local systems only, now **WITNESSED** (`R3_CM_RIGIDITY.md` Thm R3-4, Cor R3-5) | OPEN |
+| **S3** | `C_5` | `C_5, D_10`; realised: `D_10` (orbit 66) | 1 | **DEAD in the constant-coefficient channel** (Prop O4-7); residual: nonconstant local systems only, now **WITNESSED** (Thm R3-4, Cor R3-5) | OPEN |
 | **S4** | `C_6` | `C_6, D_12` | — | **DEAD** (`P(U)^{C_6}` is 6 points) | OPEN for `m >= 2` (`P(V)^{C_6}` is `6` copies of `P^{m-1}`) |
-| **S5** | `C_11` | `C_11, F_55` | — | **DEAD** (`P(U)^{C_11}` is 6 points) | OPEN for `m >= 2`; must carry `E_{-11}^5` |
+| **S5** | `C_11` | `C_11, F_55` | — | **DEAD** (`P(U)^{C_11}` is 6 points) | OPEN for `m >= 2`, but the **constant-coefficient channel is DEAD** (kill `K-m`, new); must carry `E_{-11}^5` |
 | **S6** | `S_3` | `S_3, D_12` | — | **DEAD** (`P(U)^{S_3}` is 2 points) | OPEN for `m >= 2`; sign channel DEAD |
 | **S7** | `D_10` | `D_10` only | — | **DEAD** (`P(U)^{D_10}` is 2 points) | OPEN for `m >= 2`; sign channel DEAD |
-| **S8** | `F_55` | `F_55` only | — | **DEAD** (`P(U)^{F_55}` is 1 point) | OPEN for `m >= 2`; must carry `E_{-11}^5` |
+| **S8** | `F_55` | `F_55` only | — | **DEAD** (`P(U)^{F_55}` is 1 point) | OPEN for `m >= 2`, but **every rank-one equivariant channel is DEAD** (kill `K-n`, new): only `theta_1`, `theta_2` survive; must carry `E_{-11}^5` |
 
 ### 5.3 Cross-cutting kills
 
@@ -383,89 +428,116 @@ measured geometry; "general spin `V`" is the uniform verdict.
 | **K-d** | sign-isotypic blocks at any `S_3`- or `D_10`-support, `psi_3`-isotypic blocks at any `C_6`-support: **DEAD** | Thm C4 (§D') |
 | **K-e** | carriers isogenous to powers of `E_sigma`: **DEAD** (`j = 8192/11` non-CM), and dead again by K-b | §4.1 |
 | **K-f** | whole linear eigen-strata in the constant-coefficient channel: **DEAD** (`H^1(P^k) = 0`) | Prop C8 |
-| **K-g** | at `d = 2`: all free (`N = 660`) component orbits, every dimension | §G |
+| **K-g** | at `d = 2`: all free (`N = 660`) component orbits, every dimension.  **VACUOUS for `V = U`** — there is no equivariant map of degree 2 at all (Thm O1-0); in force from `m = 2` | §G, `verify_min_degree.py` §G |
 | **K-h** | `H = A_4, A_5, G` supports with any pointwise kernel other than `1`: **DEAD** | Prop C2 (§B') |
+| **K-i** | curve supports of **geometric genus 0** (any degree, any eigenplane, constant channel): **DEAD** (`IH^1 = H^1(P^1) = 0`) | Thm O4-4(1) |
+| **K-j** | `C_3`-stable plane **cubics of nonzero weight** in an eigenplane: **DEAD** (`j(S) = 0`, CM by `Q(sqrt(-3))`, so `Hom(S,E_{-11}) = 0`) | Thm O4-4(2) (§D) |
+| **K-k** | whole `C_3`- and `C_5`-**eigen-lines** in the constant-coefficient channel: **DEAD** (`IH^1(P^1) = 0`), and for `V = U` these are the *only* positive-dimensional supports in those strata | Prop O4-7 (§B) |
+| **K-l** | for each `sigma`-**sign** equivariant structure `psi_j` (`j` odd) at a `C_6`-support, **one** `C_3`-channel is DEAD (`a = 1, 0, 2` for `j = 1, 3, 5`); `j = 3, a = 0` is K-d | Prop O4-3 (§C) |
+| **K-m** | *(new)* a positive-dimensional support inside `P(V)^{C_11}`: the **constant-coefficient** channel is DEAD, for every spin source, every `m`, every degree, every dimension and every local system (`Res_{C_11}T` has no invariants) | Thm W3 (`verify_total_degeneration.py` §C8) |
+| **K-n** | *(new)* a positive-dimensional support inside `P(V)^{F_55}`: **every rank-one** equivariant channel is DEAD; only the two 5-dimensional structures `theta_1, theta_2` survive (`Res_{F_55}T` contains no linear character) | Thm W3 (§C9) |
+| **K-o** | *(new, degree level)* on the minimal source `P(U)` there is **no** `G`-equivariant rational map of coordinate degree `d < 4`; the minimal live degree is `4` (and `2` for `V = U^{(+)m}`, `m >= 2`) | Thm O1-0 (`verify_min_degree.py`) |
 
 Total: **18 primary cells**, of which **5 are DEAD for the multiplicity-free
-source `U`** (S4-S8) and **0 are DEAD for all spin sources and all degrees**;
-plus **8 cross-cutting kills**, none of which empties the census.
+source `U`** (S4-S8), **2 more (S2, S3) are DEAD for `U` in the
+constant-coefficient channel** (2026-08-11), and **0 are DEAD for all spin
+sources and all degrees**; plus **15 cross-cutting kills**, none of which
+empties the census.  All nine point cells and cell `S1` now carry explicit
+**witnesses**, so no cell can be emptied by this machinery either.
 
 ---
 
-## 6. The OPEN cells — the lane's new state
+## 6. The OPEN cells — every one of them witnessed (2026-08-11, campaign)
 
 ```text
 +---------------------------------------------------------------------------+
 | BOXED: the surviving admissible-support cells for a dominant               |
-| G-equivariant phi : P(V) --> V14 with V any faithful spin source.          |
+| G-equivariant phi : P(V) --> V14 with V any faithful spin source --        |
+| and, for each, the WITNESS that makes it unclosable by this machinery.     |
 |                                                                           |
 | (O1)  FREE SUPPORTS.  H_0 = 1, any dim s in [0, n-3], H arbitrary.        |
-|       No character obstruction at all.  Capacity kills only d = 2 for      |
-|       N = 660 and, more generally, orbits with N > d^{n-1-s}.              |
-|       Would close by: a no-free-support theorem, which the ambient         |
-|       packet already records as unproved (its Test 4).                     |
+|       No character obstruction at all (Res_1 T = 10.triv).  Capacity      |
+|       screens exactly one live degree, d = 4, and only in the positive-   |
+|       dimensional rows; the point row 660 <= 4^5 = 1024 passes.           |
+|       WITNESS: cell P0 under Theorem W1.                                  |
 |                                                                           |
-| (O2)  THE 352 MANDATORY POINTS.  H = S_3 (2 orbits of 110) and             |
-|       H = D_10 (2 orbits of 66), j_0 = 4-n, sign channel DEAD, triv and    |
-|       std / W_1,W_2 channels OPEN.  The exceptional fibre must satisfy     |
-|       dim Y_x >= 2 and, if equal to 2, must be an irregular surface with   |
-|       E_{-11} in its Albanese, H-equivariantly, mapping finitely onto an   |
-|       H-invariant surface Z_x of V14 (fixed-point-free at H = D_10).       |
-|       Would close by: excluding H-equivariant E_{-11}-carrying irregular   |
-|       surfaces as exceptional fibres over those points, or bounding        |
-|       dim Y_x <= 1 there.                                                  |
+| (O2)  THE 352 MANDATORY POINTS.  H = S_3 (2 x 110), H = D_10 (2 x 66),    |
+|       j_0 = 4-n, sign channel DEAD, triv and std / W_1,W_2 channels OPEN. |
+|       The dim Y_x = 2 branch is NARROWED (Prop O2-3: a smooth ample       |
+|       divisor of V14 has irregularity 0, so E_{-11} must come from        |
+|       branching), but the dim Y_x = 3 branch is untouched.                |
+|       WITNESS: cells P5, P6 under Theorem W1 -- and V14^{D_10} = empty,   |
+|       the measurement meant to close the cell, is what SATISFIES the      |
+|       fixed-point-free requirement for Z_x = V14.                         |
 |                                                                           |
-| (O3)  THE ODD-ORDER POINTS.  H = C_11 (orbit 60) and H = F_55 (orbit 12).  |
-|       Res_H T is Q-IRREDUCIBLE with no invariants, so a single support     |
-|       must carry all of T, i.e. E_{-11}^5.  Sharpest arithmetic demand in  |
-|       the census.  Would close by: showing no exceptional fibre over a     |
-|       C_11- or F_55-fixed point of a spin source has a 10-dimensional      |
-|       weight-3 H-isotypic piece.  Note the fixed-point destructibility of  |
-|       KLEIN_SPIN_COMPLEX.md sec.3 does NOT apply -- it is a statement      |
-|       about fixed loci, not about supports of Rp_*IC_Y.                    |
+| (O3)  THE ODD-ORDER POINTS.  H = C_11 (orbit 60), H = F_55 (orbit 12).    |
+|       Res_H T is Q-IRREDUCIBLE with no invariants, so a single support    |
+|       must carry all of T, i.e. E_{-11}^5.  There is NO field-mismatch    |
+|       kill: the forced CM type is the quadratic-residue type of           |
+|       Q(zeta_11), it is INDUCED from Q(sqrt(-11)), and the two demands    |
+|       -- Q(zeta_11)-multiplication and E_{-11}^5-isogeny -- are the SAME  |
+|       demand (Thm O3-4).  NEW: the 12 F_55-points are MANDATORY base      |
+|       points, because V14^{F_55} = empty unconditionally (Thm O3-2).      |
+|       WITNESS: cells P7, P8 under Theorem W1, with the k = 5 floor met    |
+|       EXACTLY by A_x = J(V14) ~ E_{-11}^5.                                |
 |                                                                           |
-| (O4)  EIGENPLANE / EIGEN-LINE SUPPORTS.  H_0 = C_2, C_3, C_5 with          |
-|       positive-dimensional S.  Whole strata are dead in the               |
-|       constant-coefficient channel (H^1(P^k) = 0); what survives is a      |
-|       proper subvariety (a plane curve of degree >= 3 inside an            |
-|       eigenplane, in the sigma-trivial C_6-channel of dimension 6) or a    |
-|       nonconstant local system.  Would close by: excluding                 |
-|       E_{-11} from the Jacobians of the C_6-stable plane curves in the     |
-|       110 eigenplanes -- an explicit, finite-looking question.             |
+| (O4)  EIGENPLANE / EIGEN-LINE SUPPORTS.  Split 2026-08-11.  DEAD in the   |
+|       constant-coefficient channel: whole eigenplanes (C8), whole C_3-    |
+|       and C_5-eigen-LINES (K-k), genus-0 eigenplane curves (K-i), and     |
+|       C_3-stable plane cubics of nonzero weight (K-j).                    |
+|       WITNESS: the Hesse-family member isomorphic to E_{-11} in every     |
+|       one of the 110 eigenplanes (Thm O4-5), plus O4e and O4g.            |
 |                                                                           |
-| (O5)  HIGHER-MULTIPLICITY STRATA.  S4-S8, empty for V = U, revive for      |
-|       V = U^{(+)m}, m >= 2, and for the 10- and 12-dimensional spin        |
-|       irreducibles, whose fixed-point networks are NOT computed in-repo.   |
+| (O5)  HIGHER-MULTIPLICITY STRATA.  S4-S8, empty for V = U, revive for     |
+|       V = U^{(+)m}, m >= 2.  NEW KILLS at the stratum layer: K-m (C_11,   |
+|       constant channel) and K-n (F_55, every rank-one channel).           |
+|       WITNESS: the POINT layer of every revived stratum is cell P4, P5,   |
+|       P6, P7 or P8, all witnessed by Theorem W1 -- a stratum-level kill   |
+|       can never empty a cell whose point layer survives.                  |
 +---------------------------------------------------------------------------+
 ```
 
-`(O4)` is the only cell that looks finite and explicit enough to be decided
-by the existing machinery; `(O3)` is the sharpest arithmetically; `(O1)` is
-the one the ambient packet already flagged as the surviving escape, and it
-survives here too.
+> **Theorem (the census is closed to attack).**  Every boxed family carries
+> a witness, so `SPIN-SUPPORT-CENSUS-CLOSED` is **unreachable** by this
+> machinery and the `FIX_IX_v14.md` Cor IX.5 consequence chain cannot be
+> triggered by it.  See `TOTAL_DEGENERATION.md` Theorem W2 and Cor W2.1, and
+> §6 of that file for the boxed statement of what a stronger method must see.
 
----
+**Corrections recorded.**  The 2026-08-11 correction that `(O4)` is the
+*least* promising cell rather than the most is confirmed and generalised: the
+cells `(O2)` and `(O3)`, named there as the sharp ones, are also unclosable,
+and for a reason that has nothing to do with their arithmetic.  `(O3)`'s
+arithmetic, the sharpest in the census, turns out to be a **tautology** — the
+`E_{-11}^5` demand is met exactly by the target's own intermediate Jacobian.
 
 ## 7. Honest limits, and named next tasks
 
-1. **No cell dies for all degrees and all spin sources.**  The headline
-   consequence chain of `FIX_IX_v14.md` Cor IX.5 is therefore **not**
+1. **No cell dies for all degrees and all spin sources, and none can.**  The
+   headline consequence chain of `FIX_IX_v14.md` Cor IX.5 is therefore **not**
    triggered; Problem E's spin flank stays OPEN.  This packet supplies a
-   necessary condition and a census, not an obstruction.
-2. `b_3(V14) = 10`, `h^{2,1}(V14) = 5`, `rho(V14) = 1` are **literature**
-   values (prime Fano threefold of genus 8), flagged here as they are in
-   `MULTIPLICITY_ROUTE.md` §5.  Everything else in Theorem S0 is derived from
-   sealed data.  Sealing `b_3(V14)` in-repo would remove the last cited input
-   from the identification of `T`.
+   necessary condition and a census, not an obstruction — and, since
+   2026-08-11, a proof that no obstruction of this shape exists
+   (`TOTAL_DEGENERATION.md`).
+2. ~~`b_3(V14) = 10`, `h^{2,1}(V14) = 5`, `rho(V14) = 1` are **literature**
+   values~~ — **CLOSED 2026-08-11**, `SEAL_V14_BETTI.md`, exit
+   `V14-BETTI-SEALED`, verifier `V14_BETTI_OK`.  All three are now derived
+   in-repo from the sealed model (`V14` = codimension-5 linear section of
+   `Gr(2,6)`): `rho = b_2 = 1` by Sommese's Lefschetz theorem for the ample
+   rank-5 bundle `O(1)^{(+)5}`, and `chi_top(V14) = -6` by exact Schubert
+   calculus, whence `b_3 = 10` and `h^{2,1} = 5`.  Theorem S0 leans on no
+   unsealed input, and the same seal discharges the flag in
+   `MULTIPLICITY_ROUTE.md` §5 and in `ADVERSARIAL_TESTS.md` §B9.
 3. `chi_top(V14^g)` at `g` of order `3, 5, 6` is predicted (`6, 4, 2`) and
    **not measured**; one run of `verify_v14_s3_d10.py`'s machinery decides all
    three and would give an independent confirmation of Theorem S0 (the `10'`
    alternative predicts `3, 4, 5`).
-4. The **minimal live coordinate degree** — the smallest even `d` with
-   `<S^d U^*, 10'> != 0` — is not computed.  It is exact character
-   arithmetic (Newton's identities on `chi_U`, whose values are
-   `(6, 0, 0, -1/1, 0, (1 +/- sqrt(-11))/2)` in the sealed monomial model) and
-   would sharpen §3 in both directions.
+4. ~~The **minimal live coordinate degree** is not computed.~~ — **CLOSED
+   2026-08-11**, `O1_O5_FREE_AND_MULTIPLICITY.md` Theorem O1-0, verifier
+   `MIN_DEGREE_OK`: `M = 10'`, `Lambda^2 U = 5 (+) 10'`, `S^2 U = 10 (+) 11`,
+   and `dim Hom(M^*, S^d U^*) = 0,0,0,3,0,6,0,22,0,42,0,99` for `d = 1..12`.
+   The minimal live degree is **`d = 4`** for `V = U` (a `P^2` of candidate
+   landing tuples) and **`d = 2`** for `V = U^{(+)m}`, `m >= 2` (multiplicity
+   `C(m,2)`, by Cauchy).  Kill `K-g` is vacuous on the minimal source.
 5. The fixed-point networks of the **other** spin irreducibles (dimensions
    `10, 10, 10, 12, 12`) are not computed anywhere in-repo; cell `(O5)` is
    correspondingly coarse.  Theorem S3 itself is uniform in the source, so
@@ -479,9 +551,111 @@ survives here too.
 
 ```text
 SPIN-SUPPORT-CENSUS-TABLED
-SPIN-HODGE-SUPPORT-ESCAPE-UNDECIDED
-SPIN-CHAIN-OBSTRUCTION-UNDECIDED    (unchanged)
+SPIN-SUPPORT-CENSUS-CLOSED-TO-ATTACK       (2026-08-11 campaign)
+SPIN-HODGE-SUPPORT-METHOD-INSUFFICIENT     (TOTAL_DEGENERATION.md)
+SPIN-CHAIN-OBSTRUCTION-UNDECIDED           (unchanged)
+O4-SPLIT                                   (O4_EIGENPLANE_CURVES.md)
+O3-OPEN-WITH-WITNESS                       (O3_ODD_ORDER_POINTS.md)
+O2-OPEN-WITH-WITNESS                       (O2_MANDATORY_POINTS.md)
+O1-OPEN-WITH-WITNESS, O5-OPEN-WITH-WITNESS (O1_O5_FREE_AND_MULTIPLICITY.md)
+V14-F55-EMPTY-UNCONDITIONAL                (Thm O3-2)
+F55-STRATUM-MANDATORY                      (Thm O3-3)
+MIN-LIVE-DEGREE-COMPUTED                   (Thm O1-0)
+V14-BETTI-SEALED                           (SEAL_V14_BETTI.md)
+TOTAL_DEGENERATION_OK, O3_ODD_ORDER_OK, MIN_DEGREE_OK   (verifier markers)
 ```
 
-`SPIN-SUPPORT-CENSUS-CLOSED` is **NOT** claimed: 18 cells, 5 dead for the
-multiplicity-free source, none dead uniformly, five boxed OPEN families.
+`SPIN-SUPPORT-CENSUS-CLOSED` — meaning *every cell dead* — is **NOT** claimed
+and is now **provably unreachable** by this machinery: 18 cells, 5 dead for
+the multiplicity-free source (7 counting S2 and S3, dead for `U` in the
+constant-coefficient channel only), none dead uniformly, and all five boxed
+OPEN families carrying explicit witnesses.  What *is* claimed is
+`SPIN-SUPPORT-CENSUS-CLOSED-TO-ATTACK`: every cell has been adjudicated and
+the adjudication is negative for the method.
+
+---
+
+## 9. Residuals campaign layer (2026-08-11) — the cascade
+
+`DEPENDENCY_MAP.md`, `R1_TOTAL_DEGENERATION.md`, `R2_AMPLE_COVERS.md`,
+`R3_CM_RIGIDITY.md`, verifiers `R0_DEPENDENCY_OK` (323), `R1_DEGENERATION_OK`
+(117), `R2_COVERS_OK` (179), `R3_CM_OK` (90).
+
+### 9.1 What changed in the table
+
+Exactly one entry.  Subcell `O4g` — nonconstant local systems, the only
+survivor of cells `S2` and `S3` for `V = U` and one of the three survivors of
+`S1` — is now **WITNESSED**: for `E = E_{-11}` and the quotient
+`f : E -> E/[-1] = P^1` branched at the four 2-torsion points, the
+anti-invariant summand `L` of `f_*Q` is a nonconstant rank-one local system
+with `IH^1(P^1, L) = H^1(E_{-11},Q)`, satisfying (AHS-spin) exactly
+(`R3_CM_RIGIDITY.md` Thm R3-4, Cor R3-5).  Its monodromy has order **two**, so
+the residual is not a wild object.
+
+No cell dies.  Two kills are added and neither empties anything:
+
+* **`K-p`** *(new)*: a cyclic cover `Y_x -> Z_x` of a smooth `Z_x` in `|kH|`,
+  branched along a divisor whose class is nef and big, has `q(Y_x) = 0`, so it
+  cannot supply the `E_{-11}` of Cor C5.  (`R2_AMPLE_COVERS.md` Thm R2-2.)
+* **`K-q`** *(new)*: a strict-support local system carrying **horizontal**
+  `Q(sqrt(-11))`-multiplication is isotrivial with finite monodromy
+  (`R3_CM_RIGIDITY.md` Lemma R3-1, Cor R3-2), so that sub-case of `O4g` is
+  dead; the surviving sub-case is witnessed by Thm R3-4.
+
+Two narrowings are added at cell `P8`: `Z_x in |kH|` needs `k >= 2` there,
+because `Res_{F_55}M^*` contains no linear character (Prop R2-4); and the
+order filtration of the landing tuple at an `F_55`-point has
+`Lambda_{m+1} in \{0, theta_1, theta_2\}` with `Lambda_2 = theta_1` forced at
+`m = 1` (Prop R1-5).
+
+### 9.2 The structural rule that reorganises the open cells
+
+> **Proposition D2 (`DEPENDENCY_MAP.md` §2).**  In the constant-coefficient
+> channel the carrier `IH^{s+4-n-j_0}` is pure of that weight and must be
+> weight one, so `j_0 = s+3-n`; and `j_0` is unique (Thm S3(2)).  Hence all
+> constant-coefficient carrying supports of a given `phi` have the **same**
+> dimension, point supports coexist with **curve** supports and with nothing
+> else, and surfaces and threefolds exclude everything but themselves.
+
+This does not kill a cell, but it partitions the open ones into three
+mutually exclusive scenarios and is what makes §9.3 a single line.
+
+### 9.3 The reduced frontier
+
+```text
++---------------------------------------------------------------------------+
+| If R1, R2 and R3 all closed, this is what the census would still say.      |
+|                                                                           |
+|   A G-orbit of irreducible S subset Bs(phi), 1 <= s = dim S <= n-3, with   |
+|   pointwise kernel H_0 in Sigma_spin, carrying a CONSTANT-COEFFICIENT      |
+|   block whose IH^1(Sbar,Q) = H^1(Stilde,Q) has E_{-11} as an isogeny       |
+|   factor of Jac / Alb, in a channel surviving K-d, K-f, K-i, K-j, K-k,     |
+|   K-l, K-m, K-n, K-p, K-q.                                                |
+|                                                                           |
+|   By Prop D2 this splits into FRONTIER-1 (s = 1, curves), FRONTIER-2       |
+|   (s = 2, surfaces) and FRONTIER-3 (s = 3, threefolds), exactly one of     |
+|   which occurs for a given phi.                                           |
+|                                                                           |
+|   FRONTIER-1 IS OCCUPIED, twice: by the 110 Hesse cubics of Thm O4-5 and   |
+|   by the Thm R3-4 double-cover system, whose finite cover is the same      |
+|   curve.  So R1-R3 buy a REDUCTION and never a closure, and the exit       |
+|   SPIN-ROUTE-CLOSED-METHOD-INSUFFICIENT is not upgradable this way.       |
++---------------------------------------------------------------------------+
+```
+
+### 9.4 Two unconditional by-products, recorded here because they are census-adjacent
+
+* **`dim Bs(phi) >= 2` for every even `d < 14`** (`R1_TOTAL_DEGENERATION.md`
+  Thm R1-4).  On a smooth resolution, `H^4 = 0` on the threefold target gives
+  `14\,\delta_F = d^3` whenever `dim Bs(phi) <= 1`, and `14` is squarefree, so
+  `dim Bs = 1` forces `14 | d`.  At the minimal live degree `d = 4` — and at
+  `d = 6, 8, 10, 12` — the base locus therefore has a component of dimension
+  at least two.  This strengthens Lemma W0' (`dim Bs >= n-5 = 1`) throughout
+  the low-degree window and is consistent with §3.2's own reading at `d = 2`.
+* **The initial map lands in the target** (Lemma R1-1): the degree-`m` initial
+  forms of the landing tuple at any base point define a `K`-equivariant
+  rational map `P(T_x) --> V14`, whose image is the set of limits of `phi`
+  along straight lines.  It is **not** dominant in general — Prop R1-2 gives an
+  explicit equivariant counterexample with total degeneration and a constant
+  initial map — which upgrades Remark W0'' from an assertion to a theorem with
+  a witness.
