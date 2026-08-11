@@ -1,0 +1,52 @@
+F55 tropical lift -- independent fan-free replay
+========================================================================
+  [OK  ] witness data present: f55_qpre_data_P01.json
+  [OK  ] witness data present: f55_qpre_data_P34.json
+
+0. convention calibration (the repo pins sigma_M = shift_-1; we
+   re-derive the working convention from 33-integrality alone)
+    best convention: sigma = shift_+1, <w,e_2> = w[2]
+    33-integrality of the lift held at 183 of 183 samples
+  [OK  ] a convention exists in which the 33-lift is integral at EVERY sampled point   183/183
+
+--- witness family f55_qpre_data_P01.json (pattern shown below) ---
+    pattern = [0, 1], cells = 1090, normals = 20, walls = 2570
+  [OK  ] [f55_qpre_data_P01.json] generic lattice samples obtained   3594 generic of 4000 drawn
+  [OK  ] [f55_qpre_data_P01.json] 1. d >= 0 at every sample and every sigma-translate   0 violations in 17970 evaluations
+  [OK  ] [f55_qpre_data_P01.json] 2. TWICE-MIN: at least two of the five d(sigma^i w) vanish   0 violations in 3594 samples
+        multiplicity histogram of the minimum: {2: 3594}
+  [OK  ] [f55_qpre_data_P01.json] 3a. 2h(w) + h(sigma^-1 w) - <w,e_2> = d + m identically   0 violations
+  [OK  ] [f55_qpre_data_P01.json] 3b. the lift h is INTEGER valued (33 divides the numerator)   0 violations
+  [OK  ] [f55_qpre_data_P01.json] 3c. twice-min of (T) holds when read off h alone   0 violations
+  [OK  ] [f55_qpre_data_P01.json] 4a. the mod-3 layer holds   0 violations
+  [OK  ] [f55_qpre_data_P01.json] 4b. the mod-11 layer (congruence (3)) holds   0 violations
+
+--- witness family f55_qpre_data_P34.json (pattern shown below) ---
+    pattern = [3, 4], cells = 1090, normals = 20, walls = 2570
+  [OK  ] [f55_qpre_data_P34.json] generic lattice samples obtained   3574 generic of 4000 drawn
+  [OK  ] [f55_qpre_data_P34.json] 1. d >= 0 at every sample and every sigma-translate   0 violations in 17870 evaluations
+  [OK  ] [f55_qpre_data_P34.json] 2. TWICE-MIN: at least two of the five d(sigma^i w) vanish   0 violations in 3574 samples
+        multiplicity histogram of the minimum: {2: 3574}
+  [OK  ] [f55_qpre_data_P34.json] 3a. 2h(w) + h(sigma^-1 w) - <w,e_2> = d + m identically   0 violations
+  [OK  ] [f55_qpre_data_P34.json] 3b. the lift h is INTEGER valued (33 divides the numerator)   0 violations
+  [OK  ] [f55_qpre_data_P34.json] 3c. twice-min of (T) holds when read off h alone   0 violations
+  [OK  ] [f55_qpre_data_P34.json] 4a. the mod-3 layer holds   0 violations
+  [OK  ] [f55_qpre_data_P34.json] 4b. the mod-11 layer (congruence (3)) holds   0 violations
+
+5. structure of the CRT split, re-derived
+  [OK  ] G(x) = 1 + x + x^2 + x^3 + x^4  (mod 3)   G mod 3 = [1, 1, 1, 1, 1]
+        => (G*d)_i = sum_j d_j = m (mod 3) for every i, and
+           (G*l)_i = sum_i w_i = 0 (mod 3) because w lies in N;
+           with the free sigma-invariant term contributing 11m,
+           the numerator is m + 0 + 11m = 12m = 0 (mod 3).
+        The mod-3 layer is therefore automatic once m = sum_j d o
+        sigma^j is chosen.  This is section 8.28's 'mod-3 surprise',
+        satisfiable exactly because m is free.
+        G mod 11 = [5, 3, 4, 9, 1]: NOT the all-ones vector, so the mod-11
+        layer is a genuine congruence on d -- congruence (3).
+  [OK  ] G(x) is not constant-coefficient mod 11 (the layer is live)
+
+6. negative control (the integrality test is live, not vacuous)
+  [OK  ] a unit perturbation of d destroys 33-integrality at (almost) every sample   365 of 365 samples now fail
+
+F55_TROPICAL_LIFT_REPLAY_OK

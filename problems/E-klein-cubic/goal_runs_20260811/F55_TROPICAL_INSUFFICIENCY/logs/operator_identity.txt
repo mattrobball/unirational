@@ -1,0 +1,41 @@
+F55 operator identity / lattice-defect verification
+
+A. polynomial identity in Z[x]
+  [OK  ] (x+2)(x^4-2x^3+4x^2-8x+16) = x^5 + 32   got [32, 0, 0, 0, 0, 1]
+B. reduction mod x^5 - 1
+  [OK  ] (2+x)G(x) = 33 in Z[x]/(x^5-1)   got [33, 0, 0, 0, 0]
+  [OK  ] G(1) = 11   G(1) = 11
+  [OK  ] G(x) has 33 = 3 * 11 with 3 = (2+x)|_{x=1}
+C. the circulant of 2+sigma on Z^5
+  [OK  ] det(2+sigma) on Z^5 equals 33   det = 33
+  [OK  ] Smith normal form on Z^5 is (1,1,1,1,33)   SNF = [1, 1, 1, 1, 33]
+  [OK  ] cokernel on Z^5 is cyclic of order 33
+D. the operator on M = Z^5 / Z(1,1,1,1,1)
+  [OK  ] det(2+sigma) on M equals 11   det = 11
+  [OK  ] Smith normal form on M is (1,1,1,11)   SNF = [1, 1, 1, 11]
+  [OK  ] coker(2+sigma) on M is Z/11
+  [OK  ] 33 = 3 * 11 splits as (augmentation) * (augmentation-lattice part)   33 vs 3*11
+  [OK  ] sigma^5 = 1 on M
+  [OK  ] M^(sigma^1) = 0  (Lemma 1.1)   det(sigma^1-1) = 5
+  [OK  ] M^(sigma^2) = 0  (Lemma 1.1)   det(sigma^2-1) = 5
+  [OK  ] M^(sigma^3) = 0  (Lemma 1.1)   det(sigma^3-1) = 5
+  [OK  ] M^(sigma^4) = 0  (Lemma 1.1)   det(sigma^4-1) = 5
+E. the Lemma 1.2 functional lambda = (1,9,4,3,5) mod 11
+  [OK  ] lambda is well defined on M (sum of coefficients = 0 mod 11)   sum = 22
+  [OK  ] lambda annihilates (2+sigma)Z^5, hence (2+sigma)M
+  [OK  ] lambda(e_2) = 4 != 0   lambda(e_2) = 4
+  [OK  ] => e_2 is NOT in (2+sigma)M  (the order-eleven lattice defect)
+F. the exact rational preimage (2+sigma)^{-1} e_2
+  [OK  ] the preimage is rational with common denominator exactly 11   solution = ['-2/11', '-1/11', '4/11', '-4/11'], lcm(denominators) = 11
+  [OK  ] its class has order exactly 11 in (M x Q)/M   order = 11
+  [OK  ] G(sigma) e_2 / 33 equals the preimage   G(sigma)e_2 = [-6, -3, 12, -12]
+G. the two cheap ways to satisfy the tropical tie condition are
+   blocked by the same order-eleven class
+  [OK  ] G1: a tie for all w forces (2+sigma)m = e_2 ...
+  [OK  ] G1: ... which is impossible, since lambda(e_2) = 4 != 0
+  [OK  ] G2: G(sigma)e_2 is NOT in 11M, so no lattice polytope P can make 2P + sigma P - e_2 sigma-invariant   G(sigma)e_2 = [-6, -3, 12, -12] in the basis of M
+  [OK  ] G2: consistency -- G(sigma)e_2 = 33 * (2+sigma)^{-1} e_2 and (2+sigma)^{-1}e_2 has order 11
+   Neither blocking lemma extends to the tie condition itself:
+   ties do not require equality of the five orbit values.
+
+F55_OPERATOR_IDENTITY_OK

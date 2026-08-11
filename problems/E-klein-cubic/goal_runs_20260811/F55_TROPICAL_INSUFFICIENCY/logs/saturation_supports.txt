@@ -1,0 +1,99 @@
+F55 exact per-support saturation criterion  (Theorem 3.2 gate)
+========================================================================
+
+PART 1 -- small supports, authoritative twist exponent e_2
+
+  S1 = {0}  (a single monomial)
+    S = [[0, 0, 0, 0, 0]]   twist exponent = [0, 0, 1, 0, 0]
+  [OK  ] C0 compiler regression [S1 = {0}  (a single monomial)]   5 rows agree with direct Laurent expansion
+        F[[-1, 0, 0, 0, 0]] = A0^3
+        F[[0, -1, 0, 0, 0]] = A0^3
+        F[[0, 0, -1, 0, 0]] = A0^3
+        F[[0, 0, 0, -1, 0]] = A0^3
+        F[[1, 1, 1, 1, 0]] = A0^3
+  [OK  ] C2 gate [S1 = {0}  (a single monomial)]: I_S : m_S^inf = (1)   got True
+  [OK  ] a deletion-minimal unit core exists [S1 = {0}  (a single monomial)]   |core| = 1 of 5 rows
+        core row F[[1, 1, 1, 1, 0]] = A0^3
+  [OK  ] gate returns a PROPER ideal after deleting one core row [S1 = {0}  (a single monomial)]   got unit=False
+  [OK  ] explicit exact torus point of the reduced system [S1 = {0}  (a single monomial)]   point = (1,)
+  [OK  ] the point annihilates every retained row [S1 = {0}  (a single monomial)]
+  [OK  ] the deleted row is nonzero at that point [S1 = {0}  (a single monomial)]   F[[1, 1, 1, 1, 0]] = 1
+  [OK  ] S1: exactly five rows, the sigma-orbit of -e_2, each = A0^3   5 rows
+        (Lemma 2.3: the orbit has size 5 because M^sigma = 0, and
+         every coefficient is positive, so no monomial is a zero.)
+
+  S2 = {0, e_0}
+    S = [[0, 0, 0, 0, 0], [1, 0, 0, 0, 0]]   twist exponent = [0, 0, 1, 0, 0]
+  [OK  ] C0 compiler regression [S2 = {0, e_0}]   30 rows agree with direct Laurent expansion
+  [OK  ] C2 gate [S2 = {0, e_0}]: I_S : m_S^inf = (1)   got True
+  [OK  ] a deletion-minimal unit core exists [S2 = {0, e_0}]   |core| = 1 of 30 rows
+        core row F[[2, 1, -1, 0, 0]] = A1^3
+  [OK  ] gate returns a PROPER ideal after deleting one core row [S2 = {0, e_0}]   got unit=False
+  [OK  ] explicit exact torus point of the reduced system [S2 = {0, e_0}]   point = (1, 1)
+  [OK  ] the point annihilates every retained row [S2 = {0, e_0}]
+  [OK  ] the deleted row is nonzero at that point [S2 = {0, e_0}]   F[[2, 1, -1, 0, 0]] = 1
+
+  S3 = {0, e_0 - e_1}
+    S = [[0, 0, 0, 0, 0], [1, -1, 0, 0, 0]]   twist exponent = [0, 0, 1, 0, 0]
+  [OK  ] C0 compiler regression [S3 = {0, e_0 - e_1}]   30 rows agree with direct Laurent expansion
+  [OK  ] C2 gate [S3 = {0, e_0 - e_1}]: I_S : m_S^inf = (1)   got True
+  [OK  ] a deletion-minimal unit core exists [S3 = {0, e_0 - e_1}]   |core| = 1 of 30 rows
+        core row F[[2, 2, 4, 1, 0]] = A1^3
+  [OK  ] gate returns a PROPER ideal after deleting one core row [S3 = {0, e_0 - e_1}]   got unit=False
+  [OK  ] explicit exact torus point of the reduced system [S3 = {0, e_0 - e_1}]   point = (1, 1)
+  [OK  ] the point annihilates every retained row [S3 = {0, e_0 - e_1}]
+  [OK  ] the deleted row is nonzero at that point [S3 = {0, e_0 - e_1}]   F[[2, 2, 4, 1, 0]] = 1
+
+  S4 = {e_0, e_1}  (the r_0 - r_1 pentagon-chain segment)
+    S = [[1, 0, 0, 0, 0], [0, 1, 0, 0, 0]]   twist exponent = [0, 0, 1, 0, 0]
+  [OK  ] C0 compiler regression [S4 = {e_0, e_1}  (the r_0 - r_1 pentagon-chain segment)]   25 rows agree with direct Laurent expansion
+  [OK  ] C2 gate [S4 = {e_0, e_1}  (the r_0 - r_1 pentagon-chain segment)]: I_S : m_S^inf = (1)   got True
+  [OK  ] a deletion-minimal unit core exists [S4 = {e_0, e_1}  (the r_0 - r_1 pentagon-chain segment)]   |core| = 1 of 25 rows
+        core row F[[3, -1, 0, 0, 0]] = A0*A1^2
+  [OK  ] gate returns a PROPER ideal after deleting one core row [S4 = {e_0, e_1}  (the r_0 - r_1 pentagon-chain segment)]   got unit=False
+  [OK  ] explicit exact torus point of the reduced system [S4 = {e_0, e_1}  (the r_0 - r_1 pentagon-chain segment)]   point = (1, 1)
+  [OK  ] the point annihilates every retained row [S4 = {e_0, e_1}  (the r_0 - r_1 pentagon-chain segment)]
+  [OK  ] the deleted row is nonzero at that point [S4 = {e_0, e_1}  (the r_0 - r_1 pentagon-chain segment)]   F[[3, -1, 0, 0, 0]] = 1
+
+  S5 = {0, e_0, e_1}
+    S = [[0, 0, 0, 0, 0], [1, 0, 0, 0, 0], [0, 1, 0, 0, 0]]   twist exponent = [0, 0, 1, 0, 0]
+  [OK  ] C0 compiler regression [S5 = {0, e_0, e_1}]   61 rows agree with direct Laurent expansion
+  [OK  ] C2 gate [S5 = {0, e_0, e_1}]: I_S : m_S^inf = (1)   got True
+  [OK  ] a deletion-minimal unit core exists [S5 = {0, e_0, e_1}]   |core| = 2 of 61 rows
+        core row F[[2, -1, 0, 0, 0]] = 2*A0*A1*A2 + A0*A2^2
+        core row F[[2, 0, 0, 0, 0]] = A1^2*A2 + A2^3
+  [OK  ] gate returns a PROPER ideal after deleting one core row [S5 = {0, e_0, e_1}]   got unit=False
+  [OK  ] explicit exact torus point of the reduced system [S5 = {0, e_0, e_1}]   point = (1, 1, i)
+  [OK  ] the point annihilates every retained row [S5 = {0, e_0, e_1}]
+  [OK  ] the deleted row is nonzero at that point [S5 = {0, e_0, e_1}]   F[[2, -1, 0, 0, 0]] = -1+2i
+
+PART 2 -- the substantive support: Coverage-C's 16-point core
+  Source: F55_COVERAGE_C_ADJUDICATION_20260808.md, (2.1).
+  [OK  ] the 16 listed points stay distinct in M
+  [OK  ] C0 compiler regression [S16]   1115 rows agree with direct Laurent expansion
+  [OK  ] Coverage-C (1): no nonzero row of S16 is a singleton   0 singleton rows
+  [OK  ] Coverage-C (2): deleting any one point of S16 creates a singleton row
+  [OK  ] row f1 of Coverage-C (2.2) is reproduced by this compiler   5 occurrences (one per sigma-orbit)
+  [OK  ] row f2 of Coverage-C (2.2) is reproduced by this compiler   5 occurrences (one per sigma-orbit)
+  [OK  ] row f3 of Coverage-C (2.2) is reproduced by this compiler   5 occurrences (one per sigma-orbit)
+  [OK  ] row h of Coverage-C (2.2) is reproduced by this compiler   5 occurrences (one per sigma-orbit)
+  [OK  ] Coverage-C identity (2.2) holds exactly: A0A6h - 2A2A6f2 - 2A0A3f3 + 4A2A3f1 = 2A0^2A4A6A8   lhs - rhs = 0
+  [OK  ] its right-hand side is a monomial, hence a unit on the coefficient torus => I_S16 : m_S16^inf = (1) by Theorem 3.2
+
+  the gate the other way, on the same real F55 rows:
+    exhibited point: ['1', '1', '1', '1', '1', '1', '1', '1', '-1', '2', '1', '-2', '1', '1', '1', '1']
+  [OK  ] the point lies on the coefficient torus
+  [OK  ] {f1,f2,f3} vanishes there, so (f1,f2,f3) : m^inf != (1)
+  [OK  ] the fourth row h does NOT vanish there: h is the load-bearing row of the circuit   h = -2
+
+PART 3 -- scope, stated honestly
+  Every support run here with the authoritative twist e_2 saturates
+  to (1).  No support with I_S : m_S^inf != (1) is known for that
+  twist, and producing one would BE a K-point of the F55 trace
+  cubic -- it would settle Problem E positively, not negatively.
+  The gate is an exact per-support decision procedure.  It is NOT a
+  classification of supports: the universally quantified statement
+  'I_S : m_S^inf = (1) for every primitive finite support S' is
+  equivalent to the F55 headline itself (COVERAGE_RELATION.md).
+
+F55_SATURATION_SUPPORTS_OK
