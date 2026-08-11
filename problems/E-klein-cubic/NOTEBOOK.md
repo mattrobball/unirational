@@ -52,7 +52,7 @@ disclosed boundary, not a coverage claim.
 
 Core manifest last rebuilt: 2026-08-03. Research supplement last updated:
 2026-08-10. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `c8d5416ca3cfab964849fe77863a36799530ec7b` (2026-08-11; the
+Snapshot metadata — notebook parent head: `8e5c1cd65708a3a2825081e2406a2fc493e11896` (2026-08-11; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -4772,6 +4772,20 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
 > sweep did not impose: all 55 minus-lines in the base locus with odd order,
 > and both `X^{C6}` points in the base locus. Its own profile `m = 1` does
 > satisfy the new `C6`-band condition `m ≡ d ≡ 1 (mod 3)`.
+> Full exit ledger: `STAGE2-ODD-ORDER-PINNING-SEALED`,
+> `STAGE2-IMMUNE-FACTOR-COLLAPSED`, `STAGE2-BASE-LOCUS-CONGRUENCES-SEALED`,
+> `STAGE2-C11-QUADRUPLE-OBSTRUCTION`, `STAGE2-MINUS-LINE-PARITY`,
+> `STAGE2-NO-DEGREE-EXCLUSION`, `STAGE2-FIRST-ORDER-CHARACTER-TABLE`.
+> **Adjudicated 2026-08-11** (`ADJUDICATION_PR37.md`, PR #37): the 95-check
+> verifier replays byte-identical; the collapse `1.1 × 10¹⁵ → 3⁸` was
+> re-derived independently (the `C11` weight set is forced to be the quadratic
+> residues by `F`'s invariance alone, and the `C11`/`C5`/`C3` pinning rules,
+> Thm 2.1, Prop. 2.2, Prop. 3.1, the `d mod 165/330` table and the whole
+> `dT`-rank column of §5 were recomputed from scratch and agree). The
+> Stage-1 → Stage-2 dependency is real and is confined to the 22-row
+> identification plus Thms 3, 6, 9(i), all of which PR #32's adjudication
+> confirms; the inherited factors `43 008` and `23` are flagged upper bounds,
+> not results of this packet.
 
 ## External sessions
 
