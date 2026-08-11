@@ -1,0 +1,48 @@
+ number   line  kind         label
+     --     46  SECTION 1   \section{Conventions}
+     --     52  SECTION 2   \section{Toroidal forms and resolutions}
+    2.1     66  definition   def:toroidal
+    2.2     92  theorem      thm:toroidal_resolution
+    2.3    202  corollary    cor:cofinal
+     --    235  SECTION 3   \section{Fabulous intersections}
+    3.1    259  lemma        lem:fabulous_basics
+    3.2    287  definition   def:fabulous
+    3.3    306  remark       rem:meet_vs_contain
+    3.4    315  remark       rem:fabulous_divisor
+    3.5    326  lemma        lem:fabulous_cofinal
+    3.6    352  lemma        lem:fibre_dimension
+    3.7    391  lemma        lem:flag
+    3.8    443  theorem      thm:fabulous
+    3.9    534  proposition  prop:rcc
+   3.10    563  corollary    
+   3.11    572  remark       
+   3.12    613  remark       rem:toric_criterion
+   3.13    642  example      ex:not_a_complex
+     --    697  SECTION 4   \section{Fabulous pairs of divisors}
+    4.1    727  theorem      thm:pairs
+    4.2    736  lemma        lem:tree
+    4.3    759  proposition  prop:noncyclic_fabulous
+    4.4    814  lemma        lem:number_theory
+    4.5    837  proposition  prop:cyclic_not_fabulous
+    4.6    889  corollary    
+    4.7    904  remark       
+    4.8    936  example      ex:no_converse
+    4.9    995  proposition  prop:converse
+   4.10   1041  lemma        lem:linear_strata
+   4.11   1058  proposition  prop:rcc_total
+   4.12   1121  corollary    cor:union_of_rc
+   4.13   1135  remark       
+   4.14   1162  definition   def:stratified_tower
+   4.15   1186  lemma        lem:rational_strata_propagate
+   4.16   1232  corollary    cor:pn_resolved
+   4.17   1254  remark       
+   4.18   1275  theorem      thm:no_map_to_dp2
+   4.19   1409  remark       
+     --   1429  SECTION 5   \section{Naive ideas}
+    5.1   1439  lemma        lem:strict
+    5.2   1477  lemma        lem:game
+    5.3   1530  example      ex:mu5
+
+labels cross-checked against the recorded numbering: 31
+mismatches: 0
+RESULT: PASS
