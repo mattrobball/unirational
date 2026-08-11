@@ -51,12 +51,24 @@ Sealed / accepted inputs, cited and not recomputed:
 | relatively-ample splitting: `f^*` is a split `G`-equivariant injection on `H^3` | `REPAIR.md` §8; `certificates/hodge_centers/HODGE_CENTER_NECESSITY.md` §§37-123 | PROVED |
 | the 110 eigenplanes, 1980 meeting pairs, 352 incidence points with `Stab = S_3` (220) or `D_10` (132), and Theorems K1-K4 | `KLEIN_SPIN_COMPLEX.md`, exit `SPIN_SOURCE_NETWORK_OK` | PROVED/COMPUTED |
 | the whole ambient support package (Theorems A, B, Cor C, the boundaries) | `AMBIENT_HODGE_REES_BRIDGE/THEOREM.md`, `AMBIENT_SUPPORT.md`, exit `AMBIENT-HODGE-SUPPORT-PROVED` | PROVED |
+| `chi_top(V14) = -6`, `b(V14) = (1,0,1,10,1,0,1)`, `h^{3,0} = 0`, `h^{2,1}(V14) = 5`, `rho(V14) = 1` | `SEAL_V14_BETTI.md`, `verify_v14_betti.py`, exit `V14-BETTI-SEALED` | SEALED (2026-08-11; **was** flagged literature) |
 
 **Not sealed, and therefore proved here or flagged:**
-`H^3(V14,Q)` as a `G`-module is *not* computed anywhere in-repo; only
-`b_3(V14) = 10` is used, and it is flagged in `MULTIPLICITY_ROUTE.md` §5 as a
-literature value.  §1 below supplies the missing identification, from sealed
-data plus one Lefschetz count.
+`H^3(V14,Q)` as a `G`-module is *not* computed anywhere in-repo.  §1 below
+supplies the missing identification, from sealed data plus one Lefschetz
+count.
+
+> **Ledger update, 2026-08-11.**  The three inputs this file originally
+> flagged as literature values — `b_3(V14) = 10`, `h^{2,1}(V14) = 5`,
+> `rho(V14) = 1` — are now **sealed in-repo** (`SEAL_V14_BETTI.md`, exit
+> `V14-BETTI-SEALED`, verifier `V14_BETTI_OK`): `rho = b_2 = 1` by Sommese's
+> Lefschetz theorem for the ample rank-5 bundle `O(1)^{(+)5}` on `Gr(2,6)`
+> (the sealed model makes `V14` a codimension-5 linear section), and
+> `chi_top(V14) = -6` by exact Schubert calculus, whence `b_3 = 4 - chi = 10`
+> and `h^{2,1} = 5` with `h^{3,0} = 0` by Kodaira.  **Theorem S0 no longer
+> leans on any unsealed input.**  The same seal discharges the corresponding
+> flag in `MULTIPLICITY_ROUTE.md` §5 and closes named task 2 of
+> `SUPPORT_CENSUS.md` §7.
 
 ## 1. The target: what `T` actually is on the `V14` twin
 
@@ -87,11 +99,14 @@ factorization changes `H^3` by `H^1` of blowup centres.  So the transport is
 > 3. `chi_T = (10, 2, -2, 0, 2, -1)` on elements of order `(1,2,3,5,6,11)`.
 >    In particular `chi_T` is a function of the element order alone.
 
-*Proof.*  Inputs from the literature, flagged as such and consistent with
-everything measured in-repo: `V14` is a prime Fano threefold of genus 8,
-index 1, Picard rank 1, so `b = (1,0,1,10,1,0,1)`, `h^{3,0} = 0` and
-`h^{2,1} = h^{1,2} = 5` (Iskovskikh).  Then `chi_top(V14) = 4 - 10 = -6`,
-which is the value already used in `MULTIPLICITY_ROUTE.md` §5.
+*Proof.*  Numerical inputs, **sealed in-repo** by `SEAL_V14_BETTI.md`
+(exit `V14-BETTI-SEALED`) and agreeing with the classical tables
+(Iskovskikh; Iskovskikh–Prokhorov): in the sealed model `V14` is a
+codimension-5 linear section of `Gr(2,6)`, hence a prime Fano threefold of
+genus 8, index 1, Picard rank 1, with `chi_top(V14) = -6` by exact Schubert
+calculus and therefore `b = (1,0,1,10,1,0,1)`, `h^{3,0} = 0`,
+`h^{2,1} = h^{1,2} = 5`.  `chi_top = -6` is the value already used in
+`MULTIPLICITY_ROUTE.md` §5.
 
 `G` acts on `V14` by automorphisms (the sealed model), hence on `H^3` by
 Hodge-structure automorphisms; `G` is simple and `chi_{H^3}(sigma) != 10`
@@ -491,6 +506,8 @@ SPIN-HODGE-SUPPORT-PROVED
 SPIN-SUPPORT-CENSUS-TABLED          (SUPPORT_CENSUS.md)
 SPIN-CHAIN-OBSTRUCTION-UNDECIDED    (unchanged)
 SPIN-HODGE-SUPPORT-ESCAPE-UNDECIDED
+V14-BETTI-SEALED                    (SEAL_V14_BETTI.md, 2026-08-11)
+O4-SPLIT                            (O4_EIGENPLANE_CURVES.md, 2026-08-11)
 ```
 
 `SPIN-HODGE-SUPPORT-PROVED` is the ported theorem: Theorems S0-S3,

@@ -84,11 +84,20 @@ for `q in {7, 11}`.
 | `REPAIR.md` §8 | the corrected relatively-ample split injection, run here at relative dimension `e = n-4 >= 2` |
 | `certificates/schur_krylov/orbit_code.g`, `.json` | GAP-certified irreducible degrees `{1,5,5,10,10,11,12,12}` of `PSL(2,11)` |
 
-**Literature values used and flagged, not sealed in-repo:** `b_3(V14) = 10`,
-`h^{2,1}(V14) = 5`, `rho(V14) = 1`, `b_1(V14) = 0` (Iskovskikh; prime Fano
-threefold of genus 8, index 1).  These are the same values
-`MULTIPLICITY_ROUTE.md` §5 flags.  Sealing `b_3(V14)` in-repo would leave
-Theorem S0 with no cited input at all.
+~~**Literature values used and flagged, not sealed in-repo:** `b_3(V14) = 10`,
+`h^{2,1}(V14) = 5`, `rho(V14) = 1`, `b_1(V14) = 0`.~~ — **SEALED 2026-08-11**
+by `SEAL_V14_BETTI.md` / `verify_v14_betti.py` (exit `V14-BETTI-SEALED`), from
+the sealed model `V14 = Gr(2,U) cap P(M)` by Sommese's Lefschetz theorem plus
+exact Schubert calculus on `Gr(2,6)`.  **Theorem S0 now has no cited input.**
+The classical tables are retained as corroboration only:
+
+| external source | what it corroborates |
+|---|---|
+| V. A. Iskovskikh, *Fano threefolds I*, Izv. AN SSSR **41** (1977) 516–562; *II*, Izv. **42** (1978) 506–549 | the classification of index-1, `rho = 1` Fano threefolds; the genus-8 member is `X_14 = Gr(2,6) cap P^9` with `h^{1,2} = 5` |
+| V. A. Iskovskikh, Yu. G. Prokhorov, *Fano varieties*, Algebraic Geometry V, EMS **47**, Springer 1999, §12.2 | the same table with the `h^{1,2}` column |
+| A. J. Sommese, *Submanifolds of abelian varieties*, Math. Ann. **233** (1978) 229–256, Prop. 1.16; R. Lazarsfeld, *Positivity in Algebraic Geometry II*, §7.1 | the Lefschetz theorem for zero loci of ample vector bundles, used for `b_1 = 0`, `b_2 = 1`, hence `rho = 1` |
+| A. Iliev, D. Markushevich, Doc. Math. **5** (2000) 23–47 | `J(X_14) ~ J(\text{cubic threefold})`, a 5-dimensional ppav — corroborating `h^{1,2} = 5` and, with Theorem S0(2), the twin picture.  Not used |
+| W. Fulton, *Intersection Theory*, Ex. 12.3.1 | refined Bézout by **total degree**, used in `O4_EIGENPLANE_CURVES.md` §5 |
 
 **Explicitly NOT used:** the Tschinkel--Zhang equivalence, in either
 direction, for the identification of `T`.  It is only twisted-stable, and
