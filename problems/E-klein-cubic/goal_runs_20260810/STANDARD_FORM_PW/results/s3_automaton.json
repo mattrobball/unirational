@@ -1,0 +1,123 @@
+{
+ "profile": {
+  "1": {
+   "branches_through_point": {
+    "1": 1,
+    "2": 1
+   },
+   "dims_of_fixed_locus": {
+    "4": 2
+   }
+  },
+  "C11": {
+   "branches_through_point": {
+    "1": 4
+   },
+   "dims_of_fixed_locus": {
+    "0": 4
+   }
+  },
+  "C2": {
+   "branches_through_point": {
+    "1": 3,
+    "2": 3,
+    "3": 1
+   },
+   "dims_of_fixed_locus": {
+    "1": 2,
+    "2": 2,
+    "3": 3
+   }
+  },
+  "C3": {
+   "branches_through_point": {
+    "1": 4,
+    "2": 5
+   },
+   "dims_of_fixed_locus": {
+    "0": 3,
+    "1": 4,
+    "2": 2
+   }
+  },
+  "C5": {
+   "branches_through_point": {
+    "1": 1
+   },
+   "dims_of_fixed_locus": {
+    "0": 1
+   }
+  },
+  "C6": {
+   "branches_through_point": {
+    "1": 4,
+    "2": 12
+   },
+   "dims_of_fixed_locus": {
+    "0": 16
+   }
+  },
+  "V4": {
+   "branches_through_point": {
+    "2": 2,
+    "3": 1
+   },
+   "dims_of_fixed_locus": {
+    "0": 1,
+    "1": 2
+   }
+  }
+ },
+ "reachable_states": 245,
+ "rounds": {
+  "C11pt    (60 C11-points)": 1,
+  "C3line   (110 C3-eigenlines, generic pt)": 1,
+  "C5pt(a)  (132 C5-points)": 1,
+  "C6pt(a)  (110 C6-points off X, char 2)": 2,
+  "C6pt(b)  (110 C6-points on X, char 1)": 2,
+  "E_A4: C2 stratum of proj dim 1 in E, weights [(0,), (0,), (1,), (1,)], branches (0,)": 1,
+  "E_A4: C2 stratum of proj dim 1 in E, weights [(0,), (1,), (1,), (1,)], branches (1,)": 0,
+  "E_A4: C3 stratum of proj dim 0 in E, weights [(0,), (1,), (1,), (2,)], branches (0,)": 1,
+  "E_A4: C3 stratum of proj dim 0 in E, weights [(0,), (1,), (2,), (2,)], branches (0,)": 1,
+  "E_A4: C3 stratum of proj dim 0 in E, weights [(1,), (1,), (1,), (2,)], branches (1,)": 0,
+  "E_A4: C3 stratum of proj dim 0 in E, weights [(1,), (2,), (2,), (2,)], branches (2,)": 0,
+  "E_A4: C3 stratum of proj dim 1 in E, weights [(0,), (1,), (1,), (2,)], branches (1,)": 0,
+  "E_A4: C3 stratum of proj dim 1 in E, weights [(0,), (1,), (2,), (2,)], branches (2,)": 0,
+  "E_A4: V4 stratum of proj dim 0 in E, weights [(0, 1), (0, 1), (1, 0), (1, 1)], branches (0, 1)": 1,
+  "E_A4: V4 stratum of proj dim 0 in E, weights [(0, 1), (1, 0), (1, 0), (1, 1)], branches (1, 0)": 1,
+  "E_A4: V4 stratum of proj dim 0 in E, weights [(0, 1), (1, 0), (1, 1), (1, 1)], branches (1, 1)": 1,
+  "E_A4r2: C2 stratum of proj dim 1 in E, weights [(0,), (0,), (1,), (1,)], branches (1,)+(0,)": 0,
+  "E_A4r2: C3 stratum of proj dim 0 in E, weights [(0,), (1,), (1,), (2,)], branches (0,)+(1,)": 0,
+  "E_A4r2: C3 stratum of proj dim 0 in E, weights [(0,), (1,), (2,), (2,)], branches (0,)+(2,)": 0,
+  "E_A4r2: C3 stratum of proj dim 0 in E, weights [(1,), (1,), (1,), (2,)], branches (1,)+(1,)": 0,
+  "E_A4r2: C3 stratum of proj dim 0 in E, weights [(1,), (1,), (2,), (2,)], branches (1,)+(2,)": 0,
+  "E_A4r2: C3 stratum of proj dim 0 in E, weights [(1,), (1,), (2,), (2,)], branches (2,)+(1,)": 0,
+  "E_A4r2: C3 stratum of proj dim 0 in E, weights [(1,), (2,), (2,), (2,)], branches (2,)+(2,)": 0,
+  "E_A4r2: V4 stratum of proj dim 0 in E, weights [(0, 0), (0, 1), (1, 0), (1, 1)], branches (0, 1)+(0, 0)": 1,
+  "E_A4r2: V4 stratum of proj dim 0 in E, weights [(0, 0), (0, 1), (1, 0), (1, 1)], branches (1, 0)+(0, 0)": 1,
+  "E_A4r2: V4 stratum of proj dim 0 in E, weights [(0, 0), (0, 1), (1, 0), (1, 1)], branches (1, 1)+(0, 0)": 1,
+  "E_D10: C2 stratum of proj dim 1 in E, weights [(0,), (0,), (1,), (1,)], branches (0,)": 1,
+  "E_D10: C2 stratum of proj dim 1 in E, weights [(0,), (1,), (1,), (1,)], branches (1,)": 0,
+  "E_D10: C5 stratum of proj dim 0 in E, weights [(1,), (1,), (2,), (3,)], branches (1,)": 0,
+  "E_D10: C5 stratum of proj dim 0 in E, weights [(1,), (2,), (2,), (4,)], branches (2,)": 0,
+  "E_D10: C5 stratum of proj dim 0 in E, weights [(1,), (3,), (3,), (4,)], branches (3,)": 0,
+  "E_D10: C5 stratum of proj dim 0 in E, weights [(2,), (3,), (4,), (4,)], branches (4,)": 0,
+  "E_D12: C2 stratum of proj dim 1 in E, weights [(0,), (0,), (1,), (1,)], branches (0,)": 1,
+  "E_D12: C2 stratum of proj dim 1 in E, weights [(0,), (1,), (1,), (1,)], branches (1,)": 0,
+  "E_D12: C3 stratum of proj dim 1 in E, weights [(0,), (1,), (1,), (1,)], branches (1,)": 0,
+  "E_D12: C3 stratum of proj dim 1 in E, weights [(0,), (2,), (2,), (2,)], branches (2,)": 0,
+  "E_D12: C6 stratum of proj dim 0 in E, weights [(1,), (1,), (3,), (4,)], branches (1,)": 0,
+  "E_D12: C6 stratum of proj dim 0 in E, weights [(1,), (3,), (4,), (4,)], branches (4,)": 1,
+  "E_D12: C6 stratum of proj dim 0 in E, weights [(2,), (2,), (3,), (5,)], branches (2,)": 1,
+  "E_D12: C6 stratum of proj dim 0 in E, weights [(2,), (3,), (5,), (5,)], branches (5,)": 0,
+  "E_D12: V4 stratum of proj dim 0 in E, weights [(0, 0), (0, 1), (1, 0), (1, 1)], branches (0, 0)": 2,
+  "E_D12: V4 stratum of proj dim 0 in E, weights [(0, 1), (0, 1), (1, 0), (1, 1)], branches (0, 1)": 1,
+  "E_D12: V4 stratum of proj dim 0 in E, weights [(0, 1), (1, 0), (1, 0), (1, 1)], branches (1, 0)": 1,
+  "E_D12: V4 stratum of proj dim 0 in E, weights [(0, 1), (1, 0), (1, 1), (1, 1)], branches (1, 1)": 1,
+  "L'_sigma (55 minus-lines, generic pt)": 1,
+  "P_sigma  (55 plus-planes, generic pt)": 1,
+  "V4-I     (165 type-I V4-points)": 2,
+  "ell_V    (55 V4-lines, generic pt)": 2
+ },
+ "terminal_states": 42
+}

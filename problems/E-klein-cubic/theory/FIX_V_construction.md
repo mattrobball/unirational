@@ -10,6 +10,17 @@ construction. Headline target (sealed reductions, P1): an explicit
 equivalently a nonzero landing covariant — equivalently a
 `K_proj`-point of `V(Φ)`.
 
+> **Correction banner (2026-08-10, per Correction H1-D; see the NOTEBOOK
+> correction-layers table and packet FIX_P2_GATEWAY_D36).** The window
+> arithmetic printed in §§1–2 below is superseded and retained only as the
+> historical record: the bound `d ≥ 7r − 6m` is WITHDRAWN in favour of
+> `d ≥ 3r − 2m`; the clause `n = d − r ≥ 6(r−m)` is WITHDRAWN (the corrected
+> requirements are `n ≥ 2e` with own-point `Λ`-vanishing only); the sealed
+> empirical cutoff is `d ≤ 30` and the first open window is `d = 34`
+> (profile `(1,6)`, `n = 28`). Under the corrected bound the `(1,7)` profile
+> is admissible from `d ≥ 19` (not 43) and `(3,6)` from `d ≥ 12` (not 24).
+> Flagged by the STAGE1_COMPLEX_MAPS audit, 2026-08-10.
+
 ## 1. The forced profile of ANY map (all sealed/proved)
 
 - multi-order `(r; m,m,m)` at the V4-lines, `m` odd, `r ≥ (3m+1)/2`;

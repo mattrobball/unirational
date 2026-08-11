@@ -1,0 +1,185 @@
+=== S3: the boundary-tracking multiset automaton ===
+state notation:  K|order:  (w) = free direction, [w] = boundary branch;
+w is the character written as its value vector on the sorted elements of K.
+
+seeds: 9 level-0 abelian strata of P(W) + 39 distinct abelian strata created inside the D12/D10/A4 exceptional divisors
+
+ROUNDS 1  C11pt    (60 C11-points)
+        start C11|11: (012345678910) (024681013579) (048159261037) (073106295184)   defect |D| = 11
+ROUNDS 1  C3line   (110 C3-eigenlines, generic pt)
+        start C3|3: (000) (012) (012) (021)   defect |D| = 3
+ROUNDS 1  C5pt(a)  (132 C5-points)
+        start C5|5: (01234) (02413) (03142) (04321)   defect |D| = 5
+ROUNDS 2  C6pt(a)  (110 C6-points off X, char 2)
+        start C6|6: (012345) (024024) (030303) (042042)   defect |D| = 6
+ROUNDS 2  C6pt(b)  (110 C6-points on X, char 1)
+        start C6|6: (012345) (024024) (030303) (054321)   defect |D| = 6
+ROUNDS 1  E_A4: C2 stratum of proj dim 1 in E, weights [(0,), (0,), (1,), (1,)], branches (0,)
+        start C2|2: (00) [00] (01) (01)   defect |D| = 2
+ROUNDS 0  E_A4: C2 stratum of proj dim 1 in E, weights [(0,), (1,), (1,), (1,)], branches (1,)
+        start C2|2: (00) (01) (01) [01]   defect |D| = 1
+ROUNDS 1  E_A4: C3 stratum of proj dim 0 in E, weights [(0,), (1,), (1,), (2,)], branches (0,)
+        start C3|3: [000] (012) (012) (021)   defect |D| = 3
+ROUNDS 1  E_A4: C3 stratum of proj dim 0 in E, weights [(0,), (1,), (2,), (2,)], branches (0,)
+        start C3|3: [000] (012) (012) (021)   defect |D| = 3
+ROUNDS 0  E_A4: C3 stratum of proj dim 0 in E, weights [(1,), (1,), (1,), (2,)], branches (1,)
+        start C3|3: (012) (012) [012] (021)   defect |D| = 1
+ROUNDS 0  E_A4: C3 stratum of proj dim 0 in E, weights [(1,), (2,), (2,), (2,)], branches (2,)
+        start C3|3: (012) (012) [012] (021)   defect |D| = 1
+ROUNDS 0  E_A4: C3 stratum of proj dim 1 in E, weights [(0,), (1,), (1,), (2,)], branches (1,)
+        start C3|3: (000) (012) [012] (021)   defect |D| = 1
+ROUNDS 0  E_A4: C3 stratum of proj dim 1 in E, weights [(0,), (1,), (2,), (2,)], branches (2,)
+        start C3|3: (000) (012) [012] (021)   defect |D| = 1
+ROUNDS 1  E_A4: V4 stratum of proj dim 0 in E, weights [(0, 1), (0, 1), (1, 0), (1, 1)], branches (0, 1)
+        start V4|4: (0011) [0011] (0101) (0110)   defect |D| = 2
+ROUNDS 1  E_A4: V4 stratum of proj dim 0 in E, weights [(0, 1), (1, 0), (1, 0), (1, 1)], branches (1, 0)
+        start V4|4: (0011) [0011] (0101) (0110)   defect |D| = 2
+ROUNDS 1  E_A4: V4 stratum of proj dim 0 in E, weights [(0, 1), (1, 0), (1, 1), (1, 1)], branches (1, 1)
+        start V4|4: (0011) [0011] (0101) (0110)   defect |D| = 2
+ROUNDS 0  E_A4r2: C2 stratum of proj dim 1 in E, weights [(0,), (0,), (1,), (1,)], branches (1,)+(0,)
+        start C2|2: (00) [00] (01) [01]   defect |D| = 1
+ROUNDS 0  E_A4r2: C3 stratum of proj dim 0 in E, weights [(0,), (1,), (1,), (2,)], branches (0,)+(1,)
+        start C3|3: [000] (012) [012] (021)   defect |D| = 1
+ROUNDS 0  E_A4r2: C3 stratum of proj dim 0 in E, weights [(0,), (1,), (2,), (2,)], branches (0,)+(2,)
+        start C3|3: [000] (012) [012] (021)   defect |D| = 1
+ROUNDS 0  E_A4r2: C3 stratum of proj dim 0 in E, weights [(1,), (1,), (1,), (2,)], branches (1,)+(1,)
+        start C3|3: (012) [012] [012] (021)   defect |D| = 1
+ROUNDS 0  E_A4r2: C3 stratum of proj dim 0 in E, weights [(1,), (1,), (2,), (2,)], branches (1,)+(2,)
+        start C3|3: (012) [012] (021) [021]   defect |D| = 1
+ROUNDS 0  E_A4r2: C3 stratum of proj dim 0 in E, weights [(1,), (1,), (2,), (2,)], branches (2,)+(1,)
+        start C3|3: (012) [012] (021) [021]   defect |D| = 1
+ROUNDS 0  E_A4r2: C3 stratum of proj dim 0 in E, weights [(1,), (2,), (2,), (2,)], branches (2,)+(2,)
+        start C3|3: (012) [012] [012] (021)   defect |D| = 1
+ROUNDS 1  E_A4r2: V4 stratum of proj dim 0 in E, weights [(0, 0), (0, 1), (1, 0), (1, 1)], branches (0, 1)+(0, 0)
+        start V4|4: [0000] (0011) (0101) [0110]   defect |D| = 2
+ROUNDS 1  E_A4r2: V4 stratum of proj dim 0 in E, weights [(0, 0), (0, 1), (1, 0), (1, 1)], branches (1, 0)+(0, 0)
+        start V4|4: [0000] (0011) (0101) [0110]   defect |D| = 2
+ROUNDS 1  E_A4r2: V4 stratum of proj dim 0 in E, weights [(0, 0), (0, 1), (1, 0), (1, 1)], branches (1, 1)+(0, 0)
+        start V4|4: [0000] (0011) (0101) [0110]   defect |D| = 2
+ROUNDS 1  E_D10: C2 stratum of proj dim 1 in E, weights [(0,), (0,), (1,), (1,)], branches (0,)
+        start C2|2: (00) [00] (01) (01)   defect |D| = 2
+ROUNDS 0  E_D10: C2 stratum of proj dim 1 in E, weights [(0,), (1,), (1,), (1,)], branches (1,)
+        start C2|2: (00) (01) (01) [01]   defect |D| = 1
+ROUNDS 0  E_D10: C5 stratum of proj dim 0 in E, weights [(1,), (1,), (2,), (3,)], branches (1,)
+        start C5|5: (01234) [01234] (02413) (03142)   defect |D| = 1
+ROUNDS 0  E_D10: C5 stratum of proj dim 0 in E, weights [(1,), (2,), (2,), (4,)], branches (2,)
+        start C5|5: (01234) [01234] (02413) (03142)   defect |D| = 1
+ROUNDS 0  E_D10: C5 stratum of proj dim 0 in E, weights [(1,), (3,), (3,), (4,)], branches (3,)
+        start C5|5: (01234) [01234] (02413) (03142)   defect |D| = 1
+ROUNDS 0  E_D10: C5 stratum of proj dim 0 in E, weights [(2,), (3,), (4,), (4,)], branches (4,)
+        start C5|5: (01234) [01234] (02413) (03142)   defect |D| = 1
+ROUNDS 1  E_D12: C2 stratum of proj dim 1 in E, weights [(0,), (0,), (1,), (1,)], branches (0,)
+        start C2|2: (00) [00] (01) (01)   defect |D| = 2
+ROUNDS 0  E_D12: C2 stratum of proj dim 1 in E, weights [(0,), (1,), (1,), (1,)], branches (1,)
+        start C2|2: (00) (01) (01) [01]   defect |D| = 1
+ROUNDS 0  E_D12: C3 stratum of proj dim 1 in E, weights [(0,), (1,), (1,), (1,)], branches (1,)
+        start C3|3: (000) (012) (012) [012]   defect |D| = 1
+ROUNDS 0  E_D12: C3 stratum of proj dim 1 in E, weights [(0,), (2,), (2,), (2,)], branches (2,)
+        start C3|3: (000) (012) (012) [012]   defect |D| = 1
+ROUNDS 0  E_D12: C6 stratum of proj dim 0 in E, weights [(1,), (1,), (3,), (4,)], branches (1,)
+        start C6|6: (012345) [012345] (030303) (042042)   defect |D| = 1
+ROUNDS 1  E_D12: C6 stratum of proj dim 0 in E, weights [(1,), (3,), (4,), (4,)], branches (4,)
+        start C6|6: (012345) (030303) (042042) [042042]   defect |D| = 2
+ROUNDS 1  E_D12: C6 stratum of proj dim 0 in E, weights [(2,), (2,), (3,), (5,)], branches (2,)
+        start C6|6: (012345) (030303) (042042) [042042]   defect |D| = 2
+ROUNDS 0  E_D12: C6 stratum of proj dim 0 in E, weights [(2,), (3,), (5,), (5,)], branches (5,)
+        start C6|6: (012345) [012345] (030303) (042042)   defect |D| = 1
+ROUNDS 2  E_D12: V4 stratum of proj dim 0 in E, weights [(0, 0), (0, 1), (1, 0), (1, 1)], branches (0, 0)
+        start V4|4: [0000] (0011) (0101) (0110)   defect |D| = 4
+ROUNDS 1  E_D12: V4 stratum of proj dim 0 in E, weights [(0, 1), (0, 1), (1, 0), (1, 1)], branches (0, 1)
+        start V4|4: (0011) [0011] (0101) (0110)   defect |D| = 2
+ROUNDS 1  E_D12: V4 stratum of proj dim 0 in E, weights [(0, 1), (1, 0), (1, 0), (1, 1)], branches (1, 0)
+        start V4|4: (0011) [0011] (0101) (0110)   defect |D| = 2
+ROUNDS 1  E_D12: V4 stratum of proj dim 0 in E, weights [(0, 1), (1, 0), (1, 1), (1, 1)], branches (1, 1)
+        start V4|4: (0011) [0011] (0101) (0110)   defect |D| = 2
+ROUNDS 1  L'_sigma (55 minus-lines, generic pt)
+        start C2|2: (00) (01) (01) (01)   defect |D| = 2
+ROUNDS 1  P_sigma  (55 plus-planes, generic pt)
+        start C2|2: (00) (00) (01) (01)   defect |D| = 2
+ROUNDS 2  V4-I     (165 type-I V4-points)
+        start V4|4: (0011) (0011) (0101) (0110)   defect |D| = 4
+ROUNDS 2  ell_V    (55 V4-lines, generic pt)
+        start V4|4: (0000) (0011) (0101) (0110)   defect |D| = 4
+
+CHECK every seed reaches a toroidal terminus under rule R: PASS
+CHECK max number of rounds over all classes = 2
+
+=== terminal (toroidal) states, grouped by stabilizer ===
+  stabilizer 1 (order 1): 2 distinct terminal local states
+      1|1: (0) (0) (0) [0]   dim Fix(K) = 4, #branches = 1
+      1|1: (0) (0) [0] [0]   dim Fix(K) = 4, #branches = 2
+      -> dim Fix(1) at terminal points: {4: 2}; #boundary branches: {1: 1, 2: 1}
+  stabilizer C2 (order 2): 7 distinct terminal local states
+      C2|2: (00) (00) (00) [01]   dim Fix(K) = 3, #branches = 1
+      C2|2: (00) (00) [00] [01]   dim Fix(K) = 3, #branches = 2
+      C2|2: (00) (00) (01) [01]   dim Fix(K) = 2, #branches = 1
+      C2|2: (00) [00] [00] [01]   dim Fix(K) = 3, #branches = 3
+      C2|2: (00) [00] (01) [01]   dim Fix(K) = 2, #branches = 2
+      C2|2: (00) (01) (01) [01]   dim Fix(K) = 1, #branches = 1
+      C2|2: (00) (01) [01] [01]   dim Fix(K) = 1, #branches = 2
+      -> dim Fix(C2) at terminal points: {1: 2, 2: 2, 3: 3}; #boundary branches: {1: 3, 2: 3, 3: 1}
+  stabilizer C3 (order 3): 9 distinct terminal local states
+      C3|3: (000) (000) (012) [012]   dim Fix(K) = 2, #branches = 1
+      C3|3: (000) [000] (012) [012]   dim Fix(K) = 2, #branches = 2
+      C3|3: (000) (012) (012) [012]   dim Fix(K) = 1, #branches = 1
+      C3|3: (000) (012) [012] (021)   dim Fix(K) = 1, #branches = 1
+      C3|3: [000] (012) (012) [012]   dim Fix(K) = 1, #branches = 2
+      C3|3: [000] (012) [012] (021)   dim Fix(K) = 1, #branches = 2
+      C3|3: (012) (012) [012] (021)   dim Fix(K) = 0, #branches = 1
+      C3|3: (012) [012] [012] (021)   dim Fix(K) = 0, #branches = 2
+      C3|3: (012) [012] (021) [021]   dim Fix(K) = 0, #branches = 2
+      -> dim Fix(C3) at terminal points: {0: 3, 1: 4, 2: 2}; #boundary branches: {1: 4, 2: 5}
+  stabilizer V4 (order 4): 3 distinct terminal local states
+      V4|4: (0000) (0011) [0011] [0101]   dim Fix(K) = 1, #branches = 2
+      V4|4: [0000] (0011) [0011] [0101]   dim Fix(K) = 1, #branches = 3
+      V4|4: (0011) (0011) [0011] [0101]   dim Fix(K) = 0, #branches = 2
+      -> dim Fix(V4) at terminal points: {0: 1, 1: 2}; #boundary branches: {2: 2, 3: 1}
+  stabilizer C5 (order 5): 1 distinct terminal local states
+      C5|5: (01234) [01234] (02413) (03142)   dim Fix(K) = 0, #branches = 1
+      -> dim Fix(C5) at terminal points: {0: 1}; #boundary branches: {1: 1}
+  stabilizer C6 (order 6): 16 distinct terminal local states
+      C6|6: (012345) [012345] (024024) (030303)   dim Fix(K) = 0, #branches = 1
+      C6|6: (012345) [012345] (024024) (042042)   dim Fix(K) = 0, #branches = 1
+      C6|6: (012345) [012345] (030303) [030303]   dim Fix(K) = 0, #branches = 2
+      C6|6: (012345) [012345] (030303) (042042)   dim Fix(K) = 0, #branches = 1
+      C6|6: (012345) [012345] [030303] (042042)   dim Fix(K) = 0, #branches = 2
+      C6|6: (012345) (030303) [030303] [042042]   dim Fix(K) = 0, #branches = 2
+      C6|6: (012345) [030303] (042042) [042042]   dim Fix(K) = 0, #branches = 2
+      C6|6: [012345] (024024) (024024) [024024]   dim Fix(K) = 0, #branches = 2
+      C6|6: [012345] (024024) [024024] (042042)   dim Fix(K) = 0, #branches = 2
+      C6|6: [012345] (024024) (030303) (042042)   dim Fix(K) = 0, #branches = 1
+      C6|6: [012345] (024024) (042042) [042042]   dim Fix(K) = 0, #branches = 2
+      C6|6: [012345] (030303) [030303] (042042)   dim Fix(K) = 0, #branches = 2
+      C6|6: [012345] (042042) (042042) [042042]   dim Fix(K) = 0, #branches = 2
+      C6|6: (024024) (024024) [024024] [030303]   dim Fix(K) = 0, #branches = 2
+      C6|6: (024024) [024024] (030303) [030303]   dim Fix(K) = 0, #branches = 2
+      C6|6: (024024) [024024] [030303] (042042)   dim Fix(K) = 0, #branches = 2
+      -> dim Fix(C6) at terminal points: {0: 16}; #boundary branches: {1: 4, 2: 12}
+  stabilizer C11 (order 11): 4 distinct terminal local states
+      C11|11: (012345678910) [012345678910] (036914710258) (061728394105)   dim Fix(K) = 0, #branches = 1
+      C11|11: (012345678910) [012345678910] (051049382716) (085210741963)   dim Fix(K) = 0, #branches = 1
+      C11|11: (012345678910) (024681013579) [051049382716] (097531108642)   dim Fix(K) = 0, #branches = 1
+      C11|11: (012345678910) (036914710258) [051049382716] (010987654321)   dim Fix(K) = 0, #branches = 1
+      -> dim Fix(C11) at terminal points: {0: 4}; #boundary branches: {1: 4}
+
+=== codimension-2 crossings with non-cyclic (hence FABULOUS) stabilizer ===
+terminal V4 states whose V4-fixed locus is a codim-2 crossing of two boundary branches with DISTINCT normal characters: 0
+(Proposition A of DUNCAN_CORNER_F2: fabulous <=> G_Dij non-cyclic, and the only non-cyclic abelian subgroups of PSL(2,11) are the 55 V4's.)
+
+=== exhaustive closure under ALL stabilizer-stratified centres ===
+CHECK the reachable state space is FINITE: 245 states (63 of them non-toroidal and expanded): PASS
+      by stabilizer type: {'1': 2, 'C11': 5, 'C2': 13, 'C3': 22, 'C5': 2, 'C6': 174, 'V4': 27}
+      toroidal states: 182; non-toroidal: 63
+CHECK for EVERY subgroup L of the stabilizer: whenever Fix(L) is locally a DIVISOR it is a boundary branch (so Z_nt subset D, and rule R always has codim >= 2): 0 violations: PASS
+CHECK at most 4 = dim Z boundary branches through any point (def:toroidal(a)): max = 3: PASS
+CHECK pointwise stabilizers of the BOUNDARY DIVISORS of the tower (rule-R terminus and every intermediate state of the tower): ['1', 'C2']
+      -> only 1 and C2 occur: no C3-, C5-, C6-, C11- or V4-stabilized boundary divisor is ever created by the tower: PASS
+NOTE  over the UNRESTRICTED closure (every stabilizer-stratified centre, not just the tower's) the divisor stabilizers that occur are ['1', 'C2', 'C3']: a C3-stabilized boundary divisor is POSSIBLE on some toroidal model (blow up a centre whose normal bundle is C3-isotypic of rank 2 -- available only after two boundary branches are present) but the tower never creates one.
+CHECK generic pointwise stabilizers of the CROSSINGS D_I at the terminus, by |I|: |I|=2 -> 1, |I|=2 -> C2, |I|=3 -> C2
+      -> non-cyclic (= FABULOUS, thm:pairs) crossings at the terminus: 0  []
+      -> the terminus of this tower has NO fabulous corner: CONFIRMED
+NOTE  over the unrestricted closure, crossings with non-cyclic stabilizer DO occur: [(2, 'V4'), (3, 'V4')] -- these are the 330 fabulous corners of DUNCAN_CORNER_F2, reached by ONE further legal blow-up (their T3).
+
+CHECK no non-toroidal state is a dead end (rule R applies at every one): PASS
+
+S3_AUTOMATON_OK
