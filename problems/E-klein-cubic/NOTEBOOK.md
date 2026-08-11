@@ -4718,6 +4718,62 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
 
 ---
 
+
+## 2026-08-11 Retract-rationality literature landscape: the Klein cubic
+provably escapes the July-2025 obstruction, and Problem E's delta=1 fork
+stays open
+
+Packet: `goal_runs_20260811/RETRACT_LANDSCAPE_NOTE/`. Entry [E51](#e51).
+Problem E remains **OPEN**.
+
+Engel-de Gaay Fortman-Schreieder (arXiv:2507.15704, Thm 1.3/Cor 1.4, July
+2025) prove very general cubic threefolds are neither stably nor retract
+rational -- the first-ever retract-irrationality result for cubic
+threefolds, endorsed in Schreieder's ICM survey (arXiv:2510.13679); an
+unrefereed independent duplicate is Banerjee arXiv:2509.06013.
+
+This packet assembles (not proves new) a four-step published-theorem chain
+showing the Klein cubic is the one cubic threefold that machinery provably
+does not reach: `J(Klein) ~= E^5` as abelian varieties (Roulleau
+arXiv:1001.4853 Thm 2 + intro remark, quoted from the PDF; also Adler 1981)
++ the integral Hodge conjecture for 1-cycles on any product of Jacobians is
+polarization-free (Beckmann-de Gaay Fortman arXiv:2202.05230 Thm 1.2) =>
+the minimal class is algebraic on `J(Klein)` despite the polarization not
+being the product one => the Klein cubic has universally trivial `CH0` and
+an integral decomposition of the diagonal (Voisin JEMS 2017 arXiv:1407.7261
+Thm 1.7/Cor 4.4). Every known bare-variety obstruction to retract
+rationality vanishes for the Klein cubic; it is maximally favorable among
+all cubic threefolds; retract rationality of the bare Klein cubic stays
+OPEN in both directions (decomposition of the diagonal is necessary, not
+sufficient -- Voisin's own caveat).
+
+Relevance to Problem E: the sealed self-map dichotomy's `delta = 1` case
+(an equivariant retraction of `P^4` onto `X`) would witness exactly this
+bare-variety retract rationality. The July-2025 machinery cannot decide it
+either way (it needs the minimal class to fail algebraicity, which it does
+not here); no bare-variety method can; killing `delta = 1` requires the
+group action. The repository's own degree bookkeeping excludes retractions
+through ambient coordinate degree `d <= 30`
+(`AMBIENT_REES_SELFMAP_CLASSIFICATION` + `FIX_P2_GATEWAY_D36` +
+`COMBINED_DEGREE_SIEVE`) without closing the fork; the `delta = 3` cell's
+realizability is still uncomputed (2026-08-10 Wave-33 routing note). The
+fork between a retraction and `delta >= 12` stays open.
+
+Keep `E` (CM, `J(Klein) ~= E^5`'s factor, `j = j((-1+sqrt(-11))/2)`) and
+`E_sigma` (non-CM, `j = 8192/11`, the involution-fixed curve, sealed
+`FIX-A0`) distinct -- both appear in this landscape and are easy to
+conflate.
+
+Exits: `RETRACT-LANDSCAPE-NOTE-ASSEMBLED` (primary),
+`RETRACT-LANDSCAPE-ROULLEAU-PDF-PRESENT`,
+`RETRACT-LANDSCAPE-ROULLEAU-QUOTE-FOUND`,
+`RETRACT-LANDSCAPE-8192-11-NON-CM-OK`.
+
+Not claimed: any rationality statement about the Klein cubic; any movement
+on the `delta = 1` fork; that the section-2 chain is a published theorem of
+any single cited paper (it is an assembly, flagged as such). Headline
+status unchanged: OPEN.
+
 ## External sessions
 
 **External documents.** `external_docs/duncan_higher_obstruction_20260805.tex`
