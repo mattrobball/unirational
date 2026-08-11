@@ -1,0 +1,255 @@
+# The foliation lane
+
+Exit: `FOLIATION-CLASSIFICATION-TARGET-REGISTERED`,
+`COVARIANT-AND-DIVERGENCE-FREE-DIMENSIONS-EXACT`,
+`LANDING-DEGREE-AT-LEAST-FOUR-PROVED`.
+
+This file states the classification target, records the exact dimension
+arithmetic that makes the first cases finite and small, scopes the first
+computations, and connects to the algebraic-foliation literature without
+borrowing anything from it.
+
+**The lane is not new; the theorem is.** The repository already registered this
+lane on the same day, from a *different* external source:
+`theory/CONSTRAINT_ADDITIONS_20260811.md` item **C5, "Jacobian rank and the
+kernel foliation — NEW-LANE"**, which states that dominance forces
+`rank d[T] = 3` generically, that "the kernel of `d[T]` is a rank-one algebraic
+foliation whose leaves are the fibers; it must be `G`-invariant, integrable,
+singular along a `G`-stable determinantal scheme", and calls it "the biggest
+genuinely new lane". What that entry does not have — and what
+`THEOREM_FORCED_FOLIATION.md` supplies — is the **explicit generator** of that
+kernel: a polynomial covariant `P_T` of pinned degree `2d-4`, obtained from the
+adjugate by an exact division that needs primitivity, automatically
+divergence-free, together with the exact dimensions of the space it lives in.
+C5's own caution about the *saturated* line bundle is confirmed and sharpened
+here (section (F4)): the saturation is genuinely lossy. Item **C4** of the same
+ledger is the first line of the chain, `grad F(T) · J_T = 0`, our (5).
+
+**This lane is not a proof strategy with a known ending.** It is a second
+description of the same open problem. Its only advantage over the first
+description is that its objects live in explicitly computable finite
+dimensional `G`-modules whose smallest cases are one-dimensional.
+
+---
+
+## 1. The target
+
+> **Classification target (FOL).** Determine the set of
+>
+> ```
+> P in (Sym^{k} W^v (x) W)^G,   k = 2d-4,   P != 0,
+> ```
+>
+> for which there exists a primitive `T in (Sym^d W^v ⊗ W)^G` with `F(T) = 0`
+> and
+>
+> ```
+> adj(J_T) = P grad F(T)^t,   J_T P = 0,   div P = 0.
+> ```
+>
+> Equivalently: classify the `G`-invariant rank-one algebraically integrable
+> foliations on `P^4` whose field of rational first integrals contains a copy of
+> the function field of the Klein cubic, pulled back along a `G`-equivariant
+> dominant map. Show the set is empty, or produce a member.
+
+The three displayed conditions are necessary (Theorem 2.4 of
+`THEOREM_FORCED_FOLIATION.md`); `div P = 0` and `J_T P = 0` are consequences of
+the first, so the honest linear shadow of (FOL) — the part that can be searched
+by linear algebra without knowing `T` — is
+
+```
+FOL_lin(k) := { P in (Sym^k W^v (x) W)^G : div P = 0 }.
+```
+
+Every landing tuple of degree `d` puts a nonzero element into `FOL_lin(2d-4)`.
+So a proof that `FOL_lin(2d-4)` contains no admissible member for every `d`
+proves the headline. Conversely `FOL_lin` being nonempty proves nothing.
+
+**Why the reformulation is not free.** Recovering `T` from `P` is not addressed
+anywhere, so (FOL) is not obviously easier than the original problem. What it
+buys is that the ambient space is finite dimensional and computable in each
+degree, and — see section 3 — very small at the bottom.
+
+## 2. The exact dimension arithmetic
+
+Let `I(k) = dim (Sym^k W^v)^G` (the invariant ring's Hilbert function) and
+`C(k) = dim (Sym^k W^v ⊗ W)^G` (covariant five-tuples of degree `k`).
+
+> **Lemma 2.1.** `div : (Sym^k W^v ⊗ W)^G -> (Sym^{k-1} W^v)^G` is a surjective
+> `G`-map for every `k >= 1`, so
+>
+> ```
+> dim FOL_lin(k) = C(k) - I(k-1).
+> ```
+
+*Proof.* `div` is the composite of `d` and the canonical contraction
+`W^v ⊗ W -> C`, both `G`-maps, hence a `G`-map. For surjectivity let `f` be an
+invariant of degree `k-1` and let `E = x` be the tautological covariant (the
+Euler field, `C(1) = 1`). Then `f·E in (Sym^k W^v ⊗ W)^G` and
+
+```
+div(f x) = sum_j d/dx_j (f x_j) = (k-1) f + 5 f = (k+4) f,
+```
+
+nonzero in characteristic zero. ∎
+
+`verify_covariant_dimensions.py` computes `I(k)` and `C(k)` exactly by
+character theory over `Q(zeta_330)`, from the eigenvalue data of the eight
+conjugacy classes of `PSL(2,11)` on `W` (`1A: (1^5)`, `2A: (1^3,(-1)^2)`,
+`3A: (1, w_3^2, w_3^{2·2})`, `5A/5B:` all fifth roots once, `6A:` the sixth
+roots other than `-1`... derived in the script by discrete Fourier from the
+power-map character values, `11A: z^{QR}`, `11B: z^{NQR}`). It prints
+`RESULT: PASS`, with an mpmath cross-check to 25 digits. The table has been
+reproduced by a **second, independent implementation** written for this packet.
+
+| k | I(k) | C(k) | dim FOL_lin(k) |
+|---|---|---|---|
+| 0 | 1 | 0 | 0 |
+| 1 | 0 | 1 | 0 |
+| 2 | 0 | 0 | 0 |
+| 3 | 1 | 0 | 0 |
+| **4** | 0 | **2** | **1** |
+| 5 | 1 | 1 | 1 |
+| **6** | 2 | **2** | **1** |
+| 7 | 1 | 4 | 2 |
+| **8** | 2 | **5** | **4** |
+| 9 | 3 | 6 | 4 |
+| **10** | 3 | **10** | **7** |
+| 11 | 4 | 12 | 9 |
+| **12** | 6 | **16** | **12** |
+| 13 | 5 | 21 | 15 |
+| **14** | 8 | **26** | **21** |
+| 15 | 10 | 32 | 24 |
+| **16** | 10 | **41** | **31** |
+| 17 | 13 | 49 | 39 |
+| 18 | 17 | 59 | 46 |
+| 19 | 17 | 73 | 56 |
+| 20 | 22 | 86 | 69 |
+| 21 | 26 | 100 | 78 |
+| 22 | 28 | 121 | 95 |
+| 23 | 33 | 140 | 112 |
+| 24 | 40 | 161 | 128 |
+
+Bold rows are the even degrees `k = 2d-4`, the only ones a forced foliation can
+occupy: `2d-4` is always even, so **the forced foliation always has even
+degree**, and half the table is inaccessible to it.
+
+*Convention is not load-bearing.* `W` and `W^v` are the two distinct
+five-dimensional irreducibles of `PSL(2,11)` and are complex conjugates, so it
+is worth saying explicitly that the table does not depend on which is called
+which: swapping them replaces every entry by its complex conjugate, and the
+entries are integers. Concretely, the model has `tau : x_i |-> z^{(-2)^i} x_i`
+acting on the *coordinates*, so the coordinate span carries the quadratic-residue
+exponents; the computation uses that assignment, and the transposed one gives
+the same table.
+
+Consistency notes. `I(3) = 1` is the Klein cubic. `C(1) = 1` is the tautological
+covariant `x`. `I(5) = 1`, `I(6) = 2`, `I(7) = 1` are consistent with the frame
+`(x, C, D, E, K_7)` named in the sealed all-degree packet
+(`goal_runs_after_35fa/G_UNIVERSAL/ALL_DEGREE_THEOREM.md`), which carries a
+degree-seven invariant `K_7`; no identification is claimed here.
+
+> **Corollary 2.2 (`LANDING-DEGREE-AT-LEAST-FOUR-PROVED`).** `C(2) = C(3) = 0`,
+> so there is no `G`-covariant five-tuple at all in degrees 2 and 3, and
+> `C(1) = 1` is spanned by `x`, for which `F(x) = F != 0`. Hence every landing
+> tuple has `d >= 4`, and every forced foliation has `k = 2d-4 >= 4`.
+
+This is weaker than the sealed branch-specific floors (`d >= 6` and `d >= 24`
+in the retraction branch,
+`RETRACTION_DEGREE_BOUND.md`/`DELTA1-RETRACTION-COORDINATE-DEGREE-AT-LEAST-24`),
+which govern where they apply; Corollary 2.2 is the floor that holds for **all**
+landing tuples with no branch hypothesis, and it comes from nothing but the
+character table.
+
+## 3. The first computations, scoped
+
+The reason to open this lane at all is the left-hand end of the table.
+
+**(F1) `d = 4`: `dim FOL_lin(4) = 1`.** If a landing tuple of degree `4` exists,
+its forced foliation is, up to scalar, the **unique** divergence-free covariant
+of degree four — call it `D_4`. That object can be written down explicitly and
+interrogated directly: does the rank-one foliation it defines have a
+`G`-equivariant dominant first-integral map to `X`? This is a finite, small
+question about one named vector field, not a search.
+
+Writing `D_4` down requires explicit exact generators of the five-dimensional
+representation. The repository has them
+(`goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/exact_schur_frame/exact_representation_core.py`
+and its neighbours, over `Q(zeta_11)`); with those, `Cov_4` is the joint kernel
+of `rho_4(g) - Id` over a generating set — a two-dimensional exact linear-algebra
+problem — and `D_4` is its intersection with `ker(div)`, one further linear
+condition. `F·x` is the other basis vector, with `div(F x) = 8F != 0`, so the
+splitting is clean. **Not done in this packet**; scoped here so the next run
+starts from the right two-dimensional problem rather than from the character
+table.
+
+**(F2) `d = 5`: `dim FOL_lin(6) = 1`.** Same, one degree up.
+
+**(F3) `d = 6, 7`: `dim FOL_lin(8) = 4`, `dim FOL_lin(10) = 7`.** Still small
+enough for an exhaustive treatment of the linear shadow.
+
+**(F4) The saturation caveat.** By `THEOREM_FORCED_FOLIATION.md` §3, `P_T` need
+not be primitive: in the packet's exact witness `deg P_T = 10` while the
+saturated foliation has degree `2`. So (F1)–(F3) must interrogate the covariant
+`P`, not the saturated foliation, and a search that normalizes to primitive
+fields will miss members.
+
+**(F5) The condition that is not linear.** `FOL_lin` ignores `adj(J_T) = P Q^t`.
+Membership of `FOL_lin` is necessary and very far from sufficient — the same
+gap as everywhere else in this problem. A negative answer at (F1) would exclude
+`d = 4` only; it would not touch any other degree.
+
+## 4. Sources note — the algebraic-foliation literature
+
+Recorded as orientation. **Nothing below is used in any proof in this packet,
+and no claim is made that any of it applies to (FOL).** The connections are
+stated as questions, not as inputs. See `SOURCES.md` section E for the full
+citations.
+
+* **Darboux and Jouanolou.** The classical theory of algebraic first integrals
+  of polynomial vector fields; Jouanolou's theorem that a generic foliation of
+  degree `>= 2` on `P^2` has no algebraic invariant curve. Relevance: our
+  foliations are the extreme opposite — they are *algebraically integrable*,
+  with a four-dimensional worth of first integrals. Whether the equivariant
+  constraint is compatible with full integrability is not addressed by that
+  literature.
+* **The Poincaré problem** (Poincaré 1891): bound the degree of an invariant
+  algebraic curve, or of an algebraic first integral, in terms of the degree of
+  the foliation. Carnicer settled the non-dicritical case on `P^2`; Cerveau–Lins
+  Neto gave bounds under hypotheses on the singularities. Relevance: (FOL) has
+  the shape of a Poincaré problem run **backwards** — the first integrals are
+  prescribed (a cubic threefold's function field) and the foliation degree is
+  what is constrained (`2d-4`). We are not aware of a Poincaré-type bound in
+  `P^4` in a form that applies, and we assert none.
+* **Cerveau–Lins Neto's classification of degree-two foliations on `P^n`,
+  `n >= 3`** (irreducible components of the space of codimension-one
+  foliations). Relevance: only by analogy — ours are **rank one**, not
+  codimension one, and rank-one foliations on `P^4` are codimension three.
+  The analogy should not be pushed.
+* **Foliations with algebraic first integrals / trivial canonical class**
+  (Loray–Pereira–Touzet and successors). Relevance: a possible source of
+  structure theory for the *saturated* foliation of section (F4), whose degree
+  is unknown.
+* **Jacobian derivations** (Nowicki and the polynomial-derivation literature).
+  Relevance: direct. `P_T` is a Jacobian derivation divided by `Q_{T,j}`, and
+  the divergence-freeness is Piola's identity, both classical. The equivariance
+  and the degree drop are what is not classical.
+
+The honest summary of the literature position: the constructed object is a
+natural one and there is a developed theory of such objects, but no theorem is
+known to us that takes a `G`-invariant divergence-free rank-one foliation on
+`P^4` and decides whether its first-integral field can be that of a Klein
+cubic. This lane is open work, not a citation away from closing.
+
+## 5. Non-claims
+
+* No member of (FOL) is exhibited, and none is excluded.
+* `dim FOL_lin(k) = C(k) - I(k-1)` is exact and proved; it is a dimension count
+  of a **necessary** linear condition and bounds nothing about landing tuples
+  by itself.
+* Corollary 2.2 (`d >= 4`) is the only new constraint on landing degrees in
+  this file, and it is weaker than the branch-specific sealed floors wherever
+  those apply.
+* The literature pointers in section 4 are orientation only.
+
+**Problem E headline: OPEN.**

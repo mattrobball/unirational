@@ -64,6 +64,39 @@ Added for round 3:
 | Klein cubic has no Eckardt points (exact M2) | this packet, `eckardt_klein.m2`; `THEOREM_LEAKAGE_CLASSIFICATION.md` section 4.5 | `KLEIN-CUBIC-NO-ECKARDT-POINTS` |
 | `T_D = ±2n·id` for `[D] = r·eta + n·pi^*C` — ported, not replayed | this packet, `COUNTERMODEL_CONIC_SLICE.md` section 5 | `LINE-INCIDENCE-FACTOR-TWO-CONDITIONAL` (`r`-cancellation half now proved) |
 
+Added for round 4:
+
+| what | where | exit / label |
+|---|---|---|
+| the all-degree theorem: five canonically equivalent sets, including landing covariants in arbitrary degree and `X_T(K_proj)` | `goal_runs_after_35fa/G_UNIVERSAL/ALL_DEGREE_THEOREM.md`; `SEAL.json` (`G2_UNIVERSAL_SEAL_V2`) | `G2-FINITE-GENERATION-PASS` |
+| dominance is automatic; no separate Jacobian-rank-four gate. **Step 6 of its ledger is `ACCEPTED_INPUT` (`ed_C(G) >= 3`, Beauville), not a repo proof** | `goal_runs_after_0aecc89/G3A_EXACT_ARITHMETIC_DOMINANCE/DOMINANCE_BRIDGE.md`, `SEAL.json` | `G3A-ARITHMETIC-DOMINANCE-PASS`, `G3-DOMINANCE-AUTOMATIC` |
+| `G_UNIVERSAL/DECISION.md` states the opposite about dominance and is **superseded** by `G3A` | `NOTEBOOK.md` §17 | — |
+| `C` is `G`-unirational `<=> ed_C(G)=3`; `3 <= ed_C(G) <= 4`; so not `G`-unirational `<=> ed_C(G)=4` | `RESOLUTION.md`, "Exact reduction to essential dimension"; `SPEC.md` essential-dimension audit | — |
+| the direct-arithmetic package on `V(Phi)`: no `K_proj`-point produced; Clifford/spinor and 27-line gates `*-PARTIAL` | `goal_runs_after_ff69434/G3D_DIRECT_ARITHMETIC/STATUS.md`, `SEAL.json` (**governs** over the file's internal phase ledger, `NOTEBOOK.md` debt item 17) | `G3D-UNDECIDED` |
+| the sealed retraction identity `H + 3Phi(x,x,Q) = FR`, `F(Q)=HS`, `HR+3Phi(x,Q,Q)+FS=0`; `deg H = d-1`, `deg Q = d-3`; the residual `Delta = R^2+4S` and "no invariant-degree reason for `Delta` to be a square" | `goal_runs_20260808/DELTA1_RETRACTION_POLAR_IDENTITY/THEOREM.md` §§1,3,7 | `DELTA1-KLEIN-RETRACTION-BRANCH-OPEN`, `DELTA1-PRIMITIVE-IRREDUCIBLE-NONSQUARE-COUNTERMODEL-EXACT` |
+| the binding retraction degree floor `d >= 24` | `goal_runs_20260809/AMBIENT_REES_SELFMAP_CLASSIFICATION/RETRACTION_DEGREE_BOUND.md` | `DELTA1-RETRACTION-COORDINATE-DEGREE-AT-LEAST-24` |
+| F55 coefficient circuits bottom out at the headline: "the global statement of Coverage C is equivalent to the original F55 pointlessness problem" | `F55_COVERAGE_C_ADJUDICATION_20260808.md`; `goal_runs_20260810/F55_LADDER_COMPLETION/STATUS.md` §4 | `F55-PC-COVERAGE-C-EQUIVALENT-TO-HEADLINE` |
+| the CLEAN sieve bottoms out: "Closing CLEAN needs a geometric exclusion of small `delta`, not more congruences" | `goal_runs_20260810/COMBINED_DEGREE_SIEVE/STATUS.md`, `CONSTRAINT_LEDGER.md` | `COMBINED-SIEVE-NO-PERIODIC-CLOSURE-PROVED` |
+| the KLS conductor/minimality program admits no finite reduction | `goal_runs_after_35fa/KLS_MINIMALITY/STATUS.md` | `KLS2-NO-FINITE-REDUCTION` |
+| Griffiths-residue Jacobian ring of the Klein cubic: `dim R_d = 1,5,10,10,5,1,0` — same Hilbert function this packet recomputes | `certificates/hodge_centers/HODGE_CENTER_NECESSITY.md` §3 | — |
+| the repo already considered, and set aside, plain vector fields tangent to the cubic cone as insufficient to linearize the landing equation | `goal_runs_20260809/AMBIENT_REES_SELFMAP_CLASSIFICATION/LANDING_SYZYGY_MODULE.md` §3 | — |
+| `adj(Hess F)·grad F = ½ H x` — the same adjugate vocabulary applied to the Hessian, a **different** object from `adj(J_T)`, and recorded there as not new | `goal_runs_after_ad6746b/FIX_VII_XRING/REPORT.md` | — |
+
+| the kernel foliation registered as a lane (**C5**, "the biggest genuinely new lane"), and `grad F(T)·J_T = 0` as **C4** — from a *different* external audit, the same day | `theory/CONSTRAINT_ADDITIONS_20260811.md` §§C4, C5 | — |
+
+*Novelty check for round 4, stated carefully.* The **lane** is not new: item C5
+of the constraint ledger, folded in on the same day from a different external
+source, already says the kernel of `d[T]` is a `G`-invariant integrable rank-one
+foliation and calls it the biggest new lane. What round 4 adds is the
+**theorem**: an explicit polynomial generator `P_T` of that kernel, of pinned
+degree `2d-4`, obtained by an exact division that consumes primitivity;
+its divergence-freeness; the exact dimensions of the ambient covariant modules;
+and an exact witness. "Piola", "first integral" in this sense, and "socle" do
+not occur elsewhere in `problems/E-klein-cubic/` prose. The two nearby but
+distinct items are `adj(Hess F)·grad F` (a different adjugate, of the Hessian,
+recorded there as not new) and the rejected plain-tangent-vector-field
+linearization of `LANDING_SYZYGY_MODULE.md` §3.
+
 ## C. Literature — verified
 
 Each entry was checked against a primary source (arXiv/journal text) unless
@@ -186,6 +219,72 @@ Added for round 3:
     torsion-free for a smooth cubic threefold; `Pic X = Z·H` (Lefschetz), hence
     every surface in `X` has degree divisible by 3; six lines through a general
     point of a cubic threefold.
+
+## E. Literature for the foliation lane — orientation only
+
+**Nothing in this section is used as an input to any proof in this packet, and
+no claim is made that any of it applies to the classification target (FOL) of
+`FOLIATION_REFORMULATION.md`.** These are standard references, given so that a
+later run does not rediscover the subject from scratch. They are cited from
+memory of the standard literature and have **not** been re-checked against
+primary sources in this run; that is flagged deliberately, because unlike
+section C they carry no weight.
+
+**E1. Used, and standard.**
+
+* *Piola's identity* — the rows of the cofactor matrix of any `C^2` map are
+  divergence-free, `sum_j d_j cof(J)_{ij} = 0`. Classical; appears in continuum
+  mechanics as the Piola identity and in algebra as the divergence-freeness of
+  Jacobian derivations. **Not taken on trust**: verified symbolically here for
+  generic polynomial maps in `n = 3, 4` (`verify_forced_foliation.py` B3) and
+  for the degree-7 witness in `n = 5` (`forced_foliation_witness.m2`).
+* *Jacobian derivations and rings of constants* — A. Nowicki, *Polynomial
+  derivations and their rings of constants*, Toruń 1994, and the surrounding
+  literature. `P_T` is a Jacobian derivation divided by one entry of the
+  pulled-back gradient. The classical part of `THEOREM_FORCED_FOLIATION.md` is
+  exactly this; the equivariance and the degree drop are not.
+* *Socle of a graded Artinian complete intersection* — for forms of degrees
+  `d_1..d_n` in `n` variables the socle degree is `sum (d_i - 1)`; here
+  `5·(2-1) = 5`. Standard (Eisenbud, *Commutative Algebra*, ch. 21). **Not
+  taken on trust**: recomputed for the Klein cubic in two independent ways.
+* *Serre vanishing* — `H^1(P^n, I_Z(d)) = 0` for `d >> 0`, Hartshorne,
+  *Algebraic Geometry*, III.5.2. This is the **only** citation the interpolation
+  theorem consumes, and it is not re-proved.
+* *Unirationality of a cubic hypersurface containing a line* (the Segre
+  construction), used to build the witness tuple. Kollár–Smith–Corti,
+  *Rational and Nearly Rational Varieties*, CUP 2004, §5.3. **Not taken on
+  trust**: the resulting tuple satisfies `F(T) = 0` symbolically in the
+  verifier, so the construction is self-certifying here.
+
+**E2. Orientation, not used.**
+
+* G. Darboux (1878), on algebraic first integrals of polynomial vector fields;
+  and J.-P. Jouanolou, *Équations de Pfaff algébriques*, Springer LNM 708
+  (1979), for the generic non-existence of algebraic invariant hypersurfaces.
+  Our foliations are the extreme opposite: algebraically integrable, with a
+  three-dimensional worth of independent first integrals.
+* H. Poincaré (1891), *Sur l'intégration algébrique des équations
+  différentielles du premier ordre et du premier degré* — the **Poincaré
+  problem**: bound the degree of an invariant algebraic curve, or of an
+  algebraic first integral, by the degree of the foliation. M. Carnicer, *The
+  Poincaré problem in the nondicritical case*, Ann. of Math. 140 (1994), and
+  D. Cerveau, A. Lins Neto, Ann. Inst. Fourier 41 (1991), give bounds on `P^2`
+  under hypotheses. (FOL) has the shape of a Poincaré problem run backwards —
+  the first integrals are prescribed and the foliation degree `2d-4` is what is
+  constrained. We know of no bound in `P^4` in a form that applies and assert
+  none.
+* D. Cerveau, A. Lins Neto, *Irreducible components of the space of holomorphic
+  foliations of degree two in CP(n), n >= 3*, Ann. of Math. 143 (1996). By
+  analogy only: those are **codimension-one** foliations, ours are **rank one**,
+  hence codimension three in `P^4`. The analogy should not be pushed.
+* F. Loray, J. V. Pereira, F. Touzet, *Singular foliations with trivial
+  canonical class*, Invent. Math. 213 (2018), and the surrounding structure
+  theory. A possible source of leverage on the **saturated** foliation, whose
+  degree is not pinned by the theorem (see `THEOREM_FORCED_FOLIATION.md` §3).
+* A. Beauville, *On finite simple groups of essential dimension 3*,
+  arXiv:1101.1372 — already in `SPEC.md`'s reference list; recorded here because
+  the `ed_C(G) >= 3` lower bound is the single accepted external input inside
+  the `G3-DOMINANCE-AUTOMATIC` bridge on which "dominance is automatic" rests.
 
 ## D. Machine tools
 
