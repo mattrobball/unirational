@@ -1,7 +1,6 @@
 ## 2026-08-11 Retract-rationality literature landscape: the Klein cubic provably escapes the July-2025 obstruction, and Problem E's delta=1 fork stays open
 
-Packet: `goal_runs_20260811/RETRACT_LANDSCAPE_NOTE/`. Entry [E51](#e51).
-Problem E remains **OPEN**. Adjudicated 2026-08-11 (`ADJUDICATION_PR38.md`):
+Packet: `goal_runs_20260811/RETRACT_LANDSCAPE_NOTE/`. Problem E remains **OPEN**. Adjudicated 2026-08-11 (`ADJUDICATION_PR38.md`):
 all nine citations re-checked against the actual paper text; three
 corrections and one refutation applied in place; verifier 7/7.
 
