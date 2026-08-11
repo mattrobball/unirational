@@ -17,7 +17,6 @@ file NAME is authoritative.
 from __future__ import annotations
 
 import argparse
-import datetime
 import subprocess
 import sys
 from pathlib import Path

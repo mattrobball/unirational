@@ -38,6 +38,18 @@ make_clone() {  # $1 = name
   # the same world they see in a normal clone
   [ -n "$origin_url" ] && git -C "$target" remote set-url origin "$origin_url"
   git -C "$target" fetch -q --prune origin 2>/dev/null
+  # Other sessions push branches while these tests run, and an unregistered
+  # live branch fails the parity checker for reasons unrelated to the protocol.
+  # Register whatever is missing inside the scratch clone first -- which is
+  # also a live exercise of the registration tool.
+  tb="$target/problems/E-klein-cubic/notebook_build"
+  missing=$(python3 "$tb/register_branch.py" --missing 2>/dev/null || true)
+  if [ -n "$missing" ]; then
+    # shellcheck disable=SC2086
+    python3 "$tb/register_branch.py" $missing > /dev/null
+    git -C "$target" add -A -- problems/E-klein-cubic/notebook_build/branches
+    git -C "$target" commit -q -m "tests: register live branches in the scratch clone"
+  fi
   echo "$target"
 }
 
