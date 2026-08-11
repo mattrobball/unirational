@@ -41,6 +41,7 @@ JACOBIAN-SOCLE-DEGREE-FIVE-EXACT
 FIRST-ORDER-TANGENT-EXTENSION-GATE-VACUOUS-ABOVE-DEGREE-FIVE-PROVED
 COVARIANT-AND-DIVERGENCE-FREE-DIMENSIONS-EXACT
 LANDING-DEGREE-AT-LEAST-FOUR-PROVED
+DEGREE-FOUR-DIVERGENCE-FREE-COVARIANT-EXPLICIT
 BOXED-OBJECT-IS-THE-HEADLINE-OBJECT
 RT-OBSTRUCTION-LADDER-CLOSED
 FOLIATION-CLASSIFICATION-TARGET-REGISTERED
@@ -56,7 +57,8 @@ PROBLEM-E-HEADLINE-OPEN
 Terminal verifier markers: `verify_conic_slice.py`,
 `verify_landing_identity.py`, `verify_normal_surface_countermodel.py`,
 `verify_slice_universality.py`, `verify_forced_foliation.py`,
-`verify_interpolation_scope.py`, `verify_covariant_dimensions.py` and
+`verify_interpolation_scope.py`, `verify_covariant_dimensions.py`,
+`verify_low_degree_covariants.py`, `verify_d4_covariant.py` and
 `forced_foliation_witness.m2` each print `RESULT: PASS`; `eckardt_klein.m2`
 prints `ideal 1`.
 
@@ -250,7 +252,12 @@ divergence-free dimensions. Two consequences: every landing tuple has `d >= 4`
 (from `C(2) = C(3) = 0`, with no branch hypothesis), and the divergence-free
 space is **one-dimensional** for `d = 4` and for `d = 5`, then `4` and `7`. So
 the bottom of the foliation lane is a finite question about one named vector
-field. (`FOLIATION_REFORMULATION.md`.)
+field — and that field is now written down: `D_4`, primitive, **over `Q`**,
+seven terms per component, reproduced by explicit representation theory over
+`Q(zeta_11)` (which independently confirms the whole dimension table for
+`k <= 8`) and audited on a separate arithmetic path. Whether the foliation `D_4`
+defines is realised by a landing tuple is open and untouched.
+(`FOLIATION_REFORMULATION.md` §3.)
 
 ## What remains
 

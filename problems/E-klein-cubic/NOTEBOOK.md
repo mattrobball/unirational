@@ -8779,6 +8779,22 @@ divergence-free space is **one-dimensional** for `d = 4` and `d = 5`, then `4`
 and `7`. The bottom of the foliation lane is a finite question about one named
 vector field.
 
+**And the vector field is now written down.** A third computation, by explicit
+representation theory rather than characters, rebuilds the 5-dimensional rep
+from `sigma`, `tau` and the involution `iota` reused from the repository's own
+`exact_schur_frame/exact_representation_core.py`, enumerates the group to
+`660`, and reproduces the whole table for `k <= 8` by joint kernels over
+`Q(zeta_11)`. It returns `D_4`, the unique degree-four divergence-free
+`G`-covariant: primitive, **defined over `Q`**, seven terms per component, its
+components the cyclic shifts of the first, not a multiple of the Euler field
+(the other basis vector of `Cov_4` is `F·x`, with `div(F x) = 8F`). Audited on a
+fourth arithmetic path (`verify_d4_covariant.py`), including covariance under
+`iota` — the generator that cuts `Cov_4` from `7` to `2` — with `iota` rebuilt
+from the repo formula and `Q(zeta_11)` implemented as `Q[z]/(z^11-1)`. Exit
+`DEGREE-FOUR-DIVERGENCE-FREE-COVARIANT-EXPLICIT`. Non-claim kept explicit:
+`D_4` is the unique candidate the linear shadow permits at `d = 4`, **not** a
+landing foliation; whether it is realised is open and untouched.
+
 Exits added: `FINITE-EQUIVARIANT-JET-DATA-ASYMPTOTICALLY-INTERPOLABLE-PROVED`,
 `FIXED-FINITE-LOCAL-DATA-NOT-AN-ALL-DEGREE-OBSTRUCTION-PROVED`,
 `DECORATED-CLUSTER-OBSTRUCTION-PROGRAM-BOTTOMED-OUT`,
@@ -8792,7 +8808,9 @@ Exits added: `FINITE-EQUIVARIANT-JET-DATA-ASYMPTOTICALLY-INTERPOLABLE-PROVED`,
 `JACOBIAN-SOCLE-DEGREE-FIVE-EXACT`,
 `FIRST-ORDER-TANGENT-EXTENSION-GATE-VACUOUS-ABOVE-DEGREE-FIVE-PROVED`,
 `COVARIANT-AND-DIVERGENCE-FREE-DIMENSIONS-EXACT`,
-`LANDING-DEGREE-AT-LEAST-FOUR-PROVED`, `BOXED-OBJECT-IS-THE-HEADLINE-OBJECT`,
+`LANDING-DEGREE-AT-LEAST-FOUR-PROVED`,
+`DEGREE-FOUR-DIVERGENCE-FREE-COVARIANT-EXPLICIT`,
+`BOXED-OBJECT-IS-THE-HEADLINE-OBJECT`,
 `RT-OBSTRUCTION-LADDER-CLOSED`, `FOLIATION-CLASSIFICATION-TARGET-REGISTERED`.
 Unchanged: `GLOBAL-COVARIANT-POINTED-RATIONAL-CURVE-EXCLUSION-UNDECIDED`,
 `G3D-UNDECIDED`, `DELTA1-KLEIN-RETRACTION-BRANCH-OPEN`,
