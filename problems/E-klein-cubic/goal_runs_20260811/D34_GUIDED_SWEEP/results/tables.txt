@@ -1,0 +1,54 @@
+D34_GUIDED_SWEEP -- dimension ledger and cascade, d = 34, (m,r) = (1,6), n = 28
+==============================================================================
+
+1. EXACT DIMENSIONS  (two independent code paths, exact in F_P, P = 400291)
+   dim M_34 = (Sym^34 W* (x) W)^G                      =  576
+   N_plane  55 plus-planes,  ord >= 1   [D12-target]      =  324
+   N_minus  55 minus-lines,  ord >= 1   [D12-target]      =   18
+   N_line   55 V4-lines,     ord >= 6   [A4-target]       =  732
+   N_c3     110 C3-eigenlines, contraction [C6-target]    =   18
+   N_D10    66 D10-points                 [D10-target]    =    1
+   N_C6pt   110 X^{C6} points             [C6-target]     =    1
+   N_D12pt  55 D12-points                [D12-target]     =    1
+   TOTAL equivariant condition budget                  = 1095
+
+2. THE CASCADE AT d = 34  (dims; identical at p = 67, 199, 331, 661)
+   profile-first (FIX-P2 route, then the STAGE2 rows):
+     0: dim M_34                                     576
+     1: + (P)  ord_{P_sigma} >= 1                    316
+     2: + (P+) ord_{P_sigma}(T^+) >= 2               316
+     3: + (L)  ord_{ell_V} >= 6      <-- FIX-P2 stopped here   16
+     4: + (M)  55 minus-lines in Bs(T)          [NEW]    2
+     5: + (E)  110 C3-eigenlines contract       [NEW]    0
+     6: + (D10)/(D12)/(X^{C6}) base points      [implied]    0
+   structure-first (no profile assumed):
+     0: dim M_34                                     576
+     1: + (P)                                        316
+     2: + (P+)                                       316
+     3: + (M)                                        302
+     4: + (E)                                        290
+     5: + base points                                290
+     6: + (L) ord_{ell_V} >= 6                         0
+   individual strengths (rank of each block on all of M_34):
+     X: (E) alone                                   rank   18  dim  558
+     X: (L) alone                                   rank  490  dim   86
+     X: (M) alone                                   rank   16  dim  560
+     X: (P)+(P+)+(M)                                rank  274  dim  302
+
+3. LADDER SWEEP  (p = 331; r0 = min r over the admissible profiles;
+   monotonicity: every profile has m >= 1, r >= r0, so the (1,r0) slice contains all)
+    d  dim M_d  #prof  r0   profile-only   structure-only   BOTH   verdict
+   31     410     24    6           0            187          0   EMPTY
+   32     459     26    6           0            208          0   EMPTY
+   33     511     28    6           0            257          0   EMPTY
+   34     576     30    6          16            290          0   EMPTY
+   35     637     32    6          46            346         39   ALIVE:39
+   36     706     34    6          83            385         63   ALIVE:63
+   37     786     37    6         127            466        121   ALIVE:121
+   38     865     39    6         173            527        151   ALIVE:151
+   39     950     41    6         225            631        218   ALIVE:218
+   40    1050     44    6         287            707        261   ALIVE:261
+   41    1148     46    6         351            825        343   ALIVE:343
+   42    1255     49    6         423            917        397   ALIVE:397
+
+VERDICT: d = 34 EMPTY (all 30 profiles).  First open window moves to d = 35.

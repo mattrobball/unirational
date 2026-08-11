@@ -1,0 +1,168 @@
+{
+ "adapted_self_tests": {
+  "D12 has an element of order 3": true,
+  "V4 commutes": true,
+  "adapted basis invertible": true,
+  "c_sigma lies on ell_V": true,
+  "dim (ell_V cap std) = 1": true,
+  "dim E1 = dim E2 = dim E3 = 1": true,
+  "dim W^K = 2": true,
+  "dim W^{D12} = 1": true,
+  "dim std = 2": true,
+  "rho|W^-  order 3": true,
+  "rho|W^- off-diagonal nonzero": true,
+  "tau|W^- = diag(1,-1)": true,
+  "tr rho|W^- = -1": true,
+  "v0 in std": true,
+  "|C_G(sigma)| = 12": true
+ },
+ "cascade": {
+  "A1: + (P)  ord_{P_sigma} >= 1   [55 plus-planes]": {
+   "dim": 316,
+   "n_functionals": 600,
+   "rank": 260
+  },
+  "A2: + (P+) ord_{P_sigma}(T^+) >= 2": {
+   "dim": 316,
+   "n_functionals": 960,
+   "rank": 260
+  },
+  "A3: + (M)  T|_{L_sigma} = 0 [55 minus-lines]": {
+   "dim": 302,
+   "n_functionals": 1410,
+   "rank": 274
+  },
+  "A4: + (E)  C3-eigenline contraction [110 lines]": {
+   "dim": 290,
+   "n_functionals": 2130,
+   "rank": 286
+  },
+  "A5: + (D10)+(C6pt)+(D12pt) base points": {
+   "dim": 290,
+   "n_functionals": 2150,
+   "rank": 286
+  },
+  "A6: + (L)  ord_{ell_V} >= 6  [profile (1,6)]": {
+   "dim": 0,
+   "n_functionals": 5750,
+   "rank": 576
+  },
+  "B1: + (P)  ord_{P_sigma} >= 1": {
+   "dim": 316,
+   "n_functionals": 600,
+   "rank": 260
+  },
+  "B2: + (P+) ord_{P_sigma}(T^+) >= 2": {
+   "dim": 316,
+   "n_functionals": 960,
+   "rank": 260
+  },
+  "B3: + (L)  ord_{ell_V} >= 6   [FIX-P2 = 16]": {
+   "dim": 16,
+   "n_functionals": 4560,
+   "rank": 560
+  },
+  "B4: + (M)  minus-lines": {
+   "dim": 2,
+   "n_functionals": 5010,
+   "rank": 574
+  },
+  "B5: + (E)  C3-eigenlines": {
+   "dim": 0,
+   "n_functionals": 5730,
+   "rank": 576
+  },
+  "B6: + base points": {
+   "dim": 0,
+   "n_functionals": 5750,
+   "rank": 576
+  },
+  "SATURATION control (2x sampled functionals)": {
+   "dim": 0,
+   "n_functionals": 11120,
+   "rank": 576
+  },
+  "X: (E) alone": {
+   "dim": 558,
+   "n_functionals": 720,
+   "rank": 18
+  },
+  "X: (L) alone": {
+   "dim": 86,
+   "n_functionals": 3600,
+   "rank": 490
+  },
+  "X: (M) alone": {
+   "dim": 560,
+   "n_functionals": 450,
+   "rank": 16
+  },
+  "X: (P)+(P+)+(M)": {
+   "dim": 302,
+   "n_functionals": 1410,
+   "rank": 274
+  }
+ },
+ "cascade_A_structure_first": [
+  576,
+  316,
+  316,
+  302,
+  290,
+  290,
+  0
+ ],
+ "cascade_B_profile_first": [
+  576,
+  316,
+  316,
+  16,
+  2,
+  0,
+  0
+ ],
+ "deg": 34,
+ "dim_M_34": 576,
+ "elapsed_s": 64.4,
+ "fixp2_baseline_reproduced": true,
+ "frame_self_tests": [
+  "g^2=-11",
+  "S^2=1",
+  "T^11=1",
+  "(ST)^3=1",
+  "|G|=660",
+  "F invariant",
+  "55 involutions",
+  "chi(2A)=1",
+  "dim W+=3, dim W-=2",
+  "V4 fixed space is a line (dim 2)"
+ ],
+ "lemma11_control_rank_zero": true,
+ "n_seeds": 576,
+ "npair_plane_line": 120,
+ "npt_stage2": 90,
+ "prime": 331,
+ "profile": {
+  "e": 5,
+  "m": 1,
+  "n": 28,
+  "r": 6
+ },
+ "saturation_dim": 0,
+ "saturation_stable": true,
+ "semantics": "dimension 0 is a characteristic-zero emptiness verdict (rank mod p <= rank over Q, and sampling a subset of functionals only enlarges the kernel); a nonzero dimension is an upper bound on the char-0 dimension.",
+ "stage2_self_tests": {
+  "C6 weight spaces are lines": true,
+  "C6 weights on W are {0,1,2,4,5}": true,
+  "D10-point is off X": true,
+  "ELL1 is a rho-eigenline": true,
+  "X^{C6} = weights {1,5}": true,
+  "dim W^{C5} = 1": true,
+  "dim ann(W_w) = 3": true,
+  "dim ann(p_w) = 4": true,
+  "p_w1 lies on ELL1": true,
+  "|Stab_G(D10-point)| = 10": true,
+  "|Stab_G(ell_w)| = 6": true
+ },
+ "verdict": "D34-ONESIX-WINDOW-EMPTY"
+}
