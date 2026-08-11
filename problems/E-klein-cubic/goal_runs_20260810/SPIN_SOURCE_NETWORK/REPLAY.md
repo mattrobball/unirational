@@ -370,3 +370,133 @@ plus `spin_network_lib` from this directory.
 
 A failing assertion is printed with its name and the script exits `1` with
 `V14_BETTI_FAILED` / `O4_CENSUS_FAILED` instead of the marker.
+
+---
+
+# Replay — total degeneration, the `(O3)` odd-order cell, and the minimal
+live coordinate degree (added 2026-08-11)
+
+From this directory:
+
+```text
+python3 verify_total_degeneration.py
+python3 verify_o3_odd_order.py
+python3 verify_min_degree.py
+```
+
+Final markers:
+
+```text
+TOTAL_DEGENERATION_OK
+O3_ODD_ORDER_OK
+MIN_DEGREE_OK
+```
+
+`verify_total_degeneration.py`: 87 assertions, about 1.7 s, Python 3 standard
+library only, self-contained (builds `PSL(2,F_11)` from scratch, as
+`verify_spin_hodge_census.py` does).  No Macaulay2, no msolve, no network, no
+data files.
+
+* Section A builds `Sigma_spin` (the nine subgroups that can support a spin
+  block) and the nine point cells `P0`-`P8`: their orbit sizes `660/|H|`, the
+  Cor S4 multiplicity floor `k(H)`, and the regression that orbit sizes `11`,
+  `55`, `1` never occur at a point (Cor C3).
+* Section B is Theorem W1, the total-degeneration witness
+  `(Y_x, q|_{Y_x}, W_x) = (V14, id, H^3(V14,Q))`, checked against all eight
+  package constraints C1-C8 in every one of the nine cells: the stalk-degree
+  window forcing `dim Y_x in {2,3}`, the Hom-dimension table
+  `dim End_H(Res_H T) = (100,52,36,20,20,20,12,10,2)`, the abelian factor
+  `A_x = J(V14) ~ E_{-11}^5` meeting the Cor S4 floor in every cell and
+  exactly at `C_11`/`F_55`, and the full kill audit: all twelve cross-cutting
+  kills `K-a`...`K-l` of `SUPPORT_CENSUS.md` §5.3 checked and none touches the
+  witness.
+* Section C is Theorem W3, the pointwise-kernel selection rule: the dead
+  channels at each `H_0 in Sigma_spin`, reproducing kill `K-d` at
+  `C_6`/`S_3`/`D_10` and adding two new kills — the constant channel dies at
+  every `C_11`-stratum, all five linear channels die at every `F_55`-stratum.
+* Section D applies W3 to the positive-dimensional cells `S0`-`S8`: they are
+  finite (hence not positive-dimensional) for `V = U` at `H_0 = C_6, C_11,
+  S_3, D_10, F_55`, and revive as `P^{m-1}`-bundles for `V = U^{(+)m}`,
+  `m >= 2`; the two new kills apply to the revived `S5`, `S8` strata but do
+  not close them, because their point layer (`P4`, `P5`, `P6`, `P7`, `P8`) is
+  witnessed by W1.
+* Section E is `(O1)`, free supports: no character obstruction at all
+  (`Res_1 T = 10.triv`), the capacity table across codimension and across
+  spin-source dimension `n = 6..12`, and the verdict that capacity is a
+  low-degree screen only, never an all-degree kill.
+* Section F is `(O2)`, the 352 mandatory incidence points: `Res_{S_3}T` and
+  `Res_{D_10}T` both sign-free (kill `K-d`), the sealed Betti numbers
+  `b(V14) = (1,0,1,10,1,0,1)`, `rho(V14) = b_2(V14) = 1`, and the
+  ample-divisor narrowing — a smooth ample divisor of `V14` has irregularity
+  0 by Lefschetz, so the required `E_{-11}` can only be created by branching
+  or by singularities of the image surface, not by the surface itself.
+* Section G is the census tally — 18 primary cells, 5 dead for `V = U`
+  (`S4`-`S8`), 0 dead for all spin sources and all degrees — and the
+  campaign exit.
+* Section H is the mandatory `D_12` test: the two new kills live at strata
+  whose pointwise kernel has order divisible by 11, `11` does not divide
+  `|D_12| = 12`, so neither kill is visible to the realised dominant
+  `D_12`-equivariant spin map of Cor IX.6, and `dim T^{D_12} = 2 > 0` is left
+  open by every verdict here. PASS.
+
+`verify_o3_odd_order.py`: 86 assertions, about 0.2 s, Python 3 standard
+library only, self-contained.  No Macaulay2, no msolve, no network, no data
+files.
+
+* Section A is the group layer: `|SL(2,F_11)| = 1320`, `|PSL(2,F_11)| = 660`,
+  its order profile, `N_G(C_11) = F_55` of order 55, the 12 Sylow
+  11-subgroups, and the quadratic residues mod 11, `{1,3,4,5,9}`.
+* Section B is the spin source: `U|_{C_11} = triv (+)` five nontrivial
+  characters, so `P(U)^{C_11}` is 6 isolated points, with the
+  trivial-character eigenline fixed by `C_5` and the other five permuted
+  cyclically and freely; the resulting `12 + 60` tally (12 points with
+  `Stab = F_55`, 60 with `Stab = C_11`); and the tangent representation at an
+  `F_55`-point, `T_x = theta_1`.
+* Section C is `Res_{C_11}T` and `Res_{F_55}T`: both `Q`-irreducible of
+  dimension 10 with no invariants, so the Cor S4 floor is `k = 5` at both.
+* Section D is the minimal faithful degree: `mu(F_55) = mu(G) = 5 > 3`, so by
+  Theorem O3-2 (Cartan linearisation) `V14^{F_55} = V14^G = empty`
+  unconditionally, replacing the worker-grade mod-397 input of
+  `theory/FIX_IX_v14.md` §8; and the regression that no measured
+  **non**empty fixed locus has `mu(H) > 3`.
+* Section E is the new mandatory base locus: the 12 `F_55`-points join the
+  352 incidence points of Theorem K4 for 364 mandatory points total,
+  pairwise disjoint by stabiliser, with the `d = 2` capacity count showing
+  they cannot all be isolated base components at that degree.
+* Section F is the CM-type computation: `Q(sqrt(-11))` is the quadratic
+  subfield of `Q(zeta_11)` of index 5, the forced CM type is the
+  quadratic-residue coset, and it is a union of cosets of
+  `Gal(Q(zeta_11)/Q(sqrt(-11)))`, i.e. induced, so the Shimura-Taniyama
+  splitting gives `A ~ E_{-11}^5` — the same conclusion Theorem S0 reaches
+  independently — and there is no field-mismatch kill.
+* Section G is the witness at a `C_11`/`F_55` point (Theorem W1
+  instantiated), the twelve-kill audit, the verdict OPEN-WITH-WITNESS for
+  cells `P7`/`P8`, and the mandatory `D_12` test: `gcd(55,12) = 1` and `D_12`
+  has no element of order 11, so cells `P7`/`P8` are invisible at `D_12`
+  level and this file claims zero kills. PASS.
+
+`verify_min_degree.py`: 114 assertions, about 2 s, Python 3 standard library
+only, self-contained.
+
+* Section A builds `Gtilde = SL(2,F_11)` (15 classes) and the integral
+  monomial model `W = Ind_B(Legendre)`.
+* Section B computes `chi_U` exactly in `K = Q(sqrt(-11))` by the central
+  class-sum projector.
+* Section C identifies `Lambda^2 U = 5 (+) 10'` and `M = 10'`, the
+  10-dimensional coordinate module of the sealed `V14 = Gr(2,U) cap P(M)`.
+* Section D computes `chi_{S^d U}` by two independent routes — Newton's
+  identities and the Molien series — agreeing on all 1320 elements up to
+  degree 16.
+* Section E tabulates `dim Hom_{Gtilde}(M^*, S^d U^*)` for `d = 1..12`:
+  `0, 0, 0, 3, 0, 6, 0, 22, 0, 42, 0, 99` — so the minimal live coordinate
+  degree for `V = U` is `d = 4`; odd `d` vanish identically, reproducing
+  Theorem C6 independently and termwise.
+* Section F checks convention independence: `U` vs `U'`, `S^d U` vs its
+  dual, `M` vs `M^*` all agree.
+* Section G shows the multiplicity source `U^{(+)m}` revives `d = 2` at
+  `m >= 2`, with multiplicity `C(m,2)` by the Cauchy formula for
+  `S^2(U (x) C^m)`.
+
+A failing assertion is printed with its name and the script exits `1` with
+`TOTAL_DEGENERATION_FAILED` / `O3_ODD_ORDER_FAILED` / `MIN_DEGREE_FAILED`
+instead of the marker.

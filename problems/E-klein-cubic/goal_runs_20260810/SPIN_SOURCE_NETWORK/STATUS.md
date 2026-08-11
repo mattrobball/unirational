@@ -30,6 +30,26 @@ D10-FIXED-POINT-ROUTE-DEAD      (2026-08-10)
 SPIN-HODGE-SUPPORT-PROVED           (2026-08-10)
 SPIN-SUPPORT-CENSUS-TABLED          (2026-08-10)
 SPIN-HODGE-SUPPORT-ESCAPE-UNDECIDED (2026-08-10)
+
+SPIN-ROUTE-CLOSED-METHOD-INSUFFICIENT (2026-08-11)
+
+SPIN-HODGE-SUPPORT-METHOD-INSUFFICIENT (2026-08-11)
+TOTAL-DEGENERATION-WITNESS-PROVED      (2026-08-11)
+POINT-CELLS-UNCLOSABLE                 (2026-08-11)
+POINTWISE-KERNEL-SELECTION-RULE-PROVED (2026-08-11)
+BASE-LOCUS-DIMENSION-BOUND             (2026-08-11)
+
+O3-OPEN-WITH-WITNESS        (2026-08-11)
+V14-F55-EMPTY-UNCONDITIONAL (2026-08-11)
+F55-STRATUM-MANDATORY       (2026-08-11)
+O3-CM-TYPE-INDUCED          (2026-08-11)
+
+O2-OPEN-WITH-WITNESS     (2026-08-11)
+O2-IMAGE-SURFACE-REGULAR (2026-08-11)
+
+O1-OPEN-WITH-WITNESS     (2026-08-11)
+O5-OPEN-WITH-WITNESS     (2026-08-11)
+MIN-LIVE-DEGREE-COMPUTED (2026-08-11)
 ```
 
 `SPIN-CHAIN-OBSTRUCTION-PROVED` is **NOT** claimed. The chain system does not
@@ -67,6 +87,47 @@ its naive form is FALSE at first order.
    complete Problem F over all projectively-linear sources but yields **no**
    new essential-dimension statement, since `ed_C(PSL(2,7)) = 2` is known
    (Duncan) and `P(spin)` is not weakly versal (Duncan-Reichstein Prop 9.1).
+4. **Total degeneration, all nine point cells** (`TOTAL_DEGENERATION.md`) —
+   a single witness `(Y_x, q|_{Y_x}, W_x) = (V14, id, H^3(V14,Q))` (Thm W1)
+   satisfies every necessary condition the Hodge-support package imposes at
+   a point support, in all nine cells `P0`-`P8`, evading all twelve
+   cross-cutting kills; the pointwise-kernel selection rule (Thm W3) adds
+   two new unconditional kills (`K-m`: constant channel dead on every
+   `C_11`-stratum; `K-n`: every rank-one channel dead on every
+   `F_55`-stratum), which narrow but do not empty the revived strata `S5`,
+   `S8`, since their point layer is witnessed. Verdict: the Hodge-support
+   method, ported or not, cannot decide the spin flank. Campaign exit
+   `SPIN-ROUTE-CLOSED-METHOD-INSUFFICIENT`. Exits also
+   `SPIN-HODGE-SUPPORT-METHOD-INSUFFICIENT`,
+   `TOTAL-DEGENERATION-WITNESS-PROVED`, `POINT-CELLS-UNCLOSABLE`,
+   `POINTWISE-KERNEL-SELECTION-RULE-PROVED`, `BASE-LOCUS-DIMENSION-BOUND`.
+5. **Cell `(O3)`, the odd-order points** (`O3_ODD_ORDER_POINTS.md`) — an
+   unconditional proof that `V14^{F_55} = V14^G = empty` (minimal faithful
+   degree of `F_55` is `5 > 3`), giving 12 new mandatory `F_55` base points
+   on `P(U)` (364 mandatory points total); the forced CM type at a
+   `C_11`/`F_55` point is the quadratic-residue type of `Q(zeta_11)`, shown
+   to be induced from `Q(sqrt(-11))`, so `Q(zeta_11)`-multiplication and
+   `A ~ E_{-11}^5` are the same demand, realised canonically by `J(V14)` —
+   no field-mismatch kill. Verdict: OPEN, with a witness. Exits
+   `O3-OPEN-WITH-WITNESS`, `V14-F55-EMPTY-UNCONDITIONAL`,
+   `F55-STRATUM-MANDATORY`, `O3-CM-TYPE-INDUCED`.
+6. **Cell `(O2)`, the 352 mandatory incidence points**
+   (`O2_MANDATORY_POINTS.md`) — the `dim Y_x = 2` branch is narrowed (Prop
+   O2-3: `rho(V14) = 1` and `b_1(V14) = 0` force a smooth ample divisor of
+   `V14` to have irregularity 0, so the required `E_{-11}` can only come
+   from branching or singularities of the image surface, not the surface
+   itself), and the `dim Y_x = 3` branch carries the Thm W1 witness.
+   Verdict: OPEN, with a witness. Exits `O2-OPEN-WITH-WITNESS`,
+   `O2-IMAGE-SURFACE-REGULAR`.
+7. **Cells `(O1)` and `(O5)`, free supports and the multiplicity strata**
+   (`O1_O5_FREE_AND_MULTIPLICITY.md`) — no character obstruction on a free
+   support at any degree; the minimal live coordinate degree is computed
+   exactly, closing the named task of `SUPPORT_CENSUS.md` §7.4 (`d = 4` for
+   `V = U`, `d = 2` for `V = U^{(+)m}`, `m >= 2`, by the Cauchy
+   multiplicity `C(m,2)`); capacity is shown to be a low-degree screen
+   only, never an all-degree kill. Verdict: both OPEN, with a witness.
+   Exits `O1-OPEN-WITH-WITNESS`, `O5-OPEN-WITH-WITNESS`,
+   `MIN-LIVE-DEGREE-COMPUTED`.
 
 ## Load-bearing citations, not recomputed
 
@@ -76,7 +137,8 @@ its naive form is FALSE at first order.
 * `S^{C_2}` = genus-1 curve + 2 points —
   `problems/F-dp2-psl27/certificates/wp1_fixed_loci.py` / `WP1_FIXED_LOCI.md`.
 
-## Named next tasks — BOTH NOW DONE, BOTH NEGATIVE (2026-08-10)
+## Named next tasks — BOTH NOW DONE, BOTH NEGATIVE (2026-08-10); a third named
+task closed 2026-08-11
 
 1. ~~**`V14^{S_3}` and `V14^{D_10}`**~~ — measured
    (`V14_S3_D10_MEASUREMENT.md`, exits `V14-S3-NONEMPTY`, `V14-D10-EMPTY`,
@@ -94,6 +156,15 @@ its naive form is FALSE at first order.
    connected components of the involution-fixed locus. Separately, the
    resolution-free form of the `V14^{D_10} = empty` datum is also refuted: an
    explicit `G`-invariant centre makes the `D_10`-fixed locus empty.
+3. ~~**minimal live coordinate degree**~~ (`SUPPORT_CENSUS.md` §7.4: "the
+   smallest even `d` with `<S^d U^*, 10'> != 0`") — CLOSED
+   (`O1_O5_FREE_AND_MULTIPLICITY.md`, `verify_min_degree.py` →
+   `MIN_DEGREE_OK`, exit `MIN-LIVE-DEGREE-COMPUTED`). The answer is
+   `d = 4` for `V = U` (`dim Hom(M^*, S^4 U^*) = 3`, all smaller even and
+   all odd degrees vanish); for the multiplicity source `V = U^{(+)m}`,
+   `m >= 2`, it drops to `d = 2` (multiplicity `C(m,2)` by Cauchy). Kill
+   `K-g` (at `d = 2` the free component orbit dies) is therefore **vacuous**
+   on the minimal source `U` and only in force from `m = 2` on.
 
 **Net state of the box.** The SPIN-LINKING LEMMA is FALSE as boxed, both named
 routes are closed, and the fixed-point flank is exhausted (Cor C of
