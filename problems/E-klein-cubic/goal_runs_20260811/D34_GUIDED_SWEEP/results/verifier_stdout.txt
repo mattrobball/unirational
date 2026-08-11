@@ -1,0 +1,80 @@
+CHECK [OK ] A1 verification prime P = 1 (mod 330)                            P=400291
+CHECK [OK ] A2 P exceeds 5*C(38,4) = 369075 (dimensions read off uniquely)   P=400291
+CHECK [OK ] A3 <chi_W,chi_W> = 1  (W irreducible)                            
+CHECK [OK ] A4 <chi_W,1> = 0                                                 
+CHECK [OK ] A5 sealed Molien row dim M_d = 1,0,0,2,1,2,4 for d=1..7          [1, 0, 0, 2, 1, 2, 4]
+CHECK [OK ] A6 dim M_25 = 189 (FIX-P1)                                       
+CHECK [OK ] A7 dim M_34 = 576                                                
+CHECK [OK ] A8 dim M_36 = 706 (FIX-P2)                                       
+CHECK [OK ] A9 ledger PATH A = PATH B on dim M_d, all d <= 40                
+CHECK [OK ] A10 ledger PATH A = PATH B on N_plane                            = 324
+CHECK [OK ] A10 ledger PATH A = PATH B on N_minus                            = 18
+CHECK [OK ] A10 ledger PATH A = PATH B on N_line                             = 732
+CHECK [OK ] A10 ledger PATH A = PATH B on N_c3                               = 18
+CHECK [OK ] A10 ledger PATH A = PATH B on N_D10                              = 1
+CHECK [OK ] A10 ledger PATH A = PATH B on N_C6pt                             = 1
+CHECK [OK ] A10 ledger PATH A = PATH B on N_D12pt                            = 1
+CHECK [OK ] A11 N_plane  = dim (Sym^34 (W^+)* ox W)^{D12} = 324              
+CHECK [OK ] A12 N_minus  = dim (Sym^34 (W^-)* ox W)^{D12} = 18               
+CHECK [OK ] A13 N_line(6)= dim (+)_{k<6} (Sym^k Q* ox Sym^{34-k} U* ox W)^{A4} = 732 
+CHECK [OK ] A14 N_c3     = dim (Sym^34 (W_w)* ox W/<p_w>)^{C6} = 18          
+CHECK [OK ] A15 N_D10 = N_C6pt = N_D12pt = 1                                 
+CHECK [OK ] A16 C6 weights on X are {1,5}                                    
+CHECK [OK ] A17 the D10-point is off X                                       
+CHECK [OK ] A18 STAGE1's leading-datum count N(34,1) = 397 reproduced        N(34,1) = 397
+CHECK [OK ] A19 STAGE1 sample row N(1,1)=1, N(3,1)=4, N(3,3)=1, N(5,1)=10, N(7,1)=19, N(34,3)=704 [1, 4, 1, 10, 19, 704]
+CHECK [OK ] B1 d=34 has 30 admissible profiles (FIX-P2 corrected bound)      n=30
+CHECK [OK ] B2 every admissible profile at d=34 has m >= 1                   
+CHECK [OK ] B3 every admissible profile at d=34 has r >= 6                   min r = 6
+CHECK [OK ] B4 (m,r)=(1,6) is admissible with n = d-r = 28                   
+CHECK [OK ] C1 p=67 frame/adapted/stage2 self-tests all pass                 
+CHECK [OK ] C2 p=67 Lemma 1.1 control: ann(W_w).T|_{ell_w} has rank 0 on all of M_34 
+CHECK [OK ] C3 p=67 FIX-P2 baseline reproduced: (P)+(P+)+(L) leaves dim 16   B3 = 16
+CHECK [OK ] C4 p=67 + (M) minus-lines: 16 -> 2                               B4 = 2
+CHECK [OK ] C5 p=67 + (E) C3-eigenlines: 2 -> 0                              B5 = 0
+CHECK [OK ] C6 p=67 structure-first cascade ends at 0 as well                
+CHECK [OK ] C7 p=67 base-point block (D10,D12,X^{C6}) adds nothing (implied) 
+CHECK [OK ] C8 p=67 saturation control stable at 0                           
+CHECK [OK ] C9 p=67 verdict D34-ONESIX-WINDOW-EMPTY                          D34-ONESIX-WINDOW-EMPTY
+CHECK [OK ] C1 p=199 frame/adapted/stage2 self-tests all pass                
+CHECK [OK ] C2 p=199 Lemma 1.1 control: ann(W_w).T|_{ell_w} has rank 0 on all of M_34 
+CHECK [OK ] C3 p=199 FIX-P2 baseline reproduced: (P)+(P+)+(L) leaves dim 16  B3 = 16
+CHECK [OK ] C4 p=199 + (M) minus-lines: 16 -> 2                              B4 = 2
+CHECK [OK ] C5 p=199 + (E) C3-eigenlines: 2 -> 0                             B5 = 0
+CHECK [OK ] C6 p=199 structure-first cascade ends at 0 as well               
+CHECK [OK ] C7 p=199 base-point block (D10,D12,X^{C6}) adds nothing (implied) 
+CHECK [OK ] C8 p=199 saturation control stable at 0                          
+CHECK [OK ] C9 p=199 verdict D34-ONESIX-WINDOW-EMPTY                         D34-ONESIX-WINDOW-EMPTY
+CHECK [OK ] C1 p=331 frame/adapted/stage2 self-tests all pass                
+CHECK [OK ] C2 p=331 Lemma 1.1 control: ann(W_w).T|_{ell_w} has rank 0 on all of M_34 
+CHECK [OK ] C3 p=331 FIX-P2 baseline reproduced: (P)+(P+)+(L) leaves dim 16  B3 = 16
+CHECK [OK ] C4 p=331 + (M) minus-lines: 16 -> 2                              B4 = 2
+CHECK [OK ] C5 p=331 + (E) C3-eigenlines: 2 -> 0                             B5 = 0
+CHECK [OK ] C6 p=331 structure-first cascade ends at 0 as well               
+CHECK [OK ] C7 p=331 base-point block (D10,D12,X^{C6}) adds nothing (implied) 
+CHECK [OK ] C8 p=331 saturation control stable at 0                          
+CHECK [OK ] C9 p=331 verdict D34-ONESIX-WINDOW-EMPTY                         D34-ONESIX-WINDOW-EMPTY
+CHECK [OK ] C10 all three primes agree on the whole cascade B row            [(576, 316, 316, 16, 2, 0, 0)]
+CHECK [OK ] D1 ladder d=34 EMPTY                                             
+CHECK [OK ] D2 ladder d=34 reproduces FIX-P2 profile-only dim 16             
+CHECK [OK ] D3 ladder d=35 survives (first open window moves to 35)          ALIVE:39
+CHECK [OK ] D4 every degree 34..42 has r0 = 6 (monotonicity applies)         
+[adapted] p=661  |C_G(sigma)|=12  self-tests ALL OK
+    [seeds] tried 2500, independent 247 / 576  [3 s]
+    [seeds] tried 5000, independent 479 / 576  [7 s]
+    [seeds] tried 7500, independent 576 / 576  [11 s]
+CHECK [OK ] E1 p=661 seeds span M_34 (dim 576)                               got 576
+CHECK [OK ] E2 p=661 Lemma 1.1 control rank 0                                
+CHECK [OK ] E3 p=661 (P) alone leaves 316                                    = 316
+CHECK [OK ] E4 p=661 (P+) is vacuous (parity identity)                       316 -> 316
+CHECK [OK ] E5 p=661 + (L) r=6 leaves 16 (FIX-P2 baseline)                   = 16
+CHECK [OK ] E6 p=661 + (M) leaves 2                                          = 2
+CHECK [OK ] E7 p=661 + (E) leaves 0  -- WINDOW EMPTY                         = 0
+CHECK [OK ] E8 p=661 (M) alone has rank <= N_minus = 18                      rank = 16
+CHECK [OK ] E9 p=661 (E) alone has rank <= N_c3 = 18                         
+CHECK [OK ] E10 UNIT control: (M) alone leaves a positive-dimensional space  = 560
+CHECK [OK ] E11 UNIT control: ord_{ell_V} >= 14 kills M_34                   = 0
+
+72 checks, 0 failures   [97.0 s]
+D34_GUIDED_SWEEP_VERIFY_OK
+ALLGREEN

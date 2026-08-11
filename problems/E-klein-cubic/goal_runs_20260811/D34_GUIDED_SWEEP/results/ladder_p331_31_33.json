@@ -1,0 +1,65 @@
+{
+ "monotonicity": "every admissible profile at d has m >= 1 and r >= r0, so its slice is contained in the (1,r0) slice",
+ "prime": 331,
+ "range": [
+  31,
+  33
+ ],
+ "rows": [
+  {
+   "d": 31,
+   "dim_M": 410,
+   "dim_profile_only_(1,r0)": 0,
+   "dim_structure_only": 187,
+   "dim_structure_plus_(1,r0)": 0,
+   "m0": 1,
+   "n_profiles": 24,
+   "r0": 6,
+   "rules_fired": {
+    "C11_points": false,
+    "C5_points": false,
+    "C6_points": false,
+    "E_eigenlines": "contract to ell_{1 w}",
+    "M_minus_lines": false
+   },
+   "verdict": "EMPTY"
+  },
+  {
+   "d": 32,
+   "dim_M": 459,
+   "dim_profile_only_(1,r0)": 0,
+   "dim_structure_only": 208,
+   "dim_structure_plus_(1,r0)": 0,
+   "m0": 1,
+   "n_profiles": 26,
+   "r0": 6,
+   "rules_fired": {
+    "C11_points": true,
+    "C5_points": false,
+    "C6_points": true,
+    "E_eigenlines": "contract to ell_{2 w}",
+    "M_minus_lines": true
+   },
+   "verdict": "EMPTY"
+  },
+  {
+   "d": 33,
+   "dim_M": 511,
+   "dim_profile_only_(1,r0)": 0,
+   "dim_structure_only": 257,
+   "dim_structure_plus_(1,r0)": 0,
+   "m0": 1,
+   "n_profiles": 28,
+   "r0": 6,
+   "rules_fired": {
+    "C11_points": true,
+    "C5_points": false,
+    "C6_points": true,
+    "E_eigenlines": "vanish (3|d)",
+    "M_minus_lines": false
+   },
+   "verdict": "EMPTY"
+  }
+ ],
+ "semantics": "dimension 0 is a characteristic-zero emptiness verdict; nonzero is an upper bound only"
+}
