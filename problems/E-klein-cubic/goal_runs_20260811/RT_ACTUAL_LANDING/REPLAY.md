@@ -18,6 +18,8 @@ python3 verify_slice_universality.py
 python3 verify_forced_foliation.py
 python3 verify_interpolation_scope.py
 python3 verify_covariant_dimensions.py
+python3 verify_d4_covariant.py
+python3 verify_low_degree_covariants.py     # ~5 minutes
 
 M2 --script eckardt_klein.m2
 M2 --script cone_surface_countermodel.m2
@@ -35,6 +37,8 @@ verify_slice_universality.py             RESULT: PASS
 verify_forced_foliation.py               RESULT: PASS
 verify_interpolation_scope.py            RESULT: PASS
 verify_covariant_dimensions.py           RESULT: PASS
+verify_d4_covariant.py                   RESULT: PASS
+verify_low_degree_covariants.py          RESULT: PASS
 forced_foliation_witness.m2              RESULT: PASS
 ```
 
@@ -241,6 +245,31 @@ Exact character arithmetic in `Q(zeta_330)` for the eight classes of
 checks (class sizes, character values, orthonormality, `I(3) = 1`, `C(1) = 1`).
 The table was reproduced by a second, independently written implementation
 before being recorded in `FOLIATION_REFORMULATION.md`.
+
+### `verify_low_degree_covariants.py` — the table again, by explicit matrices
+
+A third route, sharing no arithmetic with the character computation. Rebuilds
+the representation from `sigma`, `tau = diag(z^{(-2)^i})` and the involution
+`iota` **reused from the repository's own**
+`goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/exact_schur_frame/exact_representation_core.py`
+(whose `weil_generators()` second matrix is checked to equal `tau` exactly);
+enumerates `|<sigma,tau,iota>| = 660`; checks `F` invariant under all three and
+the generator traces against the five-dimensional character; then computes
+`Cov_k` for `k <= 8` as the joint kernel of `rho_k(g) - Id` over `Q(zeta_11)`,
+and its divergence-free subspace. Reproduces `1,0,0,2,1,2,4,5` and
+`0,0,0,1,1,1,2,4`, and outputs the explicit `D_4` and `D_6`. Runtime about five
+minutes; `d = 8` is the slow step (56s build, 146s kernel).
+
+### `verify_d4_covariant.py` — the audit of `D_4`
+
+Fast, and deliberately on a fourth arithmetic path: it hardcodes only the
+claimed `D_4` and re-derives everything else, including `iota` from the
+repository formula and `Q(zeta_11)` as `Q[z]/(z^11-1)` with
+`1+z+...+z^10 = 0`. Checks homogeneity, primitivity, `div D_4 = 0`,
+`sigma`-covariance by substitution, `tau`-covariance as a weight condition, and
+`iota`-covariance — the last being the one that matters, since `iota` is what
+cuts `Cov_4` from `7` to `2`. Controls: `iota^2 = 1`, `trace(iota) = 1`,
+`F(iota x) = F(x)`, `div(F x) = 8F`.
 
 ---
 

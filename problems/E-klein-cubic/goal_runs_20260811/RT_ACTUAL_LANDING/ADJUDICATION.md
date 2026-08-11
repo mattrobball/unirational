@@ -625,6 +625,31 @@ source does not have:
   `d = 4` and `d = 5`, then `4` and `7`. The first cases of the new lane are
   finite and small.
 
+**Third confirmation, by explicit representation theory.**
+`verify_low_degree_covariants.py` rebuilds the five-dimensional representation
+from `sigma`, `tau = diag(z^{(-2)^i})` and the involution `iota` **reused from
+the repository's own** `exact_schur_frame/exact_representation_core.py`
+(its `weil_generators()` second matrix was checked to equal `tau` exactly),
+enumerates `|<sigma,tau,iota>| = 660`, checks `F` invariant under all three and
+the generator traces `0`, `(-1+sqrt(-11))/2`, `1` against the five-dimensional
+character, and then computes `Cov_k` for `k <= 8` as a joint kernel over
+`Q(zeta_11)`. It reproduces the character-theoretic table exactly —
+`1,0,0,2,1,2,4,5` and divergence-free `0,0,0,1,1,1,2,4` — by a route that shares
+no arithmetic with it. The `d >= 4` floor is therefore confirmed three
+independent ways.
+
+It also returns the unique degree-four divergence-free covariant `D_4`
+explicitly, **over `Q`**, primitive, seven terms per component, displayed in
+`FOLIATION_REFORMULATION.md` §3. `verify_d4_covariant.py` audits it on a fourth
+path — including covariance under `iota`, the generator that cuts `Cov_4` from
+`7` to `2` — with `iota` rebuilt from the repository formula rather than
+imported and `Q(zeta_11)` implemented as `Q[z]/(z^11-1)`. Exit
+`DEGREE-FOUR-DIVERGENCE-FREE-COVARIANT-EXPLICIT`.
+
+Recorded as a **non-claim**: `D_4` is the unique candidate the linear shadow
+permits at `d = 4`, not a landing foliation. Whether it is realised is (F1) and
+is open.
+
 ## R4 — exit-name mapping
 
 The source's exit vocabulary is renamed to repository style. For the record:

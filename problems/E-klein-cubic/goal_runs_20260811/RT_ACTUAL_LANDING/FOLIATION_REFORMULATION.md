@@ -2,7 +2,8 @@
 
 Exit: `FOLIATION-CLASSIFICATION-TARGET-REGISTERED`,
 `COVARIANT-AND-DIVERGENCE-FREE-DIMENSIONS-EXACT`,
-`LANDING-DEGREE-AT-LEAST-FOUR-PROVED`.
+`LANDING-DEGREE-AT-LEAST-FOUR-PROVED`,
+`DEGREE-FOUR-DIVERGENCE-FREE-COVARIANT-EXPLICIT`.
 
 This file states the classification target, records the exact dimension
 arithmetic that makes the first cases finite and small, scopes the first
@@ -167,21 +168,44 @@ The reason to open this lane at all is the left-hand end of the table.
 
 **(F1) `d = 4`: `dim FOL_lin(4) = 1`.** If a landing tuple of degree `4` exists,
 its forced foliation is, up to scalar, the **unique** divergence-free covariant
-of degree four — call it `D_4`. That object can be written down explicitly and
-interrogated directly: does the rank-one foliation it defines have a
-`G`-equivariant dominant first-integral map to `X`? This is a finite, small
-question about one named vector field, not a search.
+of degree four. That object is now written down. Normalized to be primitive, and
+**defined over `Q`**:
 
-Writing `D_4` down requires explicit exact generators of the five-dimensional
-representation. The repository has them
-(`goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/exact_schur_frame/exact_representation_core.py`
-and its neighbours, over `Q(zeta_11)`); with those, `Cov_4` is the joint kernel
-of `rho_4(g) - Id` over a generating set — a two-dimensional exact linear-algebra
-problem — and `D_4` is its intersection with `ker(div)`, one further linear
-condition. `F·x` is the other basis vector, with `div(F x) = 8F != 0`, so the
-splitting is clean. **Not done in this packet**; scoped here so the next run
-starts from the right two-dimensional problem rather than from the character
-table.
+```
+D_4 = ( 2x3^4 + 8x1x2x4^2 - x0x3^2x4 - 9x0x2^2x3 + 7x0x1^2x2 + 3x0^2x4^2 - x0^3x1 ,
+        2x4^4 - 9x1x3^2x4 + 7x1x2^2x3 - x1^3x2 - x0x1x4^2 + 8x0^2x2x3 + 3x0^2x1^2 ,
+        7x2x3^2x4 - x2^3x3 + 8x1^2x3x4 + 3x1^2x2^2 - 9x0x2x4^2 - x0^2x1x2 + 2x0^4 ,
+        -x3^3x4 + 3x2^2x3^2 - x1^2x2x3 + 2x1^4 + 7x0x3x4^2 + 8x0x2^2x4 - 9x0^2x1x3 ,
+        3x3^2x4^2 - x2^2x3x4 + 2x2^4 - 9x1^2x2x4 - x0x4^3 + 8x0x1x3^2 + 7x0^2x1x4 )
+```
+
+Seven terms per component; the components are the cyclic shifts of the first, as
+they must be. The other basis vector of `Cov_4` is `F·x`, with
+`div(F x) = 8F != 0`, so the splitting of the two-dimensional `Cov_4` into
+`ker(div)` and its complement is clean, and `D_4` is not a multiple of the
+Euler field.
+
+`verify_low_degree_covariants.py` produces it, over `Q(zeta_11)`, by taking the
+joint kernel of `rho_k(g) - Id` over the three generators
+`sigma` (cyclic shift), `tau = diag(z^{(-2)^i})` and the involution `iota`
+reused from the repository's own
+`goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/exact_schur_frame/exact_representation_core.py`.
+That script independently reproduces the whole table above for `k <= 8` —
+`Cov: 1,0,0,2,1,2,4,5` and `divergence-free: 0,0,0,1,1,1,2,4` — by explicit
+representation theory rather than character arithmetic, and enumerates the group
+to confirm `|<sigma,tau,iota>| = 660`. It also returns the unique
+divergence-free element of `Cov_6` (`D_6`, 70 terms, likewise over `Q`).
+
+`verify_d4_covariant.py` then audits `D_4` by a separate arithmetic path,
+including covariance under `iota` — the generator that actually cuts `Cov_4`
+from `7` to `2` — with `iota` rebuilt from the repository formula rather than
+imported, and `Q(zeta_11)` implemented as `Q[z]/(z^11-1)` with the relation
+`1+z+...+z^10 = 0`, sharing no code with the producer.
+
+**What is still open at (F1)**: whether the rank-one foliation defined by `D_4`
+has a `G`-equivariant dominant first-integral map to `X`. That is a finite
+question about one named vector field, and it is **not** answered here. Nothing
+above bears on it.
 
 **(F2) `d = 5`: `dim FOL_lin(6) = 1`.** Same, one degree up.
 
@@ -243,6 +267,8 @@ cubic. This lane is open work, not a citation away from closing.
 
 ## 5. Non-claims
 
+* `D_4` is **not** a landing foliation. It is the unique candidate the linear
+  shadow permits at `d = 4`; whether it is realised is (F1), and (F1) is open.
 * No member of (FOL) is exhibited, and none is excluded.
 * `dim FOL_lin(k) = C(k) - I(k-1)` is exact and proved; it is a dimension count
   of a **necessary** linear condition and bounds nothing about landing tuples
