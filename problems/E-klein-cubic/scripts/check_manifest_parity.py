@@ -16,15 +16,26 @@ Checks:
      null primary_exit.
   6. Every branch-only record's pinned branch_head_sha still matches the
      live branch head (after git fetch; git rev-parse origin/<branch>).
-  7. NOTEBOOK.md's stated notebook parent head equals the current HEAD
-     (pre-commit staleness guard: run this checker after updating the
-     preamble, before committing).
+  7. The notebook parent head recorded in notebook_build/parent_head equals
+     the current HEAD (pre-commit staleness guard: run this checker after
+     reconciling, before committing) or the parent of the last commit that
+     touched the notebook (post-commit replay on a fresh clone).
   8. Every manifest "entry" value matches E01-E55 (optional a/b suffix);
      no duplicate manifest paths.
   9. Coverage-by-mention: every goals_after_*/goals_2026-* level-1
      subdirectory, external_sessions/ file, and external_packets/ snapshot
      is at least mentioned in NOTEBOOK.md (these are manually indexed, not
      per-record manifest entries — see the coverage contract).
+ 10. Every live remote branch is registered in the notebook_build/branches/
+     marker inventory.
+ 11. Digest freshness: the committed NOTEBOOK.md is byte-identical to
+     notebook_build/generate_notebook.py's output. Search must never see
+     stale content, so the digest may not drift from its sources.
+
+Checks 9, 9b and 10 read the GENERATED digest (which check 11 pins to the
+committed one). On a tree that predates the notebook_build/ split, the
+generator has no sources: freshness is then reported WARN-skipped and every
+other check falls back to the committed NOTEBOOK.md exactly as before.
 """
 
 from __future__ import annotations
@@ -36,12 +47,41 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 PROBLEM_ROOT = SCRIPT_DIR.parent
-MANIFEST_PATH = PROBLEM_ROOT / "notebook_build" / "manifest.json"
+BUILD_DIR = PROBLEM_ROOT / "notebook_build"
+MANIFEST_PATH = BUILD_DIR / "manifest.json"
+BRANCHES_DIR = BUILD_DIR / "branches"
+PARENT_HEAD_PATH = BUILD_DIR / "parent_head"
+
+sys.path.insert(0, str(BUILD_DIR))
 
 
 def load_manifest() -> dict:
     with open(MANIFEST_PATH, "r", encoding="utf-8") as f:
         return json.load(f)
+
+
+def generated_digest() -> tuple[str | None, str | None]:
+    """(generated digest text, reason it is unavailable)."""
+    try:
+        from generate_notebook import BuildError, generate  # type: ignore
+    except ImportError as exc:
+        return None, f"generate_notebook.py not importable ({exc})"
+    try:
+        return generate(BUILD_DIR), None
+    except BuildError as exc:
+        return None, str(exc)
+
+
+def decode_branch(filename: str) -> str:
+    return filename.replace("%2F", "/").replace("%25", "%")
+
+
+def registered_branches() -> tuple[set[str], bool]:
+    """(inventory, whether the branches/ marker directory exists)."""
+    if not BRANCHES_DIR.is_dir():
+        return set(), False
+    return ({decode_branch(p.name) for p in BRANCHES_DIR.iterdir()
+             if p.is_file() and not p.name.startswith(".")}, True)
 
 
 def is_run_dir(path: Path) -> bool:
@@ -219,19 +259,49 @@ def main() -> int:
     else:
         print(f"OK   branch_head_sha_pinned: {len(branch_records)} branch-only record(s), all match pinned heads ({ref_mode})")
 
-    # --- Check 7: notebook parent head is current (replayable) -------------
-    # Passes if the stated parent equals EITHER the parent of the last commit
-    # that touched NOTEBOOK.md (post-commit replay on a fresh clone) OR the
-    # current HEAD (pre-commit guard while the edit is still staged).
+    # --- Check 11: the committed digest is what the generator produces -----
+    # Search must never see stale content, so NOTEBOOK.md may not drift from
+    # notebook_build/{sections,entries}/. Every text-based check below reads
+    # the generated digest, which this check pins to the committed file.
     import re
-    notebook_text = (PROBLEM_ROOT / "NOTEBOOK.md").read_text(encoding="utf-8")
-    m = re.search(r"notebook parent head: `([0-9a-f]{7,40})`", notebook_text)
+    committed_text = (PROBLEM_ROOT / "NOTEBOOK.md").read_text(encoding="utf-8")
+    generated_text, gen_unavailable = generated_digest()
+    if gen_unavailable is not None:
+        print(f"WARN digest_freshness: generator unavailable, checking the "
+              f"committed NOTEBOOK.md as-is ({gen_unavailable})")
+        notebook_text = committed_text
+    elif generated_text == committed_text:
+        print(f"OK   digest_freshness: NOTEBOOK.md is byte-identical to the "
+              f"generator output ({len(committed_text)} bytes)")
+        notebook_text = generated_text
+    else:
+        failures += 1
+        print(f"FAIL digest_freshness: NOTEBOOK.md ({len(committed_text)} bytes) "
+              f"differs from the generator output ({len(generated_text)} bytes) "
+              f"— run notebook_build/reconcile.py")
+        notebook_text = generated_text
+
+    # --- Check 7: notebook parent head is current (replayable) -------------
+    # The pin lives in notebook_build/parent_head (it used to sit in the digest
+    # text, which forced a digest diff on every branch that stamped it).
+    # Passes if the recorded parent equals EITHER the parent of the last commit
+    # that touched the notebook (post-commit replay on a fresh clone) OR the
+    # current HEAD (pre-commit guard while the change is still staged).
+    pin_source = "notebook_build/parent_head"
+    if PARENT_HEAD_PATH.is_file():
+        pinned = PARENT_HEAD_PATH.read_text(encoding="utf-8").strip()
+        m = re.fullmatch(r"[0-9a-f]{7,40}", pinned)
+    else:
+        # legacy tree: the pin is still a line inside the digest
+        pin_source = "NOTEBOOK.md preamble (legacy)"
+        m = re.search(r"notebook parent head: `([0-9a-f]{7,40})`", committed_text)
+        pinned = m.group(1) if m else ""
     head = git_rev_parse("HEAD")
     last_touch = None
     try:
         out = subprocess.run(
             ["git", "-C", str(PROBLEM_ROOT), "log", "-1", "--format=%H",
-             "--", "NOTEBOOK.md"],
+             "--", "NOTEBOOK.md", "notebook_build/parent_head"],
             capture_output=True, text=True, check=True)
         last_touch = out.stdout.strip() or None
     except subprocess.CalledProcessError:
@@ -239,17 +309,17 @@ def main() -> int:
     touch_parent = git_rev_parse(last_touch + "^") if last_touch else None
     if not m:
         failures += 1
-        print("FAIL notebook_parent_head_current: no 'notebook parent head: `<sha>`' line found in NOTEBOOK.md")
+        print(f"FAIL notebook_parent_head_current: no parent-head sha found in {pin_source}")
     elif head is None:
         failures += 1
         print("FAIL notebook_parent_head_current: could not resolve HEAD")
-    elif head.startswith(m.group(1)):
-        print(f"OK   notebook_parent_head_current: stated parent `{m.group(1)}` matches HEAD (pre-commit mode)")
-    elif touch_parent and touch_parent.startswith(m.group(1)):
-        print(f"OK   notebook_parent_head_current: stated parent `{m.group(1)}` matches parent of last NOTEBOOK.md commit (replay mode)")
+    elif head.startswith(pinned):
+        print(f"OK   notebook_parent_head_current: recorded parent `{pinned[:12]}` matches HEAD (pre-commit mode, {pin_source})")
+    elif touch_parent and touch_parent.startswith(pinned):
+        print(f"OK   notebook_parent_head_current: recorded parent `{pinned[:12]}` matches parent of the last notebook commit (replay mode, {pin_source})")
     else:
         failures += 1
-        print(f"FAIL notebook_parent_head_current: stated `{m.group(1)}`; HEAD {head[:12]}; parent-of-last-touch {(touch_parent or 'unknown')[:12]} — update the preamble")
+        print(f"FAIL notebook_parent_head_current: recorded `{pinned[:12]}`; HEAD {head[:12]}; parent-of-last-touch {(touch_parent or 'unknown')[:12]} — run notebook_build/reconcile.py")
 
     # --- Check 8: entry-id validity and duplicate paths --------------------
     bad_ids = [r["path"] for r in records
@@ -335,7 +405,20 @@ def main() -> int:
         print(f"OK   exits_surfaced_in_notebook: {n_exits} genuine packet exits, all mentioned in NOTEBOOK.md")
 
     # --- Check 10: no unknown remote branches ------------------------------
-    known = set(manifest.get("known_branches", []))
+    # The inventory is one marker file per branch under notebook_build/
+    # branches/ (registration = adding a file, so it never conflicts). A
+    # legacy manifest.json "known_branches" array, if still present, is
+    # unioned in so the check never regresses mid-migration.
+    marker_known, have_markers = registered_branches()
+    legacy_known = set(manifest.get("known_branches", []))
+    known = marker_known | legacy_known
+    if legacy_known:
+        print(f"WARN branch_inventory: manifest.json still carries a legacy "
+              f"'known_branches' array ({len(legacy_known)} name(s)) — run "
+              f"notebook_build/migrate_split.py to move it to branches/")
+    if have_markers:
+        print(f"OK   branch_inventory: {len(marker_known)} marker file(s) in "
+              f"notebook_build/branches/")
     if known:
         try:
             out = subprocess.run(
@@ -351,13 +434,13 @@ def main() -> int:
             print("WARN unknown_remote_branches: could not enumerate remote refs")
         elif unknown:
             failures += 1
-            print(f"FAIL unknown_remote_branches: {len(unknown)} branch(es) not in manifest inventory ({ref_mode}):")
+            print(f"FAIL unknown_remote_branches: {len(unknown)} branch(es) not in the branch inventory ({ref_mode}) — register with notebook_build/register_branch.py:")
             for b in unknown:
                 print(f"    {b}")
         else:
-            print(f"OK   unknown_remote_branches: {len(live_branches)} remote branch(es), all in manifest inventory ({ref_mode})")
+            print(f"OK   unknown_remote_branches: {len(live_branches)} remote branch(es), all in the branch inventory ({ref_mode})")
     else:
-        print("WARN unknown_remote_branches: manifest has no 'known_branches' inventory")
+        print("WARN unknown_remote_branches: no branch inventory found (neither notebook_build/branches/ nor manifest 'known_branches')")
 
     print()
     if failures:
