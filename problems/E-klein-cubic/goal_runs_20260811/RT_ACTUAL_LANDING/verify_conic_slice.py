@@ -216,6 +216,44 @@ check("C6  every 2x2 minor is divisible by (u*vp - v*up), so the map is "
       or sp.simplify(common / (u * vp - v * up)).is_polynomial(),
       f"gcd of minors = {sp.factor(common)}")
 
+# ---------------------------------------------------------------- C7
+# The exact landing-identity data of the conic cell.  With
+#     f = v,  H = u^2,  B = (1,-2,1,-2,0),  C = (-v,-2v,-2u+v,-2v,0)
+# one has A = H B + f C = P, and the four identities (10) hold with
+#     R_0 = 0,   R_1 = 8,   R_3 = -8 v.
+# (Fuller replay, including the derivation of these R_i from F(P) = 0 by the
+# mod-s / mod-t^e reductions, is in verify_slice_universality.py, block S6.)
+Hc = u**2
+fc = v
+Bc = [sp.Integer(1), sp.Integer(-2), sp.Integer(1), sp.Integer(-2),
+      sp.Integer(0)]
+Cc = [-v, -2 * v, sp.expand(-2 * u + v), -2 * v, sp.Integer(0)]
+R0c, R1c, R3c = sp.Integer(0), sp.Integer(8), sp.expand(-8 * v)
+
+
+def phi3(a, b, c):
+    """symmetric trilinear polarization of F, Phi(x,x,x) = F(x)."""
+    def add(p, q):
+        return [p[i] + q[i] for i in range(5)]
+    return sp.expand(sp.Rational(1, 6) * (
+        klein(add(add(a, b), c)) - klein(add(a, b)) - klein(add(b, c))
+        - klein(add(a, c)) + klein(a) + klein(b) + klein(c)))
+
+
+check("C7  A = H B + f C = P with H = u^2, f = v, B = (1,-2,1,-2,0), "
+      "C = (-v,-2v,-2u+v,-2v,0)",
+      all(sp.expand(Hc * Bc[i] + fc * Cc[i] - P[i]) == 0 for i in range(5)))
+check("C7a (I0) F(B) = f R_0 with R_0 = 0",
+      sp.expand(klein(Bc) - fc * R0c) == 0, f"F(B) = {klein(Bc)}")
+check("C7b (I1) H R_0 + 3 Phi(B,B,C) = f R_1 with R_1 = 8",
+      sp.expand(Hc * R0c + 3 * phi3(Bc, Bc, Cc) - fc * R1c) == 0,
+      f"3 Phi(B,B,C) = {sp.expand(3*phi3(Bc,Bc,Cc))}")
+check("C7c (I3) F(C) = H R_3 with R_3 = -8v",
+      sp.expand(klein(Cc) - Hc * R3c) == 0, f"F(C) = {klein(Cc)}")
+check("C7d (I2) H R_1 + 3 Phi(B,C,C) + f R_3 = 0",
+      sp.expand(Hc * R1c + 3 * phi3(Bc, Cc, Cc) + fc * R3c) == 0,
+      f"3 Phi(B,C,C) = {sp.expand(3*phi3(Bc,Cc,Cc))}")
+
 # ---------------------------------------------------------------- verdict
 print()
 if FAILURES:

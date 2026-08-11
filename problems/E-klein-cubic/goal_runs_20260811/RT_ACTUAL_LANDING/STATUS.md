@@ -12,9 +12,21 @@ CLEAN-IMPLIES-NON-RATIONAL-SINGULAR-RECEIVER-PROVED
 CLEAN-COMPONENTS-G-STABLE-FOR-k-AT-MOST-10-PROVED
 KLEIN-CUBIC-NO-ECKARDT-POINTS
 
+SLICE-PLUCKER-NORMAL-FORM-PROVED
+SLICE-COMPLETE-IDEAL-CLUSTER-CLASSIFICATION-PROVED
+SLICE-EXCESS-EQUALS-RATIONAL-CURVE-DEGREE-PROVED
+ALL-POINTED-RATIONAL-CURVE-DEGREES-REALIZED
+HIGHER-NORMAL-JET-DEPTH-UNBOUNDED
+EXACT-KLEIN-CONIC-CELL-VERIFIED
+LANDING-IDENTITIES-IMPOSE-NO-CURVE-TYPE-CONSTRAINT
+KLEIN-INCIDENCE-MAP-FINITE
+POINTED-LINE-CYLINDER-AND-GYSIN-ISOGENIES-EXIST
+ORBIT-SUMMED-FULL-SUPPORT-ENDOMORPHISM-EXISTS
+
 CONDUCTOR-GYSIN-EXCLUSION-REFUTED-RATIONALLY
 GENERIC-COMMON-FACTOR-LINE-NORMAL-FORM-REFUTED
 NORMAL-SURFACE-IH1-VANISHING-REFUTED
+SLICE-LOCAL-POINTED-RATIONAL-CURVE-FULL-SUPPORT-EXCLUSION-REFUTED
 
 LINE-INCIDENCE-FACTOR-TWO-CONDITIONAL
 GLOBAL-COVARIANT-POINTED-RATIONAL-CURVE-EXCLUSION-UNDECIDED
@@ -23,8 +35,14 @@ PROBLEM-E-HEADLINE-OPEN
 ```
 
 Terminal verifier markers: `verify_conic_slice.py`,
-`verify_landing_identity.py` and `verify_normal_surface_countermodel.py` each
-print `RESULT: PASS`; `eckardt_klein.m2` prints `ideal 1`.
+`verify_landing_identity.py`, `verify_normal_surface_countermodel.py` and
+`verify_slice_universality.py` each print `RESULT: PASS`; `eckardt_klein.m2`
+prints `ideal 1`.
+
+**Not ported** (the external round-3 headline):
+`POINTED-RATIONAL-CURVE-FULL-SUPPORT-EXCLUSION-REFUTED`. The construction that
+was offered for it refutes only the slice-local version; see
+`ADJUDICATION.md` item R20.
 
 ---
 
@@ -35,6 +53,14 @@ An adjudicated port of external, unaudited work on restricted transfer (RT) for
 `SOURCES.md`, `ADJUDICATION.md`. The external work was right about most things,
 wrong about one, and under-justified in two places where the missing proof
 mattered.
+
+A later external round (`[21]`, adjudicated on branch
+`agent/rt-slice-classification-20260811`, verdicts `R1`–`R23`) added the slice
+classification and a cylinder/Gysin automorphism of `V`. Its mathematics is
+right — with several proofs supplied and one step corrected in the direction of
+strength — and its **headline is overclaimed**: it refutes only the slice-local
+form of the boxed exclusion, not the boxed exclusion itself, which is sharpened
+rather than deleted.
 
 ## What is proved
 
@@ -106,19 +132,46 @@ mattered.
    Cartier cone over a smooth plane cubic, with `H^1(S,O_S) = 0` but
    `IH^1(S,Q) = Q^2`. (`THEOREM_LEAKAGE_CLASSIFICATION.md` section 4.3.)
 
+## What round 3 added
+
+10. **The slice classification, and it is empty of constraint.** The normalized
+    two-dimensional slice ideal is always `I = (a, fJ)` with `J` the
+    gauge-invariant Plücker ideal of `(B,C)`; its integral closure is a
+    Zariski–Lipman weighted cluster whose excesses are exactly the degrees of the
+    rational curves the exceptional components carry. And **every** pointed
+    rational curve on `X`, of every degree, occurs as such a slice satisfying the
+    four landing identities — with `R_0 = 0` forced — while the jet depth is
+    unbounded at fixed target degree 1. So the identities constrain the curve
+    type not at all. (`SLICE_CLASSIFICATION.md`, `verify_slice_universality.py`,
+    314 exact assertions.)
+
+11. **An invertible cylinder/Gysin endomorphism of `V` built from pointed
+    lines exists.** For a general smooth `D ∈ |k(a·e^*H + m·pi^*C)|` on the
+    incidence threefold, the composite `V → H^1(D,Q) → V` equals
+    `k m · B_C ∘ alpha_F`, an automorphism: `alpha_F` is the Clemens–Griffiths
+    cylinder isomorphism and `B_C` is its Lefschetz-twisted Poincaré adjoint. It
+    is `G`-equivariant, integral, and satisfies the Rosati-norm identity
+    automatically, being an element of `O_{Q(sqrt(-11))}`.
+    (`REFUTATION_POINTED_CURVE_EXCLUSION.md`.)
+
+    Two by-products: the Klein cubic's *absence of Eckardt points* is exactly
+    what makes `e : I → X` finite and the incidence polarization ample
+    (`KLEIN-INCIDENCE-MAP-FINITE`); and the receiver `e(D) ⊂ X` is forced to be
+    non-normal or to have a non-rational singularity — the construction is a
+    **witness for** `CLEAN-IMPLIES-NON-RATIONAL-SINGULAR-RECEIVER-PROVED`, not a
+    counterexample to it.
+
 ## What remains
 
-10. The boxed remaining theorem is a statement about the **single global
-    homogeneous `G`-covariant tuple**, not about receivers in the abstract:
-    classify the normalized two-dimensional slice ideals of tuples satisfying
-
-    ```
-    F(B + tC) = (F - H t)(R_0 + R_1 t - R_3 t^2),
-    ```
-
-    including all higher normal jets, and show the orbit-summed correspondences
-    of the resulting pointed rational-curve families cannot realize the
-    full-support endomorphism CLEAN requires. (`BOXED_GLOBAL_COVARIANT.md`.)
+12. The boxed remaining theorem is a statement about the **single global
+    homogeneous `G`-covariant tuple**, not about receivers in the abstract, and
+    it is now sharpened so that all five global data are simultaneous: global
+    degree and representation, invariant degree `k >= 5`, attachment of `H` to
+    `D_X`, the slice data of *that* tuple, and the incidence of *its own* curve
+    families. The slice-local version — drop the tuple and ask the same question
+    of any pointed rational-curve family satisfying the identities — is now
+    **known false**, so no argument that forgets the tuple can work.
+    (`BOXED_GLOBAL_COVARIANT.md`, section 2.3 lists what a proof must consume.)
 
 ## Structural note
 

@@ -4,12 +4,27 @@
 
 The mathematical content of this packet originates in an **external ChatGPT
 session**, transcript messages `[10]`, `[15]`, `[20]` (three successive reports;
-`[15]` revises `[10]`, `[20]` corrects both and withdraws five claims). That
-material was **unaudited**. It has been adjudicated here claim by claim; see
-`ADJUDICATION.md` for per-claim verdicts, including one refutation of an
-external claim, two claims whose proofs had to be supplied, one weakening, one
-citation correction, and one cited repository input that does not exist as
-cited.
+`[15]` revises `[10]`, `[20]` corrects both and withdraws five claims), and a
+later round `[21]` (the slice classification and the claimed refutation of the
+pointed-rational-curve exclusion). All of it was **unaudited**. It has been
+adjudicated here claim by claim; see `ADJUDICATION.md` for per-claim verdicts,
+including one refutation of an external claim, several claims whose proofs had
+to be supplied, one weakening, one citation correction, one cited repository
+input that does not exist as cited, and — for round 3 — one **scope
+correction** to a headline that overstated what its own construction refutes.
+
+**Round 3 (`[21]`), added on branch `agent/rt-slice-classification-20260811`.**
+Ported into `SLICE_CLASSIFICATION.md`,
+`REFUTATION_POINTED_CURVE_EXCLUSION.md`, the revised
+`BOXED_GLOBAL_COVARIANT.md`, the new verifier `verify_slice_universality.py`
+and blocks `C7`–`C7d` of `verify_conic_slice.py`. Per-claim verdicts are the
+`R1`–`R23` table in `ADJUDICATION.md`. Summary of what had to be repaired:
+Zariski–Lipman applied to a possibly non-`m`-primary ideal; the residue field of
+`eta_S` is not algebraically closed; "complete classification" needed an
+equivalence relation; the proof of `B_C` iso; the proof of
+`beta_D pi_D^* = k M_{a,m}`; the vanishing of the `xi`-term in `M_{a,m}` (which
+strengthens the result); the ampleness hypothesis on `L_{a,m}`; and the scope of
+the refutation.
 
 The external session's own bibliographic pointers were opaque tokens
 (`fileciteturn...`, `citeturn...`) with no resolvable targets. Every
@@ -38,6 +53,16 @@ below was verified independently against a primary source unless flagged.
 | `O4` witness (Hesse cubics) | `goal_runs_20260810/SPIN_SOURCE_NETWORK/O4_EIGENPLANE_CURVES.md`, Thm O4-5 | `O4-EIGENPLANE-CURVES-OPEN-WITH-WITNESS` |
 | KLS minimality exit | `goal_runs_after_35fa/KLS_MINIMALITY/STATUS.md` | `KLS2-NO-FINITE-REDUCTION` |
 | Fano–Rees retraction carrier | `goal_runs_20260809/RETRACTION_FANO_REES_CARRIER/THEOREM.md` Thm 6.1, section 7 | `DELTA1-IRREDUCIBLE-BASE-DOMINATES-FANO-SURFACE` |
+
+Added for round 3:
+
+| what | where | exit / label |
+|---|---|---|
+| `End_{G-HS}(V) = K = Q(sqrt(-11))`, eq. (4.1); `End_{G-HS}(V_Z) = O_K`, eq. (4.2); Rosati = complex conjugation; `delta = N(u_phi) = x^2+xy+3y^2`, eq. (4.4) | `goal_runs_20260810/RT_SPLIT_AND_DICHOTOMY/THEOREM_RESTRICTED_DICHOTOMY.md` section 4 | `RESTRICTED-CLEAN-CM-NORM-PROVED` |
+| double-hit argument: general `D_0` in a high very ample system on `I` has `e|_{D_0}` generically one-to-one; `G`-stable split divisors in unbounded classes | `goal_runs_20260808/DELTA1_RETRACTION_POLAR_IDENTITY/THEOREM.md` section 5 (eqs. 4.5–4.6) | `DELTA1-INVARIANT-SPLIT-DIVISORS-UNBOUNDED` |
+| unbounded blowup depth of `[u^N : v]`, machine-checked | `goal_runs_20260810/SPIN_SOURCE_NETWORK/R1_TOTAL_DEGENERATION.md` section 2; `verify_r1_degeneration.py` `A11` | `R1-INDUCTION-REFUTED`, `R1_DEGENERATION_OK` |
+| Klein cubic has no Eckardt points (exact M2) | this packet, `eckardt_klein.m2`; `THEOREM_LEAKAGE_CLASSIFICATION.md` section 4.5 | `KLEIN-CUBIC-NO-ECKARDT-POINTS` |
+| `T_D = ±2n·id` for `[D] = r·eta + n·pi^*C` — ported, not replayed | this packet, `COUNTERMODEL_CONIC_SLICE.md` section 5 | `LINE-INCIDENCE-FACTOR-TWO-CONDITIONAL` (`r`-cancellation half now proved) |
 
 ## C. Literature — verified
 
@@ -125,6 +150,42 @@ stated.
    on perverse degrees (defect of semismallness); `IC_S` a direct summand of
    `Rf_*IC_{S̃}` for a resolution; `nu_*IC_{S^nu} = IC_S` for a finite
    normalization.
+
+Added for round 3:
+
+10. **J. Lipman**, *Rational singularities, with applications to algebraic
+    surfaces and unique factorization*, Publ. Math. IHÉS **36** (1969), 195–279.
+    The Zariski theory of complete ideals — products of complete ideals are
+    complete, and complete `m`-primary ideals factor uniquely into simple
+    complete ideals — for **any** two-dimensional regular local ring, i.e.
+    without Zariski's hypothesis that the residue field be algebraically closed.
+    That generality is what the application needs, since the residue field here
+    is `kappa(eta_S)`.
+    Original: **O. Zariski**, *Polynomial ideals defined by infinitely near base
+    points*, Amer. J. Math. **60** (1938), 151–204; textbook form in
+    Zariski–Samuel, *Commutative Algebra* II, Appendix 5.
+
+11. **E. Casas-Alvero**, *Singularities of Plane Curves*, LMS Lecture Notes 276,
+    CUP (2000), §4.5 and Thm 8.4.6. Weighted clusters, proximity, point basis,
+    excesses, `E_p^* · E_q^* = -delta_{pq}`, `D·E_p = -rho_p`, and the Zariski
+    factorization `Ibar = prod_p P_p^{rho_p}`. Used only for the conventions and
+    the two displayed formulas, both re-derived in `SLICE_CLASSIFICATION.md` §2.2.
+
+12. **H. Clemens, P. Griffiths**, op. cit. (item 7), §10 and Theorem 11.19: the
+    cylinder homomorphism `H_1(F(X),Z) → H_3(X,Z)` is an isomorphism,
+    equivalently `Alb(F(X)) ≅ J(X)`. Its transpose is
+    `alpha_F = pi_* e^* : H^3(X,Q)(1) → H^1(F,Q)`, the input to (16) and — via
+    Poincaré adjunction — to (17). Same paywall flag as item 7.
+
+13. Standard facts used without citation to a specific source, beyond item 9:
+    hard Lefschetz on a smooth projective surface; weak Lefschetz for a smooth
+    ample divisor in a smooth threefold; `H^*(P(E)) = H^*(F) ⊕ H^{*-2}(F)·xi`
+    for a `P^1`-bundle; flat base change and the projection formula for proper
+    maps; Poincaré adjunction for algebraic correspondences,
+    `<Gamma_* a, b> = <a, {}^tGamma_* b>`; `b_1(X) = 0` and `H^3(X,Z) ≅ Z^{10}`
+    torsion-free for a smooth cubic threefold; `Pic X = Z·H` (Lefschetz), hence
+    every surface in `X` has degree divisible by 3; six lines through a general
+    point of a cubic threefold.
 
 ## D. Machine tools
 
