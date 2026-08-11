@@ -8316,3 +8316,11 @@ route. Sealed windows unchanged: `d ≤ 30` empty, `d = 25` dead, `d = 34`
 first open.
 
 Exits: `STAGE2-NO-DEGREE-EXCLUSION-II`, `STAGE2-SECOND-ORDER-A4-JET-SEALED`.
+
+## 2026-08-11 V14 map degrees 3-5 sealed on both slots; any explicit Phi has degree >= 6
+
+Packet: `goal_runs_20260811/V14MAP_DEGREE345_REPLAY/`. Problem E remains **OPEN**.
+
+See the packet THEOREM.md.
+
+Exits: `V14MAP-DEGREE-3-4-5-IMPORT-UNREPLAYED`, `V14MAP-DEGREE-3-4-5-REPLAYED`.
