@@ -52,11 +52,16 @@ disclosed boundary, not a coverage claim.
 
 Core manifest last rebuilt: 2026-08-03. Research supplement last updated:
 2026-08-10. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `913220f507611f1626520e3471f7e8a6909e537c` (2026-08-11; the
-repository state this revision was authored against — a file cannot carry its
-own commit hash, so the committing revision is always `git log -1 --
-problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
-verifies at pre-commit time that this stated parent equals the current HEAD.
+Snapshot metadata — notebook parent head: recorded in
+`notebook_build/parent_head` (the repository state this revision was authored
+against — a file cannot carry its own commit hash, so the committing revision
+is always `git log -1 -- problems/E-klein-cubic/NOTEBOOK.md`).
+`scripts/check_manifest_parity.py` verifies at pre-commit time that the
+recorded parent equals the current HEAD. **This file is GENERATED** from
+`notebook_build/sections/` and `notebook_build/entries/` by
+`notebook_build/generate_notebook.py`: edit those sources, never this file, and
+regenerate with `notebook_build/reconcile.py` — protocol in
+`notebook_build/PROTOCOL.md`.
 Manifest snapshot: the `as_of_commit` block inside
 `notebook_build/manifest.json`. Branch inventory: 2026-08-09, including the
 additional `agent/f55-audit-obstruction` head `851e9ac…` and this notebook's

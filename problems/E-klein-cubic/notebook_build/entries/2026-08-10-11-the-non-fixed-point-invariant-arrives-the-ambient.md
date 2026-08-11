@@ -161,7 +161,7 @@ consistency test.
 `verify_spin_hodge_census.py` and `scripts/check_manifest_parity.py` pass.
 The packet is on `agent/spin-hodge-support-20260810`. This notebook revision
 was authored against parent head
-`91ee67947f54c6a346cfea520c56a11abf75854e`.
+`95142218e4d159818cb3d6029b12efaf8cea1bbf`.
 
 ### `STANDARD_FORM_PW` (08-10, `goal_runs_20260810/`) — the source-side atlas
 
@@ -209,3 +209,130 @@ Machine: `python3 verifier.py` → `STANDARD_FORM_PW_VERIFY_OK`, `ALLGREEN`,
 arithmetic for the automaton, exact `QQ` in Macaulay2 for the charts.
 Re-verifies `STRATA_EXACT.md:108–123` and `NORMAL_CHARACTERS.md:71–90` from
 scratch. Sampled and flagged: global irreducibility of every crossing `D_I`.
+
+### TERMINUS_STRATA_PW — the full stabilized-strata census of the source terminus (2026-08-10)
+
+`goal_runs_20260810/TERMINUS_STRATA_PW/THEOREM.md`. Source side only; **Problem E
+remains OPEN**. The orbit-type (exact-stabilizer) stratification of the terminus
+`Z` of the `STANDARD_FORM_PW` tower over `P(W) = P^4`, `G = PSL(2,11)`.
+
+Identifies `Z` as the maximal De Concini–Procesi wonderful model of the
+1215-element subspace arrangement `A` (940 points, 220 lines, 55 planes, closed
+under intersection), which gives a closed chart form for every point and makes
+the census exact and finite.
+
+* **80 `G`-orbits of orbit-type strata; 11 076 components.** Per stage:
+  15/1216 (`P(W)`) → 57/7336 (T0) → 70/9591 (T1) → 80/11 076 (T2).
+* Point stabilizers: exactly `{1,C2,C3,V4,C5,C6,C11}`; the other **9 of the 16**
+  subgroup classes are **certified empty** (exhaustive enumeration + 79 sampled
+  points with brute-force stabilizers at two primes).
+* Setwise stabilizers: only **8 of 16** occur — `C2,C3,V4,C5,C6,C11,D12,G`.
+  `A4` and `D10` occur at level 0 and are destroyed by the tower.
+* Closure poset: 145 containments. Crossings: 19 orbits at `|I|=2`, **5 orbits of
+  165 at `|I|=3`** (all on `ℓ_V`-`P_σ` flags). No non-cyclic generic crossing
+  stabilizer ⇒ no fabulous corner on `Z`.
+* Every stratum is **rational** (a blowup of a product of projective spaces) —
+  verified per row, not imported from `lem:rational_strata_propagate`.
+* `Z → Z⁺` (the corner packet's T3): 3 rows consumed, 3 new, 77 unchanged; the
+  two new `V4`-fixed surfaces, `2 × 165 = 330`, **are** `DUNCAN_CORNER_F2`'s
+  fabulous corners.
+* Reproduces independently: `STRATA_EXACT` level-0, the 1215 divisors in 14
+  orbits, the **42 terminal local models class-by-class**, the crossing table.
+* **CORRECTION.** `STANDARD_FORM_PW` §5(d)'s "components created inside
+  exceptional divisors" counts are lower bounds (its producer de-duplicates on a
+  signature that merges distinct `G`-orbits): `C2 {1:1155,2:440,3:110} →
+  {1:1320,2:605,3:110}`, `V4 {0:660,1:330} → {0:1155,1:330}`, `C5 396 → 1320`,
+  `C6 330 → 1100`, `C11 60 → 240`; `C3` unchanged. No exit string affected.
+
+Exits: `TERMINUS-ORBIT-STRATA-PW-PASS`, `TERMINUS-STRATA-ALL-16-CLASSES-CERTIFIED`,
+`TERMINUS-CLOSURE-POSET-SEALED`, `TERMINUS-QUOTIENT-STRATIFICATION-COMPLETE`,
+`TERMINUS-ZPLUS-DELTA-SEALED`, `STANDARD-FORM-PW-5D-COUNTS-CORRECTED`.
+Verify: `python3 verifier.py` → `TERMINUS_STRATA_PW_VERIFY_OK` / `ALLGREEN`.
+
+**Adjudicated 2026-08-11 (PR #31): READY** (`ADJUDICATION_PR31.md`). The packet
+verifier replays byte-identical and `t6_charts.m2` gives 18/18, but it checks
+rows produced by the census engine rather than re-deriving the row list, so the
+adjudication wrote an independent census — `scripts/adj_indep_census.py`, built
+from the element eigenspaces, enumerating **all 4900 chains** and counting
+components **one at a time** with no orbit-representative shortcut. It
+reproduces every cell at both primes: 1216 / 7336 / 9591 / **11 076**
+components, **80** orbits, the per-class and setwise tables (`C2 1 · C3 8 ·
+V4 26 · C5 10 · C6 27 · C11 4 · D12 3 · G 1`), the `Z^H` dictionary
+(239/80/54/20/38/20), the chain census 1215/2860/825 matching the divisor and
+crossing counts, and the `STANDARD_FORM_PW` §5(d) correction. Four defects,
+all fixed on the branch: §2's "one fixed `H`" column carried the `Z^H` totals
+(239, 80) instead of the `Z_{=H}` ones (39, 42); §4's stage table dated `D10`'s
+death to T1 when it dies at T0; the "`STANDARD_FORM_PW` is not on `main`" note
+was stale (PR #29); and the branch was missing from `known_branches`, which had
+parity failing. The §5(d) correction is now recorded inside `STANDARD_FORM_PW`
+itself. Not independently replicated: the 145 closure-poset relations
+(packet-verified only). Headline unchanged: **OPEN**.
+
+### STAGE1_COMPLEX_MAPS — the Stage-1 classification (2026-08-10)
+
+`goal_runs_20260810/STAGE1_COMPLEX_MAPS/THEOREM.md`. **Problem E remains OPEN.**
+Classifies every morphism of decorated complexes of groups from the terminus
+complex `F(Z)` (plus the `Z⁺` order-0 delta) to the Klein cubic's complex, under
+the sealed rows, for a dominant equivariant `P(W) ⇢ X`. The boundary-pattern
+space is NONEMPTY — **Stage 1 does not close the headline.** Coherence revision
+(user-mandated, 2026-08-10): imposing evaluation-coherence along closure
+chains (Theorem 15.1, evaluation rigidity: sweep evaluations are constant per
+moduli component, char-0) cuts the raw arc-consistent count
+69 686 233 329 838 325 760 000 by 2⁶ to
+**1 088 847 395 778 723 840 000 stratum-coherent order-0 boundary patterns**;
+two of the fifteen sweeps (the two dim-3 divisors) are NOT evaluation-
+surjective (images 128/262144 and 64/128), the six `C6`-rows inside `D_{P_σ}`
+are pinned, and most Layer-2 components (e.g. 38 of 48 for `D_{P_σ}`) are
+legal equivariant surjections that cannot restrict from any global section.
+Forced features sealed: EIGHT forced sweeps onto `L_σ` (was three; the five
+new ones forced by coherence; the two divisorial cases are model-free;
+strengthens H0-2), twelve of eighteen `V4`-rows rigid, the two type-I
+`C2`-rows locked together (4 of 2⁸ sweep patterns survive), type-II exclusion at all 18 `V4`-rows of `Z` with no external
+import, no genus from admissible refinements, exactly one elliptic door with
+every section still meeting each `E_σ` at a type-I vertex, the `v_σ` rule with
+two pinned rows, the `C6` pinning, the image inventory (only `X` and the 55
+lines are positive-dimensional images), and the order-0 window verdict: parity
+only, `N(d,m) > 0` for all `d` (audit-strengthened closed formula). The
+coherence-immune factor is exactly the 22 odd-order rows (`C3`, `C5`, `C11`;
+≈ 1.1 × 10¹⁵ plus the D10-line's 23), reachable only by jets of the actual
+map — the measured location of Stage-2's work. Model
+scope per the adversarial audit (verdict REGISTER-WITH-EDITS, edits applied,
+addendum §14): non-divisorial claims quantify over maps factoring through `Z`
+or admissible refinements (Correction I-C boundary). Correction H1-D consumed;
+stale pre-correction numbers flagged in `FIX_V_construction.md` §§1–2 and
+`HANDOFF_2026-08-06.md:55-63`.
+
+Exits: `STAGE1-COMPLEX-MAPS-CLASSIFIED`, `STAGE1-BOUNDARY-PATTERNS-SEALED`,
+`STAGE1-EVALUATION-RIGIDITY`, `STAGE1-TYPE-II-EXCLUSION-ON-Z`,
+`STAGE1-EIGHT-FORCED-SWEEPS`, `STAGE1-NO-GENUS-BUYING-ADMISSIBLE`,
+`STAGE1-WITNESS-SECTION-VERIFIED`, `TERMINUS-CENSUS-INDEPENDENTLY-REPRODUCED`,
+`STAGE1-ORDER0-WINDOW-PARITY-ONLY`, `STAGE1-COHERENCE-IMMUNE-FACTOR-ISOLATED`.
+(`STAGE1-SECTION-MODULI-SEALED` and `STAGE1-THREE-FORCED-SWEEPS` renamed by the
+coherence revision; the pre-coherence count is retained in the packet as the
+arc-consistent intermediate.) Markers: `STAGE1_COMPLEX_MAPS_VERIFY_OK` /
+`ALLGREEN` (127 checks incl. the 14-check coherence series; director replay +
+independent adversarial audit + user-mandated coherence revision).
+
+**Adjudicated 2026-08-11** (`ADJUDICATION_PR32.md`, PR #32). The coherence
+revision is a genuine **correction, not a silent weakening**: the count moved
+*down* by 2⁶ (a stronger cut), and the thing that weakened — "the set of Stage-1
+morphisms" became "order-0 boundary patterns" — is stated more loudly than the
+number, with the superseded figure, the two renamed exits and the killed
+3-sweep witness (D4, now paired with the new H14) all recorded in place. The
+123-check verifier replays identically to the stored stdout. Independently
+re-derived here: the entire target-cell census (`165/165/110/220/264/60`, the
+55 `D12`- and `ℓ_V`-, 66 `D10`-, 110 `A4`-loci) from PSL(2,11) subgroup
+arithmetic alone, and the full 80-row and block accounting
+(`51+1+8+10+4+6 = 80`). Three defects fixed in place and two gaps closed:
+§14's audit-derived closed formula for `N(d,m)` — the sole basis for dropping
+the `d ≤ 45` restriction on Thm 9(ii) — was **asserted with no machine check**,
+so it was verified against the exact `Z[ζ₆]` route on 1 122 odd-`m` cases per
+prime to `d = 66` and is now checks **F7/F8** (verifier 123 → 127); §15.6(1)'s
+"the total is unchanged at maxdeg 3, 4, 5, 6" had **no artifact**, so it was run
+(`scripts/s1saturation.py`, `results/saturation_probe_331.txt`: same total, same
+`(51, 43 008)` core, 0 rigidity failures at all four cutoffs — evidence, not a
+proof of saturation, and the Tier-3 flag stands); §1's block table wrongly put
+the two dim-3 divisors inside the 51-row core (they are forced-unique and sit in
+no block); §11 Tier 3(5) still contradicted §14's withdrawal; §9's replay line
+was stale. **PR #32 must merge before PR #37**, which inherits `43 008` and the
+22-row identification from here.

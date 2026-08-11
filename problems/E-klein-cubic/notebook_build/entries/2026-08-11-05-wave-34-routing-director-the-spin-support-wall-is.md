@@ -17,3 +17,5 @@ constant.  Queued CAS task: V14 cap P^4 for the two F55-invariant eigen-P^4s
 equivariant map can carry an E_{-11}-type constant-coefficient curve
 support.  No refinement of the support decomposition can decide this; a
 genuinely map-theoretic invariant is required.  Headline OPEN.
+
+---

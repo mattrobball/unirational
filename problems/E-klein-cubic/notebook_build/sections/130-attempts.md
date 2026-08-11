@@ -3858,6 +3858,49 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   content)**; the transport lattice IX.3–IX.5, D12-shadow IX.6, odd-order
   transfer IX.7 (V₁₄ C₃-unirational; F55 = a transferable sufficient
   negative target). Headline itself: STILL OPEN, both directions.
+
+  **Receiver ledger landed 2026-08-10** (`goal_runs_20260810/RECEIVER_LEDGER_X`,
+  `RECEIVER-LEDGER-X-PASS`; markers `PRODUCE_LEDGER_OK` 55 checks,
+  `RECEIVER_LEDGER_X_VERIFY_OK` + `ALLGREEN` 107 checks,
+  `LEDGER_IDEALS_M2_OK` 32/32): the **target-side** companion of FIX-A2 —
+  one row per conjugacy class of subgroups for `X^H`, all 16 closed. New exact
+  rows: **`X^{C3}` is six reduced points** (the isolated `C3`-fixed point of
+  `P⁴` is the `D12`-point and is **off `X`**; each of the two eigenlines meets
+  `X` in 3 distinct points = 1 `C6`-point + 2 with exact stabiliser `C3`;
+  residual `D12/C3 ≅ V4` acts with orbits `2 + 4`); **`X^{C6}` = 2 points, both
+  on the minus-line `L_t`** (the two `C6`-eigenpoints with involution eigenvalue
+  `−1`), one free residual 2-orbit; **`X^{S3} = ∅` for both `S3` classes**
+  (`P(W)^{S3}` is the single `D12`-point, off `X`); **`X^{C11}` = 5 points, all
+  on `X`, one free `F55/C11` 5-cycle**. Sealed rows replayed by two further
+  independent routes (`p = 331, 661` brute-force point counts, and a Macaulay2
+  ideal route `X^H = V(F) + Σ minors₂(x | g·x)` that also certifies **every** row
+  radical, closing the `C3`-reducedness remainder named in `STRATA_EXACT.md §6.1`
+  and `NORMAL_CHARACTERS.md §5.1`). Consequences: **Corollary C3** — for every
+  representation `V` and every `G`-equivariant `φ : P(V) ⇢ X`, the linear
+  subspace `P(V^{C3})` lies in the indeterminacy locus (hypotheses: `X^{C3}`
+  finite, `X^{D12} = ∅`, and `dim V^{C3} ≥ 1` for all eight irreducibles, with
+  multiplicities `1,1,1,4,4,3,4,4` derived without a character table and checked
+  against `Σ mᵢdᵢ = 220`); and the **receiver dichotomy** — `X^{N_G(H)} = ∅` for
+  **every** `H`, and `X^H` is finite for every `H` except `H = 1` and `H = C2`,
+  so exactly two rows are blocked: `1` (by `X` itself, RCC and `G`-stable) and
+  `C2` (**by `L_σ ≅ P¹` only**; `E_σ` with `j = 8192/11` is non-CM elliptic and
+  therefore not RCC). The 55-orbit of minus-lines is the **only**
+  positive-dimensional rational target anywhere in the equivariant fixed-locus
+  system of `X`. No contradiction with any sealed certificate; FIX-A2's 16-class
+  layer, FIX-A0's `X^σ = E_σ ⊔ L_σ` with `j = 8192/11`, and FIX-A1's six reduced
+  `V4`-points with `X^{A4} = ∅` are all re-derived independently and agree
+  exactly (including FIX-A1's inert-prime finding: 0 `F_p`-rational type-II
+  points at 331 **and** 661, 3 geometric). **Scope, stated where this
+  summarises:** the ledger is a fixed-locus computation plus an
+  indeterminacy-locus consequence, nothing more. It proves **nothing** about
+  the *existence* of `G`-equivariant maps into `X`: Corollary C3 and the
+  receiver dichotomy say where such a map must be undefined, they are not an
+  obstruction to equivariant unirationality, and no such claim is made
+  (`THEOREM.md` §0 "Theorem boundary" and §8 remainder 4). Adjudicated
+  2026-08-11 — `goal_runs_20260810/RECEIVER_LEDGER_X/ADJUDICATION_PR27.md`
+  (full replay byte-identical; one arithmetic slip in §5.2 fixed in place; an
+  independent topological-Lefschetz cross-check of the five cyclic rows added
+  as verifier Part F).
 - **Aliases:** FIX; "fixed-locus calculus"; the program-4 head-on attack
 - **Provenance:** `theory/FIX_I_bcomplex.md` … `FIX_IX_v14.md` (Notes
   I–IX) and `theory/FIX_T_gate.md`, `theory/FIX_H1_coupling.md`.
@@ -3877,3 +3920,76 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
   independently.*
 
 ---
+
+
+
+
+
+
+> **Stage-2 odd-order pinning landed 2026-08-11**
+> (`goal_runs_20260810/STAGE2_ODD_ORDER_PINNING`,
+> `STAGE2-ODD-ORDER-PINNING-SEALED`; marker
+> `STAGE2_ODD_ORDER_PINNING_VERIFY_OK` + `ALLGREEN`, 95 checks at `p = 331` and
+> `p = 661`). The first Stage-2 computation. It takes the `1.1 × 10¹⁵`
+> coherence-immune factor `STAGE1_COMPLEX_MAPS` §15.5 isolated — the 22 rows of
+> the terminus whose exact stabiliser has odd order — and **pins it by exact
+> character arithmetic**. Master statement: for a landing covariant
+> `T ∈ (Sym^d W* ⊗ W)^G` (no character twist: `G` is perfect) and any `g` of
+> order `n`, the value at a `g`-fixed stratum reached by a chain of exceptional
+> directions of relative weights `c_l` over a `g`-eigenpoint of weight `a_k`
+> lies in the eigenspace of weight `d·a_k + Σ μ_l c_l (mod n)`, `μ_l` the
+> successive jet orders — **or is zero, i.e. the row is a base point**.
+> Consequences: the four `C11`-rows and all ten `C5`-rows collapse to **exactly
+> one** value each (`5⁴ · 4¹⁰ = 655 360 000 → 1`); the eight `C3`-rows over the
+> `A4`-points collapse from six values to **three** (`6⁸ → 3⁸`), the residual
+> factor 3 being exactly the `C6/C3` involution that an odd-order source row
+> cannot see. Immune factor `1 100 753 141 760 000 → 3⁸ = 6 561`, reduction
+> `2²⁸·5⁴ = 167 772 160 000`; the stratum-coherent order-0 count drops from
+> `1 088 847 395 778 723 840 000` to `43 008 · 23 · 3⁸ = 6 490 036 224` (the
+> `σ`-band factor 43 008 and the `D10` factor 23 are carried unchanged from
+> Stage 1, not recounted).
+> Five base-locus congruences are **proved and sealed**: `X^{C11} ⊆ Bs(T)` iff
+> `d` is not a quadratic residue mod 11; `X^{C5} ⊆ Bs(T)` iff `5 ∣ d`; both
+> `C3`-eigenlines in `Bs(T)` iff `3 ∣ d`; and the `D10`- and `D12`-points in
+> `Bs(T)` for **every** `d` — the last two re-deriving the sealed
+> indeterminacy corollaries by pure character arithmetic. New: **all 55
+> minus-lines `L_σ` lie in `Bs(T)` whenever `d` is even**, and
+> `ord_{L_σ}(T) ≡ d+1 (mod 2)` — the exact mirror of the sealed plus-plane
+> parity `H0-1`, which the sealed profile did not record; `X^{C6} ⊆ Bs(T)`
+> unless `d ≡ ±1 (mod 6)`, with `T` fixing the `ρ`-fixed pair when `d ≡ 1` and
+> swapping it when `d ≡ 5`; the **`C11` quadruple obstruction** (all four
+> `C11`-rows carry a value simultaneously iff `d` is a QR mod 11 and
+> `μ ≡ 0` or `d`; at most three if `d` is a non-residue, at most two if
+> `11 ∣ d`); and the `C6`-band coupling **`m ≡ d ≢ 0 (mod 3)`** for the six
+> `C6`-children of `D_{P_σ}` to be non-degenerate. The three equivariance
+> commutations the brief demanded are **proved, not refuted**: the `F55`
+> 5-cycle at `C11`, the `D10` inversion at `C5` and the `D12/C3` eigenline swap
+> all commute with `a ↦ d·a` (they are multiplications in an abelian group);
+> the only non-commuting residual generator is the invisible `C6/C3`. First
+> order: `dT` preserves the relative weight and `ker(dF)` kills the block
+> `−3a_i`, whence `dT ≡ 0` at every `C11`-point when `d ≡ 3 (mod 11)`, rank
+> `≤ 1` when `d ≡ 4,5,9`, and rank `≤ 2` at `X^{C6}` when `d ≡ 5 (mod 6)`.
+> **NO DEGREE IS EXCLUDED** (`STAGE2-NO-DEGREE-EXCLUSION`): all 165 residues
+> `mod 165` (and all 330 `mod 330`) are consistent — independently confirming
+> the repository's own adjudication of the unsealed external mod-330 sieve
+> (`COMBINED_DEGREE_SIEVE/CONSTRAINT_LEDGER.md` B1/B2, EXCLUDED), whose
+> base-locus content is now proved rather than proposed. The sealed windows are
+> therefore unchanged: `d ≤ 30` empty, `d = 25` dead, **`d = 34` still the first
+> open window** — but `d = 34` now carries two conditions the `FIX-P2` slice
+> sweep did not impose: all 55 minus-lines in the base locus with odd order,
+> and both `X^{C6}` points in the base locus. Its own profile `m = 1` does
+> satisfy the new `C6`-band condition `m ≡ d ≡ 1 (mod 3)`.
+> Full exit ledger: `STAGE2-ODD-ORDER-PINNING-SEALED`,
+> `STAGE2-IMMUNE-FACTOR-COLLAPSED`, `STAGE2-BASE-LOCUS-CONGRUENCES-SEALED`,
+> `STAGE2-C11-QUADRUPLE-OBSTRUCTION`, `STAGE2-MINUS-LINE-PARITY`,
+> `STAGE2-NO-DEGREE-EXCLUSION`, `STAGE2-FIRST-ORDER-CHARACTER-TABLE`.
+> **Adjudicated 2026-08-11** (`ADJUDICATION_PR37.md`, PR #37): the 95-check
+> verifier replays byte-identical; the collapse `1.1 × 10¹⁵ → 3⁸` was
+> re-derived independently (the `C11` weight set is forced to be the quadratic
+> residues by `F`'s invariance alone, and the `C11`/`C5`/`C3` pinning rules,
+> Thm 2.1, Prop. 2.2, Prop. 3.1, the `d mod 165/330` table and the whole
+> `dT`-rank column of §5 were recomputed from scratch and agree). The
+> Stage-1 → Stage-2 dependency is real and is confined to the 22-row
+> identification plus Thms 3, 6, 9(i), all of which PR #32's adjudication
+> confirms; the inherited factors `43 008` and `23` are flagged upper bounds,
+> not results of this packet.
