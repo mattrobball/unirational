@@ -1,0 +1,1968 @@
+{
+ "all_pass": true,
+ "checks": [
+  {
+   "detail": "",
+   "name": "group_660_elements",
+   "pass": true
+  },
+  {
+   "detail": "{1: 1, 2: 55, 3: 110, 5: 264, 6: 110, 11: 120}",
+   "name": "element_order_profile",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "F_invariant_under_generator_1",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "F_invariant_under_generator_2",
+   "pass": true
+  },
+  {
+   "detail": "got 16",
+   "name": "subgroup_conjugacy_classes_16",
+   "pass": true
+  },
+  {
+   "detail": "got 620",
+   "name": "total_subgroups_620",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "C2_minus_line_inside_X",
+   "pass": true
+  },
+  {
+   "detail": "[(0, 0, 3), (0, 3, 0), (1, 1, 1), (3, 0, 0)]",
+   "name": "C2_plus_plane_Hesse_shape",
+   "pass": true
+  },
+  {
+   "detail": "['-16/11']",
+   "name": "C2_hesse_parameter_rational",
+   "pass": true
+  },
+  {
+   "detail": "-16/11",
+   "name": "C2_hesse_parameter_is_-16/11",
+   "pass": true
+  },
+  {
+   "detail": "8192/11",
+   "name": "C2_j_invariant_8192_over_11",
+   "pass": true
+  },
+  {
+   "detail": "t = -16/11",
+   "name": "C2_plus_plane_cubic_smooth_since_t_ne_1",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "C2_j_not_an_algebraic_integer_so_E_sigma_has_no_CM",
+   "pass": true
+  },
+  {
+   "detail": "pts 1 lines 2",
+   "name": "C3_ambient_shape_pt_plus_two_lines",
+   "pass": true
+  },
+  {
+   "detail": "D12 order 12",
+   "name": "C3_isolated_point_stabiliser_is_D12",
+   "pass": true
+  },
+  {
+   "detail": "F = -5,-12,-15,-12,-5,0,-7,-18,-18,-7",
+   "name": "C3_isolated_point_OFF_X",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "C3_each_eigenline_meets_X_in_3_reduced_points",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "C3_each_eigenline_carries_exactly_one_C6_point_of_X",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "N_C3_outside_C6_inverts_C3_and_swaps_the_two_eigenlines",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "C5_five_eigenpoints",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "C5_four_on_X_one_off",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "C11_five_eigenpoints_all_on_X",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "V4_ambient_line_plus_three_points",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "V4_line_not_in_X_and_reduced",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "V4_three_type_I_points_on_X",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "C6_five_eigenpoints",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "C6_two_on_X",
+   "pass": true
+  },
+  {
+   "detail": "[[False], [False]]",
+   "name": "S3_no_fixed_point_on_X",
+   "pass": true
+  },
+  {
+   "detail": "[[False]]",
+   "name": "D10_no_fixed_point_on_X",
+   "pass": true
+  },
+  {
+   "detail": "[[False]]",
+   "name": "D12_no_fixed_point_on_X",
+   "pass": true
+  },
+  {
+   "detail": "[[False, False]]",
+   "name": "A4_no_fixed_point_on_X",
+   "pass": true
+  },
+  {
+   "detail": "[0]",
+   "name": "C11:C5_ambient_fixed_locus_empty",
+   "pass": true
+  },
+  {
+   "detail": "[0, 0]",
+   "name": "A5_ambient_fixed_locus_empty",
+   "pass": true
+  },
+  {
+   "detail": "[0]",
+   "name": "PSL(2,11)_ambient_fixed_locus_empty",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "C2_plane_setwise_D12_pointwise_C2",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "C2_line_setwise_D12_pointwise_C2",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "C3_eigenline_setwise_C6_pointwise_C3_orbit_110",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "V4_line_setwise_A4_pointwise_V4_orbit_55",
+   "pass": true
+  },
+  {
+   "detail": "[{'on_X': False, 'stab': 'A4'}, {'on_X': False, 'stab': 'A4'}]",
+   "name": "V4_line_two_A4_points_off_X",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "C6_cube_is_an_involution",
+   "pass": true
+  },
+  {
+   "detail": "[{'on_X': False, 'involution_eigenvalue': '+1'}, {'on_X': True, 'involution_eigenvalue': '-1'}, {'on_X': False, 'involution_eigenvalue': '+1'}, {'on_X': False, 'involution_eigenvalue': '+1'}, {'on_X': True, 'involution_eigenvalue': '-1'}]",
+   "name": "C6_on_X_points_are_exactly_the_minus_eigenvalue_ones",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "five_cycle_P_is_in_the_group",
+   "pass": true
+  },
+  {
+   "detail": "['5']",
+   "name": "F_at_[1:1:1:1:1]_equals_5",
+   "pass": true
+  },
+  {
+   "detail": "[True, True, True, True]",
+   "name": "F_vanishes_at_the_four_primitive_C5_eigenpoints",
+   "pass": true
+  },
+  {
+   "detail": "[2, 0, 3, 4, 1]",
+   "name": "F55_residual_C5_is_a_single_5_cycle_on_X_C11",
+   "pass": true
+  },
+  {
+   "detail": "[0, 4, 3, 2, 1]",
+   "name": "D10_reflection_has_no_fixed_point_on_X_C5",
+   "pass": true
+  },
+  {
+   "detail": "[['+', '-', '-'], ['-', '+', '-'], ['-', '-', '+']]",
+   "name": "V4_each_type_I_vertex_is_plus_for_one_involution_minus_for_two",
+   "pass": true
+  },
+  {
+   "detail": "[(2, 0), (2, 0), (2, 0)]",
+   "name": "V4_line_ell_V_lies_in_all_three_plus_planes_and_meets_no_minus_line",
+   "pass": true
+  },
+  {
+   "detail": "11,5",
+   "name": "C3_orbits_on_11_points_class0",
+   "pass": true
+  },
+  {
+   "detail": "11,5",
+   "name": "C3_orbits_on_11_points_class1",
+   "pass": true
+  },
+  {
+   "detail": "12,4",
+   "name": "C3_orbits_on_12_points",
+   "pass": true
+  },
+  {
+   "detail": "1",
+   "name": "dim_W_C3_equals_1",
+   "pass": true
+  },
+  {
+   "detail": "220,4",
+   "name": "F55_orbits_on_G_mod_C3_is_4",
+   "pass": true
+  },
+  {
+   "detail": "220",
+   "name": "sum_mult_times_degree_is_220",
+   "pass": true
+  },
+  {
+   "detail": "{'10_0': 4, '10_1': 4, '11': 3, '1': 1, '5': 1, '5*': 1, '12': 4, '12*': 4}",
+   "name": "every_irreducible_has_nonzero_C3_invariants",
+   "pass": true
+  }
+ ],
+ "detail": {
+  "A4": [
+   {
+    "n_points": 2,
+    "points": [
+     {
+      "on_X": false,
+      "stab": "A4",
+      "stab_order": 12
+     },
+     {
+      "on_X": false,
+      "stab": "A4",
+      "stab_order": 12
+     }
+    ]
+   }
+  ],
+  "C11": {
+   "points": [
+    {
+     "on_X": true,
+     "stab": "C11",
+     "stab_order": 11
+    },
+    {
+     "on_X": true,
+     "stab": "C11",
+     "stab_order": 11
+    },
+    {
+     "on_X": true,
+     "stab": "C11",
+     "stab_order": 11
+    },
+    {
+     "on_X": true,
+     "stab": "C11",
+     "stab_order": 11
+    },
+    {
+     "on_X": true,
+     "stab": "C11",
+     "stab_order": 11
+    }
+   ],
+   "residual_C5_permutation": [
+    2,
+    0,
+    3,
+    4,
+    1
+   ]
+  },
+  "C2": {
+   "hesse_abcd_zero": [
+    false,
+    false,
+    false,
+    false
+   ],
+   "hesse_t": "-16/11",
+   "j": "8192/11",
+   "minus_line_in_X": true,
+   "plus_plane_C3_eigenpoints": [
+    {
+     "c3_eigenvalue": "w^0",
+     "on_X": false,
+     "stab_name": "D12",
+     "stab_order": 12
+    },
+    {
+     "c3_eigenvalue": "w^1",
+     "on_X": false,
+     "stab_name": "C6",
+     "stab_order": 6
+    },
+    {
+     "c3_eigenvalue": "w^2",
+     "on_X": false,
+     "stab_name": "C6",
+     "stab_order": 6
+    }
+   ]
+  },
+  "C3": {
+   "eigenlines": [
+    {
+     "C6_eigenpoints_on_the_line": [
+      {
+       "eig": "zeta6^2",
+       "on_X": false,
+       "stab": "C6",
+       "stab_order": 6
+      },
+      {
+       "eig": "zeta6^5",
+       "on_X": true,
+       "stab": "C6",
+       "stab_order": 6
+      }
+     ],
+     "F_identically_zero": false,
+     "X_points": 3,
+     "disc_nonzero": true
+    },
+    {
+     "C6_eigenpoints_on_the_line": [
+      {
+       "eig": "zeta6^1",
+       "on_X": true,
+       "stab": "C6",
+       "stab_order": 6
+      },
+      {
+       "eig": "zeta6^4",
+       "on_X": false,
+       "stab": "C6",
+       "stab_order": 6
+      }
+     ],
+     "F_identically_zero": false,
+     "X_points": 3,
+     "disc_nonzero": true
+    }
+   ],
+   "isolated_point_F": [
+    "-5",
+    "-12",
+    "-15",
+    "-12",
+    "-5",
+    "0",
+    "-7",
+    "-18",
+    "-18",
+    "-7"
+   ],
+   "isolated_point_F_rational": false,
+   "isolated_point_on_X": false,
+   "isolated_point_stab": "D12"
+  },
+  "C3_corollary": {
+   "degrees": {
+    "1": 1,
+    "10_0": 10,
+    "10_1": 10,
+    "11": 11,
+    "12": 12,
+    "12*": 12,
+    "5": 5,
+    "5*": 5
+   },
+   "dim_V_C3_by_irreducible": {
+    "1": 1,
+    "10_0": 4,
+    "10_1": 4,
+    "11": 3,
+    "12": 4,
+    "12*": 4,
+    "5": 1,
+    "5*": 1
+   },
+   "sum_check": 220
+  },
+  "C5": {
+   "points": [
+    {
+     "F": [
+      "800",
+      "800",
+      "0",
+      "-675",
+      "-420",
+      "460",
+      "935",
+      "460",
+      "-420",
+      "-675"
+     ],
+     "F_rational": false,
+     "on_X": false,
+     "stab": "D10",
+     "stab_order": 10
+    },
+    {
+     "F": [],
+     "F_rational": true,
+     "on_X": true,
+     "stab": "C5",
+     "stab_order": 5
+    },
+    {
+     "F": [],
+     "F_rational": true,
+     "on_X": true,
+     "stab": "C5",
+     "stab_order": 5
+    },
+    {
+     "F": [],
+     "F_rational": true,
+     "on_X": true,
+     "stab": "C5",
+     "stab_order": 5
+    },
+    {
+     "F": [],
+     "F_rational": true,
+     "on_X": true,
+     "stab": "C5",
+     "stab_order": 5
+    }
+   ],
+   "reflection_permutation": [
+    0,
+    4,
+    3,
+    2,
+    1
+   ],
+   "standard_model": {
+    "F_at_all_ones": "5",
+    "F_at_v(zeta5^k)_k=1..4": "all zero"
+   }
+  },
+  "C6": {
+   "involution_eigenvalues": [
+    {
+     "involution_eigenvalue": "+1",
+     "on_X": false
+    },
+    {
+     "involution_eigenvalue": "-1",
+     "on_X": true
+    },
+    {
+     "involution_eigenvalue": "+1",
+     "on_X": false
+    },
+    {
+     "involution_eigenvalue": "+1",
+     "on_X": false
+    },
+    {
+     "involution_eigenvalue": "-1",
+     "on_X": true
+    }
+   ],
+   "points": [
+    {
+     "on_X": false,
+     "stab": "D12",
+     "stab_order": 12
+    },
+    {
+     "on_X": true,
+     "stab": "C6",
+     "stab_order": 6
+    },
+    {
+     "on_X": false,
+     "stab": "C6",
+     "stab_order": 6
+    },
+    {
+     "on_X": false,
+     "stab": "C6",
+     "stab_order": 6
+    },
+    {
+     "on_X": true,
+     "stab": "C6",
+     "stab_order": 6
+    }
+   ]
+  },
+  "D10": [
+   {
+    "n_points": 1,
+    "points": [
+     {
+      "on_X": false,
+      "stab": "D10",
+      "stab_order": 10
+     }
+    ]
+   }
+  ],
+  "D12": [
+   {
+    "n_points": 1,
+    "points": [
+     {
+      "on_X": false,
+      "stab": "D12",
+      "stab_order": 12
+     }
+    ]
+   }
+  ],
+  "S3": [
+   {
+    "n_points": 1,
+    "points": [
+     {
+      "on_X": false,
+      "stab": "D12",
+      "stab_order": 12
+     }
+    ]
+   },
+   {
+    "n_points": 1,
+    "points": [
+     {
+      "on_X": false,
+      "stab": "D12",
+      "stab_order": 12
+     }
+    ]
+   }
+  ],
+  "V4": {
+   "A4_points_on_ell_V": [
+    {
+     "on_X": false,
+     "stab": "A4"
+    },
+    {
+     "on_X": false,
+     "stab": "A4"
+    }
+   ],
+   "incidence": {
+    "ell_V_in_plus_planes": [
+     [
+      2,
+      0
+     ],
+     [
+      2,
+      0
+     ],
+     [
+      2,
+      0
+     ]
+    ],
+    "ell_V_meets_minus_lines": [],
+    "type_I": [
+     [
+      "+",
+      "-",
+      "-"
+     ],
+     [
+      "-",
+      "+",
+      "-"
+     ],
+     [
+      "-",
+      "-",
+      "+"
+     ]
+    ]
+   },
+   "line_disc_nonzero": true,
+   "type_I": [
+    {
+     "on_X": true,
+     "stab": "V4",
+     "stab_order": 4
+    },
+    {
+     "on_X": true,
+     "stab": "V4",
+     "stab_order": 4
+    },
+    {
+     "on_X": true,
+     "stab": "V4",
+     "stab_order": 4
+    }
+   ],
+   "type_II_count": 3,
+   "type_II_is_free_residual_C3_orbit": true
+  },
+  "containment_poset": [
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "1",
+    "sub_order": 1,
+    "sup": "C2",
+    "sup_order": 2
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "1",
+    "sub_order": 1,
+    "sup": "C11",
+    "sup_order": 11
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "1",
+    "sub_order": 1,
+    "sup": "C3",
+    "sup_order": 3
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "1",
+    "sub_order": 1,
+    "sup": "C5",
+    "sup_order": 5
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "1",
+    "sub_order": 1,
+    "sup": "C6",
+    "sup_order": 6
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "1",
+    "sub_order": 1,
+    "sup": "PSL(2,11)",
+    "sup_order": 660
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "1",
+    "sub_order": 1,
+    "sup": "D10",
+    "sup_order": 10
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "1",
+    "sub_order": 1,
+    "sup": "A5(a)",
+    "sup_order": 60
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "1",
+    "sub_order": 1,
+    "sup": "A5(b)",
+    "sup_order": 60
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "1",
+    "sub_order": 1,
+    "sup": "D12",
+    "sup_order": 12
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "1",
+    "sub_order": 1,
+    "sup": "A4",
+    "sup_order": 12
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "1",
+    "sub_order": 1,
+    "sup": "S3(a)",
+    "sup_order": 6
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "1",
+    "sub_order": 1,
+    "sup": "S3(b)",
+    "sup_order": 6
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "1",
+    "sub_order": 1,
+    "sup": "V4",
+    "sup_order": 4
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "1",
+    "sub_order": 1,
+    "sup": "C11:C5",
+    "sup_order": 55
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "C2",
+    "sub_order": 2,
+    "sup": "C6",
+    "sup_order": 6
+   },
+   {
+    "copies_of_sub_in_one_sup": 55,
+    "sub": "C2",
+    "sub_order": 2,
+    "sup": "PSL(2,11)",
+    "sup_order": 660
+   },
+   {
+    "copies_of_sub_in_one_sup": 5,
+    "sub": "C2",
+    "sub_order": 2,
+    "sup": "D10",
+    "sup_order": 10
+   },
+   {
+    "copies_of_sub_in_one_sup": 15,
+    "sub": "C2",
+    "sub_order": 2,
+    "sup": "A5(a)",
+    "sup_order": 60
+   },
+   {
+    "copies_of_sub_in_one_sup": 15,
+    "sub": "C2",
+    "sub_order": 2,
+    "sup": "A5(b)",
+    "sup_order": 60
+   },
+   {
+    "copies_of_sub_in_one_sup": 7,
+    "sub": "C2",
+    "sub_order": 2,
+    "sup": "D12",
+    "sup_order": 12
+   },
+   {
+    "copies_of_sub_in_one_sup": 3,
+    "sub": "C2",
+    "sub_order": 2,
+    "sup": "A4",
+    "sup_order": 12
+   },
+   {
+    "copies_of_sub_in_one_sup": 3,
+    "sub": "C2",
+    "sub_order": 2,
+    "sup": "S3(a)",
+    "sup_order": 6
+   },
+   {
+    "copies_of_sub_in_one_sup": 3,
+    "sub": "C2",
+    "sub_order": 2,
+    "sup": "S3(b)",
+    "sup_order": 6
+   },
+   {
+    "copies_of_sub_in_one_sup": 3,
+    "sub": "C2",
+    "sub_order": 2,
+    "sup": "V4",
+    "sup_order": 4
+   },
+   {
+    "copies_of_sub_in_one_sup": 12,
+    "sub": "C11",
+    "sub_order": 11,
+    "sup": "PSL(2,11)",
+    "sup_order": 660
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "C11",
+    "sub_order": 11,
+    "sup": "C11:C5",
+    "sup_order": 55
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "C3",
+    "sub_order": 3,
+    "sup": "C6",
+    "sup_order": 6
+   },
+   {
+    "copies_of_sub_in_one_sup": 55,
+    "sub": "C3",
+    "sub_order": 3,
+    "sup": "PSL(2,11)",
+    "sup_order": 660
+   },
+   {
+    "copies_of_sub_in_one_sup": 10,
+    "sub": "C3",
+    "sub_order": 3,
+    "sup": "A5(a)",
+    "sup_order": 60
+   },
+   {
+    "copies_of_sub_in_one_sup": 10,
+    "sub": "C3",
+    "sub_order": 3,
+    "sup": "A5(b)",
+    "sup_order": 60
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "C3",
+    "sub_order": 3,
+    "sup": "D12",
+    "sup_order": 12
+   },
+   {
+    "copies_of_sub_in_one_sup": 4,
+    "sub": "C3",
+    "sub_order": 3,
+    "sup": "A4",
+    "sup_order": 12
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "C3",
+    "sub_order": 3,
+    "sup": "S3(a)",
+    "sup_order": 6
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "C3",
+    "sub_order": 3,
+    "sup": "S3(b)",
+    "sup_order": 6
+   },
+   {
+    "copies_of_sub_in_one_sup": 66,
+    "sub": "C5",
+    "sub_order": 5,
+    "sup": "PSL(2,11)",
+    "sup_order": 660
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "C5",
+    "sub_order": 5,
+    "sup": "D10",
+    "sup_order": 10
+   },
+   {
+    "copies_of_sub_in_one_sup": 6,
+    "sub": "C5",
+    "sub_order": 5,
+    "sup": "A5(a)",
+    "sup_order": 60
+   },
+   {
+    "copies_of_sub_in_one_sup": 6,
+    "sub": "C5",
+    "sub_order": 5,
+    "sup": "A5(b)",
+    "sup_order": 60
+   },
+   {
+    "copies_of_sub_in_one_sup": 11,
+    "sub": "C5",
+    "sub_order": 5,
+    "sup": "C11:C5",
+    "sup_order": 55
+   },
+   {
+    "copies_of_sub_in_one_sup": 55,
+    "sub": "C6",
+    "sub_order": 6,
+    "sup": "PSL(2,11)",
+    "sup_order": 660
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "C6",
+    "sub_order": 6,
+    "sup": "D12",
+    "sup_order": 12
+   },
+   {
+    "copies_of_sub_in_one_sup": 66,
+    "sub": "D10",
+    "sub_order": 10,
+    "sup": "PSL(2,11)",
+    "sup_order": 660
+   },
+   {
+    "copies_of_sub_in_one_sup": 6,
+    "sub": "D10",
+    "sub_order": 10,
+    "sup": "A5(a)",
+    "sup_order": 60
+   },
+   {
+    "copies_of_sub_in_one_sup": 6,
+    "sub": "D10",
+    "sub_order": 10,
+    "sup": "A5(b)",
+    "sup_order": 60
+   },
+   {
+    "copies_of_sub_in_one_sup": 11,
+    "sub": "A5(a)",
+    "sub_order": 60,
+    "sup": "PSL(2,11)",
+    "sup_order": 660
+   },
+   {
+    "copies_of_sub_in_one_sup": 11,
+    "sub": "A5(b)",
+    "sub_order": 60,
+    "sup": "PSL(2,11)",
+    "sup_order": 660
+   },
+   {
+    "copies_of_sub_in_one_sup": 55,
+    "sub": "D12",
+    "sub_order": 12,
+    "sup": "PSL(2,11)",
+    "sup_order": 660
+   },
+   {
+    "copies_of_sub_in_one_sup": 55,
+    "sub": "A4",
+    "sub_order": 12,
+    "sup": "PSL(2,11)",
+    "sup_order": 660
+   },
+   {
+    "copies_of_sub_in_one_sup": 5,
+    "sub": "A4",
+    "sub_order": 12,
+    "sup": "A5(a)",
+    "sup_order": 60
+   },
+   {
+    "copies_of_sub_in_one_sup": 5,
+    "sub": "A4",
+    "sub_order": 12,
+    "sup": "A5(b)",
+    "sup_order": 60
+   },
+   {
+    "copies_of_sub_in_one_sup": 55,
+    "sub": "S3(a)",
+    "sub_order": 6,
+    "sup": "PSL(2,11)",
+    "sup_order": 660
+   },
+   {
+    "copies_of_sub_in_one_sup": 10,
+    "sub": "S3(a)",
+    "sub_order": 6,
+    "sup": "A5(a)",
+    "sup_order": 60
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "S3(a)",
+    "sub_order": 6,
+    "sup": "D12",
+    "sup_order": 12
+   },
+   {
+    "copies_of_sub_in_one_sup": 55,
+    "sub": "S3(b)",
+    "sub_order": 6,
+    "sup": "PSL(2,11)",
+    "sup_order": 660
+   },
+   {
+    "copies_of_sub_in_one_sup": 10,
+    "sub": "S3(b)",
+    "sub_order": 6,
+    "sup": "A5(b)",
+    "sup_order": 60
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "S3(b)",
+    "sub_order": 6,
+    "sup": "D12",
+    "sup_order": 12
+   },
+   {
+    "copies_of_sub_in_one_sup": 55,
+    "sub": "V4",
+    "sub_order": 4,
+    "sup": "PSL(2,11)",
+    "sup_order": 660
+   },
+   {
+    "copies_of_sub_in_one_sup": 5,
+    "sub": "V4",
+    "sub_order": 4,
+    "sup": "A5(a)",
+    "sup_order": 60
+   },
+   {
+    "copies_of_sub_in_one_sup": 5,
+    "sub": "V4",
+    "sub_order": 4,
+    "sup": "A5(b)",
+    "sup_order": 60
+   },
+   {
+    "copies_of_sub_in_one_sup": 3,
+    "sub": "V4",
+    "sub_order": 4,
+    "sup": "D12",
+    "sup_order": 12
+   },
+   {
+    "copies_of_sub_in_one_sup": 1,
+    "sub": "V4",
+    "sub_order": 4,
+    "sup": "A4",
+    "sup_order": 12
+   },
+   {
+    "copies_of_sub_in_one_sup": 12,
+    "sub": "C11:C5",
+    "sub_order": 55,
+    "sup": "PSL(2,11)",
+    "sup_order": 660
+   }
+  ],
+  "stratum_stabilisers": {
+   "C2_minus_line": {
+    "G_orbit_of_stratum": 55,
+    "pointwise": "C2",
+    "pointwise_order": 2,
+    "setwise": "D12",
+    "setwise_order": 12
+   },
+   "C2_plus_plane": {
+    "G_orbit_of_stratum": 55,
+    "pointwise": "C2",
+    "pointwise_order": 2,
+    "setwise": "D12",
+    "setwise_order": 12
+   },
+   "C3_eigenline": {
+    "G_orbit_of_stratum": 110,
+    "pointwise": "C3",
+    "pointwise_order": 3,
+    "setwise": "C6",
+    "setwise_order": 6
+   },
+   "V4_line_ell_V": {
+    "G_orbit_of_stratum": 55,
+    "pointwise": "V4",
+    "pointwise_order": 4,
+    "setwise": "A4",
+    "setwise_order": 12
+   }
+  }
+ },
+ "field": "Q(zeta_165) = Q(zeta_3,zeta_5,zeta_11), degree 80",
+ "model": "S,T generators as in certificates/exact_weil_check.py; F = sum x_i^2 x_{i+1}",
+ "packet": "RECEIVER_LEDGER_X",
+ "problem": "E-klein-cubic",
+ "rows": [
+  {
+   "C": "PSL(2,11)",
+   "C_order": 660,
+   "N": "PSL(2,11)",
+   "N_order": 660,
+   "ambient_strata": [
+    {
+     "X_component": "X itself",
+     "chi": 0,
+     "dim_W_chi": 5,
+     "type": "P^4"
+    }
+   ],
+   "label": "1",
+   "n_linear_characters": 1,
+   "name": "1",
+   "nconj": 1,
+   "order": 1
+  },
+  {
+   "C": "D12",
+   "C_order": 12,
+   "N": "D12",
+   "N_order": 12,
+   "ambient_strata": [
+    {
+     "F_identically_zero": false,
+     "chi": 0,
+     "dim_W_chi": 3,
+     "n_monomials": 10,
+     "type": "plane"
+    },
+    {
+     "F_identically_zero": true,
+     "X_component": "line P^1 contained in X",
+     "X_points": "infinite",
+     "chi": 1,
+     "cubic_coeffs_zero": [
+      true,
+      true,
+      true,
+      true
+     ],
+     "dim_W_chi": 2,
+     "type": "line"
+    }
+   ],
+   "label": "C2",
+   "n_linear_characters": 2,
+   "name": "C2",
+   "nconj": 55,
+   "order": 2
+  },
+  {
+   "C": "C11",
+   "C_order": 11,
+   "N": "C11:C5",
+   "N_order": 55,
+   "ambient_strata": [
+    {
+     "F_rational": true,
+     "F_value": [],
+     "F_value_Q": "0",
+     "F_value_zero": true,
+     "X_points": 1,
+     "chi": 1,
+     "dim_W_chi": 1,
+     "on_X": true,
+     "type": "point"
+    },
+    {
+     "F_rational": true,
+     "F_value": [],
+     "F_value_Q": "0",
+     "F_value_zero": true,
+     "X_points": 1,
+     "chi": 3,
+     "dim_W_chi": 1,
+     "on_X": true,
+     "type": "point"
+    },
+    {
+     "F_rational": true,
+     "F_value": [],
+     "F_value_Q": "0",
+     "F_value_zero": true,
+     "X_points": 1,
+     "chi": 4,
+     "dim_W_chi": 1,
+     "on_X": true,
+     "type": "point"
+    },
+    {
+     "F_rational": true,
+     "F_value": [],
+     "F_value_Q": "0",
+     "F_value_zero": true,
+     "X_points": 1,
+     "chi": 5,
+     "dim_W_chi": 1,
+     "on_X": true,
+     "type": "point"
+    },
+    {
+     "F_rational": true,
+     "F_value": [],
+     "F_value_Q": "0",
+     "F_value_zero": true,
+     "X_points": 1,
+     "chi": 9,
+     "dim_W_chi": 1,
+     "on_X": true,
+     "type": "point"
+    }
+   ],
+   "label": "C11",
+   "n_linear_characters": 11,
+   "name": "C11",
+   "nconj": 12,
+   "order": 11
+  },
+  {
+   "C": "C6",
+   "C_order": 6,
+   "N": "D12",
+   "N_order": 12,
+   "ambient_strata": [
+    {
+     "F_rational": false,
+     "F_value": [
+      "-5",
+      "-12",
+      "-15",
+      "-12",
+      "-5",
+      "0",
+      "-7",
+      "-18",
+      "-18",
+      "-7"
+     ],
+     "F_value_zero": false,
+     "X_points": 0,
+     "chi": 0,
+     "dim_W_chi": 1,
+     "on_X": false,
+     "type": "point"
+    },
+    {
+     "F_identically_zero": false,
+     "X_points": 3,
+     "X_reduced": true,
+     "chi": 1,
+     "cubic_coeffs_zero": [
+      false,
+      false,
+      false,
+      false
+     ],
+     "dim_W_chi": 2,
+     "disc_zero": false,
+     "type": "line"
+    },
+    {
+     "F_identically_zero": false,
+     "X_points": 3,
+     "X_reduced": true,
+     "chi": 2,
+     "cubic_coeffs_zero": [
+      false,
+      false,
+      false,
+      false
+     ],
+     "dim_W_chi": 2,
+     "disc_zero": false,
+     "type": "line"
+    }
+   ],
+   "label": "C3",
+   "n_linear_characters": 3,
+   "name": "C3",
+   "nconj": 55,
+   "order": 3
+  },
+  {
+   "C": "C5",
+   "C_order": 5,
+   "N": "D10",
+   "N_order": 10,
+   "ambient_strata": [
+    {
+     "F_rational": false,
+     "F_value": [
+      "800",
+      "800",
+      "0",
+      "-675",
+      "-420",
+      "460",
+      "935",
+      "460",
+      "-420",
+      "-675"
+     ],
+     "F_value_zero": false,
+     "X_points": 0,
+     "chi": 0,
+     "dim_W_chi": 1,
+     "on_X": false,
+     "type": "point"
+    },
+    {
+     "F_rational": true,
+     "F_value": [],
+     "F_value_Q": "0",
+     "F_value_zero": true,
+     "X_points": 1,
+     "chi": 1,
+     "dim_W_chi": 1,
+     "on_X": true,
+     "type": "point"
+    },
+    {
+     "F_rational": true,
+     "F_value": [],
+     "F_value_Q": "0",
+     "F_value_zero": true,
+     "X_points": 1,
+     "chi": 2,
+     "dim_W_chi": 1,
+     "on_X": true,
+     "type": "point"
+    },
+    {
+     "F_rational": true,
+     "F_value": [],
+     "F_value_Q": "0",
+     "F_value_zero": true,
+     "X_points": 1,
+     "chi": 3,
+     "dim_W_chi": 1,
+     "on_X": true,
+     "type": "point"
+    },
+    {
+     "F_rational": true,
+     "F_value": [],
+     "F_value_Q": "0",
+     "F_value_zero": true,
+     "X_points": 1,
+     "chi": 4,
+     "dim_W_chi": 1,
+     "on_X": true,
+     "type": "point"
+    }
+   ],
+   "label": "C5",
+   "n_linear_characters": 5,
+   "name": "C5",
+   "nconj": 66,
+   "order": 5
+  },
+  {
+   "C": "C6",
+   "C_order": 6,
+   "N": "D12",
+   "N_order": 12,
+   "ambient_strata": [
+    {
+     "F_rational": false,
+     "F_value": [
+      "-3",
+      "3",
+      "8",
+      "10",
+      "15",
+      "15",
+      "10",
+      "8",
+      "3",
+      "-3"
+     ],
+     "F_value_zero": false,
+     "X_points": 0,
+     "chi": 0,
+     "dim_W_chi": 1,
+     "on_X": false,
+     "type": "point"
+    },
+    {
+     "F_rational": true,
+     "F_value": [],
+     "F_value_Q": "0",
+     "F_value_zero": true,
+     "X_points": 1,
+     "chi": 1,
+     "dim_W_chi": 1,
+     "on_X": true,
+     "type": "point"
+    },
+    {
+     "F_rational": false,
+     "F_value": [
+      "-216942",
+      "-227436",
+      "-7546",
+      "-59642",
+      "-264660",
+      "-154242",
+      "19360",
+      "-140470",
+      "-268620",
+      "-72270",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-144672",
+      "41184",
+      "132924",
+      "-79002",
+      "-110418",
+      "110418",
+      "79002",
+      "-132924",
+      "-41184",
+      "144672"
+     ],
+     "F_value_zero": false,
+     "X_points": 0,
+     "chi": 2,
+     "dim_W_chi": 1,
+     "on_X": false,
+     "type": "point"
+    },
+    {
+     "F_rational": false,
+     "F_value": [
+      "-72270",
+      "-268620",
+      "-140470",
+      "19360",
+      "-154242",
+      "-264660",
+      "-59642",
+      "-7546",
+      "-227436",
+      "-216942",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "144672",
+      "-41184",
+      "-132924",
+      "79002",
+      "110418",
+      "-110418",
+      "-79002",
+      "132924",
+      "41184",
+      "-144672"
+     ],
+     "F_value_zero": false,
+     "X_points": 0,
+     "chi": 4,
+     "dim_W_chi": 1,
+     "on_X": false,
+     "type": "point"
+    },
+    {
+     "F_rational": true,
+     "F_value": [],
+     "F_value_Q": "0",
+     "F_value_zero": true,
+     "X_points": 1,
+     "chi": 5,
+     "dim_W_chi": 1,
+     "on_X": true,
+     "type": "point"
+    }
+   ],
+   "label": "C6",
+   "n_linear_characters": 6,
+   "name": "C6",
+   "nconj": 55,
+   "order": 6
+  },
+  {
+   "C": "1",
+   "C_order": 1,
+   "N": "PSL(2,11)",
+   "N_order": 660,
+   "ambient_strata": [],
+   "label": "PSL(2,11)",
+   "n_linear_characters": 1,
+   "name": "PSL(2,11)",
+   "nconj": 1,
+   "order": 660
+  },
+  {
+   "C": "1",
+   "C_order": 1,
+   "N": "D10",
+   "N_order": 10,
+   "ambient_strata": [
+    {
+     "F_rational": false,
+     "F_value": [
+      "255",
+      "1135",
+      "1610",
+      "1135",
+      "255",
+      "0",
+      "675",
+      "1475",
+      "1475",
+      "675"
+     ],
+     "F_value_zero": false,
+     "X_points": 0,
+     "chi": 0,
+     "dim_W_chi": 1,
+     "on_X": false,
+     "type": "point"
+    }
+   ],
+   "label": "D10",
+   "n_linear_characters": 2,
+   "name": "D10",
+   "nconj": 66,
+   "order": 10
+  },
+  {
+   "C": "1",
+   "C_order": 1,
+   "N": "A5",
+   "N_order": 60,
+   "ambient_strata": [],
+   "label": "A5(a)",
+   "n_linear_characters": 1,
+   "name": "A5",
+   "nconj": 11,
+   "order": 60
+  },
+  {
+   "C": "1",
+   "C_order": 1,
+   "N": "A5",
+   "N_order": 60,
+   "ambient_strata": [],
+   "label": "A5(b)",
+   "n_linear_characters": 1,
+   "name": "A5",
+   "nconj": 11,
+   "order": 60
+  },
+  {
+   "C": "C2",
+   "C_order": 2,
+   "N": "D12",
+   "N_order": 12,
+   "ambient_strata": [
+    {
+     "F_rational": false,
+     "F_value": [
+      "11",
+      "18",
+      "13",
+      "6",
+      "3",
+      "6",
+      "13",
+      "18",
+      "11"
+     ],
+     "F_value_zero": false,
+     "X_points": 0,
+     "chi": 0,
+     "dim_W_chi": 1,
+     "on_X": false,
+     "type": "point"
+    }
+   ],
+   "label": "D12",
+   "n_linear_characters": 4,
+   "name": "D12",
+   "nconj": 55,
+   "order": 12
+  },
+  {
+   "C": "1",
+   "C_order": 1,
+   "N": "A4",
+   "N_order": 12,
+   "ambient_strata": [
+    {
+     "F_rational": false,
+     "F_value": [
+      "31",
+      "16",
+      "48",
+      "-14",
+      "38",
+      "2",
+      "69",
+      "20",
+      "29",
+      "-8",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "63",
+      "33",
+      "96",
+      "42",
+      "57",
+      "30",
+      "48",
+      "66",
+      "39",
+      "54"
+     ],
+     "F_value_zero": false,
+     "X_points": 0,
+     "chi": 1,
+     "dim_W_chi": 1,
+     "on_X": false,
+     "type": "point"
+    },
+    {
+     "F_rational": false,
+     "F_value": [
+      "-32",
+      "-17",
+      "-48",
+      "-56",
+      "-19",
+      "-28",
+      "21",
+      "-46",
+      "-10",
+      "-62",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "-63",
+      "-33",
+      "-96",
+      "-42",
+      "-57",
+      "-30",
+      "-48",
+      "-66",
+      "-39",
+      "-54"
+     ],
+     "F_value_zero": false,
+     "X_points": 0,
+     "chi": 2,
+     "dim_W_chi": 1,
+     "on_X": false,
+     "type": "point"
+    }
+   ],
+   "label": "A4",
+   "n_linear_characters": 3,
+   "name": "A4",
+   "nconj": 55,
+   "order": 12
+  },
+  {
+   "C": "C2",
+   "C_order": 2,
+   "N": "D12",
+   "N_order": 12,
+   "ambient_strata": [
+    {
+     "F_rational": false,
+     "F_value": [
+      "-12",
+      "-12",
+      "0",
+      "-18",
+      "-7",
+      "-5",
+      "-15",
+      "-5",
+      "-7",
+      "-18"
+     ],
+     "F_value_zero": false,
+     "X_points": 0,
+     "chi": 0,
+     "dim_W_chi": 1,
+     "on_X": false,
+     "type": "point"
+    }
+   ],
+   "label": "S3(a)",
+   "n_linear_characters": 2,
+   "name": "S3",
+   "nconj": 55,
+   "order": 6
+  },
+  {
+   "C": "C2",
+   "C_order": 2,
+   "N": "D12",
+   "N_order": 12,
+   "ambient_strata": [
+    {
+     "F_rational": false,
+     "F_value": [
+      "11",
+      "18",
+      "13",
+      "6",
+      "3",
+      "6",
+      "13",
+      "18",
+      "11"
+     ],
+     "F_value_zero": false,
+     "X_points": 0,
+     "chi": 0,
+     "dim_W_chi": 1,
+     "on_X": false,
+     "type": "point"
+    }
+   ],
+   "label": "S3(b)",
+   "n_linear_characters": 2,
+   "name": "S3",
+   "nconj": 55,
+   "order": 6
+  },
+  {
+   "C": "V4",
+   "C_order": 4,
+   "N": "A4",
+   "N_order": 12,
+   "ambient_strata": [
+    {
+     "F_identically_zero": false,
+     "X_points": 3,
+     "X_reduced": true,
+     "chi": 0,
+     "cubic_coeffs_zero": [
+      false,
+      false,
+      false,
+      false
+     ],
+     "dim_W_chi": 2,
+     "disc_zero": false,
+     "type": "line"
+    },
+    {
+     "F_rational": true,
+     "F_value": [],
+     "F_value_Q": "0",
+     "F_value_zero": true,
+     "X_points": 1,
+     "chi": 1,
+     "dim_W_chi": 1,
+     "on_X": true,
+     "type": "point"
+    },
+    {
+     "F_rational": true,
+     "F_value": [],
+     "F_value_Q": "0",
+     "F_value_zero": true,
+     "X_points": 1,
+     "chi": 2,
+     "dim_W_chi": 1,
+     "on_X": true,
+     "type": "point"
+    },
+    {
+     "F_rational": true,
+     "F_value": [],
+     "F_value_Q": "0",
+     "F_value_zero": true,
+     "X_points": 1,
+     "chi": 3,
+     "dim_W_chi": 1,
+     "on_X": true,
+     "type": "point"
+    }
+   ],
+   "label": "V4",
+   "n_linear_characters": 4,
+   "name": "V4",
+   "nconj": 55,
+   "order": 4
+  },
+  {
+   "C": "1",
+   "C_order": 1,
+   "N": "C11:C5",
+   "N_order": 55,
+   "ambient_strata": [],
+   "label": "C11:C5",
+   "n_linear_characters": 5,
+   "name": "C11:C5",
+   "nconj": 12,
+   "order": 55
+  }
+ ]
+}

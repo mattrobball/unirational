@@ -1,0 +1,1239 @@
+{
+ "checks": [
+  {
+   "detail": "",
+   "name": "A0_gauss_sum_squares_to_minus_11",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "A0_S_is_an_involution",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "A0_T_has_order_11",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "A0_ST_has_order_3",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "A0_F_invariant_under_S",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "A0_F_invariant_under_T",
+   "pass": true
+  },
+  {
+   "detail": "[1, 3, 4, 5, 9]",
+   "name": "A1_T_has_five_distinct_eigenvalues",
+   "pass": true
+  },
+  {
+   "detail": "all five coordinate points lie on X",
+   "name": "A1_F_has_no_pure_power_monomial",
+   "pass": true
+  },
+  {
+   "detail": "so F(v(w)) = 1+w+w^2+w^3+w^4 = 0 for every 5th root of unity w != 1",
+   "name": "A2_C5_exponents_are_a_full_residue_system",
+   "pass": true
+  },
+  {
+   "detail": "F(1,1,1,1,1) = sum of five 1s = 5 != 0",
+   "name": "A2_F_at_all_ones_is_5",
+   "pass": true
+  },
+  {
+   "detail": "trace(S) = 1 so dim W+ = 3, dim W- = 2",
+   "name": "A3_involution_trace_is_1",
+   "pass": true
+  },
+  {
+   "detail": "3,2",
+   "name": "A3_eigenspace_dims_3_and_2",
+   "pass": true
+  },
+  {
+   "detail": "F|_{W-} has 0 nonzero coefficients",
+   "name": "A3_minus_line_lies_inside_X",
+   "pass": true
+  },
+  {
+   "detail": "10 monomials",
+   "name": "A3_plus_plane_cubic_is_not_identically_zero",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "B331_group_has_660_distinct_matrices",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "B331_F_is_G_invariant_mod_p",
+   "pass": true
+  },
+  {
+   "detail": "16 classes, 620 subgroups",
+   "name": "B331_sixteen_subgroup_classes_620_subgroups",
+   "pass": true
+  },
+  {
+   "detail": "got [5] None expected [5]",
+   "name": "B331_1_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [2, 3] None expected [2, 3]",
+   "name": "B331_C2_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1, 2, 2] None expected [1, 2, 2]",
+   "name": "B331_C3_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1, 1, 1, 2] None expected [1, 1, 1, 2]",
+   "name": "B331_V4_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1, 1, 1, 1, 1] None expected [1, 1, 1, 1, 1]",
+   "name": "B331_C5_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1] [1] expected [1]",
+   "name": "B331_S3_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1, 1, 1, 1, 1] None expected [1, 1, 1, 1, 1]",
+   "name": "B331_C6_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1] None expected [1]",
+   "name": "B331_D10_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1, 1, 1, 1, 1] None expected [1, 1, 1, 1, 1]",
+   "name": "B331_C11_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1, 1] None expected [1, 1]",
+   "name": "B331_A4_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1] None expected [1]",
+   "name": "B331_D12_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [] None expected []",
+   "name": "B331_C11:C5_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [] [] expected []",
+   "name": "B331_A5_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [] None expected []",
+   "name": "B331_PSL(2,11)_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got 6",
+   "name": "B331_C3_X_fixed_points_6",
+   "pass": true
+  },
+  {
+   "detail": "got 6",
+   "name": "B331_V4_X_fixed_points_6",
+   "pass": true
+  },
+  {
+   "detail": "got 4",
+   "name": "B331_C5_X_fixed_points_4",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B331_S3_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B331_S3#2_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "got 2",
+   "name": "B331_C6_X_fixed_points_2",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B331_D10_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "got 5",
+   "name": "B331_C11_X_fixed_points_5",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B331_A4_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B331_D12_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B331_C11:C5_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B331_A5_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B331_A5#2_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B331_PSL(2,11)_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "B331_C2_minus_line_inside_X",
+   "pass": true
+  },
+  {
+   "detail": "#E(F_331) = 339",
+   "name": "B331_C2_plus_plane_has_331_plus_1_points_or_so",
+   "pass": true
+  },
+  {
+   "detail": "339 points, 0 singular",
+   "name": "B331_plus_plane_cubic_is_smooth",
+   "pass": true
+  },
+  {
+   "detail": "a_sigma = -7, a_ref = -7",
+   "name": "B331_plus_plane_curve_matches_j_8192_over_11_up_to_twist",
+   "pass": true
+  },
+  {
+   "detail": "saw ['A4', 'C3', 'C5', 'C6', 'D10', 'D12', 'S3', 'S3#2']",
+   "name": "B331_off_X_nonvanishing_certificates_present",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "B661_group_has_660_distinct_matrices",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "B661_F_is_G_invariant_mod_p",
+   "pass": true
+  },
+  {
+   "detail": "16 classes, 620 subgroups",
+   "name": "B661_sixteen_subgroup_classes_620_subgroups",
+   "pass": true
+  },
+  {
+   "detail": "got [5] None expected [5]",
+   "name": "B661_1_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [2, 3] None expected [2, 3]",
+   "name": "B661_C2_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1, 2, 2] None expected [1, 2, 2]",
+   "name": "B661_C3_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1, 1, 1, 2] None expected [1, 1, 1, 2]",
+   "name": "B661_V4_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1, 1, 1, 1, 1] None expected [1, 1, 1, 1, 1]",
+   "name": "B661_C5_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1] [1] expected [1]",
+   "name": "B661_S3_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1, 1, 1, 1, 1] None expected [1, 1, 1, 1, 1]",
+   "name": "B661_C6_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1] None expected [1]",
+   "name": "B661_D10_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1, 1, 1, 1, 1] None expected [1, 1, 1, 1, 1]",
+   "name": "B661_C11_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1, 1] None expected [1, 1]",
+   "name": "B661_A4_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [1] None expected [1]",
+   "name": "B661_D12_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [] None expected []",
+   "name": "B661_C11:C5_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [] [] expected []",
+   "name": "B661_A5_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got [] None expected []",
+   "name": "B661_PSL(2,11)_ambient_shape",
+   "pass": true
+  },
+  {
+   "detail": "got 6",
+   "name": "B661_C3_X_fixed_points_6",
+   "pass": true
+  },
+  {
+   "detail": "got 6",
+   "name": "B661_V4_X_fixed_points_6",
+   "pass": true
+  },
+  {
+   "detail": "got 4",
+   "name": "B661_C5_X_fixed_points_4",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B661_S3_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B661_S3#2_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "got 2",
+   "name": "B661_C6_X_fixed_points_2",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B661_D10_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "got 5",
+   "name": "B661_C11_X_fixed_points_5",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B661_A4_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B661_D12_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B661_C11:C5_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B661_A5_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B661_A5#2_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "got 0",
+   "name": "B661_PSL(2,11)_X_fixed_points_0",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "B661_C2_minus_line_inside_X",
+   "pass": true
+  },
+  {
+   "detail": "#E(F_661) = 645",
+   "name": "B661_C2_plus_plane_has_661_plus_1_points_or_so",
+   "pass": true
+  },
+  {
+   "detail": "645 points, 0 singular",
+   "name": "B661_plus_plane_cubic_is_smooth",
+   "pass": true
+  },
+  {
+   "detail": "a_sigma = 17, a_ref = -17",
+   "name": "B661_plus_plane_curve_matches_j_8192_over_11_up_to_twist",
+   "pass": true
+  },
+  {
+   "detail": "saw ['A4', 'C3', 'C5', 'C6', 'D10', 'D12', 'S3', 'S3#2']",
+   "name": "B661_off_X_nonvanishing_certificates_present",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "C_normaliser_and_centraliser_table",
+   "pass": true
+  },
+  {
+   "detail": "normalisers seen: ['A4', 'A5', 'C11:C5', 'D10', 'D12', 'PSL(2,11)']",
+   "name": "C_every_normaliser_is_one_of_the_empty_rows",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "C_residual_orbit_sizes_from_stabiliser_orders",
+   "pass": true
+  },
+  {
+   "detail": "['A4', 'A5', 'C6', 'D10', 'D12', 'PSL(2,11)', 'S3', 'V4']",
+   "name": "C_C2_is_contained_in_the_expected_overgroups",
+   "pass": true
+  },
+  {
+   "detail": "['A4', 'A5', 'C6', 'D12', 'PSL(2,11)', 'S3']",
+   "name": "C_C3_is_contained_in_the_expected_overgroups",
+   "pass": true
+  },
+  {
+   "detail": "['A4', 'A5', 'D12', 'PSL(2,11)']",
+   "name": "C_A4_contains_V4_and_C3_only_among_proper_rows",
+   "pass": true
+  },
+  {
+   "detail": "{'1': 1, '10_0': 4, '10_1': 4, '11': 3, '5': 1, '5*': 1, '12': 4, '12*': 4}",
+   "name": "C_C3_invariants_multiplicities_sum_to_220",
+   "pass": true
+  },
+  {
+   "detail": "{'1': 1, '10_0': 4, '10_1': 4, '11': 3, '5': 1, '5*': 1, '12': 4, '12*': 4}",
+   "name": "C_every_irreducible_has_a_nonzero_C3_invariant_subspace",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "D_exact_and_modular_ambient_shapes_agree",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "D_producer_reported_all_pass",
+   "pass": true
+  },
+  {
+   "detail": "mismatches: []",
+   "name": "E_M2_ideal_route_p=331_all_16_rows",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "E_M2_all_rows_radical_p=331",
+   "pass": true
+  },
+  {
+   "detail": "mismatches: []",
+   "name": "E_M2_ideal_route_p=661_all_16_rows",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "E_M2_all_rows_radical_p=661",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "E_M2_marker_OK",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "F331_lefschetz_number_depends_only_on_element_order",
+   "pass": true
+  },
+  {
+   "detail": "L by order = {1: -6, 2: 2, 11: 5, 3: 6, 5: 4, 6: 2}",
+   "name": "F331_lefschetz_numbers_are_the_predicted_ones",
+   "pass": true
+  },
+  {
+   "detail": "ledger chi = {3: 6, 5: 4, 6: 2, 11: 5, 2: 2, 1: -6}",
+   "name": "F331_ledger_rows_reproduce_the_lefschetz_numbers",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "name": "F661_lefschetz_number_depends_only_on_element_order",
+   "pass": true
+  },
+  {
+   "detail": "L by order = {1: -6, 2: 2, 11: 5, 3: 6, 5: 4, 6: 2}",
+   "name": "F661_lefschetz_numbers_are_the_predicted_ones",
+   "pass": true
+  },
+  {
+   "detail": "ledger chi = {3: 6, 5: 4, 6: 2, 11: 5, 2: 2, 1: -6}",
+   "name": "F661_ledger_rows_reproduce_the_lefschetz_numbers",
+   "pass": true
+  }
+ ],
+ "modular": {
+  "331": {
+   "1": {
+    "C": "PSL(2,11)",
+    "N": "PSL(2,11)",
+    "dims": [
+     5
+    ],
+    "nconj": 1,
+    "order": 1,
+    "strata": [
+     {
+      "Fp_points": "not enumerated",
+      "dim": 5
+     }
+    ]
+   },
+   "A4": {
+    "C": "1",
+    "N": "A4",
+    "dims": [
+     1,
+     1
+    ],
+    "nconj": 55,
+    "order": 12,
+    "strata": [
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     },
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     }
+    ]
+   },
+   "A5": {
+    "C": "1",
+    "N": "A5",
+    "dims": [],
+    "nconj": 11,
+    "order": 60,
+    "strata": []
+   },
+   "A5#2": {
+    "C": "1",
+    "N": "A5",
+    "dims": [],
+    "nconj": 11,
+    "order": 60,
+    "strata": []
+   },
+   "C11": {
+    "C": "C11",
+    "N": "C11:C5",
+    "dims": [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "nconj": 12,
+    "order": 11,
+    "strata": [
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     }
+    ]
+   },
+   "C11:C5": {
+    "C": "1",
+    "N": "C11:C5",
+    "dims": [],
+    "nconj": 12,
+    "order": 55,
+    "strata": []
+   },
+   "C2": {
+    "C": "D12",
+    "N": "D12",
+    "dims": [
+     2,
+     3
+    ],
+    "nconj": 55,
+    "order": 2,
+    "strata": [
+     {
+      "Fp_points": 339,
+      "dim": 3,
+      "singular_points": 0,
+      "smooth": true
+     },
+     {
+      "F_identically_zero": true,
+      "Fp_points": "infinite",
+      "dim": 2,
+      "disc_nonzero": null,
+      "geometric_points": "infinite"
+     }
+    ]
+   },
+   "C3": {
+    "C": "C6",
+    "N": "D12",
+    "dims": [
+     1,
+     2,
+     2
+    ],
+    "nconj": 55,
+    "order": 3,
+    "strata": [
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     },
+     {
+      "F_identically_zero": false,
+      "Fp_points": 3,
+      "dim": 2,
+      "disc_nonzero": true,
+      "geometric_points": 3
+     },
+     {
+      "F_identically_zero": false,
+      "Fp_points": 3,
+      "dim": 2,
+      "disc_nonzero": true,
+      "geometric_points": 3
+     }
+    ]
+   },
+   "C5": {
+    "C": "C5",
+    "N": "D10",
+    "dims": [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "nconj": 66,
+    "order": 5,
+    "strata": [
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     }
+    ]
+   },
+   "C6": {
+    "C": "C6",
+    "N": "D12",
+    "dims": [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "nconj": 55,
+    "order": 6,
+    "strata": [
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     },
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     }
+    ]
+   },
+   "D10": {
+    "C": "1",
+    "N": "D10",
+    "dims": [
+     1
+    ],
+    "nconj": 66,
+    "order": 10,
+    "strata": [
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     }
+    ]
+   },
+   "D12": {
+    "C": "C2",
+    "N": "D12",
+    "dims": [
+     1
+    ],
+    "nconj": 55,
+    "order": 12,
+    "strata": [
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     }
+    ]
+   },
+   "PSL(2,11)": {
+    "C": "1",
+    "N": "PSL(2,11)",
+    "dims": [],
+    "nconj": 1,
+    "order": 660,
+    "strata": []
+   },
+   "S3": {
+    "C": "C2",
+    "N": "D12",
+    "dims": [
+     1
+    ],
+    "nconj": 55,
+    "order": 6,
+    "strata": [
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     }
+    ]
+   },
+   "S3#2": {
+    "C": "C2",
+    "N": "D12",
+    "dims": [
+     1
+    ],
+    "nconj": 55,
+    "order": 6,
+    "strata": [
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     }
+    ]
+   },
+   "V4": {
+    "C": "V4",
+    "N": "A4",
+    "dims": [
+     1,
+     1,
+     1,
+     2
+    ],
+    "nconj": 55,
+    "order": 4,
+    "strata": [
+     {
+      "F_identically_zero": false,
+      "Fp_points": 0,
+      "dim": 2,
+      "disc_nonzero": true,
+      "geometric_points": 3
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     }
+    ]
+   }
+  },
+  "661": {
+   "1": {
+    "C": "PSL(2,11)",
+    "N": "PSL(2,11)",
+    "dims": [
+     5
+    ],
+    "nconj": 1,
+    "order": 1,
+    "strata": [
+     {
+      "Fp_points": "not enumerated",
+      "dim": 5
+     }
+    ]
+   },
+   "A4": {
+    "C": "1",
+    "N": "A4",
+    "dims": [
+     1,
+     1
+    ],
+    "nconj": 55,
+    "order": 12,
+    "strata": [
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     },
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     }
+    ]
+   },
+   "A5": {
+    "C": "1",
+    "N": "A5",
+    "dims": [],
+    "nconj": 11,
+    "order": 60,
+    "strata": []
+   },
+   "A5#2": {
+    "C": "1",
+    "N": "A5",
+    "dims": [],
+    "nconj": 11,
+    "order": 60,
+    "strata": []
+   },
+   "C11": {
+    "C": "C11",
+    "N": "C11:C5",
+    "dims": [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "nconj": 12,
+    "order": 11,
+    "strata": [
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     }
+    ]
+   },
+   "C11:C5": {
+    "C": "1",
+    "N": "C11:C5",
+    "dims": [],
+    "nconj": 12,
+    "order": 55,
+    "strata": []
+   },
+   "C2": {
+    "C": "D12",
+    "N": "D12",
+    "dims": [
+     2,
+     3
+    ],
+    "nconj": 55,
+    "order": 2,
+    "strata": [
+     {
+      "Fp_points": 645,
+      "dim": 3,
+      "singular_points": 0,
+      "smooth": true
+     },
+     {
+      "F_identically_zero": true,
+      "Fp_points": "infinite",
+      "dim": 2,
+      "disc_nonzero": null,
+      "geometric_points": "infinite"
+     }
+    ]
+   },
+   "C3": {
+    "C": "C6",
+    "N": "D12",
+    "dims": [
+     1,
+     2,
+     2
+    ],
+    "nconj": 55,
+    "order": 3,
+    "strata": [
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     },
+     {
+      "F_identically_zero": false,
+      "Fp_points": 1,
+      "dim": 2,
+      "disc_nonzero": true,
+      "geometric_points": 3
+     },
+     {
+      "F_identically_zero": false,
+      "Fp_points": 1,
+      "dim": 2,
+      "disc_nonzero": true,
+      "geometric_points": 3
+     }
+    ]
+   },
+   "C5": {
+    "C": "C5",
+    "N": "D10",
+    "dims": [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "nconj": 66,
+    "order": 5,
+    "strata": [
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     }
+    ]
+   },
+   "C6": {
+    "C": "C6",
+    "N": "D12",
+    "dims": [
+     1,
+     1,
+     1,
+     1,
+     1
+    ],
+    "nconj": 55,
+    "order": 6,
+    "strata": [
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     },
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     }
+    ]
+   },
+   "D10": {
+    "C": "1",
+    "N": "D10",
+    "dims": [
+     1
+    ],
+    "nconj": 66,
+    "order": 10,
+    "strata": [
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     }
+    ]
+   },
+   "D12": {
+    "C": "C2",
+    "N": "D12",
+    "dims": [
+     1
+    ],
+    "nconj": 55,
+    "order": 12,
+    "strata": [
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     }
+    ]
+   },
+   "PSL(2,11)": {
+    "C": "1",
+    "N": "PSL(2,11)",
+    "dims": [],
+    "nconj": 1,
+    "order": 660,
+    "strata": []
+   },
+   "S3": {
+    "C": "C2",
+    "N": "D12",
+    "dims": [
+     1
+    ],
+    "nconj": 55,
+    "order": 6,
+    "strata": [
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     }
+    ]
+   },
+   "S3#2": {
+    "C": "C2",
+    "N": "D12",
+    "dims": [
+     1
+    ],
+    "nconj": 55,
+    "order": 6,
+    "strata": [
+     {
+      "F_value_zero": false,
+      "Fp_points": 0,
+      "dim": 1
+     }
+    ]
+   },
+   "V4": {
+    "C": "V4",
+    "N": "A4",
+    "dims": [
+     1,
+     1,
+     1,
+     2
+    ],
+    "nconj": 55,
+    "order": 4,
+    "strata": [
+     {
+      "F_identically_zero": false,
+      "Fp_points": 0,
+      "dim": 2,
+      "disc_nonzero": true,
+      "geometric_points": 3
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     },
+     {
+      "F_value_zero": true,
+      "Fp_points": 1,
+      "dim": 1
+     }
+    ]
+   }
+  }
+ },
+ "n_checks": 107,
+ "n_fail": 0
+}
