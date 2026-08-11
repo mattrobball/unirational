@@ -1,0 +1,247 @@
+  [p=331] |G| = 660
+  [p=331] arrangement A: {1: 940, 2: 220, 3: 55}
+  [p=331] abelian subgroups: 299 {'1': 1, 'C2': 55, 'C3': 55, 'V4': 55, 'C5': 66, 'C6': 55, 'C11': 12}
+  [p=331] flags in A: 4901 {0: 1, 1: 1215, 2: 2860, 3: 825}
+  [p=331] components: 11076
+  [p=331] G-orbits of components: 80
+  [p=331] target cells: {'X': 1, 'E': 55, 'L': 55, 'PI': 165, 'PII': 165, 'P6': 110, 'P3': 220, 'P5a': 132, 'P5b': 132, 'P11': 60}
+  [p=331] closure: 145 component-level relations at the 80 representatives, 145 orbit-level relations
+  [p=331] raw value-set sizes: [1, 2, 3, 4, 5, 6, 7, 23]
+  [p=331] after arc consistency: value-set sizes [(0, 1), (1, 1), (2, 1), (3, 3), (4, 2), (5, 2), (6, 2), (7, 2), (8, 1), (9, 3), (10, 3), (11, 2), (12, 2), (13, 2), (14, 2), (15, 2), (16, 23), (17, 2), (18, 2), (19, 2), (20, 2), (21, 6), (22, 6), (23, 2), (24, 2), (25, 2), (26, 2), (27, 2), (28, 2), (29, 6), (30, 6), (31, 6), (32, 6), (33, 6), (34, 6), (35, 2), (36, 2), (37, 2), (38, 2), (39, 2), (40, 2), (41, 2), (42, 1), (43, 2), (44, 2), (45, 2), (46, 1), (47, 4), (48, 4), (49, 4), (50, 4), (51, 4), (52, 4), (53, 4), (54, 4), (55, 4), (56, 4), (57, 2), (58, 2), (59, 2), (60, 2), (61, 2), (62, 2), (63, 2), (64, 2), (65, 2), (66, 2), (67, 2), (68, 2), (69, 2), (70, 2), (71, 2), (72, 2), (73, 2), (74, 2), (75, 2), (76, 5), (77, 5), (78, 5), (79, 5)]
+{
+ "p": 331,
+ "arrangement": {
+  "1": 940,
+  "2": 220,
+  "3": 55
+ },
+ "source_rows": 80,
+ "source_components": 11076,
+ "orbit_relations": 145,
+ "target_cells": {
+  "X": 1,
+  "E": 55,
+  "L": 55,
+  "PI": 165,
+  "PII": 165,
+  "P6": 110,
+  "P3": 220,
+  "P5a": 132,
+  "P5b": 132,
+  "P11": 60
+ },
+ "V4_rows": 18,
+ "V4_rows_with_typeII_option": [],
+ "V4_rows_all_typeI": true,
+ "V4_kill_rule_v_sigma": true,
+ "forced_rows": [
+  0,
+  1,
+  2,
+  8,
+  42,
+  46
+ ],
+ "rows_forced_to_sweep": [
+  1,
+  2,
+  8
+ ],
+ "rows_that_may_sweep": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16
+ ],
+ "rows_with_E_cell_option": [
+  16
+ ],
+ "rows_that_can_dominate_E": [],
+ "positive_dimensional_images": [
+  "X (free stratum)",
+  "L_sigma (55 lines)"
+ ],
+ "total_stage1_classes": 69686233329838325760000,
+ "rows_with_continuous_modulus": [
+  16
+ ],
+ "discrete_classes": 63626560866374123520000,
+ "one_parameter_families": 6059672463464202240000,
+ "witness_maximal_sweep": {
+  "violations": 0,
+  "sweeping_rows": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16
+  ],
+  "cells": {
+   "X": 1,
+   "L(onto)": 15,
+   "PI": 18,
+   "P6": 24,
+   "P5a": 10,
+   "P11": 4,
+   "P3": 8
+  },
+  "lands_on_E_cell": false,
+  "lands_on_typeII": false
+ },
+ "witness_minimal_sweep": {
+  "violations": 0,
+  "sweeping_rows": [
+   1,
+   2,
+   3,
+   8
+  ],
+  "lands_on_E_cell": false,
+  "lands_on_typeII": false
+ }
+}
+  [p=661] |G| = 660
+  [p=661] arrangement A: {1: 940, 2: 220, 3: 55}
+  [p=661] abelian subgroups: 299 {'1': 1, 'C2': 55, 'C3': 55, 'V4': 55, 'C5': 66, 'C6': 55, 'C11': 12}
+  [p=661] flags in A: 4901 {0: 1, 1: 1215, 2: 2860, 3: 825}
+  [p=661] components: 11076
+  [p=661] G-orbits of components: 80
+  [p=661] target cells: {'X': 1, 'E': 55, 'L': 55, 'PI': 165, 'PII': 165, 'P6': 110, 'P3': 220, 'P5a': 132, 'P5b': 132, 'P11': 60}
+  [p=661] closure: 145 component-level relations at the 80 representatives, 145 orbit-level relations
+  [p=661] raw value-set sizes: [1, 2, 3, 4, 5, 6, 7, 23]
+  [p=661] after arc consistency: value-set sizes [(0, 1), (1, 1), (2, 1), (3, 3), (4, 2), (5, 2), (6, 2), (7, 2), (8, 1), (9, 3), (10, 3), (11, 2), (12, 2), (13, 2), (14, 2), (15, 2), (16, 23), (17, 2), (18, 2), (19, 2), (20, 2), (21, 6), (22, 6), (23, 2), (24, 2), (25, 2), (26, 2), (27, 2), (28, 2), (29, 6), (30, 6), (31, 6), (32, 6), (33, 6), (34, 6), (35, 2), (36, 2), (37, 2), (38, 2), (39, 2), (40, 2), (41, 1), (42, 2), (43, 2), (44, 1), (45, 2), (46, 2), (47, 4), (48, 4), (49, 4), (50, 4), (51, 4), (52, 4), (53, 4), (54, 4), (55, 4), (56, 4), (57, 2), (58, 2), (59, 2), (60, 2), (61, 2), (62, 2), (63, 2), (64, 2), (65, 2), (66, 2), (67, 2), (68, 2), (69, 2), (70, 2), (71, 2), (72, 2), (73, 2), (74, 2), (75, 2), (76, 5), (77, 5), (78, 5), (79, 5)]
+{
+ "p": 661,
+ "arrangement": {
+  "1": 940,
+  "2": 220,
+  "3": 55
+ },
+ "source_rows": 80,
+ "source_components": 11076,
+ "orbit_relations": 145,
+ "target_cells": {
+  "X": 1,
+  "E": 55,
+  "L": 55,
+  "PI": 165,
+  "PII": 165,
+  "P6": 110,
+  "P3": 220,
+  "P5a": 132,
+  "P5b": 132,
+  "P11": 60
+ },
+ "V4_rows": 18,
+ "V4_rows_with_typeII_option": [],
+ "V4_rows_all_typeI": true,
+ "V4_kill_rule_v_sigma": true,
+ "forced_rows": [
+  0,
+  1,
+  2,
+  8,
+  41,
+  44
+ ],
+ "rows_forced_to_sweep": [
+  1,
+  2,
+  8
+ ],
+ "rows_that_may_sweep": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16
+ ],
+ "rows_with_E_cell_option": [
+  16
+ ],
+ "rows_that_can_dominate_E": [],
+ "positive_dimensional_images": [
+  "X (free stratum)",
+  "L_sigma (55 lines)"
+ ],
+ "total_stage1_classes": 69686233329838325760000,
+ "rows_with_continuous_modulus": [
+  16
+ ],
+ "discrete_classes": 63626560866374123520000,
+ "one_parameter_families": 6059672463464202240000,
+ "witness_maximal_sweep": {
+  "violations": 0,
+  "sweeping_rows": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16
+  ],
+  "cells": {
+   "X": 1,
+   "L(onto)": 15,
+   "PI": 18,
+   "P6": 24,
+   "P5a": 10,
+   "P11": 4,
+   "P3": 8
+  },
+  "lands_on_E_cell": false,
+  "lands_on_typeII": false
+ },
+ "witness_minimal_sweep": {
+  "violations": 0,
+  "sweeping_rows": [
+   1,
+   2,
+   3,
+   8
+  ],
+  "lands_on_E_cell": false,
+  "lands_on_typeII": false
+ }
+}
+EXIT=0

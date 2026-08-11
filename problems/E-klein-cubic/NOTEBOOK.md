@@ -52,7 +52,7 @@ disclosed boundary, not a coverage claim.
 
 Core manifest last rebuilt: 2026-08-03. Research supplement last updated:
 2026-08-10. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `91ee67947f54c6a346cfea520c56a11abf75854e` (2026-08-10; the
+Snapshot metadata — notebook parent head: `95142218e4d159818cb3d6029b12efaf8cea1bbf` (2026-08-10; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -7073,7 +7073,7 @@ consistency test.
 `verify_spin_hodge_census.py` and `scripts/check_manifest_parity.py` pass.
 The packet is on `agent/spin-hodge-support-20260810`. This notebook revision
 was authored against parent head
-`91ee67947f54c6a346cfea520c56a11abf75854e`.
+`95142218e4d159818cb3d6029b12efaf8cea1bbf`.
 
 ### `STANDARD_FORM_PW` (08-10, `goal_runs_20260810/`) — the source-side atlas
 
@@ -7121,3 +7121,31 @@ Machine: `python3 verifier.py` → `STANDARD_FORM_PW_VERIFY_OK`, `ALLGREEN`,
 arithmetic for the automaton, exact `QQ` in Macaulay2 for the charts.
 Re-verifies `STRATA_EXACT.md:108–123` and `NORMAL_CHARACTERS.md:71–90` from
 scratch. Sampled and flagged: global irreducibility of every crossing `D_I`.
+
+### STAGE1_COMPLEX_MAPS — the Stage-1 classification (2026-08-10)
+
+`goal_runs_20260810/STAGE1_COMPLEX_MAPS/THEOREM.md`. **Problem E remains OPEN.**
+Classifies every morphism of decorated complexes of groups from the terminus
+complex `F(Z)` (plus the `Z⁺` order-0 delta) to the Klein cubic's complex, under
+the sealed rows, for a dominant equivariant `P(W) ⇢ X`. The section moduli is
+NONEMPTY: 69 686 233 329 838 325 760 000 order-0 classes over independent
+blocks — **Stage 1 does not close the headline.** Forced features sealed:
+three forced sweeps onto `L_σ` (strengthens H0-2; the two divisorial cases are
+model-free), type-II exclusion at all 18 `V4`-rows of `Z` with no external
+import, no genus from admissible refinements, exactly one elliptic door with
+every section still meeting each `E_σ` at a type-I vertex, the `v_σ` rule with
+two pinned rows, the `C6` pinning, the image inventory (only `X` and the 55
+lines are positive-dimensional images), and the order-0 window verdict: parity
+only, `N(d,m) > 0` for all `d` (audit-strengthened closed formula). Model
+scope per the adversarial audit (verdict REGISTER-WITH-EDITS, edits applied,
+addendum §14): non-divisorial claims quantify over maps factoring through `Z`
+or admissible refinements (Correction I-C boundary). Correction H1-D consumed;
+stale pre-correction numbers flagged in `FIX_V_construction.md` §§1–2 and
+`HANDOFF_2026-08-06.md:55-63`.
+
+Exits: `STAGE1-COMPLEX-MAPS-CLASSIFIED`, `STAGE1-SECTION-MODULI-SEALED`,
+`STAGE1-TYPE-II-EXCLUSION-ON-Z`, `STAGE1-THREE-FORCED-SWEEPS`,
+`STAGE1-NO-GENUS-BUYING-ADMISSIBLE`, `STAGE1-WITNESS-SECTION-VERIFIED`,
+`TERMINUS-CENSUS-INDEPENDENTLY-REPRODUCED`, `STAGE1-ORDER0-WINDOW-PARITY-ONLY`.
+Markers: `STAGE1_COMPLEX_MAPS_VERIFY_OK` / `ALLGREEN` (95 checks; director
+replay + independent adversarial audit).
