@@ -64,6 +64,12 @@ COMMON-FACTOR-CELLS-K-EQUALS-D-MINUS-2-AND-D-MINUS-3-EXCLUDED
 D35-BRANCH-TABLE-EXACT
 D35-COMMON-FACTOR-CELLS-K32-AND-K33-EXCLUDED
 D35-ONE-DIMENSIONAL-RAMIFICATION-CELLS-IDENTIFIED
+D35-K31-CELL-DEAD
+D35-K30-CELL-DEAD
+RESTRICTED-COORDINATE-DEGREE-FOUR-AND-FIVE-EXCLUDED-ALL-DEGREES
+NONIDENTITY-RESTRICTED-COORDINATE-DEGREE-AT-LEAST-SIX
+DEGREE-FIVE-COVARIANT-EXPLICIT
+RESTRICTED-DEGREE-EXCLUSIONS-UNCONDITIONAL-ON-DOMINANCE
 CODIMENSION-ONE-SMITH-DEFECT-CLASSIFICATION-PROVED
 DIVISORIAL-DEFECT-LENGTHS-CANCEL-PROVED
 CODIMENSION-TWO-BALANCE-COEFFICIENT-EXACT
@@ -84,9 +90,13 @@ Terminal verifier markers: `verify_conic_slice.py`,
 `verify_slice_universality.py`, `verify_forced_foliation.py`,
 `verify_interpolation_scope.py`, `verify_covariant_dimensions.py`,
 `verify_low_degree_covariants.py`, `verify_d4_covariant.py`,
-`verify_source_tangency.py`, `verify_d35_dimensions.py`,
+`verify_source_tangency.py`, `verify_d35_dimensions.py`, `verify_d35_cells.py`,
 `verify_source_tangency.m2` and `forced_foliation_witness.m2` each print
 `RESULT: PASS`; `eckardt_klein.m2` prints `ideal 1`.
+
+`NONIDENTITY-RESTRICTED-COORDINATE-DEGREE-AT-LEAST-FOUR` is **superseded** by
+`NONIDENTITY-RESTRICTED-COORDINATE-DEGREE-AT-LEAST-SIX`
+(`D35_K30_K31_CELLS.md`); it is left in the list above because it is still true.
 
 **Not ported** (the external round-3 headline):
 `POINTED-RATIONAL-CURVE-FULL-SUPPORT-EXCLUSION-REFUTED`. The construction that
@@ -141,7 +151,7 @@ untouched. See "What round 5 added".
 | `THEOREM_SOURCE_TANGENCY.md` | the supplied proof of `Delta_T\|_X = (d/d')H^{n-e} j_phi`, via the residue form; `Delta_T` **is** the cone Jacobian of the restricted map; exact worked instances at `w = 1,2,3` and on a genuine cubic threefold |
 | `EXCLUSION_DPRIME_2_3.md` | **sealed:** `d' in {2,3}` impossible in every degree; sharpness; composition with the sealed sieve; the `d'` vs `delta` guard |
 | `BASE_GRADIENT_PACKAGE.md` | socle sandwich, `I_4(J_T)=I_P I_Q`, rank `<= 2` at base points, Klein–Nambu wedges, `a_T` invariant and Darboux, `19 266 655` |
-| `D35_BRANCH_TABLE.md` | the complete `d = 35` table, exact; the **two one-dimensional actionable cells** `k = 30, 31`; `ind(C) \| delta` and `4 \| delta` |
+| `D35_BRANCH_TABLE.md` | the complete `d = 35` table, exact; the **two one-dimensional actionable cells** `k = 30, 31` (since decided DEAD, below); `ind(C) \| delta` and `4 \| delta` |
 | `DEFECT_SMITH_CLASSIFICATION.md` | codim-one Smith partitions, why the divisorial lengths cancel, the `340` threshold |
 | `FOLIATION_REFORMULATION.md` §§5–7 | tangency-map surjectivity (the isolated-`Delta` lane is empty), the foliation quotient, postcomposition invariance, the two scope corrections |
 | `BOXED_GLOBAL_COVARIANT.md` §6 | the coupled-package form (54): the geometric alternative as one condition on one object |
@@ -310,6 +320,41 @@ seven terms per component, reproduced by explicit representation theory over
 `k <= 8`) and audited on a separate arithmetic path. Whether the foliation `D_4`
 defines is realised by a landing tuple is open and untouched.
 (`FOLIATION_REFORMULATION.md` §3.)
+
+## What the 2026-08-11 cell round added
+
+**The two one-dimensional cells of the `d = 35` table are dead**
+(`D35_K30_K31_CELLS.md`, `verify_d35_cells.py`, 89 exact checks). The branch
+table registered `k = 31` (`d' = 4`) and `k = 30` (`d' = 5`) as immediately
+actionable and left them open. Both are now excluded, and one step earlier in
+the chain than the ramification test that was registered for them:
+
+* **The candidate space is one-dimensional in each cell, not a pencil.** `B`
+  lives on `X`, i.e. modulo `F`, so the right count is
+  `dim ((S/F)_{d'} ⊗ W)^G = C(d') - C(d'-3)`: `2 - 1 = 1` at `d' = 4` (the
+  branch table's second basis member `F·x` is in the kernel of restriction) and
+  `1 - 0 = 1` at `d' = 5`. Each cell offers one candidate up to scalar.
+* **That candidate does not map `X` into `X`.** `F(B) = 0` on `X` is forced by
+  `F(T) = 0`; it fails for both generators — `F(D_4)` and `F(D_5)` are not in
+  the ideal `(F)`, by Gröbner normal form and independently by exact integer
+  evaluation at `p = (1,1,1,-2,0) in X`. No dominance, ramification, base locus
+  or `delta` is defined in these cells, let alone computable.
+* **Degree-uniform and unconditional.** No step mentions the ambient degree, so
+  `d' = 4, 5` are impossible in **every** `d`; and nothing uses the dominance of
+  `phi`, so — unlike every previous restricted-degree exclusion — this one does
+  not consume the accepted input `ed_C(G) >= 3`. The same bookkeeping re-proves
+  `d' in {2,3}` unconditionally (`C(2) = C(3) = 0`: no candidate exists at all).
+* **A new named object:** `D_5`, the generator of the one-dimensional `Cov_5`,
+  primitive, over `Q`, nine terms per component, automatically divergence-free,
+  audited on a second code-disjoint arithmetic path exactly as `D_4` was.
+* **Convention-independent:** the same verdict holds under the
+  outer-automorphism-twisted equivariance convention, where the candidate spaces
+  are again one-dimensional and again fail.
+
+Surviving restricted-degree set, all `d`: `d' = 1` (retraction), `d' in
+{6,...,d-5}`, or `d' = d` (`k = 0`, CARRIER). Open cells at `d = 35`: **27**,
+down from `29`. No branch closes; the sealed sieve's `delta = 3` survivor sits
+at `k = 0`, `d' = d` and is untouched.
 
 ## What remains
 

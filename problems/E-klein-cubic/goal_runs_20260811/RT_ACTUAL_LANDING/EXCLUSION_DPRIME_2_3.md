@@ -13,7 +13,22 @@ Recorded here at the strength the proof supports.
 Exact inputs: `verify_d35_dimensions.py` (`RESULT: PASS`, 112 checks, exact
 character arithmetic). Supporting identity: `THEOREM_SOURCE_TANGENCY.md`.
 
----
+> **Update, 2026-08-11 (`D35_K30_K31_CELLS.md`).** Two changes, both in the
+> direction of strength; nothing below is retracted.
+>
+> 1. **Extended.** `d' = 4` and `d' = 5` are excluded too, in every ambient
+>    degree, so the surviving set (39) below has middle range `{6,...,d-5}`, not
+>    `{4,...,d-5}`, and the exit
+>    `NONIDENTITY-RESTRICTED-COORDINATE-DEGREE-AT-LEAST-FOUR` is superseded by
+>    `...-AT-LEAST-SIX`. The sharpness claim in Step 4 is sharpness *of this
+>    argument*, and remains true as stated; the new exclusions come from a
+>    different argument.
+> 2. **Unconditional.** The `d' in {2,3}` exclusion no longer needs dominance,
+>    hence no longer needs the accepted input `ed_C(PSL_2(F_11)) >= 3`. Reason:
+>    the space of `G`-equivariant degree-`d'` tuples *on `X`* has dimension
+>    `C(d') - C(d'-3)`, which is `0` at `d' = 2` and at `d' = 3` — there is no
+>    candidate `B` at all, dominant or not. §4 below should be read with that
+>    conditionality removed.
 
 ## 1. Statement
 
