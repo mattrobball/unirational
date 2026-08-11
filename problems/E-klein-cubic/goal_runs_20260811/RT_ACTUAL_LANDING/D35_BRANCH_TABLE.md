@@ -4,6 +4,17 @@ Exits: `D35-BRANCH-TABLE-EXACT`,
 `D35-COMMON-FACTOR-CELLS-K32-AND-K33-EXCLUDED`,
 `D35-ONE-DIMENSIONAL-RAMIFICATION-CELLS-IDENTIFIED`.
 
+> **Update, 2026-08-11 (`D35_K30_K31_CELLS.md`).** The two one-dimensional cells
+> registered below as "immediately actionable" — `k = 31` (`d' = 4`) and
+> `k = 30` (`d' = 5`) — have since been **decided DEAD**, and by a route one
+> step earlier than the ramification test §3 proposes: the space of candidate
+> restricted tuples is one-dimensional in each cell (not the two-dimensional
+> pencil §3.1 expects — `F·x` is in the kernel of restriction), and the single
+> candidate fails `F(B) = 0` on `X`. The exclusion is degree-uniform and needs
+> no dominance hypothesis. The table's `k = 30, 31` rows and the surviving-set
+> line (39) are corrected in place below; §3 is left standing as the record of
+> what was registered, with the outcome marked.
+
 Provenance: external round 5, section 7 (unaudited). Verdict: **CONFIRMED**;
 every number recomputed exactly in `verify_d35_dimensions.py` (`RESULT: PASS`,
 112 checks, exact character arithmetic over `Z[(1+sqrt(-11))/2]`, no floating
@@ -24,6 +35,7 @@ and `d' = 35 - k` the restricted coordinate degree:
 |---|---|---|
 | invariant-degree lemma | `k in {0} ∪ {5,6,7,...}` | sealed, `COMBINED_DEGREE_SIEVE` Lemma 2.3 |
 | ramification exclusion | `d' != 2, 3` | `EXCLUSION_DPRIME_2_3.md` (new) |
+| covariant-space exclusion | `d' != 4, 5` | `D35_K30_K31_CELLS.md` (2026-08-11) |
 | restricted-transfer | `k = 0 => CARRIER`; retraction `=> k != 0` | sealed, `THEOREM_ACTUAL_TRANSFER.md` |
 
 ## 2. The table
@@ -46,8 +58,8 @@ dim H^0(X, O_X(68))^G = 254.
 | 8 | 27 | 117 | open |
 | 9 | 26 | 105 | open |
 | 10..29 | 25..6 | 93, 82, 73, 64, 56, 48, 42, 35, 30, 26, 20, 17, 14, 11, 9, 7, 5, 4, 3, 2 | open |
-| **30** | **5** | **1** | open — **one-dimensional, actionable** |
-| **31** | **4** | **1** | open — **one-dimensional, actionable** |
+| **30** | **5** | **1** | **EXCLUDED** (`D35_K30_K31_CELLS.md`) — was "one-dimensional, actionable" |
+| **31** | **4** | **1** | **EXCLUDED** (`D35_K30_K31_CELLS.md`) — was "one-dimensional, actionable" |
 | 32 | 3 | **0** | **EXCLUDED** (`EXCLUSION_DPRIME_2_3.md`) |
 | 33 | 2 | **0** | **EXCLUDED** (`EXCLUSION_DPRIME_2_3.md`) |
 | 34 | 1 | 1 | retraction branch, `phi = id_X`, `D_X != 0` |
@@ -55,6 +67,9 @@ dim H^0(X, O_X(68))^G = 254.
 
 The `k = 5..9` row of the source, `160, 145, 131, 117, 105`, is confirmed
 exactly, as is `254`, and the two `1`s at `k = 30, 31`.
+
+**Open cells at `d = 35`: 27** — `k = 0` (CARRIER), `k = 5..29`, `k = 34`
+(retraction). Down from `29` after `k = 30, 31` were excluded.
 
 The three shapes of the tangency identity are then:
 
@@ -70,6 +85,16 @@ ramification factor. (The constant `35 = d/d'` comes from Lemma 3.1 of
 `THEOREM_SOURCE_TANGENCY.md`; the source's unspecified `c` hides it.)
 
 ## 3. The two one-dimensional cells — immediately actionable
+
+> **OUTCOME (`D35_K30_K31_CELLS.md`): both DEAD.** What follows is left as
+> written, as the record of what this packet registered. Two things in it are
+> corrected there. (i) The candidate space at `d' = 4` is **not** the
+> two-dimensional `C(4) = 2`: `B` lives on `X`, i.e. modulo `F`, and `F·x` — one
+> of the two basis members named in §3.1 below — restricts to `0`. The right
+> count is `C(d') - C(d'-3)`, giving `1` at `d' = 4` and `1` at `d' = 5`. (ii)
+> The ramification-locus test §3.1 proposes is never reached: the single
+> candidate in each cell fails the *earlier* necessary condition `F(B) = 0` on
+> `X`, so there is no restricted selfmap and no ramification divisor to compare.
 
 > **`k = 31`, `d' = 4`.** `j_phi in H^0(X,O_X(6))^G`, which is
 > **one-dimensional**. So `j_phi` is, up to scalar, a single named invariant
@@ -104,6 +129,12 @@ are finite and small:
 Recorded as the concrete next computation. **Not done in this packet.** What is
 done: the cells are identified, their dimensions are exact, and the objects they
 require are named.
+
+**Done in `D35_K30_K31_CELLS.md`, 2026-08-11.** The degree-`5` generator `D_5`
+was constructed and audited, the two candidate spaces on `X` came out
+one-dimensional, and `F(B) not in (F)` for both generators — with exact point
+certificates on `X` and under both equivariance conventions. Both cells DEAD;
+`d' = 4, 5` excluded in every ambient degree, with no dominance hypothesis.
 
 ## 4. Cross-checks performed
 
