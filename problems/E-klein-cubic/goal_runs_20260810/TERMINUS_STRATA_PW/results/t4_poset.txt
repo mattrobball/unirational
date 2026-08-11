@@ -1,0 +1,844 @@
+=========================  p = 331  =========================
+the terminus has 80 G-orbits of orbit-type strata; 11076 components in all
+
+=== CLOSURE POSET  (K,F) <= (K',F')  iff  F is contained in F'   ===
+=== listed as: each stratum orbit, then the orbits whose closure  ===
+=== contains it (its COVERS are marked *)                         ===
+  #00 [1] dim 4 x1 on (off D)
+      (maximal)
+  #01 [C2] dim 3 x55 on Lminus_sigma
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #02 [C2] dim 3 x55 on P_sigma
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #03 [C2] dim 2 x165 on ell_V
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #04 [C2] dim 2 x110 on pt_C6(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #05 [C2] dim 2 x165 on pt_V4I
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #06 [C2] dim 2 x165 on pt_V4I
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #07 [C3] dim 2 x110 on C3line
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #08 [C2] dim 1 x165 on pt_A4(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #09 [C2] dim 1 x165 on pt_A4(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #10 [C2] dim 1 x110 on pt_C6(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #11 [C2] dim 1 x110 on pt_C6(a)<C3line
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #12 [C2] dim 1 x330 on pt_D10
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #13 [C2] dim 1 x165 on pt_D12
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #14 [C2] dim 1 x165 on pt_D12
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #15 [C2] dim 1 x55 on pt_D12
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #16 [C2] dim 1 x165 on pt_V4I
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #17 [C3] dim 1 x110 on C3line
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #18 [C3] dim 1 x220 on pt_A4(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #19 [C3] dim 1 x220 on pt_A4(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #20 [C3] dim 1 x110 on pt_C6(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #21 [C3] dim 1 x110 on pt_C6(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #22 [C3] dim 1 x110 on pt_D12
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #23 [V4] dim 1 x165 on ell_V<P_sigma
+      *  <  #03 [C2] dim 2 x165 on ell_V   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #24 [V4] dim 1 x165 on ell_V<P_sigma
+      *  <  #03 [C2] dim 2 x165 on ell_V   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #25 [V4] dim 1 x165 on pt_V4I<Lminus_sigma
+      *  <  #05 [C2] dim 2 x165 on pt_V4I   [1 translate(s) of it contain it]
+      *  <  #01 [C2] dim 3 x55 on Lminus_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #26 [V4] dim 1 x165 on pt_V4I<Lminus_sigma
+      *  <  #06 [C2] dim 2 x165 on pt_V4I   [1 translate(s) of it contain it]
+      *  <  #01 [C2] dim 3 x55 on Lminus_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #27 [V4] dim 1 x165 on pt_V4I<P_sigma
+      *  <  #06 [C2] dim 2 x165 on pt_V4I   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #28 [V4] dim 1 x165 on pt_V4I<P_sigma
+      *  <  #05 [C2] dim 2 x165 on pt_V4I   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #29 [C3] dim 0 x220 on pt_A4(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #30 [C3] dim 0 x220 on pt_A4(a)<ell_V
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #31 [C3] dim 0 x220 on pt_A4(a)<ell_V
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #32 [C3] dim 0 x220 on pt_A4(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #33 [C3] dim 0 x220 on pt_A4(b)<ell_V
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #34 [C3] dim 0 x220 on pt_A4(b)<ell_V
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #35 [V4] dim 0 x165 on pt_A4(a)<P_sigma
+      *  <  #08 [C2] dim 1 x165 on pt_A4(a)   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #36 [V4] dim 0 x165 on pt_A4(a)<P_sigma
+      *  <  #08 [C2] dim 1 x165 on pt_A4(a)   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #37 [V4] dim 0 x165 on pt_A4(b)<P_sigma
+      *  <  #09 [C2] dim 1 x165 on pt_A4(b)   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #38 [V4] dim 0 x165 on pt_A4(b)<P_sigma
+      *  <  #09 [C2] dim 1 x165 on pt_A4(b)   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #39 [V4] dim 0 x165 on pt_D12<P_sigma
+      *  <  #13 [C2] dim 1 x165 on pt_D12   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #40 [V4] dim 0 x165 on pt_D12<P_sigma
+      *  <  #15 [C2] dim 1 x55 on pt_D12   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #41 [V4] dim 0 x165 on pt_D12<P_sigma
+      *  <  #13 [C2] dim 1 x165 on pt_D12   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #42 [V4] dim 0 x165 on pt_D12<P_sigma
+      *  <  #14 [C2] dim 1 x165 on pt_D12   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #43 [V4] dim 0 x165 on pt_D12<P_sigma
+      *  <  #14 [C2] dim 1 x165 on pt_D12   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #44 [V4] dim 0 x165 on pt_D12<P_sigma
+      *  <  #15 [C2] dim 1 x55 on pt_D12   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #45 [V4] dim 0 x165 on pt_V4I<Lminus_sigma
+      *  <  #16 [C2] dim 1 x165 on pt_V4I   [1 translate(s) of it contain it]
+      *  <  #01 [C2] dim 3 x55 on Lminus_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #46 [V4] dim 0 x165 on pt_V4I<Lminus_sigma
+      *  <  #16 [C2] dim 1 x165 on pt_V4I   [1 translate(s) of it contain it]
+      *  <  #01 [C2] dim 3 x55 on Lminus_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #47 [C5] dim 0 x132 on pt_C5(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #48 [C5] dim 0 x132 on pt_C5(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #49 [C5] dim 0 x132 on pt_C5(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #50 [C5] dim 0 x132 on pt_C5(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #51 [C5] dim 0 x132 on pt_C5(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #52 [C5] dim 0 x132 on pt_C5(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #53 [C5] dim 0 x132 on pt_C5(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #54 [C5] dim 0 x132 on pt_C5(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #55 [C5] dim 0 x132 on pt_D10
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #56 [C5] dim 0 x132 on pt_D10
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #57 [C6] dim 0 x110 on pt_C6(a)
+      *  <  #10 [C2] dim 1 x110 on pt_C6(a)   [1 translate(s) of it contain it]
+      *  <  #20 [C3] dim 1 x110 on pt_C6(a)   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #58 [C6] dim 0 x110 on pt_C6(a)<C3line
+      *  <  #11 [C2] dim 1 x110 on pt_C6(a)<C3line   [1 translate(s) of it contain it]
+      *  <  #17 [C3] dim 1 x110 on C3line   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #59 [C6] dim 0 x110 on pt_C6(a)<C3line
+      *  <  #10 [C2] dim 1 x110 on pt_C6(a)   [1 translate(s) of it contain it]
+      *  <  #07 [C3] dim 2 x110 on C3line   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #60 [C6] dim 0 x110 on pt_C6(a)<C3line
+      *  <  #11 [C2] dim 1 x110 on pt_C6(a)<C3line   [1 translate(s) of it contain it]
+      *  <  #07 [C3] dim 2 x110 on C3line   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #61 [C6] dim 0 x110 on pt_C6(a)<P_sigma
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #62 [C6] dim 0 x110 on pt_C6(a)<P_sigma
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #63 [C6] dim 0 x110 on pt_C6(a)<P_sigma
+      *  <  #20 [C3] dim 1 x110 on pt_C6(a)   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #64 [C6] dim 0 x110 on pt_C6(a)<P_sigma
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #65 [C6] dim 0 x110 on pt_C6(b)
+      *  <  #04 [C2] dim 2 x110 on pt_C6(b)   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #66 [C6] dim 0 x110 on pt_C6(b)
+      *  <  #21 [C3] dim 1 x110 on pt_C6(b)   [1 translate(s) of it contain it]
+      *  <  #04 [C2] dim 2 x110 on pt_C6(b)   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #67 [C6] dim 0 x110 on pt_C6(b)<C3line
+      *  <  #17 [C3] dim 1 x110 on C3line   [1 translate(s) of it contain it]
+      *  <  #04 [C2] dim 2 x110 on pt_C6(b)   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #68 [C6] dim 0 x110 on pt_C6(b)<C3line
+      *  <  #07 [C3] dim 2 x110 on C3line   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #69 [C6] dim 0 x110 on pt_C6(b)<C3line
+      *  <  #04 [C2] dim 2 x110 on pt_C6(b)   [1 translate(s) of it contain it]
+      *  <  #07 [C3] dim 2 x110 on C3line   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #70 [C6] dim 0 x110 on pt_C6(b)<Lminus_sigma
+      *  <  #01 [C2] dim 3 x55 on Lminus_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #71 [C6] dim 0 x110 on pt_C6(b)<Lminus_sigma
+      *  <  #01 [C2] dim 3 x55 on Lminus_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #72 [C6] dim 0 x110 on pt_C6(b)<Lminus_sigma
+      *  <  #21 [C3] dim 1 x110 on pt_C6(b)   [1 translate(s) of it contain it]
+      *  <  #01 [C2] dim 3 x55 on Lminus_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #73 [C6] dim 0 x110 on pt_D12
+      *  <  #15 [C2] dim 1 x55 on pt_D12   [1 translate(s) of it contain it]
+      *  <  #22 [C3] dim 1 x110 on pt_D12   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #74 [C6] dim 0 x110 on pt_D12<P_sigma
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #75 [C6] dim 0 x110 on pt_D12<P_sigma
+      *  <  #22 [C3] dim 1 x110 on pt_D12   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #76 [C11] dim 0 x60 on pt_C11
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #77 [C11] dim 0 x60 on pt_C11
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #78 [C11] dim 0 x60 on pt_C11
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #79 [C11] dim 0 x60 on pt_C11
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+
+=== CONSISTENCY: uniqueness of the ambient Z^H component ===
+  incomparable pairs of H-fixed strata above a common stratum: 0
+  CHECK Z^H components are pairwise disjoint (0 expected): PASS
+
+CHECK the relation is a strict partial order, isotropy grows downward, dimension drops downward: PASS
+
+=== WHICH STRATA MEET WHICH CROSSINGS ===
+(a stratum whose own chain has length k lies IN a k-fold crossing; it
+ MEETS the deeper crossings of the strata below it in the poset)
+  #00 [1] dim 4 x1 on (off D)
+      lies in the |I| = 0 crossing (off D)
+      meets deeper crossings: C3line, Lminus_sigma, P_sigma, ell_V, ell_V<P_sigma, pt_A4(a), pt_A4(a)<P_sigma, pt_A4(a)<ell_V, pt_A4(b), pt_A4(b)<P_sigma, pt_A4(b)<ell_V, pt_C11, pt_C5(a), pt_C5(b), pt_C6(a), pt_C6(a)<C3line, pt_C6(a)<P_sigma, pt_C6(b), pt_C6(b)<C3line, pt_C6(b)<Lminus_sigma, pt_D10, pt_D12, pt_D12<P_sigma, pt_V4I, pt_V4I<Lminus_sigma, pt_V4I<P_sigma
+  #01 [C2] dim 3 x55 on Lminus_sigma
+      lies in the |I| = 1 crossing Lminus_sigma
+      meets deeper crossings: pt_C6(b)<Lminus_sigma, pt_V4I<Lminus_sigma
+  #02 [C2] dim 3 x55 on P_sigma
+      lies in the |I| = 1 crossing P_sigma
+      meets deeper crossings: ell_V<P_sigma, pt_A4(a)<P_sigma, pt_A4(b)<P_sigma, pt_C6(a)<P_sigma, pt_D12<P_sigma, pt_V4I<P_sigma
+  #03 [C2] dim 2 x165 on ell_V
+      lies in the |I| = 1 crossing ell_V
+      meets deeper crossings: ell_V<P_sigma
+  #04 [C2] dim 2 x110 on pt_C6(b)
+      lies in the |I| = 1 crossing pt_C6(b)
+      meets deeper crossings: pt_C6(b)<C3line
+  #05 [C2] dim 2 x165 on pt_V4I
+      lies in the |I| = 1 crossing pt_V4I
+      meets deeper crossings: pt_V4I<Lminus_sigma, pt_V4I<P_sigma
+  #06 [C2] dim 2 x165 on pt_V4I
+      lies in the |I| = 1 crossing pt_V4I
+      meets deeper crossings: pt_V4I<Lminus_sigma, pt_V4I<P_sigma
+  #07 [C3] dim 2 x110 on C3line
+      lies in the |I| = 1 crossing C3line
+      meets deeper crossings: pt_C6(a)<C3line, pt_C6(b)<C3line
+  #08 [C2] dim 1 x165 on pt_A4(a)
+      lies in the |I| = 1 crossing pt_A4(a)
+      meets deeper crossings: pt_A4(a)<P_sigma
+  #09 [C2] dim 1 x165 on pt_A4(b)
+      lies in the |I| = 1 crossing pt_A4(b)
+      meets deeper crossings: pt_A4(b)<P_sigma
+  #10 [C2] dim 1 x110 on pt_C6(a)
+      lies in the |I| = 1 crossing pt_C6(a)
+      meets deeper crossings: pt_C6(a)<C3line
+  #11 [C2] dim 1 x110 on pt_C6(a)<C3line
+      lies in the |I| = 2 crossing pt_C6(a)<C3line
+  #12 [C2] dim 1 x330 on pt_D10
+      lies in the |I| = 1 crossing pt_D10
+  #13 [C2] dim 1 x165 on pt_D12
+      lies in the |I| = 1 crossing pt_D12
+      meets deeper crossings: pt_D12<P_sigma
+  #14 [C2] dim 1 x165 on pt_D12
+      lies in the |I| = 1 crossing pt_D12
+      meets deeper crossings: pt_D12<P_sigma
+  #15 [C2] dim 1 x55 on pt_D12
+      lies in the |I| = 1 crossing pt_D12
+      meets deeper crossings: pt_D12<P_sigma
+  #16 [C2] dim 1 x165 on pt_V4I
+      lies in the |I| = 1 crossing pt_V4I
+      meets deeper crossings: pt_V4I<Lminus_sigma
+  #17 [C3] dim 1 x110 on C3line
+      lies in the |I| = 1 crossing C3line
+      meets deeper crossings: pt_C6(a)<C3line, pt_C6(b)<C3line
+  #18 [C3] dim 1 x220 on pt_A4(a)
+      lies in the |I| = 1 crossing pt_A4(a)
+  #19 [C3] dim 1 x220 on pt_A4(b)
+      lies in the |I| = 1 crossing pt_A4(b)
+  #20 [C3] dim 1 x110 on pt_C6(a)
+      lies in the |I| = 1 crossing pt_C6(a)
+      meets deeper crossings: pt_C6(a)<P_sigma
+  #21 [C3] dim 1 x110 on pt_C6(b)
+      lies in the |I| = 1 crossing pt_C6(b)
+      meets deeper crossings: pt_C6(b)<Lminus_sigma
+  #22 [C3] dim 1 x110 on pt_D12
+      lies in the |I| = 1 crossing pt_D12
+      meets deeper crossings: pt_D12<P_sigma
+  #23 [V4] dim 1 x165 on ell_V<P_sigma
+      lies in the |I| = 2 crossing ell_V<P_sigma
+  #24 [V4] dim 1 x165 on ell_V<P_sigma
+      lies in the |I| = 2 crossing ell_V<P_sigma
+  #25 [V4] dim 1 x165 on pt_V4I<Lminus_sigma
+      lies in the |I| = 2 crossing pt_V4I<Lminus_sigma
+  #26 [V4] dim 1 x165 on pt_V4I<Lminus_sigma
+      lies in the |I| = 2 crossing pt_V4I<Lminus_sigma
+  #27 [V4] dim 1 x165 on pt_V4I<P_sigma
+      lies in the |I| = 2 crossing pt_V4I<P_sigma
+  #28 [V4] dim 1 x165 on pt_V4I<P_sigma
+      lies in the |I| = 2 crossing pt_V4I<P_sigma
+  #29 [C3] dim 0 x220 on pt_A4(a)
+      lies in the |I| = 1 crossing pt_A4(a)
+  #30 [C3] dim 0 x220 on pt_A4(a)<ell_V
+      lies in the |I| = 2 crossing pt_A4(a)<ell_V
+  #31 [C3] dim 0 x220 on pt_A4(a)<ell_V
+      lies in the |I| = 2 crossing pt_A4(a)<ell_V
+  #32 [C3] dim 0 x220 on pt_A4(b)
+      lies in the |I| = 1 crossing pt_A4(b)
+  #33 [C3] dim 0 x220 on pt_A4(b)<ell_V
+      lies in the |I| = 2 crossing pt_A4(b)<ell_V
+  #34 [C3] dim 0 x220 on pt_A4(b)<ell_V
+      lies in the |I| = 2 crossing pt_A4(b)<ell_V
+  #35 [V4] dim 0 x165 on pt_A4(a)<P_sigma
+      lies in the |I| = 2 crossing pt_A4(a)<P_sigma
+  #36 [V4] dim 0 x165 on pt_A4(a)<P_sigma
+      lies in the |I| = 2 crossing pt_A4(a)<P_sigma
+  #37 [V4] dim 0 x165 on pt_A4(b)<P_sigma
+      lies in the |I| = 2 crossing pt_A4(b)<P_sigma
+  #38 [V4] dim 0 x165 on pt_A4(b)<P_sigma
+      lies in the |I| = 2 crossing pt_A4(b)<P_sigma
+  #39 [V4] dim 0 x165 on pt_D12<P_sigma
+      lies in the |I| = 2 crossing pt_D12<P_sigma
+  #40 [V4] dim 0 x165 on pt_D12<P_sigma
+      lies in the |I| = 2 crossing pt_D12<P_sigma
+  #41 [V4] dim 0 x165 on pt_D12<P_sigma
+      lies in the |I| = 2 crossing pt_D12<P_sigma
+  #42 [V4] dim 0 x165 on pt_D12<P_sigma
+      lies in the |I| = 2 crossing pt_D12<P_sigma
+  #43 [V4] dim 0 x165 on pt_D12<P_sigma
+      lies in the |I| = 2 crossing pt_D12<P_sigma
+  #44 [V4] dim 0 x165 on pt_D12<P_sigma
+      lies in the |I| = 2 crossing pt_D12<P_sigma
+  #45 [V4] dim 0 x165 on pt_V4I<Lminus_sigma
+      lies in the |I| = 2 crossing pt_V4I<Lminus_sigma
+  #46 [V4] dim 0 x165 on pt_V4I<Lminus_sigma
+      lies in the |I| = 2 crossing pt_V4I<Lminus_sigma
+  #47 [C5] dim 0 x132 on pt_C5(a)
+      lies in the |I| = 1 crossing pt_C5(a)
+  #48 [C5] dim 0 x132 on pt_C5(a)
+      lies in the |I| = 1 crossing pt_C5(a)
+  #49 [C5] dim 0 x132 on pt_C5(a)
+      lies in the |I| = 1 crossing pt_C5(a)
+  #50 [C5] dim 0 x132 on pt_C5(a)
+      lies in the |I| = 1 crossing pt_C5(a)
+  #51 [C5] dim 0 x132 on pt_C5(b)
+      lies in the |I| = 1 crossing pt_C5(b)
+  #52 [C5] dim 0 x132 on pt_C5(b)
+      lies in the |I| = 1 crossing pt_C5(b)
+  #53 [C5] dim 0 x132 on pt_C5(b)
+      lies in the |I| = 1 crossing pt_C5(b)
+  #54 [C5] dim 0 x132 on pt_C5(b)
+      lies in the |I| = 1 crossing pt_C5(b)
+  #55 [C5] dim 0 x132 on pt_D10
+      lies in the |I| = 1 crossing pt_D10
+  #56 [C5] dim 0 x132 on pt_D10
+      lies in the |I| = 1 crossing pt_D10
+  #57 [C6] dim 0 x110 on pt_C6(a)
+      lies in the |I| = 1 crossing pt_C6(a)
+  #58 [C6] dim 0 x110 on pt_C6(a)<C3line
+      lies in the |I| = 2 crossing pt_C6(a)<C3line
+  #59 [C6] dim 0 x110 on pt_C6(a)<C3line
+      lies in the |I| = 2 crossing pt_C6(a)<C3line
+  #60 [C6] dim 0 x110 on pt_C6(a)<C3line
+      lies in the |I| = 2 crossing pt_C6(a)<C3line
+  #61 [C6] dim 0 x110 on pt_C6(a)<P_sigma
+      lies in the |I| = 2 crossing pt_C6(a)<P_sigma
+  #62 [C6] dim 0 x110 on pt_C6(a)<P_sigma
+      lies in the |I| = 2 crossing pt_C6(a)<P_sigma
+  #63 [C6] dim 0 x110 on pt_C6(a)<P_sigma
+      lies in the |I| = 2 crossing pt_C6(a)<P_sigma
+  #64 [C6] dim 0 x110 on pt_C6(a)<P_sigma
+      lies in the |I| = 2 crossing pt_C6(a)<P_sigma
+  #65 [C6] dim 0 x110 on pt_C6(b)
+      lies in the |I| = 1 crossing pt_C6(b)
+  #66 [C6] dim 0 x110 on pt_C6(b)
+      lies in the |I| = 1 crossing pt_C6(b)
+  #67 [C6] dim 0 x110 on pt_C6(b)<C3line
+      lies in the |I| = 2 crossing pt_C6(b)<C3line
+  #68 [C6] dim 0 x110 on pt_C6(b)<C3line
+      lies in the |I| = 2 crossing pt_C6(b)<C3line
+  #69 [C6] dim 0 x110 on pt_C6(b)<C3line
+      lies in the |I| = 2 crossing pt_C6(b)<C3line
+  #70 [C6] dim 0 x110 on pt_C6(b)<Lminus_sigma
+      lies in the |I| = 2 crossing pt_C6(b)<Lminus_sigma
+  #71 [C6] dim 0 x110 on pt_C6(b)<Lminus_sigma
+      lies in the |I| = 2 crossing pt_C6(b)<Lminus_sigma
+  #72 [C6] dim 0 x110 on pt_C6(b)<Lminus_sigma
+      lies in the |I| = 2 crossing pt_C6(b)<Lminus_sigma
+  #73 [C6] dim 0 x110 on pt_D12
+      lies in the |I| = 1 crossing pt_D12
+  #74 [C6] dim 0 x110 on pt_D12<P_sigma
+      lies in the |I| = 2 crossing pt_D12<P_sigma
+  #75 [C6] dim 0 x110 on pt_D12<P_sigma
+      lies in the |I| = 2 crossing pt_D12<P_sigma
+  #76 [C11] dim 0 x60 on pt_C11
+      lies in the |I| = 1 crossing pt_C11
+  #77 [C11] dim 0 x60 on pt_C11
+      lies in the |I| = 1 crossing pt_C11
+  #78 [C11] dim 0 x60 on pt_C11
+      lies in the |I| = 1 crossing pt_C11
+  #79 [C11] dim 0 x60 on pt_C11
+      lies in the |I| = 1 crossing pt_C11
+
+=========================  p = 661  =========================
+the terminus has 80 G-orbits of orbit-type strata; 11076 components in all
+
+=== CLOSURE POSET  (K,F) <= (K',F')  iff  F is contained in F'   ===
+=== listed as: each stratum orbit, then the orbits whose closure  ===
+=== contains it (its COVERS are marked *)                         ===
+  #00 [1] dim 4 x1 on (off D)
+      (maximal)
+  #01 [C2] dim 3 x55 on Lminus_sigma
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #02 [C2] dim 3 x55 on P_sigma
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #03 [C2] dim 2 x165 on ell_V
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #04 [C2] dim 2 x110 on pt_C6(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #05 [C2] dim 2 x165 on pt_V4I
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #06 [C2] dim 2 x165 on pt_V4I
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #07 [C3] dim 2 x110 on C3line
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #08 [C2] dim 1 x165 on pt_A4(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #09 [C2] dim 1 x165 on pt_A4(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #10 [C2] dim 1 x110 on pt_C6(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #11 [C2] dim 1 x110 on pt_C6(a)<C3line
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #12 [C2] dim 1 x330 on pt_D10
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #13 [C2] dim 1 x165 on pt_D12
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #14 [C2] dim 1 x165 on pt_D12
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #15 [C2] dim 1 x55 on pt_D12
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #16 [C2] dim 1 x165 on pt_V4I
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #17 [C3] dim 1 x110 on C3line
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #18 [C3] dim 1 x220 on pt_A4(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #19 [C3] dim 1 x220 on pt_A4(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #20 [C3] dim 1 x110 on pt_C6(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #21 [C3] dim 1 x110 on pt_C6(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #22 [C3] dim 1 x110 on pt_D12
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #23 [V4] dim 1 x165 on ell_V<P_sigma
+      *  <  #03 [C2] dim 2 x165 on ell_V   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #24 [V4] dim 1 x165 on ell_V<P_sigma
+      *  <  #03 [C2] dim 2 x165 on ell_V   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #25 [V4] dim 1 x165 on pt_V4I<Lminus_sigma
+      *  <  #06 [C2] dim 2 x165 on pt_V4I   [1 translate(s) of it contain it]
+      *  <  #01 [C2] dim 3 x55 on Lminus_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #26 [V4] dim 1 x165 on pt_V4I<Lminus_sigma
+      *  <  #05 [C2] dim 2 x165 on pt_V4I   [1 translate(s) of it contain it]
+      *  <  #01 [C2] dim 3 x55 on Lminus_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #27 [V4] dim 1 x165 on pt_V4I<P_sigma
+      *  <  #06 [C2] dim 2 x165 on pt_V4I   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #28 [V4] dim 1 x165 on pt_V4I<P_sigma
+      *  <  #05 [C2] dim 2 x165 on pt_V4I   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #29 [C3] dim 0 x220 on pt_A4(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #30 [C3] dim 0 x220 on pt_A4(a)<ell_V
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #31 [C3] dim 0 x220 on pt_A4(a)<ell_V
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #32 [C3] dim 0 x220 on pt_A4(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #33 [C3] dim 0 x220 on pt_A4(b)<ell_V
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #34 [C3] dim 0 x220 on pt_A4(b)<ell_V
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #35 [V4] dim 0 x165 on pt_A4(a)<P_sigma
+      *  <  #08 [C2] dim 1 x165 on pt_A4(a)   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #36 [V4] dim 0 x165 on pt_A4(a)<P_sigma
+      *  <  #08 [C2] dim 1 x165 on pt_A4(a)   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #37 [V4] dim 0 x165 on pt_A4(b)<P_sigma
+      *  <  #09 [C2] dim 1 x165 on pt_A4(b)   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #38 [V4] dim 0 x165 on pt_A4(b)<P_sigma
+      *  <  #09 [C2] dim 1 x165 on pt_A4(b)   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #39 [V4] dim 0 x165 on pt_D12<P_sigma
+      *  <  #13 [C2] dim 1 x165 on pt_D12   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #40 [V4] dim 0 x165 on pt_D12<P_sigma
+      *  <  #15 [C2] dim 1 x55 on pt_D12   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #41 [V4] dim 0 x165 on pt_D12<P_sigma
+      *  <  #14 [C2] dim 1 x165 on pt_D12   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #42 [V4] dim 0 x165 on pt_D12<P_sigma
+      *  <  #15 [C2] dim 1 x55 on pt_D12   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #43 [V4] dim 0 x165 on pt_D12<P_sigma
+      *  <  #13 [C2] dim 1 x165 on pt_D12   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #44 [V4] dim 0 x165 on pt_D12<P_sigma
+      *  <  #14 [C2] dim 1 x165 on pt_D12   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #45 [V4] dim 0 x165 on pt_V4I<Lminus_sigma
+      *  <  #16 [C2] dim 1 x165 on pt_V4I   [1 translate(s) of it contain it]
+      *  <  #01 [C2] dim 3 x55 on Lminus_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #46 [V4] dim 0 x165 on pt_V4I<Lminus_sigma
+      *  <  #16 [C2] dim 1 x165 on pt_V4I   [1 translate(s) of it contain it]
+      *  <  #01 [C2] dim 3 x55 on Lminus_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #47 [C5] dim 0 x132 on pt_C5(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #48 [C5] dim 0 x132 on pt_C5(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #49 [C5] dim 0 x132 on pt_C5(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #50 [C5] dim 0 x132 on pt_C5(a)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #51 [C5] dim 0 x132 on pt_C5(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #52 [C5] dim 0 x132 on pt_C5(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #53 [C5] dim 0 x132 on pt_C5(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #54 [C5] dim 0 x132 on pt_C5(b)
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #55 [C5] dim 0 x132 on pt_D10
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #56 [C5] dim 0 x132 on pt_D10
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #57 [C6] dim 0 x110 on pt_C6(a)
+      *  <  #10 [C2] dim 1 x110 on pt_C6(a)   [1 translate(s) of it contain it]
+      *  <  #20 [C3] dim 1 x110 on pt_C6(a)   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #58 [C6] dim 0 x110 on pt_C6(a)<C3line
+      *  <  #11 [C2] dim 1 x110 on pt_C6(a)<C3line   [1 translate(s) of it contain it]
+      *  <  #17 [C3] dim 1 x110 on C3line   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #59 [C6] dim 0 x110 on pt_C6(a)<C3line
+      *  <  #11 [C2] dim 1 x110 on pt_C6(a)<C3line   [1 translate(s) of it contain it]
+      *  <  #07 [C3] dim 2 x110 on C3line   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #60 [C6] dim 0 x110 on pt_C6(a)<C3line
+      *  <  #10 [C2] dim 1 x110 on pt_C6(a)   [1 translate(s) of it contain it]
+      *  <  #07 [C3] dim 2 x110 on C3line   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #61 [C6] dim 0 x110 on pt_C6(a)<P_sigma
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #62 [C6] dim 0 x110 on pt_C6(a)<P_sigma
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #63 [C6] dim 0 x110 on pt_C6(a)<P_sigma
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #64 [C6] dim 0 x110 on pt_C6(a)<P_sigma
+      *  <  #20 [C3] dim 1 x110 on pt_C6(a)   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #65 [C6] dim 0 x110 on pt_C6(b)
+      *  <  #04 [C2] dim 2 x110 on pt_C6(b)   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #66 [C6] dim 0 x110 on pt_C6(b)
+      *  <  #21 [C3] dim 1 x110 on pt_C6(b)   [1 translate(s) of it contain it]
+      *  <  #04 [C2] dim 2 x110 on pt_C6(b)   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #67 [C6] dim 0 x110 on pt_C6(b)<C3line
+      *  <  #17 [C3] dim 1 x110 on C3line   [1 translate(s) of it contain it]
+      *  <  #04 [C2] dim 2 x110 on pt_C6(b)   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #68 [C6] dim 0 x110 on pt_C6(b)<C3line
+      *  <  #07 [C3] dim 2 x110 on C3line   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #69 [C6] dim 0 x110 on pt_C6(b)<C3line
+      *  <  #04 [C2] dim 2 x110 on pt_C6(b)   [1 translate(s) of it contain it]
+      *  <  #07 [C3] dim 2 x110 on C3line   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #70 [C6] dim 0 x110 on pt_C6(b)<Lminus_sigma
+      *  <  #01 [C2] dim 3 x55 on Lminus_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #71 [C6] dim 0 x110 on pt_C6(b)<Lminus_sigma
+      *  <  #01 [C2] dim 3 x55 on Lminus_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #72 [C6] dim 0 x110 on pt_C6(b)<Lminus_sigma
+      *  <  #21 [C3] dim 1 x110 on pt_C6(b)   [1 translate(s) of it contain it]
+      *  <  #01 [C2] dim 3 x55 on Lminus_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #73 [C6] dim 0 x110 on pt_D12
+      *  <  #15 [C2] dim 1 x55 on pt_D12   [1 translate(s) of it contain it]
+      *  <  #22 [C3] dim 1 x110 on pt_D12   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #74 [C6] dim 0 x110 on pt_D12<P_sigma
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #75 [C6] dim 0 x110 on pt_D12<P_sigma
+      *  <  #22 [C3] dim 1 x110 on pt_D12   [1 translate(s) of it contain it]
+      *  <  #02 [C2] dim 3 x55 on P_sigma   [1 translate(s) of it contain it]
+         <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #76 [C11] dim 0 x60 on pt_C11
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #77 [C11] dim 0 x60 on pt_C11
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #78 [C11] dim 0 x60 on pt_C11
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+  #79 [C11] dim 0 x60 on pt_C11
+      *  <  #00 [1] dim 4 x1 on (off D)   [1 translate(s) of it contain it]
+
+=== CONSISTENCY: uniqueness of the ambient Z^H component ===
+  incomparable pairs of H-fixed strata above a common stratum: 0
+  CHECK Z^H components are pairwise disjoint (0 expected): PASS
+
+CHECK the relation is a strict partial order, isotropy grows downward, dimension drops downward: PASS
+
+=== WHICH STRATA MEET WHICH CROSSINGS ===
+(a stratum whose own chain has length k lies IN a k-fold crossing; it
+ MEETS the deeper crossings of the strata below it in the poset)
+  #00 [1] dim 4 x1 on (off D)
+      lies in the |I| = 0 crossing (off D)
+      meets deeper crossings: C3line, Lminus_sigma, P_sigma, ell_V, ell_V<P_sigma, pt_A4(a), pt_A4(a)<P_sigma, pt_A4(a)<ell_V, pt_A4(b), pt_A4(b)<P_sigma, pt_A4(b)<ell_V, pt_C11, pt_C5(a), pt_C5(b), pt_C6(a), pt_C6(a)<C3line, pt_C6(a)<P_sigma, pt_C6(b), pt_C6(b)<C3line, pt_C6(b)<Lminus_sigma, pt_D10, pt_D12, pt_D12<P_sigma, pt_V4I, pt_V4I<Lminus_sigma, pt_V4I<P_sigma
+  #01 [C2] dim 3 x55 on Lminus_sigma
+      lies in the |I| = 1 crossing Lminus_sigma
+      meets deeper crossings: pt_C6(b)<Lminus_sigma, pt_V4I<Lminus_sigma
+  #02 [C2] dim 3 x55 on P_sigma
+      lies in the |I| = 1 crossing P_sigma
+      meets deeper crossings: ell_V<P_sigma, pt_A4(a)<P_sigma, pt_A4(b)<P_sigma, pt_C6(a)<P_sigma, pt_D12<P_sigma, pt_V4I<P_sigma
+  #03 [C2] dim 2 x165 on ell_V
+      lies in the |I| = 1 crossing ell_V
+      meets deeper crossings: ell_V<P_sigma
+  #04 [C2] dim 2 x110 on pt_C6(b)
+      lies in the |I| = 1 crossing pt_C6(b)
+      meets deeper crossings: pt_C6(b)<C3line
+  #05 [C2] dim 2 x165 on pt_V4I
+      lies in the |I| = 1 crossing pt_V4I
+      meets deeper crossings: pt_V4I<Lminus_sigma, pt_V4I<P_sigma
+  #06 [C2] dim 2 x165 on pt_V4I
+      lies in the |I| = 1 crossing pt_V4I
+      meets deeper crossings: pt_V4I<Lminus_sigma, pt_V4I<P_sigma
+  #07 [C3] dim 2 x110 on C3line
+      lies in the |I| = 1 crossing C3line
+      meets deeper crossings: pt_C6(a)<C3line, pt_C6(b)<C3line
+  #08 [C2] dim 1 x165 on pt_A4(a)
+      lies in the |I| = 1 crossing pt_A4(a)
+      meets deeper crossings: pt_A4(a)<P_sigma
+  #09 [C2] dim 1 x165 on pt_A4(b)
+      lies in the |I| = 1 crossing pt_A4(b)
+      meets deeper crossings: pt_A4(b)<P_sigma
+  #10 [C2] dim 1 x110 on pt_C6(a)
+      lies in the |I| = 1 crossing pt_C6(a)
+      meets deeper crossings: pt_C6(a)<C3line
+  #11 [C2] dim 1 x110 on pt_C6(a)<C3line
+      lies in the |I| = 2 crossing pt_C6(a)<C3line
+  #12 [C2] dim 1 x330 on pt_D10
+      lies in the |I| = 1 crossing pt_D10
+  #13 [C2] dim 1 x165 on pt_D12
+      lies in the |I| = 1 crossing pt_D12
+      meets deeper crossings: pt_D12<P_sigma
+  #14 [C2] dim 1 x165 on pt_D12
+      lies in the |I| = 1 crossing pt_D12
+      meets deeper crossings: pt_D12<P_sigma
+  #15 [C2] dim 1 x55 on pt_D12
+      lies in the |I| = 1 crossing pt_D12
+      meets deeper crossings: pt_D12<P_sigma
+  #16 [C2] dim 1 x165 on pt_V4I
+      lies in the |I| = 1 crossing pt_V4I
+      meets deeper crossings: pt_V4I<Lminus_sigma
+  #17 [C3] dim 1 x110 on C3line
+      lies in the |I| = 1 crossing C3line
+      meets deeper crossings: pt_C6(a)<C3line, pt_C6(b)<C3line
+  #18 [C3] dim 1 x220 on pt_A4(a)
+      lies in the |I| = 1 crossing pt_A4(a)
+  #19 [C3] dim 1 x220 on pt_A4(b)
+      lies in the |I| = 1 crossing pt_A4(b)
+  #20 [C3] dim 1 x110 on pt_C6(a)
+      lies in the |I| = 1 crossing pt_C6(a)
+      meets deeper crossings: pt_C6(a)<P_sigma
+  #21 [C3] dim 1 x110 on pt_C6(b)
+      lies in the |I| = 1 crossing pt_C6(b)
+      meets deeper crossings: pt_C6(b)<Lminus_sigma
+  #22 [C3] dim 1 x110 on pt_D12
+      lies in the |I| = 1 crossing pt_D12
+      meets deeper crossings: pt_D12<P_sigma
+  #23 [V4] dim 1 x165 on ell_V<P_sigma
+      lies in the |I| = 2 crossing ell_V<P_sigma
+  #24 [V4] dim 1 x165 on ell_V<P_sigma
+      lies in the |I| = 2 crossing ell_V<P_sigma
+  #25 [V4] dim 1 x165 on pt_V4I<Lminus_sigma
+      lies in the |I| = 2 crossing pt_V4I<Lminus_sigma
+  #26 [V4] dim 1 x165 on pt_V4I<Lminus_sigma
+      lies in the |I| = 2 crossing pt_V4I<Lminus_sigma
+  #27 [V4] dim 1 x165 on pt_V4I<P_sigma
+      lies in the |I| = 2 crossing pt_V4I<P_sigma
+  #28 [V4] dim 1 x165 on pt_V4I<P_sigma
+      lies in the |I| = 2 crossing pt_V4I<P_sigma
+  #29 [C3] dim 0 x220 on pt_A4(a)
+      lies in the |I| = 1 crossing pt_A4(a)
+  #30 [C3] dim 0 x220 on pt_A4(a)<ell_V
+      lies in the |I| = 2 crossing pt_A4(a)<ell_V
+  #31 [C3] dim 0 x220 on pt_A4(a)<ell_V
+      lies in the |I| = 2 crossing pt_A4(a)<ell_V
+  #32 [C3] dim 0 x220 on pt_A4(b)
+      lies in the |I| = 1 crossing pt_A4(b)
+  #33 [C3] dim 0 x220 on pt_A4(b)<ell_V
+      lies in the |I| = 2 crossing pt_A4(b)<ell_V
+  #34 [C3] dim 0 x220 on pt_A4(b)<ell_V
+      lies in the |I| = 2 crossing pt_A4(b)<ell_V
+  #35 [V4] dim 0 x165 on pt_A4(a)<P_sigma
+      lies in the |I| = 2 crossing pt_A4(a)<P_sigma
+  #36 [V4] dim 0 x165 on pt_A4(a)<P_sigma
+      lies in the |I| = 2 crossing pt_A4(a)<P_sigma
+  #37 [V4] dim 0 x165 on pt_A4(b)<P_sigma
+      lies in the |I| = 2 crossing pt_A4(b)<P_sigma
+  #38 [V4] dim 0 x165 on pt_A4(b)<P_sigma
+      lies in the |I| = 2 crossing pt_A4(b)<P_sigma
+  #39 [V4] dim 0 x165 on pt_D12<P_sigma
+      lies in the |I| = 2 crossing pt_D12<P_sigma
+  #40 [V4] dim 0 x165 on pt_D12<P_sigma
+      lies in the |I| = 2 crossing pt_D12<P_sigma
+  #41 [V4] dim 0 x165 on pt_D12<P_sigma
+      lies in the |I| = 2 crossing pt_D12<P_sigma
+  #42 [V4] dim 0 x165 on pt_D12<P_sigma
+      lies in the |I| = 2 crossing pt_D12<P_sigma
+  #43 [V4] dim 0 x165 on pt_D12<P_sigma
+      lies in the |I| = 2 crossing pt_D12<P_sigma
+  #44 [V4] dim 0 x165 on pt_D12<P_sigma
+      lies in the |I| = 2 crossing pt_D12<P_sigma
+  #45 [V4] dim 0 x165 on pt_V4I<Lminus_sigma
+      lies in the |I| = 2 crossing pt_V4I<Lminus_sigma
+  #46 [V4] dim 0 x165 on pt_V4I<Lminus_sigma
+      lies in the |I| = 2 crossing pt_V4I<Lminus_sigma
+  #47 [C5] dim 0 x132 on pt_C5(a)
+      lies in the |I| = 1 crossing pt_C5(a)
+  #48 [C5] dim 0 x132 on pt_C5(a)
+      lies in the |I| = 1 crossing pt_C5(a)
+  #49 [C5] dim 0 x132 on pt_C5(a)
+      lies in the |I| = 1 crossing pt_C5(a)
+  #50 [C5] dim 0 x132 on pt_C5(a)
+      lies in the |I| = 1 crossing pt_C5(a)
+  #51 [C5] dim 0 x132 on pt_C5(b)
+      lies in the |I| = 1 crossing pt_C5(b)
+  #52 [C5] dim 0 x132 on pt_C5(b)
+      lies in the |I| = 1 crossing pt_C5(b)
+  #53 [C5] dim 0 x132 on pt_C5(b)
+      lies in the |I| = 1 crossing pt_C5(b)
+  #54 [C5] dim 0 x132 on pt_C5(b)
+      lies in the |I| = 1 crossing pt_C5(b)
+  #55 [C5] dim 0 x132 on pt_D10
+      lies in the |I| = 1 crossing pt_D10
+  #56 [C5] dim 0 x132 on pt_D10
+      lies in the |I| = 1 crossing pt_D10
+  #57 [C6] dim 0 x110 on pt_C6(a)
+      lies in the |I| = 1 crossing pt_C6(a)
+  #58 [C6] dim 0 x110 on pt_C6(a)<C3line
+      lies in the |I| = 2 crossing pt_C6(a)<C3line
+  #59 [C6] dim 0 x110 on pt_C6(a)<C3line
+      lies in the |I| = 2 crossing pt_C6(a)<C3line
+  #60 [C6] dim 0 x110 on pt_C6(a)<C3line
+      lies in the |I| = 2 crossing pt_C6(a)<C3line
+  #61 [C6] dim 0 x110 on pt_C6(a)<P_sigma
+      lies in the |I| = 2 crossing pt_C6(a)<P_sigma
+  #62 [C6] dim 0 x110 on pt_C6(a)<P_sigma
+      lies in the |I| = 2 crossing pt_C6(a)<P_sigma
+  #63 [C6] dim 0 x110 on pt_C6(a)<P_sigma
+      lies in the |I| = 2 crossing pt_C6(a)<P_sigma
+  #64 [C6] dim 0 x110 on pt_C6(a)<P_sigma
+      lies in the |I| = 2 crossing pt_C6(a)<P_sigma
+  #65 [C6] dim 0 x110 on pt_C6(b)
+      lies in the |I| = 1 crossing pt_C6(b)
+  #66 [C6] dim 0 x110 on pt_C6(b)
+      lies in the |I| = 1 crossing pt_C6(b)
+  #67 [C6] dim 0 x110 on pt_C6(b)<C3line
+      lies in the |I| = 2 crossing pt_C6(b)<C3line
+  #68 [C6] dim 0 x110 on pt_C6(b)<C3line
+      lies in the |I| = 2 crossing pt_C6(b)<C3line
+  #69 [C6] dim 0 x110 on pt_C6(b)<C3line
+      lies in the |I| = 2 crossing pt_C6(b)<C3line
+  #70 [C6] dim 0 x110 on pt_C6(b)<Lminus_sigma
+      lies in the |I| = 2 crossing pt_C6(b)<Lminus_sigma
+  #71 [C6] dim 0 x110 on pt_C6(b)<Lminus_sigma
+      lies in the |I| = 2 crossing pt_C6(b)<Lminus_sigma
+  #72 [C6] dim 0 x110 on pt_C6(b)<Lminus_sigma
+      lies in the |I| = 2 crossing pt_C6(b)<Lminus_sigma
+  #73 [C6] dim 0 x110 on pt_D12
+      lies in the |I| = 1 crossing pt_D12
+  #74 [C6] dim 0 x110 on pt_D12<P_sigma
+      lies in the |I| = 2 crossing pt_D12<P_sigma
+  #75 [C6] dim 0 x110 on pt_D12<P_sigma
+      lies in the |I| = 2 crossing pt_D12<P_sigma
+  #76 [C11] dim 0 x60 on pt_C11
+      lies in the |I| = 1 crossing pt_C11
+  #77 [C11] dim 0 x60 on pt_C11
+      lies in the |I| = 1 crossing pt_C11
+  #78 [C11] dim 0 x60 on pt_C11
+      lies in the |I| = 1 crossing pt_C11
+  #79 [C11] dim 0 x60 on pt_C11
+      lies in the |I| = 1 crossing pt_C11
+

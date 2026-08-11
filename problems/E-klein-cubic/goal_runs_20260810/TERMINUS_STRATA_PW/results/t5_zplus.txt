@@ -1,0 +1,98 @@
+=========================  p = 331  =========================
+
+=== 1. THE T3 CENTRE M_tau^V AS A ROW OF THE TERMINUS CENSUS ===
+  rows with K = C2, dim 2, 165 components, on D_ell_V: 1
+    K = C2   dim 2   #components 165   Stab_G(M) = V4   W(K,M) = C2
+    weights at a general point: [('1', '.'), ('[1/2]', 'B'), ('[1/2]', '.'), ('1', '.')]
+  CHECK matches DUNCAN_CORNER_F2 (165 surfaces, G_M = <tau> = C2, Stab_G = V4): PASS
+  normal bundle N_M as a <tau>-module: [('[1/2]', 'B'), ('[1/2]', '.')]
+  CHECK N_M is <tau>-ISOTYPIC (Lemma B => G_{E_tau^V} = <tau>): PASS
+  CHECK exactly one of the two normal directions is a boundary branch (D_ell_V): PASS
+
+=== 2. ARE THE 165 SURFACES M_tau^V PAIRWISE DISJOINT ON Z ? ===
+  number of copies: 165
+  stratum orbits lying inside TWO OR MORE of the 165 copies: 0
+  CHECK the copies are pairwise disjoint on Z (DUNCAN_CORNER_F2 W2: 'separated by T2'): PASS
+
+=== 3./4. THE CENSUS DELTA  Z -> Z+  ===
+  stratum orbits contained in M (including M itself): 3
+
+  (a) CONSUMED / REPLACED: every stratum orbit inside M is replaced by
+      its exceptional pieces (FIX_I_bcomplex Thm 2.1(ii),(iii)):
+      [C2] dim 2 x165 on ell_V   N_M rank 2: [('[1/2]', '.'), ('[1/2]', 'B')]
+      [V4] dim 1 x165 on ell_V<P_sigma   N_M rank 2: [('[0/2,1/2]', '.'), ('[0/2,1/2]', 'B')]
+      [V4] dim 1 x165 on ell_V<P_sigma   N_M rank 2: [('[0/2,1/2]', '.'), ('[0/2,1/2]', 'B')]
+
+  (b) NEW ROWS on Z+ (one per nontrivial character of the normal
+      bundle of M along each stratum inside it):
+      new: dim 3  over [C2] dim 2 x165 on ell_V   normal character [1/2] (multiplicity 2)
+      new: dim 2  over [V4] dim 1 x165 on ell_V<P_sigma   normal character [0/2,1/2] (multiplicity 2)
+      new: dim 2  over [V4] dim 1 x165 on ell_V<P_sigma   normal character [0/2,1/2] (multiplicity 2)
+
+  (c) UNCHANGED: every stratum orbit NOT inside M survives as its strict
+      transform with dim, count, K, Stab_G, W(K,F) and normal
+      characters unchanged (Thm 2.1(i)): 77 of the 80 rows.
+
+=== 5. THE 330 FABULOUS V4-CORNERS ON Z+ ===
+  E_tau^V = P(N_M) is a divisor with G_E = <tau> (step 1, Lemma B).
+  It meets the strict transform of D_{P_z} for the OTHER involutions
+  z of V; at that crossing both <tau> and <z> act trivially, so the
+  crossing stabilizer is <tau,z> = V4, non-cyclic, hence FABULOUS
+  (thm:pairs, EXTERNAL-UNVERIFIED).
+  Klein four-subgroups of G: 55
+  corner labels (V, z, s) with z != s in V minus 1: 330
+  CHECK 55 V4's and 330 corner labels (DUNCAN_CORNER_F2 W3 PART 1): PASS
+  NEW ROWS of Z+ of dimension 2 with V4 acting trivially: 2 orbits, 330 components
+  CHECK these ARE the fabulous corners: 2 G-orbits of 165 = 330, V4-fixed of codim 2: PASS
+  (the 330 split into 2 G-orbits of 165 -- the ordered pair (z,s) records
+   which involution is G_{D_i} and which is G_{D_j}; setwise stabilizer V4.)
+
+=========================  p = 661  =========================
+
+=== 1. THE T3 CENTRE M_tau^V AS A ROW OF THE TERMINUS CENSUS ===
+  rows with K = C2, dim 2, 165 components, on D_ell_V: 1
+    K = C2   dim 2   #components 165   Stab_G(M) = V4   W(K,M) = C2
+    weights at a general point: [('1', '.'), ('[1/2]', 'B'), ('[1/2]', '.'), ('1', '.')]
+  CHECK matches DUNCAN_CORNER_F2 (165 surfaces, G_M = <tau> = C2, Stab_G = V4): PASS
+  normal bundle N_M as a <tau>-module: [('[1/2]', 'B'), ('[1/2]', '.')]
+  CHECK N_M is <tau>-ISOTYPIC (Lemma B => G_{E_tau^V} = <tau>): PASS
+  CHECK exactly one of the two normal directions is a boundary branch (D_ell_V): PASS
+
+=== 2. ARE THE 165 SURFACES M_tau^V PAIRWISE DISJOINT ON Z ? ===
+  number of copies: 165
+  stratum orbits lying inside TWO OR MORE of the 165 copies: 0
+  CHECK the copies are pairwise disjoint on Z (DUNCAN_CORNER_F2 W2: 'separated by T2'): PASS
+
+=== 3./4. THE CENSUS DELTA  Z -> Z+  ===
+  stratum orbits contained in M (including M itself): 3
+
+  (a) CONSUMED / REPLACED: every stratum orbit inside M is replaced by
+      its exceptional pieces (FIX_I_bcomplex Thm 2.1(ii),(iii)):
+      [C2] dim 2 x165 on ell_V   N_M rank 2: [('[1/2]', '.'), ('[1/2]', 'B')]
+      [V4] dim 1 x165 on ell_V<P_sigma   N_M rank 2: [('[0/2,1/2]', '.'), ('[0/2,1/2]', 'B')]
+      [V4] dim 1 x165 on ell_V<P_sigma   N_M rank 2: [('[0/2,1/2]', '.'), ('[0/2,1/2]', 'B')]
+
+  (b) NEW ROWS on Z+ (one per nontrivial character of the normal
+      bundle of M along each stratum inside it):
+      new: dim 3  over [C2] dim 2 x165 on ell_V   normal character [1/2] (multiplicity 2)
+      new: dim 2  over [V4] dim 1 x165 on ell_V<P_sigma   normal character [0/2,1/2] (multiplicity 2)
+      new: dim 2  over [V4] dim 1 x165 on ell_V<P_sigma   normal character [0/2,1/2] (multiplicity 2)
+
+  (c) UNCHANGED: every stratum orbit NOT inside M survives as its strict
+      transform with dim, count, K, Stab_G, W(K,F) and normal
+      characters unchanged (Thm 2.1(i)): 77 of the 80 rows.
+
+=== 5. THE 330 FABULOUS V4-CORNERS ON Z+ ===
+  E_tau^V = P(N_M) is a divisor with G_E = <tau> (step 1, Lemma B).
+  It meets the strict transform of D_{P_z} for the OTHER involutions
+  z of V; at that crossing both <tau> and <z> act trivially, so the
+  crossing stabilizer is <tau,z> = V4, non-cyclic, hence FABULOUS
+  (thm:pairs, EXTERNAL-UNVERIFIED).
+  Klein four-subgroups of G: 55
+  corner labels (V, z, s) with z != s in V minus 1: 330
+  CHECK 55 V4's and 330 corner labels (DUNCAN_CORNER_F2 W3 PART 1): PASS
+  NEW ROWS of Z+ of dimension 2 with V4 acting trivially: 2 orbits, 330 components
+  CHECK these ARE the fabulous corners: 2 G-orbits of 165 = 330, V4-fixed of codim 2: PASS
+  (the 330 split into 2 G-orbits of 165 -- the ordered pair (z,s) records
+   which involution is G_{D_i} and which is G_{D_j}; setwise stabilizer V4.)
+

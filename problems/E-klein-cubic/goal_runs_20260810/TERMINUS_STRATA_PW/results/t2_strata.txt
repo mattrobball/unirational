@@ -1,0 +1,979 @@
+=========================  p = 331  =========================
+
+### STAGE 0: Z_0 = P(W)   (15 G-orbits of orbit-type strata)
+   K dim  #comp #/fixedK  Stab_G(F)  W(K,F)  boundary chain                     weights (*=boundary branch)   |  birational model (all RATIONAL)
+   1   4      1        1  PSL(2,11) PSL(2,11)  (none: off D)                      1 1 1 1   |  P^4
+  C2   1     55        1        D12      S3  (none: off D)                      [1/2] [1/2] [1/2] 1   |  P^1
+  C2   2     55        1        D12      S3  (none: off D)                      1 1 [1/2] [1/2]   |  P^2
+  C3   1    110        2         C6      C2  (none: off D)                      [2/3] 1 [1/3] [1/3]   |  P^1
+  V4   0    165        3         V4       1  (none: off D)                      [0/2,1/2] [0/2,1/2] [1/2,1/2] [1/2,0/2]   |  P^0
+  V4   1     55        1         A4      C3  (none: off D)                      1 [0/2,1/2] [1/2,0/2] [1/2,1/2]   |  P^1
+  C5   0    132        2         C5       1  (none: off D)                      [1/5] [2/5] [3/5] [4/5]   |  P^0
+  C5   0    132        2         C5       1  (none: off D)                      [1/5] [2/5] [3/5] [4/5]   |  P^0
+  C6   0    110        2         C6       1  (none: off D)                      [4/6] [5/6] [2/6] [3/6]   |  P^0
+  C6   0    110        2         C6       1  (none: off D)                      [1/6] [2/6] [3/6] [5/6]   |  P^0
+ C11   0     60        5        C11       1  (none: off D)                      [3/11] [5/11] [6/11] [7/11]   |  P^0
+ D10   0     66        1        D10       1  (none: off D)                      (nonabelian K: not diagonalisable)   |  P^0
+ D12   0     55        1        D12       1  (none: off D)                      (nonabelian K: not diagonalisable)   |  P^0
+  A4   0     55        1         A4       1  (none: off D)                      (nonabelian K: not diagonalisable)   |  P^0
+  A4   0     55        1         A4       1  (none: off D)                      (nonabelian K: not diagonalisable)   |  P^0
+
+  stage 0 totals by exact stabilizer K:
+    K = 1     components by dim: {4: 1}   (total 1)
+    K = C2    components by dim: {1: 55, 2: 55}   (total 110)
+    K = C3    components by dim: {1: 110}   (total 110)
+    K = V4    components by dim: {0: 165, 1: 55}   (total 220)
+    K = C5    components by dim: {0: 264}   (total 264)
+    K = C6    components by dim: {0: 220}   (total 220)
+    K = C11   components by dim: {0: 60}   (total 60)
+    K = D10   components by dim: {0: 66}   (total 66)
+    K = D12   components by dim: {0: 55}   (total 55)
+    K = A4    components by dim: {0: 110}   (total 110)
+
+### STAGE 1: Z_1 (after T0)   (57 G-orbits of orbit-type strata)
+   K dim  #comp #/fixedK  Stab_G(F)  W(K,F)  boundary chain                     weights (*=boundary branch)   |  birational model (all RATIONAL)
+   1   4      1        1  PSL(2,11) PSL(2,11)  (none: off D)                      1 1 1 1   |  P^4
+  C2   1    330        6         C2       1  pt_D10                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_A4(a)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_A4(b)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_V4I                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    110        2         C6      C3  pt_C6(a)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1     55        1        D12      S3  (none: off D)                      [1/2] [1/2] [1/2] 1   |  P^1
+  C2   1     55        1        D12      S3  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   2    165        3         V4      C2  pt_V4I                             [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   2    165        3         V4      C2  pt_V4I                             [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   2    110        2         C6      C3  pt_C6(b)                           [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   2     55        1        D12      S3  (none: off D)                      1 1 [1/2] [1/2]   |  P^2
+  C3   0    220        4         C3       1  pt_A4(a)                           [2/3]* [1/3] [2/3] [2/3]   |  P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(b)                           [1/3]* [1/3] [1/3] [2/3]   |  P^0 x P^0
+  C3   1    220        4         C3       1  pt_A4(a)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    220        4         C3       1  pt_A4(b)                           [2/3]* [2/3] 1 [1/3]   |  P^0 x P^1
+  C3   1    110        2         C6      C2  (none: off D)                      [2/3] 1 [1/3] [1/3]   |  P^1
+  C3   1    110        2         C6      C2  pt_C6(a)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    110        2         C6      C2  pt_C6(b)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    110        2         C6      C2  pt_D12                             [1/3]* 1 [1/3] [1/3]   |  P^0 x P^1
+  V4   0    165        3         V4       1  pt_A4(a)                           [0/2,1/2]* [0/2,1/2] [1/2,1/2] [1/2,0/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_A4(b)                           [0/2,1/2]* [0/2,1/2] [1/2,1/2] [1/2,0/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12                             [0/2,1/2]* [0/2,1/2] [1/2,1/2] [1/2,0/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12                             [1/2,0/2]* [1/2,0/2] [1/2,1/2] [0/2,1/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12                             [1/2,1/2]* [1/2,1/2] [1/2,0/2] [0/2,1/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_V4I                             [1/2,1/2]* [1/2,0/2] [1/2,0/2] [0/2,1/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_V4I                             [1/2,0/2]* [1/2,1/2] [1/2,1/2] [0/2,1/2]   |  P^0 x P^0
+  V4   1    165        3         V4       1  pt_V4I                             [0/2,1/2]* 1 [1/2,0/2] [1/2,1/2]   |  P^0 x P^1
+  V4   1     55        1         A4      C3  (none: off D)                      1 [0/2,1/2] [1/2,0/2] [1/2,1/2]   |  P^1
+  C5   0    132        2         C5       1  pt_C5(a)                           [1/5]* [1/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [2/5]* [4/5] [1/5] [2/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [3/5]* [3/5] [4/5] [1/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [4/5]* [2/5] [3/5] [4/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [2/5]* [1/5] [2/5] [4/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [3/5]* [4/5] [1/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [4/5]* [3/5] [4/5] [2/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [1/5]* [1/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_D10                             [1/5]* [1/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_D10                             [2/5]* [4/5] [1/5] [2/5]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)                           [4/6]* [1/6] [4/6] [5/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)                           [5/6]* [5/6] [3/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)                           [2/6]* [2/6] [3/6] [1/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)                           [3/6]* [1/6] [2/6] [5/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)                           [1/6]* [1/6] [2/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)                           [2/6]* [5/6] [1/6] [3/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)                           [3/6]* [4/6] [5/6] [2/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)                           [5/6]* [2/6] [3/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_D12                             [1/6]* [1/6] [3/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_D12                             [2/6]* [5/6] [2/6] [3/6]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [3/11]* [2/11] [3/11] [4/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [5/11]* [9/11] [1/11] [2/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [6/11]* [8/11] [10/11] [1/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [7/11]* [7/11] [9/11] [10/11]   |  P^0 x P^0
+  A4   0     55        1         A4       1  pt_A4(a)                           (nonabelian K: not diagonalisable)   |  P^0 x P^0
+  A4   0     55        1         A4       1  pt_A4(b)                           (nonabelian K: not diagonalisable)   |  P^0 x P^0
+
+  stage 1 totals by exact stabilizer K:
+    K = 1     components by dim: {4: 1}   (total 1)
+    K = C2    components by dim: {1: 1375, 2: 495}   (total 1870)
+    K = C3    components by dim: {0: 440, 1: 880}   (total 1320)
+    K = V4    components by dim: {0: 1155, 1: 220}   (total 1375)
+    K = C5    components by dim: {0: 1320}   (total 1320)
+    K = C6    components by dim: {0: 1100}   (total 1100)
+    K = C11   components by dim: {0: 240}   (total 240)
+    K = A4    components by dim: {0: 110}   (total 110)
+
+### STAGE 2: Z_2 (after T1)   (70 G-orbits of orbit-type strata)
+   K dim  #comp #/fixedK  Stab_G(F)  W(K,F)  boundary chain                     weights (*=boundary branch)   |  birational model (all RATIONAL)
+   1   4      1        1  PSL(2,11) PSL(2,11)  (none: off D)                      1 1 1 1   |  P^4
+  C2   1    330        6         C2       1  pt_D10                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_A4(a)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_A4(b)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_V4I                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    110        2         C6      C3  pt_C6(a)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    110        2         C6      C3  pt_C6(a)<C3line                    [1/2]* [1/2]* 1 [1/2]   |  P^0 x P^0 x P^1
+  C2   1     55        1        D12      S3  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   2    165        3         V4      C2  ell_V                              1 [1/2]* [1/2] 1   |  P^1 x P^1
+  C2   2    165        3         V4      C2  pt_V4I                             [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   2    165        3         V4      C2  pt_V4I                             [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   2    110        2         C6      C3  pt_C6(b)                           [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   2     55        1        D12      S3  (none: off D)                      1 1 [1/2] [1/2]   |  P^2
+  C2   3     55        1        D12      S3  Lminus_sigma                       1 [1/2]* 1 1   |  P^1 x P^2
+  C3   0    220        4         C3       1  pt_A4(a)                           [2/3]* [1/3] [2/3] [2/3]   |  P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(a)<ell_V                     [1/3]* [1/3]* [1/3] [2/3]   |  P^0 x P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(a)<ell_V                     [1/3]* [2/3]* [2/3] [1/3]   |  P^0 x P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(b)                           [1/3]* [1/3] [1/3] [2/3]   |  P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(b)<ell_V                     [2/3]* [2/3]* [1/3] [2/3]   |  P^0 x P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(b)<ell_V                     [2/3]* [1/3]* [1/3] [2/3]   |  P^0 x P^0 x P^0
+  C3   1    220        4         C3       1  pt_A4(a)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    220        4         C3       1  pt_A4(b)                           [2/3]* [2/3] 1 [1/3]   |  P^0 x P^1
+  C3   1    110        2         C6      C2  C3line                             1 [2/3]* [2/3] [2/3]   |  P^1 x P^0
+  C3   1    110        2         C6      C2  pt_C6(a)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    110        2         C6      C2  pt_C6(b)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    110        2         C6      C2  pt_D12                             [1/3]* 1 [1/3] [1/3]   |  P^0 x P^1
+  C3   2    110        2         C6      C2  C3line                             1 [1/3]* [1/3] 1   |  P^1 x P^1
+  V4   0    165        3         V4       1  pt_A4(a)                           [0/2,1/2]* [0/2,1/2] [1/2,1/2] [1/2,0/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_A4(b)                           [0/2,1/2]* [0/2,1/2] [1/2,1/2] [1/2,0/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12                             [0/2,1/2]* [0/2,1/2] [1/2,1/2] [1/2,0/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12                             [1/2,0/2]* [1/2,0/2] [1/2,1/2] [0/2,1/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12                             [1/2,1/2]* [1/2,1/2] [1/2,0/2] [0/2,1/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_V4I<Lminus_sigma                [1/2,0/2]* [0/2,1/2]* [1/2,0/2] [1/2,0/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_V4I<Lminus_sigma                [1/2,1/2]* [0/2,1/2]* [1/2,1/2] [1/2,1/2]   |  P^0 x P^0 x P^0
+  V4   1    165        3         V4       1  ell_V                              1 [0/2,1/2]* [1/2,1/2] [1/2,0/2]   |  P^1 x P^0
+  V4   1    165        3         V4       1  pt_V4I                             [0/2,1/2]* 1 [1/2,0/2] [1/2,1/2]   |  P^0 x P^1
+  V4   1    165        3         V4       1  pt_V4I<Lminus_sigma                [1/2,0/2]* [1/2,1/2]* 1 [1/2,0/2]   |  P^0 x P^0 x P^1
+  V4   1    165        3         V4       1  pt_V4I<Lminus_sigma                [1/2,1/2]* [1/2,0/2]* 1 [1/2,1/2]   |  P^0 x P^0 x P^1
+  C5   0    132        2         C5       1  pt_C5(a)                           [1/5]* [1/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [2/5]* [4/5] [1/5] [2/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [3/5]* [3/5] [4/5] [1/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [4/5]* [2/5] [3/5] [4/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [2/5]* [1/5] [2/5] [4/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [3/5]* [4/5] [1/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [4/5]* [3/5] [4/5] [2/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [1/5]* [1/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_D10                             [1/5]* [1/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_D10                             [2/5]* [4/5] [1/5] [2/5]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)                           [4/6]* [1/6] [4/6] [5/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)                           [5/6]* [5/6] [3/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)                           [2/6]* [2/6] [3/6] [1/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<C3line                    [3/6]* [1/6]* [1/6] [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<C3line                    [3/6]* [2/6]* [5/6] [3/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<C3line                    [3/6]* [5/6]* [2/6] [3/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)                           [1/6]* [1/6] [2/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)                           [5/6]* [2/6] [3/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<C3line                    [3/6]* [4/6]* [1/6] [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<C3line                    [3/6]* [5/6]* [5/6] [3/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<C3line                    [3/6]* [2/6]* [2/6] [3/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<Lminus_sigma              [2/6]* [5/6]* [2/6] [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<Lminus_sigma              [2/6]* [1/6]* [4/6] [2/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<Lminus_sigma              [2/6]* [3/6]* [2/6] [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_D12                             [1/6]* [1/6] [3/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_D12                             [2/6]* [5/6] [2/6] [3/6]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [3/11]* [2/11] [3/11] [4/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [5/11]* [9/11] [1/11] [2/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [6/11]* [8/11] [10/11] [1/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [7/11]* [7/11] [9/11] [10/11]   |  P^0 x P^0
+
+  stage 2 totals by exact stabilizer K:
+    K = 1     components by dim: {4: 1}   (total 1)
+    K = C2    components by dim: {1: 1430, 2: 660, 3: 55}   (total 2145)
+    K = C3    components by dim: {0: 1320, 1: 880, 2: 110}   (total 2310)
+    K = V4    components by dim: {0: 1155, 1: 660}   (total 1815)
+    K = C5    components by dim: {0: 1320}   (total 1320)
+    K = C6    components by dim: {0: 1760}   (total 1760)
+    K = C11   components by dim: {0: 240}   (total 240)
+
+### STAGE 3: Z = Z_3 (after T2)   (80 G-orbits of orbit-type strata)
+   K dim  #comp #/fixedK  Stab_G(F)  W(K,F)  boundary chain                     weights (*=boundary branch)   |  birational model (all RATIONAL)
+   1   4      1        1  PSL(2,11) PSL(2,11)  (none: off D)                      1 1 1 1   |  P^4
+  C2   1    330        6         C2       1  pt_D10                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_A4(a)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_A4(b)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_V4I                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    110        2         C6      C3  pt_C6(a)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    110        2         C6      C3  pt_C6(a)<C3line                    [1/2]* [1/2]* 1 [1/2]   |  P^0 x P^0 x P^1
+  C2   1     55        1        D12      S3  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   2    165        3         V4      C2  ell_V                              1 [1/2]* [1/2] 1   |  P^1 x P^1
+  C2   2    165        3         V4      C2  pt_V4I                             [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   2    165        3         V4      C2  pt_V4I                             [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   2    110        2         C6      C3  pt_C6(b)                           [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   3     55        1        D12      S3  Lminus_sigma                       1 [1/2]* 1 1   |  P^1 x P^2
+  C2   3     55        1        D12      S3  P_sigma                            1 1 [1/2]* 1   |  P^2 x P^1
+  C3   0    220        4         C3       1  pt_A4(a)                           [2/3]* [1/3] [2/3] [2/3]   |  P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(a)<ell_V                     [1/3]* [1/3]* [1/3] [2/3]   |  P^0 x P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(a)<ell_V                     [1/3]* [2/3]* [2/3] [1/3]   |  P^0 x P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(b)                           [1/3]* [1/3] [1/3] [2/3]   |  P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(b)<ell_V                     [2/3]* [2/3]* [1/3] [2/3]   |  P^0 x P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(b)<ell_V                     [2/3]* [1/3]* [1/3] [2/3]   |  P^0 x P^0 x P^0
+  C3   1    220        4         C3       1  pt_A4(a)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    220        4         C3       1  pt_A4(b)                           [2/3]* [2/3] 1 [1/3]   |  P^0 x P^1
+  C3   1    110        2         C6      C2  C3line                             1 [2/3]* [2/3] [2/3]   |  P^1 x P^0
+  C3   1    110        2         C6      C2  pt_C6(a)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    110        2         C6      C2  pt_C6(b)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    110        2         C6      C2  pt_D12                             [1/3]* 1 [1/3] [1/3]   |  P^0 x P^1
+  C3   2    110        2         C6      C2  C3line                             1 [1/3]* [1/3] 1   |  P^1 x P^1
+  V4   0    165        3         V4       1  pt_A4(a)<P_sigma                   [0/2,1/2]* [0/2,1/2] [1/2,1/2]* [0/2,1/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_A4(a)<P_sigma                   [0/2,1/2]* [0/2,1/2] [1/2,0/2]* [0/2,1/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_A4(b)<P_sigma                   [1/2,0/2]* [1/2,0/2] [1/2,1/2]* [1/2,0/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_A4(b)<P_sigma                   [1/2,0/2]* [1/2,0/2] [0/2,1/2]* [1/2,0/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12<P_sigma                     [1/2,0/2]* [1/2,0/2] [1/2,1/2]* [1/2,0/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12<P_sigma                     [1/2,0/2]* [1/2,0/2] [0/2,1/2]* [1/2,0/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12<P_sigma                     [0/2,1/2]* [0/2,1/2] [1/2,1/2]* [0/2,1/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12<P_sigma                     [0/2,1/2]* [0/2,1/2] [1/2,0/2]* [0/2,1/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12<P_sigma                     [1/2,1/2]* [1/2,1/2] [1/2,0/2]* [1/2,1/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12<P_sigma                     [1/2,1/2]* [1/2,1/2] [0/2,1/2]* [1/2,1/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_V4I<Lminus_sigma                [1/2,0/2]* [0/2,1/2]* [1/2,0/2] [1/2,0/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_V4I<Lminus_sigma                [1/2,1/2]* [0/2,1/2]* [1/2,1/2] [1/2,1/2]   |  P^0 x P^0 x P^0
+  V4   1    165        3         V4       1  ell_V<P_sigma                      1 [0/2,1/2]* [1/2,1/2]* [0/2,1/2]   |  P^1 x P^0 x P^0
+  V4   1    165        3         V4       1  ell_V<P_sigma                      1 [0/2,1/2]* [1/2,0/2]* [0/2,1/2]   |  P^1 x P^0 x P^0
+  V4   1    165        3         V4       1  pt_V4I<Lminus_sigma                [1/2,0/2]* [1/2,1/2]* 1 [1/2,0/2]   |  P^0 x P^0 x P^1
+  V4   1    165        3         V4       1  pt_V4I<Lminus_sigma                [1/2,1/2]* [1/2,0/2]* 1 [1/2,1/2]   |  P^0 x P^0 x P^1
+  V4   1    165        3         V4       1  pt_V4I<P_sigma                     [0/2,1/2]* 1 [1/2,0/2]* [0/2,1/2]   |  P^0 x P^1 x P^0
+  V4   1    165        3         V4       1  pt_V4I<P_sigma                     [0/2,1/2]* 1 [1/2,1/2]* [0/2,1/2]   |  P^0 x P^1 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [1/5]* [1/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [2/5]* [4/5] [1/5] [2/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [3/5]* [3/5] [4/5] [1/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [4/5]* [2/5] [3/5] [4/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [2/5]* [1/5] [2/5] [4/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [3/5]* [4/5] [1/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [4/5]* [3/5] [4/5] [2/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [1/5]* [1/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_D10                             [1/5]* [1/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_D10                             [2/5]* [4/5] [1/5] [2/5]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)                           [5/6]* [5/6] [3/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<C3line                    [3/6]* [1/6]* [1/6] [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<C3line                    [3/6]* [2/6]* [5/6] [3/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<C3line                    [3/6]* [5/6]* [2/6] [3/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<P_sigma                   [4/6]* [4/6] [1/6]* [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<P_sigma                   [4/6]* [4/6] [5/6]* [2/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<P_sigma                   [2/6]* [2/6] [3/6]* [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<P_sigma                   [2/6]* [2/6] [1/6]* [2/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)                           [1/6]* [1/6] [2/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)                           [5/6]* [2/6] [3/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<C3line                    [3/6]* [4/6]* [1/6] [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<C3line                    [3/6]* [5/6]* [5/6] [3/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<C3line                    [3/6]* [2/6]* [2/6] [3/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<Lminus_sigma              [2/6]* [5/6]* [2/6] [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<Lminus_sigma              [2/6]* [1/6]* [4/6] [2/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<Lminus_sigma              [2/6]* [3/6]* [2/6] [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_D12                             [1/6]* [1/6] [3/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_D12<P_sigma                     [2/6]* [2/6] [5/6]* [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_D12<P_sigma                     [2/6]* [2/6] [3/6]* [2/6]   |  P^0 x P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [3/11]* [2/11] [3/11] [4/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [5/11]* [9/11] [1/11] [2/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [6/11]* [8/11] [10/11] [1/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [7/11]* [7/11] [9/11] [10/11]   |  P^0 x P^0
+
+  stage 3 totals by exact stabilizer K:
+    K = 1     components by dim: {4: 1}   (total 1)
+    K = C2    components by dim: {1: 1430, 2: 605, 3: 110}   (total 2145)
+    K = C3    components by dim: {0: 1320, 1: 880, 2: 110}   (total 2310)
+    K = V4    components by dim: {0: 1980, 1: 990}   (total 2970)
+    K = C5    components by dim: {0: 1320}   (total 1320)
+    K = C6    components by dim: {0: 2090}   (total 2090)
+    K = C11   components by dim: {0: 240}   (total 240)
+
+=== TERMINUS Z: point-stabilizer classes, ALL 16 SUBGROUP CLASSES ===
+  the 16 conjugacy classes of subgroups of G: ['1', 'C2', 'C3', 'V4', 'C5', 'S3', 'S3', 'C6', 'D10', 'C11', 'A4', 'D12', '11:5', 'A5', 'A5', 'PSL(2,11)']
+    1          OCCURS   :   1 G-orbits,      1 components of Z_(=H)
+    C2         OCCURS   :  15 G-orbits,   2145 components of Z_(=H)
+    C3         OCCURS   :  13 G-orbits,   2310 components of Z_(=H)
+    V4         OCCURS   :  18 G-orbits,   2970 components of Z_(=H)
+    C5         OCCURS   :  10 G-orbits,   1320 components of Z_(=H)
+    S3         EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer S3)
+    S3         EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer S3)
+    C6         OCCURS   :  19 G-orbits,   2090 components of Z_(=H)
+    D10        EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer D10)
+    C11        OCCURS   :   4 G-orbits,    240 components of Z_(=H)
+    A4         EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer A4)
+    D12        EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer D12)
+    11:5       EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer 11:5)
+    A5         EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer A5)
+    A5         EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer A5)
+    PSL(2,11)  EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer PSL(2,11))
+  CHECK occurring point stabilizers on Z are exactly {1,C2,C3,V4,C5,C6,C11}: PASS
+  CHECK the nine empty classes are ['S3', 'S3', 'D10', 'A4', 'D12', '11:5', 'A5', 'A5', 'PSL(2,11)']: PASS
+
+=== TERMINUS Z: SETWISE-STABILIZER INDEX (all 16 classes) ===
+  Stab_G(F) = 1          : no stratum orbit
+  Stab_G(F) = C2         : 1 stratum orbits
+        K = C2   dim 1  x  330  W(K,F) = 1     on pt_D10
+  Stab_G(F) = C3         : 8 stratum orbits
+        K = C3   dim 0  x  220  W(K,F) = 1     on pt_A4(a)
+        K = C3   dim 0  x  220  W(K,F) = 1     on pt_A4(a)<ell_V
+        K = C3   dim 0  x  220  W(K,F) = 1     on pt_A4(a)<ell_V
+        K = C3   dim 0  x  220  W(K,F) = 1     on pt_A4(b)
+        K = C3   dim 0  x  220  W(K,F) = 1     on pt_A4(b)<ell_V
+        K = C3   dim 0  x  220  W(K,F) = 1     on pt_A4(b)<ell_V
+        K = C3   dim 1  x  220  W(K,F) = 1     on pt_A4(a)
+        K = C3   dim 1  x  220  W(K,F) = 1     on pt_A4(b)
+  Stab_G(F) = V4         : 26 stratum orbits
+        K = C2   dim 1  x  165  W(K,F) = C2    on pt_A4(a)
+        K = C2   dim 1  x  165  W(K,F) = C2    on pt_A4(b)
+        K = C2   dim 1  x  165  W(K,F) = C2    on pt_D12
+        K = C2   dim 1  x  165  W(K,F) = C2    on pt_D12
+        K = C2   dim 1  x  165  W(K,F) = C2    on pt_V4I
+        K = C2   dim 2  x  165  W(K,F) = C2    on ell_V
+        K = C2   dim 2  x  165  W(K,F) = C2    on pt_V4I
+        K = C2   dim 2  x  165  W(K,F) = C2    on pt_V4I
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_A4(a)<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_A4(a)<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_A4(b)<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_A4(b)<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_D12<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_D12<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_D12<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_D12<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_D12<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_D12<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_V4I<Lminus_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_V4I<Lminus_sigma
+        K = V4   dim 1  x  165  W(K,F) = 1     on ell_V<P_sigma
+        K = V4   dim 1  x  165  W(K,F) = 1     on ell_V<P_sigma
+        K = V4   dim 1  x  165  W(K,F) = 1     on pt_V4I<Lminus_sigma
+        K = V4   dim 1  x  165  W(K,F) = 1     on pt_V4I<Lminus_sigma
+        K = V4   dim 1  x  165  W(K,F) = 1     on pt_V4I<P_sigma
+        K = V4   dim 1  x  165  W(K,F) = 1     on pt_V4I<P_sigma
+  Stab_G(F) = C5         : 10 stratum orbits
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_C5(a)
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_C5(a)
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_C5(a)
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_C5(a)
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_C5(b)
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_C5(b)
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_C5(b)
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_C5(b)
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_D10
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_D10
+  Stab_G(F) = S3         : no stratum orbit
+  Stab_G(F) = S3         : no stratum orbit
+  Stab_G(F) = C6         : 27 stratum orbits
+        K = C2   dim 1  x  110  W(K,F) = C3    on pt_C6(a)
+        K = C2   dim 1  x  110  W(K,F) = C3    on pt_C6(a)<C3line
+        K = C2   dim 2  x  110  W(K,F) = C3    on pt_C6(b)
+        K = C3   dim 1  x  110  W(K,F) = C2    on C3line
+        K = C3   dim 1  x  110  W(K,F) = C2    on pt_C6(a)
+        K = C3   dim 1  x  110  W(K,F) = C2    on pt_C6(b)
+        K = C3   dim 1  x  110  W(K,F) = C2    on pt_D12
+        K = C3   dim 2  x  110  W(K,F) = C2    on C3line
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(a)
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(a)<C3line
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(a)<C3line
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(a)<C3line
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(a)<P_sigma
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(a)<P_sigma
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(a)<P_sigma
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(a)<P_sigma
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(b)
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(b)
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(b)<C3line
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(b)<C3line
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(b)<C3line
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(b)<Lminus_sigma
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(b)<Lminus_sigma
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(b)<Lminus_sigma
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_D12
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_D12<P_sigma
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_D12<P_sigma
+  Stab_G(F) = D10        : no stratum orbit
+  Stab_G(F) = C11        : 4 stratum orbits
+        K = C11  dim 0  x   60  W(K,F) = 1     on pt_C11
+        K = C11  dim 0  x   60  W(K,F) = 1     on pt_C11
+        K = C11  dim 0  x   60  W(K,F) = 1     on pt_C11
+        K = C11  dim 0  x   60  W(K,F) = 1     on pt_C11
+  Stab_G(F) = A4         : no stratum orbit
+  Stab_G(F) = D12        : 3 stratum orbits
+        K = C2   dim 1  x   55  W(K,F) = S3    on pt_D12
+        K = C2   dim 3  x   55  W(K,F) = S3    on Lminus_sigma
+        K = C2   dim 3  x   55  W(K,F) = S3    on P_sigma
+  Stab_G(F) = 11:5       : no stratum orbit
+  Stab_G(F) = A5         : no stratum orbit
+  Stab_G(F) = A5         : no stratum orbit
+  Stab_G(F) = PSL(2,11)  : 1 stratum orbits
+        K = 1    dim 4  x    1  W(K,F) = PSL(2,11)  on (off D)
+
+=== DICTIONARY  Z^H = union of Z_(=K) over K containing (a conjugate of) H ===
+(for each abelian class H: the components of Z^H are the strata rows whose
+ exact stabilizer K contains H, counted for ONE fixed H)
+  H = C2  : components of Z^H by dim {0: 146, 1: 80, 2: 11, 3: 2}   (total 239)
+  H = C3  : components of Z^H by dim {0: 62, 1: 16, 2: 2}   (total 80)
+  H = V4  : components of Z^H by dim {0: 36, 1: 18}   (total 54)
+  H = C5  : components of Z^H by dim {0: 20}   (total 20)
+  H = C6  : components of Z^H by dim {0: 38}   (total 38)
+  H = C11 : components of Z^H by dim {0: 20}   (total 20)
+
+=== THE QUOTIENT STRATIFICATION OF Z/G ===
+stratum of Z/G                           dim   generic fibre  |G/K| #comp upstairs
+[1] (off D)                                4             G/1    660              1
+[C2] pt_D10                                1            G/C2    330            330
+[C2] pt_A4(a)                              1            G/C2    330            165
+[C2] pt_A4(b)                              1            G/C2    330            165
+[C2] pt_D12                                1            G/C2    330            165
+[C2] pt_D12                                1            G/C2    330            165
+[C2] pt_V4I                                1            G/C2    330            165
+[C2] pt_C6(a)                              1            G/C2    330            110
+[C2] pt_C6(a)<C3line                       1            G/C2    330            110
+[C2] pt_D12                                1            G/C2    330             55
+[C2] ell_V                                 2            G/C2    330            165
+[C2] pt_V4I                                2            G/C2    330            165
+[C2] pt_V4I                                2            G/C2    330            165
+[C2] pt_C6(b)                              2            G/C2    330            110
+[C2] Lminus_sigma                          3            G/C2    330             55
+[C2] P_sigma                               3            G/C2    330             55
+[C3] pt_A4(a)                              0            G/C3    220            220
+[C3] pt_A4(a)<ell_V                        0            G/C3    220            220
+[C3] pt_A4(a)<ell_V                        0            G/C3    220            220
+[C3] pt_A4(b)                              0            G/C3    220            220
+[C3] pt_A4(b)<ell_V                        0            G/C3    220            220
+[C3] pt_A4(b)<ell_V                        0            G/C3    220            220
+[C3] pt_A4(a)                              1            G/C3    220            220
+[C3] pt_A4(b)                              1            G/C3    220            220
+[C3] C3line                                1            G/C3    220            110
+[C3] pt_C6(a)                              1            G/C3    220            110
+[C3] pt_C6(b)                              1            G/C3    220            110
+[C3] pt_D12                                1            G/C3    220            110
+[C3] C3line                                2            G/C3    220            110
+[V4] pt_A4(a)<P_sigma                      0            G/V4    165            165
+[V4] pt_A4(a)<P_sigma                      0            G/V4    165            165
+[V4] pt_A4(b)<P_sigma                      0            G/V4    165            165
+[V4] pt_A4(b)<P_sigma                      0            G/V4    165            165
+[V4] pt_D12<P_sigma                        0            G/V4    165            165
+[V4] pt_D12<P_sigma                        0            G/V4    165            165
+[V4] pt_D12<P_sigma                        0            G/V4    165            165
+[V4] pt_D12<P_sigma                        0            G/V4    165            165
+[V4] pt_D12<P_sigma                        0            G/V4    165            165
+[V4] pt_D12<P_sigma                        0            G/V4    165            165
+[V4] pt_V4I<Lminus_sigma                   0            G/V4    165            165
+[V4] pt_V4I<Lminus_sigma                   0            G/V4    165            165
+[V4] ell_V<P_sigma                         1            G/V4    165            165
+[V4] ell_V<P_sigma                         1            G/V4    165            165
+[V4] pt_V4I<Lminus_sigma                   1            G/V4    165            165
+[V4] pt_V4I<Lminus_sigma                   1            G/V4    165            165
+[V4] pt_V4I<P_sigma                        1            G/V4    165            165
+[V4] pt_V4I<P_sigma                        1            G/V4    165            165
+[C5] pt_C5(a)                              0            G/C5    132            132
+[C5] pt_C5(a)                              0            G/C5    132            132
+[C5] pt_C5(a)                              0            G/C5    132            132
+[C5] pt_C5(a)                              0            G/C5    132            132
+[C5] pt_C5(b)                              0            G/C5    132            132
+[C5] pt_C5(b)                              0            G/C5    132            132
+[C5] pt_C5(b)                              0            G/C5    132            132
+[C5] pt_C5(b)                              0            G/C5    132            132
+[C5] pt_D10                                0            G/C5    132            132
+[C5] pt_D10                                0            G/C5    132            132
+[C6] pt_C6(a)                              0            G/C6    110            110
+[C6] pt_C6(a)<C3line                       0            G/C6    110            110
+[C6] pt_C6(a)<C3line                       0            G/C6    110            110
+[C6] pt_C6(a)<C3line                       0            G/C6    110            110
+[C6] pt_C6(a)<P_sigma                      0            G/C6    110            110
+[C6] pt_C6(a)<P_sigma                      0            G/C6    110            110
+[C6] pt_C6(a)<P_sigma                      0            G/C6    110            110
+[C6] pt_C6(a)<P_sigma                      0            G/C6    110            110
+[C6] pt_C6(b)                              0            G/C6    110            110
+[C6] pt_C6(b)                              0            G/C6    110            110
+[C6] pt_C6(b)<C3line                       0            G/C6    110            110
+[C6] pt_C6(b)<C3line                       0            G/C6    110            110
+[C6] pt_C6(b)<C3line                       0            G/C6    110            110
+[C6] pt_C6(b)<Lminus_sigma                 0            G/C6    110            110
+[C6] pt_C6(b)<Lminus_sigma                 0            G/C6    110            110
+[C6] pt_C6(b)<Lminus_sigma                 0            G/C6    110            110
+[C6] pt_D12                                0            G/C6    110            110
+[C6] pt_D12<P_sigma                        0            G/C6    110            110
+[C6] pt_D12<P_sigma                        0            G/C6    110            110
+[C11] pt_C11                               0           G/C11     60             60
+[C11] pt_C11                               0           G/C11     60             60
+[C11] pt_C11                               0           G/C11     60             60
+[C11] pt_C11                               0           G/C11     60             60
+  the quotient Z/G is stratified by 80 locally closed pieces (one per stratum orbit); dim of each image = dim of the stratum (G finite).
+
+=========================  p = 661  =========================
+
+### STAGE 0: Z_0 = P(W)   (15 G-orbits of orbit-type strata)
+   K dim  #comp #/fixedK  Stab_G(F)  W(K,F)  boundary chain                     weights (*=boundary branch)   |  birational model (all RATIONAL)
+   1   4      1        1  PSL(2,11) PSL(2,11)  (none: off D)                      1 1 1 1   |  P^4
+  C2   1     55        1        D12      S3  (none: off D)                      [1/2] [1/2] [1/2] 1   |  P^1
+  C2   2     55        1        D12      S3  (none: off D)                      1 1 [1/2] [1/2]   |  P^2
+  C3   1    110        2         C6      C2  (none: off D)                      [2/3] 1 [1/3] [1/3]   |  P^1
+  V4   0    165        3         V4       1  (none: off D)                      [0/2,1/2] [0/2,1/2] [1/2,1/2] [1/2,0/2]   |  P^0
+  V4   1     55        1         A4      C3  (none: off D)                      1 [0/2,1/2] [1/2,0/2] [1/2,1/2]   |  P^1
+  C5   0    132        2         C5       1  (none: off D)                      [2/5] [3/5] [4/5] [1/5]   |  P^0
+  C5   0    132        2         C5       1  (none: off D)                      [1/5] [2/5] [3/5] [4/5]   |  P^0
+  C6   0    110        2         C6       1  (none: off D)                      [2/6] [3/6] [4/6] [1/6]   |  P^0
+  C6   0    110        2         C6       1  (none: off D)                      [5/6] [1/6] [3/6] [4/6]   |  P^0
+ C11   0     60        5        C11       1  (none: off D)                      [7/11] [9/11] [10/11] [4/11]   |  P^0
+ D10   0     66        1        D10       1  (none: off D)                      (nonabelian K: not diagonalisable)   |  P^0
+ D12   0     55        1        D12       1  (none: off D)                      (nonabelian K: not diagonalisable)   |  P^0
+  A4   0     55        1         A4       1  (none: off D)                      (nonabelian K: not diagonalisable)   |  P^0
+  A4   0     55        1         A4       1  (none: off D)                      (nonabelian K: not diagonalisable)   |  P^0
+
+  stage 0 totals by exact stabilizer K:
+    K = 1     components by dim: {4: 1}   (total 1)
+    K = C2    components by dim: {1: 55, 2: 55}   (total 110)
+    K = C3    components by dim: {1: 110}   (total 110)
+    K = V4    components by dim: {0: 165, 1: 55}   (total 220)
+    K = C5    components by dim: {0: 264}   (total 264)
+    K = C6    components by dim: {0: 220}   (total 220)
+    K = C11   components by dim: {0: 60}   (total 60)
+    K = D10   components by dim: {0: 66}   (total 66)
+    K = D12   components by dim: {0: 55}   (total 55)
+    K = A4    components by dim: {0: 110}   (total 110)
+
+### STAGE 1: Z_1 (after T0)   (57 G-orbits of orbit-type strata)
+   K dim  #comp #/fixedK  Stab_G(F)  W(K,F)  boundary chain                     weights (*=boundary branch)   |  birational model (all RATIONAL)
+   1   4      1        1  PSL(2,11) PSL(2,11)  (none: off D)                      1 1 1 1   |  P^4
+  C2   1    330        6         C2       1  pt_D10                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_A4(a)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_A4(b)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_V4I                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    110        2         C6      C3  pt_C6(a)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1     55        1        D12      S3  (none: off D)                      [1/2] [1/2] [1/2] 1   |  P^1
+  C2   1     55        1        D12      S3  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   2    165        3         V4      C2  pt_V4I                             [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   2    165        3         V4      C2  pt_V4I                             [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   2    110        2         C6      C3  pt_C6(b)                           [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   2     55        1        D12      S3  (none: off D)                      1 1 [1/2] [1/2]   |  P^2
+  C3   0    220        4         C3       1  pt_A4(a)                           [1/3]* [1/3] [1/3] [2/3]   |  P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(b)                           [2/3]* [1/3] [2/3] [2/3]   |  P^0 x P^0
+  C3   1    220        4         C3       1  pt_A4(a)                           [2/3]* [2/3] 1 [1/3]   |  P^0 x P^1
+  C3   1    220        4         C3       1  pt_A4(b)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    110        2         C6      C2  (none: off D)                      [2/3] 1 [1/3] [1/3]   |  P^1
+  C3   1    110        2         C6      C2  pt_C6(a)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    110        2         C6      C2  pt_C6(b)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    110        2         C6      C2  pt_D12                             [1/3]* 1 [1/3] [1/3]   |  P^0 x P^1
+  V4   0    165        3         V4       1  pt_A4(a)                           [0/2,1/2]* [0/2,1/2] [1/2,1/2] [1/2,0/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_A4(b)                           [0/2,1/2]* [0/2,1/2] [1/2,1/2] [1/2,0/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12                             [0/2,1/2]* [0/2,1/2] [1/2,1/2] [1/2,0/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12                             [1/2,0/2]* [1/2,0/2] [1/2,1/2] [0/2,1/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12                             [1/2,1/2]* [1/2,1/2] [1/2,0/2] [0/2,1/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_V4I                             [1/2,1/2]* [1/2,0/2] [1/2,0/2] [0/2,1/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_V4I                             [1/2,0/2]* [1/2,1/2] [1/2,1/2] [0/2,1/2]   |  P^0 x P^0
+  V4   1    165        3         V4       1  pt_V4I                             [0/2,1/2]* 1 [1/2,0/2] [1/2,1/2]   |  P^0 x P^1
+  V4   1     55        1         A4      C3  (none: off D)                      1 [0/2,1/2] [1/2,0/2] [1/2,1/2]   |  P^1
+  C5   0    132        2         C5       1  pt_C5(a)                           [3/5]* [1/5] [3/5] [4/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [4/5]* [4/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [1/5]* [2/5] [3/5] [1/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [2/5]* [1/5] [2/5] [4/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [2/5]* [1/5] [2/5] [4/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [3/5]* [4/5] [1/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [4/5]* [3/5] [4/5] [2/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [1/5]* [1/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_D10                             [1/5]* [1/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_D10                             [2/5]* [4/5] [1/5] [2/5]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)                           [2/6]* [1/6] [2/6] [5/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)                           [3/6]* [5/6] [1/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)                           [4/6]* [4/6] [5/6] [3/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)                           [1/6]* [1/6] [2/6] [3/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)                           [1/6]* [1/6] [2/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)                           [2/6]* [5/6] [1/6] [3/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)                           [3/6]* [4/6] [5/6] [2/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)                           [5/6]* [2/6] [3/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_D12                             [1/6]* [1/6] [3/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_D12                             [2/6]* [5/6] [2/6] [3/6]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [7/11]* [2/11] [3/11] [8/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [9/11]* [9/11] [1/11] [6/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [10/11]* [8/11] [10/11] [5/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [4/11]* [3/11] [5/11] [6/11]   |  P^0 x P^0
+  A4   0     55        1         A4       1  pt_A4(a)                           (nonabelian K: not diagonalisable)   |  P^0 x P^0
+  A4   0     55        1         A4       1  pt_A4(b)                           (nonabelian K: not diagonalisable)   |  P^0 x P^0
+
+  stage 1 totals by exact stabilizer K:
+    K = 1     components by dim: {4: 1}   (total 1)
+    K = C2    components by dim: {1: 1375, 2: 495}   (total 1870)
+    K = C3    components by dim: {0: 440, 1: 880}   (total 1320)
+    K = V4    components by dim: {0: 1155, 1: 220}   (total 1375)
+    K = C5    components by dim: {0: 1320}   (total 1320)
+    K = C6    components by dim: {0: 1100}   (total 1100)
+    K = C11   components by dim: {0: 240}   (total 240)
+    K = A4    components by dim: {0: 110}   (total 110)
+
+### STAGE 2: Z_2 (after T1)   (70 G-orbits of orbit-type strata)
+   K dim  #comp #/fixedK  Stab_G(F)  W(K,F)  boundary chain                     weights (*=boundary branch)   |  birational model (all RATIONAL)
+   1   4      1        1  PSL(2,11) PSL(2,11)  (none: off D)                      1 1 1 1   |  P^4
+  C2   1    330        6         C2       1  pt_D10                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_A4(a)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_A4(b)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_V4I                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    110        2         C6      C3  pt_C6(a)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    110        2         C6      C3  pt_C6(a)<C3line                    [1/2]* [1/2]* 1 [1/2]   |  P^0 x P^0 x P^1
+  C2   1     55        1        D12      S3  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   2    165        3         V4      C2  ell_V                              1 [1/2]* [1/2] 1   |  P^1 x P^1
+  C2   2    165        3         V4      C2  pt_V4I                             [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   2    165        3         V4      C2  pt_V4I                             [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   2    110        2         C6      C3  pt_C6(b)                           [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   2     55        1        D12      S3  (none: off D)                      1 1 [1/2] [1/2]   |  P^2
+  C2   3     55        1        D12      S3  Lminus_sigma                       1 [1/2]* 1 1   |  P^1 x P^2
+  C3   0    220        4         C3       1  pt_A4(a)                           [1/3]* [1/3] [1/3] [2/3]   |  P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(a)<ell_V                     [2/3]* [2/3]* [1/3] [2/3]   |  P^0 x P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(a)<ell_V                     [2/3]* [1/3]* [1/3] [2/3]   |  P^0 x P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(b)                           [2/3]* [1/3] [2/3] [2/3]   |  P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(b)<ell_V                     [1/3]* [1/3]* [1/3] [2/3]   |  P^0 x P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(b)<ell_V                     [1/3]* [2/3]* [2/3] [1/3]   |  P^0 x P^0 x P^0
+  C3   1    220        4         C3       1  pt_A4(a)                           [2/3]* [2/3] 1 [1/3]   |  P^0 x P^1
+  C3   1    220        4         C3       1  pt_A4(b)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    110        2         C6      C2  C3line                             1 [2/3]* [2/3] [2/3]   |  P^1 x P^0
+  C3   1    110        2         C6      C2  pt_C6(a)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    110        2         C6      C2  pt_C6(b)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    110        2         C6      C2  pt_D12                             [1/3]* 1 [1/3] [1/3]   |  P^0 x P^1
+  C3   2    110        2         C6      C2  C3line                             1 [1/3]* [1/3] 1   |  P^1 x P^1
+  V4   0    165        3         V4       1  pt_A4(a)                           [0/2,1/2]* [0/2,1/2] [1/2,1/2] [1/2,0/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_A4(b)                           [0/2,1/2]* [0/2,1/2] [1/2,1/2] [1/2,0/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12                             [0/2,1/2]* [0/2,1/2] [1/2,1/2] [1/2,0/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12                             [1/2,0/2]* [1/2,0/2] [1/2,1/2] [0/2,1/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12                             [1/2,1/2]* [1/2,1/2] [1/2,0/2] [0/2,1/2]   |  P^0 x P^0
+  V4   0    165        3         V4       1  pt_V4I<Lminus_sigma                [1/2,1/2]* [0/2,1/2]* [1/2,1/2] [1/2,1/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_V4I<Lminus_sigma                [1/2,0/2]* [0/2,1/2]* [1/2,0/2] [1/2,0/2]   |  P^0 x P^0 x P^0
+  V4   1    165        3         V4       1  ell_V                              1 [0/2,1/2]* [1/2,1/2] [1/2,0/2]   |  P^1 x P^0
+  V4   1    165        3         V4       1  pt_V4I                             [0/2,1/2]* 1 [1/2,0/2] [1/2,1/2]   |  P^0 x P^1
+  V4   1    165        3         V4       1  pt_V4I<Lminus_sigma                [1/2,1/2]* [1/2,0/2]* 1 [1/2,1/2]   |  P^0 x P^0 x P^1
+  V4   1    165        3         V4       1  pt_V4I<Lminus_sigma                [1/2,0/2]* [1/2,1/2]* 1 [1/2,0/2]   |  P^0 x P^0 x P^1
+  C5   0    132        2         C5       1  pt_C5(a)                           [3/5]* [1/5] [3/5] [4/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [4/5]* [4/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [1/5]* [2/5] [3/5] [1/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [2/5]* [1/5] [2/5] [4/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [2/5]* [1/5] [2/5] [4/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [3/5]* [4/5] [1/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [4/5]* [3/5] [4/5] [2/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [1/5]* [1/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_D10                             [1/5]* [1/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_D10                             [2/5]* [4/5] [1/5] [2/5]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)                           [2/6]* [1/6] [2/6] [5/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)                           [4/6]* [4/6] [5/6] [3/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)                           [1/6]* [1/6] [2/6] [3/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<C3line                    [3/6]* [5/6]* [2/6] [5/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<C3line                    [3/6]* [1/6]* [4/6] [3/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<C3line                    [3/6]* [4/6]* [1/6] [3/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)                           [1/6]* [1/6] [2/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)                           [5/6]* [2/6] [3/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<C3line                    [3/6]* [4/6]* [1/6] [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<C3line                    [3/6]* [5/6]* [5/6] [3/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<C3line                    [3/6]* [2/6]* [2/6] [3/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<Lminus_sigma              [2/6]* [5/6]* [2/6] [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<Lminus_sigma              [2/6]* [1/6]* [4/6] [2/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<Lminus_sigma              [2/6]* [3/6]* [2/6] [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_D12                             [1/6]* [1/6] [3/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_D12                             [2/6]* [5/6] [2/6] [3/6]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [7/11]* [2/11] [3/11] [8/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [9/11]* [9/11] [1/11] [6/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [10/11]* [8/11] [10/11] [5/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [4/11]* [3/11] [5/11] [6/11]   |  P^0 x P^0
+
+  stage 2 totals by exact stabilizer K:
+    K = 1     components by dim: {4: 1}   (total 1)
+    K = C2    components by dim: {1: 1430, 2: 660, 3: 55}   (total 2145)
+    K = C3    components by dim: {0: 1320, 1: 880, 2: 110}   (total 2310)
+    K = V4    components by dim: {0: 1155, 1: 660}   (total 1815)
+    K = C5    components by dim: {0: 1320}   (total 1320)
+    K = C6    components by dim: {0: 1760}   (total 1760)
+    K = C11   components by dim: {0: 240}   (total 240)
+
+### STAGE 3: Z = Z_3 (after T2)   (80 G-orbits of orbit-type strata)
+   K dim  #comp #/fixedK  Stab_G(F)  W(K,F)  boundary chain                     weights (*=boundary branch)   |  birational model (all RATIONAL)
+   1   4      1        1  PSL(2,11) PSL(2,11)  (none: off D)                      1 1 1 1   |  P^4
+  C2   1    330        6         C2       1  pt_D10                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_A4(a)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_A4(b)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    165        3         V4      C2  pt_V4I                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    110        2         C6      C3  pt_C6(a)                           [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   1    110        2         C6      C3  pt_C6(a)<C3line                    [1/2]* [1/2]* 1 [1/2]   |  P^0 x P^0 x P^1
+  C2   1     55        1        D12      S3  pt_D12                             [1/2]* [1/2] [1/2] 1   |  P^0 x P^1
+  C2   2    165        3         V4      C2  ell_V                              1 [1/2]* [1/2] 1   |  P^1 x P^1
+  C2   2    165        3         V4      C2  pt_V4I                             [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   2    165        3         V4      C2  pt_V4I                             [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   2    110        2         C6      C3  pt_C6(b)                           [1/2]* 1 1 [1/2]   |  P^0 x P^2
+  C2   3     55        1        D12      S3  Lminus_sigma                       1 [1/2]* 1 1   |  P^1 x P^2
+  C2   3     55        1        D12      S3  P_sigma                            1 1 [1/2]* 1   |  P^2 x P^1
+  C3   0    220        4         C3       1  pt_A4(a)                           [1/3]* [1/3] [1/3] [2/3]   |  P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(a)<ell_V                     [2/3]* [2/3]* [1/3] [2/3]   |  P^0 x P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(a)<ell_V                     [2/3]* [1/3]* [1/3] [2/3]   |  P^0 x P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(b)                           [2/3]* [1/3] [2/3] [2/3]   |  P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(b)<ell_V                     [1/3]* [1/3]* [1/3] [2/3]   |  P^0 x P^0 x P^0
+  C3   0    220        4         C3       1  pt_A4(b)<ell_V                     [1/3]* [2/3]* [2/3] [1/3]   |  P^0 x P^0 x P^0
+  C3   1    220        4         C3       1  pt_A4(a)                           [2/3]* [2/3] 1 [1/3]   |  P^0 x P^1
+  C3   1    220        4         C3       1  pt_A4(b)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    110        2         C6      C2  C3line                             1 [2/3]* [2/3] [2/3]   |  P^1 x P^0
+  C3   1    110        2         C6      C2  pt_C6(a)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    110        2         C6      C2  pt_C6(b)                           [1/3]* [1/3] [2/3] 1   |  P^0 x P^1
+  C3   1    110        2         C6      C2  pt_D12                             [1/3]* 1 [1/3] [1/3]   |  P^0 x P^1
+  C3   2    110        2         C6      C2  C3line                             1 [1/3]* [1/3] 1   |  P^1 x P^1
+  V4   0    165        3         V4       1  pt_A4(a)<P_sigma                   [1/2,0/2]* [1/2,0/2] [1/2,1/2]* [1/2,0/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_A4(a)<P_sigma                   [1/2,0/2]* [1/2,0/2] [0/2,1/2]* [1/2,0/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_A4(b)<P_sigma                   [1/2,1/2]* [1/2,1/2] [1/2,0/2]* [1/2,1/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_A4(b)<P_sigma                   [1/2,1/2]* [1/2,1/2] [0/2,1/2]* [1/2,1/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12<P_sigma                     [1/2,1/2]* [1/2,1/2] [1/2,0/2]* [1/2,1/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12<P_sigma                     [1/2,1/2]* [1/2,1/2] [0/2,1/2]* [1/2,1/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12<P_sigma                     [1/2,1/2]* [1/2,1/2] [1/2,0/2]* [1/2,1/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12<P_sigma                     [1/2,1/2]* [1/2,1/2] [0/2,1/2]* [1/2,1/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12<P_sigma                     [1/2,0/2]* [1/2,0/2] [1/2,1/2]* [1/2,0/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_D12<P_sigma                     [1/2,0/2]* [1/2,0/2] [0/2,1/2]* [1/2,0/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_V4I<Lminus_sigma                [1/2,1/2]* [0/2,1/2]* [1/2,1/2] [1/2,1/2]   |  P^0 x P^0 x P^0
+  V4   0    165        3         V4       1  pt_V4I<Lminus_sigma                [1/2,0/2]* [0/2,1/2]* [1/2,0/2] [1/2,0/2]   |  P^0 x P^0 x P^0
+  V4   1    165        3         V4       1  ell_V<P_sigma                      1 [0/2,1/2]* [1/2,1/2]* [0/2,1/2]   |  P^1 x P^0 x P^0
+  V4   1    165        3         V4       1  ell_V<P_sigma                      1 [0/2,1/2]* [1/2,0/2]* [0/2,1/2]   |  P^1 x P^0 x P^0
+  V4   1    165        3         V4       1  pt_V4I<Lminus_sigma                [1/2,1/2]* [1/2,0/2]* 1 [1/2,1/2]   |  P^0 x P^0 x P^1
+  V4   1    165        3         V4       1  pt_V4I<Lminus_sigma                [1/2,0/2]* [1/2,1/2]* 1 [1/2,0/2]   |  P^0 x P^0 x P^1
+  V4   1    165        3         V4       1  pt_V4I<P_sigma                     [0/2,1/2]* 1 [1/2,0/2]* [0/2,1/2]   |  P^0 x P^1 x P^0
+  V4   1    165        3         V4       1  pt_V4I<P_sigma                     [0/2,1/2]* 1 [1/2,1/2]* [0/2,1/2]   |  P^0 x P^1 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [3/5]* [1/5] [3/5] [4/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [4/5]* [4/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [1/5]* [2/5] [3/5] [1/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(a)                           [2/5]* [1/5] [2/5] [4/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [2/5]* [1/5] [2/5] [4/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [3/5]* [4/5] [1/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [4/5]* [3/5] [4/5] [2/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_C5(b)                           [1/5]* [1/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_D10                             [1/5]* [1/5] [2/5] [3/5]   |  P^0 x P^0
+  C5   0    132        2         C5       1  pt_D10                             [2/5]* [4/5] [1/5] [2/5]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)                           [1/6]* [1/6] [2/6] [3/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<C3line                    [3/6]* [5/6]* [2/6] [5/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<C3line                    [3/6]* [1/6]* [4/6] [3/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<C3line                    [3/6]* [4/6]* [1/6] [3/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<P_sigma                   [2/6]* [2/6] [1/6]* [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<P_sigma                   [2/6]* [2/6] [5/6]* [2/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<P_sigma                   [4/6]* [4/6] [5/6]* [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(a)<P_sigma                   [4/6]* [4/6] [3/6]* [2/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)                           [1/6]* [1/6] [2/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)                           [5/6]* [2/6] [3/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<C3line                    [3/6]* [4/6]* [1/6] [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<C3line                    [3/6]* [5/6]* [5/6] [3/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<C3line                    [3/6]* [2/6]* [2/6] [3/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<Lminus_sigma              [2/6]* [5/6]* [2/6] [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<Lminus_sigma              [2/6]* [1/6]* [4/6] [2/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_C6(b)<Lminus_sigma              [2/6]* [3/6]* [2/6] [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_D12                             [1/6]* [1/6] [3/6] [4/6]   |  P^0 x P^0
+  C6   0    110        2         C6       1  pt_D12<P_sigma                     [2/6]* [2/6] [5/6]* [4/6]   |  P^0 x P^0 x P^0
+  C6   0    110        2         C6       1  pt_D12<P_sigma                     [2/6]* [2/6] [3/6]* [2/6]   |  P^0 x P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [7/11]* [2/11] [3/11] [8/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [9/11]* [9/11] [1/11] [6/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [10/11]* [8/11] [10/11] [5/11]   |  P^0 x P^0
+ C11   0     60        5        C11       1  pt_C11                             [4/11]* [3/11] [5/11] [6/11]   |  P^0 x P^0
+
+  stage 3 totals by exact stabilizer K:
+    K = 1     components by dim: {4: 1}   (total 1)
+    K = C2    components by dim: {1: 1430, 2: 605, 3: 110}   (total 2145)
+    K = C3    components by dim: {0: 1320, 1: 880, 2: 110}   (total 2310)
+    K = V4    components by dim: {0: 1980, 1: 990}   (total 2970)
+    K = C5    components by dim: {0: 1320}   (total 1320)
+    K = C6    components by dim: {0: 2090}   (total 2090)
+    K = C11   components by dim: {0: 240}   (total 240)
+
+=== TERMINUS Z: point-stabilizer classes, ALL 16 SUBGROUP CLASSES ===
+  the 16 conjugacy classes of subgroups of G: ['1', 'C2', 'C3', 'V4', 'C5', 'S3', 'S3', 'C6', 'D10', 'C11', 'A4', 'D12', '11:5', 'A5', 'A5', 'PSL(2,11)']
+    1          OCCURS   :   1 G-orbits,      1 components of Z_(=H)
+    C2         OCCURS   :  15 G-orbits,   2145 components of Z_(=H)
+    C3         OCCURS   :  13 G-orbits,   2310 components of Z_(=H)
+    V4         OCCURS   :  18 G-orbits,   2970 components of Z_(=H)
+    C5         OCCURS   :  10 G-orbits,   1320 components of Z_(=H)
+    S3         EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer S3)
+    S3         EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer S3)
+    C6         OCCURS   :  19 G-orbits,   2090 components of Z_(=H)
+    D10        EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer D10)
+    C11        OCCURS   :   4 G-orbits,    240 components of Z_(=H)
+    A4         EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer A4)
+    D12        EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer D12)
+    11:5       EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer 11:5)
+    A5         EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer A5)
+    A5         EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer A5)
+    PSL(2,11)  EMPTY    : Z_(=H) = empty  (certified: no chain/eigen datum on Z has exact stabilizer PSL(2,11))
+  CHECK occurring point stabilizers on Z are exactly {1,C2,C3,V4,C5,C6,C11}: PASS
+  CHECK the nine empty classes are ['S3', 'S3', 'D10', 'A4', 'D12', '11:5', 'A5', 'A5', 'PSL(2,11)']: PASS
+
+=== TERMINUS Z: SETWISE-STABILIZER INDEX (all 16 classes) ===
+  Stab_G(F) = 1          : no stratum orbit
+  Stab_G(F) = C2         : 1 stratum orbits
+        K = C2   dim 1  x  330  W(K,F) = 1     on pt_D10
+  Stab_G(F) = C3         : 8 stratum orbits
+        K = C3   dim 0  x  220  W(K,F) = 1     on pt_A4(a)
+        K = C3   dim 0  x  220  W(K,F) = 1     on pt_A4(a)<ell_V
+        K = C3   dim 0  x  220  W(K,F) = 1     on pt_A4(a)<ell_V
+        K = C3   dim 0  x  220  W(K,F) = 1     on pt_A4(b)
+        K = C3   dim 0  x  220  W(K,F) = 1     on pt_A4(b)<ell_V
+        K = C3   dim 0  x  220  W(K,F) = 1     on pt_A4(b)<ell_V
+        K = C3   dim 1  x  220  W(K,F) = 1     on pt_A4(a)
+        K = C3   dim 1  x  220  W(K,F) = 1     on pt_A4(b)
+  Stab_G(F) = V4         : 26 stratum orbits
+        K = C2   dim 1  x  165  W(K,F) = C2    on pt_A4(a)
+        K = C2   dim 1  x  165  W(K,F) = C2    on pt_A4(b)
+        K = C2   dim 1  x  165  W(K,F) = C2    on pt_D12
+        K = C2   dim 1  x  165  W(K,F) = C2    on pt_D12
+        K = C2   dim 1  x  165  W(K,F) = C2    on pt_V4I
+        K = C2   dim 2  x  165  W(K,F) = C2    on ell_V
+        K = C2   dim 2  x  165  W(K,F) = C2    on pt_V4I
+        K = C2   dim 2  x  165  W(K,F) = C2    on pt_V4I
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_A4(a)<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_A4(a)<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_A4(b)<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_A4(b)<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_D12<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_D12<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_D12<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_D12<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_D12<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_D12<P_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_V4I<Lminus_sigma
+        K = V4   dim 0  x  165  W(K,F) = 1     on pt_V4I<Lminus_sigma
+        K = V4   dim 1  x  165  W(K,F) = 1     on ell_V<P_sigma
+        K = V4   dim 1  x  165  W(K,F) = 1     on ell_V<P_sigma
+        K = V4   dim 1  x  165  W(K,F) = 1     on pt_V4I<Lminus_sigma
+        K = V4   dim 1  x  165  W(K,F) = 1     on pt_V4I<Lminus_sigma
+        K = V4   dim 1  x  165  W(K,F) = 1     on pt_V4I<P_sigma
+        K = V4   dim 1  x  165  W(K,F) = 1     on pt_V4I<P_sigma
+  Stab_G(F) = C5         : 10 stratum orbits
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_C5(a)
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_C5(a)
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_C5(a)
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_C5(a)
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_C5(b)
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_C5(b)
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_C5(b)
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_C5(b)
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_D10
+        K = C5   dim 0  x  132  W(K,F) = 1     on pt_D10
+  Stab_G(F) = S3         : no stratum orbit
+  Stab_G(F) = S3         : no stratum orbit
+  Stab_G(F) = C6         : 27 stratum orbits
+        K = C2   dim 1  x  110  W(K,F) = C3    on pt_C6(a)
+        K = C2   dim 1  x  110  W(K,F) = C3    on pt_C6(a)<C3line
+        K = C2   dim 2  x  110  W(K,F) = C3    on pt_C6(b)
+        K = C3   dim 1  x  110  W(K,F) = C2    on C3line
+        K = C3   dim 1  x  110  W(K,F) = C2    on pt_C6(a)
+        K = C3   dim 1  x  110  W(K,F) = C2    on pt_C6(b)
+        K = C3   dim 1  x  110  W(K,F) = C2    on pt_D12
+        K = C3   dim 2  x  110  W(K,F) = C2    on C3line
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(a)
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(a)<C3line
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(a)<C3line
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(a)<C3line
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(a)<P_sigma
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(a)<P_sigma
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(a)<P_sigma
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(a)<P_sigma
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(b)
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(b)
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(b)<C3line
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(b)<C3line
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(b)<C3line
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(b)<Lminus_sigma
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(b)<Lminus_sigma
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_C6(b)<Lminus_sigma
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_D12
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_D12<P_sigma
+        K = C6   dim 0  x  110  W(K,F) = 1     on pt_D12<P_sigma
+  Stab_G(F) = D10        : no stratum orbit
+  Stab_G(F) = C11        : 4 stratum orbits
+        K = C11  dim 0  x   60  W(K,F) = 1     on pt_C11
+        K = C11  dim 0  x   60  W(K,F) = 1     on pt_C11
+        K = C11  dim 0  x   60  W(K,F) = 1     on pt_C11
+        K = C11  dim 0  x   60  W(K,F) = 1     on pt_C11
+  Stab_G(F) = A4         : no stratum orbit
+  Stab_G(F) = D12        : 3 stratum orbits
+        K = C2   dim 1  x   55  W(K,F) = S3    on pt_D12
+        K = C2   dim 3  x   55  W(K,F) = S3    on Lminus_sigma
+        K = C2   dim 3  x   55  W(K,F) = S3    on P_sigma
+  Stab_G(F) = 11:5       : no stratum orbit
+  Stab_G(F) = A5         : no stratum orbit
+  Stab_G(F) = A5         : no stratum orbit
+  Stab_G(F) = PSL(2,11)  : 1 stratum orbits
+        K = 1    dim 4  x    1  W(K,F) = PSL(2,11)  on (off D)
+
+=== DICTIONARY  Z^H = union of Z_(=K) over K containing (a conjugate of) H ===
+(for each abelian class H: the components of Z^H are the strata rows whose
+ exact stabilizer K contains H, counted for ONE fixed H)
+  H = C2  : components of Z^H by dim {0: 146, 1: 80, 2: 11, 3: 2}   (total 239)
+  H = C3  : components of Z^H by dim {0: 62, 1: 16, 2: 2}   (total 80)
+  H = V4  : components of Z^H by dim {0: 36, 1: 18}   (total 54)
+  H = C5  : components of Z^H by dim {0: 20}   (total 20)
+  H = C6  : components of Z^H by dim {0: 38}   (total 38)
+  H = C11 : components of Z^H by dim {0: 20}   (total 20)
+
+=== THE QUOTIENT STRATIFICATION OF Z/G ===
+stratum of Z/G                           dim   generic fibre  |G/K| #comp upstairs
+[1] (off D)                                4             G/1    660              1
+[C2] pt_D10                                1            G/C2    330            330
+[C2] pt_A4(a)                              1            G/C2    330            165
+[C2] pt_A4(b)                              1            G/C2    330            165
+[C2] pt_D12                                1            G/C2    330            165
+[C2] pt_D12                                1            G/C2    330            165
+[C2] pt_V4I                                1            G/C2    330            165
+[C2] pt_C6(a)                              1            G/C2    330            110
+[C2] pt_C6(a)<C3line                       1            G/C2    330            110
+[C2] pt_D12                                1            G/C2    330             55
+[C2] ell_V                                 2            G/C2    330            165
+[C2] pt_V4I                                2            G/C2    330            165
+[C2] pt_V4I                                2            G/C2    330            165
+[C2] pt_C6(b)                              2            G/C2    330            110
+[C2] Lminus_sigma                          3            G/C2    330             55
+[C2] P_sigma                               3            G/C2    330             55
+[C3] pt_A4(a)                              0            G/C3    220            220
+[C3] pt_A4(a)<ell_V                        0            G/C3    220            220
+[C3] pt_A4(a)<ell_V                        0            G/C3    220            220
+[C3] pt_A4(b)                              0            G/C3    220            220
+[C3] pt_A4(b)<ell_V                        0            G/C3    220            220
+[C3] pt_A4(b)<ell_V                        0            G/C3    220            220
+[C3] pt_A4(a)                              1            G/C3    220            220
+[C3] pt_A4(b)                              1            G/C3    220            220
+[C3] C3line                                1            G/C3    220            110
+[C3] pt_C6(a)                              1            G/C3    220            110
+[C3] pt_C6(b)                              1            G/C3    220            110
+[C3] pt_D12                                1            G/C3    220            110
+[C3] C3line                                2            G/C3    220            110
+[V4] pt_A4(a)<P_sigma                      0            G/V4    165            165
+[V4] pt_A4(a)<P_sigma                      0            G/V4    165            165
+[V4] pt_A4(b)<P_sigma                      0            G/V4    165            165
+[V4] pt_A4(b)<P_sigma                      0            G/V4    165            165
+[V4] pt_D12<P_sigma                        0            G/V4    165            165
+[V4] pt_D12<P_sigma                        0            G/V4    165            165
+[V4] pt_D12<P_sigma                        0            G/V4    165            165
+[V4] pt_D12<P_sigma                        0            G/V4    165            165
+[V4] pt_D12<P_sigma                        0            G/V4    165            165
+[V4] pt_D12<P_sigma                        0            G/V4    165            165
+[V4] pt_V4I<Lminus_sigma                   0            G/V4    165            165
+[V4] pt_V4I<Lminus_sigma                   0            G/V4    165            165
+[V4] ell_V<P_sigma                         1            G/V4    165            165
+[V4] ell_V<P_sigma                         1            G/V4    165            165
+[V4] pt_V4I<Lminus_sigma                   1            G/V4    165            165
+[V4] pt_V4I<Lminus_sigma                   1            G/V4    165            165
+[V4] pt_V4I<P_sigma                        1            G/V4    165            165
+[V4] pt_V4I<P_sigma                        1            G/V4    165            165
+[C5] pt_C5(a)                              0            G/C5    132            132
+[C5] pt_C5(a)                              0            G/C5    132            132
+[C5] pt_C5(a)                              0            G/C5    132            132
+[C5] pt_C5(a)                              0            G/C5    132            132
+[C5] pt_C5(b)                              0            G/C5    132            132
+[C5] pt_C5(b)                              0            G/C5    132            132
+[C5] pt_C5(b)                              0            G/C5    132            132
+[C5] pt_C5(b)                              0            G/C5    132            132
+[C5] pt_D10                                0            G/C5    132            132
+[C5] pt_D10                                0            G/C5    132            132
+[C6] pt_C6(a)                              0            G/C6    110            110
+[C6] pt_C6(a)<C3line                       0            G/C6    110            110
+[C6] pt_C6(a)<C3line                       0            G/C6    110            110
+[C6] pt_C6(a)<C3line                       0            G/C6    110            110
+[C6] pt_C6(a)<P_sigma                      0            G/C6    110            110
+[C6] pt_C6(a)<P_sigma                      0            G/C6    110            110
+[C6] pt_C6(a)<P_sigma                      0            G/C6    110            110
+[C6] pt_C6(a)<P_sigma                      0            G/C6    110            110
+[C6] pt_C6(b)                              0            G/C6    110            110
+[C6] pt_C6(b)                              0            G/C6    110            110
+[C6] pt_C6(b)<C3line                       0            G/C6    110            110
+[C6] pt_C6(b)<C3line                       0            G/C6    110            110
+[C6] pt_C6(b)<C3line                       0            G/C6    110            110
+[C6] pt_C6(b)<Lminus_sigma                 0            G/C6    110            110
+[C6] pt_C6(b)<Lminus_sigma                 0            G/C6    110            110
+[C6] pt_C6(b)<Lminus_sigma                 0            G/C6    110            110
+[C6] pt_D12                                0            G/C6    110            110
+[C6] pt_D12<P_sigma                        0            G/C6    110            110
+[C6] pt_D12<P_sigma                        0            G/C6    110            110
+[C11] pt_C11                               0           G/C11     60             60
+[C11] pt_C11                               0           G/C11     60             60
+[C11] pt_C11                               0           G/C11     60             60
+[C11] pt_C11                               0           G/C11     60             60
+  the quotient Z/G is stratified by 80 locally closed pieces (one per stratum orbit); dim of each image = dim of the stratum (G finite).
+
+CHECK the two primes give identical row sets at every stage: PASS
