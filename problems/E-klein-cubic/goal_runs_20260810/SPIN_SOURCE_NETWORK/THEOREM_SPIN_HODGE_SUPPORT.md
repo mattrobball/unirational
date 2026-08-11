@@ -408,7 +408,8 @@ The `n = 5` column reproduces `THEOREM_POINT_SUPPORT.md` (2.1) and the two
 > `j_0 + (n-1) = 3`.  Hence its Hodge structure is a weight-three
 > `H`-sub-Hodge structure
 > \[
-> W_x\subset H^{-1-j_0+\dots}\;=\;\mathbf H^{3-(n-1)}\!\left(Y_x, IC_Y^H\right),
+> W_x\subset \mathbf H^{\,j_0}\!\left(Y_x, IC_Y^H\right)
+> =\mathbf H^{\,3-(n-1)}\!\left(Y_x, IC_Y^H\right),
 > \qquad\text{equal to } W_x\subset H^3(Y_x,\mathbf Q)\ \text{ when } Y\text{ is smooth near }Y_x,
 > \]
 > and therefore
