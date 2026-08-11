@@ -302,3 +302,116 @@ and consequently `[20]`'s final-status line
 * `[10]`'s exit `TARGET-FIXED-RECEIVER-EXCLUSION-INCOMPLETE` is not ported as a
   new exit: it restates the receiver ledger's own scope disclaimer, already in
   the repository.
+
+---
+---
+
+# ROUND 3 — adjudication of external message `[21]` (slice classification and
+# the claimed refutation)
+
+Source: a further external ChatGPT-derived report, transcript message `[21]`,
+also **external and unaudited**. Same vocabulary of verdicts, plus
+**SCOPE-CORRECTED** (the mathematics is right but the statement it is claimed to
+refute is not the statement it refutes).
+
+Ported files: `SLICE_CLASSIFICATION.md`,
+`REFUTATION_POINTED_CURVE_EXCLUSION.md`, revised `BOXED_GLOBAL_COVARIANT.md`,
+verifier `verify_slice_universality.py` (`RESULT: PASS`, 314 exact assertions),
+and blocks `C7`–`C7d` added to `verify_conic_slice.py`.
+
+## R3 summary table
+
+| # | claim | verdict |
+|---|---|---|
+| R1 | local normal form `I = (a, fJ)`, `J` the Plücker ideal, gauge invariance, `I mod f = (H)` | **CONFIRMED** — symbolic, `S1a`–`S1f` |
+| R2 | Zariski–Lipman unique factorization of complete ideals | **CONFIRMED WITH REPAIR** — quoted correctly (Lipman IHÉS 36 for the non-closed residue field), but applied to a possibly non-`m`-primary `I`; the `(gcd) × (m-primary)` split is supplied |
+| R3 | `D·E_p = -rho_p`, Zariski factorization `Ibar = prod P_p^{rho_p}` | **CONFIRMED** — standard, quoted correctly |
+| R4 | excess = degree, `(q_Z|_{E_p})^*O_X(1) = O(rho_p)` (8)–(9) | **CONFIRMED** — derivation from `Ibar O_Z = O_Z(-D)` is right |
+| R5 | decoration is a pointed genus-zero stable map | **CONFIRMED WITH CAVEAT** — over `kappa(p)`, with Galois action; the source's data list includes it, its conclusion does not |
+| R6 | "complete classification" | **CONFIRMED WITH REPAIR** — stated as a bijection up to units (Prop. 2.5); it is a dictionary, not a finiteness theorem |
+| R7 | universality (11): every pointed rational curve occurs, `A = HB+fC = P`, identities by mod-`s`/mod-`t^e` | **CONFIRMED** — full symbolic derivation supplied and machine-checked; `R_0 = 0` is *forced*, which the source does not remark |
+| R8 | depth family `A_N = (s^N,0,t,0,0)`, cluster (13) | **CONFIRMED** — `F(A_N)=0`, ideal `(t,s^N)` complete, free chain of `N` points, excesses `(0,...,0,1)`, last component degree 1; `N = 1..12` |
+| R9 | exact conic cell `R_0=0, R_1=8, R_3=-8v` (15) | **CONFIRMED** exactly, twice; **plus** the new observation that the conic cell *is* the `e=2` instance of R7 |
+| R10 | (16) Clemens–Griffiths `alpha_F` iso | **CONFIRMED** — citation correct (Ann. Math. 95 (1972) §10, Thm 11.19) |
+| R11 | (17) `B_C` iso via "hard Lefschetz + homological cylinder" | **CONFIRMED WITH SUPPLIED PROOF** — hard Lefschetz plus Poincaré adjunction `<Gamma_* a, b>_X = <a, alpha_F b>_F`; "homological cylinder" was Clemens–Griffiths again, dualized |
+| R12 | (18) `M_{a,m} = aA + mB_C` iso for all but finitely many `m` | **CONFIRMED, CORRECTED, STRENGTHENED** — `A = 0` (projection formula + `H^1(X)=0`), so `M_{a,m} = mB_C` and the determinant polynomial is the monomial `m^{10} det B_C`; iso for **every** `m != 0` |
+| R12' | `L_{a,m}` very ample | **HYPOTHESIS SUPPLIED** — needs `e : I → X` finite; proved from `KLEIN-CUBIC-NO-ECKARDT-POINTS`, new exit `KLEIN-INCIDENCE-MAP-FINITE` |
+| R13 | (19) weak Lefschetz `pi_D^*` iso | **CONFIRMED** |
+| R14 | `alpha_D = pi_D^* alpha_F` | **CONFIRMED WITH SUPPLIED PROOF** — flat base change on the cartesian square |
+| R15 | `beta_D pi_D^* = k M_{a,m}` | **CONFIRMED WITH SUPPLIED PROOF** — projection formula for `j : D ↪ I`, `[D] = kL_{a,m}` |
+| R16 | (20) `T_D ∈ Aut_HS(V)` | **CONFIRMED**, with closed form `T_D = km·B_C∘alpha_F` — the divisor contributes only the scalar |
+| R17 | (21) cycle formula and `G`-equivariance | **CONFIRMED AND SHARPENED** — `[D]` is `G`-invariant for every member; the orbit sum is needed only to make the *receiver* `G`-stable |
+| R18 | (22) integrality, `End_{G-HS}(V)=Q(sqrt(-11))`, automatic norm identity | **CONFIRMED** against `RT_SPLIT_AND_DICHOTOMY` (4.1), (4.2), Rosati = complex conjugation |
+| R19 | (23) generic slice of `D` is line-type, all `R_i = 0` | **CONFIRMED**, machine-verified |
+| **R20** | **§7 headline / §8: "the requested CLEAN correspondence exclusion is false"** | **SCOPE-CORRECTED — the boxed statement is NOT refuted** |
+| R21 | "no obstruction depending only on slice ideals, jets and orbit-summed correspondences can close the branch" (the source's line 9) | **CONFIRMED** — this, not the headline, is what was proved |
+
+## R20 in full — the decisive item
+
+The box quantifies over the slices **of an actual `G`-covariant landing tuple**
+and over **components `S ⊂ D_X` of that tuple's own divisorial common factor**.
+`T_D` is built from a general divisor in a linear system on the incidence
+threefold `I`; no landing tuple appears anywhere in its construction, and
+`e(D) ⊂ X` is not exhibited as a component of any `D_X`. Therefore the boxed
+exclusion is untouched.
+
+What is refuted is the **slice-local** version (drop items 1, 2 and 5 of the
+sharpened box): "no family of pointed rational curves on `X` whose slices satisfy
+`(10)` can produce a nonzero `V → IH^1(S,Q) → V`". That is false, decisively,
+and the witness sits in the *simplest* slice cell.
+
+The source concedes this itself in its closing paragraph — "it refutes the
+local-to-global exclusion without deciding Problem E" — while its verdict box
+and its §8 exit line say the opposite. We keep the concession and discard the
+headline. Accordingly the source's proposed exit
+`POINTED-RATIONAL-CURVE-FULL-SUPPORT-EXCLUSION-REFUTED` is **not ported**; it is
+replaced by `SLICE-LOCAL-POINTED-RATIONAL-CURVE-FULL-SUPPORT-EXCLUSION-REFUTED`.
+`GLOBAL-COVARIANT-POINTED-RATIONAL-CURVE-EXCLUSION-UNDECIDED` is unchanged, and
+the box is sharpened rather than deleted.
+
+This is the second time in this packet that an external round has produced a
+correct object and an overstated headline (compare item 5: the conductor/Gysin
+refutation is real but was routed through an input it did not need). The
+pattern is worth naming: the external line is reliable about *existence* and
+unreliable about *scope*.
+
+## R22 — repository cross-references checked
+
+* "repo double-hit argument for high very ample divisors; split divisors occur
+  in unbounded classes" — **EXISTS AS CITED**:
+  `goal_runs_20260808/DELTA1_RETRACTION_POLAR_IDENTITY/THEOREM.md` §5, exit
+  `DELTA1-INVARIANT-SPLIT-DIVISORS-UNBOUNDED`. Its hypothesis "on the finite
+  locus of `e`" is upgraded to "everywhere" for the Klein cubic by
+  `KLEIN-INCIDENCE-MAP-FINITE`.
+* "same mechanism as the `[u^N : v]` examples elsewhere in the repo" —
+  **EXISTS AS CITED**:
+  `goal_runs_20260810/SPIN_SOURCE_NETWORK/R1_TOTAL_DEGENERATION.md` §2 and
+  `verify_r1_degeneration.py` `A11`, exit `R1-INDUCTION-REFUTED`.
+* `LINE-INCIDENCE-FACTOR-TWO-CONDITIONAL` (`COUNTERMODEL_CONIC_SLICE.md` §5,
+  "`T_D = ±2n·id`, the coefficient `r` cancelling") — the **`r`-cancellation half
+  is now proved** (it is `A = 0`, R12). The residual `±2` factor is the classical
+  double-cylinder relation and is still not replayed; the exit stays conditional.
+* The Zariski–Lipman vocabulary (*complete ideal*, *weighted cluster*,
+  *infinitely near point*) does **not** occur anywhere else in
+  `problems/E-klein-cubic/` prose. This material is new to the repository.
+
+## R23 — new composed corollaries recorded
+
+1. `KLEIN-INCIDENCE-MAP-FINITE`: no Eckardt points ⟹ `e : I → X` finite of
+   degree 6 ⟹ `xi = e^*H_X` ample. The packet's own Macaulay2 Eckardt
+   computation, made for the `|H|` cone countermodel, turns out to be the
+   ampleness input for the incidence polarization.
+2. `e(D)` is non-normal or has a non-rational singularity — the `T_D`
+   construction is a **witness for**
+   `CLEAN-IMPLIES-NON-RATIONAL-SINGULAR-RECEIVER-PROVED`, not a
+   counterexample to it, and it *proves* the double locus of `e|_D` is nonempty
+   (`REFUTATION_POINTED_CURVE_EXCLUSION.md` Cor. 6.2).
+3. The `T_D` route lives at `k >> 0` (receiver degree `k(6a + lambda m)`,
+   `lambda > 0`), hence supplies **no** candidate in the window `5 <= k <= 10`
+   where `CLEAN-COMPONENTS-G-STABLE-FOR-k-AT-MOST-10-PROVED` bites, and no
+   individually `G`-stable smooth member. It therefore does not interact with
+   the retraction corollary or the sealed `d >= 6` floor in either direction.
+4. `R_0 = 0` is *forced* in every universality slice, because the marked value
+   lies on `X`. The `R_0 = 1` normalization of the sealed retraction identity
+   (`DELTA1_RETRACTION_POLAR_IDENTITY`, `B = x`) is therefore the opposite
+   extreme of the same system, not a generic case.
