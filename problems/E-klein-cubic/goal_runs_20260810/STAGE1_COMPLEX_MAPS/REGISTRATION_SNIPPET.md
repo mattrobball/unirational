@@ -128,8 +128,8 @@ Paste into the repository manifest. Fields follow the manifest schema
     (STAGE1-SECTION-MODULI-SEALED and STAGE1-THREE-FORCED-SWEEPS are RENAMED,
     not withdrawn: the first because the count is of boundary patterns, not a
     moduli; the second because the coherence layer raises three to eight.)
-    Machine markers: STAGE1_COMPLEX_MAPS_VERIFY_OK, ALLGREEN (123 checks,
-    0 failures; 61 per prime including the 14-check evaluation-coherence
+    Machine markers: STAGE1_COMPLEX_MAPS_VERIFY_OK, ALLGREEN (127 checks,
+    0 failures; 63 per prime including the 14-check evaluation-coherence
     series H1-H14, plus one cross-prime identity check).
 ```
 

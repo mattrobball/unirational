@@ -30,7 +30,7 @@ STAGE1-COHERENCE-IMMUNE-FACTOR-ISOLATED
 ```
 
 Machine markers: `STAGE1_COMPLEX_MAPS_VERIFY_OK` / `ALLGREEN`
-(`python3 verifier.py` — **123 checks, 0 failures**: 61 per prime at
+(`python3 verifier.py` — **127 checks, 0 failures**: 63 per prime at
 `p = 331, 661`, including the exact `Z[ζ₆]` route and the 14-check
 evaluation-coherence series, plus one cross-prime identity check).
 
@@ -140,7 +140,7 @@ hyper-edges joining each swept row to every row in its closure:
 
 | block | rows | joint values |
 |---|---|---:|
-| the coupled core (the whole `σ`-band: the two dim-3 divisors, the eight `V4`-stabilised and three `C6`-stabilised `C2`-rows, sixteen `V4`-rows, the `C6`-band) | 51 | **43 008 = 2¹¹ · 21** |
+| the coupled core (the multi-valued part of the `σ`-band: the eight `V4`-stabilised and three `C6`-stabilised `C2`-rows, `ell_V`, sixteen `V4`-rows, and the 24-row `C6`-band — the 19 `C6`-rows together with the five `C3`-rows of `Stab = C6`) | 51 | **43 008 = 2¹¹ · 21** |
 | the `D10` `C2`-line | 1 | **23** (21 points + 2 one-parameter) |
 | eight `C3`-rows, ten `C5`-rows, four `C11`-rows — the **coherence-immune** factor | 1 each | 6, 4, 5 |
 
@@ -149,6 +149,14 @@ and six free `C6`-rows (2 each): `2⁹ · 84 · 2⁶ = 2 752 512`. After coheren
 is one 51-row block with `43 008 = 2⁹ · 84` — the six `C6`-rows inside
 `D_{P_σ}` lose their independence, and fifteen further rows lose all freedom
 (Theorems 3′, 5′).
+
+Six of the 80 rows sit in **no** block, having a single forced value: the free
+stratum; the two dim-3 divisors `D_{P_σ}` and `D_{L⁻_σ}` and the `pt_D12` line
+(forced sweeps, unique — Theorem 3); and the two rigid `V4`-rows of Theorem 5.
+`51 + 1 + 8 + 10 + 4 + 6 = 80`. *(The block membership of the two dim-3 divisors
+was misstated in this table before the PR #32 adjudication: being forced-unique,
+they cannot lie in a multi-valued block. The count is unaffected — it is
+`verifier.py` H5/H8 that carries it, not this prose.)*
 
 The full row-by-row table is `results/section_moduli_331.txt` (identical at
 `p = 661`). *Row-index caveat:* the `#nn` indices in the results files are
@@ -577,7 +585,7 @@ No anchor failed; nothing was adjusted.
 python3 scripts/produce.py 331 661            # classification + tables + witness
 python3 scripts/produce_coherence.py 331 661  # the evaluation-coherence layer
 python3 scripts/run_layer2.py <cache> results/layer2_moduli_331.txt
-python3 verifier.py                    # 47 checks per prime + exact route; ALLGREEN
+python3 verifier.py                    # 63 checks per prime + exact route; ALLGREEN
 ```
 
 `verifier.py` rebuilds everything from the 660 matrices, at `p = 331` and
@@ -604,8 +612,12 @@ python3 verifier.py                    # 47 checks per prime + exact route; ALLG
 * **D1–D5** the witness sections (0 violations; maximal, `E`-free; and D4 records
   that arc consistency *alone* would have admitted a 3-sweep section).
 * **E1–E7** the four anchors.
-* **F1–F6** Layer 2 / Layer 3: the parity theorem in both directions; `N(d,m) > 0`
-  for all odd `m ≤ d ≤ 45`; the quoted window values; **agreement between the
+* **F1–F8** Layer 2 / Layer 3: the parity theorem in both directions; `N(d,m) > 0`
+  for all odd `m ≤ d ≤ 45`; the quoted window values; **§14's audit-derived
+  closed form for `N(d,m)`, checked against the exact route on every odd
+  `m ≤ d ≤ 45` and then used for the all-`d` positivity** (F7, F8 — added by
+  the PR #32 adjudication, which found §14's strengthening asserted but
+  unchecked); **agreement between the
   mod-`p` character route and the exact `Z[ζ₆]` route**; and agreement between
   the Layer-2 `F_p` linear-algebra module dimensions and the Layer-3 character
   dimensions on the `P_σ` row (two entirely independent implementations).
@@ -699,7 +711,12 @@ verdicts of §15.2 and Theorems 3′, 5′; Theorem 9(ii) for `d ≤ 45` (exact 
    Layer-2 tables, the sampled generic points of `π(F_R)`, and the fact that
    coherence is imposed stratum-locally rather than globally. They are stated
    in §15.6 and are **the** honest limit of the new count.
-5. `N(d,m) > 0` is verified for `d ≤ 45`; we have no proof for all `d`.
+5. ~~`N(d,m) > 0` is verified for `d ≤ 45`; we have no proof for all `d`.~~
+   **WITHDRAWN** by §14's closed formula (as that section already states), and
+   since the PR #32 adjudication the withdrawal is machine-backed: the closed
+   form is checked against the exact `Z[ζ₆]` route on every odd `m ≤ d ≤ 45`
+   at both primes (`verifier.py` F7) and the all-`d` positivity is checked as
+   arithmetic (F8). Theorem 9(ii) is Tier 1 for every `d`.
 
 ---
 
@@ -916,8 +933,15 @@ two one-parameter families) for the same reason. Everything else — the entire
    through `a mod 6` per slot, so every character class is represented; what can
    still change with larger `a` is which children are degenerate. Empirically
    the image of `D_{P_σ}` is constant from maxdeg 3 and that of `D_{L⁻_σ}` from
-   maxdeg 4, and **the total is unchanged at maxdeg 3, 4, 5 and 6**. We do not
-   have a proof of saturation.
+   maxdeg 4, and **the total is unchanged at maxdeg 3, 4, 5 and 6**. That last
+   statement now carries an artifact: the PR #32 adjudication found it asserted
+   but unrecorded and ran it. `scripts/s1saturation.py` re-does the recount at a
+   *uniform* maxdeg across all fifteen sweep rows — below the producer's default
+   in one slot-class and above it in the other — and returns the same total
+   `1 088 847 395 778 723 840 000` and the same `(51 rows, 43 008 patterns)` core
+   at maxdeg 3, 4, 5 and 6, with 0 rigidity failures throughout
+   (`results/saturation_probe_331.txt`). **We still do not
+   have a proof of saturation** — this is evidence, and the flag stands.
 2. The identification of `π(F_R)` (the image of a child stratum in the
    product-of-projective-spaces model of the swept row) uses the wonderful-model
    chart form of `TERMINUS_STRATA_PW` Thm 1; generic points of `π(F_R)` are

@@ -6,7 +6,7 @@
 |---|---|
 | opened | 2026-08-10 |
 | main document | `THEOREM.md` |
-| machine markers | `STAGE1_COMPLEX_MAPS_VERIFY_OK` / `ALLGREEN` — **123 checks, 0 failures** |
+| machine markers | `STAGE1_COMPLEX_MAPS_VERIFY_OK` / `ALLGREEN` — **127 checks, 0 failures** |
 | replay | `python3 verifier.py` (both primes, ~20 min) |
 | state | complete; adversarial audit applied (§14); director coherence-correction applied (§15) |
 
@@ -43,6 +43,7 @@ ratio                                                            64 = 2⁶
 | 2026-08-10 | adversarial audit — verdict REGISTER-WITH-EDITS; edits applied, §14 added (incl. the audit-derived closed formula removing the `d ≤ 45` restriction in Theorem 9(ii)) |
 | 2026-08-10 | landed on `agent/stage1-complex-maps-20260810` (PR #32) |
 | 2026-08-10 | **director correction order** — the count treated the constraint blocks as independent; evaluation coherence imposed, count re-issued, §15 added, verifier grown from 95 to 123 checks |
+| 2026-08-11 | adjudication (`ADJUDICATION_PR32.md`): revision confirmed a correction, not a weakening; verifier replayed identically; §14's closed formula and §15.6's saturation stability were unverified assertions and are now checked (F7/F8, `scripts/s1saturation.py`); verifier 123 → **127 checks** |
 
 ## Exits
 

@@ -52,7 +52,7 @@ disclosed boundary, not a coverage claim.
 
 Core manifest last rebuilt: 2026-08-03. Research supplement last updated:
 2026-08-10. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `c8d5416ca3cfab964849fe77863a36799530ec7b` (2026-08-11; the
+Snapshot metadata — notebook parent head: `e3c2fcb69c92acce569256acc365adce7dc7f766` (2026-08-11; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -7127,8 +7127,8 @@ scratch. Sampled and flagged: global irreducibility of every crossing `D_I`.
 `goal_runs_20260810/STAGE1_COMPLEX_MAPS/THEOREM.md`. **Problem E remains OPEN.**
 Classifies every morphism of decorated complexes of groups from the terminus
 complex `F(Z)` (plus the `Z⁺` order-0 delta) to the Klein cubic's complex, under
-the sealed rows, for a dominant equivariant `P(W) ⇢ X`. The section moduli is
-NONEMPTY — **Stage 1 does not close the headline.** Coherence revision
+the sealed rows, for a dominant equivariant `P(W) ⇢ X`. The boundary-pattern
+space is NONEMPTY — **Stage 1 does not close the headline.** Coherence revision
 (user-mandated, 2026-08-10): imposing evaluation-coherence along closure
 chains (Theorem 15.1, evaluation rigidity: sweep evaluations are constant per
 moduli component, char-0) cuts the raw arc-consistent count
@@ -7164,8 +7164,33 @@ Exits: `STAGE1-COMPLEX-MAPS-CLASSIFIED`, `STAGE1-BOUNDARY-PATTERNS-SEALED`,
 (`STAGE1-SECTION-MODULI-SEALED` and `STAGE1-THREE-FORCED-SWEEPS` renamed by the
 coherence revision; the pre-coherence count is retained in the packet as the
 arc-consistent intermediate.) Markers: `STAGE1_COMPLEX_MAPS_VERIFY_OK` /
-`ALLGREEN` (123 checks incl. the 14-check coherence series; director replay +
+`ALLGREEN` (127 checks incl. the 14-check coherence series; director replay +
 independent adversarial audit + user-mandated coherence revision).
+
+**Adjudicated 2026-08-11** (`ADJUDICATION_PR32.md`, PR #32). The coherence
+revision is a genuine **correction, not a silent weakening**: the count moved
+*down* by 2⁶ (a stronger cut), and the thing that weakened — "the set of Stage-1
+morphisms" became "order-0 boundary patterns" — is stated more loudly than the
+number, with the superseded figure, the two renamed exits and the killed
+3-sweep witness (D4, now paired with the new H14) all recorded in place. The
+123-check verifier replays identically to the stored stdout. Independently
+re-derived here: the entire target-cell census (`165/165/110/220/264/60`, the
+55 `D12`- and `ℓ_V`-, 66 `D10`-, 110 `A4`-loci) from PSL(2,11) subgroup
+arithmetic alone, and the full 80-row and block accounting
+(`51+1+8+10+4+6 = 80`). Three defects fixed in place and two gaps closed:
+§14's audit-derived closed formula for `N(d,m)` — the sole basis for dropping
+the `d ≤ 45` restriction on Thm 9(ii) — was **asserted with no machine check**,
+so it was verified against the exact `Z[ζ₆]` route on 1 122 odd-`m` cases per
+prime to `d = 66` and is now checks **F7/F8** (verifier 123 → 127); §15.6(1)'s
+"the total is unchanged at maxdeg 3, 4, 5, 6" had **no artifact**, so it was run
+(`scripts/s1saturation.py`, `results/saturation_probe_331.txt`: same total, same
+`(51, 43 008)` core, 0 rigidity failures at all four cutoffs — evidence, not a
+proof of saturation, and the Tier-3 flag stands); §1's block table wrongly put
+the two dim-3 divisors inside the 51-row core (they are forced-unique and sit in
+no block); §11 Tier 3(5) still contradicted §14's withdrawal; §9's replay line
+was stale. **PR #32 must merge before PR #37**, which inherits `43 008` and the
+22-row identification from here.
+
 # Notebook supplement — 2026-08-11: the spin packet's last cited input is sealed, and census cell (O4) splits — with a witness that closes the cell to attack
 
 ## What was asked

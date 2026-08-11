@@ -15,6 +15,7 @@ import json
 import os
 import sys
 from collections import Counter
+from math import comb
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(HERE, "scripts"))
@@ -26,6 +27,18 @@ from produce import solve_block, witness, chain_invols, cellname, prod   # noqa:
 
 FAILS = []
 CHECKS = []
+
+
+def closed_N(d, mm):
+    """THEOREM.md sec.14's audit-derived closed form for N(d,m), with
+    W^+ = triv (+) std, W^- = std:
+        N(d,m) = (1/3)[ C(d-m+2,2)(m+1) - eps ],
+        eps = [3 | d-m] * c(m),  c(m) = 1, -1, 0  for m = 0, 1, 2 (mod 3).
+    """
+    eps = {0: 1, 1: -1, 2: 0}[mm % 3] if (d - mm) % 3 == 0 else 0
+    num = comb(d - mm + 2, 2) * (mm + 1) - eps
+    assert num % 3 == 0, (d, mm, num)
+    return num // 3
 
 
 def check(name, cond, detail=""):
@@ -266,6 +279,18 @@ def run_prime(p):
     mp = window_table(m, sig, dmax=20)
     check("F5 mod-p and exact Z[zeta_6] character routes agree (d<=20) (p=%d)" % p,
           all(mp[(d, mm)][0] % p == ex[(d, mm)][0] % p for (d, mm) in mp))
+    # F7/F8: the audit-derived closed form of sec.14, which is what removes the
+    # d <= 45 restriction from Theorem 9(ii).  Added by the PR #32 adjudication:
+    # sec.14 asserted it without a machine check.
+    odd = [(d, mm) for (d, mm) in ex if mm % 2 == 1]
+    check("F7 audit closed form N(d,m) = (1/3)[C(d-m+2,2)(m+1) - eps] agrees "
+          "with the exact Z[zeta_6] route on every odd m <= d <= 45 (p=%d)" % p,
+          all(ex[k][0] == closed_N(*k) for k in odd), "%d cases" % len(odd))
+    check("F8 hence Theorem 9(ii) for ALL d: C(d-m+2,2)(m+1) >= 2 > 1 >= eps, "
+          "so N(d,m) >= 1 for every odd m <= d (p=%d)" % p,
+          all(comb(d - mm + 2, 2) * (mm + 1) >= 2
+              for mm in range(1, 400, 2) for d in range(mm, 400)) and
+          all(closed_N(*k) >= 1 for k in odd))
     # Layer 2 cross-check: the F_p linear-algebra module dimension at (a,b)=(2,1)
     from s1layer2 import sweep_moduli
     out, dims, ng = sweep_moduli(E, fs_row(E, "P_sigma"), maxdeg=3)
