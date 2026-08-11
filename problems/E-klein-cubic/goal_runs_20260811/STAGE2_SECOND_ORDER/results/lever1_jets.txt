@@ -1,0 +1,39 @@
+LEVER 1 : the A4-equivariant jet at an A4-point
+cols: orbit | d%3 | mu | dim A | dim A' | dim ev(dim1 row) | verdict(dim1 row) | dim ev(dim0 row) | verdict(dim0 row)
+
+omega    0  1 |   1   0 | - -                                                          | - -
+omega    0  2 |   3   2 | 1 PINNED to one point; onX=False; is the X^{C6} point=False  | 1 PINNED to one point; onX=False; is the X^{C6} point=False
+omega    0  3 |   3   2 | 1 PINNED to one point; onX=False; is the X^{C6} point=False  | 1 PINNED to one point; onX=False; is the X^{C6} point=False
+omega    0  4 |   7   6 | 2 image is the whole P^1 of the eigenline                    | 2 image is the whole P^1 of the eigenline
+omega    0  5 |   8   7 | 2 image is the whole P^1 of the eigenline                    | 2 image is the whole P^1 of the eigenline
+omega    0  6 |  12  11 | 1 PINNED to one point; onX=False; is the X^{C6} point=False  | 1 PINNED to one point; onX=False; is the X^{C6} point=False
+omega    1  1 |   1   0 | - -                                                          | - -
+omega    1  2 |   3   2 | 1 PINNED to one point; onX=False; is the X^{C6} point=False  | 2 image is the whole P^1 of the eigenline
+omega    1  3 |   4   3 | 2 image is the whole P^1 of the eigenline                    | 2 image is the whole P^1 of the eigenline
+omega    1  4 |   7   6 | 2 image is the whole P^1 of the eigenline                    | 1 PINNED to one point; onX=False; is the X^{C6} point=False
+omega    1  5 |   8   7 | 1 PINNED to one point; onX=False; is the X^{C6} point=False  | 2 image is the whole P^1 of the eigenline
+omega    1  6 |  13  12 | 2 image is the whole P^1 of the eigenline                    | 2 image is the whole P^1 of the eigenline
+omega    2  1 |   1   0 | - -                                                          | - -
+omega    2  2 |   3   2 | 2 image is the whole P^1 of the eigenline                    | 1 PINNED to one point; onX=False; is the X^{C6} point=False
+omega    2  3 |   4   3 | 2 image is the whole P^1 of the eigenline                    | 2 image is the whole P^1 of the eigenline
+omega    2  4 |   7   6 | 1 PINNED to one point; onX=False; is the X^{C6} point=False  | 2 image is the whole P^1 of the eigenline
+omega    2  5 |   8   7 | 2 image is the whole P^1 of the eigenline                    | 1 PINNED to one point; onX=False; is the X^{C6} point=False
+omega    2  6 |  13  12 | 2 image is the whole P^1 of the eigenline                    | 2 image is the whole P^1 of the eigenline
+omega^2  0  1 |   1   0 | - -                                                          | - -
+omega^2  0  2 |   3   2 | 1 PINNED to one point; onX=False; is the X^{C6} point=False  | 1 PINNED to one point; onX=False; is the X^{C6} point=False
+omega^2  0  3 |   3   2 | 1 PINNED to one point; onX=False; is the X^{C6} point=False  | 1 PINNED to one point; onX=False; is the X^{C6} point=False
+omega^2  0  4 |   7   6 | 2 image is the whole P^1 of the eigenline                    | 2 image is the whole P^1 of the eigenline
+omega^2  0  5 |   8   7 | 2 image is the whole P^1 of the eigenline                    | 2 image is the whole P^1 of the eigenline
+omega^2  0  6 |  12  11 | 1 PINNED to one point; onX=False; is the X^{C6} point=False  | 1 PINNED to one point; onX=False; is the X^{C6} point=False
+omega^2  1  1 |   1   0 | - -                                                          | - -
+omega^2  1  2 |   3   2 | 2 image is the whole P^1 of the eigenline                    | 1 PINNED to one point; onX=False; is the X^{C6} point=False
+omega^2  1  3 |   4   3 | 2 image is the whole P^1 of the eigenline                    | 2 image is the whole P^1 of the eigenline
+omega^2  1  4 |   7   6 | 1 PINNED to one point; onX=False; is the X^{C6} point=False  | 2 image is the whole P^1 of the eigenline
+omega^2  1  5 |   8   7 | 2 image is the whole P^1 of the eigenline                    | 1 PINNED to one point; onX=False; is the X^{C6} point=False
+omega^2  1  6 |  13  12 | 2 image is the whole P^1 of the eigenline                    | 2 image is the whole P^1 of the eigenline
+omega^2  2  1 |   1   0 | - -                                                          | - -
+omega^2  2  2 |   3   2 | 1 PINNED to one point; onX=False; is the X^{C6} point=False  | 2 image is the whole P^1 of the eigenline
+omega^2  2  3 |   4   3 | 2 image is the whole P^1 of the eigenline                    | 2 image is the whole P^1 of the eigenline
+omega^2  2  4 |   7   6 | 2 image is the whole P^1 of the eigenline                    | 1 PINNED to one point; onX=False; is the X^{C6} point=False
+omega^2  2  5 |   8   7 | 1 PINNED to one point; onX=False; is the X^{C6} point=False  | 2 image is the whole P^1 of the eigenline
+omega^2  2  6 |  13  12 | 2 image is the whole P^1 of the eigenline                    | 2 image is the whole P^1 of the eigenline
