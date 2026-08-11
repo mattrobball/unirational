@@ -148,6 +148,84 @@ def main():
     check("RETRACT-LANDSCAPE-NOTE-ASSEMBLED", theorem_md.exists() and reg_md.exists(),
           f"THEOREM.md exists={theorem_md.exists()}, REGISTRATION_SNIPPET.md exists={reg_md.exists()}")
 
+    # --- 6. In-repo citations of section 3 actually resolve ---------------
+    # Added 2026-08-11 in adjudication.  Section 3 is the only part of this
+    # note that makes load-bearing REPOSITORY claims, and the adjudication
+    # found two mis-citations there.  This check is the regression: every
+    # in-repo path named in section 3 must exist, and every exit marker
+    # attributed to a packet must appear verbatim in that packet's own files.
+    print()
+    print("In-repo citation resolution (section 3):")
+    body = theorem_md.read_text(encoding="utf-8") if theorem_md.exists() else ""
+    REPO_PATHS = [
+        "goal_runs_20260810/RT_SPLIT_AND_DICHOTOMY/THEOREM_RESTRICTED_DICHOTOMY.md",
+        "goal_runs_20260810/COMBINED_DEGREE_SIEVE/STATUS.md",
+        "goal_runs_20260809/AMBIENT_REES_SELFMAP_CLASSIFICATION/RETRACTION_DEGREE_BOUND.md",
+        "goal_runs_after_2666fdb/FIX_P2_GATEWAY_D36",
+        "goal_runs_after_88f0967/FIX_VIII_A5LADDER",
+        "goal_runs_20260810/V14_MAP_DICHOTOMY",
+    ]
+    missing_paths = [p for p in REPO_PATHS if not (PROBLEM_DIR / p).exists()]
+    cited_paths = [p for p in REPO_PATHS if p.rsplit("/", 1)[-1] in body or p in body]
+    for p in REPO_PATHS:
+        print(f"  {'OK ' if (PROBLEM_DIR / p).exists() else 'MISSING'}  {p}")
+    check("RETRACT-LANDSCAPE-REPO-PATHS-RESOLVE", not missing_paths,
+          f"{len(REPO_PATHS)} in-repo paths named, missing: {missing_paths}")
+
+    # exit marker -> the directory whose files must contain it verbatim
+    EXIT_MARKERS = {
+        "DELTA1-RETRACTION-COORDINATE-DEGREE-AT-LEAST-24":
+            "goal_runs_20260809/AMBIENT_REES_SELFMAP_CLASSIFICATION",
+        "FIX-P2-SWEEP2-EMPTY-THROUGH-30": "goal_runs_after_2666fdb/FIX_P2_GATEWAY_D36",
+        "FIX-VIII-A5LADDER-EMPTY-THROUGH-10": "goal_runs_after_88f0967/FIX_VIII_A5LADDER",
+        "RESTRICTED-CLEAN-CM-NORM-PROVED": "goal_runs_20260810/RT_SPLIT_AND_DICHOTOMY",
+        "COMBINED-SIEVE-NO-PERIODIC-CLOSURE-PROVED": "goal_runs_20260810/COMBINED_DEGREE_SIEVE",
+    }
+    unresolved = []
+    for marker, subdir in EXIT_MARKERS.items():
+        d = PROBLEM_DIR / subdir
+        found = False
+        if d.is_dir():
+            for f in d.rglob("*"):
+                if f.is_file() and f.suffix in (".md", ".py", ".txt", ".json"):
+                    try:
+                        if marker in f.read_text(encoding="utf-8", errors="ignore"):
+                            found = True
+                            break
+                    except OSError:
+                        pass
+        print(f"  {'OK ' if found else 'MISSING'}  {marker}  <- {subdir}")
+        if not found:
+            unresolved.append(marker)
+    check("RETRACT-LANDSCAPE-REPO-EXITS-RESOLVE", not unresolved,
+          f"{len(EXIT_MARKERS)} exit markers attributed, unresolved: {unresolved}")
+
+    # --- 7. Retracted claims stay retracted -------------------------------
+    # Regression on the three statements refuted in adjudication.  Each must
+    # NOT reappear as an assertion of this note.
+    RETRACTED = [
+        "delta >= 12",
+        "maximally favorable",
+        "no other named or general member",
+    ]
+    reg_body = reg_md.read_text(encoding="utf-8") if reg_md.exists() else ""
+    GUARD_WORDS = ("retract", "refut", "earlier revision", "earlier draft",
+                   "adjudicat", "draft's claim", "not claimed")
+    resurfaced = []
+    for phrase in RETRACTED:
+        # allowed only inside an explicit retraction passage; the guard word
+        # may sit a couple of lines away because the prose is hard-wrapped.
+        for name, txt in (("THEOREM.md", body), ("REGISTRATION_SNIPPET.md", reg_body)):
+            lines = txt.splitlines()
+            for k, line in enumerate(lines):
+                if phrase not in line:
+                    continue
+                window = " ".join(lines[max(0, k - 3):k + 4]).lower()
+                if not any(w in window for w in GUARD_WORDS):
+                    resurfaced.append(f"{name}:{k + 1}: {phrase!r} in {line.strip()[:70]!r}")
+    check("RETRACT-LANDSCAPE-REFUTED-CLAIMS-STAY-RETRACTED", not resurfaced,
+          f"{len(RETRACTED)} refuted phrases guarded, resurfaced: {resurfaced}")
+
     # --- Report -----------------------------------------------------------
     print()
     print("-" * 70)

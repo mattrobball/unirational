@@ -7,11 +7,19 @@
 
 This note assembles, with exact citations, the current state of the published
 literature on retract rationality of cubic threefolds, establishes that the
-Klein cubic is the one member of that family the July-2025 landscape event
+Klein cubic is a member of the family that the July-2025 landscape event
 provably does not reach, and records what that non-reach does and does not
 say about Problem E. All mathematical content below was derived and
 adjudicated by the director beforehand; this packet's job is citation-exact
 assembly, not new proof.
+
+> **Adjudication amendment, 2026-08-11.** An earlier revision of this note said
+> the Klein cubic is *the* one such member and is *maximally favorable* among
+> all cubic threefolds. That was **refuted** and is retracted; see
+> `ADJUDICATION_PR38.md` and §2.1 below. What survives — and is what the rest
+> of the note uses — is that the Klein cubic **is** in the escaping locus, with
+> the sharpest available form of the input (an isomorphism `J(X) ≅ E^5`, not
+> merely an isogeny).
 
 ---
 
@@ -26,9 +34,11 @@ conjecture for abelian varieties"*, arXiv:2507.15704 (July 2025).
   (Chow-theoretic) decomposition of the diagonal, hence are **neither stably
   rational, nor retract rational, nor A¹-connected**.
 
-This is the **first-ever retract-irrationality result for cubic
-threefolds** — no prior published theorem excluded retract rationality for
-any smooth cubic threefold. (The paper's own abstract states the headline
+This is, to the best of this note's literature survey, the **first published
+retract-irrationality result for cubic threefolds** — no earlier published
+theorem is known to us that excludes retract rationality for any smooth cubic
+threefold. This is a survey judgement, not a verified statement, and is
+recorded as such. (The paper's own abstract states the headline
 consequence directly: "This disproves the integral Hodge conjecture for
 abelian varieties and shows that very general cubic threefolds are not
 stably rational"; Corollary 1.4's sharper retract/A¹ statement is the one
@@ -54,7 +64,9 @@ threefolds — a property holding outside a countable union of proper closed
 subvarieties of the moduli space. This says nothing, by itself, about any
 *named* cubic threefold, including the Klein cubic. Section 2 shows the gap
 is not merely a labeling accident: the Klein cubic is excluded from the
-argument's reach by an explicit, provable structural reason.
+argument's reach by an explicit, provable structural reason. Section 2.1
+records that the excluded locus is **not** just the Klein cubic — it is
+positive-dimensional and was already known to be non-empty before 2025.
 
 ---
 
@@ -86,8 +98,10 @@ against the PDF):
 reference [7] is Clemens–Griffiths, *"The intermediate Jacobian of the cubic
 threefold"*, Ann. of Math. **95** (1972), 281–356; reference [2] is confirmed
 from the same PDF's bibliography as **A. Adler**, *"On the automorphism
-group of certain hypersurfaces"*, J. Algebra **72** (1981), no. 1, 146–165 —
-matching the credit given in the task brief for this packet.)
+groups of certain hypersurfaces"*, J. Algebra **72** (1981), no. 1, 146–165 —
+matching the credit given in the task brief for this packet. The plural
+"groups" is the title as published; Roulleau's bibliography entry has the
+singular.)
 
 The precise content needed below: `J(X)` is isomorphic to `E^5` **as an
 abelian variety** (equivalently, as a complex torus with its group
@@ -144,21 +158,27 @@ cubic threefold **vanishes for the Klein cubic**:
   already known to vanish for *every* smooth cubic threefold (not specific
   to Klein), by **Colliot-Thélène, Voisin**, *"Cohomologie non ramifiée et
   conjecture de Hodge entière"*, Duke Math. J. **161** (2012), no. 5,
-  735–801 (unramified `H^3(-,Z)` vanishes on all uniruled threefolds, and
-  smooth cubic threefolds are uniruled).
+  735–801: unramified `H^3(-, Q/Z)` vanishes on all uniruled threefolds,
+  and smooth cubic threefolds are uniruled. (The coefficient group is
+  `Q/Z`, not `Z`; an earlier revision of this note said `Z`.)
 - **The (integral) decomposition of the diagonal** — vanishes as an
   obstruction by step (iv) above.
 - **The minimal class** — algebraic, by step (iii).
 - **The universal codimension-2 cycle** obstruction of **Voisin**,
   *"Cycle classes on abelian varieties and the geometry of the Abel–Jacobi
-  map"*, Pure Appl. Math. Q. (2024), arXiv:2212.03046, Theorem 1.15 — this
-  obstruction is tied to the same "direct summand of a product of Jacobians"
-  property that (i)+(ii) establish for `J(X)`, so it does not obstruct the
-  Klein cubic either.
+  map"*, Pure Appl. Math. Q. **20** (2024), no. 5, 2469–2496,
+  arXiv:2212.03046, Theorem 1.15: *a smooth cubic threefold admits a
+  universal codimension-2 cycle **if** the minimal class of its intermediate
+  Jacobian is algebraic.* This is a one-directional implication (the partial
+  converse is the separate Theorem 1.16, which is not used here), and the
+  direction stated is exactly the one needed: step (iii) supplies the
+  hypothesis, so the Klein cubic **does** admit a universal codimension-2
+  cycle and that obstruction does not fire.
 
-The Klein cubic sits in the **good locus of Voisin's Theorem 4.5** (the JEMS
-2017 paper): every hypothesis that theorem needs from the intermediate
-Jacobian is met.
+The Klein cubic therefore sits in the **good locus of Voisin's Theorem 1.7 /
+Corollary 4.4** (the JEMS 2017 paper), whose criterion is an equivalence:
+*a smooth cubic threefold has universally trivial `CH0` if and only if
+`theta^4/4!` is algebraic on `J(X)`*.
 
 **What this does and does not prove.** Decomposition of the diagonal is
 **necessary, not sufficient**, for stable or retract rationality — this is
@@ -169,10 +189,46 @@ retract rationality built from the intermediate Jacobian's Hodge/Chow theory
 fails to fire. Consequently:
 
 > **Retract rationality of the bare Klein cubic threefold is OPEN in both
-> directions**, and among all smooth cubic threefolds, the Klein cubic is
-> currently **maximally favorable** for it — no other named or general
-> member of the family has all of these obstructions simultaneously
-> vanish, and (per §1) the very general member has them all fire.
+> directions.** The Klein cubic lies in the locus where every currently known
+> bare-variety obstruction vanishes, while (per §1) the very general member
+> has them all fire.
+
+## 2.1 The escaping locus is not just the Klein cubic — REFUTED CLAIM, recorded
+
+An earlier revision of this note claimed the Klein cubic is *maximally
+favorable* and that "no other named or general member of the family has all of
+these obstructions simultaneously vanish". **That claim is false**, and it is
+refuted by two sources this note already cites or is adjacent to.
+
+1. **Voisin's own Theorem 1.7** (JEMS 2017, arXiv:1407.7261) continues past
+   the equivalence quoted above: *"This happens (at least) on a countable union
+   of closed subvarieties of codimension ≤ 3 of the moduli space of `X`."* Her
+   Theorem 4.5 constructs those families explicitly — cubic threefolds with an
+   order-3 automorphism acting as `(X0, jX1, j^2X2, X3, X4)`, for which an
+   odd-degree isogeny of `J(X)` to a Jacobian of a reducible curve, combined
+   with `2·theta^4/4!` always being algebraic on a Prym, forces `theta^4/4!`
+   itself to be algebraic. So a **positive-dimensional, Zariski-dense countable
+   union** of cubic threefolds with universally trivial `CH0` was published in
+   2017, by a route that does not use the Klein cubic, CM, or step (ii) at all.
+2. **The step-(i) input is not unique to Klein either.** Roulleau, *"Fano
+   surfaces with 12 or 30 elliptic curves"*, arXiv:1001.4855, Theorem 23: for
+   the **Fermat** cubic threefold the intermediate Jacobian `A` is *isomorphic*
+   to `E^4 × E'` with `E = C/Z[alpha]`, `E' = C/Z[3 alpha]`, `alpha` a primitive
+   cube root of unity — a product of elliptic curves, hence of Jacobians, so
+   steps (ii)–(iv) apply verbatim. (Note `E^4 × E'`, **not** `E^5`: `E` and `E'`
+   are 3-isogenous but not isomorphic, so sources writing `J ∼ E^5` for Fermat
+   are stating an isogeny.) Roulleau, *"Elliptic curve configurations on Fano
+   surfaces"*, arXiv:0804.1861, Theorem 27, gives a one-parameter family
+   `F_lambda = {x1^3+x2^3+x3^3-3 lambda x1x2x3 + x4^3 + x5^3 = 0}` whose
+   Albanese is isomorphic to a product of elliptic curves at the CM values of
+   `lambda`.
+
+**What survives.** The Klein cubic is in the escaping locus, and it is the
+member where the step-(i) input is available in its sharpest published form —
+an **isomorphism** `J(X) ≅ E^5` (Adler 1981; Roulleau 2009), not an isogeny,
+with `E` having CM by `Q(sqrt(-11))`. Its interest for Problem E (§3) comes
+from `Aut(X) = PSL(2,11)`, which is genuinely unique to it, not from any
+uniqueness in the bare-variety landscape.
 
 ---
 
@@ -185,15 +241,27 @@ specific fork, sealed in the repository's own self-map analysis.
 
 **The self-map dichotomy.** Any hypothetical `G`-equivariant parametrization
 `T : P(W_5) --> X` restricts on `X` to a `G`-equivariant self-map `X --> X`
-of some degree `delta` (the CLEAN/CARRIER dichotomy of
+of some degree `delta`. The CLEAN/CARRIER dichotomy of
 `goal_runs_20260810/RT_SPLIT_AND_DICHOTOMY/THEOREM_RESTRICTED_DICHOTOMY.md`,
-Theorem 3.1: `delta` is forced to be a norm from `Q(sqrt(-11))`, and
-`delta >= 3` is sealed there). The case **`delta = 1`** is the case where
-the restricted self-map is the identity — i.e. `T` is an honest
-`G`-equivariant retraction of `P^4` onto `X`. Such a retraction would in
-particular **witness retract rationality of the bare Klein cubic** — a
-would-be first among all cubic threefolds, given §2's conclusion that no
-other cubic threefold is currently even a candidate.
+Theorem 3.1, says: either the exceptional part `r_phi` is non-zero (CARRIER)
+or it vanishes and then `u_phi^dagger u_phi = delta·id` on `V`, forcing
+`delta = x^2 + xy + 3y^2`, i.e. **`delta` is a norm from `Q(sqrt(-11))`**.
+Theorem 3.1 does **not** bound `delta` from below; `delta >= 3` is a separate,
+weaker statement, and it holds only on the non-retraction side — `2` is not a
+norm, so the norm condition rules out `delta = 2`, and `delta = 1` is precisely
+the retraction case (see `goal_runs_20260810/COMBINED_DEGREE_SIEVE/STATUS.md`
+§4, which runs the retraction branch at `delta = 1` and the all-ambient branch
+over the norms in `[3, d^3 - d]`). An earlier revision of this note attributed
+`delta >= 3` to Theorem 3.1, which is a mis-citation and contradicted its own
+next sentence.
+
+The case **`delta = 1`** is the case where the restricted self-map is the
+identity — i.e. `T` is an honest `G`-equivariant retraction of `P^4` onto `X`.
+Such a retraction would in particular **witness retract rationality of the bare
+Klein cubic**. Per §2.1 that would not be a first among cubic threefolds in the
+*obstruction-vanishing* sense — Voisin's 2017 families already have universally
+trivial `CH0` — but it would be the first actual retraction ever exhibited, on
+any cubic threefold, since §2 only removes obstructions and constructs nothing.
 
 **Why §1–2's machinery cannot decide this fork.** The July-2025 landscape
 event and its published relatives are all statements about the intermediate
@@ -235,19 +303,28 @@ one side without closing it:
   `A5`-equivariant landing data and is `EMPTY-THROUGH-10`, with rungs 11
   and 12 boxed `UNDECIDED`.
 
-Taken together (per `goal_runs_20260810/V14_MAP_DICHOTOMY` context and the
-session record), the honest statement of where the fork currently stands is:
-**the retraction case (`delta = 1`) is not excluded, and neither is any
-specific small non-retraction degree below the next open rung; the fork
-between a retraction and `delta >= 12` stays open.** This packet does not
-move that fork in either direction — it only records why the July-2025
-landscape event cannot be the tool that moves it.
+Taken together, the honest statement of where the fork currently stands is:
+**the retraction case (`delta = 1`) is not excluded, and neither is the
+smallest non-retraction cell; the fork between `delta = 1` and `delta >= 3`
+stays open.** `COMBINED_DEGREE_SIEVE/STATUS.md` is explicit that "the cell
+`delta = 3` satisfies every sealed constraint at every live degree", and `3` is
+a norm from `Q(sqrt(-11))`, so no repository result pushes the non-retraction
+side above `3`. (An earlier revision of this note wrote `delta >= 12`; that
+figure has no support anywhere in the repository — the A5-ladder's
+`EMPTY-THROUGH-10` with rungs 11, 12 undecided is a statement about the
+coordinate degree `d` of `A5`-equivariant landing data, not about `delta` — and
+it is retracted.) This packet does not move the fork in either direction; it
+only records why the July-2025 landscape event cannot be the tool that moves
+it.
 
 **The retraction-slice ansatz.** A retraction's ambient tuple is forced
-into the normal form `T = A*x + F*B` (equivalently the accepted polar
-normal form `T = H*x + F*Q` of
-`RETRACTION_DEGREE_BOUND.md` §1, with `A` an invariant scalar of degree
-`d-1` and `A ≡ -grad(F)*B mod F`). The free data is therefore a single
+into the accepted polar normal form `T = H*x + F*Q` of
+`RETRACTION_DEGREE_BOUND.md` §1, with `H` an invariant scalar of degree `d-1`,
+`Q` a `W`-valued covariant of degree `d-3`, `gcd(H,F) = 1`, and
+`H ≡ -grad(F)·Q mod F` — the latter being that file's identity (1.2)
+`H + 3·Phi(x,x,Q) = F·R` together with `3·Phi(x,x,Q) = grad(F)(x)·Q`. (Beware
+the letter clash: that file's own `A` and `B` are `Phi(x,x,Q)` and
+`Phi(x,Q,Q)`, not the `H` and `Q` used here.) The free data is therefore a single
 `W`-valued `G`-covariant `B` of degree `d-3` — a strictly thinner slice of
 the general covariant search than the unrestricted landing-tuple problem.
 The sealed exclusions through `d <= 30` (above) already cover this thinner
@@ -308,24 +385,33 @@ This packet cites and depends on the following, in three tiers.
    Theorem 4.1/4.5 machinery cited in §2 consequences. Confirmed live
    against arxiv.org 2026-08-11.
 6. Voisin, "Cycle classes on abelian varieties and the geometry of the
-   Abel-Jacobi map", Pure Appl. Math. Q. (2024), arXiv:2212.03046.
-   Theorem 1.15. Confirmed live against arxiv.org 2026-08-11 (exact title;
-   venue as given in the task brief, not independently confirmed from the
-   arXiv page itself).
+   Abel-Jacobi map", Pure Appl. Math. Q. **20** (2024), no. 5, 2469-2496,
+   arXiv:2212.03046. Theorem 1.15, a one-directional "if" (Theorem 1.16 is
+   the partial converse and is not used). Title, author, venue, volume,
+   issue and pages confirmed 2026-08-11; Theorem 1.15's statement extracted
+   from the paper text in adjudication.
 7. Colliot-Thelene, Voisin, "Cohomologie non ramifiee et conjecture de
-   Hodge entiere", Duke Math. J. 161 (2012), no. 5, 735-801. Confirmed by
-   web search 2026-08-11 (Duke Math J, vol/issue/pages as stated).
-8. Adler, "On the automorphism group of certain hypersurfaces", J. Algebra
-   72 (1981), no. 1, 146-165. Confirmed directly from the bibliography of
-   item B below (reference [2] there), not independently fetched.
+   Hodge entiere", Duke Math. J. 161 (2012), no. 5, 735-801. Bibliographic
+   data confirmed. **Coefficient group corrected in adjudication:** the
+   vanishing is for unramified `H^3(-, Q/Z)` on uniruled threefolds, not
+   `H^3(-, Z)` as an earlier revision of §2 stated.
+8. Adler, "On the automorphism **groups** of certain hypersurfaces",
+   J. Algebra 72 (1981), no. 1, 146-165. Bibliographic data confirmed;
+   **title corrected in adjudication** — "groups", plural (an earlier
+   revision, following item B's bibliography entry, had the singular).
 
 None of items 1-7's source PDFs are present in this repository's
-`external_docs/`; their statements are transcribed from the director's
-prior reading plus this packet's own live confirmation pass (arXiv
-abstract pages and one web search, both 2026-08-11), not from a local PDF.
-Theorem/corollary *numbers* for items 1, 4, 5, 6 are taken on the
-director's authority and were not independently re-derived or re-checked
-against the full PDF text in this packet.
+`external_docs/`. Their statements were transcribed from the director's prior
+reading plus this packet's own live confirmation pass (arXiv abstract pages
+and one web search, both 2026-08-11). **In adjudication (2026-08-11) items
+1, 4, 5, 6 were re-checked against the actual paper text, not just the
+abstract pages, and all four theorem/corollary numbers and statements were
+confirmed verbatim** — including the load-bearing item 4 (Beckmann-de Gaay
+Fortman Thm 1.2 really is "the integral Hodge conjecture for one-cycles holds
+for the product of Jacobians `J(C1) × ... × J(Cn)`", a standalone theorem, not
+a misattributed corollary of their more general Thm 1.1), and item 5 (Voisin
+JEMS Thm 1.7 really is the stated equivalence for smooth cubic threefolds).
+See `ADJUDICATION_PR38.md`.
 
 ### B. Director-verified joint (quoted from the local PDF)
 
@@ -352,6 +438,13 @@ in the director's prior derivation, and should be cited as such (an
 assembly, flagged), never as a theorem of any of the papers in tier A or B
 individually.
 
+The same caveat applies, with the same force, to the *non-uniqueness*
+statement of §2.1: the observation that Roulleau's Fermat and `F_lambda`
+results feed the identical chain is likewise an assembly by this packet, not
+a published corollary. What §2.1 cites as published, and what does the
+refuting work on its own, is Voisin's Theorem 1.7 sentence about the
+codimension-`<= 3` countable union.
+
 Section 3's "relevance to Problem E" is entirely internal repository
 content (packets named therein); it cites no external literature beyond
 what's already listed above.
@@ -368,14 +461,28 @@ clear message if `pdftotext` is unavailable); and re-checks trivially that
 It does not and cannot verify the tier-A published theorems themselves —
 that verification is literature review, not computation, and is recorded
 in DEPENDENCIES above as the director's prior reading plus this packet's
-live arXiv/web confirmation pass.
+live arXiv/web confirmation pass and the adjudication's full-text pass.
+
+**Added 2026-08-11 in adjudication** — §3 is the only part of this note making
+load-bearing *repository* claims, and the adjudication found two mis-citations
+there, so those claims are now machine-guarded:
+
+* every in-repo path named in §3 must exist on disk (6 paths);
+* every exit marker attributed to a packet must appear verbatim somewhere in
+  that packet's own files (5 markers);
+* the three statements refuted in adjudication (`delta >= 12`, "maximally
+  favorable", "no other named or general member") must not reappear as
+  assertions — only inside an explicit retraction passage.
 
 Exits: `RETRACT-LANDSCAPE-ROULLEAU-PDF-PRESENT`,
 `RETRACT-LANDSCAPE-ROULLEAU-QUOTE-FOUND` (or `-SKIPPED-NO-PDFTOTEXT`),
-`RETRACT-LANDSCAPE-8192-11-NON-CM-OK`, `RETRACT-LANDSCAPE-NOTE-ASSEMBLED`
-(primary).
+`RETRACT-LANDSCAPE-8192-11-NON-CM-OK`, `RETRACT-LANDSCAPE-REPO-PATHS-RESOLVE`,
+`RETRACT-LANDSCAPE-REPO-EXITS-RESOLVE`,
+`RETRACT-LANDSCAPE-REFUTED-CLAIMS-STAY-RETRACTED`,
+`RETRACT-LANDSCAPE-NOTE-ASSEMBLED` (primary). 7 checks, 0 failures.
 
 **Not claimed:** any new obstruction, any new rationality statement about
-the Klein cubic or Problem E, any resolution of the `delta = 1` fork, and
-no claim that the chain in §2 is itself a citable theorem of any single
-paper.
+the Klein cubic or Problem E, any resolution of the `delta = 1` fork, any
+uniqueness or maximality of the Klein cubic within the family of cubic
+threefolds (see §2.1), and no claim that the chain in §2 is itself a citable
+theorem of any single paper.
