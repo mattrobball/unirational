@@ -1,0 +1,67 @@
+{
+ "threshold_Theta": 6,
+ "full_flag_rows": [
+  "D_P_sigma",
+  "D_Lminus_sigma"
+ ],
+ "degree_blind_sigma_band": 43008,
+ "d10_split": {
+  "E_branch": 13,
+  "L_branch": 10,
+  "stage1": 23
+ },
+ "immune_stage1": 1100753141760000,
+ "immune_stage2": 6561,
+ "stage1_total": 1088847395778723840000,
+ "stage1_x_stage2_degree_blind": 6490036224,
+ "table": [
+  {
+   "d_mod_6": 0,
+   "sigma_band_factor": 10752,
+   "stage1_immune_total": 272211848944680960000,
+   "tightened_E_branch": 917070336,
+   "tightened_L_branch": 705438720,
+   "status": "tightened"
+  },
+  {
+   "d_mod_6": 1,
+   "sigma_band_factor": 0,
+   "stage1_immune_total": 0,
+   "tightened_E_branch": 0,
+   "tightened_L_branch": 0,
+   "status": "FLAGGED-NOT-CLAIMED (see THEOREM.md 2.5)"
+  },
+  {
+   "d_mod_6": 2,
+   "sigma_band_factor": 672,
+   "stage1_immune_total": 17013240559042560000,
+   "tightened_E_branch": 57316896,
+   "tightened_L_branch": 44089920,
+   "status": "tightened"
+  },
+  {
+   "d_mod_6": 3,
+   "sigma_band_factor": 0,
+   "stage1_immune_total": 0,
+   "tightened_E_branch": 0,
+   "tightened_L_branch": 0,
+   "status": "FLAGGED-NOT-CLAIMED (see THEOREM.md 2.5)"
+  },
+  {
+   "d_mod_6": 4,
+   "sigma_band_factor": 672,
+   "stage1_immune_total": 17013240559042560000,
+   "tightened_E_branch": 57316896,
+   "tightened_L_branch": 44089920,
+   "status": "tightened"
+  },
+  {
+   "d_mod_6": 5,
+   "sigma_band_factor": 0,
+   "stage1_immune_total": 0,
+   "tightened_E_branch": 0,
+   "tightened_L_branch": 0,
+   "status": "FLAGGED-NOT-CLAIMED (see THEOREM.md 2.5)"
+  }
+ ]
+}
