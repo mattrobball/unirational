@@ -52,7 +52,7 @@ disclosed boundary, not a coverage claim.
 
 Core manifest last rebuilt: 2026-08-03. Research supplement last updated:
 2026-08-10. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `770ecbc0f5b6f66b57670e3873fa62ecee0725c1` (2026-08-11; the
+Snapshot metadata — notebook parent head: `f762d0cd6c49add0c01df8ec41c4f473fe04b028` (2026-08-11; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -7073,7 +7073,7 @@ consistency test.
 `verify_spin_hodge_census.py` and `scripts/check_manifest_parity.py` pass.
 The packet is on `agent/spin-hodge-support-20260810`. This notebook revision
 was authored against parent head
-`91ee67947f54c6a346cfea520c56a11abf75854e`.
+`95142218e4d159818cb3d6029b12efaf8cea1bbf`.
 
 ### `STANDARD_FORM_PW` (08-10, `goal_runs_20260810/`) — the source-side atlas
 
@@ -7121,6 +7121,64 @@ Machine: `python3 verifier.py` → `STANDARD_FORM_PW_VERIFY_OK`, `ALLGREEN`,
 arithmetic for the automaton, exact `QQ` in Macaulay2 for the charts.
 Re-verifies `STRATA_EXACT.md:108–123` and `NORMAL_CHARACTERS.md:71–90` from
 scratch. Sampled and flagged: global irreducibility of every crossing `D_I`.
+
+### TERMINUS_STRATA_PW — the full stabilized-strata census of the source terminus (2026-08-10)
+
+`goal_runs_20260810/TERMINUS_STRATA_PW/THEOREM.md`. Source side only; **Problem E
+remains OPEN**. The orbit-type (exact-stabilizer) stratification of the terminus
+`Z` of the `STANDARD_FORM_PW` tower over `P(W) = P^4`, `G = PSL(2,11)`.
+
+Identifies `Z` as the maximal De Concini–Procesi wonderful model of the
+1215-element subspace arrangement `A` (940 points, 220 lines, 55 planes, closed
+under intersection), which gives a closed chart form for every point and makes
+the census exact and finite.
+
+* **80 `G`-orbits of orbit-type strata; 11 076 components.** Per stage:
+  15/1216 (`P(W)`) → 57/7336 (T0) → 70/9591 (T1) → 80/11 076 (T2).
+* Point stabilizers: exactly `{1,C2,C3,V4,C5,C6,C11}`; the other **9 of the 16**
+  subgroup classes are **certified empty** (exhaustive enumeration + 79 sampled
+  points with brute-force stabilizers at two primes).
+* Setwise stabilizers: only **8 of 16** occur — `C2,C3,V4,C5,C6,C11,D12,G`.
+  `A4` and `D10` occur at level 0 and are destroyed by the tower.
+* Closure poset: 145 containments. Crossings: 19 orbits at `|I|=2`, **5 orbits of
+  165 at `|I|=3`** (all on `ℓ_V`-`P_σ` flags). No non-cyclic generic crossing
+  stabilizer ⇒ no fabulous corner on `Z`.
+* Every stratum is **rational** (a blowup of a product of projective spaces) —
+  verified per row, not imported from `lem:rational_strata_propagate`.
+* `Z → Z⁺` (the corner packet's T3): 3 rows consumed, 3 new, 77 unchanged; the
+  two new `V4`-fixed surfaces, `2 × 165 = 330`, **are** `DUNCAN_CORNER_F2`'s
+  fabulous corners.
+* Reproduces independently: `STRATA_EXACT` level-0, the 1215 divisors in 14
+  orbits, the **42 terminal local models class-by-class**, the crossing table.
+* **CORRECTION.** `STANDARD_FORM_PW` §5(d)'s "components created inside
+  exceptional divisors" counts are lower bounds (its producer de-duplicates on a
+  signature that merges distinct `G`-orbits): `C2 {1:1155,2:440,3:110} →
+  {1:1320,2:605,3:110}`, `V4 {0:660,1:330} → {0:1155,1:330}`, `C5 396 → 1320`,
+  `C6 330 → 1100`, `C11 60 → 240`; `C3` unchanged. No exit string affected.
+
+Exits: `TERMINUS-ORBIT-STRATA-PW-PASS`, `TERMINUS-STRATA-ALL-16-CLASSES-CERTIFIED`,
+`TERMINUS-CLOSURE-POSET-SEALED`, `TERMINUS-QUOTIENT-STRATIFICATION-COMPLETE`,
+`TERMINUS-ZPLUS-DELTA-SEALED`, `STANDARD-FORM-PW-5D-COUNTS-CORRECTED`.
+Verify: `python3 verifier.py` → `TERMINUS_STRATA_PW_VERIFY_OK` / `ALLGREEN`.
+
+**Adjudicated 2026-08-11 (PR #31): READY** (`ADJUDICATION_PR31.md`). The packet
+verifier replays byte-identical and `t6_charts.m2` gives 18/18, but it checks
+rows produced by the census engine rather than re-deriving the row list, so the
+adjudication wrote an independent census — `scripts/adj_indep_census.py`, built
+from the element eigenspaces, enumerating **all 4900 chains** and counting
+components **one at a time** with no orbit-representative shortcut. It
+reproduces every cell at both primes: 1216 / 7336 / 9591 / **11 076**
+components, **80** orbits, the per-class and setwise tables (`C2 1 · C3 8 ·
+V4 26 · C5 10 · C6 27 · C11 4 · D12 3 · G 1`), the `Z^H` dictionary
+(239/80/54/20/38/20), the chain census 1215/2860/825 matching the divisor and
+crossing counts, and the `STANDARD_FORM_PW` §5(d) correction. Four defects,
+all fixed on the branch: §2's "one fixed `H`" column carried the `Z^H` totals
+(239, 80) instead of the `Z_{=H}` ones (39, 42); §4's stage table dated `D10`'s
+death to T1 when it dies at T0; the "`STANDARD_FORM_PW` is not on `main`" note
+was stale (PR #29); and the branch was missing from `known_branches`, which had
+parity failing. The §5(d) correction is now recorded inside `STANDARD_FORM_PW`
+itself. Not independently replicated: the 145 closure-poset relations
+(packet-verified only). Headline unchanged: **OPEN**.
 
 # Notebook supplement — 2026-08-11: the spin packet's last cited input is sealed, and census cell (O4) splits — with a witness that closes the cell to attack
 

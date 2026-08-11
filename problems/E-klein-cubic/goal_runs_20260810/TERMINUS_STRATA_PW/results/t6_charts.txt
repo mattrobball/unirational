@@ -1,0 +1,29 @@
+CHECK PASS  zz has exact multiplicative order 6 (primitive 6th root of unity)
+
+=== GENRE A: k=1, S_1 = {x}  (POINT) ===
+CHECK PASS  A: chart is a 4-dim'l affine space and the substitution is monomial and unimodular (birational, smooth blow-up chart)
+CHECK PASS  A: induced weights of (t1,p2,p3,p4) match the rule (forced by equivariance phi.gU = gS.phi on every original coordinate)
+CHECK PASS  A: the boundary divisor D_S1 = {t1=0} is exactly a codim-1 divisor
+CHECK PASS  A: Fix(zz) in the chart has codim = # nontrivial weights (3/4)
+
+=== GENRE B: k=1, S_1 = line <w0,w1>  (LINE) ===
+CHECK PASS  B: chart is a 4-dim'l affine space and the substitution is monomial and unimodular
+CHECK PASS  B: induced weights of (u1,t1,q3,q4) match the rule (forced by equivariance phi.gU = gS.phi)
+CHECK PASS  B: the boundary divisor D_S1 = {t1=0} is exactly a codim-1 divisor
+CHECK PASS  B: Fix(zz) in the chart has codim = # nontrivial weights (4/4)
+
+=== GENRE C: k=1, S_1 = plane <w0,w1,w2>  (PLANE) ===
+CHECK PASS  C: chart is a 4-dim'l affine space and the substitution is monomial and unimodular
+CHECK PASS  C: induced weights of (u1,u2,t1,r4) match the rule (forced by equivariance phi.gU = gS.phi)
+CHECK PASS  C: the boundary divisor D_S1 = {t1=0} is exactly a codim-1 divisor
+CHECK PASS  C: Fix(zz) in the chart has codim = # nontrivial weights (4/4)
+
+=== GENRE D: k=3, {x} < line <w0,w1> < plane <w0,w1,w2> (TRIPLE) ===
+CHECK PASS  D: chart is a 4-dim'l affine space and the substitution is monomial and unimodular
+CHECK PASS  D: induced weights of (t1,t2,t3,p4) match the rule (forced by equivariance phi.gU = gS.phi); free_0,free_1,free_2 are all EMPTY since dim(V_{i+1}/V_i)=1 forces beta_i to exhaust them
+CHECK PASS  D: each boundary divisor D_S1={t1=0}, D_S2={t2=0}, D_S3={t3=0} is a codim-1 divisor
+CHECK PASS  D: the triple crossing D_S1 cap D_S2 cap D_S3 is smooth of codim 3 (three coordinate hyperplanes meeting normally)
+CHECK PASS  D: Fix(zz) in the chart has codim = # nontrivial weights (4/4)
+
+18/18 checks passed
+T6_CHARTS_OK

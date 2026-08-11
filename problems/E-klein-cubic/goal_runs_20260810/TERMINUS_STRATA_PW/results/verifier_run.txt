@@ -1,0 +1,56 @@
+TERMINUS_STRATA_PW verifier
+==================================================================
+--- running scripts/t2_orbit_strata.py ---
+CHECK scripts/t2_orbit_strata.py -> T2_ORBIT_STRATA_OK: PASS
+CHECK scripts/t2_orbit_strata.py reports no internal FAIL: PASS
+--- running scripts/t3_localmodels.py ---
+CHECK scripts/t3_localmodels.py -> T3_LOCAL_MODELS_OK: PASS
+CHECK scripts/t3_localmodels.py reports no internal FAIL: PASS
+--- running scripts/t4_poset.py ---
+CHECK scripts/t4_poset.py -> T4_POSET_OK: PASS
+CHECK scripts/t4_poset.py reports no internal FAIL: PASS
+--- running scripts/t5_zplus.py ---
+CHECK scripts/t5_zplus.py -> T5_ZPLUS_OK: PASS
+CHECK scripts/t5_zplus.py reports no internal FAIL: PASS
+==================================================================
+--- independent replay at p = 331 ---
+  rows verified: 80; explicit points sampled: 79; rows where a sampled point had stabilizer EXACTLY K: 79
+CHECK p=331: every row's orbit size = 660/|Stab_G(F)|: PASS
+CHECK p=331: every row's setwise stabilizer contains and normalises K, and |W(K,F)| = |Stab_G(F)|/|K|: PASS
+CHECK p=331: dim F = #(K-trivial tangent weights) for every row: PASS
+CHECK p=331: an explicit sampled point with stabilizer EXACTLY K exists on every non-empty-chain row: PASS
+  |components of Z^C2| = 239
+  |components of Z^C3| = 80
+  |components of Z^V4| = 54
+  |components of Z^C5| = 20
+  |components of Z^C6| = 38
+  |components of Z^C11| = 20
+CHECK p=331: Fix(C2) contains exactly 110 divisorial components (E_sigma + E'_sigma): PASS
+CHECK p=331: 1215 boundary divisors in 14 G-orbits: PASS
+CHECK p=331: 940 points + 220 lines + 55 planes in the arrangement: PASS
+CHECK p=331: exact point stabilizers on Z are exactly {1,C2,C3,V4,C5,C6,C11}: PASS
+CHECK p=331: G has 16 conjugacy classes of subgroups: PASS
+CHECK p=331: the 9 non-occurring classes are certified empty: PASS
+CHECK p=331: the level-0 orbit-type census reproduces certificates/STRATA_EXACT.md: PASS
+--- independent replay at p = 661 ---
+  rows verified: 80; explicit points sampled: 79; rows where a sampled point had stabilizer EXACTLY K: 79
+CHECK p=661: every row's orbit size = 660/|Stab_G(F)|: PASS
+CHECK p=661: every row's setwise stabilizer contains and normalises K, and |W(K,F)| = |Stab_G(F)|/|K|: PASS
+CHECK p=661: dim F = #(K-trivial tangent weights) for every row: PASS
+CHECK p=661: an explicit sampled point with stabilizer EXACTLY K exists on every non-empty-chain row: PASS
+  |components of Z^C2| = 239
+  |components of Z^C3| = 80
+  |components of Z^V4| = 54
+  |components of Z^C5| = 20
+  |components of Z^C6| = 38
+  |components of Z^C11| = 20
+CHECK p=661: Fix(C2) contains exactly 110 divisorial components (E_sigma + E'_sigma): PASS
+CHECK p=661: 1215 boundary divisors in 14 G-orbits: PASS
+CHECK p=661: 940 points + 220 lines + 55 planes in the arrangement: PASS
+CHECK p=661: exact point stabilizers on Z are exactly {1,C2,C3,V4,C5,C6,C11}: PASS
+CHECK p=661: G has 16 conjugacy classes of subgroups: PASS
+CHECK p=661: the 9 non-occurring classes are certified empty: PASS
+CHECK p=661: the level-0 orbit-type census reproduces certificates/STRATA_EXACT.md: PASS
+==================================================================
+TERMINUS_STRATA_PW_VERIFY_OK
+ALLGREEN

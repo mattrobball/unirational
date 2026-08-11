@@ -1,0 +1,198 @@
+=========================  p = 331  =========================
+
+=== (1) THE BOUNDARY DIVISORS OF Z (re-derived from the arrangement) ===
+  T0  D_pt_C11         centre dim 0  count   60  H_C = C11   Stab_G = C11
+  T0  D_pt_D10         centre dim 0  count   66  H_C = D10   Stab_G = D10
+  T0  D_pt_A4(a)       centre dim 0  count   55  H_C = A4    Stab_G = A4
+  T0  D_pt_A4(b)       centre dim 0  count   55  H_C = A4    Stab_G = A4
+  T0  D_pt_V4I         centre dim 0  count  165  H_C = V4    Stab_G = V4
+  T0  D_pt_C5(a)       centre dim 0  count  132  H_C = C5    Stab_G = C5
+  T0  D_pt_C6(a)       centre dim 0  count  110  H_C = C6    Stab_G = C6
+  T0  D_pt_C5(b)       centre dim 0  count  132  H_C = C5    Stab_G = C5
+  T0  D_pt_D12         centre dim 0  count   55  H_C = D12   Stab_G = D12
+  T0  D_pt_C6(b)       centre dim 0  count  110  H_C = C6    Stab_G = C6
+  T1  D_C3line         centre dim 1  count  110  H_C = C3    Stab_G = C6
+  T1  D_Lminus_sigma   centre dim 1  count   55  H_C = C2    Stab_G = D12
+  T1  D_ell_V          centre dim 1  count   55  H_C = V4    Stab_G = A4
+  T2  D_P_sigma        centre dim 2  count   55  H_C = C2    Stab_G = D12
+  total 1215 boundary divisors in 14 G-orbits
+  CHECK 1215 in 14 orbits (STANDARD_FORM_PW §5(a)): PASS
+
+=== (2) POINT TYPES OF THE TERMINUS = the terminal local models ===
+  point types with NONABELIAN exact stabilizer: 0  (def:toroidal(c) forbids them)
+  (the single interior point type -- trivial stabilizer, 0 boundary
+   branches -- is excluded, matching the automaton's boundary census)
+  K       #local models   STANDARD_FORM_PW
+  1                   2                  2   PASS
+  C2                  7                  7   PASS
+  C3                  9                  9   PASS
+  V4                  3                  3   PASS
+  C5                  1                  1   PASS
+  C6                 16                 16   PASS
+  C11                 4                  4   PASS
+  TOTAL 42 distinct terminal local models (STANDARD_FORM_PW: 42): PASS
+  boundary-branch multiplicities |I(x)| over all point types: {0: 1, 1: 53, 2: 71, 3: 15}
+  CHECK |I(x)| <= 3 everywhere: PASS
+  CHECK every point type is TOROIDAL (defect = 1): PASS
+
+=== (3) CROSSING COMBINATORICS ===
+  (a) generic pointwise stabilizer of each crossing COMPONENT
+      |I| = 2  pt_D10<P_sigma                     x330    generic stabilizer C2
+      |I| = 2  pt_A4(a)<C3line                    x220    generic stabilizer 1
+      |I| = 2  pt_A4(a)<ell_V                     x55     generic stabilizer 1
+      |I| = 2  pt_A4(a)<P_sigma                   x165    generic stabilizer C2
+      |I| = 2  pt_A4(b)<C3line                    x220    generic stabilizer 1
+      |I| = 2  pt_A4(b)<ell_V                     x55     generic stabilizer 1
+      |I| = 2  pt_A4(b)<P_sigma                   x165    generic stabilizer C2
+      |I| = 2  pt_V4I<Lminus_sigma                x165    generic stabilizer C2
+      |I| = 2  pt_V4I<Lminus_sigma                x165    generic stabilizer C2
+      |I| = 2  pt_V4I<P_sigma                     x165    generic stabilizer C2
+      |I| = 2  pt_C6(a)<C3line                    x110    generic stabilizer 1
+      |I| = 2  pt_C6(a)<P_sigma                   x110    generic stabilizer C2
+      |I| = 2  pt_D12<ell_V                       x165    generic stabilizer 1
+      |I| = 2  pt_D12<P_sigma                     x165    generic stabilizer C2
+      |I| = 2  pt_D12<P_sigma                     x55     generic stabilizer C2
+      |I| = 2  pt_D12<P_sigma                     x165    generic stabilizer C2
+      |I| = 2  pt_C6(b)<C3line                    x110    generic stabilizer 1
+      |I| = 2  pt_C6(b)<Lminus_sigma              x110    generic stabilizer C2
+      |I| = 2  ell_V<P_sigma                      x165    generic stabilizer C2
+      |I| = 3  pt_A4(a)<ell_V<P_sigma             x165    generic stabilizer C2
+      |I| = 3  pt_A4(b)<ell_V<P_sigma             x165    generic stabilizer C2
+      |I| = 3  pt_D12<ell_V<P_sigma               x165    generic stabilizer C2
+      |I| = 3  pt_D12<ell_V<P_sigma               x165    generic stabilizer C2
+      |I| = 3  pt_D12<ell_V<P_sigma               x165    generic stabilizer C2
+    |I| = 1: generic stabilizers occurring: ['1', 'C2']
+    |I| = 2: generic stabilizers occurring: ['1', 'C2']
+    |I| = 3: generic stabilizers occurring: ['C2']
+    (STANDARD_FORM_PW §5(c): |I|=2 -> 1 or C2, |I|=3 -> C2)
+    CHECK agrees with STANDARD_FORM_PW §5(c): PASS
+  (b) ALL pointwise stabilizers occurring at SOME point of a crossing
+      |I| = 2: ['1', 'C2', 'C3', 'C6', 'V4']
+      |I| = 3: ['C2', 'V4']
+  CHECK the only NON-CYCLIC stabilizer at a crossing of Z is V4: PASS
+  fabulous corners on Z (V4-fixed codim-2 crossings): 0
+  CHECK none (STANDARD_FORM_PW SOURCE-NO-FABULOUS-CORNER-AT-MINIMAL-TERMINUS): PASS
+
+=== (4) 'COMPONENTS CREATED INSIDE EACH EXCEPTIONAL DIVISOR' ===
+    (STANDARD_FORM_PW §5(d): the strata created over the GENERIC point
+     of each centre, i.e. the rows with a length-1 chain and A_0 = the
+     whole centre.  Recomputed here as full G-orbits.)
+  K    THIS PACKET (exact G-orbits)              STANDARD_FORM_PW §5(d)
+  C2   {1: 1320, 2: 605, 3: 110}                 {1: 1155, 2: 440, 3: 110}    <<< DIFFERS
+  C3   {0: 440, 1: 880, 2: 110}                  {0: 440, 1: 880, 2: 110}    agree
+  V4   {0: 1155, 1: 330}                         {0: 660, 1: 330}    <<< DIFFERS
+  C5   {0: 1320}                                 {0: 396}    <<< DIFFERS
+  C6   {0: 1100}                                 {0: 330}    <<< DIFFERS
+  C11  {0: 240}                                  {0: 60}    <<< DIFFERS
+
+  ** CORRECTION TO STANDARD_FORM_PW §5(d) **
+  The dimension PROFILES (which dimensions occur for each class) agree
+  exactly.  The COUNTS differ: s5_terminus.py de-duplicates its rows on
+  the signature (stabilizer name, dim, normal rank, orbit size), which
+  merges genuinely distinct G-orbits sharing that signature.  Its
+  numbers are therefore LOWER BOUNDS.  Corrected values above.
+    C2: {1: 1155, 2: 440, 3: 110}  ->  {1: 1320, 2: 605, 3: 110}
+    V4: {0: 660, 1: 330}  ->  {0: 1155, 1: 330}
+    C5: {0: 396}  ->  {0: 1320}
+    C6: {0: 330}  ->  {0: 1100}
+    C11: {0: 60}  ->  {0: 240}
+
+=========================  p = 661  =========================
+
+=== (1) THE BOUNDARY DIVISORS OF Z (re-derived from the arrangement) ===
+  T0  D_pt_C11         centre dim 0  count   60  H_C = C11   Stab_G = C11
+  T0  D_pt_D10         centre dim 0  count   66  H_C = D10   Stab_G = D10
+  T0  D_pt_C5(a)       centre dim 0  count  132  H_C = C5    Stab_G = C5
+  T0  D_pt_C6(a)       centre dim 0  count  110  H_C = C6    Stab_G = C6
+  T0  D_pt_V4I         centre dim 0  count  165  H_C = V4    Stab_G = V4
+  T0  D_pt_C6(b)       centre dim 0  count  110  H_C = C6    Stab_G = C6
+  T0  D_pt_A4(a)       centre dim 0  count   55  H_C = A4    Stab_G = A4
+  T0  D_pt_C5(b)       centre dim 0  count  132  H_C = C5    Stab_G = C5
+  T0  D_pt_A4(b)       centre dim 0  count   55  H_C = A4    Stab_G = A4
+  T0  D_pt_D12         centre dim 0  count   55  H_C = D12   Stab_G = D12
+  T1  D_C3line         centre dim 1  count  110  H_C = C3    Stab_G = C6
+  T1  D_Lminus_sigma   centre dim 1  count   55  H_C = C2    Stab_G = D12
+  T1  D_ell_V          centre dim 1  count   55  H_C = V4    Stab_G = A4
+  T2  D_P_sigma        centre dim 2  count   55  H_C = C2    Stab_G = D12
+  total 1215 boundary divisors in 14 G-orbits
+  CHECK 1215 in 14 orbits (STANDARD_FORM_PW §5(a)): PASS
+
+=== (2) POINT TYPES OF THE TERMINUS = the terminal local models ===
+  point types with NONABELIAN exact stabilizer: 0  (def:toroidal(c) forbids them)
+  (the single interior point type -- trivial stabilizer, 0 boundary
+   branches -- is excluded, matching the automaton's boundary census)
+  K       #local models   STANDARD_FORM_PW
+  1                   2                  2   PASS
+  C2                  7                  7   PASS
+  C3                  9                  9   PASS
+  V4                  3                  3   PASS
+  C5                  1                  1   PASS
+  C6                 16                 16   PASS
+  C11                 4                  4   PASS
+  TOTAL 42 distinct terminal local models (STANDARD_FORM_PW: 42): PASS
+  boundary-branch multiplicities |I(x)| over all point types: {0: 1, 1: 53, 2: 71, 3: 15}
+  CHECK |I(x)| <= 3 everywhere: PASS
+  CHECK every point type is TOROIDAL (defect = 1): PASS
+
+=== (3) CROSSING COMBINATORICS ===
+  (a) generic pointwise stabilizer of each crossing COMPONENT
+      |I| = 2  pt_D10<P_sigma                     x330    generic stabilizer C2
+      |I| = 2  pt_C6(a)<C3line                    x110    generic stabilizer 1
+      |I| = 2  pt_C6(a)<P_sigma                   x110    generic stabilizer C2
+      |I| = 2  pt_V4I<Lminus_sigma                x165    generic stabilizer C2
+      |I| = 2  pt_V4I<Lminus_sigma                x165    generic stabilizer C2
+      |I| = 2  pt_V4I<P_sigma                     x165    generic stabilizer C2
+      |I| = 2  pt_C6(b)<C3line                    x110    generic stabilizer 1
+      |I| = 2  pt_C6(b)<Lminus_sigma              x110    generic stabilizer C2
+      |I| = 2  pt_A4(a)<C3line                    x220    generic stabilizer 1
+      |I| = 2  pt_A4(a)<ell_V                     x55     generic stabilizer 1
+      |I| = 2  pt_A4(a)<P_sigma                   x165    generic stabilizer C2
+      |I| = 2  pt_A4(b)<ell_V                     x55     generic stabilizer 1
+      |I| = 2  pt_A4(b)<C3line                    x220    generic stabilizer 1
+      |I| = 2  pt_A4(b)<P_sigma                   x165    generic stabilizer C2
+      |I| = 2  pt_D12<ell_V                       x165    generic stabilizer 1
+      |I| = 2  pt_D12<P_sigma                     x165    generic stabilizer C2
+      |I| = 2  pt_D12<P_sigma                     x165    generic stabilizer C2
+      |I| = 2  pt_D12<P_sigma                     x55     generic stabilizer C2
+      |I| = 2  ell_V<P_sigma                      x165    generic stabilizer C2
+      |I| = 3  pt_A4(a)<ell_V<P_sigma             x165    generic stabilizer C2
+      |I| = 3  pt_A4(b)<ell_V<P_sigma             x165    generic stabilizer C2
+      |I| = 3  pt_D12<ell_V<P_sigma               x165    generic stabilizer C2
+      |I| = 3  pt_D12<ell_V<P_sigma               x165    generic stabilizer C2
+      |I| = 3  pt_D12<ell_V<P_sigma               x165    generic stabilizer C2
+    |I| = 1: generic stabilizers occurring: ['1', 'C2']
+    |I| = 2: generic stabilizers occurring: ['1', 'C2']
+    |I| = 3: generic stabilizers occurring: ['C2']
+    (STANDARD_FORM_PW §5(c): |I|=2 -> 1 or C2, |I|=3 -> C2)
+    CHECK agrees with STANDARD_FORM_PW §5(c): PASS
+  (b) ALL pointwise stabilizers occurring at SOME point of a crossing
+      |I| = 2: ['1', 'C2', 'C3', 'C6', 'V4']
+      |I| = 3: ['C2', 'V4']
+  CHECK the only NON-CYCLIC stabilizer at a crossing of Z is V4: PASS
+  fabulous corners on Z (V4-fixed codim-2 crossings): 0
+  CHECK none (STANDARD_FORM_PW SOURCE-NO-FABULOUS-CORNER-AT-MINIMAL-TERMINUS): PASS
+
+=== (4) 'COMPONENTS CREATED INSIDE EACH EXCEPTIONAL DIVISOR' ===
+    (STANDARD_FORM_PW §5(d): the strata created over the GENERIC point
+     of each centre, i.e. the rows with a length-1 chain and A_0 = the
+     whole centre.  Recomputed here as full G-orbits.)
+  K    THIS PACKET (exact G-orbits)              STANDARD_FORM_PW §5(d)
+  C2   {1: 1320, 2: 605, 3: 110}                 {1: 1155, 2: 440, 3: 110}    <<< DIFFERS
+  C3   {0: 440, 1: 880, 2: 110}                  {0: 440, 1: 880, 2: 110}    agree
+  V4   {0: 1155, 1: 330}                         {0: 660, 1: 330}    <<< DIFFERS
+  C5   {0: 1320}                                 {0: 396}    <<< DIFFERS
+  C6   {0: 1100}                                 {0: 330}    <<< DIFFERS
+  C11  {0: 240}                                  {0: 60}    <<< DIFFERS
+
+  ** CORRECTION TO STANDARD_FORM_PW §5(d) **
+  The dimension PROFILES (which dimensions occur for each class) agree
+  exactly.  The COUNTS differ: s5_terminus.py de-duplicates its rows on
+  the signature (stabilizer name, dim, normal rank, orbit size), which
+  merges genuinely distinct G-orbits sharing that signature.  Its
+  numbers are therefore LOWER BOUNDS.  Corrected values above.
+    C2: {1: 1155, 2: 440, 3: 110}  ->  {1: 1320, 2: 605, 3: 110}
+    V4: {0: 660, 1: 330}  ->  {0: 1155, 1: 330}
+    C5: {0: 396}  ->  {0: 1320}
+    C6: {0: 330}  ->  {0: 1100}
+    C11: {0: 60}  ->  {0: 240}
+

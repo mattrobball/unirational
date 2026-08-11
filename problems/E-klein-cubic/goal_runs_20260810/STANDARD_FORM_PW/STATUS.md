@@ -91,7 +91,11 @@ over `QQ`. Results are `.txt`/`.json` only.
 3. **Component counts in table (d)** are counted **at the moment of creation**
    inside each exceptional divisor. No component is destroyed later (no created
    locus is itself a later centre), but components created at T0 can be met by
-   the T1/T2 centres.
+   the T1/T2 centres. **CORRECTED 2026-08-11** (`TERMINUS_STRATA_PW` §7,
+   confirmed at adjudication of PR #31): those counts are **lower bounds** —
+   `s5_terminus.py` de-duplicates rows on a signature that merges distinct
+   `G`-orbits. Exact values are in THEOREM.md §5(d). The dimension **profiles**
+   and every exit string of this packet are unaffected.
 4. The `X`-related annotations (which strata lie on the Klein cubic) are carried
    from `STRATA_EXACT.md` and re-verified only by the `F ≡ 0` test mod `p`.
 
