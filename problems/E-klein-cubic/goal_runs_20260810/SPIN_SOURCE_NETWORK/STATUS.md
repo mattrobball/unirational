@@ -1,11 +1,17 @@
 # Spin-source fixed network — status
 
-**Date:** 2026-08-10.
+**Date:** 2026-08-10; campaign layer 2026-08-11.
 **Problem:** E (Klein cubic / `V14` twin) — the spin flank of [IX §6], plus
 the general engine and one new example.
-**Headline:** Problem E remains **OPEN**. The spin flank is not closed; it is
-computed exactly, given two new unconditional theorems, and reduced to one
-boxed lemma with two concrete routes past it.
+**Headline:** Problem E remains **OPEN**. The fixed-point flank is exhausted
+(`SPIN-LINKING-LEMMA-FALSE`, `D10-FIXED-POINT-ROUTE-DEAD`), and as of
+2026-08-11 the non-fixed-point flank — the ported Hodge-support census — is
+**closed as METHOD-INSUFFICIENT**: every one of its five boxed cells carries
+an explicit witness, so no obstruction of that shape exists
+(`TOTAL_DEGENERATION.md` Thms W1, W2). What remains open is the boxed
+`SPIN-CHAIN-OBSTRUCTION-UNDECIDED` and the three residuals of
+`TOTAL_DEGENERATION.md` §6, all of which are statements about the map `phi`
+rather than about the support decomposition of `Rp_*IC_Y`.
 
 ## Exit ledger
 

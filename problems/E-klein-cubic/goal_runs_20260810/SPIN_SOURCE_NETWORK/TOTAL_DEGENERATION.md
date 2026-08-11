@@ -158,10 +158,13 @@ degeneration rather than hostile to it.
 > In particular on `P(U) = P^5` the base locus has a component of dimension
 > at least one: `Bs(phi)` is **never** a finite set of points.
 
-*Proof.*  `p : Y -> P(V)` is proper birational, `Y` is normal and `P(V)` is
-smooth, so by purity of the exceptional locus (van der Waerden) every
-irreducible component `E_i` of `Exc(p)` has codimension one in `Y`, i.e.
-`dim E_i = n-2`.  By C5 every fibre of `p` has dimension at most `3`.  Hence
+*Proof.*  `Exc(p)` is nonempty: `Bs(phi) != empty` by Theorem K4 (the 352
+incidence points), and `p` is an isomorphism exactly over the complement of
+`Bs(phi)`.  `p : Y -> P(V)` is proper birational, `Y` is normal and `P(V)` is
+smooth (hence locally factorial), so by purity of the exceptional locus
+(van der Waerden) every irreducible component `E_i` of `Exc(p)` has
+codimension one in `Y`, i.e. `dim E_i = n-2`.  By C5 every fibre of `p` has
+dimension at most `3`, since `p^{-1}(x) -> V14` is finite.  Hence
 `dim p(E_i) >= (n-2)-3 = n-5`, and `p(Exc(p)) subset Bs(phi)`.  `QED`
 
 (Consistency: Theorem S3(1) gives `dim Bs(phi) <= n-3`, and `n-5 <= n-3`.
