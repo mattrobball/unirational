@@ -182,9 +182,12 @@ Results (`I(d)` = invariant multiplicity in `Sym^d W`):
 - Incidental anchors: `A(35) = 637 = dim M_35` before the sealed cuts;
   `A(34) = 576` matches the `D34_GUIDED_SWEEP` cascade start.
 
-A second, independently-written probe (subagent, same anchors) is expected
-to land as `molien_probe.py` in the same directory; on arrival it
-cross-checks this one.
+Cross-checked: a second, independently-written probe
+(`molien_probe.py`, generating-function method with exact sympy arithmetic
+plus an mpmath recomputation, structurally different from the Newton
+recurrence of `molien_director.py`) agrees on all 123 values `I/A/J`,
+`d = 0..40`, with the same 11 anchors passing. `E ∩ [1,40] = {3} ∪ [5,40]`
+is two-method confirmed.
 
 ## 8. Obligations
 
