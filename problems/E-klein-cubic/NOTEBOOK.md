@@ -8563,6 +8563,9 @@ psi model shown to be a relaxation (can only over-count, cannot make a zero);
 independent of the artifact. Director adjudication: bug citations verified
 against the sources; verifier replayed (52 checks, `ALLGREEN`, `p = 331, 661`).
 
+Director handoff for the next session: `HANDOFF_2026-08-11.md` (campaign
+state, today's corrections, queued work in order, protocol notes).
+
 Exits: `ODDZERO-AUDIT-VERDICT-ARTIFACT`, `ODDZERO-AUDIT-MECHANISM-REPRODUCED`,
 `ODDZERO-AUDIT-DEGENERACY-SEMANTICS-ERROR`, `ODDZERO-AUDIT-ESCAPE-WITNESS`,
 `ODDZERO-AUDIT-PSI-MODEL-SOUND`, `ODDZERO-AUDIT-ANCHORS-REPRODUCED`,
