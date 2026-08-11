@@ -134,6 +134,15 @@ Bold rows are the even degrees `k = 2d-4`, the only ones a forced foliation can
 occupy: `2d-4` is always even, so **the forced foliation always has even
 degree**, and half the table is inaccessible to it.
 
+*Convention is not load-bearing.* `W` and `W^v` are the two distinct
+five-dimensional irreducibles of `PSL(2,11)` and are complex conjugates, so it
+is worth saying explicitly that the table does not depend on which is called
+which: swapping them replaces every entry by its complex conjugate, and the
+entries are integers. Concretely, the model has `tau : x_i |-> z^{(-2)^i} x_i`
+acting on the *coordinates*, so the coordinate span carries the quadratic-residue
+exponents; the computation uses that assignment, and the transposed one gives
+the same table.
+
 Consistency notes. `I(3) = 1` is the Klein cubic. `C(1) = 1` is the tautological
 covariant `x`. `I(5) = 1`, `I(6) = 2`, `I(7) = 1` are consistent with the frame
 `(x, C, D, E, K_7)` named in the sealed all-degree packet
@@ -158,11 +167,21 @@ The reason to open this lane at all is the left-hand end of the table.
 
 **(F1) `d = 4`: `dim FOL_lin(4) = 1`.** If a landing tuple of degree `4` exists,
 its forced foliation is, up to scalar, the **unique** divergence-free covariant
-of degree four. That object can be written down explicitly and interrogated
-directly: does the rank-one foliation it defines have a `G`-equivariant
-dominant first-integral map to `X`? This is a finite, small question about one
-named vector field, not a search. Status: the explicit `D_4` is being computed
-(`verify_low_degree_covariants.py`); nothing is claimed about the answer.
+of degree four — call it `D_4`. That object can be written down explicitly and
+interrogated directly: does the rank-one foliation it defines have a
+`G`-equivariant dominant first-integral map to `X`? This is a finite, small
+question about one named vector field, not a search.
+
+Writing `D_4` down requires explicit exact generators of the five-dimensional
+representation. The repository has them
+(`goal_runs_after_35fa/Q_SCHUR_INDEX_ONE/exact_schur_frame/exact_representation_core.py`
+and its neighbours, over `Q(zeta_11)`); with those, `Cov_4` is the joint kernel
+of `rho_4(g) - Id` over a generating set — a two-dimensional exact linear-algebra
+problem — and `D_4` is its intersection with `ker(div)`, one further linear
+condition. `F·x` is the other basis vector, with `div(F x) = 8F != 0`, so the
+splitting is clean. **Not done in this packet**; scoped here so the next run
+starts from the right two-dimensional problem rather than from the character
+table.
 
 **(F2) `d = 5`: `dim FOL_lin(6) = 1`.** Same, one degree up.
 
