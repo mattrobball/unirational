@@ -1,0 +1,8 @@
+# NOTEBOOK.md is generated from notebook_build/{sections,entries}/ and is never
+# merged textually: the driver discards both sides and regenerates it from the
+# merged sources. notebook_build/parent_head resolves to the merge's HEAD.
+# Install the driver in your clone with notebook_build/setup_merge_driver.sh
+# (reconcile.py does it for you). Without it the merge just conflicts and
+# `reconcile.py --resolve-merge` fixes it in one command.
+NOTEBOOK.md merge=notebook
+notebook_build/parent_head merge=notebook

@@ -1,0 +1,37 @@
+## Nomenclature glossary
+
+The repo's historical documents use bare letters that collide. This table is
+the disambiguation authority; the canonical citation form is the E-number
+(optionally with a run directory). **Binding rule 6 below forbids new bare
+tokens.**
+
+| Token | Distinct referents |
+|---|---|
+| `F` | [E13](#e13) Path F fixed-frame genus-one torsor; [E14](#e14) Problem-F technique import / F-engine; [E15](#e15) Fable trisection; Problem F itself (the solved dP example, external to E); `F_{14,T}` the twisted Fano ([E07](#e07)/[E26](#e26)); `f3,f5,f6,f8,f11` the primary invariants; `F` the Klein form. Ledger rows saying "F terminal" are ambiguous (conflict 4). |
+| `dP` / del Pezzo | Problem F's dP (the solved obstruction example, T3); [E24](#e24)'s degree-3 dP *fibration* (Sarkisov target, T5); [E52](#e52) DP-REPLAY (equivalent-object proposal, T3); the OD16 Fermat *quartic* dP2 (session-only claim, unverified). |
+| Fermat cubic | The `C9⋊C3` non-unirationality of the Fermat cubic *threefold* — an example **outside Problem E**, since 2026-08-04 a machine-verified corollary of the central obstruction (`FIX-T34`, [E56](#e56)) holding for 2 of the 3 conjugacy classes of `C₉⋊C₃`-actions (the naive generator class T4-C03 fails hypothesis (b): `X^G` = 3 points there). Reconciliation with Correction IX-a: CTZ's open exception "C₉⋊C₃ on the Fermat" is the class our obstruction provably cannot touch (T4-C03); the FIX-T34 closures of the other two classes do NOT settle it. Not the Klein cubic. |
+| `G4` | Path G4/G4.1 symbolic free-fibre recurrence ([E16](#e16)); the A5 index-11 transfer run `G4_A5_INDEX11_TRANSFER` + `G4A` projectors (grouped under [E04](#e04)). Conflict 6. |
+| `G7` | Path-G degree-7 exit label `G7-OBSTRUCTION` ([E16](#e16); the REPAIR sample-residual downgrade is documented only for G13/G19); the double-A5 biplane program `G7A/B/C` ([E17](#e17)), whose `G7B` induced-cycle claim was refuted and quarantined. Conflict 7. |
+| `V2` | The "V2 Track" work-order wave labels (process; surfaces in [E07](#e07), [E25](#e25), [E32](#e32); collision explained at [E33](#e33), conflict 8); the exit `V2-FIXED-FRAME-PLACE-NONTRANSFERABLE` ([E33](#e33)). Conflict 8. |
+| `H` | Goal H subgroup-twist sweep with runs `H1/H2/H3` ([E11](#e11) — `H1` there is the two-A5-classes run, distinct from `WP-H1`); the `H5/H6/H6A/H11:5` trace-cubic program ([E18](#e18)); the Elo wave's "Path H" = **KLS** minimality-conductor, exits `N-H`/`H-UNIQUE`/`H-COUNTERMODEL` ([E22](#e22)); `WP-H1` Hodge screen ([E34](#e34)/[E19](#e19)); `H_6 = V(f_6)` the invariant sextic ([E35](#e35)); `H_q` the canonical polar ([E17](#e17)); `H = V(...)` the fold hypersurface with `B = V(H)` ([E32](#e32)); `H ≤ G` subgroups generically. Conflict 9. |
+| `L1` | The full-polar-range recursion ([E23](#e23)); the "ambient self-map rigidity" route coined by one offline session and never materialized (alias only, conflict 14). |
+| `A1` | Path A Gate A1 ([E01](#e01)); Audit A1 = `certificates/audit_a1`, commit `78abba4` ([E03](#e03)). |
+| `B` | Task B fixed-frame exhaustiveness bridge ([E06](#e06)); Path B "upstairs simple fold" precursor wave ([E32](#e32) provenance); `B = V(H)` the fold hypersurface ([E32](#e32)); `b` in the KLS divisibility `rad(h) | b` ([E22](#e22)). |
+| `C` | Route C quaternion/Hermitian Fano stages `C0–C3` ([E07](#e07)); `C5/C6` Palatini common-line ([E08](#e08)); `C` the Klein cubic in reduction quotes ([E37](#e37)); `C_gen` the generic twist; `C_{012}` the center cubic ([E24](#e24)); the xCD plane cubic ([E35](#e35)). |
+| `D` | Goal D equivariant motive / `D2` stack invariant ([E10](#e10)); the `D5` residue gate ([E06](#e06)); `D`/`D_proj` the quaternion algebra ([E26](#e26)); `D10/D12` dihedral stabilizers (arrangement geometry); ELO "Path D" = Hodge ([E19](#e19)). |
+| `T` | The T-track fold program `T/T2/T2R/T3/T6/T8–T11` ([E32](#e32)); `T_m` the irrelevant-torsion module ([E16](#e16)/[E09](#e09)); `X_T` the twist parameter ([E16](#e16)); `𝒯_X` the proposed transition cosheaf (session-only, [E34](#e34)). |
+| `R` | R rational-curves route ([E28](#e28)); `R0` canonical refresh ([E29](#e29)); `R = X∩P(T)` the Fable base orbit ([E15](#e15)); `R1–R32`/`RES-01–28` lens-local labels (exist only in `notebook_build/`, never in repo documents). |
+| `Q` | Q descent-obstruction route ([E27](#e27)); `Q_q` the canonical polar quadric ([E17](#e17)); `Q=0` the Fable section constraint ([E15](#e15)); `Q3` the resolvent successor ([E27](#e27)). |
+| `V` | The valuation/residue program `V/V2/V3/V4` ([E33](#e33)); `V₄` the Klein four-group (group theory, everywhere); `V(Φ)` the universal cubic ([E16](#e16)); `V_6` the Schur representation ([E26](#e26)/[E31](#e31)); `V_Z` the Path A interface object ([E01](#e01)). |
+| `M` | M/M3 Sarkisov section program ([E24](#e24)); `M̄` the G3H frame matrix ([E17](#e17)); `m` the plane-order parameter ([E09](#e09)/[E25](#e25)); `M_d` the covariant module ([E16](#e16)). |
+| `Attempt1–5` | The 2026-07-30 dispatch wave ([E05](#e05)): Attempt1 = Pfaffian idempotent (→ [E26](#e26)), Attempt2 = fold/T (→ [E32](#e32)), Attempt3 = S19 (→ [E30](#e30)), Attempt4 = KLS (→ [E22](#e22)), Attempt5 = Path G (→ [E16](#e16)). |
+| type-I / type-II | The two `V4`-point patterns in the arrangement, precisely defined since the FIX-A1 adjudication ([E34](#e34), [E56](#e56)): **type-I** = the 165 triangle vertices (one plane cubic ∩ two minus-lines; 3 per `E_σ`, 6 per `L_σ`); **type-II** = the 3-per-V4 points of `X ∩ ℓ_V` (three plane cubics ∩ the V4-fixed line, `ℓ_V ⊄ X`; none on any minus-line). Pre-adjudication uses of these terms in strata documents are unreliable without this row. |
+| `A0` | Path A Gate A0 (route intro/objective, [E01](#e01)); `A0-CANONICAL-AUDIT-PASS` canonical audit / CAS baseline ([E02](#e02)). |
+| `C2` | Route C Fano stage C2 (rank-one/Plücker, two-generator descent, [E07](#e07)); the cyclic-order-2 stabilizer stratum `C2` in the WP-strata classification ([E34](#e34)). |
+| `J` | Elo Path J — unexecuted candidate-invariant survey (exits `N-J`/`J-CANDIDATE`/`J-STOP`, "theory watch", [E21](#e21)); Goal J / `J_BASELOCUS_PRYM` — executed fixed-centre Albanese–Prym obstruction (exit `J2-UNRESTRICTED-COUNTERMODEL-EXTENDS`, [E21](#e21)). Two distinct programs sharing a letter — see E21 and conflict 11. |
+| `N1` | Attempt-1 scoped negative exit `N1-SCOPED` ([E05](#e05)/[E26](#e26)); WP5 transition-diagram exit `N1` ([E34](#e34)). |
+| `N3` | Attempt-3 exit `N3`/`N3-SCOPED` ([E05](#e05)/[E30](#e30)); WP5 transition-diagram exit `N3` ([E34](#e34)). |
+| `P1` | Attempt-1 positive exit `P1`/`P1-CONDITIONAL` ([E05](#e05)/[E26](#e26)); the projective line `P¹` (pervasive notation, e.g. [E06](#e06)/[E32](#e32)). |
+| `P4` | Attempt-4 structural exit `P4-STRUCTURE` ([E05](#e05)/[E22](#e22)); the ambient `P(W)=P⁴` (pervasive notation). |
+| `P5` | Attempt-5 exit `P5`/`P5-FORMAL` ([E05](#e05)/[E16](#e16)); the interface space `P⁵(F)` in the B fixed-frame conic construction ([E06](#e06)); a locally-scoped "P5 family" in the KLS/L1 polar-range narrative ([E22](#e22)/[E23](#e23)). |
+| `BR-*` | Headline-bridge decision-exit family (`WORKORDER_CAS_HEADLINE.md` final table): `BR-T-NEG` ([E32](#e32)); `BR-G-NEG` ([E16](#e16)); `BR-COV-POS` ([E16](#e16)/[E25](#e25)/[E09](#e09)); `BR-FANO-POS` ([E07](#e07)/[E08](#e08)); `BR-SCHUR19-POS` ([E30](#e30)); `BR-SUBGROUP-NEG` ([E11](#e11)/[E18](#e18)). Individually unambiguous; defined once and cited elsewhere as settled vocabulary. |
