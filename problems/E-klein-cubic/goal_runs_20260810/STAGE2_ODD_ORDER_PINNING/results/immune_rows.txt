@@ -1,0 +1,28 @@
+THE 22 COHERENCE-IMMUNE ROWS, PINNED
+Stage-1 free count: 6^8 * 4^10 * 5^4 = 1100753141760000
+
+row                                n    base   chain    #val(Stage1)
+C11/pt_C11 c=3                     11   9      (3,)     5     
+C11/pt_C11 c=5                     11   9      (5,)     5     
+C11/pt_C11 c=6                     11   9      (6,)     5     
+C11/pt_C11 c=7                     11   9      (7,)     5     
+C5/pt_C5(a) c=1                    5    1      (1,)     4     
+C5/pt_C5(a) c=2                    5    1      (2,)     4     
+C5/pt_C5(a) c=3                    5    1      (3,)     4     
+C5/pt_C5(a) c=4                    5    1      (4,)     4     
+C5/pt_C5(b) c=1                    5    2      (1,)     4     
+C5/pt_C5(b) c=2                    5    2      (2,)     4     
+C5/pt_C5(b) c=3                    5    2      (3,)     4     
+C5/pt_C5(b) c=4                    5    2      (4,)     4     
+C5/pt_D10 c=1                      5    0      (1,)     4     
+C5/pt_D10 c=2                      5    0      (2,)     4     
+C3/pt_A4(a) dim1 c=1               3    1      (1,)     6     
+C3/pt_A4(a) dim0 c=2               3    1      (2,)     6     
+C3/pt_A4(a)<ell_V c=(1,1)          3    1      (1, 1)   6     
+C3/pt_A4(a)<ell_V c=(1,2)          3    1      (1, 2)   6     
+C3/pt_A4(b) dim1 c=2               3    2      (2,)     6     
+C3/pt_A4(b) dim0 c=1               3    2      (1,)     6     
+C3/pt_A4(b)<ell_V c=(2,2)          3    2      (2, 2)   6     
+C3/pt_A4(b)<ell_V c=(2,1)          3    2      (2, 1)   6     
+
+per-residue collapse (d mod 165): see residues_165.txt

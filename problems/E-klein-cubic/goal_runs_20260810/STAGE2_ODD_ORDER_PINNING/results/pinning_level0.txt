@@ -1,0 +1,174 @@
+LEVEL-0 PINNING  T(e_k) lies in the eigenspace of weight d*a_k
+(a weight that does not occur, or occurs at a point OFF X, forces T(e_k)=0)
+
+n= 3  d=0 mod 3
+      a_k=0  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+
+n= 3  d=1 mod 3
+      a_k=0  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+
+n= 3  d=2 mod 3
+      a_k=0  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+
+n= 5  d=0 mod 5
+      a_k=0  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=1  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=2  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=3  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=4  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+
+n= 5  d=1 mod 5
+      a_k=0  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=1  -> weight 1   occurs=True  onX=True   pinned
+      a_k=2  -> weight 2   occurs=True  onX=True   pinned
+      a_k=3  -> weight 3   occurs=True  onX=True   pinned
+      a_k=4  -> weight 4   occurs=True  onX=True   pinned
+
+n= 5  d=2 mod 5
+      a_k=0  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=1  -> weight 2   occurs=True  onX=True   pinned
+      a_k=2  -> weight 4   occurs=True  onX=True   pinned
+      a_k=3  -> weight 1   occurs=True  onX=True   pinned
+      a_k=4  -> weight 3   occurs=True  onX=True   pinned
+
+n= 5  d=3 mod 5
+      a_k=0  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=1  -> weight 3   occurs=True  onX=True   pinned
+      a_k=2  -> weight 1   occurs=True  onX=True   pinned
+      a_k=3  -> weight 4   occurs=True  onX=True   pinned
+      a_k=4  -> weight 2   occurs=True  onX=True   pinned
+
+n= 5  d=4 mod 5
+      a_k=0  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=1  -> weight 4   occurs=True  onX=True   pinned
+      a_k=2  -> weight 3   occurs=True  onX=True   pinned
+      a_k=3  -> weight 2   occurs=True  onX=True   pinned
+      a_k=4  -> weight 1   occurs=True  onX=True   pinned
+
+n= 6  d=0 mod 6
+      a_k=0  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=1  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=2  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=4  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=5  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+
+n= 6  d=1 mod 6
+      a_k=0  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=1  -> weight 1   occurs=True  onX=True   pinned
+      a_k=2  -> weight 2   occurs=True  onX=False  T vanishes (base point)
+      a_k=4  -> weight 4   occurs=True  onX=False  T vanishes (base point)
+      a_k=5  -> weight 5   occurs=True  onX=True   pinned
+
+n= 6  d=2 mod 6
+      a_k=0  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=1  -> weight 2   occurs=True  onX=False  T vanishes (base point)
+      a_k=2  -> weight 4   occurs=True  onX=False  T vanishes (base point)
+      a_k=4  -> weight 2   occurs=True  onX=False  T vanishes (base point)
+      a_k=5  -> weight 4   occurs=True  onX=False  T vanishes (base point)
+
+n= 6  d=3 mod 6
+      a_k=0  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=1  -> weight 3   occurs=False onX=False  T vanishes (base point)
+      a_k=2  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=4  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=5  -> weight 3   occurs=False onX=False  T vanishes (base point)
+
+n= 6  d=4 mod 6
+      a_k=0  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=1  -> weight 4   occurs=True  onX=False  T vanishes (base point)
+      a_k=2  -> weight 2   occurs=True  onX=False  T vanishes (base point)
+      a_k=4  -> weight 4   occurs=True  onX=False  T vanishes (base point)
+      a_k=5  -> weight 2   occurs=True  onX=False  T vanishes (base point)
+
+n= 6  d=5 mod 6
+      a_k=0  -> weight 0   occurs=True  onX=False  T vanishes (base point)
+      a_k=1  -> weight 5   occurs=True  onX=True   pinned
+      a_k=2  -> weight 4   occurs=True  onX=False  T vanishes (base point)
+      a_k=4  -> weight 2   occurs=True  onX=False  T vanishes (base point)
+      a_k=5  -> weight 1   occurs=True  onX=True   pinned
+
+n=11  d=0 mod 11
+      a_k=1  -> weight 0   occurs=False onX=False  T vanishes (base point)
+      a_k=3  -> weight 0   occurs=False onX=False  T vanishes (base point)
+      a_k=4  -> weight 0   occurs=False onX=False  T vanishes (base point)
+      a_k=5  -> weight 0   occurs=False onX=False  T vanishes (base point)
+      a_k=9  -> weight 0   occurs=False onX=False  T vanishes (base point)
+
+n=11  d=1 mod 11
+      a_k=1  -> weight 1   occurs=True  onX=True   pinned
+      a_k=3  -> weight 3   occurs=True  onX=True   pinned
+      a_k=4  -> weight 4   occurs=True  onX=True   pinned
+      a_k=5  -> weight 5   occurs=True  onX=True   pinned
+      a_k=9  -> weight 9   occurs=True  onX=True   pinned
+
+n=11  d=2 mod 11
+      a_k=1  -> weight 2   occurs=False onX=False  T vanishes (base point)
+      a_k=3  -> weight 6   occurs=False onX=False  T vanishes (base point)
+      a_k=4  -> weight 8   occurs=False onX=False  T vanishes (base point)
+      a_k=5  -> weight 10  occurs=False onX=False  T vanishes (base point)
+      a_k=9  -> weight 7   occurs=False onX=False  T vanishes (base point)
+
+n=11  d=3 mod 11
+      a_k=1  -> weight 3   occurs=True  onX=True   pinned
+      a_k=3  -> weight 9   occurs=True  onX=True   pinned
+      a_k=4  -> weight 1   occurs=True  onX=True   pinned
+      a_k=5  -> weight 4   occurs=True  onX=True   pinned
+      a_k=9  -> weight 5   occurs=True  onX=True   pinned
+
+n=11  d=4 mod 11
+      a_k=1  -> weight 4   occurs=True  onX=True   pinned
+      a_k=3  -> weight 1   occurs=True  onX=True   pinned
+      a_k=4  -> weight 5   occurs=True  onX=True   pinned
+      a_k=5  -> weight 9   occurs=True  onX=True   pinned
+      a_k=9  -> weight 3   occurs=True  onX=True   pinned
+
+n=11  d=5 mod 11
+      a_k=1  -> weight 5   occurs=True  onX=True   pinned
+      a_k=3  -> weight 4   occurs=True  onX=True   pinned
+      a_k=4  -> weight 9   occurs=True  onX=True   pinned
+      a_k=5  -> weight 3   occurs=True  onX=True   pinned
+      a_k=9  -> weight 1   occurs=True  onX=True   pinned
+
+n=11  d=6 mod 11
+      a_k=1  -> weight 6   occurs=False onX=False  T vanishes (base point)
+      a_k=3  -> weight 7   occurs=False onX=False  T vanishes (base point)
+      a_k=4  -> weight 2   occurs=False onX=False  T vanishes (base point)
+      a_k=5  -> weight 8   occurs=False onX=False  T vanishes (base point)
+      a_k=9  -> weight 10  occurs=False onX=False  T vanishes (base point)
+
+n=11  d=7 mod 11
+      a_k=1  -> weight 7   occurs=False onX=False  T vanishes (base point)
+      a_k=3  -> weight 10  occurs=False onX=False  T vanishes (base point)
+      a_k=4  -> weight 6   occurs=False onX=False  T vanishes (base point)
+      a_k=5  -> weight 2   occurs=False onX=False  T vanishes (base point)
+      a_k=9  -> weight 8   occurs=False onX=False  T vanishes (base point)
+
+n=11  d=8 mod 11
+      a_k=1  -> weight 8   occurs=False onX=False  T vanishes (base point)
+      a_k=3  -> weight 2   occurs=False onX=False  T vanishes (base point)
+      a_k=4  -> weight 10  occurs=False onX=False  T vanishes (base point)
+      a_k=5  -> weight 7   occurs=False onX=False  T vanishes (base point)
+      a_k=9  -> weight 6   occurs=False onX=False  T vanishes (base point)
+
+n=11  d=9 mod 11
+      a_k=1  -> weight 9   occurs=True  onX=True   pinned
+      a_k=3  -> weight 5   occurs=True  onX=True   pinned
+      a_k=4  -> weight 3   occurs=True  onX=True   pinned
+      a_k=5  -> weight 1   occurs=True  onX=True   pinned
+      a_k=9  -> weight 4   occurs=True  onX=True   pinned
+
+n=11  d=10 mod 11
+      a_k=1  -> weight 10  occurs=False onX=False  T vanishes (base point)
+      a_k=3  -> weight 8   occurs=False onX=False  T vanishes (base point)
+      a_k=4  -> weight 7   occurs=False onX=False  T vanishes (base point)
+      a_k=5  -> weight 6   occurs=False onX=False  T vanishes (base point)
+      a_k=9  -> weight 2   occurs=False onX=False  T vanishes (base point)
+
+
+C3 EIGENLINES (2-dimensional eigenspaces)
+  d=0 mod 3, line weight 1 -> W^{C3} = the D12-point (OFF X) : whole eigenline in Bs(T)
+  d=0 mod 3, line weight 2 -> W^{C3} = the D12-point (OFF X) : whole eigenline in Bs(T)
+  d=1 mod 3, line weight 1 -> eigenline of weight 1 : contracted to the X^{C6} point of weight 1
+  d=1 mod 3, line weight 2 -> eigenline of weight 2 : contracted to the X^{C6} point of weight 5
+  d=2 mod 3, line weight 1 -> eigenline of weight 2 : contracted to the X^{C6} point of weight 5
+  d=2 mod 3, line weight 2 -> eigenline of weight 1 : contracted to the X^{C6} point of weight 1
