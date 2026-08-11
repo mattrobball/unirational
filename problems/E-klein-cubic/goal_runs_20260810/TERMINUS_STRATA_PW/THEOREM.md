@@ -23,6 +23,14 @@ STANDARD-FORM-PW-5D-COUNTS-CORRECTED
 
 Machine marker: `TERMINUS_STRATA_PW_VERIFY_OK` / `ALLGREEN` (`python3 verifier.py`).
 
+**Adjudicated 2026-08-11 (PR #31): READY** — `ADJUDICATION_PR31.md`. Every count
+in §2–§4, §6 and §7 was re-derived by an independently written census
+(`scripts/adj_indep_census.py`: all 4900 chains, components counted one at a
+time, no orbit-representative shortcut) and agrees in every cell at both primes.
+Four documentation/registration defects were found and fixed; the 145
+closure-poset relations of §5 are the one claim that was not independently
+replicated.
+
 ---
 
 ## 0. What is computed, and in what form
@@ -133,19 +141,24 @@ birational model) are in that file; here the totals and the shape.
 
 **80 `G`-orbits of orbit-type strata; 11 076 components in all.**
 
-| `H` | `G`-orbits | components of `Z_{=H}` | by dimension | components for ONE fixed `H` |
-|---|---:|---:|---|---:|
-| `1` | 1 | 1 | `dim 4: 1` (the free open stratum) | 1 |
-| `C2` | 15 | 2145 | `1: 1430 · 2: 605 · 3: 110` | 239 |
-| `C3` | 13 | 2310 | `0: 1320 · 1: 880 · 2: 110` | 80 |
-| `V4` | 18 | 2970 | `0: 1980 · 1: 990` | 54 |
-| `C5` | 10 | 1320 | `0: 1320` | 20 |
-| `C6` | 19 | 2090 | `0: 2090` | 38 |
-| `C11` | 4 | 240 | `0: 240` | 20 |
+| `H` | `G`-orbits | components of `Z_{=H}` | by dimension | of `Z_{=H}`, ONE fixed `H` | of `Z^H`, ONE fixed `H` |
+|---|---:|---:|---|---:|---:|
+| `1` | 1 | 1 | `dim 4: 1` (the free open stratum) | 1 | 1 |
+| `C2` | 15 | 2145 | `1: 1430 · 2: 605 · 3: 110` | 39 | 239 |
+| `C3` | 13 | 2310 | `0: 1320 · 1: 880 · 2: 110` | 42 | 80 |
+| `V4` | 18 | 2970 | `0: 1980 · 1: 990` | 54 | 54 |
+| `C5` | 10 | 1320 | `0: 1320` | 20 | 20 |
+| `C6` | 19 | 2090 | `0: 2090` | 38 | 38 |
+| `C11` | 4 | 240 | `0: 240` | 20 | 20 |
 
-The last column is `|N_G(H)|/|Stab_G(F)|` summed over the orbit; e.g. a fixed
-`C11` fixes exactly 20 points of `Z` (its 5 eigenpoints on `P(W)`, each blown up
-into 4 surviving directions).
+The fifth column is `|N_G(H)|/|Stab_G(F)|` summed over the orbit — the number
+of components of `Z_{=H}` for ONE fixed subgroup `H` (this is the `#/fixedK`
+column of `results/t2_strata.txt`). The sixth is the number of components of
+the whole fixed locus `Z^H = ⊔_{K ⊇ H} Z_{=K}` for that same fixed `H` (§6);
+the two agree exactly when no larger occurring class contains `H`, which is why
+they differ only for `C2` and `C3`. E.g. a fixed `C11` fixes exactly 20 points
+of `Z` (its 5 eigenpoints on `P(W)`, each blown up into 4 surviving directions),
+and `Z^{C11} = Z_{=C11}`.
 
 ### The seven occurring classes, row by row (compressed)
 
@@ -248,8 +261,8 @@ Every row names its `Stab_G(F)`; the inverse index (`results/t2_strata.txt`,
 | stage | model | stratum orbits | components | setwise-stabilizer classes occurring |
 |---|---|---:|---:|---|
 | 0 | `P(W)` | 15 | 1216 | `A4`, `C6`, `D12`, `C5`, `C11`, `D10`, `V4`, `G` |
-| 1 | `Z_1` (after T0) | 57 | 7336 | `+ C3, C2`; still `A4` |
-| 2 | `Z_2` (after T1) | 70 | 9591 | `A4` and `D10` gone |
+| 1 | `Z_1` (after T0) | 57 | 7336 | `+ C3, C2`; `D10` **already gone**; still `A4` |
+| 2 | `Z_2` (after T1) | 70 | 9591 | `A4` gone too (so `A4` and `D10` both absent) |
 | 3 | `Z = Z_3` (after T2) | 80 | 11076 | `C2,C3,V4,C5,C6,C11,D12,G` |
 
 Row-level deltas (`G`-orbits identified by their geometric data, so a strict
@@ -313,11 +326,13 @@ Structure of the order (all machine-checked):
   strata above it whose stabilizer contains `H` form a chain (0 incomparable
   pairs);
 * the free stratum is the unique maximal element; **42 of the 80 orbits have
-  nothing above them but `Z` itself** — the seven `dim 2` and two `dim 3`
+  nothing above them but `Z` itself** — the **five** `dim 2` and two `dim 3`
   families (`E_σ`, `E'_σ`, `M_τ^V`, the two `pt_V4I` surfaces, the `pt_C6`
-  surface, the `C3line` surface), fifteen `dim 1` families, and eighteen
+  surface, the `C3line` surface), fifteen `dim 1` families, and **twenty**
   *isolated* `dim 0` families (all ten `C5` orbits, all four `C11` orbits and
-  six `C3` orbits) that lie in no larger stratum at all;
+  six `C3` orbits) that lie in no larger stratum at all — `5 + 2 + 15 + 20 = 42`;
+  (the itemised lists were right in the first version, the two number words were
+  not — corrected at the PR #31 adjudication against `results/t4_poset.json`);
 * the **minimal** elements are the `dim 0` rows: 12 `V4` orbits, 6 `C3` orbits,
   10 `C5`, 19 `C6`, 4 `C11`.
 
@@ -548,11 +563,12 @@ the nine empty classes as a positive result rather than an absence of evidence.
 | `DUNCAN_CORNER_F2` | Lemma B, `M_τ^V`, the corner inventory | reproduced; nothing contradicted |
 | `certificates/STRATA_EXACT.md` | the level-0 census | reproduced from scratch |
 
-**Provenance note.** `STANDARD_FORM_PW` is **not on `main`**: at the time of
-writing it exists only on the unmerged branch `agent/standard-form-pw-20260810`
-(commit `1430ffa`), and the working tree at `main` contains only stray
-`__pycache__` files from it. This packet reads it from that commit and carries
-its own copies of `psl211.py` and `sfcore.py` so as to be self-contained.
+**Provenance note.** When this packet was written `STANDARD_FORM_PW` was not yet
+on `main`; it was read from the unmerged branch `agent/standard-form-pw-20260810`
+(commit `1430ffa`), and this packet carries its own copies of `psl211.py` and
+`sfcore.py` so as to be self-contained. **Updated 2026-08-11:** that packet is
+now on `main` (PR #29, merge `64e41d3`), and the two carried files are
+byte-identical to the merged ones (checked at adjudication).
 
 ## 11. Not claimed
 

@@ -1,6 +1,14 @@
 # STATUS — TERMINUS_STRATA_PW
 
 **Opened** 2026-08-10. **State: COMPLETE, verified at two primes.**
+**Adjudicated 2026-08-11 (PR #31): READY** — see `ADJUDICATION_PR31.md`. The
+four headline counts (1216 / 7336 / 9591 / **11 076** components, **80** orbits,
+the per-class and setwise tables, the `Z^H` dictionary and the
+`STANDARD_FORM_PW` §5(d) correction) were re-derived by an independently
+written census, `scripts/adj_indep_census.py`, which enumerates components one
+at a time over all 4900 chains with no orbit-representative shortcut; it agrees
+in every cell at both primes. Four documentation/registration defects were
+found and fixed; no mathematical claim changed.
 **Problem E remains OPEN** — this packet makes no headline claim.
 
 ## What it is
@@ -88,8 +96,8 @@ Everything is python3 + Macaulay2 only; two split primes 331 and 661.
 
 ## Relations to sibling packets
 
-* **`STANDARD_FORM_PW`** (branch `agent/standard-form-pw-20260810`, commit
-  `1430ffa` — **not on `main`**). Foundation. Everything qualitative in it is
+* **`STANDARD_FORM_PW`** (written against branch `agent/standard-form-pw-20260810`,
+  commit `1430ffa`; **on `main` since PR #29**). Foundation. Everything qualitative in it is
   reproduced here independently: the 1215 divisors in 14 orbits, the **42
   terminal local models class-by-class**, the crossing table, the abelian
   floor, "no fabulous corner at the minimal terminus", the per-class dimension
@@ -111,8 +119,11 @@ Everything is python3 + Macaulay2 only; two split primes 331 and 661.
 ```
 THEOREM.md                    the main document
 STATUS.md                     this file
+ADJUDICATION_PR31.md          the PR#31 adjudication: per-claim verdicts
 REGISTRATION_SNIPPET.md       proposed NOTEBOOK entry + manifest record
 verifier.py                   ALLGREEN gate; per-row exact-stabilizer sampling
+scripts/adj_indep_census.py   ADJUDICATION: an independent recount of the whole
+scripts/adj_indep_extra.py      census (all chains, component by component)
 scripts/psl211.py             packet-local model of PSL(2,11) on W (from STANDARD_FORM_PW)
 scripts/sfcore.py             packet-local subgroup/character core (from STANDARD_FORM_PW)
 scripts/tcore.py              NEW: the arrangement, chains, graded reps, the census engine

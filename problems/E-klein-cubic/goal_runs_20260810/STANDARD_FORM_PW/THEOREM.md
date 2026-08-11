@@ -394,6 +394,17 @@ creates inside the exceptional divisors (`G`-orbit counts, exact at both primes)
 | `C6` | **0 only** | `dim 0`: 330 |
 | `C11` | **0 only** | `dim 0`: 60 |
 
+> **CORRECTION (2026-08-11, `TERMINUS_STRATA_PW` §7; confirmed at adjudication
+> of PR #31 by an independent component-by-component recount).** The right-hand
+> column above gives **lower bounds**, not exact counts: the producer
+> `s5_terminus.py` de-duplicates its rows on the signature
+> `(stabilizer name, dim, normal rank, orbit size)` and thereby merges
+> genuinely distinct `G`-orbits. Exact values:
+> `C2 → dim 1: 1320 · dim 2: 605 · dim 3: 110`; `C3` unchanged;
+> `V4 → dim 0: 1155 · dim 1: 330`; `C5 → 1320`; `C6 → 1100`; `C11 → 240`.
+> The dimension **profiles** (the middle column) are exact and unaffected, and
+> no exit string of this packet depends on the counts.
+
 Two answers to questions the work order posed as open:
 
 1. **`C5`-fixed loci stay zero-dimensional through the whole recursion**, and so

@@ -3,9 +3,15 @@
 Pure python3, no arguments.  Replays the whole packet at BOTH split primes:
 
   * runs every script and requires its marker;
-  * re-derives every census row independently of the census code and compares
-    (dimension, #components, exact pointwise stabilizer, setwise stabilizer,
-    residual action);
+  * re-checks every census row against the raw 660-element group action --
+    orbit size by direct enumeration, the setwise stabilizer's containment and
+    normalisation of K, |W(K,F)| = |Stab_G(F)|/|K|, and dim F = the number of
+    K-trivial tangent weights.  NOTE (scope, added at the PR#31 adjudication):
+    these checks take the ROW LIST from `tcore.census`; they do not re-derive
+    it.  The completeness of the row list -- the 80 orbits / 11076 components
+    headline -- is tested by the separate, independently written
+    `scripts/adj_indep_census.py`, which enumerates components one by one over
+    ALL chains with no orbit-representative shortcut;
   * PER-ROW EXACT-STABILIZER SPOT CHECK: samples explicit points of the
     stratum (as flag data (x, beta_1, ..., beta_k) over F_p), computes the
     stabilizer by brute force in the 660-element group, and requires it to be

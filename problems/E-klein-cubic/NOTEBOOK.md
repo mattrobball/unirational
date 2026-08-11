@@ -52,7 +52,7 @@ disclosed boundary, not a coverage claim.
 
 Core manifest last rebuilt: 2026-08-03. Research supplement last updated:
 2026-08-10. Headline status: **OPEN**.
-Snapshot metadata — notebook parent head: `e7778c220c5eac45e1f4fce2602102b01ff96154` (2026-08-11; the
+Snapshot metadata — notebook parent head: `ef77a9250bc98604dc6f829acb8ba15e6463de39` (2026-08-11; the
 repository state this revision was authored against — a file cannot carry its
 own commit hash, so the committing revision is always `git log -1 --
 problems/E-klein-cubic/NOTEBOOK.md`). `scripts/check_manifest_parity.py`
@@ -7160,6 +7160,25 @@ Exits: `TERMINUS-ORBIT-STRATA-PW-PASS`, `TERMINUS-STRATA-ALL-16-CLASSES-CERTIFIE
 `TERMINUS-CLOSURE-POSET-SEALED`, `TERMINUS-QUOTIENT-STRATIFICATION-COMPLETE`,
 `TERMINUS-ZPLUS-DELTA-SEALED`, `STANDARD-FORM-PW-5D-COUNTS-CORRECTED`.
 Verify: `python3 verifier.py` → `TERMINUS_STRATA_PW_VERIFY_OK` / `ALLGREEN`.
+
+**Adjudicated 2026-08-11 (PR #31): READY** (`ADJUDICATION_PR31.md`). The packet
+verifier replays byte-identical and `t6_charts.m2` gives 18/18, but it checks
+rows produced by the census engine rather than re-deriving the row list, so the
+adjudication wrote an independent census — `scripts/adj_indep_census.py`, built
+from the element eigenspaces, enumerating **all 4900 chains** and counting
+components **one at a time** with no orbit-representative shortcut. It
+reproduces every cell at both primes: 1216 / 7336 / 9591 / **11 076**
+components, **80** orbits, the per-class and setwise tables (`C2 1 · C3 8 ·
+V4 26 · C5 10 · C6 27 · C11 4 · D12 3 · G 1`), the `Z^H` dictionary
+(239/80/54/20/38/20), the chain census 1215/2860/825 matching the divisor and
+crossing counts, and the `STANDARD_FORM_PW` §5(d) correction. Four defects,
+all fixed on the branch: §2's "one fixed `H`" column carried the `Z^H` totals
+(239, 80) instead of the `Z_{=H}` ones (39, 42); §4's stage table dated `D10`'s
+death to T1 when it dies at T0; the "`STANDARD_FORM_PW` is not on `main`" note
+was stale (PR #29); and the branch was missing from `known_branches`, which had
+parity failing. The §5(d) correction is now recorded inside `STANDARD_FORM_PW`
+itself. Not independently replicated: the 145 closure-poset relations
+(packet-verified only). Headline unchanged: **OPEN**.
 
 # Notebook supplement — 2026-08-11: the spin packet's last cited input is sealed, and census cell (O4) splits — with a witness that closes the cell to attack
 
