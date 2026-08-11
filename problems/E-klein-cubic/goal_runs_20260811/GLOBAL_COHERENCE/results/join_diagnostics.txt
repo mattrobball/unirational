@@ -1,0 +1,47 @@
+JOIN DIAGNOSTICS
+
+Corrected K table (STAGE1_STRATIFIED):
+  d=0 mod 6: K=11068
+  d=1 mod 6: K=1178
+  d=2 mod 6: K=1512
+  d=3 mod 6: K=6216
+  d=4 mod 6: K=1344
+  d=5 mod 6: K=756
+
+Incidence bindings immune <-> sigma-band: 0
+(STAGE1 §15.5: 22 rows have free stratum as only parent)
+Z+ D10 C2-line: multiplies by branch(mu0) in {13,10};
+  configuration sum_{mu0=1..4} branch = 46  (vs free 23)
+
+At d=35:
+{
+  "d_mod_330": 35,
+  "d_mod_6": 5,
+  "K": 756,
+  "F_odd": 36252160,
+  "H_immune_D10": 416899840,
+  "G": 315176279040,
+  "G_triv": 756,
+  "product_K_23_3_8": 114082668,
+  "product_K_13_3_8": 64481508,
+  "ratio_to_K_23_3_8": 2762.7008078036883,
+  "factors": {
+    "C11": 10,
+    "C5a": 4,
+    "C5b": 4,
+    "D10": 4,
+    "A4a": 238,
+    "A4b": 238
+  },
+  "d10_branch_sum": 46,
+  "mechanism": {
+    "shared_mu_A4": 56644,
+    "shared_mu_A4_vs_3_8": 8.633440024386527,
+    "C11_patterns": 10,
+    "C5_patterns": 16,
+    "D10_pt_patterns": 4,
+    "D10_branch_sum_vs_23": 2.0,
+    "incidence_bindings_immune_to_sigma": 0,
+    "incidence_note": "immune rows are coherence-immune (only parent = free stratum); the 145 order-0 relations do not constrain their values against the sigma-band. Z+ D10 C2-line multiplies by the mu0-selected branch; both parities are attainable for every defined pt_D10 pattern via mu0 |-> mu0+5, and the configuration sum uses sum_{mu0=1..4} branch(mu0) = 46."
+  }
+}

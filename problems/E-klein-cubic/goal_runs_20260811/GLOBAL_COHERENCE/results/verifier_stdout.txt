@@ -1,0 +1,120 @@
+CHECK A1 path A (closed form) == path B (enumeration)              PASS 47736 cases, 0 mismatches
+CHECK A2 22 immune rows loaded from s2pin.IMMUNE_ROWS              PASS 
+CHECK A3 center inventory partitions the 22 rows                   PASS 
+CHECK A4 row_weight agrees with pathA_weight on all centers        PASS 
+CHECK B1 sharing-off A4 block = 3^8 at d=0                         PASS got 6561
+CHECK B2 sharing-off C11 single-pattern at d=0                     PASS got 1
+CHECK B3 sharing-off C5a single-pattern at d=0                     PASS got 1
+CHECK B4 sharing-off C5b single-pattern at d=0                     PASS got 1
+CHECK B5 sharing-off D10 single-pattern at d=0                     PASS got 1
+CHECK B6 sharing-off F_odd = 3^8 at d=0                            PASS got 6561
+CHECK B1 sharing-off A4 block = 3^8 at d=1                         PASS got 6561
+CHECK B2 sharing-off C11 single-pattern at d=1                     PASS got 1
+CHECK B3 sharing-off C5a single-pattern at d=1                     PASS got 1
+CHECK B4 sharing-off C5b single-pattern at d=1                     PASS got 1
+CHECK B5 sharing-off D10 single-pattern at d=1                     PASS got 1
+CHECK B6 sharing-off F_odd = 3^8 at d=1                            PASS got 6561
+CHECK B1 sharing-off A4 block = 3^8 at d=5                         PASS got 6561
+CHECK B2 sharing-off C11 single-pattern at d=5                     PASS got 1
+CHECK B3 sharing-off C5a single-pattern at d=5                     PASS got 1
+CHECK B4 sharing-off C5b single-pattern at d=5                     PASS got 1
+CHECK B5 sharing-off D10 single-pattern at d=5                     PASS got 1
+CHECK B6 sharing-off F_odd = 3^8 at d=5                            PASS got 6561
+CHECK B1 sharing-off A4 block = 3^8 at d=25                        PASS got 6561
+CHECK B2 sharing-off C11 single-pattern at d=25                    PASS got 1
+CHECK B3 sharing-off C5a single-pattern at d=25                    PASS got 1
+CHECK B4 sharing-off C5b single-pattern at d=25                    PASS got 1
+CHECK B5 sharing-off D10 single-pattern at d=25                    PASS got 1
+CHECK B6 sharing-off F_odd = 3^8 at d=25                           PASS got 6561
+CHECK B1 sharing-off A4 block = 3^8 at d=34                        PASS got 6561
+CHECK B2 sharing-off C11 single-pattern at d=34                    PASS got 1
+CHECK B3 sharing-off C5a single-pattern at d=34                    PASS got 1
+CHECK B4 sharing-off C5b single-pattern at d=34                    PASS got 1
+CHECK B5 sharing-off D10 single-pattern at d=34                    PASS got 1
+CHECK B6 sharing-off F_odd = 3^8 at d=34                           PASS got 6561
+CHECK B1 sharing-off A4 block = 3^8 at d=35                        PASS got 6561
+CHECK B2 sharing-off C11 single-pattern at d=35                    PASS got 1
+CHECK B3 sharing-off C5a single-pattern at d=35                    PASS got 1
+CHECK B4 sharing-off C5b single-pattern at d=35                    PASS got 1
+CHECK B5 sharing-off D10 single-pattern at d=35                    PASS got 1
+CHECK B6 sharing-off F_odd = 3^8 at d=35                           PASS got 6561
+CHECK B1 sharing-off A4 block = 3^8 at d=36                        PASS got 6561
+CHECK B2 sharing-off C11 single-pattern at d=36                    PASS got 1
+CHECK B3 sharing-off C5a single-pattern at d=36                    PASS got 1
+CHECK B4 sharing-off C5b single-pattern at d=36                    PASS got 1
+CHECK B5 sharing-off D10 single-pattern at d=36                    PASS got 1
+CHECK B6 sharing-off F_odd = 3^8 at d=36                           PASS got 6561
+CHECK B1 sharing-off A4 block = 3^8 at d=55                        PASS got 6561
+CHECK B2 sharing-off C11 single-pattern at d=55                    PASS got 1
+CHECK B3 sharing-off C5a single-pattern at d=55                    PASS got 1
+CHECK B4 sharing-off C5b single-pattern at d=55                    PASS got 1
+CHECK B5 sharing-off D10 single-pattern at d=55                    PASS got 1
+CHECK B6 sharing-off F_odd = 3^8 at d=55                           PASS got 6561
+CHECK B1 sharing-off A4 block = 3^8 at d=110                       PASS got 6561
+CHECK B2 sharing-off C11 single-pattern at d=110                   PASS got 1
+CHECK B3 sharing-off C5a single-pattern at d=110                   PASS got 1
+CHECK B4 sharing-off C5b single-pattern at d=110                   PASS got 1
+CHECK B5 sharing-off D10 single-pattern at d=110                   PASS got 1
+CHECK B6 sharing-off F_odd = 3^8 at d=110                          PASS got 6561
+CHECK B1 sharing-off A4 block = 3^8 at d=165                       PASS got 6561
+CHECK B2 sharing-off C11 single-pattern at d=165                   PASS got 1
+CHECK B3 sharing-off C5a single-pattern at d=165                   PASS got 1
+CHECK B4 sharing-off C5b single-pattern at d=165                   PASS got 1
+CHECK B5 sharing-off D10 single-pattern at d=165                   PASS got 1
+CHECK B6 sharing-off F_odd = 3^8 at d=165                          PASS got 6561
+CHECK B1 sharing-off A4 block = 3^8 at d=329                       PASS got 6561
+CHECK B2 sharing-off C11 single-pattern at d=329                   PASS got 1
+CHECK B3 sharing-off C5a single-pattern at d=329                   PASS got 1
+CHECK B4 sharing-off C5b single-pattern at d=329                   PASS got 1
+CHECK B5 sharing-off D10 single-pattern at d=329                   PASS got 1
+CHECK B6 sharing-off F_odd = 3^8 at d=329                          PASS got 6561
+CHECK C1 Thm 4.1: sharing-off F_odd = 3^8 for all d mod 165        PASS failures=0
+CHECK C2 C11 quadruple rule (STAGE2 Thm 2.1) reproduced            PASS 
+CHECK C3 no residue has F_odd_sharing_off = 0                      PASS 
+CHECK D1 residual_count_A4: mu=1 impossible                        PASS 
+CHECK D2 residual_count_A4: mu=2,4 valueless                       PASS 
+CHECK D3 residual_count_A4: mu=3 excludes C6 (2 values)            PASS 
+CHECK D4 residual_count_A4: mu>=5 has 3 values                     PASS 
+CHECK D5 A4a admits the all-UNDEF pattern (mu in {2,4}) at d=1     PASS 
+CHECK D6 A4a sharing-on pattern count > 0 at d=1                   PASS n=238
+CHECK D5 A4a admits the all-UNDEF pattern (mu in {2,4}) at d=35    PASS 
+CHECK D6 A4a sharing-on pattern count > 0 at d=35                  PASS n=238
+CHECK D7 D10 branch sum over mu0=1..4 equals 13+10+13+10=46        PASS got 46
+CHECK D8 even mu0 -> E-branch 13, odd -> L-branch 10               PASS 
+CHECK E1 trivialized join G_triv = K at d=0 mod 6                  PASS G_triv=11068 K=11068
+CHECK E2 G = K * H_immune_D10 at d=0                               PASS 
+CHECK E1 trivialized join G_triv = K at d=1 mod 6                  PASS G_triv=1178 K=1178
+CHECK E2 G = K * H_immune_D10 at d=1                               PASS 
+CHECK E1 trivialized join G_triv = K at d=2 mod 6                  PASS G_triv=1512 K=1512
+CHECK E2 G = K * H_immune_D10 at d=2                               PASS 
+CHECK E1 trivialized join G_triv = K at d=3 mod 6                  PASS G_triv=6216 K=6216
+CHECK E2 G = K * H_immune_D10 at d=3                               PASS 
+CHECK E1 trivialized join G_triv = K at d=4 mod 6                  PASS G_triv=1344 K=1344
+CHECK E2 G = K * H_immune_D10 at d=4                               PASS 
+CHECK E1 trivialized join G_triv = K at d=5 mod 6                  PASS G_triv=756 K=756
+CHECK E2 G = K * H_immune_D10 at d=5                               PASS 
+CHECK E3 corrected K table matches STAGE1_STRATIFIED               PASS {0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756}
+CHECK E4 G(35 mod 330) reported and positive                       PASS G=315176279040 K=756 F_odd=36252160
+CHECK E5 K(5)=756 at residue of d=35                               PASS 
+CHECK E6 no residue has G=0 (nothing to flag as exclusion)         PASS zeros=[]
+CHECK E7 incidence bindings immune<->sigma-band = 0 (coherence-immune) PASS 
+CHECK E8 artifact exists: F_odd_counts.json                        PASS 
+CHECK E8 artifact exists: F_odd_table.txt                          PASS 
+CHECK E8 artifact exists: G_counts.json                            PASS 
+CHECK E8 artifact exists: G_table.txt                              PASS 
+CHECK E8 artifact exists: vectors_d35.json                         PASS 
+CHECK E8 artifact exists: join_diagnostics.txt                     PASS 
+CHECK F1 K table identical at p=331 and p=661 (STAGE1_STRATIFIED)  PASS 
+CHECK F2 F_odd recomputation is deterministic (prime-free)         PASS 
+CHECK F3 G recomputation is deterministic (prime-free)             PASS 
+CHECK F4 two-path w(R) crosscheck prime-free, 0 mismatches         PASS 17656 cases
+CHECK G1 six center orbits                                         PASS 
+CHECK G2 center ids = C11,C5a,C5b,D10,A4a,A4b                      PASS ['C11', 'C5a', 'C5b', 'D10', 'A4a', 'A4b']
+CHECK G3 C11 has 4 rows                                            PASS 
+CHECK G4 C5a+C5b+D10 = 10 rows                                     PASS 
+CHECK G5 A4a+A4b = 8 rows                                          PASS 
+CHECK G6 C11 period 11, C5 period 5, A4 periods (3,3)              PASS 
+
+116 checks, 0 failures
+GLOBAL_COHERENCE_VERIFY_OK
+ALLGREEN

@@ -1,0 +1,7 @@
+GLOBAL_COHERENCE corrected G table (director range audit)
+D10 branch sum corrected 46 -> 92 (joint mod-10 lattice); G = 2x the worker table, uniformly.
+F_odd unchanged (phase-1 invariant under the extension).
+
+d mod 330 = 35:  G_corrected = 630352558080
+min/max G_corrected over residues: 39397034880 / 14968053650176
+zeros: NONE

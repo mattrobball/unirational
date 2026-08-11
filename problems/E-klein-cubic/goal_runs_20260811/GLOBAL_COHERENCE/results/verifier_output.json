@@ -1,0 +1,605 @@
+{
+ "n_checks": 116,
+ "n_pass": 116,
+ "n_fail": 0,
+ "checks": [
+  {
+   "name": "A1 path A (closed form) == path B (enumeration)",
+   "pass": true,
+   "detail": "47736 cases, 0 mismatches"
+  },
+  {
+   "name": "A2 22 immune rows loaded from s2pin.IMMUNE_ROWS",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "A3 center inventory partitions the 22 rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "A4 row_weight agrees with pathA_weight on all centers",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "B1 sharing-off A4 block = 3^8 at d=0",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B2 sharing-off C11 single-pattern at d=0",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B3 sharing-off C5a single-pattern at d=0",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B4 sharing-off C5b single-pattern at d=0",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B5 sharing-off D10 single-pattern at d=0",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B6 sharing-off F_odd = 3^8 at d=0",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B1 sharing-off A4 block = 3^8 at d=1",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B2 sharing-off C11 single-pattern at d=1",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B3 sharing-off C5a single-pattern at d=1",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B4 sharing-off C5b single-pattern at d=1",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B5 sharing-off D10 single-pattern at d=1",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B6 sharing-off F_odd = 3^8 at d=1",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B1 sharing-off A4 block = 3^8 at d=5",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B2 sharing-off C11 single-pattern at d=5",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B3 sharing-off C5a single-pattern at d=5",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B4 sharing-off C5b single-pattern at d=5",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B5 sharing-off D10 single-pattern at d=5",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B6 sharing-off F_odd = 3^8 at d=5",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B1 sharing-off A4 block = 3^8 at d=25",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B2 sharing-off C11 single-pattern at d=25",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B3 sharing-off C5a single-pattern at d=25",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B4 sharing-off C5b single-pattern at d=25",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B5 sharing-off D10 single-pattern at d=25",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B6 sharing-off F_odd = 3^8 at d=25",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B1 sharing-off A4 block = 3^8 at d=34",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B2 sharing-off C11 single-pattern at d=34",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B3 sharing-off C5a single-pattern at d=34",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B4 sharing-off C5b single-pattern at d=34",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B5 sharing-off D10 single-pattern at d=34",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B6 sharing-off F_odd = 3^8 at d=34",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B1 sharing-off A4 block = 3^8 at d=35",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B2 sharing-off C11 single-pattern at d=35",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B3 sharing-off C5a single-pattern at d=35",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B4 sharing-off C5b single-pattern at d=35",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B5 sharing-off D10 single-pattern at d=35",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B6 sharing-off F_odd = 3^8 at d=35",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B1 sharing-off A4 block = 3^8 at d=36",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B2 sharing-off C11 single-pattern at d=36",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B3 sharing-off C5a single-pattern at d=36",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B4 sharing-off C5b single-pattern at d=36",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B5 sharing-off D10 single-pattern at d=36",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B6 sharing-off F_odd = 3^8 at d=36",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B1 sharing-off A4 block = 3^8 at d=55",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B2 sharing-off C11 single-pattern at d=55",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B3 sharing-off C5a single-pattern at d=55",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B4 sharing-off C5b single-pattern at d=55",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B5 sharing-off D10 single-pattern at d=55",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B6 sharing-off F_odd = 3^8 at d=55",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B1 sharing-off A4 block = 3^8 at d=110",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B2 sharing-off C11 single-pattern at d=110",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B3 sharing-off C5a single-pattern at d=110",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B4 sharing-off C5b single-pattern at d=110",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B5 sharing-off D10 single-pattern at d=110",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B6 sharing-off F_odd = 3^8 at d=110",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B1 sharing-off A4 block = 3^8 at d=165",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B2 sharing-off C11 single-pattern at d=165",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B3 sharing-off C5a single-pattern at d=165",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B4 sharing-off C5b single-pattern at d=165",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B5 sharing-off D10 single-pattern at d=165",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B6 sharing-off F_odd = 3^8 at d=165",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B1 sharing-off A4 block = 3^8 at d=329",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "B2 sharing-off C11 single-pattern at d=329",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B3 sharing-off C5a single-pattern at d=329",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B4 sharing-off C5b single-pattern at d=329",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B5 sharing-off D10 single-pattern at d=329",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "name": "B6 sharing-off F_odd = 3^8 at d=329",
+   "pass": true,
+   "detail": "got 6561"
+  },
+  {
+   "name": "C1 Thm 4.1: sharing-off F_odd = 3^8 for all d mod 165",
+   "pass": true,
+   "detail": "failures=0"
+  },
+  {
+   "name": "C2 C11 quadruple rule (STAGE2 Thm 2.1) reproduced",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "C3 no residue has F_odd_sharing_off = 0",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "D1 residual_count_A4: mu=1 impossible",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "D2 residual_count_A4: mu=2,4 valueless",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "D3 residual_count_A4: mu=3 excludes C6 (2 values)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "D4 residual_count_A4: mu>=5 has 3 values",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "D5 A4a admits the all-UNDEF pattern (mu in {2,4}) at d=1",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "D6 A4a sharing-on pattern count > 0 at d=1",
+   "pass": true,
+   "detail": "n=238"
+  },
+  {
+   "name": "D5 A4a admits the all-UNDEF pattern (mu in {2,4}) at d=35",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "D6 A4a sharing-on pattern count > 0 at d=35",
+   "pass": true,
+   "detail": "n=238"
+  },
+  {
+   "name": "D7 D10 branch sum over mu0=1..4 equals 13+10+13+10=46",
+   "pass": true,
+   "detail": "got 46"
+  },
+  {
+   "name": "D8 even mu0 -> E-branch 13, odd -> L-branch 10",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E1 trivialized join G_triv = K at d=0 mod 6",
+   "pass": true,
+   "detail": "G_triv=11068 K=11068"
+  },
+  {
+   "name": "E2 G = K * H_immune_D10 at d=0",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E1 trivialized join G_triv = K at d=1 mod 6",
+   "pass": true,
+   "detail": "G_triv=1178 K=1178"
+  },
+  {
+   "name": "E2 G = K * H_immune_D10 at d=1",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E1 trivialized join G_triv = K at d=2 mod 6",
+   "pass": true,
+   "detail": "G_triv=1512 K=1512"
+  },
+  {
+   "name": "E2 G = K * H_immune_D10 at d=2",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E1 trivialized join G_triv = K at d=3 mod 6",
+   "pass": true,
+   "detail": "G_triv=6216 K=6216"
+  },
+  {
+   "name": "E2 G = K * H_immune_D10 at d=3",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E1 trivialized join G_triv = K at d=4 mod 6",
+   "pass": true,
+   "detail": "G_triv=1344 K=1344"
+  },
+  {
+   "name": "E2 G = K * H_immune_D10 at d=4",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E1 trivialized join G_triv = K at d=5 mod 6",
+   "pass": true,
+   "detail": "G_triv=756 K=756"
+  },
+  {
+   "name": "E2 G = K * H_immune_D10 at d=5",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E3 corrected K table matches STAGE1_STRATIFIED",
+   "pass": true,
+   "detail": "{0: 11068, 1: 1178, 2: 1512, 3: 6216, 4: 1344, 5: 756}"
+  },
+  {
+   "name": "E4 G(35 mod 330) reported and positive",
+   "pass": true,
+   "detail": "G=315176279040 K=756 F_odd=36252160"
+  },
+  {
+   "name": "E5 K(5)=756 at residue of d=35",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E6 no residue has G=0 (nothing to flag as exclusion)",
+   "pass": true,
+   "detail": "zeros=[]"
+  },
+  {
+   "name": "E7 incidence bindings immune<->sigma-band = 0 (coherence-immune)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E8 artifact exists: F_odd_counts.json",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E8 artifact exists: F_odd_table.txt",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E8 artifact exists: G_counts.json",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E8 artifact exists: G_table.txt",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E8 artifact exists: vectors_d35.json",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "E8 artifact exists: join_diagnostics.txt",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "F1 K table identical at p=331 and p=661 (STAGE1_STRATIFIED)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "F2 F_odd recomputation is deterministic (prime-free)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "F3 G recomputation is deterministic (prime-free)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "F4 two-path w(R) crosscheck prime-free, 0 mismatches",
+   "pass": true,
+   "detail": "17656 cases"
+  },
+  {
+   "name": "G1 six center orbits",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "G2 center ids = C11,C5a,C5b,D10,A4a,A4b",
+   "pass": true,
+   "detail": "['C11', 'C5a', 'C5b', 'D10', 'A4a', 'A4b']"
+  },
+  {
+   "name": "G3 C11 has 4 rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "G4 C5a+C5b+D10 = 10 rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "G5 A4a+A4b = 8 rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "name": "G6 C11 period 11, C5 period 5, A4 periods (3,3)",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "summary": {
+  "F_odd_min": 2265760,
+  "F_odd_max": 58798784,
+  "F_odd_typical": 2492336,
+  "F_odd_at_35": 36252160,
+  "G_at_35": 315176279040,
+  "G_min": 19698517440,
+  "G_max": 7484026825088,
+  "zeros_G": [],
+  "K_table": {
+   "0": 11068,
+   "1": 1178,
+   "2": 1512,
+   "3": 6216,
+   "4": 1344,
+   "5": 756
+  }
+ }
+}
