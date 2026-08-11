@@ -379,6 +379,28 @@ on the list — its statements quantify over `U^{(+)m}` — but the "all faithfu
 spin sources" quantifier is one irreducible wider than recorded, and cell
 `(O5)` of the census reflects that.
 
+## S9'. The `b_3` flag of §B9 is DISCHARGED (2026-08-11)
+
+§B9 above records the one place the multiplicity packet depended on a value
+not derived in-repo: `V14^{C_5}` and `V14^{C_11}` argued nonempty from
+`chi(V14^{C_p}) = chi(V14) mod p` with `chi(V14) = -6`, which used the
+literature `b_3(V14) = 10`.  `SEAL_V14_BETTI.md` (exit `V14-BETTI-SEALED`,
+41 assertions, `V14_BETTI_OK`) derives `chi_top(V14) = -6` from the sealed
+model by exact Schubert calculus on `Gr(2,6)`, and `b_3 = 10`,
+`h^{2,1} = 5`, `rho = 1` with it.  The flag is removed; the argument of
+`MULTIPLICITY_ROUTE.md` §5 is unchanged and now rests on in-repo data.
+
+**Adversarial check on the seal itself.**  The obvious failure mode is a
+Schubert computation that silently computes something else.  Five independent
+regressions pin it: `int sigma_1^8 = 14` (the degree of `Gr(2,6)`),
+`int c_8(T_{Gr}) = 15` (`chi_top(Gr(2,6)) = binom(6,2)`),
+`c_1(T_{Gr}) = 6 sigma_1` (index `n` of `Gr(2,n)`), `deg V14 = 14` and
+`(-K)^3 = 14` (matching the sealed Macaulay2 `REG V14 dim 4 degree 14`), and
+`h^0(-K) = 10` by Hirzebruch--Riemann--Roch — the last identifying the sealed
+`P(M) = P^9` as the anticanonical space, i.e. confirming that the model is
+the classical `X_14` that the literature table describes.  A transcription
+error would have to survive all six.
+
 ## S10. Is anything here a fixed-point statement in disguise? — NO
 
 Audited step by step.  Theorem S1 is a projection-formula identity; S2 is
@@ -389,3 +411,134 @@ populate the census (the 110 eigenplanes, the 352 points, `V14^{D_10} =
 empty`), and they are used to enumerate cells, never to derive the
 obstruction.  No Chow projector, no canonical splitting, no "every stratum
 stays RCC" claim, no chain argument.
+
+---
+
+# Adversarial tests — the `b_3` seal and the `(O4)` split (2026-08-11)
+
+Tests against `SEAL_V14_BETTI.md` and `O4_EIGENPLANE_CURVES.md`.  The
+standing risks are different again: Task 1 replaces a citation by a
+computation, so the risk is a wrong computation dressed as a seal (§S9' above
+and §T1 below); Task 2 ends in a **non**-kill supported by an explicit
+witness, so the risk is a witness that does not satisfy the condition it
+claims to, or a kill that proves too much and collides with the realised
+`D_12`-map (§§T2-T5).
+
+## T1. Does the seal quietly assume what it proves? — NO
+
+The chain is: sealed model (`V14 = Gr(2,U) cap P(M)`, smooth, `dim 3`,
+`deg 14` — all from `FIX-IX-SEAL-PASS` / `V14-S3-D10-MEASUREMENT-OK`) →
+Sommese's Lefschetz theorem, whose four hypotheses are checked one at a time
+in `SEAL_V14_BETTI.md` §2 → `b_1 = 0`, `b_2 = 1` → Kodaira vanishing →
+`rho = b_2 = 1`; and separately, Schubert calculus → `chi_top = -6` →
+`b_3 = 10` → `h^{2,1} = 5`.  Nowhere is `b_3`, `h^{2,1}` or `rho` used as an
+input, and the literature is not consulted at any step: §1's citation is
+placed first for the record and marked not load-bearing, then the values are
+recomputed.  The seal is not circular, but it *is* conditional on the sealed
+model being what the seal says it is (smooth, of the expected dimension) —
+flagged in `SEAL_V14_BETTI.md` §6.1.
+
+## T2. The mandatory `D_12` test for the `(O4)` kills — PASSED
+
+Cor IX.6 (`theory/FIX_IX_v14.md` §7) proves a dominant `D_12`-equivariant map
+from a spin source to the `V14` **exists**.  The four new kills must be
+compatible with it.
+
+*Which `(O4)` supports that map's graph could occupy.*  `sigma` is the centre
+of `D_12`; its two eigenplanes are `D_12`-stable as a pair, each stabilised by
+`C_6 <= D_12`; `Res_{D_12}T = 2.(1(x)triv) (+) 2.(1(x)std) (+) 2.(eps(x)std)`,
+all of multiplicity 2, and `dim T^{D_12} = 2`.  So the realised map is free to
+have an eigenplane-curve strict support with `H = C_6` in the trivial
+channel — precisely the channel of the witness (Thm O4-5).  It is equally free
+to use free supports (`O1`) or `S_3`-point supports, as §S1 already recorded.
+
+*Why no kill can bite.*  `K-i`, `K-k` and the `s = 2` case of C8 say a
+specific carrier is **zero** (`IH^1` of `P^1`, of `P^2`, of a rational curve).
+A vanishing cohomology group cannot contradict the existence of a map; it says
+only that the map's Hodge bookkeeping does not route through that object.
+`K-j` says a plane cubic with a `C_3`-fixed point has `j = 0`, hence CM by
+`Q(sqrt(-3))`, hence receives no nonzero morphism from an `E_{-11}`-isotypic
+Hodge structure; the Hesse alternative, in the same plane, is untouched and is
+exactly what remains available.  `K-l` is the `psi_j`-refinement of the
+already `D_12`-tested `K-d`.
+
+**PASS**, with the informative sign: the one subcell of `(O4)` that survives
+is the one the realised map can occupy.  Had the analysis emptied the trivial
+channel at `C_6`, it would have refuted Cor IX.6 and been wrong.
+
+## T3. Is the witness real, or an existence claim in disguise? — REAL
+
+Thm O4-5 is constructive twice over.
+
+* Structurally: `(E_{-11}, tau in E[3], L = O_E(3.0))`.  `t_tau^*L ~= L`
+  because `deg L = 3` and `3 tau = 0`; the translation therefore acts linearly
+  on `P(H^0(L)^dual) = P^2`, with a lift of order 3; its fixed locus cannot be
+  a point-plus-line, since that line would meet the cubic in three points
+  fixed by a fixed-point-free translation; so the action is `diag(1,w,w^2)`,
+  which Thm O4-1(3) shows is exactly the residual `C_3`-action on an
+  eigenplane.
+* Concretely: the `C_3`-invariant cubics of the plane are exactly the Hesse
+  family (exact monomial-weight computation, §D1 of the verifier); the pencil
+  has singular members (`x^3+y^3+z^3-3xyz` factors as a triangle over `Z[w]`,
+  expanded exactly in §D13) and smooth ones (`lambda = 0`), so its `j`-map is
+  a nonconstant rational function of the parameter and attains `-32768`.
+
+And it satisfies the condition it claims: `dim T^{C_6} = 2` and every
+sub-Hodge structure of `T` is `E_{-11}`-isotypic (Thm S0(2)), so
+`T^{C_6} ~= H^1(E_{-11})` and the projection
+`Res_{C_6}T -> T^{C_6} ~= H^1(S)` is a nonzero `C_6`-equivariant morphism of
+Hodge structures.  Cor S4's floor `k(C_6) = 1` is met exactly — the witness is
+the cheapest admissible support, not an extravagant one.
+
+## T4. Does the `eps != 0` kill (K-j) prove too much? — NO
+
+Sharpest test: apply the same reasoning at `delta >= 4`, where it must fail.
+It does.  The mechanism is that at `delta = 3` a fixed point of the `C_3` on
+the curve makes it an elliptic curve *with an order-3 automorphism fixing the
+origin*, which forces `j = 0`.  At genus `>= 3` an order-3 automorphism
+carries no CM information at all, and indeed Prop O4-3' shows all three
+`C_3`-channels of `H^1` are nonzero for every `delta >= 4` and every weight.
+A version of K-j that survived to higher degree would have been wrong.
+
+Second test: does K-j accidentally kill the Hesse case?  No — the two are
+disjoint by exact monomial arithmetic (§D1, §D2, §D15): the coordinate cubes
+`x^3, y^3, z^3` all have weight 0, so a weight-`eps != 0` cubic contains all
+three coordinate points, while a Hesse member contains none of them (its value
+at each coordinate point is `1`, for every `lambda`).
+
+## T5. The `j = 8192/11` trap — NOT ENTERED
+
+The tempting argument — "`sigma` fixes `S` pointwise, so the image lies in
+`V14^sigma`, whose curve part is `E_sigma`, which has no map to `E_{-11}`" —
+is wrong three times: the carrier is `IH^1` of the **support**, not of any
+image; by Thm K1 the image of the whole plane is a single **point**, so there
+is no target curve at all; and `S` lies in `Bs(phi)`, where `phi` is not
+defined.  `O4_EIGENPLANE_CURVES.md` §8 records this explicitly, and no step of
+the split uses `E_sigma`.
+
+## T6. Does the split contradict Thm K1, K4, C6 or Prop S5? — NO
+
+* K1 (each eigenplane contracts to `y(Pi) in V14^sigma`): compatible.  A
+  strict support inside `Pi` lies in `Bs(phi)`, and `phi|_{Pi}` being constant
+  where defined says nothing about the fibres of `p` over the base locus.
+* K4 (the 352 incidence points are mandatory base locus): no interaction — the
+  witness curve is neither forced through them nor away from them.
+* C6 (`d` even) and Prop O4-6 (`d >= 6` for a cubic orbit that is a base
+  component): both satisfiable, since `d` is unbounded on this lane.
+* Prop S5 (point supports need `dim Y_x >= 2`): the curve-support analogue,
+  computed the same way, is `dim p^{-1}(y) >= 1` for `y` in the support —
+  automatic for a codimension-4 curve that is blown up, hence not a
+  constraint.  No claim is made beyond that.
+
+## T7. Is `(O4)` *unclosable*, or only *unclosed*? — UNCLOSABLE BY THIS
+MACHINERY, and that is the exact claim
+
+What is proved: there exists a pair `(S, L)` — `S` a `C_6`-stable plane cubic
+isomorphic to `E_{-11}` in each eigenplane, `L` constant with equivariant
+character `psi_j`, `j != 3` — satisfying **every** necessary condition the
+Hodge-support package imposes ((AHS-spin), the refinement (5.2), Cor S4's
+multiplicity floor, the perverse-degree ledger, and the orbit/capacity screen
+for `d >= 6`).  What is **not** proved: that such a support occurs in an
+actual dominant map.  The package supplies necessary conditions only, and no
+map is exhibited.  The correct reading is "no obstruction can come from this
+cell via the Hodge-support census", never "a map exists".

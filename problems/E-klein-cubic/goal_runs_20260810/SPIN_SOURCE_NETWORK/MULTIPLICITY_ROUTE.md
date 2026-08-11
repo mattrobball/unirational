@@ -370,8 +370,12 @@ Against the target:
 `V14^{C_5}` and `V14^{C_11}` are the only entries not settled in-repo. Both are
 nonempty by the Lefschetz congruence `chi(V14^{C_p}) = chi(V14) mod p` with
 `chi(V14) = -6` (`b_3 = 2 h^{1,2} = 10` for the genus-8 Fano threefold):
-`-6 = 4 mod 5` and `-6 = 5 mod 11`, both nonzero. **This uses a literature
-value for `b_3(V_14)` and is flagged as such**; both loci are decidable in-repo
+`-6 = 4 mod 5` and `-6 = 5 mod 11`, both nonzero. ~~**This uses a literature
+value for `b_3(V_14)` and is flagged as such**~~ — **flag discharged
+2026-08-11**: `chi_top(V14) = -6` and `b_3 = 10` are now derived in-repo from
+the sealed model by exact Schubert calculus on `Gr(2,6)`
+(`SEAL_V14_BETTI.md`, exit `V14-BETTI-SEALED`, verifier `V14_BETTI_OK`).
+Both loci are also decidable in-repo
 by one run of `verify_v14_s3_d10.py`'s machinery (`M|_{C_11}` is 10 isolated
 points of `P^9`, `M|_{C_5}` is five `P^1`'s), and neither is load-bearing for
 anything proved here — they only affect the completeness of this audit row.

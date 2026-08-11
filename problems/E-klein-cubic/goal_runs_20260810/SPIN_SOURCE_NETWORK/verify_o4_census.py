@@ -373,6 +373,11 @@ for delta, eps, g, m in ROWS:
     print(f"   {delta:>3}   {eps}  {g:>2}   {m}   dead for psi_j with "
           f"j in {dead_j if dead_j else '{}'}")
 
+check("D3' for delta >= 4 EVERY C_3-channel of H^1 is nonzero -- the general "
+      "principle: the three weight classes are all represented among the "
+      "monomials of degree delta-3 >= 1",
+      sorted({m for d, e, g, m in ROWS if d >= 4 and min(m) == 0}), [])
+
 # an entire degree dies only if EVERY equivariant structure is dead
 fully_dead = [(d, e) for d, e, g, m in ROWS
               if all(not any(m[a] and live(a, j) for a in range(3))

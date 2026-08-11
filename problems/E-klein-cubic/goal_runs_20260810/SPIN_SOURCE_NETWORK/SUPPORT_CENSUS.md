@@ -10,6 +10,10 @@ Every number is machine-checked by `verify_spin_hodge_census.py`
 (`SPIN_HODGE_CENSUS_OK`, 206 assertions, exact integers, about 30 s).  Section
 references `§A`-`§I` point at that script's sections.
 
+The 2026-08-11 layer — the `(O4)` split of §5.2/§6 and the kills K-i…K-l — is
+checked by `verify_o4_census.py` (`O4_CENSUS_OK`, 92 assertions), and the
+Betti/Hodge inputs by `verify_v14_betti.py` (`V14_BETTI_OK`, 41 assertions).
+
 Notation: `S` an irreducible strict support, `H = Stab_G(S)` its setwise
 stabilizer, `H_0` the **pointwise** stabilizer (the kernel of `H` acting on
 `S`), `s = dim S`, `j_0` the perverse jump, `n = dim V >= 6`.
@@ -333,6 +337,25 @@ and `Hom(E_sigma, E_{-11}) = 0` (sealed).  Consequently:
 > Capacity: the orbit has `<= 110` members (one per plane), needing even
 > `d >= 4` (`c = 4`).
 
+**Superseded in detail by `O4_EIGENPLANE_CURVES.md` (2026-08-11, exit
+`O4-SPLIT`).**  Three corrections and one refutation:
+
+* `H_0 = C_2` **exactly** and `H in {C_2, C_6}`, with orbit `110` or `330`;
+  the residual action on `Pi` is the diagonal `C_3 = diag(1,w,w^2)` with
+  exactly three fixed points (Thm O4-1, proved from the `C_12`-decomposition
+  of `U`).
+* the `sigma`-**sign** structures are not excluded — for each of them exactly
+  one `C_3`-channel dies, and the `psi_3` case is the already-recorded kill
+  K-d (Prop O4-3).
+* capacity by **total degree** (refined Bézout bounds `sum deg`, not the
+  component count): an orbit of 110 plane cubics needs even `d >= 6`, not
+  `d >= 4` (Prop O4-6).
+* the proposed closing move is **refuted**: every eigenplane carries a
+  `C_3`-stable plane cubic isomorphic to `E_{-11}` satisfying (AHS-spin)
+  exactly (Thm O4-5).  What *does* die at `delta = 3` is the nonzero-weight
+  case, where the `C_3`-action has a fixed point on the cubic, forcing
+  `j(S) = 0`, CM by `Q(sqrt(-3))`, and `Hom(S, E_{-11}) = 0` (Thm O4-4).
+
 (That `H <= C_6` for a positive-dimensional `S subset Pi` is because two
 distinct eigenplanes meet in at most a point, so any `h` with `h(S) = S`
 must fix `Pi`; and `Stab_G(Pi) = C_6` exactly, the six `D_12`-reflections
@@ -364,9 +387,9 @@ measured geometry; "general spin `V`" is the uniform verdict.
 | cell | `H_0` | possible `H` | max `s` for `V=U` | verdict for `V = U` | verdict for general spin `V` |
 |---|---|---|---:|---|---|
 | **S0** | `1` | any of the 14 types | `n-3` | **OPEN** | **OPEN** — the large escape |
-| **S1** | `C_2` | `C_2, C_6` (`H <= Stab(Pi) = C_6`) | 2 | **OPEN**; whole-plane support DEAD in the constant-coefficient channel (C8); curve supports need `deg >= 3` (C9) | OPEN |
-| **S2** | `C_3` | `C_3, C_6, S_3, D_12` | 1 | **OPEN**; whole-line support DEAD in the constant-coefficient channel (C8) | OPEN |
-| **S3** | `C_5` | `C_5, D_10` | 1 | **OPEN**; whole-line support DEAD in the constant-coefficient channel (C8) | OPEN |
+| **S1** | `C_2` | `C_2, C_6` exactly (`H_0 = C_2` exactly, Thm O4-2) | 2 | **OPEN**, and **not closable**: whole-plane DEAD in the constant channel (C8); genus-0 curves DEAD; nonzero-weight plane cubics DEAD (`j = 0`, Thm O4-4); the Hesse channel is **WITNESSED** (Thm O4-5) | OPEN |
+| **S2** | `C_3` | `C_3, C_6, S_3, D_12`; realised: `C_6` (orbit 110) and `D_12` (orbit 55) | 1 | **DEAD in the constant-coefficient channel** — the only curve inside a `C_3`-eigen-line is the line, `IH^1(P^1) = 0` (Prop O4-7); residual: nonconstant local systems only | OPEN |
+| **S3** | `C_5` | `C_5, D_10`; realised: `D_10` (orbit 66) | 1 | **DEAD in the constant-coefficient channel** (Prop O4-7); residual: nonconstant local systems only | OPEN |
 | **S4** | `C_6` | `C_6, D_12` | — | **DEAD** (`P(U)^{C_6}` is 6 points) | OPEN for `m >= 2` (`P(V)^{C_6}` is `6` copies of `P^{m-1}`) |
 | **S5** | `C_11` | `C_11, F_55` | — | **DEAD** (`P(U)^{C_11}` is 6 points) | OPEN for `m >= 2`; must carry `E_{-11}^5` |
 | **S6** | `S_3` | `S_3, D_12` | — | **DEAD** (`P(U)^{S_3}` is 2 points) | OPEN for `m >= 2`; sign channel DEAD |
@@ -385,10 +408,16 @@ measured geometry; "general spin `V`" is the uniform verdict.
 | **K-f** | whole linear eigen-strata in the constant-coefficient channel: **DEAD** (`H^1(P^k) = 0`) | Prop C8 |
 | **K-g** | at `d = 2`: all free (`N = 660`) component orbits, every dimension | §G |
 | **K-h** | `H = A_4, A_5, G` supports with any pointwise kernel other than `1`: **DEAD** | Prop C2 (§B') |
+| **K-i** | curve supports of **geometric genus 0** (any degree, any eigenplane, constant channel): **DEAD** (`IH^1 = H^1(P^1) = 0`) | Thm O4-4(1) |
+| **K-j** | `C_3`-stable plane **cubics of nonzero weight** in an eigenplane: **DEAD** (`j(S) = 0`, CM by `Q(sqrt(-3))`, so `Hom(S,E_{-11}) = 0`) | Thm O4-4(2) (§D) |
+| **K-k** | whole `C_3`- and `C_5`-**eigen-lines** in the constant-coefficient channel: **DEAD** (`IH^1(P^1) = 0`), and for `V = U` these are the *only* positive-dimensional supports in those strata | Prop O4-7 (§B) |
+| **K-l** | for each `sigma`-**sign** equivariant structure `psi_j` (`j` odd) at a `C_6`-support, **one** `C_3`-channel is DEAD (`a = 1, 0, 2` for `j = 1, 3, 5`); `j = 3, a = 0` is K-d | Prop O4-3 (§C) |
 
 Total: **18 primary cells**, of which **5 are DEAD for the multiplicity-free
-source `U`** (S4-S8) and **0 are DEAD for all spin sources and all degrees**;
-plus **8 cross-cutting kills**, none of which empties the census.
+source `U`** (S4-S8), **2 more (S2, S3) are DEAD for `U` in the
+constant-coefficient channel** (2026-08-11), and **0 are DEAD for all spin
+sources and all degrees**; plus **12 cross-cutting kills**, none of which
+empties the census.
 
 ---
 
@@ -425,13 +454,20 @@ plus **8 cross-cutting kills**, none of which empties the census.
 |       about fixed loci, not about supports of Rp_*IC_Y.                    |
 |                                                                           |
 | (O4)  EIGENPLANE / EIGEN-LINE SUPPORTS.  H_0 = C_2, C_3, C_5 with          |
-|       positive-dimensional S.  Whole strata are dead in the               |
-|       constant-coefficient channel (H^1(P^k) = 0); what survives is a      |
-|       proper subvariety (a plane curve of degree >= 3 inside an            |
-|       eigenplane, in the sigma-trivial C_6-channel of dimension 6) or a    |
-|       nonconstant local system.  Would close by: excluding                 |
-|       E_{-11} from the Jacobians of the C_6-stable plane curves in the     |
-|       110 eigenplanes -- an explicit, finite-looking question.             |
+|       positive-dimensional S.  *** SPLIT 2026-08-11, see below and         |
+|       O4_EIGENPLANE_CURVES.md (exit O4-SPLIT). ***  DEAD in the            |
+|       constant-coefficient channel: whole eigenplanes (C8); whole C_3-     |
+|       and C_5-eigen-LINES, which for V = U are the only positive-          |
+|       dimensional supports in those strata (K-k); eigenplane curves of     |
+|       geometric genus 0 (K-i); C_3-stable plane cubics of nonzero weight,  |
+|       where the C_3 has a fixed point on the cubic, forcing j = 0 and CM   |
+|       by Q(sqrt(-3)) (K-j).  STILL OPEN, and NOT CLOSABLE by this          |
+|       machinery: the weight-0 (Hesse) plane cubics -- every eigenplane     |
+|       carries one isomorphic to E_{-11}, with the C_3 acting as a          |
+|       3-torsion translation, satisfying (AHS-spin) in every channel psi_j  |
+|       with j != 3 (Thm O4-5); eigenplane curves of genus >= 1 and degree   |
+|       >= 4, where no character kill exists at all (Prop O4-3'); and every  |
+|       stratum with a nonconstant local system.                             |
 |                                                                           |
 | (O5)  HIGHER-MULTIPLICITY STRATA.  S4-S8, empty for V = U, revive for      |
 |       V = U^{(+)m}, m >= 2, and for the 10- and 12-dimensional spin        |
@@ -439,10 +475,19 @@ plus **8 cross-cutting kills**, none of which empties the census.
 +---------------------------------------------------------------------------+
 ```
 
-`(O4)` is the only cell that looks finite and explicit enough to be decided
-by the existing machinery; `(O3)` is the sharpest arithmetically; `(O1)` is
-the one the ambient packet already flagged as the surviving escape, and it
-survives here too.
+`(O3)` is the sharpest arithmetically; `(O1)` is the one the ambient packet
+already flagged as the surviving escape, and it survives here too.
+
+**Correction, 2026-08-11.**  This section previously read "`(O4)` is the only
+cell that looks finite and explicit enough to be decided by the existing
+machinery".  That is **wrong on both counts** and is retracted:
+the `C_6`-stable plane curves of an eigenplane form a positive-dimensional
+family in every degree `>= 3` (already a `P^3` of invariant cubics, the Hesse
+family), so the question is not finite; and its answer runs the wrong way —
+`E_{-11}` is not excludable from their Jacobians, it is **attained**
+(`O4_EIGENPLANE_CURVES.md` Thm O4-5).  `(O4)` is therefore the *least*
+promising of the five cells, not the most, and the effort belongs on `(O2)`
+and `(O3)`.
 
 ---
 
@@ -452,11 +497,15 @@ survives here too.
    consequence chain of `FIX_IX_v14.md` Cor IX.5 is therefore **not**
    triggered; Problem E's spin flank stays OPEN.  This packet supplies a
    necessary condition and a census, not an obstruction.
-2. `b_3(V14) = 10`, `h^{2,1}(V14) = 5`, `rho(V14) = 1` are **literature**
-   values (prime Fano threefold of genus 8), flagged here as they are in
-   `MULTIPLICITY_ROUTE.md` §5.  Everything else in Theorem S0 is derived from
-   sealed data.  Sealing `b_3(V14)` in-repo would remove the last cited input
-   from the identification of `T`.
+2. ~~`b_3(V14) = 10`, `h^{2,1}(V14) = 5`, `rho(V14) = 1` are **literature**
+   values~~ — **CLOSED 2026-08-11**, `SEAL_V14_BETTI.md`, exit
+   `V14-BETTI-SEALED`, verifier `V14_BETTI_OK`.  All three are now derived
+   in-repo from the sealed model (`V14` = codimension-5 linear section of
+   `Gr(2,6)`): `rho = b_2 = 1` by Sommese's Lefschetz theorem for the ample
+   rank-5 bundle `O(1)^{(+)5}`, and `chi_top(V14) = -6` by exact Schubert
+   calculus, whence `b_3 = 10` and `h^{2,1} = 5`.  Theorem S0 leans on no
+   unsealed input, and the same seal discharges the flag in
+   `MULTIPLICITY_ROUTE.md` §5 and in `ADVERSARIAL_TESTS.md` §B9.
 3. `chi_top(V14^g)` at `g` of order `3, 5, 6` is predicted (`6, 4, 2`) and
    **not measured**; one run of `verify_v14_s3_d10.py`'s machinery decides all
    three and would give an independent confirmation of Theorem S0 (the `10'`
@@ -481,7 +530,12 @@ survives here too.
 SPIN-SUPPORT-CENSUS-TABLED
 SPIN-HODGE-SUPPORT-ESCAPE-UNDECIDED
 SPIN-CHAIN-OBSTRUCTION-UNDECIDED    (unchanged)
+O4-SPLIT                            (O4_EIGENPLANE_CURVES.md, 2026-08-11)
+V14-BETTI-SEALED                    (SEAL_V14_BETTI.md, 2026-08-11)
 ```
 
 `SPIN-SUPPORT-CENSUS-CLOSED` is **NOT** claimed: 18 cells, 5 dead for the
-multiplicity-free source, none dead uniformly, five boxed OPEN families.
+multiplicity-free source (7 counting S2 and S3, which are dead for `U` in the
+constant-coefficient channel only), none dead uniformly, five boxed OPEN
+families of which `(O4)` is now split and known to be **unclosable** by this
+machinery.

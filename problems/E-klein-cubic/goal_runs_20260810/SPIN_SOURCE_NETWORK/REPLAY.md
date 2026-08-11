@@ -301,3 +301,72 @@ spin-admissible level such as `S_3`.
 
 A failing assertion is printed with its name and the script exits `1` with
 `SPIN_HODGE_CENSUS_FAILED` instead of the marker.
+
+---
+
+# Replay — the `b_3` seal and the `(O4)` split (added 2026-08-11)
+
+From this directory:
+
+```text
+python3 verify_v14_betti.py
+python3 verify_o4_census.py
+```
+
+Final markers:
+
+```text
+V14_BETTI_OK
+O4_CENSUS_OK
+```
+
+`verify_v14_betti.py`: 41 assertions, under a second, Python 3 standard
+library only (`fractions`), self-contained.  No Macaulay2, no msolve, no
+network, no data files.
+
+* Section A builds the Chow ring of `Gr(2,6)` as symmetric polynomials in the
+  two Chern roots of `S^dual`, with the Schubert basis on the `2x4` box,
+  classes outside the box set to zero (the quotient by `(h_5,h_6)`), and the
+  degree map "coefficient of `s_{(4,4)}`".  Regressions: 15 Schubert classes,
+  a Pieri product, `h_5` out of the box, `int sigma_1^8 = 14`.
+* Section B computes `c(T_{Gr}) = c(S^dual (x) Q)` from the Chern roots and
+  checks `c_1 = 6 sigma_1` and `int c_8 = 15 = chi_top(Gr(2,6))`.
+* Section C restricts to the codimension-5 linear section: `c_1(T_{V14}) =
+  sigma_1` (index 1), `deg = 14`, `(-K)^3 = 14` (genus 8), `c_1c_2 = 24`
+  (`chi(O) = 1`), `h^0(-K) = 10` by HRR — so the sealed `P(M) = P^9` is the
+  anticanonical space — and the target value
+  `chi_top(V14) = int c_3(T_{V14}) = -6`.
+* Section D assembles `b = (1,0,1,10,1,0,1)`, `h^{3,0} = 0`, `h^{2,1} = 5`,
+  `rho = b_2 = 1`, with the Hodge-diamond consistency check.
+* Section E regresses against the packet: `chi_top = 4 - b_3` as Theorem S0
+  uses it, the five Lefschetz predictions `(2,6,4,2,5)`, and the two known
+  agreements at orders 2 and 11.
+
+`verify_o4_census.py`: 92 assertions, a few seconds, Python 3 standard library
+plus `spin_network_lib` from this directory.
+
+* Section A rebuilds the residual action on an eigenplane from the integral
+  monomial model: `chi_W` on the `C_12`-lift, the multiplicities extracted by
+  orthogonality inside `Z[zeta_12]` (exact, no floating point), the halving
+  principle, and the conclusion that the three `C_3`-eigenvalues on the plane
+  are `1, w, w^2` — pairwise distinct, so the residual action is the diagonal
+  `C_3` with exactly three fixed points.
+* Section B computes setwise stabilisers directly: `Stab_G(Pi) = C_6`
+  (order 6) with 6 of the 12 elements of `C_G(sigma) = D_12` swapping the
+  planes; the three `C_3`-eigen-lines with stabilisers `D_12` (orbit 55) and
+  `C_6` (orbit 110); the `C_5`-eigen-line with stabiliser `D_10` (orbit 66).
+* Section C recomputes `Res_{C_6}T = (2,2,2,0,2,2)` and tabulates the channel
+  condition `2a+j != 3 mod 6`, plus `dim T^H` for all six stabilisers.
+* Section D is the plane-curve layer: the weight-0 cubics are exactly the
+  Hesse family, weight-nonzero cubics contain all three coordinate points, the
+  `C_3`-isotypic multiplicities of `H^1` for `delta = 3..8` and all weights,
+  the general principle that every channel is nonzero for `delta >= 4`, and
+  the exact `Z[w]` factorisation of `x^3+y^3+z^3-3xyz` into a triangle.
+* Section E is refined-Bézout capacity by **total degree**, reproducing the
+  census's component-count table at `delta = 1` and sharpening it to
+  `d >= 6` for an orbit of 110 plane cubics.
+* Section F is the `(O4)` verdict table and the mandatory `D_12` consistency
+  test against Cor IX.6.
+
+A failing assertion is printed with its name and the script exits `1` with
+`V14_BETTI_FAILED` / `O4_CENSUS_FAILED` instead of the marker.

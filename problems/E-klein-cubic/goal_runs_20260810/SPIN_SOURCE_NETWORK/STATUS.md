@@ -154,3 +154,42 @@ so the headline consequence chain of Cor IX.5 is **not** triggered.  Problem
 E's spin flank remains **OPEN**, now with a non-fixed-point invariant, an
 exact necessary condition, and five boxed OPEN cells instead of no named
 route.
+
+---
+
+## Added 2026-08-11 — the last cited input sealed, and cell `(O4)` split
+
+* `SEAL_V14_BETTI.md` + `verify_v14_betti.py` (`V14_BETTI_OK`, 41
+  assertions).  Exit **`V14-BETTI-SEALED`**.  `b_3(V14) = 10`,
+  `h^{2,1}(V14) = 5`, `rho(V14) = 1` are no longer literature values:
+  `rho = b_2 = 1` follows from Sommese's Lefschetz theorem for the ample
+  rank-5 bundle `O(1)^{(+)5}` on `Gr(2,6)` (the sealed model makes `V14` a
+  codimension-5 linear section), and `chi_top(V14) = -6` from exact Schubert
+  calculus, whence `b_3 = 4 - chi = 10` and `h^{2,1} = 5`.  **Theorem S0 has
+  no unsealed input left.**  Bonus regressions from the same computation:
+  `deg = 14`, index 1, genus 8, `chi(O) = 1`, and `h^0(-K) = 10 = dim M`, so
+  the sealed `P(M) = P^9` is the anticanonical space and the model is the
+  classical `X_14`.
+* `O4_EIGENPLANE_CURVES.md` + `verify_o4_census.py` (`O4_CENSUS_OK`, 92
+  assertions).  Exit **`O4-SPLIT`**, and `O4-DEAD` is *not* claimed — it is
+  now known to be unreachable.  Dead in the constant-coefficient channel:
+  whole eigenplanes and whole eigen-lines, eigenplane curves of geometric
+  genus 0, and `C_3`-stable plane cubics of nonzero weight (the `C_3` has a
+  fixed point on such a cubic, forcing `j = 0`, CM by `Q(sqrt(-3))`, so no
+  map from the `E_{-11}`-isotypic `T`).  Open, **with an explicit witness**:
+  every eigenplane carries a Hesse-family cubic isomorphic to `E_{-11}` on
+  which the residual `C_3` acts as a 3-torsion translation, satisfying
+  (AHS-spin) exactly in every channel `psi_j`, `j != 3`.  The census's guess
+  that `(O4)` was "finite and explicit enough to be decided" is retracted:
+  the candidate family is positive-dimensional in every degree `>= 3` and
+  `E_{-11}` is attained, not excludable.  Effort belongs on `(O2)` and
+  `(O3)`.
+* Capacity sharpened: refined Bézout bounds the **total degree** of the
+  distinguished varieties, so an orbit of 110 plane cubics needs even
+  `d >= 6`, not `d >= 4`.
+* `ADVERSARIAL_TESTS.md` §S9' and §§T1-T7, including the mandatory `D_12`
+  test against Cor IX.6 (PASSED: the surviving subcell is exactly the one the
+  realised `D_12`-map may occupy) and the `j = 8192/11` overreach, explicitly
+  not committed.
+
+Headline unchanged: **OPEN**.
