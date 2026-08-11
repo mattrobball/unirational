@@ -4718,6 +4718,61 @@ anchor — cite each individually as `[E21a]`/`[E21b]`, not bare "E21" or "J".
 
 ---
 
+
+> **Stage-2 odd-order pinning landed 2026-08-11**
+> (`goal_runs_20260810/STAGE2_ODD_ORDER_PINNING`,
+> `STAGE2-ODD-ORDER-PINNING-SEALED`; marker
+> `STAGE2_ODD_ORDER_PINNING_VERIFY_OK` + `ALLGREEN`, 95 checks at `p = 331` and
+> `p = 661`). The first Stage-2 computation. It takes the `1.1 × 10¹⁵`
+> coherence-immune factor `STAGE1_COMPLEX_MAPS` §15.5 isolated — the 22 rows of
+> the terminus whose exact stabiliser has odd order — and **pins it by exact
+> character arithmetic**. Master statement: for a landing covariant
+> `T ∈ (Sym^d W* ⊗ W)^G` (no character twist: `G` is perfect) and any `g` of
+> order `n`, the value at a `g`-fixed stratum reached by a chain of exceptional
+> directions of relative weights `c_l` over a `g`-eigenpoint of weight `a_k`
+> lies in the eigenspace of weight `d·a_k + Σ μ_l c_l (mod n)`, `μ_l` the
+> successive jet orders — **or is zero, i.e. the row is a base point**.
+> Consequences: the four `C11`-rows and all ten `C5`-rows collapse to **exactly
+> one** value each (`5⁴ · 4¹⁰ = 655 360 000 → 1`); the eight `C3`-rows over the
+> `A4`-points collapse from six values to **three** (`6⁸ → 3⁸`), the residual
+> factor 3 being exactly the `C6/C3` involution that an odd-order source row
+> cannot see. Immune factor `1 100 753 141 760 000 → 3⁸ = 6 561`, reduction
+> `2²⁸·5⁴ = 167 772 160 000`; the stratum-coherent order-0 count drops from
+> `1 088 847 395 778 723 840 000` to `43 008 · 23 · 3⁸ = 6 490 036 224` (the
+> `σ`-band factor 43 008 and the `D10` factor 23 are carried unchanged from
+> Stage 1, not recounted).
+> Five base-locus congruences are **proved and sealed**: `X^{C11} ⊆ Bs(T)` iff
+> `d` is not a quadratic residue mod 11; `X^{C5} ⊆ Bs(T)` iff `5 ∣ d`; both
+> `C3`-eigenlines in `Bs(T)` iff `3 ∣ d`; and the `D10`- and `D12`-points in
+> `Bs(T)` for **every** `d` — the last two re-deriving the sealed
+> indeterminacy corollaries by pure character arithmetic. New: **all 55
+> minus-lines `L_σ` lie in `Bs(T)` whenever `d` is even**, and
+> `ord_{L_σ}(T) ≡ d+1 (mod 2)` — the exact mirror of the sealed plus-plane
+> parity `H0-1`, which the sealed profile did not record; `X^{C6} ⊆ Bs(T)`
+> unless `d ≡ ±1 (mod 6)`, with `T` fixing the `ρ`-fixed pair when `d ≡ 1` and
+> swapping it when `d ≡ 5`; the **`C11` quadruple obstruction** (all four
+> `C11`-rows carry a value simultaneously iff `d` is a QR mod 11 and
+> `μ ≡ 0` or `d`; at most three if `d` is a non-residue, at most two if
+> `11 ∣ d`); and the `C6`-band coupling **`m ≡ d ≢ 0 (mod 3)`** for the six
+> `C6`-children of `D_{P_σ}` to be non-degenerate. The three equivariance
+> commutations the brief demanded are **proved, not refuted**: the `F55`
+> 5-cycle at `C11`, the `D10` inversion at `C5` and the `D12/C3` eigenline swap
+> all commute with `a ↦ d·a` (they are multiplications in an abelian group);
+> the only non-commuting residual generator is the invisible `C6/C3`. First
+> order: `dT` preserves the relative weight and `ker(dF)` kills the block
+> `−3a_i`, whence `dT ≡ 0` at every `C11`-point when `d ≡ 3 (mod 11)`, rank
+> `≤ 1` when `d ≡ 4,5,9`, and rank `≤ 2` at `X^{C6}` when `d ≡ 5 (mod 6)`.
+> **NO DEGREE IS EXCLUDED** (`STAGE2-NO-DEGREE-EXCLUSION`): all 165 residues
+> `mod 165` (and all 330 `mod 330`) are consistent — independently confirming
+> the repository's own adjudication of the unsealed external mod-330 sieve
+> (`COMBINED_DEGREE_SIEVE/CONSTRAINT_LEDGER.md` B1/B2, EXCLUDED), whose
+> base-locus content is now proved rather than proposed. The sealed windows are
+> therefore unchanged: `d ≤ 30` empty, `d = 25` dead, **`d = 34` still the first
+> open window** — but `d = 34` now carries two conditions the `FIX-P2` slice
+> sweep did not impose: all 55 minus-lines in the base locus with odd order,
+> and both `X^{C6}` points in the base locus. Its own profile `m = 1` does
+> satisfy the new `C6`-band condition `m ≡ d ≡ 1 (mod 3)`.
+
 ## External sessions
 
 **External documents.** `external_docs/duncan_higher_obstruction_20260805.tex`

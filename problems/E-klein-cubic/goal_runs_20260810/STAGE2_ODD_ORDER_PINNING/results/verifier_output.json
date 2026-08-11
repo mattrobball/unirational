@@ -1,0 +1,481 @@
+{
+ "n_checks": 95,
+ "n_failures": 0,
+ "checks": [
+  {
+   "name": "A1 |G|=660 (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "A2 order profile (p=331)",
+   "ok": true,
+   "detail": "{5: 264, 1: 1, 3: 110, 6: 110, 2: 55, 11: 120}"
+  },
+  {
+   "name": "A3 F invariant under S and T (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "A1 |G|=660 (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "A2 order profile (p=661)",
+   "ok": true,
+   "detail": "{5: 264, 1: 1, 11: 120, 3: 110, 6: 110, 2: 55}"
+  },
+  {
+   "name": "A3 F invariant under S and T (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B1 C11 weights = QR11 (p=331)",
+   "ok": true,
+   "detail": "[1, 3, 4, 5, 9]"
+  },
+  {
+   "name": "B2 all five C11-eigenpoints on X (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B3 C11 normal weights = sealed terminus (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B4 C11 normaliser acts by multiplication (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B5 C5 spectrum is the regular rep (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B6 C5 weight-0 point OFF X, stab = D10 (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B7 the four non-trivial C5-eigenpoints ON X (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B8 C5 normal weights = sealed (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B9 D10 involution acts by a -> -a (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B10 C6 spectrum = {0,1,2,4,5} (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B11 X^{C6} = weights {1,5}, and those are the t=-1 ones (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B12 C3 spectrum multiplicities (1,2,2) (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B13 C3 weight-0 point OFF X, stab = D12 (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B14 neither C3-eigenline lies in X (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B15 the X^{C6} point on the weight-w eigenline has C6-weight 1 resp 5 (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B16 A4-point normal C3-weights = sealed terminus (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B17 both A4-points OFF X, stab order 12 (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B1 C11 weights = QR11 (p=661)",
+   "ok": true,
+   "detail": "[1, 3, 4, 5, 9]"
+  },
+  {
+   "name": "B2 all five C11-eigenpoints on X (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B3 C11 normal weights = sealed terminus (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B4 C11 normaliser acts by multiplication (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B5 C5 spectrum is the regular rep (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B6 C5 weight-0 point OFF X, stab = D10 (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B7 the four non-trivial C5-eigenpoints ON X (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B8 C5 normal weights = sealed (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B9 D10 involution acts by a -> -a (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B10 C6 spectrum = {0,1,2,4,5} (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B11 X^{C6} = weights {1,5}, and those are the t=-1 ones (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B12 C3 spectrum multiplicities (1,2,2) (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B13 C3 weight-0 point OFF X, stab = D12 (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B14 neither C3-eigenline lies in X (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B15 the X^{C6} point on the weight-w eigenline has C6-weight 1 resp 5 (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B16 A4-point normal C3-weights = sealed terminus (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B17 both A4-points OFF X, stab order 12 (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B18 Stab_G(C3-eigenline) = C_G(C3) = C6, and the six elements of D12 outside it swap the two eigenlines (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B19 D12 acts TRIVIALLY on the D12-point line (needed for J3) (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B18 Stab_G(C3-eigenline) = C_G(C3) = C6, and the six elements of D12 outside it swap the two eigenlines (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B19 D12 acts TRIVIALLY on the D12-point line (needed for J3) (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C1 path A (closed form) == path B (enumeration)",
+   "ok": true,
+   "detail": "47736 cases"
+  },
+  {
+   "name": "C2 T(e_k) weight = d*a_k for all n, d<200",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C3 D12-point (C3 weight 0) is always a base point",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C4 D10-point (C5 weight 0) is always a base point",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C5 X^{C11} in Bs(T) iff d is not a QR mod 11",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C6 X^{C5} in Bs(T) iff 5 | d",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C7 X^{C6} in Bs(T) iff d is not +-1 mod 6",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C8 both C3-eigenlines in Bs(T) iff 3 | d",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "D1 all 165 residues present",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "D2 no residue is contradictory",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "D3 C11 quadruple rule: all four rows defined iff d in QR11 and mu = 0 or d (mod 11); max 3 if d non-residue, max 2 if 11 | d",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "D4 the eight pt_C5 rows are always simultaneously realisable",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "D5 the two pt_D10 rows are always simultaneously realisable",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "D6 the two pt_D10 rows always land in DIFFERENT C5-orbits",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "D7 the eight C3 rows are always simultaneously realisable",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "D8 every defined C11/C5 row has EXACTLY ONE admissible value",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "D9 every defined C3 row has EXACTLY THREE admissible values",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "D10 Stage-1 immune factor = 1100753141760000",
+   "ok": true,
+   "detail": "1100753141760000"
+  },
+  {
+   "name": "D11 collapsed immune factor = 3^8 = 6561",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "D12 collapse factor = 2^28 * 5^4 = 167772160000",
+   "ok": true,
+   "detail": "167772160000"
+  },
+  {
+   "name": "E1 F55 5-cycle commutes with a -> d a at C11",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "E2 D10 inversion commutes with a -> d a at C5",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "E3 D12/C3 eigenline swap commutes with w -> d w",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "E4 the six C6-children of D_{P_sigma} are all non-degenerate iff  d != 0 and m = d  (mod 3)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "E5 when 3|d and 3|m all six C6-children are degenerate",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "E6 m odd is consistent with the sealed parity theorem (H0-1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "F1 dT = 0 at every C11-point when d = 3 (mod 11)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "F2 dT has rank <= 3 at C11 iff d = 1 (mod 11)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "F3 dT has rank <= 2 at X^{C6} when d = 5 (mod 6), <= 3 when d = 1",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "F4 dT has rank <= 3 at X^{C5} for every d not divisible by 5",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "F5 dF at a weight-a eigenpoint is supported on weight -2a (direct gradient computation, p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "G dim M_1 = 1 (p=331, sealed Molien)",
+   "ok": true,
+   "detail": "1"
+  },
+  {
+   "name": "G dim M_2 = 0 (p=331, sealed Molien)",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "name": "G dim M_3 = 0 (p=331, sealed Molien)",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "name": "G dim M_4 = 2 (p=331, sealed Molien)",
+   "ok": true,
+   "detail": "2"
+  },
+  {
+   "name": "G dim M_5 = 1 (p=331, sealed Molien)",
+   "ok": true,
+   "detail": "1"
+  },
+  {
+   "name": "G dim M_6 = 2 (p=331, sealed Molien)",
+   "ok": true,
+   "detail": "2"
+  },
+  {
+   "name": "G dim M_7 = 4 (p=331, sealed Molien)",
+   "ok": true,
+   "detail": "4"
+  },
+  {
+   "name": "G monomial-congruence violations = 0 (p=331)",
+   "ok": true,
+   "detail": "6213 coefficients tested"
+  },
+  {
+   "name": "G eigenpoint-value violations = 0 (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "G dim M_1 = 1 (p=661, sealed Molien)",
+   "ok": true,
+   "detail": "1"
+  },
+  {
+   "name": "G dim M_2 = 0 (p=661, sealed Molien)",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "name": "G dim M_3 = 0 (p=661, sealed Molien)",
+   "ok": true,
+   "detail": "0"
+  },
+  {
+   "name": "G dim M_4 = 2 (p=661, sealed Molien)",
+   "ok": true,
+   "detail": "2"
+  },
+  {
+   "name": "G dim M_5 = 1 (p=661, sealed Molien)",
+   "ok": true,
+   "detail": "1"
+  },
+  {
+   "name": "G dim M_6 = 2 (p=661, sealed Molien)",
+   "ok": true,
+   "detail": "2"
+  },
+  {
+   "name": "G dim M_7 = 4 (p=661, sealed Molien)",
+   "ok": true,
+   "detail": "4"
+  },
+  {
+   "name": "G monomial-congruence violations = 0 (p=661)",
+   "ok": true,
+   "detail": "6211 coefficients tested"
+  },
+  {
+   "name": "G eigenpoint-value violations = 0 (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "H1 the two primes give identical eigen data",
+   "ok": true,
+   "detail": "[]"
+  },
+  {
+   "name": "H2 C3-eigenline F_p-rationality differs by design (3 at 331, 1 at 661) - matches RECEIVER_LEDGER_X 3.1",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

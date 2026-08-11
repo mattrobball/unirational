@@ -1,0 +1,20 @@
+[p=331] eigen report done
+[p=661] eigen report done
+S2_EIGEN_OK
+  p=331 d=1: dim M_d = 1, n=3: 0/0 bad, n=5: 0/0 bad, n=6: 0/0 bad, n=11: 0/0 bad
+  p=331 d=2: dim M_d = 0, n=3: 0/0 bad, n=5: 0/0 bad, n=6: 0/0 bad, n=11: 0/0 bad
+  p=331 d=3: dim M_d = 0, n=3: 0/0 bad, n=5: 0/0 bad, n=6: 0/0 bad, n=11: 0/0 bad
+  p=331 d=4: dim M_d = 2, n=3: 0/0 bad, n=5: 0/0 bad, n=6: 0/0 bad, n=11: 0/0 bad
+  p=331 d=5: dim M_d = 1, n=3: 0/0 bad, n=5: 0/0 bad, n=6: 0/0 bad, n=11: 0/0 bad
+  p=331 d=6: dim M_d = 2, n=3: 0/0 bad, n=5: 0/0 bad, n=6: 0/0 bad, n=11: 0/0 bad
+  p=331 d=7: dim M_d = 4, n=3: 0/0 bad, n=5: 0/0 bad, n=6: 0/0 bad, n=11: 0/0 bad
+  p=661 d=1: dim M_d = 1, n=3: 0/0 bad, n=5: 0/0 bad, n=6: 0/0 bad, n=11: 0/0 bad
+  p=661 d=2: dim M_d = 0, n=3: 0/0 bad, n=5: 0/0 bad, n=6: 0/0 bad, n=11: 0/0 bad
+  p=661 d=3: dim M_d = 0, n=3: 0/0 bad, n=5: 0/0 bad, n=6: 0/0 bad, n=11: 0/0 bad
+  p=661 d=4: dim M_d = 2, n=3: 0/0 bad, n=5: 0/0 bad, n=6: 0/0 bad, n=11: 0/0 bad
+  p=661 d=5: dim M_d = 1, n=3: 0/0 bad, n=5: 0/0 bad, n=6: 0/0 bad, n=11: 0/0 bad
+  p=661 d=6: dim M_d = 2, n=3: 0/0 bad, n=5: 0/0 bad, n=6: 0/0 bad, n=11: 0/0 bad
+  p=661 d=7: dim M_d = 4, n=3: 0/0 bad, n=5: 0/0 bad, n=6: 0/0 bad, n=11: 0/0 bad
+S2_COVARIANT_BRUTEFORCE_OK
+path A/B crosscheck: {'tested': 47736, 'mismatches': 0}
+S2_TABLES_OK

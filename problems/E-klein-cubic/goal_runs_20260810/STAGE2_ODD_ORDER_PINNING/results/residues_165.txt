@@ -1,0 +1,168 @@
+RESIDUE TABLE  d mod 165 = lcm(3,5,11)
+cols: d165 | d3 d5 d11 | C11 branch (#def/4) | C5 exact (#def/8) | C5 D10 (#def/2) | C3 (#def/8) | collapsed count | verdict
+
+  0 | 0 0  0 | nonQR 2/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+  1 | 1 1  1 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+  2 | 2 2  2 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+  3 | 0 3  3 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+  4 | 1 4  4 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+  5 | 2 0  5 | QR    4/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+  6 | 0 1  6 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+  7 | 1 2  7 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+  8 | 2 3  8 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+  9 | 0 4  9 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 10 | 1 0 10 | nonQR 3/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 11 | 2 1  0 | nonQR 2/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 12 | 0 2  1 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 13 | 1 3  2 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 14 | 2 4  3 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 15 | 0 0  4 | QR    4/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 16 | 1 1  5 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 17 | 2 2  6 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 18 | 0 3  7 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 19 | 1 4  8 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 20 | 2 0  9 | QR    4/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 21 | 0 1 10 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 22 | 1 2  0 | nonQR 2/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 23 | 2 3  1 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 24 | 0 4  2 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 25 | 1 0  3 | QR    4/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 26 | 2 1  4 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 27 | 0 2  5 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 28 | 1 3  6 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 29 | 2 4  7 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 30 | 0 0  8 | nonQR 3/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 31 | 1 1  9 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 32 | 2 2 10 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 33 | 0 3  0 | nonQR 2/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 34 | 1 4  1 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 35 | 2 0  2 | nonQR 3/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 36 | 0 1  3 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 37 | 1 2  4 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 38 | 2 3  5 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 39 | 0 4  6 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 40 | 1 0  7 | nonQR 3/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 41 | 2 1  8 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 42 | 0 2  9 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 43 | 1 3 10 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 44 | 2 4  0 | nonQR 2/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 45 | 0 0  1 | QR    4/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 46 | 1 1  2 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 47 | 2 2  3 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 48 | 0 3  4 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 49 | 1 4  5 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 50 | 2 0  6 | nonQR 3/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 51 | 0 1  7 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 52 | 1 2  8 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 53 | 2 3  9 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 54 | 0 4 10 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 55 | 1 0  0 | nonQR 2/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 56 | 2 1  1 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 57 | 0 2  2 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 58 | 1 3  3 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 59 | 2 4  4 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 60 | 0 0  5 | QR    4/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 61 | 1 1  6 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 62 | 2 2  7 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 63 | 0 3  8 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 64 | 1 4  9 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 65 | 2 0 10 | nonQR 3/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 66 | 0 1  0 | nonQR 2/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 67 | 1 2  1 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 68 | 2 3  2 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 69 | 0 4  3 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 70 | 1 0  4 | QR    4/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 71 | 2 1  5 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 72 | 0 2  6 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 73 | 1 3  7 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 74 | 2 4  8 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 75 | 0 0  9 | QR    4/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 76 | 1 1 10 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 77 | 2 2  0 | nonQR 2/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 78 | 0 3  1 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 79 | 1 4  2 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 80 | 2 0  3 | QR    4/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 81 | 0 1  4 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 82 | 1 2  5 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 83 | 2 3  6 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 84 | 0 4  7 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 85 | 1 0  8 | nonQR 3/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 86 | 2 1  9 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 87 | 0 2 10 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 88 | 1 3  0 | nonQR 2/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 89 | 2 4  1 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 90 | 0 0  2 | nonQR 3/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 91 | 1 1  3 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 92 | 2 2  4 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 93 | 0 3  5 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 94 | 1 4  6 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 95 | 2 0  7 | nonQR 3/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 96 | 0 1  8 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 97 | 1 2  9 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 98 | 2 3 10 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+ 99 | 0 4  0 | nonQR 2/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+100 | 1 0  1 | QR    4/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+101 | 2 1  2 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+102 | 0 2  3 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+103 | 1 3  4 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+104 | 2 4  5 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+105 | 0 0  6 | nonQR 3/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+106 | 1 1  7 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+107 | 2 2  8 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+108 | 0 3  9 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+109 | 1 4 10 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+110 | 2 0  0 | nonQR 2/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+111 | 0 1  1 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+112 | 1 2  2 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+113 | 2 3  3 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+114 | 0 4  4 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+115 | 1 0  5 | QR    4/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+116 | 2 1  6 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+117 | 0 2  7 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+118 | 1 3  8 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+119 | 2 4  9 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+120 | 0 0 10 | nonQR 3/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+121 | 1 1  0 | nonQR 2/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+122 | 2 2  1 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+123 | 0 3  2 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+124 | 1 4  3 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+125 | 2 0  4 | QR    4/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+126 | 0 1  5 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+127 | 1 2  6 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+128 | 2 3  7 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+129 | 0 4  8 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+130 | 1 0  9 | QR    4/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+131 | 2 1 10 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+132 | 0 2  0 | nonQR 2/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+133 | 1 3  1 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+134 | 2 4  2 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+135 | 0 0  3 | QR    4/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+136 | 1 1  4 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+137 | 2 2  5 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+138 | 0 3  6 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+139 | 1 4  7 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+140 | 2 0  8 | nonQR 3/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+141 | 0 1  9 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+142 | 1 2 10 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+143 | 2 3  0 | nonQR 2/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+144 | 0 4  1 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+145 | 1 0  2 | nonQR 3/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+146 | 2 1  3 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+147 | 0 2  4 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+148 | 1 3  5 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+149 | 2 4  6 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+150 | 0 0  7 | nonQR 3/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+151 | 1 1  8 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+152 | 2 2  9 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+153 | 0 3 10 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+154 | 1 4  0 | nonQR 2/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+155 | 2 0  1 | QR    4/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+156 | 0 1  2 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+157 | 1 2  3 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+158 | 2 3  4 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+159 | 0 4  5 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+160 | 1 0  6 | nonQR 3/4 | Bs    8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+161 | 2 1  7 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+162 | 0 2  8 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+163 | 1 3  9 | QR    4/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT
+164 | 2 4 10 | nonQR 3/4 | def   8/8 | 2/2 | 8/8 |  6561 | CONSISTENT

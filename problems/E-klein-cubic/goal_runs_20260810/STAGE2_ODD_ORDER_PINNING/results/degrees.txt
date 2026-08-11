@@ -1,0 +1,129 @@
+PER-DEGREE VERDICT (sealed window degrees)
+the sealed sieve says d <= 30 is EMPTY, 31-33 near-complete all-zero, first open window d = 34
+
+d = 25   (d mod 3,5,11 = 1,0,3 ; d mod 165 = 25 ; d mod 6 = 1)
+   C11   : d is a QR mod 11: T is defined at the 60 C11-points and permutes X^{C11} by a |-> 3 a; all four C11-rows collapse to that ONE value
+   C5    : 5 | d: all 264 C5-points, hence all four points of X^{C5}, lie in Bs(T)
+   C5/D10: the 66 D10-points always lie in Bs(T); the two pt_D10 rows are pinned by mu_0 mod 5 and always land in DIFFERENT C5-orbits
+   C3    : d = 1 mod 3: each C3-eigenline is contracted to the X^{C6} point ON it
+   L_sig : minus-lines in Bs(T)? False ; ord_{L_sigma}(T) even (0 allowed)
+   X^C6  : in Bs(T)? False ; T fixes each of the two X^{C6} points
+   max rank of dT at a pinned point: C11 0, C5 None, C6 3
+
+d = 34   (d mod 3,5,11 = 1,4,1 ; d mod 165 = 34 ; d mod 6 = 4)
+   C11   : d is a QR mod 11: T is defined at the 60 C11-points and permutes X^{C11} by a |-> 1 a; all four C11-rows collapse to that ONE value
+   C5    : 5 does not divide d: T permutes X^{C5} by a |-> 4 a; the eight pt_C5 rows collapse to ONE value each
+   C5/D10: the 66 D10-points always lie in Bs(T); the two pt_D10 rows are pinned by mu_0 mod 5 and always land in DIFFERENT C5-orbits
+   C3    : d = 1 mod 3: each C3-eigenline is contracted to the X^{C6} point ON it
+   L_sig : minus-lines in Bs(T)? True ; ord_{L_sigma}(T) odd
+   X^C6  : in Bs(T)? True ; both X^{C6} points are base points
+   max rank of dT at a pinned point: C11 3, C5 3, C6 None
+
+d = 35   (d mod 3,5,11 = 2,0,2 ; d mod 165 = 35 ; d mod 6 = 5)
+   C11   : d is a non-residue mod 11 (or 0): ALL 60 C11-points lie in Bs(T)
+   C5    : 5 | d: all 264 C5-points, hence all four points of X^{C5}, lie in Bs(T)
+   C5/D10: the 66 D10-points always lie in Bs(T); the two pt_D10 rows are pinned by mu_0 mod 5 and always land in DIFFERENT C5-orbits
+   C3    : d = 2 mod 3: each C3-eigenline is contracted to the X^{C6} point on the OTHER eigenline
+   L_sig : minus-lines in Bs(T)? False ; ord_{L_sigma}(T) even (0 allowed)
+   X^C6  : in Bs(T)? False ; T swaps the two X^{C6} points
+   max rank of dT at a pinned point: C11 None, C5 None, C6 2
+
+d = 36   (d mod 3,5,11 = 0,1,3 ; d mod 165 = 36 ; d mod 6 = 0)
+   C11   : d is a QR mod 11: T is defined at the 60 C11-points and permutes X^{C11} by a |-> 3 a; all four C11-rows collapse to that ONE value
+   C5    : 5 does not divide d: T permutes X^{C5} by a |-> 1 a; the eight pt_C5 rows collapse to ONE value each
+   C5/D10: the 66 D10-points always lie in Bs(T); the two pt_D10 rows are pinned by mu_0 mod 5 and always land in DIFFERENT C5-orbits
+   C3    : 3 | d: both C3-eigenlines (110 lines) lie in Bs(T)
+   L_sig : minus-lines in Bs(T)? True ; ord_{L_sigma}(T) odd
+   X^C6  : in Bs(T)? True ; both X^{C6} points are base points
+   max rank of dT at a pinned point: C11 0, C5 3, C6 None
+
+d = 37   (d mod 3,5,11 = 1,2,4 ; d mod 165 = 37 ; d mod 6 = 1)
+   C11   : d is a QR mod 11: T is defined at the 60 C11-points and permutes X^{C11} by a |-> 4 a; all four C11-rows collapse to that ONE value
+   C5    : 5 does not divide d: T permutes X^{C5} by a |-> 2 a; the eight pt_C5 rows collapse to ONE value each
+   C5/D10: the 66 D10-points always lie in Bs(T); the two pt_D10 rows are pinned by mu_0 mod 5 and always land in DIFFERENT C5-orbits
+   C3    : d = 1 mod 3: each C3-eigenline is contracted to the X^{C6} point ON it
+   L_sig : minus-lines in Bs(T)? False ; ord_{L_sigma}(T) even (0 allowed)
+   X^C6  : in Bs(T)? False ; T fixes each of the two X^{C6} points
+   max rank of dT at a pinned point: C11 1, C5 3, C6 3
+
+d = 38   (d mod 3,5,11 = 2,3,5 ; d mod 165 = 38 ; d mod 6 = 2)
+   C11   : d is a QR mod 11: T is defined at the 60 C11-points and permutes X^{C11} by a |-> 5 a; all four C11-rows collapse to that ONE value
+   C5    : 5 does not divide d: T permutes X^{C5} by a |-> 3 a; the eight pt_C5 rows collapse to ONE value each
+   C5/D10: the 66 D10-points always lie in Bs(T); the two pt_D10 rows are pinned by mu_0 mod 5 and always land in DIFFERENT C5-orbits
+   C3    : d = 2 mod 3: each C3-eigenline is contracted to the X^{C6} point on the OTHER eigenline
+   L_sig : minus-lines in Bs(T)? True ; ord_{L_sigma}(T) odd
+   X^C6  : in Bs(T)? True ; both X^{C6} points are base points
+   max rank of dT at a pinned point: C11 1, C5 3, C6 None
+
+d = 39   (d mod 3,5,11 = 0,4,6 ; d mod 165 = 39 ; d mod 6 = 3)
+   C11   : d is a non-residue mod 11 (or 0): ALL 60 C11-points lie in Bs(T)
+   C5    : 5 does not divide d: T permutes X^{C5} by a |-> 4 a; the eight pt_C5 rows collapse to ONE value each
+   C5/D10: the 66 D10-points always lie in Bs(T); the two pt_D10 rows are pinned by mu_0 mod 5 and always land in DIFFERENT C5-orbits
+   C3    : 3 | d: both C3-eigenlines (110 lines) lie in Bs(T)
+   L_sig : minus-lines in Bs(T)? False ; ord_{L_sigma}(T) even (0 allowed)
+   X^C6  : in Bs(T)? True ; both X^{C6} points are base points
+   max rank of dT at a pinned point: C11 None, C5 3, C6 None
+
+d = 40   (d mod 3,5,11 = 1,0,7 ; d mod 165 = 40 ; d mod 6 = 4)
+   C11   : d is a non-residue mod 11 (or 0): ALL 60 C11-points lie in Bs(T)
+   C5    : 5 | d: all 264 C5-points, hence all four points of X^{C5}, lie in Bs(T)
+   C5/D10: the 66 D10-points always lie in Bs(T); the two pt_D10 rows are pinned by mu_0 mod 5 and always land in DIFFERENT C5-orbits
+   C3    : d = 1 mod 3: each C3-eigenline is contracted to the X^{C6} point ON it
+   L_sig : minus-lines in Bs(T)? True ; ord_{L_sigma}(T) odd
+   X^C6  : in Bs(T)? True ; both X^{C6} points are base points
+   max rank of dT at a pinned point: C11 None, C5 None, C6 None
+
+d = 41   (d mod 3,5,11 = 2,1,8 ; d mod 165 = 41 ; d mod 6 = 5)
+   C11   : d is a non-residue mod 11 (or 0): ALL 60 C11-points lie in Bs(T)
+   C5    : 5 does not divide d: T permutes X^{C5} by a |-> 1 a; the eight pt_C5 rows collapse to ONE value each
+   C5/D10: the 66 D10-points always lie in Bs(T); the two pt_D10 rows are pinned by mu_0 mod 5 and always land in DIFFERENT C5-orbits
+   C3    : d = 2 mod 3: each C3-eigenline is contracted to the X^{C6} point on the OTHER eigenline
+   L_sig : minus-lines in Bs(T)? False ; ord_{L_sigma}(T) even (0 allowed)
+   X^C6  : in Bs(T)? False ; T swaps the two X^{C6} points
+   max rank of dT at a pinned point: C11 None, C5 3, C6 2
+
+d = 42   (d mod 3,5,11 = 0,2,9 ; d mod 165 = 42 ; d mod 6 = 0)
+   C11   : d is a QR mod 11: T is defined at the 60 C11-points and permutes X^{C11} by a |-> 9 a; all four C11-rows collapse to that ONE value
+   C5    : 5 does not divide d: T permutes X^{C5} by a |-> 2 a; the eight pt_C5 rows collapse to ONE value each
+   C5/D10: the 66 D10-points always lie in Bs(T); the two pt_D10 rows are pinned by mu_0 mod 5 and always land in DIFFERENT C5-orbits
+   C3    : 3 | d: both C3-eigenlines (110 lines) lie in Bs(T)
+   L_sig : minus-lines in Bs(T)? True ; ord_{L_sigma}(T) odd
+   X^C6  : in Bs(T)? True ; both X^{C6} points are base points
+   max rank of dT at a pinned point: C11 1, C5 3, C6 None
+
+d = 43   (d mod 3,5,11 = 1,3,10 ; d mod 165 = 43 ; d mod 6 = 1)
+   C11   : d is a non-residue mod 11 (or 0): ALL 60 C11-points lie in Bs(T)
+   C5    : 5 does not divide d: T permutes X^{C5} by a |-> 3 a; the eight pt_C5 rows collapse to ONE value each
+   C5/D10: the 66 D10-points always lie in Bs(T); the two pt_D10 rows are pinned by mu_0 mod 5 and always land in DIFFERENT C5-orbits
+   C3    : d = 1 mod 3: each C3-eigenline is contracted to the X^{C6} point ON it
+   L_sig : minus-lines in Bs(T)? False ; ord_{L_sigma}(T) even (0 allowed)
+   X^C6  : in Bs(T)? False ; T fixes each of the two X^{C6} points
+   max rank of dT at a pinned point: C11 None, C5 3, C6 3
+
+d = 44   (d mod 3,5,11 = 2,4,0 ; d mod 165 = 44 ; d mod 6 = 2)
+   C11   : d is a non-residue mod 11 (or 0): ALL 60 C11-points lie in Bs(T)
+   C5    : 5 does not divide d: T permutes X^{C5} by a |-> 4 a; the eight pt_C5 rows collapse to ONE value each
+   C5/D10: the 66 D10-points always lie in Bs(T); the two pt_D10 rows are pinned by mu_0 mod 5 and always land in DIFFERENT C5-orbits
+   C3    : d = 2 mod 3: each C3-eigenline is contracted to the X^{C6} point on the OTHER eigenline
+   L_sig : minus-lines in Bs(T)? True ; ord_{L_sigma}(T) odd
+   X^C6  : in Bs(T)? True ; both X^{C6} points are base points
+   max rank of dT at a pinned point: C11 None, C5 3, C6 None
+
+d = 45   (d mod 3,5,11 = 0,0,1 ; d mod 165 = 45 ; d mod 6 = 3)
+   C11   : d is a QR mod 11: T is defined at the 60 C11-points and permutes X^{C11} by a |-> 1 a; all four C11-rows collapse to that ONE value
+   C5    : 5 | d: all 264 C5-points, hence all four points of X^{C5}, lie in Bs(T)
+   C5/D10: the 66 D10-points always lie in Bs(T); the two pt_D10 rows are pinned by mu_0 mod 5 and always land in DIFFERENT C5-orbits
+   C3    : 3 | d: both C3-eigenlines (110 lines) lie in Bs(T)
+   L_sig : minus-lines in Bs(T)? False ; ord_{L_sigma}(T) even (0 allowed)
+   X^C6  : in Bs(T)? True ; both X^{C6} points are base points
+   max rank of dT at a pinned point: C11 3, C5 None, C6 None
+
+d = 46   (d mod 3,5,11 = 1,1,2 ; d mod 165 = 46 ; d mod 6 = 4)
+   C11   : d is a non-residue mod 11 (or 0): ALL 60 C11-points lie in Bs(T)
+   C5    : 5 does not divide d: T permutes X^{C5} by a |-> 1 a; the eight pt_C5 rows collapse to ONE value each
+   C5/D10: the 66 D10-points always lie in Bs(T); the two pt_D10 rows are pinned by mu_0 mod 5 and always land in DIFFERENT C5-orbits
+   C3    : d = 1 mod 3: each C3-eigenline is contracted to the X^{C6} point ON it
+   L_sig : minus-lines in Bs(T)? True ; ord_{L_sigma}(T) odd
+   X^C6  : in Bs(T)? True ; both X^{C6} points are base points
+   max rank of dT at a pinned point: C11 None, C5 3, C6 None
+
