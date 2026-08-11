@@ -1,0 +1,7 @@
+(m, c1, c2) triples tested with gcd(c1,c2,m)=1, m <= 120: 483672
+failures of the tex's construction: 0
+brute-force existence check (m <= 60): missing witnesses = 0
+ex:not_a_complex  H = Z/6, (chi_1,chi_2) = (2,3): construction gives (a,b) = (5,11), weight b*c1-a*c2 = 1 mod 6, gcd with 6 = 1
+  tex's own choice there is (a,b) = (1,1), weight 2-3 = -1: gcd(-1 mod 6, 6) = 1  (both are legal witnesses)
+cyclic H of prime order with both ker(chi_i) != 1 and <chi_1,chi_2> = dual(H): 0 cases (expected 0)
+RESULT: PASS

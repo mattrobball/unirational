@@ -269,6 +269,13 @@ assertion "the repo's PSL(2,7) result is the all-degree
 
 ## T2′. The Duncan instance (S4 on the Fermat dP2), closed in the calculus
 
+> **Citation-drift correction (2026-08-11, `DUNCAN_IMPORTS_REVIEW`).** The Duncan
+> numbers in §T2′ are from an EARLIER draft; in the current
+> `duncan_higher_obstruction_20260805.tex`: "Thm 6.2" = `thm:no_map_to_dp2` 4.18,
+> "Thm 4.2" = `thm:pairs` 4.1, "Thm 3.10" = `thm:fabulous` 3.8, "Prop 3.12" =
+> `prop:rcc` 3.9. ("Prop 4.3" = `prop:noncyclic_fabulous` 4.3 is still correct.)
+> **Cite BY LABEL, not by number.**
+
 Added 2026-08-05, on request, after ingesting
 `external_docs/duncan_higher_obstruction_20260805.tex` (their Thm 6.2):
 a THIRD sibling of the T2/T3 family — same Fermat-quartic dP2 target as

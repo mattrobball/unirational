@@ -1,0 +1,1286 @@
+{
+ "331": [
+  {
+   "d_mod_3": 0,
+   "dim_A": 3,
+   "dim_Aprime": 2,
+   "mu": 2,
+   "orbit": "omega",
+   "p": 331,
+   "rows": {
+    "row_dim0": {
+     "C6_point_st": [
+      176,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       39,
+       278,
+       271,
+       29
+      ],
+      "value_at_(1:0)": 29
+     },
+     "achievable_st": [],
+     "ev_matrix": [
+      [
+       145,
+       32
+      ],
+      [
+       164,
+       75
+      ]
+     ],
+     "landing_gcd_degree": 0,
+     "rank_ev": 1,
+     "weight": 1
+    },
+    "row_dim1": {
+     "C6_point_st": [
+      200,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       158,
+       323,
+       93,
+       20
+      ],
+      "value_at_(1:0)": 20
+     },
+     "achievable_st": [],
+     "ev_matrix": [
+      [
+       288,
+       36
+      ],
+      [
+       19,
+       292
+      ]
+     ],
+     "landing_gcd_degree": 0,
+     "rank_ev": 1,
+     "weight": 2
+    }
+   }
+  },
+  {
+   "d_mod_3": 0,
+   "dim_A": 3,
+   "dim_Aprime": 2,
+   "mu": 3,
+   "orbit": "omega",
+   "p": 331,
+   "rows": {
+    "row_dim0": {
+     "verdict": "target weight 0 = the D12-point, OFF X: the row is a deeper base point (no value at this order)",
+     "weight": 0
+    },
+    "row_dim1": {
+     "verdict": "target weight 0 = the D12-point, OFF X: the row is a deeper base point (no value at this order)",
+     "weight": 0
+    }
+   }
+  },
+  {
+   "d_mod_3": 1,
+   "dim_A": 3,
+   "dim_Aprime": 2,
+   "mu": 2,
+   "orbit": "omega",
+   "p": 331,
+   "rows": {
+    "row_dim0": {
+     "C6_point_st": [
+      200,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       158,
+       323,
+       93,
+       20
+      ],
+      "value_at_(1:0)": 20
+     },
+     "achievable_st": [],
+     "ev_matrix": [
+      [
+       238,
+       85
+      ],
+      [
+       187,
+       202
+      ]
+     ],
+     "landing_gcd_degree": 0,
+     "rank_ev": 2,
+     "weight": 2
+    },
+    "row_dim1": {
+     "verdict": "target weight 0 = the D12-point, OFF X: the row is a deeper base point (no value at this order)",
+     "weight": 0
+    }
+   }
+  },
+  {
+   "d_mod_3": 1,
+   "dim_A": 4,
+   "dim_Aprime": 3,
+   "mu": 3,
+   "orbit": "omega",
+   "p": 331,
+   "rows": {
+    "row_dim0": {
+     "C6_point_st": [
+      176,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       39,
+       278,
+       271,
+       29
+      ],
+      "value_at_(1:0)": 29
+     },
+     "achievable_st": "NOT-SCANNED (dim A' = 3)",
+     "ev_matrix": [
+      [
+       328,
+       263
+      ],
+      [
+       206,
+       154
+      ],
+      [
+       65,
+       85
+      ]
+     ],
+     "rank_ev": 2,
+     "weight": 1
+    },
+    "row_dim1": {
+     "C6_point_st": [
+      176,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       39,
+       278,
+       271,
+       29
+      ],
+      "value_at_(1:0)": 29
+     },
+     "achievable_st": "NOT-SCANNED (dim A' = 3)",
+     "ev_matrix": [
+      [
+       189,
+       167
+      ],
+      [
+       317,
+       124
+      ],
+      [
+       193,
+       176
+      ]
+     ],
+     "rank_ev": 2,
+     "weight": 1
+    }
+   }
+  },
+  {
+   "d_mod_3": 2,
+   "dim_A": 3,
+   "dim_Aprime": 2,
+   "mu": 2,
+   "orbit": "omega",
+   "p": 331,
+   "rows": {
+    "row_dim0": {
+     "verdict": "target weight 0 = the D12-point, OFF X: the row is a deeper base point (no value at this order)",
+     "weight": 0
+    },
+    "row_dim1": {
+     "C6_point_st": [
+      176,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       39,
+       278,
+       271,
+       29
+      ],
+      "value_at_(1:0)": 29
+     },
+     "achievable_st": [],
+     "ev_matrix": [
+      [
+       259,
+       138
+      ],
+      [
+       265,
+       265
+      ]
+     ],
+     "landing_gcd_degree": 0,
+     "rank_ev": 2,
+     "weight": 1
+    }
+   }
+  },
+  {
+   "d_mod_3": 2,
+   "dim_A": 4,
+   "dim_Aprime": 3,
+   "mu": 3,
+   "orbit": "omega",
+   "p": 331,
+   "rows": {
+    "row_dim0": {
+     "C6_point_st": [
+      200,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       158,
+       323,
+       93,
+       20
+      ],
+      "value_at_(1:0)": 20
+     },
+     "achievable_st": "NOT-SCANNED (dim A' = 3)",
+     "ev_matrix": [
+      [
+       181,
+       142
+      ],
+      [
+       109,
+       207
+      ],
+      [
+       41,
+       313
+      ]
+     ],
+     "rank_ev": 2,
+     "weight": 2
+    },
+    "row_dim1": {
+     "C6_point_st": [
+      200,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       158,
+       323,
+       93,
+       20
+      ],
+      "value_at_(1:0)": 20
+     },
+     "achievable_st": "NOT-SCANNED (dim A' = 3)",
+     "ev_matrix": [
+      [
+       52,
+       202
+      ],
+      [
+       146,
+       131
+      ],
+      [
+       81,
+       247
+      ]
+     ],
+     "rank_ev": 2,
+     "weight": 2
+    }
+   }
+  },
+  {
+   "d_mod_3": 0,
+   "dim_A": 3,
+   "dim_Aprime": 2,
+   "mu": 2,
+   "orbit": "omega^2",
+   "p": 331,
+   "rows": {
+    "row_dim0": {
+     "C6_point_st": [
+      176,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       39,
+       278,
+       271,
+       29
+      ],
+      "value_at_(1:0)": 29
+     },
+     "achievable_st": [],
+     "ev_matrix": [
+      [
+       181,
+       218
+      ],
+      [
+       207,
+       242
+      ]
+     ],
+     "landing_gcd_degree": 0,
+     "rank_ev": 1,
+     "weight": 1
+    },
+    "row_dim1": {
+     "C6_point_st": [
+      200,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       158,
+       323,
+       93,
+       20
+      ],
+      "value_at_(1:0)": 20
+     },
+     "achievable_st": [],
+     "ev_matrix": [
+      [
+       75,
+       299
+      ],
+      [
+       167,
+       145
+      ]
+     ],
+     "landing_gcd_degree": 0,
+     "rank_ev": 1,
+     "weight": 2
+    }
+   }
+  },
+  {
+   "d_mod_3": 0,
+   "dim_A": 3,
+   "dim_Aprime": 2,
+   "mu": 3,
+   "orbit": "omega^2",
+   "p": 331,
+   "rows": {
+    "row_dim0": {
+     "verdict": "target weight 0 = the D12-point, OFF X: the row is a deeper base point (no value at this order)",
+     "weight": 0
+    },
+    "row_dim1": {
+     "verdict": "target weight 0 = the D12-point, OFF X: the row is a deeper base point (no value at this order)",
+     "weight": 0
+    }
+   }
+  },
+  {
+   "d_mod_3": 1,
+   "dim_A": 3,
+   "dim_Aprime": 2,
+   "mu": 2,
+   "orbit": "omega^2",
+   "p": 331,
+   "rows": {
+    "row_dim0": {
+     "verdict": "target weight 0 = the D12-point, OFF X: the row is a deeper base point (no value at this order)",
+     "weight": 0
+    },
+    "row_dim1": {
+     "C6_point_st": [
+      176,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       39,
+       278,
+       271,
+       29
+      ],
+      "value_at_(1:0)": 29
+     },
+     "achievable_st": [],
+     "ev_matrix": [
+      [
+       64,
+       98
+      ],
+      [
+       169,
+       169
+      ]
+     ],
+     "landing_gcd_degree": 0,
+     "rank_ev": 2,
+     "weight": 1
+    }
+   }
+  },
+  {
+   "d_mod_3": 1,
+   "dim_A": 4,
+   "dim_Aprime": 3,
+   "mu": 3,
+   "orbit": "omega^2",
+   "p": 331,
+   "rows": {
+    "row_dim0": {
+     "C6_point_st": [
+      200,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       158,
+       323,
+       93,
+       20
+      ],
+      "value_at_(1:0)": 20
+     },
+     "achievable_st": "NOT-SCANNED (dim A' = 3)",
+     "ev_matrix": [
+      [
+       103,
+       4
+      ],
+      [
+       312,
+       219
+      ],
+      [
+       171,
+       264
+      ]
+     ],
+     "rank_ev": 2,
+     "weight": 2
+    },
+    "row_dim1": {
+     "C6_point_st": [
+      200,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       158,
+       323,
+       93,
+       20
+      ],
+      "value_at_(1:0)": 20
+     },
+     "achievable_st": "NOT-SCANNED (dim A' = 3)",
+     "ev_matrix": [
+      [
+       69,
+       128
+      ],
+      [
+       166,
+       90
+      ],
+      [
+       41,
+       313
+      ]
+     ],
+     "rank_ev": 2,
+     "weight": 2
+    }
+   }
+  },
+  {
+   "d_mod_3": 2,
+   "dim_A": 3,
+   "dim_Aprime": 2,
+   "mu": 2,
+   "orbit": "omega^2",
+   "p": 331,
+   "rows": {
+    "row_dim0": {
+     "C6_point_st": [
+      200,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       158,
+       323,
+       93,
+       20
+      ],
+      "value_at_(1:0)": 20
+     },
+     "achievable_st": [],
+     "ev_matrix": [
+      [
+       256,
+       186
+      ],
+      [
+       12,
+       259
+      ]
+     ],
+     "landing_gcd_degree": 0,
+     "rank_ev": 2,
+     "weight": 2
+    },
+    "row_dim1": {
+     "verdict": "target weight 0 = the D12-point, OFF X: the row is a deeper base point (no value at this order)",
+     "weight": 0
+    }
+   }
+  },
+  {
+   "d_mod_3": 2,
+   "dim_A": 4,
+   "dim_Aprime": 3,
+   "mu": 3,
+   "orbit": "omega^2",
+   "p": 331,
+   "rows": {
+    "row_dim0": {
+     "C6_point_st": [
+      176,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       39,
+       278,
+       271,
+       29
+      ],
+      "value_at_(1:0)": 29
+     },
+     "achievable_st": "NOT-SCANNED (dim A' = 3)",
+     "ev_matrix": [
+      [
+       247,
+       82
+      ],
+      [
+       122,
+       43
+      ],
+      [
+       150,
+       298
+      ]
+     ],
+     "rank_ev": 2,
+     "weight": 1
+    },
+    "row_dim1": {
+     "C6_point_st": [
+      176,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       39,
+       278,
+       271,
+       29
+      ],
+      "value_at_(1:0)": 29
+     },
+     "achievable_st": "NOT-SCANNED (dim A' = 3)",
+     "ev_matrix": [
+      [
+       28,
+       37
+      ],
+      [
+       238,
+       209
+      ],
+      [
+       65,
+       85
+      ]
+     ],
+     "rank_ev": 2,
+     "weight": 1
+    }
+   }
+  }
+ ],
+ "661": [
+  {
+   "d_mod_3": 0,
+   "dim_A": 3,
+   "dim_Aprime": 2,
+   "mu": 2,
+   "orbit": "omega",
+   "p": 661,
+   "rows": {
+    "row_dim0": {
+     "C6_point_st": [
+      354,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       436,
+       181,
+       396,
+       64
+      ],
+      "value_at_(1:0)": 64
+     },
+     "achievable_st": [],
+     "ev_matrix": [
+      [
+       512,
+       8
+      ],
+      [
+       487,
+       555
+      ]
+     ],
+     "landing_gcd_degree": 0,
+     "rank_ev": 1,
+     "weight": 1
+    },
+    "row_dim1": {
+     "C6_point_st": [
+      171,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       157,
+       209,
+       595,
+       621
+      ],
+      "value_at_(1:0)": 621
+     },
+     "achievable_st": [],
+     "ev_matrix": [
+      [
+       569,
+       18
+      ],
+      [
+       600,
+       170
+      ]
+     ],
+     "landing_gcd_degree": 0,
+     "rank_ev": 1,
+     "weight": 2
+    }
+   }
+  },
+  {
+   "d_mod_3": 0,
+   "dim_A": 3,
+   "dim_Aprime": 2,
+   "mu": 3,
+   "orbit": "omega",
+   "p": 661,
+   "rows": {
+    "row_dim0": {
+     "verdict": "target weight 0 = the D12-point, OFF X: the row is a deeper base point (no value at this order)",
+     "weight": 0
+    },
+    "row_dim1": {
+     "verdict": "target weight 0 = the D12-point, OFF X: the row is a deeper base point (no value at this order)",
+     "weight": 0
+    }
+   }
+  },
+  {
+   "d_mod_3": 1,
+   "dim_A": 3,
+   "dim_Aprime": 2,
+   "mu": 2,
+   "orbit": "omega",
+   "p": 661,
+   "rows": {
+    "row_dim0": {
+     "C6_point_st": [
+      171,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       157,
+       209,
+       595,
+       621
+      ],
+      "value_at_(1:0)": 621
+     },
+     "achievable_st": [],
+     "ev_matrix": [
+      [
+       20,
+       543
+      ],
+      [
+       157,
+       317
+      ]
+     ],
+     "landing_gcd_degree": 0,
+     "rank_ev": 2,
+     "weight": 2
+    },
+    "row_dim1": {
+     "verdict": "target weight 0 = the D12-point, OFF X: the row is a deeper base point (no value at this order)",
+     "weight": 0
+    }
+   }
+  },
+  {
+   "d_mod_3": 1,
+   "dim_A": 4,
+   "dim_Aprime": 3,
+   "mu": 3,
+   "orbit": "omega",
+   "p": 661,
+   "rows": {
+    "row_dim0": {
+     "C6_point_st": [
+      354,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       436,
+       181,
+       396,
+       64
+      ],
+      "value_at_(1:0)": 64
+     },
+     "achievable_st": "NOT-SCANNED (dim A' = 3)",
+     "ev_matrix": [
+      [
+       4,
+       579
+      ],
+      [
+       264,
+       622
+      ],
+      [
+       381,
+       410
+      ]
+     ],
+     "rank_ev": 2,
+     "weight": 1
+    },
+    "row_dim1": {
+     "C6_point_st": [
+      354,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       436,
+       181,
+       396,
+       64
+      ],
+      "value_at_(1:0)": 64
+     },
+     "achievable_st": "NOT-SCANNED (dim A' = 3)",
+     "ev_matrix": [
+      [
+       584,
+       94
+      ],
+      [
+       109,
+       79
+      ],
+      [
+       302,
+       266
+      ]
+     ],
+     "rank_ev": 2,
+     "weight": 1
+    }
+   }
+  },
+  {
+   "d_mod_3": 2,
+   "dim_A": 3,
+   "dim_Aprime": 2,
+   "mu": 2,
+   "orbit": "omega",
+   "p": 661,
+   "rows": {
+    "row_dim0": {
+     "verdict": "target weight 0 = the D12-point, OFF X: the row is a deeper base point (no value at this order)",
+     "weight": 0
+    },
+    "row_dim1": {
+     "C6_point_st": [
+      354,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       436,
+       181,
+       396,
+       64
+      ],
+      "value_at_(1:0)": 64
+     },
+     "achievable_st": [],
+     "ev_matrix": [
+      [
+       270,
+       507
+      ],
+      [
+       271,
+       19
+      ]
+     ],
+     "landing_gcd_degree": 0,
+     "rank_ev": 2,
+     "weight": 1
+    }
+   }
+  },
+  {
+   "d_mod_3": 2,
+   "dim_A": 4,
+   "dim_Aprime": 3,
+   "mu": 3,
+   "orbit": "omega",
+   "p": 661,
+   "rows": {
+    "row_dim0": {
+     "C6_point_st": [
+      171,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       157,
+       209,
+       595,
+       621
+      ],
+      "value_at_(1:0)": 621
+     },
+     "achievable_st": "NOT-SCANNED (dim A' = 3)",
+     "ev_matrix": [
+      [
+       121,
+       312
+      ],
+      [
+       71,
+       95
+      ],
+      [
+       469,
+       254
+      ]
+     ],
+     "rank_ev": 2,
+     "weight": 2
+    },
+    "row_dim1": {
+     "C6_point_st": [
+      171,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       157,
+       209,
+       595,
+       621
+      ],
+      "value_at_(1:0)": 621
+     },
+     "achievable_st": "NOT-SCANNED (dim A' = 3)",
+     "ev_matrix": [
+      [
+       260,
+       171
+      ],
+      [
+       484,
+       587
+      ],
+      [
+       56,
+       642
+      ]
+     ],
+     "rank_ev": 2,
+     "weight": 2
+    }
+   }
+  },
+  {
+   "d_mod_3": 0,
+   "dim_A": 3,
+   "dim_Aprime": 2,
+   "mu": 2,
+   "orbit": "omega^2",
+   "p": 661,
+   "rows": {
+    "row_dim0": {
+     "C6_point_st": [
+      354,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       436,
+       181,
+       396,
+       64
+      ],
+      "value_at_(1:0)": 64
+     },
+     "achievable_st": [],
+     "ev_matrix": [
+      [
+       627,
+       268
+      ],
+      [
+       120,
+       415
+      ]
+     ],
+     "landing_gcd_degree": 0,
+     "rank_ev": 1,
+     "weight": 1
+    },
+    "row_dim1": {
+     "C6_point_st": [
+      171,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       157,
+       209,
+       595,
+       621
+      ],
+      "value_at_(1:0)": 621
+     },
+     "achievable_st": [],
+     "ev_matrix": [
+      [
+       555,
+       653
+      ],
+      [
+       174,
+       512
+      ]
+     ],
+     "landing_gcd_degree": 0,
+     "rank_ev": 1,
+     "weight": 2
+    }
+   }
+  },
+  {
+   "d_mod_3": 0,
+   "dim_A": 3,
+   "dim_Aprime": 2,
+   "mu": 3,
+   "orbit": "omega^2",
+   "p": 661,
+   "rows": {
+    "row_dim0": {
+     "verdict": "target weight 0 = the D12-point, OFF X: the row is a deeper base point (no value at this order)",
+     "weight": 0
+    },
+    "row_dim1": {
+     "verdict": "target weight 0 = the D12-point, OFF X: the row is a deeper base point (no value at this order)",
+     "weight": 0
+    }
+   }
+  },
+  {
+   "d_mod_3": 1,
+   "dim_A": 3,
+   "dim_Aprime": 2,
+   "mu": 2,
+   "orbit": "omega^2",
+   "p": 661,
+   "rows": {
+    "row_dim0": {
+     "verdict": "target weight 0 = the D12-point, OFF X: the row is a deeper base point (no value at this order)",
+     "weight": 0
+    },
+    "row_dim1": {
+     "C6_point_st": [
+      354,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       436,
+       181,
+       396,
+       64
+      ],
+      "value_at_(1:0)": 64
+     },
+     "achievable_st": [],
+     "ev_matrix": [
+      [
+       541,
+       656
+      ],
+      [
+       614,
+       65
+      ]
+     ],
+     "landing_gcd_degree": 0,
+     "rank_ev": 2,
+     "weight": 1
+    }
+   }
+  },
+  {
+   "d_mod_3": 1,
+   "dim_A": 4,
+   "dim_Aprime": 3,
+   "mu": 3,
+   "orbit": "omega^2",
+   "p": 661,
+   "rows": {
+    "row_dim0": {
+     "C6_point_st": [
+      171,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       157,
+       209,
+       595,
+       621
+      ],
+      "value_at_(1:0)": 621
+     },
+     "achievable_st": "NOT-SCANNED (dim A' = 3)",
+     "ev_matrix": [
+      [
+       539,
+       188
+      ],
+      [
+       596,
+       453
+      ],
+      [
+       192,
+       407
+      ]
+     ],
+     "rank_ev": 2,
+     "weight": 2
+    },
+    "row_dim1": {
+     "C6_point_st": [
+      171,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       157,
+       209,
+       595,
+       621
+      ],
+      "value_at_(1:0)": 621
+     },
+     "achievable_st": "NOT-SCANNED (dim A' = 3)",
+     "ev_matrix": [
+      [
+       65,
+       208
+      ],
+      [
+       122,
+       473
+      ],
+      [
+       469,
+       254
+      ]
+     ],
+     "rank_ev": 2,
+     "weight": 2
+    }
+   }
+  },
+  {
+   "d_mod_3": 2,
+   "dim_A": 3,
+   "dim_Aprime": 2,
+   "mu": 2,
+   "orbit": "omega^2",
+   "p": 661,
+   "rows": {
+    "row_dim0": {
+     "C6_point_st": [
+      171,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       157,
+       209,
+       595,
+       621
+      ],
+      "value_at_(1:0)": 621
+     },
+     "achievable_st": [],
+     "ev_matrix": [
+      [
+       9,
+       13
+      ],
+      [
+       302,
+       374
+      ]
+     ],
+     "landing_gcd_degree": 0,
+     "rank_ev": 2,
+     "weight": 2
+    },
+    "row_dim1": {
+     "verdict": "target weight 0 = the D12-point, OFF X: the row is a deeper base point (no value at this order)",
+     "weight": 0
+    }
+   }
+  },
+  {
+   "d_mod_3": 2,
+   "dim_A": 4,
+   "dim_Aprime": 3,
+   "mu": 3,
+   "orbit": "omega^2",
+   "p": 661,
+   "rows": {
+    "row_dim0": {
+     "C6_point_st": [
+      354,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       436,
+       181,
+       396,
+       64
+      ],
+      "value_at_(1:0)": 64
+     },
+     "achievable_st": "NOT-SCANNED (dim A' = 3)",
+     "ev_matrix": [
+      [
+       138,
+       476
+      ],
+      [
+       410,
+       315
+      ],
+      [
+       280,
+       251
+      ]
+     ],
+     "rank_ev": 2,
+     "weight": 1
+    },
+    "row_dim1": {
+     "C6_point_st": [
+      354,
+      1
+     ],
+     "X_cubic_on_eigenline": {
+      "affine_coeffs_t=1": [
+       436,
+       181,
+       396,
+       64
+      ],
+      "value_at_(1:0)": 64
+     },
+     "achievable_st": "NOT-SCANNED (dim A' = 3)",
+     "ev_matrix": [
+      [
+       146,
+       354
+      ],
+      [
+       134,
+       558
+      ],
+      [
+       381,
+       410
+      ]
+     ],
+     "rank_ev": 2,
+     "weight": 1
+    }
+   }
+  }
+ ]
+}

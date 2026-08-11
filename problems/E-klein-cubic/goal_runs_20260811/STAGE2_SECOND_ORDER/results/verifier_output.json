@@ -1,0 +1,486 @@
+{
+ "n_checks": 96,
+ "n_failures": 0,
+ "checks": [
+  {
+   "name": "A1 |G| = 660 (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "A2 order profile (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "A1 |G| = 660 (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "A2 order profile (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B1 |A4| = 12 (p=331,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B2 Theta = sum of the 3 non-trivial V4-eigenspaces, dim 3 (p=331,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B3 W^{V4} = ell_V is 2-dimensional and contains both A4-points (p=331,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B4 both A4-points are OFF X, stabiliser of order 12 (p=331,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B5 W^{A4} = 0: no trivial A4-summand in W (p=331,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B6 Theta|_{C3} = 1 + omega + omega^2 (weights 0,1,2) (p=331,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B7 the C3-eigenline through q is <q, theta_{a_q}>, i.e. the relative-weight-0 normal direction (p=331,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B8 neither C3-eigenline lies in X (p=331,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B9 exactly one X^{C6} point on each C3-eigenline (p=331,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B1 |A4| = 12 (p=331,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B2 Theta = sum of the 3 non-trivial V4-eigenspaces, dim 3 (p=331,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B3 W^{V4} = ell_V is 2-dimensional and contains both A4-points (p=331,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B4 both A4-points are OFF X, stabiliser of order 12 (p=331,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B5 W^{A4} = 0: no trivial A4-summand in W (p=331,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B6 Theta|_{C3} = 1 + omega + omega^2 (weights 0,1,2) (p=331,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B7 the C3-eigenline through q is <q, theta_{a_q}>, i.e. the relative-weight-0 normal direction (p=331,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B8 neither C3-eigenline lies in X (p=331,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B9 exactly one X^{C6} point on each C3-eigenline (p=331,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B1 |A4| = 12 (p=661,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B2 Theta = sum of the 3 non-trivial V4-eigenspaces, dim 3 (p=661,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B3 W^{V4} = ell_V is 2-dimensional and contains both A4-points (p=661,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B4 both A4-points are OFF X, stabiliser of order 12 (p=661,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B5 W^{A4} = 0: no trivial A4-summand in W (p=661,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B6 Theta|_{C3} = 1 + omega + omega^2 (weights 0,1,2) (p=661,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B7 the C3-eigenline through q is <q, theta_{a_q}>, i.e. the relative-weight-0 normal direction (p=661,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B8 neither C3-eigenline lies in X (p=661,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B9 exactly one X^{C6} point on each C3-eigenline (p=661,omega)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B1 |A4| = 12 (p=661,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B2 Theta = sum of the 3 non-trivial V4-eigenspaces, dim 3 (p=661,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B3 W^{V4} = ell_V is 2-dimensional and contains both A4-points (p=661,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B4 both A4-points are OFF X, stabiliser of order 12 (p=661,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B5 W^{A4} = 0: no trivial A4-summand in W (p=661,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B6 Theta|_{C3} = 1 + omega + omega^2 (weights 0,1,2) (p=661,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B7 the C3-eigenline through q is <q, theta_{a_q}>, i.e. the relative-weight-0 normal direction (p=661,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B8 neither C3-eigenline lies in X (p=661,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "B9 exactly one X^{C6} point on each C3-eigenline (p=661,omega^2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C1 dim Hom_{A4}(Theta, W (x) omega^{-d}) = 1 (p=331,omega,d=0)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C2 the generator does NOT satisfy F(Phi) = 0 (no plane in X) (p=331,omega,d=0)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C3 the eigenline constraint kills the mu=1 jet (p=331,omega,d=0)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C1 dim Hom_{A4}(Theta, W (x) omega^{-d}) = 1 (p=331,omega,d=1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C2 the generator does NOT satisfy F(Phi) = 0 (no plane in X) (p=331,omega,d=1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C3 the eigenline constraint kills the mu=1 jet (p=331,omega,d=1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C1 dim Hom_{A4}(Theta, W (x) omega^{-d}) = 1 (p=331,omega,d=2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C2 the generator does NOT satisfy F(Phi) = 0 (no plane in X) (p=331,omega,d=2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C3 the eigenline constraint kills the mu=1 jet (p=331,omega,d=2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C1 dim Hom_{A4}(Theta, W (x) omega^{-d}) = 1 (p=331,omega^2,d=0)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C2 the generator does NOT satisfy F(Phi) = 0 (no plane in X) (p=331,omega^2,d=0)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C3 the eigenline constraint kills the mu=1 jet (p=331,omega^2,d=0)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C1 dim Hom_{A4}(Theta, W (x) omega^{-d}) = 1 (p=331,omega^2,d=1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C2 the generator does NOT satisfy F(Phi) = 0 (no plane in X) (p=331,omega^2,d=1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C3 the eigenline constraint kills the mu=1 jet (p=331,omega^2,d=1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C1 dim Hom_{A4}(Theta, W (x) omega^{-d}) = 1 (p=331,omega^2,d=2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C2 the generator does NOT satisfy F(Phi) = 0 (no plane in X) (p=331,omega^2,d=2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C3 the eigenline constraint kills the mu=1 jet (p=331,omega^2,d=2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C1 dim Hom_{A4}(Theta, W (x) omega^{-d}) = 1 (p=661,omega,d=0)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C2 the generator does NOT satisfy F(Phi) = 0 (no plane in X) (p=661,omega,d=0)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C3 the eigenline constraint kills the mu=1 jet (p=661,omega,d=0)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C1 dim Hom_{A4}(Theta, W (x) omega^{-d}) = 1 (p=661,omega,d=1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C2 the generator does NOT satisfy F(Phi) = 0 (no plane in X) (p=661,omega,d=1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C3 the eigenline constraint kills the mu=1 jet (p=661,omega,d=1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C1 dim Hom_{A4}(Theta, W (x) omega^{-d}) = 1 (p=661,omega,d=2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C2 the generator does NOT satisfy F(Phi) = 0 (no plane in X) (p=661,omega,d=2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C3 the eigenline constraint kills the mu=1 jet (p=661,omega,d=2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C1 dim Hom_{A4}(Theta, W (x) omega^{-d}) = 1 (p=661,omega^2,d=0)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C2 the generator does NOT satisfy F(Phi) = 0 (no plane in X) (p=661,omega^2,d=0)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C3 the eigenline constraint kills the mu=1 jet (p=661,omega^2,d=0)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C1 dim Hom_{A4}(Theta, W (x) omega^{-d}) = 1 (p=661,omega^2,d=1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C2 the generator does NOT satisfy F(Phi) = 0 (no plane in X) (p=661,omega^2,d=1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C3 the eigenline constraint kills the mu=1 jet (p=661,omega^2,d=1)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C1 dim Hom_{A4}(Theta, W (x) omega^{-d}) = 1 (p=661,omega^2,d=2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C2 the generator does NOT satisfy F(Phi) = 0 (no plane in X) (p=661,omega^2,d=2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "C3 the eigenline constraint kills the mu=1 jet (p=661,omega^2,d=2)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "D1 mu = 3 : the X^{C6} point is NOT realisable",
+   "ok": true,
+   "detail": "{False}"
+  },
+  {
+   "name": "D2 mu = 3 : the two exact-C3 points ARE realisable",
+   "ok": true,
+   "detail": "{True}"
+  },
+  {
+   "name": "D3 mu = 4 : neither target is realisable (rows are base points)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "D4 mu = 5 : all three targets are realisable (the jet is blind)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "D5 independent univariate-gcd route agrees at mu = 3 (16 C6-exclusions, 16 exact-C3 realisations)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "D6 mu = 2 : no landing jet reaches any point of X on the eigenline",
+   "ok": true,
+   "detail": "0 violations"
+  },
+  {
+   "name": "E1 ten C11-coordinate lines, all with stabiliser C11 and orbit 60 (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "E2 a C11-coordinate line lies IN X iff its ratio class is {3,4} (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "E3 the split is 5 + 5 (p=331)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "E1 ten C11-coordinate lines, all with stabiliser C11 and orbit 60 (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "E2 a C11-coordinate line lies IN X iff its ratio class is {3,4} (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "E3 the split is 5 + 5 (p=661)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "E4 mu_min(d) = 0 exactly for the quadratic residues, else 1",
+   "ok": true,
+   "detail": "{0: 1, 1: 0, 2: 1, 3: 0, 4: 0, 5: 0, 6: 1, 7: 1, 8: 1, 9: 0, 10: 1}"
+  },
+  {
+   "name": "E5 the congruence never forces mu >= 2 at a C11-point",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "E6 mu = 1 : at most TWO of the four C11-rows can carry a value",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "E7 mu = 1 : at most ONE row for 7 of the 11 residues",
+   "ok": true,
+   "detail": "[0, 3, 4, 5, 7, 8, 9]"
+  },
+  {
+   "name": "E8 the mu=1 cut is strictly sharper than the sealed congruence count (4 rows would be allowed at d = 1 mod 11)",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "E9 no exclusion: mu_min(d) <= 1 < floor(d/2) for every d >= 4",
+   "ok": true,
+   "detail": ""
+  },
+  {
+   "name": "F1 the A4 weight dictionary is the same at both primes",
+   "ok": true,
+   "detail": "{331: ([0, 1, 2], 1, [1, 2]), 661: ([0, 1, 2], 1, [1, 2])}"
+  },
+  {
+   "name": "F2 the C11 line geometry is the same at both primes",
+   "ok": true,
+   "detail": ""
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+groups tested (order <= 100, <= 3 cyclic factors): 322
+failures of  [exists injective character  <=>  cyclic]: 0
+  Z/6  (ex:not_a_complex, G_{D_12})            order   6  cyclic=True  #injective characters = 2
+  Z/6 x Z/2  (ex:not_a_complex, G_{D_123})     order  12  cyclic=False #injective characters = 0
+  V4  (the PSL(2,11) corner group)             order   4  cyclic=False #injective characters = 0
+  Z/6  (ex:no_converse, G_{D_12})              order   6  cyclic=True  #injective characters = 2
+  Z/2 x (Z/3)^2  (ex:no_converse, G_{D_13})    order  18  cyclic=False #injective characters = 0
+  (Z/2)^2 x Z/3  (ex:no_converse, G_{D_23})    order  12  cyclic=False #injective characters = 0
+RESULT: PASS

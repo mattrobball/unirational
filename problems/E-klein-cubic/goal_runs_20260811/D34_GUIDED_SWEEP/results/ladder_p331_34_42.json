@@ -1,0 +1,173 @@
+{
+ "monotonicity": "every admissible profile at d has m >= 1 and r >= r0, so its slice is contained in the (1,r0) slice",
+ "prime": 331,
+ "range": [
+  34,
+  42
+ ],
+ "rows": [
+  {
+   "d": 34,
+   "dim_M": 576,
+   "dim_profile_only_(1,r0)": 16,
+   "dim_structure_only": 290,
+   "dim_structure_plus_(1,r0)": 0,
+   "m0": 1,
+   "n_profiles": 30,
+   "r0": 6,
+   "rules_fired": {
+    "C11_points": false,
+    "C5_points": false,
+    "C6_points": true,
+    "E_eigenlines": "contract to ell_{1 w}",
+    "M_minus_lines": true
+   },
+   "verdict": "EMPTY"
+  },
+  {
+   "d": 35,
+   "dim_M": 637,
+   "dim_profile_only_(1,r0)": 46,
+   "dim_structure_only": 346,
+   "dim_structure_plus_(1,r0)": 39,
+   "m0": 1,
+   "n_profiles": 32,
+   "r0": 6,
+   "rules_fired": {
+    "C11_points": true,
+    "C5_points": true,
+    "C6_points": false,
+    "E_eigenlines": "contract to ell_{2 w}",
+    "M_minus_lines": false
+   },
+   "verdict": "ALIVE:39"
+  },
+  {
+   "d": 36,
+   "dim_M": 706,
+   "dim_profile_only_(1,r0)": 83,
+   "dim_structure_only": 385,
+   "dim_structure_plus_(1,r0)": 63,
+   "m0": 1,
+   "n_profiles": 34,
+   "r0": 6,
+   "rules_fired": {
+    "C11_points": false,
+    "C5_points": false,
+    "C6_points": true,
+    "E_eigenlines": "vanish (3|d)",
+    "M_minus_lines": true
+   },
+   "verdict": "ALIVE:63"
+  },
+  {
+   "d": 37,
+   "dim_M": 786,
+   "dim_profile_only_(1,r0)": 127,
+   "dim_structure_only": 466,
+   "dim_structure_plus_(1,r0)": 121,
+   "m0": 1,
+   "n_profiles": 37,
+   "r0": 6,
+   "rules_fired": {
+    "C11_points": false,
+    "C5_points": false,
+    "C6_points": false,
+    "E_eigenlines": "contract to ell_{1 w}",
+    "M_minus_lines": false
+   },
+   "verdict": "ALIVE:121"
+  },
+  {
+   "d": 38,
+   "dim_M": 865,
+   "dim_profile_only_(1,r0)": 173,
+   "dim_structure_only": 527,
+   "dim_structure_plus_(1,r0)": 151,
+   "m0": 1,
+   "n_profiles": 39,
+   "r0": 6,
+   "rules_fired": {
+    "C11_points": false,
+    "C5_points": false,
+    "C6_points": true,
+    "E_eigenlines": "contract to ell_{2 w}",
+    "M_minus_lines": true
+   },
+   "verdict": "ALIVE:151"
+  },
+  {
+   "d": 39,
+   "dim_M": 950,
+   "dim_profile_only_(1,r0)": 225,
+   "dim_structure_only": 631,
+   "dim_structure_plus_(1,r0)": 218,
+   "m0": 1,
+   "n_profiles": 41,
+   "r0": 6,
+   "rules_fired": {
+    "C11_points": true,
+    "C5_points": false,
+    "C6_points": true,
+    "E_eigenlines": "vanish (3|d)",
+    "M_minus_lines": false
+   },
+   "verdict": "ALIVE:218"
+  },
+  {
+   "d": 40,
+   "dim_M": 1050,
+   "dim_profile_only_(1,r0)": 287,
+   "dim_structure_only": 707,
+   "dim_structure_plus_(1,r0)": 261,
+   "m0": 1,
+   "n_profiles": 44,
+   "r0": 6,
+   "rules_fired": {
+    "C11_points": true,
+    "C5_points": true,
+    "C6_points": true,
+    "E_eigenlines": "contract to ell_{1 w}",
+    "M_minus_lines": true
+   },
+   "verdict": "ALIVE:261"
+  },
+  {
+   "d": 41,
+   "dim_M": 1148,
+   "dim_profile_only_(1,r0)": 351,
+   "dim_structure_only": 825,
+   "dim_structure_plus_(1,r0)": 343,
+   "m0": 1,
+   "n_profiles": 46,
+   "r0": 6,
+   "rules_fired": {
+    "C11_points": true,
+    "C5_points": false,
+    "C6_points": false,
+    "E_eigenlines": "contract to ell_{2 w}",
+    "M_minus_lines": false
+   },
+   "verdict": "ALIVE:343"
+  },
+  {
+   "d": 42,
+   "dim_M": 1255,
+   "dim_profile_only_(1,r0)": 423,
+   "dim_structure_only": 917,
+   "dim_structure_plus_(1,r0)": 397,
+   "m0": 1,
+   "n_profiles": 49,
+   "r0": 6,
+   "rules_fired": {
+    "C11_points": false,
+    "C5_points": false,
+    "C6_points": true,
+    "E_eigenlines": "vanish (3|d)",
+    "M_minus_lines": true
+   },
+   "verdict": "ALIVE:397"
+  }
+ ],
+ "semantics": "dimension 0 is a characteristic-zero emptiness verdict; nonzero is an upper bound only"
+}
