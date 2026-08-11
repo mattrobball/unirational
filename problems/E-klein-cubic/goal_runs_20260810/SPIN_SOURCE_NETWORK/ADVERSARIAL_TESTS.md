@@ -542,3 +542,144 @@ for `d >= 6`).  What is **not** proved: that such a support occurs in an
 actual dominant map.  The package supplies necessary conditions only, and no
 map is exhibited.  The correct reading is "no obstruction can come from this
 cell via the Hodge-support census", never "a map exists".
+
+---
+
+# W. The campaign layer (2026-08-11): total degeneration, and the METHOD-INSUFFICIENT exit
+
+New in this layer: `TOTAL_DEGENERATION.md` (Thms W1, W2, W3; Lemmas W0,
+W0'), `O3_ODD_ORDER_POINTS.md` (Thms O3-1…O3-5),
+`O2_MANDATORY_POINTS.md` (Prop O2-3), `O1_O5_FREE_AND_MULTIPLICITY.md`
+(Thm O1-0; kills `K-m`, `K-n`).  Verifiers `TOTAL_DEGENERATION_OK` (87),
+`O3_ODD_ORDER_OK` (86), `MIN_DEGREE_OK` (114).
+
+## W1. The MANDATORY `D_12` test, on every verdict of the layer — PASSED
+
+The layer records exactly **three** kills and two structural theorems; each
+is tested against Cor IX.6 (the `V14` **is** `D_12`-spin-unirational, by a
+realised dominant map).
+
+| verdict | visible at `D_12`? | could it contradict Cor IX.6? |
+|---|---|---|
+| `K-m` (`C_11`-stratum, constant channel DEAD) | **no** — `11` does not divide `12` | no |
+| `K-n` (`F_55`-stratum, all rank-one channels DEAD) | **no** — `11` and `55` do not divide `12` | no |
+| `K-o` / Thm O1-0 (minimal live degree `d = 4` on `P(U)`) | yes, degrees are group-blind | no: it *restricts* which degrees carry a `G`-equivariant map, and the realised map of Cor IX.6 is only `D_12`-equivariant, so no `G`-degree bound applies to it |
+| Thm O3-2 (`V14^{F_55} = empty`) | **no** — `D_12` contains no element of order 5 or 11 | no |
+| Thm O3-3 (`P(V)^{F_55} subset Ind(phi)`) | **no**, same reason | no |
+| W1, W2 (witnesses) | — | a witness is a non-exclusion; it cannot contradict an existence theorem |
+
+`dim T^{D_12} = 2 > 0` and the channel the realised map needs is left OPEN by
+every verdict here (`verify_total_degeneration.py` §H2, §H6).  **PASS.**
+
+Informative, as in §S1 and §T2: the one cell `D_12` can see in full — `P5`,
+the `S_3`-points — is left open, which is the correct sign.  A kill covering
+`P5` in the trivial channel would have refuted Cor IX.6.
+
+## W2. Does the total-degeneration witness prove too much? — NO, and the ambient transfer is recorded rather than hidden
+
+W1's proof uses only `n >= 4`, `dim V14 = 3` and purity of `H^3` of the
+target.  Run at `n = 5` against the Klein cubic it gives the same verdict for
+the point cells of `RT_SPLIT_AND_DICHOTOMY/THEOREM_POINT_SUPPORT.md`.  That
+is a real consequence and is recorded as Cor W2.2.  It damages nothing: that
+file's exit is `POINT-SUPPORT-CHARACTERIZED`, and its §1 already states that
+`FREE-SUPPORT-EXCLUDED` is unavailable.  W1 upgrades "unavailable" to
+"unavailable in principle".
+
+What W1 does **not** prove: that no obstruction exists.  It proves that no
+obstruction of the *support-census shape* exists.  Residuals 1-3 of
+`TOTAL_DEGENERATION.md` §6 are exactly the shapes that survive, and each is a
+statement about the **map** `phi` rather than about `Rp_*IC_Y`.
+
+## W3. Is the witness real, or an existence claim in disguise? — REAL, to the same standard as §T3
+
+Proved: the datum `(Y_x, q|_{Y_x}, W_x) = (V14, id, H^3(V14,Q))` is an honest
+projective variety with an honest `H`-action and an honest polarizable
+weight-three Hodge structure, and it satisfies **C1-C8**, the complete list of
+what the package imposes at a point support, in all nine cells.  Not proved:
+that it occurs as `p^{-1}(x)` for an actual dominant `phi`, or that a
+dominant `phi` exists at all.  The correct reading is *"no obstruction can
+come from any point cell via this census"*, never *"a map exists"* — exactly
+the reading §T7 fixed for `(O4)`.
+
+## W4. Do the new kills `K-m`, `K-n` contradict Cor S4 or each other? — NO
+
+`K-n` says the equivariant structure at an `F_55`-stratum must be
+five-dimensional; Cor S4 says the abelian factor must contain five copies of
+`E_{-11}`.  Both are shadows of the same fact — `Res_{F_55}T` is
+`Q`-irreducible of dimension 10 — and they agree.  `K-m` and `K-n` are
+disjoint in scope (`C_11`-strata vs `F_55`-strata) and both are strictly
+weaker than the point-level statement they sit above, which is why neither
+empties its cell.
+
+Scope check: Theorem W3 is an `H_0`-level rule and is applied only where
+`H_0` acts trivially on the support, i.e. inside a fixed locus.  It is **not**
+applied at `(O4)`, where `H_0 = C_2` and the interesting group `C_3` acts
+nontrivially on the eigenplane; there Prop O4-3 governs and W3 correctly
+yields nothing.  No overlap, no contradiction.
+
+## W5. Does `V14^{F_55} = empty` (Thm O3-2) contradict any measured locus? — NO
+
+The fixed-point law (`mu(H) > 3 => V14^H = empty`) fires at exactly two
+subgroups, `F_55` and `G`, and is silent at all others
+(`verify_o3_odd_order.py` §D5, §D9).  It is consistent with every measured
+**non**empty locus — no subgroup with `V14^H != empty` has `mu(H) > 3` (§D6)
+— and it does not pretend to explain `V14^{V_4}`, `V14^{D_12}`,
+`V14^{D_10}` or `V14^{A_5}` being empty, which stay genuine measurements
+(`mu = 2, 2, 2, 3`).  It replaces a worker-grade mod-397 input of
+`FIX_IX_v14.md` §8 with a proof, and uses none of that input.
+
+## W6. Does Thm O3-3 (the `F_55` stratum is mandatory) collide with Thm K4 or Thm K5? — NO
+
+K4's 352 incidence points have stabilisers `S_3` and `D_10`; the 12 `F_55`
+points have stabiliser `F_55`.  Disjoint sets, disjoint arguments (K4 goes
+through the rational-curve-free `V14^sigma`; O3-3 through
+`V14^{F_55} = empty`).  K5's first-order separation is a statement about the
+tangent representation at an incidence point and is untouched.  The only
+joint consequence is quantitative: `Bs(phi)` contains at least
+`352 + 12 = 364` prescribed points, which fits comfortably under the
+codimension-5 capacity at the minimal live degree (`4^5 = 1024 >= 364`).
+
+## W7. Is the minimal-degree result consistent with the capacity table and with the `(O4)` witness? — YES, and it sharpens both
+
+* `d = 2` is **not live** for `V = U` (`S^2 U = 10 (+) 11` carries the
+  *other* absolutely irreducible 10), so kill `K-g` is vacuous there.  It
+  becomes live at `m >= 2`, where `S^2(U^{(+)m})` contains
+  `Lambda^2 U (x) Lambda^2(C^m)`, hence `10'` with multiplicity `C(m,2)`.
+  Both branches are asserted (`verify_min_degree.py` §G).
+* At the minimal live degree `d = 4`, refined Bézout gives `4^5 = 1024 >= 660`
+  but `4^4 = 256 < 660`: free **positive-dimensional component** orbits die at
+  `d = 4` and revive at `d = 6`.  Recorded, and it changes no cell verdict,
+  because a strict support need not be a base component.
+* Prop O4-6 requires `d >= 6` for an orbit of 110 eigenplane cubics that are
+  base **components**.  At `d = 4` the `(O4)` witness therefore cannot be a
+  base component — it can still be a strict support inside a larger
+  component.  No contradiction; the caveat of `THEOREM_POINT_SUPPORT.md` §1
+  is doing exactly the work it was flagged for.
+
+## W8. Is the campaign exit honest? — the three-exit test
+
+The mission's exits were NEGATIVE (every cell dead), METHOD-INSUFFICIENT
+(an unremovable witness at every remaining choke point), or HANDOFF.
+
+* NEGATIVE would require all 18 cells dead.  Nine point cells and `S1` carry
+  witnesses; `S0` (free, positive-dimensional) has no character obstruction
+  at all.  So NEGATIVE is not merely unattained, it is **unattainable**
+  (Thm W2, Cor W2.1).
+* HANDOFF would be right if a cell were merely *unresolved*.  None is: every
+  one of the five boxed families has an explicit witness or an explicit
+  reason it cannot be emptied.
+* METHOD-INSUFFICIENT is therefore the correct exit, and it comes with the
+  boxed statement of what a stronger method must see
+  (`TOTAL_DEGENERATION.md` §6, Residuals 1-3).
+
+Nothing here decides Problem E.  The headline `ed_C(PSL_2(F_11))` remains
+**OPEN**, and `SPIN-CHAIN-OBSTRUCTION-UNDECIDED` is unchanged.
+
+## W9. Falsifiable predictions — STILL REGISTERED, still untested
+
+§S4's predictions `chi_top(V14^g) = 6, 4, 2` at element orders `3, 5, 6` are
+**not** measured by this campaign and remain the sharpest available
+independent test of Theorem S0, on which the whole census rests.  They are
+carried forward unchanged.  Two of the five predictions (`o = 2`, `o = 11`)
+agree with sealed measurements; the other three are one run of
+`verify_v14_s3_d10.py`'s machinery away.
