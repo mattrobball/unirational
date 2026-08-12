@@ -127,7 +127,18 @@ restricted ideal, so `V ∩ L = {0}` outright. Hence
 The free argument stops at `m = 19`: `C(21,3) = 1330 ≤ 1380 < 1540 =
 C(22,3)`, so from `m = 20` on the restricted cubics can no longer fill
 `Sym³(L)` and a real Gröbner computation is required. Status of that
-step: Macaulay2 TIMED OUT (30 min) on 35 cubics in 20 variables;
-msolve on 240 generators in 20 variables is the current attempt
-(`cone_m20_p331.ms`). Each successful rung tightens the bound by one:
-`m = 20 → dim V ≤ 17`, and so on.
+step: Macaulay2 timed out (30 min) on 35 cubics in 20 variables, but
+**msolve CLEARED the `m = 20` rung** (240 generators,
+`cone_m20_p331.ms`): the leading ideal contains a pure power of every
+one of the 20 variables (exponents 3,3,…,3,4,4,4,4,4,5,5,5,5,5), so the
+restricted ideal is zero-dimensional and `V ∩ L₂₀ = {0}`. Hence
+
+> **dim V ≤ 17** (landing cone at `d = 35`, machine-certified at
+> `p = 331` via the leading ideal; `cone_m20_lead.out`).
+
+Ladder status: free rungs to `m = 19`; `m = 20` cleared by msolve.
+Each further rung tightens by one. The decisive case is the unrestricted
+system (`m = 37`), where `V = {0}` would close `d = 35` outright — that
+is the sealed record's walled computation, retried here with far fewer
+generators (a subset suffices, and 45–60 cubics already overdetermine
+37 unknowns).
