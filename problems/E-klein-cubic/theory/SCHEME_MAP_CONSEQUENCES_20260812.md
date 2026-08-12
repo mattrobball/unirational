@@ -718,3 +718,18 @@ claim except where `[EXT]` is displayed.
 - The E2 positivity of individual `s_j` is NOT claimed (integers only);
   the `μ ≡ ±1 (mod 11)` instance is conditional on the stated
   nondegeneracy and on no other 11-heavy base orbits.
+
+> **2026-08-12 correction banner on §3.1 (from `goal_runs_20260812/
+> E_LEDGER` and its referee).** The component-indexed form of E2 above
+> silently requires H-PROPER (no full-`G`-stable component row), and
+> that hypothesis is NOT innocuous: the 55 plus-planes form a single
+> connected `G`-stable set inside `Bs(T)` at every degree (machine: all
+> 1485 pairs meet). The REPAIRED form: index the Segre expansion by
+> `G`-orbits of IRREDUCIBLE exceptional divisors; a ≤4-multiset has
+> full stabilizer only if each divisor is `G`-fixed, and `G` simple
+> with minimum census orbit 55 means the full-stabilizer row requires
+> only **H-IRR** (no `G`-invariant irreducible center). The displayed
+> mod-p tables survive under H-IRR (the plane union's 55 divisors enter
+> with coefficient 55). The `d = 35` conditional instance is to be
+> stated divisor-wise; see the E_LEDGER packet and its referee report
+> for the exact forms.

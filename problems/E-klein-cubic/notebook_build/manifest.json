@@ -1890,6 +1890,17 @@
    "char0_scope": "THE GENERAL-DEGREE YIELD (map level, model- and convention-independent, genus-free): at every degree in a quadratic-residue class mod 11, no landing map is defined at the C11-points (the mu=0 branch dies by algebraic integrality of the Vandermonde-forced fiber trace, v_pi = -1 at all five points). Combined with the sealed non-residue branch: all 60 C11-points lie in Bs(T) at EVERY degree. Banner placed on STAGE2_ODD_ORDER_PINNING (B(C11) and the sec. 4 QR row strengthened).\nAt d = 35: forced resolution depth over every C11-point >= 3 (>= 4 for mu_1 in {6,9}, >= 5 for mu_1 = 7; point-blowup scope); the genus-0 fiber branch is DEAD through the extended tower scope (0 of 2674 towers pass at any twist, all menu entries, constancy across the 22 verified); Tier-B smooth-fiber menu pass: 0 of 226 (model-dependent, flagged). The k=0 sum rule is consistent and vacuous on the Smith configuration (content in trace differences). FLAG-A: the ledger note's sec. 8 display pairing was sign-inconsistent; the two consistent completions are Galois conjugate, verdicts independent (note sec. 9).\nNOT claimed: any degree exclusion; no cell cut; first open window stays d = 35.",
    "tracked": true,
    "notes": "The global localization ledger's first machine phase, and the campaign's first referee-confirmed general-degree realization kill. Headline: Problem E remains OPEN. Markers: L12_O11_VERIFY_OK-style ALLGREEN (93 checks; director- and referee-replayed; SMITH_I3 replay 95/95 alongside)."
+  },
+  {
+   "path": "goal_runs_20260812/E_LEDGER",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "mid-tier execution against the pinned flush spec (Chow numbers derived not tabled, three independent routes after referee; C1 reproduced as polynomial identities; filter lemma proved from Lagrange); Fable hostile referee (116 checks, byte-identical replay); director seal with the H-IRR re-indexing adopted",
+   "primary_exit": "E-LEDGER-CONGRUENCES-UNDER-H-IRR",
+   "superseded_by": null,
+   "char0_scope": "The intersection ledger from (q*H_X)^4 = 0, map level. Blowup Chow anchors exact (E^4 = -1/3/-3 for point/line/plane centers; discrepancies 3/2/1). Filter lemma proved: for p in {3,5,11}, p | 660/|S| iff p does not divide |S| (Lagrange + v_p(660) = 1); sharp failure at p = 2. Congruence tables per prime as displayed, valid under H-IRR (no G-invariant irreducible center) after the referee's re-indexing rescue -- the packet's own E2-G-ORBIT flag against the extraction's H-PROPER form was CONFIRMED and the extraction carries the correction banner. d = 35 order-11 instance conditional (divisor-wise reading; mu = +-1 mod 11 under named hypotheses; side conditional narrows mu to {12, 21}). E3 LP: feasible at d = 35 -- excludes no degree; bounds m_P <= d/3 and d >= m_ellV + m_P >= 7; outer-approximation caveat with a worked degree-9 gap example. E4: rank 4 certified; no forced entries (referee-run rowspace test).\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Morphism ledger L10 machine-spent: nulls with structure plus one important correction cascade (H-PROPER -> H-IRR) caught by executor flag and resolved by referee. Headline: Problem E remains OPEN. Markers: E_LEDGER_VERIFY_OK, ALLGREEN (214 checks; director- and referee-replayed byte-identical)."
   }
  ]
 }

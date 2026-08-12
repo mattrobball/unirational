@@ -1,0 +1,218 @@
+[PASS] A      A1_E4_is_minus_one_on_Bl_pt_P4                                 E^4 = -1
+[PASS] A      A1_H3E_H2E2_HE3_vanish_on_Bl_pt_P4                             (0, 0, 0)
+[PASS] A      A1_H4_is_one                                                   
+[PASS] A      A2_segre_closed_form_agrees_with_the_bundle_computation        
+[PASS] A      A3_projection_identity_(H-E)^4_is_zero                         
+[PASS] A      A4_line_centre_HE3_is_1_and_E4_is_3                            HE^3 = 1, E^4 = 3
+[PASS] A      A5_plane_centre_H2E2_HE3_E4_are_-1_-2_-3                       
+[PASS] A      A6_discrepancies_are_3_2_1                                     
+[PASS] A      A7_producer_anchor_block_all_pass                              ['A1_point_center', 'A2_line_center', 'A3_plane_center', 'A4_projectio
+[PASS] B      B_C1a_relative_canonical                                       
+[PASS] B      B_C1b_projection_pairing                                       3(d.nu - sum m_k ebar_k) == deg(D^4)
+[PASS] B      B_C1c_genus_package                                            3(2g-2) == 3[(2d-5)nu + sum (a_k - 2 m_k) ebar_k]
+[PASS] B      B_C1d_level3_row                                               
+[PASS] B      B_C1e_level4_row                                               
+[PASS] B      B_producer_c1_block_matches                                    
+[PASS] B      B_isolated_point_local_level4_is_mu^4                          1*m^4
+[PASS] B      B_line_and_plane_local_level4_forms                            4*d*m^3 - 3*m^4 | 6*d^2*m^2 - 8*d*m^3 + 3*m^4
+[PASS] C      C1_orbit_size_equals_660_over_setwise_stabiliser               
+[PASS] C      C2_totals_940_220_55                                           (940, 220, 55)
+[PASS] C      C3_fourteen_orbits                                             
+[PASS] C      C4_rebuild_p331_matches_cited_census                           940/220/55 in 14 orbits
+[PASS] C      C5_rebuild_p331_labels_are_the_14_census_labels                
+[PASS] C      C6_rebuild_p331_every_plus_plane_pair_meets                    {'meet_in_a_point': 1320, 'meet_in_a_line': 165, 'disjoint': 0}
+[PASS] C      C4_rebuild_p661_matches_cited_census                           940/220/55 in 14 orbits
+[PASS] C      C5_rebuild_p661_labels_are_the_14_census_labels                
+[PASS] C      C6_rebuild_p661_every_plus_plane_pair_meets                    {'meet_in_a_point': 1320, 'meet_in_a_line': 165, 'disjoint': 0}
+[PASS] D      D1_lagrange                                                    [1, 2, 3, 4, 5, 6, 10, 11, 12, 55, 60, 660]
+[PASS] D      D2_v_p_660_is_one_for_11_5_3                                   
+[PASS] D      D3_v_2_660_is_two                                              
+[PASS] D      D4_lemma_F_holds_for_p_in_11_5_3                               
+[PASS] D      D5_p2_control_fails_as_it_must                                 [2, 6, 10]
+[PASS] D      D6_section3_1_coefficients_reproduced_p11                      expected {11: 5, 55: 1} inside got {11: 5, 55: 1, 660: 1}
+[PASS] D      D7_row_660_present_and_dropped_by_section3_1_p11               n = 1 for a G-stabilised component; this is FLAG E2-G-ORBIT
+[PASS] D      D6_section3_1_coefficients_reproduced_p5                       expected {5: 2, 10: 1, 55: 2, 60: 1} inside got {5: 2, 10: 1, 55: 2, 6
+[PASS] D      D7_row_660_present_and_dropped_by_section3_1_p5                n = 1 for a G-stabilised component; this is FLAG E2-G-ORBIT
+[PASS] D      D6_section3_1_coefficients_reproduced_p3                       expected {3: 1, 6: 2, 12: 1, 60: 2} inside got {3: 1, 6: 2, 12: 1, 60:
+[PASS] D      D7_row_660_present_and_dropped_by_section3_1_p3                n = 1 for a G-stabilised component; this is FLAG E2-G-ORBIT
+[PASS] D      D8_fourth_powers_mod_11_are_the_QRs                            [1, 3, 4, 5, 9]
+[PASS] D      D9_fourth_powers_mod_5_and_3_are_trivial                       
+[PASS] D      D10_census_orbits_surviving_the_filter_p11                     ['pt_C11']
+[PASS] D      D10_census_orbits_surviving_the_filter_p5                      ['pt_C5(a)', 'pt_C5(b)', 'pt_D10']
+[PASS] D      D10_census_orbits_surviving_the_filter_p3                      ['C3line', 'Lminus_sigma', 'P_sigma', 'ell_V', 'pt_A4(a)', 'pt_A4(b)',
+[PASS] E      E1_35_mod_11_is_2                                              
+[PASS] E      E2_35^4_mod_11_is_5                                            
+[PASS] E      E3_2_is_not_a_fourth_power_mod_11                              
+[PASS] E      E4_section3_1_form_reproduced                                  s(C11) = 1 - 9*s(F55) (mod 11)
+[PASS] E      E5_mu4_eq_1_mod_11_iff_mu_eq_pm1                               
+[PASS] E      E6_statement_is_conditional_and_names_its_hypotheses           
+[PASS] F      F1_p331_labels_stable                                          
+[PASS] F      F2_p331_one_orbit_0_witness_reverified                         stored {'0': 1} recomputed {'0': 1}
+[PASS] F      F3_p331_one_orbit_0_line_through_z                             
+[PASS] F      F2_p331_one_orbit_1_witness_reverified                         stored {'1': 1} recomputed {'1': 1}
+[PASS] F      F3_p331_one_orbit_1_line_through_z                             
+[PASS] F      F2_p331_one_orbit_2_witness_reverified                         stored {'2': 1} recomputed {'2': 1}
+[PASS] F      F3_p331_one_orbit_2_line_through_z                             
+[PASS] F      F2_p331_one_orbit_3_witness_reverified                         stored {'3': 1} recomputed {'3': 1}
+[PASS] F      F3_p331_one_orbit_3_line_through_z                             
+[PASS] F      F2_p331_one_orbit_4_witness_reverified                         stored {'4': 1} recomputed {'4': 1}
+[PASS] F      F3_p331_one_orbit_4_line_through_z                             
+[PASS] F      F2_p331_one_orbit_5_witness_reverified                         stored {'5': 1} recomputed {'5': 1}
+[PASS] F      F3_p331_one_orbit_5_line_through_z                             
+[PASS] F      F2_p331_one_orbit_6_witness_reverified                         stored {'6': 1} recomputed {'6': 1}
+[PASS] F      F3_p331_one_orbit_6_line_through_z                             
+[PASS] F      F2_p331_one_orbit_7_witness_reverified                         stored {'7': 1} recomputed {'7': 1}
+[PASS] F      F3_p331_one_orbit_7_line_through_z                             
+[PASS] F      F2_p331_one_orbit_8_witness_reverified                         stored {'8': 1} recomputed {'8': 1}
+[PASS] F      F3_p331_one_orbit_8_line_through_z                             
+[PASS] F      F2_p331_one_orbit_9_witness_reverified                         stored {'9': 1} recomputed {'9': 1}
+[PASS] F      F3_p331_one_orbit_9_line_through_z                             
+[PASS] F      F2_p331_one_orbit_10_witness_reverified                        stored {'10': 1} recomputed {'10': 1}
+[PASS] F      F3_p331_one_orbit_10_line_through_z                            
+[PASS] F      F2_p331_one_orbit_11_witness_reverified                        stored {'11': 1} recomputed {'11': 1}
+[PASS] F      F3_p331_one_orbit_11_line_through_z                            
+[PASS] F      F2_p331_one_orbit_12_witness_reverified                        stored {'12': 1} recomputed {'12': 1}
+[PASS] F      F3_p331_one_orbit_12_line_through_z                            
+[PASS] F      F2_p331_one_orbit_13_witness_reverified                        stored {'13': 1} recomputed {'13': 1}
+[PASS] F      F3_p331_one_orbit_13_line_through_z                            
+[PASS] F      F2_p331_two_planes_witness_reverified                          stored {'7': 2} recomputed {'7': 2}
+[PASS] F      F3_p331_two_planes_line_through_z                              
+[PASS] F      F2_p331_three_planes_witness_reverified                        stored {'7': 3} recomputed {'7': 3}
+[PASS] F      F3_p331_three_planes_line_through_z                            
+[PASS] F      F2_p331_line_orbit_5_plus_plane_witness_reverified             stored {'5': 1, '7': 1} recomputed {'5': 1, '7': 1}
+[PASS] F      F3_p331_line_orbit_5_plus_plane_line_through_z                 
+[PASS] F      F2_p331_line_orbit_10_plus_plane_witness_reverified            stored {'7': 1, '10': 1} recomputed {'7': 1, '10': 1}
+[PASS] F      F3_p331_line_orbit_10_plus_plane_line_through_z                
+[PASS] F      F2_p331_line_orbit_13_plus_plane_witness_reverified            stored {'7': 1, '13': 1} recomputed {'7': 1, '13': 1}
+[PASS] F      F3_p331_line_orbit_13_plus_plane_line_through_z                
+[PASS] F      F4_p331_control_four_planes_is_not_a_covering_family           1/12
+[PASS] F      F4_p331_control_line_orbits_5_5_is_not_a_covering_family       0/12
+[PASS] F      F4_p331_control_line_orbits_5_10_is_not_a_covering_family      1/12
+[PASS] F      F4_p331_control_line_orbits_5_13_is_not_a_covering_family      1/12
+[PASS] F      F4_p331_control_line_orbits_10_10_is_not_a_covering_family     1/12
+[PASS] F      F4_p331_control_line_orbits_10_13_is_not_a_covering_family     1/12
+[PASS] F      F4_p331_control_line_orbits_13_13_is_not_a_covering_family     0/12
+[PASS] F      F4_p331_control_point_plus_plane_is_not_a_covering_family      0/12
+[PASS] F      F4_p331_control_line_orbit_5_plus_two_planes_is_not_a_covering_family 1/12
+[PASS] F      F4_p331_control_line_orbit_10_plus_two_planes_is_not_a_covering_family 4/12
+[PASS] F      F4_p331_control_line_orbit_13_plus_two_planes_is_not_a_covering_family 1/12
+[PASS] F      F1_p661_labels_stable                                          
+[PASS] F      F2_p661_one_orbit_0_witness_reverified                         stored {'0': 1} recomputed {'0': 1}
+[PASS] F      F3_p661_one_orbit_0_line_through_z                             
+[PASS] F      F2_p661_one_orbit_1_witness_reverified                         stored {'1': 1} recomputed {'1': 1}
+[PASS] F      F3_p661_one_orbit_1_line_through_z                             
+[PASS] F      F2_p661_one_orbit_2_witness_reverified                         stored {'2': 1} recomputed {'2': 1}
+[PASS] F      F3_p661_one_orbit_2_line_through_z                             
+[PASS] F      F2_p661_one_orbit_3_witness_reverified                         stored {'3': 1} recomputed {'3': 1}
+[PASS] F      F3_p661_one_orbit_3_line_through_z                             
+[PASS] F      F2_p661_one_orbit_4_witness_reverified                         stored {'4': 1} recomputed {'4': 1}
+[PASS] F      F3_p661_one_orbit_4_line_through_z                             
+[PASS] F      F2_p661_one_orbit_5_witness_reverified                         stored {'5': 1} recomputed {'5': 1}
+[PASS] F      F3_p661_one_orbit_5_line_through_z                             
+[PASS] F      F2_p661_one_orbit_6_witness_reverified                         stored {'6': 1} recomputed {'6': 1}
+[PASS] F      F3_p661_one_orbit_6_line_through_z                             
+[PASS] F      F2_p661_one_orbit_7_witness_reverified                         stored {'7': 1} recomputed {'7': 1}
+[PASS] F      F3_p661_one_orbit_7_line_through_z                             
+[PASS] F      F2_p661_one_orbit_8_witness_reverified                         stored {'8': 1} recomputed {'8': 1}
+[PASS] F      F3_p661_one_orbit_8_line_through_z                             
+[PASS] F      F2_p661_one_orbit_9_witness_reverified                         stored {'9': 1} recomputed {'9': 1}
+[PASS] F      F3_p661_one_orbit_9_line_through_z                             
+[PASS] F      F2_p661_one_orbit_10_witness_reverified                        stored {'10': 1} recomputed {'10': 1}
+[PASS] F      F3_p661_one_orbit_10_line_through_z                            
+[PASS] F      F2_p661_one_orbit_11_witness_reverified                        stored {'11': 1} recomputed {'11': 1}
+[PASS] F      F3_p661_one_orbit_11_line_through_z                            
+[PASS] F      F2_p661_one_orbit_12_witness_reverified                        stored {'12': 1} recomputed {'12': 1}
+[PASS] F      F3_p661_one_orbit_12_line_through_z                            
+[PASS] F      F2_p661_one_orbit_13_witness_reverified                        stored {'13': 1} recomputed {'13': 1}
+[PASS] F      F3_p661_one_orbit_13_line_through_z                            
+[PASS] F      F2_p661_two_planes_witness_reverified                          stored {'2': 2} recomputed {'2': 2}
+[PASS] F      F3_p661_two_planes_line_through_z                              
+[PASS] F      F2_p661_three_planes_witness_reverified                        stored {'2': 3} recomputed {'2': 3}
+[PASS] F      F3_p661_three_planes_line_through_z                            
+[PASS] F      F2_p661_line_orbit_6_plus_plane_witness_reverified             stored {'2': 1, '6': 1} recomputed {'2': 1, '6': 1}
+[PASS] F      F3_p661_line_orbit_6_plus_plane_line_through_z                 
+[PASS] F      F2_p661_line_orbit_7_plus_plane_witness_reverified             stored {'2': 1, '7': 1} recomputed {'2': 1, '7': 1}
+[PASS] F      F3_p661_line_orbit_7_plus_plane_line_through_z                 
+[PASS] F      F2_p661_line_orbit_13_plus_plane_witness_reverified            stored {'2': 1, '13': 1} recomputed {'2': 1, '13': 1}
+[PASS] F      F3_p661_line_orbit_13_plus_plane_line_through_z                
+[PASS] F      F4_p661_control_four_planes_is_not_a_covering_family           1/12
+[PASS] F      F4_p661_control_line_orbits_6_6_is_not_a_covering_family       0/12
+[PASS] F      F4_p661_control_line_orbits_6_7_is_not_a_covering_family       0/12
+[PASS] F      F4_p661_control_line_orbits_6_13_is_not_a_covering_family      0/12
+[PASS] F      F4_p661_control_line_orbits_7_7_is_not_a_covering_family       1/12
+[PASS] F      F4_p661_control_line_orbits_7_13_is_not_a_covering_family      1/12
+[PASS] F      F4_p661_control_line_orbits_13_13_is_not_a_covering_family     0/12
+[PASS] F      F4_p661_control_point_plus_plane_is_not_a_covering_family      0/12
+[PASS] F      F4_p661_control_line_orbit_6_plus_two_planes_is_not_a_covering_family 1/12
+[PASS] F      F4_p661_control_line_orbit_7_plus_two_planes_is_not_a_covering_family 2/12
+[PASS] F      F4_p661_control_line_orbit_13_plus_two_planes_is_not_a_covering_family 1/12
+[PASS] F      F5_two_prime_agreement                                         {'primes': ['331', '661'], 'agree': True}
+[PASS] F      F6_e3_lp_core_optimum_pt_C11                                   1 vs 1
+[PASS] F      F7_e3_lp_core_duality_certificate_pt_C11                       {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_core_optimum_pt_D10                                   1 vs 1
+[PASS] F      F7_e3_lp_core_duality_certificate_pt_D10                       {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_core_optimum_pt_A4(a)                                 1 vs 1
+[PASS] F      F7_e3_lp_core_duality_certificate_pt_A4(a)                     {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_core_optimum_pt_A4(b)                                 1 vs 1
+[PASS] F      F7_e3_lp_core_duality_certificate_pt_A4(b)                     {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_core_optimum_pt_V4I                                   1 vs 1
+[PASS] F      F7_e3_lp_core_duality_certificate_pt_V4I                       {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_core_optimum_pt_C5(a)                                 1 vs 1
+[PASS] F      F7_e3_lp_core_duality_certificate_pt_C5(a)                     {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_core_optimum_pt_C5(b)                                 1 vs 1
+[PASS] F      F7_e3_lp_core_duality_certificate_pt_C5(b)                     {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_core_optimum_pt_C6(a)                                 1 vs 1
+[PASS] F      F7_e3_lp_core_duality_certificate_pt_C6(a)                     {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_core_optimum_pt_C6(b)                                 1 vs 1
+[PASS] F      F7_e3_lp_core_duality_certificate_pt_C6(b)                     {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_core_optimum_pt_D12                                   1 vs 1
+[PASS] F      F7_e3_lp_core_duality_certificate_pt_D12                       {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_core_optimum_C3line                                   1 vs 1
+[PASS] F      F7_e3_lp_core_duality_certificate_C3line                       {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_core_optimum_Lminus_sigma                             1 vs 1
+[PASS] F      F7_e3_lp_core_duality_certificate_Lminus_sigma                 {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_core_optimum_ell_V                                    1 vs 1
+[PASS] F      F7_e3_lp_core_duality_certificate_ell_V                        {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_core_optimum_P_sigma                                  1/3 vs 1/3
+[PASS] F      F7_e3_lp_core_duality_certificate_P_sigma                      {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_with_cone_coupling_optimum_pt_C11                     1 vs 1
+[PASS] F      F7_e3_lp_with_cone_coupling_duality_certificate_pt_C11         {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_with_cone_coupling_optimum_pt_D10                     1 vs 1
+[PASS] F      F7_e3_lp_with_cone_coupling_duality_certificate_pt_D10         {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_with_cone_coupling_optimum_pt_A4(a)                   1 vs 1
+[PASS] F      F7_e3_lp_with_cone_coupling_duality_certificate_pt_A4(a)       {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_with_cone_coupling_optimum_pt_A4(b)                   1 vs 1
+[PASS] F      F7_e3_lp_with_cone_coupling_duality_certificate_pt_A4(b)       {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_with_cone_coupling_optimum_pt_V4I                     1 vs 1
+[PASS] F      F7_e3_lp_with_cone_coupling_duality_certificate_pt_V4I         {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_with_cone_coupling_optimum_pt_C5(a)                   1 vs 1
+[PASS] F      F7_e3_lp_with_cone_coupling_duality_certificate_pt_C5(a)       {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_with_cone_coupling_optimum_pt_C5(b)                   1 vs 1
+[PASS] F      F7_e3_lp_with_cone_coupling_duality_certificate_pt_C5(b)       {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_with_cone_coupling_optimum_pt_C6(a)                   1 vs 1
+[PASS] F      F7_e3_lp_with_cone_coupling_duality_certificate_pt_C6(a)       {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_with_cone_coupling_optimum_pt_C6(b)                   1 vs 1
+[PASS] F      F7_e3_lp_with_cone_coupling_duality_certificate_pt_C6(b)       {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_with_cone_coupling_optimum_pt_D12                     1 vs 1
+[PASS] F      F7_e3_lp_with_cone_coupling_duality_certificate_pt_D12         {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_with_cone_coupling_optimum_C3line                     1 vs 1
+[PASS] F      F7_e3_lp_with_cone_coupling_duality_certificate_C3line         {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_with_cone_coupling_optimum_Lminus_sigma               1 vs 1
+[PASS] F      F7_e3_lp_with_cone_coupling_duality_certificate_Lminus_sigma   {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_with_cone_coupling_optimum_ell_V                      1 vs 1
+[PASS] F      F7_e3_lp_with_cone_coupling_duality_certificate_ell_V          {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F6_e3_lp_with_cone_coupling_optimum_P_sigma                    1/3 vs 1/3
+[PASS] F      F7_e3_lp_with_cone_coupling_duality_certificate_P_sigma        {'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_fe
+[PASS] F      F8_max_plus_plane_multiplicity_is_d_over_3                     
+[PASS] F      F9_pinned_bounds_feasible_at_d35                               []
+[PASS] F      F10_degree_bound_from_E3_plus_pinning_is_7                     
+[PASS] G      G1_linear_part_rank_is_4                                       generic rank over Q(d, m); max over 5 integer specialisations, all giv
+[PASS] G      G2_certifying_minor_has_rank_4                                 
+[PASS] G      G3_no_forced_entries_from_the_linear_part                      the linear part has 4 equations in 46 declared unknowns (plus the unkn
+[PASS] G      G4_producer_matches                                            
+[PASS] G      G5_ND_corollary_is_conditional                                 
+[PASS] G      G6_ND_mu_candidates_at_d35                                     [12, 21]
+
+214 checks, 0 failures
+E_LEDGER_VERIFY_OK
+ALLGREEN

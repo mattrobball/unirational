@@ -1,0 +1,1290 @@
+{
+ "checks": [
+  {
+   "group": "A",
+   "name": "A1_E4_is_minus_one_on_Bl_pt_P4",
+   "pass": true,
+   "detail": "E^4 = -1"
+  },
+  {
+   "group": "A",
+   "name": "A1_H3E_H2E2_HE3_vanish_on_Bl_pt_P4",
+   "pass": true,
+   "detail": "(0, 0, 0)"
+  },
+  {
+   "group": "A",
+   "name": "A1_H4_is_one",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "A",
+   "name": "A2_segre_closed_form_agrees_with_the_bundle_computation",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "A",
+   "name": "A3_projection_identity_(H-E)^4_is_zero",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "A",
+   "name": "A4_line_centre_HE3_is_1_and_E4_is_3",
+   "pass": true,
+   "detail": "HE^3 = 1, E^4 = 3"
+  },
+  {
+   "group": "A",
+   "name": "A5_plane_centre_H2E2_HE3_E4_are_-1_-2_-3",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "A",
+   "name": "A6_discrepancies_are_3_2_1",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "A",
+   "name": "A7_producer_anchor_block_all_pass",
+   "pass": true,
+   "detail": "['A1_point_center', 'A2_line_center', 'A3_plane_center', 'A4_projection_identity', 'A5_segre_closed_form']"
+  },
+  {
+   "group": "B",
+   "name": "B_C1a_relative_canonical",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B_C1b_projection_pairing",
+   "pass": true,
+   "detail": "3(d.nu - sum m_k ebar_k) == deg(D^4)"
+  },
+  {
+   "group": "B",
+   "name": "B_C1c_genus_package",
+   "pass": true,
+   "detail": "3(2g-2) == 3[(2d-5)nu + sum (a_k - 2 m_k) ebar_k]"
+  },
+  {
+   "group": "B",
+   "name": "B_C1d_level3_row",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B_C1e_level4_row",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B_producer_c1_block_matches",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B_isolated_point_local_level4_is_mu^4",
+   "pass": true,
+   "detail": "1*m^4"
+  },
+  {
+   "group": "B",
+   "name": "B_line_and_plane_local_level4_forms",
+   "pass": true,
+   "detail": "4*d*m^3 - 3*m^4 | 6*d^2*m^2 - 8*d*m^3 + 3*m^4"
+  },
+  {
+   "group": "C",
+   "name": "C1_orbit_size_equals_660_over_setwise_stabiliser",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C2_totals_940_220_55",
+   "pass": true,
+   "detail": "(940, 220, 55)"
+  },
+  {
+   "group": "C",
+   "name": "C3_fourteen_orbits",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C4_rebuild_p331_matches_cited_census",
+   "pass": true,
+   "detail": "940/220/55 in 14 orbits"
+  },
+  {
+   "group": "C",
+   "name": "C5_rebuild_p331_labels_are_the_14_census_labels",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C6_rebuild_p331_every_plus_plane_pair_meets",
+   "pass": true,
+   "detail": "{'meet_in_a_point': 1320, 'meet_in_a_line': 165, 'disjoint': 0}"
+  },
+  {
+   "group": "C",
+   "name": "C4_rebuild_p661_matches_cited_census",
+   "pass": true,
+   "detail": "940/220/55 in 14 orbits"
+  },
+  {
+   "group": "C",
+   "name": "C5_rebuild_p661_labels_are_the_14_census_labels",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C6_rebuild_p661_every_plus_plane_pair_meets",
+   "pass": true,
+   "detail": "{'meet_in_a_point': 1320, 'meet_in_a_line': 165, 'disjoint': 0}"
+  },
+  {
+   "group": "D",
+   "name": "D1_lagrange",
+   "pass": true,
+   "detail": "[1, 2, 3, 4, 5, 6, 10, 11, 12, 55, 60, 660]"
+  },
+  {
+   "group": "D",
+   "name": "D2_v_p_660_is_one_for_11_5_3",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "D",
+   "name": "D3_v_2_660_is_two",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "D",
+   "name": "D4_lemma_F_holds_for_p_in_11_5_3",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "D",
+   "name": "D5_p2_control_fails_as_it_must",
+   "pass": true,
+   "detail": "[2, 6, 10]"
+  },
+  {
+   "group": "D",
+   "name": "D6_section3_1_coefficients_reproduced_p11",
+   "pass": true,
+   "detail": "expected {11: 5, 55: 1} inside got {11: 5, 55: 1, 660: 1}"
+  },
+  {
+   "group": "D",
+   "name": "D7_row_660_present_and_dropped_by_section3_1_p11",
+   "pass": true,
+   "detail": "n = 1 for a G-stabilised component; this is FLAG E2-G-ORBIT"
+  },
+  {
+   "group": "D",
+   "name": "D6_section3_1_coefficients_reproduced_p5",
+   "pass": true,
+   "detail": "expected {5: 2, 10: 1, 55: 2, 60: 1} inside got {5: 2, 10: 1, 55: 2, 60: 1, 660: 1}"
+  },
+  {
+   "group": "D",
+   "name": "D7_row_660_present_and_dropped_by_section3_1_p5",
+   "pass": true,
+   "detail": "n = 1 for a G-stabilised component; this is FLAG E2-G-ORBIT"
+  },
+  {
+   "group": "D",
+   "name": "D6_section3_1_coefficients_reproduced_p3",
+   "pass": true,
+   "detail": "expected {3: 1, 6: 2, 12: 1, 60: 2} inside got {3: 1, 6: 2, 12: 1, 60: 2, 660: 1}"
+  },
+  {
+   "group": "D",
+   "name": "D7_row_660_present_and_dropped_by_section3_1_p3",
+   "pass": true,
+   "detail": "n = 1 for a G-stabilised component; this is FLAG E2-G-ORBIT"
+  },
+  {
+   "group": "D",
+   "name": "D8_fourth_powers_mod_11_are_the_QRs",
+   "pass": true,
+   "detail": "[1, 3, 4, 5, 9]"
+  },
+  {
+   "group": "D",
+   "name": "D9_fourth_powers_mod_5_and_3_are_trivial",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "D",
+   "name": "D10_census_orbits_surviving_the_filter_p11",
+   "pass": true,
+   "detail": "['pt_C11']"
+  },
+  {
+   "group": "D",
+   "name": "D10_census_orbits_surviving_the_filter_p5",
+   "pass": true,
+   "detail": "['pt_C5(a)', 'pt_C5(b)', 'pt_D10']"
+  },
+  {
+   "group": "D",
+   "name": "D10_census_orbits_surviving_the_filter_p3",
+   "pass": true,
+   "detail": "['C3line', 'Lminus_sigma', 'P_sigma', 'ell_V', 'pt_A4(a)', 'pt_A4(b)', 'pt_C6(a)', 'pt_C6(b)', 'pt_D12']"
+  },
+  {
+   "group": "E",
+   "name": "E1_35_mod_11_is_2",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "E",
+   "name": "E2_35^4_mod_11_is_5",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "E",
+   "name": "E3_2_is_not_a_fourth_power_mod_11",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "E",
+   "name": "E4_section3_1_form_reproduced",
+   "pass": true,
+   "detail": "s(C11) = 1 - 9*s(F55) (mod 11)"
+  },
+  {
+   "group": "E",
+   "name": "E5_mu4_eq_1_mod_11_iff_mu_eq_pm1",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "E",
+   "name": "E6_statement_is_conditional_and_names_its_hypotheses",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F1_p331_labels_stable",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_one_orbit_0_witness_reverified",
+   "pass": true,
+   "detail": "stored {'0': 1} recomputed {'0': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_one_orbit_0_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_one_orbit_1_witness_reverified",
+   "pass": true,
+   "detail": "stored {'1': 1} recomputed {'1': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_one_orbit_1_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_one_orbit_2_witness_reverified",
+   "pass": true,
+   "detail": "stored {'2': 1} recomputed {'2': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_one_orbit_2_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_one_orbit_3_witness_reverified",
+   "pass": true,
+   "detail": "stored {'3': 1} recomputed {'3': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_one_orbit_3_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_one_orbit_4_witness_reverified",
+   "pass": true,
+   "detail": "stored {'4': 1} recomputed {'4': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_one_orbit_4_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_one_orbit_5_witness_reverified",
+   "pass": true,
+   "detail": "stored {'5': 1} recomputed {'5': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_one_orbit_5_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_one_orbit_6_witness_reverified",
+   "pass": true,
+   "detail": "stored {'6': 1} recomputed {'6': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_one_orbit_6_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_one_orbit_7_witness_reverified",
+   "pass": true,
+   "detail": "stored {'7': 1} recomputed {'7': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_one_orbit_7_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_one_orbit_8_witness_reverified",
+   "pass": true,
+   "detail": "stored {'8': 1} recomputed {'8': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_one_orbit_8_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_one_orbit_9_witness_reverified",
+   "pass": true,
+   "detail": "stored {'9': 1} recomputed {'9': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_one_orbit_9_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_one_orbit_10_witness_reverified",
+   "pass": true,
+   "detail": "stored {'10': 1} recomputed {'10': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_one_orbit_10_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_one_orbit_11_witness_reverified",
+   "pass": true,
+   "detail": "stored {'11': 1} recomputed {'11': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_one_orbit_11_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_one_orbit_12_witness_reverified",
+   "pass": true,
+   "detail": "stored {'12': 1} recomputed {'12': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_one_orbit_12_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_one_orbit_13_witness_reverified",
+   "pass": true,
+   "detail": "stored {'13': 1} recomputed {'13': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_one_orbit_13_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_two_planes_witness_reverified",
+   "pass": true,
+   "detail": "stored {'7': 2} recomputed {'7': 2}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_two_planes_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_three_planes_witness_reverified",
+   "pass": true,
+   "detail": "stored {'7': 3} recomputed {'7': 3}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_three_planes_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_line_orbit_5_plus_plane_witness_reverified",
+   "pass": true,
+   "detail": "stored {'5': 1, '7': 1} recomputed {'5': 1, '7': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_line_orbit_5_plus_plane_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_line_orbit_10_plus_plane_witness_reverified",
+   "pass": true,
+   "detail": "stored {'7': 1, '10': 1} recomputed {'7': 1, '10': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_line_orbit_10_plus_plane_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p331_line_orbit_13_plus_plane_witness_reverified",
+   "pass": true,
+   "detail": "stored {'7': 1, '13': 1} recomputed {'7': 1, '13': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p331_line_orbit_13_plus_plane_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F4_p331_control_four_planes_is_not_a_covering_family",
+   "pass": true,
+   "detail": "1/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p331_control_line_orbits_5_5_is_not_a_covering_family",
+   "pass": true,
+   "detail": "0/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p331_control_line_orbits_5_10_is_not_a_covering_family",
+   "pass": true,
+   "detail": "1/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p331_control_line_orbits_5_13_is_not_a_covering_family",
+   "pass": true,
+   "detail": "1/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p331_control_line_orbits_10_10_is_not_a_covering_family",
+   "pass": true,
+   "detail": "1/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p331_control_line_orbits_10_13_is_not_a_covering_family",
+   "pass": true,
+   "detail": "1/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p331_control_line_orbits_13_13_is_not_a_covering_family",
+   "pass": true,
+   "detail": "0/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p331_control_point_plus_plane_is_not_a_covering_family",
+   "pass": true,
+   "detail": "0/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p331_control_line_orbit_5_plus_two_planes_is_not_a_covering_family",
+   "pass": true,
+   "detail": "1/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p331_control_line_orbit_10_plus_two_planes_is_not_a_covering_family",
+   "pass": true,
+   "detail": "4/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p331_control_line_orbit_13_plus_two_planes_is_not_a_covering_family",
+   "pass": true,
+   "detail": "1/12"
+  },
+  {
+   "group": "F",
+   "name": "F1_p661_labels_stable",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_one_orbit_0_witness_reverified",
+   "pass": true,
+   "detail": "stored {'0': 1} recomputed {'0': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_one_orbit_0_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_one_orbit_1_witness_reverified",
+   "pass": true,
+   "detail": "stored {'1': 1} recomputed {'1': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_one_orbit_1_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_one_orbit_2_witness_reverified",
+   "pass": true,
+   "detail": "stored {'2': 1} recomputed {'2': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_one_orbit_2_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_one_orbit_3_witness_reverified",
+   "pass": true,
+   "detail": "stored {'3': 1} recomputed {'3': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_one_orbit_3_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_one_orbit_4_witness_reverified",
+   "pass": true,
+   "detail": "stored {'4': 1} recomputed {'4': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_one_orbit_4_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_one_orbit_5_witness_reverified",
+   "pass": true,
+   "detail": "stored {'5': 1} recomputed {'5': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_one_orbit_5_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_one_orbit_6_witness_reverified",
+   "pass": true,
+   "detail": "stored {'6': 1} recomputed {'6': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_one_orbit_6_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_one_orbit_7_witness_reverified",
+   "pass": true,
+   "detail": "stored {'7': 1} recomputed {'7': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_one_orbit_7_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_one_orbit_8_witness_reverified",
+   "pass": true,
+   "detail": "stored {'8': 1} recomputed {'8': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_one_orbit_8_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_one_orbit_9_witness_reverified",
+   "pass": true,
+   "detail": "stored {'9': 1} recomputed {'9': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_one_orbit_9_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_one_orbit_10_witness_reverified",
+   "pass": true,
+   "detail": "stored {'10': 1} recomputed {'10': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_one_orbit_10_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_one_orbit_11_witness_reverified",
+   "pass": true,
+   "detail": "stored {'11': 1} recomputed {'11': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_one_orbit_11_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_one_orbit_12_witness_reverified",
+   "pass": true,
+   "detail": "stored {'12': 1} recomputed {'12': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_one_orbit_12_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_one_orbit_13_witness_reverified",
+   "pass": true,
+   "detail": "stored {'13': 1} recomputed {'13': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_one_orbit_13_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_two_planes_witness_reverified",
+   "pass": true,
+   "detail": "stored {'2': 2} recomputed {'2': 2}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_two_planes_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_three_planes_witness_reverified",
+   "pass": true,
+   "detail": "stored {'2': 3} recomputed {'2': 3}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_three_planes_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_line_orbit_6_plus_plane_witness_reverified",
+   "pass": true,
+   "detail": "stored {'2': 1, '6': 1} recomputed {'2': 1, '6': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_line_orbit_6_plus_plane_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_line_orbit_7_plus_plane_witness_reverified",
+   "pass": true,
+   "detail": "stored {'2': 1, '7': 1} recomputed {'2': 1, '7': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_line_orbit_7_plus_plane_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F2_p661_line_orbit_13_plus_plane_witness_reverified",
+   "pass": true,
+   "detail": "stored {'2': 1, '13': 1} recomputed {'2': 1, '13': 1}"
+  },
+  {
+   "group": "F",
+   "name": "F3_p661_line_orbit_13_plus_plane_line_through_z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F4_p661_control_four_planes_is_not_a_covering_family",
+   "pass": true,
+   "detail": "1/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p661_control_line_orbits_6_6_is_not_a_covering_family",
+   "pass": true,
+   "detail": "0/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p661_control_line_orbits_6_7_is_not_a_covering_family",
+   "pass": true,
+   "detail": "0/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p661_control_line_orbits_6_13_is_not_a_covering_family",
+   "pass": true,
+   "detail": "0/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p661_control_line_orbits_7_7_is_not_a_covering_family",
+   "pass": true,
+   "detail": "1/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p661_control_line_orbits_7_13_is_not_a_covering_family",
+   "pass": true,
+   "detail": "1/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p661_control_line_orbits_13_13_is_not_a_covering_family",
+   "pass": true,
+   "detail": "0/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p661_control_point_plus_plane_is_not_a_covering_family",
+   "pass": true,
+   "detail": "0/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p661_control_line_orbit_6_plus_two_planes_is_not_a_covering_family",
+   "pass": true,
+   "detail": "1/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p661_control_line_orbit_7_plus_two_planes_is_not_a_covering_family",
+   "pass": true,
+   "detail": "2/12"
+  },
+  {
+   "group": "F",
+   "name": "F4_p661_control_line_orbit_13_plus_two_planes_is_not_a_covering_family",
+   "pass": true,
+   "detail": "1/12"
+  },
+  {
+   "group": "F",
+   "name": "F5_two_prime_agreement",
+   "pass": true,
+   "detail": "{'primes': ['331', '661'], 'agree': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_core_optimum_pt_C11",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_core_duality_certificate_pt_C11",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_core_optimum_pt_D10",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_core_duality_certificate_pt_D10",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_core_optimum_pt_A4(a)",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_core_duality_certificate_pt_A4(a)",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_core_optimum_pt_A4(b)",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_core_duality_certificate_pt_A4(b)",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_core_optimum_pt_V4I",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_core_duality_certificate_pt_V4I",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_core_optimum_pt_C5(a)",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_core_duality_certificate_pt_C5(a)",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_core_optimum_pt_C5(b)",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_core_duality_certificate_pt_C5(b)",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_core_optimum_pt_C6(a)",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_core_duality_certificate_pt_C6(a)",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_core_optimum_pt_C6(b)",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_core_duality_certificate_pt_C6(b)",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_core_optimum_pt_D12",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_core_duality_certificate_pt_D12",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_core_optimum_C3line",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_core_duality_certificate_C3line",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_core_optimum_Lminus_sigma",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_core_duality_certificate_Lminus_sigma",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_core_optimum_ell_V",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_core_duality_certificate_ell_V",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_core_optimum_P_sigma",
+   "pass": true,
+   "detail": "1/3 vs 1/3"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_core_duality_certificate_P_sigma",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_with_cone_coupling_optimum_pt_C11",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_with_cone_coupling_duality_certificate_pt_C11",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_with_cone_coupling_optimum_pt_D10",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_with_cone_coupling_duality_certificate_pt_D10",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_with_cone_coupling_optimum_pt_A4(a)",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_with_cone_coupling_duality_certificate_pt_A4(a)",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_with_cone_coupling_optimum_pt_A4(b)",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_with_cone_coupling_duality_certificate_pt_A4(b)",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_with_cone_coupling_optimum_pt_V4I",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_with_cone_coupling_duality_certificate_pt_V4I",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_with_cone_coupling_optimum_pt_C5(a)",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_with_cone_coupling_duality_certificate_pt_C5(a)",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_with_cone_coupling_optimum_pt_C5(b)",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_with_cone_coupling_duality_certificate_pt_C5(b)",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_with_cone_coupling_optimum_pt_C6(a)",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_with_cone_coupling_duality_certificate_pt_C6(a)",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_with_cone_coupling_optimum_pt_C6(b)",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_with_cone_coupling_duality_certificate_pt_C6(b)",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_with_cone_coupling_optimum_pt_D12",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_with_cone_coupling_duality_certificate_pt_D12",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_with_cone_coupling_optimum_C3line",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_with_cone_coupling_duality_certificate_C3line",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_with_cone_coupling_optimum_Lminus_sigma",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_with_cone_coupling_duality_certificate_Lminus_sigma",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_with_cone_coupling_optimum_ell_V",
+   "pass": true,
+   "detail": "1 vs 1"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_with_cone_coupling_duality_certificate_ell_V",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F6_e3_lp_with_cone_coupling_optimum_P_sigma",
+   "pass": true,
+   "detail": "1/3 vs 1/3"
+  },
+  {
+   "group": "F",
+   "name": "F7_e3_lp_with_cone_coupling_duality_certificate_P_sigma",
+   "pass": true,
+   "detail": "{'x_nonneg': True, 'primal_feasible': True, 'y_nonneg': True, 'dual_feasible': True, 'primal_value': True, 'dual_value': True}"
+  },
+  {
+   "group": "F",
+   "name": "F8_max_plus_plane_multiplicity_is_d_over_3",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "F",
+   "name": "F9_pinned_bounds_feasible_at_d35",
+   "pass": true,
+   "detail": "[]"
+  },
+  {
+   "group": "F",
+   "name": "F10_degree_bound_from_E3_plus_pinning_is_7",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "G",
+   "name": "G1_linear_part_rank_is_4",
+   "pass": true,
+   "detail": "generic rank over Q(d, m); max over 5 integer specialisations, all giving [4, 4, 4, 4, 4]"
+  },
+  {
+   "group": "G",
+   "name": "G2_certifying_minor_has_rank_4",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "G",
+   "name": "G3_no_forced_entries_from_the_linear_part",
+   "pass": true,
+   "detail": "the linear part has 4 equations in 46 declared unknowns (plus the unknown extra-orbit columns), so NO variable is forced by the linear part alone"
+  },
+  {
+   "group": "G",
+   "name": "G4_producer_matches",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "G",
+   "name": "G5_ND_corollary_is_conditional",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "G",
+   "name": "G6_ND_mu_candidates_at_d35",
+   "pass": true,
+   "detail": "[12, 21]"
+  }
+ ],
+ "n_checks": 214,
+ "n_failures": 0
+}
