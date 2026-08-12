@@ -1,0 +1,400 @@
+# The audit: coordinate degrees of the constructed self-maps, and their
+# restriction-necessary data
+
+Exits: `EQUIVARIANT-TANGENT-SECTION-REPRESENTATION-PROVED`,
+`MINIMAL-EQUIVARIANT-TANGENT-FIELD-DEGREE-EIGHT-EXACT`,
+`MINIMAL-EQUIVARIANT-TANGENT-FIELD-UNIQUE`,
+`TANGENT-RESIDUAL-COORDINATE-DEGREE-25-EXACT`,
+`TANGENT-RESIDUAL-SELFMAP-CANONICAL-AND-EXPLICIT`,
+`TANGENT-RESIDUAL-DOMINANT-NONIDENTITY-CERTIFIED`,
+`SELFMAP-AUDIT-ALL-RESTRICTION-COMPATIBLE`,
+`TANGENT-RESIDUAL-TOPOLOGICAL-DEGREE-NOT-COMPUTED`.
+
+Verified exactly: `verify_selfmap_audit.py` (`RESULT: PASS`, 133 checks, ~12 s).
+
+**Problem E headline: OPEN.** No self-map is restriction-excluded; the
+retraction branch survives.
+
+---
+
+## 0. One-paragraph summary
+
+`COMBINED_DEGREE_SIEVE/THEOREM_COMBINED_SIEVE.md` §6 flags that the
+tangent-residual packet "produces nonidentity dominant `G`-selfmaps with
+`delta >= 3` and does not compute their degree". This packet computes the
+**coordinate** degree exactly, and in the process makes the construction
+canonical. A tangent-residual selfmap is `phi_V = rho o s_V` for a
+`G`-equivariant rational section `s_V` of `P(T_X) -> X`; such sections are
+exactly the `G`-covariant tuples `V` of degree `m` on `X` with
+`grad F · V ≡ 0 (mod F)`, taken modulo `x·(invariants)`. The space of these has
+dimension `N(m) = [C(m)-C(m-3)] - S(m+2) - S(m-1)`, which is **zero for every
+`m <= 7` and one for `m = 8`**: there is a unique minimal equivariant tangent
+direction field `V_8`, hence a **canonical** tangent-residual selfmap
+`phi_8 := phi_{V_8}`. Its coordinate degree is `3·8+1 = 25` before removing the
+base locus, and the divisorial base locus is **empty** (certified on an explicit
+2-plane), so
+
+```
+              deg_coord(phi_8) = 25    exactly.
+```
+
+`phi_8` is dominant and is not the identity, with exact point certificates.
+The next section, `V_9` (also unique), gives `deg_coord(phi_9) = 28`. Both
+degrees sit inside the sealed surviving set `{1} ∪ {6,7,...}` — a real
+consistency test of the sealed exclusions, which would have been contradicted by
+any value in `{2,3,4,5}`. Every audited self-map comes out
+**RESTRICTION-COMPATIBLE**, with the surviving `(d,k)` cells listed in §6.
+Nothing is excluded, so the detection corollary does not fire. The unresolved
+quantity is the **topological** degree `delta`, and §7 records the exact
+blowup point.
+
+---
+
+## 1. The inventory
+
+What `goal_runs_20260809/FULL_G_SELFMAP_CLASSIFICATION` actually constructs:
+
+| # | object | file | status as a self-map of `X` |
+|---|---|---|---|
+| S0 | `id_X` | — | in `Self`; `deg_coord = 1`, `delta = 1` |
+| S1 | tangent-residual `phi_V = rho o s_V`, `s_V` an equivariant rational section of `P(T_X) -> X` chosen over the free quotient by a first-jet argument | `THEOREM.md` §§1–3, `TANGENT_RESIDUAL_CONSTRUCTION.md` | **the only explicit nonidentity family**; the section is not pinned by the source |
+| S2 | iterates `phi_V^r` | `THEOREM.md` §4 | in `Self`; degrees `delta^r` |
+| S3 | `Phi_{n,m}` with `Phi\|_{E_t} = [n]`, `Phi\|_{L_t} = z^m`, `n,m ≡ 1 (6)` | `FIXED_NETWORK_SELFMAPS.md` §1 | **not self-maps of `X`** — these are residual-equivariant maps of the fixed curves `E_t`, `L_t` of an involution. Out of audit scope, and recorded as such |
+| S4 | the generic-torsor pairs `(psi, iota)` | `THEOREM.md` §5, `GENERIC_TORSOR_CLASSIFICATION.md` | a field-theoretic classification, not an explicit map; no coordinate degree to compute |
+
+So the audit reduces to `S0`, `S1` (with the section pinned) and `S2`.
+
+---
+
+## 2. Equivariant tangent sections are covariant tuples
+
+> **Proposition 2.1 (representation).** Let `s : X --> P(T_X)` be a
+> `G`-equivariant rational section. Then there is `m >= 1` and a
+> `G`-covariant tuple `V in ((S/F)_m ⊗ W)^G` with
+>
+> ```
+> grad F · V ≡ 0  (mod F)          [ V is tangent to X ],                 (2.1)
+> V ∉ x · (S/F)_{m-1}              [ V is not the radial direction ],     (2.2)
+> ```
+>
+> such that `s(x) = [V(x) mod <x>]`. Conversely every such `V` defines a
+> `G`-equivariant rational section, and two tuples define the same section iff
+> they agree up to a scalar and up to adding `h·x` with `h` invariant.
+
+*Proof.* At the generic point, `s` selects a line in `(W ⊗ L)/<x>`, where
+`L = C(X)`; equivalently a two-dimensional `L`-subspace `Pi ⊂ W ⊗ L` containing
+`x`, and `Pi` is `G`-stable because `s` is equivariant. Pick any
+`V_1 in Pi \ <x>`. Equivariance of `Pi` gives
+`g·V_1(g^{-1}x) ≡ lambda(g) V_1 (mod <x>)` with `lambda in Z^1(G, L^*)`;
+`L/L^G` is Galois with group `G`, so `H^1(G,L^*) = 1` (Hilbert 90) and after
+rescaling `V_1` by an element of `L^*` we may take `lambda ≡ 1`. Then
+`V_1(gx) - g V_1(x) = c(g)·x` defines `c in Z^1(G, L^+)`, and `H^1(G,L^+) = 0`
+(normal basis theorem), so replacing `V_1` by `V_1 + (\text{coboundary})·x`
+makes `V := V_1` genuinely equivariant: `V(gx) = g V(x)` in `W ⊗ L`.
+
+Clear denominators. `S/(F)` is a graded UFD, because `Cl(X) = Z·H_X` is
+generated by the hyperplane class (Lefschetz) and `X` is projectively normal, so
+the class group of the affine cone vanishes. Write `V_i = A_i/B` with `B` the
+least common denominator, canonical up to a scalar, hence `G`-semi-invariant,
+hence `G`-invariant because `G` is perfect. Then `A = B·V` is a `G`-covariant
+tuple of forms of degree `m := deg B`; divide by the (invariant) content to make
+it primitive. Condition (2.1) is `dF_x(V) = 0`, the definition of a tangent
+direction; (2.2) is `V ∉ <x>`, and the multiplier is forced to be a polynomial
+invariant: `V = f x` with `f in Frac(S/F)` forces `f in S/F` by primitivity of
+`x`, and `f` invariant because `V` and `x` are covariant.
+
+Conversely such a `V` visibly gives an equivariant section. For the last clause,
+`V` and `V'` give the same section iff `V' ≡ a V + b x` in `W ⊗ L`; comparing
+covariance and degrees gives `a` a scalar and `b` an invariant form. ∎
+
+> **Corollary 2.2.** The tangent-residual selfmaps of `X` are exactly the maps
+> ```
+> phi_V = [ R(x,V) ],       R(x,V) := F(V)·x - Q(x,V)·V,                  (2.3)
+> ```
+> for `V` as in Proposition 2.1, where `Q(x,v)` is the `t^2`-coefficient of
+> `F(x+tv)`. `R` has degree `3m+1`, and `R(x, aV+bx) = a^3 R(x,V)` modulo
+> `(F, grad F·V)`, so `phi_V` depends only on the section.
+
+Degrees: `F(V)` has degree `3m`, `x_i` degree `1`; `Q(x,V)` has degree `1+2m`,
+`V_i` degree `m`; both terms have degree `3m+1`. ✓
+
+> **Corollary 2.3.** `phi_V = id_X` iff `Q(x,V) ≡ 0 on X`, and `phi_V` is
+> undefined (the section lands in the indeterminacy locus of `rho`, i.e. the
+> line `l_{x,V(x)}` lies in `X`) iff `Q(x,V) ≡ F(V) ≡ 0 on X`.
+
+*Proof.* `[R] = [x]` iff `R ∧ x = 0` iff `Q(x,V)·(V ∧ x) = 0`, and `V ∧ x != 0`
+by (2.2). ∎
+
+---
+
+## 3. The tangent-section count, and minimality
+
+Write `C(m) = dim (Sym^m W^v ⊗ W)^G`, `I(n) = dim (Sym^n W^v)^G`,
+`S(n) = dim H^0(X,O_X(n))^G = I(n) - I(n-3)` and
+`Chat(m) = C(m) - C(m-3) = dim ((S/F)_m ⊗ W)^G`.
+
+> **Theorem 3.1.** For `m >= 4`, the space of `G`-equivariant tangent direction
+> fields of degree `m`, modulo the degenerate ones, has dimension
+>
+> ```
+> N(m) = Chat(m) - S(m+2) - S(m-1).                                       (3.1)
+> ```
+>
+> For `m <= 3` it is `0`. Consequently
+>
+> ```
+> N(m) = 0 for every m <= 7,      N(8) = 1,      N(9) = 1,     N(10) = 2. (3.2)
+> ```
+>
+> **The minimal degree of a `G`-equivariant tangent direction field on the
+> Klein cubic is `8`, and in degree `8` the field is unique up to scalar.**
+
+*Proof.* Set `K_m := { V in ((S/F)_m ⊗ W)^G : grad F·V ≡ 0 (mod F) }` and
+`Z_m := x · H^0(X,O_X(m-1))^G ⊆ K_m` (indeed
+`grad F·(hx) = 3hF ≡ 0`). By Proposition 2.1 the sections of degree `m` are the
+nonzero classes of `K_m/Z_m`. The map
+
+```
+((S/F)_m ⊗ W)^G  -->  H^0(X, O_X(m+2))^G,     V |-> grad F · V (mod F),
+```
+
+is surjective for `m >= 4`: `FOLIATION_REFORMULATION.md` Proposition 5.1 proves
+surjectivity from the divergence-free ambient covariants of degree `m`, and that
+map factors through the restriction to `X`. Hence
+`dim K_m = Chat(m) - S(m+2)`, and `dim Z_m = S(m-1)` because `S/(F)` is a domain
+so `h |-> hx` is injective. This is (3.1). For `m <= 3`: `Chat(1) = 1` spanned by
+`x` itself (degenerate), `Chat(2) = Chat(3) = 0`.
+
+The numbers (3.2) follow from the sealed dimension tables, recomputed exactly by
+Molien / character arithmetic in block (A) of the verifier and cross-checked
+against `FOLIATION_REFORMULATION.md` §2 and the sealed sieve table. ∎
+
+| `m` | 1 | 2 | 3 | 4 | 5 | 6 | 7 | **8** | 9 | 10 | 11 | 12 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| `Chat(m)` | 1 | 0 | 0 | 1 | 1 | 2 | 2 | **4** | 4 | 6 | 7 | 10 |
+| `S(m+2)` | 0 | 0 | 1 | 1 | 1 | 1 | 1 | **2** | 2 | 3 | 2 | 4 |
+| `S(m-1)` | 1 | 0 | 0 | 0 | 0 | 1 | 1 | **1** | 1 | 1 | 2 | 2 |
+| `N(m)` | 0 | 0 | 0 | 0 | 0 | 0 | 0 | **1** | 1 | 2 | 3 | 4 |
+
+**Independent recomputation.** Blocks (C)–(E) of the verifier rebuild the whole
+thing from scratch by explicit linear algebra over `F_p` (`p ≡ 1 mod 11`, two
+primes), with the group generated by the repository's own `sigma`, `tau` and the
+Gauss-sum `iota`. The model is pinned to the sealed one by checking that the
+repository's boxed degree-`5` covariant `D_5`
+(`D35_K30_K31_CELLS.md` §2) spans the computed `Cov_5`. The linear algebra
+returns `dim Cov_m = C(m)` and `dim Inv_m = I(m)` for `m <= 10`, and
+`dim K_m - dim Z_m = N(m)` for `m <= 10`, agreeing with (3.1) on the nose at
+both primes. Since ranks can only drop under reduction, agreement with the exact
+characteristic-zero Molien values proves that the `F_p` spaces are the
+reductions of the characteristic-zero spaces (see `ADVERSARIAL_TESTS.md` A6).
+
+> **Corollary 3.2 (the construction becomes canonical).** There is exactly one
+> `G`-equivariant tangent direction field of degree `8` on `X`, hence exactly
+> one tangent-residual selfmap built from a minimal section:
+> ```
+> phi_8 := phi_{V_8} : X --> X.
+> ```
+> This makes `FULL_G_SELFMAP_CLASSIFICATION`'s existence theorem
+> **constructive**: `phi_8` is produced without the dominant-section lemma
+> (§2 of that packet), without the free quotient `B = U/G`, and without the
+> descent argument of its §3.
+
+---
+
+## 4. The exact coordinate degrees
+
+> **Theorem 4.1.** `deg_coord(phi_8) = 25`, exactly. Equivalently: the tuple
+> `R(x,V_8) = F(V_8)x - Q(x,V_8)V_8` of degree `25` is **primitive on `X`** —
+> its divisorial base locus is empty.
+
+*Proof.* `deg R = 3·8+1 = 25` by Corollary 2.2. Suppose the divisorial base
+locus `D` were nonzero. `D` is then a surface in `P^4` (pure dimension `2`).
+Let `P ⊂ P^4` be any 2-plane. By the projective dimension theorem,
+`dim(D ∩ P) >= 2 + 2 - 4 = 0`, so `D ∩ P != ∅`; in particular the five forms
+`R_i|_P` have a common zero on the plane cubic `X ∩ P`.
+
+Block (G) of the verifier exhibits an explicit 2-plane `P` (an explicit `5 x 3`
+matrix over `F_p`) for which
+
+```
+Res_w( F|_P , R_0|_P )  and  Res_w( F|_P , R_1|_P )
+```
+
+are binary forms of degree `75 = 3·25` whose **gcd is a nonzero constant**, and
+for which `F|_P`, `R_0|_P`, `R_1|_P` have no common root on the line `v = 0`
+either. Hence `F|_P, R_0|_P, R_1|_P` have no common zero in `P^2` at all, so
+`D ∩ P = ∅`, so `D = 0`. ∎
+
+The certificate is a single plane and it is decisive — no genericity is assumed,
+because *every* 2-plane meets a nonzero divisor. This is the reason the test is
+cheap: everything is substituted into three variables *before* the degree-25
+tuple is formed, so no degree-25 form in five variables is ever built.
+
+> **Theorem 4.2.** The unique degree-`9` equivariant tangent field `V_9` gives
+> `deg_coord(phi_9) = 28`, by the same certificate.
+
+> **Theorem 4.3 (dominant, nonidentity).** `phi_8` is dominant and
+> `phi_8 != id_X`.
+
+*Proof.* Block (H) produces an exact point `q in X(F_p)` at which
+`V_8(q) ∉ <q>`, `R(q) != 0`, `F(R(q)) = 0` (the image really is on `X`),
+`Q(q,V_8(q)) != 0` — so `phi_8 != id_X` by Corollary 2.3 — and at which the
+restricted differential of the cone map
+
+```
+d tau_q : T_q C(X) --> T_{R(q)} C(X)
+```
+
+has nonzero determinant. A nonzero value at one point of a polynomial that is
+the reduction of the characteristic-zero cone Jacobian forces that Jacobian to
+be nonzero, hence `tau` and `phi_8` dominant (`THEOREM_SOURCE_TANGENCY.md`
+(T6)). Two independent primes, two independent points. ∎
+
+**Sanity, and the tangent-residual identity.** Block (I) verifies, on the same
+plane and with `V_8` substituted, the exact polynomial identity
+
+```
+F(R) = C(V)^3 F(x) - C(V)^2 Q(x,V) L(x,V),      C(V) = F(V), L = grad F · V,
+```
+
+which is `(1.4)` of `FULL_G_SELFMAP_CLASSIFICATION/THEOREM.md`, together with
+`L(x,V_8) = c·F·h_7` in five variables (`h_7` the degree-`7` invariant,
+`I(7) = 1`) — so `L ≡ 0` on `X`, which is (2.1), and `F(R) ≡ 0` on `X`, which is
+why `phi_8` lands on `X`.
+
+---
+
+## 5. The audit table
+
+For a self-map `psi` of primitive coordinate degree `n` the sealed constraints
+on any landing tuple `A` with `phi_A = psi` are `d = k+n`,
+`k in {0} ∪ {5,6,...}` (`COMMON-FACTOR-INVARIANT-DEGREE-SET-PROVED`) and
+`d >= 35` (`LADDER-EMPTY-THROUGH-34`), with `k = 0 => d = n` and CARRIER
+(`RT-DX0-PROVED`), and `n = 1 <=> ` retraction.
+
+| self-map | `deg_coord` | `delta` | surviving `(d,k)` cells | verdict |
+|---|---|---|---|---|
+| `S0` `id_X` | `1` | `1` | `k = d-1`, every `d >= 35`; first cell `(35,34)` — the retraction cell of the `d=35` branch table, **open** | **RESTRICTION-COMPATIBLE** |
+| `S1` `phi_8` (minimal section) | **`25`** (exact) | not computed, `3 <= delta <= 25^3` | `k = d-25 >= 10`, every `d >= 35`; first cell `(35,10)`, inside the open band `k = 5..29` | **RESTRICTION-COMPATIBLE** |
+| `S1` `phi_9` | **`28`** (exact) | not computed | `k = d-28 >= 7`, every `d >= 35`; first cell `(35,7)` | **RESTRICTION-COMPATIBLE** |
+| `S1` `phi_V`, `m = 10` | `<= 31` | not computed | a pencil of sections; not pinned | **RESTRICTION-COMPATIBLE** (no cell excluded for any `n in {1}∪{6,...}`) |
+| `S2` `phi_8^r`, `r >= 2` | `<= 25^r`, exact value not computed | `delta^r` | as above for whatever `n` results | **RESTRICTION-COMPATIBLE** |
+| `S3` fixed-network `Phi_{n,m}` | — | — | not self-maps of `X` | **OUT OF SCOPE** |
+| `S4` generic-torsor pairs | — | — | not explicit | **OUT OF SCOPE** |
+
+Note the `k = 0` column is empty for every audited map: `k = 0` forces
+`d = n >= 35`, and no audited nonidentity map has coordinate degree `>= 35`.
+So none of them can be the restriction of a **CARRIER-by-`D_X=0`** tuple; each
+would have to come with a nonzero common factor `H` of degree `k >= 35 - n`.
+That is a genuine, if weak, restriction-only consequence, and it is recorded in
+`ADVERSARIAL_TESTS.md` A4.
+
+### 5.1 The ramification test of (R2)
+
+`THEOREM_SOURCE_TANGENCY.md` (34) applies to a restriction and gives
+`Delta_T|_X = (d/d')H^2 j_psi` with `j_psi in H^0(X,O_X(2n-2))^G`. For
+`n = 25` this asks for a nonzero invariant of degree `48` on `X`;
+`S(48) = dim H^0(X,O_X(48))^G` is large (`> 0` for every `n >= 4`, sealed), so
+the condition is satisfiable and the test does **not** fire. For `n = 28`,
+degree `54`, same conclusion. As `FOLIATION_REFORMULATION.md` Proposition 5.1
+predicts, the tangency identity alone excludes nothing; this is a confirmation of
+that scope statement, not a new obstruction.
+
+---
+
+## 6. Verdicts
+
+```
+S0  id_X                     RESTRICTION-COMPATIBLE   cells (d, d-1), d >= 35
+S1  phi_8   deg_coord 25     RESTRICTION-COMPATIBLE   cells (d, d-25), d >= 35
+S1  phi_9   deg_coord 28     RESTRICTION-COMPATIBLE   cells (d, d-28), d >= 35
+S2  iterates                 RESTRICTION-COMPATIBLE   (coordinate degree not pinned)
+S3  fixed-network maps       OUT OF SCOPE (not selfmaps of X)
+S4  generic-torsor pairs     OUT OF SCOPE (not explicit)
+```
+
+**No self-map is RESTRICTION-EXCLUDED.** The detection corollary
+(`THEOREM_DETECTION_PRINCIPLE.md` Cor 3.5) therefore does not fire, and the
+retraction branch is untouched. There is no headline-critical finding in this
+packet, and the packet says so plainly rather than manufacturing one.
+
+The consistency direction is worth stating, because it was a real test: had any
+audited self-map come out with coordinate degree in `{2,3,4,5}`, it would have
+**contradicted** `D35_K30_K31_CELLS.md` Corollary 3.3 and
+`EXCLUSION_DPRIME_2_3.md` §8, both of which assert that no `G`-equivariant
+selfmap of `X` of those primitive coordinate degrees exists, dominant or not.
+The computed values `1, 25, 28` are all in the sealed surviving set, and the
+low-degree machinery reproduces the sealed `C(4)=2`, `C(5)=1`, `Chat(4)=Chat(5)=1`
+exactly.
+
+---
+
+## 7. Blowup points, recorded exactly
+
+Nothing here was launched and abandoned. These are the computations the audit
+identifies as its boundary, with the reason.
+
+**(B1) The topological degree `delta(phi_8)` — NOT COMPUTED.** This is the
+quantity `COMBINED_DEGREE_SIEVE` §6 asks for, and it is the one the detection
+lever (S2) of `THEOREM_DETECTION_PRINCIPLE.md` needs. What is known:
+`delta >= 3` (`FULL_G_SELFMAP_CLASSIFICATION/THEOREM.md` (4.1)) and
+`delta <= n^3 = 15625` (`THEOREM_COMBINED_SIEVE.md` Cor 3.5). The exact route,
+identified but not executed: `phi_8(x) = y` iff `y in l_{x,V_8(x)}`, so `delta`
+is the *order* of the line congruence `x |-> l_{x,V_8(x)}`, i.e.
+`int_X c_3(Q)` for `Q = (W ⊗ O_X)/E`, `E` the rank-two subsheaf generated by `x`
+and `V_8`, **minus** the contribution of the always-present spurious solution
+`x = y`. Two things must be settled before that number means anything, and
+neither was: (i) whether `E` is a subbundle, i.e. whether the degeneracy locus
+`{V_8 ∧ x = 0} ⊂ X` is empty — it is a determinantal locus of expected dimension
+zero, so it is expected to be **nonempty**, and then `c_3` acquires corrections;
+(ii) the local multiplicity of the spurious component at `x = y`. Until both are
+settled the naive count is not a bound in either direction, and no number is
+recorded here.
+
+**(B2) The gcd of `R` in five variables — NOT ATTEMPTED, and not needed.**
+Computing `gcd_{S/F}(R_0,...,R_4)` directly means Gröbner work on five degree-25
+forms in five variables. The plane-section certificate of Theorem 4.1 replaces it
+with three-variable arithmetic and is decisive, so the five-variable computation
+was never started.
+
+**(B3) The coordinate degree of the iterates `phi_8^r` — NOT COMPUTED.** The
+composite tuple has degree `25^r` before base-locus removal, e.g. `625` at
+`r = 2`; deciding the common factor needs the same plane-section certificate on
+degree-`625` ternary forms. That is feasible in principle and was not run; only
+the inequality `deg_coord(phi_8^r) <= 25^r` is claimed.
+
+**(B4) `m >= 10` sections — a family, not a point.** `N(10) = 2`, so the
+degree-10 sections form a pencil and "the" coordinate degree is not a single
+number: the generic member has degree `31 - c` with `c` the generic common
+factor, and special members can drop. Not audited.
+
+**(B5) The characteristic-zero coefficients of `V_8` — NOT RECONSTRUCTED.**
+`V_8` is computed modulo two primes. Every conclusion drawn from it transfers to
+characteristic zero in the direction used (`ADVERSARIAL_TESTS.md` A6), so an
+integral model was not reconstructed. Writing `V_8` out over `Q` the way
+`D_5` is written out in `D35_K30_K31_CELLS.md` §2 is a straightforward but
+separate piece of work, and it is what a future packet would need in order to
+box `V_8` as a named repository object.
+
+---
+
+## 8. Non-claims
+
+* `delta(phi_8)` is not computed, so the CLEAN norm test of (R4) is not run on
+  any self-map, and the detection lever is not exercised.
+* No self-map is shown to lie outside `Im(res)`. The retraction branch is not
+  killed and no branch closes.
+* Theorem 4.1 says the *divisorial* base locus of `R(x,V_8)` on `X` is empty.
+  It says nothing about the lower-dimensional base locus, which is certainly
+  nonempty (it contains the locus where the line `l_{x,V_8(x)}` lies in `X`).
+* Corollary 3.2 says the minimal section is unique. It does **not** say that
+  `phi_8` is the minimal-coordinate-degree nonidentity self-map of `X`: a
+  self-map of coordinate degree in `{6,...,24}` is not excluded by anything
+  here, and none is known.
+* The uniqueness in Theorem 3.1 is uniqueness of the *section*, not of the
+  self-map: distinct sections could a priori give the same `phi`.
+* `V_8` is not boxed as a named object (see B5), and no claim is made about its
+  divergence, its geometry, or whether it is a landing foliation — the same
+  non-claim `FOLIATION_REFORMULATION.md` §8 makes for `D_4`.
+
+**Problem E headline: OPEN.**
