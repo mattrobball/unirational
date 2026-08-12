@@ -1,0 +1,30 @@
+{
+ "p": 331,
+ "P3_global": 1380,
+ "sections": [
+  {
+   "m": 18,
+   "dim_sym3": 1140,
+   "rank": 1140,
+   "HF_L3": 0,
+   "generic_rank": 1140,
+   "npts": 1636
+  },
+  {
+   "m": 20,
+   "dim_sym3": 1540,
+   "rank": 1380,
+   "HF_L3": 160,
+   "generic_rank": 1380,
+   "npts": 2196
+  },
+  {
+   "m": 22,
+   "dim_sym3": 2024,
+   "rank": 1380,
+   "HF_L3": 644,
+   "generic_rank": 1380,
+   "npts": 2873
+  }
+ ]
+}

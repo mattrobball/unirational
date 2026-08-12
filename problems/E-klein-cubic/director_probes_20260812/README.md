@@ -49,3 +49,44 @@ only by `dim ≤ 33` (a cone of dim `k` meets a generic `m`-dim subspace
 nontrivially iff `k + m ≥ 38`). The Hilbert data is far stronger: the
 growth ratio `HF(4)/HF(3) ∈ [5.2, 11.0]` puts the cone dimension near
 **7–9** (heuristic — asymptotic growth read at `t = 3, 4`).
+
+`section_deficiency_probe.py` / `section_deficiency_p331.json` — the
+landing system restricted to random sections of the 37-cell:
+
+| m | dim Sym³(L) | rank | HF_L(3) | generic space would give |
+|---|---|---|---|---|
+| 6, 8, 10, 18 | 56, 120, 220, 1140 | full | 0 | full |
+| 20 | 1540 | **1380** | 160 | 1380 |
+| 22 | 2024 | **1380** | 644 | 1380 |
+
+**No structural deficiency anywhere.** Through `m = 22` the landing
+cubics restrict exactly as a generic 1380-dimensional space of cubics
+would (and the restriction is injective on the global span from `m = 20`
+on). The system's specialness is invisible to sections — which is also
+why the sealed "origin-only" section probes carried so little: they ran
+where every system behaves alike.
+
+## CORRECTION (director, same day) — two claims withdrawn
+
+1. **My "landing cone has dimension ≈ 7–9" estimate is WRONG** (stated
+   earlier today from the `HF(4)/HF(3)` growth ratio). `HF(4) ≥ 40330`
+   is not a measurement: `I₄` is spanned by `37 × 1380 = 51 060`
+   products inside a 91 390-dimensional space, so `HF(4) ≥ 40 330` is
+   forced by COUNTING ALONE, whatever the solution set is. A system with
+   no nonzero solutions shows the same `HF(3) = 7759`, `HF(4) ≈ 40 330`.
+   The ratio carries no dimension information at these degrees.
+2. **The sealed conclusion "the linear-algebra ladder cannot close the
+   `d = 35` certificate" is a NON SEQUITUR.** It was drawn from `HF(4)`
+   being large — but degree 4 could never have been surjective:
+   `37 × 1380 = 51 060 < 91 390`. **Degree 5 is the first degree where
+   surjectivity is numerically possible at all**:
+   `703 × 1380 = 970 140 > 749 398`. The ladder was stopped one degree
+   short of the first degree that could have decided anything.
+
+Net effect of this probe round: no evidence against emptiness (the
+sections look generic, and a generic 1380-dimensional space of cubics in
+37 variables has no nonzero zeros), and the emptiness route is NOT
+closed — it is untested at the only degree that matters. The decisive
+computation is the rank of the degree-5 Macaulay matrix (970 140
+structured sparse rows, 749 398 columns; each row is a monomial shift of
+a cubic, ≤ 9139 nonzeros).
