@@ -1,0 +1,51 @@
+{
+ "661": {
+  "A1": "CONFIRMED",
+  "A2": "CONFIRMED",
+  "n_no_level0": 4,
+  "zero_counts": {
+   "1": 12,
+   "2": 4,
+   "3": 12,
+   "4": 8,
+   "5": 12,
+   "7": 12,
+   "8": 4
+  },
+  "replay": {
+   "n_live_ext_in": 62,
+   "n_dead": 62,
+   "n_live": 0,
+   "death_mechanisms": {
+    "level2_assert_all_kappa_equiv2_vanish": 62
+   },
+   "forced_rows_own": [
+    74,
+    75
+   ]
+  },
+  "A1_witnesses": [],
+  "A2_witnesses": [],
+  "hard_rigidity_ok": true,
+  "wall_s": 89.65
+ },
+ "991": {
+  "A1": "CONFIRMED",
+  "A2": "CONFIRMED",
+  "n_no_level0": 4,
+  "zero_counts": {
+   "1": 12,
+   "2": 4,
+   "3": 12,
+   "4": 8,
+   "5": 12,
+   "7": 12,
+   "8": 4
+  },
+  "replay": null,
+  "A1_witnesses": [],
+  "A2_witnesses": [],
+  "hard_rigidity_ok": true,
+  "wall_s": 92.86
+ }
+}

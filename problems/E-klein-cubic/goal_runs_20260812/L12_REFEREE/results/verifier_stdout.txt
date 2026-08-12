@@ -1,0 +1,109 @@
+L12_REFEREE verifier — hostile referee spot-checks
+Object: theory/GLOBAL_LOCALIZATION_LEDGER_20260812.md
+
+--- R1: P1 holomorphic Lefschetz calibration ---
+  [PASS] R1 n=0: det(1-dg) matches H0 character  (err=0.00e+00)
+  [PASS] R1 n=0: det(1-(dg)^-1) accidentally matches
+  [PASS] R1 n=1: det(1-dg) matches H0 character  (err=5.55e-17)
+  [PASS] R1 n=1: det(1-(dg)^-1) FAILS (expected)  (|inv-true|=1.966)
+  [PASS] R1 n=2: det(1-dg) matches H0 character  (err=2.22e-16)
+  [PASS] R1 n=2: det(1-(dg)^-1) FAILS (expected)  (|inv-true|=3.865)
+  [PASS] R1 n=3: det(1-dg) matches H0 character  (err=2.22e-16)
+  [PASS] R1 n=3: det(1-(dg)^-1) FAILS (expected)  (|inv-true|=5.632)
+  [PASS] R1 n=4: det(1-dg) matches H0 character  (err=4.44e-16)
+  [PASS] R1 n=4: det(1-(dg)^-1) FAILS (expected)  (|inv-true|=7.206)
+  [PASS] R1 n=5: det(1-dg) matches H0 character  (err=0.00e+00)
+  [PASS] R1 n=5: det(1-(dg)^-1) FAILS (expected)  (|inv-true|=8.535)
+  [PASS] R1 dim-mismatch: factor(n=3,d) != factor(n=4,d) for det_dg=λ≠0
+
+--- R2: F has no x_i^3 monomial ---
+  [PASS] R2: term i=0 uses distinct indices
+  [PASS] R2: term i=1 uses distinct indices
+  [PASS] R2: term i=2 uses distinct indices
+  [PASS] R2: term i=3 uses distinct indices
+  [PASS] R2: term i=4 uses distinct indices
+--- R2: F, gradient, tangent span over Z ---
+  [PASS] R2 Z: F(e_0)=0
+  [PASS] R2 Z: grad F(e_0) single nonzero at j+1 with value 1  (grad=[0, 1, 0, 0, 0])
+  [PASS] R2 Z: |T basis at e_0| = 3  (idx=[2, 3, 4])
+  [PASS] R2 Z: F(e_1)=0
+  [PASS] R2 Z: grad F(e_1) single nonzero at j+1 with value 1  (grad=[0, 0, 1, 0, 0])
+  [PASS] R2 Z: |T basis at e_1| = 3  (idx=[0, 3, 4])
+  [PASS] R2 Z: F(e_2)=0
+  [PASS] R2 Z: grad F(e_2) single nonzero at j+1 with value 1  (grad=[0, 0, 0, 1, 0])
+  [PASS] R2 Z: |T basis at e_2| = 3  (idx=[0, 1, 4])
+  [PASS] R2 Z: F(e_3)=0
+  [PASS] R2 Z: grad F(e_3) single nonzero at j+1 with value 1  (grad=[0, 0, 0, 0, 1])
+  [PASS] R2 Z: |T basis at e_3| = 3  (idx=[0, 1, 2])
+  [PASS] R2 Z: F(e_4)=0
+  [PASS] R2 Z: grad F(e_4) single nonzero at j+1 with value 1  (grad=[1, 0, 0, 0, 0])
+  [PASS] R2 Z: |T basis at e_4| = 3  (idx=[1, 2, 3])
+--- R2: modular checks at p=331 ---
+  [PASS] R2 p=331: F(e_0)=0
+  [PASS] R2 p=331: grad F(e_0) = e_1 direction  (grad=[0, 1, 0, 0, 0])
+  [PASS] R2 p=331: three tangent weights at e_0, none equal 1  (w=[85, 111, 74])
+  [PASS] R2 p=331: conormal = inverse of normal at e_0  (n=80 c=120)
+  [PASS] R2 p=331: det(1-dg) != det(1-(dg)^-1) at e_0 (generic)  (det=58 det_inv=244)
+  [PASS] R2 p=331: F(e_1)=0
+  [PASS] R2 p=331: grad F(e_1) = e_2 direction  (grad=[0, 0, 1, 0, 0])
+  [PASS] R2 p=331: three tangent weights at e_1, none equal 1  (w=[120, 80, 274])
+  [PASS] R2 p=331: conormal = inverse of normal at e_1  (n=270 c=293)
+  [PASS] R2 p=331: det(1-dg) != det(1-(dg)^-1) at e_1 (generic)  (det=101 det_inv=25)
+  [PASS] R2 p=331: F(e_2)=0
+  [PASS] R2 p=331: grad F(e_2) = e_3 direction  (grad=[0, 0, 0, 1, 0])
+  [PASS] R2 p=331: three tangent weights at e_2, none equal 1  (w=[74, 293, 180])
+  [PASS] R2 p=331: conormal = inverse of normal at e_2  (n=270 c=293)
+  [PASS] R2 p=331: det(1-dg) != det(1-(dg)^-1) at e_2 (generic)  (det=204 det_inv=139)
+  [PASS] R2 p=331: F(e_3)=0
+  [PASS] R2 p=331: grad F(e_3) = e_4 direction  (grad=[0, 0, 0, 0, 1])
+  [PASS] R2 p=331: three tangent weights at e_3, none equal 1  (w=[167, 120, 293])
+  [PASS] R2 p=331: conormal = inverse of normal at e_3  (n=111 c=167)
+  [PASS] R2 p=331: det(1-dg) != det(1-(dg)^-1) at e_3 (generic)  (det=169 det_inv=243)
+  [PASS] R2 p=331: F(e_4)=0
+  [PASS] R2 p=331: grad F(e_4) = e_5 direction  (grad=[1, 0, 0, 0, 0])
+  [PASS] R2 p=331: three tangent weights at e_4, none equal 1  (w=[180, 274, 167])
+  [PASS] R2 p=331: conormal = inverse of normal at e_4  (n=85 c=74)
+  [PASS] R2 p=331: det(1-dg) != det(1-(dg)^-1) at e_4 (generic)  (det=226 det_inv=70)
+--- R2: modular checks at p=661 ---
+  [PASS] R2 p=661: F(e_0)=0
+  [PASS] R2 p=661: grad F(e_0) = e_1 direction  (grad=[0, 1, 0, 0, 0])
+  [PASS] R2 p=661: three tangent weights at e_0, none equal 1  (w=[147, 658, 9])
+  [PASS] R2 p=661: conormal = inverse of normal at e_0  (n=68 c=418)
+  [PASS] R2 p=661: det(1-dg) != det(1-(dg)^-1) at e_0 (generic)  (det=45 det_inv=15)
+  [PASS] R2 p=661: F(e_1)=0
+  [PASS] R2 p=661: grad F(e_1) = e_2 direction  (grad=[0, 0, 1, 0, 0])
+  [PASS] R2 p=661: three tangent weights at e_1, none equal 1  (w=[418, 68, 457])
+  [PASS] R2 p=661: conormal = inverse of normal at e_1  (n=634 c=612)
+  [PASS] R2 p=661: det(1-dg) != det(1-(dg)^-1) at e_1 (generic)  (det=591 det_inv=382)
+  [PASS] R2 p=661: F(e_2)=0
+  [PASS] R2 p=661: grad F(e_2) = e_3 direction  (grad=[0, 0, 0, 1, 0])
+  [PASS] R2 p=661: three tangent weights at e_2, none equal 1  (w=[9, 612, 81])
+  [PASS] R2 p=661: conormal = inverse of normal at e_2  (n=634 c=612)
+  [PASS] R2 p=661: det(1-dg) != det(1-(dg)^-1) at e_2 (generic)  (det=272 det_inv=108)
+  [PASS] R2 p=661: F(e_3)=0
+  [PASS] R2 p=661: grad F(e_3) = e_4 direction  (grad=[0, 0, 0, 0, 1])
+  [PASS] R2 p=661: three tangent weights at e_3, none equal 1  (w=[220, 418, 612])
+  [PASS] R2 p=661: conormal = inverse of normal at e_3  (n=658 c=220)
+  [PASS] R2 p=661: det(1-dg) != det(1-(dg)^-1) at e_3 (generic)  (det=623 det_inv=428)
+  [PASS] R2 p=661: F(e_4)=0
+  [PASS] R2 p=661: grad F(e_4) = e_5 direction  (grad=[1, 0, 0, 0, 0])
+  [PASS] R2 p=661: three tangent weights at e_4, none equal 1  (w=[81, 457, 220])
+  [PASS] R2 p=661: conormal = inverse of normal at e_4  (n=147 c=9)
+  [PASS] R2 p=661: det(1-dg) != det(1-(dg)^-1) at e_4 (generic)  (det=387 det_inv=500)
+
+--- R4: twist-row independence over Q(ζ_11) (mod p) ---
+  [PASS] R4: rows k=1,2,3 linearly independent over F_331  (minor cols=(0, 1, 2) det=246)
+  [PASS] R4: k=0 weight row is the trivial character on X^g
+
+--- R5: odd-order cyclic projective lifts ---
+  [PASS] R5: QR weight sum ≡ 0 mod 11 (SL-lift of C11 exists on the nose)  (sum=22)
+  [PASS] R5: order 11 is odd (projective=linear order)
+  [PASS] R5: order 5 is odd (projective=linear order)
+  [PASS] R5: order 3 is odd (projective=linear order)
+  [PASS] R5: order 2 is even (lift needs sealed-matrix care)
+  [PASS] R5: order 6 is even (lift needs sealed-matrix care)
+
+Checks: 91 passed, 0 failed, 91 total
+Wrote /Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/L12_REFEREE/results/verifier_output.json
+L12_REFEREE_VERIFY_OK
+ALLGREEN

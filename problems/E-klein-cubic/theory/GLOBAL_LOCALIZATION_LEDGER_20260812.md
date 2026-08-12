@@ -131,3 +131,25 @@ groups" acting as one object rather than a list of local shadows.
 
 No degree excluded; no pattern yet tested; the identity family is
 derived, not yet machine-instantiated; flags 1–4 gate everything.
+
+## 8. Referee corrections (2026-08-12, same day — `goal_runs_20260812/L12_REFEREE`, adopted in full)
+
+The derivation stands (R2, R5, R6 CONFIRMED — including the strategic
+claim that no local layer implies the identities), with these corrections
+superseding the corresponding formulas above:
+
+1. **Fixed-point contribution (R1):** `w_k(q(z)) / det(1 − dg_z | T_z)`
+   — the note's `det(1 − (dg)^{-1})` convention is replaced by the
+   sealed-usage convention throughout.
+2. **Order-11 denominators:** `Π_{k' ∉ {j, j+1}} (1 − ζ^{a_{k'} − a_j})`.
+3. **Wording:** the weight `ζ^{a_{j+1} − a_j}` at `e_j` is the NORMAL
+   weight of `X ⊂ P⁴`, not the conormal.
+4. **The `k = 0` identity is NOT vacuous (R4, referee's improvement):**
+   localized it reads `Σ_j (tr_j − 1)/D_j = 0` with
+   `tr_j = tr(g | (Rq_*O)_{e_j})` — a sum rule on the fiber traces alone,
+   FREE of the twist bookkeeping: the cleanest first machine target.
+5. **Flag 5 added (R3):** the local receiver factor is the derived
+   `χ_g(Z_x, O)` (derived base change), not naively `1 − tr H¹`.
+
+Machine phase cleared for order 11, genus-0 branch first, under these
+formulas.

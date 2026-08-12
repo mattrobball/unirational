@@ -216,3 +216,9 @@ this packet.
    exhausted; the remaining paths to the verdict are the landing-cubic
    certificate (inconclusive, leaning empty) and the open-condition
    realization layer, plus the audits gating the flagged kills.
+
+> **2026-08-12 promotion (`goal_runs_20260812/ARCJET_AUDIT`):** the 62
+> arc-jet kills are CONFIRMED (independent engine, primes 331/661/991,
+> partition and hashes reproduced, 22-anchor stable at 991). The FLAG of
+> the adjudication §2 is resolved; the census 1264 → 22 is audit-backed
+> end to end.

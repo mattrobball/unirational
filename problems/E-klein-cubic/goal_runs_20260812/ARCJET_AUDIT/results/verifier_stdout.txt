@@ -1,0 +1,101 @@
+== ARCJET_AUDIT verifier
+OK: no REPORT.md
+OK: THEOREM.md present
+OK: a1_a2_p331.json exists
+OK: A1 CONFIRMED p=331
+OK: A2 CONFIRMED p=331
+OK: 12 period-3 p=331
+OK: hard rigidity p=331
+OK: kappa2 zero 4/12 p=331
+OK: kappa5 zero 12/12 p=331
+OK: kappa8 zero 4/12 p=331
+OK: all-mod2-vanish 4 kids p=331
+OK: rig0 p=331
+OK: rig1 p=331
+OK: rig2 p=331
+OK: rig5 p=331
+OK: rig8 p=331
+OK: 4 no-level0 p=331
+OK: A1 no refute witnesses p=331
+OK: A2 no refute witnesses p=331
+OK: own cell37 p=331
+OK: replay 62 dead p=331
+OK: sealed cell rowspace p=331
+OK: sealed vanishing match p=331
+OK: a1_a2_p661.json exists
+OK: A1 CONFIRMED p=661
+OK: A2 CONFIRMED p=661
+OK: 12 period-3 p=661
+OK: hard rigidity p=661
+OK: kappa2 zero 4/12 p=661
+OK: kappa5 zero 12/12 p=661
+OK: kappa8 zero 4/12 p=661
+OK: all-mod2-vanish 4 kids p=661
+OK: rig0 p=661
+OK: rig1 p=661
+OK: rig2 p=661
+OK: rig5 p=661
+OK: rig8 p=661
+OK: 4 no-level0 p=661
+OK: A1 no refute witnesses p=661
+OK: A2 no refute witnesses p=661
+OK: own cell37 p=661
+OK: replay 62 dead p=661
+OK: sealed cell rowspace p=661
+OK: sealed vanishing match p=661
+OK: a1_a2_p991.json exists
+OK: A1 CONFIRMED p=991
+OK: A2 CONFIRMED p=991
+OK: 12 period-3 p=991
+OK: hard rigidity p=991
+OK: kappa2 zero 4/12 p=991
+OK: kappa5 zero 12/12 p=991
+OK: kappa8 zero 4/12 p=991
+OK: all-mod2-vanish 4 kids p=991
+OK: rig0 p=991
+OK: rig1 p=991
+OK: rig2 p=991
+OK: rig5 p=991
+OK: rig8 p=991
+OK: 4 no-level0 p=991
+OK: A1 no refute witnesses p=991
+OK: A2 no refute witnesses p=991
+OK: own cell37 p=991
+OK: a3_materialize_p331.json exists
+OK: A3 CONFIRMED p=331
+OK: joint 1264 p=331
+OK: ext 508 p=331
+OK: strat 756 p=331
+OK: partition 298/148/62 p=331
+OK: sol_hash sets match p=331
+OK: partition_match flag p=331
+OK: a3_materialize_p661.json exists
+OK: A3 CONFIRMED p=661
+OK: joint 1264 p=661
+OK: ext 508 p=661
+OK: strat 756 p=661
+OK: partition 298/148/62 p=661
+OK: sol_hash sets match p=661
+OK: partition_match flag p=661
+OK: A4 CONFIRMED
+OK: A4 ok p=331
+OK: A4 ok p=661
+OK: A4 ok p=991
+OK: 991 null dim 39
+OK: 991 six-flip rank 2
+OK: 991 dim 37
+OK: audit_summary.json exists
+OK: headline OPEN
+OK: summary A1 CONFIRMED
+OK: summary A2 CONFIRMED
+OK: summary A3 CONFIRMED
+OK: summary A4 CONFIRMED
+OK: script reynolds.py
+OK: script frame.py
+OK: script linalg.py
+OK: script audit_a1_a2.py
+OK: script audit_a3_materialize.py
+OK: script audit_a4_anchor.py
+
+ARCJET_AUDIT_VERIFY_OK
+ALLGREEN

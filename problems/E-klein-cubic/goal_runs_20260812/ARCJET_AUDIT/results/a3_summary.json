@@ -1,0 +1,14 @@
+{
+ "661": {
+  "A3": "CONFIRMED",
+  "partition": {
+   "multidegree": 298,
+   "line_order": 148,
+   "to_ladder": 62
+  },
+  "sol_joint": true,
+  "sol_ext": true,
+  "witnesses": [],
+  "wall_s": 194.87
+ }
+}

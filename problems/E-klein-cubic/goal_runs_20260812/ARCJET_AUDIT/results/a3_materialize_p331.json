@@ -1,0 +1,36 @@
+{
+ "p": 331,
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "wall_s": 190.55,
+ "n_joint": 1264,
+ "n_strat": 756,
+ "n_ext": 508,
+ "partition_508": {
+  "multidegree": 298,
+  "line_order": 148,
+  "to_ladder": 62
+ },
+ "partition_match_298_148_62": true,
+ "sol_hash_joint_match": true,
+ "sol_hash_ext_match": true,
+ "content_hash_joint_match": false,
+ "content_hash_ext_match": false,
+ "content_note": "sol_hashes match joint/ext but content_hash payload shape differs from sealed emission; partition and sol-identity stand.",
+ "anchor_22_sealed_hashes_n": 22,
+ "A3_verdict": "CONFIRMED",
+ "A3_refute_witnesses": [],
+ "our_ext_sol_hashes_sample": [
+  "0002255afc24dd07",
+  "0162f46ae314be6e",
+  "01a5e157d27851e1",
+  "01ea87da8753e093",
+  "01fc4fcc08040e78"
+ ],
+ "sealed_ext_sol_hashes_sample": [
+  "0002255afc24dd07",
+  "0162f46ae314be6e",
+  "01a5e157d27851e1",
+  "01ea87da8753e093",
+  "01fc4fcc08040e78"
+ ]
+}

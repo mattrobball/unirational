@@ -1802,6 +1802,28 @@
    "char0_scope": "Exact, saturated, both primes: P3 = 1380/1850/2642/3285 at d = 35/36/37/38 against Molien ceilings I(3d) = 8555/9545/10614/11776 (director probe) -- the landing system's rank deficit grows across four consecutive degrees (7175/7695/7972/8491); HF3 = 7759/41830/285338/581991. HF4 at 35: [40330, 85390], exact P4 unreached -- the linear-algebra ladder cannot close the d=35 certificate (settled twice). Kernel question: partial_structural (nested r-planes full-rank to r <= 15; image saturates by r ~ 25).\nNOT claimed: any degree exclusion; any closed form for P3.",
    "tracked": true,
    "notes": "Cycle-5 lane A, resumed and sealed. Headline: Problem E remains OPEN; this packet excludes no degree. The four-point deficit curve is the constraint any structural explanation of the landing kernel must reproduce. Machine markers: LANDING_INV_VERIFY_OK, ALLGREEN (53 checks, director-replayed)."
+  },
+  {
+   "path": "goal_runs_20260812/ARCJET_AUDIT",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "hostile audit, independent Reynolds engine, primes 331/661/991; director-replayed ALLGREEN",
+   "primary_exit": "ARCJET-AUDIT-ALL-CONFIRMED",
+   "superseded_by": null,
+   "char0_scope": "A1-A4 all CONFIRMED: the kappa-level identically-zero pattern (62 kills), the no-level-0 frames, the 508 partition 298/148/62 with matching hashes, the 22-anchor at 991 (null dim 39, six-flip rank 2, rigidity 0). Soft notes recorded (kappa=4 soft rigidity, kappa=7 character-only reading). PROMOTION: the d=35 census 1264 -> 22 is audit-backed end to end.\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Promotion banner placed on D35_EXTENDED_SIEVE. Headline: Problem E remains OPEN. Markers: ARCJET_AUDIT_VERIFY_OK, ALLGREEN (director-replayed)."
+  },
+  {
+   "path": "goal_runs_20260812/L12_REFEREE",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "hostile mathematical referee of theory/GLOBAL_LOCALIZATION_LEDGER_20260812.md with computational spot checks; director-replayed ALLGREEN",
+   "primary_exit": "L12-REFEREE-MAY-PROCEED-WITH-CORRECTIONS",
+   "superseded_by": null,
+   "char0_scope": "R2/R5/R6 CONFIRMED (five points on X with the stated tangent weights; lift safety at odd orders; locality cannot imply the global identities). R1/R3/R4 CORRECTED: contribution w/det(1-dg|T); derived-base-change flag added; localized k=0 is the twist-free sum rule Sum_j (tr_j - 1)/D_j = 0 (an improvement, now the first machine target). All corrections adopted into the note's section 8.\nNOT claimed: any degree exclusion; the machine phase is cleared for order 11 only, genus-0 branch first.",
+   "tracked": true,
+   "notes": "Director's derivation refereed before machine work, per the campaign's correction culture. Headline: Problem E remains OPEN. Markers: L12_REFEREE_VERIFY_OK, ALLGREEN (director-replayed)."
   }
  ]
 }

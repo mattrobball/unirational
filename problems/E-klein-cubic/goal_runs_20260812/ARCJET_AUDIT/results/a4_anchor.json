@@ -1,0 +1,133 @@
+{
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "per_prime": {
+  "331": {
+   "p": 331,
+   "n_sealed_hashes": 22,
+   "sealed_ids": [
+    5,
+    7,
+    13,
+    15,
+    21,
+    23,
+    29,
+    31,
+    37,
+    39,
+    45,
+    47,
+    53,
+    55,
+    61,
+    63,
+    69,
+    71,
+    697,
+    699,
+    701,
+    703
+   ],
+   "ids_match_SURV": true,
+   "mat_all_present": true,
+   "sieve_all_present": true,
+   "census_all_present": true,
+   "strat_live": 22,
+   "final_live": 22,
+   "witnesses": [],
+   "ok": true
+  },
+  "661": {
+   "p": 661,
+   "n_sealed_hashes": 22,
+   "sealed_ids": [
+    5,
+    7,
+    13,
+    15,
+    21,
+    23,
+    29,
+    31,
+    37,
+    39,
+    45,
+    47,
+    53,
+    55,
+    61,
+    63,
+    69,
+    71,
+    697,
+    699,
+    701,
+    703
+   ],
+   "ids_match_SURV": true,
+   "mat_all_present": true,
+   "sieve_all_present": true,
+   "census_all_present": true,
+   "strat_live": 22,
+   "final_live": 22,
+   "witnesses": [],
+   "ok": true
+  },
+  "991": {
+   "p": 991,
+   "null_dim": 39,
+   "six_flip": {
+    "p": 991,
+    "pick": 0,
+    "z": 1,
+    "r1_rigidity": 0,
+    "slice_rank": 2,
+    "cell37_shape": [
+     37,
+     39
+    ],
+    "dim_after": 37
+   },
+   "cell37_shape": [
+    37,
+    39
+   ],
+   "survivor_ids": [
+    5,
+    7,
+    13,
+    15,
+    21,
+    23,
+    29,
+    31,
+    37,
+    39,
+    45,
+    47,
+    53,
+    55,
+    61,
+    63,
+    69,
+    71,
+    697,
+    699,
+    701,
+    703
+   ],
+   "ids_stable_331_661": true,
+   "prior_t2_991": {
+    "slice_rank": 2,
+    "ambient_rank": 2,
+    "verdict": "CONFIRMED"
+   },
+   "witnesses": [],
+   "ok": true,
+   "note": "At 991 the full 1264 materialization is not re-run; the 22-anchor is the sealed survivor id set plus the geometric cut (null 39, six-flip rank 2 \u2192 dim \u2264 37) underwriting every live cell."
+  }
+ },
+ "A4_verdict": "CONFIRMED",
+ "A4_refute_witnesses": [],
+ "all_primes_ok": true
+}

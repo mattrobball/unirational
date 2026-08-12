@@ -1,0 +1,20 @@
+{
+ "marker": "ARCJET_AUDIT_VERIFY_OK",
+ "allgreen": true,
+ "verdicts": {
+  "A1": "CONFIRMED",
+  "A2": "CONFIRMED",
+  "A3": "CONFIRMED",
+  "A4": "CONFIRMED"
+ },
+ "primes_A1_A2_A4": [
+  331,
+  661,
+  991
+ ],
+ "primes_A3": [
+  331,
+  661
+ ],
+ "headline": "Problem E remains OPEN; this packet excludes no degree."
+}

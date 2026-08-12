@@ -1,0 +1,264 @@
+{
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "verdicts": {
+  "A1": "CONFIRMED",
+  "A2": "CONFIRMED",
+  "A3": "CONFIRMED",
+  "A4": "CONFIRMED"
+ },
+ "primes": {
+  "A1_A2": [
+   331,
+   661,
+   991
+  ],
+  "A3": [
+   331,
+   661
+  ],
+  "A4": [
+   331,
+   661,
+   991
+  ]
+ },
+ "third_prime_991": {
+  "A1_zero_pattern": {
+   "1": 12,
+   "2": 4,
+   "3": 12,
+   "4": 8,
+   "5": 12,
+   "7": 12,
+   "8": 4
+  },
+  "A1_hard_rigidity_ok": true,
+  "A2_frames_12": true,
+  "A4_null39_sixflip_rank2_dim37": true
+ },
+ "notes": [
+  "kappa=4 rigidity soft-fails (~5084/7644) at all three primes \u2014 same as sealed; hard anchors 0,1,2,5,8 hold.",
+  "kappa=7 character component vanishes on killers but full 5-vector jet has nonzero W+ components; kill uses character reading only (sound for label assertion).",
+  "4 of 12 period-3 kids lack level-0; frames built from first available level; hard rigidity still 0.",
+  "62 replay dead at 331/661 with independent engine; both mod1 and mod2 sites available on forced-deeper p3 rows."
+ ],
+ "a1_a2": {
+  "331": {
+   "A1": "CONFIRMED",
+   "A2": "CONFIRMED",
+   "n_no_level0": 4,
+   "zero_counts": {
+    "1": 12,
+    "2": 4,
+    "3": 12,
+    "4": 8,
+    "5": 12,
+    "7": 12,
+    "8": 4
+   },
+   "n_all_mod1_vanish": 8,
+   "n_all_mod2_vanish": 4,
+   "hard_rigidity_ok": true,
+   "level_rigidity": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 5084,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0
+   },
+   "replay_62": {
+    "n_live_ext_in": 62,
+    "n_dead": 62,
+    "n_live": 0,
+    "death_mechanisms": {
+     "level1_assert_all_kappa_equiv1_vanish": 62
+    },
+    "forced_rows_own": [
+     68,
+     69
+    ]
+   },
+   "sealed_cell_match": true,
+   "sealed_vanishing_mismatches": 0,
+   "no_level0_kids": [
+    8972,
+    8974,
+    9597,
+    9599
+   ],
+   "period3_kid_idxs": [
+    6210,
+    6211,
+    6214,
+    6215,
+    8972,
+    8973,
+    8974,
+    8975,
+    9596,
+    9597,
+    9598,
+    9599
+   ],
+   "wall_s": 89.95,
+   "kappa7_fulljet_nonzero_on_killers": true
+  },
+  "661": {
+   "A1": "CONFIRMED",
+   "A2": "CONFIRMED",
+   "n_no_level0": 4,
+   "zero_counts": {
+    "1": 12,
+    "2": 4,
+    "3": 12,
+    "4": 8,
+    "5": 12,
+    "7": 12,
+    "8": 4
+   },
+   "n_all_mod1_vanish": 8,
+   "n_all_mod2_vanish": 4,
+   "hard_rigidity_ok": true,
+   "level_rigidity": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 5084,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0
+   },
+   "replay_62": {
+    "n_live_ext_in": 62,
+    "n_dead": 62,
+    "n_live": 0,
+    "death_mechanisms": {
+     "level2_assert_all_kappa_equiv2_vanish": 62
+    },
+    "forced_rows_own": [
+     74,
+     75
+    ]
+   },
+   "sealed_cell_match": true,
+   "sealed_vanishing_mismatches": 0,
+   "no_level0_kids": [
+    9031,
+    9033,
+    9910,
+    9912
+   ],
+   "period3_kid_idxs": [
+    7436,
+    7437,
+    7438,
+    7439,
+    9030,
+    9031,
+    9032,
+    9033,
+    9910,
+    9911,
+    9912,
+    9913
+   ],
+   "wall_s": 89.65,
+   "kappa7_fulljet_nonzero_on_killers": true
+  },
+  "991": {
+   "A1": "CONFIRMED",
+   "A2": "CONFIRMED",
+   "n_no_level0": 4,
+   "zero_counts": {
+    "1": 12,
+    "2": 4,
+    "3": 12,
+    "4": 8,
+    "5": 12,
+    "7": 12,
+    "8": 4
+   },
+   "n_all_mod1_vanish": 8,
+   "n_all_mod2_vanish": 4,
+   "hard_rigidity_ok": true,
+   "level_rigidity": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 5088,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0
+   },
+   "replay_62": null,
+   "sealed_cell_match": null,
+   "sealed_vanishing_mismatches": null,
+   "no_level0_kids": [
+    8537,
+    8539,
+    10676,
+    10678
+   ],
+   "period3_kid_idxs": [
+    8536,
+    8537,
+    8538,
+    8539,
+    10364,
+    10365,
+    10372,
+    10373,
+    10676,
+    10677,
+    10678,
+    10679
+   ],
+   "wall_s": 92.86,
+   "kappa7_fulljet_nonzero_on_killers": true
+  }
+ },
+ "a3": {
+  "331": {
+   "A3": "CONFIRMED",
+   "partition": {
+    "multidegree": 298,
+    "line_order": 148,
+    "to_ladder": 62
+   },
+   "sol_joint": true,
+   "sol_ext": true,
+   "content_hash_joint_match_wrong_formula": false,
+   "content_note": "Independent sol_hash sets match sealed joint/ext exactly. Sealed content_hashes self-consistent under sealed formula (0 mismatches). Audit initially used a different payload shape for content_hash; that is not a sealed defect. Partition 298/148/62 reproduced.",
+   "wall_s": 190.55
+  },
+  "661": {
+   "A3": "CONFIRMED",
+   "partition": {
+    "multidegree": 298,
+    "line_order": 148,
+    "to_ladder": 62
+   },
+   "sol_joint": true,
+   "sol_ext": true,
+   "content_hash_joint_match_wrong_formula": false,
+   "content_note": "Independent sol_hash sets match sealed joint/ext exactly. Sealed content_hashes self-consistent under sealed formula (0 mismatches). Audit initially used a different payload shape for content_hash; that is not a sealed defect. Partition 298/148/62 reproduced.",
+   "wall_s": 194.87
+  }
+ },
+ "a4": {
+  "verdict": "CONFIRMED",
+  "per_prime_ok": {
+   "331": true,
+   "661": true,
+   "991": true
+  }
+ }
+}

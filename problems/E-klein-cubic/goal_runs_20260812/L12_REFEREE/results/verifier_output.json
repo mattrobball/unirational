@@ -1,0 +1,475 @@
+{
+  "packet": "L12_REFEREE",
+  "object": "theory/GLOBAL_LOCALIZATION_LEDGER_20260812.md",
+  "headline": "Problem E remains OPEN; this packet excludes no degree",
+  "verdicts": {
+    "R1": "CORRECTED",
+    "R2": "CONFIRMED",
+    "R3": "CORRECTED",
+    "R4": "CORRECTED",
+    "R5": "CONFIRMED",
+    "R6": "CONFIRMED"
+  },
+  "machine_phase": "may proceed after R1 denominator patch",
+  "n_checks": 91,
+  "n_passed": 91,
+  "n_failed": 0,
+  "failures": [],
+  "checks": [
+    {
+      "name": "R1 n=0: det(1-dg) matches H0 character",
+      "ok": true,
+      "detail": "err=0.00e+00"
+    },
+    {
+      "name": "R1 n=0: det(1-(dg)^-1) accidentally matches",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R1 n=1: det(1-dg) matches H0 character",
+      "ok": true,
+      "detail": "err=5.55e-17"
+    },
+    {
+      "name": "R1 n=1: det(1-(dg)^-1) FAILS (expected)",
+      "ok": true,
+      "detail": "|inv-true|=1.966"
+    },
+    {
+      "name": "R1 n=2: det(1-dg) matches H0 character",
+      "ok": true,
+      "detail": "err=2.22e-16"
+    },
+    {
+      "name": "R1 n=2: det(1-(dg)^-1) FAILS (expected)",
+      "ok": true,
+      "detail": "|inv-true|=3.865"
+    },
+    {
+      "name": "R1 n=3: det(1-dg) matches H0 character",
+      "ok": true,
+      "detail": "err=2.22e-16"
+    },
+    {
+      "name": "R1 n=3: det(1-(dg)^-1) FAILS (expected)",
+      "ok": true,
+      "detail": "|inv-true|=5.632"
+    },
+    {
+      "name": "R1 n=4: det(1-dg) matches H0 character",
+      "ok": true,
+      "detail": "err=4.44e-16"
+    },
+    {
+      "name": "R1 n=4: det(1-(dg)^-1) FAILS (expected)",
+      "ok": true,
+      "detail": "|inv-true|=7.206"
+    },
+    {
+      "name": "R1 n=5: det(1-dg) matches H0 character",
+      "ok": true,
+      "detail": "err=0.00e+00"
+    },
+    {
+      "name": "R1 n=5: det(1-(dg)^-1) FAILS (expected)",
+      "ok": true,
+      "detail": "|inv-true|=8.535"
+    },
+    {
+      "name": "R1 dim-mismatch: factor(n=3,d) != factor(n=4,d) for det_dg=\u03bb\u22600",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2: term i=0 uses distinct indices",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2: term i=1 uses distinct indices",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2: term i=2 uses distinct indices",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2: term i=3 uses distinct indices",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2: term i=4 uses distinct indices",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2 Z: F(e_0)=0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2 Z: grad F(e_0) single nonzero at j+1 with value 1",
+      "ok": true,
+      "detail": "grad=[0, 1, 0, 0, 0]"
+    },
+    {
+      "name": "R2 Z: |T basis at e_0| = 3",
+      "ok": true,
+      "detail": "idx=[2, 3, 4]"
+    },
+    {
+      "name": "R2 Z: F(e_1)=0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2 Z: grad F(e_1) single nonzero at j+1 with value 1",
+      "ok": true,
+      "detail": "grad=[0, 0, 1, 0, 0]"
+    },
+    {
+      "name": "R2 Z: |T basis at e_1| = 3",
+      "ok": true,
+      "detail": "idx=[0, 3, 4]"
+    },
+    {
+      "name": "R2 Z: F(e_2)=0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2 Z: grad F(e_2) single nonzero at j+1 with value 1",
+      "ok": true,
+      "detail": "grad=[0, 0, 0, 1, 0]"
+    },
+    {
+      "name": "R2 Z: |T basis at e_2| = 3",
+      "ok": true,
+      "detail": "idx=[0, 1, 4]"
+    },
+    {
+      "name": "R2 Z: F(e_3)=0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2 Z: grad F(e_3) single nonzero at j+1 with value 1",
+      "ok": true,
+      "detail": "grad=[0, 0, 0, 0, 1]"
+    },
+    {
+      "name": "R2 Z: |T basis at e_3| = 3",
+      "ok": true,
+      "detail": "idx=[0, 1, 2]"
+    },
+    {
+      "name": "R2 Z: F(e_4)=0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2 Z: grad F(e_4) single nonzero at j+1 with value 1",
+      "ok": true,
+      "detail": "grad=[1, 0, 0, 0, 0]"
+    },
+    {
+      "name": "R2 Z: |T basis at e_4| = 3",
+      "ok": true,
+      "detail": "idx=[1, 2, 3]"
+    },
+    {
+      "name": "R2 p=331: F(e_0)=0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2 p=331: grad F(e_0) = e_1 direction",
+      "ok": true,
+      "detail": "grad=[0, 1, 0, 0, 0]"
+    },
+    {
+      "name": "R2 p=331: three tangent weights at e_0, none equal 1",
+      "ok": true,
+      "detail": "w=[85, 111, 74]"
+    },
+    {
+      "name": "R2 p=331: conormal = inverse of normal at e_0",
+      "ok": true,
+      "detail": "n=80 c=120"
+    },
+    {
+      "name": "R2 p=331: det(1-dg) != det(1-(dg)^-1) at e_0 (generic)",
+      "ok": true,
+      "detail": "det=58 det_inv=244"
+    },
+    {
+      "name": "R2 p=331: F(e_1)=0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2 p=331: grad F(e_1) = e_2 direction",
+      "ok": true,
+      "detail": "grad=[0, 0, 1, 0, 0]"
+    },
+    {
+      "name": "R2 p=331: three tangent weights at e_1, none equal 1",
+      "ok": true,
+      "detail": "w=[120, 80, 274]"
+    },
+    {
+      "name": "R2 p=331: conormal = inverse of normal at e_1",
+      "ok": true,
+      "detail": "n=270 c=293"
+    },
+    {
+      "name": "R2 p=331: det(1-dg) != det(1-(dg)^-1) at e_1 (generic)",
+      "ok": true,
+      "detail": "det=101 det_inv=25"
+    },
+    {
+      "name": "R2 p=331: F(e_2)=0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2 p=331: grad F(e_2) = e_3 direction",
+      "ok": true,
+      "detail": "grad=[0, 0, 0, 1, 0]"
+    },
+    {
+      "name": "R2 p=331: three tangent weights at e_2, none equal 1",
+      "ok": true,
+      "detail": "w=[74, 293, 180]"
+    },
+    {
+      "name": "R2 p=331: conormal = inverse of normal at e_2",
+      "ok": true,
+      "detail": "n=270 c=293"
+    },
+    {
+      "name": "R2 p=331: det(1-dg) != det(1-(dg)^-1) at e_2 (generic)",
+      "ok": true,
+      "detail": "det=204 det_inv=139"
+    },
+    {
+      "name": "R2 p=331: F(e_3)=0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2 p=331: grad F(e_3) = e_4 direction",
+      "ok": true,
+      "detail": "grad=[0, 0, 0, 0, 1]"
+    },
+    {
+      "name": "R2 p=331: three tangent weights at e_3, none equal 1",
+      "ok": true,
+      "detail": "w=[167, 120, 293]"
+    },
+    {
+      "name": "R2 p=331: conormal = inverse of normal at e_3",
+      "ok": true,
+      "detail": "n=111 c=167"
+    },
+    {
+      "name": "R2 p=331: det(1-dg) != det(1-(dg)^-1) at e_3 (generic)",
+      "ok": true,
+      "detail": "det=169 det_inv=243"
+    },
+    {
+      "name": "R2 p=331: F(e_4)=0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2 p=331: grad F(e_4) = e_5 direction",
+      "ok": true,
+      "detail": "grad=[1, 0, 0, 0, 0]"
+    },
+    {
+      "name": "R2 p=331: three tangent weights at e_4, none equal 1",
+      "ok": true,
+      "detail": "w=[180, 274, 167]"
+    },
+    {
+      "name": "R2 p=331: conormal = inverse of normal at e_4",
+      "ok": true,
+      "detail": "n=85 c=74"
+    },
+    {
+      "name": "R2 p=331: det(1-dg) != det(1-(dg)^-1) at e_4 (generic)",
+      "ok": true,
+      "detail": "det=226 det_inv=70"
+    },
+    {
+      "name": "R2 p=661: F(e_0)=0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2 p=661: grad F(e_0) = e_1 direction",
+      "ok": true,
+      "detail": "grad=[0, 1, 0, 0, 0]"
+    },
+    {
+      "name": "R2 p=661: three tangent weights at e_0, none equal 1",
+      "ok": true,
+      "detail": "w=[147, 658, 9]"
+    },
+    {
+      "name": "R2 p=661: conormal = inverse of normal at e_0",
+      "ok": true,
+      "detail": "n=68 c=418"
+    },
+    {
+      "name": "R2 p=661: det(1-dg) != det(1-(dg)^-1) at e_0 (generic)",
+      "ok": true,
+      "detail": "det=45 det_inv=15"
+    },
+    {
+      "name": "R2 p=661: F(e_1)=0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2 p=661: grad F(e_1) = e_2 direction",
+      "ok": true,
+      "detail": "grad=[0, 0, 1, 0, 0]"
+    },
+    {
+      "name": "R2 p=661: three tangent weights at e_1, none equal 1",
+      "ok": true,
+      "detail": "w=[418, 68, 457]"
+    },
+    {
+      "name": "R2 p=661: conormal = inverse of normal at e_1",
+      "ok": true,
+      "detail": "n=634 c=612"
+    },
+    {
+      "name": "R2 p=661: det(1-dg) != det(1-(dg)^-1) at e_1 (generic)",
+      "ok": true,
+      "detail": "det=591 det_inv=382"
+    },
+    {
+      "name": "R2 p=661: F(e_2)=0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2 p=661: grad F(e_2) = e_3 direction",
+      "ok": true,
+      "detail": "grad=[0, 0, 0, 1, 0]"
+    },
+    {
+      "name": "R2 p=661: three tangent weights at e_2, none equal 1",
+      "ok": true,
+      "detail": "w=[9, 612, 81]"
+    },
+    {
+      "name": "R2 p=661: conormal = inverse of normal at e_2",
+      "ok": true,
+      "detail": "n=634 c=612"
+    },
+    {
+      "name": "R2 p=661: det(1-dg) != det(1-(dg)^-1) at e_2 (generic)",
+      "ok": true,
+      "detail": "det=272 det_inv=108"
+    },
+    {
+      "name": "R2 p=661: F(e_3)=0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2 p=661: grad F(e_3) = e_4 direction",
+      "ok": true,
+      "detail": "grad=[0, 0, 0, 0, 1]"
+    },
+    {
+      "name": "R2 p=661: three tangent weights at e_3, none equal 1",
+      "ok": true,
+      "detail": "w=[220, 418, 612]"
+    },
+    {
+      "name": "R2 p=661: conormal = inverse of normal at e_3",
+      "ok": true,
+      "detail": "n=658 c=220"
+    },
+    {
+      "name": "R2 p=661: det(1-dg) != det(1-(dg)^-1) at e_3 (generic)",
+      "ok": true,
+      "detail": "det=623 det_inv=428"
+    },
+    {
+      "name": "R2 p=661: F(e_4)=0",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R2 p=661: grad F(e_4) = e_5 direction",
+      "ok": true,
+      "detail": "grad=[1, 0, 0, 0, 0]"
+    },
+    {
+      "name": "R2 p=661: three tangent weights at e_4, none equal 1",
+      "ok": true,
+      "detail": "w=[81, 457, 220]"
+    },
+    {
+      "name": "R2 p=661: conormal = inverse of normal at e_4",
+      "ok": true,
+      "detail": "n=147 c=9"
+    },
+    {
+      "name": "R2 p=661: det(1-dg) != det(1-(dg)^-1) at e_4 (generic)",
+      "ok": true,
+      "detail": "det=387 det_inv=500"
+    },
+    {
+      "name": "R4: rows k=1,2,3 linearly independent over F_331",
+      "ok": true,
+      "detail": "minor cols=(0, 1, 2) det=246"
+    },
+    {
+      "name": "R4: k=0 weight row is the trivial character on X^g",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R5: QR weight sum \u2261 0 mod 11 (SL-lift of C11 exists on the nose)",
+      "ok": true,
+      "detail": "sum=22"
+    },
+    {
+      "name": "R5: order 11 is odd (projective=linear order)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R5: order 5 is odd (projective=linear order)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R5: order 3 is odd (projective=linear order)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R5: order 2 is even (lift needs sealed-matrix care)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "R5: order 6 is even (lift needs sealed-matrix care)",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}
