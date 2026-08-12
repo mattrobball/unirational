@@ -260,3 +260,129 @@ conditional surjectivity theorem whose antecedent is the very branch it would
 constrain, (ii) an exact coordinate degree, and (iii) a canonical explicit
 witness for an existence theorem that was previously non-constructive. All three
 are recorded as such. `Problem E headline: OPEN.`
+
+---
+
+# Adversarial tests for `PHI8_DEGREE.md` (2026-08-12)
+
+## A17. ★★ Is the degeneracy locus really empty, as the expected dimension suggests?
+
+**Attack.** `V_8` is a section of the rank-three bundle `T_X(7)` on a threefold,
+so its zero locus has expected dimension zero and `int_X c_3(T_X(7)) = 1401`.
+The first computation run said the locus was **empty** in all five charts, which
+would have made the line congruence a morphism and given
+`delta = 3(1+8+8^2+8^3) - 2 = 1753`.
+
+**Outcome: the first computation was wrong, and the correct answer changes the
+verdict.** The emptiness came from an msolve **input-format** defect, not from
+geometry: msolve's parser does not understand parentheses, so systems emitted as
+`(3)*x1^2*x2+(-8)` are silently mis-read and reported as having no solution. The
+defect was caught by feeding msolve a system whose solution was known by
+substitution — `{F, all ten 3x3 minors, x = y}` — and getting "no solution" for a
+point that visibly satisfies every equation. With the systems re-emitted fully
+expanded, the degeneracy locus is **one-dimensional**: a reduced curve of degree
+`72`. And `1753 = 1^2 + 1·24 + 3·24^2` **is** a norm, so the format bug would
+have produced a CLEAN-compatible verdict and buried the lever. Both the
+regression test for the mis-parse and the fact that `1753` is a norm are now
+assertions in `verify_phi8_degree.py`, blocks (C) and (E).
+
+## A18. Are the `208` solutions genuine preimages, or artefacts of the `t`-parametrisation?
+
+**Attack.** Route B solves `y ~ x + tV_8(x)`, not `y ~ R(x)`. A solution with
+`x` in the base locus of `R` would be counted but would not be a preimage under
+`phi_8`, which is defined by the degree-`25` tuple `R`.
+
+**Outcome: excluded by construction, not by inspection.** The system carries
+`z·Q(x,V_8(x)) = 1`. On `X`, `F(x+tV) = t^2(Q + tF(V))` because
+`grad F . V_8 = 0 (mod F)`; so a solution with `t != 0` satisfies
+`Q + tF(V) = 0`, and `Q != 0` forces `F(V) != 0`, `t = -Q/F(V)` and
+`x + tV_8 ~ F(V_8)x - Q V_8 = R(x)`. Conversely `Q = 0` with `t != 0` forces
+`F(V) = 0`, which is exactly `l_x ⊂ X`, i.e. `x in Bs(R)`. So the constraint
+removes precisely the base locus, and every counted solution is a genuine
+preimage under the degree-`25` tuple.
+
+## A19. ★ Is the fiber count complete, or is the chart hiding solutions?
+
+**Attack.** A count in one affine chart misses preimages on the hyperplane at
+infinity, and would under-report `delta`.
+
+**Outcome: the count is complete by construction.** Every fiber is solved in all
+five **flag** charts `x_0=1`; `x_0=0,x_1=1`; `x_0=x_1=0,x_2=1`; ... , which
+partition `P^4` exactly. Charts 1--4 come back empty in every run — `phi_8`,
+`phi_9`, both routes, every target. Nothing is at infinity, and no point is
+double counted.
+
+## A20. Does the answer depend on the target, i.e. is `208` the *generic* count?
+
+**Attack.** `#phi^{-1}(y) = delta` only for `y` outside a proper closed subset.
+Three hand-picked small rational targets could all be special, and a special
+fiber can only be *smaller*.
+
+**Outcome: mitigated, not eliminated, and this is the packet's one caveat.** The
+lower bound `delta >= 208` is unconditional (Stein factorization on the normal
+`X`). The upper bound uses upper semicontinuity of the fiber length of the
+proper map `Z' -> X` and needs the target off an at-most-two-dimensional bad
+locus. Six independent targets — `y1, y2, y3` and three *random* points of
+`X(F_p)` with `p ~ 10^6`, each lying on a fixed surface with probability
+`~1/p` — all give exactly `208`, in two characteristics and by two routes. A
+special target would ordinarily give a *different* (smaller) count, and none
+does. The residual caveat is recorded in `PHI8_DEGREE.md` §8 rather than being
+argued away.
+
+## A21. Is the double point at `x = y` really multiplicity two, and not part of the excess?
+
+**Attack.** Route A reports `210` against `209`. If the extra length sat on the
+degeneracy curve rather than at `x = y`, then `delta` would be `209`, not `208`
+— and `209 = 11·19` is also a non-norm, but a *different* number.
+
+**Outcome: it is at `x = y`, twice over.** Structurally, Lemma 3.1: `ds_y` has
+rank `2` because `V_8(y)` lies in the affine tangent space (tangency) and is not
+proportional to `y`; both inputs are checked at every target. Computationally,
+adding the constraint `x != y` returns `208` points with minimal polynomial of
+degree `208` — all simple — at three targets; and the excess curve was already
+inverted away before either count. The two agree.
+
+## A22. Could the boxed rational `V_8` be a tangent field but not *the* equivariant one?
+
+**Attack.** Rational reconstruction from `F_p` data proves nothing over `Q` by
+itself, and the space of degree-`8` tangent fields that are *not* equivariant is
+large. A non-equivariant `V` would give a self-map, just not `phi_8`.
+
+**Outcome: identified, with a characteristic-zero certificate.**
+`sigma`-covariance is built into the storage (component `i` is the shift of
+component `0`) and `tau`-weight covariance is an exact rational check.
+`iota`-covariance is an identity in `Z[zeta_11]` whose coefficients are bounded
+in every archimedean absolute value by an explicit integer `H` (the entries of
+`iota` have modulus `2 sqrt(11)/11 < 61/100`, and coefficients are bounded by
+the sup-norm on the unit polydisc); it is verified at eleven primes above
+`10^18` whose product exceeds `H^10`, so any coefficient divisible by all eleven
+degree-one primes is zero. Independently, the boxed tuple is checked to reduce
+into `Cov_m` and *not* into `Z_m` at the sealed prime, so it spans `K_m/Z_m`,
+which by `SELFMAP_AUDIT.md` Theorem 3.1 (`N(8) = 1`) is one-dimensional.
+
+## A23. Does `delta(phi_8) = 208` contradict any sealed constraint?
+
+**Attack.** The sealed excess identity `delta = d'^3 - d' zeta - a` with
+`zeta = z/3 >= 1`, `a >= 0`, `zeta <= d'^2` and the interval
+`1 <= delta <= d'^3 - d'` must accommodate `208` at `d' = 25`.
+
+**Outcome: consistent, and the identity is too loose to have predicted it.**
+`25 zeta + a = 15417` has integer solutions for every `zeta` in `[1, 616]`, and
+`3 <= 208 <= 15600`. `COMBINED_DEGREE_SIEVE` Corollary 3.5 says explicitly that
+the identity "contributes an interval and nothing else"; the computation is what
+pins the value. Also `delta != 1, 2`, as every `G`-selfmap must satisfy, and
+`delta(phi_8) != delta(phi_9)`, so the two canonical maps are genuinely
+different.
+
+## A24. Is `RETRACTION-BRANCH-CARRIER-ONLY` a headline claim in disguise?
+
+**Attack.** "The retraction branch is now a pure CARRIER question" sounds like a
+branch closure.
+
+**Outcome: it is not, and the packet says so in three places.** The statement is
+an implication whose antecedent is the retraction branch being nonempty; it
+converts one open question into another, strictly smaller one. Nothing is
+excluded: `CARRIER-EXCLUSION-NOT-ACHIEVED` is an exit of the packet, the genus
+and CM data of the candidate support curve are **not** computed, and the sealed
+`j = 8192/11` non-CM data the work order points at belongs to the `V14` fixed
+network, not to `Bs(J_{phi_8})`, so it is not used. `Problem E headline: OPEN.`

@@ -1,6 +1,58 @@
 # Replay
 
-## One command
+## Two commands
+
+```
+cd problems/E-klein-cubic/goal_runs_20260812/SELFMAP_DETECTION
+python3 verify_selfmap_audit.py ; echo "EXIT=$?"
+python3 verify_phi8_degree.py   ; echo "EXIT=$?"
+```
+
+The second expects
+
+```text
+  delta(phi_8) = 208 = 2^4 * 13   -- NOT a norm  => phi_8 is NOT CLEAN
+  delta(phi_9) = 288 = 2^5 * 3^2  -- NOT a norm  => phi_9 is NOT CLEAN
+  checks run : 149
+  failures   : 0
+
+RESULT: PASS
+EXIT=0
+```
+
+Runtime ~175 s, of which ~135 s is the single characteristic-zero msolve run.
+It needs **msolve** (`>= 0.10`) on `PATH` in addition to Python 3; nothing else.
+Everything is exact: Python integers, `Fraction`, `F_p`, and msolve over `Q` and
+over `F_p`.
+
+> **msolve input format — read this before editing any system.** msolve's parser
+> does **not** understand parentheses. A polynomial written `(3)*x1^2*x2+(-8)`
+> is silently mis-read, and msolve then reports "no solution" for a system with
+> obvious solutions. This cost a full debugging cycle and would have produced a
+> wrong (and norm-representable) answer. Every system is therefore emitted fully
+> expanded in the plain form `3*x1^2*x2-8`, and block (C) of
+> `verify_phi8_degree.py` contains a live regression test for the mis-parse.
+
+| block | content | why it is a real assertion |
+|---|---|---|
+| (0)(A) | `V_8`, `V_9` boxed over `Q`; degrees; `tau`-weight covariance; `grad F . V = 0 (mod F)` by exact division; `x ^ V != 0 (mod F)`; `deg F(V)`, `deg Q`, `deg R = 25, 28` | a wrong integral model fails the exact division immediately |
+| (B) | the sealed `F_p` model rebuilt (machinery copied verbatim), `|G| = 660`, the boxed `D_5` cross-check, `N(8) = N(9) = 1`, and the boxed tuple lands in `Cov_m` and not in `Z_m` | this is what identifies the boxed object with *the* sealed minimal equivariant field |
+| (B') | `iota`-covariance at eleven primes `> 10^18` plus an explicit archimedean height bound | upgrades (B) from `F_p` to an identity over `Q(zeta_11)` |
+| (C) | msolve plain/parenthesised regression | guards the format bug described above |
+| (D1) | the degeneracy locus is positive-dimensional; two random slices give `72` distinct points | settles preliminary issue (i) — against the audit's expectation |
+| (D1') | Hilbert function of the leading ideal `= 72d + 147` for `24 <= d <= 30`; three slice factor-degree profiles at `p = 1 mod 11` | pins degree and `chi`, and forces an extra `0`-dimensional part of length `>= 75` |
+| (D1'') | `D_8(F_23)` is one `G`-orbit of `60` points, `V_8 = 0` at each | an independent confirmation of equivariance, and orbit data for the carrier question |
+| (D2) | ROUTE A: `209` points / minimal polynomial `210` off `D_8`; `208` / `208` after also removing `x = y`; five flag charts; two targets; two random inversions | measures both the count and the tangency multiplicity |
+| (D3) | ROUTE B: `208` in the chart `x_0 != 0` and **empty** in the other four flag charts, at three targets, two primes, and over `Q` | the flag charts make the fiber count complete, not a sample |
+| (D3') | ROUTE B at three random targets of `X(F_p)`, `p ~ 10^6` | the genericity guard for the upper bound |
+| (D4) | the two routes agree: `210 - 2 = 208`; and `delta(phi_9) = 288` | the only place the two routes are compared |
+| (D5) | at every target: `V_8(y) ^ y != 0` and `grad F(y) . V_8(y) = 0` | the structural reason the multiplicity at `x = y` is `2` |
+| (E) | the inert-prime valuation criterion against brute force on `1..400`; `208 = 2^4·13`, `13` inert, `v_13` odd; `288`, `2` inert, `v_2` odd; iterates and composites; and that the **naive** `1753` *would* have been a norm | the detection test, plus the adversarial check that the excess correction was decisive |
+| (F) | `3 <= delta <= d'^3-d'`; the sealed excess identity admits `zeta <= 616`, `a >= 0` | consistency with `COMBINED_DEGREE_SIEVE` |
+
+---
+
+## The earlier verifier
 
 ```
 cd problems/E-klein-cubic/goal_runs_20260812/SELFMAP_DETECTION

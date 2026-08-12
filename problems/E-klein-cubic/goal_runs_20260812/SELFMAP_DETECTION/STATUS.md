@@ -22,7 +22,16 @@ TANGENT-RESIDUAL-COORDINATE-DEGREE-25-EXACT
 TANGENT-RESIDUAL-SELFMAP-CANONICAL-AND-EXPLICIT
 TANGENT-RESIDUAL-DOMINANT-NONIDENTITY-CERTIFIED
 SELFMAP-AUDIT-ALL-RESTRICTION-COMPATIBLE
-TANGENT-RESIDUAL-TOPOLOGICAL-DEGREE-NOT-COMPUTED
+TANGENT-RESIDUAL-TOPOLOGICAL-DEGREE-NOT-COMPUTED   [superseded 2026-08-12]
+MINIMAL-EQUIVARIANT-TANGENT-FIELD-BOXED-OVER-Q
+DEGENERACY-LOCUS-ONE-DIMENSIONAL-DEGREE-72
+TANGENCY-DOUBLE-POINT-MULTIPLICITY-TWO
+PHI8-DELTA-COMPUTED
+PHI9-DELTA-COMPUTED
+PHI8-NOT-CLEAN
+PHI9-NOT-CLEAN
+RETRACTION-BRANCH-CARRIER-ONLY
+CARRIER-EXCLUSION-NOT-ACHIEVED
 ```
 
 ## Executive summary
@@ -80,6 +89,30 @@ A by-product: the existence theorem of `FULL_G_SELFMAP_CLASSIFICATION` becomes
 **constructive** — `phi_8` is exhibited without the dominant-section lemma, the
 free quotient or the descent argument.
 
+**Part 3 — the topological degree (2026-08-12, `PHI8_DEGREE.md`).** The item
+listed below as open #1 is done.
+
+```
+        delta(phi_8) = 208 = 2^4 * 13,     delta(phi_9) = 288 = 2^5 * 3^2
+```
+
+exactly, by two independent routes that agree, at six targets, at two primes and
+in characteristic zero. Both preliminary obstacles are settled, and the first
+settles **against** the audit's expectation: the degeneracy locus
+`{V_8 ^ x = 0}` is **one-dimensional** — a reduced curve of degree `72`, not a
+finite set — so the line congruence is not a morphism and the naive Chern-class
+count `1753` is void; and the spurious `x = y` solution has multiplicity exactly
+`2` (the line is tangent there). `13` is inert in `Q(sqrt(-11))` and
+`v_13(208) = 1` is odd, so **`delta(phi_8)` is not represented by
+`x^2+xy+3y^2`** and `phi_8` cannot be CLEAN; likewise `phi_9` (`v_2(288) = 5`).
+Consequently, **if the retraction branch is nonempty then the normalized graph
+of `phi_8` must carry a CARRIER block** on a proper irreducible
+`T ⊆ Bs(J_{phi_8})`, `dim T <= 1`, with the `(AHS-Gamma)` Hom condition. The
+arithmetic half of the detection lever has fired; the CARRIER half is
+**not** excluded, and the retraction branch does **not** die here. By-product:
+`V_8` and `V_9` are boxed over `Q` with integer coefficients (blowup point (B5)
+closed).
+
 ## Verification
 
 ```
@@ -114,23 +147,31 @@ Key intermediate output, verbatim:
 
 ## What is open, and where the next step is
 
-1. **`delta(phi_8)`, the topological degree.** Not computed. This is the exact
-   quantity `COMBINED_DEGREE_SIEVE` §6 asks for and the one the detection lever
-   needs: a self-map whose `delta` is not represented by `x^2+xy+3y^2`, together
-   with a CARRIER exclusion, kills the retraction branch. Known:
-   `3 <= delta <= 25^3`. The identified route (line-congruence order via
-   `int_X c_3((W ⊗ O_X)/E)`) needs the degeneracy locus `{V_8 ∧ x = 0}` and the
-   spurious `x = y` multiplicity settled first; neither was attempted.
-   See `SELFMAP_AUDIT.md` §7 B1.
-2. **Boxing `V_8` over `Q`.** It is computed mod two primes; an integral model
-   the way `D_5` is boxed in `D35_K30_K31_CELLS.md` §2 is separate work (B5).
-3. **Excluding CARRIER** for a specific self-map — untouched anywhere in the
-   repository.
+1. ~~**`delta(phi_8)`, the topological degree.**~~ **DONE 2026-08-12**:
+   `delta(phi_8) = 208`, `delta(phi_9) = 288`, both non-norms. See
+   `PHI8_DEGREE.md`.
+2. ~~**Boxing `V_8` over `Q`.**~~ **DONE 2026-08-12**: integer coefficients,
+   `40` terms per component, max `|coefficient| = 24`; `V_9` likewise.
+3. **Excluding CARRIER for `phi_8`** — the whole remaining distance to
+   `RETRACTION-BRANCH-DEAD`, and still untouched. The candidate supports are the
+   components of `Bs(J_{phi_8}) = D_8 ∪ {l_x ⊂ X}`; `D_8` is the reduced
+   degree-`72` curve computed in `PHI8_DEGREE.md` §2, whose primary
+   decomposition, genera and CM data are **not** computed. One exclusion of
+   `(AHS-Gamma)` over that curve kills the retraction branch.
+4. **The Segre class of `Bs(J_{phi_8})`.** `delta = 25^3 - 25 zeta - a` is
+   checked for consistency only; `zeta` and `a` are not computed. This is the
+   only route that would give a third, purely intersection-theoretic
+   determination of `delta`.
 
 ## Non-claims
 
 * No self-map is shown to lie outside `Im(res)`; the retraction branch is not
   killed; no cell of the `d = 35` table changes.
+* `delta = 208` is unconditional as a lower bound; the matching upper bound
+  needs the target to lie off an at-most-two-dimensional bad locus. Six
+  independent targets, two characteristics, two routes — but no named target is
+  *proved* generic. This is the one caveat, and it is stated again in
+  `PHI8_DEGREE.md` §8.
 * `res` well defined inherits the accepted input `ed_C(PSL_2(F_11)) >= 3`;
   Corollary 3.4 additionally inherits the accepted full-`G` birational
   superrigidity input, and Theorem 3.3 does not.
