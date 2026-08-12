@@ -1,0 +1,24 @@
+{
+  "headline": "Problem E remains OPEN; this packet excludes no degree.",
+  "general_table": {
+    "rid1_period_histogram": {"1": 36, "2": 6, "3": 12},
+    "rid2_period_histogram": {"2": 12, "3": 6},
+    "indexed_by": "(d mod 6, m mod 6) on rid1; (d mod 6, nu mod 6) on rid2",
+    "verified_classes_rid1": [[5, 1], [4, 1]],
+    "verified_classes_rid2": [[5, 0], [4, 1]],
+    "two_prime": [331, 661],
+    "t4_anchor": "reproduced 36/6/12",
+    "same_class_lift": "cycles invariant under a_i += 6"
+  },
+  "keep_pass_d35": {
+    "n_in": 22,
+    "n_dead_closed": 0,
+    "n_live": 22,
+    "live_dims_upper": [37],
+    "forced_deeper": "14 of 18",
+    "closed_func_rank_on_37cell": 0,
+    "note": "period-3 forced-deeper keeps of lab0 force levels 1,2 vanish; those functionals already vanish on the 37-cell (rank 0). No cell death by closed conditions. Residual keeps recorded as open demands."
+  },
+  "machine_markers": ["DEPTH_TABLE_GENERAL_VERIFY_OK", "ALLGREEN"],
+  "packet": "goal_runs_20260812/DEPTH_TABLE_GENERAL/"
+}

@@ -1,0 +1,25 @@
+CONE_ORDER_AUDIT — degree sweep table (both primes)
+
+Semantics: dim 0 is char-0 empty; nonzero is upper bound only.
+exact r=0..5 = dim(struct+ord>=r) - dim(struct+ord>=r+1) (upper bounds).
+
+d  mod6  dimM  struct>=0  exact r=0..5 (p331)           ord>=6  p661  sat
+31   1    410     187     0, 0, 20, 51, 80, 36              0     0   yes
+32   2    459     208     0, 0, 21, 53, 85, 49              0     0   yes
+33   3    511     257     0, 0, 22, 55, 90, 90              0     0   yes
+34   4    576     306    15, 1, 23, 59, 95,113              0     0   yes
+35   5    637     375    19,10, 24, 61,100,122             39    39   yes
+36   0    706     431    21,25, 25, 63,105,129             63    63   yes
+37   1    786     528    15,30, 49, 67,110,136            121   121   yes
+38   2    865     589    21,31, 59, 69,115,143            151   151   yes
+39   3    950     691    21,32, 79, 71,120,150            218   218   yes
+40   4   1050     767    23,33, 92, 76,125,157            261   261   yes
+41   5   1148     887    19,34, 97,100,130,164            343   343   yes
+42   0   1255     974    25,35,100,109,137,171            397   397   yes
+
+Landing probe (p331): at every d, 8/8 low-ord samples had F(T(v)) nonzero
+at some probe point. No candidate landing with r < 6.
+
+Workorder linear prediction dim(>=r)=dim(>=6) for r<6: FALSE at every d.
+Sealed landing premise ord>=6 for landing covariants: CONFIRMED via FIX-N2
+Theorem A + H0-1 + cone; machine finds no counterexample.

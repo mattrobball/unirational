@@ -1,0 +1,98 @@
+{
+ "elapsed_s": 22.6,
+ "npair": 40,
+ "npt": 40,
+ "premise": "ord_{ell_V}(T) >= 6 for every landing covariant",
+ "prime": 331,
+ "range": [
+  31,
+  31
+ ],
+ "rows": [
+  {
+   "d": 31,
+   "d_mod_6": 1,
+   "dim_M": 410,
+   "dims_profile_plane_plus_ord_ge": {
+    "0": 291,
+    "1": 273,
+    "2": 247,
+    "3": 178,
+    "4": 123,
+    "5": 41,
+    "6": 0
+   },
+   "dims_structure_plus_ord_ge": {
+    "0": 273,
+    "1": 258,
+    "2": 234,
+    "3": 167,
+    "4": 116,
+    "5": 36,
+    "6": 0
+   },
+   "exact_cell_upper_bound_r_lt_6": {
+    "0": 15,
+    "1": 24,
+    "2": 67,
+    "3": 51,
+    "4": 80,
+    "5": 36
+   },
+   "exact_cells_r_lt_6_empty_in_structure": false,
+   "exact_profile_cell_upper_bound": {
+    "0": 18,
+    "1": 26,
+    "2": 69,
+    "3": 55,
+    "4": 82,
+    "5": 41
+   },
+   "landing_probe": {
+    "dims_structure_plus_ord_ge": {
+     "0": 273,
+     "1": 258,
+     "2": 234,
+     "3": 167,
+     "4": 116,
+     "5": 36,
+     "6": 0
+    },
+    "exact_cell_upper_bound": {
+     "0": 15,
+     "1": 24,
+     "2": 67,
+     "3": 51,
+     "4": 80,
+     "5": 36
+    },
+    "n_low_ord_samples": 8,
+    "n_low_ord_with_F_all_zero_on_sample_pts": 0,
+    "n_low_ord_with_F_nonzero": 8,
+    "n_samples": 8,
+    "note": "F-all-zero on random points is NOT a landing certificate; F-nonzero IS a non-landing certificate. Premise concerns landing only."
+   },
+   "ranks_structure_plus_ord_ge": {
+    "0": 137,
+    "1": 152,
+    "2": 176,
+    "3": 243,
+    "4": 294,
+    "5": 374,
+    "6": 410
+   },
+   "rules_fired": {
+    "C11_points": false,
+    "C5_points": false,
+    "C6_points": false,
+    "E_eigenlines": "contract to ell_{1 w}",
+    "M_minus_lines": false
+   },
+   "saturation_dim_ord_ge_6": 0,
+   "saturation_stable_at_6": true,
+   "semantics": "nonzero modular dim is upper bound only; dim 0 is char-0 empty; exact-cell numbers are differences of upper bounds hence themselves upper bounds",
+   "workorder_prediction_dims_equal": false
+  }
+ ],
+ "sealed_origin": "FIX-N2 Theorem A + H0-1 + cone bound (theory/FIX_II_jets.md cell table)"
+}

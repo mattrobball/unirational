@@ -1,0 +1,8 @@
+# Heavy regenerable binaries (hosting limit 50 MB/file).
+# Re-run: python3 scripts/sweep_all.py [p] [dmin] [dmax]
+*.npy
+*.ms
+*.out
+*.gb
+*.m2
+_sec_*

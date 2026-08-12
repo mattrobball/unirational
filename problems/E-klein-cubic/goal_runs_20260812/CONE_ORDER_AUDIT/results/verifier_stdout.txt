@@ -1,0 +1,207 @@
+CONE_ORDER_AUDIT verifier
+CHECK [OK ] A1 dim M_25 = 189                                                
+CHECK [OK ] A2 dim M_31 = 410                                                
+CHECK [OK ] A3 dim M_34 = 576                                                
+CHECK [OK ] A4 dim M_35 = 637                                                
+CHECK [OK ] A5 dim M_36 = 706                                                
+CHECK [OK ] A6 dim M_42 = 1255                                               
+CHECK [OK ] A7 all residues mod 6 covered in 31..42                          
+CHECK [OK ] B r0(31)=6                                                       r0=6 #prof=24
+CHECK [OK ] B r0(32)=6                                                       r0=6 #prof=26
+CHECK [OK ] B r0(33)=6                                                       r0=6 #prof=28
+CHECK [OK ] B r0(34)=6                                                       r0=6 #prof=30
+CHECK [OK ] B r0(35)=6                                                       r0=6 #prof=32
+CHECK [OK ] B r0(36)=6                                                       r0=6 #prof=34
+CHECK [OK ] B r0(37)=6                                                       r0=6 #prof=37
+CHECK [OK ] B r0(38)=6                                                       r0=6 #prof=39
+CHECK [OK ] B r0(39)=6                                                       r0=6 #prof=41
+CHECK [OK ] B r0(40)=6                                                       r0=6 #prof=44
+CHECK [OK ] B r0(41)=6                                                       r0=6 #prof=46
+CHECK [OK ] B r0(42)=6                                                       r0=6 #prof=49
+CHECK [OK ] C1 p=331 sweep payload exists                                    /Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/CONE_ORDER_AUDIT/results/sweep_p331_31_42.json
+CHECK [OK ] C2 p=331 has 12 degree rows                                      got 12
+CHECK [OK ] C3 p=331 d=31 present                                            
+CHECK [OK ] C4 p=331 d=31 dim_M matches sealed                               410 vs 410
+CHECK [OK ] C5 p=331 d=31 ord>=0 dim >= ord>=6 dim                           d0=187 d6=0
+CHECK [OK ] C6 p=331 d=31 saturation stable at 6                             
+CHECK [OK ] C7 p=331 d=31 window slice ord>=6 empty (D34)                    dim=0
+CHECK [OK ] C10 p=331 d=31 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=331 d=31 no SEED shortfall                                 
+CHECK [OK ] C3 p=331 d=32 present                                            
+CHECK [OK ] C4 p=331 d=32 dim_M matches sealed                               459 vs 459
+CHECK [OK ] C5 p=331 d=32 ord>=0 dim >= ord>=6 dim                           d0=208 d6=0
+CHECK [OK ] C6 p=331 d=32 saturation stable at 6                             
+CHECK [OK ] C7 p=331 d=32 window slice ord>=6 empty (D34)                    dim=0
+CHECK [OK ] C10 p=331 d=32 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=331 d=32 no SEED shortfall                                 
+CHECK [OK ] C3 p=331 d=33 present                                            
+CHECK [OK ] C4 p=331 d=33 dim_M matches sealed                               511 vs 511
+CHECK [OK ] C5 p=331 d=33 ord>=0 dim >= ord>=6 dim                           d0=257 d6=0
+CHECK [OK ] C6 p=331 d=33 saturation stable at 6                             
+CHECK [OK ] C7 p=331 d=33 window slice ord>=6 empty (D34)                    dim=0
+CHECK [OK ] C10 p=331 d=33 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=331 d=33 no SEED shortfall                                 
+CHECK [OK ] C3 p=331 d=34 present                                            
+CHECK [OK ] C4 p=331 d=34 dim_M matches sealed                               576 vs 576
+CHECK [OK ] C5 p=331 d=34 ord>=0 dim >= ord>=6 dim                           d0=306 d6=0
+CHECK [OK ] C6 p=331 d=34 saturation stable at 6                             
+CHECK [OK ] C7 p=331 d=34 window slice ord>=6 empty (D34)                    dim=0
+CHECK [OK ] C10 p=331 d=34 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=331 d=34 no SEED shortfall                                 
+CHECK [OK ] C3 p=331 d=35 present                                            
+CHECK [OK ] C4 p=331 d=35 dim_M matches sealed                               637 vs 637
+CHECK [OK ] C5 p=331 d=35 ord>=0 dim >= ord>=6 dim                           d0=375 d6=39
+CHECK [OK ] C6 p=331 d=35 saturation stable at 6                             
+CHECK [OK ] C8 p=331 d=35 ord>=6 dim <= 39 (D34 upper bound)                 dim=39
+CHECK [OK ] C10 p=331 d=35 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=331 d=35 no SEED shortfall                                 
+CHECK [OK ] C3 p=331 d=36 present                                            
+CHECK [OK ] C4 p=331 d=36 dim_M matches sealed                               706 vs 706
+CHECK [OK ] C5 p=331 d=36 ord>=0 dim >= ord>=6 dim                           d0=431 d6=63
+CHECK [OK ] C6 p=331 d=36 saturation stable at 6                             
+CHECK [OK ] C9 p=331 d=36 ord>=6 dim <= 63 (D34 upper bound)                 dim=63
+CHECK [OK ] C10 p=331 d=36 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=331 d=36 no SEED shortfall                                 
+CHECK [OK ] C3 p=331 d=37 present                                            
+CHECK [OK ] C4 p=331 d=37 dim_M matches sealed                               786 vs 786
+CHECK [OK ] C5 p=331 d=37 ord>=0 dim >= ord>=6 dim                           d0=528 d6=121
+CHECK [OK ] C6 p=331 d=37 saturation stable at 6                             
+CHECK [OK ] C10 p=331 d=37 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=331 d=37 no SEED shortfall                                 
+CHECK [OK ] C3 p=331 d=38 present                                            
+CHECK [OK ] C4 p=331 d=38 dim_M matches sealed                               865 vs 865
+CHECK [OK ] C5 p=331 d=38 ord>=0 dim >= ord>=6 dim                           d0=589 d6=151
+CHECK [OK ] C6 p=331 d=38 saturation stable at 6                             
+CHECK [OK ] C10 p=331 d=38 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=331 d=38 no SEED shortfall                                 
+CHECK [OK ] C3 p=331 d=39 present                                            
+CHECK [OK ] C4 p=331 d=39 dim_M matches sealed                               950 vs 950
+CHECK [OK ] C5 p=331 d=39 ord>=0 dim >= ord>=6 dim                           d0=691 d6=218
+CHECK [OK ] C6 p=331 d=39 saturation stable at 6                             
+CHECK [OK ] C10 p=331 d=39 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=331 d=39 no SEED shortfall                                 
+CHECK [OK ] C3 p=331 d=40 present                                            
+CHECK [OK ] C4 p=331 d=40 dim_M matches sealed                               1050 vs 1050
+CHECK [OK ] C5 p=331 d=40 ord>=0 dim >= ord>=6 dim                           d0=767 d6=261
+CHECK [OK ] C6 p=331 d=40 saturation stable at 6                             
+CHECK [OK ] C10 p=331 d=40 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=331 d=40 no SEED shortfall                                 
+CHECK [OK ] C3 p=331 d=41 present                                            
+CHECK [OK ] C4 p=331 d=41 dim_M matches sealed                               1148 vs 1148
+CHECK [OK ] C5 p=331 d=41 ord>=0 dim >= ord>=6 dim                           d0=887 d6=343
+CHECK [OK ] C6 p=331 d=41 saturation stable at 6                             
+CHECK [OK ] C10 p=331 d=41 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=331 d=41 no SEED shortfall                                 
+CHECK [OK ] C3 p=331 d=42 present                                            
+CHECK [OK ] C4 p=331 d=42 dim_M matches sealed                               1255 vs 1255
+CHECK [OK ] C5 p=331 d=42 ord>=0 dim >= ord>=6 dim                           d0=974 d6=397
+CHECK [OK ] C6 p=331 d=42 saturation stable at 6                             
+CHECK [OK ] C10 p=331 d=42 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=331 d=42 no SEED shortfall                                 
+CHECK [OK ] C1 p=661 sweep payload exists                                    /Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/CONE_ORDER_AUDIT/results/sweep_p661_31_42.json
+CHECK [OK ] C2 p=661 has 12 degree rows                                      got 12
+CHECK [OK ] C3 p=661 d=31 present                                            
+CHECK [OK ] C4 p=661 d=31 dim_M matches sealed                               410 vs 410
+CHECK [OK ] C5 p=661 d=31 ord>=0 dim >= ord>=6 dim                           d0=187 d6=0
+CHECK [OK ] C6 p=661 d=31 saturation stable at 6                             
+CHECK [OK ] C7 p=661 d=31 window slice ord>=6 empty (D34)                    dim=0
+CHECK [OK ] C10 p=661 d=31 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=661 d=31 no SEED shortfall                                 
+CHECK [OK ] C3 p=661 d=32 present                                            
+CHECK [OK ] C4 p=661 d=32 dim_M matches sealed                               459 vs 459
+CHECK [OK ] C5 p=661 d=32 ord>=0 dim >= ord>=6 dim                           d0=208 d6=0
+CHECK [OK ] C6 p=661 d=32 saturation stable at 6                             
+CHECK [OK ] C7 p=661 d=32 window slice ord>=6 empty (D34)                    dim=0
+CHECK [OK ] C10 p=661 d=32 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=661 d=32 no SEED shortfall                                 
+CHECK [OK ] C3 p=661 d=33 present                                            
+CHECK [OK ] C4 p=661 d=33 dim_M matches sealed                               511 vs 511
+CHECK [OK ] C5 p=661 d=33 ord>=0 dim >= ord>=6 dim                           d0=257 d6=0
+CHECK [OK ] C6 p=661 d=33 saturation stable at 6                             
+CHECK [OK ] C7 p=661 d=33 window slice ord>=6 empty (D34)                    dim=0
+CHECK [OK ] C10 p=661 d=33 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=661 d=33 no SEED shortfall                                 
+CHECK [OK ] C3 p=661 d=34 present                                            
+CHECK [OK ] C4 p=661 d=34 dim_M matches sealed                               576 vs 576
+CHECK [OK ] C5 p=661 d=34 ord>=0 dim >= ord>=6 dim                           d0=302 d6=0
+CHECK [OK ] C6 p=661 d=34 saturation stable at 6                             
+CHECK [OK ] C7 p=661 d=34 window slice ord>=6 empty (D34)                    dim=0
+CHECK [OK ] C10 p=661 d=34 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=661 d=34 no SEED shortfall                                 
+CHECK [OK ] C3 p=661 d=35 present                                            
+CHECK [OK ] C4 p=661 d=35 dim_M matches sealed                               637 vs 637
+CHECK [OK ] C5 p=661 d=35 ord>=0 dim >= ord>=6 dim                           d0=376 d6=39
+CHECK [OK ] C6 p=661 d=35 saturation stable at 6                             
+CHECK [OK ] C8 p=661 d=35 ord>=6 dim <= 39 (D34 upper bound)                 dim=39
+CHECK [OK ] C10 p=661 d=35 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=661 d=35 no SEED shortfall                                 
+CHECK [OK ] C3 p=661 d=36 present                                            
+CHECK [OK ] C4 p=661 d=36 dim_M matches sealed                               706 vs 706
+CHECK [OK ] C5 p=661 d=36 ord>=0 dim >= ord>=6 dim                           d0=431 d6=63
+CHECK [OK ] C6 p=661 d=36 saturation stable at 6                             
+CHECK [OK ] C9 p=661 d=36 ord>=6 dim <= 63 (D34 upper bound)                 dim=63
+CHECK [OK ] C10 p=661 d=36 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=661 d=36 no SEED shortfall                                 
+CHECK [OK ] C3 p=661 d=37 present                                            
+CHECK [OK ] C4 p=661 d=37 dim_M matches sealed                               786 vs 786
+CHECK [OK ] C5 p=661 d=37 ord>=0 dim >= ord>=6 dim                           d0=525 d6=121
+CHECK [OK ] C6 p=661 d=37 saturation stable at 6                             
+CHECK [OK ] C10 p=661 d=37 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=661 d=37 no SEED shortfall                                 
+CHECK [OK ] C3 p=661 d=38 present                                            
+CHECK [OK ] C4 p=661 d=38 dim_M matches sealed                               865 vs 865
+CHECK [OK ] C5 p=661 d=38 ord>=0 dim >= ord>=6 dim                           d0=586 d6=151
+CHECK [OK ] C6 p=661 d=38 saturation stable at 6                             
+CHECK [OK ] C10 p=661 d=38 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=661 d=38 no SEED shortfall                                 
+CHECK [OK ] C3 p=661 d=39 present                                            
+CHECK [OK ] C4 p=661 d=39 dim_M matches sealed                               950 vs 950
+CHECK [OK ] C5 p=661 d=39 ord>=0 dim >= ord>=6 dim                           d0=694 d6=218
+CHECK [OK ] C6 p=661 d=39 saturation stable at 6                             
+CHECK [OK ] C10 p=661 d=39 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=661 d=39 no SEED shortfall                                 
+CHECK [OK ] C3 p=661 d=40 present                                            
+CHECK [OK ] C4 p=661 d=40 dim_M matches sealed                               1050 vs 1050
+CHECK [OK ] C5 p=661 d=40 ord>=0 dim >= ord>=6 dim                           d0=769 d6=261
+CHECK [OK ] C6 p=661 d=40 saturation stable at 6                             
+CHECK [OK ] C10 p=661 d=40 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=661 d=40 no SEED shortfall                                 
+CHECK [OK ] C3 p=661 d=41 present                                            
+CHECK [OK ] C4 p=661 d=41 dim_M matches sealed                               1148 vs 1148
+CHECK [OK ] C5 p=661 d=41 ord>=0 dim >= ord>=6 dim                           d0=886 d6=343
+CHECK [OK ] C6 p=661 d=41 saturation stable at 6                             
+CHECK [OK ] C10 p=661 d=41 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=661 d=41 no SEED shortfall                                 
+CHECK [OK ] C3 p=661 d=42 present                                            
+CHECK [OK ] C4 p=661 d=42 dim_M matches sealed                               1255 vs 1255
+CHECK [OK ] C5 p=661 d=42 ord>=0 dim >= ord>=6 dim                           d0=974 d6=397
+CHECK [OK ] C6 p=661 d=42 saturation stable at 6                             
+CHECK [OK ] C10 p=661 d=42 linear dim-equality prediction is False (expected: structure has low-order room) 
+CHECK [OK ] C11 p=661 d=42 no SEED shortfall                                 
+CHECK [OK ] D1 both primes d=31 ord>=6 empty                                 331=0 661=0
+CHECK [OK ] D1 both primes d=32 ord>=6 empty                                 331=0 661=0
+CHECK [OK ] D1 both primes d=33 ord>=6 empty                                 331=0 661=0
+CHECK [OK ] D1 both primes d=34 ord>=6 empty                                 331=0 661=0
+CHECK [OK ] D2 both primes d=35 ord>=6 defined                               331=39 661=39
+CHECK [OK ] D2 both primes d=36 ord>=6 defined                               331=63 661=63
+CHECK [OK ] D2 both primes d=37 ord>=6 defined                               331=121 661=121
+CHECK [OK ] D2 both primes d=38 ord>=6 defined                               331=151 661=151
+CHECK [OK ] D2 both primes d=39 ord>=6 defined                               331=218 661=218
+CHECK [OK ] D2 both primes d=40 ord>=6 defined                               331=261 661=261
+CHECK [OK ] D2 both primes d=41 ord>=6 defined                               331=343 661=343
+CHECK [OK ] D2 both primes d=42 ord>=6 defined                               331=397 661=397
+[adapted] p=331  |C_G(sigma)|=12  self-tests ALL OK
+CHECK [OK ] E1 frame |G|=660                                                 
+CHECK [OK ] E2 dim ell_V = 2                                                 
+CHECK [OK ] E3 stage2 self-tests all pass                                    
+CHECK [OK ] E4 adapted self-tests all pass                                   
+CHECK [OK ] F1 THEOREM.md exists                                             
+CHECK [OK ] F2 quotes FIX-N2 Theorem A                                       
+CHECK [OK ] F3 headline OPEN                                                 
+CHECK [OK ] F4 excludes no degree                                            
+CHECK [OK ] F5 verdict named                                                 
+CHECK [OK ] F6 level classification present                                  
+
+TOTAL 201 checks, 0 failures  [0 s]
+CONE_ORDER_AUDIT_VERIFY_OK
+ALLGREEN

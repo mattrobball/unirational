@@ -1,0 +1,72 @@
+{
+ "anchor_cell": 261,
+ "cell_dim": 261,
+ "d": 40,
+ "dim_M": 1050,
+ "dim_profile_only": 287,
+ "dim_structure_only": 715,
+ "finisher": {
+  "cell_dim": 261,
+  "d": 40,
+  "demanded_ord": 3,
+  "dim_after": 139,
+  "impossible": false,
+  "npts": 40,
+  "p": 331,
+  "parity_note": "ord \u2261 d+1 (mod 2); test minimal POSITIVE option beyond forced base",
+  "rank": 122,
+  "ranks": {
+   "ord1": 0,
+   "ord2": 33,
+   "ord3": 122
+  },
+  "saturation_ok": true
+ },
+ "p": 331,
+ "p3": {
+  "HF3": null,
+  "K": 261,
+  "N3": 2997411,
+  "P3": null,
+  "P3_lower": null,
+  "d": 40,
+  "mode": "too_large",
+  "note": "post-flip dim 261 exceeds dense P3 budget",
+  "p": 331,
+  "saturated": false
+ },
+ "post_flip_dim": 261,
+ "rules_fired": {
+  "C11_points": true,
+  "C5_points": true,
+  "C6_points": true,
+  "E_eigenlines": "contract to ell_{1 w}",
+  "M_minus_lines": true
+ },
+ "seconds_total": 336.497585773468,
+ "sections": {
+  "K": 261,
+  "P1": {
+   "fail": 0,
+   "n": 10,
+   "nontriv": 0,
+   "origin_only": 10,
+   "verdict": "origin_only"
+  },
+  "P2": {
+   "fail": 0,
+   "n": 10,
+   "nontriv": 0,
+   "origin_only": 10,
+   "verdict": "origin_only"
+  },
+  "d": 40,
+  "p": 331
+ },
+ "six_flip": {
+  "d": 40,
+  "note": "even d: level-0 value is the demanded vertex; skip flip cut",
+  "p": 331,
+  "skipped": true
+ }
+}

@@ -192,6 +192,7 @@ minimal presentation (its `d` is `d_min`; does not transport by itself).
 | `C1`/`C2` graph ledgers (constraint additions) | map | their `d` is `d_min`; flag when citing |
 | `C4`/`C6`/`C13` linear compiler constraints | tuple | linear conditions on `M_d` |
 | `C12` postcomposition caveat | — | complementary: `C12` quotients classifications by postcomposition on the target side; this note transports exclusions by multiplication/precomposition on the source side |
+| cone order (`ord_{ℓ_V} ≥ 6`) | tuple | AUDITED 2026-08-12 (`goal_runs_20260812/CONE_ORDER_AUDIT`): FIX-N2 Thm A + H0-1 + Note II force it for every landing tuple at every degree; transports |
 
 ## 7. Machine input: the invariant-degree table
 

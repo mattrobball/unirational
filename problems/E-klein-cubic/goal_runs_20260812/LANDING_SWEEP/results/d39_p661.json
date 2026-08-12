@@ -1,0 +1,77 @@
+{
+ "anchor_cell": 218,
+ "cell_dim": 218,
+ "d": 39,
+ "dim_M": 950,
+ "dim_profile_only": 225,
+ "dim_structure_only": 630,
+ "finisher": {
+  "cell_dim": 218,
+  "d": 39,
+  "demanded_ord": 2,
+  "dim_after": 161,
+  "impossible": false,
+  "npts": 40,
+  "p": 661,
+  "parity_note": "ord \u2261 d+1 (mod 2); test minimal POSITIVE option beyond forced base",
+  "rank": 57,
+  "ranks": {
+   "ord1": 11,
+   "ord2": 57
+  },
+  "saturation_ok": true
+ },
+ "p": 661,
+ "p3": {
+  "HF3": null,
+  "K": 216,
+  "N3": 1703016,
+  "P3": null,
+  "P3_lower": null,
+  "d": 39,
+  "mode": "too_large",
+  "note": "post-flip dim 216 exceeds dense P3 budget",
+  "p": 661,
+  "saturated": false
+ },
+ "post_flip_dim": 216,
+ "rules_fired": {
+  "C11_points": true,
+  "C5_points": false,
+  "C6_points": true,
+  "E_eigenlines": "vanish (3|d)",
+  "M_minus_lines": false
+ },
+ "seconds_total": 233.57729768753052,
+ "sections": {
+  "K": 216,
+  "P1": {
+   "fail": 0,
+   "n": 10,
+   "nontriv": 0,
+   "origin_only": 10,
+   "verdict": "origin_only"
+  },
+  "P2": {
+   "fail": 0,
+   "n": 10,
+   "nontriv": 0,
+   "origin_only": 10,
+   "verdict": "origin_only"
+  },
+  "d": 39,
+  "p": 661
+ },
+ "six_flip": {
+  "ambient_rank": 2,
+  "cell_dim": 218,
+  "d": 39,
+  "dim_after": 216,
+  "p": 661,
+  "post_flip_dim": 216,
+  "r1_bad": 0,
+  "rank": 2,
+  "skipped": false,
+  "z": 1
+ }
+}

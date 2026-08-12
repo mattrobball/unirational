@@ -1,0 +1,3717 @@
+{
+ "p": 661,
+ "n_survivors_in": 22,
+ "forced_deeper_rows": [
+  23,
+  24,
+  37,
+  38,
+  39,
+  40,
+  41,
+  42,
+  43,
+  44,
+  45,
+  46,
+  74,
+  75
+ ],
+ "live_rows_level0": [
+  25,
+  26,
+  62,
+  64
+ ],
+ "n_value_defined_rows": 18,
+ "universal_rank": 2,
+ "cell37_dim": 37,
+ "level_rigidity": {
+  "0": 0,
+  "1": 0,
+  "2": 0
+ },
+ "n_dead": 0,
+ "n_live": 22,
+ "live_dims": [
+  37
+ ],
+ "detail": [
+  {
+   "id": 5,
+   "content_hash": "3768da1fb6042609",
+   "sealed_hash": "669ab2b99ee64deb",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 7,
+   "content_hash": "6c1c7f52b1d8d5bd",
+   "sealed_hash": "67e43d50008bd07e",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 13,
+   "content_hash": "f8d800245cfa1a04",
+   "sealed_hash": "f3292bd5371a70d4",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 15,
+   "content_hash": "3c35c5c17ae53d15",
+   "sealed_hash": "c399cb8afa6b62ff",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 21,
+   "content_hash": "762da102f7d4de4e",
+   "sealed_hash": "ad3d1ae2b7e6dcac",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 23,
+   "content_hash": "a5d0c6d07dbeaa6b",
+   "sealed_hash": "f62173fd3520e0a0",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 29,
+   "content_hash": "8137c81727c54fc2",
+   "sealed_hash": "720ce6bad4a5f5a0",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 31,
+   "content_hash": "302ec310d9fd9cce",
+   "sealed_hash": "715a76b256ac0691",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 37,
+   "content_hash": "c03e27afd8fd33b1",
+   "sealed_hash": "810e57a489655daa",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 39,
+   "content_hash": "7e37f06a042c6b0b",
+   "sealed_hash": "fac04ea70c1810eb",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 45,
+   "content_hash": "8fa7cc8cf7dca5da",
+   "sealed_hash": "939c890dfe55afb4",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 47,
+   "content_hash": "8021d72044f07705",
+   "sealed_hash": "fa3376b88dfe1309",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 53,
+   "content_hash": "bcc1df4bd8e5252f",
+   "sealed_hash": "6c16dbd3bde8925f",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 55,
+   "content_hash": "c54ee2f5bdaea229",
+   "sealed_hash": "eb7f7ed304b4ec9d",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 61,
+   "content_hash": "17a46e555dbe4c8b",
+   "sealed_hash": "e70f4b5ce4d5ca21",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 63,
+   "content_hash": "c952c22e3ff8155c",
+   "sealed_hash": "c81e7042b7aba13b",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 69,
+   "content_hash": "b3e30a87e041affb",
+   "sealed_hash": "039cafe9e9fdf89e",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 71,
+   "content_hash": "f47fcb791ec463b5",
+   "sealed_hash": "e8558c465207aea8",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 697,
+   "content_hash": "fe3fb2cfd5096556",
+   "sealed_hash": "0a0ab8e19311ac4e",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 699,
+   "content_hash": "1224e7ed3ba9f65c",
+   "sealed_hash": "39309437eafbce57",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 701,
+   "content_hash": "4f3d0812b4ded90c",
+   "sealed_hash": "7b566c53097eee4c",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  },
+  {
+   "id": 703,
+   "content_hash": "4a3a0c87d06478e8",
+   "sealed_hash": "7b4482ecc6edb606",
+   "branches": [
+    {
+     "branch": 0,
+     "content_key": "3c10d6ac3122da3b",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 1,
+     "content_key": "b8c61ab96cfb0606",
+     "n_closed_kid_sites": 0,
+     "n_closed_functionals": 0,
+     "closed_kids": [],
+     "n_period1_keeps": 36,
+     "n_open_demands": 4,
+     "open_demands": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "levels": [
+        1
+       ],
+       "note": "kept value at levels [1]; openness demand (not used to kill)"
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "levels": [
+        2
+       ],
+       "note": "kept value at levels [2]; openness demand (not used to kill)"
+      }
+     ],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    },
+    {
+     "branch": 2,
+     "content_key": "f437ffd15e19e388",
+     "n_closed_kid_sites": 4,
+     "n_closed_functionals": 8,
+     "closed_kids": [
+      {
+       "kid_idx": 7436,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7437,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7438,
+       "row": 74,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      },
+      {
+       "kid_idx": 7439,
+       "row": 75,
+       "period": 3,
+       "kappas": [
+        1,
+        2
+       ],
+       "assigned_matches_lab0": true
+      }
+     ],
+     "n_period1_keeps": 36,
+     "n_open_demands": 0,
+     "open_demands": [],
+     "rank": 0,
+     "dim": 37,
+     "verdict": "LIVE"
+    }
+   ],
+   "verdict": "LIVE",
+   "best_dim": 37
+  }
+ ],
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "note": "Closed conditions only: period>1 keeps of a \u03ba\u22610-only value at a forced-deeper child force levels 1..period-1 to vanish. Period-1 keeps and non-mod0 keeps are recorded as open demands, not kills."
+}

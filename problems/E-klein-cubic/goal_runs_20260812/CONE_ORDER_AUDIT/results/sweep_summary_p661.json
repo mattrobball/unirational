@@ -1,0 +1,1022 @@
+{
+ "all_degrees_prediction_holds": false,
+ "any_degree_prediction_holds": false,
+ "any_exact_cell_r_lt_6_positive_upper_bound": true,
+ "elapsed_s": 1322.2,
+ "interpretation": "If exact-cell upper bounds for r<6 are positive inside the structure space, that does NOT refute the landing premise: structure alone does not encode F(T)=0.  A refutation requires an explicit landing covariant with ord < 6.  Confirmation of the landing premise rests on the sealed local FIX-N2 Theorem A plus the H0-1/cone bridge; the global modular filtration documents that the linear structure space has room at low order (non-landing) while the window machinery scopes only the r>=6 slice.",
+ "prime": 661,
+ "range": [
+  31,
+  42
+ ],
+ "rows": [
+  {
+   "d": 31,
+   "d_mod_6": 1,
+   "dim_M": 410,
+   "dims_profile_plane_plus_ord_ge": {
+    "0": 198,
+    "1": 198,
+    "2": 198,
+    "3": 176,
+    "4": 123,
+    "5": 41,
+    "6": 0
+   },
+   "dims_structure_plus_ord_ge": {
+    "0": 187,
+    "1": 187,
+    "2": 187,
+    "3": 167,
+    "4": 116,
+    "5": 36,
+    "6": 0
+   },
+   "exact_cell_upper_bound_r_lt_6": {
+    "0": 0,
+    "1": 0,
+    "2": 20,
+    "3": 51,
+    "4": 80,
+    "5": 36
+   },
+   "exact_cells_r_lt_6_empty_in_structure": false,
+   "exact_profile_cell_upper_bound": {
+    "0": 0,
+    "1": 0,
+    "2": 22,
+    "3": 53,
+    "4": 82,
+    "5": 41
+   },
+   "landing_probe": {
+    "dims_structure_plus_ord_ge": {
+     "0": 187,
+     "1": 187,
+     "2": 187,
+     "3": 167,
+     "4": 116,
+     "5": 36,
+     "6": 0
+    },
+    "exact_cell_upper_bound": {
+     "0": 0,
+     "1": 0,
+     "2": 20,
+     "3": 51,
+     "4": 80,
+     "5": 36
+    },
+    "n_low_ord_samples": 8,
+    "n_low_ord_with_F_all_zero_on_sample_pts": 0,
+    "n_low_ord_with_F_nonzero": 8,
+    "n_samples": 8,
+    "note": "F-all-zero on random points is NOT a landing certificate; F-nonzero IS a non-landing certificate. Premise concerns landing only."
+   },
+   "ranks_structure_plus_ord_ge": {
+    "0": 223,
+    "1": 223,
+    "2": 223,
+    "3": 243,
+    "4": 294,
+    "5": 374,
+    "6": 410
+   },
+   "rules_fired": {
+    "C11_points": false,
+    "C5_points": false,
+    "C6_points": false,
+    "E_eigenlines": "contract to ell_{1 w}",
+    "M_minus_lines": false
+   },
+   "saturation_dim_ord_ge_6": 0,
+   "saturation_stable_at_6": true,
+   "semantics": "nonzero modular dim is upper bound only; dim 0 is char-0 empty; exact-cell numbers are differences of upper bounds hence themselves upper bounds",
+   "workorder_prediction_dims_equal": false
+  },
+  {
+   "d": 32,
+   "d_mod_6": 2,
+   "dim_M": 459,
+   "dims_profile_plane_plus_ord_ge": {
+    "0": 232,
+    "1": 232,
+    "2": 232,
+    "3": 209,
+    "4": 154,
+    "5": 67,
+    "6": 0
+   },
+   "dims_structure_plus_ord_ge": {
+    "0": 208,
+    "1": 208,
+    "2": 208,
+    "3": 187,
+    "4": 134,
+    "5": 49,
+    "6": 0
+   },
+   "exact_cell_upper_bound_r_lt_6": {
+    "0": 0,
+    "1": 0,
+    "2": 21,
+    "3": 53,
+    "4": 85,
+    "5": 49
+   },
+   "exact_cells_r_lt_6_empty_in_structure": false,
+   "exact_profile_cell_upper_bound": {
+    "0": 0,
+    "1": 0,
+    "2": 23,
+    "3": 55,
+    "4": 87,
+    "5": 67
+   },
+   "landing_probe": {
+    "dims_structure_plus_ord_ge": {
+     "0": 208,
+     "1": 208,
+     "2": 208,
+     "3": 187,
+     "4": 134,
+     "5": 49,
+     "6": 0
+    },
+    "exact_cell_upper_bound": {
+     "0": 0,
+     "1": 0,
+     "2": 21,
+     "3": 53,
+     "4": 85,
+     "5": 49
+    },
+    "n_low_ord_samples": 8,
+    "n_low_ord_with_F_all_zero_on_sample_pts": 0,
+    "n_low_ord_with_F_nonzero": 8,
+    "n_samples": 8,
+    "note": "F-all-zero on random points is NOT a landing certificate; F-nonzero IS a non-landing certificate. Premise concerns landing only."
+   },
+   "ranks_structure_plus_ord_ge": {
+    "0": 251,
+    "1": 251,
+    "2": 251,
+    "3": 272,
+    "4": 325,
+    "5": 410,
+    "6": 459
+   },
+   "rules_fired": {
+    "C11_points": true,
+    "C5_points": false,
+    "C6_points": true,
+    "E_eigenlines": "contract to ell_{2 w}",
+    "M_minus_lines": true
+   },
+   "saturation_dim_ord_ge_6": 0,
+   "saturation_stable_at_6": true,
+   "semantics": "nonzero modular dim is upper bound only; dim 0 is char-0 empty; exact-cell numbers are differences of upper bounds hence themselves upper bounds",
+   "workorder_prediction_dims_equal": false
+  },
+  {
+   "d": 33,
+   "d_mod_6": 3,
+   "dim_M": 511,
+   "dims_profile_plane_plus_ord_ge": {
+    "0": 271,
+    "1": 269,
+    "2": 269,
+    "3": 245,
+    "4": 188,
+    "5": 96,
+    "6": 0
+   },
+   "dims_structure_plus_ord_ge": {
+    "0": 257,
+    "1": 257,
+    "2": 257,
+    "3": 235,
+    "4": 180,
+    "5": 90,
+    "6": 0
+   },
+   "exact_cell_upper_bound_r_lt_6": {
+    "0": 0,
+    "1": 0,
+    "2": 22,
+    "3": 55,
+    "4": 90,
+    "5": 90
+   },
+   "exact_cells_r_lt_6_empty_in_structure": false,
+   "exact_profile_cell_upper_bound": {
+    "0": 2,
+    "1": 0,
+    "2": 24,
+    "3": 57,
+    "4": 92,
+    "5": 96
+   },
+   "landing_probe": {
+    "dims_structure_plus_ord_ge": {
+     "0": 257,
+     "1": 257,
+     "2": 257,
+     "3": 235,
+     "4": 180,
+     "5": 90,
+     "6": 0
+    },
+    "exact_cell_upper_bound": {
+     "0": 0,
+     "1": 0,
+     "2": 22,
+     "3": 55,
+     "4": 90,
+     "5": 90
+    },
+    "n_low_ord_samples": 8,
+    "n_low_ord_with_F_all_zero_on_sample_pts": 0,
+    "n_low_ord_with_F_nonzero": 8,
+    "n_samples": 8,
+    "note": "F-all-zero on random points is NOT a landing certificate; F-nonzero IS a non-landing certificate. Premise concerns landing only."
+   },
+   "ranks_structure_plus_ord_ge": {
+    "0": 254,
+    "1": 254,
+    "2": 254,
+    "3": 276,
+    "4": 331,
+    "5": 421,
+    "6": 511
+   },
+   "rules_fired": {
+    "C11_points": true,
+    "C5_points": false,
+    "C6_points": true,
+    "E_eigenlines": "vanish (3|d)",
+    "M_minus_lines": false
+   },
+   "saturation_dim_ord_ge_6": 0,
+   "saturation_stable_at_6": true,
+   "semantics": "nonzero modular dim is upper bound only; dim 0 is char-0 empty; exact-cell numbers are differences of upper bounds hence themselves upper bounds",
+   "workorder_prediction_dims_equal": false
+  },
+  {
+   "d": 34,
+   "d_mod_6": 4,
+   "dim_M": 576,
+   "dims_profile_plane_plus_ord_ge": {
+    "0": 337,
+    "1": 317,
+    "2": 316,
+    "3": 291,
+    "4": 230,
+    "5": 133,
+    "6": 16
+   },
+   "dims_structure_plus_ord_ge": {
+    "0": 302,
+    "1": 290,
+    "2": 290,
+    "3": 267,
+    "4": 208,
+    "5": 113,
+    "6": 0
+   },
+   "exact_cell_upper_bound_r_lt_6": {
+    "0": 12,
+    "1": 0,
+    "2": 23,
+    "3": 59,
+    "4": 95,
+    "5": 113
+   },
+   "exact_cells_r_lt_6_empty_in_structure": false,
+   "exact_profile_cell_upper_bound": {
+    "0": 20,
+    "1": 1,
+    "2": 25,
+    "3": 61,
+    "4": 97,
+    "5": 117
+   },
+   "landing_probe": {
+    "dims_structure_plus_ord_ge": {
+     "0": 302,
+     "1": 290,
+     "2": 290,
+     "3": 267,
+     "4": 208,
+     "5": 113,
+     "6": 0
+    },
+    "exact_cell_upper_bound": {
+     "0": 12,
+     "1": 0,
+     "2": 23,
+     "3": 59,
+     "4": 95,
+     "5": 113
+    },
+    "n_low_ord_samples": 8,
+    "n_low_ord_with_F_all_zero_on_sample_pts": 0,
+    "n_low_ord_with_F_nonzero": 8,
+    "n_samples": 8,
+    "note": "F-all-zero on random points is NOT a landing certificate; F-nonzero IS a non-landing certificate. Premise concerns landing only."
+   },
+   "ranks_structure_plus_ord_ge": {
+    "0": 274,
+    "1": 286,
+    "2": 286,
+    "3": 309,
+    "4": 368,
+    "5": 463,
+    "6": 576
+   },
+   "rules_fired": {
+    "C11_points": false,
+    "C5_points": false,
+    "C6_points": true,
+    "E_eigenlines": "contract to ell_{1 w}",
+    "M_minus_lines": true
+   },
+   "saturation_dim_ord_ge_6": 0,
+   "saturation_stable_at_6": true,
+   "semantics": "nonzero modular dim is upper bound only; dim 0 is char-0 empty; exact-cell numbers are differences of upper bounds hence themselves upper bounds",
+   "workorder_prediction_dims_equal": false
+  },
+  {
+   "d": 35,
+   "d_mod_6": 5,
+   "dim_M": 637,
+   "dims_profile_plane_plus_ord_ge": {
+    "0": 398,
+    "1": 378,
+    "2": 361,
+    "3": 335,
+    "4": 272,
+    "5": 170,
+    "6": 46
+   },
+   "dims_structure_plus_ord_ge": {
+    "0": 376,
+    "1": 359,
+    "2": 346,
+    "3": 322,
+    "4": 261,
+    "5": 161,
+    "6": 39
+   },
+   "exact_cell_upper_bound_r_lt_6": {
+    "0": 17,
+    "1": 13,
+    "2": 24,
+    "3": 61,
+    "4": 100,
+    "5": 122
+   },
+   "exact_cells_r_lt_6_empty_in_structure": false,
+   "exact_profile_cell_upper_bound": {
+    "0": 20,
+    "1": 17,
+    "2": 26,
+    "3": 63,
+    "4": 102,
+    "5": 124
+   },
+   "landing_probe": {
+    "dims_structure_plus_ord_ge": {
+     "0": 376,
+     "1": 359,
+     "2": 346,
+     "3": 322,
+     "4": 261,
+     "5": 161,
+     "6": 39
+    },
+    "exact_cell_upper_bound": {
+     "0": 17,
+     "1": 13,
+     "2": 24,
+     "3": 61,
+     "4": 100,
+     "5": 122
+    },
+    "n_low_ord_samples": 8,
+    "n_low_ord_with_F_all_zero_on_sample_pts": 0,
+    "n_low_ord_with_F_nonzero": 8,
+    "n_samples": 8,
+    "note": "F-all-zero on random points is NOT a landing certificate; F-nonzero IS a non-landing certificate. Premise concerns landing only."
+   },
+   "ranks_structure_plus_ord_ge": {
+    "0": 261,
+    "1": 278,
+    "2": 291,
+    "3": 315,
+    "4": 376,
+    "5": 476,
+    "6": 598
+   },
+   "rules_fired": {
+    "C11_points": true,
+    "C5_points": true,
+    "C6_points": false,
+    "E_eigenlines": "contract to ell_{2 w}",
+    "M_minus_lines": false
+   },
+   "saturation_dim_ord_ge_6": 39,
+   "saturation_stable_at_6": true,
+   "semantics": "nonzero modular dim is upper bound only; dim 0 is char-0 empty; exact-cell numbers are differences of upper bounds hence themselves upper bounds",
+   "workorder_prediction_dims_equal": false
+  },
+  {
+   "d": 36,
+   "d_mod_6": 0,
+   "dim_M": 706,
+   "dims_profile_plane_plus_ord_ge": {
+    "0": 466,
+    "1": 444,
+    "2": 414,
+    "3": 386,
+    "4": 321,
+    "5": 214,
+    "6": 83
+   },
+   "dims_structure_plus_ord_ge": {
+    "0": 431,
+    "1": 410,
+    "2": 385,
+    "3": 360,
+    "4": 297,
+    "5": 192,
+    "6": 63
+   },
+   "exact_cell_upper_bound_r_lt_6": {
+    "0": 21,
+    "1": 25,
+    "2": 25,
+    "3": 63,
+    "4": 105,
+    "5": 129
+   },
+   "exact_cells_r_lt_6_empty_in_structure": false,
+   "exact_profile_cell_upper_bound": {
+    "0": 22,
+    "1": 30,
+    "2": 28,
+    "3": 65,
+    "4": 107,
+    "5": 131
+   },
+   "landing_probe": {
+    "dims_structure_plus_ord_ge": {
+     "0": 431,
+     "1": 410,
+     "2": 385,
+     "3": 360,
+     "4": 297,
+     "5": 192,
+     "6": 63
+    },
+    "exact_cell_upper_bound": {
+     "0": 21,
+     "1": 25,
+     "2": 25,
+     "3": 63,
+     "4": 105,
+     "5": 129
+    },
+    "n_low_ord_samples": 8,
+    "n_low_ord_with_F_all_zero_on_sample_pts": 0,
+    "n_low_ord_with_F_nonzero": 8,
+    "n_samples": 8,
+    "note": "F-all-zero on random points is NOT a landing certificate; F-nonzero IS a non-landing certificate. Premise concerns landing only."
+   },
+   "ranks_structure_plus_ord_ge": {
+    "0": 275,
+    "1": 296,
+    "2": 321,
+    "3": 346,
+    "4": 409,
+    "5": 514,
+    "6": 643
+   },
+   "rules_fired": {
+    "C11_points": false,
+    "C5_points": false,
+    "C6_points": true,
+    "E_eigenlines": "vanish (3|d)",
+    "M_minus_lines": true
+   },
+   "saturation_dim_ord_ge_6": 63,
+   "saturation_stable_at_6": true,
+   "semantics": "nonzero modular dim is upper bound only; dim 0 is char-0 empty; exact-cell numbers are differences of upper bounds hence themselves upper bounds",
+   "workorder_prediction_dims_equal": false
+  },
+  {
+   "d": 37,
+   "d_mod_6": 1,
+   "dim_M": 786,
+   "dims_profile_plane_plus_ord_ge": {
+    "0": 546,
+    "1": 522,
+    "2": 490,
+    "3": 446,
+    "4": 377,
+    "5": 265,
+    "6": 127
+   },
+   "dims_structure_plus_ord_ge": {
+    "0": 525,
+    "1": 504,
+    "2": 474,
+    "3": 434,
+    "4": 367,
+    "5": 257,
+    "6": 121
+   },
+   "exact_cell_upper_bound_r_lt_6": {
+    "0": 21,
+    "1": 30,
+    "2": 40,
+    "3": 67,
+    "4": 110,
+    "5": 136
+   },
+   "exact_cells_r_lt_6_empty_in_structure": false,
+   "exact_profile_cell_upper_bound": {
+    "0": 24,
+    "1": 32,
+    "2": 44,
+    "3": 69,
+    "4": 112,
+    "5": 138
+   },
+   "landing_probe": {
+    "dims_structure_plus_ord_ge": {
+     "0": 525,
+     "1": 504,
+     "2": 474,
+     "3": 434,
+     "4": 367,
+     "5": 257,
+     "6": 121
+    },
+    "exact_cell_upper_bound": {
+     "0": 21,
+     "1": 30,
+     "2": 40,
+     "3": 67,
+     "4": 110,
+     "5": 136
+    },
+    "n_low_ord_samples": 8,
+    "n_low_ord_with_F_all_zero_on_sample_pts": 0,
+    "n_low_ord_with_F_nonzero": 8,
+    "n_samples": 8,
+    "note": "F-all-zero on random points is NOT a landing certificate; F-nonzero IS a non-landing certificate. Premise concerns landing only."
+   },
+   "ranks_structure_plus_ord_ge": {
+    "0": 261,
+    "1": 282,
+    "2": 312,
+    "3": 352,
+    "4": 419,
+    "5": 529,
+    "6": 665
+   },
+   "rules_fired": {
+    "C11_points": false,
+    "C5_points": false,
+    "C6_points": false,
+    "E_eigenlines": "contract to ell_{1 w}",
+    "M_minus_lines": false
+   },
+   "saturation_dim_ord_ge_6": 121,
+   "saturation_stable_at_6": true,
+   "semantics": "nonzero modular dim is upper bound only; dim 0 is char-0 empty; exact-cell numbers are differences of upper bounds hence themselves upper bounds",
+   "workorder_prediction_dims_equal": false
+  },
+  {
+   "d": 38,
+   "d_mod_6": 2,
+   "dim_M": 865,
+   "dims_profile_plane_plus_ord_ge": {
+    "0": 625,
+    "1": 601,
+    "2": 568,
+    "3": 506,
+    "4": 435,
+    "5": 318,
+    "6": 173
+   },
+   "dims_structure_plus_ord_ge": {
+    "0": 586,
+    "1": 565,
+    "2": 534,
+    "3": 478,
+    "4": 409,
+    "5": 294,
+    "6": 151
+   },
+   "exact_cell_upper_bound_r_lt_6": {
+    "0": 21,
+    "1": 31,
+    "2": 56,
+    "3": 69,
+    "4": 115,
+    "5": 143
+   },
+   "exact_cells_r_lt_6_empty_in_structure": false,
+   "exact_profile_cell_upper_bound": {
+    "0": 24,
+    "1": 33,
+    "2": 62,
+    "3": 71,
+    "4": 117,
+    "5": 145
+   },
+   "landing_probe": {
+    "dims_structure_plus_ord_ge": {
+     "0": 586,
+     "1": 565,
+     "2": 534,
+     "3": 478,
+     "4": 409,
+     "5": 294,
+     "6": 151
+    },
+    "exact_cell_upper_bound": {
+     "0": 21,
+     "1": 31,
+     "2": 56,
+     "3": 69,
+     "4": 115,
+     "5": 143
+    },
+    "n_low_ord_samples": 8,
+    "n_low_ord_with_F_all_zero_on_sample_pts": 0,
+    "n_low_ord_with_F_nonzero": 8,
+    "n_samples": 8,
+    "note": "F-all-zero on random points is NOT a landing certificate; F-nonzero IS a non-landing certificate. Premise concerns landing only."
+   },
+   "ranks_structure_plus_ord_ge": {
+    "0": 279,
+    "1": 300,
+    "2": 331,
+    "3": 387,
+    "4": 456,
+    "5": 571,
+    "6": 714
+   },
+   "rules_fired": {
+    "C11_points": false,
+    "C5_points": false,
+    "C6_points": true,
+    "E_eigenlines": "contract to ell_{2 w}",
+    "M_minus_lines": true
+   },
+   "saturation_dim_ord_ge_6": 151,
+   "saturation_stable_at_6": true,
+   "semantics": "nonzero modular dim is upper bound only; dim 0 is char-0 empty; exact-cell numbers are differences of upper bounds hence themselves upper bounds",
+   "workorder_prediction_dims_equal": false
+  },
+  {
+   "d": 39,
+   "d_mod_6": 3,
+   "dim_M": 950,
+   "dims_profile_plane_plus_ord_ge": {
+    "0": 714,
+    "1": 698,
+    "2": 664,
+    "3": 572,
+    "4": 499,
+    "5": 377,
+    "6": 225
+   },
+   "dims_structure_plus_ord_ge": {
+    "0": 694,
+    "1": 679,
+    "2": 647,
+    "3": 559,
+    "4": 488,
+    "5": 368,
+    "6": 218
+   },
+   "exact_cell_upper_bound_r_lt_6": {
+    "0": 15,
+    "1": 32,
+    "2": 88,
+    "3": 71,
+    "4": 120,
+    "5": 150
+   },
+   "exact_cells_r_lt_6_empty_in_structure": false,
+   "exact_profile_cell_upper_bound": {
+    "0": 16,
+    "1": 34,
+    "2": 92,
+    "3": 73,
+    "4": 122,
+    "5": 152
+   },
+   "landing_probe": {
+    "dims_structure_plus_ord_ge": {
+     "0": 694,
+     "1": 679,
+     "2": 647,
+     "3": 559,
+     "4": 488,
+     "5": 368,
+     "6": 218
+    },
+    "exact_cell_upper_bound": {
+     "0": 15,
+     "1": 32,
+     "2": 88,
+     "3": 71,
+     "4": 120,
+     "5": 150
+    },
+    "n_low_ord_samples": 8,
+    "n_low_ord_with_F_all_zero_on_sample_pts": 0,
+    "n_low_ord_with_F_nonzero": 8,
+    "n_samples": 8,
+    "note": "F-all-zero on random points is NOT a landing certificate; F-nonzero IS a non-landing certificate. Premise concerns landing only."
+   },
+   "ranks_structure_plus_ord_ge": {
+    "0": 256,
+    "1": 271,
+    "2": 303,
+    "3": 391,
+    "4": 462,
+    "5": 582,
+    "6": 732
+   },
+   "rules_fired": {
+    "C11_points": true,
+    "C5_points": false,
+    "C6_points": true,
+    "E_eigenlines": "vanish (3|d)",
+    "M_minus_lines": false
+   },
+   "saturation_dim_ord_ge_6": 218,
+   "saturation_stable_at_6": true,
+   "semantics": "nonzero modular dim is upper bound only; dim 0 is char-0 empty; exact-cell numbers are differences of upper bounds hence themselves upper bounds",
+   "workorder_prediction_dims_equal": false
+  },
+  {
+   "d": 40,
+   "d_mod_6": 4,
+   "dim_M": 1050,
+   "dims_profile_plane_plus_ord_ge": {
+    "0": 812,
+    "1": 790,
+    "2": 755,
+    "3": 659,
+    "4": 573,
+    "5": 446,
+    "6": 287
+   },
+   "dims_structure_plus_ord_ge": {
+    "0": 769,
+    "1": 750,
+    "2": 717,
+    "3": 623,
+    "4": 543,
+    "5": 418,
+    "6": 261
+   },
+   "exact_cell_upper_bound_r_lt_6": {
+    "0": 19,
+    "1": 33,
+    "2": 94,
+    "3": 80,
+    "4": 125,
+    "5": 157
+   },
+   "exact_cells_r_lt_6_empty_in_structure": false,
+   "exact_profile_cell_upper_bound": {
+    "0": 22,
+    "1": 35,
+    "2": 96,
+    "3": 86,
+    "4": 127,
+    "5": 159
+   },
+   "landing_probe": {
+    "dims_structure_plus_ord_ge": {
+     "0": 769,
+     "1": 750,
+     "2": 717,
+     "3": 623,
+     "4": 543,
+     "5": 418,
+     "6": 261
+    },
+    "exact_cell_upper_bound": {
+     "0": 19,
+     "1": 33,
+     "2": 94,
+     "3": 80,
+     "4": 125,
+     "5": 157
+    },
+    "n_low_ord_samples": 8,
+    "n_low_ord_with_F_all_zero_on_sample_pts": 0,
+    "n_low_ord_with_F_nonzero": 8,
+    "n_samples": 8,
+    "note": "F-all-zero on random points is NOT a landing certificate; F-nonzero IS a non-landing certificate. Premise concerns landing only."
+   },
+   "ranks_structure_plus_ord_ge": {
+    "0": 281,
+    "1": 300,
+    "2": 333,
+    "3": 427,
+    "4": 507,
+    "5": 632,
+    "6": 789
+   },
+   "rules_fired": {
+    "C11_points": true,
+    "C5_points": true,
+    "C6_points": true,
+    "E_eigenlines": "contract to ell_{1 w}",
+    "M_minus_lines": true
+   },
+   "saturation_dim_ord_ge_6": 261,
+   "saturation_stable_at_6": true,
+   "semantics": "nonzero modular dim is upper bound only; dim 0 is char-0 empty; exact-cell numbers are differences of upper bounds hence themselves upper bounds",
+   "workorder_prediction_dims_equal": false
+  },
+  {
+   "d": 41,
+   "d_mod_6": 5,
+   "dim_M": 1148,
+   "dims_profile_plane_plus_ord_ge": {
+    "0": 909,
+    "1": 885,
+    "2": 849,
+    "3": 750,
+    "4": 649,
+    "5": 517,
+    "6": 351
+   },
+   "dims_structure_plus_ord_ge": {
+    "0": 886,
+    "1": 865,
+    "2": 831,
+    "3": 734,
+    "4": 637,
+    "5": 507,
+    "6": 343
+   },
+   "exact_cell_upper_bound_r_lt_6": {
+    "0": 21,
+    "1": 34,
+    "2": 97,
+    "3": 97,
+    "4": 130,
+    "5": 164
+   },
+   "exact_cells_r_lt_6_empty_in_structure": false,
+   "exact_profile_cell_upper_bound": {
+    "0": 24,
+    "1": 36,
+    "2": 99,
+    "3": 101,
+    "4": 132,
+    "5": 166
+   },
+   "landing_probe": {
+    "dims_structure_plus_ord_ge": {
+     "0": 886,
+     "1": 865,
+     "2": 831,
+     "3": 734,
+     "4": 637,
+     "5": 507,
+     "6": 343
+    },
+    "exact_cell_upper_bound": {
+     "0": 21,
+     "1": 34,
+     "2": 97,
+     "3": 97,
+     "4": 130,
+     "5": 164
+    },
+    "n_low_ord_samples": 8,
+    "n_low_ord_with_F_all_zero_on_sample_pts": 0,
+    "n_low_ord_with_F_nonzero": 8,
+    "n_samples": 8,
+    "note": "F-all-zero on random points is NOT a landing certificate; F-nonzero IS a non-landing certificate. Premise concerns landing only."
+   },
+   "ranks_structure_plus_ord_ge": {
+    "0": 262,
+    "1": 283,
+    "2": 317,
+    "3": 414,
+    "4": 511,
+    "5": 641,
+    "6": 805
+   },
+   "rules_fired": {
+    "C11_points": true,
+    "C5_points": false,
+    "C6_points": false,
+    "E_eigenlines": "contract to ell_{2 w}",
+    "M_minus_lines": false
+   },
+   "saturation_dim_ord_ge_6": 343,
+   "saturation_stable_at_6": true,
+   "semantics": "nonzero modular dim is upper bound only; dim 0 is char-0 empty; exact-cell numbers are differences of upper bounds hence themselves upper bounds",
+   "workorder_prediction_dims_equal": false
+  },
+  {
+   "d": 42,
+   "d_mod_6": 0,
+   "dim_M": 1255,
+   "dims_profile_plane_plus_ord_ge": {
+    "0": 1015,
+    "1": 989,
+    "2": 952,
+    "3": 850,
+    "4": 738,
+    "5": 596,
+    "6": 423
+   },
+   "dims_structure_plus_ord_ge": {
+    "0": 974,
+    "1": 949,
+    "2": 914,
+    "3": 814,
+    "4": 705,
+    "5": 568,
+    "6": 397
+   },
+   "exact_cell_upper_bound_r_lt_6": {
+    "0": 25,
+    "1": 35,
+    "2": 100,
+    "3": 109,
+    "4": 137,
+    "5": 171
+   },
+   "exact_cells_r_lt_6_empty_in_structure": false,
+   "exact_profile_cell_upper_bound": {
+    "0": 26,
+    "1": 37,
+    "2": 102,
+    "3": 112,
+    "4": 142,
+    "5": 173
+   },
+   "landing_probe": {
+    "dims_structure_plus_ord_ge": {
+     "0": 974,
+     "1": 949,
+     "2": 914,
+     "3": 814,
+     "4": 705,
+     "5": 568,
+     "6": 397
+    },
+    "exact_cell_upper_bound": {
+     "0": 25,
+     "1": 35,
+     "2": 100,
+     "3": 109,
+     "4": 137,
+     "5": 171
+    },
+    "n_low_ord_samples": 8,
+    "n_low_ord_with_F_all_zero_on_sample_pts": 0,
+    "n_low_ord_with_F_nonzero": 8,
+    "n_samples": 8,
+    "note": "F-all-zero on random points is NOT a landing certificate; F-nonzero IS a non-landing certificate. Premise concerns landing only."
+   },
+   "ranks_structure_plus_ord_ge": {
+    "0": 281,
+    "1": 306,
+    "2": 341,
+    "3": 441,
+    "4": 550,
+    "5": 687,
+    "6": 858
+   },
+   "rules_fired": {
+    "C11_points": false,
+    "C5_points": false,
+    "C6_points": true,
+    "E_eigenlines": "vanish (3|d)",
+    "M_minus_lines": true
+   },
+   "saturation_dim_ord_ge_6": 397,
+   "saturation_stable_at_6": true,
+   "semantics": "nonzero modular dim is upper bound only; dim 0 is char-0 empty; exact-cell numbers are differences of upper bounds hence themselves upper bounds",
+   "workorder_prediction_dims_equal": false
+  }
+ ]
+}

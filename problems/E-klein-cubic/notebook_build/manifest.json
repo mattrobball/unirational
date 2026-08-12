@@ -1736,6 +1736,39 @@
    "char0_scope": "Tier-2 modular throughout. Exact: dim of the landing ideal's cubic piece on the 37-cell is 1380 of 9139 (saturated: thousands of samples, two independent extra batches add zero, both primes identical), so HF(3) = 7759; degree-4 piece bounded (HF(4) >= 40330), so the linear-algebra ladder cannot certify emptiness at low degree. Sections: all random P^1/P^2/P^3 probes (40/25/12 per prime, msolve on reduced systems, never the monolith) meet the landing variety in the origin only; zero nondegenerate witnesses. Residual G-action on the cell is trivial (37 x 1) -- no isotypic structure.\nOUTCOME: O4 INCONCLUSIVE, leaning O1 EMPTY; FLAGGED window-closure candidate; NOT claimed; adversarial audit named as gate.\nNOT claimed: any degree exclusion; emptiness; a witness.",
    "tracked": true,
    "notes": "The endgame object at d = 35: the cubic landing system F(T) = 0 imposed for the first time on the single 37-dimensional cell carrying all 22 surviving blueprints. Headline: Problem E remains OPEN; no degree is excluded.\n\nFirst session of this worker was externally terminated (SIGTERM) mid-run; relaunched in resume mode with the Hilbert-ladder priority route; partial assets reused. Lessons recorded: monolithic Groebner (70MB msolve input) walls; the cell has no group action to exploit.\n\nDirector adjudication appended: the HF numbers are definitive that low-degree linear algebra cannot close the certificate; the origin-only sections are evidence not proof (worker's own caveat adopted); the 22 blueprints are conditionally dead if O1 holds; the window statement is unchanged. Next in order of expected bite: the corrected period-3 keep-pass on the 22 (audited T4 semantics, new closed conditions at rows 68/69), the T6 cone-order audit, then the cubic again on whatever survives.\n\nExits: D35-LANDING-O4-INCONCLUSIVE-LEANING-EMPTY, D35-LANDING-HF3-EXACT-1380, D35-LANDING-SECTIONS-ORIGIN-ONLY, D35-LANDING-NO-WITNESS, D35-LANDING-NO-DEGREE-EXCLUSION.\nMachine markers: D35_LANDING_VERIFY_OK, ALLGREEN (71 checks, director-replayed)."
+  },
+  {
+   "path": "goal_runs_20260812/DEPTH_TABLE_GENERAL",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "general depth-value table for both full-flag rows, indexed by multidegree class mod 6, two-class verification at 331/661 with +6 lift consistency; d=35 keep-pass application on the 22 canonical survivors; director-replayed",
+   "primary_exit": "DEPTH-TABLE-GENERAL-SEALED",
+   "superseded_by": null,
+   "char0_scope": "General (degree-independent) table: rid1 (plus-row, 54 children) period histogram 36/6/12 (T4 anchor reproduced); rid2 (line-row, 18 children) period histogram 12/6 (new); full value cycles by depth level and arc-consistent levels per class. Verified at two distinct classes per row, both primes, with same-class +6 lifts matching.\nApplication at d=35: the period-3 keep conditions (levels 1-2 vanish at the period-3 rows) have RANK 0 on the 37-cell -- already free -- so the salvaged keep-kill mechanism does not bite: 0 closed deaths, the 22 remain at dim <= 37; open demands recorded per cell.\nNOT claimed: any degree exclusion; any open-condition kill.",
+   "tracked": true,
+   "notes": "Cycle-4 move 1. Headline: Problem E remains OPEN; this packet excludes no degree. The sealed product is the general table every future window consumes; the honest application outcome is null (the period-3 functionals at levels 1-2 vanish identically on the cell, so readings live at level >= 3 where the kept values recur freely). Machine markers: DEPTH_TABLE_GENERAL_VERIFY_OK, ALLGREEN (55 checks, director-replayed)."
+  },
+  {
+   "path": "goal_runs_20260812/CONE_ORDER_AUDIT",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "provenance + independent degree sweep d=31..42, all residues mod 6, primes 331/661; exact-order structure-space bounds; no-witness probes; director-replayed",
+   "primary_exit": "CONE-ORDER-CONFIRMED-AT-GENERAL-DEGREE",
+   "superseded_by": null,
+   "char0_scope": "VERDICT: CONFIRMED-AT-GENERAL-DEGREE, TUPLE level. Provenance located and quoted: FIX-N2 Theorem A (no A4-equivariant landing family with plane order >= 1 and triple-line order r in {2..5} at any line degree) + H0-1 (m odd >= 1) + Note II cone/propagation lemmas => every landing tuple has ord_{ell_V} >= 6 at every degree. Machine sweep: ord >= 6 cell dims match the sealed D34 table exactly (0 for d <= 34; 39/63/121/151/218/261/343/397 for 35..42); the workorder's proposed test gloss (dim(>=r) = dim(>=6) for r < 6 on the STRUCTURE space) is FALSE and was correctly rejected by the worker -- the emptiness is landing-conditional (needs F(T)=0, which is FIX-N2's content), not a linear-structure fact; exact-order structure bounds are positive for r in {2..5}; no landing witness with r < 6 at any tested degree.\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Cycle-4 move 2: the last unaudited premise scoping every window is now audited. Headline: Problem E remains OPEN; this packet excludes no degree. Consequence recorded in theory/EXCLUSION_TRANSPORT_20260811.md section 6: the cone-order layer is tuple-level and transports. Machine markers: CONE_ORDER_AUDIT_VERIFY_OK, ALLGREEN (201 checks, director-replayed)."
+  },
+  {
+   "path": "goal_runs_20260812/LANDING_SWEEP",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "the d=35 endgame instruments run at every degree 34..42 with the sealed-closed d=34 as control; both primes; heavy binaries gitignored with regeneration notes; director-replayed",
+   "primary_exit": "LANDING-SWEEP-DEGREE-TABLE",
+   "superseded_by": null,
+   "char0_scope": "Degree table (both primes agree): cell dims 0/39/63/121/151/218/261/343/397 for d = 34..42 (control 0 reproduced). Parity-forced line-order impossibility: FULL RANK (kill) at d = 35 (>= 2 -> 39) AND d = 36 (>= 3 -> 63); residual positive for d >= 37 (54/114/57/122/61/130). Six-flip cut: rank exactly 2 at every odd degree in range. P3(35) = 1380 / HF3 = 7759 reproduced; P3(36) >= 1500 unsaturated; beyond too large for the direct method. All section probes origin-only at every alive degree.\nOBSERVATIONS, not theorems: the finisher kill is narrow (35, 36 only); the universal flip cut is degree-uniform on odd d; the landing variety shows no witness anywhere in range.\nNOT claimed: any degree exclusion; any pattern as a theorem.",
+   "tracked": true,
+   "notes": "Cycle-4 move 3: the instruments generalized. Headline: Problem E remains OPEN; this packet excludes no degree. The d=36 full-rank kill of the nu >= 3 line-branches is the standout general-degree yield -- the next window's 398-analogue is already in hand before the window opens. Machine markers: LANDING_SWEEP_VERIFY_OK, ALLGREEN (director-replayed)."
   }
  ]
 }

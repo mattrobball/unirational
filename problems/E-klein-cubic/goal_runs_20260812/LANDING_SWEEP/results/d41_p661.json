@@ -1,0 +1,77 @@
+{
+ "anchor_cell": 343,
+ "cell_dim": 343,
+ "d": 41,
+ "dim_M": 1148,
+ "dim_profile_only": 351,
+ "dim_structure_only": 825,
+ "finisher": {
+  "cell_dim": 343,
+  "d": 41,
+  "demanded_ord": 2,
+  "dim_after": 282,
+  "impossible": false,
+  "npts": 40,
+  "p": 661,
+  "parity_note": "ord \u2261 d+1 (mod 2); test minimal POSITIVE option beyond forced base",
+  "rank": 61,
+  "ranks": {
+   "ord1": 12,
+   "ord2": 61
+  },
+  "saturation_ok": true
+ },
+ "p": 661,
+ "p3": {
+  "HF3": null,
+  "K": 341,
+  "N3": 6666891,
+  "P3": null,
+  "P3_lower": null,
+  "d": 41,
+  "mode": "too_large",
+  "note": "post-flip dim 341 exceeds dense P3 budget",
+  "p": 661,
+  "saturated": false
+ },
+ "post_flip_dim": 341,
+ "rules_fired": {
+  "C11_points": true,
+  "C5_points": false,
+  "C6_points": false,
+  "E_eigenlines": "contract to ell_{2 w}",
+  "M_minus_lines": false
+ },
+ "seconds_total": 444.57952880859375,
+ "sections": {
+  "K": 341,
+  "P1": {
+   "fail": 0,
+   "n": 10,
+   "nontriv": 0,
+   "origin_only": 10,
+   "verdict": "origin_only"
+  },
+  "P2": {
+   "fail": 0,
+   "n": 10,
+   "nontriv": 0,
+   "origin_only": 10,
+   "verdict": "origin_only"
+  },
+  "d": 41,
+  "p": 661
+ },
+ "six_flip": {
+  "ambient_rank": 2,
+  "cell_dim": 343,
+  "d": 41,
+  "dim_after": 341,
+  "p": 661,
+  "post_flip_dim": 341,
+  "r1_bad": 0,
+  "rank": 2,
+  "skipped": false,
+  "z": 1
+ }
+}

@@ -1,0 +1,1014 @@
+{
+ "allgreen": true,
+ "checks": [
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "A1 dim M_25 = 189"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "A2 dim M_31 = 410"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "A3 dim M_34 = 576"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "A4 dim M_35 = 637"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "A5 dim M_36 = 706"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "A6 dim M_42 = 1255"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "A7 all residues mod 6 covered in 31..42"
+  },
+  {
+   "detail": "r0=6 #prof=24",
+   "ok": true,
+   "tag": "B r0(31)=6"
+  },
+  {
+   "detail": "r0=6 #prof=26",
+   "ok": true,
+   "tag": "B r0(32)=6"
+  },
+  {
+   "detail": "r0=6 #prof=28",
+   "ok": true,
+   "tag": "B r0(33)=6"
+  },
+  {
+   "detail": "r0=6 #prof=30",
+   "ok": true,
+   "tag": "B r0(34)=6"
+  },
+  {
+   "detail": "r0=6 #prof=32",
+   "ok": true,
+   "tag": "B r0(35)=6"
+  },
+  {
+   "detail": "r0=6 #prof=34",
+   "ok": true,
+   "tag": "B r0(36)=6"
+  },
+  {
+   "detail": "r0=6 #prof=37",
+   "ok": true,
+   "tag": "B r0(37)=6"
+  },
+  {
+   "detail": "r0=6 #prof=39",
+   "ok": true,
+   "tag": "B r0(38)=6"
+  },
+  {
+   "detail": "r0=6 #prof=41",
+   "ok": true,
+   "tag": "B r0(39)=6"
+  },
+  {
+   "detail": "r0=6 #prof=44",
+   "ok": true,
+   "tag": "B r0(40)=6"
+  },
+  {
+   "detail": "r0=6 #prof=46",
+   "ok": true,
+   "tag": "B r0(41)=6"
+  },
+  {
+   "detail": "r0=6 #prof=49",
+   "ok": true,
+   "tag": "B r0(42)=6"
+  },
+  {
+   "detail": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/CONE_ORDER_AUDIT/results/sweep_p331_31_42.json",
+   "ok": true,
+   "tag": "C1 p=331 sweep payload exists"
+  },
+  {
+   "detail": "got 12",
+   "ok": true,
+   "tag": "C2 p=331 has 12 degree rows"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=331 d=31 present"
+  },
+  {
+   "detail": "410 vs 410",
+   "ok": true,
+   "tag": "C4 p=331 d=31 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=187 d6=0",
+   "ok": true,
+   "tag": "C5 p=331 d=31 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=331 d=31 saturation stable at 6"
+  },
+  {
+   "detail": "dim=0",
+   "ok": true,
+   "tag": "C7 p=331 d=31 window slice ord>=6 empty (D34)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=331 d=31 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=331 d=31 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=331 d=32 present"
+  },
+  {
+   "detail": "459 vs 459",
+   "ok": true,
+   "tag": "C4 p=331 d=32 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=208 d6=0",
+   "ok": true,
+   "tag": "C5 p=331 d=32 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=331 d=32 saturation stable at 6"
+  },
+  {
+   "detail": "dim=0",
+   "ok": true,
+   "tag": "C7 p=331 d=32 window slice ord>=6 empty (D34)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=331 d=32 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=331 d=32 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=331 d=33 present"
+  },
+  {
+   "detail": "511 vs 511",
+   "ok": true,
+   "tag": "C4 p=331 d=33 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=257 d6=0",
+   "ok": true,
+   "tag": "C5 p=331 d=33 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=331 d=33 saturation stable at 6"
+  },
+  {
+   "detail": "dim=0",
+   "ok": true,
+   "tag": "C7 p=331 d=33 window slice ord>=6 empty (D34)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=331 d=33 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=331 d=33 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=331 d=34 present"
+  },
+  {
+   "detail": "576 vs 576",
+   "ok": true,
+   "tag": "C4 p=331 d=34 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=306 d6=0",
+   "ok": true,
+   "tag": "C5 p=331 d=34 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=331 d=34 saturation stable at 6"
+  },
+  {
+   "detail": "dim=0",
+   "ok": true,
+   "tag": "C7 p=331 d=34 window slice ord>=6 empty (D34)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=331 d=34 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=331 d=34 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=331 d=35 present"
+  },
+  {
+   "detail": "637 vs 637",
+   "ok": true,
+   "tag": "C4 p=331 d=35 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=375 d6=39",
+   "ok": true,
+   "tag": "C5 p=331 d=35 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=331 d=35 saturation stable at 6"
+  },
+  {
+   "detail": "dim=39",
+   "ok": true,
+   "tag": "C8 p=331 d=35 ord>=6 dim <= 39 (D34 upper bound)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=331 d=35 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=331 d=35 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=331 d=36 present"
+  },
+  {
+   "detail": "706 vs 706",
+   "ok": true,
+   "tag": "C4 p=331 d=36 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=431 d6=63",
+   "ok": true,
+   "tag": "C5 p=331 d=36 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=331 d=36 saturation stable at 6"
+  },
+  {
+   "detail": "dim=63",
+   "ok": true,
+   "tag": "C9 p=331 d=36 ord>=6 dim <= 63 (D34 upper bound)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=331 d=36 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=331 d=36 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=331 d=37 present"
+  },
+  {
+   "detail": "786 vs 786",
+   "ok": true,
+   "tag": "C4 p=331 d=37 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=528 d6=121",
+   "ok": true,
+   "tag": "C5 p=331 d=37 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=331 d=37 saturation stable at 6"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=331 d=37 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=331 d=37 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=331 d=38 present"
+  },
+  {
+   "detail": "865 vs 865",
+   "ok": true,
+   "tag": "C4 p=331 d=38 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=589 d6=151",
+   "ok": true,
+   "tag": "C5 p=331 d=38 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=331 d=38 saturation stable at 6"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=331 d=38 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=331 d=38 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=331 d=39 present"
+  },
+  {
+   "detail": "950 vs 950",
+   "ok": true,
+   "tag": "C4 p=331 d=39 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=691 d6=218",
+   "ok": true,
+   "tag": "C5 p=331 d=39 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=331 d=39 saturation stable at 6"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=331 d=39 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=331 d=39 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=331 d=40 present"
+  },
+  {
+   "detail": "1050 vs 1050",
+   "ok": true,
+   "tag": "C4 p=331 d=40 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=767 d6=261",
+   "ok": true,
+   "tag": "C5 p=331 d=40 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=331 d=40 saturation stable at 6"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=331 d=40 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=331 d=40 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=331 d=41 present"
+  },
+  {
+   "detail": "1148 vs 1148",
+   "ok": true,
+   "tag": "C4 p=331 d=41 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=887 d6=343",
+   "ok": true,
+   "tag": "C5 p=331 d=41 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=331 d=41 saturation stable at 6"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=331 d=41 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=331 d=41 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=331 d=42 present"
+  },
+  {
+   "detail": "1255 vs 1255",
+   "ok": true,
+   "tag": "C4 p=331 d=42 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=974 d6=397",
+   "ok": true,
+   "tag": "C5 p=331 d=42 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=331 d=42 saturation stable at 6"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=331 d=42 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=331 d=42 no SEED shortfall"
+  },
+  {
+   "detail": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/CONE_ORDER_AUDIT/results/sweep_p661_31_42.json",
+   "ok": true,
+   "tag": "C1 p=661 sweep payload exists"
+  },
+  {
+   "detail": "got 12",
+   "ok": true,
+   "tag": "C2 p=661 has 12 degree rows"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=661 d=31 present"
+  },
+  {
+   "detail": "410 vs 410",
+   "ok": true,
+   "tag": "C4 p=661 d=31 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=187 d6=0",
+   "ok": true,
+   "tag": "C5 p=661 d=31 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=661 d=31 saturation stable at 6"
+  },
+  {
+   "detail": "dim=0",
+   "ok": true,
+   "tag": "C7 p=661 d=31 window slice ord>=6 empty (D34)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=661 d=31 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=661 d=31 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=661 d=32 present"
+  },
+  {
+   "detail": "459 vs 459",
+   "ok": true,
+   "tag": "C4 p=661 d=32 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=208 d6=0",
+   "ok": true,
+   "tag": "C5 p=661 d=32 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=661 d=32 saturation stable at 6"
+  },
+  {
+   "detail": "dim=0",
+   "ok": true,
+   "tag": "C7 p=661 d=32 window slice ord>=6 empty (D34)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=661 d=32 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=661 d=32 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=661 d=33 present"
+  },
+  {
+   "detail": "511 vs 511",
+   "ok": true,
+   "tag": "C4 p=661 d=33 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=257 d6=0",
+   "ok": true,
+   "tag": "C5 p=661 d=33 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=661 d=33 saturation stable at 6"
+  },
+  {
+   "detail": "dim=0",
+   "ok": true,
+   "tag": "C7 p=661 d=33 window slice ord>=6 empty (D34)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=661 d=33 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=661 d=33 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=661 d=34 present"
+  },
+  {
+   "detail": "576 vs 576",
+   "ok": true,
+   "tag": "C4 p=661 d=34 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=302 d6=0",
+   "ok": true,
+   "tag": "C5 p=661 d=34 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=661 d=34 saturation stable at 6"
+  },
+  {
+   "detail": "dim=0",
+   "ok": true,
+   "tag": "C7 p=661 d=34 window slice ord>=6 empty (D34)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=661 d=34 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=661 d=34 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=661 d=35 present"
+  },
+  {
+   "detail": "637 vs 637",
+   "ok": true,
+   "tag": "C4 p=661 d=35 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=376 d6=39",
+   "ok": true,
+   "tag": "C5 p=661 d=35 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=661 d=35 saturation stable at 6"
+  },
+  {
+   "detail": "dim=39",
+   "ok": true,
+   "tag": "C8 p=661 d=35 ord>=6 dim <= 39 (D34 upper bound)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=661 d=35 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=661 d=35 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=661 d=36 present"
+  },
+  {
+   "detail": "706 vs 706",
+   "ok": true,
+   "tag": "C4 p=661 d=36 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=431 d6=63",
+   "ok": true,
+   "tag": "C5 p=661 d=36 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=661 d=36 saturation stable at 6"
+  },
+  {
+   "detail": "dim=63",
+   "ok": true,
+   "tag": "C9 p=661 d=36 ord>=6 dim <= 63 (D34 upper bound)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=661 d=36 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=661 d=36 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=661 d=37 present"
+  },
+  {
+   "detail": "786 vs 786",
+   "ok": true,
+   "tag": "C4 p=661 d=37 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=525 d6=121",
+   "ok": true,
+   "tag": "C5 p=661 d=37 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=661 d=37 saturation stable at 6"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=661 d=37 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=661 d=37 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=661 d=38 present"
+  },
+  {
+   "detail": "865 vs 865",
+   "ok": true,
+   "tag": "C4 p=661 d=38 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=586 d6=151",
+   "ok": true,
+   "tag": "C5 p=661 d=38 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=661 d=38 saturation stable at 6"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=661 d=38 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=661 d=38 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=661 d=39 present"
+  },
+  {
+   "detail": "950 vs 950",
+   "ok": true,
+   "tag": "C4 p=661 d=39 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=694 d6=218",
+   "ok": true,
+   "tag": "C5 p=661 d=39 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=661 d=39 saturation stable at 6"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=661 d=39 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=661 d=39 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=661 d=40 present"
+  },
+  {
+   "detail": "1050 vs 1050",
+   "ok": true,
+   "tag": "C4 p=661 d=40 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=769 d6=261",
+   "ok": true,
+   "tag": "C5 p=661 d=40 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=661 d=40 saturation stable at 6"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=661 d=40 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=661 d=40 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=661 d=41 present"
+  },
+  {
+   "detail": "1148 vs 1148",
+   "ok": true,
+   "tag": "C4 p=661 d=41 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=886 d6=343",
+   "ok": true,
+   "tag": "C5 p=661 d=41 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=661 d=41 saturation stable at 6"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=661 d=41 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=661 d=41 no SEED shortfall"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C3 p=661 d=42 present"
+  },
+  {
+   "detail": "1255 vs 1255",
+   "ok": true,
+   "tag": "C4 p=661 d=42 dim_M matches sealed"
+  },
+  {
+   "detail": "d0=974 d6=397",
+   "ok": true,
+   "tag": "C5 p=661 d=42 ord>=0 dim >= ord>=6 dim"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C6 p=661 d=42 saturation stable at 6"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C10 p=661 d=42 linear dim-equality prediction is False (expected: structure has low-order room)"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "C11 p=661 d=42 no SEED shortfall"
+  },
+  {
+   "detail": "331=0 661=0",
+   "ok": true,
+   "tag": "D1 both primes d=31 ord>=6 empty"
+  },
+  {
+   "detail": "331=0 661=0",
+   "ok": true,
+   "tag": "D1 both primes d=32 ord>=6 empty"
+  },
+  {
+   "detail": "331=0 661=0",
+   "ok": true,
+   "tag": "D1 both primes d=33 ord>=6 empty"
+  },
+  {
+   "detail": "331=0 661=0",
+   "ok": true,
+   "tag": "D1 both primes d=34 ord>=6 empty"
+  },
+  {
+   "detail": "331=39 661=39",
+   "ok": true,
+   "tag": "D2 both primes d=35 ord>=6 defined"
+  },
+  {
+   "detail": "331=63 661=63",
+   "ok": true,
+   "tag": "D2 both primes d=36 ord>=6 defined"
+  },
+  {
+   "detail": "331=121 661=121",
+   "ok": true,
+   "tag": "D2 both primes d=37 ord>=6 defined"
+  },
+  {
+   "detail": "331=151 661=151",
+   "ok": true,
+   "tag": "D2 both primes d=38 ord>=6 defined"
+  },
+  {
+   "detail": "331=218 661=218",
+   "ok": true,
+   "tag": "D2 both primes d=39 ord>=6 defined"
+  },
+  {
+   "detail": "331=261 661=261",
+   "ok": true,
+   "tag": "D2 both primes d=40 ord>=6 defined"
+  },
+  {
+   "detail": "331=343 661=343",
+   "ok": true,
+   "tag": "D2 both primes d=41 ord>=6 defined"
+  },
+  {
+   "detail": "331=397 661=397",
+   "ok": true,
+   "tag": "D2 both primes d=42 ord>=6 defined"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "E1 frame |G|=660"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "E2 dim ell_V = 2"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "E3 stage2 self-tests all pass"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "E4 adapted self-tests all pass"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "F1 THEOREM.md exists"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "F2 quotes FIX-N2 Theorem A"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "F3 headline OPEN"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "F4 excludes no degree"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "F5 verdict named"
+  },
+  {
+   "detail": "",
+   "ok": true,
+   "tag": "F6 level classification present"
+  }
+ ],
+ "elapsed_s": 0.1,
+ "marker": "CONE_ORDER_AUDIT_VERIFY_OK",
+ "n_checks": 201,
+ "n_failures": 0
+}
