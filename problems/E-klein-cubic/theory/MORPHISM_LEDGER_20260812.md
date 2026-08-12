@@ -20,14 +20,16 @@ than a value assignment. The layers:
 | L5 | pairwise child coherence | shared-value equality via transversals | SPENT |
 | L6 | section-level gluing on shared positive-dim loci | cross-band equality of restricted sections | DISPATCHED (`WORKORDER_CROSSBAND_GLUING`) |
 | L7 | 2-chain (triangle) cocycle coherence | transversal-twist consistency of the quotient-complex morphism | DISPATCHED (`WORKORDER_COCYCLE_COHERENCE`) |
-| L8 | the equivariant ramification complex | per-stratum NORMAL response: which conormal characters of `S` map to which normal characters at `τ(S)`, with which orders — the `m_E`-data as `Γ_S`-representation constraints, not numbers; includes the receiver-side tangent-cone condition at special values | UNSPENT — `WORKORDER_RAMIFICATION_COMPLEX` (this cycle) |
+| L8 | the equivariant ramification complex | per-stratum NORMAL response: which conormal characters of `S` map to which normal characters at `τ(S)`, with which orders — the `m_E`-data as `Γ_S`-representation constraints, not numbers; includes the receiver-side tangent-cone condition at special values | DISPATCHED (`WORKORDER_RAMIFICATION_COMPLEX`) |
 | L9 | chain-level jet transitivity | along `S ⊇ S′ ⊇ S″`: the composite of the two level/value rules must agree with the direct one; pairwise arc-consistency does not imply it | UNSPENT — `WORKORDER_CHAIN_JET_TRANSITIVITY` (this cycle) |
 | L10 | global cycle ledger | pushforward/projection-formula relations among the per-stratum mapping degrees across the whole poset (one linear system over the census) | UNSPENT — queued after L8/L9 |
 | L11 | full functorial coherence | the single-morphism cut of STAGE1 §15.4 — the umbrella of L5–L10 | THEORY TARGET |
+| L12 | global localization ledger | equivariant χ pushed through the map, both-ways evaluation per conjugacy class and twist — the first GLOBAL identity family, coupling the pattern census to the fiber complex | DERIVED (`theory/GLOBAL_LOCALIZATION_LEDGER_20260812.md`, director) — machine phase gated on referee |
 
 Reading discipline: L1–L3 spending is what produced everything at d = 35
 (1264 → 22); L4's tuple upgrade is the transport program's remaining
 ammunition; L6–L9 are the four computable unspent layers, every one
 degree-general in structure (their data are census/group-theoretic, with
-the degree entering only through residue classes). The stone is not dry:
-four layers have never been squeezed at all.
+the degree entering only through residue classes). The stone is not dry: L8–L10 and L12 have
+never been machine-spent, and L12 is the first layer that is GLOBAL —
+no failure of it can be localized to a stratum.
