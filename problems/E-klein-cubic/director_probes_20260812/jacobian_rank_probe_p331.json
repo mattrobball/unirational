@@ -1,0 +1,18 @@
+{
+ "p": 331,
+ "cell_ranks": [
+  5,
+  5,
+  5
+ ],
+ "ambient_ranks": [
+  5,
+  5,
+  5
+ ],
+ "euler_ok": [
+  true,
+  true,
+  true
+ ]
+}
