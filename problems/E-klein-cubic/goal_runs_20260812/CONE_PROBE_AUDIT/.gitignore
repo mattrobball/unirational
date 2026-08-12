@@ -1,0 +1,6 @@
+# Regenerable heavy artefacts (50 MB hosting limit). Replay:
+#   python3 scripts/produce_r2r3.py && python3 scripts/produce_r4.py
+results/Vseed_*.npy
+results/own_cone_m20_p*.ms
+__pycache__/
+scripts/__pycache__/

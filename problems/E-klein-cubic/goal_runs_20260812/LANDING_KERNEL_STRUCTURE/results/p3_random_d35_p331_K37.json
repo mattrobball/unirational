@@ -1,0 +1,22 @@
+{
+ "d": 35,
+ "p": 331,
+ "K": 37,
+ "n_func": 3600,
+ "ns": 637,
+ "results": {
+  "random": {
+   "rank": 3600,
+   "saturated": false,
+   "hit_func_cap": true,
+   "n_tested": 3950
+  },
+  "cell": {
+   "rank": 1380,
+   "saturated": true,
+   "hit_func_cap": false,
+   "n_tested": 1730
+  }
+ },
+ "seconds": 205.1135971546173
+}

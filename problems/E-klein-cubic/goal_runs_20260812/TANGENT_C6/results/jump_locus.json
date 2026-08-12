@@ -1,0 +1,28 @@
+{
+ "rho_generic_by_prime": {
+  "331": 37,
+  "661": 37
+ },
+ "samples_constant_by_prime": {
+  "331": true,
+  "661": true
+ },
+ "jump_seen_in_samples": {
+  "331": false,
+  "661": false
+ },
+ "common_kernel_dim": {
+  "331": 0,
+  "661": 0
+ },
+ "rho_generic_agrees": true,
+ "interpretation": {
+  "A_entries": "quadratic in c (Jac of the landing cubics); not themselves vanishing conditions on V",
+  "locus_rho_le_k": "closed, cut by (k+1)-minors of A, degree 2(k+1)",
+  "euler": "A(c) c = 3 F(T_c), so c in V implies rho(c) <= 36",
+  "first_drop": "{rho <= 36} contains V\\{0} by Euler; intersecting V with that locus does nothing",
+  "further_drops": "{rho <= 35} is the Jacobian-criterion / singular-locus cut on P(V); it is a proper closed condition on the cell iff rho_generic > 35, and it is NOT implied by the landing cubics (does not vanish on all of V unless P(V) is everywhere singular).  No nonzero point of V is known, so membership of V in {rho <= 35} is not evaluated.",
+  "new_vs_restatement": "The minors of A are new polynomials on the 37-cell (Jacobian ideal, not the landing ideal).  They are a restatement of Jac(landing cubics), not a new spanning set of equations that every landing point must satisfy.  Deformation theory does not cut V except by the optional singular-locus intersection.",
+  "rho_generic_measured": 37
+ }
+}

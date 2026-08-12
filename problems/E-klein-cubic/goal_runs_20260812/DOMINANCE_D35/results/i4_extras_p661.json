@@ -1,0 +1,53 @@
+{
+  "p": 661,
+  "n_S": 17905,
+  "n_extras": 33155,
+  "n_sampled": 6,
+  "n_rewrite_zero": 0,
+  "all_sampled_in_lead_span": false,
+  "weights": [
+    {
+      "i": 18,
+      "j": 245,
+      "lead": 4372,
+      "wt_rem": 72732,
+      "zero": false
+    },
+    {
+      "i": 31,
+      "j": 787,
+      "lead": 10814,
+      "wt_rem": 72735,
+      "zero": false
+    },
+    {
+      "i": 28,
+      "j": 307,
+      "lead": 5323,
+      "wt_rem": 72704,
+      "zero": false
+    },
+    {
+      "i": 34,
+      "j": 1322,
+      "lead": 17405,
+      "wt_rem": 14867,
+      "zero": false
+    },
+    {
+      "i": 32,
+      "j": 1225,
+      "lead": 16726,
+      "wt_rem": 14872,
+      "zero": false
+    },
+    {
+      "i": 27,
+      "j": 708,
+      "lead": 9330,
+      "wt_rem": 73374,
+      "zero": false
+    }
+  ],
+  "seconds": 1.6158218383789062
+}

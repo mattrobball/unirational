@@ -1,0 +1,382 @@
+{
+ "d": 38,
+ "p": 331,
+ "K": 151,
+ "loci": {
+  "generic (control)": {
+   "orders_single_c": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "orders_span_combo": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "min_order": 0,
+   "interp_ok": true,
+   "seconds": 2.7847180366516113
+  },
+  "ellV (V4-line, ord>=6 cut)": {
+   "orders_single_c": [
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18
+   ],
+   "orders_span_combo": [
+    18,
+    18,
+    18,
+    18,
+    18,
+    18
+   ],
+   "min_order": 18,
+   "interp_ok": true,
+   "seconds": 2.7812259197235107
+  },
+  "plus-plane P_sigma": {
+   "orders_single_c": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "orders_span_combo": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "min_order": 4,
+   "interp_ok": true,
+   "seconds": 2.7963597774505615
+  },
+  "minus-line L_sigma": {
+   "orders_single_c": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "orders_span_combo": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "min_order": 4,
+   "interp_ok": true,
+   "seconds": 3.0033199787139893
+  },
+  "C3-eigenline ELL1": {
+   "orders_single_c": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "orders_span_combo": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "min_order": 2,
+   "interp_ok": true,
+   "seconds": 2.8151450157165527
+  },
+  "C3-eigenline ELL2": {
+   "orders_single_c": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    3,
+    2,
+    2,
+    2,
+    2
+   ],
+   "orders_span_combo": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "min_order": 2,
+   "interp_ok": true,
+   "seconds": 2.7535479068756104
+  },
+  "D10-point": {
+   "orders_single_c": [
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12
+   ],
+   "orders_span_combo": [
+    12,
+    12,
+    12,
+    12,
+    12,
+    12
+   ],
+   "min_order": 12,
+   "interp_ok": true,
+   "seconds": 2.784882068634033
+  },
+  "D12-point c_sigma": {
+   "orders_single_c": [
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21,
+    21
+   ],
+   "orders_span_combo": [
+    21,
+    21,
+    21,
+    21,
+    21,
+    21
+   ],
+   "min_order": 21,
+   "interp_ok": true,
+   "seconds": 2.7711119651794434
+  },
+  "X^{C6} point w=1": {
+   "orders_single_c": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "orders_span_combo": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "min_order": 4,
+   "interp_ok": true,
+   "seconds": 2.782402276992798
+  },
+  "X^{C6} point w=5": {
+   "orders_single_c": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "orders_span_combo": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4
+   ],
+   "min_order": 4,
+   "interp_ok": true,
+   "seconds": 2.795319080352783
+  },
+  "C11 eigenpoint": {
+   "orders_single_c": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "orders_span_combo": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+   ],
+   "min_order": 2,
+   "interp_ok": true,
+   "seconds": 2.7741260528564453
+  },
+  "exact-C5 point (on X)": {
+   "orders_single_c": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "orders_span_combo": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1
+   ],
+   "min_order": 1,
+   "interp_ok": true,
+   "seconds": 2.7680509090423584
+  },
+  "C5 fixed point off X (= D10 pt?)": {
+   "orders_single_c": [
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12,
+    12
+   ],
+   "orders_span_combo": [
+    12,
+    12,
+    12,
+    12,
+    12,
+    12
+   ],
+   "min_order": 12,
+   "interp_ok": true,
+   "seconds": 2.763711929321289
+  },
+  "V4-child w (flip point)": {
+   "orders_single_c": [
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6,
+    6
+   ],
+   "orders_span_combo": [
+    6,
+    6,
+    6,
+    6,
+    6,
+    6
+   ],
+   "min_order": 6,
+   "interp_ok": true,
+   "seconds": 2.7754921913146973
+  },
+  "second random pt on ellV": {
+   "orders_single_c": [
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18,
+    18
+   ],
+   "orders_span_combo": [
+    18,
+    18,
+    18,
+    18,
+    18,
+    18
+   ],
+   "min_order": 18,
+   "interp_ok": true,
+   "seconds": 2.7568767070770264
+  }
+ }
+}

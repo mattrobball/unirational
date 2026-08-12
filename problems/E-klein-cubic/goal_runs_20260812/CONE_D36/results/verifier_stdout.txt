@@ -1,0 +1,55 @@
+CONE_D36 verifier
+[A] fatal anchors
+  OK  A1 cell artefact p=331 
+  OK  A2 sealed 63-cell 63
+  OK  A3 post-cut 62 62
+  OK  A4 cut rank 1 1
+  OK  A5 cut sat 
+  OK  A6 C11 census 60 
+  OK  A7 P3 artefact K63 p=331 
+  OK  A8 P3(36)=1850 1850
+  OK  A9 P3 saturated 
+  OK  A10 K=63 
+  OK  A11 P3 <= I(108) 
+[B] 62-cell P3 and free rungs
+  OK  B1 P3 on 62-cell present P3=1835 sat=True
+  OK  B2 K=62 
+  OK  B3 P3_62 <= 1850 
+  OK  B4 free-rung artefact 
+  OK  B5 N=62 
+  OK  B6 m=16 rank bookkeeping rank=816 HF=0
+  OK  B6 m=18 rank bookkeeping rank=1140 HF=0
+  OK  B6 m=19 rank bookkeeping rank=1330 HF=0
+  OK  B6 m=20 rank bookkeeping rank=1540 HF=0
+  OK  B6 m=21 rank bookkeeping rank=1771 HF=0
+  OK  B7 free bound = 62-m 
+[C] msolve rungs (full span)
+  OK  C1 any msolve rung recorded or free-only n=5
+  OK  C2 m=22 full-span rule 
+  OK  C3 m=22 leading file 
+  OK  C4 m=22 every var has a pure power []
+  OK  C5 m=22 bound 62-m 
+  OK  C2 m=24 full-span rule 
+  OK  C3 m=24 leading file 
+  OK  C4 m=24 every var has a pure power []
+  OK  C5 m=24 bound 62-m 
+  OK  C2 m=28 full-span rule 
+  OK  C3 m=28 leading file 
+  OK  C4 m=28 every var has a pure power []
+  OK  C5 m=28 bound 62-m 
+  OK  C2 m=30 full-span rule 
+  OK  C3 m=30 leading file 
+  OK  C4 m=30 every var has a pure power []
+  OK  C5 m=30 bound 62-m 
+  OK  C2 m=32 full-span rule 
+  OK  C6 m=32 timeout recorded honestly 
+[D] summary + honesty
+  OK  D1 summary present 
+  OK  D2 no exclusion flag 
+  OK  D3 headline open 
+  OK  D4 tightest is int 
+  OK  E1 p=661 cell 62 
+  OK  E2 p=661 P3=1850 
+
+CONE_D36_VERIFY_OK
+ALLGREEN  47 checks  0.0s

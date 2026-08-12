@@ -1,0 +1,95 @@
+{
+ "model": "semi-regular cubics; dreg = first d with Hilbert coeff <= 0",
+ "not_a_measurement_of_landing_ideal": true,
+ "n": 37,
+ "rows": [
+  {
+   "n": 37,
+   "m": 55,
+   "dreg": 21,
+   "claimed": 21,
+   "match": true,
+   "macaulay_columns_at_dreg": 2132379668729310,
+   "nearby_coeffs": [
+    {
+     "d": 19,
+     "coeff": 4287089029960
+    },
+    {
+     "d": 20,
+     "coeff": 2252280859642
+    },
+    {
+     "d": 21,
+     "coeff": -6894520234866
+    }
+   ],
+   "HF_3": 9084,
+   "HF_4": 89355,
+   "HF_5": 710733,
+   "dim_Sym21": 2132379668729310
+  },
+  {
+   "n": 37,
+   "m": 520,
+   "dreg": 7,
+   "claimed": 7,
+   "match": true,
+   "macaulay_columns_at_dreg": 32224114,
+   "nearby_coeffs": [
+    {
+     "d": 5,
+     "coeff": 383838
+    },
+    {
+     "d": 6,
+     "coeff": 628446
+    },
+    {
+     "d": 7,
+     "coeff": -10305906
+    }
+   ],
+   "HF_3": 8619,
+   "HF_4": 72150,
+   "HF_5": 383838,
+   "dim_Sym7": 32224114
+  },
+  {
+   "n": 37,
+   "m": 1380,
+   "dreg": 5,
+   "claimed": 5,
+   "match": true,
+   "macaulay_columns_at_dreg": 749398,
+   "nearby_coeffs": [
+    {
+     "d": 3,
+     "coeff": 7759
+    },
+    {
+     "d": 4,
+     "coeff": 40330
+    },
+    {
+     "d": 5,
+     "coeff": -220742
+    }
+   ],
+   "HF_3": 7759,
+   "HF_4": 40330,
+   "HF_5": -220742,
+   "dim_Sym5": 749398,
+   "macaulay_rows_deg5": 970140,
+   "first_possible_surjective_degree": 5,
+   "deg4_cannot_surject": {
+    "rows": 51060,
+    "cols": 91390,
+    "rows_lt_cols": true
+   }
+  }
+ ],
+ "numbers_match_director": true,
+ "practical_conclusion": "Use the FULL cubic span as generators. A 55-element subset has semi-regular dreg 21 (about 10^15 Macaulay columns). A 520-element subset has dreg 7 (about 32 million columns). The full 1380-span has dreg 5 (749398 columns). A subset is valid for emptiness (V(subset) contains V) and ruinously more expensive.",
+ "verdict": "CONFIRMED"
+}

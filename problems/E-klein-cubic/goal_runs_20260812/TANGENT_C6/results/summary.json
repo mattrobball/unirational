@@ -1,0 +1,69 @@
+{
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "polar_ok": true,
+ "polar_n_checks": 121,
+ "cells": {
+  "331": {
+   "shape": [
+    37,
+    637
+   ],
+   "rank_U": 2,
+   "null_shape": [
+    39,
+    637
+   ]
+  },
+  "661": {
+   "shape": [
+    37,
+    637
+   ],
+   "rank_U": 2,
+   "null_shape": [
+    39,
+    637
+   ]
+  }
+ },
+ "origin_rho": {
+  "331": 0,
+  "661": 0
+ },
+ "origin_A_zero": {
+  "331": true,
+  "661": true
+ },
+ "rho_generic": {
+  "331": 37,
+  "661": 37
+ },
+ "euler_all_ok": {
+  "331": true,
+  "661": true
+ },
+ "homog_all_ok": {
+  "331": true,
+  "661": true
+ },
+ "second_order_all_ok": {
+  "331": true,
+  "661": true
+ },
+ "jump": {
+  "rho_generic_by_prime": {
+   "331": 37,
+   "661": 37
+  },
+  "samples_constant": {
+   "331": true,
+   "661": true
+  },
+  "jump_seen_in_samples": {
+   "331": false,
+   "661": false
+  }
+ },
+ "excludes_no_degree": true,
+ "nonzero_landing_point": false
+}

@@ -1,0 +1,51 @@
+{
+  "p": 661,
+  "nx": 1,
+  "n_minors": 5,
+  "n_tested": 5,
+  "n_rewrite_zero": 0,
+  "all_in_I4_by_rewrite": false,
+  "remainder_rank": 5,
+  "n_used_leads": 17905,
+  "P4_ub": 51060,
+  "lead_deficit": 33155,
+  "weights": [
+    {
+      "pt": 0,
+      "minor": 0,
+      "wt_Q": 91268,
+      "wt_rem": 73374,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 1,
+      "wt_Q": 91286,
+      "wt_rem": 73366,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 2,
+      "wt_Q": 91258,
+      "wt_rem": 73378,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 3,
+      "wt_Q": 91245,
+      "wt_rem": 73378,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 4,
+      "wt_Q": 91248,
+      "wt_rem": 73389,
+      "zero": false
+    }
+  ],
+  "seconds": 32.00992798805237,
+  "method": "I3-echelon product rewrite, 5 minors"
+}

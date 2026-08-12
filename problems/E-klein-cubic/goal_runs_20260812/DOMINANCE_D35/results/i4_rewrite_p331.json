@@ -1,0 +1,191 @@
+{
+  "p": 331,
+  "nx": 1,
+  "n_minors": 25,
+  "n_tested": 25,
+  "n_rewrite_zero": 0,
+  "all_in_I4_by_rewrite": false,
+  "remainder_rank": 25,
+  "n_used_leads": 17905,
+  "P4_ub": 51060,
+  "lead_deficit": 33155,
+  "weights": [
+    {
+      "pt": 0,
+      "minor": 0,
+      "wt_Q": 91098,
+      "wt_rem": 73251,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 1,
+      "wt_Q": 91074,
+      "wt_rem": 73248,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 2,
+      "wt_Q": 91140,
+      "wt_rem": 73275,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 3,
+      "wt_Q": 91111,
+      "wt_rem": 73248,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 4,
+      "wt_Q": 91111,
+      "wt_rem": 73263,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 5,
+      "wt_Q": 91129,
+      "wt_rem": 73259,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 6,
+      "wt_Q": 91127,
+      "wt_rem": 73267,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 7,
+      "wt_Q": 91094,
+      "wt_rem": 73244,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 8,
+      "wt_Q": 91119,
+      "wt_rem": 73271,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 9,
+      "wt_Q": 91117,
+      "wt_rem": 73263,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 10,
+      "wt_Q": 91098,
+      "wt_rem": 73281,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 11,
+      "wt_Q": 91114,
+      "wt_rem": 73290,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 12,
+      "wt_Q": 91117,
+      "wt_rem": 73232,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 13,
+      "wt_Q": 91117,
+      "wt_rem": 73275,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 14,
+      "wt_Q": 91109,
+      "wt_rem": 73262,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 15,
+      "wt_Q": 91104,
+      "wt_rem": 73249,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 16,
+      "wt_Q": 91113,
+      "wt_rem": 73259,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 17,
+      "wt_Q": 91144,
+      "wt_rem": 73244,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 18,
+      "wt_Q": 91116,
+      "wt_rem": 73239,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 19,
+      "wt_Q": 91095,
+      "wt_rem": 73263,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 20,
+      "wt_Q": 91145,
+      "wt_rem": 73260,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 21,
+      "wt_Q": 91124,
+      "wt_rem": 73275,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 22,
+      "wt_Q": 91110,
+      "wt_rem": 73248,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 23,
+      "wt_Q": 91126,
+      "wt_rem": 73292,
+      "zero": false
+    },
+    {
+      "pt": 0,
+      "minor": 24,
+      "wt_Q": 91128,
+      "wt_rem": 73259,
+      "zero": false
+    }
+  ],
+  "seconds": 123.6908187866211,
+  "method": "I3-echelon product rewrite (sufficient for membership)"
+}

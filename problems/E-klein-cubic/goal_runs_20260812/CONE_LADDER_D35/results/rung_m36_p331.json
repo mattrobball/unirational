@@ -1,0 +1,18 @@
+{
+ "p": 331,
+ "m": 36,
+ "dim_sym3": 8436,
+ "npts": 1971,
+ "rank": 1380,
+ "HF_L3": 7056,
+ "generic_rank": 1380,
+ "full_span_ngens": 1380,
+ "free_rung": false,
+ "section_seed": 813,
+ "point_seed": 20261143,
+ "seconds_emit": 41.395812034606934,
+ "verdict": "EMITTED",
+ "ms_path": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/CONE_LADDER_D35/results/cone_m36_p331.ms",
+ "ms_bytes": 169902016,
+ "ngens_written": 1380
+}

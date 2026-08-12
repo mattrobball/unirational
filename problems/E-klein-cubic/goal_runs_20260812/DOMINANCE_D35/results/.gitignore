@@ -1,0 +1,8 @@
+*.npy
+*.npz
+*.ms
+*.m2
+*.out
+*.gb
+*.log
+__pycache__/

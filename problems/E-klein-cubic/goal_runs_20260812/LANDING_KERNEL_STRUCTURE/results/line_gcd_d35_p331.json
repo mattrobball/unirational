@@ -1,0 +1,67 @@
+{
+ "d": 35,
+ "p": 331,
+ "K": 37,
+ "lines": [
+  {
+   "line": 0,
+   "deg_gcd": 0,
+   "deg_each": [
+    105,
+    105,
+    105,
+    105,
+    105,
+    105,
+    105,
+    105,
+    105,
+    105,
+    105,
+    105
+   ],
+   "degree_valid_all_points": true,
+   "ranks_at_random_t": [
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "n_common_zeros_Fp": 0,
+   "common_zeros": [],
+   "squarefree_profile(deg of mult>=k part)": [],
+   "seconds": 2.0882961750030518
+  },
+  {
+   "line": 1,
+   "deg_gcd": 0,
+   "deg_each": [
+    105,
+    105,
+    105,
+    105,
+    105,
+    105,
+    105,
+    105,
+    105,
+    105,
+    105,
+    105
+   ],
+   "degree_valid_all_points": true,
+   "ranks_at_random_t": [
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "n_common_zeros_Fp": 0,
+   "common_zeros": [],
+   "squarefree_profile(deg of mult>=k part)": [],
+   "seconds": 2.0969161987304688
+  }
+ ]
+}

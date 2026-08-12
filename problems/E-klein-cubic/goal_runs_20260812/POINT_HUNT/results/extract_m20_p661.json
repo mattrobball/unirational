@@ -1,0 +1,33 @@
+{
+ "p": 661,
+ "m": 20,
+ "threads": 2,
+ "timeout": 180,
+ "full_span_ngens": 1380,
+ "charts": [
+  {
+   "chart": 1,
+   "extra_cuts": 0,
+   "verdict": "EMPTY_CHART",
+   "seconds": 3.049820899963379,
+   "max_rss_kb": 216176,
+   "timed_out": false,
+   "killed_memory": false,
+   "n_points": 0,
+   "cmd": [
+    "msolve",
+    "-t",
+    "2",
+    "-v",
+    "1",
+    "-f",
+    "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/POINT_HUNT/results/chart_m20_p661_c0_k0.ms",
+    "-o",
+    "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/POINT_HUNT/results/chart_m20_p661_c0_k0.out"
+   ]
+  }
+ ],
+ "points": [],
+ "n_points": 0,
+ "verdict": "EMPTY_CHARTS"
+}

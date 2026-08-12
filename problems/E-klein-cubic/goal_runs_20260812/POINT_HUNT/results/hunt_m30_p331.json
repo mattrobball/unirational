@@ -1,0 +1,14 @@
+{
+  "p": 331,
+  "m": 30,
+  "full_span_ngens": 1380,
+  "chart_t1=1": {
+    "verdict": "NO_VERDICT_MEMORY",
+    "seconds": 544.2,
+    "max_rss_kb": 8497504
+  },
+  "verdict": "INFEASIBLE",
+  "infeasible_at_m": 30,
+  "infeasible_reason": "NO_VERDICT_MEMORY",
+  "note": "Largest completed hunt is m=29. No point claimed at m=30."
+}

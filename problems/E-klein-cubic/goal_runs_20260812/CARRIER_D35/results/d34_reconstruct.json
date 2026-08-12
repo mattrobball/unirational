@@ -1,0 +1,32 @@
+{
+ "by_prime": {
+  "199": {
+   "HF34": 655,
+   "degree": "20",
+   "hilbPoly": "20*i-25",
+   "n1": 16,
+   "n2": 13,
+   "rank": 3
+  },
+  "67": {
+   "HF34": 655,
+   "degree": "20",
+   "hilbPoly": "20*i-25",
+   "n1": 16,
+   "n2": 13,
+   "rank": 3
+  }
+ },
+ "chain": "M_34=576; (1,6) n1=16; restr-to-C rank 3; n2=13; LAND empty",
+ "land_empty_claimed": true,
+ "land_primes": [
+  67,
+  199
+ ],
+ "n1_both": true,
+ "n2_both": true,
+ "rank_both": true,
+ "source_gate": "goal_runs_after_ac61998/FIX_VII_GATE",
+ "source_land": "goal_runs_after_10804b2/FIX_VII_LAND",
+ "verdict": "CANONICAL_CARRIER_D34_CLOSED_NEGATIVE"
+}

@@ -1,0 +1,4 @@
+dimAff -1
+deg 0
+ncomps 0
+END

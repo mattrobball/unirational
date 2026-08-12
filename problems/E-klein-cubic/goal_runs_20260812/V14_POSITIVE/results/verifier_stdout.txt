@@ -1,0 +1,17 @@
+CHECK produce_ran PASS produce.py exit 0; tail='oblems/E-klein-cubic/goal_runs_20260812/V14_POSITIVE/results/character_dims.json\nC_d(A) d=0..8: [0, 0, 1, 2, 7, 18, 43, 94, 198]\nspin Hom d=0..6 @23: [0, 0, 0, 0, 3, 0, 6]\nfive->M Hom d=0..6 @23: [0, 0, 1, 1, 2, 3, 5]\nledger all_hits: True\n'
+CHECK control_C_d PASS dim C_d(A) d=0..5 = [0, 0, 1, 2, 7, 18] (sealed V14MAP_DEGREE345)
+CHECK control_inv PASS invariants of Sym^d M d=0..5 = [1, 0, 1, 2, 4, 8]
+CHECK C6_is_43 PASS dim Hom_G(Sym^6 M*, A) = 43
+CHECK HF6_is_650 PASS classical h^0(V14, O(6)) = 650
+CHECK two_prime_spin_agree PASS spin Hom @23=[0, 0, 0, 0, 3, 0, 6] @67=[0, 0, 0, 0, 3, 0, 6]
+CHECK two_prime_five_agree PASS five->M Hom @23=[0, 0, 1, 1, 2, 3, 5] @67=[0, 0, 1, 1, 2, 3, 5]
+CHECK spin_d2_zero PASS Hom_SL(Sym^2 U*, M) = 0 (no quadratic spin map P(U)-->P(M))
+CHECK spin_first_at_d4 PASS first spin ambient is d=4, dim 3; odds vanish
+CHECK sl_order_1320 PASS SL(2,11) closure 1320 at both primes
+CHECK sealed_markers PASS all cited packets present with required strings; misses=none
+CHECK headline_line PASS required headline sentence present in THEOREM.md
+CHECK no_report_md PASS harness-forbidden REPORT.md is absent
+CHECK not_claimed_section PASS Not claimed section present
+CHECK no_degree_exclusion_claimed PASS no degree exclusion is claimed; any exclusion language is flagged
+CHECK logical_block PASS composition cannot settle the headline; Phi dominance unsealed; spin not sufficient
+ALLGREEN

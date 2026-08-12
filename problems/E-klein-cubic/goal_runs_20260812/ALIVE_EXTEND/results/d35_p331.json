@@ -1,0 +1,74 @@
+{
+ "c11_already_in_structure": true,
+ "c11_rank": 0,
+ "cut60": {
+  "n_functionals": 300,
+  "n_points": 60,
+  "new_dim": 39,
+  "rank": 0,
+  "sat_ok": true,
+  "sat_rank": 0
+ },
+ "cut_one_frame": {
+  "n_points": 5,
+  "new_dim": 39,
+  "rank": 0,
+  "sat_ok": true
+ },
+ "d": 35,
+ "d_mod_11": 2,
+ "dim_M": 637,
+ "dim_profile_only": 46,
+ "dim_structure_only": 346,
+ "finisher": {
+  "cell_dim": 39,
+  "d": 35,
+  "demanded_ord": 2,
+  "dim_after": 0,
+  "impossible": true,
+  "npts": 40,
+  "p": 331,
+  "parity_note": "ord \u2261 d+1 (mod 2); test minimal POSITIVE option beyond forced base",
+  "rank": 39,
+  "ranks": {
+   "ord1": 10,
+   "ord2": 39
+  },
+  "saturation_ok": true
+ },
+ "flag_note": null,
+ "flagged_zero": false,
+ "is_qr": false,
+ "n_profiles": 32,
+ "one_frame_rank_matches_60": true,
+ "p": 331,
+ "post_flip_dim": 37,
+ "r0": 6,
+ "raw_cell": 39,
+ "rules_fired": {
+  "C11_points": true,
+  "C5_points": true,
+  "C6_points": false,
+  "E_eigenlines": "contract to ell_{2 w}",
+  "M_minus_lines": false
+ },
+ "sealed_raw": 39,
+ "sealed_raw_ok": true,
+ "sealed_window": 39,
+ "sealed_window_ok": true,
+ "seconds_cell": 58.4,
+ "seconds_total": 64.3,
+ "six_flip": {
+  "ambient_rank": 2,
+  "cell_dim": 39,
+  "d": 35,
+  "dim_after": 37,
+  "p": 331,
+  "post_flip_dim": 37,
+  "r1_bad": 0,
+  "rank": 2,
+  "skipped": false,
+  "z": 1
+ },
+ "window": 39
+}

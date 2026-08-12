@@ -1,0 +1,234 @@
+{
+  "exact": {
+    "control_d0_to_5_C": [
+      0,
+      0,
+      1,
+      2,
+      7,
+      18
+    ],
+    "control_d0_to_5_inv": [
+      1,
+      0,
+      1,
+      2,
+      4,
+      8
+    ],
+    "control_expected_C": [
+      0,
+      0,
+      1,
+      2,
+      7,
+      18
+    ],
+    "control_expected_inv": [
+      1,
+      0,
+      1,
+      2,
+      4,
+      8
+    ],
+    "dim_C_d_A": [
+      0,
+      0,
+      1,
+      2,
+      7,
+      18,
+      43,
+      94,
+      198
+    ],
+    "dim_Sym_d_M": [
+      1,
+      10,
+      55,
+      220,
+      715,
+      2002,
+      5005,
+      11440,
+      24310
+    ],
+    "dim_invariants_Sym_d_M": [
+      1,
+      0,
+      1,
+      2,
+      4,
+      8,
+      16,
+      28,
+      54
+    ],
+    "dmax": 8,
+    "hilbert_V14_classical": [
+      1,
+      10,
+      40,
+      105,
+      219,
+      396,
+      650,
+      995,
+      1445
+    ]
+  },
+  "logical": {
+    "Phi_dominance_not_sealed": true,
+    "Phi_existence_sealed_nonconstant": true,
+    "headline_needs_linear_G_rep": true,
+    "linear_P_to_V14_impossible": true,
+    "reason": "FIX_IX_SEAL + Cor IX.1: no G-eq rational map from any faithful linear P(V) to V14",
+    "spin_P_U_to_V14_open": true,
+    "spin_plus_Phi_not_headline": true
+  },
+  "packet": "goal_runs_20260812/V14_POSITIVE",
+  "sealed_ledger": [
+    {
+      "all_hits": true,
+      "exists": true,
+      "hits": {
+        "Dominance of `Phi`": true,
+        "Not claimed": true,
+        "V14MAP-DICHOTOMY-SEALED": true,
+        "V14MAP-KLEIN-TO-V14-EMPTY": true,
+        "V14MAP-V14-TO-KLEIN-EXISTS": true
+      },
+      "name": "V14_MAP_DICHOTOMY",
+      "path": "goal_runs_20260810/V14_MAP_DICHOTOMY/REPORT.md"
+    },
+    {
+      "all_hits": true,
+      "exists": true,
+      "hits": {
+        "Dominance of `Phi`": true,
+        "Not claimed": true,
+        "V14MAP-DEGREE-3-4-5-REPLAYED": true,
+        "d \u2265 6": true,
+        "no `G`-equivariant rational map": true
+      },
+      "name": "V14MAP_DEGREE345_REPLAY",
+      "path": "goal_runs_20260811/V14MAP_DEGREE345_REPLAY/THEOREM.md"
+    },
+    {
+      "all_hits": true,
+      "exists": true,
+      "hits": {
+        "FIX-IX-SEAL-PASS": true,
+        "NOT G-unirational": true,
+        "V14 is smooth, pure dim 3": true,
+        "V14^{D12}": true,
+        "weakly versal": true
+      },
+      "name": "FIX_IX_SEAL",
+      "path": "goal_runs_after_c53d89a/FIX_IX_SEAL/REPORT.md"
+    },
+    {
+      "all_hits": true,
+      "exists": true,
+      "hits": {
+        "8192/11": true,
+        "PHI-SEXTIC-ISOGENY-VERDICT-POS": true
+      },
+      "name": "PHI_SEXTIC_ISOGENY",
+      "path": "goal_runs_20260810/PHI_SEXTIC_ISOGENY/REPORT.md"
+    },
+    {
+      "all_hits": true,
+      "exists": true,
+      "hits": {
+        "finite-dimensional complex linear representation": true,
+        "very versality": true
+      },
+      "name": "SPEC",
+      "path": "SPEC.md"
+    },
+    {
+      "all_hits": true,
+      "exists": true,
+      "hits": {
+        "Corollary IX.1": true,
+        "Corollary IX.5": true,
+        "not weakly versal": true,
+        "spin-unirational": true
+      },
+      "name": "FIX_IX_THEORY",
+      "path": "theory/FIX_IX_v14.md"
+    }
+  ],
+  "traces": {
+    "23": {
+      "Hom_G_Sym_d_five_M": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        3,
+        5
+      ],
+      "Hom_SL_Sym_d_Ustar_M": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        6
+      ],
+      "dim_M": 10,
+      "dim_five_in_lambda2": 5,
+      "even_d_only_spin_descends": true,
+      "note_spin": "A G-map P(U) --> P(M) of degree d exists in Hom_SL(Sym^d U*, M) only for even d (center acts as (-1)^d on the source and +1 on M).",
+      "p": 23,
+      "proj_profile": {
+        "1": 2,
+        "11": 240,
+        "2": 110,
+        "3": 220,
+        "5": 528,
+        "6": 220
+      },
+      "sl_order": 1320
+    },
+    "67": {
+      "Hom_G_Sym_d_five_M": [
+        0,
+        0,
+        1,
+        1,
+        2,
+        3,
+        5
+      ],
+      "Hom_SL_Sym_d_Ustar_M": [
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        6
+      ],
+      "dim_M": 10,
+      "dim_five_in_lambda2": 5,
+      "even_d_only_spin_descends": true,
+      "note_spin": "A G-map P(U) --> P(M) of degree d exists in Hom_SL(Sym^d U*, M) only for even d (center acts as (-1)^d on the source and +1 on M).",
+      "p": 67,
+      "proj_profile": {
+        "1": 2,
+        "11": 240,
+        "2": 110,
+        "3": 220,
+        "5": 528,
+        "6": 220
+      },
+      "sl_order": 1320
+    }
+  }
+}

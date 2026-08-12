@@ -1,0 +1,30 @@
+{
+ "K_flip": 151,
+ "cell_dim": 151,
+ "census_all_on_X": true,
+ "census_n_frames": 12,
+ "census_n_points": 60,
+ "cut_ok": true,
+ "cut_rank": 1,
+ "d": 38,
+ "dim_M": 865,
+ "flip_ok": true,
+ "flip_rank": null,
+ "flip_skipped": true,
+ "new_dim": 150,
+ "p": 331,
+ "precut_ok": true,
+ "rules_fired": {
+  "C11_points": false,
+  "C5_points": false,
+  "C6_points": true,
+  "E_eigenlines": "contract to ell_{2 w}",
+  "M_minus_lines": true
+ },
+ "sat_ok": true,
+ "sat_rank": 1,
+ "sealed_P3_K": 151,
+ "sealed_postcut": 150,
+ "sealed_precut": 151,
+ "seconds": 4278.920808315277
+}

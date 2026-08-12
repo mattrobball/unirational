@@ -1,0 +1,11 @@
+{
+ "also_open": [
+  "genus-5 A5-curves (11-orbit; FIX_VII \u00a73)",
+  "genus-12 F55-curves (12-orbit; FIX_VII \u00a73)",
+  "C11 Lefschetz / D12 genus>=3 induced carriers",
+  "tower carriers over point orbits (Hodge-local)"
+ ],
+ "canonical_hessian": "linearly ALIVE at d=35",
+ "d34_contrast": "d=34 died at LANDING on a 13-space, not at the linear cut. A d=35 landing cone on the Hessian kernel is FIX_VII_LAND's analogue and is out of scope (director msolve jobs own the box).",
+ "landing_cone": "NOT COMPUTED"
+}

@@ -1,0 +1,34 @@
+{
+ "p": 331,
+ "m": 32,
+ "dim_sym3": 5984,
+ "npts": 1971,
+ "rank": 1380,
+ "HF_L3": 4604,
+ "generic_rank": 1380,
+ "full_span_ngens": 1380,
+ "free_rung": false,
+ "section_seed": 809,
+ "point_seed": 20261143,
+ "seconds_emit": 18.663703203201294,
+ "verdict": "NO_VERDICT_MEMORY",
+ "ms_path": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/CONE_LADDER_D35/results/cone_m32_p331.ms",
+ "ms_bytes": 119504054,
+ "ngens_written": 1380,
+ "clears": false,
+ "bound": null,
+ "msolve": {
+  "returncode": null,
+  "seconds": null,
+  "timed_out": false,
+  "killed": true,
+  "reason": "deg-4 F4 finished 1755s (44159x52359, 18873 new); deg-5 opened 493128 pairs; RSS 13.6 GB; stopped to stay under 15 GB cap",
+  "verdict": "NO_VERDICT_MEMORY",
+  "threads": 4,
+  "last_log_lines": [
+   "3  1380 x 5984  1378 new",
+   "4  44159 x 52359  18873 new  32 zero  1755.14s",
+   "5  493128 pairs  (killed at start)"
+  ]
+ }
+}

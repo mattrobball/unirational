@@ -1,0 +1,70 @@
+{
+ "c11_already_in_structure": true,
+ "c11_rank": 0,
+ "cut60": {
+  "n_functionals": 300,
+  "n_points": 60,
+  "new_dim": 261,
+  "rank": 0,
+  "sat_ok": true,
+  "sat_rank": 0
+ },
+ "cut_one_frame": {
+  "n_points": 5,
+  "new_dim": 261,
+  "rank": 0,
+  "sat_ok": true
+ },
+ "d": 40,
+ "d_mod_11": 7,
+ "dim_M": 1050,
+ "dim_profile_only": 287,
+ "dim_structure_only": 708,
+ "finisher": {
+  "cell_dim": 261,
+  "d": 40,
+  "demanded_ord": 3,
+  "dim_after": 139,
+  "impossible": false,
+  "npts": 40,
+  "p": 331,
+  "parity_note": "ord \u2261 d+1 (mod 2); test minimal POSITIVE option beyond forced base",
+  "rank": 122,
+  "ranks": {
+   "ord1": 0,
+   "ord2": 33,
+   "ord3": 122
+  },
+  "saturation_ok": true
+ },
+ "flag_note": null,
+ "flagged_zero": false,
+ "is_qr": false,
+ "n_profiles": 44,
+ "one_frame_rank_matches_60": true,
+ "p": 331,
+ "post_flip_dim": 261,
+ "r0": 6,
+ "raw_cell": 261,
+ "rules_fired": {
+  "C11_points": true,
+  "C5_points": true,
+  "C6_points": true,
+  "E_eigenlines": "contract to ell_{1 w}",
+  "M_minus_lines": true
+ },
+ "sealed_raw": 261,
+ "sealed_raw_ok": true,
+ "sealed_window": 261,
+ "sealed_window_ok": true,
+ "seconds_cell": 174.8,
+ "seconds_total": 1362.0,
+ "six_flip": {
+  "d": 40,
+  "note": "even d: level-0 value is the demanded vertex; skip flip cut",
+  "p": 331,
+  "post_flip_dim": 261,
+  "skipped": true
+ },
+ "window": 261
+}

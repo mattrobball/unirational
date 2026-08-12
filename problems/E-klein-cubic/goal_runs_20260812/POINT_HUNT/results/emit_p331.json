@@ -1,0 +1,41 @@
+{
+ "p": 331,
+ "cell_rank_U": 2,
+ "cell_shape": [
+  37,
+  637
+ ],
+ "P3": {
+  "p": 331,
+  "m": 37,
+  "npts": 1971,
+  "dim_sym3": 9139,
+  "rank": 1380,
+  "P3_sealed": 1380,
+  "match_sealed": true,
+  "seconds": 42.832358837127686,
+  "point_seed": 20261143
+ },
+ "rungs": [
+  {
+   "p": 331,
+   "m": 30,
+   "dim_sym3": 4960,
+   "npts": 1971,
+   "rank": 1380,
+   "HF_L3": 3580,
+   "generic_rank": 1380,
+   "full_span_ngens": 1380,
+   "free_rung": false,
+   "section_seed": 20261842,
+   "point_seed": 20261143,
+   "seconds_emit": 23.32723093032837,
+   "verdict": "EMITTED",
+   "ms_path": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/POINT_HUNT/results/cone_m30_p331.ms",
+   "ms_bytes": 98552006,
+   "ngens_written": 1380
+  }
+ ],
+ "seconds": 89.87320804595947,
+ "note": "full restricted span; never a subset"
+}

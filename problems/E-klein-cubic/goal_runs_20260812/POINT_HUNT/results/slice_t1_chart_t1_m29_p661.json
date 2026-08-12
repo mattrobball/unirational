@@ -1,0 +1,22 @@
+{
+ "verdict": "EMPTY_CHART",
+ "seconds": 389.9079523086548,
+ "max_rss_kb": 4799856,
+ "timed_out": false,
+ "killed_memory": false,
+ "n_points": 0,
+ "cmd": [
+  "msolve",
+  "-t",
+  "2",
+  "-v",
+  "1",
+  "-f",
+  "results/slice_t1_chart_t1_m29_p661.ms",
+  "-o",
+  "results/slice_t1_chart_t1_m29_p661.out"
+ ],
+ "p": 661,
+ "m": 29,
+ "note": "chart t1=1 on the t1=0 slice (old t2=1)"
+}

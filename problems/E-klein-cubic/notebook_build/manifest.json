@@ -1912,6 +1912,160 @@
    "char0_scope": "Application of the sealed all-degree C11 base-point theorem (goal_runs_20260812/L12_ORDER11) to the window cells at quadratic-residue degrees, which had been built without those conditions under the old iff. Anchors: sealed dims 39/63/121/151/397 reproduce; the d = 35 control rank is 0 (points already forced at non-residues); census 60 points in 12 frames of 5, all on X. Cuts: rank exactly 1 at d = 36, 37, 38, 42, so the alive table becomes 0, 39, 62, 120, 150, 218, 261, 343, 396 for d = 34..42 (non-residue rows unchanged). Structural reason for rank 1, recorded: the 60 points form one G-orbit, so equivariance collapses the evaluation conditions to a single covariant functional at one representative -- orbit-supported base conditions have rank bounded by representation content at a representative, not by orbit size.\nNOT claimed: any degree exclusion; no window closes; no new dim is 0.",
    "tracked": true,
    "notes": "First Grok 4.6 dispatch (effort xhigh). Headline: Problem E remains OPEN. Markers: QR_POINT_CUTS_VERIFY_OK, ALLGREEN (72 checks, director-replayed)."
+  },
+  {
+   "path": "goal_runs_20260812/CONE_LADDER_D35",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "swarm lane (Grok 4.6, xhigh) against a director-pinned spec; director-replayed ALLGREEN",
+   "primary_exit": "CONE-LADDER-D35-DIM-LE-9",
+   "superseded_by": null,
+   "char0_scope": "Section ladder on the landing cone at d=35: free rungs through m=19 give dim V <= 18 with no solving; msolve rungs at m=20,24,28 with the FULL generator span clear at both primes, giving dim V <= 9 (two-prime). Modular, not a char-0 emptiness proof.\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Cone/attack swarm of 2026-08-12. Headline: Problem E remains OPEN; this packet excludes no degree."
+  },
+  {
+   "path": "goal_runs_20260812/CONE_CROSSPRIME",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "swarm lane (Grok 4.6, xhigh) against a director-pinned spec; director-replayed ALLGREEN",
+   "primary_exit": "CONE-CROSSPRIME-NO-PRIME-DEPENDENCE",
+   "superseded_by": null,
+   "char0_scope": "Independent reproduction at p=661 of the director's single-prime cone results; the m=20 rung is zero-dimensional with a pure power of every variable. No prime-dependence.\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Cone/attack swarm of 2026-08-12. Headline: Problem E remains OPEN; this packet excludes no degree."
+  },
+  {
+   "path": "goal_runs_20260812/CONE_VS_PATTERN",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "swarm lane (Grok 4.6, xhigh) against a director-pinned spec; director-replayed ALLGREEN",
+   "primary_exit": "CONE-VS-PATTERN-22-DEAD-FLAGGED",
+   "superseded_by": null,
+   "char0_scope": "The comparison the campaign had never made: the 22 patterns' OPEN demands tested against the landing cone rather than the ambient cell. Five linearly distinct open-demand forms are identically zero on the 37-cell, hence on V; under the sealed demand semantics all 22 patterns are unrealizable, which would exclude d=35 WITHOUT deciding emptiness. FLAGGED, not promoted; the director's adjudication names the single audit question (levels 0-3 rigid, level 4 fails rigidity, and a non-rigid level is not a level where no value exists).\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Cone/attack swarm of 2026-08-12. Headline: Problem E remains OPEN; this packet excludes no degree."
+  },
+  {
+   "path": "goal_runs_20260812/CONE_PROBE_AUDIT",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "swarm lane (Grok 4.6, xhigh) against a director-pinned spec; director-replayed ALLGREEN",
+   "primary_exit": "CONE-PROBE-AUDIT-DIRECTOR-CLAIMS-STAND",
+   "superseded_by": null,
+   "char0_scope": "Hostile audit of the director's own probes: R1/R2 CONFIRMED, R3 CORRECTED (free argument needs no genericity; bound unaffected), R4/R5 as reported. The degree-of-regularity redirect survives independent rebuild.\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Cone/attack swarm of 2026-08-12. Headline: Problem E remains OPEN; this packet excludes no degree."
+  },
+  {
+   "path": "goal_runs_20260812/CONE_D36",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "swarm lane (Grok 4.6, xhigh) against a director-pinned spec; director-replayed ALLGREEN",
+   "primary_exit": "CONE-D36-INSTRUMENT-TRANSFERS",
+   "superseded_by": null,
+   "char0_scope": "The cone instrument at d=36: cell 62 and P3(36)=1850 reproduced as anchors; best bound dim V <= 34. The instrument transfers across windows.\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Cone/attack swarm of 2026-08-12. Headline: Problem E remains OPEN; this packet excludes no degree."
+  },
+  {
+   "path": "goal_runs_20260812/CELL_SYNTHESIS",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "swarm lane (Grok 4.6, xhigh) against a director-pinned spec; director-replayed ALLGREEN",
+   "primary_exit": "CELL-SYNTHESIS-PER-CELL-VERDICT",
+   "superseded_by": null,
+   "char0_scope": "Per-cell assembly of every sealed realization constraint: what a degree-35 map must look like, with the joint-contradiction check run.\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Cone/attack swarm of 2026-08-12. Headline: Problem E remains OPEN; this packet excludes no degree."
+  },
+  {
+   "path": "goal_runs_20260812/DOMINANCE_D35",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "swarm lane (Grok 4.6, xhigh) against a director-pinned spec; director-replayed ALLGREEN",
+   "primary_exit": "DOMINANCE-D35-MINOR-TEST",
+   "superseded_by": null,
+   "char0_scope": "The dominance route: 4x4 Jacobian minors tested for membership in the degree-4 part of the landing ideal.\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Cone/attack swarm of 2026-08-12. Headline: Problem E remains OPEN; this packet excludes no degree."
+  },
+  {
+   "path": "goal_runs_20260812/CARRIER_D35",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "swarm lane (Grok 4.6, xhigh) against a director-pinned spec; director-replayed ALLGREEN",
+   "primary_exit": "CARRIER-D35-GATEWAY",
+   "superseded_by": null,
+   "char0_scope": "The W-carrier gateway re-run at the live window d=35 (the d=34 analogue was sealed closed-negative).\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Cone/attack swarm of 2026-08-12. Headline: Problem E remains OPEN; this packet excludes no degree."
+  },
+  {
+   "path": "goal_runs_20260812/BURNSIDE_ASSESS",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "swarm lane (Grok 4.6, xhigh) against a director-pinned spec; director-replayed ALLGREEN",
+   "primary_exit": "BURNSIDE-ASSESS-VERDICT",
+   "superseded_by": null,
+   "char0_scope": "Assessment of the equivariant Burnside group against Problem E: what it obstructs (birationality, linearizability) versus what we need (dominance).\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Cone/attack swarm of 2026-08-12. Headline: Problem E remains OPEN; this packet excludes no degree."
+  },
+  {
+   "path": "goal_runs_20260812/GUNIRATIONALITY",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "swarm lane (Grok 4.6, xhigh) against a director-pinned spec; director-replayed ALLGREEN",
+   "primary_exit": "GUNIRATIONALITY-FRAMING",
+   "superseded_by": null,
+   "char0_scope": "The headline restated as G-unirationality of X via W, against the no-name lemma, versality, essential dimension and the Duncan-Reichstein line.\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Cone/attack swarm of 2026-08-12. Headline: Problem E remains OPEN; this packet excludes no degree."
+  },
+  {
+   "path": "goal_runs_20260812/V14_POSITIVE",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "swarm lane (Grok 4.6, xhigh) against a director-pinned spec; director-replayed ALLGREEN",
+   "primary_exit": "V14-POSITIVE-INGREDIENT",
+   "superseded_by": null,
+   "char0_scope": "The positive flank: what the sealed dominant map V14 -> X would need to settle the headline positively.\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Cone/attack swarm of 2026-08-12. Headline: Problem E remains OPEN; this packet excludes no degree."
+  },
+  {
+   "path": "goal_runs_20260812/SMITH_ORDERS_23",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "swarm lane (Grok 4.6, xhigh) against a director-pinned spec; director-replayed ALLGREEN",
+   "primary_exit": "SMITH-ORDERS-23",
+   "superseded_by": null,
+   "char0_scope": "The Smith branches at orders 2 and 3 re-attacked with the chi_0 = 35 mod 55 rigidity and the order-11 results sealed since.\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Cone/attack swarm of 2026-08-12. Headline: Problem E remains OPEN; this packet excludes no degree."
+  },
+  {
+   "path": "goal_runs_20260812/POINT_HUNT",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "swarm lane (Grok 4.6, xhigh) against a director-pinned spec; director-replayed ALLGREEN",
+   "primary_exit": "POINT-HUNT-PIPELINE",
+   "superseded_by": null,
+   "char0_scope": "Contingency pipeline: extract cone points on a section and test each for dominance by the Jacobian rank criterion.\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Cone/attack swarm of 2026-08-12. Headline: Problem E remains OPEN; this packet excludes no degree."
+  },
+  {
+   "path": "goal_runs_20260812/TANGENT_C6",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "swarm lane (Grok 4.6, xhigh) against a director-pinned spec; director-replayed ALLGREEN",
+   "primary_exit": "TANGENT-C6-DEFORMATION",
+   "superseded_by": null,
+   "char0_scope": "Deformation theory of the landing scheme (item C6): tangent and obstruction spaces, and whether the rank-jump locus yields new equations.\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Cone/attack swarm of 2026-08-12. Headline: Problem E remains OPEN; this packet excludes no degree."
   }
  ]
 }

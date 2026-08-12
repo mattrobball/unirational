@@ -1,0 +1,210 @@
+{
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "P3": {
+  "331": {
+   "p": 331,
+   "m": 37,
+   "npts": 1971,
+   "dim_sym3": 9139,
+   "rank": 1380,
+   "P3_sealed": 1380,
+   "match_sealed": true,
+   "seconds": 46.863746881484985
+  },
+  "661": {
+   "p": 661,
+   "m": 37,
+   "npts": 1971,
+   "dim_sym3": 9139,
+   "rank": 1380,
+   "P3_sealed": 1380,
+   "match_sealed": true,
+   "seconds": 29.269575834274292
+  }
+ },
+ "director_m20_control": {
+  "clears": true,
+  "nlead": 11201
+ },
+ "rungs": [
+  {
+   "p": 331,
+   "m": 18,
+   "verdict": "FREE",
+   "rank": 1140,
+   "dim_sym3": 1140,
+   "free": true,
+   "clears": null,
+   "bound": 19,
+   "seconds": 3.1157729625701904
+  },
+  {
+   "p": 331,
+   "m": 19,
+   "verdict": "FREE",
+   "rank": 1330,
+   "dim_sym3": 1330,
+   "free": true,
+   "clears": null,
+   "bound": 18,
+   "seconds": 4.896943092346191
+  },
+  {
+   "p": 331,
+   "m": 20,
+   "verdict": "ZERO_DIM",
+   "rank": 1380,
+   "dim_sym3": 1540,
+   "free": false,
+   "clears": true,
+   "bound": 17,
+   "seconds": 2.42
+  },
+  {
+   "p": 331,
+   "m": 22,
+   "verdict": "ZERO_DIM",
+   "rank": 1380,
+   "dim_sym3": 2024,
+   "free": false,
+   "clears": true,
+   "bound": 15,
+   "seconds": 7.19
+  },
+  {
+   "p": 331,
+   "m": 24,
+   "verdict": "ZERO_DIM",
+   "rank": 1380,
+   "dim_sym3": 2600,
+   "free": false,
+   "clears": true,
+   "bound": 13,
+   "seconds": 22.82
+  },
+  {
+   "p": 331,
+   "m": 28,
+   "verdict": "ZERO_DIM",
+   "rank": 1380,
+   "dim_sym3": 4060,
+   "free": false,
+   "clears": true,
+   "bound": 9,
+   "seconds": 159.81
+  },
+  {
+   "p": 331,
+   "m": 32,
+   "verdict": "NO_VERDICT_MEMORY",
+   "rank": 1380,
+   "dim_sym3": 5984,
+   "free": false,
+   "clears": false,
+   "bound": null,
+   "seconds": 18.663703203201294
+  },
+  {
+   "p": 331,
+   "m": 34,
+   "verdict": "EMITTED",
+   "rank": 1380,
+   "dim_sym3": 7140,
+   "free": false,
+   "clears": null,
+   "bound": null,
+   "seconds": 36.36738872528076
+  },
+  {
+   "p": 331,
+   "m": 36,
+   "verdict": "EMITTED",
+   "rank": 1380,
+   "dim_sym3": 8436,
+   "free": false,
+   "clears": null,
+   "bound": null,
+   "seconds": 41.395812034606934
+  },
+  {
+   "p": 661,
+   "m": 18,
+   "verdict": "FREE",
+   "rank": 1140,
+   "dim_sym3": 1140,
+   "free": true,
+   "clears": null,
+   "bound": 19,
+   "seconds": 3.031893014907837
+  },
+  {
+   "p": 661,
+   "m": 19,
+   "verdict": "FREE",
+   "rank": 1330,
+   "dim_sym3": 1330,
+   "free": true,
+   "clears": null,
+   "bound": 18,
+   "seconds": 4.870264053344727
+  },
+  {
+   "p": 661,
+   "m": 20,
+   "verdict": "ZERO_DIM",
+   "rank": 1380,
+   "dim_sym3": 1540,
+   "free": false,
+   "clears": true,
+   "bound": 17,
+   "seconds": 2.75
+  },
+  {
+   "p": 661,
+   "m": 22,
+   "verdict": "ZERO_DIM",
+   "rank": 1380,
+   "dim_sym3": 2024,
+   "free": false,
+   "clears": true,
+   "bound": 15,
+   "seconds": 8.77
+  },
+  {
+   "p": 661,
+   "m": 24,
+   "verdict": "ZERO_DIM",
+   "rank": 1380,
+   "dim_sym3": 2600,
+   "free": false,
+   "clears": true,
+   "bound": 13,
+   "seconds": 22.61
+  },
+  {
+   "p": 661,
+   "m": 28,
+   "verdict": "ZERO_DIM",
+   "rank": 1380,
+   "dim_sym3": 4060,
+   "free": false,
+   "clears": true,
+   "bound": 9,
+   "seconds": 198.41
+  },
+  {
+   "p": 661,
+   "m": 32,
+   "verdict": "EMITTED",
+   "rank": 1380,
+   "dim_sym3": 5984,
+   "free": false,
+   "clears": null,
+   "bound": null,
+   "seconds": 24.123778820037842
+  }
+ ],
+ "tightest_two_prime_bound": 9,
+ "tightest_one_prime_bound": 9,
+ "note": "dim V <= 9 at both primes (m=28 full-span leading ideal 0-dim). m=32 no verdict (killed at deg-5 start, 13.6 GB). Modular; no degree excluded."
+}

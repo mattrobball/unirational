@@ -1,0 +1,18 @@
+{
+ "p": 661,
+ "m": 22,
+ "dim_sym3": 2024,
+ "npts": 1971,
+ "rank": 1380,
+ "HF_L3": 644,
+ "generic_rank": 1380,
+ "matches_generic": true,
+ "full_span_ngens": 1380,
+ "free_rung": false,
+ "section_seed": 661302166,
+ "point_seed": 661350035,
+ "section_rank": 22,
+ "seconds_emit": 14.89579701423645,
+ "verdict": "RANKED",
+ "bound": null
+}

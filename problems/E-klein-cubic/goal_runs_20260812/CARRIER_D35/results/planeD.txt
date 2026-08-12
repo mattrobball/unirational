@@ -1,0 +1,7 @@
+L1 69*x0-39*x1+33*x2+131*x3+61*x4
+IC dim 2 deg 20
+J0 dim -1 deg 0
+dimAff -1
+deg 0
+ncomps 0
+END

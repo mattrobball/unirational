@@ -1,0 +1,88 @@
+{
+  "331": {
+    "p": 331,
+    "cell_dim": 37,
+    "rank_U": 2,
+    "I3_shape": [
+      1380,
+      9139
+    ],
+    "P3": 1380,
+    "N3": 9139,
+    "HF3": 7759,
+    "n_pivots": 1380,
+    "pivot_eye_spotcheck": true,
+    "pivot_quartic_support": 17905,
+    "P4_ub": 51060,
+    "N4": 91390,
+    "HF4_domain_lb": 40330,
+    "cell_ranks": [
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "ambient_ranks": [
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "euler_ok": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "generic_cell_rank": 5,
+    "generic_ambient_rank": 5,
+    "euler_all_ok": true,
+    "seconds": 2.4899680614471436
+  },
+  "661": {
+    "p": 661,
+    "cell_dim": 37,
+    "rank_U": 2,
+    "I3_shape": [
+      1380,
+      9139
+    ],
+    "P3": 1380,
+    "N3": 9139,
+    "HF3": 7759,
+    "n_pivots": 1380,
+    "pivot_eye_spotcheck": true,
+    "pivot_quartic_support": 17905,
+    "P4_ub": 51060,
+    "N4": 91390,
+    "HF4_domain_lb": 40330,
+    "cell_ranks": [
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "ambient_ranks": [
+      5,
+      5,
+      5,
+      5,
+      5
+    ],
+    "euler_ok": [
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "generic_cell_rank": 5,
+    "generic_ambient_rank": 5,
+    "euler_all_ok": true,
+    "seconds": 2.1383490562438965
+  }
+}

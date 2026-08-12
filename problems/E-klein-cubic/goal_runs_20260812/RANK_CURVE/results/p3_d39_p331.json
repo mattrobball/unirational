@@ -1,0 +1,42 @@
+{
+ "d": 39,
+ "p": 331,
+ "K": 216,
+ "N3": 1703016,
+ "I_3d": 13026,
+ "P3": 4168,
+ "P3_is_lower_bound": false,
+ "HF3": 1698848,
+ "HF3_note": "HF3 = binom(K+2,3) - P3 (c-ring Hilbert piece)",
+ "deficit_vs_I": 8858,
+ "ratio_P3_over_I": 0.3201298943651159,
+ "ratio_P3_over_N3": 0.002447539306147328,
+ "n_func": 7000,
+ "npts_c_tested": 5600,
+ "stable_final": 500,
+ "stable_window": 500,
+ "extra_batches": [
+  {"batch": 0, "size": 500, "rank_before": 4168, "rank_after": 4168, "added": 0},
+  {"batch": 1, "size": 500, "rank_before": 4168, "rank_after": 4168, "added": 0}
+ ],
+ "extra_added_total": 0,
+ "saturated": true,
+ "mode": "inv_eval_matrix",
+ "hit_func_ceiling": false,
+ "tag": "sweep_postflip",
+ "cell_source": "LANDING_SWEEP layer0+flip",
+ "cell_dim": 218,
+ "dim_M": 950,
+ "seconds": 795.0,
+ "seconds_total": 1304.0,
+ "salvaged_from_log": true,
+ "salvage_note": "P3/saturation taken from produce_p3.py stdout (extra batches +0 at rank 4168). JSON write was skipped by a subsequent qr_cut crash; cell npy saved.",
+ "qr_cut": {
+  "rank": 0,
+  "new_dim": 218,
+  "n_points": 60,
+  "expect_alive": 218,
+  "is_qr": false,
+  "note": "NQR: C11 already in Layer-0 structure (QR_POINT_CUTS). Cut is the identity; P3 is on the post-flip 216-cell."
+ }
+}

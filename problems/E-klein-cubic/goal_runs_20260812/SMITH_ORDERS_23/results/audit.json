@@ -1,0 +1,286 @@
+{
+ "crt_gap": {
+  "branch_A_two_chi0_mod_3": [
+   0,
+   1,
+   2
+  ],
+  "branch_B_two_chi0_mod_3": [
+   0,
+   1,
+   2
+  ],
+  "chi0_mod_3_values": [
+   0,
+   1,
+   2
+  ],
+  "formula": "chi_0 = 35 + 55*k  (STEIN_LERAY sec.6.4, smooth row, n_x=4,5 on Z)",
+  "need_modulus_to_pin_mod_3": 165,
+  "pins_mod_2": true,
+  "pins_mod_3": false,
+  "pins_mod_3_on_branch_A": false,
+  "pins_mod_3_on_branch_B": false,
+  "two_chi0_mod_2_values": [
+   0
+  ],
+  "two_chi0_mod_3_values": [
+   0,
+   1,
+   2
+  ],
+  "verdict": "2*chi_0 is always even, so Smith at p=2 is tautological on U in the smooth row.  2*chi_0 (mod 3) takes all three residues on branch A and on branch B, so chi_0 == 35 (mod 55) does not determine the order-3 Smith residue.",
+  "window": [
+   -12,
+   12
+  ]
+ },
+ "crt_rows_sample": [
+  {
+   "branch": "A",
+   "chi_0": -75,
+   "k": -2,
+   "two_chi_0": -150,
+   "two_chi_0_mod_2": 0,
+   "two_chi_0_mod_3": 0
+  },
+  {
+   "branch": "A",
+   "chi_0": -20,
+   "k": -1,
+   "two_chi_0": -40,
+   "two_chi_0_mod_2": 0,
+   "two_chi_0_mod_3": 2
+  },
+  {
+   "branch": "B",
+   "chi_0": 35,
+   "k": 0,
+   "two_chi_0": 70,
+   "two_chi_0_mod_2": 0,
+   "two_chi_0_mod_3": 1
+  },
+  {
+   "branch": "B",
+   "chi_0": 90,
+   "k": 1,
+   "two_chi_0": 180,
+   "two_chi_0_mod_2": 0,
+   "two_chi_0_mod_3": 0
+  },
+  {
+   "branch": "B",
+   "chi_0": 145,
+   "k": 2,
+   "two_chi_0": 290,
+   "two_chi_0_mod_2": 0,
+   "two_chi_0_mod_3": 2
+  }
+ ],
+ "d": 35,
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "l12_consumed": {
+  "all_60_base_points": true,
+  "forced_depths_mentioned": true,
+  "genus0_dead_extended": true,
+  "n_x_model_caveat_in_smith_feed": true,
+  "orders_2_3_untouched_in_L12": true
+ },
+ "locus": {
+  "C3_surface_receivers_in_U": false,
+  "L_sigma_in_U": false,
+  "c3_model_is_blowup_of_product_not_iso": true,
+  "c3_surface_row_is_C3line": true,
+  "census_C2": {
+   "0": 146,
+   "1": 80,
+   "2": 11,
+   "3": 2
+  },
+  "census_C3": {
+   "0": 62,
+   "1": 16,
+   "2": 2
+  },
+  "chi0_binds_on_C3_surface_receivers": false,
+  "chi0_binds_on_L": false,
+  "generic_fibre_dim_over_C3_surface_receivers": 2,
+  "generic_fibre_dim_over_L": 2,
+  "reason_C3_surfaces_not_in_U": "X^{C3} is finite (6 points).  Every component of Z^{C3} is contracted to one of those points.  The two dim-2 components therefore give fibre dimension >= 2 at their receiver point(s).  Those 1 or 2 of the 6 C3-points lie outside U.",
+  "reason_L_not_in_U": "STAGE1 Thm 3: D_{P_sigma} and D_{L'_sigma} are dim-3 and map onto L_sigma (dim 1), so generic fibre dimension is 2.  U is the locus of 1-dimensional fibres.  Hence L_sigma cap U = empty.",
+  "stage1_thm3_present": true,
+  "thm3_two_dim3_one_dim1": true
+ },
+ "packet": "goal_runs_20260812/SMITH_ORDERS_23",
+ "reconstructed": {
+  "F_odd_35": 36252160,
+  "branch_E": {
+   "coupling": "such a centre is exactly a G1 Hodge-carrier at the C2 row (Res_{C2} W = 3(+1) (+) 2(-1), cheapest carrying centre g >= 1) -- SCHEME_MAP_CONSEQUENCES sec.3.3 table",
+   "escape": "a sigma-fixed IRRATIONAL stratum of the actual model dominating E^X_sigma; only a non-admissible centre can supply one",
+   "holds_on": "Z and every admissible refinement",
+   "proof": "Lemma R (rationality + Luroth) + Smith at p = 2",
+   "statement": "chi(q^{-1}(x)) == 0 (mod 2) for all but finitely many x in E^X_sigma"
+  },
+  "branch_L_as_computed": {
+   "dominating_rows": [
+    "D_{P_sigma}",
+    "D_{L'_sigma}",
+    "central-involution line in E_{pt_D12}"
+   ],
+   "parametric": true,
+   "reason_parametric": "no sealed bound at d = 35 pins chi(F_1), chi(F_2) or n_3; C1 of CONSTRAINT_ADDITIONS_20260811.md is a genus IDENTITY package, not a bound",
+   "statement": "chi(q^{-1}(x)) == chi(F_1) + chi(F_2) + n_3 (mod 2) for generic x in L^X_sigma, where F_1, F_2 are the generic fibres of D_{P_sigma} and D_{L'_sigma} over L^X_sigma and n_3 is the degree of the third (1-dimensional) row over L^X_sigma"
+  },
+  "branch_L_widened_display": "chi(q^{-1}(x)) == chi(F_1) + chi(F_2) + n_3 + sum_j chi(F_j) (mod 2)",
+  "branch_L_widened_in_theorem": true,
+  "chi_Z_C3_shape": "94 + chi(S_1) + chi(S_2),  chi(S_i) >= 3",
+  "n_cells": 22,
+  "order2_cell_reading": "all 22 live cells carry ord_{L'_sigma}(T) = 0 and ord_{P_sigma}(T) = 1 with m = 1, so the minus-line is NOT in the base locus and the plus-plane carries a simple vanishing; identical across the 22",
+  "order2_census": {
+   "0": 146,
+   "1": 80,
+   "2": 11,
+   "3": 2
+  },
+  "order2_receiver": [
+   {
+    "CM": false,
+    "chi": 0,
+    "j": "8192/11",
+    "name": "E^X_sigma",
+    "type": "smooth plane cubic, genus 1"
+   },
+   {
+    "chi": 2,
+    "name": "L^X_sigma",
+    "type": "line P^1"
+   }
+  ],
+  "order3_blocker": "chi of the 2 two-dimensional components of Z^{C3} is not pinned by the census (component counts by dimension only); with the 62 points and the 16 rational curves this gives chi(Z^{C3}) = 62 + 32 + chi(S_1) + chi(S_2) = 94 + chi(S_1) + chi(S_2), chi(S_i) >= 3",
+  "order3_census": {
+   "0": 62,
+   "1": 16,
+   "2": 2
+  },
+  "order3_menu_size": 56644,
+  "order3_receiver_chi": 6,
+  "order3_status": "PARAMETRIC",
+  "referee_S4_widened": true,
+  "sealed_order11": {
+   "F3": "5*4 = 20 = chi(Z^{C11})",
+   "five_equal": true,
+   "n_x_on_Z": 4,
+   "residue_mod_11": 4
+  },
+  "sealed_order5": {
+   "F3": "4*5 = 20 = chi(Z^{C5})",
+   "n_x_on_Z": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5
+   },
+   "n_x_uniform": true,
+   "residue_mod_5": 0
+  }
+ },
+ "remaining_unknowns": [
+  {
+   "id": "L_chi",
+   "scope": "order-2 L-branch, widened display (SMITH_I3 referee S4)",
+   "what": "chi(F_1), chi(F_2), n_3, and chi(F_j) for unforced sigma-fixed rows dominating L^X_sigma"
+  },
+  {
+   "id": "E_escape",
+   "scope": "order-2 E-branch escape; Group G forces some irrational centre; neither STEIN_LERAY nor L12 shuts this",
+   "what": "whether a sigma-fixed irrational stratum dominates E^X_sigma"
+  },
+  {
+   "id": "S_chi",
+   "scope": "order-3; chi(Z^{C3}) = 94 + chi(S_1) + chi(S_2), chi(S_i) >= 3; census models are blowups of products, not isomorphism types",
+   "what": "chi(S_1), chi(S_2) and the assignment of the 80 Z^{C3}-components to the 6 receiver points"
+  },
+  {
+   "id": "Zsigma_chi",
+   "scope": "order-2 F3; census pins counts by dimension only",
+   "what": "Euler characteristics of the 11 surfaces and 2 threefolds of Z^sigma"
+  },
+  {
+   "id": "U_membership",
+   "scope": "chi_0 inheritance is conditional on membership in U",
+   "what": "whether generic points of E^X_sigma, or any C3-point that does not receive a surface, lie in U"
+  },
+  {
+   "id": "defects",
+   "scope": "STEIN_LERAY Lemma BR; sharp numbers are smooth-row only",
+   "what": "bridge defects D(F) and chi(N_F) on non-smooth fibres"
+  },
+  {
+   "id": "stein_s",
+   "scope": "carried as a menu variable; branch B requires s >= 35",
+   "what": "Stein degree s"
+  },
+  {
+   "id": "Delta_C11",
+   "scope": "L12 forces depth >= 3, so the actual model is a refinement of Z; the residue chi_0 == 35 (mod 55) is Z-scoped",
+   "what": "refinement delta Delta at C11 (n_x = 4 + Delta/5)"
+  }
+ ],
+ "stein_consumed": {
+  "C11_dim2_note": "q is not flat at x, so the flat-locus constant chi_0 does not bind here",
+  "C11_n_x_on_Z": 4,
+  "C5_dim2_note": "q is not flat at x, so the flat-locus constant chi_0 does not bind here",
+  "C5_n_x_on_Z": 5,
+  "J1_degrees_phrase": true,
+  "PIN_in_theorem": true,
+  "PIN_min_degree_missing_all": 55,
+  "branch_A": "chi_0 <= -20",
+  "branch_B": "chi_0 >= 35",
+  "chi_0_mod_55": [
+   35
+  ],
+  "dim3_flagged": true,
+  "general_form": [
+   "2*chi_0 + D_x - 2*chi(N_x) = 4 (mod 11) at each of the five C11-points",
+   "2*chi_0 + D_x - 2*chi(N_x) = 0 (mod 5) at each of the four C5-points",
+   "the five C11 values chi_top are EQUAL (sealed), so D_x - 2*chi(N_x) is the same integer at all five"
+  ],
+  "hypotheses": [
+   "either branch of the Stein dichotomy",
+   "all nine pinned points carry 1-dimensional fibres",
+   "those fibres are smooth (bridge defects D = 0, N = 0)",
+   "read on the terminus model Z, where n_x = 4 and 5"
+  ],
+  "lemma_FL_in_menus": "chi(O_{F_x}) is constant = chi_0 on the open locus of 1-dimensional fibres (miracle flatness: Ztilde is CM and X is regular; that locus is a nonempty open subset of the irreducible X, hence connected)",
+  "quintic_C11_values": {
+   "0": 0,
+   "1": 0,
+   "2": 0,
+   "3": 0,
+   "4": 0
+  },
+  "quintic_misses_C5": true,
+  "quintic_vanishes_at_C11": true
+ },
+ "verdict": {
+  "cells_cut": 0,
+  "degree_excluded": null,
+  "exclusion_claimed": false,
+  "honesty": "FLAGGED-behind-audit only if a zero/all-dead outcome appears; none does.  The negative pin is claimed as a non-implication, not as an exclusion.",
+  "order2_E_escape_still_live": true,
+  "order2_E_still_closed_as_SMITH_I3_left_it": true,
+  "order2_L_pinned": false,
+  "order3_pinned": false,
+  "reasons": [
+   "CRT: chi_0 == 35 (mod 55) does not determine 2*chi_0 (mod 3); both dichotomy branches hit all three residues.",
+   "Locus: STAGE1 Thm 3 puts L^X_sigma in X\\U, so chi_0 does not bind on the order-2 L-branch.",
+   "Locus: the two C3-surfaces put their receiver points in X\\U.",
+   "On U itself, 2*chi_0 is even, so Smith at p=2 is tautological in the smooth row and does not pin chi(F_i) or n_3.",
+   "L12's 60 base points are already the STEIN_LERAY pinned points; forced depths move n_x and therefore the chi_0 residue; the genus-0 death is at C11 and does not evaluate chi(S_i) or chi(F_i).  L12 itself says orders 2 and 3 are untouched.",
+   "PIN and J1 constrain invariant divisors on X, not the Euler characteristics of source strata of Z^sigma or Z^{C3}."
+  ],
+  "what_closes": "Nothing of the two SMITH_I3-parametric branches.  The E-branch remains closed as SMITH_I3 left it (== 0 mod 2 on Z and on admissible refinements).  Genus-0 on U is incompatible with chi_0 == 35 (mod 55); that is already in STEIN_LERAY, not a new pin of order-2/3 Smith data.",
+  "what_stays_parametric": "Order-2 L-branch (widened display) and the whole of order 3, including F3 at both orders.",
+  "zero_or_all_dead": false
+ }
+}

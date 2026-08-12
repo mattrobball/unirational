@@ -1,0 +1,11 @@
+p 661
+degH 5
+dimProj 1
+degree 20
+hilbPoly 20*i-25
+ngens 15
+HF 33 635
+HF 34 655
+HF 35 675
+HF 36 695
+END

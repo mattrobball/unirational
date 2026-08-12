@@ -1,0 +1,377 @@
+{
+ "checks": [
+  {
+   "detail": "wrote /Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/SMITH_ORDERS_23/results/audit.json\nCRT pins_mod_2 = True pins_mod_3 = False A3 = [0, 1, 2] B3 = [0, 1, 2]\nL in U = False C3 surfaces in U = False\norder2_L_pinned = False order3_pinned = False\nSMITH_ORDERS_23_PRODUCE_OK\n",
+   "group": "A",
+   "name": "A0 produce.py replays",
+   "pass": true
+  },
+  {
+   "detail": "no sealed bound at d = 35 pins chi(F_1), chi(F_2) or n_3; C1 of CONSTRAINT_ADDITIONS_20260811.md is a genus IDENTITY package, not a bound",
+   "group": "A",
+   "name": "A1 SMITH_I3 order-2 L-branch is PARAMETRIC",
+   "pass": true
+  },
+  {
+   "detail": "chi(q^{-1}(x)) == 0 (mod 2) for all but finitely many x in E^X_sigma",
+   "group": "A",
+   "name": "A2 SMITH_I3 order-2 E-branch closed == 0 mod 2",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "A",
+   "name": "A3 SMITH_I3 names the irrational escape",
+   "pass": true
+  },
+  {
+   "detail": "['D_{P_sigma}', \"D_{L'_sigma}\", 'central-involution line in E_{pt_D12}']",
+   "group": "A",
+   "name": "A4 three forced dominating rows",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "A",
+   "name": "A5 referee S4 widens the L-display by unforced rows",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "A",
+   "name": "A6 director adopted the L-widening",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "A",
+   "name": "A7 order-3 status PARAMETRIC",
+   "pass": true
+  },
+  {
+   "detail": "chi of the 2 two-dimensional components of Z^{C3} is not pinned by the census (component counts by dimension only); with the 62 points and the 16 rational curves this gives chi(Z^{C3}) = 62 + 32 + chi(S_1) + chi(S_2) = 94 + chi(S_1) + chi(S_2), chi(S_i) >= 3",
+   "group": "A",
+   "name": "A8 order-3 blocker is chi(S_i), not the point/curve count",
+   "pass": true
+  },
+  {
+   "detail": "{'0': 146, '1': 80, '2': 11, '3': 2}",
+   "group": "A",
+   "name": "A9 census C2 = {0:146,1:80,2:11,3:2}",
+   "pass": true
+  },
+  {
+   "detail": "{'0': 62, '1': 16, '2': 2}",
+   "group": "A",
+   "name": "A10 census C3 = {0:62,1:16,2:2}",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "A",
+   "name": "A11 A4 menu 238*238 = 56644",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "A",
+   "name": "A12 receiver X^sigma splits 0+2=2",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "A",
+   "name": "A13 22 cells, F_odd = 36252160",
+   "pass": true
+  },
+  {
+   "detail": "C11 n_x=4 C5 n_x={'1': 5, '2': 5, '3': 5, '4': 5}",
+   "group": "A",
+   "name": "A14 sealed n_x = 4 at C11 and n_x = 5 at C5, on Z",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "A",
+   "name": "A15 reconstruction matches produce()",
+   "pass": true
+  },
+  {
+   "detail": "[35]",
+   "group": "B",
+   "name": "B1 STEIN_LERAY chi_0 == 35 (mod 55)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "B",
+   "name": "B2 joint hypotheses name the nine pinned points, smooth row, Z",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "B",
+   "name": "B3 dichotomy A: chi_0 <= -20; B: chi_0 >= 35",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "B",
+   "name": "B4 dim-2 menu: chi_0 does not bind",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "B",
+   "name": "B5 dim-3 fibre FLAGGED",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "B",
+   "name": "B6 J1 invariant degrees exactly {k >= 5}",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "B",
+   "name": "B7 Proposition PIN is sealed in STEIN_LERAY",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "B",
+   "name": "B8 L12: all 60 C11-points are base points at every degree",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "B",
+   "name": "B9 L12: genus-0 dead 0 of 2674 (extended scope)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "B",
+   "name": "B10 L12: forced depths >= 3 / >= 4 for {6,9} / >= 5 for mu1=7",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "B",
+   "name": "B11 L12 leaves orders 2 and 3 untouched",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "B",
+   "name": "B12 STAGE1 Thm 3: two dim-3 rows and one dim-1 row onto L_sigma",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "B",
+   "name": "B13 TERMINUS dictionary C2/C3 dimension counts",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "B",
+   "name": "B14 TERMINUS: closure is a smooth blowup of a product, not an iso",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "B",
+   "name": "B15 C3 dim-2 row is the C3line (110 components, #/fixedK = 2)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "B",
+   "name": "B16 STEIN_LERAY n_x on Z is 4 and 5",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "B",
+   "name": "B17 produce() consumed the same chi_0 residue",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "B",
+   "name": "B18 produce() saw L12 all-60 and 0-of-2674",
+   "pass": true
+  },
+  {
+   "detail": "{0}",
+   "group": "C",
+   "name": "C1 2*chi_0 is always even",
+   "pass": true
+  },
+  {
+   "detail": "{0, 1, 2}",
+   "group": "C",
+   "name": "C2 2*chi_0 (mod 3) takes {0,1,2}",
+   "pass": true
+  },
+  {
+   "detail": "{0, 1, 2}",
+   "group": "C",
+   "name": "C3 branch A hits all three residues mod 3",
+   "pass": true
+  },
+  {
+   "detail": "{0, 1, 2}",
+   "group": "C",
+   "name": "C4 branch B hits all three residues mod 3",
+   "pass": true
+  },
+  {
+   "detail": "{0, 1, 2}",
+   "group": "C",
+   "name": "C5 chi_0 itself is not pinned mod 3",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C6 pinning 2*chi_0 mod 3 needs modulus 165",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C7 k=-1 => chi_0=-20, 2*chi_0=-40 == 2 (mod 3)  [g=21]",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C8 k=-2 => chi_0=-75, 2*chi_0=-150 == 0 (mod 3)  [g=76]",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C9 k=-3 => chi_0=-130, 2*chi_0=-260 == 1 (mod 3)  [g=131]",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C10 k=0 => chi_0=35, 2*chi_0=70 == 1 (mod 3)  [Stein s>=35]",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C11 produce() CRT agrees",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C12 L_sigma is not in U",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C13 generic fibre dim over L is 2",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C14 C3-surface receivers are not in U",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C15 STAGE1 Thm 3 ingredients present",
+   "pass": true
+  },
+  {
+   "detail": "{'0': 146, '1': 80, '2': 11, '3': 2}",
+   "group": "C",
+   "name": "C16 census C2/C3 reproduced",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C17 order-2 L-branch stays parametric",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C18 order-3 stays parametric",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C19 E-branch remains closed as SMITH_I3 left it",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C20 no exclusion, no cell cut, no zero/all-dead",
+   "pass": true
+  },
+  {
+   "detail": "['Delta_C11', 'E_escape', 'L_chi', 'S_chi', 'U_membership', 'Zsigma_chi', 'defects', 'stein_s']",
+   "group": "C",
+   "name": "C21 eight named remaining unknowns",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C22 chi(Z^{C3}) shape 94 + chi(S_1) + chi(S_2) unrepaired",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C23 94 == 1 (mod 3), so F3 + a would-be uniform residue would still leave chi(S_1)+chi(S_2) free mod 3 once the CRT gap is open",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C24 genus-0 chi_0 values 1 and 2 are not 35 (mod 55)",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C25 headline in the artefact",
+   "pass": true
+  },
+  {
+   "detail": "",
+   "group": "C",
+   "name": "C26 zero/all-dead audit is negative (no ODDZERO claim)",
+   "pass": true
+  }
+ ],
+ "summary": {
+  "allgreen": true,
+  "fail": 0,
+  "groups": {
+   "A": 16,
+   "B": 18,
+   "C": 26
+  },
+  "marker": "SMITH_ORDERS_23_VERIFY_OK",
+  "n": 60,
+  "pass": 60,
+  "skip": 0
+ }
+}

@@ -1,0 +1,30 @@
+{
+  "p": 331,
+  "m": 29,
+  "full_span_ngens": 1380,
+  "chart_t1=1": {
+    "verdict": "EMPTY_CHART",
+    "seconds": 641.2,
+    "max_rss_kb": 6680288,
+    "meaning": "I + (t1-1) is the unit ideal; no point of V ∩ L has t1=1"
+  },
+  "slice_t1=0": {
+    "verdict": "ZERO_DIM",
+    "seconds": 298.0,
+    "max_rss_kb": 7696448,
+    "nvars": 28,
+    "nlead": 13110,
+    "pure_powers": "t1..t19^3, t20..t28^4",
+    "meaning": "homogeneous restriction to t1=0 is 0-dimensional, hence only the origin"
+  },
+  "homogeneous_g1_m29": {
+    "verdict": "NO_VERDICT_MEMORY",
+    "seconds": 543.5,
+    "max_rss_kb": 7402768,
+    "note": "29-variable leading ideal exceeded the first 7 GiB cap; not needed once chart+slice close"
+  },
+  "V_cap_L": "{0}",
+  "n_points": 0,
+  "verdict": "NO_NONZERO_POINT",
+  "note": "Chart empty and complementary hyperplane 0-dim ⇒ V ∩ L = {0} on this F_331-section. No landing tuple extracted. Does not exclude d=35."
+}

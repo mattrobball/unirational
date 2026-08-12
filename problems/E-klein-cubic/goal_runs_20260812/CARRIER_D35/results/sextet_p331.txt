@@ -1,0 +1,60 @@
+dimAff 1
+deg 6
+dimProj 0
+ncomps 3
+comp dim=1 deg=2
+ngens 4
+gen x2-91*x3+30*x4
+gen x1-44*x3+42*x4
+gen x0-51*x3-98*x4
+gen x3^2+131*x3*x4-158*x4^2
+comp dim=1 deg=2
+ngens 4
+gen x2+63*x3+66*x4
+gen x1+102*x3-156*x4
+gen x0+42*x3+57*x4
+gen x3^2+17*x3*x4+153*x4^2
+comp dim=1 deg=2
+ngens 4
+gen x2+10*x3+165*x4
+gen x1-103*x3+127*x4
+gen x0+154*x3-96*x4
+gen x3^2-119*x3*x4-4*x4^2
+ncomps2 6
+comp2 dim=1 deg=1
+ngens2 4
+gen2 y3+(121*aa+37)*y4
+gen2 y2+(-10*aa+52)*y4
+gen2 y1+(-95*aa+42)*y4
+gen2 y0+(-117*aa+158)*y4
+comp2 dim=1 deg=1
+ngens2 4
+gen2 y3+(139*aa-76)*y4
+gen2 y2+(-66*aa-68)*y4
+gen2 y1+(84*aa-88)*y4
+gen2 y0+(109*aa+23)*y4
+comp2 dim=1 deg=1
+ngens2 4
+gen2 y3+(145*aa+34)*y4
+gen2 y2+(-45*aa+145)*y4
+gen2 y1+(91*aa-117)*y4
+gen2 y0+(113*aa-19)*y4
+comp2 dim=1 deg=1
+ngens2 4
+gen2 y3+(-145*aa+97)*y4
+gen2 y2+(45*aa-80)*y4
+gen2 y1+(-91*aa+7)*y4
+gen2 y0+(-113*aa-116)*y4
+comp2 dim=1 deg=1
+ngens2 4
+gen2 y3+(-139*aa-43)*y4
+gen2 y2+(66*aa-67)*y4
+gen2 y1+(-84*aa+1)*y4
+gen2 y0+(-109*aa-94)*y4
+comp2 dim=1 deg=1
+ngens2 4
+gen2 y3+(-121*aa-20)*y4
+gen2 y2+(10*aa+2)*y4
+gen2 y1+(95*aa-102)*y4
+gen2 y0+(117*aa-96)*y4
+END

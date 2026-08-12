@@ -1,0 +1,75 @@
+{
+ "p": 661,
+ "cell_rank_U": 2,
+ "cell_shape": [
+  37,
+  637
+ ],
+ "P3": {
+  "p": 661,
+  "m": 37,
+  "npts": 1971,
+  "dim_sym3": 9139,
+  "rank": 1380,
+  "P3_sealed": 1380,
+  "match_sealed": true,
+  "seconds": 37.444287061691284,
+  "point_seed": 20261473
+ },
+ "rungs": [
+  {
+   "p": 661,
+   "m": 19,
+   "dim_sym3": 1330,
+   "npts": 1901,
+   "rank": 1330,
+   "HF_L3": 0,
+   "generic_rank": 1330,
+   "full_span_ngens": 1330,
+   "free_rung": true,
+   "section_seed": 20261831,
+   "point_seed": 20261473,
+   "seconds_emit": 7.617876052856445,
+   "verdict": "FREE",
+   "V_cap_L": "{0}"
+  },
+  {
+   "p": 661,
+   "m": 20,
+   "dim_sym3": 1540,
+   "npts": 1971,
+   "rank": 1380,
+   "HF_L3": 160,
+   "generic_rank": 1380,
+   "full_span_ngens": 1380,
+   "free_rung": false,
+   "section_seed": 20261832,
+   "point_seed": 20261473,
+   "seconds_emit": 9.805362939834595,
+   "verdict": "EMITTED",
+   "ms_path": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/POINT_HUNT/results/cone_m20_p661.ms",
+   "ms_bytes": 29789102,
+   "ngens_written": 1380
+  },
+  {
+   "p": 661,
+   "m": 29,
+   "dim_sym3": 4495,
+   "npts": 1971,
+   "rank": 1380,
+   "HF_L3": 3115,
+   "generic_rank": 1380,
+   "full_span_ngens": 1380,
+   "free_rung": false,
+   "section_seed": 20261841,
+   "point_seed": 20261473,
+   "seconds_emit": 18.617889881134033,
+   "verdict": "EMITTED",
+   "ms_path": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/POINT_HUNT/results/cone_m29_p661.ms",
+   "ms_bytes": 90216383,
+   "ngens_written": 1380
+  }
+ ],
+ "seconds": 94.76896405220032,
+ "note": "full restricted span; never a subset"
+}

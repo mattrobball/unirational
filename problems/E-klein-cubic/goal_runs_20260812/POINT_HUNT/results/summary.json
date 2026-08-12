@@ -1,0 +1,287 @@
+{
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "selftest": {
+  "ok": true
+ },
+ "P3": {
+  "331": {
+   "p": 331,
+   "m": 37,
+   "npts": 1971,
+   "dim_sym3": 9139,
+   "rank": 1380,
+   "P3_sealed": 1380,
+   "match_sealed": true,
+   "seconds": 42.832358837127686,
+   "point_seed": 20261143
+  },
+  "661": {
+   "p": 661,
+   "m": 37,
+   "npts": 1971,
+   "dim_sym3": 9139,
+   "rank": 1380,
+   "P3_sealed": 1380,
+   "match_sealed": true,
+   "seconds": 37.444287061691284,
+   "point_seed": 20261473
+  }
+ },
+ "jac_control": {
+  "331": {
+   "max_ranks": [
+    5,
+    5,
+    5
+   ],
+   "euler_all_ok": true,
+   "matches_director": true
+  },
+  "661": {
+   "max_ranks": [
+    5,
+    5,
+    5
+   ],
+   "euler_all_ok": true,
+   "matches_director": true
+  }
+ },
+ "extracts": [
+  {
+   "p": 331,
+   "m": 20,
+   "verdict": "EMPTY_CHARTS",
+   "n_points": 0,
+   "infeasible_at_m": null,
+   "charts": [
+    {
+     "verdict": "EMPTY_CHART",
+     "seconds": 11.304762840270996,
+     "max_rss_kb": 296096
+    },
+    {
+     "verdict": "EMPTY_CHART",
+     "seconds": 10.403065919876099,
+     "max_rss_kb": 292528
+    },
+    {
+     "verdict": "EMPTY_CHART",
+     "seconds": 10.265270948410034,
+     "max_rss_kb": 292336
+    }
+   ]
+  },
+  {
+   "p": 331,
+   "m": 29,
+   "verdict": "EMPTY_CHARTS",
+   "n_points": 0,
+   "infeasible_at_m": null,
+   "charts": [
+    {
+     "verdict": "EMPTY_CHART",
+     "seconds": 641.1980290412903,
+     "max_rss_kb": 6680288
+    }
+   ]
+  },
+  {
+   "p": 331,
+   "m": 30,
+   "verdict": "NO_VERDICT_MEMORY",
+   "n_points": 0,
+   "infeasible_at_m": 30,
+   "charts": [
+    {
+     "verdict": "NO_VERDICT_MEMORY",
+     "seconds": 544.2040519714355,
+     "max_rss_kb": 8497504
+    }
+   ]
+  },
+  {
+   "p": 661,
+   "m": 20,
+   "verdict": "EMPTY_CHARTS",
+   "n_points": 0,
+   "infeasible_at_m": null,
+   "charts": [
+    {
+     "verdict": "EMPTY_CHART",
+     "seconds": 3.049820899963379,
+     "max_rss_kb": 216176
+    }
+   ]
+  },
+  {
+   "p": 661,
+   "m": 29,
+   "verdict": "EMPTY_CHARTS",
+   "n_points": 0,
+   "infeasible_at_m": null,
+   "charts": [
+    {
+     "verdict": "EMPTY_CHART",
+     "seconds": 479.29211378097534,
+     "max_rss_kb": 6146592
+    }
+   ]
+  }
+ ],
+ "leads": [
+  {
+   "p": 331,
+   "m": 20,
+   "verdict": "ZERO_DIM",
+   "seconds": 11.828588962554932,
+   "killed_memory": false
+  },
+  {
+   "p": 331,
+   "m": 29,
+   "verdict": "NO_VERDICT_MEMORY",
+   "seconds": 543.475653886795,
+   "killed_memory": true
+  },
+  {
+   "p": 331,
+   "m": 29,
+   "kind": "slice_t1=0",
+   "verdict": "ZERO_DIM",
+   "seconds": 298.01169896125793,
+   "zero_dimensional": true
+  },
+  {
+   "p": 661,
+   "m": 29,
+   "kind": "slice_t1=0",
+   "verdict": "NO_VERDICT_MEMORY",
+   "seconds": 340.62155771255493,
+   "zero_dimensional": false
+  }
+ ],
+ "points": [],
+ "largest_completed_m": 29,
+ "largest_attempted_m": 30,
+ "infeasible_at_m": 30,
+ "hunts": {
+  "hunt_m29_p331.json": {
+   "p": 331,
+   "m": 29,
+   "full_span_ngens": 1380,
+   "chart_t1=1": {
+    "verdict": "EMPTY_CHART",
+    "seconds": 641.2,
+    "max_rss_kb": 6680288,
+    "meaning": "I + (t1-1) is the unit ideal; no point of V \u2229 L has t1=1"
+   },
+   "slice_t1=0": {
+    "verdict": "ZERO_DIM",
+    "seconds": 298.0,
+    "max_rss_kb": 7696448,
+    "nvars": 28,
+    "nlead": 13110,
+    "pure_powers": "t1..t19^3, t20..t28^4",
+    "meaning": "homogeneous restriction to t1=0 is 0-dimensional, hence only the origin"
+   },
+   "homogeneous_g1_m29": {
+    "verdict": "NO_VERDICT_MEMORY",
+    "seconds": 543.5,
+    "max_rss_kb": 7402768,
+    "note": "29-variable leading ideal exceeded the first 7 GiB cap; not needed once chart+slice close"
+   },
+   "V_cap_L": "{0}",
+   "n_points": 0,
+   "verdict": "NO_NONZERO_POINT",
+   "note": "Chart empty and complementary hyperplane 0-dim \u21d2 V \u2229 L = {0} on this F_331-section. No landing tuple extracted. Does not exclude d=35."
+  },
+  "hunt_m29_p661.json": {
+   "p": 661,
+   "m": 29,
+   "full_span_ngens": 1380,
+   "chart_t1=1": {
+    "verdict": "EMPTY_CHART",
+    "seconds": 479.3,
+    "max_rss_kb": 6146560,
+    "meaning": "I + (t1-1) is the unit ideal"
+   },
+   "slice_t1=0_lead": {
+    "verdict": "NO_VERDICT_MEMORY",
+    "seconds": 340.6,
+    "max_rss_kb": 8630496,
+    "note": "28-variable leading ideal exceeded the 8 GB cap at p=661"
+   },
+   "slice_t1=0_chart_t2=1": {
+    "verdict": "EMPTY_CHART",
+    "seconds": 389.9,
+    "max_rss_kb": 4799856,
+    "meaning": "I + (t1) + (t2-1) is the unit ideal"
+   },
+   "slice_t1=t2=0": {
+    "verdict": "ZERO_DIM",
+    "seconds": 361.2,
+    "max_rss_kb": 6151536,
+    "nvars": 27,
+    "nlead": 10430,
+    "missing_pure": [],
+    "meaning": "homogeneous restriction to t1=t2=0 is 0-dimensional, hence only the origin"
+   },
+   "V_cap_L": "{0}",
+   "n_points": 0,
+   "verdict": "NO_NONZERO_POINT",
+   "note": "Empty charts on t1=1 and on {t1=0,t2=1}, plus 0-dim on t1=t2=0 \u21d2 V \u2229 L = {0}. No landing tuple extracted. Does not exclude d=35."
+  },
+  "hunt_m30_p331.json": {
+   "p": 331,
+   "m": 30,
+   "full_span_ngens": 1380,
+   "chart_t1=1": {
+    "verdict": "NO_VERDICT_MEMORY",
+    "seconds": 544.2,
+    "max_rss_kb": 8497504
+   },
+   "verdict": "INFEASIBLE",
+   "infeasible_at_m": 30,
+   "infeasible_reason": "NO_VERDICT_MEMORY",
+   "note": "Largest completed hunt is m=29. No point claimed at m=30."
+  }
+ },
+ "json_files": [
+  "emit_m19_p331.json",
+  "emit_m19_p661.json",
+  "emit_m20_p331.json",
+  "emit_m20_p661.json",
+  "emit_m29_p331.json",
+  "emit_m29_p661.json",
+  "emit_m30_p331.json",
+  "emit_p331.json",
+  "emit_p661.json",
+  "extract_m20_p331.json",
+  "extract_m20_p661.json",
+  "extract_m29_p331.json",
+  "extract_m29_p661.json",
+  "extract_m30_p331.json",
+  "hunt_m29_p331.json",
+  "hunt_m29_p661.json",
+  "hunt_m30_p331.json",
+  "jac_control_p331.json",
+  "jac_control_p661.json",
+  "lead_m20_p331.json",
+  "lead_m29_p331.json",
+  "mons_m20_p331.json",
+  "mons_m20_p661.json",
+  "mons_m29_p331.json",
+  "mons_m29_p661.json",
+  "mons_m30_p331.json",
+  "p3_p331.json",
+  "p3_p661.json",
+  "selftest.json",
+  "slice_t1_chart_t1_m29_p661.json",
+  "slice_t1_m29_p331.json",
+  "slice_t1_m29_p661.json",
+  "slice_t1t2_m29_p661.json",
+  "summary.json"
+ ],
+ "note": "Points are F_p-points of V \u2229 L on an affine chart. A rank<=3 Jacobian is not dominant. No degree is excluded."
+}

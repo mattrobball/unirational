@@ -1,0 +1,115 @@
+{
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "prime_dependence": false,
+ "serious_finding": false,
+ "agreements": [
+  "m=6 rank 56 vs director 56",
+  "m=8 rank 120 vs director 120",
+  "m=10 rank 220 vs director 220",
+  "m=18 rank 1140 vs director 1140",
+  "m=19 rank 1330 vs director 1330",
+  "m=20 rank 1380 vs director 1380",
+  "m=22 rank 1380 vs director 1380",
+  "m=20 zero-dimensional both primes"
+ ],
+ "disagreements": [],
+ "section_rows": [
+  {
+   "m": 6,
+   "director_p331_rank": 56,
+   "this_p661_rank": 56,
+   "director_HF_L3": 0,
+   "this_HF_L3": 0,
+   "dim_sym3": 56,
+   "free_rung": true,
+   "rank_agrees": true,
+   "hf_agrees": true
+  },
+  {
+   "m": 8,
+   "director_p331_rank": 120,
+   "this_p661_rank": 120,
+   "director_HF_L3": 0,
+   "this_HF_L3": 0,
+   "dim_sym3": 120,
+   "free_rung": true,
+   "rank_agrees": true,
+   "hf_agrees": true
+  },
+  {
+   "m": 10,
+   "director_p331_rank": 220,
+   "this_p661_rank": 220,
+   "director_HF_L3": 0,
+   "this_HF_L3": 0,
+   "dim_sym3": 220,
+   "free_rung": true,
+   "rank_agrees": true,
+   "hf_agrees": true
+  },
+  {
+   "m": 18,
+   "director_p331_rank": 1140,
+   "this_p661_rank": 1140,
+   "director_HF_L3": 0,
+   "this_HF_L3": 0,
+   "dim_sym3": 1140,
+   "free_rung": true,
+   "rank_agrees": true,
+   "hf_agrees": true
+  },
+  {
+   "m": 19,
+   "director_p331_rank": 1330,
+   "this_p661_rank": 1330,
+   "director_HF_L3": 0,
+   "this_HF_L3": 0,
+   "dim_sym3": 1330,
+   "free_rung": true,
+   "rank_agrees": true,
+   "hf_agrees": true
+  },
+  {
+   "m": 20,
+   "director_p331_rank": 1380,
+   "this_p661_rank": 1380,
+   "director_HF_L3": 160,
+   "this_HF_L3": 160,
+   "dim_sym3": 1540,
+   "free_rung": false,
+   "rank_agrees": true,
+   "hf_agrees": true
+  },
+  {
+   "m": 22,
+   "director_p331_rank": 1380,
+   "this_p661_rank": 1380,
+   "director_HF_L3": 644,
+   "this_HF_L3": 644,
+   "dim_sym3": 2024,
+   "free_rung": false,
+   "rank_agrees": true,
+   "hf_agrees": true
+  }
+ ],
+ "m20": {
+  "director_p331_zero_dim": true,
+  "director_ngens": 240,
+  "this_p661_zero_dim": true,
+  "this_ngens": 1380,
+  "this_full_span": true,
+  "this_threads": 2,
+  "this_seconds": 8.869111061096191,
+  "this_pure_hist": {
+   "3": 19,
+   "4": 1
+  },
+  "director_pure_hist": {
+   "3": 10,
+   "4": 5,
+   "5": 5
+  },
+  "zero_dim_agrees": true
+ },
+ "note": "Agreement of ranks and of m=20 zero-dimensionality is the campaign's standard cross-prime evidence class. Exact leading exponents may differ (independent sections; director used a 240-gen subset, this packet uses the full 1380-gen span)."
+}

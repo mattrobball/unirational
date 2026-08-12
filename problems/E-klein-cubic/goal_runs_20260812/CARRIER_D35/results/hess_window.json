@@ -1,0 +1,49 @@
+{
+ "rows": [
+  {
+   "HF": 635,
+   "d": 33,
+   "ideal_Wb": 507,
+   "molien_W": 511,
+   "molien_Wb": 511,
+   "oncurve_W": 5,
+   "oncurve_Wb": 4
+  },
+  {
+   "HF": 655,
+   "d": 34,
+   "ideal_Wb": 570,
+   "molien_W": 575,
+   "molien_Wb": 576,
+   "oncurve_W": 5,
+   "oncurve_Wb": 6
+  },
+  {
+   "HF": 675,
+   "d": 35,
+   "ideal_Wb": 632,
+   "molien_W": 638,
+   "molien_Wb": 637,
+   "oncurve_W": 6,
+   "oncurve_Wb": 5
+  },
+  {
+   "HF": 695,
+   "d": 36,
+   "ideal_Wb": 701,
+   "molien_W": 706,
+   "molien_Wb": 706,
+   "oncurve_W": 5,
+   "oncurve_Wb": 5
+  },
+  {
+   "HF": 715,
+   "d": 37,
+   "ideal_Wb": 779,
+   "molien_W": 785,
+   "molien_Wb": 786,
+   "oncurve_W": 5,
+   "oncurve_Wb": 7
+  }
+ ]
+}

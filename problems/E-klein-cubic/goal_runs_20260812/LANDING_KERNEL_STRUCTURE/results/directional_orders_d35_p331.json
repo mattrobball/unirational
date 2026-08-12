@@ -1,0 +1,171 @@
+{
+ "d": 35,
+ "p": 331,
+ "cases": [
+  {
+   "locus": "ellV",
+   "dir": "dir B(+-)",
+   "min_order": 331
+  },
+  {
+   "locus": "ellV",
+   "dir": "dir C(-+)",
+   "min_order": 331
+  },
+  {
+   "locus": "ellV",
+   "dir": "dir D(--)",
+   "min_order": 331
+  },
+  {
+   "locus": "ellV",
+   "dir": "dir random",
+   "min_order": 18
+  },
+  {
+   "locus": "plus-plane",
+   "dir": "W^- eig omega",
+   "min_order": 4
+  },
+  {
+   "locus": "plus-plane",
+   "dir": "W^- eig omega^2",
+   "min_order": 4
+  },
+  {
+   "locus": "plus-plane",
+   "dir": "dir random",
+   "min_order": 4
+  },
+  {
+   "locus": "minus-line",
+   "dir": "dir c_sigma",
+   "min_order": 1
+  },
+  {
+   "locus": "minus-line",
+   "dir": "W^+ eig omega^0#0",
+   "min_order": 1
+  },
+  {
+   "locus": "minus-line",
+   "dir": "W^+ eig omega#0",
+   "min_order": 1
+  },
+  {
+   "locus": "minus-line",
+   "dir": "W^+ eig omega^2#0",
+   "min_order": 1
+  },
+  {
+   "locus": "minus-line",
+   "dir": "dir random",
+   "min_order": 1
+  },
+  {
+   "locus": "eigenline1",
+   "dir": "C6 wt 0",
+   "min_order": 3
+  },
+  {
+   "locus": "eigenline1",
+   "dir": "C6 wt 2",
+   "min_order": 3
+  },
+  {
+   "locus": "eigenline1",
+   "dir": "C6 wt 5",
+   "min_order": 3
+  },
+  {
+   "locus": "eigenline1",
+   "dir": "dir random",
+   "min_order": 2
+  },
+  {
+   "locus": "D10pt",
+   "dir": "C5 wt#0",
+   "min_order": 20
+  },
+  {
+   "locus": "D10pt",
+   "dir": "C5 wt#1",
+   "min_order": 20
+  },
+  {
+   "locus": "D10pt",
+   "dir": "C5 wt#2",
+   "min_order": 20
+  },
+  {
+   "locus": "D10pt",
+   "dir": "C5 wt#3",
+   "min_order": 20
+  },
+  {
+   "locus": "D10pt",
+   "dir": "dir random",
+   "min_order": 12
+  },
+  {
+   "locus": "D12pt",
+   "dir": "W^- eig m.omega",
+   "min_order": 24
+  },
+  {
+   "locus": "D12pt",
+   "dir": "W^- eig m.omega^2",
+   "min_order": 24
+  },
+  {
+   "locus": "D12pt",
+   "dir": "W^+ eig p.omega",
+   "min_order": 331
+  },
+  {
+   "locus": "D12pt",
+   "dir": "W^+ eig p.omega^2",
+   "min_order": 331
+  },
+  {
+   "locus": "D12pt",
+   "dir": "dir random",
+   "min_order": 21
+  },
+  {
+   "locus": "C11pt",
+   "dir": "wt#1",
+   "min_order": 8
+  },
+  {
+   "locus": "C11pt",
+   "dir": "wt#2",
+   "min_order": 9
+  },
+  {
+   "locus": "C11pt",
+   "dir": "wt#3",
+   "min_order": 15
+  },
+  {
+   "locus": "C11pt",
+   "dir": "wt#4",
+   "min_order": 13
+  },
+  {
+   "locus": "V4w",
+   "dir": "dir y",
+   "min_order": 331
+  },
+  {
+   "locus": "V4w",
+   "dir": "dir yperp",
+   "min_order": 331
+  },
+  {
+   "locus": "V4w",
+   "dir": "dir random",
+   "min_order": 6
+  }
+ ]
+}

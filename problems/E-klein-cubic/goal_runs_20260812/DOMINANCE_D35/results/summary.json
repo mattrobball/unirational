@@ -1,0 +1,28 @@
+{
+  "headline": "Problem E remains OPEN; this packet excludes no degree.",
+  "cell_dim": 37,
+  "P3": 1380,
+  "generic_jac_rank": 5,
+  "euler_ok": true,
+  "P4_lower_exact": 17905,
+  "P4_upper": 51060,
+  "HF4": [
+    40330,
+    73485
+  ],
+  "I4_lead_S": 17905,
+  "I4_collision_extras": 33155,
+  "minors_p331_rewrite_zero": 0,
+  "minors_p331_tested": 25,
+  "minors_p331_rem_rank": 25,
+  "minors_p661_rewrite_zero": 0,
+  "minors_p661_tested": 5,
+  "extras_sampled_zero": 0,
+  "I5_lead_S": 178811,
+  "I5_linears_zero": 0,
+  "I5_linears_sampled": 4,
+  "minor_span_lb": 2200,
+  "degree_excluded": false,
+  "prize": false,
+  "flag": "no degree excluded; ODDZERO idle"
+}

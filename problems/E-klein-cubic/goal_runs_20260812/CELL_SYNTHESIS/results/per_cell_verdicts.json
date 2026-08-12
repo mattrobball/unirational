@@ -1,0 +1,1784 @@
+[
+  {
+    "FLAG_KILL": false,
+    "cell_id": 5,
+    "claimed_dead": false,
+    "content_hash_p331": "1c9110f65f5bbba3",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "2955f30c0593ff1d",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 7,
+    "claimed_dead": false,
+    "content_hash_p331": "3150d84bef191573",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "29bd5a4e397c0790",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 13,
+    "claimed_dead": false,
+    "content_hash_p331": "3618971b26ff55c3",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "2c7513acc00d7368",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 15,
+    "claimed_dead": false,
+    "content_hash_p331": "3f5a2ac32819ba6f",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "2f9b8e8ba5ba6288",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 21,
+    "claimed_dead": false,
+    "content_hash_p331": "4719753a11bf778e",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "337226b957ffdc34",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 23,
+    "claimed_dead": false,
+    "content_hash_p331": "5a83d267319fa23e",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "6635c24184e4be43",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 29,
+    "claimed_dead": false,
+    "content_hash_p331": "60e0986d49bee8f8",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "6ae7ffa6dbd79c50",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 31,
+    "claimed_dead": false,
+    "content_hash_p331": "6250d74a687cb983",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "6fb4d2d4d5a56413",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 37,
+    "claimed_dead": false,
+    "content_hash_p331": "6d86d9d5001c7e2e",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "88ca456f7d4537e6",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 39,
+    "claimed_dead": false,
+    "content_hash_p331": "936cc3c107447118",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "8b6af44c6a58b736",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 45,
+    "claimed_dead": false,
+    "content_hash_p331": "9b53e234676b5956",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "a51f1461a34945c2",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 47,
+    "claimed_dead": false,
+    "content_hash_p331": "a604f5628e9236ba",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "a6a8ab1ae0fdfe22",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 53,
+    "claimed_dead": false,
+    "content_hash_p331": "b55e098db7f81575",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "aac84803b75ad54e",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 55,
+    "claimed_dead": false,
+    "content_hash_p331": "bbb7766320c5cd5a",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "b357be64b49d4511",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 61,
+    "claimed_dead": false,
+    "content_hash_p331": "c1aa082c6d18a709",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "bdbc702f4f11afa8",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 63,
+    "claimed_dead": false,
+    "content_hash_p331": "cc5dcc73af916c94",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "be7f55ce39e664a6",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 69,
+    "claimed_dead": false,
+    "content_hash_p331": "cda89047957f1b38",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "c197d9761918cc70",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 71,
+    "claimed_dead": false,
+    "content_hash_p331": "d0d84b4f9163e092",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "cbc5e8bf02feaf22",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 697,
+    "claimed_dead": false,
+    "content_hash_p331": "db1cfded50b57ffb",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "d743d7a4fc7d0414",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 699,
+    "claimed_dead": false,
+    "content_hash_p331": "f3d6a4eaa956f29f",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "e87fb26421304593",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 701,
+    "claimed_dead": false,
+    "content_hash_p331": "f728b33a2e34714b",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "f24058be9349945b",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  },
+  {
+    "FLAG_KILL": false,
+    "cell_id": 703,
+    "claimed_dead": false,
+    "content_hash_p331": "fcf626911737b157",
+    "intersection_empty": false,
+    "keep_pass": {
+      "closed_deaths": 0,
+      "identity_note": "DEPTH_TABLE keep_pass id<->hash pairing disagrees with D35_AUDIT; the 22 hashes as a SET and the LIVE/37 verdict are consumed, not the scrambled pairing",
+      "live_dim_upper": 37,
+      "verdict": "LIVE"
+    },
+    "menu_admissible": "FULL F_odd(35) = 36252160 entries (no cell-to-menu linkage)",
+    "must_look_like": {
+      "base_locus": {
+        "C11_orbit_60": "MUST be in the base locus (every degree, hence d=35)",
+        "minus_line_L": "MUST NOT be in the base locus (ord = 0)",
+        "plus_plane_P": "simple vanishing (ord = 1)"
+      },
+      "cell": "lives in the shared 37-cell; closed keep-pass already satisfied",
+      "fiber_euler": {
+        "C11_five_points": "chi_top congruent to 4 mod 11, and the five values EQUAL (on Z: n_x = 4)",
+        "C5_four_points": "chi_top congruent to 0 mod 5 (on Z: n_x = 5)",
+        "E_sigma_generic": "chi_top even, on the closed branch; escape carried",
+        "L_sigma_and_C3": "not numerically pinned"
+      },
+      "if_nine_pinned_fibres_are_smooth_curves": {
+        "branch_A_connected": "chi_0 <= -20, genus in [21, 76, 131, 186] (and 21+55 Z)",
+        "branch_B_disconnected": "chi_0 >= 35, Stein degree s >= 35",
+        "chi_0": "one integer, == 35 (mod 55)",
+        "genus_0_C14": "FORBIDDEN (0 of 2674 towers)"
+      },
+      "invariant_divisors": {
+        "D5": "Hessian quintic: all five C11, no C5",
+        "PIN": "cannot dodge the pinned points below degree 55",
+        "degrees": "exactly k >= 5"
+      },
+      "tower_depths_over_C11": {
+        "every_mu": ">= 3",
+        "mu_eq_7": ">= 5",
+        "mu_in_6_9": ">= 4",
+        "per_mu": {
+          "1": 3,
+          "10": 3,
+          "2": 3,
+          "3": 3,
+          "4": 3,
+          "5": 3,
+          "6": 4,
+          "7": 5,
+          "8": 3,
+          "9": 4
+        }
+      }
+    },
+    "sealed_hash_p331": "f2639db1fe05652f",
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "stein_ledger_verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+  }
+]

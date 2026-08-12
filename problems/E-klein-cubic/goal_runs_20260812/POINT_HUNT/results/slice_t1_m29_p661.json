@@ -1,0 +1,28 @@
+{
+ "p": 661,
+ "m": 29,
+ "coord": 0,
+ "m_slice": 28,
+ "ngens": 1380,
+ "nmon_kept": 4060,
+ "verdict": "NO_VERDICT_MEMORY",
+ "seconds": 340.62155771255493,
+ "max_rss_kb": 8630496,
+ "timed_out": false,
+ "killed_memory": true,
+ "lead": null,
+ "zero_dimensional": false,
+ "cmd": [
+  "msolve",
+  "-g",
+  "1",
+  "-t",
+  "2",
+  "-v",
+  "1",
+  "-f",
+  "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/POINT_HUNT/results/slice_t1_m29_p661.ms",
+  "-o",
+  "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/POINT_HUNT/results/slice_t1_m29_p661_lead.out"
+ ]
+}

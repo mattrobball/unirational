@@ -1,0 +1,17 @@
+{
+  "psl2_11_order_formula": 660,
+  "psl2_11_order_factors": 660,
+  "character_degrees": [
+    1,
+    5,
+    5,
+    10,
+    10,
+    11,
+    12,
+    12
+  ],
+  "sum_of_squares": 660,
+  "two_sylow_order": 4,
+  "index_of_borel_c11_rtimes_c5": 12
+}

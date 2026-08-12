@@ -1,0 +1,23 @@
+{
+ "N": 120,
+ "d": 37,
+ "dim_sym3": 5984,
+ "expect_span": 2640,
+ "full_span_rule": true,
+ "killed_rss": false,
+ "m": 32,
+ "ms_path": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/CONE_D3738/results/cone_d37_m32_p331.ms",
+ "n_gens_written": 2640,
+ "n_indep": 2640,
+ "n_sampled": 4830,
+ "other_msolve_n": 9,
+ "other_msolve_rss_kb": 67877328,
+ "p": 331,
+ "returncode": null,
+ "rss_after_kb": 1497312,
+ "rss_before_kb": 1792576,
+ "seconds": 1267.5038659572601,
+ "threads": 2,
+ "timeout": true,
+ "verdict": "timeout"
+}

@@ -1,0 +1,74 @@
+{
+ "source": "director_probes_20260812/cone_m20_lead.out",
+ "note": "director p=331 m=20 control: 240 generators (a subset).",
+ "lead": {
+  "ok": true,
+  "path": "/Users/worker/unirational/problems/E-klein-cubic/director_probes_20260812/cone_m20_lead.out",
+  "nvars": 20,
+  "nlead": 11201,
+  "header": {
+   "char": 331,
+   "vars": [
+    "t1",
+    "t2",
+    "t3",
+    "t4",
+    "t5",
+    "t6",
+    "t7",
+    "t8",
+    "t9",
+    "t10",
+    "t11",
+    "t12",
+    "t13",
+    "t14",
+    "t15",
+    "t16",
+    "t17",
+    "t18",
+    "t19",
+    "t20"
+   ],
+   "length": 11201
+  },
+  "pure_powers": {
+   "1": 3,
+   "2": 3,
+   "3": 3,
+   "4": 3,
+   "5": 3,
+   "6": 3,
+   "7": 3,
+   "8": 3,
+   "9": 3,
+   "10": 3,
+   "11": 4,
+   "12": 4,
+   "13": 4,
+   "14": 4,
+   "15": 4,
+   "16": 5,
+   "17": 5,
+   "18": 5,
+   "19": 5,
+   "20": 5
+  },
+  "pure_exponent_histogram": {
+   "3": 10,
+   "4": 5,
+   "5": 5
+  },
+  "missing_pure": [],
+  "zero_dimensional": true
+ },
+ "clears": true,
+ "bound_if_clear": 17,
+ "char": 331,
+ "nlead": 11201,
+ "pure_exponent_histogram": {
+  "3": 10,
+  "4": 5,
+  "5": 5
+ }
+}

@@ -1,0 +1,24 @@
+{
+ "p": 331,
+ "m": 29,
+ "verdict": "NO_VERDICT_MEMORY",
+ "seconds": 543.475653886795,
+ "max_rss_kb": 7402768,
+ "timed_out": false,
+ "killed_memory": true,
+ "lead": null,
+ "zero_dimensional": false,
+ "cmd": [
+  "msolve",
+  "-g",
+  "1",
+  "-t",
+  "2",
+  "-v",
+  "1",
+  "-f",
+  "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/POINT_HUNT/results/cone_m29_p331.ms",
+  "-o",
+  "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/POINT_HUNT/results/lead_m29_p331.out"
+ ]
+}

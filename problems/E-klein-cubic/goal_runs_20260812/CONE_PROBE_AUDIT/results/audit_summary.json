@@ -1,0 +1,15 @@
+{
+  "packet": "goal_runs_20260812/CONE_PROBE_AUDIT",
+  "headline": "Problem E remains OPEN; this packet excludes no degree.",
+  "verdicts": {
+    "R1": "CONFIRMED",
+    "R2": "CONFIRMED",
+    "R3": "CORRECTED",
+    "R4": "CONFIRMED",
+    "R5": "CONFIRMED"
+  },
+  "dimV_le_17": "stands modularly (p=331 and p=661); not a char-0 theorem",
+  "R3_exact_fix": "V cap L = {0} for ANY linear m-plane through the origin implies dim V <= 37-m; genericity is not required",
+  "no_slicelib": true,
+  "primes": [331, 661]
+}

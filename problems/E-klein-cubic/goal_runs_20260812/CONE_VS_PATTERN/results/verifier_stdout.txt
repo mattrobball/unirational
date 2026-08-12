@@ -1,0 +1,59 @@
+CONE_VS_PATTERN verifier
+  OK  H1 headline OPEN 
+  OK  H2 excludes no degree 
+  OK  H3 no REPORT.md 
+  OK  H4 registration present 
+  OK  H5 Not claimed section 
+  OK  H6 FLAG not claim 
+[A] extraction / rigidity
+  OK  A1 p=331 extract present 
+  OK  A2 p=331 22 patterns 
+  OK  A3 p=331 14 forced-deeper [23, 24, 35, 36, 37, 38, 41, 42, 43, 44, 45, 46, 68, 69]
+  OK  A4 p=331 rigidity 0 at 0..3 {'0': 0, '1': 0, '2': 0, '3': 0}
+  OK  A5 p=331 functionals npy 
+  OK  A6 p=331 npy rows match (37, 37)
+  OK  A1 p=661 extract present 
+  OK  A2 p=661 22 patterns 
+  OK  A3 p=661 14 forced-deeper [23, 24, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 74, 75]
+  OK  A4 p=661 rigidity 0 at 0..3 {'0': 0, '1': 0, '2': 0, '3': 0}
+  OK  A5 p=661 functionals npy 
+  OK  A6 p=661 npy rows match (39, 37)
+[B] vanishing certificates
+  OK  B1 p=331 vanish present 
+  OK  B2 p=331 I3 rank 1380 
+  OK  B3 p=331 22 dead 
+  OK  B4 p=331 0 live 
+  OK  B5 p=331 flag on 
+  OK  B6 p=331 headline OPEN 
+  OK  B7 p=331 replay Z37 count 5 vs 5
+  OK  B8 p=331 replay I3 extras 0 vs 0
+  OK  B9 p=331 all pattern DEAD 
+  OK  B10 p=331 rid2 kill 
+  OK  B1 p=661 vanish present 
+  OK  B2 p=661 I3 rank 1380 
+  OK  B3 p=661 22 dead 
+  OK  B4 p=661 0 live 
+  OK  B5 p=661 flag on 
+  OK  B6 p=661 headline OPEN 
+  OK  B7 p=661 replay Z37 count 5 vs 5
+  OK  B8 p=661 replay I3 extras 0 vs 0
+  OK  B9 p=661 all pattern DEAD 
+  OK  B10 p=661 rid2 kill 
+[C] Rabinowitsch control is tautological
+  OK  C1 p=331 rabin present 
+  OK  C2 p=331 all tautological ['random', 'z37', 'none']
+  OK  C3 p=331 random lead=1 
+  OK  C3 p=331 z37 lead=1 
+  OK  C3 p=331 none lead=1 
+  OK  C1 p=661 rabin present 
+  OK  C2 p=661 all tautological ['random', 'z37', 'none']
+  OK  C3 p=661 random lead=1 
+  OK  C3 p=661 z37 lead=1 
+  OK  C3 p=661 none lead=1 
+[D] summary / no claim
+  OK  D1 summary present 
+  OK  D2 summary headline OPEN 
+  OK  D3 no exclusion claimed 
+checks=51 fails=0
+CONE_VS_PATTERN_VERIFY_OK
+ALLGREEN

@@ -1,0 +1,696 @@
+{
+  "cells": [
+    {
+      "cell_id": 5,
+      "content_hash_p331": "1c9110f65f5bbba3",
+      "sealed_hash_p331": "2955f30c0593ff1d",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 7,
+      "content_hash_p331": "3150d84bef191573",
+      "sealed_hash_p331": "29bd5a4e397c0790",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 13,
+      "content_hash_p331": "3618971b26ff55c3",
+      "sealed_hash_p331": "2c7513acc00d7368",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 15,
+      "content_hash_p331": "3f5a2ac32819ba6f",
+      "sealed_hash_p331": "2f9b8e8ba5ba6288",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 21,
+      "content_hash_p331": "4719753a11bf778e",
+      "sealed_hash_p331": "337226b957ffdc34",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 23,
+      "content_hash_p331": "5a83d267319fa23e",
+      "sealed_hash_p331": "6635c24184e4be43",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 29,
+      "content_hash_p331": "60e0986d49bee8f8",
+      "sealed_hash_p331": "6ae7ffa6dbd79c50",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 31,
+      "content_hash_p331": "6250d74a687cb983",
+      "sealed_hash_p331": "6fb4d2d4d5a56413",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 37,
+      "content_hash_p331": "6d86d9d5001c7e2e",
+      "sealed_hash_p331": "88ca456f7d4537e6",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 39,
+      "content_hash_p331": "936cc3c107447118",
+      "sealed_hash_p331": "8b6af44c6a58b736",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 45,
+      "content_hash_p331": "9b53e234676b5956",
+      "sealed_hash_p331": "a51f1461a34945c2",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 47,
+      "content_hash_p331": "a604f5628e9236ba",
+      "sealed_hash_p331": "a6a8ab1ae0fdfe22",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 53,
+      "content_hash_p331": "b55e098db7f81575",
+      "sealed_hash_p331": "aac84803b75ad54e",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 55,
+      "content_hash_p331": "bbb7766320c5cd5a",
+      "sealed_hash_p331": "b357be64b49d4511",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 61,
+      "content_hash_p331": "c1aa082c6d18a709",
+      "sealed_hash_p331": "bdbc702f4f11afa8",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 63,
+      "content_hash_p331": "cc5dcc73af916c94",
+      "sealed_hash_p331": "be7f55ce39e664a6",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 69,
+      "content_hash_p331": "cda89047957f1b38",
+      "sealed_hash_p331": "c197d9761918cc70",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 71,
+      "content_hash_p331": "d0d84b4f9163e092",
+      "sealed_hash_p331": "cbc5e8bf02feaf22",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 697,
+      "content_hash_p331": "db1cfded50b57ffb",
+      "sealed_hash_p331": "d743d7a4fc7d0414",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 699,
+      "content_hash_p331": "f3d6a4eaa956f29f",
+      "sealed_hash_p331": "e87fb26421304593",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 701,
+      "content_hash_p331": "f728b33a2e34714b",
+      "sealed_hash_p331": "f24058be9349945b",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    },
+    {
+      "cell_id": 703,
+      "content_hash_p331": "fcf626911737b157",
+      "sealed_hash_p331": "f2639db1fe05652f",
+      "sigma_band": {
+        "a35_L_options": [
+          [
+            35,
+            0
+          ]
+        ],
+        "a35_P_options": [
+          [
+            34,
+            1
+          ]
+        ],
+        "group_key": "0bbfc90a9b60",
+        "m_options_L": [
+          35
+        ],
+        "m_options_P": [
+          1
+        ],
+        "max_m": 1,
+        "min_m": 1
+      }
+    }
+  ],
+  "pairing": {
+    "audit_id_to_hash": {
+      "13": "3618971b26ff55c3",
+      "15": "3f5a2ac32819ba6f",
+      "21": "4719753a11bf778e",
+      "23": "5a83d267319fa23e",
+      "29": "60e0986d49bee8f8",
+      "31": "6250d74a687cb983",
+      "37": "6d86d9d5001c7e2e",
+      "39": "936cc3c107447118",
+      "45": "9b53e234676b5956",
+      "47": "a604f5628e9236ba",
+      "5": "1c9110f65f5bbba3",
+      "53": "b55e098db7f81575",
+      "55": "bbb7766320c5cd5a",
+      "61": "c1aa082c6d18a709",
+      "63": "cc5dcc73af916c94",
+      "69": "cda89047957f1b38",
+      "697": "db1cfded50b57ffb",
+      "699": "f3d6a4eaa956f29f",
+      "7": "3150d84bef191573",
+      "701": "f728b33a2e34714b",
+      "703": "fcf626911737b157",
+      "71": "d0d84b4f9163e092"
+    },
+    "audit_smith_stein_hashes_agree": true,
+    "audit_smith_stein_ids_agree": true,
+    "identity_key": "content_hash@p331 (HANDOFF / D35_AUDIT)",
+    "keep_pass_id_hash_pairing_FLAG": true,
+    "keep_pass_p331": {
+      "all_best_dim_37": true,
+      "all_verdicts_LIVE": true,
+      "content_hash_set_equal": true,
+      "id_to_hash_agrees_with_audit": false,
+      "ids_equal_as_list": true,
+      "live_dims": [
+        37
+      ],
+      "n_dead": 0,
+      "n_live": 22,
+      "sealed_hash_set_equal": true
+    },
+    "keep_pass_p661": {
+      "all_best_dim_37": true,
+      "all_verdicts_LIVE": true,
+      "live_dims": [
+        37
+      ],
+      "n_dead": 0,
+      "n_live": 22
+    },
+    "sigma_band": {
+      "a35_L_options": [
+        [
+          35,
+          0
+        ]
+      ],
+      "a35_P_options": [
+        [
+          34,
+          1
+        ]
+      ],
+      "group_key": "0bbfc90a9b60",
+      "m_options_L": [
+        35
+      ],
+      "m_options_P": [
+        1
+      ],
+      "max_m": 1,
+      "min_m": 1
+    },
+    "sigma_band_shared": true
+  }
+}

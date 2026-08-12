@@ -1,0 +1,36 @@
+{
+  "p": 661,
+  "m": 29,
+  "full_span_ngens": 1380,
+  "chart_t1=1": {
+    "verdict": "EMPTY_CHART",
+    "seconds": 479.3,
+    "max_rss_kb": 6146560,
+    "meaning": "I + (t1-1) is the unit ideal"
+  },
+  "slice_t1=0_lead": {
+    "verdict": "NO_VERDICT_MEMORY",
+    "seconds": 340.6,
+    "max_rss_kb": 8630496,
+    "note": "28-variable leading ideal exceeded the 8 GB cap at p=661"
+  },
+  "slice_t1=0_chart_t2=1": {
+    "verdict": "EMPTY_CHART",
+    "seconds": 389.9,
+    "max_rss_kb": 4799856,
+    "meaning": "I + (t1) + (t2-1) is the unit ideal"
+  },
+  "slice_t1=t2=0": {
+    "verdict": "ZERO_DIM",
+    "seconds": 361.2,
+    "max_rss_kb": 6151536,
+    "nvars": 27,
+    "nlead": 10430,
+    "missing_pure": [],
+    "meaning": "homogeneous restriction to t1=t2=0 is 0-dimensional, hence only the origin"
+  },
+  "V_cap_L": "{0}",
+  "n_points": 0,
+  "verdict": "NO_NONZERO_POINT",
+  "note": "Empty charts on t1=1 and on {t1=0,t2=1}, plus 0-dim on t1=t2=0 ⇒ V ∩ L = {0}. No landing tuple extracted. Does not exclude d=35."
+}

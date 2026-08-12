@@ -1,0 +1,64 @@
+group sizes: {'A': 13, 'B': 27, 'C': 8, 'D': 9, 'E': 4}
+  [A] PASS ledger_row_1  order=1 nconj=1
+  [A] PASS ledger_row_C2  order=2 nconj=55
+  [A] PASS ledger_row_C3  order=3 nconj=55
+  [A] PASS ledger_row_V4  order=4 nconj=55
+  [A] PASS ledger_row_C5  order=5 nconj=66
+  [A] PASS ledger_row_C6  order=6 nconj=55
+  [A] PASS ledger_row_C11  order=11 nconj=12
+  [A] PASS C11_five_points_on_X  on_X=5
+  [A] PASS C11_residual_is_a_5_cycle  [2, 0, 3, 4, 1]
+  [A] PASS C2_minus_line_in_X
+  [A] PASS C2_j_8192_over_11
+  [A] PASS condition_A_abelian_rows_present
+  [A] PASS X_G_empty_is_classical  W irreducible; not re-proved
+  [B] PASS C11_beta_len_at_0  [2, 3, 4]
+  [B] PASS C11_beta_len_at_1  [3, 5, 7]
+  [B] PASS C11_beta_len_at_2  [1, 5, 8]
+  [B] PASS C11_beta_len_at_3  [1, 6, 9]
+  [B] PASS C11_beta_len_at_4  [4, 9, 10]
+  [B] PASS C11_single_QR_orbit  got=[[1, 5, 8], [1, 6, 9], [2, 3, 4], [3, 5, 7], [4, 9, 10]]
+  [B] PASS C11_representative_234  [2, 3, 4]
+  [B] PASS C5_beta_len_a1  [1, 2, 3]
+  [B] PASS C5_beta_len_a2  [1, 2, 4]
+  [B] PASS C5_beta_len_a3  [1, 3, 4]
+  [B] PASS C5_beta_len_a4  [2, 3, 4]
+  [B] PASS C5_a1_is_123
+  [B] PASS C5_a2_is_124
+  [B] PASS C5_inversion_fuses_1_with_4
+  [B] PASS C5_inversion_fuses_2_with_3
+  [B] PASS C5_times2_would_identify_but_is_outer  2*[1, 2, 3]=[1, 2, 4]
+  [B] PASS C6_chi1_beta_134  [1, 3, 4]
+  [B] PASS C6_chi5_beta_235  [2, 3, 5]
+  [B] PASS C6_pair_identified_by_inversion
+  [B] PASS dim_plus_beta_open
+  [B] PASS dim_plus_beta_C2E
+  [B] PASS dim_plus_beta_C2L
+  [B] PASS dim_plus_beta_C3
+  [B] PASS dim_plus_beta_V4
+  [B] PASS dim_plus_beta_C5
+  [B] PASS dim_plus_beta_C6
+  [B] PASS dim_plus_beta_C11
+  [C] PASS FIXB_present  keys=abelian_refinements_of_nonabelian_strata,meta,reduced_isotropy_stratification,sanity,symbols
+  [C] PASS FIXB_20_orbits  20
+  [C] PASS FIXB_19_distinct  19
+  [C] PASS FIXB_14_abelian  14
+  [C] PASS FIXB_6_nonabelian  6
+  [C] PASS FIXB_dim_plus_beta_4
+  [C] PASS FIXB_isotropy_15  n=15
+  [C] PASS FIXB_n_symbols_20  20
+  [D] PASS dim_mismatch_recorded
+  [D] PASS Burn_X_is_3
+  [D] PASS Burn_PW_is_4
+  [D] PASS ten_X_symbols  n=10
+  [D] PASS all_X_in_Burn3
+  [D] PASS all_X_dim_plus_beta_3
+  [D] PASS assumption2_fails_exactly_E_and_V4II  ['X.C2.E', 'X.V4.II']
+  [D] PASS headline_open
+  [D] PASS no_degree_in_headline_exclusion
+  [E] PASS exclusions_claimed_empty
+  [E] PASS degrees_excluded_empty
+  [E] PASS verdict_is_orthogonal  ORTHOGONAL / INAPPLICABLE as a new dominance obstruction
+  [E] PASS condition_A_passes_in_assembly
+BURNSIDE_ASSESS_VERIFY_OK
+ALLGREEN (61 checks, 0 failures, 0 skips; groups A = 13, B = 27, C = 8, D = 9, E = 4)

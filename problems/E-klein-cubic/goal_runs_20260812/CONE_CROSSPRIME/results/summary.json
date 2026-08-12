@@ -1,0 +1,306 @@
+{
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "packet": "goal_runs_20260812/CONE_CROSSPRIME",
+ "p": 661,
+ "director_prime": 331,
+ "P3": {
+  "p": 661,
+  "m": 37,
+  "npts": 1971,
+  "dim_sym3": 9139,
+  "rank": 1380,
+  "P3_sealed": 1380,
+  "match_sealed": true,
+  "point_seed": 661350035,
+  "seconds": 45.088581800460815
+ },
+ "cell_shape": [
+  37,
+  637
+ ],
+ "cell_rank_U": 2,
+ "director_m20_control": {
+  "source": "director_probes_20260812/cone_m20_lead.out",
+  "note": "director p=331 m=20 control: 240 generators (a subset).",
+  "lead": {
+   "ok": true,
+   "path": "/Users/worker/unirational/problems/E-klein-cubic/director_probes_20260812/cone_m20_lead.out",
+   "nvars": 20,
+   "nlead": 11201,
+   "header": {
+    "char": 331,
+    "vars": [
+     "t1",
+     "t2",
+     "t3",
+     "t4",
+     "t5",
+     "t6",
+     "t7",
+     "t8",
+     "t9",
+     "t10",
+     "t11",
+     "t12",
+     "t13",
+     "t14",
+     "t15",
+     "t16",
+     "t17",
+     "t18",
+     "t19",
+     "t20"
+    ],
+    "length": 11201
+   },
+   "pure_powers": {
+    "1": 3,
+    "2": 3,
+    "3": 3,
+    "4": 3,
+    "5": 3,
+    "6": 3,
+    "7": 3,
+    "8": 3,
+    "9": 3,
+    "10": 3,
+    "11": 4,
+    "12": 4,
+    "13": 4,
+    "14": 4,
+    "15": 4,
+    "16": 5,
+    "17": 5,
+    "18": 5,
+    "19": 5,
+    "20": 5
+   },
+   "pure_exponent_histogram": {
+    "3": 10,
+    "4": 5,
+    "5": 5
+   },
+   "missing_pure": [],
+   "zero_dimensional": true
+  },
+  "clears": true,
+  "bound_if_clear": 17,
+  "char": 331,
+  "nlead": 11201,
+  "pure_exponent_histogram": {
+   "3": 10,
+   "4": 5,
+   "5": 5
+  }
+ },
+ "rungs": [
+  {
+   "p": 661,
+   "m": 6,
+   "verdict": "FREE",
+   "rank": 56,
+   "dim_sym3": 56,
+   "HF_L3": 0,
+   "free": true,
+   "clears": null,
+   "bound": 31,
+   "ngens_written": null,
+   "seconds": 0.007425069808959961
+  },
+  {
+   "p": 661,
+   "m": 8,
+   "verdict": "FREE",
+   "rank": 120,
+   "dim_sym3": 120,
+   "HF_L3": 0,
+   "free": true,
+   "clears": null,
+   "bound": 29,
+   "ngens_written": null,
+   "seconds": 0.025648832321166992
+  },
+  {
+   "p": 661,
+   "m": 10,
+   "verdict": "FREE",
+   "rank": 220,
+   "dim_sym3": 220,
+   "HF_L3": 0,
+   "free": true,
+   "clears": null,
+   "bound": 27,
+   "ngens_written": null,
+   "seconds": 0.06516814231872559
+  },
+  {
+   "p": 661,
+   "m": 18,
+   "verdict": "FREE",
+   "rank": 1140,
+   "dim_sym3": 1140,
+   "HF_L3": 0,
+   "free": true,
+   "clears": null,
+   "bound": 19,
+   "ngens_written": null,
+   "seconds": 5.636088848114014
+  },
+  {
+   "p": 661,
+   "m": 19,
+   "verdict": "FREE",
+   "rank": 1330,
+   "dim_sym3": 1330,
+   "HF_L3": 0,
+   "free": true,
+   "clears": null,
+   "bound": 18,
+   "ngens_written": null,
+   "seconds": 6.475847959518433
+  },
+  {
+   "p": 661,
+   "m": 20,
+   "verdict": "ZERO_DIM",
+   "rank": 1380,
+   "dim_sym3": 1540,
+   "HF_L3": 160,
+   "free": false,
+   "clears": true,
+   "bound": 17,
+   "ngens_written": 1380,
+   "seconds": 8.869111061096191
+  },
+  {
+   "p": 661,
+   "m": 22,
+   "verdict": "RANKED",
+   "rank": 1380,
+   "dim_sym3": 2024,
+   "HF_L3": 644,
+   "free": false,
+   "clears": null,
+   "bound": null,
+   "ngens_written": null,
+   "seconds": 14.89579701423645
+  }
+ ],
+ "tightest_modular_bound": 17,
+ "crossprime": {
+  "headline": "Problem E remains OPEN; this packet excludes no degree.",
+  "prime_dependence": false,
+  "serious_finding": false,
+  "agreements": [
+   "m=6 rank 56 vs director 56",
+   "m=8 rank 120 vs director 120",
+   "m=10 rank 220 vs director 220",
+   "m=18 rank 1140 vs director 1140",
+   "m=19 rank 1330 vs director 1330",
+   "m=20 rank 1380 vs director 1380",
+   "m=22 rank 1380 vs director 1380",
+   "m=20 zero-dimensional both primes"
+  ],
+  "disagreements": [],
+  "section_rows": [
+   {
+    "m": 6,
+    "director_p331_rank": 56,
+    "this_p661_rank": 56,
+    "director_HF_L3": 0,
+    "this_HF_L3": 0,
+    "dim_sym3": 56,
+    "free_rung": true,
+    "rank_agrees": true,
+    "hf_agrees": true
+   },
+   {
+    "m": 8,
+    "director_p331_rank": 120,
+    "this_p661_rank": 120,
+    "director_HF_L3": 0,
+    "this_HF_L3": 0,
+    "dim_sym3": 120,
+    "free_rung": true,
+    "rank_agrees": true,
+    "hf_agrees": true
+   },
+   {
+    "m": 10,
+    "director_p331_rank": 220,
+    "this_p661_rank": 220,
+    "director_HF_L3": 0,
+    "this_HF_L3": 0,
+    "dim_sym3": 220,
+    "free_rung": true,
+    "rank_agrees": true,
+    "hf_agrees": true
+   },
+   {
+    "m": 18,
+    "director_p331_rank": 1140,
+    "this_p661_rank": 1140,
+    "director_HF_L3": 0,
+    "this_HF_L3": 0,
+    "dim_sym3": 1140,
+    "free_rung": true,
+    "rank_agrees": true,
+    "hf_agrees": true
+   },
+   {
+    "m": 19,
+    "director_p331_rank": 1330,
+    "this_p661_rank": 1330,
+    "director_HF_L3": 0,
+    "this_HF_L3": 0,
+    "dim_sym3": 1330,
+    "free_rung": true,
+    "rank_agrees": true,
+    "hf_agrees": true
+   },
+   {
+    "m": 20,
+    "director_p331_rank": 1380,
+    "this_p661_rank": 1380,
+    "director_HF_L3": 160,
+    "this_HF_L3": 160,
+    "dim_sym3": 1540,
+    "free_rung": false,
+    "rank_agrees": true,
+    "hf_agrees": true
+   },
+   {
+    "m": 22,
+    "director_p331_rank": 1380,
+    "this_p661_rank": 1380,
+    "director_HF_L3": 644,
+    "this_HF_L3": 644,
+    "dim_sym3": 2024,
+    "free_rung": false,
+    "rank_agrees": true,
+    "hf_agrees": true
+   }
+  ],
+  "m20": {
+   "director_p331_zero_dim": true,
+   "director_ngens": 240,
+   "this_p661_zero_dim": true,
+   "this_ngens": 1380,
+   "this_full_span": true,
+   "this_threads": 2,
+   "this_seconds": 8.869111061096191,
+   "this_pure_hist": {
+    "3": 19,
+    "4": 1
+   },
+   "director_pure_hist": {
+    "3": 10,
+    "4": 5,
+    "5": 5
+   },
+   "zero_dim_agrees": true
+  },
+  "note": "Agreement of ranks and of m=20 zero-dimensionality is the campaign's standard cross-prime evidence class. Exact leading exponents may differ (independent sections; director used a 240-gen subset, this packet uses the full 1380-gen span)."
+ },
+ "note": "Bound is modular (F_661 section + free-span / leading-ideal). No degree excluded."
+}

@@ -1,0 +1,15 @@
+IC dim 2 deg 20
+J0 dim 1 deg 20
+J2 dim 1 deg 20
+ncomps 4
+comp dim=1 deg=1
+ngens 4
+gen y3+132*y4
+gen y2-55*y4
+gen y1-159*y4
+gen y0-111*y4
+comp dim=1 deg=3
+comp dim=1 deg=7
+comp dim=1 deg=9
+nlinear 1
+END

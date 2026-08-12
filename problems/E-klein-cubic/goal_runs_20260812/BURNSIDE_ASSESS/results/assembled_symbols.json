@@ -1,0 +1,465 @@
+{
+  "P_W": {
+    "abelian_generic_stab_orbits": 14,
+    "collision": "C5/chi and C5/chi^2 share (C5; 1 on k; {1,2,3,4})",
+    "fixb_present": true,
+    "fixb_sanity": {
+      "dimF_plus_beta_equals_4_on_all": true,
+      "num_abelian_stabiliser_orbits": 14,
+      "num_distinct_symbol_keys": 19,
+      "num_nonabelian_stabiliser_orbits": 6,
+      "num_stratum_orbits": 20
+    },
+    "fixb_top_keys": [
+      "abelian_refinements_of_nonabelian_strata",
+      "meta",
+      "reduced_isotropy_stratification",
+      "sanity",
+      "symbols"
+    ],
+    "lives_in": "Burn_4(G)",
+    "n_G_orbits_of_strata": 20,
+    "n_distinct_symbols": 19,
+    "nonabelian_point_orbits_need_standard_form": 6,
+    "note": "FIX-B computed the source-side list; this packet does not re-run it.",
+    "source": "goal_runs_after_fc5e2d3/FIX_B_BURNSIDE_SYMBOLS/"
+  },
+  "X_symbols": [
+    {
+      "H": "1",
+      "assumption2_on_this_model": true,
+      "beta": [],
+      "dim_F": 3,
+      "dim_plus_beta": 3,
+      "id": "X.1",
+      "k_F": "function field of the Klein cubic (unirational, not rational)",
+      "lives_in": "Burn_3(G)",
+      "note": "open symbol of Burn_3(G)",
+      "pic_pairing": "triv",
+      "residual": "G = PSL(2,11) on k(X)"
+    },
+    {
+      "H": "C2",
+      "assumption2_on_this_model": false,
+      "beta": [
+        "sgn",
+        "sgn"
+      ],
+      "dim_F": 1,
+      "dim_plus_beta": 3,
+      "id": "X.C2.E",
+      "k_F": "function field of the Hesse cubic j=8192/11, non-CM",
+      "lives_in": "Burn_3(G)",
+      "note": "O(1) pairing is trivial along E; divisorialification required",
+      "pic_pairing": "triv (E subset P(W^+))",
+      "residual": "S3 = D12/C2 on k(E_sigma)"
+    },
+    {
+      "H": "C2",
+      "assumption2_on_this_model": true,
+      "beta": [
+        "sgn",
+        "sgn"
+      ],
+      "dim_F": 1,
+      "dim_plus_beta": 3,
+      "id": "X.C2.L",
+      "k_F": "k(P^1), residual std 2-dim irrep on W^-",
+      "lives_in": "Burn_3(G)",
+      "note": "the unique positive-dimensional rational receiver stratum",
+      "pic_pairing": "sgn (L = P(W^-))",
+      "residual": "S3 = D12/C2 on k(P^1)"
+    },
+    {
+      "H": "C3",
+      "assumption2_on_this_model": true,
+      "beta": [
+        1,
+        1,
+        2
+      ],
+      "dim_F": 0,
+      "dim_plus_beta": 3,
+      "id": "X.C3",
+      "k_F": "k x k x k x k",
+      "lives_in": "Burn_3(G)",
+      "note": "C6-points excluded (generic stab C6, not C3)",
+      "pic_pairing": "omega or omega^2, fused by residual C2",
+      "residual": "V4 = D12/C3 freely on 4 exact-C3 points (k^4)"
+    },
+    {
+      "H": "V4",
+      "assumption2_on_this_model": true,
+      "beta": [
+        "chi1",
+        "chi2",
+        "chi3"
+      ],
+      "dim_F": 0,
+      "dim_plus_beta": 3,
+      "id": "X.V4.I",
+      "k_F": "k x k x k",
+      "lives_in": "Burn_3(G)",
+      "note": "same normal weights as type-II; distinguished by Pic pairing",
+      "pic_pairing": "chi_i (the character line of the point)",
+      "residual": "C3 = A4/V4 freely on 3 type-I vertices (k^3)"
+    },
+    {
+      "H": "V4",
+      "assumption2_on_this_model": false,
+      "beta": [
+        "chi1",
+        "chi2",
+        "chi3"
+      ],
+      "dim_F": 0,
+      "dim_plus_beta": 3,
+      "id": "X.V4.II",
+      "k_F": "k x k x k",
+      "lives_in": "Burn_3(G)",
+      "note": "trivial Pic pairing: Assumption 2 fails on this orbit",
+      "pic_pairing": "triv (points on P(W^{V4}))",
+      "residual": "C3 = A4/V4 freely on 3 type-II points of ell_V (k^3)"
+    },
+    {
+      "H": "C5",
+      "assumption2_on_this_model": true,
+      "beta": [
+        1,
+        2,
+        3
+      ],
+      "dim_F": 0,
+      "dim_plus_beta": 3,
+      "id": "X.C5.a",
+      "k_F": "k x k",
+      "lives_in": "Burn_3(G)",
+      "note": "splits from the sibling orbit; ambient P(W) had a collision",
+      "pic_pairing": "chi or chi^4",
+      "residual": "C2 = D10/C5 on the orbit {chi, chi^4}"
+    },
+    {
+      "H": "C5",
+      "assumption2_on_this_model": true,
+      "beta": [
+        1,
+        2,
+        4
+      ],
+      "dim_F": 0,
+      "dim_plus_beta": 3,
+      "id": "X.C5.b",
+      "k_F": "k x k",
+      "lives_in": "Burn_3(G)",
+      "note": "the second C5 symbol; not G-conjugate to X.C5.a",
+      "pic_pairing": "chi^2 or chi^3",
+      "residual": "C2 = D10/C5 on the orbit {chi^2, chi^3}"
+    },
+    {
+      "H": "C6",
+      "assumption2_on_this_model": true,
+      "beta": [
+        1,
+        3,
+        4
+      ],
+      "dim_F": 0,
+      "dim_plus_beta": 3,
+      "id": "X.C6",
+      "k_F": "k x k",
+      "lives_in": "Burn_3(G)",
+      "note": "chi^2 and chi^4 points lie off X",
+      "pic_pairing": "chi^1 or chi^5",
+      "residual": "C2 = D12/C6 swapping chi^1 and chi^5 (k x k)"
+    },
+    {
+      "H": "C11",
+      "assumption2_on_this_model": true,
+      "beta": [
+        2,
+        3,
+        4
+      ],
+      "dim_F": 0,
+      "dim_plus_beta": 3,
+      "id": "X.C11",
+      "k_F": "k^5",
+      "lives_in": "Burn_3(G)",
+      "note": "single N-orbit; QR-orbit of {2,3,4} mod 11",
+      "pic_pairing": "a QR character (all generate C11^vee)",
+      "residual": "C5 = F55/C11, one 5-cycle on the five coordinate points"
+    }
+  ],
+  "c11_weight_cut": {
+    "locals": [
+      {
+        "T_weight": 1,
+        "X_beta_mod_11": [
+          2,
+          3,
+          4
+        ],
+        "ambient_beta_mod_11": [
+          2,
+          3,
+          4,
+          8
+        ],
+        "point_index": 0,
+        "removed_by_dF": 8
+      },
+      {
+        "T_weight": 9,
+        "X_beta_mod_11": [
+          3,
+          5,
+          7
+        ],
+        "ambient_beta_mod_11": [
+          3,
+          5,
+          6,
+          7
+        ],
+        "point_index": 1,
+        "removed_by_dF": 6
+      },
+      {
+        "T_weight": 4,
+        "X_beta_mod_11": [
+          1,
+          5,
+          8
+        ],
+        "ambient_beta_mod_11": [
+          1,
+          5,
+          8,
+          10
+        ],
+        "point_index": 2,
+        "removed_by_dF": 10
+      },
+      {
+        "T_weight": 3,
+        "X_beta_mod_11": [
+          1,
+          6,
+          9
+        ],
+        "ambient_beta_mod_11": [
+          1,
+          2,
+          6,
+          9
+        ],
+        "point_index": 3,
+        "removed_by_dF": 2
+      },
+      {
+        "T_weight": 5,
+        "X_beta_mod_11": [
+          4,
+          9,
+          10
+        ],
+        "ambient_beta_mod_11": [
+          4,
+          7,
+          9,
+          10
+        ],
+        "point_index": 4,
+        "removed_by_dF": 7
+      }
+    ],
+    "qr_orbit_of_first": [
+      [
+        2,
+        3,
+        4
+      ],
+      [
+        1,
+        6,
+        9
+      ],
+      [
+        1,
+        5,
+        8
+      ],
+      [
+        4,
+        9,
+        10
+      ],
+      [
+        3,
+        5,
+        7
+      ]
+    ],
+    "representative": [
+      2,
+      3,
+      4
+    ],
+    "single_N_orbit": true
+  },
+  "c5_split": {
+    "n_distinct_symbols": 2,
+    "rows": [
+      {
+        "X_beta_mod_5": [
+          1,
+          2,
+          3
+        ],
+        "character": 1,
+        "removed": 4
+      },
+      {
+        "X_beta_mod_5": [
+          1,
+          2,
+          4
+        ],
+        "character": 2,
+        "removed": 3
+      },
+      {
+        "X_beta_mod_5": [
+          1,
+          3,
+          4
+        ],
+        "character": 3,
+        "removed": 2
+      },
+      {
+        "X_beta_mod_5": [
+          2,
+          3,
+          4
+        ],
+        "character": 4,
+        "removed": 1
+      }
+    ],
+    "two_residual_orbits": [
+      {
+        "betas": [
+          [
+            1,
+            2,
+            3
+          ],
+          [
+            2,
+            3,
+            4
+          ]
+        ],
+        "residual_C2_orbit": [
+          1,
+          4
+        ]
+      },
+      {
+        "betas": [
+          [
+            1,
+            2,
+            4
+          ],
+          [
+            1,
+            3,
+            4
+          ]
+        ],
+        "residual_C2_orbit": [
+          2,
+          3
+        ]
+      }
+    ]
+  },
+  "c6_cut": {
+    "1": {
+      "X_beta_mod_6": [
+        1,
+        3,
+        4
+      ],
+      "ambient": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "removed_triv_line": 5
+    },
+    "5": {
+      "X_beta_mod_6": [
+        2,
+        3,
+        5
+      ],
+      "ambient": [
+        1,
+        2,
+        3,
+        5
+      ],
+      "removed_triv_line": 1
+    }
+  },
+  "condition_A": {
+    "X_G_empty": true,
+    "every_abelian_class_present": true,
+    "note": "Condition (A) is existence of H-fixed points for abelian H, not G-fixed points.",
+    "rows": [
+      {
+        "H": "C2",
+        "n_rows": 1,
+        "nconj": 55
+      },
+      {
+        "H": "C3",
+        "n_rows": 1,
+        "nconj": 55
+      },
+      {
+        "H": "V4",
+        "n_rows": 1,
+        "nconj": 55
+      },
+      {
+        "H": "C5",
+        "n_rows": 1,
+        "nconj": 66
+      },
+      {
+        "H": "C6",
+        "n_rows": 1,
+        "nconj": 55
+      },
+      {
+        "H": "C11",
+        "n_rows": 1,
+        "nconj": 12
+      }
+    ]
+  },
+  "degrees_excluded": [],
+  "dimension_mismatch": {
+    "Burn_n_of_P_W": 4,
+    "Burn_n_of_X": 3,
+    "comparison_X_vs_P_W_is_a_type_error": true
+  },
+  "exclusions_claimed": [],
+  "headline": "Problem E remains OPEN; this packet excludes no degree.",
+  "verdict": "ORTHOGONAL / INAPPLICABLE as a new dominance obstruction"
+}

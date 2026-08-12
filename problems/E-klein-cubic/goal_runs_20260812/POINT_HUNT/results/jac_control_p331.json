@@ -1,0 +1,61 @@
+{
+ "p": 331,
+ "ntrials": 3,
+ "trials": [
+  {
+   "ranks": [
+    5,
+    5,
+    5
+   ],
+   "max_rank": 5,
+   "euler_ok": [
+    true,
+    true,
+    true
+   ],
+   "ntrials": 3,
+   "verdict": "RANK5_GENERIC",
+   "note": "rank <= 3 is not dominant onto the 3-fold; rank 4 is the dominance-open condition; rank 5 means det J is not forced at this point"
+  },
+  {
+   "ranks": [
+    5,
+    5,
+    5
+   ],
+   "max_rank": 5,
+   "euler_ok": [
+    true,
+    true,
+    true
+   ],
+   "ntrials": 3,
+   "verdict": "RANK5_GENERIC",
+   "note": "rank <= 3 is not dominant onto the 3-fold; rank 4 is the dominance-open condition; rank 5 means det J is not forced at this point"
+  },
+  {
+   "ranks": [
+    5,
+    5,
+    5
+   ],
+   "max_rank": 5,
+   "euler_ok": [
+    true,
+    true,
+    true
+   ],
+   "ntrials": 3,
+   "verdict": "RANK5_GENERIC",
+   "note": "rank <= 3 is not dominant onto the 3-fold; rank 4 is the dominance-open condition; rank 5 means det J is not forced at this point"
+  }
+ ],
+ "max_ranks": [
+  5,
+  5,
+  5
+ ],
+ "euler_all_ok": true,
+ "matches_director": true
+}

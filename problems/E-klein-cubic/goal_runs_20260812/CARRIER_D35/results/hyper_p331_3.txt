@@ -1,0 +1,10 @@
+IC dim 2 deg 20
+J0 dim 1 deg 20
+J2 dim 1 deg 20
+ncomps 4
+comp dim=1 deg=2
+comp dim=1 deg=2
+comp dim=1 deg=3
+comp dim=1 deg=13
+nlinear 0
+END

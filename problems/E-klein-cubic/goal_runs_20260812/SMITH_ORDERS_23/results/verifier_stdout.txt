@@ -1,0 +1,66 @@
+[A] PASS A0 produce.py replays                                    wrote /Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/SMITH_ORDERS_23/results/audit.json
+CRT pins_mod_2 = True pins_mod_3 = False A3 = [0, 1, 2] B3 = [0, 1, 2]
+L in U = False C3 surfaces in U = False
+order2_L_pinned = False order3_pinned = False
+SMITH_ORDERS_23_PRODUCE_OK
+
+[A] PASS A1 SMITH_I3 order-2 L-branch is PARAMETRIC               no sealed bound at d = 35 pins chi(F_1), chi(F_2) or n_3; C1 of CONSTRAINT_ADDITIONS_20260811.md is a genus IDENTITY package, not a bound
+[A] PASS A2 SMITH_I3 order-2 E-branch closed == 0 mod 2           chi(q^{-1}(x)) == 0 (mod 2) for all but finitely many x in E^X_sigma
+[A] PASS A3 SMITH_I3 names the irrational escape                  
+[A] PASS A4 three forced dominating rows                          ['D_{P_sigma}', "D_{L'_sigma}", 'central-involution line in E_{pt_D12}']
+[A] PASS A5 referee S4 widens the L-display by unforced rows      
+[A] PASS A6 director adopted the L-widening                       
+[A] PASS A7 order-3 status PARAMETRIC                             
+[A] PASS A8 order-3 blocker is chi(S_i), not the point/curve count chi of the 2 two-dimensional components of Z^{C3} is not pinned by the census (component counts by dimension only); with the 62 points and the 16 rational curves this gives chi(Z^{C3}) = 62 + 32 + chi(S_1) + chi(S_2) = 94 + chi(S_1) + chi(S_2), chi(S_i) >= 3
+[A] PASS A9 census C2 = {0:146,1:80,2:11,3:2}                     {'0': 146, '1': 80, '2': 11, '3': 2}
+[A] PASS A10 census C3 = {0:62,1:16,2:2}                          {'0': 62, '1': 16, '2': 2}
+[A] PASS A11 A4 menu 238*238 = 56644                              
+[A] PASS A12 receiver X^sigma splits 0+2=2                        
+[A] PASS A13 22 cells, F_odd = 36252160                           
+[A] PASS A14 sealed n_x = 4 at C11 and n_x = 5 at C5, on Z        C11 n_x=4 C5 n_x={'1': 5, '2': 5, '3': 5, '4': 5}
+[A] PASS A15 reconstruction matches produce()                     
+[B] PASS B1 STEIN_LERAY chi_0 == 35 (mod 55)                      [35]
+[B] PASS B2 joint hypotheses name the nine pinned points, smooth row, Z 
+[B] PASS B3 dichotomy A: chi_0 <= -20; B: chi_0 >= 35             
+[B] PASS B4 dim-2 menu: chi_0 does not bind                       
+[B] PASS B5 dim-3 fibre FLAGGED                                   
+[B] PASS B6 J1 invariant degrees exactly {k >= 5}                 
+[B] PASS B7 Proposition PIN is sealed in STEIN_LERAY              
+[B] PASS B8 L12: all 60 C11-points are base points at every degree 
+[B] PASS B9 L12: genus-0 dead 0 of 2674 (extended scope)          
+[B] PASS B10 L12: forced depths >= 3 / >= 4 for {6,9} / >= 5 for mu1=7 
+[B] PASS B11 L12 leaves orders 2 and 3 untouched                  
+[B] PASS B12 STAGE1 Thm 3: two dim-3 rows and one dim-1 row onto L_sigma 
+[B] PASS B13 TERMINUS dictionary C2/C3 dimension counts           
+[B] PASS B14 TERMINUS: closure is a smooth blowup of a product, not an iso 
+[B] PASS B15 C3 dim-2 row is the C3line (110 components, #/fixedK = 2) 
+[B] PASS B16 STEIN_LERAY n_x on Z is 4 and 5                      
+[B] PASS B17 produce() consumed the same chi_0 residue            
+[B] PASS B18 produce() saw L12 all-60 and 0-of-2674               
+[C] PASS C1 2*chi_0 is always even                                {0}
+[C] PASS C2 2*chi_0 (mod 3) takes {0,1,2}                         {0, 1, 2}
+[C] PASS C3 branch A hits all three residues mod 3                {0, 1, 2}
+[C] PASS C4 branch B hits all three residues mod 3                {0, 1, 2}
+[C] PASS C5 chi_0 itself is not pinned mod 3                      {0, 1, 2}
+[C] PASS C6 pinning 2*chi_0 mod 3 needs modulus 165               
+[C] PASS C7 k=-1 => chi_0=-20, 2*chi_0=-40 == 2 (mod 3)  [g=21]   
+[C] PASS C8 k=-2 => chi_0=-75, 2*chi_0=-150 == 0 (mod 3)  [g=76]  
+[C] PASS C9 k=-3 => chi_0=-130, 2*chi_0=-260 == 1 (mod 3)  [g=131] 
+[C] PASS C10 k=0 => chi_0=35, 2*chi_0=70 == 1 (mod 3)  [Stein s>=35] 
+[C] PASS C11 produce() CRT agrees                                 
+[C] PASS C12 L_sigma is not in U                                  
+[C] PASS C13 generic fibre dim over L is 2                        
+[C] PASS C14 C3-surface receivers are not in U                    
+[C] PASS C15 STAGE1 Thm 3 ingredients present                     
+[C] PASS C16 census C2/C3 reproduced                              {'0': 146, '1': 80, '2': 11, '3': 2}
+[C] PASS C17 order-2 L-branch stays parametric                    
+[C] PASS C18 order-3 stays parametric                             
+[C] PASS C19 E-branch remains closed as SMITH_I3 left it          
+[C] PASS C20 no exclusion, no cell cut, no zero/all-dead          
+[C] PASS C21 eight named remaining unknowns                       ['Delta_C11', 'E_escape', 'L_chi', 'S_chi', 'U_membership', 'Zsigma_chi', 'defects', 'stein_s']
+[C] PASS C22 chi(Z^{C3}) shape 94 + chi(S_1) + chi(S_2) unrepaired 
+[C] PASS C23 94 == 1 (mod 3), so F3 + a would-be uniform residue would still leave chi(S_1)+chi(S_2) free mod 3 once the CRT gap is open 
+[C] PASS C24 genus-0 chi_0 values 1 and 2 are not 35 (mod 55)     
+[C] PASS C25 headline in the artefact                             
+[C] PASS C26 zero/all-dead audit is negative (no ODDZERO claim)   
+summary {"n": 60, "pass": 60, "fail": 0, "skip": 0, "groups": {"A": 16, "B": 18, "C": 26}, "allgreen": true, "marker": "SMITH_ORDERS_23_VERIFY_OK"}

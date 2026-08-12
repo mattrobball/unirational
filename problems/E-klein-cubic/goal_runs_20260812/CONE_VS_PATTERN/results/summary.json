@@ -1,0 +1,77 @@
+{
+ "primes": [
+  331,
+  661
+ ],
+ "rows": [
+  {
+   "p": 331,
+   "n_functionals": 37,
+   "n_Z37": 5,
+   "n_I3": 0,
+   "n_NONE": 32,
+   "n_patterns_dead": 22,
+   "n_patterns_live": 0,
+   "flag_d35_exclusion": true,
+   "rigidity": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "forced_deeper": [
+    23,
+    24,
+    35,
+    36,
+    37,
+    38,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    68,
+    69
+   ],
+   "rabin_tautology": true
+  },
+  {
+   "p": 661,
+   "n_functionals": 39,
+   "n_Z37": 5,
+   "n_I3": 0,
+   "n_NONE": 34,
+   "n_patterns_dead": 22,
+   "n_patterns_live": 0,
+   "flag_d35_exclusion": true,
+   "rigidity": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "forced_deeper": [
+    23,
+    24,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    74,
+    75
+   ],
+   "rabin_tautology": true
+  }
+ ],
+ "cross_prime_agree": true,
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "any_exclusion_claimed": false
+}

@@ -1,0 +1,18 @@
+{
+ "p": 331,
+ "m": 20,
+ "dim_sym3": 1540,
+ "npts": 1971,
+ "rank": 1380,
+ "HF_L3": 160,
+ "generic_rank": 1380,
+ "full_span_ngens": 1380,
+ "free_rung": false,
+ "section_seed": 20261832,
+ "point_seed": 20261143,
+ "seconds_emit": 31.51778221130371,
+ "verdict": "EMITTED",
+ "ms_path": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/POINT_HUNT/results/cone_m20_p331.ms",
+ "ms_bytes": 29396910,
+ "ngens_written": 1380
+}

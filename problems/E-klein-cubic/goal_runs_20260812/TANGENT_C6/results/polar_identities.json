@@ -1,0 +1,14 @@
+{
+ "n_checks": 121,
+ "n_fail": 0,
+ "fails": [],
+ "all_ok": true,
+ "formulas": {
+  "F": "sum_{k in Z/5} y_k^2 y_{k+1}",
+  "dF/dy_k": "2 y_k y_{k+1} + y_{k-1}^2",
+  "H_kk": "2 y_{k+1}",
+  "H_k,k+1": "2 y_k",
+  "first_order": "sum_k (2 T_k T_{k+1} + T_{k-1}^2) S_k",
+  "second_order": "sum_k (2 T_{k+1} S_k^2 + 4 T_k S_k S_{k+1}) + 2 sum_k (2 T_k T_{k+1} + T_{k-1}^2) R_k"
+ }
+}

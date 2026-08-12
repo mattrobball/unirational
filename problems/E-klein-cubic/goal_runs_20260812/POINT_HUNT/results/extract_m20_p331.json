@@ -1,0 +1,75 @@
+{
+ "p": 331,
+ "m": 20,
+ "threads": 2,
+ "timeout": 180,
+ "full_span_ngens": 1380,
+ "charts": [
+  {
+   "chart": 1,
+   "extra_cuts": 0,
+   "verdict": "EMPTY_CHART",
+   "seconds": 11.304762840270996,
+   "max_rss_kb": 296096,
+   "timed_out": false,
+   "killed_memory": false,
+   "n_points": 0,
+   "cmd": [
+    "msolve",
+    "-t",
+    "2",
+    "-v",
+    "1",
+    "-f",
+    "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/POINT_HUNT/results/chart_m20_p331_c0_k0.ms",
+    "-o",
+    "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/POINT_HUNT/results/chart_m20_p331_c0_k0.out"
+   ]
+  },
+  {
+   "chart": 2,
+   "extra_cuts": 0,
+   "verdict": "EMPTY_CHART",
+   "seconds": 10.403065919876099,
+   "max_rss_kb": 292528,
+   "timed_out": false,
+   "killed_memory": false,
+   "n_points": 0,
+   "cmd": [
+    "msolve",
+    "-t",
+    "2",
+    "-v",
+    "1",
+    "-f",
+    "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/POINT_HUNT/results/chart_m20_p331_c1_k0.ms",
+    "-o",
+    "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/POINT_HUNT/results/chart_m20_p331_c1_k0.out"
+   ]
+  },
+  {
+   "chart": 3,
+   "extra_cuts": 0,
+   "verdict": "EMPTY_CHART",
+   "seconds": 10.265270948410034,
+   "max_rss_kb": 292336,
+   "timed_out": false,
+   "killed_memory": false,
+   "n_points": 0,
+   "cmd": [
+    "msolve",
+    "-t",
+    "2",
+    "-v",
+    "1",
+    "-f",
+    "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/POINT_HUNT/results/chart_m20_p331_c2_k0.ms",
+    "-o",
+    "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/POINT_HUNT/results/chart_m20_p331_c2_k0.out"
+   ]
+  }
+ ],
+ "points": [],
+ "n_points": 0,
+ "verdict": "EMPTY_CHARTS"
+}

@@ -1,0 +1,18 @@
+{
+ "N": 62,
+ "dim_sym3": 5984,
+ "director_rss_kb": 45672192,
+ "full_span_rule": true,
+ "m": 32,
+ "ms_path": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260812/CONE_D36/results/cone_m32_p331.ms",
+ "n_gens_written": 1835,
+ "n_indep": 1835,
+ "n_sampled": 3014,
+ "p": 331,
+ "returncode": null,
+ "rss_after_kb": 565920,
+ "rss_before_kb": 1539872,
+ "seconds": 1200.104702949524,
+ "timeout": true,
+ "verdict": "timeout"
+}

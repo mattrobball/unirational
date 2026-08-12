@@ -1,0 +1,962 @@
+[
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 1,
+    "mu_C5b": 1,
+    "mu_D10": 1,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 1,
+    "mu_C5b": 1,
+    "mu_D10": 2,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 1,
+    "mu_C5b": 1,
+    "mu_D10": 3,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 1,
+    "mu_C5b": 1,
+    "mu_D10": 4,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 1,
+    "mu_C5b": 2,
+    "mu_D10": 1,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 1,
+    "mu_C5b": 2,
+    "mu_D10": 2,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 1,
+    "mu_C5b": 2,
+    "mu_D10": 3,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 1,
+    "mu_C5b": 2,
+    "mu_D10": 4,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 1,
+    "mu_C5b": 3,
+    "mu_D10": 1,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 1,
+    "mu_C5b": 3,
+    "mu_D10": 2,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 1,
+    "mu_C5b": 3,
+    "mu_D10": 3,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 1,
+    "mu_C5b": 3,
+    "mu_D10": 4,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 1,
+    "mu_C5b": 4,
+    "mu_D10": 1,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 1,
+    "mu_C5b": 4,
+    "mu_D10": 2,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 1,
+    "mu_C5b": 4,
+    "mu_D10": 3,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 1,
+    "mu_C5b": 4,
+    "mu_D10": 4,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 2,
+    "mu_C5b": 1,
+    "mu_D10": 1,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 2,
+    "mu_C5b": 1,
+    "mu_D10": 2,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 2,
+    "mu_C5b": 1,
+    "mu_D10": 3,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 2,
+    "mu_C5b": 1,
+    "mu_D10": 4,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 2,
+    "mu_C5b": 2,
+    "mu_D10": 1,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 2,
+    "mu_C5b": 2,
+    "mu_D10": 2,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 2,
+    "mu_C5b": 2,
+    "mu_D10": 3,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 2,
+    "mu_C5b": 2,
+    "mu_D10": 4,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 2,
+    "mu_C5b": 3,
+    "mu_D10": 1,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 2,
+    "mu_C5b": 3,
+    "mu_D10": 2,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 2,
+    "mu_C5b": 3,
+    "mu_D10": 3,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 2,
+    "mu_C5b": 3,
+    "mu_D10": 4,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 2,
+    "mu_C5b": 4,
+    "mu_D10": 1,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 2,
+    "mu_C5b": 4,
+    "mu_D10": 2,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 2,
+    "mu_C5b": 4,
+    "mu_D10": 3,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 2,
+    "mu_C5b": 4,
+    "mu_D10": 4,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 3,
+    "mu_C5b": 1,
+    "mu_D10": 1,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 3,
+    "mu_C5b": 1,
+    "mu_D10": 2,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 3,
+    "mu_C5b": 1,
+    "mu_D10": 3,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 3,
+    "mu_C5b": 1,
+    "mu_D10": 4,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 3,
+    "mu_C5b": 2,
+    "mu_D10": 1,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 3,
+    "mu_C5b": 2,
+    "mu_D10": 2,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 3,
+    "mu_C5b": 2,
+    "mu_D10": 3,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 3,
+    "mu_C5b": 2,
+    "mu_D10": 4,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 3,
+    "mu_C5b": 3,
+    "mu_D10": 1,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 3,
+    "mu_C5b": 3,
+    "mu_D10": 2,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 3,
+    "mu_C5b": 3,
+    "mu_D10": 3,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 3,
+    "mu_C5b": 3,
+    "mu_D10": 4,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 3,
+    "mu_C5b": 4,
+    "mu_D10": 1,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 3,
+    "mu_C5b": 4,
+    "mu_D10": 2,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 3,
+    "mu_C5b": 4,
+    "mu_D10": 3,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 3,
+    "mu_C5b": 4,
+    "mu_D10": 4,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 4,
+    "mu_C5b": 1,
+    "mu_D10": 1,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 4,
+    "mu_C5b": 1,
+    "mu_D10": 2,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 4,
+    "mu_C5b": 1,
+    "mu_D10": 3,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 4,
+    "mu_C5b": 1,
+    "mu_D10": 4,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 4,
+    "mu_C5b": 2,
+    "mu_D10": 1,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 4,
+    "mu_C5b": 2,
+    "mu_D10": 2,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 4,
+    "mu_C5b": 2,
+    "mu_D10": 3,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 4,
+    "mu_C5b": 2,
+    "mu_D10": 4,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 4,
+    "mu_C5b": 3,
+    "mu_D10": 1,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 4,
+    "mu_C5b": 3,
+    "mu_D10": 2,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 4,
+    "mu_C5b": 3,
+    "mu_D10": 3,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 4,
+    "mu_C5b": 3,
+    "mu_D10": 4,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 4,
+    "mu_C5b": 4,
+    "mu_D10": 1,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 4,
+    "mu_C5b": 4,
+    "mu_D10": 2,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 4,
+    "mu_C5b": 4,
+    "mu_D10": 3,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  },
+  {
+    "FLAG_KILL": false,
+    "chi_top": "congruent to 0 mod 5 at all four C5-points",
+    "intersection_empty": false,
+    "menu_factor": "C5a x C5b x D10",
+    "mu_C5a": 4,
+    "mu_C5b": 4,
+    "mu_D10": 4,
+    "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+    }
+  }
+]

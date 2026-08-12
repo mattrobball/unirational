@@ -1,0 +1,18 @@
+{
+ "331": {
+  "K": 37,
+  "N3": 9139,
+  "P3_copy": 1380,
+  "P3_director": 1380,
+  "d": 35,
+  "matches_seal": true,
+  "mode": "restricted_cubics",
+  "npts": 2200,
+  "p": 331,
+  "rows_equal": true,
+  "rss_gb": 1.235828736,
+  "sealed_P3": 1380,
+  "seconds": 454.37760281562805,
+  "seed": 20260812
+ }
+}

@@ -1,0 +1,17 @@
+{
+ "p": 661,
+ "m": 18,
+ "dim_sym3": 1140,
+ "npts": 1636,
+ "rank": 1140,
+ "HF_L3": 0,
+ "generic_rank": 1140,
+ "full_span_ngens": 1140,
+ "free_rung": true,
+ "section_seed": 795,
+ "point_seed": 20261473,
+ "seconds_emit": 3.031893014907837,
+ "verdict": "FREE",
+ "V_cap_L": "{0}",
+ "bound": 19
+}

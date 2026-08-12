@@ -1,0 +1,117 @@
+{
+ "d": 35,
+ "p": 331,
+ "loci": {
+  "D12pt c_sigma": {
+   "ord_T": 7,
+   "ord_T_all": [
+    7
+   ],
+   "ord_F": 21,
+   "ord_F_all": [
+    21
+   ],
+   "excess": 0
+  },
+  "D10pt": {
+   "ord_T": 4,
+   "ord_T_all": [
+    4
+   ],
+   "ord_F": 12,
+   "ord_F_all": [
+    12
+   ],
+   "excess": 0
+  },
+  "V4-child w": {
+   "ord_T": 2,
+   "ord_T_all": [
+    2
+   ],
+   "ord_F": 6,
+   "ord_F_all": [
+    6
+   ],
+   "excess": 0
+  },
+  "X^C6 w=1": {
+   "ord_T": 0,
+   "ord_T_all": [
+    0
+   ],
+   "ord_F": 2,
+   "ord_F_all": [
+    2
+   ],
+   "excess": 2
+  },
+  "C11 pt": {
+   "ord_T": 1,
+   "ord_T_all": [
+    1
+   ],
+   "ord_F": 4,
+   "ord_F_all": [
+    4
+   ],
+   "excess": 1
+  },
+  "C5 pt": {
+   "ord_T": 1,
+   "ord_T_all": [
+    1
+   ],
+   "ord_F": 3,
+   "ord_F_all": [
+    3
+   ],
+   "excess": 0
+  },
+  "ellV pt": {
+   "ord_T": 6,
+   "ord_T_all": [
+    6
+   ],
+   "ord_F": 18,
+   "ord_F_all": [
+    18,
+    19
+   ],
+   "excess": 0
+  },
+  "plus-plane pt": {
+   "ord_T": 1,
+   "ord_T_all": [
+    1
+   ],
+   "ord_F": 4,
+   "ord_F_all": [
+    4
+   ],
+   "excess": 1
+  },
+  "minus-line pt": {
+   "ord_T": 0,
+   "ord_T_all": [
+    0
+   ],
+   "ord_F": 1,
+   "ord_F_all": [
+    1
+   ],
+   "excess": 1
+  },
+  "eigenline pt": {
+   "ord_T": 0,
+   "ord_T_all": [
+    0
+   ],
+   "ord_F": 2,
+   "ord_F_all": [
+    2
+   ],
+   "excess": 2
+  }
+ }
+}

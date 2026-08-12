@@ -1,0 +1,85 @@
+{
+ "c11": {
+  "all_on_C": true,
+  "all_on_X": true,
+  "n": 60,
+  "value_rank": 0
+ },
+ "dH_fd_check": [
+  8,
+  8
+ ],
+ "fp2": {
+  "hyper": [
+   {
+    "i": 0,
+    "n_new": 0,
+    "n_on_C": 0
+   },
+   {
+    "i": 1,
+    "n_new": 0,
+    "n_on_C": 0
+   },
+   {
+    "i": 2,
+    "n_new": 0,
+    "n_on_C": 0
+   },
+   {
+    "i": 3,
+    "n_new": 3,
+    "n_on_C": 3
+   },
+   {
+    "i": 4,
+    "n_new": 0,
+    "n_on_C": 0
+   },
+   {
+    "i": 5,
+    "n_new": 0,
+    "n_on_C": 0
+   },
+   {
+    "i": 6,
+    "n_new": 2,
+    "n_on_C": 2
+   },
+   {
+    "i": 7,
+    "n_new": 2,
+    "n_on_C": 2
+   }
+  ],
+  "kernel_dim": 36,
+  "n_fp2_points": 7,
+  "n_hyper": 8,
+  "n_sextet_included": 0,
+  "oncurve_Wb_bound": 5,
+  "p": 661,
+  "rank_values": 1,
+  "saturated_at_character_bound": false,
+  "seconds": 26.5,
+  "st": [
+   1,
+   659
+  ]
+ },
+ "kernel_dim_lower": 32,
+ "kernel_dim_upper": 36,
+ "oncurve_Wb_bound": 5,
+ "p": 661,
+ "rank_values": 1,
+ "saturated_at_character_bound": false,
+ "seconds": 29.4,
+ "sextet": {
+  "comp2_degrees": [
+   3,
+   3
+  ],
+  "involution": 1,
+  "ncomps2": 2,
+  "six_linear_over_fp2": false
+ }
+}

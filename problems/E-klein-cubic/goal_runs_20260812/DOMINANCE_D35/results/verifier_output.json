@@ -1,0 +1,10 @@
+{
+  "checks": 29,
+  "fails": [],
+  "ok": true,
+  "seconds": 0.001583099365234375,
+  "markers": [
+    "DOMINANCE_D35_VERIFY_OK",
+    "ALLGREEN"
+  ]
+}

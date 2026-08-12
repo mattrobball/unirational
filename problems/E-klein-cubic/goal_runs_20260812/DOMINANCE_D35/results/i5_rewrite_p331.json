@@ -1,0 +1,42 @@
+{
+  "p": 331,
+  "minor": "delete row 4 col 4 at 1 random x",
+  "n_linears": 37,
+  "n_sampled": 4,
+  "n_rewrite_zero": 0,
+  "all_linears_times_Q_in_I5": false,
+  "n_used_I5_leads": 178811,
+  "N5": 749398,
+  "P5_ub": 749398,
+  "N5_minus_leads": 570587,
+  "results": [
+    {
+      "var": 0,
+      "wt_before": 91112,
+      "wt_rem": 568918,
+      "zero": false
+    },
+    {
+      "var": 1,
+      "wt_before": 91112,
+      "wt_rem": 568880,
+      "zero": false
+    },
+    {
+      "var": 2,
+      "wt_before": 91112,
+      "wt_rem": 569767,
+      "zero": false
+    },
+    {
+      "var": 3,
+      "wt_before": 91112,
+      "wt_rem": 569481,
+      "zero": false
+    }
+  ],
+  "seconds": null,
+  "method": "I5 echelon-style rewrite (quad * I3-pivot leads); sufficient. Stopped after 4 linears: all remainders fill the complement (~570587).",
+  "stopped_early": true,
+  "note": "remainder weight ~ N5 - |I5 leads| = 570587; none of the four c_i*Q lie in the 178811-dimensional I5 lead span."
+}

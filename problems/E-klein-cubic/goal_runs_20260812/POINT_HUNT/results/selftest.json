@@ -1,0 +1,21 @@
+{
+ "line_verdict": "POINTS",
+ "line_points": [
+  [
+   0,
+   0,
+   1
+  ]
+ ],
+ "line_ok": true,
+ "empty_verdict": "EMPTY_CHART",
+ "empty_ok": true,
+ "inf_verdict": "POSITIVE_DIM",
+ "inf_ok": true,
+ "seconds": {
+  "line": 1.171447992324829,
+  "empty": 1.087165355682373,
+  "inf": 1.0467758178710938
+ },
+ "ok": true
+}

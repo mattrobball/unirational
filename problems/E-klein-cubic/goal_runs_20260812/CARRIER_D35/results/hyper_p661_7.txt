@@ -1,0 +1,20 @@
+IC dim 2 deg 20
+J0 dim 1 deg 20
+J2 dim 1 deg 20
+ncomps 4
+comp dim=1 deg=1
+ngens 4
+gen y3+(119*aa+174)*y4
+gen y2+(-237*aa-83)*y4
+gen y1+(-118*aa-66)*y4
+gen y0+(-156*aa-175)*y4
+comp dim=1 deg=1
+ngens 4
+gen y3+(-119*aa+293)*y4
+gen y2+(237*aa-320)*y4
+gen y1+(118*aa-184)*y4
+gen y0+(156*aa+330)*y4
+comp dim=1 deg=9
+comp dim=1 deg=9
+nlinear 2
+END

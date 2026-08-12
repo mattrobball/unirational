@@ -1,0 +1,87 @@
+{
+  "n_checks": 16,
+  "n_failures": 0,
+  "allgreen": true,
+  "checks": [
+    {
+      "name": "produce_ran",
+      "ok": true,
+      "detail": "produce.py exit 0; tail='oblems/E-klein-cubic/goal_runs_20260812/V14_POSITIVE/results/character_dims.json\\nC_d(A) d=0..8: [0, 0, 1, 2, 7, 18, 43, 94, 198]\\nspin Hom d=0..6 @23: [0, 0, 0, 0, 3, 0, 6]\\nfive->M Hom d=0..6 @23: [0, 0, 1, 1, 2, 3, 5]\\nledger all_hits: True\\n'"
+    },
+    {
+      "name": "control_C_d",
+      "ok": true,
+      "detail": "dim C_d(A) d=0..5 = [0, 0, 1, 2, 7, 18] (sealed V14MAP_DEGREE345)"
+    },
+    {
+      "name": "control_inv",
+      "ok": true,
+      "detail": "invariants of Sym^d M d=0..5 = [1, 0, 1, 2, 4, 8]"
+    },
+    {
+      "name": "C6_is_43",
+      "ok": true,
+      "detail": "dim Hom_G(Sym^6 M*, A) = 43"
+    },
+    {
+      "name": "HF6_is_650",
+      "ok": true,
+      "detail": "classical h^0(V14, O(6)) = 650"
+    },
+    {
+      "name": "two_prime_spin_agree",
+      "ok": true,
+      "detail": "spin Hom @23=[0, 0, 0, 0, 3, 0, 6] @67=[0, 0, 0, 0, 3, 0, 6]"
+    },
+    {
+      "name": "two_prime_five_agree",
+      "ok": true,
+      "detail": "five->M Hom @23=[0, 0, 1, 1, 2, 3, 5] @67=[0, 0, 1, 1, 2, 3, 5]"
+    },
+    {
+      "name": "spin_d2_zero",
+      "ok": true,
+      "detail": "Hom_SL(Sym^2 U*, M) = 0 (no quadratic spin map P(U)-->P(M))"
+    },
+    {
+      "name": "spin_first_at_d4",
+      "ok": true,
+      "detail": "first spin ambient is d=4, dim 3; odds vanish"
+    },
+    {
+      "name": "sl_order_1320",
+      "ok": true,
+      "detail": "SL(2,11) closure 1320 at both primes"
+    },
+    {
+      "name": "sealed_markers",
+      "ok": true,
+      "detail": "all cited packets present with required strings; misses=none"
+    },
+    {
+      "name": "headline_line",
+      "ok": true,
+      "detail": "required headline sentence present in THEOREM.md"
+    },
+    {
+      "name": "no_report_md",
+      "ok": true,
+      "detail": "harness-forbidden REPORT.md is absent"
+    },
+    {
+      "name": "not_claimed_section",
+      "ok": true,
+      "detail": "Not claimed section present"
+    },
+    {
+      "name": "no_degree_exclusion_claimed",
+      "ok": true,
+      "detail": "no degree exclusion is claimed; any exclusion language is flagged"
+    },
+    {
+      "name": "logical_block",
+      "ok": true,
+      "detail": "composition cannot settle the headline; Phi dominance unsealed; spin not sufficient"
+    }
+  ]
+}

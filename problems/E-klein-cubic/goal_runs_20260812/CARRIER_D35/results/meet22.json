@@ -1,0 +1,22 @@
+{
+ "by_prime": [
+  {
+   "all_best_dim_37": true,
+   "all_closed_rank_0": true,
+   "n_dead": 0,
+   "n_live": 22,
+   "p": 331
+  },
+  {
+   "all_best_dim_37": true,
+   "all_closed_rank_0": true,
+   "n_dead": 0,
+   "n_live": 22,
+   "p": 661
+  }
+ ],
+ "kernel_dim_lower": 32,
+ "meets_closed_constraints": true,
+ "note": "The 22 occupy the full 37-cell linearly (closed rank 0). Any positive-dimensional subspace meets those closed constraints. KEEP non-vanishing on the kernel is not a closed cut.",
+ "sealed_keep_pass_ok": true
+}

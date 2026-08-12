@@ -1,0 +1,11 @@
+{
+ "marker": "CONE_D36_VERIFY_OK",
+ "allgreen": true,
+ "tightest_dim_V_le": 32,
+ "two_prime_cleared": [
+  22,
+  24,
+  28,
+  30
+ ]
+}

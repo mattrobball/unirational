@@ -1,0 +1,185 @@
+{
+ "d": 35,
+ "p": 331,
+ "I_3d": 8555,
+ "P3_sealed": 1380,
+ "target_rank": 7175,
+ "families": [
+  {
+   "family": "ellV",
+   "kind": "line",
+   "order": 18,
+   "npair": 318,
+   "ncols": 5724,
+   "seconds": 107.9
+  },
+  {
+   "family": "plusplane",
+   "kind": "plane",
+   "order": 4,
+   "npair": 520,
+   "ncols": 2080,
+   "seconds": 37.8
+  },
+  {
+   "family": "minusline",
+   "kind": "line",
+   "order": 1,
+   "npair": 60,
+   "ncols": 60,
+   "seconds": 0.4
+  },
+  {
+   "family": "eigenline1",
+   "kind": "line",
+   "order": 2,
+   "npair": 60,
+   "ncols": 120,
+   "seconds": 0.6
+  },
+  {
+   "family": "eigenline2",
+   "kind": "line",
+   "order": 2,
+   "npair": 60,
+   "ncols": 120,
+   "seconds": 0.6
+  },
+  {
+   "family": "D12pt",
+   "kind": "point",
+   "order": 21,
+   "npair": 130,
+   "ncols": 2730,
+   "seconds": 52.9
+  },
+  {
+   "family": "D10pt",
+   "kind": "point",
+   "order": 12,
+   "npair": 150,
+   "ncols": 1800,
+   "seconds": 33.8
+  },
+  {
+   "family": "V4w",
+   "kind": "point",
+   "order": 6,
+   "npair": 110,
+   "ncols": 660,
+   "seconds": 7.6
+  },
+  {
+   "family": "C6a",
+   "kind": "point",
+   "order": 2,
+   "npair": 60,
+   "ncols": 120,
+   "seconds": 0.5
+  },
+  {
+   "family": "C6b",
+   "kind": "point",
+   "order": 2,
+   "npair": 60,
+   "ncols": 120,
+   "seconds": 0.5
+  },
+  {
+   "family": "C11",
+   "kind": "point",
+   "order": 4,
+   "npair": 90,
+   "ncols": 360,
+   "seconds": 1.4
+  },
+  {
+   "family": "C5a",
+   "kind": "point",
+   "order": 3,
+   "npair": 80,
+   "ncols": 240,
+   "seconds": 1.0
+  },
+  {
+   "family": "C5b",
+   "kind": "point",
+   "order": 3,
+   "npair": 80,
+   "ncols": 240,
+   "seconds": 1.0
+  }
+ ],
+ "family_rank_history": [
+  {
+   "through": "ellV",
+   "cum_cols": 5724,
+   "cum_rank_le": 3995
+  },
+  {
+   "through": "plusplane",
+   "cum_cols": 7804,
+   "cum_rank_le": 5528
+  },
+  {
+   "through": "minusline",
+   "cum_cols": 7864,
+   "cum_rank_le": 5590
+  },
+  {
+   "through": "eigenline1",
+   "cum_cols": 7984,
+   "cum_rank_le": 5590
+  },
+  {
+   "through": "eigenline2",
+   "cum_cols": 8104,
+   "cum_rank_le": 5590
+  },
+  {
+   "through": "D12pt",
+   "cum_cols": 10834,
+   "cum_rank_le": 5908
+  },
+  {
+   "through": "D10pt",
+   "cum_cols": 12634,
+   "cum_rank_le": 5982
+  },
+  {
+   "through": "V4w",
+   "cum_cols": 13294,
+   "cum_rank_le": 6006
+  },
+  {
+   "through": "C6a",
+   "cum_cols": 13414,
+   "cum_rank_le": 6006
+  },
+  {
+   "through": "C6b",
+   "cum_cols": 13534,
+   "cum_rank_le": 6006
+  },
+  {
+   "through": "C11",
+   "cum_cols": 13894,
+   "cum_rank_le": 6006
+  },
+  {
+   "through": "C5a",
+   "cum_cols": 14134,
+   "cum_rank_le": 6006
+  },
+  {
+   "through": "C5b",
+   "cum_cols": 14374,
+   "cum_rank_le": 6006
+  }
+ ],
+ "total_rank": 6006,
+ "model_span_rank": 8221,
+ "n_product_rows": 14342,
+ "verdict": "SHORT: rank 6006 < target 7175; dim S <= 2549, gap 1169",
+ "seconds": 727.0
+}

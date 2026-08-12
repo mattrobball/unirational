@@ -1,0 +1,50 @@
+{
+  "331": {
+    "p": 331,
+    "nx": 80,
+    "nc": 2200,
+    "extra_x": 16,
+    "n_minor_slots": 25,
+    "n_rows": 2000,
+    "n_nonzero_rows": 2000,
+    "rank": 2000,
+    "rank_after_extra": 2200,
+    "added_by_extra": 200,
+    "saturated": false,
+    "curve": [
+      {
+        "nx": 16,
+        "nrows": 400,
+        "nnz_rows": 400,
+        "rank": 400
+      },
+      {
+        "nx": 32,
+        "nrows": 800,
+        "nnz_rows": 800,
+        "rank": 800
+      },
+      {
+        "nx": 48,
+        "nrows": 1200,
+        "nnz_rows": 1200,
+        "rank": 1200
+      },
+      {
+        "nx": 64,
+        "nrows": 1600,
+        "nnz_rows": 1600,
+        "rank": 1600
+      },
+      {
+        "nx": 80,
+        "nrows": 2000,
+        "nnz_rows": 2000,
+        "rank": 2000
+      }
+    ],
+    "seed": 20261143,
+    "seconds": 25.64993405342102,
+    "note": "Rank of the evaluation matrix of the 25 four-by-four minors of J_T at nx sample points, on nc random cell vectors. Equals dim of the span of those minor-quartics once nc is larger than that dimension and the x-sample has saturated."
+  }
+}

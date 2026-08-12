@@ -1,0 +1,77 @@
+{
+  "ODDZERO_audit_triggered": false,
+  "any_row_FLAG_KILL": false,
+  "any_row_intersection_empty": false,
+  "claimed_degree_exclusion": false,
+  "claimed_kills": 0,
+  "flagged_kills": [],
+  "flags": [
+    {
+      "detail": "L12 kills the C14 genus-0 branch (tr=1) at every C11 menu entry.  No sealed constraint REQUIRES genus 0, so the intersection with the live branches is nonempty.",
+      "id": "GENUS0_C14_DEAD_NOT_A_CELL_KILL",
+      "status": "CONSTRAINT"
+    },
+    {
+      "detail": "chi_0 == 35 (mod 55) splits as chi_0 <= -20 OR chi_0 >= 35.  Forcing both would be empty; the sealed packet does not force both.",
+      "first_joint_genera": [
+        21,
+        76,
+        131,
+        186
+      ],
+      "id": "STEIN_DICHOTOMY_IS_OR",
+      "residue_classes_live": [
+        "35+55k for k<=-1 (A)",
+        "35+55k for k>=0 (B)"
+      ],
+      "status": "CONSTRAINT"
+    },
+    {
+      "detail": "STEIN C11-alone smooth connected menu starts at g=10; C5-alone at g=6.  The joint CRT is g == 21 (mod 55).  g=10 is excluded by the intersection, not by any one cell dying.",
+      "id": "PER_POINT_MENU_STRICTLY_LARGER",
+      "status": "INTERSECTION_TIGHTENING"
+    },
+    {
+      "detail": "No depth-<=3 integrality survivor, and none is allowed: R==0 is first reachable at depth 4.",
+      "forced_total_depth": 4,
+      "id": "MU_6_INTEGRALITY_EMPTY_BELOW_FORCED_DEPTH",
+      "status": "CONSISTENT"
+    },
+    {
+      "detail": "No depth-<=3 integrality survivor, and none is allowed: R==0 is first reachable at depth 5.",
+      "forced_total_depth": 5,
+      "id": "MU_7_INTEGRALITY_EMPTY_BELOW_FORCED_DEPTH",
+      "status": "CONSISTENT"
+    },
+    {
+      "detail": "No depth-<=3 integrality survivor, and none is allowed: R==0 is first reachable at depth 4.",
+      "forced_total_depth": 4,
+      "id": "MU_9_INTEGRALITY_EMPTY_BELOW_FORCED_DEPTH",
+      "status": "CONSISTENT"
+    },
+    {
+      "ODDZERO_audit": "NOT TRIGGERED (outcome is not an all-22 death)",
+      "claimed": false,
+      "detail": "L12 sec. 7 / TIER B / FLAG-M: 0 of 118 (depth<=3) and 0 of 226 (extended) integrality survivors lie in the smooth-fibre C7 trace menu.  Intersected with STEIN's smooth 1-dimensional row this is a NEAR-KILL of that row at the enumerated tower scope.  L12 states it is a menu verdict under a stated model, not a closed death.  FLAG-P (point blowups only) and the proved saturation of the leading-order obstruction at depth >= 4 are in force.  NOT claimed as a cell death or a degree exclusion.",
+      "id": "FLAG_M_SMOOTH_TRACE_NEAR_KILL",
+      "status": "FLAG"
+    },
+    {
+      "claimed": false,
+      "detail": "STEIN menus.json realisability window (hmax=4,...) finds a C11 witness at chi_0=35 and does NOT find a C5 witness in that window.  The packet labels this a WINDOW: absence is not impossibility.  Not a kill.",
+      "id": "STEIN_WINDOW_C5_CHI0_35_MISS",
+      "status": "FLAG"
+    },
+    {
+      "claimed": false,
+      "detail": "DEPTH_TABLE_GENERAL keep_pass_22_p331.json carries the same 22 ids and the same 22 content_hash / sealed_hash SETS as D35_AUDIT, but the three fields are not synchronously paired.  This packet keys cells by the D35_AUDIT / SMITH / STEIN pairing (those three AGREE).  The keep-pass LIVE / dim<=37 verdict is uniform on all 22, so the fiber-structure intersection does not depend on the pairing.",
+      "id": "KEEP_PASS_IDENTITY_PAIRING",
+      "status": "FLAG"
+    }
+  ],
+  "n_c11_entries": 10,
+  "n_c5_entries": 64,
+  "n_cells": 22,
+  "n_flagged_kills": 0,
+  "verdict": "NO CLAIMED CONTRADICTION.  No cell of the 22 has an empty joint constraint set.  Two FLAGS (smooth-trace near-kill; keep-pass pairing hygiene) and one window-miss are recorded.  Problem E remains OPEN; this packet excludes no degree."
+}

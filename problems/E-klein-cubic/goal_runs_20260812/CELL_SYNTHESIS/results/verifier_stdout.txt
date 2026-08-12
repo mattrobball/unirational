@@ -1,0 +1,4 @@
+checks 79  pass 79  fail 0  skip 0
+CELL_SYNTHESIS_VERIFY_OK
+ALLGREEN
+Problem E remains OPEN; this packet excludes no degree.

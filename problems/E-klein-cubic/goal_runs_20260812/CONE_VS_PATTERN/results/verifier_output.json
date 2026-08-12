@@ -1,0 +1,8 @@
+{
+  "packet": "CONE_VS_PATTERN",
+  "stored": "CONE_VS_PATTERN_VERIFY_OK / ALLGREEN",
+  "live": "CONE_VS_PATTERN_VERIFY_OK / ALLGREEN (T(w) dead nnz=0, live nnz>0)",
+  "checks_stored": 51,
+  "checks_live": 54,
+  "fails": 0
+}

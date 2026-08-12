@@ -1,0 +1,98 @@
+CONE_LADDER_D35 verifier
+  OK  H1 headline OPEN 
+  OK  H2 excludes no degree 
+  OK  H3 no REPORT.md 
+  OK  H4 registration present 
+  OK  H5 Not claimed section 
+[A] cell / P3 anchors
+  OK  A1 p=331 emit present 
+  OK  A2 p=331 P3 present 
+  OK  A3 p=331 cell shape 37x637 [37, 637]
+  OK  A4 p=331 rank_U=2 
+  OK  A5 p=331 P3=1380 1380
+  OK  A6 p=331 P3 matches sealed 
+  OK  A1 p=661 emit present 
+  OK  A2 p=661 P3 present 
+  OK  A3 p=661 cell shape 37x637 [37, 637]
+  OK  A4 p=661 rank_U=2 
+  OK  A5 p=661 P3=1380 1380
+  OK  A6 p=661 P3 matches sealed 
+[B] free rungs m=18,19
+  OK  B1 m=18 p=331 present 
+  OK  B2 m=18 p=331 free 
+  OK  B3 m=18 p=331 rank=Sym3 1140/1140
+  OK  B4 m=18 p=331 bound 19 
+  OK  B1 m=19 p=331 present 
+  OK  B2 m=19 p=331 free 
+  OK  B3 m=19 p=331 rank=Sym3 1330/1330
+  OK  B4 m=19 p=331 bound 18 
+  OK  B1 m=18 p=661 present 
+  OK  B2 m=18 p=661 free 
+  OK  B3 m=18 p=661 rank=Sym3 1140/1140
+  OK  B4 m=18 p=661 bound 19 
+  OK  B1 m=19 p=661 present 
+  OK  B2 m=19 p=661 free 
+  OK  B3 m=19 p=661 rank=Sym3 1330/1330
+  OK  B4 m=19 p=661 bound 18 
+[C] director m=20 control (240-gen artefact)
+  OK  C1 director control json 
+  OK  C2 director zero-dim 
+  OK  C3 director 20 pure powers 
+  OK  C4 sealed lead reparse zero-dim 
+  OK  C5 sealed nlead 11201 11201
+[D] full-span msolve rungs
+  OK  D1 m=20 p=331 ZERO_DIM 
+  OK  D2 m=20 p=331 ngens=1380 1380
+  OK  D3 m=20 p=331 all pure powers 
+  OK  D4 m=20 p=331 bound=17 
+  OK  D5 m=20 p=331 lead file zero-dim 
+  OK  D1 m=20 p=661 ZERO_DIM 
+  OK  D2 m=20 p=661 ngens=1380 1380
+  OK  D3 m=20 p=661 all pure powers 
+  OK  D4 m=20 p=661 bound=17 
+  OK  D5 m=20 p=661 lead file zero-dim 
+  OK  D1 m=22 p=331 ZERO_DIM 
+  OK  D2 m=22 p=331 ngens=1380 1380
+  OK  D3 m=22 p=331 all pure powers 
+  OK  D4 m=22 p=331 bound=15 
+  OK  D5 m=22 p=331 lead file zero-dim 
+  OK  D1 m=22 p=661 ZERO_DIM 
+  OK  D2 m=22 p=661 ngens=1380 1380
+  OK  D3 m=22 p=661 all pure powers 
+  OK  D4 m=22 p=661 bound=15 
+  OK  D5 m=22 p=661 lead file zero-dim 
+  OK  D1 m=24 p=331 ZERO_DIM 
+  OK  D2 m=24 p=331 ngens=1380 1380
+  OK  D3 m=24 p=331 all pure powers 
+  OK  D4 m=24 p=331 bound=13 
+  OK  D5 m=24 p=331 lead file zero-dim 
+  OK  D1 m=24 p=661 ZERO_DIM 
+  OK  D2 m=24 p=661 ngens=1380 1380
+  OK  D3 m=24 p=661 all pure powers 
+  OK  D4 m=24 p=661 bound=13 
+  OK  D5 m=24 p=661 lead file zero-dim 
+  OK  D1 m=28 p=331 ZERO_DIM 
+  OK  D2 m=28 p=331 ngens=1380 1380
+  OK  D3 m=28 p=331 all pure powers 
+  OK  D4 m=28 p=331 bound=9 
+  OK  D5 m=28 p=331 lead file zero-dim 
+  OK  D1 m=28 p=661 ZERO_DIM 
+  OK  D2 m=28 p=661 ngens=1380 1380
+  OK  D3 m=28 p=661 all pure powers 
+  OK  D4 m=28 p=661 bound=9 
+  OK  D5 m=28 p=661 lead file zero-dim 
+  OK  D0 m=32 p=331 recorded as no-verdict NO_VERDICT_MEMORY
+  OK  D0 m=32 p=661 emitted, no solve yet no verdict
+  OK  D0 m=34 p=331 emitted, no solve yet no verdict
+  OK  D0 m=36 p=331 emitted, no solve yet no verdict
+[E] bound bookkeeping
+  OK  E1 summary present 
+  OK  E2 summary headline OPEN 
+  OK  E3 two-prime bound is 9 one-prime tightest 9
+[L] live cell rebuild p=331
+  OK  L1 live cell 37x637 
+  OK  L2 live rank_U=2 
+
+87 checks, 0 failures
+CONE_LADDER_D35_VERIFY_OK
+ALLGREEN

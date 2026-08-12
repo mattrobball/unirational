@@ -1,0 +1,24 @@
+{
+ "41": {
+  "331": {
+   "HF3": 6660732,
+   "I_3d": 15828,
+   "K": 341,
+   "N3": 6666891,
+   "P3": 6159,
+   "P3_is_lower_bound": false,
+   "deficit_vs_I": 9669,
+   "error": null,
+   "qr_cut": {
+    "expect_alive": 343,
+    "is_qr": false,
+    "n_points": 60,
+    "new_dim": 343,
+    "rank": 0
+   },
+   "qr_cut_p3": null,
+   "saturated": true,
+   "seconds": 1680.145749092102
+  }
+ }
+}

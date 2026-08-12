@@ -1,0 +1,1045 @@
+{
+  "A4a": {
+    "n": 238,
+    "n_vectors": 238,
+    "note": "238 entries kept as a menu; listed in results/a4_vectors.json",
+    "row_names": [
+      "C3/pt_A4(a) dim1 c=1",
+      "C3/pt_A4(a) dim0 c=2",
+      "C3/pt_A4(a)<ell_V c=(1,1)",
+      "C3/pt_A4(a)<ell_V c=(1,2)"
+    ],
+    "vectors_sha256": "b70c3a622f308647a49fbeaf08edd32f0d86dcde1a09200feac0cefe442c3a07"
+  },
+  "A4b": {
+    "n": 238,
+    "n_vectors": 238,
+    "row_names": [
+      "C3/pt_A4(b) dim1 c=2",
+      "C3/pt_A4(b) dim0 c=1",
+      "C3/pt_A4(b)<ell_V c=(2,2)",
+      "C3/pt_A4(b)<ell_V c=(2,1)"
+    ],
+    "vectors_sha256": "57097f291ddf566103294a92c910708fadf4eeee2b138627186e4235d1c3472a"
+  },
+  "C11": {
+    "entries_mu_attached": [
+      {
+        "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+        "mu": 2,
+        "n_defined_rows": 0,
+        "n_x": 4,
+        "vector": [
+          "UNDEF",
+          "UNDEF",
+          "UNDEF",
+          "UNDEF"
+        ]
+      },
+      {
+        "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+        "mu": 5,
+        "n_defined_rows": 2,
+        "n_x": 4,
+        "vector": [
+          "UNDEF",
+          "UNDEF",
+          "eigpt(w=4)",
+          "eigpt(w=9)"
+        ]
+      },
+      {
+        "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+        "mu": 1,
+        "n_defined_rows": 2,
+        "n_x": 4,
+        "vector": [
+          "UNDEF",
+          "eigpt(w=1)",
+          "UNDEF",
+          "eigpt(w=3)"
+        ]
+      },
+      {
+        "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+        "mu": 4,
+        "n_defined_rows": 2,
+        "n_x": 4,
+        "vector": [
+          "UNDEF",
+          "eigpt(w=5)",
+          "eigpt(w=9)",
+          "UNDEF"
+        ]
+      },
+      {
+        "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+        "mu": 7,
+        "n_defined_rows": 3,
+        "n_x": 4,
+        "vector": [
+          "UNDEF",
+          "eigpt(w=9)",
+          "eigpt(w=5)",
+          "eigpt(w=1)"
+        ]
+      },
+      {
+        "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+        "mu": 9,
+        "n_defined_rows": 2,
+        "n_x": 4,
+        "vector": [
+          "eigpt(w=1)",
+          "UNDEF",
+          "UNDEF",
+          "eigpt(w=4)"
+        ]
+      },
+      {
+        "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+        "mu": 6,
+        "n_defined_rows": 3,
+        "n_x": 4,
+        "vector": [
+          "eigpt(w=3)",
+          "eigpt(w=4)",
+          "UNDEF",
+          "eigpt(w=5)"
+        ]
+      },
+      {
+        "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+        "mu": 10,
+        "n_defined_rows": 2,
+        "n_x": 4,
+        "vector": [
+          "eigpt(w=4)",
+          "UNDEF",
+          "eigpt(w=1)",
+          "UNDEF"
+        ]
+      },
+      {
+        "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+        "mu": 3,
+        "n_defined_rows": 2,
+        "n_x": 4,
+        "vector": [
+          "eigpt(w=5)",
+          "UNDEF",
+          "eigpt(w=3)",
+          "UNDEF"
+        ]
+      },
+      {
+        "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+        "mu": 8,
+        "n_defined_rows": 2,
+        "n_x": 4,
+        "vector": [
+          "eigpt(w=9)",
+          "eigpt(w=3)",
+          "UNDEF",
+          "UNDEF"
+        ]
+      }
+    ],
+    "n": 10,
+    "order_in_vectors_d35_differs_from_smith_mu_order": true,
+    "row_names": [
+      "C11/pt_C11 c=3",
+      "C11/pt_C11 c=5",
+      "C11/pt_C11 c=6",
+      "C11/pt_C11 c=7"
+    ],
+    "set_of_vectors_agrees_with_smith": true,
+    "vectors_as_in_vectors_d35": [
+      [
+        "UNDEF",
+        "UNDEF",
+        "UNDEF",
+        "UNDEF"
+      ],
+      [
+        "UNDEF",
+        "UNDEF",
+        "eigpt(w=4)",
+        "eigpt(w=9)"
+      ],
+      [
+        "UNDEF",
+        "eigpt(w=1)",
+        "UNDEF",
+        "eigpt(w=3)"
+      ],
+      [
+        "UNDEF",
+        "eigpt(w=5)",
+        "eigpt(w=9)",
+        "UNDEF"
+      ],
+      [
+        "UNDEF",
+        "eigpt(w=9)",
+        "eigpt(w=5)",
+        "eigpt(w=1)"
+      ],
+      [
+        "eigpt(w=1)",
+        "UNDEF",
+        "UNDEF",
+        "eigpt(w=4)"
+      ],
+      [
+        "eigpt(w=3)",
+        "eigpt(w=4)",
+        "UNDEF",
+        "eigpt(w=5)"
+      ],
+      [
+        "eigpt(w=4)",
+        "UNDEF",
+        "eigpt(w=1)",
+        "UNDEF"
+      ],
+      [
+        "eigpt(w=5)",
+        "UNDEF",
+        "eigpt(w=3)",
+        "UNDEF"
+      ],
+      [
+        "eigpt(w=9)",
+        "eigpt(w=3)",
+        "UNDEF",
+        "UNDEF"
+      ]
+    ]
+  },
+  "C5_joint_64": {
+    "entries": [
+      {
+        "mu_C5a": 1,
+        "mu_C5b": 1,
+        "mu_D10": 1,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 1,
+        "mu_C5b": 1,
+        "mu_D10": 2,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 1,
+        "mu_C5b": 1,
+        "mu_D10": 3,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 1,
+        "mu_C5b": 1,
+        "mu_D10": 4,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 1,
+        "mu_C5b": 2,
+        "mu_D10": 1,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 1,
+        "mu_C5b": 2,
+        "mu_D10": 2,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 1,
+        "mu_C5b": 2,
+        "mu_D10": 3,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 1,
+        "mu_C5b": 2,
+        "mu_D10": 4,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 1,
+        "mu_C5b": 3,
+        "mu_D10": 1,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 1,
+        "mu_C5b": 3,
+        "mu_D10": 2,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 1,
+        "mu_C5b": 3,
+        "mu_D10": 3,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 1,
+        "mu_C5b": 3,
+        "mu_D10": 4,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 1,
+        "mu_C5b": 4,
+        "mu_D10": 1,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 1,
+        "mu_C5b": 4,
+        "mu_D10": 2,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 1,
+        "mu_C5b": 4,
+        "mu_D10": 3,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 1,
+        "mu_C5b": 4,
+        "mu_D10": 4,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 2,
+        "mu_C5b": 1,
+        "mu_D10": 1,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 2,
+        "mu_C5b": 1,
+        "mu_D10": 2,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 2,
+        "mu_C5b": 1,
+        "mu_D10": 3,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 2,
+        "mu_C5b": 1,
+        "mu_D10": 4,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 2,
+        "mu_C5b": 2,
+        "mu_D10": 1,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 2,
+        "mu_C5b": 2,
+        "mu_D10": 2,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 2,
+        "mu_C5b": 2,
+        "mu_D10": 3,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 2,
+        "mu_C5b": 2,
+        "mu_D10": 4,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 2,
+        "mu_C5b": 3,
+        "mu_D10": 1,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 2,
+        "mu_C5b": 3,
+        "mu_D10": 2,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 2,
+        "mu_C5b": 3,
+        "mu_D10": 3,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 2,
+        "mu_C5b": 3,
+        "mu_D10": 4,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 2,
+        "mu_C5b": 4,
+        "mu_D10": 1,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 2,
+        "mu_C5b": 4,
+        "mu_D10": 2,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 2,
+        "mu_C5b": 4,
+        "mu_D10": 3,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 2,
+        "mu_C5b": 4,
+        "mu_D10": 4,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 3,
+        "mu_C5b": 1,
+        "mu_D10": 1,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 3,
+        "mu_C5b": 1,
+        "mu_D10": 2,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 3,
+        "mu_C5b": 1,
+        "mu_D10": 3,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 3,
+        "mu_C5b": 1,
+        "mu_D10": 4,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 3,
+        "mu_C5b": 2,
+        "mu_D10": 1,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 3,
+        "mu_C5b": 2,
+        "mu_D10": 2,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 3,
+        "mu_C5b": 2,
+        "mu_D10": 3,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 3,
+        "mu_C5b": 2,
+        "mu_D10": 4,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 3,
+        "mu_C5b": 3,
+        "mu_D10": 1,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 3,
+        "mu_C5b": 3,
+        "mu_D10": 2,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 3,
+        "mu_C5b": 3,
+        "mu_D10": 3,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 3,
+        "mu_C5b": 3,
+        "mu_D10": 4,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 3,
+        "mu_C5b": 4,
+        "mu_D10": 1,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 3,
+        "mu_C5b": 4,
+        "mu_D10": 2,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 3,
+        "mu_C5b": 4,
+        "mu_D10": 3,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 3,
+        "mu_C5b": 4,
+        "mu_D10": 4,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 4,
+        "mu_C5b": 1,
+        "mu_D10": 1,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 4,
+        "mu_C5b": 1,
+        "mu_D10": 2,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 4,
+        "mu_C5b": 1,
+        "mu_D10": 3,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 4,
+        "mu_C5b": 1,
+        "mu_D10": 4,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 4,
+        "mu_C5b": 2,
+        "mu_D10": 1,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 4,
+        "mu_C5b": 2,
+        "mu_D10": 2,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 4,
+        "mu_C5b": 2,
+        "mu_D10": 3,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 4,
+        "mu_C5b": 2,
+        "mu_D10": 4,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 4,
+        "mu_C5b": 3,
+        "mu_D10": 1,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 4,
+        "mu_C5b": 3,
+        "mu_D10": 2,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 4,
+        "mu_C5b": 3,
+        "mu_D10": 3,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 4,
+        "mu_C5b": 3,
+        "mu_D10": 4,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 4,
+        "mu_C5b": 4,
+        "mu_D10": 1,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 4,
+        "mu_C5b": 4,
+        "mu_D10": 2,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 4,
+        "mu_C5b": 4,
+        "mu_D10": 3,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      },
+      {
+        "mu_C5a": 4,
+        "mu_C5b": 4,
+        "mu_D10": 4,
+        "n_x": {
+          "1": 5,
+          "2": 5,
+          "3": 5,
+          "4": 5
+        }
+      }
+    ],
+    "factors": [
+      "C5a",
+      "C5b",
+      "D10"
+    ],
+    "n": 64,
+    "n_x_uniform": true
+  },
+  "C5a": {
+    "n": 4,
+    "row_names": [
+      "C5/pt_C5(a) c=1",
+      "C5/pt_C5(a) c=2",
+      "C5/pt_C5(a) c=3",
+      "C5/pt_C5(a) c=4"
+    ],
+    "vectors": [
+      [
+        "eigpt(w=1)",
+        "eigpt(w=2)",
+        "eigpt(w=3)",
+        "eigpt(w=4)"
+      ],
+      [
+        "eigpt(w=2)",
+        "eigpt(w=4)",
+        "eigpt(w=1)",
+        "eigpt(w=3)"
+      ],
+      [
+        "eigpt(w=3)",
+        "eigpt(w=1)",
+        "eigpt(w=4)",
+        "eigpt(w=2)"
+      ],
+      [
+        "eigpt(w=4)",
+        "eigpt(w=3)",
+        "eigpt(w=2)",
+        "eigpt(w=1)"
+      ]
+    ]
+  },
+  "C5b": {
+    "n": 4,
+    "row_names": [
+      "C5/pt_C5(b) c=1",
+      "C5/pt_C5(b) c=2",
+      "C5/pt_C5(b) c=3",
+      "C5/pt_C5(b) c=4"
+    ],
+    "vectors": [
+      [
+        "eigpt(w=1)",
+        "eigpt(w=2)",
+        "eigpt(w=3)",
+        "eigpt(w=4)"
+      ],
+      [
+        "eigpt(w=2)",
+        "eigpt(w=4)",
+        "eigpt(w=1)",
+        "eigpt(w=3)"
+      ],
+      [
+        "eigpt(w=3)",
+        "eigpt(w=1)",
+        "eigpt(w=4)",
+        "eigpt(w=2)"
+      ],
+      [
+        "eigpt(w=4)",
+        "eigpt(w=3)",
+        "eigpt(w=2)",
+        "eigpt(w=1)"
+      ]
+    ]
+  },
+  "D10": {
+    "n": 4,
+    "row_names": [
+      "C5/pt_D10 c=1",
+      "C5/pt_D10 c=2"
+    ],
+    "vectors": [
+      [
+        "eigpt(w=1)",
+        "eigpt(w=2)"
+      ],
+      [
+        "eigpt(w=2)",
+        "eigpt(w=4)"
+      ],
+      [
+        "eigpt(w=3)",
+        "eigpt(w=1)"
+      ],
+      [
+        "eigpt(w=4)",
+        "eigpt(w=3)"
+      ]
+    ]
+  },
+  "F_odd": 36252160,
+  "d": 35,
+  "factor_sizes": {
+    "A4a": 238,
+    "A4b": 238,
+    "C11": 10,
+    "C5a": 4,
+    "C5b": 4,
+    "D10": 4
+  },
+  "n_cell_menu_pairs": 797547520,
+  "n_cells": 22,
+  "note": "MENUS ARE MENUS.  The six centres are independent G-orbits.  There is no cell-to-menu-subset linkage in the sealed record (SMITH_I3 sec. 7.2); the FULL F_odd(35) product is admissible for every one of the 22 cells.  Factoring a report is not collapsing a menu: every entry of every factor is listed, and covered x free-multiplicity = F_odd(35) is checked.",
+  "product": 36252160,
+  "product_equals_F_odd": true
+}

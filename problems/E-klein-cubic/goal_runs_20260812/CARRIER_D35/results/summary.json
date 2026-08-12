@@ -1,0 +1,66 @@
+{
+ "alive_linearly": true,
+ "ansatz": "CANONICAL_CARRIER_D35_LINEARLY_ALIVE",
+ "d34": {
+  "by_prime": {
+   "199": {
+    "HF34": 655,
+    "degree": "20",
+    "hilbPoly": "20*i-25",
+    "n1": 16,
+    "n2": 13,
+    "rank": 3
+   },
+   "67": {
+    "HF34": 655,
+    "degree": "20",
+    "hilbPoly": "20*i-25",
+    "n1": 16,
+    "n2": 13,
+    "rank": 3
+   }
+  },
+  "chain": "M_34=576; (1,6) n1=16; restr-to-C rank 3; n2=13; LAND empty",
+  "land_empty_claimed": true,
+  "land_primes": [
+   67,
+   199
+  ],
+  "n1_both": true,
+  "n2_both": true,
+  "rank_both": true,
+  "source_gate": "goal_runs_after_ac61998/FIX_VII_GATE",
+  "source_land": "goal_runs_after_10804b2/FIX_VII_LAND",
+  "verdict": "CANONICAL_CARRIER_D34_CLOSED_NEGATIVE"
+ },
+ "degree_excluded": false,
+ "flag": "no degree excluded; Problem E remains OPEN; ODDZERO gate idle",
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "ic_ok": {
+  "331": true,
+  "661": true
+ },
+ "kernel_dim_interval": [
+  32,
+  36
+ ],
+ "meets_22_closed": true,
+ "oddzero_idle": true,
+ "rank_values": 1,
+ "rank_values_by_prime": {
+  "331": 1,
+  "661": 1
+ },
+ "saturated_at_character_bound": false,
+ "seconds_total": 71.55,
+ "two_prime_agree": true,
+ "window_d35": {
+  "HF": 675,
+  "d": 35,
+  "ideal_Wb": 632,
+  "molien_W": 638,
+  "molien_Wb": 637,
+  "oncurve_W": 6,
+  "oncurve_Wb": 5
+ }
+}

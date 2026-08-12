@@ -1,0 +1,485 @@
+{
+  "ALLGREEN": true,
+  "checks": [
+    {
+      "detail": "CELL_SYNTHESIS_ASSEMBLE_OK\ncells 22\nC11 10 C5 64\npairs 797547520\nflagged_kills 0\nclaimed_kills 0\nProblem E remains OPEN; this packet excludes no degree.\n",
+      "group": "A",
+      "name": "A0 assemble.py replays",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A1 22 ids",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A1b 22 unique hashes",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A2 sealed id list",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A3 SMITH ids match AUDIT",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A4 SMITH hashes match AUDIT",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A5 STEIN ids match AUDIT",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A6 STEIN hashes match AUDIT",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A7 STEIN ledger 22 rows",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A8 packet cells 22",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A9 packet keyed by AUDIT hashes",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A10 sigma-band shared",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A11 sigma-band values",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A12 F_odd product 36252160",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A13 factor sizes uncollapsed",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A14 cell-menu pairs 797547520",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A15 C11 menu has 10 distinct vectors",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A16 C11 vector SET matches SMITH (not collapsed)",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A17 C5 joint menu 64",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A18 C5 n_x uniform (5,5,5,5)",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A19 A4 menus 238+238 not collapsed",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A20 A4a sha matches sealed vectors",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A21 A4b sha matches sealed vectors",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "A",
+      "name": "A22 no cell-to-menu linkage (SMITH)",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B1 SMITH d=35",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B2 SMITH n_cell_menu_pairs",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B3 SMITH order-11 n_x=4",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B4 SMITH order-5 n_x=5 and uniform",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B5 SMITH order-5 menu size 64",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B6 SMITH order-3 parametric",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B7 SMITH F_odd factors",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B8 STEIN chi0_mod_55 is [35]",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B9 STEIN branch A chi0<=-20, h1==21 mod 55",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B10 STEIN branch B s>=35",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B11 STEIN RH first common genus 21",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B12 STEIN ledger both branches live on every row",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B13 L12 json totals 1540/0/118/0",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B14 L12 genus0 pass is 0 on every mu",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B15 L12 menu pass is 0 on every mu",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B16 L12 cells.verified (constancy over 22)",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B17 L12 extended-scope sealed numbers",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B18 L12 THEOREM contains 2674 and 0 of 2674",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B19 L12 THEOREM contains 226 integrality-survivors",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B20 DEPTH keep-pass 0 dead / 22 live / dim 37 both primes",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B21 DEPTH period hist rid1 36/6/12",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B22 DEPTH period hist rid2 12/6",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B23 vectors_d35 d/F_odd/K",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B24 AUDIT split 756=336+398+22",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B25 keep_pass content_hash SET equals AUDIT",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B26 keep_pass id<->hash pairing FLAG is recorded",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B27 STEIN menus cell-independent",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B28 STEIN C11 n_x constant",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "B",
+      "name": "B29 C11 defined-rows never 4 (STAGE2 Thm 2.1)",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C1 CRT chi0 == 35 (mod 55)",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C2 packet CRT matches in-packet recompute",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C3 first joint genus is 21, then 76",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C4 joint genera are 21 (mod 55)",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C5 forced depths 3/4/5 by mu",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C6 packet per-C11 depths match",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C7 genus0 pass 0 on every C11 row",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C8 mu 6,7,9 have 0 integrality at depth<=3 and forced depth>3",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C9 mu not in {6,7,9} have integrality survivors at depth<=3",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C10 no C11 row intersection empty",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C11 64 C5 rows, none empty",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C12 22 cell rows, none empty, none claimed dead",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C13 all 22 share the same must_look_like",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C14 no flagged kills claimed",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C15 FLAG-M near-kill is recorded, not claimed",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C16 keep-pass pairing FLAG recorded",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C17 headline exact",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C18 plain paragraph present and agrees",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C19 no claimed kill / no claimed exclusion in synthesis",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C20 no REPORT.md in the packet",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C21 g=10 is in C11-alone menu and NOT in the joint list",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C22 g=21 is in C11-alone, C5-alone, and the joint list",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C23 L12 depth<=3 tower sum 1540",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C24 L12 depth<=3 integral sum 118",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C25 keep_pass all LIVE both primes",
+      "pass": true
+    },
+    {
+      "detail": "",
+      "group": "C",
+      "name": "C26 invariant table names the sealed sources",
+      "pass": true
+    }
+  ],
+  "headline": "Problem E remains OPEN; this packet excludes no degree.",
+  "marker": "CELL_SYNTHESIS_VERIFY_OK",
+  "n_checks": 79,
+  "n_fail": 0,
+  "n_pass": 79,
+  "n_skip": 0
+}
