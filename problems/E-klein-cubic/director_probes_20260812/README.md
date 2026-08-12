@@ -108,3 +108,26 @@ a cubic, ≤ 9139 nonzeros).
 > "The ladder was stopped one degree short" means: the parameter ideal
 > was computed in `c`-degrees 3 and 4 only, and `c`-degree 5 is the first
 > piece that can decide emptiness.
+
+`cone_dimension_probe.py` — bounding the dimension of the landing cone
+`V = {c ∈ 37-cell : F(T_c(x)) ≡ 0}` at `d = 35`. Two levers make this
+cheap where the sealed attempt was not: a SUBSET of the landing cubics
+suffices (`V(subset) ⊇ V`, so a trivial subset locus proves `V = {0}`),
+and a generic `m`-section bounds the cone (`dim(V ∩ L) = max(0, k+m−37)`,
+so `V ∩ L = {0}` gives `dim V ≤ 37 − m`).
+
+**Result obtained for free from the deficiency measurements**
+(no Gröbner basis needed): at `m = 18` AND `m = 19` the restricted
+cubics span ALL of `Sym³(L)` — in particular every `t_i³` lies in the
+restricted ideal, so `V ∩ L = {0}` outright. Hence
+
+> **dim V ≤ 18** (landing cone at `d = 35`, both from `m = 19`;
+> the sealed record's section probes gave only `≤ 33`).
+
+The free argument stops at `m = 19`: `C(21,3) = 1330 ≤ 1380 < 1540 =
+C(22,3)`, so from `m = 20` on the restricted cubics can no longer fill
+`Sym³(L)` and a real Gröbner computation is required. Status of that
+step: Macaulay2 TIMED OUT (30 min) on 35 cubics in 20 variables;
+msolve on 240 generators in 20 variables is the current attempt
+(`cone_m20_p331.ms`). Each successful rung tightens the bound by one:
+`m = 20 → dim V ≤ 17`, and so on.
