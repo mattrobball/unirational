@@ -1,0 +1,1176 @@
+{
+ "C11_defined_rows_per_entry": [
+  0,
+  2,
+  2,
+  2,
+  3,
+  2,
+  3,
+  2,
+  2,
+  2
+ ],
+ "C11_n_x_constant": true,
+ "C11_n_x_per_entry": [
+  [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  [
+   4,
+   4,
+   4,
+   4,
+   4
+  ],
+  [
+   4,
+   4,
+   4,
+   4,
+   4
+  ]
+ ],
+ "C5_distinct_deposit_vectors": [
+  [
+   5,
+   5,
+   5,
+   5
+  ]
+ ],
+ "C5_entries_checked": 64,
+ "C5_n_x_constant": true,
+ "F_odd_sealed": 36252160,
+ "X_C11_points": 5,
+ "X_C5_points": 4,
+ "Z_C11_points": 20,
+ "Z_C5_points": 20,
+ "cell_menu_pairs": 797547520,
+ "cells_22_content_hashes_p331": [
+  "1c9110f65f5bbba3",
+  "3150d84bef191573",
+  "3618971b26ff55c3",
+  "3f5a2ac32819ba6f",
+  "4719753a11bf778e",
+  "5a83d267319fa23e",
+  "60e0986d49bee8f8",
+  "6250d74a687cb983",
+  "6d86d9d5001c7e2e",
+  "936cc3c107447118",
+  "9b53e234676b5956",
+  "a604f5628e9236ba",
+  "b55e098db7f81575",
+  "bbb7766320c5cd5a",
+  "c1aa082c6d18a709",
+  "cc5dcc73af916c94",
+  "cda89047957f1b38",
+  "d0d84b4f9163e092",
+  "db1cfded50b57ffb",
+  "f3d6a4eaa956f29f",
+  "f728b33a2e34714b",
+  "fcf626911737b157"
+ ],
+ "cells_22_count": 22,
+ "cells_22_hashes_unique": true,
+ "cells_22_ids": [
+  5,
+  7,
+  13,
+  15,
+  21,
+  23,
+  29,
+  31,
+  37,
+  39,
+  45,
+  47,
+  53,
+  55,
+  61,
+  63,
+  69,
+  71,
+  697,
+  699,
+  701,
+  703
+ ],
+ "census_C11_row_shape": [
+  [
+   "60",
+   "5"
+  ]
+ ],
+ "census_C5_row_shape": [
+  [
+   "132",
+   "2"
+  ]
+ ],
+ "dichotomy_ledger": {
+  "n_rows": 22,
+  "rows": [
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 5,
+    "content_hash_p331": "1c9110f65f5bbba3",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 7,
+    "content_hash_p331": "3150d84bef191573",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 13,
+    "content_hash_p331": "3618971b26ff55c3",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 15,
+    "content_hash_p331": "3f5a2ac32819ba6f",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 21,
+    "content_hash_p331": "4719753a11bf778e",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 23,
+    "content_hash_p331": "5a83d267319fa23e",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 29,
+    "content_hash_p331": "60e0986d49bee8f8",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 31,
+    "content_hash_p331": "6250d74a687cb983",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 37,
+    "content_hash_p331": "6d86d9d5001c7e2e",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 39,
+    "content_hash_p331": "936cc3c107447118",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 45,
+    "content_hash_p331": "9b53e234676b5956",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 47,
+    "content_hash_p331": "a604f5628e9236ba",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 53,
+    "content_hash_p331": "b55e098db7f81575",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 55,
+    "content_hash_p331": "bbb7766320c5cd5a",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 61,
+    "content_hash_p331": "c1aa082c6d18a709",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 63,
+    "content_hash_p331": "cc5dcc73af916c94",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 69,
+    "content_hash_p331": "cda89047957f1b38",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 71,
+    "content_hash_p331": "d0d84b4f9163e092",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 697,
+    "content_hash_p331": "db1cfded50b57ffb",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 699,
+    "content_hash_p331": "f3d6a4eaa956f29f",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 701,
+    "content_hash_p331": "f728b33a2e34714b",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   },
+   {
+    "branch_CONNECTED": {
+     "J3": "H^0(R^1) = H^1(R^1) = 0, H^0(R^2) = H^2(R^1)",
+     "conditions": [
+      "dim supp R^1 q_*O <= 1",
+      "pinned points isolated in supp R^2"
+     ],
+     "escape": "a divisorial component of supp R^1 (the h^0-jump divisor D_J) is G-invariant of degree >= 5; by Proposition PIN it then contains ALL FIVE C11-pinned points unless 11 | deg D_J, and all four C5-pinned points unless 5 | deg D_J",
+     "h2_at_pinned_points": 0,
+     "menu": "CONN_dim1_smooth / CONN_dim1_reduced_nodal / CONN_dim1_general / CONN_dim2"
+    },
+    "branch_DISCONNECTED": {
+     "J3_transfer": "the three vanishing statements hold for qtilde : Ztilde -> Y iff H^i(Y, O_Y) = 0 for i > 0 (e.g. Y has rational singularities)",
+     "PIN_sharpening": [
+      "deg B = 5 forces B = {det Hess F = 0} n X, the UNIQUE degree-5 invariant divisor, which contains all five C11-pinned points and no C5-pinned point",
+      "B misses every pinned point only if 55 | deg B, hence deg B >= 55"
+     ],
+     "cost": "a finite G-cover nu : Y -> X of degree s >= 2 branched along a G-invariant divisor B with deg B >= 5",
+     "menu": "DISC_dim1_smooth",
+     "sealed_d35_bound": "NONE -- see THEOREM.md sec. 5.3"
+    },
+    "cell_id": 703,
+    "content_hash_p331": "fcf626911737b157",
+    "sigma_band_group": "shared by all 22 at this prime (sealed)",
+    "verdict": "BOTH BRANCHES LIVE; no cell cut, no degree excluded"
+   }
+  ]
+ },
+ "menu_factor_sizes": {
+  "A4a": 238,
+  "A4b": 238,
+  "C11": 10,
+  "C5a": 4,
+  "C5b": 4,
+  "D10": 4
+ },
+ "menu_inputs_used": [
+  "X^{C11}=5",
+  "X^{C5}=4",
+  "Z^{C11}=20",
+  "Z^{C5}=20",
+  "residual C5 5-cycle",
+  "immune row shapes"
+ ],
+ "menu_product": 36252160,
+ "menus": {
+  "C11": {
+   "CONN_dim1_general": {
+    "bridge": "chi_top(F) = 2*chi(O_F) + D - 2*chi(N);  D >= 0, D = 0 iff F_red is smooth, D = #nodes if F_red is nodal; N = the nilradical sheaf of F",
+    "chi_O": "h0 - h1 = chi_0, the flat-locus constant",
+    "constraint": "2*chi_0 + D - 2*chi(N) = 4 (mod 11)",
+    "h0_min": 1,
+    "h2": 0,
+    "h3": 0
+   },
+   "CONN_dim1_reduced_nodal": {
+    "h0": 1,
+    "p": 11,
+    "rows": [
+     {
+      "delta_nodes": 0,
+      "h1_mod_p": 10
+     },
+     {
+      "delta_nodes": 1,
+      "h1_mod_p": 5
+     },
+     {
+      "delta_nodes": 2,
+      "h1_mod_p": 0
+     },
+     {
+      "delta_nodes": 3,
+      "h1_mod_p": 6
+     },
+     {
+      "delta_nodes": 4,
+      "h1_mod_p": 1
+     },
+     {
+      "delta_nodes": 5,
+      "h1_mod_p": 7
+     },
+     {
+      "delta_nodes": 6,
+      "h1_mod_p": 2
+     },
+     {
+      "delta_nodes": 7,
+      "h1_mod_p": 8
+     },
+     {
+      "delta_nodes": 8,
+      "h1_mod_p": 3
+     },
+     {
+      "delta_nodes": 9,
+      "h1_mod_p": 9
+     },
+     {
+      "delta_nodes": 10,
+      "h1_mod_p": 4
+     },
+     {
+      "delta_nodes": 11,
+      "h1_mod_p": 10
+     }
+    ]
+   },
+   "CONN_dim1_smooth": {
+    "chi_O": [
+     -9,
+     -20,
+     -31,
+     -42
+    ],
+    "h0": 1,
+    "h1_congruence": "h1 = 10 (mod 11)",
+    "h1_menu": [
+     10,
+     21,
+     32,
+     43
+    ],
+    "h1_min": 10,
+    "smith_check": [
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "CONN_dim2": {
+    "flat": false,
+    "h0_min": 1,
+    "h1": "free: no bridge from chi_top for a 2-dimensional fibre",
+    "h2": 0,
+    "h2_conditions": [
+     "dim supp R^1 q_* O <= 1 (the escape caveat)",
+     "x isolated in supp R^2 (sealed incidence: the pinned points lie on no line and no E^X_sigma)"
+    ],
+    "note": "q is not flat at x, so the flat-locus constant chi_0 does not bind here"
+   },
+   "DISC_dim1_smooth": {
+    "cheapest_disconnected": {
+     "chi_O": 2,
+     "chi_top": 4,
+     "connected": false,
+     "extra_free_components": [],
+     "free_orbit_genus": 0,
+     "free_orbits": 0,
+     "genera": [
+      0,
+      0
+     ],
+     "h0": 2,
+     "h1": 0,
+     "split": [
+      2,
+      2
+     ]
+    },
+    "fixed_point_splits": [
+     [
+      2,
+      2
+     ],
+     [
+      4
+     ]
+    ],
+    "h0_le_stein_degree": "h0 = #nu^{-1}(x) <= s",
+    "hurwitz_rule": "no component carries exactly 1 fixed point",
+    "rule": "components of F_x <-> points of nu^{-1}(x); C_p permutes them in orbits of size 1 or p; the n fixed points sit on the stable components; h0 = #components, h1 = sum of genera",
+    "types_enumerated": 1440
+   },
+   "dim3_fibre": {
+    "note": "a 3-dimensional fibre is a contracted divisor; R^3 q_* O then enters Leray.  The three J3 vanishing statements survive (checked in THEOREM.md sec. 3.1) but the h^2 corollary is not the one proved.",
+    "status": "FLAGGED"
+   },
+   "smith_input": {
+    "chi_top_congruence": "chi_top(F_x) = 4 (mod 11)",
+    "n_x_on_Z": 4,
+    "p": 11,
+    "refinement": "on a further equivariant model n_x = 4 + Delta/5 with Delta >= 0"
+   }
+  },
+  "C5": {
+   "CONN_dim1_general": {
+    "bridge": "chi_top(F) = 2*chi(O_F) + D - 2*chi(N);  D >= 0, D = 0 iff F_red is smooth, D = #nodes if F_red is nodal; N = the nilradical sheaf of F",
+    "chi_O": "h0 - h1 = chi_0, the flat-locus constant",
+    "constraint": "2*chi_0 + D - 2*chi(N) = 0 (mod 5)",
+    "h0_min": 1,
+    "h2": 0,
+    "h3": 0
+   },
+   "CONN_dim1_reduced_nodal": {
+    "h0": 1,
+    "p": 5,
+    "rows": [
+     {
+      "delta_nodes": 0,
+      "h1_mod_p": 1
+     },
+     {
+      "delta_nodes": 1,
+      "h1_mod_p": 4
+     },
+     {
+      "delta_nodes": 2,
+      "h1_mod_p": 2
+     },
+     {
+      "delta_nodes": 3,
+      "h1_mod_p": 0
+     },
+     {
+      "delta_nodes": 4,
+      "h1_mod_p": 3
+     },
+     {
+      "delta_nodes": 5,
+      "h1_mod_p": 1
+     },
+     {
+      "delta_nodes": 6,
+      "h1_mod_p": 4
+     },
+     {
+      "delta_nodes": 7,
+      "h1_mod_p": 2
+     },
+     {
+      "delta_nodes": 8,
+      "h1_mod_p": 0
+     },
+     {
+      "delta_nodes": 9,
+      "h1_mod_p": 3
+     },
+     {
+      "delta_nodes": 10,
+      "h1_mod_p": 1
+     },
+     {
+      "delta_nodes": 11,
+      "h1_mod_p": 4
+     }
+    ]
+   },
+   "CONN_dim1_smooth": {
+    "chi_O": [
+     -5,
+     -10,
+     -15,
+     -20
+    ],
+    "h0": 1,
+    "h1_congruence": "h1 = 1 (mod 5)",
+    "h1_menu": [
+     6,
+     11,
+     16,
+     21
+    ],
+    "h1_min": 6,
+    "smith_check": [
+     true,
+     true,
+     true,
+     true
+    ]
+   },
+   "CONN_dim2": {
+    "flat": false,
+    "h0_min": 1,
+    "h1": "free: no bridge from chi_top for a 2-dimensional fibre",
+    "h2": 0,
+    "h2_conditions": [
+     "dim supp R^1 q_* O <= 1 (the escape caveat)",
+     "x isolated in supp R^2 (sealed incidence: the pinned points lie on no line and no E^X_sigma)"
+    ],
+    "note": "q is not flat at x, so the flat-locus constant chi_0 does not bind here"
+   },
+   "DISC_dim1_smooth": {
+    "cheapest_disconnected": {
+     "chi_O": 0,
+     "chi_top": 0,
+     "connected": false,
+     "extra_free_components": [],
+     "free_orbit_genus": 0,
+     "free_orbits": 0,
+     "genera": [
+      0,
+      2
+     ],
+     "h0": 2,
+     "h1": 2,
+     "split": [
+      2,
+      3
+     ]
+    },
+    "fixed_point_splits": [
+     [
+      2,
+      3
+     ],
+     [
+      5
+     ]
+    ],
+    "h0_le_stein_degree": "h0 = #nu^{-1}(x) <= s",
+    "hurwitz_rule": "no component carries exactly 1 fixed point",
+    "rule": "components of F_x <-> points of nu^{-1}(x); C_p permutes them in orbits of size 1 or p; the n fixed points sit on the stable components; h0 = #components, h1 = sum of genera",
+    "types_enumerated": 1440
+   },
+   "dim3_fibre": {
+    "note": "a 3-dimensional fibre is a contracted divisor; R^3 q_* O then enters Leray.  The three J3 vanishing statements survive (checked in THEOREM.md sec. 3.1) but the h^2 corollary is not the one proved.",
+    "status": "FLAGGED"
+   },
+   "smith_input": {
+    "chi_top_congruence": "chi_top(F_x) = 0 (mod 5)",
+    "n_x_on_Z": 5,
+    "p": 5,
+    "refinement": "on a further equivariant model n_x = 5 + Delta/4 with Delta >= 0"
+   }
+  },
+  "JOINT_flat_smooth": {
+   "branch_A": {
+    "condition": "chi_0 <= -20",
+    "connected_case": {
+     "h0": 1,
+     "h1_menu": [
+      21,
+      76,
+      131,
+      186,
+      241
+     ],
+     "h1_mod_55": 21
+    },
+    "consequence": "h1 = h0 - chi_0 >= h0 + 20 >= 21 at every one of the nine pinned points"
+   },
+   "branch_B": {
+    "condition": "chi_0 >= 35",
+    "consequence": "h0 = chi_0 + h1 >= 35, and h0 = #nu^{-1}(x) <= s, so the Stein degree is s >= 35; impossible in the connected branch, where h0 = 1"
+   },
+   "chi_0_mod_55": [
+    35
+   ],
+   "cross_check_RH": {
+    "common_solutions": [
+     21,
+     76,
+     131,
+     186
+    ],
+    "statement": "connected smooth fibres: g = 11a + 10 at a C11-point and g = 5b + 6 at a C5-point; equal genus forces g = 21 (mod 55)"
+   },
+   "general_form": [
+    "2*chi_0 + D_x - 2*chi(N_x) = 4 (mod 11) at each of the five C11-points",
+    "2*chi_0 + D_x - 2*chi(N_x) = 0 (mod 5) at each of the four C5-points",
+    "the five C11 values chi_top are EQUAL (sealed), so D_x - 2*chi(N_x) is the same integer at all five"
+   ],
+   "hypotheses": [
+    "either branch of the Stein dichotomy",
+    "all nine pinned points carry 1-dimensional fibres",
+    "those fibres are smooth (bridge defects D = 0, N = 0)",
+    "read on the terminus model Z, where n_x = 4 and 5"
+   ],
+   "lemma": "chi(O_{F_x}) is constant = chi_0 on the open locus of 1-dimensional fibres (miracle flatness: Ztilde is CM and X is regular; that locus is a nonempty open subset of the irreducible X, hence connected)",
+   "realisability": {
+    "-20": {
+     "C11_found_in_window": true,
+     "C11_min_h0": 1,
+     "C11_witness": {
+      "chi_O": -20,
+      "chi_top": -40,
+      "connected": true,
+      "extra_free_components": [],
+      "free_orbit_genus": 0,
+      "free_orbits": 0,
+      "genera": [
+       21
+      ],
+      "h0": 1,
+      "h1": 21,
+      "split": [
+       4
+      ]
+     },
+     "C5_found_in_window": true,
+     "C5_min_h0": 1,
+     "C5_witness": {
+      "chi_O": -20,
+      "chi_top": -40,
+      "connected": true,
+      "extra_free_components": [],
+      "free_orbit_genus": 0,
+      "free_orbits": 0,
+      "genera": [
+       21
+      ],
+      "h0": 1,
+      "h1": 21,
+      "split": [
+       5
+      ]
+     },
+     "enumeration_window": "hmax=4, emax=1, fmax=3, gmax=1 (a WINDOW: absence here is not impossibility)"
+    },
+    "35": {
+     "C11_found_in_window": true,
+     "C11_min_h0": 35,
+     "C11_witness": {
+      "chi_O": 35,
+      "chi_top": 70,
+      "connected": false,
+      "extra_free_components": [],
+      "free_orbit_genus": 0,
+      "free_orbits": 3,
+      "genera": [
+       0,
+       0
+      ],
+      "h0": 35,
+      "h1": 0,
+      "split": [
+       2,
+       2
+      ]
+     },
+     "C5_found_in_window": false,
+     "C5_min_h0": null,
+     "C5_witness": null,
+     "enumeration_window": "hmax=4, emax=1, fmax=3, gmax=1 (a WINDOW: absence here is not impossibility)"
+    }
+   }
+  }
+ },
+ "menus_are_cell_independent": true,
+ "residual_C2_on_C5_points": [
+  0,
+  4,
+  3,
+  2,
+  1
+ ],
+ "residual_C5_permutation": [
+  2,
+  0,
+  3,
+  4,
+  1
+ ],
+ "residual_C5_transitive": true,
+ "sealed_cell_menu_pairs": 797547520,
+ "smooth_fibre_type_counts": {
+  "C11": 1440,
+  "C5": 1440
+ }
+}

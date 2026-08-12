@@ -1,0 +1,574 @@
+{
+ "checks": [
+  {
+   "group": "A",
+   "name": "A1 j1_molien.py replays",
+   "pass": true,
+   "detail": "31, 32, 33, 34, 35, 36, 37, 38, 39, 40]\nprobe {3} u [5,40] match: True\nJ1: a_k = 0 for k<5, a_k >= 1 for 5<=k<=46 : PASS\nmin degree of an invariant divisor missing every pinned point: 55\nJ1_MOLIEN_OK\n"
+  },
+  {
+   "group": "A",
+   "name": "A2 pinned_points.py replays",
+   "pass": true,
+   "detail": ", '3': 0, '4': 0}\nQ at the four C5-points  : {1: [3, 5, 0, -5], 2: [3, -5, 5], 3: [8, 5, 5, 10], 4: [-2, -5, -10, -5]}  all zero: False\nmin degree able to miss every pinned point: 55\nPINNED_POINTS_OK\n"
+  },
+  {
+   "group": "A",
+   "name": "A3 |G| = 660",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "A",
+   "name": "A4 class sizes",
+   "pass": true,
+   "detail": "[1, 55, 110, 132, 132, 110, 60, 60]"
+  },
+  {
+   "group": "A",
+   "name": "A5 class orders",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "A",
+   "name": "A6 Klein weights b = (-2)^i are the quadratic residues",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "A",
+   "name": "A7 the 5-dim character is the unique completion of the derived C11 datum",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "A",
+   "name": "A8 order-2 eigenvalues = 3(+1) + 2(-1)  [SCHEME_MAP sec 3.3]",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "A",
+   "name": "A9 order-3 eigenvalues = 1 + 2w + 2w^2  [sec 3.3]",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "A",
+   "name": "A10 order-5 eigenvalues = all five 5th roots  [sec 3.3]",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "A",
+   "name": "A11 order-6 eigenvalues = 1,-w,-w^2,w,w^2  [sec 3.3]",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "A",
+   "name": "A12 the two order-11 classes carry QR and NQR",
+   "pass": true,
+   "detail": "[[1, 3, 4, 5, 9], [2, 6, 7, 8, 10]]"
+  },
+  {
+   "group": "A",
+   "name": "A anchor M_1 = 1",
+   "pass": true,
+   "detail": "got 1"
+  },
+  {
+   "group": "A",
+   "name": "A anchor M_11 = 12",
+   "pass": true,
+   "detail": "got 12"
+  },
+  {
+   "group": "A",
+   "name": "A anchor M_12 = 16",
+   "pass": true,
+   "detail": "got 16"
+  },
+  {
+   "group": "A",
+   "name": "A anchor M_25 = 189",
+   "pass": true,
+   "detail": "got 189"
+  },
+  {
+   "group": "A",
+   "name": "A anchor M_34 = 576",
+   "pass": true,
+   "detail": "got 576"
+  },
+  {
+   "group": "A",
+   "name": "A anchor M_35 = 637",
+   "pass": true,
+   "detail": "got 637"
+  },
+  {
+   "group": "A",
+   "name": "A13 i_3 = 1 (the invariant cubic is unique)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "A",
+   "name": "A14 a_k = 0 for 1 <= k <= 4",
+   "pass": true,
+   "detail": "[0, 0, 0, 0]"
+  },
+  {
+   "group": "A",
+   "name": "A15 a_k >= 1 for 5 <= k <= 46",
+   "pass": true,
+   "detail": "1"
+  },
+  {
+   "group": "A",
+   "name": "A16 J1: invariant divisor degrees on X are exactly {k >= 5}",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "A",
+   "name": "A17 director probe: ambient invariant degrees in [1,40] = {3} u [5,40]",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "A",
+   "name": "A18 a_5 = 1: the degree-5 invariant divisor on X is unique",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "A",
+   "name": "A19 a_11 = 2: degree-11 invariant divisors form a pencil",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B1 X^{C11} = 5 points, all on X",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B2 X^{C5}: the weight-0 point is off X, four are on X",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B3 residual C5 on X^{C11} is the 5-cycle [2,0,3,4,1]",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B4 residual C2 on X^{C5} is w -> -w",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B5 sealed model uses F = sum x_i^2 x_{i+1}",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B6 sealed standard model: F(1,1,1,1,1) = 5, F(v_k) = 0 for k=1..4",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B7 census: Z^{C11} = 20 points",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B8 census: Z^{C5} = 20 points",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B9 census: the C11 immune rows are 60-component with 5 per fixed C11",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B10 census: the C5 immune rows are 132-component with 2 per fixed C5",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B11 F_odd(35) = 36252160 and factors 10*4*4*4*238*238",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B12 the C11 menu has 10 entries over 4 chain rows",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B13 22 live cells with 22 distinct content hashes at p=331",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B14 sealed (cell, menu-entry) pair count 797547520",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B15 sealed Smith order 11: n_x = 4 on Z",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B16 sealed Smith order 5: n_x = 5 at all four points",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B17 sealed: the order-5 result is uniform across the menu",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B18 sealed: the five C11 fibre chi are EQUAL and = 4 (mod 11)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B19 sealed director correction: n_x = 4 is read on Z, not model-free",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B20 sealed: the 22 share ONE sigma-band group per prime",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B21 J1 as stated in the authority: deg B >= 5, degrees exactly {k>=5}",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B22 J3 as stated in the authority: the three vanishing statements",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B23 the escape caveat is in the authority (D_J invariant, degree >= 5)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B24 sealed incidence: the pinned points lie on no line and no E_sigma",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B25 SMITH records that neither Stein branch was assumed",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "B",
+   "name": "B26 no sealed genus bound binds at d = 35 (C1 is an identity package)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C1 PIN: 11 divides k is necessary to miss the C11-pinned points",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C2 PIN: 5 divides k is necessary to miss the C5-pinned points",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C3 PIN: the minimal degree able to miss every pinned point is 55",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C4 the tau-weights are 5 distinct nonzero residues",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C5 deg-3 C11:C5 invariants are 1-dimensional and equal F",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C6 the C5 eigenpoints: weight 0 off X, weights 1..4 on X",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C7 no invariant quintic monomial is a pure fifth power",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C8 Q = det Hess F is nonzero, C11- and sigma-invariant",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C9 Q vanishes at all five C11-pinned points",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C10 Q vanishes at NO C5-pinned point",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C11 independent Hessian-determinant evaluation agrees",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C12 that independent evaluation is nonzero at all four C5-points",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C13 menu factor product = F_odd(35)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C14 C11: n_x = 4 at all five points on every one of the 10 entries",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C15 C11: at most 3 of the 4 rows are ever defined (STAGE2 Thm 2.1)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C16 C5: all 64 entries recomputed, deposit (5,5,5,5) every time",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C17 F3 closes: 5*4 = 20 = Z^{C11} and 4*5 = 20 = Z^{C5}",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C18 the menus are cell-independent: 797547520 pairs carry one menu",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C19 22 cell ids match the sealed survivors22 block",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C20 Hurwitz rule: no C_p action on a smooth curve has exactly 1 fixed point",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C21 C11 connected smooth fibre: g = 11h + 10, minimum 10",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C22 C5 connected smooth fibre: g = 5h + 6, minimum 6",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C23 RH reproduces the Smith congruence at C11: 2-2g = 4 (mod 11)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C24 RH reproduces the Smith congruence at C5: 2-2g = 0 (mod 5)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C25 fixed-point splits with no part 1: C11 -> {[2,2],[4]}",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C26 fixed-point splits with no part 1: C5 -> {[2,3],[5]}",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C27 every enumerated smooth fibre type satisfies the Smith congruence",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C28 cheapest disconnected fibre at a C11-point is two P^1: (h0,h1) = (2,0)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C29 cheapest disconnected fibre at a C5-point is (h0,h1) = (2,2)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C30 joint flat-locus constant: chi_0 = 35 (mod 55)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C31 joint branch A: connected + smooth gives h1 = 21 (mod 55), min 21",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C32 joint cross-check: g = 11a+10 = 5b+6 has smallest solution 21",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C33 joint branch B forces Stein degree s >= 35",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C34 CONN dim-1 menus record h2 = h3 = 0",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C35 CONN dim-2 menu records h2 = 0 with both named conditions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C36 the dim-3 fibre case is FLAGGED, not silently excluded",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C39 the dichotomy ledger carries all 22 cells by (id, content_hash)",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C40 every ledger row keeps BOTH Stein branches live",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C41 the ledger records that nothing sealed at d=35 bounds branch DISC",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "group": "C",
+   "name": "C37 ODDZERO audit: nothing in this packet returns zero or all-dead",
+   "pass": true,
+   "detail": "{'n_x_C11': 4, 'n_x_C5': 5, 'cells_live': 22, 'menu_entries': 36252160, 'invariant_degrees_from': 5}"
+  },
+  {
+   "group": "C",
+   "name": "C38 headline: no degree is excluded by this packet",
+   "pass": true,
+   "detail": ""
+  }
+ ],
+ "n": 92,
+ "pass": 92,
+ "fail": 0,
+ "gate_A": true,
+ "groups": {
+  "A": [
+   25,
+   0
+  ],
+  "B": [
+   26,
+   0
+  ],
+  "C": [
+   41,
+   0
+  ]
+ }
+}

@@ -1,0 +1,97 @@
+PASS A      A1 j1_molien.py replays
+PASS A      A2 pinned_points.py replays
+PASS A      A3 |G| = 660
+PASS A      A4 class sizes
+PASS A      A5 class orders
+PASS A      A6 Klein weights b = (-2)^i are the quadratic residues
+PASS A      A7 the 5-dim character is the unique completion of the derived C11 datum
+PASS A      A8 order-2 eigenvalues = 3(+1) + 2(-1)  [SCHEME_MAP sec 3.3]
+PASS A      A9 order-3 eigenvalues = 1 + 2w + 2w^2  [sec 3.3]
+PASS A      A10 order-5 eigenvalues = all five 5th roots  [sec 3.3]
+PASS A      A11 order-6 eigenvalues = 1,-w,-w^2,w,w^2  [sec 3.3]
+PASS A      A12 the two order-11 classes carry QR and NQR
+PASS A      A anchor M_1 = 1
+PASS A      A anchor M_11 = 12
+PASS A      A anchor M_12 = 16
+PASS A      A anchor M_25 = 189
+PASS A      A anchor M_34 = 576
+PASS A      A anchor M_35 = 637
+PASS A      A13 i_3 = 1 (the invariant cubic is unique)
+PASS A      A14 a_k = 0 for 1 <= k <= 4
+PASS A      A15 a_k >= 1 for 5 <= k <= 46
+PASS A      A16 J1: invariant divisor degrees on X are exactly {k >= 5}
+PASS A      A17 director probe: ambient invariant degrees in [1,40] = {3} u [5,40]
+PASS A      A18 a_5 = 1: the degree-5 invariant divisor on X is unique
+PASS A      A19 a_11 = 2: degree-11 invariant divisors form a pencil
+PASS B      B1 X^{C11} = 5 points, all on X
+PASS B      B2 X^{C5}: the weight-0 point is off X, four are on X
+PASS B      B3 residual C5 on X^{C11} is the 5-cycle [2,0,3,4,1]
+PASS B      B4 residual C2 on X^{C5} is w -> -w
+PASS B      B5 sealed model uses F = sum x_i^2 x_{i+1}
+PASS B      B6 sealed standard model: F(1,1,1,1,1) = 5, F(v_k) = 0 for k=1..4
+PASS B      B7 census: Z^{C11} = 20 points
+PASS B      B8 census: Z^{C5} = 20 points
+PASS B      B9 census: the C11 immune rows are 60-component with 5 per fixed C11
+PASS B      B10 census: the C5 immune rows are 132-component with 2 per fixed C5
+PASS B      B11 F_odd(35) = 36252160 and factors 10*4*4*4*238*238
+PASS B      B12 the C11 menu has 10 entries over 4 chain rows
+PASS B      B13 22 live cells with 22 distinct content hashes at p=331
+PASS B      B14 sealed (cell, menu-entry) pair count 797547520
+PASS B      B15 sealed Smith order 11: n_x = 4 on Z
+PASS B      B16 sealed Smith order 5: n_x = 5 at all four points
+PASS B      B17 sealed: the order-5 result is uniform across the menu
+PASS B      B18 sealed: the five C11 fibre chi are EQUAL and = 4 (mod 11)
+PASS B      B19 sealed director correction: n_x = 4 is read on Z, not model-free
+PASS B      B20 sealed: the 22 share ONE sigma-band group per prime
+PASS B      B21 J1 as stated in the authority: deg B >= 5, degrees exactly {k>=5}
+PASS B      B22 J3 as stated in the authority: the three vanishing statements
+PASS B      B23 the escape caveat is in the authority (D_J invariant, degree >= 5)
+PASS B      B24 sealed incidence: the pinned points lie on no line and no E_sigma
+PASS B      B25 SMITH records that neither Stein branch was assumed
+PASS B      B26 no sealed genus bound binds at d = 35 (C1 is an identity package)
+PASS C      C1 PIN: 11 divides k is necessary to miss the C11-pinned points
+PASS C      C2 PIN: 5 divides k is necessary to miss the C5-pinned points
+PASS C      C3 PIN: the minimal degree able to miss every pinned point is 55
+PASS C      C4 the tau-weights are 5 distinct nonzero residues
+PASS C      C5 deg-3 C11:C5 invariants are 1-dimensional and equal F
+PASS C      C6 the C5 eigenpoints: weight 0 off X, weights 1..4 on X
+PASS C      C7 no invariant quintic monomial is a pure fifth power
+PASS C      C8 Q = det Hess F is nonzero, C11- and sigma-invariant
+PASS C      C9 Q vanishes at all five C11-pinned points
+PASS C      C10 Q vanishes at NO C5-pinned point
+PASS C      C11 independent Hessian-determinant evaluation agrees
+PASS C      C12 that independent evaluation is nonzero at all four C5-points
+PASS C      C13 menu factor product = F_odd(35)
+PASS C      C14 C11: n_x = 4 at all five points on every one of the 10 entries
+PASS C      C15 C11: at most 3 of the 4 rows are ever defined (STAGE2 Thm 2.1)
+PASS C      C16 C5: all 64 entries recomputed, deposit (5,5,5,5) every time
+PASS C      C17 F3 closes: 5*4 = 20 = Z^{C11} and 4*5 = 20 = Z^{C5}
+PASS C      C18 the menus are cell-independent: 797547520 pairs carry one menu
+PASS C      C19 22 cell ids match the sealed survivors22 block
+PASS C      C20 Hurwitz rule: no C_p action on a smooth curve has exactly 1 fixed point
+PASS C      C21 C11 connected smooth fibre: g = 11h + 10, minimum 10
+PASS C      C22 C5 connected smooth fibre: g = 5h + 6, minimum 6
+PASS C      C23 RH reproduces the Smith congruence at C11: 2-2g = 4 (mod 11)
+PASS C      C24 RH reproduces the Smith congruence at C5: 2-2g = 0 (mod 5)
+PASS C      C25 fixed-point splits with no part 1: C11 -> {[2,2],[4]}
+PASS C      C26 fixed-point splits with no part 1: C5 -> {[2,3],[5]}
+PASS C      C27 every enumerated smooth fibre type satisfies the Smith congruence
+PASS C      C28 cheapest disconnected fibre at a C11-point is two P^1: (h0,h1) = (2,0)
+PASS C      C29 cheapest disconnected fibre at a C5-point is (h0,h1) = (2,2)
+PASS C      C30 joint flat-locus constant: chi_0 = 35 (mod 55)
+PASS C      C31 joint branch A: connected + smooth gives h1 = 21 (mod 55), min 21
+PASS C      C32 joint cross-check: g = 11a+10 = 5b+6 has smallest solution 21
+PASS C      C33 joint branch B forces Stein degree s >= 35
+PASS C      C34 CONN dim-1 menus record h2 = h3 = 0
+PASS C      C35 CONN dim-2 menu records h2 = 0 with both named conditions
+PASS C      C36 the dim-3 fibre case is FLAGGED, not silently excluded
+PASS C      C39 the dichotomy ledger carries all 22 cells by (id, content_hash)
+PASS C      C40 every ledger row keeps BOTH Stein branches live
+PASS C      C41 the ledger records that nothing sealed at d=35 bounds branch DISC
+PASS C      C37 ODDZERO audit: nothing in this packet returns zero or all-dead
+PASS C      C38 headline: no degree is excluded by this packet
+
+groups: A 25/25, B 26/26, C 41/41
+92 checks, 0 failures, 0 skips
+STEIN_LERAY_VERIFY_OK
+ALLGREEN
