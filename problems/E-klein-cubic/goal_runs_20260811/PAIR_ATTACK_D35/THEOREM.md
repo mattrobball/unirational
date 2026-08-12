@@ -325,6 +325,14 @@ remains OPEN; no degree is excluded by this packet.
    flip children and nowhere else; at period-1 rows a vanishing level-0
    reading delivers the SAME value deeper. §11.1 (the 39 → 37 universal
    cut), the vanishing table (reinterpreted), and the anchors stand.
+   > **2026-08-11 correction (`D35_AUDIT` T4, same day):** the sentence
+   > "exactly the six … and nowhere else" is itself wrong: the audited
+   > period histogram on this row's children is 36 (period 1) / 6
+   > (period 2) / **12 (period 3)**, with value change confirmed at the
+   > period-3 children (rows 68/69 — both among the 14 dead rows). The
+   > RETRACTION stands unchanged; the salvage is that keep-demands at
+   > period-3 dead rows force additional closed vanishing layers — the
+   > corrected keep-pass on the 22 uses the audited period table.
 2. **The sound finisher** (`scripts/director_finish_d35.py`, both primes,
    saturation-checked): `ord ≥ 2` along the minus-lines has rank 39 on
    the slice — dimension 0. Every pattern whose L-row options all have

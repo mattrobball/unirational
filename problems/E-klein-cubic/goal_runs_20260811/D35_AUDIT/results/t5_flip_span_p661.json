@@ -1,0 +1,17 @@
+{
+ "p": 661,
+ "npts": 40,
+ "seed": 20260846,
+ "z": 1,
+ "rank_flip": 2,
+ "rank_V1": 10,
+ "rank_joint": 10,
+ "flips_in_span_of_V1": true,
+ "dim_37_cell": 37,
+ "rank_V1_on_37_cell": 8,
+ "claim_joint_eq_V1": true,
+ "claim_V1_rank_10": true,
+ "claim_V1_on_37_rank_8": true,
+ "note_geometry": "If confirmed: the six flip functionals (transverse (34,1) readings at the six attaching pairs over type-I points of one plus-plane) are linear combinations of plain T-evaluations on the corresponding minus-line. Heuristic: by G-equivariance and the identity theorem along the line, the (34,1) datum at a point of the line is determined by the restriction of T to a neighbourhood of that line \u2014 hence by sufficiently many plain line evaluations after the sealed profile cuts.",
+ "verdict": "CONFIRMED"
+}

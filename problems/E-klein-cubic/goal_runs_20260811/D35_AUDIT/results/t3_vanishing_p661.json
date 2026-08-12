@@ -1,0 +1,49 @@
+{
+ "p": 661,
+ "n_value_defined_rows": 18,
+ "n_forced_deeper": 14,
+ "forced_deeper_rows": [
+  23,
+  24,
+  37,
+  38,
+  39,
+  40,
+  41,
+  42,
+  43,
+  44,
+  45,
+  46,
+  74,
+  75
+ ],
+ "live_rows": [
+  25,
+  26,
+  62,
+  64
+ ],
+ "rigidity_violations": 0,
+ "matches_director_count_14_of_18": true,
+ "matches_sealed_row_ids_p331": false,
+ "sealed_dead_rows_p331": [
+  23,
+  24,
+  35,
+  36,
+  37,
+  38,
+  41,
+  42,
+  43,
+  44,
+  45,
+  46,
+  68,
+  69
+ ],
+ "note_row_ids": "Row ids are prime-dependent; only p=331 is expected to match the sealed id list. The load-bearing claim is the count 14/18.",
+ "interpretation": "level-0 reading vanishes on the whole 39-slice at these rows; readings live deeper. This is NOT a value contradiction except where arc-character period > 1 (see T4).",
+ "verdict": "CONFIRMED"
+}

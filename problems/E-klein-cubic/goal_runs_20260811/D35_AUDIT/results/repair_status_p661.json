@@ -1,0 +1,19 @@
+{
+ "byte_identical_across_3_runs": true,
+ "content_rehash": [
+  "d00a51e00621e9d07dd6ad80b4f6ac82d95da2a5",
+  "d00a51e00621e9d07dd6ad80b4f6ac82d95da2a5",
+  "d00a51e00621e9d07dd6ad80b4f6ac82d95da2a5"
+ ],
+ "embed_ok": true,
+ "hashes_match": true,
+ "ids_match": true,
+ "p": 661,
+ "run_content_sha1s": [
+  "d00a51e00621e9d07dd6ad80b4f6ac82d95da2a5",
+  "d00a51e00621e9d07dd6ad80b4f6ac82d95da2a5",
+  "d00a51e00621e9d07dd6ad80b4f6ac82d95da2a5"
+ ],
+ "split_ok": true,
+ "verdict": "REPAIRED"
+}

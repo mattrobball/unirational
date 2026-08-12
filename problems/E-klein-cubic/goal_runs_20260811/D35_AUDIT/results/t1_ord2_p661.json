@@ -1,0 +1,19 @@
+{
+ "p": 661,
+ "npts": 48,
+ "seed": 20261802,
+ "invol_pick": 3,
+ "z": 24,
+ "z_alt": 135,
+ "null_dim": 39,
+ "rank_ord1": 10,
+ "dim_after_ord1": 29,
+ "rank_ord2": 39,
+ "dim_after_ord2": 0,
+ "rank_ord2_alt_line": 39,
+ "dim_after_ord2_alt": 0,
+ "saturation_ok": true,
+ "claim_rank_ord2_eq_null_dim": true,
+ "claim_alt_also_full": true,
+ "verdict": "CONFIRMED"
+}

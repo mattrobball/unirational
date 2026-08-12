@@ -1,0 +1,43 @@
+{
+ "byte_identical_across_3_runs": true,
+ "content_rehash": [
+  "35f2ef036cf430bf184a80468f9694dee74e5420",
+  "35f2ef036cf430bf184a80468f9694dee74e5420",
+  "35f2ef036cf430bf184a80468f9694dee74e5420"
+ ],
+ "embed_ok": true,
+ "hashes_match": true,
+ "ids_match": true,
+ "p": 331,
+ "run_content_sha1s": [
+  "35f2ef036cf430bf184a80468f9694dee74e5420",
+  "35f2ef036cf430bf184a80468f9694dee74e5420",
+  "35f2ef036cf430bf184a80468f9694dee74e5420"
+ ],
+ "split_ok": true,
+ "survivors22_ids": [
+  5,
+  7,
+  13,
+  15,
+  21,
+  23,
+  29,
+  31,
+  37,
+  39,
+  45,
+  47,
+  53,
+  55,
+  61,
+  63,
+  69,
+  71,
+  697,
+  699,
+  701,
+  703
+ ],
+ "verdict": "REPAIRED"
+}

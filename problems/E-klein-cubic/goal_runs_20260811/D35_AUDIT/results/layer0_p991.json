@@ -1,0 +1,13 @@
+{
+ "prime": 991,
+ "nullspace_dim": 39,
+ "fired": {
+  "M_minus_lines": false,
+  "E_eigenlines": "contract to ell_{2 w}",
+  "C6_points": false,
+  "C11_points": true,
+  "C5_points": true
+ },
+ "rank_layer0": 598,
+ "note": "rebuilt in D35_AUDIT for third-prime audit"
+}

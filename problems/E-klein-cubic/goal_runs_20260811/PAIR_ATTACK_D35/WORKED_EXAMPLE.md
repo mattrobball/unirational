@@ -152,7 +152,11 @@ line").** The census argument killed blueprints for KEEPING a location
 where the surface reading vanishes for all candidates. That inference is
 only valid where a deeper reading CHANGES the demanded value — which
 happens exactly at the six special locations (where the value alternates
-with depth) and nowhere else. At the other locations the value is the
+with depth) and nowhere else.
+[Audited same day, `D35_AUDIT` T4: "and nowhere else" is also wrong —
+twelve further children change value with period THREE (rows 68/69,
+which are among the 14). The retraction stands; the corrected
+keep-analysis on the audited period table is the queued next pass.] At the other locations the value is the
 same at every depth, so a vanishing surface reading just means "delivered
 deeper", not "impossible". Since every blueprint already flips the six,
 the 420-kill claimed in §2 step 4 is **retracted**. What stands from

@@ -1,0 +1,104 @@
+== D35_AUDIT verifier ==
+-- T1 ord>=2 --
+  OK   T1 exists p=331 
+  OK   T1 rank_ord2==null_dim p=331 rank=39 dim=39
+  OK   T1 alt-line full p=331 
+  OK   T1 saturation p=331 
+  OK   T1 verdict CONFIRMED p=331 
+  OK   T1 V1 rank 10 p=331 
+  OK   T1 exists p=661 
+  OK   T1 rank_ord2==null_dim p=661 rank=39 dim=39
+  OK   T1 alt-line full p=661 
+  OK   T1 saturation p=661 
+  OK   T1 verdict CONFIRMED p=661 
+  OK   T1 V1 rank 10 p=661 
+  OK   T1 exists p=991 
+  OK   T1 rank_ord2==null_dim p=991 rank=39 dim=39
+  OK   T1 alt-line full p=991 
+  OK   T1 saturation p=991 
+  OK   T1 verdict CONFIRMED p=991 
+  OK   T1 V1 rank 10 p=991 
+-- T2 six-flip --
+  OK   T2 exists p=331 
+  OK   T2 ambient rank 2 p=331 
+  OK   T2 slice rank 2 p=331 
+  OK   T2 rigidity 0 p=331 
+  OK   T2 verdict CONFIRMED p=331 
+  OK   T2 exists p=661 
+  OK   T2 ambient rank 2 p=661 
+  OK   T2 slice rank 2 p=661 
+  OK   T2 rigidity 0 p=661 
+  OK   T2 verdict CONFIRMED p=661 
+  OK   T2 exists p=991 
+  OK   T2 ambient rank 2 p=991 
+  OK   T2 slice rank 2 p=991 
+  OK   T2 rigidity 0 p=991 
+  OK   T2 verdict CONFIRMED p=991 
+-- T3 vanishing table --
+  OK   T3 exists p=331 
+  OK   T3 14 of 18 p=331 deeper=14 defined=18
+  OK   T3 rigidity 0 p=331 
+  OK   T3 verdict CONFIRMED p=331 
+  OK   T3 p331 row ids match sealed 
+  OK   T3 exists p=661 
+  OK   T3 14 of 18 p=661 deeper=14 defined=18
+  OK   T3 rigidity 0 p=661 
+  OK   T3 verdict CONFIRMED p=661 
+-- T4 depth-parity --
+  OK   T4 exists p=331 
+  OK   T4 six period-2 exist p=331 
+  OK   T4 all period-2 alternate p=331 
+  OK   T4 period>1 beyond six p=331 n_period_gt1=18
+  OK   T4 depth-varies outside p2 p=331 
+  OK   T4 verdict REFUTED p=331 
+  OK   T4 exists p=661 
+  OK   T4 six period-2 exist p=661 
+  OK   T4 all period-2 alternate p=661 
+  OK   T4 period>1 beyond six p=661 n_period_gt1=18
+  OK   T4 depth-varies outside p2 p=661 
+  OK   T4 verdict REFUTED p=661 
+-- T5 flip span --
+  OK   T5 exists p=331 
+  OK   T5 V1 rank 10 p=331 
+  OK   T5 joint==V1 p=331 
+  OK   T5 V1|37 rank 8 p=331 
+  OK   T5 flips in span p=331 
+  OK   T5 verdict CONFIRMED p=331 
+  OK   T5 exists p=661 
+  OK   T5 V1 rank 10 p=661 
+  OK   T5 joint==V1 p=661 
+  OK   T5 V1|37 rank 8 p=661 
+  OK   T5 flips in span p=661 
+  OK   T5 verdict CONFIRMED p=661 
+  OK   T5 exists p=991 
+  OK   T5 V1 rank 10 p=991 
+  OK   T5 joint==V1 p=991 
+  OK   T5 V1|37 rank 8 p=991 
+  OK   T5 flips in span p=991 
+  OK   T5 verdict CONFIRMED p=991 
+-- linkage repair --
+  OK   repair content exists p=331 
+  OK   repair n=756 p=331 
+  OK   repair split 336+398+22 p=331 {'formula': '756 = 336 + 398 + 22', 'multidegree_dead_m_ne_1': 336, 'ok': True, 'ord0_L_survivors': 22, 'ord_ge2_L_only': 398, 'total': 756}
+  OK   repair embed_ok p=331 
+  OK   repair 22 ids match sealed p=331 [5, 7, 13, 15, 21, 23, 29, 31, 37, 39, 45, 47, 53, 55, 61, 63, 69, 71, 697, 699, 701, 703]
+  OK   repair 22 hashes match sealed p=331 
+  OK   repair ids == survivors22 file p=331 
+  OK   repair 3-run identical p=331 ['35f2ef036cf430bf184a80468f9694dee74e5420', '35f2ef036cf430bf184a80468f9694dee74e5420', '35f2ef036cf430bf184a80468f9694dee74e5420']
+  OK   repair verdict REPAIRED p=331 
+  OK   repair content exists p=661 
+  OK   repair n=756 p=661 
+  OK   repair split 336+398+22 p=661 {'formula': '756 = 336 + 398 + 22', 'multidegree_dead_m_ne_1': 336, 'ok': True, 'ord0_L_survivors': 22, 'ord_ge2_L_only': 398, 'total': 756}
+  OK   repair embed_ok p=661 
+  OK   repair 22 ids match sealed p=661 [5, 7, 13, 15, 21, 23, 29, 31, 37, 39, 45, 47, 53, 55, 61, 63, 69, 71, 697, 699, 701, 703]
+  OK   repair 22 hashes match sealed p=661 
+  OK   repair ids == survivors22 file p=661 
+  OK   repair 3-run identical p=661 ['d00a51e00621e9d07dd6ad80b4f6ac82d95da2a5', 'd00a51e00621e9d07dd6ad80b4f6ac82d95da2a5', 'd00a51e00621e9d07dd6ad80b4f6ac82d95da2a5']
+  OK   repair verdict REPAIRED p=661 
+-- third prime layer0 --
+  OK   layer0_991 exists 
+  OK   layer0_991 dim 39 
+
+RESULT: 92 checks, 0 failures, 92 ok
+D35_AUDIT_VERIFY_OK
+ALLGREEN
