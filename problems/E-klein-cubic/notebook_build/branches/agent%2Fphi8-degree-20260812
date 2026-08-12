@@ -1,0 +1,2 @@
+branch: agent/phi8-degree-20260812
+note: PR #52: delta(phi_8) = 208 and delta(phi_9) = 288, exact, two routes; neither is a norm, so neither map can be CLEAN; degeneracy locus is a degree-72 curve; V_8, V_9 boxed over Q
