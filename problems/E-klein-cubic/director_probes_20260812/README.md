@@ -142,3 +142,9 @@ system (`m = 37`), where `V = {0}` would close `d = 35` outright — that
 is the sealed record's walled computation, retried here with far fewer
 generators (a subset suffices, and 45–60 cubics already overdetermine
 37 unknowns).
+
+**Storage note:** solver inputs/outputs here (`*.ms`, `*.out`, `*.m2`,
+`*.log`) are gitignored — they run to 160 MB, exceed the hosting limit,
+and are fully regenerable from the scripts in this directory (the
+generator emitters print their own commands). The scripts, the JSON
+results and this README are the tracked record.
