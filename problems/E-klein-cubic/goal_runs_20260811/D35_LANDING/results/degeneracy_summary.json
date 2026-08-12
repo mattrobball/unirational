@@ -1,0 +1,13 @@
+{
+  "per_prime": {
+    "661": "O1_EMPTY_LEANING"
+  },
+  "detail": {
+    "661": {
+      "label": "O1_EMPTY_LEANING",
+      "reason": "all successful low-dim sections origin-only; no full GB",
+      "n_nondeg": 0,
+      "n_deg": 0
+    }
+  }
+}

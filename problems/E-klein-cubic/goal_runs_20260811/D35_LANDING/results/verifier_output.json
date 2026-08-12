@@ -1,0 +1,363 @@
+{
+  "pass": 71,
+  "fail": 0,
+  "checks": [
+    {
+      "name": "plateau_json_p331",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "N3_p331",
+      "ok": true,
+      "detail": "9139"
+    },
+    {
+      "name": "P3_p331",
+      "ok": true,
+      "detail": "1380"
+    },
+    {
+      "name": "HF3_p331",
+      "ok": true,
+      "detail": "7759"
+    },
+    {
+      "name": "P3_plus_HF3_p331",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "saturation_ok_p331",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "extra_batches_zero_p331",
+      "ok": true,
+      "detail": "[{'batch': 0, 'seed': 20262149, 'size': 400, 'rank_before': 1380, 'rank_after': 1380, 'added': 0}, {'batch': 1, 'seed': 20263149, 'size': 400, 'rank_before': 1380, 'rank_after': 1380, 'added': 0}]"
+    },
+    {
+      "name": "I3_echelon_exists_p331",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I3_echelon_rows_p331",
+      "ok": true,
+      "detail": "(1380, 9139)"
+    },
+    {
+      "name": "I3_echelon_cols_p331",
+      "ok": true,
+      "detail": "(1380, 9139)"
+    },
+    {
+      "name": "I3_echelon_rank_p331",
+      "ok": true,
+      "detail": "1380"
+    },
+    {
+      "name": "plateau_json_p661",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "N3_p661",
+      "ok": true,
+      "detail": "9139"
+    },
+    {
+      "name": "P3_p661",
+      "ok": true,
+      "detail": "1380"
+    },
+    {
+      "name": "HF3_p661",
+      "ok": true,
+      "detail": "7759"
+    },
+    {
+      "name": "P3_plus_HF3_p661",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "saturation_ok_p661",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "extra_batches_zero_p661",
+      "ok": true,
+      "detail": "[{'batch': 0, 'seed': 20262479, 'size': 400, 'rank_before': 1380, 'rank_after': 1380, 'added': 0}, {'batch': 1, 'seed': 20263479, 'size': 400, 'rank_before': 1380, 'rank_after': 1380, 'added': 0}]"
+    },
+    {
+      "name": "I3_echelon_exists_p661",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I3_echelon_rows_p661",
+      "ok": true,
+      "detail": "(1380, 9139)"
+    },
+    {
+      "name": "I3_echelon_cols_p661",
+      "ok": true,
+      "detail": "(1380, 9139)"
+    },
+    {
+      "name": "I3_echelon_rank_p661",
+      "ok": true,
+      "detail": "1380"
+    },
+    {
+      "name": "nmon3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "nmon4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "nmon5",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "P4_upper_lt_N4",
+      "ok": true,
+      "detail": "37*1380=51060 < 91390"
+    },
+    {
+      "name": "HF4_lower_bound",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "hf_mul_json_p331",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "P4_lb_ge_6000_p331",
+      "ok": true,
+      "detail": "6000"
+    },
+    {
+      "name": "HF4_lb_p331",
+      "ok": true,
+      "detail": "40330"
+    },
+    {
+      "name": "P4_cannot_full_p331",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "hf_mul_json_p661",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "P4_lb_ge_6000_p661",
+      "ok": true,
+      "detail": "6000"
+    },
+    {
+      "name": "HF4_lb_p661",
+      "ok": true,
+      "detail": "40330"
+    },
+    {
+      "name": "P4_cannot_full_p661",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "char_trivial_cached_p331",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "char_trivial_cached_p661",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "degeneracy_json_p331",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "deg_ker_dim_p331",
+      "ok": true,
+      "detail": "{'rank': 8, 'kernel_dim': 29, 'null_basis_shape': [29, 37]}"
+    },
+    {
+      "name": "deg_ker_rank_p331",
+      "ok": true,
+      "detail": "{'rank': 8, 'kernel_dim': 29, 'null_basis_shape': [29, 37]}"
+    },
+    {
+      "name": "P1_origin_only_p331",
+      "ok": true,
+      "detail": "40"
+    },
+    {
+      "name": "P1_nontriv_zero_p331",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "P1_nondeg_zero_p331",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "P2_origin_only_p331",
+      "ok": true,
+      "detail": "25"
+    },
+    {
+      "name": "P2_nontriv_zero_p331",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "P2_nondeg_zero_p331",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "P3_origin_only_p331",
+      "ok": true,
+      "detail": "12"
+    },
+    {
+      "name": "P3_nontriv_zero_p331",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "P3_nondeg_zero_p331",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "verdict_O1_leaning_p331",
+      "ok": true,
+      "detail": "{'label': 'O1_EMPTY_LEANING', 'reason': 'all successful low-dim sections origin-only; no full GB', 'n_nondeg': 0, 'n_deg': 0}"
+    },
+    {
+      "name": "degeneracy_json_p661",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "deg_ker_dim_p661",
+      "ok": true,
+      "detail": "{'rank': 8, 'kernel_dim': 29, 'null_basis_shape': [29, 37]}"
+    },
+    {
+      "name": "deg_ker_rank_p661",
+      "ok": true,
+      "detail": "{'rank': 8, 'kernel_dim': 29, 'null_basis_shape': [29, 37]}"
+    },
+    {
+      "name": "P1_origin_only_p661",
+      "ok": true,
+      "detail": "40"
+    },
+    {
+      "name": "P1_nontriv_zero_p661",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "P1_nondeg_zero_p661",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "P2_origin_only_p661",
+      "ok": true,
+      "detail": "25"
+    },
+    {
+      "name": "P2_nontriv_zero_p661",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "P2_nondeg_zero_p661",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "P3_origin_only_p661",
+      "ok": true,
+      "detail": "12"
+    },
+    {
+      "name": "P3_nontriv_zero_p661",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "P3_nondeg_zero_p661",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "verdict_O1_leaning_p661",
+      "ok": true,
+      "detail": "{'label': 'O1_EMPTY_LEANING', 'reason': 'all successful low-dim sections origin-only; no full GB', 'n_nondeg': 0, 'n_deg': 0}"
+    },
+    {
+      "name": "P3_agree",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "HF3_agree",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "summary_overall_O4",
+      "ok": true,
+      "detail": "O4_INCONCLUSIVE"
+    },
+    {
+      "name": "summary_leaning_O1",
+      "ok": true,
+      "detail": "O1_EMPTY"
+    },
+    {
+      "name": "summary_tier2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "summary_not_claimed_flag",
+      "ok": true,
+      "detail": "window-closure candidate; modular section+plateau evidence at both primes; adversarial audit (WORKORDER_D35_ADVERSARIAL_AUDIT) is the gate; NOT claimed"
+    },
+    {
+      "name": "live_I3_span_20pts_p331",
+      "ok": true,
+      "detail": "new_dirs=0"
+    },
+    {
+      "name": "live_P1_msolve_irrelevant_p331",
+      "ok": true,
+      "detail": "[0, 1]"
+    }
+  ],
+  "seconds": 1.2469959259033203,
+  "marker": "D35_LANDING_VERIFY_OK"
+}

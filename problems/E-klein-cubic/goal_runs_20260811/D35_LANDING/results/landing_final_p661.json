@@ -1,0 +1,73 @@
+{
+  "p": 661,
+  "P3": 1380,
+  "HF3": 7759,
+  "N3": 9139,
+  "saturation_ok": true,
+  "extra_batches": [
+    {
+      "batch": 0,
+      "seed": 20262479,
+      "size": 400,
+      "rank_before": 1380,
+      "rank_after": 1380,
+      "added": 0
+    },
+    {
+      "batch": 1,
+      "seed": 20263479,
+      "size": 400,
+      "rank_before": 1380,
+      "rank_after": 1380,
+      "added": 0
+    }
+  ],
+  "crosscheck": {
+    "npts": 300,
+    "seed": 20361463,
+    "new_directions": 0
+  },
+  "npts_tested": 2681,
+  "character_trivial": true,
+  "isotypic": {
+    "1": 37,
+    "5a+5b": 0,
+    "10a": 0,
+    "10b": 0,
+    "11": 0,
+    "12a+12b": 0
+  },
+  "degeneracy_kernel_dim": 29,
+  "sections": {
+    "P1": {
+      "n_origin_only": 40,
+      "n_nontriv": 0,
+      "n_fail": 0,
+      "n_nondeg_witnesses": 0
+    },
+    "P2": {
+      "n_origin_only": 25,
+      "n_nontriv": 0,
+      "n_fail": 0,
+      "n_nondeg_witnesses": 0
+    },
+    "P3": {
+      "n_origin_only": 12,
+      "n_nontriv": 0,
+      "n_fail": 0,
+      "n_nondeg_witnesses": 0
+    }
+  },
+  "deg_kernel_P2": {
+    "n_origin_only": 15,
+    "n_nontriv": 0,
+    "n_fail": 0
+  },
+  "hf_mul": null,
+  "prime_verdict": {
+    "label": "O1_EMPTY_LEANING",
+    "reason": "all successful low-dim sections origin-only; no full GB",
+    "n_nondeg": 0,
+    "n_deg": 0
+  }
+}

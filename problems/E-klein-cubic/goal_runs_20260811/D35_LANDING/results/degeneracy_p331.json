@@ -1,0 +1,235 @@
+{
+  "p": 331,
+  "degeneracy_kernel": {
+    "rank": 8,
+    "kernel_dim": 29,
+    "null_basis_shape": [
+      29,
+      37
+    ]
+  },
+  "restricted_to_deg": {
+    "kdim": 29,
+    "npts": 250,
+    "N3": 4495,
+    "rank_I3_on_deg": 250,
+    "HF3_on_deg": 4245,
+    "fills_sym3": false,
+    "deg_P2_sections": {
+      "n_origin_only": 15,
+      "n_nontriv": 0,
+      "n_fail": 0
+    }
+  },
+  "sections_P1": {
+    "sec_dim": 1,
+    "n_sections": 40,
+    "n_origin_only": 40,
+    "n_nontriv": 0,
+    "n_fail": 0,
+    "n_nondeg_witnesses": 0,
+    "n_deg_witnesses": 0,
+    "witnesses": [],
+    "details_head": [
+      {
+        "sidx": 0,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 1,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 2,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 3,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 4,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 5,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 6,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 7,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 8,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 9,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 10,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 11,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 12,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 13,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 14,
+        "status": "origin_only"
+      }
+    ]
+  },
+  "sections_P2": {
+    "sec_dim": 2,
+    "n_sections": 25,
+    "n_origin_only": 25,
+    "n_nontriv": 0,
+    "n_fail": 0,
+    "n_nondeg_witnesses": 0,
+    "n_deg_witnesses": 0,
+    "witnesses": [],
+    "details_head": [
+      {
+        "sidx": 0,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 1,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 2,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 3,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 4,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 5,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 6,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 7,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 8,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 9,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 10,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 11,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 12,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 13,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 14,
+        "status": "origin_only"
+      }
+    ]
+  },
+  "sections_P3": {
+    "sec_dim": 3,
+    "n_sections": 12,
+    "n_origin_only": 12,
+    "n_nontriv": 0,
+    "n_fail": 0,
+    "n_nondeg_witnesses": 0,
+    "n_deg_witnesses": 0,
+    "witnesses": [],
+    "details_head": [
+      {
+        "sidx": 0,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 1,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 2,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 3,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 4,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 5,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 6,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 7,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 8,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 9,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 10,
+        "status": "origin_only"
+      },
+      {
+        "sidx": 11,
+        "status": "origin_only"
+      }
+    ]
+  },
+  "prime_verdict": {
+    "label": "O1_EMPTY_LEANING",
+    "reason": "all successful low-dim sections origin-only; no full GB",
+    "n_nondeg": 0,
+    "n_deg": 0
+  },
+  "seconds": 33.29605507850647
+}

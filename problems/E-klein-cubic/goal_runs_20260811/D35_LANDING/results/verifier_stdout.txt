@@ -1,0 +1,90 @@
+D35_LANDING verifier
+============================================================
+
+-- A. I3 plateau ranks --
+CHECK [OK] plateau_json_p331
+CHECK [OK] N3_p331  9139
+CHECK [OK] P3_p331  1380
+CHECK [OK] HF3_p331  7759
+CHECK [OK] P3_plus_HF3_p331
+CHECK [OK] saturation_ok_p331
+CHECK [OK] extra_batches_zero_p331  [{'batch': 0, 'seed': 20262149, 'size': 400, 'rank_before': 1380, 'rank_after': 1380, 'added': 0}, {'batch': 1, 'seed': 20263149, 'size': 400, 'rank_before': 1380, 'rank_after': 1380, 'added': 0}]
+CHECK [OK] I3_echelon_exists_p331
+CHECK [OK] I3_echelon_rows_p331  (1380, 9139)
+CHECK [OK] I3_echelon_cols_p331  (1380, 9139)
+CHECK [OK] I3_echelon_rank_p331  1380
+CHECK [OK] plateau_json_p661
+CHECK [OK] N3_p661  9139
+CHECK [OK] P3_p661  1380
+CHECK [OK] HF3_p661  7759
+CHECK [OK] P3_plus_HF3_p661
+CHECK [OK] saturation_ok_p661
+CHECK [OK] extra_batches_zero_p661  [{'batch': 0, 'seed': 20262479, 'size': 400, 'rank_before': 1380, 'rank_after': 1380, 'added': 0}, {'batch': 1, 'seed': 20263479, 'size': 400, 'rank_before': 1380, 'rank_after': 1380, 'added': 0}]
+CHECK [OK] I3_echelon_exists_p661
+CHECK [OK] I3_echelon_rows_p661  (1380, 9139)
+CHECK [OK] I3_echelon_cols_p661  (1380, 9139)
+CHECK [OK] I3_echelon_rank_p661  1380
+
+-- B. HF profile bookkeeping --
+CHECK [OK] nmon3
+CHECK [OK] nmon4
+CHECK [OK] nmon5
+CHECK [OK] P4_upper_lt_N4  37*1380=51060 < 91390
+CHECK [OK] HF4_lower_bound
+CHECK [OK] hf_mul_json_p331
+CHECK [OK] P4_lb_ge_6000_p331  6000
+CHECK [OK] HF4_lb_p331  40330
+CHECK [OK] P4_cannot_full_p331
+CHECK [OK] hf_mul_json_p661
+CHECK [OK] P4_lb_ge_6000_p661  6000
+CHECK [OK] HF4_lb_p661  40330
+CHECK [OK] P4_cannot_full_p661
+
+-- C. cell character (trivial residual action) --
+CHECK [OK] char_trivial_cached_p331
+CHECK [OK] char_trivial_cached_p661
+
+-- D. degeneracy + sections from artefacts --
+CHECK [OK] degeneracy_json_p331
+CHECK [OK] deg_ker_dim_p331  {'rank': 8, 'kernel_dim': 29, 'null_basis_shape': [29, 37]}
+CHECK [OK] deg_ker_rank_p331  {'rank': 8, 'kernel_dim': 29, 'null_basis_shape': [29, 37]}
+CHECK [OK] P1_origin_only_p331  40
+CHECK [OK] P1_nontriv_zero_p331
+CHECK [OK] P1_nondeg_zero_p331
+CHECK [OK] P2_origin_only_p331  25
+CHECK [OK] P2_nontriv_zero_p331
+CHECK [OK] P2_nondeg_zero_p331
+CHECK [OK] P3_origin_only_p331  12
+CHECK [OK] P3_nontriv_zero_p331
+CHECK [OK] P3_nondeg_zero_p331
+CHECK [OK] verdict_O1_leaning_p331  {'label': 'O1_EMPTY_LEANING', 'reason': 'all successful low-dim sections origin-only; no full GB', 'n_nondeg': 0, 'n_deg': 0}
+CHECK [OK] degeneracy_json_p661
+CHECK [OK] deg_ker_dim_p661  {'rank': 8, 'kernel_dim': 29, 'null_basis_shape': [29, 37]}
+CHECK [OK] deg_ker_rank_p661  {'rank': 8, 'kernel_dim': 29, 'null_basis_shape': [29, 37]}
+CHECK [OK] P1_origin_only_p661  40
+CHECK [OK] P1_nontriv_zero_p661
+CHECK [OK] P1_nondeg_zero_p661
+CHECK [OK] P2_origin_only_p661  25
+CHECK [OK] P2_nontriv_zero_p661
+CHECK [OK] P2_nondeg_zero_p661
+CHECK [OK] P3_origin_only_p661  12
+CHECK [OK] P3_nontriv_zero_p661
+CHECK [OK] P3_nondeg_zero_p661
+CHECK [OK] verdict_O1_leaning_p661  {'label': 'O1_EMPTY_LEANING', 'reason': 'all successful low-dim sections origin-only; no full GB', 'n_nondeg': 0, 'n_deg': 0}
+
+-- E. cross-prime agreement --
+CHECK [OK] P3_agree
+CHECK [OK] HF3_agree
+CHECK [OK] summary_overall_O4  O4_INCONCLUSIVE
+CHECK [OK] summary_leaning_O1  O1_EMPTY
+CHECK [OK] summary_tier2
+CHECK [OK] summary_not_claimed_flag  window-closure candidate; modular section+plateau evidence at both primes; adversarial audit (WORKORDER_D35_ADVERSARIAL_AUDIT) is the gate; NOT claimed
+
+-- F. live spot checks --
+CHECK [OK] live_I3_span_20pts_p331  new_dirs=0
+CHECK [OK] live_P1_msolve_irrelevant_p331  [0, 1]
+
+============================================================
+PASS 71  FAIL 0  (1.9s)
+D35_LANDING_VERIFY_OK
+ALLGREEN

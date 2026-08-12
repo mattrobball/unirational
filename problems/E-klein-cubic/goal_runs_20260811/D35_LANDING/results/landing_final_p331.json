@@ -1,0 +1,146 @@
+{
+  "p": 331,
+  "P3": 1380,
+  "HF3": 7759,
+  "N3": 9139,
+  "saturation_ok": true,
+  "extra_batches": [
+    {
+      "batch": 0,
+      "seed": 20262149,
+      "size": 400,
+      "rank_before": 1380,
+      "rank_after": 1380,
+      "added": 0
+    },
+    {
+      "batch": 1,
+      "seed": 20263149,
+      "size": 400,
+      "rank_before": 1380,
+      "rank_after": 1380,
+      "added": 0
+    }
+  ],
+  "crosscheck": null,
+  "npts_tested": 3001,
+  "character_trivial": true,
+  "isotypic": {
+    "1": 37,
+    "5a+5b": 0,
+    "10a": 0,
+    "10b": 0,
+    "11": 0,
+    "12a+12b": 0
+  },
+  "degeneracy_kernel_dim": 29,
+  "sections": {
+    "P1": {
+      "n_origin_only": 40,
+      "n_nontriv": 0,
+      "n_fail": 0,
+      "n_nondeg_witnesses": 0
+    },
+    "P2": {
+      "n_origin_only": 25,
+      "n_nontriv": 0,
+      "n_fail": 0,
+      "n_nondeg_witnesses": 0
+    },
+    "P3": {
+      "n_origin_only": 12,
+      "n_nontriv": 0,
+      "n_fail": 0,
+      "n_nondeg_witnesses": 0
+    }
+  },
+  "deg_kernel_P2": {
+    "n_origin_only": 15,
+    "n_nontriv": 0,
+    "n_fail": 0
+  },
+  "hf_mul": {
+    "p": 331,
+    "I3": {
+      "P3": 1380,
+      "HF3": 7759,
+      "sat_ok": true
+    },
+    "d4": {
+      "d": 4,
+      "N": 91390,
+      "upper_bound_P": 51060,
+      "P_lower_bound": 6000,
+      "P_certified": null,
+      "P": 6000,
+      "P_is_lower_bound": true,
+      "HF": null,
+      "HF_upper_bound": 85390,
+      "HF_lower_bound": 40330,
+      "probes": [
+        {
+          "k": 1000,
+          "ranks": [
+            1000,
+            1000
+          ]
+        },
+        {
+          "k": 2000,
+          "ranks": [
+            2000,
+            2000
+          ]
+        },
+        {
+          "k": 3500,
+          "ranks": [
+            3500,
+            3500
+          ]
+        },
+        {
+          "k": 5000,
+          "ranks": [
+            5000,
+            5000
+          ]
+        },
+        {
+          "k": 6000,
+          "ranks": [
+            6000,
+            6000
+          ]
+        }
+      ],
+      "seconds": 907.1699569225311,
+      "method": "kxk_sketch_tier2",
+      "cannot_be_full": true
+    },
+    "d5_bounds": {
+      "N": 749398,
+      "upper_bound_P_from_P4upper": 749398,
+      "upper_bound_P_from_P4cert": null,
+      "HF_lower_bound_from_P4upper": 0
+    },
+    "d6_bounds": {
+      "N": 5245786,
+      "upper_bound_P_from_chain": 5245786,
+      "HF_lower_bound": 0
+    },
+    "HF_profile": {
+      "3": 7759,
+      "4": null,
+      "4_HF_lower": 40330,
+      "4_HF_upper": 85390
+    },
+    "O1_empty_by_HF0": false
+  },
+  "prime_verdict": {
+    "label": "O1_EMPTY_LEANING",
+    "reason": "all successful low-dim sections origin-only; no full GB",
+    "n_nondeg": 0,
+    "n_deg": 0
+  }
+}

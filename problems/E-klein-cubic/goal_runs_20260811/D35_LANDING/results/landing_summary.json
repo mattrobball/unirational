@@ -1,0 +1,52 @@
+{
+  "overall": "O4_INCONCLUSIVE",
+  "leaning": "O1_EMPTY",
+  "flag": "window-closure candidate; modular section+plateau evidence at both primes; adversarial audit (WORKORDER_D35_ADVERSARIAL_AUDIT) is the gate; NOT claimed",
+  "honesty_tier": 2,
+  "reason": "I_3 plateau P3=1380 HF3=7759 at both primes (saturated). HF(4)>=40330>0 so LA does not prove emptiness at deg<=4. Full 37-var msolve/M2 resource wall. All random P1/P2/P3 linear sections (40+25+12 per prime) have msolve GB = irrelevant ideal; same for 15 P2 sections inside the minus-line degeneracy kernel. No non-degenerate witness. Section origin-only is decisive for positive-dimensional components and is empty-leaning for 0-dim, but is not a full Nullstellensatz certificate for finite points in P^36.",
+  "HF_profile": {
+    "3": {
+      "P": 1380,
+      "N": 9139,
+      "HF": 7759,
+      "certified": true,
+      "both_primes": true
+    },
+    "4": {
+      "P_lower_bound": 6000,
+      "P_upper_bound": 51060,
+      "N": 91390,
+      "HF_lower_bound": 40330,
+      "HF_upper_bound": 85390,
+      "certified": false,
+      "method": "kxk_sketch_tier2 + domain upper bound 37*P3"
+    },
+    "5": {
+      "N": 749398,
+      "note": "bound only"
+    }
+  },
+  "per_prime": {
+    "331": "O1_EMPTY_LEANING",
+    "661": "O1_EMPTY_LEANING"
+  },
+  "P3_both": {
+    "331": 1380,
+    "661": 1380
+  },
+  "blueprints22": "all 22 order-0 line-branch blueprints are conditionally DEAD if O1 holds; no nondeg landing witness found; packet excludes no degree",
+  "hf_mul": {
+    "331": {
+      "P4_lb": 6000,
+      "HF4_lb": 40330,
+      "HF4_ub": 85390,
+      "P4_ub": 51060
+    },
+    "661": {
+      "P4_lb": 6000,
+      "HF4_lb": 40330,
+      "HF4_ub": 85390,
+      "P4_ub": 51060
+    }
+  }
+}

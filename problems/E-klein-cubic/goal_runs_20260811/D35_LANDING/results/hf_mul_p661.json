@@ -1,0 +1,78 @@
+{
+  "p": 661,
+  "I3": {
+    "P3": 1380,
+    "HF3": 7759,
+    "sat_ok": true
+  },
+  "d4": {
+    "d": 4,
+    "N": 91390,
+    "upper_bound_P": 51060,
+    "P_lower_bound": 6000,
+    "P_certified": null,
+    "P": 6000,
+    "P_is_lower_bound": true,
+    "HF": null,
+    "HF_upper_bound": 85390,
+    "HF_lower_bound": 40330,
+    "probes": [
+      {
+        "k": 1000,
+        "ranks": [
+          1000,
+          1000
+        ]
+      },
+      {
+        "k": 2000,
+        "ranks": [
+          2000,
+          2000
+        ]
+      },
+      {
+        "k": 3500,
+        "ranks": [
+          3500,
+          3500
+        ]
+      },
+      {
+        "k": 5000,
+        "ranks": [
+          5000,
+          5000
+        ]
+      },
+      {
+        "k": 6000,
+        "ranks": [
+          6000,
+          6000
+        ]
+      }
+    ],
+    "seconds": 1100.7674767971039,
+    "method": "kxk_sketch_tier2",
+    "cannot_be_full": true
+  },
+  "d5_bounds": {
+    "N": 749398,
+    "upper_bound_P_from_P4upper": 749398,
+    "upper_bound_P_from_P4cert": null,
+    "HF_lower_bound_from_P4upper": 0
+  },
+  "d6_bounds": {
+    "N": 5245786,
+    "upper_bound_P_from_chain": 5245786,
+    "HF_lower_bound": 0
+  },
+  "HF_profile": {
+    "3": 7759,
+    "4": null,
+    "4_HF_lower": 40330,
+    "4_HF_upper": 85390
+  },
+  "O1_empty_by_HF0": false
+}
