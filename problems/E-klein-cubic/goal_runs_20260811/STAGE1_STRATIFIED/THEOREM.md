@@ -265,3 +265,11 @@ Check groups: **A** anchors (5), **B** ODDZERO old/new (6), **C** Theorem S′
    47 checks, 0 failures, both primes (`STAGE1_STRATIFIED_VERIFY_OK` /
    `ALLGREEN`); replay log archived at
    `results/replay_director_stdout.txt`.
+
+> **2026-08-12 banner (`goal_runs_20260812/TUPLE_JOINT_RESIDUE`):** the
+> corrected `K` values of §3 are LOWER BOUNDS on tuple-level coherent
+> patterns: this packet's stratified enumeration flipped only the six
+> period-2 children (pre-`D35_AUDIT`-T4 semantics); the audited depth
+> table licenses period-3 level-2 escapes as well, and the joint census
+> `J = 11594 / 1408 / 2018 / 10752 / 1596 / 1264` supersedes `K` as the
+> tuple-level table. No zeros either way; anchors unchanged.

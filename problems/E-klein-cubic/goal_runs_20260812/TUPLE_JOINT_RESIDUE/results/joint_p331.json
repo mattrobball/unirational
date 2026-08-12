@@ -1,0 +1,467 @@
+{
+ "p": 331,
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "K_table_sealed": [
+  11068,
+  1178,
+  1512,
+  6216,
+  1344,
+  756
+ ],
+ "table": {
+  "0": {
+   "d_mod6": 0,
+   "triv": {
+    "total": 280212122778992640000,
+    "K": 11068,
+    "core": 11068,
+    "core_size": 51,
+    "empty": false
+   },
+   "depth_only": {
+    "total": 293529034288005120000,
+    "K": 11594,
+    "core": 11594,
+    "core_size": 51,
+    "empty": false
+   },
+   "cone_only": {
+    "total": 280212122778992640000,
+    "K": 11068,
+    "core": 11068,
+    "core_size": 51,
+    "empty": false
+   },
+   "joint": {
+    "total": 293529034288005120000,
+    "K": 11594,
+    "core": 11594,
+    "core_size": 51,
+    "empty": false
+   },
+   "K_anchor": 11068,
+   "anchor_match": true,
+   "mechanism": {
+    "K_triv": 11068,
+    "K_depth_only": 11594,
+    "K_cone_only": 11068,
+    "K_joint": 11594,
+    "cut_by_depth": -526,
+    "cut_by_cone": 0,
+    "cut_by_joint": -526,
+    "zero": false
+   }
+  },
+  "1": {
+   "d_mod6": 1,
+   "triv": {
+    "total": 29823805622845440000,
+    "K": 1178,
+    "core": 1178,
+    "core_size": 51,
+    "empty": false
+   },
+   "depth_only": {
+    "total": 35646789742755840000,
+    "K": 1408,
+    "core": 1408,
+    "core_size": 51,
+    "empty": false
+   },
+   "cone_only": {
+    "total": 29823805622845440000,
+    "K": 1178,
+    "core": 1178,
+    "core_size": 51,
+    "empty": false
+   },
+   "joint": {
+    "total": 35646789742755840000,
+    "K": 1408,
+    "core": 1408,
+    "core_size": 51,
+    "empty": false
+   },
+   "K_anchor": 1178,
+   "anchor_match": true,
+   "mechanism": {
+    "K_triv": 1178,
+    "K_depth_only": 1408,
+    "K_cone_only": 1178,
+    "K_joint": 1408,
+    "cut_by_depth": -230,
+    "cut_by_cone": 0,
+    "cut_by_joint": -230,
+    "zero": false
+   }
+  },
+  "2": {
+   "d_mod6": 2,
+   "triv": {
+    "total": 38279791257845760000,
+    "K": 1512,
+    "core": 1512,
+    "core_size": 51,
+    "empty": false
+   },
+   "depth_only": {
+    "total": 51090356321648640000,
+    "K": 2018,
+    "core": 2018,
+    "core_size": 51,
+    "empty": false
+   },
+   "cone_only": {
+    "total": 38279791257845760000,
+    "K": 1512,
+    "core": 1512,
+    "core_size": 51,
+    "empty": false
+   },
+   "joint": {
+    "total": 51090356321648640000,
+    "K": 2018,
+    "core": 2018,
+    "core_size": 51,
+    "empty": false
+   },
+   "K_anchor": 1512,
+   "anchor_match": true,
+   "mechanism": {
+    "K_triv": 1512,
+    "K_depth_only": 2018,
+    "K_cone_only": 1512,
+    "K_joint": 2018,
+    "cut_by_depth": -506,
+    "cut_by_cone": 0,
+    "cut_by_joint": -506,
+    "zero": false
+   }
+  },
+  "3": {
+   "d_mod6": 3,
+   "triv": {
+    "total": 157372475171143680000,
+    "K": 6216,
+    "core": 6216,
+    "core_size": 51,
+    "empty": false
+   },
+   "depth_only": {
+    "total": 272211848944680960000,
+    "K": 10752,
+    "core": 10752,
+    "core_size": 51,
+    "empty": false
+   },
+   "cone_only": {
+    "total": 157372475171143680000,
+    "K": 6216,
+    "core": 6216,
+    "core_size": 51,
+    "empty": false
+   },
+   "joint": {
+    "total": 272211848944680960000,
+    "K": 10752,
+    "core": 10752,
+    "core_size": 51,
+    "empty": false
+   },
+   "K_anchor": 6216,
+   "anchor_match": true,
+   "mechanism": {
+    "K_triv": 6216,
+    "K_depth_only": 10752,
+    "K_cone_only": 6216,
+    "K_joint": 10752,
+    "cut_by_depth": -4536,
+    "cut_by_cone": 0,
+    "cut_by_joint": -4536,
+    "zero": false
+   }
+  },
+  "4": {
+   "d_mod6": 4,
+   "triv": {
+    "total": 34026481118085120000,
+    "K": 1344,
+    "core": 1344,
+    "core_size": 51,
+    "empty": false
+   },
+   "depth_only": {
+    "total": 40406446327726080000,
+    "K": 1596,
+    "core": 1596,
+    "core_size": 51,
+    "empty": false
+   },
+   "cone_only": {
+    "total": 34026481118085120000,
+    "K": 1344,
+    "core": 1344,
+    "core_size": 51,
+    "empty": false
+   },
+   "joint": {
+    "total": 40406446327726080000,
+    "K": 1596,
+    "core": 1596,
+    "core_size": 51,
+    "empty": false
+   },
+   "K_anchor": 1344,
+   "anchor_match": true,
+   "mechanism": {
+    "K_triv": 1344,
+    "K_depth_only": 1596,
+    "K_cone_only": 1344,
+    "K_joint": 1596,
+    "cut_by_depth": -252,
+    "cut_by_cone": 0,
+    "cut_by_joint": -252,
+    "zero": false
+   }
+  },
+  "5": {
+   "d_mod6": 5,
+   "triv": {
+    "total": 19139895628922880000,
+    "K": 756,
+    "core": 756,
+    "core_size": 51,
+    "empty": false
+   },
+   "depth_only": {
+    "total": 32001095337246720000,
+    "K": 1264,
+    "core": 1264,
+    "core_size": 51,
+    "empty": false
+   },
+   "cone_only": {
+    "total": 19139895628922880000,
+    "K": 756,
+    "core": 756,
+    "core_size": 51,
+    "empty": false
+   },
+   "joint": {
+    "total": 32001095337246720000,
+    "K": 1264,
+    "core": 1264,
+    "core_size": 51,
+    "empty": false
+   },
+   "K_anchor": 756,
+   "anchor_match": true,
+   "mechanism": {
+    "K_triv": 756,
+    "K_depth_only": 1264,
+    "K_cone_only": 756,
+    "K_joint": 1264,
+    "cut_by_depth": -508,
+    "cut_by_cone": 0,
+    "cut_by_joint": -508,
+    "zero": false
+   }
+  }
+ },
+ "ff_compare": {
+  "1": {
+   "0": {
+    "n_strat": 7,
+    "n_depth": 13,
+    "depth_subset_strat": false,
+    "strat_subset_depth": true,
+    "equal": false,
+    "n_only_strat": 0,
+    "n_only_depth": 6
+   },
+   "1": {
+    "n_strat": 6,
+    "n_depth": 12,
+    "depth_subset_strat": false,
+    "strat_subset_depth": true,
+    "equal": false,
+    "n_only_strat": 0,
+    "n_only_depth": 6
+   },
+   "2": {
+    "n_strat": 6,
+    "n_depth": 12,
+    "depth_subset_strat": false,
+    "strat_subset_depth": true,
+    "equal": false,
+    "n_only_strat": 0,
+    "n_only_depth": 6
+   },
+   "3": {
+    "n_strat": 7,
+    "n_depth": 13,
+    "depth_subset_strat": false,
+    "strat_subset_depth": true,
+    "equal": false,
+    "n_only_strat": 0,
+    "n_only_depth": 6
+   },
+   "4": {
+    "n_strat": 6,
+    "n_depth": 12,
+    "depth_subset_strat": false,
+    "strat_subset_depth": true,
+    "equal": false,
+    "n_only_strat": 0,
+    "n_only_depth": 6
+   },
+   "5": {
+    "n_strat": 5,
+    "n_depth": 10,
+    "depth_subset_strat": false,
+    "strat_subset_depth": true,
+    "equal": false,
+    "n_only_strat": 0,
+    "n_only_depth": 5
+   }
+  },
+  "2": {
+   "0": {
+    "n_strat": 8,
+    "n_depth": 13,
+    "depth_subset_strat": false,
+    "strat_subset_depth": true,
+    "equal": false,
+    "n_only_strat": 0,
+    "n_only_depth": 5
+   },
+   "1": {
+    "n_strat": 7,
+    "n_depth": 10,
+    "depth_subset_strat": false,
+    "strat_subset_depth": true,
+    "equal": false,
+    "n_only_strat": 0,
+    "n_only_depth": 3
+   },
+   "2": {
+    "n_strat": 6,
+    "n_depth": 11,
+    "depth_subset_strat": false,
+    "strat_subset_depth": true,
+    "equal": false,
+    "n_only_strat": 0,
+    "n_only_depth": 5
+   },
+   "3": {
+    "n_strat": 9,
+    "n_depth": 15,
+    "depth_subset_strat": false,
+    "strat_subset_depth": true,
+    "equal": false,
+    "n_only_strat": 0,
+    "n_only_depth": 6
+   },
+   "4": {
+    "n_strat": 8,
+    "n_depth": 11,
+    "depth_subset_strat": false,
+    "strat_subset_depth": true,
+    "equal": false,
+    "n_only_strat": 0,
+    "n_only_depth": 3
+   },
+   "5": {
+    "n_strat": 6,
+    "n_depth": 10,
+    "depth_subset_strat": false,
+    "strat_subset_depth": true,
+    "equal": false,
+    "n_only_strat": 0,
+    "n_only_depth": 4
+   }
+  }
+ },
+ "ellv_sat": {
+  "maxdeg": 12,
+  "r_min": 6,
+  "n_all_patterns": 1,
+  "n_cone_patterns": 1,
+  "n_usable_multidegrees": 78,
+  "n_cone_multidegrees": 60,
+  "cone_equals_all": true,
+  "per_residue_n": {
+   "0": 1,
+   "1": 1,
+   "2": 1,
+   "3": 1,
+   "4": 1,
+   "5": 1
+  },
+  "plus6_checked": 81,
+  "pattern_growth_Sprime_ok": true,
+  "ups_ok": true
+ },
+ "ellv_fullsweep_anchor": {
+  "n_mins": 18,
+  "up_set_ok": true,
+  "a1_always_odd": true,
+  "n_mins_with_r_lift": 18,
+  "mins_sample": [
+   [
+    0,
+    1
+   ],
+   [
+    0,
+    3
+   ],
+   [
+    0,
+    5
+   ],
+   [
+    1,
+    1
+   ],
+   [
+    1,
+    3
+   ],
+   [
+    1,
+    5
+   ]
+  ]
+ },
+ "ellv_n_all": 1,
+ "ellv_n_cone": 1,
+ "parity": {
+  "H0_1_m_odd": {
+   "rid": 1,
+   "all_a1_odd": true,
+   "a1_values_mod2": [
+    1
+   ]
+  },
+  "ord_L_parity": {
+   "rid": 2,
+   "all_a0_odd": true,
+   "a0_values_mod2": [
+    1
+   ],
+   "note": "realized full-flag classes on rid2 have a0 odd (ord_L \u2261 d+1 mod 2 via a0 + a1 = d and a0 odd)"
+  }
+ },
+ "zeros_joint": [],
+ "any_zero": false,
+ "anchor_all_match": true,
+ "layers": {
+  "L1": "stratified full-flag (STAGE1_STRATIFIED) \u2192 corrected K",
+  "L2": "depth-table assertable-level menus (DEPTH_TABLE_GENERAL)",
+  "L3": "ell_V-band rid4 under cone ord>=6 (CONE_ORDER_AUDIT)",
+  "L4": "parities fall out of full-flag modules",
+  "excluded": "STAGE2 pinning / map-level layers"
+ }
+}

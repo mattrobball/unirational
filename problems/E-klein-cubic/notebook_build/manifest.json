@@ -1769,6 +1769,17 @@
    "char0_scope": "Degree table (both primes agree): cell dims 0/39/63/121/151/218/261/343/397 for d = 34..42 (control 0 reproduced). Parity-forced line-order impossibility: FULL RANK (kill) at d = 35 (>= 2 -> 39) AND d = 36 (>= 3 -> 63); residual positive for d >= 37 (54/114/57/122/61/130). Six-flip cut: rank exactly 2 at every odd degree in range. P3(35) = 1380 / HF3 = 7759 reproduced; P3(36) >= 1500 unsaturated; beyond too large for the direct method. All section probes origin-only at every alive degree.\nOBSERVATIONS, not theorems: the finisher kill is narrow (35, 36 only); the universal flip cut is degree-uniform on odd d; the landing variety shows no witness anywhere in range.\nNOT claimed: any degree exclusion; any pattern as a theorem.",
    "tracked": true,
    "notes": "Cycle-4 move 3: the instruments generalized. Headline: Problem E remains OPEN; this packet excludes no degree. The d=36 full-rank kill of the nu >= 3 line-branches is the standout general-degree yield -- the next window's 398-analogue is already in hand before the window opens. Machine markers: LANDING_SWEEP_VERIFY_OK, ALLGREEN (director-replayed)."
+  },
+  {
+   "path": "goal_runs_20260812/TUPLE_JOINT_RESIDUE",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "tuple-level joint of the corrected sigma-band with the audited cone-order layer, the parities, and the sealed depth-table menus; per-residue mod 6, Theorem-S-style saturation verified on the new rows; both primes; director-replayed ALLGREEN (68)",
+   "primary_exit": "TUPLE-JOINT-NO-CLASS-ZERO",
+   "superseded_by": null,
+   "char0_scope": "VERDICT: no class-at-infinity zero; Corollary 3.4 not triggered. The joint tuple-level census J = 11594/1408/2018/10752/1596/1264 for d = 0..5 mod 6 EXTENDS the corrected K table (the stratified enumeration flipped only the six period-2 children; the audited depth table licenses period-3 level-2 escapes, adding +526/+230/+506/+4536/+252/+508). The cone-order layer cuts nothing at order 0 (the ell_V-band's single pattern already satisfies ord >= 6; Theorem-S-prime growth checks pass). Trivialized join reproduces K exactly; both sealed parities fall out; cross-prime identical; STAGE2 pinning excluded (map-level).\nConsequences: K is a LOWER bound at tuple level (banner placed on STAGE1_STRATIFIED sec. 3; J supersedes as the tuple-level census); the d=35 blueprint base grows by 508 (scope banner on PAIR_ATTACK_D35; extended sieve dispatched).\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Cycle-5 lane B: the transport program's first live shot. Headline: Problem E remains OPEN; this packet excludes no degree. Honest strategic readout (adjudication sec.): completing the order-0 semantics GROWS tuple-level counts -- order-0 systems will not produce a class zero; the transport program's next targets are tuple-level realization layers (the Phi_J closure of Stage-2 remains the queued upgrade). Run-history note: an intermediate cut-direction table was superseded by the final, principled extend-semantics; the final table is the record. Machine markers: TUPLE_JOINT_RESIDUE_VERIFY_OK, ALLGREEN (68 checks, director-replayed)."
   }
  ]
 }

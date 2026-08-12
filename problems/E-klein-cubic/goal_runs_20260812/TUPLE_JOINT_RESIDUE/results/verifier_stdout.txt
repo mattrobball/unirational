@@ -1,0 +1,74 @@
+=== TUPLE_JOINT_RESIDUE verifier ===
+  PASS  A0 summary.json exists
+  PASS  A1 joint_p331.json exists
+  PASS  A1 joint_p661.json exists
+  PASS  A2 sealed K table matches STAGE1_STRATIFIED
+  PASS  A3 anchor_all_match (triv join = K)
+  PASS  A4 d≡0 triv_331 == K
+  PASS  A4 d≡0 triv_661 == K
+  PASS  A4 d≡1 triv_331 == K
+  PASS  A4 d≡1 triv_661 == K
+  PASS  A4 d≡2 triv_331 == K
+  PASS  A4 d≡2 triv_661 == K
+  PASS  A4 d≡3 triv_331 == K
+  PASS  A4 d≡3 triv_661 == K
+  PASS  A4 d≡4 triv_331 == K
+  PASS  A4 d≡4 triv_661 == K
+  PASS  A4 d≡5 triv_331 == K
+  PASS  A4 d≡5 triv_661 == K
+  PASS  D1 any_zero is False (no class-at-infinity zero)
+  PASS  D2 zeros at p=331 empty
+  PASS  D2 zeros at p=661 empty
+  PASS  D3 d≡0 joint_331 > 0
+  PASS  D4 d≡0 joint_331 >= K (depth extends, cone free)
+  PASS  D3 d≡0 joint_661 > 0
+  PASS  D4 d≡0 joint_661 >= K (depth extends, cone free)
+  PASS  D3 d≡1 joint_331 > 0
+  PASS  D4 d≡1 joint_331 >= K (depth extends, cone free)
+  PASS  D3 d≡1 joint_661 > 0
+  PASS  D4 d≡1 joint_661 >= K (depth extends, cone free)
+  PASS  D3 d≡2 joint_331 > 0
+  PASS  D4 d≡2 joint_331 >= K (depth extends, cone free)
+  PASS  D3 d≡2 joint_661 > 0
+  PASS  D4 d≡2 joint_661 >= K (depth extends, cone free)
+  PASS  D3 d≡3 joint_331 > 0
+  PASS  D4 d≡3 joint_331 >= K (depth extends, cone free)
+  PASS  D3 d≡3 joint_661 > 0
+  PASS  D4 d≡3 joint_661 >= K (depth extends, cone free)
+  PASS  D3 d≡4 joint_331 > 0
+  PASS  D4 d≡4 joint_331 >= K (depth extends, cone free)
+  PASS  D3 d≡4 joint_661 > 0
+  PASS  D4 d≡4 joint_661 >= K (depth extends, cone free)
+  PASS  D3 d≡5 joint_331 > 0
+  PASS  D4 d≡5 joint_331 >= K (depth extends, cone free)
+  PASS  D3 d≡5 joint_661 > 0
+  PASS  D4 d≡5 joint_661 >= K (depth extends, cone free)
+  PASS  D5 cross_prime_agree
+  PASS  C1 ell_V p=331 cone pattern count == all
+  PASS  C2 ell_V p=331 S' growth ok
+  PASS  C3 ell_V p=331 cone_equals_all
+  PASS  C1 ell_V p=661 cone pattern count == all
+  PASS  C2 ell_V p=661 S' growth ok
+  PASS  C3 ell_V p=661 cone_equals_all
+  PASS  B1 p=331 H0-1 m odd on rid1
+  PASS  B2 p=331 ord_L parity (a0 odd on rid2)
+  PASS  B1 p=661 H0-1 m odd on rid1
+  PASS  B2 p=661 ord_L parity (a0 odd on rid2)
+--- live spot checks p=331 ---
+  PASS  B3 rid 1 up-set ok
+  PASS  B4 rid1 all m=a1 odd
+  PASS  B3 rid 2 up-set ok
+  PASS  B5 rid2 all a0 odd (ord_L parity)
+  PASS  A5 live triv K(5)=756
+  PASS  C4 live ell_V single pattern under cone
+  PASS  C5 live cone_equals_all
+  PASS  E1 depth superset of strat at min multidegree
+  PASS  F1 no STAGE2 pinning import in joint_residue
+  PASS  F2 no map-level IMMUNE_ROWS in joint
+  PASS  G1 headline OPEN
+  PASS  G2 THEOREM.md has no REPORT.md
+  PASS  G3 THEOREM.md headline OPEN
+
+checks: 68  fails: 0
+TUPLE_JOINT_RESIDUE_VERIFY_OK
+ALLGREEN

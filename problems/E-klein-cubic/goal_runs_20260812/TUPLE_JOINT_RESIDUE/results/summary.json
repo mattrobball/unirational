@@ -1,0 +1,272 @@
+{
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "primes": [
+  331,
+  661
+ ],
+ "cross_prime_agree": true,
+ "K_sealed": [
+  11068,
+  1178,
+  1512,
+  6216,
+  1344,
+  756
+ ],
+ "per_class": [
+  {
+   "d_mod6": 0,
+   "joint_331": 11594,
+   "triv_331": 11068,
+   "mech_331": {
+    "K_triv": 11068,
+    "K_depth_only": 11594,
+    "K_cone_only": 11068,
+    "K_joint": 11594,
+    "cut_by_depth": -526,
+    "cut_by_cone": 0,
+    "cut_by_joint": -526,
+    "zero": false
+   },
+   "joint_661": 11594,
+   "triv_661": 11068,
+   "mech_661": {
+    "K_triv": 11068,
+    "K_depth_only": 11594,
+    "K_cone_only": 11068,
+    "K_joint": 11594,
+    "cut_by_depth": -526,
+    "cut_by_cone": 0,
+    "cut_by_joint": -526,
+    "zero": false
+   }
+  },
+  {
+   "d_mod6": 1,
+   "joint_331": 1408,
+   "triv_331": 1178,
+   "mech_331": {
+    "K_triv": 1178,
+    "K_depth_only": 1408,
+    "K_cone_only": 1178,
+    "K_joint": 1408,
+    "cut_by_depth": -230,
+    "cut_by_cone": 0,
+    "cut_by_joint": -230,
+    "zero": false
+   },
+   "joint_661": 1408,
+   "triv_661": 1178,
+   "mech_661": {
+    "K_triv": 1178,
+    "K_depth_only": 1408,
+    "K_cone_only": 1178,
+    "K_joint": 1408,
+    "cut_by_depth": -230,
+    "cut_by_cone": 0,
+    "cut_by_joint": -230,
+    "zero": false
+   }
+  },
+  {
+   "d_mod6": 2,
+   "joint_331": 2018,
+   "triv_331": 1512,
+   "mech_331": {
+    "K_triv": 1512,
+    "K_depth_only": 2018,
+    "K_cone_only": 1512,
+    "K_joint": 2018,
+    "cut_by_depth": -506,
+    "cut_by_cone": 0,
+    "cut_by_joint": -506,
+    "zero": false
+   },
+   "joint_661": 2018,
+   "triv_661": 1512,
+   "mech_661": {
+    "K_triv": 1512,
+    "K_depth_only": 2018,
+    "K_cone_only": 1512,
+    "K_joint": 2018,
+    "cut_by_depth": -506,
+    "cut_by_cone": 0,
+    "cut_by_joint": -506,
+    "zero": false
+   }
+  },
+  {
+   "d_mod6": 3,
+   "joint_331": 10752,
+   "triv_331": 6216,
+   "mech_331": {
+    "K_triv": 6216,
+    "K_depth_only": 10752,
+    "K_cone_only": 6216,
+    "K_joint": 10752,
+    "cut_by_depth": -4536,
+    "cut_by_cone": 0,
+    "cut_by_joint": -4536,
+    "zero": false
+   },
+   "joint_661": 10752,
+   "triv_661": 6216,
+   "mech_661": {
+    "K_triv": 6216,
+    "K_depth_only": 10752,
+    "K_cone_only": 6216,
+    "K_joint": 10752,
+    "cut_by_depth": -4536,
+    "cut_by_cone": 0,
+    "cut_by_joint": -4536,
+    "zero": false
+   }
+  },
+  {
+   "d_mod6": 4,
+   "joint_331": 1596,
+   "triv_331": 1344,
+   "mech_331": {
+    "K_triv": 1344,
+    "K_depth_only": 1596,
+    "K_cone_only": 1344,
+    "K_joint": 1596,
+    "cut_by_depth": -252,
+    "cut_by_cone": 0,
+    "cut_by_joint": -252,
+    "zero": false
+   },
+   "joint_661": 1596,
+   "triv_661": 1344,
+   "mech_661": {
+    "K_triv": 1344,
+    "K_depth_only": 1596,
+    "K_cone_only": 1344,
+    "K_joint": 1596,
+    "cut_by_depth": -252,
+    "cut_by_cone": 0,
+    "cut_by_joint": -252,
+    "zero": false
+   }
+  },
+  {
+   "d_mod6": 5,
+   "joint_331": 1264,
+   "triv_331": 756,
+   "mech_331": {
+    "K_triv": 756,
+    "K_depth_only": 1264,
+    "K_cone_only": 756,
+    "K_joint": 1264,
+    "cut_by_depth": -508,
+    "cut_by_cone": 0,
+    "cut_by_joint": -508,
+    "zero": false
+   },
+   "joint_661": 1264,
+   "triv_661": 756,
+   "mech_661": {
+    "K_triv": 756,
+    "K_depth_only": 1264,
+    "K_cone_only": 756,
+    "K_joint": 1264,
+    "cut_by_depth": -508,
+    "cut_by_cone": 0,
+    "cut_by_joint": -508,
+    "zero": false
+   }
+  }
+ ],
+ "zeros": {
+  "331": [],
+  "661": []
+ },
+ "any_zero": false,
+ "anchor_all_match": true,
+ "ellv": {
+  "331": {
+   "n_all": 1,
+   "n_cone": 1,
+   "sat": {
+    "maxdeg": 12,
+    "r_min": 6,
+    "n_all_patterns": 1,
+    "n_cone_patterns": 1,
+    "n_usable_multidegrees": 78,
+    "n_cone_multidegrees": 60,
+    "cone_equals_all": true,
+    "per_residue_n": {
+     "0": 1,
+     "1": 1,
+     "2": 1,
+     "3": 1,
+     "4": 1,
+     "5": 1
+    },
+    "plus6_checked": 81,
+    "pattern_growth_Sprime_ok": true,
+    "ups_ok": true
+   }
+  },
+  "661": {
+   "n_all": 1,
+   "n_cone": 1,
+   "sat": {
+    "maxdeg": 12,
+    "r_min": 6,
+    "n_all_patterns": 1,
+    "n_cone_patterns": 1,
+    "n_usable_multidegrees": 78,
+    "n_cone_multidegrees": 60,
+    "cone_equals_all": true,
+    "per_residue_n": {
+     "0": 1,
+     "1": 1,
+     "2": 1,
+     "3": 1,
+     "4": 1,
+     "5": 1
+    },
+    "plus6_checked": 81,
+    "pattern_growth_Sprime_ok": true,
+    "ups_ok": true
+   }
+  }
+ },
+ "parity": {
+  "331": {
+   "H0_1_m_odd": {
+    "rid": 1,
+    "all_a1_odd": true,
+    "a1_values_mod2": [
+     1
+    ]
+   },
+   "ord_L_parity": {
+    "rid": 2,
+    "all_a0_odd": true,
+    "a0_values_mod2": [
+     1
+    ],
+    "note": "realized full-flag classes on rid2 have a0 odd (ord_L \u2261 d+1 mod 2 via a0 + a1 = d and a0 odd)"
+   }
+  },
+  "661": {
+   "H0_1_m_odd": {
+    "rid": 1,
+    "all_a1_odd": true,
+    "a1_values_mod2": [
+     1
+    ]
+   },
+   "ord_L_parity": {
+    "rid": 2,
+    "all_a0_odd": true,
+    "a0_values_mod2": [
+     1
+    ],
+    "note": "realized full-flag classes on rid2 have a0 odd (ord_L \u2261 d+1 mod 2 via a0 + a1 = d and a0 odd)"
+   }
+  }
+ }
+}

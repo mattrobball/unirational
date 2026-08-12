@@ -192,3 +192,16 @@ jet and realization layers, an independent hostile rebuild of the
 order-2-impossibility and vanishing tables, and the reproducibility
 repair from §4.1. Problem E remains OPEN; degree 35 is not closed; it is
 now a fight over 22 explicit cells instead of 756.
+
+---
+
+## 7. SCOPE UPDATE (2026-08-12)
+
+The 756 blueprints of this document are the period-≤2 stratified census.
+The audited depth semantics add **508** further coherent blueprints at
+the degree-35 class (`TUPLE_JOINT_RESIDUE`: J(5) = 1264). The 734 kills
+and the 22 survivors stand unchanged as members of the larger list; the
+508 extras inherit every audited instrument and are being sieved under
+`WORKORDER_D35_EXTENDED_BLUEPRINTS.md` (their distinguishing assertions
+— period-3 level-2 values — face the cell fact that level-1/2 readings
+vanish identically, so their fate rides on the level-5 ladder).
