@@ -679,3 +679,14 @@ confirmation.
    worked out.
 5. The `V4`/type-I layer (even order) is only touched in passing; the analogous
    pinning there interacts with `STAGE1` Theorem 4 and is left to a later packet.
+
+> **2026-08-12 strengthening (`goal_runs_20260812/L12_ORDER11`,
+> referee-confirmed):** B(C11)'s "iff `d` is not a QR" is strengthened:
+> at QR degrees too, no landing map is defined at the `X^{C11}` points
+> (the μ = 0 branch dies by algebraic integrality of the localization
+> trace — genus-free, model-independent, map level). Hence all 60
+> C11-points lie in `Bs(T)` at EVERY degree, and §4's QR row ("T defined
+> at all 60 points; 4 rows") describes a branch that no landing map
+> realizes. Nothing here contradicts the sealed statements — the "iff"
+> characterized what THIS packet's congruences force; the localization
+> ledger forces more.

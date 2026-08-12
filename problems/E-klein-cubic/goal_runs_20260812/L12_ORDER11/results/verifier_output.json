@@ -1,0 +1,476 @@
+{
+  "packet": "L12_ORDER11",
+  "headline": "Problem E remains OPEN; this packet excludes no degree",
+  "d": 35,
+  "n_checks": 93,
+  "n_passed": 93,
+  "n_failed": 0,
+  "failures": [],
+  "checks": [
+    {
+      "name": "A A0 frame: weights_are_QR",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A0 frame: recursion_-2",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A0 frame: F_invariant",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A0 frame: sum_zero",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A0 frame: normal_is_-3a",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A0 frame: tangent_nonzero",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A1 untwisted total on P^4 = 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A5 local blowup mass identity (1320 blowups, 682 positive-dimensional components)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A2 untwisted total = 1 after random tower #0 (8 fixed components)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A2 untwisted total = 1 after random tower #1 (8 fixed components)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A2 untwisted total = 1 after random tower #2 (14 fixed components)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A2 untwisted total = 1 after random tower #3 (13 fixed components)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A2 untwisted total = 1 after random tower #4 (16 fixed components)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A2 untwisted total = 1 after random tower #5 (16 fixed components)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A2 untwisted total = 1 after random tower #6 (20 fixed components)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A2 untwisted total = 1 after random tower #7 (16 fixed components)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A2 untwisted total = 1 after random tower #8 (11 fixed components)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A2 untwisted total = 1 after random tower #9 (13 fixed components)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A2 untwisted total = 1 after random tower #10 (19 fixed components)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A2 untwisted total = 1 after random tower #11 (10 fixed components)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A3 P^4 twist k=0 equals chi_Sym^0W*(g)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A3 P^4 twist k=1 equals chi_Sym^1W*(g)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A3 P^4 twist k=2 equals chi_Sym^2W*(g)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A3 P^4 twist k=3 equals chi_Sym^3W*(g)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A3 P^4 twist k=4 equals chi_Sym^4W*(g)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A3 P^4 twist k=5 equals chi_Sym^5W*(g)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A3 P^4 twist k=6 equals chi_Sym^6W*(g)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A4 X twist k=0 equals genus-0 right side",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A4 X twist k=1 equals genus-0 right side",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A4 X twist k=2 equals genus-0 right side",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A4 X twist k=3 equals genus-0 right side",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A4' X twist k=4 equals chi_g(X,O(k)) via Koszul",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A4' X twist k=5 equals chi_g(X,O(k)) via Koszul",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A4' X twist k=6 equals chi_g(X,O(k)) via Koszul",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A6 FLAG-A: Sec.8 numerator+denominator as literally paired FAILS for k=1,2,3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "A A6 both consistent completions are sigma_{-1}-conjugate (verdicts convention-independent)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P1 v_pi(D_0) = 3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P1 delta_0 is a unit",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P1 delta_0 mod pi = prod of (a_j - a_k') = 9",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P1 v_pi(D_1) = 3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P1 delta_1 is a unit",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P1 delta_1 mod pi = prod of (a_j - a_k') = 5",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P1 v_pi(D_2) = 3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P1 delta_2 is a unit",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P1 delta_2 mod pi = prod of (a_j - a_k') = 4",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P1 v_pi(D_3) = 3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P1 delta_3 is a unit",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P1 delta_3 mod pi = prod of (a_j - a_k') = 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P1 v_pi(D_4) = 3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P1 delta_4 is a unit",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P1 delta_4 mod pi = prod of (a_j - a_k') = 3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P2 sum_j 1/delta_j = pi^3",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P2 sum_j 1/deltabar_j = 0 in F_11",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P3 every admissible residue vector lifts to an exact solution (11 vectors)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P3 necessity: inadmissible residue vectors have nonzero pi-residue",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P4 constant residue vectors are ALWAYS admissible (k=0 sum rule vacuous on the Smith configuration)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "K P5 sum_j 1/D_j = 1, so equal traces force tr_j = 1",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I1 d=1 (QR), mu=0 branch: all five forced traces have v_pi = -1 -> DEAD",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I1 d=3 (QR), mu=0 branch: all five forced traces have v_pi = -1 -> DEAD",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I1 d=4 (QR), mu=0 branch: all five forced traces have v_pi = -1 -> DEAD",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I1 d=5 (QR), mu=0 branch: all five forced traces have v_pi = -1 -> DEAD",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I1 d=9 (QR), mu=0 branch: all five forced traces have v_pi = -1 -> DEAD",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "I3 mu1=1: integrality forces total blowup depth >= 3",
+      "ok": true,
+      "detail": "min extra depth 2"
+    },
+    {
+      "name": "I3 mu1=2: integrality forces total blowup depth >= 3",
+      "ok": true,
+      "detail": "min extra depth 2"
+    },
+    {
+      "name": "I3 mu1=3: integrality forces total blowup depth >= 3",
+      "ok": true,
+      "detail": "min extra depth 2"
+    },
+    {
+      "name": "I3 mu1=4: integrality forces total blowup depth >= 3",
+      "ok": true,
+      "detail": "min extra depth 2"
+    },
+    {
+      "name": "I3 mu1=5: integrality forces total blowup depth >= 3",
+      "ok": true,
+      "detail": "min extra depth 2"
+    },
+    {
+      "name": "I3 mu1=6: integrality forces total blowup depth >= 4",
+      "ok": true,
+      "detail": "min extra depth 3"
+    },
+    {
+      "name": "I3 mu1=7: integrality forces total blowup depth >= 5",
+      "ok": true,
+      "detail": "min extra depth 4"
+    },
+    {
+      "name": "I3 mu1=8: integrality forces total blowup depth >= 3",
+      "ok": true,
+      "detail": "min extra depth 2"
+    },
+    {
+      "name": "I3 mu1=9: integrality forces total blowup depth >= 4",
+      "ok": true,
+      "detail": "min extra depth 3"
+    },
+    {
+      "name": "I3 mu1=10: integrality forces total blowup depth >= 3",
+      "ok": true,
+      "detail": "min extra depth 2"
+    },
+    {
+      "name": "G mu1=1: 0 of 21 towers pass the genus-0 test (k=1,2,3)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G mu1=2: 0 of 1134 towers pass the genus-0 test (k=1,2,3)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G mu1=3: 0 of 90 towers pass the genus-0 test (k=1,2,3)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G mu1=4: 0 of 126 towers pass the genus-0 test (k=1,2,3)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G mu1=5: 0 of 30 towers pass the genus-0 test (k=1,2,3)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G mu1=6: 0 of 3 towers pass the genus-0 test (k=1,2,3)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G mu1=7: 0 of 7 towers pass the genus-0 test (k=1,2,3)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G mu1=8: 0 of 90 towers pass the genus-0 test (k=1,2,3)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G mu1=9: 0 of 9 towers pass the genus-0 test (k=1,2,3)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G mu1=10: 0 of 30 towers pass the genus-0 test (k=1,2,3)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G TOTAL: 0 of 1540 depth<=3 towers pass the genus-0 test",
+      "ok": true,
+      "detail": "towers=1540"
+    },
+    {
+      "name": "G integrality survivors: 118 of 1540",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G bounded-menu pass: 0 of 118 integrality survivors",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "G Smith Lemma U(b) reproduced: n_x is constant over the five receiver points in EVERY enumerated tower",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "M exact criterion agrees with brute-force MENU_b, b=2..5 (1914 entries)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "M tr = 1 forces b = 2 (a smooth rational fibre with two fixed points)",
+      "ok": true,
+      "detail": ""
+    },
+    {
+      "name": "X C11 value menu reproduced from Stage-2 Thm 1.2: 10 entries",
+      "ok": true,
+      "detail": "sealed=10 mine=10"
+    },
+    {
+      "name": "X STAGE2 Thm 2.1 reproduced: d=1 mod 11 -> at most 4 of the four C11 rows carry a value",
+      "ok": true,
+      "detail": "got 4"
+    },
+    {
+      "name": "X STAGE2 Thm 2.1 reproduced: d=2 mod 11 -> at most 3 of the four C11 rows carry a value",
+      "ok": true,
+      "detail": "got 3"
+    },
+    {
+      "name": "X STAGE2 Thm 2.1 reproduced: d=0 mod 11 -> at most 2 of the four C11 rows carry a value",
+      "ok": true,
+      "detail": "got 2"
+    },
+    {
+      "name": "X the canonical 22 cells carry NO order-11 content (no C11/P11/pt_C11 token), so every order-11 verdict is constant across the 22 cells",
+      "ok": true,
+      "detail": ""
+    }
+  ]
+}

@@ -1879,6 +1879,17 @@
    "char0_scope": "Proposition PIN: an invariant divisor of degree k on X contains all five C11-pinned points unless 11|k and all four C5-pinned points unless 5|k; missing all pinned points forces 55|k. The unique degree-5 invariant divisor is {det Hess F = 0} on X (contains every C11-pinned point, no C5-pinned point; F does not divide it). J1 window-free: invariant divisor degrees on X are exactly {k >= 5} (semigroup closure adopted at sealing).\nTHE DICHOTOMY (map level, d = 35 class, cell-uniform; scope: terminus model, nine pinned points with one-dimensional fibers, smooth-fiber row): miracle flatness makes chi(O_fiber) one integer chi_0 on the one-dimensional-fiber locus, and Smith's congruences force chi_0 = 35 (mod 55); the gap (-20, 35) is empty, so EITHER chi_0 <= -20 (connected fibers of genus >= 21) OR chi_0 >= 35 (Stein degree >= 35, connected excluded). Riemann-Hurwitz rows g = 11a+10 / 5b+6 reproduce Smith independently. Constancy across all 797,547,520 (cell, menu) pairs verified.\nFLAGS carried: chi topological/coherent bridge with defect; 3-dim fibers not excluded; PIN converse open; disconnected branch otherwise unbounded by sealed data.\nNOT claimed: any degree exclusion; no cell cut.",
    "tracked": true,
    "notes": "The heaviest realization constraint on the 22 to date: every surviving d=35 map carries genus >= 21 fibers or a degree >= 35 Stein factor. Headline: Problem E remains OPEN. Markers: STEIN_LERAY_VERIFY_OK, ALLGREEN (92 checks; director- and referee-replayed byte-identical)."
+  },
+  {
+   "path": "goal_runs_20260812/L12_ORDER11",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "mid-tier execution against the pinned flush spec, exact Q(zeta_11) arithmetic, 36 fatal anchors; Fable hostile referee with fully independent engine (closed the one enumeration gap itself); director-replayed 93/93 ALLGREEN; corrections C1-C6 adopted",
+   "primary_exit": "L12-O11-QR-CLASS-MU0-KILL",
+   "superseded_by": null,
+   "char0_scope": "THE GENERAL-DEGREE YIELD (map level, model- and convention-independent, genus-free): at every degree in a quadratic-residue class mod 11, no landing map is defined at the C11-points (the mu=0 branch dies by algebraic integrality of the Vandermonde-forced fiber trace, v_pi = -1 at all five points). Combined with the sealed non-residue branch: all 60 C11-points lie in Bs(T) at EVERY degree. Banner placed on STAGE2_ODD_ORDER_PINNING (B(C11) and the sec. 4 QR row strengthened).\nAt d = 35: forced resolution depth over every C11-point >= 3 (>= 4 for mu_1 in {6,9}, >= 5 for mu_1 = 7; point-blowup scope); the genus-0 fiber branch is DEAD through the extended tower scope (0 of 2674 towers pass at any twist, all menu entries, constancy across the 22 verified); Tier-B smooth-fiber menu pass: 0 of 226 (model-dependent, flagged). The k=0 sum rule is consistent and vacuous on the Smith configuration (content in trace differences). FLAG-A: the ledger note's sec. 8 display pairing was sign-inconsistent; the two consistent completions are Galois conjugate, verdicts independent (note sec. 9).\nNOT claimed: any degree exclusion; no cell cut; first open window stays d = 35.",
+   "tracked": true,
+   "notes": "The global localization ledger's first machine phase, and the campaign's first referee-confirmed general-degree realization kill. Headline: Problem E remains OPEN. Markers: L12_O11_VERIFY_OK-style ALLGREEN (93 checks; director- and referee-replayed; SMITH_I3 replay 95/95 alongside)."
   }
  ]
 }

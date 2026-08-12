@@ -1,0 +1,106 @@
+L12_ORDER11 verifier — order-11 global localization identity
+Headline: Problem E remains OPEN; this packet excludes no degree.
+
+--- A: fatal anchors ---
+  [PASS] A A0 frame: weights_are_QR
+  [PASS] A A0 frame: recursion_-2
+  [PASS] A A0 frame: F_invariant
+  [PASS] A A0 frame: sum_zero
+  [PASS] A A0 frame: normal_is_-3a
+  [PASS] A A0 frame: tangent_nonzero
+  [PASS] A A1 untwisted total on P^4 = 1
+  [PASS] A A5 local blowup mass identity (1320 blowups, 682 positive-dimensional components)
+  [PASS] A A2 untwisted total = 1 after random tower #0 (8 fixed components)
+  [PASS] A A2 untwisted total = 1 after random tower #1 (8 fixed components)
+  [PASS] A A2 untwisted total = 1 after random tower #2 (14 fixed components)
+  [PASS] A A2 untwisted total = 1 after random tower #3 (13 fixed components)
+  [PASS] A A2 untwisted total = 1 after random tower #4 (16 fixed components)
+  [PASS] A A2 untwisted total = 1 after random tower #5 (16 fixed components)
+  [PASS] A A2 untwisted total = 1 after random tower #6 (20 fixed components)
+  [PASS] A A2 untwisted total = 1 after random tower #7 (16 fixed components)
+  [PASS] A A2 untwisted total = 1 after random tower #8 (11 fixed components)
+  [PASS] A A2 untwisted total = 1 after random tower #9 (13 fixed components)
+  [PASS] A A2 untwisted total = 1 after random tower #10 (19 fixed components)
+  [PASS] A A2 untwisted total = 1 after random tower #11 (10 fixed components)
+  [PASS] A A3 P^4 twist k=0 equals chi_Sym^0W*(g)
+  [PASS] A A3 P^4 twist k=1 equals chi_Sym^1W*(g)
+  [PASS] A A3 P^4 twist k=2 equals chi_Sym^2W*(g)
+  [PASS] A A3 P^4 twist k=3 equals chi_Sym^3W*(g)
+  [PASS] A A3 P^4 twist k=4 equals chi_Sym^4W*(g)
+  [PASS] A A3 P^4 twist k=5 equals chi_Sym^5W*(g)
+  [PASS] A A3 P^4 twist k=6 equals chi_Sym^6W*(g)
+  [PASS] A A4 X twist k=0 equals genus-0 right side
+  [PASS] A A4 X twist k=1 equals genus-0 right side
+  [PASS] A A4 X twist k=2 equals genus-0 right side
+  [PASS] A A4 X twist k=3 equals genus-0 right side
+  [PASS] A A4' X twist k=4 equals chi_g(X,O(k)) via Koszul
+  [PASS] A A4' X twist k=5 equals chi_g(X,O(k)) via Koszul
+  [PASS] A A4' X twist k=6 equals chi_g(X,O(k)) via Koszul
+  [PASS] A A6 FLAG-A: Sec.8 numerator+denominator as literally paired FAILS for k=1,2,3
+  [PASS] A A6 both consistent completions are sigma_{-1}-conjugate (verdicts convention-independent)
+--- K: the k = 0 localized sum rule ---
+  [PASS] K P1 v_pi(D_0) = 3
+  [PASS] K P1 delta_0 is a unit
+  [PASS] K P1 delta_0 mod pi = prod of (a_j - a_k') = 9
+  [PASS] K P1 v_pi(D_1) = 3
+  [PASS] K P1 delta_1 is a unit
+  [PASS] K P1 delta_1 mod pi = prod of (a_j - a_k') = 5
+  [PASS] K P1 v_pi(D_2) = 3
+  [PASS] K P1 delta_2 is a unit
+  [PASS] K P1 delta_2 mod pi = prod of (a_j - a_k') = 4
+  [PASS] K P1 v_pi(D_3) = 3
+  [PASS] K P1 delta_3 is a unit
+  [PASS] K P1 delta_3 mod pi = prod of (a_j - a_k') = 1
+  [PASS] K P1 v_pi(D_4) = 3
+  [PASS] K P1 delta_4 is a unit
+  [PASS] K P1 delta_4 mod pi = prod of (a_j - a_k') = 3
+  [PASS] K P2 sum_j 1/delta_j = pi^3
+  [PASS] K P2 sum_j 1/deltabar_j = 0 in F_11
+  [PASS] K P3 every admissible residue vector lifts to an exact solution (11 vectors)
+  [PASS] K P3 necessity: inadmissible residue vectors have nonzero pi-residue
+  [PASS] K P4 constant residue vectors are ALWAYS admissible (k=0 sum rule vacuous on the Smith configuration)
+  [PASS] K P5 sum_j 1/D_j = 1, so equal traces force tr_j = 1
+--- I: integrality (genus-free) and forced depth ---
+  [PASS] I1 d=1 (QR), mu=0 branch: all five forced traces have v_pi = -1 -> DEAD
+  [PASS] I1 d=3 (QR), mu=0 branch: all five forced traces have v_pi = -1 -> DEAD
+  [PASS] I1 d=4 (QR), mu=0 branch: all five forced traces have v_pi = -1 -> DEAD
+  [PASS] I1 d=5 (QR), mu=0 branch: all five forced traces have v_pi = -1 -> DEAD
+  [PASS] I1 d=9 (QR), mu=0 branch: all five forced traces have v_pi = -1 -> DEAD
+  [PASS] I3 mu1=1: integrality forces total blowup depth >= 3  (min extra depth 2)
+  [PASS] I3 mu1=2: integrality forces total blowup depth >= 3  (min extra depth 2)
+  [PASS] I3 mu1=3: integrality forces total blowup depth >= 3  (min extra depth 2)
+  [PASS] I3 mu1=4: integrality forces total blowup depth >= 3  (min extra depth 2)
+  [PASS] I3 mu1=5: integrality forces total blowup depth >= 3  (min extra depth 2)
+  [PASS] I3 mu1=6: integrality forces total blowup depth >= 4  (min extra depth 3)
+  [PASS] I3 mu1=7: integrality forces total blowup depth >= 5  (min extra depth 4)
+  [PASS] I3 mu1=8: integrality forces total blowup depth >= 3  (min extra depth 2)
+  [PASS] I3 mu1=9: integrality forces total blowup depth >= 4  (min extra depth 3)
+  [PASS] I3 mu1=10: integrality forces total blowup depth >= 3  (min extra depth 2)
+--- G: genus-0 closed test, d = 35, all depth<=3 towers ---
+  [PASS] G mu1=1: 0 of 21 towers pass the genus-0 test (k=1,2,3)
+  [PASS] G mu1=2: 0 of 1134 towers pass the genus-0 test (k=1,2,3)
+  [PASS] G mu1=3: 0 of 90 towers pass the genus-0 test (k=1,2,3)
+  [PASS] G mu1=4: 0 of 126 towers pass the genus-0 test (k=1,2,3)
+  [PASS] G mu1=5: 0 of 30 towers pass the genus-0 test (k=1,2,3)
+  [PASS] G mu1=6: 0 of 3 towers pass the genus-0 test (k=1,2,3)
+  [PASS] G mu1=7: 0 of 7 towers pass the genus-0 test (k=1,2,3)
+  [PASS] G mu1=8: 0 of 90 towers pass the genus-0 test (k=1,2,3)
+  [PASS] G mu1=9: 0 of 9 towers pass the genus-0 test (k=1,2,3)
+  [PASS] G mu1=10: 0 of 30 towers pass the genus-0 test (k=1,2,3)
+  [PASS] G TOTAL: 0 of 1540 depth<=3 towers pass the genus-0 test  (towers=1540)
+  [PASS] G integrality survivors: 118 of 1540
+  [PASS] G bounded-menu pass: 0 of 118 integrality survivors
+  [PASS] G Smith Lemma U(b) reproduced: n_x is constant over the five receiver points in EVERY enumerated tower
+--- M: fibre-trace menu criterion ---
+  [PASS] M exact criterion agrees with brute-force MENU_b, b=2..5 (1914 entries)
+  [PASS] M tr = 1 forces b = 2 (a smooth rational fibre with two fixed points)
+--- X: cross-checks against the sealed record ---
+  [PASS] X C11 value menu reproduced from Stage-2 Thm 1.2: 10 entries  (sealed=10 mine=10)
+  [PASS] X STAGE2 Thm 2.1 reproduced: d=1 mod 11 -> at most 4 of the four C11 rows carry a value  (got 4)
+  [PASS] X STAGE2 Thm 2.1 reproduced: d=2 mod 11 -> at most 3 of the four C11 rows carry a value  (got 3)
+  [PASS] X STAGE2 Thm 2.1 reproduced: d=0 mod 11 -> at most 2 of the four C11 rows carry a value  (got 2)
+  [PASS] X the canonical 22 cells carry NO order-11 content (no C11/P11/pt_C11 token), so every order-11 verdict is constant across the 22 cells
+
+Checks: 93 passed, 0 failed, 93 total
+L12_ORDER11_VERIFY_OK
+ALLGREEN

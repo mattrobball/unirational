@@ -153,3 +153,15 @@ superseding the corresponding formulas above:
 
 Machine phase cleared for order 11, genus-0 branch first, under these
 formulas.
+
+## 9. Second correction round (2026-08-12, from `L12_ORDER11` + its referee)
+
+The §8 display's numerator/denominator pairing is itself sign-
+inconsistent as an Atiyah–Bott pair (machine: fails k = 1, 2, 3; all
+four pairings tested by the referee). The two CONSISTENT completions are
+Galois conjugates of each other, so every downstream verdict is
+independent of the choice; the implemented convention is the one
+validated by the packet's 36 anchors (untwisted = 1 on P⁴ and all test
+towers; twisted = the independent character values). The machine phase
+is sealed: see `goal_runs_20260812/L12_ORDER11` for the yields (the
+QR-class kill at all degrees; forced depths; the dead genus-0 branch).
