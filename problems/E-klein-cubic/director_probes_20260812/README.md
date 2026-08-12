@@ -90,3 +90,21 @@ closed — it is untested at the only degree that matters. The decisive
 computation is the rank of the degree-5 Macaulay matrix (970 140
 structured sparse rows, 749 398 columns; each row is a monomial shift of
 a cubic, ≤ 9139 nonzeros).
+
+> **DISAMBIGUATION (director, after a reader was misled by the wording
+> above — read this before §CORRECTION).** Two polynomial rings are in
+> play and "degree" means different things in each:
+>
+> * `C[x₀..x₄]` — the SOURCE coordinates. `deg T = d` lives here; it is
+>   the campaign's degree. **Every `d ≤ 34` is excluded and sealed; the
+>   first open window is `d = 35`, unchanged by anything in this file.**
+> * `C[c₁..c₃₇]` — the PARAMETER coordinates of the sealed cell at the
+>   fixed degree `d = 35`. For each `x`, the landing condition
+>   `F(T_c(x)) = 0` is a CUBIC in `c`; the ideal these generate is graded
+>   in `c`-degree 3, 4, 5, …
+>
+> Every "degree 3/4/5" in the CORRECTION section above is a `c`-degree —
+> a graded piece of the parameter ideal at `d = 35` — never a map degree.
+> "The ladder was stopped one degree short" means: the parameter ideal
+> was computed in `c`-degrees 3 and 4 only, and `c`-degree 5 is the first
+> piece that can decide emptiness.
