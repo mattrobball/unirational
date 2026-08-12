@@ -1,0 +1,362 @@
+{
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "primes": [
+  331,
+  661
+ ],
+ "pathAB": {
+  "checked": 1200,
+  "mismatches": 0,
+  "ok": true
+ },
+ "tc_C11_ok": true,
+ "conormal": {
+  "n_tabulated": 37,
+  "n_sweep": 15,
+  "n_immune": 22,
+  "total_live_values": 159,
+  "total_dead_values": 0,
+  "per_row_sizes": [
+   {
+    "id": 1,
+    "role": "sweep",
+    "n_conormal": 1,
+    "n_val": 1,
+    "live": 1,
+    "dead": 0
+   },
+   {
+    "id": 2,
+    "role": "sweep",
+    "n_conormal": 1,
+    "n_val": 1,
+    "live": 1,
+    "dead": 0
+   },
+   {
+    "id": 3,
+    "role": "sweep",
+    "n_conormal": 1,
+    "n_val": 3,
+    "live": 3,
+    "dead": 0
+   },
+   {
+    "id": 4,
+    "role": "sweep",
+    "n_conormal": 1,
+    "n_val": 2,
+    "live": 2,
+    "dead": 0
+   },
+   {
+    "id": 5,
+    "role": "sweep",
+    "n_conormal": 1,
+    "n_val": 2,
+    "live": 2,
+    "dead": 0
+   },
+   {
+    "id": 6,
+    "role": "sweep",
+    "n_conormal": 1,
+    "n_val": 2,
+    "live": 2,
+    "dead": 0
+   },
+   {
+    "id": 8,
+    "role": "sweep",
+    "n_conormal": 1,
+    "n_val": 1,
+    "live": 1,
+    "dead": 0
+   },
+   {
+    "id": 9,
+    "role": "sweep",
+    "n_conormal": 1,
+    "n_val": 3,
+    "live": 3,
+    "dead": 0
+   },
+   {
+    "id": 10,
+    "role": "sweep",
+    "n_conormal": 1,
+    "n_val": 3,
+    "live": 3,
+    "dead": 0
+   },
+   {
+    "id": 11,
+    "role": "sweep",
+    "n_conormal": 1,
+    "n_val": 2,
+    "live": 2,
+    "dead": 0
+   },
+   {
+    "id": 12,
+    "role": "sweep",
+    "n_conormal": 1,
+    "n_val": 2,
+    "live": 2,
+    "dead": 0
+   },
+   {
+    "id": 13,
+    "role": "sweep",
+    "n_conormal": 1,
+    "n_val": 2,
+    "live": 2,
+    "dead": 0
+   },
+   {
+    "id": 14,
+    "role": "sweep",
+    "n_conormal": 1,
+    "n_val": 2,
+    "live": 2,
+    "dead": 0
+   },
+   {
+    "id": 15,
+    "role": "sweep",
+    "n_conormal": 1,
+    "n_val": 2,
+    "live": 2,
+    "dead": 0
+   },
+   {
+    "id": 16,
+    "role": "sweep",
+    "n_conormal": 1,
+    "n_val": 23,
+    "live": 23,
+    "dead": 0
+   },
+   {
+    "id": 21,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 6,
+    "live": 6,
+    "dead": 0
+   },
+   {
+    "id": 22,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 6,
+    "live": 6,
+    "dead": 0
+   },
+   {
+    "id": 29,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 6,
+    "live": 6,
+    "dead": 0
+   },
+   {
+    "id": 30,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 6,
+    "live": 6,
+    "dead": 0
+   },
+   {
+    "id": 31,
+    "role": "immune",
+    "n_conormal": 2,
+    "n_val": 6,
+    "live": 6,
+    "dead": 0
+   },
+   {
+    "id": 32,
+    "role": "immune",
+    "n_conormal": 2,
+    "n_val": 6,
+    "live": 6,
+    "dead": 0
+   },
+   {
+    "id": 33,
+    "role": "immune",
+    "n_conormal": 2,
+    "n_val": 6,
+    "live": 6,
+    "dead": 0
+   },
+   {
+    "id": 34,
+    "role": "immune",
+    "n_conormal": 2,
+    "n_val": 6,
+    "live": 6,
+    "dead": 0
+   },
+   {
+    "id": 47,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 4,
+    "live": 4,
+    "dead": 0
+   },
+   {
+    "id": 48,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 4,
+    "live": 4,
+    "dead": 0
+   },
+   {
+    "id": 49,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 4,
+    "live": 4,
+    "dead": 0
+   },
+   {
+    "id": 50,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 4,
+    "live": 4,
+    "dead": 0
+   },
+   {
+    "id": 51,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 4,
+    "live": 4,
+    "dead": 0
+   },
+   {
+    "id": 52,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 4,
+    "live": 4,
+    "dead": 0
+   },
+   {
+    "id": 53,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 4,
+    "live": 4,
+    "dead": 0
+   },
+   {
+    "id": 54,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 4,
+    "live": 4,
+    "dead": 0
+   },
+   {
+    "id": 55,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 4,
+    "live": 4,
+    "dead": 0
+   },
+   {
+    "id": 56,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 4,
+    "live": 4,
+    "dead": 0
+   },
+   {
+    "id": 76,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 5,
+    "live": 5,
+    "dead": 0
+   },
+   {
+    "id": 77,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 5,
+    "live": 5,
+    "dead": 0
+   },
+   {
+    "id": 78,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 5,
+    "live": 5,
+    "dead": 0
+   },
+   {
+    "id": 79,
+    "role": "immune",
+    "n_conormal": 1,
+    "n_val": 5,
+    "live": 5,
+    "dead": 0
+   }
+  ]
+ },
+ "join": {
+  "J_sealed": [
+   11594,
+   1408,
+   2018,
+   10752,
+   1596,
+   1264
+  ],
+  "J_ram": [
+   11594,
+   1408,
+   2018,
+   10752,
+   1596,
+   1264
+  ],
+  "cuts": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "zeros": [],
+  "any_zero": false,
+  "ramification_free": true
+ },
+ "d35": {
+  "anchor_intact": {
+   "331": true,
+   "661": true
+  },
+  "n_closed_kills_on_22": {
+   "331": 0,
+   "661": 0
+  },
+  "n_immune_closed": {
+   "331": 0,
+   "661": 0
+  },
+  "cross_prime_count_agree": true
+ }
+}

@@ -1824,6 +1824,39 @@
    "char0_scope": "R2/R5/R6 CONFIRMED (five points on X with the stated tangent weights; lift safety at odd orders; locality cannot imply the global identities). R1/R3/R4 CORRECTED: contribution w/det(1-dg|T); derived-base-change flag added; localized k=0 is the twist-free sum rule Sum_j (tr_j - 1)/D_j = 0 (an improvement, now the first machine target). All corrections adopted into the note's section 8.\nNOT claimed: any degree exclusion; the machine phase is cleared for order 11 only, genus-0 branch first.",
    "tracked": true,
    "notes": "Director's derivation refereed before machine work, per the campaign's correction culture. Headline: Problem E remains OPEN. Markers: L12_REFEREE_VERIFY_OK, ALLGREEN (director-replayed)."
+  },
+  {
+   "path": "goal_runs_20260812/CROSSBAND_GLUING",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "weak-model execution lane, director-replayed ALLGREEN; landed as an honest null (layer spent, no cut)",
+   "primary_exit": "CROSSBAND-GLUING-RANK-ZERO",
+   "superseded_by": null,
+   "char0_scope": "Positive-dimensional cross-band gluing loci: one orbit (the 55 V4-triple-lines; commuting plus-plane pairs meet there). At d = 35 and d = 36 the section-level gluing system has RANK 0 on the cells: the leading data already vanish on ell_V because of the sealed cone order (ord >= 6), so both bands restrict to zero and agree automatically; depth-6 diagnostics recorded, not used as kills. 22 cells unaffected.\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Morphism layer L6 spent with no cut. Headline: Problem E remains OPEN."
+  },
+  {
+   "path": "goal_runs_20260812/COCYCLE_COHERENCE",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "weak-model execution lane, director-replayed ALLGREEN; landed as an honest null (layer spent, no cut)",
+   "primary_exit": "COCYCLE-ALREADY-IMPLIED",
+   "superseded_by": null,
+   "char0_scope": "Audit verdict with proof: the census closure poset has all 66 2-chains carrying their long edge (missing_direct = 0), and on value assignments triangle consistency reduces to the three pairwise checks already imposed; the transversal scheme is coherent. J census unchanged at every residue; 22-anchor unchanged. Verifier 44/44 with live re-audit at both primes.\nNOT claimed: Stage-2 single-map coherence (still the L11 target).",
+   "tracked": true,
+   "notes": "Morphism layer L7 spent with no cut -- and the 'already implied' proof is itself sealed knowledge. Headline: Problem E remains OPEN."
+  },
+  {
+   "path": "goal_runs_20260812/RAMIFICATION_COMPLEX",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "weak-model execution lane, director-replayed ALLGREEN; landed as an honest null (layer spent, no cut)",
+   "primary_exit": "RAMCX-J-CENSUS-UNCUT",
+   "superseded_by": null,
+   "char0_scope": "Tuple-level weight rule proved by the Theorem 1.2 equivariance argument (PATH A/B cross-check 1200 cases, 0 mismatches); per-row conormal character tables for all 37 rows; receiver tangent-cone characters at the special points machine-checked at both primes; 159 live value-options, 0 degree-free deaths; join leaves the J census identical at every residue; 22-anchor intact, 0 closed kills.\nNOT claimed: any degree exclusion.",
+   "tracked": true,
+   "notes": "Morphism layer L8 spent with no cut at order 0; the tables themselves are reusable sealed data for the realization layer. Headline: Problem E remains OPEN."
   }
  ]
 }

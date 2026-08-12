@@ -1,0 +1,111 @@
+{
+ "all_loci": [
+  {
+   "band_type": "plus-plane D_{P_\u03c3} of each of three involutions",
+   "description": "\u2113_V = P_\u03c3 \u2229 P_\u03c4 for commuting involution pairs in a V4; also P_\u03c3 \u2229 \u2113_V for each of the three involutions of the V4",
+   "dim_projective": 1,
+   "id": "L1_ellV_commuting_planes",
+   "n_bands_meeting": 3,
+   "orbit_size": 55,
+   "positive_dimensional": true,
+   "rep_A_dim": 2,
+   "rep_involutions": [
+    1,
+    385,
+    454
+   ],
+   "stab_order": 12,
+   "stabilizer": "A4 = N_G(V4)"
+  },
+  {
+   "description": "P_\u03c3 \u2229 P_\u03c3' for non-commuting pairs (point only)",
+   "dim_projective": 0,
+   "excluded_reason": "0-dimensional; census children already cover points",
+   "id": "L2_noncommuting_planes",
+   "n_unordered_pairs": 1320,
+   "orbit_note": "1320 unordered non-commuting pairs",
+   "positive_dimensional": false
+  },
+  {
+   "description": "L_\u03c3 \u2229 L_\u03c4: type-I point if commuting, empty if not",
+   "dim_projective": 0,
+   "excluded_reason": "0-dimensional or empty",
+   "id": "L3_minus_line_pairs",
+   "positive_dimensional": false
+  },
+  {
+   "description": "P_\u03c3 \u2229 L_\u03c4: point on E_\u03c3 if commuting, empty if not",
+   "dim_projective": 0,
+   "excluded_reason": "0-dimensional or empty; no L in foreign P",
+   "id": "L4_plane_foreign_minus",
+   "positive_dimensional": false
+  },
+  {
+   "description": "\u2113_V \u2229 L_\u03c4 = \u2205 always",
+   "dim_projective": -1,
+   "excluded_reason": "empty",
+   "id": "L5_ellV_minus",
+   "positive_dimensional": false
+  }
+ ],
+ "bad_ellV_count": 0,
+ "degree_general": {
+  "class_dependent": [
+   "jet order of the leading term (m), parity of line-order, C6/C5/C11 structure cuts (sealed STAGE2 residue table)"
+  ],
+  "every_degree": [
+   "L1 ell_V gluing of plus-plane leading data across the three involutions of each V4 (whenever m>=1 is forced)"
+  ],
+  "loci_degree_independent": true,
+  "note": "The arrangement strata (\u2113_V, plane meets, line meets) are independent of d. Gluing conditions that fire depend on the leading multidegree class: at every d with forced m=1 on plus-planes (the sealed (1,6) window), the (d-1,1) leading datum of each D_{P_\u03c3} must agree on \u2113_V with its V4 partners. At even d the minus-line band is additionally active but contributes no new positive-dim cross-band locus. Class-dependent: which depth of jet is the leading term (m odd; residue tables)."
+ },
+ "expected_commuting": 165,
+ "expected_noncommuting": 1320,
+ "minus_inter_dim_commuting": {
+  "all_equal_1": true,
+  "max": 1,
+  "min": 1
+ },
+ "minus_inter_dim_noncommuting": {
+  "all_equal_0": true,
+  "max": 0,
+  "min": 0
+ },
+ "n_involutions": 55,
+ "n_unordered_commuting_pairs": 165,
+ "n_unordered_noncommuting_pairs": 1320,
+ "n_v4": 55,
+ "p": 661,
+ "plus_inter_dim_commuting": {
+  "all_equal_2": true,
+  "max": 2,
+  "min": 2
+ },
+ "plus_inter_dim_noncommuting": {
+  "all_equal_1": true,
+  "max": 1,
+  "min": 1
+ },
+ "pos_dim_loci": [
+  {
+   "band_type": "plus-plane D_{P_\u03c3} of each of three involutions",
+   "description": "\u2113_V = P_\u03c3 \u2229 P_\u03c4 for commuting involution pairs in a V4; also P_\u03c3 \u2229 \u2113_V for each of the three involutions of the V4",
+   "dim_projective": 1,
+   "id": "L1_ellV_commuting_planes",
+   "n_bands_meeting": 3,
+   "orbit_size": 55,
+   "positive_dimensional": true,
+   "rep_A_dim": 2,
+   "rep_involutions": [
+    1,
+    385,
+    454
+   ],
+   "stab_order": 12,
+   "stabilizer": "A4 = N_G(V4)"
+  }
+ ],
+ "pos_dim_orbit_count": 1,
+ "rep_A_in_Wplus": true,
+ "rep_L_meet_ellV_dim": 0
+}

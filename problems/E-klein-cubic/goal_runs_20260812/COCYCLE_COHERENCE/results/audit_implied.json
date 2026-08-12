@@ -1,0 +1,864 @@
+{
+  "331": {
+    "p": 331,
+    "verdict": "COCYCLE-ALREADY-IMPLIED",
+    "reason": "Every orbit 2-chain has its long edge among the 145 (missing_direct=0). BFS transversals match the construction; geometric 2-chain section holds up to parent setwise stabilizer.  On assignments, the triangle condition is the conjunction of the three pairwise img_contains constraints already imposed by arc consistency and block enumeration (point lemma, dom lemma).  Evaluation tables are single-germ and arc-closed.  Raw transport maps may disagree on labels that no pairwise-consistent assignment can carry (vtr disagree=11205 of 18150); that is coset noise, not a residual cut.  The triangle layer adds no cut.",
+    "n_orbit_edges": 145,
+    "n_triangles": 66,
+    "n_missing_direct": 0,
+    "missing_direct": [],
+    "triangles": [
+      [
+        23,
+        1,
+        0
+      ],
+      [
+        23,
+        4,
+        0
+      ],
+      [
+        24,
+        1,
+        0
+      ],
+      [
+        24,
+        4,
+        0
+      ],
+      [
+        25,
+        1,
+        0
+      ],
+      [
+        25,
+        5,
+        0
+      ],
+      [
+        26,
+        1,
+        0
+      ],
+      [
+        26,
+        6,
+        0
+      ],
+      [
+        27,
+        2,
+        0
+      ],
+      [
+        27,
+        6,
+        0
+      ],
+      [
+        28,
+        2,
+        0
+      ],
+      [
+        28,
+        5,
+        0
+      ],
+      [
+        35,
+        1,
+        0
+      ],
+      [
+        35,
+        11,
+        0
+      ],
+      [
+        36,
+        1,
+        0
+      ],
+      [
+        36,
+        11,
+        0
+      ],
+      [
+        37,
+        1,
+        0
+      ],
+      [
+        37,
+        12,
+        0
+      ],
+      [
+        38,
+        1,
+        0
+      ],
+      [
+        38,
+        12,
+        0
+      ],
+      [
+        39,
+        2,
+        0
+      ],
+      [
+        39,
+        13,
+        0
+      ],
+      [
+        40,
+        2,
+        0
+      ],
+      [
+        40,
+        13,
+        0
+      ],
+      [
+        41,
+        1,
+        0
+      ],
+      [
+        41,
+        15,
+        0
+      ],
+      [
+        42,
+        1,
+        0
+      ],
+      [
+        42,
+        8,
+        0
+      ],
+      [
+        43,
+        1,
+        0
+      ],
+      [
+        43,
+        14,
+        0
+      ],
+      [
+        44,
+        1,
+        0
+      ],
+      [
+        44,
+        15,
+        0
+      ],
+      [
+        45,
+        1,
+        0
+      ],
+      [
+        45,
+        14,
+        0
+      ],
+      [
+        46,
+        1,
+        0
+      ],
+      [
+        46,
+        8,
+        0
+      ],
+      [
+        57,
+        9,
+        0
+      ],
+      [
+        57,
+        18,
+        0
+      ],
+      [
+        58,
+        8,
+        0
+      ],
+      [
+        58,
+        19,
+        0
+      ],
+      [
+        59,
+        3,
+        0
+      ],
+      [
+        59,
+        20,
+        0
+      ],
+      [
+        60,
+        3,
+        0
+      ],
+      [
+        61,
+        1,
+        0
+      ],
+      [
+        62,
+        1,
+        0
+      ],
+      [
+        62,
+        18,
+        0
+      ],
+      [
+        63,
+        1,
+        0
+      ],
+      [
+        64,
+        1,
+        0
+      ],
+      [
+        65,
+        9,
+        0
+      ],
+      [
+        65,
+        7,
+        0
+      ],
+      [
+        66,
+        17,
+        0
+      ],
+      [
+        66,
+        10,
+        0
+      ],
+      [
+        67,
+        10,
+        0
+      ],
+      [
+        67,
+        7,
+        0
+      ],
+      [
+        68,
+        1,
+        0
+      ],
+      [
+        69,
+        1,
+        0
+      ],
+      [
+        69,
+        19,
+        0
+      ],
+      [
+        70,
+        3,
+        0
+      ],
+      [
+        70,
+        7,
+        0
+      ],
+      [
+        71,
+        17,
+        0
+      ],
+      [
+        71,
+        3,
+        0
+      ],
+      [
+        72,
+        7,
+        0
+      ],
+      [
+        73,
+        2,
+        0
+      ],
+      [
+        73,
+        20,
+        0
+      ],
+      [
+        74,
+        2,
+        0
+      ],
+      [
+        75,
+        2,
+        0
+      ]
+    ],
+    "bfs_tree": {
+      "n_ok": 11076,
+      "n_fail": 0,
+      "n_comp": 11076,
+      "covers_all": true
+    },
+    "geometric_2chain": {
+      "n_tested": 66,
+      "n_ok": 66,
+      "n_fail": 0,
+      "n_strict_eq": 25,
+      "samples": []
+    },
+    "value_transport": {
+      "n_tests": 18150,
+      "n_agree": 6945,
+      "n_disagree": 11205,
+      "samples": [
+        {
+          "triangle": [
+            23,
+            1,
+            0
+          ],
+          "cell": "PI"
+        },
+        {
+          "triangle": [
+            23,
+            1,
+            0
+          ],
+          "cell": "PI"
+        },
+        {
+          "triangle": [
+            23,
+            1,
+            0
+          ],
+          "cell": "PI"
+        },
+        {
+          "triangle": [
+            23,
+            1,
+            0
+          ],
+          "cell": "PI"
+        },
+        {
+          "triangle": [
+            23,
+            1,
+            0
+          ],
+          "cell": "PI"
+        }
+      ]
+    },
+    "eval_arc": {
+      "n_patterns": 97,
+      "n_arc_failures": 0
+    },
+    "classify": {
+      "n_pure_point_possible": 12,
+      "n_dom_involving": 54,
+      "n_dom_rows": 15
+    },
+    "coherent_total": 1088847395778723840000,
+    "core_solutions": 43008,
+    "core_size": 51,
+    "lemma_point": "Let c < mid < p be an orbit triangle with all three edges among the 145 constraints, and let val assign point values.  For each edge the constraint list carries one or more transversal witnesses; arc consistency + block enumeration require img_contains on EVERY witness (s1enum.py:164-169, 174-184, 229-233).  For a fixed witness triple (\u03c4_cm, \u03c4_mp, \u03c4_cp) on which all three point constraints hold:\n  lab_c = \u03c4_cm \u00b7 lab_mid,  lab_mid = \u03c4_mp \u00b7 lab_p,  lab_c = \u03c4_cp \u00b7 lab_p.\nCompose: lab_c = \u03c4_cm \u00b7 \u03c4_mp \u00b7 lab_p = \u03c4_cp \u00b7 lab_p.  So composed transport and direct transport agree on the assigned parent value.  The triangle cocycle condition on that assignment is exactly the conjunction of the three pairwise equalities.",
+    "lemma_dom": "If the parent is dominant onto L_\u03c3, img_contains requires equality of transported L-labels (dom-dom) or incidence of a point on the transported L (pt-dom) (s1enum.py:139-146).  Minus-lines are pairwise disjoint, so a point determines its L.  Three pairwise incidences / equalities on a triangle therefore force the composed L-identification to equal the direct one.  No extra cut.",
+    "lemma_eval": "Each usable evaluation pattern is the joint evaluation of a single multiform germ on all children of a sweep row (s1coherence.py classes, s1recount.py:51-76).  Restriction of a germ is transitive: \u03c6|_{S''} = (\u03c6|_{S'})|_{S''}.  Patterns that fail arc consistency on any child-edge are dropped (s1recount.py:73-75).  So evaluation tables are already 2-chain closed on their support.",
+    "line_refs": {
+      "s1source_transversal": "s1source.py:337-357",
+      "s1enum_cons": "s1enum.py:164-169",
+      "s1enum_arc": "s1enum.py:160-187",
+      "s1enum_img_contains": "s1enum.py:130-157",
+      "s1enum_count_block": "s1enum.py:211-239",
+      "s1coherence_kids_tr": "s1coherence.py:196-197",
+      "s1recount_own_transport": "s1recount.py:64-69",
+      "s1recount_drop_dom": "s1recount.py:73-75",
+      "s1recount_join": "s1recount.py:93-200",
+      "s3sweep_own_frame": "s3sweep.py:166-172",
+      "theorem_section4_145": "STAGE1_COMPLEX_MAPS/THEOREM.md:396-400",
+      "theorem_15_6_3": "STAGE1_COMPLEX_MAPS/THEOREM.md:976-978"
+    },
+    "abstract_note": "Abstractly, pairwise edge consistency need not imply a 2-cocycle filler.  In this census every 2-chain's long edge is among the 145 (machine: missing_direct=0), so the filler is already an imposed edge.  That is the content of COCYCLE-ALREADY-IMPLIED."
+  },
+  "661": {
+    "p": 661,
+    "verdict": "COCYCLE-ALREADY-IMPLIED",
+    "reason": "Every orbit 2-chain has its long edge among the 145 (missing_direct=0). BFS transversals match the construction; geometric 2-chain section holds up to parent setwise stabilizer.  On assignments, the triangle condition is the conjunction of the three pairwise img_contains constraints already imposed by arc consistency and block enumeration (point lemma, dom lemma).  Evaluation tables are single-germ and arc-closed.  Raw transport maps may disagree on labels that no pairwise-consistent assignment can carry (vtr disagree=10677 of 18150); that is coset noise, not a residual cut.  The triangle layer adds no cut.",
+    "n_orbit_edges": 145,
+    "n_triangles": 66,
+    "n_missing_direct": 0,
+    "missing_direct": [],
+    "triangles": [
+      [
+        23,
+        1,
+        0
+      ],
+      [
+        23,
+        4,
+        0
+      ],
+      [
+        24,
+        1,
+        0
+      ],
+      [
+        24,
+        4,
+        0
+      ],
+      [
+        25,
+        1,
+        0
+      ],
+      [
+        25,
+        5,
+        0
+      ],
+      [
+        26,
+        1,
+        0
+      ],
+      [
+        26,
+        6,
+        0
+      ],
+      [
+        27,
+        2,
+        0
+      ],
+      [
+        27,
+        6,
+        0
+      ],
+      [
+        28,
+        2,
+        0
+      ],
+      [
+        28,
+        5,
+        0
+      ],
+      [
+        35,
+        2,
+        0
+      ],
+      [
+        35,
+        11,
+        0
+      ],
+      [
+        36,
+        2,
+        0
+      ],
+      [
+        36,
+        11,
+        0
+      ],
+      [
+        37,
+        1,
+        0
+      ],
+      [
+        37,
+        12,
+        0
+      ],
+      [
+        38,
+        1,
+        0
+      ],
+      [
+        38,
+        12,
+        0
+      ],
+      [
+        39,
+        1,
+        0
+      ],
+      [
+        39,
+        13,
+        0
+      ],
+      [
+        40,
+        1,
+        0
+      ],
+      [
+        40,
+        13,
+        0
+      ],
+      [
+        41,
+        1,
+        0
+      ],
+      [
+        41,
+        8,
+        0
+      ],
+      [
+        42,
+        1,
+        0
+      ],
+      [
+        42,
+        14,
+        0
+      ],
+      [
+        43,
+        1,
+        0
+      ],
+      [
+        43,
+        15,
+        0
+      ],
+      [
+        44,
+        1,
+        0
+      ],
+      [
+        44,
+        8,
+        0
+      ],
+      [
+        45,
+        1,
+        0
+      ],
+      [
+        45,
+        14,
+        0
+      ],
+      [
+        46,
+        1,
+        0
+      ],
+      [
+        46,
+        15,
+        0
+      ],
+      [
+        57,
+        9,
+        0
+      ],
+      [
+        57,
+        18,
+        0
+      ],
+      [
+        58,
+        3,
+        0
+      ],
+      [
+        59,
+        19,
+        0
+      ],
+      [
+        59,
+        3,
+        0
+      ],
+      [
+        60,
+        8,
+        0
+      ],
+      [
+        60,
+        20,
+        0
+      ],
+      [
+        61,
+        1,
+        0
+      ],
+      [
+        61,
+        18,
+        0
+      ],
+      [
+        62,
+        1,
+        0
+      ],
+      [
+        63,
+        1,
+        0
+      ],
+      [
+        64,
+        1,
+        0
+      ],
+      [
+        65,
+        10,
+        0
+      ],
+      [
+        65,
+        7,
+        0
+      ],
+      [
+        66,
+        17,
+        0
+      ],
+      [
+        66,
+        10,
+        0
+      ],
+      [
+        67,
+        9,
+        0
+      ],
+      [
+        67,
+        7,
+        0
+      ],
+      [
+        68,
+        17,
+        0
+      ],
+      [
+        68,
+        3,
+        0
+      ],
+      [
+        69,
+        3,
+        0
+      ],
+      [
+        69,
+        7,
+        0
+      ],
+      [
+        70,
+        7,
+        0
+      ],
+      [
+        71,
+        2,
+        0
+      ],
+      [
+        72,
+        2,
+        0
+      ],
+      [
+        72,
+        19,
+        0
+      ],
+      [
+        73,
+        2,
+        0
+      ],
+      [
+        74,
+        1,
+        0
+      ],
+      [
+        75,
+        1,
+        0
+      ],
+      [
+        75,
+        20,
+        0
+      ]
+    ],
+    "bfs_tree": {
+      "n_ok": 11076,
+      "n_fail": 0,
+      "n_comp": 11076,
+      "covers_all": true
+    },
+    "geometric_2chain": {
+      "n_tested": 66,
+      "n_ok": 66,
+      "n_fail": 0,
+      "n_strict_eq": 27,
+      "samples": []
+    },
+    "value_transport": {
+      "n_tests": 18150,
+      "n_agree": 7473,
+      "n_disagree": 10677,
+      "samples": [
+        {
+          "triangle": [
+            23,
+            1,
+            0
+          ],
+          "cell": "PI"
+        },
+        {
+          "triangle": [
+            23,
+            1,
+            0
+          ],
+          "cell": "PI"
+        },
+        {
+          "triangle": [
+            23,
+            1,
+            0
+          ],
+          "cell": "PI"
+        },
+        {
+          "triangle": [
+            23,
+            1,
+            0
+          ],
+          "cell": "PI"
+        },
+        {
+          "triangle": [
+            23,
+            1,
+            0
+          ],
+          "cell": "PI"
+        }
+      ]
+    },
+    "eval_arc": {
+      "n_patterns": 97,
+      "n_arc_failures": 0
+    },
+    "classify": {
+      "n_pure_point_possible": 12,
+      "n_dom_involving": 54,
+      "n_dom_rows": 15
+    },
+    "coherent_total": 1088847395778723840000,
+    "core_solutions": 43008,
+    "core_size": 51,
+    "lemma_point": "Let c < mid < p be an orbit triangle with all three edges among the 145 constraints, and let val assign point values.  For each edge the constraint list carries one or more transversal witnesses; arc consistency + block enumeration require img_contains on EVERY witness (s1enum.py:164-169, 174-184, 229-233).  For a fixed witness triple (\u03c4_cm, \u03c4_mp, \u03c4_cp) on which all three point constraints hold:\n  lab_c = \u03c4_cm \u00b7 lab_mid,  lab_mid = \u03c4_mp \u00b7 lab_p,  lab_c = \u03c4_cp \u00b7 lab_p.\nCompose: lab_c = \u03c4_cm \u00b7 \u03c4_mp \u00b7 lab_p = \u03c4_cp \u00b7 lab_p.  So composed transport and direct transport agree on the assigned parent value.  The triangle cocycle condition on that assignment is exactly the conjunction of the three pairwise equalities.",
+    "lemma_dom": "If the parent is dominant onto L_\u03c3, img_contains requires equality of transported L-labels (dom-dom) or incidence of a point on the transported L (pt-dom) (s1enum.py:139-146).  Minus-lines are pairwise disjoint, so a point determines its L.  Three pairwise incidences / equalities on a triangle therefore force the composed L-identification to equal the direct one.  No extra cut.",
+    "lemma_eval": "Each usable evaluation pattern is the joint evaluation of a single multiform germ on all children of a sweep row (s1coherence.py classes, s1recount.py:51-76).  Restriction of a germ is transitive: \u03c6|_{S''} = (\u03c6|_{S'})|_{S''}.  Patterns that fail arc consistency on any child-edge are dropped (s1recount.py:73-75).  So evaluation tables are already 2-chain closed on their support.",
+    "line_refs": {
+      "s1source_transversal": "s1source.py:337-357",
+      "s1enum_cons": "s1enum.py:164-169",
+      "s1enum_arc": "s1enum.py:160-187",
+      "s1enum_img_contains": "s1enum.py:130-157",
+      "s1enum_count_block": "s1enum.py:211-239",
+      "s1coherence_kids_tr": "s1coherence.py:196-197",
+      "s1recount_own_transport": "s1recount.py:64-69",
+      "s1recount_drop_dom": "s1recount.py:73-75",
+      "s1recount_join": "s1recount.py:93-200",
+      "s3sweep_own_frame": "s3sweep.py:166-172",
+      "theorem_section4_145": "STAGE1_COMPLEX_MAPS/THEOREM.md:396-400",
+      "theorem_15_6_3": "STAGE1_COMPLEX_MAPS/THEOREM.md:976-978"
+    },
+    "abstract_note": "Abstractly, pairwise edge consistency need not imply a 2-cocycle filler.  In this census every 2-chain's long edge is among the 145 (machine: missing_direct=0), so the filler is already an imposed edge.  That is the content of COCYCLE-ALREADY-IMPLIED."
+  }
+}

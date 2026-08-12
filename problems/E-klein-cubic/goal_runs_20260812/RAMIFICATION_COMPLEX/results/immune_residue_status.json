@@ -1,0 +1,2194 @@
+{
+ "21": {
+  "n": 3,
+  "base": 1,
+  "chain": [
+   1
+  ],
+  "name": "C3/pt_A4(a) dim1 c=1",
+  "per_rho": {
+   "0": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "1": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "2": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "3": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "4": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "5": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   }
+  }
+ },
+ "22": {
+  "n": 3,
+  "base": 2,
+  "chain": [
+   2
+  ],
+  "name": "C3/pt_A4(b) dim1 c=2",
+  "per_rho": {
+   "0": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "1": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "2": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "3": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "4": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "5": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   }
+  }
+ },
+ "29": {
+  "n": 3,
+  "base": 1,
+  "chain": [
+   2
+  ],
+  "name": "C3/pt_A4(a) dim0 c=2",
+  "per_rho": {
+   "0": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "1": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "2": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "3": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "4": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "5": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   }
+  }
+ },
+ "30": {
+  "n": 3,
+  "base": 2,
+  "chain": [
+   1
+  ],
+  "name": "C3/pt_A4(b) dim0 c=1",
+  "per_rho": {
+   "0": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "1": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "2": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "3": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "4": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "5": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   }
+  }
+ },
+ "31": {
+  "n": 3,
+  "base": 1,
+  "chain": [
+   1,
+   1
+  ],
+  "name": "C3/pt_A4(a)<ell_V c=(1,1)",
+  "per_rho": {
+   "0": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "1": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "2": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "3": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "4": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "5": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   }
+  }
+ },
+ "32": {
+  "n": 3,
+  "base": 1,
+  "chain": [
+   1,
+   2
+  ],
+  "name": "C3/pt_A4(a)<ell_V c=(1,2)",
+  "per_rho": {
+   "0": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "1": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "2": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "3": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "4": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "5": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   }
+  }
+ },
+ "33": {
+  "n": 3,
+  "base": 2,
+  "chain": [
+   2,
+   2
+  ],
+  "name": "C3/pt_A4(b)<ell_V c=(2,2)",
+  "per_rho": {
+   "0": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "1": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "2": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "3": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "4": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "5": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   }
+  }
+ },
+ "34": {
+  "n": 3,
+  "base": 2,
+  "chain": [
+   2,
+   1
+  ],
+  "name": "C3/pt_A4(b)<ell_V c=(2,1)",
+  "per_rho": {
+   "0": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "1": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "2": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "3": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "4": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   },
+   "5": {
+    "n_opts": 6,
+    "n_live": 6,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P6#0",
+     "P6#1",
+     "P3#0",
+     "P3#1",
+     "P3#2",
+     "P3#3"
+    ],
+    "factor_live": 6,
+    "factor_all": 6
+   }
+  }
+ },
+ "47": {
+  "n": 5,
+  "base": 0,
+  "chain": [
+   1
+  ],
+  "name": "C5/pt_D10 c=1",
+  "per_rho": {
+   "0": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "1": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "2": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "3": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "4": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "5": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   }
+  }
+ },
+ "48": {
+  "n": 5,
+  "base": 0,
+  "chain": [
+   2
+  ],
+  "name": "C5/pt_D10 c=2",
+  "per_rho": {
+   "0": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "1": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "2": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "3": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "4": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "5": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   }
+  }
+ },
+ "49": {
+  "n": 5,
+  "base": 1,
+  "chain": [
+   1
+  ],
+  "name": "C5/pt_C5(a) c=1",
+  "per_rho": {
+   "0": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "1": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "2": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "3": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "4": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "5": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   }
+  }
+ },
+ "50": {
+  "n": 5,
+  "base": 1,
+  "chain": [
+   2
+  ],
+  "name": "C5/pt_C5(a) c=2",
+  "per_rho": {
+   "0": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "1": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "2": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "3": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "4": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "5": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   }
+  }
+ },
+ "51": {
+  "n": 5,
+  "base": 1,
+  "chain": [
+   3
+  ],
+  "name": "C5/pt_C5(a) c=3",
+  "per_rho": {
+   "0": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "1": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "2": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "3": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "4": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "5": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   }
+  }
+ },
+ "52": {
+  "n": 5,
+  "base": 1,
+  "chain": [
+   4
+  ],
+  "name": "C5/pt_C5(a) c=4",
+  "per_rho": {
+   "0": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "1": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "2": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "3": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "4": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "5": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   }
+  }
+ },
+ "53": {
+  "n": 5,
+  "base": 2,
+  "chain": [
+   1
+  ],
+  "name": "C5/pt_C5(b) c=1",
+  "per_rho": {
+   "0": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "1": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "2": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "3": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "4": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "5": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   }
+  }
+ },
+ "54": {
+  "n": 5,
+  "base": 2,
+  "chain": [
+   2
+  ],
+  "name": "C5/pt_C5(b) c=2",
+  "per_rho": {
+   "0": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "1": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "2": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "3": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "4": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "5": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   }
+  }
+ },
+ "55": {
+  "n": 5,
+  "base": 2,
+  "chain": [
+   3
+  ],
+  "name": "C5/pt_C5(b) c=3",
+  "per_rho": {
+   "0": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "1": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "2": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "3": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "4": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "5": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   }
+  }
+ },
+ "56": {
+  "n": 5,
+  "base": 2,
+  "chain": [
+   4
+  ],
+  "name": "C5/pt_C5(b) c=4",
+  "per_rho": {
+   "0": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "1": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "2": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "3": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "4": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   },
+   "5": {
+    "n_opts": 4,
+    "n_live": 4,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P5a#0",
+     "P5a#1",
+     "P5b#0",
+     "P5b#1"
+    ],
+    "factor_live": 4,
+    "factor_all": 4
+   }
+  }
+ },
+ "76": {
+  "n": 11,
+  "base": 9,
+  "chain": [
+   3
+  ],
+  "name": "C11/pt_C11 c=3",
+  "per_rho": {
+   "0": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "1": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "2": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "3": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "4": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "5": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   }
+  }
+ },
+ "77": {
+  "n": 11,
+  "base": 9,
+  "chain": [
+   5
+  ],
+  "name": "C11/pt_C11 c=5",
+  "per_rho": {
+   "0": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "1": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "2": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "3": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "4": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "5": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   }
+  }
+ },
+ "78": {
+  "n": 11,
+  "base": 9,
+  "chain": [
+   6
+  ],
+  "name": "C11/pt_C11 c=6",
+  "per_rho": {
+   "0": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "1": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "2": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "3": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "4": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "5": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   }
+  }
+ },
+ "79": {
+  "n": 11,
+  "base": 9,
+  "chain": [
+   7
+  ],
+  "name": "C11/pt_C11 c=7",
+  "per_rho": {
+   "0": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "1": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "2": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "3": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "4": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   },
+   "5": {
+    "n_opts": 5,
+    "n_live": 5,
+    "n_dead": 0,
+    "dead_cells": [],
+    "live_cells": [
+     "P11#0",
+     "P11#1",
+     "P11#2",
+     "P11#3",
+     "P11#4"
+    ],
+    "factor_live": 5,
+    "factor_all": 5
+   }
+  }
+ }
+}

@@ -1,0 +1,301 @@
+{
+ "automatic_gluing_note": "Primary (d-1,1) gluing has rank 0: the plus-plane leading form vanishes identically on ell_V (compatible with sealed ord_ellV>=6), so both bands restrict to the zero section and agree automatically. No new closed cut; all 22 remain at dim <= 37.",
+ "cell_in_dim": 37,
+ "d": 35,
+ "depth6_diagnostic": {
+  "first_nonzero_Wm": 6,
+  "first_nonzero_common_normal": null,
+  "first_nonzero_full_normal": 6,
+  "note": "Sealed Layer-0 imposes ord_ellV >= r0=6, so t^0..t^5 vanish along ell_V. Primary cross-band gluing uses the plus-plane multidegree leading form (t^1 / bidegree (d-1,1)), which already vanishes on ell_V \u2014 gluing is 0=0. Bulk t^6 data is recorded here only as a depth diagnostic.",
+  "orders_on_Wm": {
+   "0": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "1": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "2": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "3": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "4": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "5": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "6": {
+    "nz": 1293,
+    "r_cell": 21
+   },
+   "7": {
+    "nz": 1477,
+    "r_cell": 15
+   }
+  },
+  "orders_on_common_normal": {
+   "0": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "1": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "2": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "3": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "4": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "5": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "6": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "7": {
+    "nz": 0,
+    "r_cell": 0
+   }
+  },
+  "orders_on_full_normal": {
+   "0": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "1": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "2": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "3": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "4": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "5": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "6": {
+    "nz": 1293,
+    "r_cell": 35
+   },
+   "7": {
+    "nz": 1478,
+    "r_cell": 37
+   }
+  }
+ },
+ "diagnostic_full_fiber_dim": 37,
+ "diagnostic_full_fiber_rank": 0,
+ "dim_after_gluing": 37,
+ "dim_rep_pass1": 37,
+ "dim_rep_saturated": 37,
+ "flag_all_dead": false,
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "layer0_dim": 39,
+ "leading_vanish_table": {
+  "ellV_x_Wm": {
+   "n_samples": 10,
+   "nz_cell": 0,
+   "r_cell": 0
+  },
+  "ellV_x_common_normal": {
+   "n_samples": 10,
+   "nz_cell": 0,
+   "r_cell": 0
+  },
+  "generic_Pplus_x_Wm": {
+   "n_samples": 10,
+   "nz_cell": 1846,
+   "r_cell": 20
+  }
+ },
+ "mechanism_if_dead": null,
+ "meta_pass1": {
+  "n_func_raw": 96,
+  "n_samples": 48
+ },
+ "meta_sat": {
+  "n_func_raw": 168,
+  "n_samples": 84
+ },
+ "n_dead_among_22": 0,
+ "n_func_orbit": 3564,
+ "n_func_rep_sat": 264,
+ "n_live_among_22": 22,
+ "p": 661,
+ "per_cell": [
+  {
+   "dim_upper": 37,
+   "id": 5,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 7,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 13,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 15,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 21,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 23,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 29,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 31,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 37,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 39,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 45,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 47,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 53,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 55,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 61,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 63,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 69,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 71,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 697,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 699,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 701,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  },
+  {
+   "dim_upper": 37,
+   "id": 703,
+   "note": "gluing automatic (leading form vanishes on locus)",
+   "verdict": "LIVE"
+  }
+ ],
+ "rank_full_orbit_55": 0,
+ "rank_on_layer0_39_rep": 0,
+ "rank_rep_pass1": 0,
+ "rank_rep_saturated": 0,
+ "rep_v4_involutions": [
+  1,
+  385,
+  454
+ ],
+ "rigidity_glued_bad": 0,
+ "rigidity_glued_checks": 2664,
+ "rigidity_slice_bad": 0,
+ "rigidity_slice_checks": 3330,
+ "saturation_ok": true,
+ "seconds": 58.49556612968445
+}

@@ -1,0 +1,557 @@
+{
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "d": 35,
+ "anchor_22_intact": {
+  "331": true,
+  "661": true
+ },
+ "n_closed_kills_on_22": {
+  "331": 0,
+  "661": 0
+ },
+ "n_immune_closed": {
+  "331": 0,
+  "661": 0
+ },
+ "cross_prime_count_agree": true,
+ "per_prime": {
+  "331": {
+   "p": 331,
+   "d": 35,
+   "d_mod6": 5,
+   "n_anchor_hashes": 22,
+   "anchor_hashes": [
+    "2955f30c0593ff1d",
+    "29bd5a4e397c0790",
+    "2c7513acc00d7368",
+    "2f9b8e8ba5ba6288",
+    "337226b957ffdc34",
+    "6635c24184e4be43",
+    "6ae7ffa6dbd79c50",
+    "6fb4d2d4d5a56413",
+    "88ca456f7d4537e6",
+    "8b6af44c6a58b736",
+    "a51f1461a34945c2",
+    "a6a8ab1ae0fdfe22",
+    "aac84803b75ad54e",
+    "b357be64b49d4511",
+    "bdbc702f4f11afa8",
+    "be7f55ce39e664a6",
+    "c197d9761918cc70",
+    "cbc5e8bf02feaf22",
+    "d743d7a4fc7d0414",
+    "e87fb26421304593",
+    "f24058be9349945b",
+    "f2639db1fe05652f"
+   ],
+   "anchor_intact": true,
+   "n_closed_kills_on_22": 0,
+   "closed_kills_on_22": [],
+   "mechanism_note": "The sealed 22 are stratified \u03c3-band survivors (dim \u2264 37).  Their value assignments avoid every degree-free character incompatibility of the ramification layer.  Immune-row closed kills (if any) affect only the free IMM1 factor, not the 22 sol-hashes.  No closed character-incompatibility kills any of the 22 at d=35.",
+   "immune_specialisation_summary": [
+    {
+     "rid": 21,
+     "name": "C3/pt_A4(a) dim1 c=1",
+     "n": 3,
+     "w_tang": 2,
+     "n_live_weights": 2,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": false,
+     "mechanism": null
+    },
+    {
+     "rid": 22,
+     "name": "C3/pt_A4(b) dim1 c=2",
+     "n": 3,
+     "w_tang": 1,
+     "n_live_weights": 2,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": false,
+     "mechanism": null
+    },
+    {
+     "rid": 29,
+     "name": "C3/pt_A4(a) dim0 c=2",
+     "n": 3,
+     "w_tang": 2,
+     "n_live_weights": 2,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": false,
+     "mechanism": null
+    },
+    {
+     "rid": 30,
+     "name": "C3/pt_A4(b) dim0 c=1",
+     "n": 3,
+     "w_tang": 1,
+     "n_live_weights": 2,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": false,
+     "mechanism": null
+    },
+    {
+     "rid": 31,
+     "name": "C3/pt_A4(a)<ell_V c=(1,1)",
+     "n": 3,
+     "w_tang": 2,
+     "n_live_weights": 2,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": false,
+     "mechanism": null
+    },
+    {
+     "rid": 32,
+     "name": "C3/pt_A4(a)<ell_V c=(1,2)",
+     "n": 3,
+     "w_tang": 2,
+     "n_live_weights": 2,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": false,
+     "mechanism": null
+    },
+    {
+     "rid": 33,
+     "name": "C3/pt_A4(b)<ell_V c=(2,2)",
+     "n": 3,
+     "w_tang": 1,
+     "n_live_weights": 2,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": false,
+     "mechanism": null
+    },
+    {
+     "rid": 34,
+     "name": "C3/pt_A4(b)<ell_V c=(2,1)",
+     "n": 3,
+     "w_tang": 1,
+     "n_live_weights": 2,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": false,
+     "mechanism": null
+    },
+    {
+     "rid": 47,
+     "name": "C5/pt_D10 c=1",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 48,
+     "name": "C5/pt_D10 c=2",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 49,
+     "name": "C5/pt_C5(a) c=1",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 50,
+     "name": "C5/pt_C5(a) c=2",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 51,
+     "name": "C5/pt_C5(a) c=3",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 52,
+     "name": "C5/pt_C5(a) c=4",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 53,
+     "name": "C5/pt_C5(b) c=1",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 54,
+     "name": "C5/pt_C5(b) c=2",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 55,
+     "name": "C5/pt_C5(b) c=3",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 56,
+     "name": "C5/pt_C5(b) c=4",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 76,
+     "name": "C11/pt_C11 c=3",
+     "n": 11,
+     "w_tang": 7,
+     "n_live_weights": 3,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 77,
+     "name": "C11/pt_C11 c=5",
+     "n": 11,
+     "w_tang": 7,
+     "n_live_weights": 5,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 78,
+     "name": "C11/pt_C11 c=6",
+     "n": 11,
+     "w_tang": 7,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 79,
+     "name": "C11/pt_C11 c=7",
+     "n": 11,
+     "w_tang": 7,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    }
+   ],
+   "n_immune_closed": 0,
+   "immune_closed_rids": [],
+   "c11": {
+    "d_mod11": 2,
+    "in_Q": false,
+    "level0": "all 60 C11-points in Bs(T) (map-level B(C11))",
+    "note": "first-order blocks only apply after a \u03bc\u22651 blowup lands on X"
+   },
+   "c5": {
+    "d_mod5": 0,
+    "level0": "all 264 C5-points in Bs(T) (map-level B(C5)); D10 always Bs"
+   },
+   "headline": "Problem E remains OPEN; this packet excludes no degree."
+  },
+  "661": {
+   "p": 661,
+   "d": 35,
+   "d_mod6": 5,
+   "n_anchor_hashes": 22,
+   "anchor_hashes": [
+    "039cafe9e9fdf89e",
+    "0a0ab8e19311ac4e",
+    "39309437eafbce57",
+    "669ab2b99ee64deb",
+    "67e43d50008bd07e",
+    "6c16dbd3bde8925f",
+    "715a76b256ac0691",
+    "720ce6bad4a5f5a0",
+    "7b4482ecc6edb606",
+    "7b566c53097eee4c",
+    "810e57a489655daa",
+    "939c890dfe55afb4",
+    "ad3d1ae2b7e6dcac",
+    "c399cb8afa6b62ff",
+    "c81e7042b7aba13b",
+    "e70f4b5ce4d5ca21",
+    "e8558c465207aea8",
+    "eb7f7ed304b4ec9d",
+    "f3292bd5371a70d4",
+    "f62173fd3520e0a0",
+    "fa3376b88dfe1309",
+    "fac04ea70c1810eb"
+   ],
+   "anchor_intact": true,
+   "n_closed_kills_on_22": 0,
+   "closed_kills_on_22": [],
+   "mechanism_note": "The sealed 22 are stratified \u03c3-band survivors (dim \u2264 37).  Their value assignments avoid every degree-free character incompatibility of the ramification layer.  Immune-row closed kills (if any) affect only the free IMM1 factor, not the 22 sol-hashes.  No closed character-incompatibility kills any of the 22 at d=35.",
+   "immune_specialisation_summary": [
+    {
+     "rid": 21,
+     "name": "C3/pt_A4(a) dim1 c=1",
+     "n": 3,
+     "w_tang": 2,
+     "n_live_weights": 2,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": false,
+     "mechanism": null
+    },
+    {
+     "rid": 22,
+     "name": "C3/pt_A4(b) dim1 c=2",
+     "n": 3,
+     "w_tang": 1,
+     "n_live_weights": 2,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": false,
+     "mechanism": null
+    },
+    {
+     "rid": 29,
+     "name": "C3/pt_A4(a) dim0 c=2",
+     "n": 3,
+     "w_tang": 2,
+     "n_live_weights": 2,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": false,
+     "mechanism": null
+    },
+    {
+     "rid": 30,
+     "name": "C3/pt_A4(b) dim0 c=1",
+     "n": 3,
+     "w_tang": 1,
+     "n_live_weights": 2,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": false,
+     "mechanism": null
+    },
+    {
+     "rid": 31,
+     "name": "C3/pt_A4(a)<ell_V c=(1,1)",
+     "n": 3,
+     "w_tang": 2,
+     "n_live_weights": 2,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": false,
+     "mechanism": null
+    },
+    {
+     "rid": 32,
+     "name": "C3/pt_A4(a)<ell_V c=(1,2)",
+     "n": 3,
+     "w_tang": 2,
+     "n_live_weights": 2,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": false,
+     "mechanism": null
+    },
+    {
+     "rid": 33,
+     "name": "C3/pt_A4(b)<ell_V c=(2,2)",
+     "n": 3,
+     "w_tang": 1,
+     "n_live_weights": 2,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": false,
+     "mechanism": null
+    },
+    {
+     "rid": 34,
+     "name": "C3/pt_A4(b)<ell_V c=(2,1)",
+     "n": 3,
+     "w_tang": 1,
+     "n_live_weights": 2,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": false,
+     "mechanism": null
+    },
+    {
+     "rid": 47,
+     "name": "C5/pt_D10 c=1",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 48,
+     "name": "C5/pt_D10 c=2",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 49,
+     "name": "C5/pt_C5(a) c=1",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 50,
+     "name": "C5/pt_C5(a) c=2",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 51,
+     "name": "C5/pt_C5(a) c=3",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 52,
+     "name": "C5/pt_C5(a) c=4",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 53,
+     "name": "C5/pt_C5(b) c=1",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 54,
+     "name": "C5/pt_C5(b) c=2",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 55,
+     "name": "C5/pt_C5(b) c=3",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 56,
+     "name": "C5/pt_C5(b) c=4",
+     "n": 5,
+     "w_tang": 0,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 76,
+     "name": "C11/pt_C11 c=3",
+     "n": 11,
+     "w_tang": 7,
+     "n_live_weights": 3,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 77,
+     "name": "C11/pt_C11 c=5",
+     "n": 11,
+     "w_tang": 7,
+     "n_live_weights": 5,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 78,
+     "name": "C11/pt_C11 c=6",
+     "n": 11,
+     "w_tang": 7,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    },
+    {
+     "rid": 79,
+     "name": "C11/pt_C11 c=7",
+     "n": 11,
+     "w_tang": 7,
+     "n_live_weights": 4,
+     "closed_char_incompat": false,
+     "level0_Bs_maplevel": true,
+     "mechanism": null
+    }
+   ],
+   "n_immune_closed": 0,
+   "immune_closed_rids": [],
+   "c11": {
+    "d_mod11": 2,
+    "in_Q": false,
+    "level0": "all 60 C11-points in Bs(T) (map-level B(C11))",
+    "note": "first-order blocks only apply after a \u03bc\u22651 blowup lands on X"
+   },
+   "c5": {
+    "d_mod5": 0,
+    "level0": "all 264 C5-points in Bs(T) (map-level B(C5)); D10 always Bs"
+   },
+   "headline": "Problem E remains OPEN; this packet excludes no degree."
+  }
+ }
+}

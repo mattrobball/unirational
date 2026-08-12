@@ -1,0 +1,154 @@
+{
+ "automatic_gluing_note": "Primary (d-1,1) gluing has rank 0 on the 63-cell: leading form vanishes on ell_V; both bands agree automatically. dim stays 63.",
+ "cell_in_dim": 63,
+ "d": 36,
+ "depth6_diagnostic": {
+  "first_nonzero_Wm": 6,
+  "first_nonzero_common_normal": null,
+  "first_nonzero_full_normal": 6,
+  "note": "Sealed Layer-0 imposes ord_ellV >= r0=6, so t^0..t^5 vanish along ell_V. Primary cross-band gluing uses the plus-plane multidegree leading form (t^1 / bidegree (d-1,1)), which already vanishes on ell_V \u2014 gluing is 0=0. Bulk t^6 data is recorded here only as a depth diagnostic.",
+  "orders_on_Wm": {
+   "0": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "1": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "2": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "3": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "4": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "5": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "6": {
+    "nz": 2204,
+    "r_cell": 21
+   },
+   "7": {
+    "nz": 2514,
+    "r_cell": 15
+   }
+  },
+  "orders_on_common_normal": {
+   "0": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "1": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "2": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "3": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "4": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "5": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "6": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "7": {
+    "nz": 0,
+    "r_cell": 0
+   }
+  },
+  "orders_on_full_normal": {
+   "0": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "1": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "2": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "3": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "4": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "5": {
+    "nz": 0,
+    "r_cell": 0
+   },
+   "6": {
+    "nz": 2200,
+    "r_cell": 35
+   },
+   "7": {
+    "nz": 2516,
+    "r_cell": 38
+   }
+  }
+ },
+ "dim_after_gluing": 63,
+ "dim_rep_pass1": 63,
+ "dim_rep_saturated": 63,
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "leading_vanish_table": {
+  "ellV_x_Wm": {
+   "n_samples": 10,
+   "nz_cell": 0,
+   "r_cell": 0
+  },
+  "ellV_x_common_normal": {
+   "n_samples": 10,
+   "nz_cell": 0,
+   "r_cell": 0
+  },
+  "generic_Pplus_x_Wm": {
+   "n_samples": 10,
+   "nz_cell": 3146,
+   "r_cell": 20
+  }
+ },
+ "meta_pass1": {
+  "n_func_raw": 96,
+  "n_samples": 48
+ },
+ "n_func_orbit": 3564,
+ "n_func_rep_sat": 264,
+ "note": "Even d: no six-flip cut; minus-line band on but no new pos-dim cross-band locus. Same L1 ell_V gluing as d=35.",
+ "p": 661,
+ "rank_full_orbit_55": 0,
+ "rank_rep_pass1": 0,
+ "rank_rep_saturated": 0,
+ "rep_v4_involutions": [
+  1,
+  385,
+  454
+ ],
+ "rigidity_slice_bad": 0,
+ "rigidity_slice_checks": 5670,
+ "saturation_ok": true,
+ "seconds": 61.429441928863525
+}

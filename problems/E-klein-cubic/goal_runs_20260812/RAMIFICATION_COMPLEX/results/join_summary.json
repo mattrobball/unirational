@@ -1,0 +1,111 @@
+{
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "J_sealed": [
+  11594,
+  1408,
+  2018,
+  10752,
+  1596,
+  1264
+ ],
+ "K_sealed": [
+  11068,
+  1178,
+  1512,
+  6216,
+  1344,
+  756
+ ],
+ "per_class": [
+  {
+   "d_mod6": 0,
+   "J_sealed": 11594,
+   "K_sealed": 11068,
+   "J_ram": 11594,
+   "cut": 0,
+   "immune_live_product": 1100753141760000,
+   "immune_all_product": 1100753141760000,
+   "ratio_num": 1100753141760000,
+   "ratio_den": 1100753141760000,
+   "killed_rows": [],
+   "zero": false,
+   "FLAG_zero": null
+  },
+  {
+   "d_mod6": 1,
+   "J_sealed": 1408,
+   "K_sealed": 1178,
+   "J_ram": 1408,
+   "cut": 0,
+   "immune_live_product": 1100753141760000,
+   "immune_all_product": 1100753141760000,
+   "ratio_num": 1100753141760000,
+   "ratio_den": 1100753141760000,
+   "killed_rows": [],
+   "zero": false,
+   "FLAG_zero": null
+  },
+  {
+   "d_mod6": 2,
+   "J_sealed": 2018,
+   "K_sealed": 1512,
+   "J_ram": 2018,
+   "cut": 0,
+   "immune_live_product": 1100753141760000,
+   "immune_all_product": 1100753141760000,
+   "ratio_num": 1100753141760000,
+   "ratio_den": 1100753141760000,
+   "killed_rows": [],
+   "zero": false,
+   "FLAG_zero": null
+  },
+  {
+   "d_mod6": 3,
+   "J_sealed": 10752,
+   "K_sealed": 6216,
+   "J_ram": 10752,
+   "cut": 0,
+   "immune_live_product": 1100753141760000,
+   "immune_all_product": 1100753141760000,
+   "ratio_num": 1100753141760000,
+   "ratio_den": 1100753141760000,
+   "killed_rows": [],
+   "zero": false,
+   "FLAG_zero": null
+  },
+  {
+   "d_mod6": 4,
+   "J_sealed": 1596,
+   "K_sealed": 1344,
+   "J_ram": 1596,
+   "cut": 0,
+   "immune_live_product": 1100753141760000,
+   "immune_all_product": 1100753141760000,
+   "ratio_num": 1100753141760000,
+   "ratio_den": 1100753141760000,
+   "killed_rows": [],
+   "zero": false,
+   "FLAG_zero": null
+  },
+  {
+   "d_mod6": 5,
+   "J_sealed": 1264,
+   "K_sealed": 756,
+   "J_ram": 1264,
+   "cut": 0,
+   "immune_live_product": 1100753141760000,
+   "immune_all_product": 1100753141760000,
+   "ratio_num": 1100753141760000,
+   "ratio_den": 1100753141760000,
+   "killed_rows": [],
+   "zero": false,
+   "FLAG_zero": null
+  }
+ ],
+ "zeros": [],
+ "any_zero": false,
+ "structural_dead_rows": [],
+ "ramification_free": true,
+ "anchor_J_reproduced": true,
+ "note": "J_ram is the sealed J census multiplied by the surviving fraction of immune-row value options under the tuple-level weight rule per residue mod 6.  Sweep-band values have no degree-free kill (Stage-1 already character-filters them). No STAGE2 map-level pinning is re-imposed."
+}

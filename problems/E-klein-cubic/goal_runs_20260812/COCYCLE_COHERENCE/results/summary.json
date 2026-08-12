@@ -1,0 +1,139 @@
+{
+  "headline": "Problem E remains OPEN; this packet excludes no degree.",
+  "verdict": "COCYCLE-ALREADY-IMPLIED",
+  "primes": [
+    331,
+    661
+  ],
+  "n_orbit_edges": {
+    "331": 145,
+    "661": 145
+  },
+  "n_triangles": {
+    "331": 66,
+    "661": 66
+  },
+  "n_missing_direct": {
+    "331": 0,
+    "661": 0
+  },
+  "bfs_fail": {
+    "331": 0,
+    "661": 0
+  },
+  "geo_fail": {
+    "331": 0,
+    "661": 0
+  },
+  "eval_arc_fail": {
+    "331": 0,
+    "661": 0
+  },
+  "core_solutions": {
+    "331": 43008,
+    "661": 43008
+  },
+  "triangle_layer_size": 0,
+  "J_sealed": [
+    11594,
+    1408,
+    2018,
+    10752,
+    1596,
+    1264
+  ],
+  "K_sealed": [
+    11068,
+    1178,
+    1512,
+    6216,
+    1344,
+    756
+  ],
+  "J_before": [
+    11594,
+    1408,
+    2018,
+    10752,
+    1596,
+    1264
+  ],
+  "J_after": [
+    11594,
+    1408,
+    2018,
+    10752,
+    1596,
+    1264
+  ],
+  "cut_per_residue": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "per_class": [
+    {
+      "d_mod6": 0,
+      "J_before": 11594,
+      "J_after": 11594,
+      "cut": 0,
+      "zero": false
+    },
+    {
+      "d_mod6": 1,
+      "J_before": 1408,
+      "J_after": 1408,
+      "cut": 0,
+      "zero": false
+    },
+    {
+      "d_mod6": 2,
+      "J_before": 2018,
+      "J_after": 2018,
+      "cut": 0,
+      "zero": false
+    },
+    {
+      "d_mod6": 3,
+      "J_before": 10752,
+      "J_after": 10752,
+      "cut": 0,
+      "zero": false
+    },
+    {
+      "d_mod6": 4,
+      "J_before": 1596,
+      "J_after": 1596,
+      "cut": 0,
+      "zero": false
+    },
+    {
+      "d_mod6": 5,
+      "J_before": 1264,
+      "J_after": 1264,
+      "cut": 0,
+      "zero": false
+    }
+  ],
+  "d35": {
+    "residue": 5,
+    "J_before": 1264,
+    "J_after": 1264,
+    "cut": 0,
+    "anchor_22": "unchanged",
+    "dead_1242_bookkeeping": "unchanged",
+    "note": "triangle layer already implied; no re-sieve"
+  },
+  "any_zero": false,
+  "zeros": [],
+  "cross_prime_agree": true,
+  "exits": [
+    "COCYCLE-ALREADY-IMPLIED",
+    "COCYCLE-NO-DEGREE-EXCLUSION",
+    "COCYCLE-J-IDENTITY",
+    "COCYCLE-D35-UNCHANGED"
+  ]
+}

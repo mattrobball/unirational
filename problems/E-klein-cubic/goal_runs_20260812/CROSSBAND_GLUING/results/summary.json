@@ -1,0 +1,41 @@
+{
+ "cross_prime": {
+  "d35_dead_agree": true,
+  "d35_dim_agree": true,
+  "d35_rank_agree": true,
+  "d36_dim_agree": true,
+  "d36_rank_agree": true
+ },
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "per_prime": {
+  "331": {
+   "d35_dead_22": 0,
+   "d35_dim_after": 37,
+   "d35_flag_all_dead": false,
+   "d35_live_22": 22,
+   "d35_rank": 0,
+   "d35_sat_ok": true,
+   "d36_dim_after": 63,
+   "d36_rank": 0,
+   "d36_sat_ok": true,
+   "inventory_pos_dim_orbits": 1
+  },
+  "661": {
+   "d35_dead_22": 0,
+   "d35_dim_after": 37,
+   "d35_flag_all_dead": false,
+   "d35_live_22": 22,
+   "d35_rank": 0,
+   "d35_sat_ok": true,
+   "d36_dim_after": 63,
+   "d36_rank": 0,
+   "d36_sat_ok": true,
+   "inventory_pos_dim_orbits": 1
+  }
+ },
+ "primes": [
+  331,
+  661
+ ],
+ "seconds_total": 241.63600325584412
+}

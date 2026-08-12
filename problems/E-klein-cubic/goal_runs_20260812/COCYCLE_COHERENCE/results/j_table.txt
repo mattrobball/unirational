@@ -1,0 +1,10 @@
+residue  J_before  J_after  cut
+      0     11594    11594    0
+      1      1408     1408    0
+      2      2018     2018    0
+      3     10752    10752    0
+      4      1596     1596    0
+      5      1264     1264    0
+
+verdict: COCYCLE-ALREADY-IMPLIED
+triangle_layer_size: 0

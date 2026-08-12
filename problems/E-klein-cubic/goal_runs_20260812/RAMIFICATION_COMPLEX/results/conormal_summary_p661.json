@@ -1,0 +1,532 @@
+{
+ "p": 661,
+ "n_sweep": 15,
+ "n_immune": 22,
+ "n_tabulated": 37,
+ "per_row": [
+  {
+   "id": 1,
+   "role": "sweep",
+   "K": "C2",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 1,
+   "n_live_values": 1,
+   "n_dead_values": 0,
+   "s2_name": null,
+   "chain": "P_sigma"
+  },
+  {
+   "id": 2,
+   "role": "sweep",
+   "K": "C2",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 1,
+   "n_live_values": 1,
+   "n_dead_values": 0,
+   "s2_name": null,
+   "chain": "Lminus_sigma"
+  },
+  {
+   "id": 3,
+   "role": "sweep",
+   "K": "C2",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 3,
+   "n_live_values": 3,
+   "n_dead_values": 0,
+   "s2_name": null,
+   "chain": "pt_C6*"
+  },
+  {
+   "id": 4,
+   "role": "sweep",
+   "K": "C2",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 2,
+   "n_live_values": 2,
+   "n_dead_values": 0,
+   "s2_name": null,
+   "chain": "ell_V"
+  },
+  {
+   "id": 5,
+   "role": "sweep",
+   "K": "C2",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 2,
+   "n_live_values": 2,
+   "n_dead_values": 0,
+   "s2_name": null,
+   "chain": "pt_V4*"
+  },
+  {
+   "id": 6,
+   "role": "sweep",
+   "K": "C2",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 2,
+   "n_live_values": 2,
+   "n_dead_values": 0,
+   "s2_name": null,
+   "chain": "pt_V4*"
+  },
+  {
+   "id": 8,
+   "role": "sweep",
+   "K": "C2",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 1,
+   "n_live_values": 1,
+   "n_dead_values": 0,
+   "s2_name": null,
+   "chain": "pt_D12"
+  },
+  {
+   "id": 9,
+   "role": "sweep",
+   "K": "C2",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 3,
+   "n_live_values": 3,
+   "n_dead_values": 0,
+   "s2_name": null,
+   "chain": "pt_C6"
+  },
+  {
+   "id": 10,
+   "role": "sweep",
+   "K": "C2",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 3,
+   "n_live_values": 3,
+   "n_dead_values": 0,
+   "s2_name": null,
+   "chain": "pt_C6<C3line"
+  },
+  {
+   "id": 11,
+   "role": "sweep",
+   "K": "C2",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 2,
+   "n_live_values": 2,
+   "n_dead_values": 0,
+   "s2_name": null,
+   "chain": "pt_V4*"
+  },
+  {
+   "id": 12,
+   "role": "sweep",
+   "K": "C2",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 2,
+   "n_live_values": 2,
+   "n_dead_values": 0,
+   "s2_name": null,
+   "chain": "pt_A4"
+  },
+  {
+   "id": 13,
+   "role": "sweep",
+   "K": "C2",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 2,
+   "n_live_values": 2,
+   "n_dead_values": 0,
+   "s2_name": null,
+   "chain": "pt_A4"
+  },
+  {
+   "id": 14,
+   "role": "sweep",
+   "K": "C2",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 2,
+   "n_live_values": 2,
+   "n_dead_values": 0,
+   "s2_name": null,
+   "chain": "pt_D12"
+  },
+  {
+   "id": 15,
+   "role": "sweep",
+   "K": "C2",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 2,
+   "n_live_values": 2,
+   "n_dead_values": 0,
+   "s2_name": null,
+   "chain": "pt_D12"
+  },
+  {
+   "id": 16,
+   "role": "sweep",
+   "K": "C2",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 23,
+   "n_live_values": 23,
+   "n_dead_values": 0,
+   "s2_name": null,
+   "chain": "pt_D10"
+  },
+  {
+   "id": 21,
+   "role": "immune",
+   "K": "C3",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 6,
+   "n_live_values": 6,
+   "n_dead_values": 0,
+   "s2_name": "C3/pt_A4(a) dim1 c=1",
+   "chain": "pt_A4"
+  },
+  {
+   "id": 22,
+   "role": "immune",
+   "K": "C3",
+   "n_conormal": 1,
+   "conormal_weights": [
+    2
+   ],
+   "n_value_options": 6,
+   "n_live_values": 6,
+   "n_dead_values": 0,
+   "s2_name": "C3/pt_A4(b) dim1 c=2",
+   "chain": "pt_A4"
+  },
+  {
+   "id": 29,
+   "role": "immune",
+   "K": "C3",
+   "n_conormal": 1,
+   "conormal_weights": [
+    2
+   ],
+   "n_value_options": 6,
+   "n_live_values": 6,
+   "n_dead_values": 0,
+   "s2_name": "C3/pt_A4(a) dim0 c=2",
+   "chain": "pt_A4"
+  },
+  {
+   "id": 30,
+   "role": "immune",
+   "K": "C3",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 6,
+   "n_live_values": 6,
+   "n_dead_values": 0,
+   "s2_name": "C3/pt_A4(b) dim0 c=1",
+   "chain": "pt_A4"
+  },
+  {
+   "id": 31,
+   "role": "immune",
+   "K": "C3",
+   "n_conormal": 2,
+   "conormal_weights": [
+    1,
+    1
+   ],
+   "n_value_options": 6,
+   "n_live_values": 6,
+   "n_dead_values": 0,
+   "s2_name": "C3/pt_A4(a)<ell_V c=(1,1)",
+   "chain": "pt_A4<ell_V"
+  },
+  {
+   "id": 32,
+   "role": "immune",
+   "K": "C3",
+   "n_conormal": 2,
+   "conormal_weights": [
+    1,
+    2
+   ],
+   "n_value_options": 6,
+   "n_live_values": 6,
+   "n_dead_values": 0,
+   "s2_name": "C3/pt_A4(a)<ell_V c=(1,2)",
+   "chain": "pt_A4<ell_V"
+  },
+  {
+   "id": 33,
+   "role": "immune",
+   "K": "C3",
+   "n_conormal": 2,
+   "conormal_weights": [
+    2,
+    2
+   ],
+   "n_value_options": 6,
+   "n_live_values": 6,
+   "n_dead_values": 0,
+   "s2_name": "C3/pt_A4(b)<ell_V c=(2,2)",
+   "chain": "pt_A4<ell_V"
+  },
+  {
+   "id": 34,
+   "role": "immune",
+   "K": "C3",
+   "n_conormal": 2,
+   "conormal_weights": [
+    2,
+    1
+   ],
+   "n_value_options": 6,
+   "n_live_values": 6,
+   "n_dead_values": 0,
+   "s2_name": "C3/pt_A4(b)<ell_V c=(2,1)",
+   "chain": "pt_A4<ell_V"
+  },
+  {
+   "id": 47,
+   "role": "immune",
+   "K": "C5",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 4,
+   "n_live_values": 4,
+   "n_dead_values": 0,
+   "s2_name": "C5/pt_D10 c=1",
+   "chain": "pt_D10"
+  },
+  {
+   "id": 48,
+   "role": "immune",
+   "K": "C5",
+   "n_conormal": 1,
+   "conormal_weights": [
+    2
+   ],
+   "n_value_options": 4,
+   "n_live_values": 4,
+   "n_dead_values": 0,
+   "s2_name": "C5/pt_D10 c=2",
+   "chain": "pt_D10"
+  },
+  {
+   "id": 49,
+   "role": "immune",
+   "K": "C5",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 4,
+   "n_live_values": 4,
+   "n_dead_values": 0,
+   "s2_name": "C5/pt_C5(a) c=1",
+   "chain": "pt_C5*"
+  },
+  {
+   "id": 50,
+   "role": "immune",
+   "K": "C5",
+   "n_conormal": 1,
+   "conormal_weights": [
+    2
+   ],
+   "n_value_options": 4,
+   "n_live_values": 4,
+   "n_dead_values": 0,
+   "s2_name": "C5/pt_C5(a) c=2",
+   "chain": "pt_C5*"
+  },
+  {
+   "id": 51,
+   "role": "immune",
+   "K": "C5",
+   "n_conormal": 1,
+   "conormal_weights": [
+    3
+   ],
+   "n_value_options": 4,
+   "n_live_values": 4,
+   "n_dead_values": 0,
+   "s2_name": "C5/pt_C5(a) c=3",
+   "chain": "pt_C5*"
+  },
+  {
+   "id": 52,
+   "role": "immune",
+   "K": "C5",
+   "n_conormal": 1,
+   "conormal_weights": [
+    4
+   ],
+   "n_value_options": 4,
+   "n_live_values": 4,
+   "n_dead_values": 0,
+   "s2_name": "C5/pt_C5(a) c=4",
+   "chain": "pt_C5*"
+  },
+  {
+   "id": 53,
+   "role": "immune",
+   "K": "C5",
+   "n_conormal": 1,
+   "conormal_weights": [
+    1
+   ],
+   "n_value_options": 4,
+   "n_live_values": 4,
+   "n_dead_values": 0,
+   "s2_name": "C5/pt_C5(b) c=1",
+   "chain": "pt_C5*"
+  },
+  {
+   "id": 54,
+   "role": "immune",
+   "K": "C5",
+   "n_conormal": 1,
+   "conormal_weights": [
+    2
+   ],
+   "n_value_options": 4,
+   "n_live_values": 4,
+   "n_dead_values": 0,
+   "s2_name": "C5/pt_C5(b) c=2",
+   "chain": "pt_C5*"
+  },
+  {
+   "id": 55,
+   "role": "immune",
+   "K": "C5",
+   "n_conormal": 1,
+   "conormal_weights": [
+    3
+   ],
+   "n_value_options": 4,
+   "n_live_values": 4,
+   "n_dead_values": 0,
+   "s2_name": "C5/pt_C5(b) c=3",
+   "chain": "pt_C5*"
+  },
+  {
+   "id": 56,
+   "role": "immune",
+   "K": "C5",
+   "n_conormal": 1,
+   "conormal_weights": [
+    4
+   ],
+   "n_value_options": 4,
+   "n_live_values": 4,
+   "n_dead_values": 0,
+   "s2_name": "C5/pt_C5(b) c=4",
+   "chain": "pt_C5*"
+  },
+  {
+   "id": 76,
+   "role": "immune",
+   "K": "C11",
+   "n_conormal": 1,
+   "conormal_weights": [
+    3
+   ],
+   "n_value_options": 5,
+   "n_live_values": 5,
+   "n_dead_values": 0,
+   "s2_name": "C11/pt_C11 c=3",
+   "chain": "pt_C11*"
+  },
+  {
+   "id": 77,
+   "role": "immune",
+   "K": "C11",
+   "n_conormal": 1,
+   "conormal_weights": [
+    5
+   ],
+   "n_value_options": 5,
+   "n_live_values": 5,
+   "n_dead_values": 0,
+   "s2_name": "C11/pt_C11 c=5",
+   "chain": "pt_C11*"
+  },
+  {
+   "id": 78,
+   "role": "immune",
+   "K": "C11",
+   "n_conormal": 1,
+   "conormal_weights": [
+    6
+   ],
+   "n_value_options": 5,
+   "n_live_values": 5,
+   "n_dead_values": 0,
+   "s2_name": "C11/pt_C11 c=6",
+   "chain": "pt_C11*"
+  },
+  {
+   "id": 79,
+   "role": "immune",
+   "K": "C11",
+   "n_conormal": 1,
+   "conormal_weights": [
+    7
+   ],
+   "n_value_options": 5,
+   "n_live_values": 5,
+   "n_dead_values": 0,
+   "s2_name": "C11/pt_C11 c=7",
+   "chain": "pt_C11*"
+  }
+ ],
+ "total_live_values": 159,
+ "total_dead_values": 0
+}
