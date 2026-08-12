@@ -1857,6 +1857,17 @@
    "char0_scope": "Tuple-level weight rule proved by the Theorem 1.2 equivariance argument (PATH A/B cross-check 1200 cases, 0 mismatches); per-row conormal character tables for all 37 rows; receiver tangent-cone characters at the special points machine-checked at both primes; 159 live value-options, 0 degree-free deaths; join leaves the J census identical at every residue; 22-anchor intact, 0 closed kills.\nNOT claimed: any degree exclusion.",
    "tracked": true,
    "notes": "Morphism layer L8 spent with no cut at order 0; the tables themselves are reusable sealed data for the realization layer. Headline: Problem E remains OPEN."
+  },
+  {
+   "path": "goal_runs_20260812/SMITH_I3",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "mid-tier execution against the director-pinned DATA_SPEC (calibration anchors exact, flag-and-stop); Fable hostile referee (REFEREE_REPORT.md, spot-checks green); director-replayed 95/95 ALLGREEN; two referee corrections adopted with no numeric change",
+   "primary_exit": "SMITH-I3-ORDERS-11-5-CLOSED",
+   "superseded_by": null,
+   "char0_scope": "I3: every nonzero G-covariant is SL(5)-semistable (Kempf uniqueness vs irreducibility of W; packet-grade proof; Gordan/convexity test with exact simplex certificates, both calibration anchors pass). Verdict SUBSUMED in the current pipeline (every tested object is a Reynolds image; 8 locations verified); non-vacuous residual recorded (C11-eigenbasis level tests) for pre-symmetrization consumers.\nF2/F3 (Smith congruences): order 11 CLOSED -- n_x = 4 at all five C11-points, chi(fiber) = 4 mod 11, the five fiber chi's outright EQUAL (chi-form lemma, corrected per referee: read on Z from the census, residual C5 transitivity), F3 closes 5x4 = 20; order 5 CLOSED -- chi = 0 mod 5, F3 closes 4x5 = 20; order 2: E-branch closed (rationality + Lueroth) with the named sigma-fixed-irrational escape, L-branch parametric widened by unforced dominating rows per referee; order 3 parametric (census gives no chi(Z^{C3}) pin). Menus: no cell-to-menu linkage exists; all results per (cell, menu entry) with orders 11/5 constant across the whole menu; menu factorization exact (36,252,160; x22 = 797,547,520). Spec errata (director's): shared sigma-band group per prime, not unique; field names content_hash/sealed_hash.\nNOT claimed: any degree exclusion; no zero anywhere (wired check).",
+   "tracked": true,
+   "notes": "The first realization-layer constraints wired to the pattern census: the order-11 and order-5 fiber Euler congruences now bind every future fiber-structure claim at the C11/C5 points, for every cell and every menu entry. Headline: Problem E remains OPEN; this packet excludes no degree. Markers: SMITH_I3_VERIFY_OK, ALLGREEN (95 checks; director- and referee-replayed)."
   }
  ]
 }

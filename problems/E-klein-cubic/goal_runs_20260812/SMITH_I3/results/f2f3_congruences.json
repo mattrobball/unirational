@@ -1,0 +1,2325 @@
+{
+ "cells": [
+  {
+   "cell_id": 5,
+   "content_hash_p331": "1c9110f65f5bbba3",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 7,
+   "content_hash_p331": "3150d84bef191573",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 13,
+   "content_hash_p331": "3618971b26ff55c3",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 15,
+   "content_hash_p331": "3f5a2ac32819ba6f",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 21,
+   "content_hash_p331": "4719753a11bf778e",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 23,
+   "content_hash_p331": "5a83d267319fa23e",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 29,
+   "content_hash_p331": "60e0986d49bee8f8",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 31,
+   "content_hash_p331": "6250d74a687cb983",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 37,
+   "content_hash_p331": "6d86d9d5001c7e2e",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 39,
+   "content_hash_p331": "936cc3c107447118",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 45,
+   "content_hash_p331": "9b53e234676b5956",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 47,
+   "content_hash_p331": "a604f5628e9236ba",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 53,
+   "content_hash_p331": "b55e098db7f81575",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 55,
+   "content_hash_p331": "bbb7766320c5cd5a",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 61,
+   "content_hash_p331": "c1aa082c6d18a709",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 63,
+   "content_hash_p331": "cc5dcc73af916c94",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 69,
+   "content_hash_p331": "cda89047957f1b38",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 71,
+   "content_hash_p331": "d0d84b4f9163e092",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 697,
+   "content_hash_p331": "db1cfded50b57ffb",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 699,
+   "content_hash_p331": "f3d6a4eaa956f29f",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 701,
+   "content_hash_p331": "f728b33a2e34714b",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  },
+  {
+   "cell_id": 703,
+   "content_hash_p331": "fcf626911737b157",
+   "menu_admissible": "FULL (36252160 entries)",
+   "order11": {
+    "constant_over_menu": true,
+    "free_multiplicity": 3625216,
+    "menu_entries_covered": 10,
+    "n_x": 4,
+    "residue_mod_11": 4
+   },
+   "order2": {
+    "constant_over_menu": true,
+    "note": "the sigma-band pattern is identical for all 22 cells, so the order-2 reading is too",
+    "status": "E^X_sigma branch CLOSED (== 0 mod 2); L^X_sigma branch PARAMETRIC"
+   },
+   "order3": {
+    "free_multiplicity": 640,
+    "menu_entries_covered": 56644,
+    "status": "PARAMETRIC"
+   },
+   "order5": {
+    "constant_over_menu": true,
+    "free_multiplicity": 566440,
+    "menu_entries_covered": 64,
+    "n_x": {
+     "1": 5,
+     "2": 5,
+     "3": 5,
+     "4": 5
+    },
+    "residue_mod_5": 0
+   },
+   "sigma_band": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   }
+  }
+ ],
+ "d": 35,
+ "menu": {
+  "F_odd_35": 36252160,
+  "factors": {
+   "A4a": 238,
+   "A4b": 238,
+   "C11": 10,
+   "C5a": 4,
+   "C5b": 4,
+   "D10": 4
+  },
+  "linkage": "NOT DETERMINED BY THE FILES -- full menu admissible"
+ },
+ "n_cell_menu_pairs": 797547520,
+ "n_cells": 22,
+ "orders": {
+  "11": {
+   "F2": "chi(q^{-1}(x)) == n_x (mod 11), the SAME residue at all five points; on Z the residue is 4",
+   "F3": "chi(Ztilde^{C11}) = sum_{x in X^{C11}} n_x = 5*n_x; on Z this is 5*4 = 20, matching the census exactly",
+   "menu": [
+    {
+     "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+     "mu": 1,
+     "n_defined_rows": 2,
+     "n_x": 4,
+     "vector": [
+      "UNDEF",
+      "eigpt(w=1)",
+      "UNDEF",
+      "eigpt(w=3)"
+     ]
+    },
+    {
+     "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+     "mu": 2,
+     "n_defined_rows": 0,
+     "n_x": 4,
+     "vector": [
+      "UNDEF",
+      "UNDEF",
+      "UNDEF",
+      "UNDEF"
+     ]
+    },
+    {
+     "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+     "mu": 3,
+     "n_defined_rows": 2,
+     "n_x": 4,
+     "vector": [
+      "eigpt(w=5)",
+      "UNDEF",
+      "eigpt(w=3)",
+      "UNDEF"
+     ]
+    },
+    {
+     "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+     "mu": 4,
+     "n_defined_rows": 2,
+     "n_x": 4,
+     "vector": [
+      "UNDEF",
+      "eigpt(w=5)",
+      "eigpt(w=9)",
+      "UNDEF"
+     ]
+    },
+    {
+     "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+     "mu": 5,
+     "n_defined_rows": 2,
+     "n_x": 4,
+     "vector": [
+      "UNDEF",
+      "UNDEF",
+      "eigpt(w=4)",
+      "eigpt(w=9)"
+     ]
+    },
+    {
+     "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+     "mu": 6,
+     "n_defined_rows": 3,
+     "n_x": 4,
+     "vector": [
+      "eigpt(w=3)",
+      "eigpt(w=4)",
+      "UNDEF",
+      "eigpt(w=5)"
+     ]
+    },
+    {
+     "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+     "mu": 7,
+     "n_defined_rows": 3,
+     "n_x": 4,
+     "vector": [
+      "UNDEF",
+      "eigpt(w=9)",
+      "eigpt(w=5)",
+      "eigpt(w=1)"
+     ]
+    },
+    {
+     "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+     "mu": 8,
+     "n_defined_rows": 2,
+     "n_x": 4,
+     "vector": [
+      "eigpt(w=9)",
+      "eigpt(w=3)",
+      "UNDEF",
+      "UNDEF"
+     ]
+    },
+    {
+     "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+     "mu": 9,
+     "n_defined_rows": 2,
+     "n_x": 4,
+     "vector": [
+      "eigpt(w=1)",
+      "UNDEF",
+      "UNDEF",
+      "eigpt(w=4)"
+     ]
+    },
+    {
+     "congruence": "chi(q^{-1}(x)) == 4 (mod 11) for all x in X^{C11}",
+     "mu": 10,
+     "n_defined_rows": 2,
+     "n_x": 4,
+     "vector": [
+      "eigpt(w=4)",
+      "UNDEF",
+      "eigpt(w=1)",
+      "UNDEF"
+     ]
+    }
+   ],
+   "menu_size": 10,
+   "n_defined_rows_range": [
+    0,
+    3
+   ],
+   "n_x_on_Z": 4,
+   "order": 11,
+   "receiver": {
+    "X^g": "5 isolated points",
+    "chi": 5
+   },
+   "refinement": "on a further equivariant model, #Ztilde^{C11} = 20 + Delta with 5 | Delta and n_x = 4 + Delta/5; the five congruences stay equal to each other for every Delta",
+   "residual_C5_transitive_on_X^{C11}": true,
+   "source_census": {
+    "#Z^{C11}": 20,
+    "all dim 0": true
+   }
+  },
+  "2": {
+   "F3": "chi(Ztilde^sigma) = (finite E^X_sigma contribution) + int_{L^X_sigma} chi(fibre^sigma); NOT closable here because the census fixes only the COMPONENT COUNTS of Z^sigma by dimension (146/80/11/2), not the Euler characteristics of the 11 surface and 2 threefold components",
+   "all_strata_rational": true,
+   "branch_E": {
+    "coupling": "such a centre is exactly a G1 Hodge-carrier at the C2 row (Res_{C2} W = 3(+1) (+) 2(-1), cheapest carrying centre g >= 1) -- SCHEME_MAP_CONSEQUENCES sec.3.3 table",
+    "escape": "a sigma-fixed IRRATIONAL stratum of the actual model dominating E^X_sigma; only a non-admissible centre can supply one",
+    "holds_on": "Z and every admissible refinement",
+    "proof": "Lemma R (rationality + Luroth) + Smith at p = 2",
+    "statement": "chi(q^{-1}(x)) == 0 (mod 2) for all but finitely many x in E^X_sigma"
+   },
+   "branch_L": {
+    "dominating_rows": [
+     "D_{P_sigma}",
+     "D_{L'_sigma}",
+     "central-involution line in E_{pt_D12}"
+    ],
+    "parametric": true,
+    "reason_parametric": "no sealed bound at d = 35 pins chi(F_1), chi(F_2) or n_3; C1 of CONSTRAINT_ADDITIONS_20260811.md is a genus IDENTITY package, not a bound",
+    "statement": "chi(q^{-1}(x)) == chi(F_1) + chi(F_2) + n_3 (mod 2) for generic x in L^X_sigma, where F_1, F_2 are the generic fibres of D_{P_sigma} and D_{L'_sigma} over L^X_sigma and n_3 is the degree of the third (1-dimensional) row over L^X_sigma"
+   },
+   "cell_data": {
+    "a35_L_options": [
+     [
+      35,
+      0
+     ]
+    ],
+    "a35_P_options": [
+     [
+      34,
+      1
+     ]
+    ],
+    "group_key": "0bbfc90a9b60",
+    "m_options_L": [
+     35
+    ],
+    "m_options_P": [
+     1
+    ],
+    "max_m": 1,
+    "min_m": 1
+   },
+   "cell_reading": "all 22 live cells carry ord_{L'_sigma}(T) = 0 and ord_{P_sigma}(T) = 1 with m = 1, so the minus-line is NOT in the base locus and the plus-plane carries a simple vanishing; identical across the 22",
+   "chi_X_sigma": 2,
+   "order": 2,
+   "receiver_strata": [
+    {
+     "CM": false,
+     "chi": 0,
+     "j": "8192/11",
+     "name": "E^X_sigma",
+     "type": "smooth plane cubic, genus 1"
+    },
+    {
+     "chi": 2,
+     "name": "L^X_sigma",
+     "type": "line P^1"
+    }
+   ],
+   "source_census_Z_sigma_by_dim": {
+    "0": 146,
+    "1": 80,
+    "2": 11,
+    "3": 2
+   }
+  },
+  "3": {
+   "A4a_rows": [
+    "C3/pt_A4(a) dim1 c=1",
+    "C3/pt_A4(a) dim0 c=2",
+    "C3/pt_A4(a)<ell_V c=(1,1)",
+    "C3/pt_A4(a)<ell_V c=(1,2)"
+   ],
+   "A4a_undef_profile": {
+    "0": 81,
+    "1": 135,
+    "2": 18,
+    "3": 3,
+    "4": 1
+   },
+   "A4b_rows": [
+    "C3/pt_A4(b) dim1 c=2",
+    "C3/pt_A4(b) dim0 c=1",
+    "C3/pt_A4(b)<ell_V c=(2,2)",
+    "C3/pt_A4(b)<ell_V c=(2,1)"
+   ],
+   "A4b_undef_profile": {
+    "0": 81,
+    "1": 135,
+    "2": 18,
+    "3": 3,
+    "4": 1
+   },
+   "F2": "chi(q^{-1}(x)) == chi((q|_{Z^{C3}})^{-1}(x)) (mod 3) at each of the 6 points; the right-hand sides sum to 94 + chi(S_1) + chi(S_2) and are otherwise free",
+   "blocker": "chi of the 2 two-dimensional components of Z^{C3} is not pinned by the census (component counts by dimension only); with the 62 points and the 16 rational curves this gives chi(Z^{C3}) = 62 + 32 + chi(S_1) + chi(S_2) = 94 + chi(S_1) + chi(S_2), chi(S_i) >= 3",
+   "joint_defined_profile": {
+    "0,0": 1,
+    "0,1": 3,
+    "0,2": 18,
+    "0,3": 135,
+    "0,4": 81,
+    "1,0": 3,
+    "1,1": 9,
+    "1,2": 54,
+    "1,3": 405,
+    "1,4": 243,
+    "2,0": 18,
+    "2,1": 54,
+    "2,2": 324,
+    "2,3": 2430,
+    "2,4": 1458,
+    "3,0": 135,
+    "3,1": 405,
+    "3,2": 2430,
+    "3,3": 18225,
+    "3,4": 10935,
+    "4,0": 81,
+    "4,1": 243,
+    "4,2": 1458,
+    "4,3": 10935,
+    "4,4": 6561
+   },
+   "menu_factors_used": [
+    "A4a",
+    "A4b"
+   ],
+   "menu_size": 56644,
+   "order": 3,
+   "receiver": {
+    "X^g": "6 isolated points (2 eigenlines x 3 points)",
+    "chi": 6,
+    "off_X": "the weight-0 isolated D12-point"
+   },
+   "receiver_labels_named": [
+    "C6pt(w=1)",
+    "C6pt(w=2)",
+    "exactC3_1(w=1)",
+    "exactC3_1(w=2)",
+    "exactC3_2(w=1)",
+    "exactC3_2(w=2)"
+   ],
+   "source_census_Z_C3_by_dim": {
+    "0": 62,
+    "1": 16,
+    "2": 2
+   },
+   "status": "PARAMETRIC"
+  },
+  "5": {
+   "F2": "chi(q^{-1}(x)) == 5 == 0 (mod 5) at every one of the four C5-fixed points of X, for EVERY menu entry",
+   "F3": "chi(Ztilde^{C5}) = sum_{x in X^{C5}} n_x; on Z this is 4*5 = 20, matching the census exactly",
+   "menu": [
+    {
+     "mu_C5a": 1,
+     "mu_C5b": 1,
+     "mu_D10": 1,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 1,
+     "mu_C5b": 1,
+     "mu_D10": 2,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 1,
+     "mu_C5b": 1,
+     "mu_D10": 3,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 1,
+     "mu_C5b": 1,
+     "mu_D10": 4,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 1,
+     "mu_C5b": 2,
+     "mu_D10": 1,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 1,
+     "mu_C5b": 2,
+     "mu_D10": 2,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 1,
+     "mu_C5b": 2,
+     "mu_D10": 3,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 1,
+     "mu_C5b": 2,
+     "mu_D10": 4,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 1,
+     "mu_C5b": 3,
+     "mu_D10": 1,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 1,
+     "mu_C5b": 3,
+     "mu_D10": 2,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 1,
+     "mu_C5b": 3,
+     "mu_D10": 3,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 1,
+     "mu_C5b": 3,
+     "mu_D10": 4,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 1,
+     "mu_C5b": 4,
+     "mu_D10": 1,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 1,
+     "mu_C5b": 4,
+     "mu_D10": 2,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 1,
+     "mu_C5b": 4,
+     "mu_D10": 3,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 1,
+     "mu_C5b": 4,
+     "mu_D10": 4,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 2,
+     "mu_C5b": 1,
+     "mu_D10": 1,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 2,
+     "mu_C5b": 1,
+     "mu_D10": 2,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 2,
+     "mu_C5b": 1,
+     "mu_D10": 3,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 2,
+     "mu_C5b": 1,
+     "mu_D10": 4,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 2,
+     "mu_C5b": 2,
+     "mu_D10": 1,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 2,
+     "mu_C5b": 2,
+     "mu_D10": 2,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 2,
+     "mu_C5b": 2,
+     "mu_D10": 3,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 2,
+     "mu_C5b": 2,
+     "mu_D10": 4,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 2,
+     "mu_C5b": 3,
+     "mu_D10": 1,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 2,
+     "mu_C5b": 3,
+     "mu_D10": 2,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 2,
+     "mu_C5b": 3,
+     "mu_D10": 3,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 2,
+     "mu_C5b": 3,
+     "mu_D10": 4,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 2,
+     "mu_C5b": 4,
+     "mu_D10": 1,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 2,
+     "mu_C5b": 4,
+     "mu_D10": 2,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 2,
+     "mu_C5b": 4,
+     "mu_D10": 3,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 2,
+     "mu_C5b": 4,
+     "mu_D10": 4,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 3,
+     "mu_C5b": 1,
+     "mu_D10": 1,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 3,
+     "mu_C5b": 1,
+     "mu_D10": 2,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 3,
+     "mu_C5b": 1,
+     "mu_D10": 3,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 3,
+     "mu_C5b": 1,
+     "mu_D10": 4,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 3,
+     "mu_C5b": 2,
+     "mu_D10": 1,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 3,
+     "mu_C5b": 2,
+     "mu_D10": 2,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 3,
+     "mu_C5b": 2,
+     "mu_D10": 3,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 3,
+     "mu_C5b": 2,
+     "mu_D10": 4,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 3,
+     "mu_C5b": 3,
+     "mu_D10": 1,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 3,
+     "mu_C5b": 3,
+     "mu_D10": 2,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 3,
+     "mu_C5b": 3,
+     "mu_D10": 3,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 3,
+     "mu_C5b": 3,
+     "mu_D10": 4,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 3,
+     "mu_C5b": 4,
+     "mu_D10": 1,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 3,
+     "mu_C5b": 4,
+     "mu_D10": 2,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 3,
+     "mu_C5b": 4,
+     "mu_D10": 3,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 3,
+     "mu_C5b": 4,
+     "mu_D10": 4,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 4,
+     "mu_C5b": 1,
+     "mu_D10": 1,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 4,
+     "mu_C5b": 1,
+     "mu_D10": 2,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 4,
+     "mu_C5b": 1,
+     "mu_D10": 3,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 4,
+     "mu_C5b": 1,
+     "mu_D10": 4,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 4,
+     "mu_C5b": 2,
+     "mu_D10": 1,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 4,
+     "mu_C5b": 2,
+     "mu_D10": 2,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 4,
+     "mu_C5b": 2,
+     "mu_D10": 3,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 4,
+     "mu_C5b": 2,
+     "mu_D10": 4,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 4,
+     "mu_C5b": 3,
+     "mu_D10": 1,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 4,
+     "mu_C5b": 3,
+     "mu_D10": 2,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 4,
+     "mu_C5b": 3,
+     "mu_D10": 3,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 4,
+     "mu_C5b": 3,
+     "mu_D10": 4,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 4,
+     "mu_C5b": 4,
+     "mu_D10": 1,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 4,
+     "mu_C5b": 4,
+     "mu_D10": 2,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 4,
+     "mu_C5b": 4,
+     "mu_D10": 3,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    },
+    {
+     "mu_C5a": 4,
+     "mu_C5b": 4,
+     "mu_D10": 4,
+     "n_x": {
+      "1": 5,
+      "2": 5,
+      "3": 5,
+      "4": 5
+     }
+    }
+   ],
+   "menu_factors_used": [
+    "C5a",
+    "C5b",
+    "D10"
+   ],
+   "menu_size": 64,
+   "n_x": {
+    "1": 5,
+    "2": 5,
+    "3": 5,
+    "4": 5
+   },
+   "order": 5,
+   "receiver": {
+    "X^g": "4 isolated points (weights 1,2,3,4)",
+    "chi": 4,
+    "off_X": "the weight-0 D10-point"
+   },
+   "residual_C2_orbits_on_X^{C5}": [
+    [
+     1,
+     4
+    ],
+    [
+     2,
+     3
+    ]
+   ],
+   "source_census": {
+    "#Z^{C5}": 20,
+    "all dim 0": true
+   },
+   "sum_check": 20,
+   "uniform_across_menu": true
+  },
+  "6": {
+   "F3": "chi(Z^{C6}) = 2 * 19 = 38, matching the census exactly",
+   "n_x": 19,
+   "note": "recorded as an F3 consistency row only; no mod-p claim",
+   "order": 6,
+   "receiver": {
+    "X^g": "2 isolated points (weights 1, 5)",
+    "chi": 2
+   },
+   "smith_applies": false,
+   "source_census": {
+    "#Z^{C6}": 38
+   }
+  }
+ }
+}

@@ -91,3 +91,11 @@ receiver/census constant consumed as group B; the congruence evaluations
 as group C); honesty tiering; exits `SMITH-I3-*`; "Not claimed". Any
 zero/all-dead outcome: FLAG behind an ODDZERO-standard audit. A Fable
 referee pass follows delivery; write for that referee.
+
+## Errata (2026-08-12, director — found by the executor, confirmed)
+
+1. §2 said each cell's σ-band pattern is unique. WRONG: the 22 share one
+   σ-band group per prime (prime-dependent labels; e.g. `0bbfc90a9b60`
+   at p = 331); uniqueness holds only at the content-hash level.
+2. §2 named a field `sol_hash`. The fields are `content_hash` and
+   `sealed_hash`.

@@ -35,8 +35,8 @@ never been machine-spent, and L12 is the first layer that is GLOBAL —
 no failure of it can be localized to a stratum.
 | L13 | Stein / branch divisor | disconnected fibers cost a G-invariant branch divisor on `X` of degree ≥ 5 (machine: X-invariant divisor degrees are exactly k ≥ 5) | UNSPENT (`SCHEME_MAP_CONSEQUENCES` J1–J2) |
 | L14 | coherent-pushforward vanishing | Leray constraints on `R^iq_*O` over pinned strata | UNSPENT (J3) |
-| L15 | Smith mod-p shadow of L12 | fiberwise `χ ≡ χ^{C_p} (mod p)`: twist-free, lift-free, connectedness-free; the right first machine target | UNSPENT (F2/F3) |
-| L16 | semistability/support prefilter | every nonzero covariant is SL(5)-semistable — free compiler-level cut | UNSPENT (I3) |
+| L15 | Smith mod-p shadow of L12 | fiberwise `χ ≡ χ^{C_p} (mod p)` | SPENT-PARTIAL (`goal_runs_20260812/SMITH_I3`, refereed): orders 11 and 5 CLOSED (`≡ 4 mod 11` with equality of the five fiber χ's; `≡ 0 mod 5`); order 2 dichotomy (E-branch closed); order 3 parametric |
+| L16 | semistability/support prefilter | every nonzero covariant is SL(5)-semistable | SPENT: SUBSUMED (every tested object is a Reynolds image; theorem packet-grade in `SMITH_I3`; non-vacuous residual recorded for pre-symmetrization consumers) |
 
 Source of L13–L16 and the L10 spec: the clean-context consequence
 extraction `theory/SCHEME_MAP_CONSEQUENCES_20260812.md` (40 items, 11

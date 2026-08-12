@@ -1,0 +1,579 @@
+{
+ "all_pass": true,
+ "checks": [
+  {
+   "detail": "expected SEMISTABLE got SEMISTABLE, d=4, |supp|=25",
+   "group": "A",
+   "name": "A1_anchor_i_F_times_x_is_SEMISTABLE",
+   "pass": true
+  },
+  {
+   "detail": "sum(lambda)=1, combination=['3/5', '3/5', '3/5', '3/5', '3/5'], target=3/5",
+   "group": "A",
+   "name": "A2_anchor_i_convex_certificate_hits_barycentre",
+   "pass": true
+  },
+  {
+   "detail": "expected UNSTABLE got UNSTABLE at d=35",
+   "group": "A",
+   "name": "A3_anchor_ii_x0d_e0_is_UNSTABLE",
+   "pass": true
+  },
+  {
+   "detail": "weights under the pinned 1-PS: [136]",
+   "group": "A",
+   "name": "A4_anchor_ii_pinned_destabiliser_(4,-1,-1,-1,-1)_works",
+   "pass": true
+  },
+  {
+   "detail": "found [4, -1, -1, -1, -1], min weight 136",
+   "group": "A",
+   "name": "A5_anchor_ii_found_destabiliser_matches_the_pinned_one",
+   "pass": true
+  },
+  {
+   "detail": "verdict is not an artefact of the degree",
+   "group": "A",
+   "name": "A6_anchor_ii_also_UNSTABLE_at_d=4",
+   "pass": true
+  },
+  {
+   "detail": "sum(r) = 0",
+   "group": "A",
+   "name": "A7_one_PS_is_traceless",
+   "pass": true
+  },
+  {
+   "detail": "weight(x_0^35 e_0) = 140 - 4 = 136",
+   "group": "A",
+   "name": "A8_weight_formula_is_<r,alpha>-r_c",
+   "pass": true
+  },
+  {
+   "detail": "[(2, 1, 0, 0, 0), (0, 2, 1, 0, 0), (0, 0, 2, 1, 0), (0, 0, 0, 2, 1), (1, 0, 0, 0, 2)]",
+   "group": "A",
+   "name": "A9_F_monomials_are_x_i^2_x_(i+1)",
+   "pass": true
+  },
+  {
+   "detail": "gate for every later use of the test",
+   "group": "A",
+   "name": "A10_all_anchors_pass",
+   "pass": true
+  },
+  {
+   "detail": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260810/RECEIVER_LEDGER_X/results/ledger_exact.json",
+   "group": "B",
+   "name": "B1_receiver_ledger_present",
+   "pass": true
+  },
+  {
+   "detail": "sealed self-report all_pass",
+   "group": "B",
+   "name": "B2_receiver_ledger_all_pass",
+   "pass": true
+  },
+  {
+   "detail": "from ledger rows: {11: 5, 5: 4, 6: 2, 3: 6} ; constants: {11: 5, 5: 4, 6: 2, 3: 6}",
+   "group": "B",
+   "name": "B3_X_fixed_point_counts_match_CHI_X_FIXED",
+   "pass": true
+  },
+  {
+   "detail": "ledger (1, 3, 4, 5, 9) vs constants (1, 3, 4, 5, 9)",
+   "group": "B",
+   "name": "B4_C11_weights_read_from_ledger",
+   "pass": true
+  },
+  {
+   "detail": "ledger [1, 2, 3, 4] vs constants [1, 2, 3, 4]",
+   "group": "B",
+   "name": "B5_on_X_weights_order5",
+   "pass": true
+  },
+  {
+   "detail": "ledger [1, 3, 4, 5, 9]",
+   "group": "B",
+   "name": "B6_on_X_weights_order11",
+   "pass": true
+  },
+  {
+   "detail": "[2, 0, 3, 4, 1]",
+   "group": "B",
+   "name": "B7_residual_C5_permutation",
+   "pass": true
+  },
+  {
+   "detail": "[0, 4, 3, 2, 1]",
+   "group": "B",
+   "name": "B8_C5_reflection_permutation",
+   "pass": true
+  },
+  {
+   "detail": "orbit of point 0 has size 5",
+   "group": "B",
+   "name": "B9_residual_C5_transitive_on_X_C11",
+   "pass": true
+  },
+  {
+   "detail": "[[1, 4], [2, 3]]",
+   "group": "B",
+   "name": "B10_residual_C2_on_X_C5_has_two_orbits",
+   "pass": true
+  },
+  {
+   "detail": "PSL(2,11): 12 Sylow-11 and 66 Sylow-5 subgroups (ledger nconj)",
+   "group": "B",
+   "name": "B10a_subgroup_counts_C11_12_and_C5_66",
+   "pass": true
+  },
+  {
+   "detail": "C11: 4 rows x 60/12 = 4 x 5 = 20;  C5: 10 rows x 132/66 = 10 x 2 = 20",
+   "group": "B",
+   "name": "B10b_row_arithmetic_reproduces_the_census",
+   "pass": true
+  },
+  {
+   "detail": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260810/RECEIVER_LEDGER_X/THEOREM.md",
+   "group": "B",
+   "name": "B11_receiver_THEOREM_present",
+   "pass": true
+  },
+  {
+   "detail": "sec.6.1 topological-Lefschetz table",
+   "group": "B",
+   "name": "B12_chi_X_table_line_present_verbatim",
+   "pass": true
+  },
+  {
+   "detail": "the order-2 split 0 + 2",
+   "group": "B",
+   "name": "B13_chi_E_sigma_plus_chi_L_sigma_line_present",
+   "pass": true
+  },
+  {
+   "detail": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260810/TERMINUS_STRATA_PW/results/t2_strata.txt",
+   "group": "B",
+   "name": "B14_census_file_present",
+   "pass": true
+  },
+  {
+   "detail": "24 'pt_C11' rows across the stage/prime blocks, every one dim 0, #comp 60, #/fixedK 5; OCCURS line gives 4 G-orbits and 240 components => 4 x 5 = 20 points of Z^{C11} for one fixed C11",
+   "group": "B",
+   "name": "B15_census_C11_rows_are_dim0_60_comp_5_per_fixed_C11",
+   "pass": true
+  },
+  {
+   "detail": "{0: 20}",
+   "group": "B",
+   "name": "B16_census_Z_fixed_by_dim_C11",
+   "pass": true
+  },
+  {
+   "detail": "C2: {0: 146, 1: 80, 2: 11, 3: 2} sums to 239",
+   "group": "B",
+   "name": "B17_C2_dim_breakdown_sums_to_component_count",
+   "pass": true
+  },
+  {
+   "detail": "C3: {0: 62, 1: 16, 2: 2} sums to 80",
+   "group": "B",
+   "name": "B17_C3_dim_breakdown_sums_to_component_count",
+   "pass": true
+  },
+  {
+   "detail": "V4: {0: 36, 1: 18} sums to 54",
+   "group": "B",
+   "name": "B17_V4_dim_breakdown_sums_to_component_count",
+   "pass": true
+  },
+  {
+   "detail": "C5: {0: 20} sums to 20",
+   "group": "B",
+   "name": "B17_C5_dim_breakdown_sums_to_component_count",
+   "pass": true
+  },
+  {
+   "detail": "C6: {0: 38} sums to 38",
+   "group": "B",
+   "name": "B17_C6_dim_breakdown_sums_to_component_count",
+   "pass": true
+  },
+  {
+   "detail": "C11: {0: 20} sums to 20",
+   "group": "B",
+   "name": "B17_C11_dim_breakdown_sums_to_component_count",
+   "pass": true
+  },
+  {
+   "detail": "sec.2 prose",
+   "group": "B",
+   "name": "B18_terminus_20_points_sentence_present",
+   "pass": true
+  },
+  {
+   "detail": "sec.1 corollary -- the input to Lemma R",
+   "group": "B",
+   "name": "B19_every_stratum_rational_present",
+   "pass": true
+  },
+  {
+   "detail": "Theorem 3 (three D12-stabilised rows surject onto L_sigma)",
+   "group": "B",
+   "name": "B20_L_sigma_dominance_theorem_present",
+   "pass": true
+  },
+  {
+   "detail": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260811/GLOBAL_COHERENCE/results/vectors_d35.json",
+   "group": "B",
+   "name": "B21_menu_file_present",
+   "pass": true
+  },
+  {
+   "detail": "d = 35",
+   "group": "B",
+   "name": "B22_menu_is_for_d_35",
+   "pass": true
+  },
+  {
+   "detail": "{'C11': 10, 'C5a': 4, 'C5b': 4, 'D10': 4, 'A4a': 238, 'A4b': 238}",
+   "group": "B",
+   "name": "B23_menu_factors_match",
+   "pass": true
+  },
+  {
+   "detail": "36252160",
+   "group": "B",
+   "name": "B24_menu_product_equals_F_odd_35",
+   "pass": true
+  },
+  {
+   "detail": "10 entries, mu = 1..10 (35 = 2 mod 11 is a non-residue, so mu >= 1)",
+   "group": "B",
+   "name": "B25_C11_menu_rebuilt_from_master_formula",
+   "pass": true
+  },
+  {
+   "detail": "mu = 1..4 each (5 | 35 forces 5 not dividing mu)",
+   "group": "B",
+   "name": "B26_C5a_C5b_D10_menus_rebuilt_from_master_formula",
+   "pass": true
+  },
+  {
+   "detail": "max defined rows over the whole menu = 3 (STAGE2_ODD_ORDER_PINNING Thm 2.1)",
+   "group": "B",
+   "name": "B27_at_most_three_C11_rows_defined_at_d_35",
+   "pass": true
+  },
+  {
+   "detail": "record d_mod_330 = 35: F_odd = 36252160, factors = {'C11': 10, 'C5a': 4, 'C5b': 4, 'D10': 4, 'A4a': 238, 'A4b': 238}, d mod 11 = 2 (non-residue), d mod 5 = 0",
+   "group": "B",
+   "name": "B28_F_odd_counts_record_for_residue_35",
+   "pass": true
+  },
+  {
+   "detail": "/Users/worker/unirational/problems/E-klein-cubic/goal_runs_20260811/D35_AUDIT/results/patterns_r5_content_p331.json",
+   "group": "B",
+   "name": "B29_d35_audit_file_present",
+   "pass": true
+  },
+  {
+   "detail": "756",
+   "group": "B",
+   "name": "B30_n_patterns_756",
+   "pass": true
+  },
+  {
+   "detail": "22 ids",
+   "group": "B",
+   "name": "B31_survivor_ids_match",
+   "pass": true
+  },
+  {
+   "detail": "22 content hashes at p = 331",
+   "group": "B",
+   "name": "B32_survivor_hashes_match",
+   "pass": true
+  },
+  {
+   "detail": "{'formula': '756 = 336 + 398 + 22', 'multidegree_dead_m_ne_1': 336, 'ok': True, 'ord0_L_survivors': 22, 'ord_ge2_L_only': 398, 'total': 756}",
+   "group": "B",
+   "name": "B33_split_formula_756_336_398_22",
+   "pass": true
+  },
+  {
+   "detail": "group_keys among the 22: ['0bbfc90a9b60']  *** SPEC DIVERGENCE: the data spec says each cell's sigma-band pattern is UNIQUE; it is SHARED ***",
+   "group": "B",
+   "name": "B34_all_22_share_one_sigma_band_group_key",
+   "pass": true
+  },
+  {
+   "detail": "ord_{L'_sigma} = 0, ord_{P_sigma} = 1, m = 1",
+   "group": "B",
+   "name": "B35_sigma_band_pattern_of_the_22_is_as_recorded",
+   "pass": true
+  },
+  {
+   "detail": "per-cell identity fields are content_hash / sealed_hash *** SPEC DIVERGENCE, flagged ***",
+   "group": "B",
+   "name": "B36_no_field_named_sol_hash",
+   "pass": true
+  },
+  {
+   "detail": "full menu treated as admissible for every cell, per DATA_SPEC sec.2",
+   "group": "B",
+   "name": "B37_cell_menu_linkage_not_determined",
+   "pass": true
+  },
+  {
+   "detail": "C1 states K_{Z/X}, 2g-2 = 65nu + sum(a_E - 2m_E)e_E and d*nu = sum m_E e_E at d = 35: identities in unpinned a_E, m_E, e_E, nu. NO sealed numeric g_max binds => fiber menus reported PARAMETRICALLY, per DATA_SPEC sec.2",
+   "group": "B",
+   "name": "B38_C1_is_an_identity_package_not_a_bound",
+   "pass": true
+  },
+  {
+   "detail": "0 (E^X_sigma) + 2 (L^X_sigma) = 2",
+   "group": "B",
+   "name": "B39_selfcheck_chi_X_order2_splits",
+   "pass": true
+  },
+  {
+   "detail": "6,4,2,5 = #points for orders 3,5,6,11",
+   "group": "B",
+   "name": "B39_selfcheck_chi_X_odd_orders_are_point_counts",
+   "pass": true
+  },
+  {
+   "detail": "order 1: 5; order 2: 5; order 3: 5; order 5: 5; order 6: 5; order 11: 5",
+   "group": "B",
+   "name": "B39_selfcheck_chi_PW_is_5",
+   "pass": true
+  },
+  {
+   "detail": "QR mod 11 = [1, 3, 4, 5, 9]",
+   "group": "B",
+   "name": "B39_selfcheck_C11_weights_are_QR_mod_11",
+   "pass": true
+  },
+  {
+   "detail": "C11 20, C5 20, C6 38",
+   "group": "B",
+   "name": "B39_selfcheck_Z_finite_fixed_matches_census",
+   "pass": true
+  },
+  {
+   "detail": "census",
+   "group": "C",
+   "name": "C1_order11_Z_fixed_is_20_points",
+   "pass": true
+  },
+  {
+   "detail": "Lemma U(b) forces 5 | #Ztilde^{C11}",
+   "group": "C",
+   "name": "C2_order11_5_divides_Z_fixed",
+   "pass": true
+  },
+  {
+   "detail": "20 / 5",
+   "group": "C",
+   "name": "C3_order11_n_x_equals_4",
+   "pass": true
+  },
+  {
+   "detail": "sum over the 5 receiver points = chi(Z^{C11}) = 20",
+   "group": "C",
+   "name": "C4_order11_F3_closes_exactly",
+   "pass": true
+  },
+  {
+   "detail": "chi(q^{-1}(x)) == 4 (mod 11) at each of the 5 C11-fixed points of X",
+   "group": "C",
+   "name": "C5_order11_congruence_residue_is_4",
+   "pass": true
+  },
+  {
+   "detail": "all 10 C11 menu entries give n_x = 4; the entry changes WHICH row lands on which point, never the count",
+   "group": "C",
+   "name": "C6_order11_result_constant_over_the_menu",
+   "pass": true
+  },
+  {
+   "detail": "per mu = 1..10; max 3, so at d = 35 the value assignment is NEVER total on the four C11 rows",
+   "group": "C",
+   "name": "C7_order11_menu_defined_row_counts",
+   "pass": true
+  },
+  {
+   "detail": "C5a x C5b x D10 = 4 x 4 x 4",
+   "group": "C",
+   "name": "C8_order5_uniform_over_the_64_menu_entries",
+   "pass": true
+  },
+  {
+   "detail": "{'1': 5, '2': 5, '3': 5, '4': 5}",
+   "group": "C",
+   "name": "C9_order5_n_x_is_5_at_every_receiver_point",
+   "pass": true
+  },
+  {
+   "detail": "4 receiver points x 5 = 20 = chi(Z^{C5})",
+   "group": "C",
+   "name": "C10_order5_F3_closes_exactly",
+   "pass": true
+  },
+  {
+   "detail": "chi(q^{-1}(x)) == 0 (mod 5) at each of the 4 C5-fixed points of X",
+   "group": "C",
+   "name": "C11_order5_congruence_residue_is_0",
+   "pass": true
+  },
+  {
+   "detail": "2 receiver points x 19 = 38; recorded as F3 only, no mod-p claim",
+   "group": "C",
+   "name": "C12_order6_F3_cross_check",
+   "pass": true
+  },
+  {
+   "detail": "E^X_sigma chi 0 (genus 1) + L^X_sigma chi 2 = 2",
+   "group": "C",
+   "name": "C13_order2_receiver_split",
+   "pass": true
+  },
+  {
+   "detail": "TERMINUS_STRATA_PW sec.1: every stratum of Z is rational",
+   "group": "C",
+   "name": "C14_order2_rationality_input_present",
+   "pass": true
+  },
+  {
+   "detail": "chi(q^{-1}(x)) == 0 (mod 2) for all but finitely many x in E^X_sigma",
+   "group": "C",
+   "name": "C15_order2_E_branch_closed_on_Z",
+   "pass": true
+  },
+  {
+   "detail": "no sealed bound at d = 35 pins chi(F_1), chi(F_2) or n_3; C1 of CONSTRAINT_ADDITIONS_20260811.md is a genus IDENTITY package, not a bound",
+   "group": "C",
+   "name": "C16_order2_L_branch_is_parametric",
+   "pass": true
+  },
+  {
+   "detail": "['D_{P_sigma}', \"D_{L'_sigma}\", 'central-involution line in E_{pt_D12}']",
+   "group": "C",
+   "name": "C17_order2_three_dominating_rows",
+   "pass": true
+  },
+  {
+   "detail": "ord_{L'_sigma}(T) = 0, ord_{P_sigma}(T) = 1 for all 22 cells",
+   "group": "C",
+   "name": "C18_order2_cell_band_reading",
+   "pass": true
+  },
+  {
+   "detail": "chi of the 2 two-dimensional components of Z^{C3} is not pinned by the census (component counts by dimension only); with the 62 points and the 16 rational curves this gives chi(Z^{C3}) = 62 + 32 + chi(S_1) + chi(S_2) = 94 + chi(S_1) + chi(S_2), chi(S_i) >= 3",
+   "group": "C",
+   "name": "C19_order3_is_parametric",
+   "pass": true
+  },
+  {
+   "detail": "A4a x A4b",
+   "group": "C",
+   "name": "C20_order3_menu_size_56644",
+   "pass": true
+  },
+  {
+   "detail": "chi(X^{C3}) = 6",
+   "group": "C",
+   "name": "C21_order3_receiver_is_6_points",
+   "pass": true
+  },
+  {
+   "detail": "62 points + 16 rational curves + 2 surfaces = 80 components",
+   "group": "C",
+   "name": "C22_order3_Z_fixed_dim_breakdown",
+   "pass": true
+  },
+  {
+   "detail": "one row per live cell",
+   "group": "C",
+   "name": "C23_22_cells_reported",
+   "pass": true
+  },
+  {
+   "detail": "no linkage exists, so no menu is narrowed",
+   "group": "C",
+   "name": "C24_every_cell_paired_with_the_FULL_menu",
+   "pass": true
+  },
+  {
+   "detail": "covered x free-multiplicity = F_odd(35) for every reported factor",
+   "group": "C",
+   "name": "C25_menu_never_collapsed",
+   "pass": true
+  },
+  {
+   "detail": "22 x 36252160",
+   "group": "C",
+   "name": "C26_cell_menu_pair_count",
+   "pass": true
+  },
+  {
+   "detail": "5 does not divide 33",
+   "group": "C",
+   "name": "C27_no_semistable_single_monomial_at_d_34",
+   "pass": true
+  },
+  {
+   "detail": "5 does not divide 34",
+   "group": "C",
+   "name": "C27_no_semistable_single_monomial_at_d_35",
+   "pass": true
+  },
+  {
+   "detail": "at d = 36 the five tuples x^(7,7,7,7,7) x_c (x) e_c are semistable",
+   "group": "C",
+   "name": "C28_semistable_single_monomials_exist_exactly_when_5_divides_d_minus_1",
+   "pass": true
+  },
+  {
+   "detail": "r = [-17, -7, -2, 3, 23], need a level k <= 13 and a level k >= 14, attainable range [3, 27]",
+   "group": "C",
+   "name": "C29_C11_eigenbasis_levels_d_34",
+   "pass": true
+  },
+  {
+   "detail": "r = [-17, -7, -2, 3, 23], need a level k <= 13 and a level k >= 14, attainable range [3, 28]",
+   "group": "C",
+   "name": "C29_C11_eigenbasis_levels_d_35",
+   "pass": true
+  },
+  {
+   "detail": "the non-residue generator gives an independent two-sided level test",
+   "group": "C",
+   "name": "C30_C11_eigenbasis_second_frame_d_35",
+   "pass": true
+  },
+  {
+   "detail": "and this is CORRECT, not a leak: a seed is an argument of the Reynolds operator, never a candidate tuple",
+   "group": "C",
+   "name": "C31_all_637_stored_d35_seeds_are_UNSTABLE",
+   "pass": true
+  },
+  {
+   "detail": "Every stage of the current d = 34 / d = 35 pipeline that tests an object tests a Reynolds image R(s), which is by constr ...",
+   "group": "C",
+   "name": "C32_I3_verdict_is_SUBSUMED",
+   "pass": true
+  },
+  {
+   "detail": "nothing in this packet returns 0 or all-dead; if it ever does, the ODDZERO-standard audit is mandatory before any claim",
+   "group": "C",
+   "name": "C33_no_zero_or_all_dead_outcome_to_flag",
+   "pass": true
+  }
+ ],
+ "n_checks": 95,
+ "n_fail": 0,
+ "n_pass": 95,
+ "n_skip": 0
+}
