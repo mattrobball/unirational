@@ -1901,6 +1901,17 @@
    "char0_scope": "The intersection ledger from (q*H_X)^4 = 0, map level. Blowup Chow anchors exact (E^4 = -1/3/-3 for point/line/plane centers; discrepancies 3/2/1). Filter lemma proved: for p in {3,5,11}, p | 660/|S| iff p does not divide |S| (Lagrange + v_p(660) = 1); sharp failure at p = 2. Congruence tables per prime as displayed, valid under H-IRR (no G-invariant irreducible center) after the referee's re-indexing rescue -- the packet's own E2-G-ORBIT flag against the extraction's H-PROPER form was CONFIRMED and the extraction carries the correction banner. d = 35 order-11 instance conditional (divisor-wise reading; mu = +-1 mod 11 under named hypotheses; side conditional narrows mu to {12, 21}). E3 LP: feasible at d = 35 -- excludes no degree; bounds m_P <= d/3 and d >= m_ellV + m_P >= 7; outer-approximation caveat with a worked degree-9 gap example. E4: rank 4 certified; no forced entries (referee-run rowspace test).\nNOT claimed: any degree exclusion.",
    "tracked": true,
    "notes": "Morphism ledger L10 machine-spent: nulls with structure plus one important correction cascade (H-PROPER -> H-IRR) caught by executor flag and resolved by referee. Headline: Problem E remains OPEN. Markers: E_LEDGER_VERIFY_OK, ALLGREEN (214 checks; director- and referee-replayed byte-identical)."
+  },
+  {
+   "path": "goal_runs_20260812/QR_POINT_CUTS",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "mechanical lane (Grok 4.6, xhigh) against a committed workorder with two fatal anchors; director-replayed 72/72 ALLGREEN, both primes",
+   "primary_exit": "QRCUT-ALIVE-TABLE-REISSUED",
+   "superseded_by": null,
+   "char0_scope": "Application of the sealed all-degree C11 base-point theorem (goal_runs_20260812/L12_ORDER11) to the window cells at quadratic-residue degrees, which had been built without those conditions under the old iff. Anchors: sealed dims 39/63/121/151/397 reproduce; the d = 35 control rank is 0 (points already forced at non-residues); census 60 points in 12 frames of 5, all on X. Cuts: rank exactly 1 at d = 36, 37, 38, 42, so the alive table becomes 0, 39, 62, 120, 150, 218, 261, 343, 396 for d = 34..42 (non-residue rows unchanged). Structural reason for rank 1, recorded: the 60 points form one G-orbit, so equivariance collapses the evaluation conditions to a single covariant functional at one representative -- orbit-supported base conditions have rank bounded by representation content at a representative, not by orbit size.\nNOT claimed: any degree exclusion; no window closes; no new dim is 0.",
+   "tracked": true,
+   "notes": "First Grok 4.6 dispatch (effort xhigh). Headline: Problem E remains OPEN. Markers: QR_POINT_CUTS_VERIFY_OK, ALLGREEN (72 checks, director-replayed)."
   }
  ]
 }

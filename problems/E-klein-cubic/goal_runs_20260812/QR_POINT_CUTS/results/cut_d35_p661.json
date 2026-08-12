@@ -1,0 +1,43 @@
+{
+ "c11_already_in_structure": true,
+ "cell_dim": 39,
+ "cut60": {
+  "n_functionals": 300,
+  "n_points": 60,
+  "new_dim": 39,
+  "rank": 0,
+  "sat_ok": true,
+  "sat_rank": 0
+ },
+ "cut_one_frame": {
+  "n_functionals": 25,
+  "n_points": 5,
+  "new_dim": 39,
+  "rank": 0,
+  "sat_ok": true,
+  "sat_rank": 0
+ },
+ "d": 35,
+ "d_mod_11": 2,
+ "dim_M": 637,
+ "dim_profile_only": 46,
+ "dim_structure_only": 346,
+ "flag_note": null,
+ "flagged_zero": false,
+ "is_qr": false,
+ "new_dim": 39,
+ "one_frame_rank_matches_60": true,
+ "p": 661,
+ "rank": 0,
+ "rules_fired": {
+  "C11_points": true,
+  "C5_points": true,
+  "C6_points": false,
+  "E_eigenlines": "contract to ell_{2 w}",
+  "M_minus_lines": false
+ },
+ "sealed_cell": 39,
+ "sealed_ok": true,
+ "seconds_cell": 61.8,
+ "seconds_total": 62.7
+}

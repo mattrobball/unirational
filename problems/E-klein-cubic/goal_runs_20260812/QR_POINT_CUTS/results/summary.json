@@ -1,0 +1,215 @@
+{
+ "alive_table": [
+  {
+   "changed": false,
+   "class": "QR",
+   "d": 34,
+   "d_mod_11": 1,
+   "new_cell": 0,
+   "note": "QR but sealed empty; 60-point cut is vacuous",
+   "old_cell": 0,
+   "source": "QR already empty (d=34); not recut"
+  },
+  {
+   "changed": false,
+   "class": "NQR",
+   "d": 35,
+   "d_mod_11": 2,
+   "new_cell": 39,
+   "note": "NQR control: rank 0, dim stays 39",
+   "old_cell": 39,
+   "source": "this packet (60-point cut)"
+  },
+  {
+   "changed": true,
+   "class": "QR",
+   "d": 36,
+   "d_mod_11": 3,
+   "new_cell": 62,
+   "note": "QR degree: cell 63 -> 62 after 60 C11-points",
+   "old_cell": 63,
+   "source": "this packet (60-point cut)"
+  },
+  {
+   "changed": true,
+   "class": "QR",
+   "d": 37,
+   "d_mod_11": 4,
+   "new_cell": 120,
+   "note": "QR degree: cell 121 -> 120 after 60 C11-points",
+   "old_cell": 121,
+   "source": "this packet (60-point cut)"
+  },
+  {
+   "changed": true,
+   "class": "QR",
+   "d": 38,
+   "d_mod_11": 5,
+   "new_cell": 150,
+   "note": "QR degree: cell 151 -> 150 after 60 C11-points",
+   "old_cell": 151,
+   "source": "this packet (60-point cut)"
+  },
+  {
+   "changed": false,
+   "class": "NQR",
+   "d": 39,
+   "d_mod_11": 6,
+   "new_cell": 218,
+   "note": "NQR row unchanged (C11 already in the ladder)",
+   "old_cell": 218,
+   "source": "NQR unchanged"
+  },
+  {
+   "changed": false,
+   "class": "NQR",
+   "d": 40,
+   "d_mod_11": 7,
+   "new_cell": 261,
+   "note": "NQR row unchanged (C11 already in the ladder)",
+   "old_cell": 261,
+   "source": "NQR unchanged"
+  },
+  {
+   "changed": false,
+   "class": "NQR",
+   "d": 41,
+   "d_mod_11": 8,
+   "new_cell": 343,
+   "note": "NQR row unchanged (C11 already in the ladder)",
+   "old_cell": 343,
+   "source": "NQR unchanged"
+  },
+  {
+   "changed": true,
+   "class": "QR",
+   "d": 42,
+   "d_mod_11": 9,
+   "new_cell": 396,
+   "note": "QR degree: cell 397 -> 396 after 60 C11-points",
+   "old_cell": 397,
+   "source": "this packet (60-point cut)"
+  }
+ ],
+ "any_flagged_zero": false,
+ "census": {
+  "331": {
+   "all_on_X": true,
+   "ladder_five_is_a_frame": true,
+   "n_frames": 12,
+   "n_order11_elements": 120,
+   "n_points": 60
+  },
+  "661": {
+   "all_on_X": true,
+   "ladder_five_is_a_frame": true,
+   "n_frames": 12,
+   "n_order11_elements": 120,
+   "n_points": 60
+  }
+ },
+ "control_d35_rank": 0,
+ "control_ok": true,
+ "cut_degrees": [
+  35,
+  36,
+  37,
+  38,
+  42
+ ],
+ "cut_rows": [
+  {
+   "agree": true,
+   "c11_already_in_structure": true,
+   "cell_331": 39,
+   "cell_661": 39,
+   "d": 35,
+   "d_mod_11": 2,
+   "flagged_zero": false,
+   "is_qr": false,
+   "new_dim_331": 39,
+   "new_dim_661": 39,
+   "one_frame_matches": true,
+   "rank_331": 0,
+   "rank_661": 0,
+   "sat_ok": true,
+   "sealed_cell": 39
+  },
+  {
+   "agree": true,
+   "c11_already_in_structure": false,
+   "cell_331": 63,
+   "cell_661": 63,
+   "d": 36,
+   "d_mod_11": 3,
+   "flagged_zero": false,
+   "is_qr": true,
+   "new_dim_331": 62,
+   "new_dim_661": 62,
+   "one_frame_matches": true,
+   "rank_331": 1,
+   "rank_661": 1,
+   "sat_ok": true,
+   "sealed_cell": 63
+  },
+  {
+   "agree": true,
+   "c11_already_in_structure": false,
+   "cell_331": 121,
+   "cell_661": 121,
+   "d": 37,
+   "d_mod_11": 4,
+   "flagged_zero": false,
+   "is_qr": true,
+   "new_dim_331": 120,
+   "new_dim_661": 120,
+   "one_frame_matches": true,
+   "rank_331": 1,
+   "rank_661": 1,
+   "sat_ok": true,
+   "sealed_cell": 121
+  },
+  {
+   "agree": true,
+   "c11_already_in_structure": false,
+   "cell_331": 151,
+   "cell_661": 151,
+   "d": 38,
+   "d_mod_11": 5,
+   "flagged_zero": false,
+   "is_qr": true,
+   "new_dim_331": 150,
+   "new_dim_661": 150,
+   "one_frame_matches": true,
+   "rank_331": 1,
+   "rank_661": 1,
+   "sat_ok": true,
+   "sealed_cell": 151
+  },
+  {
+   "agree": true,
+   "c11_already_in_structure": false,
+   "cell_331": 397,
+   "cell_661": 397,
+   "d": 42,
+   "d_mod_11": 9,
+   "flagged_zero": false,
+   "is_qr": true,
+   "new_dim_331": 396,
+   "new_dim_661": 396,
+   "one_frame_matches": true,
+   "rank_331": 1,
+   "rank_661": 1,
+   "sat_ok": true,
+   "sealed_cell": 397
+  }
+ ],
+ "headline": "Problem E remains OPEN; this packet excludes no degree",
+ "primes": [
+  331,
+  661
+ ],
+ "sealed_ok": true,
+ "semantics": "new_dim is a modular upper bound when positive; new_dim=0 on a previously alive cell is FLAGGED behind an ODDZERO-standard audit and is never claimed as a degree exclusion.",
+ "two_prime_agree": true
+}

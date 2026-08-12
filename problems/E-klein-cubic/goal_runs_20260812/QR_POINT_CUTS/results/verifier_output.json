@@ -1,0 +1,11 @@
+{
+ "ok": true,
+ "n_checks": 72,
+ "n_fail": 0,
+ "fails": [],
+ "seconds": 0.0,
+ "markers": [
+  "QR_POINT_CUTS_VERIFY_OK",
+  "ALLGREEN"
+ ]
+}
