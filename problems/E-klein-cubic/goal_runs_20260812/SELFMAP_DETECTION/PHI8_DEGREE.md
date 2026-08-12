@@ -8,7 +8,7 @@ Exits: `MINIMAL-EQUIVARIANT-TANGENT-FIELD-BOXED-OVER-Q`,
 `RETRACTION-BRANCH-CARRIER-ONLY`,
 `CARRIER-EXCLUSION-NOT-ACHIEVED`.
 
-Verified exactly: `verify_phi8_degree.py` (`RESULT: PASS`, 149 checks, ~175 s).
+Verified exactly: `verify_phi8_degree.py` (`RESULT: PASS`, 157 checks, ~175 s).
 
 **Problem E headline: OPEN.** No branch closes. What does change: the
 retraction branch is now a **pure CARRIER question**, on an explicitly computed
@@ -231,6 +231,19 @@ charts 1..4    :  empty
 at all three rational targets, at `p = 1000003`, at `p = 2000003`, **and over
 `Q` in characteristic zero** (msolve over the rationals, ~133 s), and at three
 random targets of `X(F_p)`.
+
+### The round trip
+
+Block (D3'') closes the loop end to end, twice: take a random `x in X(F_p)`,
+form its image `R(x)` by the degree-`25` tuple, and check that
+
+* `R(x)` lies on `X`;
+* the two parametrisations agree — `x + t^* V_8(x) ~ R(x)` with
+  `t^* = -Q(x,V_8)/F(V_8)`;
+* the fiber over `R(x)`, computed by Route B in all five flag charts, has
+  exactly `208` points;
+* and `x` itself is one of them (pinning `x` to the source point leaves exactly
+  one solution).
 
 ### The two routes agree
 

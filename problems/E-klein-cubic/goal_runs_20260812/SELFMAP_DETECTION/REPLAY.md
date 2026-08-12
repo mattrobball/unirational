@@ -13,7 +13,7 @@ The second expects
 ```text
   delta(phi_8) = 208 = 2^4 * 13   -- NOT a norm  => phi_8 is NOT CLEAN
   delta(phi_9) = 288 = 2^5 * 3^2  -- NOT a norm  => phi_9 is NOT CLEAN
-  checks run : 149
+  checks run : 157
   failures   : 0
 
 RESULT: PASS
@@ -45,6 +45,7 @@ over `F_p`.
 | (D2) | ROUTE A: `209` points / minimal polynomial `210` off `D_8`; `208` / `208` after also removing `x = y`; five flag charts; two targets; two random inversions | measures both the count and the tangency multiplicity |
 | (D3) | ROUTE B: `208` in the chart `x_0 != 0` and **empty** in the other four flag charts, at three targets, two primes, and over `Q` | the flag charts make the fiber count complete, not a sample |
 | (D3') | ROUTE B at three random targets of `X(F_p)`, `p ~ 10^6` | the genericity guard for the upper bound |
+| (D3'') | round trip: for a random `x in X(F_p)`, `R(x)` lies on `X`, the two parametrisations agree (`x + t*V_8(x) ~ R(x)`, `t* = -Q/F(V)`), the fiber over `R(x)` has `208` points, and `x` is one of them | the end-to-end check that the count really is a fiber of `phi_8` |
 | (D4) | the two routes agree: `210 - 2 = 208`; and `delta(phi_9) = 288` | the only place the two routes are compared |
 | (D5) | at every target: `V_8(y) ^ y != 0` and `grad F(y) . V_8(y) = 0` | the structural reason the multiplicity at `x = y` is `2` |
 | (E) | the inert-prime valuation criterion against brute force on `1..400`; `208 = 2^4·13`, `13` inert, `v_13` odd; `288`, `2` inert, `v_2` odd; iterates and composites; and that the **naive** `1753` *would* have been a norm | the detection test, plus the adversarial check that the excess correction was decisive |

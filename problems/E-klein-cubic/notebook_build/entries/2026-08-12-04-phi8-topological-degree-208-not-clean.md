@@ -1,7 +1,7 @@
 ## 2026-08-12 The canonical tangent-residual self-map has topological degree 208, which is not a norm: phi_8 cannot be CLEAN
 
 Packet: `goal_runs_20260812/SELFMAP_DETECTION/PHI8_DEGREE.md`
-(`verify_phi8_degree.py`, 149 checks, `RESULT: PASS`, `EXIT=0`, ~175 s; exact
+(`verify_phi8_degree.py`, 157 checks, `RESULT: PASS`, `EXIT=0`, ~175 s; exact
 integers, `Fraction`, `F_p`, and msolve over `Q` and `F_p`; no floating point).
 Problem E remains **OPEN**; no branch closes.
 

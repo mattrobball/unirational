@@ -1362,6 +1362,80 @@ for n, y in enumerate(big):
              "(a target off the at-most-two-dimensional bad locus, up to a "
              "1-in-p accident)", tot, 208)
 
+banner("(D3'')  round trip: the image of a random point, and its own fiber")
+FV8 = FofV(V8)
+Q8 = Qform(V8)
+
+
+def _evp(a, x, q):
+    t = 0
+    for e, c in a.items():
+        u = c % q
+        for i in range(5):
+            if e[i]:
+                u = u * pow(x[i], e[i], q) % q
+        t = (t + u) % q
+    return t
+
+
+rnd4 = _lcg(99)
+done = 0
+while done < 2:
+    x0, x1, x2, x3 = [next(rnd4) * next(rnd4) % PRIME_A + 1 for _ in range(4)]
+    aa, bb = x0, x3 * x3 % PRIME_A
+    c0 = (x0 * x0 % PRIME_A * x1 + x1 * x1 % PRIME_A * x2
+          + x2 * x2 % PRIME_A * x3) % PRIME_A
+    sq = _sqrt_mod((bb * bb - 4 * aa * c0) % PRIME_A, PRIME_A)
+    if sq is None:
+        continue
+    x4 = (-bb + sq) * pow(2 * aa % PRIME_A, PRIME_A - 2, PRIME_A) % PRIME_A
+    src = (x0, x1, x2, x3, x4)
+    if _evp(FK, src, PRIME_A) != 0:
+        continue
+    Vx = [_evp(V8[i], src, PRIME_A) for i in range(5)]
+    cc = _evp(FV8, src, PRIME_A)
+    qq = _evp(Q8, src, PRIME_A)
+    if cc == 0 or qq == 0:
+        continue
+    Rimg = [(cc * src[i] - qq * Vx[i]) % PRIME_A for i in range(5)]
+    done += 1
+    check(f"round trip {done}: the image R(x) of a random x in X(F_p) lies "
+          "on X", _evp(FK, Rimg, PRIME_A) == 0)
+    ts = (-qq) * pow(cc, PRIME_A - 2, PRIME_A) % PRIME_A
+    lin = [(src[i] + ts * Vx[i]) % PRIME_A for i in range(5)]
+    check(f"round trip {done}: the t-parametrisation and the degree-25 tuple "
+          "give the same point, x + t*V_8(x) ~ R(x) with t* = -Q/F(V)",
+          all((lin[i] * Rimg[j] - lin[j] * Rimg[i]) % PRIME_A == 0
+              for i in range(5) for j in range(5)))
+    tot = 0
+    for chart in range(5):
+        fn = sys_routeB(V8, Rimg, chart, PRIME_A,
+                        os.path.join(TMP, f"Bt{done}{chart}.ms"))
+        rr = msolve(fn, f"Bt{done}{chart}")
+        tot += rr.get("pts") or 0
+    check_eq(f"round trip {done}: the fiber over R(x) has 208 points", tot, 208)
+    # and x itself must be one of them
+    S = Chart(0, ["t", "w", "u", "z"])
+    Rg = S.R
+    tv = Rg.var("t")
+    A = [Rg.add(S.X[i], Rg.mul(tv, S.sub(V8[i]))) for i in range(5)]
+    eqs = [S.sub(FK)]
+    for i in range(5):
+        for j in range(i + 1, 5):
+            eqs.append(Rg.sub(Rg.scal(Rimg[j], A[i]), Rg.scal(Rimg[i], A[j])))
+    eqs.append(Rg.sub(Rg.mul(Rg.var("w"), A[0]), Rg.const(1)))
+    eqs.append(Rg.sub(Rg.mul(Rg.var("u"), tv), Rg.const(1)))
+    eqs.append(Rg.sub(Rg.mul(Rg.var("z"), S.sub(Q8)), Rg.const(1)))
+    iv0 = pow(src[0], PRIME_A - 2, PRIME_A)
+    for i in range(1, 5):
+        eqs.append(Rg.sub(Rg.var(f"x{i}"),
+                          Rg.const(src[i] * iv0 % PRIME_A)))
+    fn = os.path.join(TMP, f"Bpin{done}.ms")
+    write_ms(fn, Rg, eqs, PRIME_A)
+    rr = msolve(fn, f"Bpin{done}")
+    check_eq(f"round trip {done}: the source point x is itself one of those "
+             "208 preimages", (rr["kind"], rr["pts"]), ("zerodim", 1))
+
 banner("(D4)  the two routes agree, and phi_9")
 DELTA8 = 208
 check_eq("ROUTE A - 2 (remove the tangency double point at x = y) = ROUTE B",
