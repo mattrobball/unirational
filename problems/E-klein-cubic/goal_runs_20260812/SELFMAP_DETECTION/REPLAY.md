@@ -1,12 +1,42 @@
 # Replay
 
-## Two commands
+## Three commands
 
 ```
 cd problems/E-klein-cubic/goal_runs_20260812/SELFMAP_DETECTION
 python3 verify_selfmap_audit.py ; echo "EXIT=$?"
 python3 verify_phi8_degree.py   ; echo "EXIT=$?"
+python3 verify_phi8_carrier.py  ; echo "EXIT=$?"
 ```
+
+The third expects
+
+```text
+  60 checks run, 0 failed.
+
+RESULT: PASS
+EXIT=0
+```
+
+Runtime ~65 s. It needs **msolve**, **Macaulay2** and **numpy** on `PATH` in
+addition to Python 3. Its block (C0) carries the same live msolve
+parenthesis regression guard as `verify_phi8_degree.py`; every system is
+emitted fully expanded. What it asserts, block by block:
+
+| block | content | why it is a real assertion |
+|---|---|---|
+| (A) | `208` and `288` not represented by `x^2+xy+3y^2`, by brute force **and** by the inert-valuation criterion, the criterion itself checked against brute force for every `n <= 400`; `208^r` for odd `r`; and `1,3,5` **are** represented | this is the sole arithmetic input of Theorem 2.1; a sign slip here would flip the verdict |
+| (B) | `V_8` rebuilt over `Q`: degrees, `tau`-weight covariance, `grad F . V_8 = c F h_7` by exact division, non-radiality, `deg F(V_8)=24`, `deg Q=17`, `deg R=25` | a wrong integral model fails the exact division at once |
+| (C) | Macaulay2 at `p = 23` and `p = 1000033`: `codim Bs(J) = 3`, `degree = 1224`, Hilbert polynomial `1224 i - 23868`; `codim D_8 = 3`, `deg D_8 = 72`; `gcd(R_0..R_4) = 1`; `codim((F)+(R)) = 3` | proper complete intersection of type `(3,24,17)`, cross-checked against adjunction `2p_a-2 = 39·1224`; also re-proves no divisorial base component |
+| (C0) | msolve regression guard, then generic slices at `(1000003, 20260812)`, `(2000003, 777)`, `(1000033, 31337)`, all five flag charts | `864` and `72` distinct points at every pair; `1224 = 6·72 + 792` |
+| (D) | subgroup orders of `PSL(2,11)` computed from scratch (`1,2,3,4,5,6,10,11,12,55,60,660`, so orbit sizes include `165`); largest Frobenius orbits on the slices (`787` for `Lambda`, `70` for `D_8`) via Macaulay2 factorization; the `(s,e,m)` enumeration | forces one `G`-invariant irreducible component in each case |
+| (E) | the `60` points `{V_8 = 0}` at `p = 23, 67`; stabiliser order `11`; `Res_{C_11} V` is all ten nontrivial characters once | shows no character obstruction exists at the point orbit |
+| (F) | at `p = 23, 61, 79, 109`, every `F_p`-point of `Lambda` has `l_x ⊄ Bs(J)` | empties the only CARRIER-dead component class |
+| (G) | `Tr(Frob|H^3(X))` for `25` primes: `0` unless `p ≡ 1 (11)`, else `5 p a_p` with `4p = a_p^2 + 11 b^2` | reconfirms `J(X) ~ E_{-11}^5` from `F` alone — a live falsification test of the sealed chain |
+
+---
+
+## The two earlier commands
 
 The second expects
 

@@ -1,0 +1,127 @@
+## 2026-08-12 phi_8 is CARRIER unconditionally, so its CARRIER exclusion is impossible and the (S2) detection lever is void; the base scheme computed, the carrier boxed
+
+Packet: `goal_runs_20260812/SELFMAP_DETECTION/PHI8_CARRIER.md`
+(`verify_phi8_carrier.py`, 60 checks, `RESULT: PASS`, `EXIT=0`, ~65 s; exact
+integers, `F_p`, msolve and Macaulay2; no floating point). Problem E remains
+**OPEN**; no branch closes; the retraction branch is untouched and still open.
+
+**The finding, and it points the other way.** Yesterday's packet
+(`PHI8_DEGREE.md` §7) boxed one residual: *exclude `(AHS-Gamma)` for every
+irreducible `T` of dimension `<= 1` inside `Bs(J_{phi_8})`; that single
+exclusion kills the retraction branch.* That residual asks for a proof of a
+false statement.
+
+`THEOREM_RESTRICTED_DICHOTOMY.md` §1 introduces its self-map as one "obtained
+by restricting a hypothetical ambient landing map", but the proof of
+Theorem 3.1 never uses the provenance. Reading it step by step, the inputs it
+actually consumes are five: `phi` dominant `G`-equivariant; `Gamma` normal with
+`pi` proper birational and `X` smooth; `q` generically finite of degree
+`delta`; `V = H^3(X,Q)(1)` irreducible as a rational `G`-module; and
+`End_{G-HS}(V_Z) = O_K` with `h(K) = 1` and an integral graph correspondence.
+Nothing about an ambient tuple `T`, an ambient degree `d`, a common factor, or
+`F(T) = 0`. The word "restricted" in "primitive **restricted** base ideal"
+names the object — an ideal on `X` rather than on `P^4` — not where `phi` came
+from. `phi_8` satisfies all five from sealed statements. Hence
+
+```
+        delta(phi_8) = 208 is not a norm  =>  CLEAN fails  =>  r_{phi_8} != 0
+```
+
+**unconditionally**: `phi_8` is CARRIER, full stop, and `(AHS-Gamma)` **holds**.
+Same for `phi_9` (`delta = 288`) and every odd iterate `phi_8^r`
+(`delta = 208^r`, `v_13 = r` odd).
+
+**The lever is void in general, not just here.** The argument uses nothing
+special about `phi_8`. For any dominant `G`-equivariant `psi`, "`delta(psi)` is
+not represented by `x^2+xy+3y^2`" already forces CARRIER, so the second half of
+(S2) of `THEOREM_DETECTION_PRINCIPLE.md` §3.3 — "exclude the CARRIER branch for
+`psi`" — is asking to disprove a theorem. The two halves of (S2) are mutually
+exclusive at every degree and for every `psi`. The reason it looked live is
+recorded in §4.2 (R4) of that file: the dichotomy "is the **only** condition in
+the list that constrains a quantity intrinsic to `psi`". True — and that is
+exactly why it cannot detect whether `psi` extends to `P^4`. `PHI8_DEGREE.md`
+Corollary 6.2 is not retracted; it is a true implication with an
+unconditionally true consequent, hence carries no information. What is retracted
+is the plan built on it.
+
+**The base scheme, exactly.** `Bs(J_{phi_8}) = V(F, F(V_8), Q(x,V_8))` on `X`
+has codimension `3`, degree `1224 = 3*24*17` and Hilbert polynomial
+`1224 i - 23868` — a **proper complete intersection** of type `(3,24,17)`,
+matching the adjunction prediction `2 p_a - 2 = 39 * 1224` exactly, hence
+Cohen-Macaulay and unmixed: no isolated and no embedded points. Also
+`gcd(R_0..R_4) = 1` and `codim((F)+(R)) = 3`, which re-proves from the intrinsic
+side that `J` has no divisorial component. Generic slices at three
+`(prime, seed)` pairs give `864` distinct points, so the reduced curve has
+degree `864`, and
+
+```
+   Bs(J_{phi_8})_red = D_8 (deg 72, multiplicity 6)  ∪  Lambda (deg 792, mult 1)
+   1224 = 6 * 72 + 792
+```
+
+with the multiplicity `6` also proved structurally: along `D_8` one has
+`Q = 3B(x,eps,eps)` of order 2 and `F(V_8) - lambda Q = F(eps)` of order 3, and
+`2 * 3 = 6`. `Lambda` is the **lines locus**, the closure of
+`{x : l_x = <x, V_8(x)> ⊂ X}`. Both components are **irreducible and
+`G`-invariant**: factoring the eliminating polynomial of the slice exhibits a
+Frobenius orbit of `787` slice points inside `Lambda` and of `70` inside `D_8`,
+and with the subgroup indices of `PSL(2,11)` (computed from scratch —
+`1,11,12,55,60,66,110,132,165,220,330,660`; the order-4 Klein subgroup is easy
+to omit and the verifier caught its omission) the arithmetic `s | N`,
+`s e >= N`, `m >= s`, `m e <= total` leaves only `s = m = 1` in each case. The
+residual for `Lambda` has degree `<= 5`, and there is no `G`-invariant
+irreducible curve of degree `<= 5` in `P^4` (it would span `P^4`, hence have
+genus `<= 1`, and `PSL(2,11)` acts faithfully on no such curve), so `Lambda` is
+irreducible of degree `792`.
+
+**The carrier, boxed.** `Lambda` is `G`-invariant with `H = G`, and its line map
+`lambda : Lambda -> S` to the Fano surface is nonconstant (`deg 792 > 1`). The
+fibres of `Gamma -> X` over `Lambda` are the lines `l_x ≅ P^1`, so the
+coefficients are constant, `j_0 = 0`, and the weight-one part of the block is
+`H^1(C̃_0)` with `C_0 = lambda(Lambda) ⊆ S` a `G`-invariant curve. Since
+`Alb(S) = J(X)`, `S` embeds in its Albanese, and `H^1(J(X),Q) = V(-1)` is an
+irreducible `G`-module, the abelian subvariety generated by `C_0` is `G`-stable
+and nonzero, hence all of `J(X)`; so `V(-1) ↪ H^1(C̃_0)` and
+`Hom_{HS,G}(V, H^1(C̃_0)(1)) != 0`. That is exactly the datum `(AHS-Gamma)`
+demands, exhibited. The one component class that would have been CARRIER-dead —
+a line `l ⊂ X` with constant line map, exceptional divisor `l x l`, `H^1 = 0` —
+is **empty**: at `p = 23, 61, 79, 109` every `F_p`-point of `Lambda` has
+`l_x ⊄ Bs(J)`, and the complete intersection is flat over `Z`, so one witness
+settles it in characteristic zero.
+
+**Per-orbit verdicts.** `Lambda` (orbit size 1, `H = G`):
+`CARRIER-CANDIDATE-BOXED`. Lines with constant line map: `CARRIER-DEAD`, and
+the class is empty. `D_8` (orbit size 1, `H = G`, degree 72):
+`CARRIER-UNDECIDED` — `g(D̃_8)`, `Hom(Jac(D̃_8), E_{-11})` and the fibres of
+`Gamma -> X` over `D_8` are not computed. The `60` points where `V_8` vanishes
+identically (one orbit, `H = C_11`): `CARRIER-UNDECIDED` — `Res_{C_11} V` is
+every nontrivial character of `C_11` exactly once, so no character obstruction
+exists, consistent with the sealed `SUPPORT-ESCAPE-UNDECIDED` of
+`THEOREM_POINT_SUPPORT.md`. Neither open orbit can change any verdict here:
+`RETRACTION-BRANCH-DEAD` would need **every** orbit dead, which the forced
+CARRIER forbids.
+
+**A live falsification test the sealed chain passes.** Because CARRIER is
+forced, the geometry had to produce a support carrying `E_{-11}` — an empty or
+`E_{-11}`-free base scheme would have refuted `delta = 208`, the dichotomy, or
+`End = O_K`. It produced one. Independently, exhaustive enumeration of
+`P^4(F_p)` for 25 primes `13 <= p <= 113` gives `Tr(Frob | H^3(X)) = 0` for
+every `p ≢ 1 mod 11` and `Tr = 5 p a_p` with `4p = a_p^2 + 11 b^2` at
+`p = 23, 67, 89, 199` (`a = -9, +13, -9, -20`) — the signature of a CM structure
+induced from `Q(zeta_11)` with `E_{-11}` factors, recomputed from `F` alone.
+
+**What survives on the retraction side.** Only genuinely *ambient* obstructions:
+the ambient `(AHS)` with supports in `Bs(J_ambient) ⊂ P^4`
+(`SUPPORT-ESCAPE-UNDECIDED`), the ambient-to-restricted transfer
+(`CLEAN-CASE-TRANSFER-UNDECIDED`, with its CT1 countermodel), and (R1), (R3),
+(R6) of `THEOREM_DETECTION_PRINCIPLE.md` §4.2. The landing table's `d' = 1`
+cell is **not** killed and remains open at every ambient degree `d >= 35`,
+exactly as before.
+
+Exits: `PHI8-BASE-SCHEME-CURVE-DEGREE-1224`,
+`PHI8-BASE-NO-DIVISORIAL-COMPONENT-REPROVED`, `PHI8-BASE-DECOMPOSED`,
+`PHI8-CARRIER-FORCED-UNCONDITIONALLY`, `CARRIER-EXCLUSION-IMPOSSIBLE-FOR-PHI8`,
+`S2-DETECTION-LEVER-VOID`, `CARRIER-LINES-CONSTANT-CLASS-DEAD-AND-EMPTY`,
+`CARRIER-D8-UNDECIDED`, `CARRIER-POINT-ORBIT-60-UNDECIDED`,
+`PHI8-CARRIER-CANDIDATE-BOXED`, `RETRACTION-BRANCH-UNDECIDED`.
+`Problem E headline: OPEN.`
