@@ -28,8 +28,6 @@ noncomputable section
 namespace V14Formalization
 namespace GeometricCarrier
 
-set_option maxHeartbeats 8000000
-
 /-! ## Unipotent generator of order 11 -/
 
 def tMat : SLG := ⟨!![1, 1; 0, 1], by simp [Matrix.det_fin_two_of]⟩

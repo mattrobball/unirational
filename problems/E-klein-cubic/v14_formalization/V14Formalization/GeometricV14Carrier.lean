@@ -85,8 +85,6 @@ namespace GeometricV14Carrier
 
 open GeometricFanoCarrier
 
-set_option maxHeartbeats 32000000
-
 abbrev k := GeometricFanoCarrier.k
 abbrev F := GeometricFanoCarrier.F
 abbrev SLG := GeometricFanoCarrier.SLG
@@ -2586,6 +2584,29 @@ theorem sq_eq_neg_one_of_neg_two_sub (a : k) (h : (-2 : k) - a ^ 2 = -1) : a ^ 2
     _ = -2 + 1 := by rw [← h']
     _ = -1 := by norm_num
 
+theorem monic_quad_form_mul (a b c e : k) :
+    (X ^ 2 + C a * X + C b) * (X ^ 2 + C c * X + C e) =
+      X ^ 4 + C (a + c) * X ^ 3 + C (b + e + a * c) * X ^ 2 +
+        C (a * e + b * c) * X + C (b * e) := by
+  simp only [C_add, C_mul]
+  ring
+
+theorem quartic_form_coeff_three (p3 p2 p1 p0 : k) :
+    (X ^ 4 + C p3 * X ^ 3 + C p2 * X ^ 2 + C p1 * X + C p0 : k[X]).coeff 3 = p3 := by
+  simp [coeff_add, coeff_C_mul, coeff_X_pow]
+
+theorem quartic_form_coeff_two (p3 p2 p1 p0 : k) :
+    (X ^ 4 + C p3 * X ^ 3 + C p2 * X ^ 2 + C p1 * X + C p0 : k[X]).coeff 2 = p2 := by
+  simp [coeff_add, coeff_C_mul, coeff_X_pow]
+
+theorem quartic_form_coeff_one (p3 p2 p1 p0 : k) :
+    (X ^ 4 + C p3 * X ^ 3 + C p2 * X ^ 2 + C p1 * X + C p0 : k[X]).coeff 1 = p1 := by
+  simp [coeff_add, coeff_C_mul, coeff_X_pow]
+
+theorem quartic_form_coeff_zero (p3 p2 p1 p0 : k) :
+    (X ^ 4 + C p3 * X ^ 3 + C p2 * X ^ 2 + C p1 * X + C p0 : k[X]).coeff 0 = p0 := by
+  simp [coeff_add, coeff_C_mul, coeff_X_pow, coeff_X, coeff_C]
+
 theorem monic_quad_dvd_X6_eq_X2_add_one
     (f : k[X]) (hm : f.Monic) (hd : f.natDegree = 2)
     (hdiv : f ∣ (X : k[X]) ^ 6 + 1) :
@@ -2632,49 +2653,7 @@ theorem monic_quad_dvd_X6_eq_X2_add_one
           X ^ 4 + C (a + c) * X ^ 3 + C (b + e + a * c) * X ^ 2 +
             C (a * e + b * c) * X + C (b * e) := by
       rw [hf', hg']
-      -- Expand (X² + Ca X + Cb)(X² + Cc X + Ce)
-      have hexpand :
-          (X ^ 2 + C a * X + C b) * (X ^ 2 + C c * X + C e) =
-            X ^ 4 + C (a + c) * X ^ 3 + C (b + e + a * c) * X ^ 2 +
-              C (a * e + b * c) * X + C (b * e) := by
-        calc (X ^ 2 + C a * X + C b) * (X ^ 2 + C c * X + C e)
-            = X ^ 2 * X ^ 2 + X ^ 2 * (C c * X) + X ^ 2 * C e +
-                (C a * X) * X ^ 2 + (C a * X) * (C c * X) + (C a * X) * C e +
-                C b * X ^ 2 + C b * (C c * X) + C b * C e := by ring
-          _ = X ^ 4 + C c * X ^ 3 + C e * X ^ 2 +
-                C a * X ^ 3 + C a * C c * X ^ 2 + C a * C e * X +
-                C b * X ^ 2 + C b * C c * X + C b * C e := by ring
-          _ = X ^ 4 + C c * X ^ 3 + C e * X ^ 2 +
-                C a * X ^ 3 + C (a * c) * X ^ 2 + C (a * e) * X +
-                C b * X ^ 2 + C (b * c) * X + C (b * e) := by
-                  simp only [← C_mul]
-          _ = X ^ 4 + C (a + c) * X ^ 3 + C (b + e + a * c) * X ^ 2 +
-                C (a * e + b * c) * X + C (b * e) := by
-                  simp only [← C_add, add_mul, mul_add, add_assoc, add_left_comm, add_comm]
-                  ring_nf
-                  simp only [C_add, C_mul]
-                  ring
-      exact hexpand
-    -- equate to X^4 + 0 X^3 - X^2 + 0 X + 1 via coeffs
-    -- Coefficients of the expanded monic form via monomial extraction
-    have coeff_form (n : ℕ) (p3 p2 p1 p0 : k) :
-        (X ^ 4 + C p3 * X ^ 3 + C p2 * X ^ 2 + C p1 * X + C p0 : k[X]).coeff n =
-          (if n = 4 then 1 else 0) + (if n = 3 then p3 else 0) + (if n = 2 then p2 else 0) +
-            (if n = 1 then p1 else 0) + (if n = 0 then p0 else 0) := by
-      match n with
-      | 0 =>
-        simp [coeff_add, coeff_C_mul, coeff_X_pow, coeff_X, coeff_C]
-      | 1 =>
-        simp [coeff_add, coeff_C_mul, coeff_X_pow, coeff_X, coeff_C]
-      | 2 =>
-        simp [coeff_add, coeff_C_mul, coeff_X_pow, coeff_X, coeff_C]
-      | 3 =>
-        simp [coeff_add, coeff_C_mul, coeff_X_pow, coeff_X, coeff_C]
-      | 4 =>
-        simp [coeff_add, coeff_C_mul, coeff_X_pow, coeff_X, coeff_C]
-      | n + 5 =>
-        simp [coeff_add, coeff_C_mul, coeff_X_pow, coeff_X, coeff_C]
-        all_goals (try omega)
+      exact monic_quad_form_mul a b c e
     have heq_coeff (n : ℕ) :
         ((X : k[X]) ^ 4 - X ^ 2 + 1).coeff n =
           (X ^ 4 + C (a + c) * X ^ 3 + C (b + e + a * c) * X ^ 2 +
@@ -2687,7 +2666,7 @@ theorem monic_quad_dvd_X6_eq_X2_add_one
       have hr :
           (X ^ 4 + C (a + c) * X ^ 3 + C (b + e + a * c) * X ^ 2 +
             C (a * e + b * c) * X + C (b * e)).coeff 3 = a + c := by
-        rw [coeff_form]; simp
+        exact quartic_form_coeff_three _ _ _ _
       rw [hl, hr] at this; exact this.symm
     have h2c : b + e + a * c = (-1 : k) := by
       have := heq_coeff 2
@@ -2696,7 +2675,7 @@ theorem monic_quad_dvd_X6_eq_X2_add_one
       have hr :
           (X ^ 4 + C (a + c) * X ^ 3 + C (b + e + a * c) * X ^ 2 +
             C (a * e + b * c) * X + C (b * e)).coeff 2 = b + e + a * c := by
-        rw [coeff_form]; simp
+        exact quartic_form_coeff_two _ _ _ _
       rw [hl, hr] at this; exact this.symm
     have h1c : a * e + b * c = (0 : k) := by
       have := heq_coeff 1
@@ -2705,7 +2684,7 @@ theorem monic_quad_dvd_X6_eq_X2_add_one
       have hr :
           (X ^ 4 + C (a + c) * X ^ 3 + C (b + e + a * c) * X ^ 2 +
             C (a * e + b * c) * X + C (b * e)).coeff 1 = a * e + b * c := by
-        rw [coeff_form]; simp
+        exact quartic_form_coeff_one _ _ _ _
       rw [hl, hr] at this; exact this.symm
     have h0c : b * e = (1 : k) := by
       have := heq_coeff 0
@@ -2714,7 +2693,7 @@ theorem monic_quad_dvd_X6_eq_X2_add_one
       have hr :
           (X ^ 4 + C (a + c) * X ^ 3 + C (b + e + a * c) * X ^ 2 +
             C (a * e + b * c) * X + C (b * e)).coeff 0 = b * e := by
-        rw [coeff_form]; simp
+        exact quartic_form_coeff_zero _ _ _ _
       rw [hl, hr] at this; exact this.symm
     have hc : c = -a := eq_neg_of_add_eq_zero_left (by rw [add_comm]; exact h3)
     have hbne : b ≠ 0 := fun hb => by simp [hb] at h0c
@@ -5225,43 +5204,56 @@ theorem bL2_eq_zero (h : (0 : ℕ) < 2) : bL2 ⟨0, h⟩ = (1 : Ladj) := by
 theorem bL2_eq_one (h : (1 : ℕ) < 2) : bL2 ⟨1, h⟩ = iRoot := by
   convert bL2_one <;> rfl
 
+noncomputable def jTraceBasisU :
+    Basis (Module.Free.ChooseBasisIndex Ladj U) Ladj U :=
+  Module.Free.chooseBasis Ladj U
+
+noncomputable def jTraceBasis :
+    Basis (Fin 2 × Module.Free.ChooseBasisIndex Ladj U) k U :=
+  bL2.smulTower jTraceBasisU
+
+theorem jTraceBasis_apply (i : Fin 2) (x : Module.Free.ChooseBasisIndex Ladj U) :
+    jTraceBasis (i, x) = bL2 i • (jTraceBasisU x : U) := by
+  exact Basis.smulTower_apply bL2 jTraceBasisU (i, x)
+
+theorem Jlin_diag_zero_zero (x : Module.Free.ChooseBasisIndex Ladj U) :
+    LinearMap.toMatrix jTraceBasis jTraceBasis Jlin (0, x) (0, x) = 0 := by
+  rw [LinearMap.toMatrix_apply]
+  have hJ : Jlin (jTraceBasis (0, x)) =
+      (iRoot * bL2 0) • (jTraceBasisU x : U) := by
+    rw [jTraceBasis_apply, ← iRoot_smul_eq_Jlin, smul_smul]
+  rw [hJ, bL2_zero, mul_one]
+  have hbx : iRoot • (jTraceBasisU x : U) = jTraceBasis ((1 : Fin 2), x) := by
+    rw [jTraceBasis_apply, bL2_one]
+  rw [hbx, Basis.repr_self]
+  exact Finsupp.single_eq_of_ne (fun h => by cases h)
+
+theorem Jlin_diag_zero_one (x : Module.Free.ChooseBasisIndex Ladj U) :
+    LinearMap.toMatrix jTraceBasis jTraceBasis Jlin (1, x) (1, x) = 0 := by
+  rw [LinearMap.toMatrix_apply]
+  have hJ : Jlin (jTraceBasis (1, x)) =
+      (iRoot * bL2 1) • (jTraceBasisU x : U) := by
+    rw [jTraceBasis_apply, ← iRoot_smul_eq_Jlin, smul_smul]
+  rw [hJ, bL2_one, iRoot_mul_self]
+  have hbx : ((-1 : Ladj) • (jTraceBasisU x : U)) =
+      -jTraceBasis ((0 : Fin 2), x) := by
+    rw [neg_one_smul, jTraceBasis_apply, bL2_zero, one_smul]
+  rw [hbx, map_neg, Basis.repr_self]
+  have hne : ((0 : Fin 2), x) ≠ ((1 : Fin 2), x) := fun h => by cases h
+  simpa using Finsupp.single_eq_of_ne (a := ((0 : Fin 2), x)) (b := ((1 : Fin 2), x))
+    (v := (1 : k)) hne
+
+theorem Jlin_diag_zero (i : Fin 2) (x : Module.Free.ChooseBasisIndex Ladj U) :
+    LinearMap.toMatrix jTraceBasis jTraceBasis Jlin (i, x) (i, x) = 0 := by
+  fin_cases i
+  · exact Jlin_diag_zero_zero x
+  · exact Jlin_diag_zero_one x
+
 /-- Trace of `Jlin` is zero. -/
 theorem Jlin_trace : LinearMap.trace k U Jlin = 0 := by
-  classical
-  haveI : Module.Free Ladj U := instFreeLadjU
-  haveI : Module.Finite Ladj U := instFiniteLadjU
-  haveI : Module.Free k Ladj := instFreeLadj
-  haveI : Module.Finite k Ladj := instFiniteLadj
-  haveI : Module.Free k U := inferInstance
-  haveI : Module.Finite k U := inferInstance
-  let bU := Module.Free.chooseBasis Ladj U
-  let b := bL2.smulTower bU
-  have htr : LinearMap.trace k U Jlin = (LinearMap.toMatrix b b Jlin).trace :=
-    LinearMap.trace_eq_matrix_trace k b Jlin
-  rw [htr, Matrix.trace]
-  simp_rw [Matrix.diag_apply, LinearMap.toMatrix_apply]
-  refine Finset.sum_eq_zero fun ij _ => ?_
-  obtain ⟨i, x⟩ := ij
-  have happly : b (i, x) = bL2 i • (bU x : U) := Basis.smulTower_apply bL2 bU (i, x)
-  have hJ : Jlin (b (i, x)) = (iRoot * bL2 i) • (bU x : U) := by
-    rw [happly, ← iRoot_smul_eq_Jlin, smul_smul]
-  match i with
-  | ⟨0, hi0⟩ =>
-    rw [hJ, bL2_eq_zero hi0, mul_one]
-    have hbx : iRoot • (bU x : U) = b ((1 : Fin 2), x) := by
-      rw [Basis.smulTower_apply bL2 bU ((1 : Fin 2), x), bL2_one]
-    rw [hbx, Basis.repr_self]
-    exact Finsupp.single_eq_of_ne (fun h => by cases h)
-  | ⟨1, hi1⟩ =>
-    rw [hJ, bL2_eq_one hi1, iRoot_mul_self]
-    have hbx : ((-1 : Ladj) • (bU x : U)) = -b ((0 : Fin 2), x) := by
-      rw [neg_one_smul, Basis.smulTower_apply bL2 bU ((0 : Fin 2), x), bL2_zero, one_smul]
-    rw [hbx, map_neg, Basis.repr_self]
-    have hne : ((0 : Fin 2), x) ≠ ((1 : Fin 2), x) := fun h => by cases h
-    simpa using Finsupp.single_eq_of_ne (a := ((0 : Fin 2), x)) (b := ((1 : Fin 2), x))
-      (v := (1 : k)) hne
-  | ⟨n+2, hn⟩ =>
-    omega
+  rw [LinearMap.trace_eq_matrix_trace k jTraceBasis Jlin, Matrix.trace]
+  simp_rw [Matrix.diag_apply]
+  exact Finset.sum_eq_zero fun ij _ => Jlin_diag_zero ij.1 ij.2
 
 /-! ### χ_Λ²(σ) = 3 via Newton exterior identity
 
@@ -6105,6 +6097,63 @@ theorem smul_one_mul_matrix (r : k) (A : Matrix (Fin 2) (Fin 2) k) :
     · rfl
   · intro; exact absurd (Finset.mem_univ _) (by assumption)
 
+theorem matrix_fin_two_trace_ne_zero_offdiag_zero
+    (A : Matrix (Fin 2) (Fin 2) k) (hA2 : A * A + 1 = 0) (htr : A.trace ≠ 0) :
+    A 1 0 = 0 := by
+  have ht : A 0 0 + A 1 1 ≠ 0 := by
+    simpa [Matrix.trace, Fin.sum_univ_two] using htr
+  have hentry := congrArg (fun M : Matrix (Fin 2) (Fin 2) k => M 1 0) hA2
+  have hmul : (A 0 0 + A 1 1) * A 1 0 = 0 := by
+    have hentry' : A 1 0 * A 0 0 + A 1 1 * A 1 0 = 0 := by
+      simpa only [Matrix.add_apply, Matrix.mul_apply, Fin.sum_univ_two, Matrix.one_apply,
+        ne_eq, one_ne_zero, ↓reduceIte, add_zero, Matrix.zero_apply] using hentry
+    calc
+      (A 0 0 + A 1 1) * A 1 0 = A 1 0 * A 0 0 + A 1 1 * A 1 0 := by ring
+      _ = 0 := hentry'
+  exact (mul_eq_zero.mp hmul).resolve_left ht
+
+theorem trace_eq_zero_of_sq_eq_neg_one_of_no_eigen
+    {V : Type*} [AddCommGroup V] [Module k V] [Module.Finite k V] [Module.Free k V]
+    (T : Module.End k V) (hdim : Module.finrank k V = 2)
+    (hT2 : T ∘ₗ T + LinearMap.id = 0)
+    (hnoeig : ∀ (mu : k) (x : V), x ≠ 0 → T x = mu • x → False) :
+    LinearMap.trace k V T = 0 := by
+  have hcard : Fintype.card (Module.Free.ChooseBasisIndex k V) = 2 := by
+    rw [← Module.finrank_eq_card_chooseBasisIndex k V, hdim]
+  let eIdx : Module.Free.ChooseBasisIndex k V ≃ Fin 2 :=
+    Fintype.equivFinOfCardEq hcard
+  let b : Basis (Fin 2) k V := (Module.Free.chooseBasis k V).reindex eIdx
+  let A : Matrix (Fin 2) (Fin 2) k := LinearMap.toMatrix b b T
+  have htr : LinearMap.trace k V T = A.trace :=
+    LinearMap.trace_eq_matrix_trace k b T
+  rw [htr]
+  by_contra ht
+  have hA2 : A * A + 1 = 0 := by
+    have hcomp : LinearMap.toMatrix b b (T ∘ₗ T) = A * A :=
+      LinearMap.toMatrix_comp b b b T T
+    have hid : LinearMap.toMatrix b b (LinearMap.id : V →ₗ[k] V) =
+        (1 : Matrix (Fin 2) (Fin 2) k) := LinearMap.toMatrix_id b
+    have hsum : LinearMap.toMatrix b b (T ∘ₗ T + LinearMap.id) =
+        LinearMap.toMatrix b b (T ∘ₗ T) + LinearMap.toMatrix b b LinearMap.id :=
+      map_add (LinearMap.toMatrix b b) _ _
+    have hzero : LinearMap.toMatrix b b (0 : V →ₗ[k] V) = 0 := map_zero _
+    calc
+      A * A + 1 = LinearMap.toMatrix b b (T ∘ₗ T) +
+          LinearMap.toMatrix b b LinearMap.id := by rw [hcomp, hid]
+      _ = LinearMap.toMatrix b b (T ∘ₗ T + LinearMap.id) := hsum.symm
+      _ = LinearMap.toMatrix b b 0 := by rw [hT2]
+      _ = 0 := hzero
+  have h10 : A 1 0 = 0 := matrix_fin_two_trace_ne_zero_offdiag_zero A hA2 ht
+  have h10' : b.repr (T (b 0)) 1 = 0 := by
+    simpa only [A, LinearMap.toMatrix_apply] using h10
+  have heig : T (b 0) = A 0 0 • b 0 := by
+    apply b.repr.injective
+    ext i
+    fin_cases i
+    · simp [A, LinearMap.toMatrix_apply]
+    · simp [h10']
+  exact hnoeig (A 0 0) (b 0) (b.ne_zero 0) heig
+
 theorem Rrestrict_residual_trace :
     let hR : ∀ x ∈ residualKer, Rlin x ∈ residualKer := fun _ hx => residualKer_R_stable hx
     LinearMap.trace k residualKer (Rrestrict residualKer hR) = 0 := by
@@ -6113,91 +6162,12 @@ theorem Rrestrict_residual_trace :
   haveI : Module.Free k residualKer := Module.Free.of_divisionRing k residualKer
   let hR : ∀ x ∈ residualKer, Rlin x ∈ residualKer := fun _ hx => residualKer_R_stable hx
   let RW := Rrestrict residualKer hR
-  have hdim : Module.finrank k residualKer = 2 := finrank_residualKer_eq_two
-  have hcard : Fintype.card (Module.Free.ChooseBasisIndex k residualKer) = 2 := by
-    rw [← Module.finrank_eq_card_chooseBasisIndex k residualKer, hdim]
-  let eIdx : Module.Free.ChooseBasisIndex k residualKer ≃ Fin 2 :=
-    Fintype.equivFinOfCardEq hcard
-  let b : Basis (Fin 2) k residualKer :=
-    (Module.Free.chooseBasis k residualKer).reindex eIdx
-  let A : Matrix (Fin 2) (Fin 2) k := LinearMap.toMatrix b b RW
-  have htr : LinearMap.trace k residualKer RW = A.trace :=
-    LinearMap.trace_eq_matrix_trace k b RW
-  -- A² + I = 0
-  have hA2 : A * A + 1 = 0 := by
-    have h0map : LinearMap.toMatrix b b (0 : residualKer →ₗ[k] residualKer) = 0 :=
-      map_zero _
-    have hsum : LinearMap.toMatrix b b (RW ∘ₗ RW + LinearMap.id) =
-        LinearMap.toMatrix b b (RW ∘ₗ RW) + LinearMap.toMatrix b b LinearMap.id :=
-      map_add (LinearMap.toMatrix b b) _ _
-    have hR2 : RW ∘ₗ RW + LinearMap.id = 0 := Rrestrict_residual_sq_add_id hR
-    have hcomp : LinearMap.toMatrix b b (RW ∘ₗ RW) = A * A :=
-      LinearMap.toMatrix_comp b b b RW RW
-    have hid : LinearMap.toMatrix b b (LinearMap.id : residualKer →ₗ[k] residualKer) =
-        (1 : Matrix (Fin 2) (Fin 2) k) :=
-      LinearMap.toMatrix_id b
-    calc A * A + 1
-        = LinearMap.toMatrix b b (RW ∘ₗ RW) +
-            LinearMap.toMatrix b b LinearMap.id := by rw [← hcomp, ← hid]
-      _ = LinearMap.toMatrix b b (RW ∘ₗ RW + LinearMap.id) := hsum.symm
-      _ = LinearMap.toMatrix b b 0 := by rw [hR2]
-      _ = 0 := h0map
-  have hA2' : A * A = -1 := eq_neg_of_add_eq_zero_left hA2
-  -- Cayley–Hamilton: A² − tr•A + det•I = 0
-  have hCH : A * A - A.trace • A + A.det • (1 : Matrix (Fin 2) (Fin 2) k) = 0 := by
-    have h0 : aeval A A.charpoly = 0 := Matrix.aeval_self_charpoly A
-    have hcp : A.charpoly = X ^ 2 - C A.trace * X + C A.det := Matrix.charpoly_fin_two A
-    rw [hcp] at h0
-    -- aeval expands to A^2 - (tr • 1) * A + det • 1
-    have h0' : A ^ 2 - (A.trace • (1 : Matrix (Fin 2) (Fin 2) k)) * A +
-        A.det • (1 : Matrix (Fin 2) (Fin 2) k) = 0 := by
-      simpa [map_add, map_sub, map_mul, map_pow, aeval_X, aeval_C,
-        Algebra.algebraMap_eq_smul_one] using h0
-    -- rewrite (tr•1)*A = tr•A and A^2 = A*A
-    rw [smul_one_mul_matrix, sq] at h0'
-    exact h0'
-  -- tr • A = (det − 1) • I
-  have hsc : A.trace • A = (A.det - 1) • (1 : Matrix (Fin 2) (Fin 2) k) := by
-    -- CH with A² = -I: -I - tr•A + det•I = 0
-    have h1 : -(1 : Matrix (Fin 2) (Fin 2) k) - A.trace • A + A.det • 1 = 0 := by
-      have h := hCH
-      rwa [hA2'] at h
-    -- From h1: tr•A = -1 + det•1  (add 1 + tr•A to both sides of h1 = 0)
-    have hsum : A.trace • A =
-        -(1 : Matrix (Fin 2) (Fin 2) k) + A.det • 1 := by
-      have h1' : (A.trace • A) + (-(1 : Matrix (Fin 2) (Fin 2) k) - A.trace • A + A.det • 1) =
-          -(1) + A.det • 1 := by abel
-      rwa [h1, add_zero] at h1'
-    -- -1 + det•1 = (det - 1)•1
-    convert hsum using 1
-    ext i j
-    simp only [Matrix.add_apply, Matrix.neg_apply, Matrix.smul_apply, Matrix.one_apply,
-      sub_smul, one_smul]
-    ring
-  -- tr = 0
   change LinearMap.trace k residualKer RW = 0
-  rw [htr]
-  by_cases ht : A.trace = 0
-  · exact ht
-  · let c : k := (A.det - 1) * A.trace⁻¹
-    have hAscal : A = c • (1 : Matrix (Fin 2) (Fin 2) k) := by
-      have hA : A = A.trace⁻¹ • (A.trace • A) := by
-        rw [smul_smul, inv_mul_cancel₀ ht, one_smul]
-      rw [hA, hsc, smul_smul]
-      -- A.trace⁻¹ * (A.det - 1) = (A.det - 1) * A.trace⁻¹
-      simp only [c, mul_comm]
-    have hRWscal : RW = c • LinearMap.id := by
-      apply (LinearMap.toMatrix b b).injective
-      calc LinearMap.toMatrix b b RW = A := rfl
-        _ = c • (1 : Matrix (Fin 2) (Fin 2) k) := hAscal
-        _ = c • LinearMap.toMatrix b b (LinearMap.id : residualKer →ₗ[k] residualKer) := by
-            rw [LinearMap.toMatrix_id]
-        _ = LinearMap.toMatrix b b (c • LinearMap.id) :=
-            (map_smul (LinearMap.toMatrix b b) c LinearMap.id).symm
-    have hx0 : b 0 ≠ 0 := b.ne_zero 0
-    have heig : RW (b 0) = c • b 0 := by
-      rw [hRWscal, LinearMap.smul_apply, LinearMap.id_apply]
-    exact False.elim (Rrestrict_residual_no_eigen hR hx0 heig)
+  apply trace_eq_zero_of_sq_eq_neg_one_of_no_eigen (V := residualKer) RW
+    finrank_residualKer_eq_two
+  · exact Rrestrict_residual_sq_add_id hR
+  · intro mu x hx hmu
+    exact Rrestrict_residual_no_eigen hR hx hmu
 
 /-! ### Wker: companion matrix of cyclic basis has zero diagonal -/
 
@@ -6891,7 +6861,6 @@ theorem card_centralizer_rotGen :
 theorem card_carrier_rotGen :
     Fintype.card (ConjClasses.mk (CentralizerN.rotGen : PSL2F11)).carrier = 110 := by
   classical
-  set_option maxRecDepth 4096 in
   have hG : Fintype.card PSL2F11 = 660 := card_PSL2F11
   let g0 : PSL2F11 := CentralizerN.rotGen
   have hcent : Nat.card (Subgroup.centralizer ({g0} : Set PSL2F11)) = 6 := by
@@ -7137,7 +7106,12 @@ private theorem card_sylow3 (Q : Sylow 3 PSL2F11) : Nat.card Q = 3 := by
   haveI : Fact (Nat.Prime 3) := ⟨by decide⟩
   rw [Sylow.card_eq_multiplicity]
   have hfac : Nat.factorization (Nat.card PSL2F11) 3 = 1 := by
-    rw [card_G]; native_decide
+    rw [card_G]
+    have hp : Nat.Prime 3 := by decide
+    rw [show 660 = 3 * 220 by norm_num,
+      Nat.factorization_mul (by norm_num) (by norm_num), Finsupp.add_apply,
+      hp.factorization_self,
+      Nat.factorization_eq_zero_of_not_dvd (by norm_num : ¬ 3 ∣ 220)]
   rw [hfac]; norm_num
 
 private theorem orderOf_ne_one_of_mem_sylow3 (Q : Sylow 3 PSL2F11)
@@ -7294,7 +7268,6 @@ private theorem card_normalizer_r2 :
 theorem card_centralizer_rotGen_pow_two :
     Nat.card (Subgroup.centralizer ({r2} : Set PSL2F11)) = 6 := by
   classical
-  set_option maxRecDepth 4096 in
   let C := Subgroup.centralizer ({r2} : Set PSL2F11)
   let Cr := Subgroup.centralizer ({rGen} : Set PSL2F11)
   let N := Subgroup.normalizer (Subgroup.zpowers r2 : Set PSL2F11)
@@ -7355,7 +7328,6 @@ theorem card_centralizer_rotGen_pow_two :
 theorem card_carrier_rotGen_pow_two :
     Fintype.card (ConjClasses.mk r2).carrier = 110 := by
   classical
-  set_option maxRecDepth 4096 in
   have hG : Fintype.card PSL2F11 = 660 := card_PSL2F11
   have hcent : Nat.card (Subgroup.centralizer ({r2} : Set PSL2F11)) = 6 :=
     card_centralizer_rotGen_pow_two

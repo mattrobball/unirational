@@ -544,6 +544,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Ring/PNat.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Ring/PNat.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Ring/PNat.olean.private"],
+  "Mathlib.Tactic.Ring.Compare":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Ring/Compare.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Ring/Compare.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Ring/Compare.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Ring/Compare.olean.private"],
   "Mathlib.Tactic.Ring.Common":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Ring/Common.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Ring/Common.ir",
@@ -594,6 +599,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Push.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Push.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Push.olean.private"],
+  "Mathlib.Tactic.Positivity.Finset":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Positivity/Finset.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Positivity/Finset.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Positivity/Finset.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Positivity/Finset.olean.private"],
   "Mathlib.Tactic.Positivity.Core":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Positivity/Core.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Positivity/Core.ir",
@@ -604,6 +614,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Positivity/Basic.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Positivity/Basic.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Positivity/Basic.olean.private"],
+  "Mathlib.Tactic.Positivity":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Positivity.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Positivity.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Positivity.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Positivity.olean.private"],
   "Mathlib.Tactic.Polynomial.Core":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Polynomial/Core.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Polynomial/Core.ir",
@@ -884,6 +899,16 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linter.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linter.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linter.olean.private"],
+  "Mathlib.Tactic.LinearCombination.Lemmas":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/LinearCombination/Lemmas.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/LinearCombination/Lemmas.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/LinearCombination/Lemmas.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/LinearCombination/Lemmas.olean.private"],
+  "Mathlib.Tactic.LinearCombination":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/LinearCombination.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/LinearCombination.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/LinearCombination.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/LinearCombination.olean.private"],
   "Mathlib.Tactic.Linarith.Verification":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith/Verification.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Tactic/Linarith/Verification.ir",
@@ -1554,16 +1579,46 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/SetTheory/Cardinal/Aleph.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/SetTheory/Cardinal/Aleph.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/SetTheory/Cardinal/Aleph.olean.private"],
+  "Mathlib.RingTheory.UniqueFactorizationDomain.NormalizedFactors":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/NormalizedFactors.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/NormalizedFactors.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/NormalizedFactors.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/NormalizedFactors.olean.private"],
+  "Mathlib.RingTheory.UniqueFactorizationDomain.Multiplicity":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Multiplicity.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Multiplicity.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Multiplicity.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Multiplicity.olean.private"],
   "Mathlib.RingTheory.UniqueFactorizationDomain.Ideal":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Ideal.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Ideal.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Ideal.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Ideal.olean.private"],
+  "Mathlib.RingTheory.UniqueFactorizationDomain.GCDMonoid":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/GCDMonoid.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/GCDMonoid.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/GCDMonoid.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/GCDMonoid.olean.private"],
+  "Mathlib.RingTheory.UniqueFactorizationDomain.Finite":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Finite.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Finite.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Finite.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Finite.olean.private"],
+  "Mathlib.RingTheory.UniqueFactorizationDomain.FactorSet":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/FactorSet.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/FactorSet.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/FactorSet.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/FactorSet.olean.private"],
   "Mathlib.RingTheory.UniqueFactorizationDomain.Defs":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Defs.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Defs.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Defs.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Defs.olean.private"],
+  "Mathlib.RingTheory.UniqueFactorizationDomain.Basic":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Basic.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Basic.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Basic.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/UniqueFactorizationDomain/Basic.olean.private"],
   "Mathlib.RingTheory.TwoSidedIdeal.Operations":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/TwoSidedIdeal/Operations.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/TwoSidedIdeal/Operations.ir",
@@ -1584,6 +1639,16 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/TwoSidedIdeal/Basic.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/TwoSidedIdeal/Basic.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/TwoSidedIdeal/Basic.olean.private"],
+  "Mathlib.RingTheory.TensorProduct.MvPolynomial":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/TensorProduct/MvPolynomial.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/TensorProduct/MvPolynomial.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/TensorProduct/MvPolynomial.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/TensorProduct/MvPolynomial.olean.private"],
+  "Mathlib.RingTheory.TensorProduct.MonoidAlgebra":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/TensorProduct/MonoidAlgebra.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/TensorProduct/MonoidAlgebra.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/TensorProduct/MonoidAlgebra.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/TensorProduct/MonoidAlgebra.olean.private"],
   "Mathlib.RingTheory.TensorProduct.Maps":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/TensorProduct/Maps.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/TensorProduct/Maps.ir",
@@ -1619,6 +1684,61 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/PrincipalIdealDomain.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/PrincipalIdealDomain.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/PrincipalIdealDomain.olean.private"],
+  "Mathlib.RingTheory.PowerBasis":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/PowerBasis.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/PowerBasis.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/PowerBasis.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/PowerBasis.olean.private"],
+  "Mathlib.RingTheory.PolynomialAlgebra":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/PolynomialAlgebra.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/PolynomialAlgebra.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/PolynomialAlgebra.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/PolynomialAlgebra.olean.private"],
+  "Mathlib.RingTheory.Polynomial.UniqueFactorization":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/UniqueFactorization.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/UniqueFactorization.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/UniqueFactorization.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/UniqueFactorization.olean.private"],
+  "Mathlib.RingTheory.Polynomial.Tower":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Tower.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Tower.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Tower.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Tower.olean.private"],
+  "Mathlib.RingTheory.Polynomial.Subring":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Subring.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Subring.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Subring.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Subring.olean.private"],
+  "Mathlib.RingTheory.Polynomial.ScaleRoots":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/ScaleRoots.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/ScaleRoots.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/ScaleRoots.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/ScaleRoots.olean.private"],
+  "Mathlib.RingTheory.Polynomial.Quotient":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Quotient.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Quotient.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Quotient.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Quotient.olean.private"],
+  "Mathlib.RingTheory.Polynomial.Nilpotent":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Nilpotent.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Nilpotent.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Nilpotent.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Nilpotent.olean.private"],
+  "Mathlib.RingTheory.Polynomial.IntegralNormalization":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/IntegralNormalization.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/IntegralNormalization.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/IntegralNormalization.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/IntegralNormalization.olean.private"],
+  "Mathlib.RingTheory.Polynomial.Ideal":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Ideal.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Ideal.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Ideal.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Ideal.olean.private"],
+  "Mathlib.RingTheory.Polynomial.Content":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Content.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Content.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Content.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Content.olean.private"],
   "Mathlib.RingTheory.Polynomial.Basic":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Basic.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Polynomial/Basic.ir",
@@ -1634,6 +1754,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/OreLocalization/Ring.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/OreLocalization/Ring.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/OreLocalization/Ring.olean.private"],
+  "Mathlib.RingTheory.OreLocalization.OreSet":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/OreLocalization/OreSet.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/OreLocalization/OreSet.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/OreLocalization/OreSet.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/OreLocalization/OreSet.olean.private"],
   "Mathlib.RingTheory.OreLocalization.NonZeroDivisors":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/OreLocalization/NonZeroDivisors.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/OreLocalization/NonZeroDivisors.ir",
@@ -1644,6 +1769,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/OreLocalization/Basic.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/OreLocalization/Basic.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/OreLocalization/Basic.olean.private"],
+  "Mathlib.RingTheory.Norm.Defs":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Norm/Defs.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Norm/Defs.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Norm/Defs.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Norm/Defs.olean.private"],
   "Mathlib.RingTheory.NonUnitalSubsemiring.Defs":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/NonUnitalSubsemiring/Defs.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/NonUnitalSubsemiring/Defs.ir",
@@ -1684,11 +1814,46 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Noetherian/Basic.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Noetherian/Basic.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Noetherian/Basic.olean.private"],
+  "Mathlib.RingTheory.Nilpotent.Lemmas":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Nilpotent/Lemmas.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Nilpotent/Lemmas.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Nilpotent/Lemmas.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Nilpotent/Lemmas.olean.private"],
+  "Mathlib.RingTheory.Nilpotent.Defs":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Nilpotent/Defs.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Nilpotent/Defs.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Nilpotent/Defs.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Nilpotent/Defs.olean.private"],
+  "Mathlib.RingTheory.Nilpotent.Basic":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Nilpotent/Basic.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Nilpotent/Basic.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Nilpotent/Basic.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Nilpotent/Basic.olean.private"],
+  "Mathlib.RingTheory.MvPolynomial.Tower":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/MvPolynomial/Tower.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/MvPolynomial/Tower.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/MvPolynomial/Tower.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/MvPolynomial/Tower.olean.private"],
   "Mathlib.RingTheory.Multiplicity":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Multiplicity.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Multiplicity.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Multiplicity.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Multiplicity.olean.private"],
+  "Mathlib.RingTheory.MatrixPolynomialAlgebra":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/MatrixPolynomialAlgebra.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/MatrixPolynomialAlgebra.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/MatrixPolynomialAlgebra.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/MatrixPolynomialAlgebra.olean.private"],
+  "Mathlib.RingTheory.MatrixAlgebra":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/MatrixAlgebra.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/MatrixAlgebra.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/MatrixAlgebra.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/MatrixAlgebra.olean.private"],
+  "Mathlib.RingTheory.Localization.Module":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Localization/Module.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Localization/Module.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Localization/Module.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Localization/Module.olean.private"],
   "Mathlib.RingTheory.Localization.Integer":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Localization/Integer.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Localization/Integer.ir",
@@ -1709,6 +1874,16 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Localization/Basic.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Localization/Basic.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Localization/Basic.olean.private"],
+  "Mathlib.RingTheory.Localization.BaseChange":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Localization/BaseChange.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Localization/BaseChange.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Localization/BaseChange.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Localization/BaseChange.olean.private"],
+  "Mathlib.RingTheory.Localization.Away.Basic":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Localization/Away/Basic.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Localization/Away/Basic.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Localization/Away/Basic.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Localization/Away/Basic.olean.private"],
   "Mathlib.RingTheory.LocalRing.Defs":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/LocalRing/Defs.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/LocalRing/Defs.ir",
@@ -1729,11 +1904,46 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Jacobson/Ideal.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Jacobson/Ideal.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Jacobson/Ideal.olean.private"],
+  "Mathlib.RingTheory.IsTensorProduct":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IsTensorProduct.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IsTensorProduct.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IsTensorProduct.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IsTensorProduct.olean.private"],
   "Mathlib.RingTheory.IntegralDomain":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralDomain.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralDomain.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralDomain.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralDomain.olean.private"],
+  "Mathlib.RingTheory.IntegralClosure.IsIntegralClosure.Defs":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/IsIntegralClosure/Defs.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/IsIntegralClosure/Defs.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/IsIntegralClosure/Defs.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/IsIntegralClosure/Defs.olean.private"],
+  "Mathlib.RingTheory.IntegralClosure.IsIntegralClosure.Basic":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/IsIntegralClosure/Basic.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/IsIntegralClosure/Basic.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/IsIntegralClosure/Basic.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/IsIntegralClosure/Basic.olean.private"],
+  "Mathlib.RingTheory.IntegralClosure.IsIntegral.Defs":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/IsIntegral/Defs.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/IsIntegral/Defs.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/IsIntegral/Defs.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/IsIntegral/Defs.olean.private"],
+  "Mathlib.RingTheory.IntegralClosure.IsIntegral.Basic":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/IsIntegral/Basic.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/IsIntegral/Basic.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/IsIntegral/Basic.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/IsIntegral/Basic.olean.private"],
+  "Mathlib.RingTheory.IntegralClosure.Algebra.Defs":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/Algebra/Defs.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/Algebra/Defs.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/Algebra/Defs.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/Algebra/Defs.olean.private"],
+  "Mathlib.RingTheory.IntegralClosure.Algebra.Basic":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/Algebra/Basic.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/Algebra/Basic.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/Algebra/Basic.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/IntegralClosure/Algebra/Basic.olean.private"],
   "Mathlib.RingTheory.Ideal.Span":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Span.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Span.ir",
@@ -1744,6 +1954,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Quotient/Operations.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Quotient/Operations.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Quotient/Operations.olean.private"],
+  "Mathlib.RingTheory.Ideal.Quotient.Noetherian":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Quotient/Noetherian.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Quotient/Noetherian.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Quotient/Noetherian.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Quotient/Noetherian.olean.private"],
   "Mathlib.RingTheory.Ideal.Quotient.Defs":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Quotient/Defs.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Quotient/Defs.ir",
@@ -1794,11 +2009,21 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Defs.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Defs.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Defs.olean.private"],
+  "Mathlib.RingTheory.Ideal.BigOperators":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/BigOperators.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/BigOperators.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/BigOperators.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/BigOperators.olean.private"],
   "Mathlib.RingTheory.Ideal.Basic":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Basic.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Basic.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Basic.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Ideal/Basic.olean.private"],
+  "Mathlib.RingTheory.Finiteness.Subalgebra":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Subalgebra.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Subalgebra.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Subalgebra.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Subalgebra.olean.private"],
   "Mathlib.RingTheory.Finiteness.Projective":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Projective.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Projective.ir",
@@ -1809,6 +2034,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Lattice.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Lattice.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Lattice.olean.private"],
+  "Mathlib.RingTheory.Finiteness.Ideal":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Ideal.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Ideal.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Ideal.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Ideal.olean.private"],
   "Mathlib.RingTheory.Finiteness.Finsupp":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Finsupp.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Finsupp.ir",
@@ -1824,6 +2054,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Cardinality.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Cardinality.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Cardinality.olean.private"],
+  "Mathlib.RingTheory.Finiteness.Bilinear":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Bilinear.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Bilinear.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Bilinear.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Bilinear.olean.private"],
   "Mathlib.RingTheory.Finiteness.Basic":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Basic.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Finiteness/Basic.ir",
@@ -1834,6 +2069,16 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/FiniteType.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/FiniteType.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/FiniteType.olean.private"],
+  "Mathlib.RingTheory.FinitePresentation":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/FinitePresentation.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/FinitePresentation.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/FinitePresentation.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/FinitePresentation.olean.private"],
+  "Mathlib.RingTheory.EuclideanDomain":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/EuclideanDomain.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/EuclideanDomain.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/EuclideanDomain.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/EuclideanDomain.olean.private"],
   "Mathlib.RingTheory.Coprime.Lemmas":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Coprime/Lemmas.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Coprime/Lemmas.ir",
@@ -1859,11 +2104,31 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Congruence/Basic.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Congruence/Basic.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Congruence/Basic.olean.private"],
+  "Mathlib.RingTheory.Algebraic.Integral":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Algebraic/Integral.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Algebraic/Integral.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Algebraic/Integral.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Algebraic/Integral.olean.private"],
+  "Mathlib.RingTheory.Algebraic.Defs":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Algebraic/Defs.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Algebraic/Defs.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Algebraic/Defs.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Algebraic/Defs.olean.private"],
+  "Mathlib.RingTheory.Algebraic.Basic":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Algebraic/Basic.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Algebraic/Basic.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Algebraic/Basic.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Algebraic/Basic.olean.private"],
   "Mathlib.RingTheory.AlgebraTower":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/AlgebraTower.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/AlgebraTower.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/AlgebraTower.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/AlgebraTower.olean.private"],
+  "Mathlib.RingTheory.AdjoinRoot":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/AdjoinRoot.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/AdjoinRoot.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/AdjoinRoot.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/AdjoinRoot.olean.private"],
   "Mathlib.RingTheory.Adjoin.Tower":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Adjoin/Tower.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/RingTheory/Adjoin/Tower.ir",
@@ -2544,6 +2809,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/BourbakiWitt.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/BourbakiWitt.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/BourbakiWitt.olean.private"],
+  "Mathlib.Order.Bounds.OrderIso":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/Bounds/OrderIso.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/Bounds/OrderIso.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/Bounds/OrderIso.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/Bounds/OrderIso.olean.private"],
   "Mathlib.Order.Bounds.Image":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/Bounds/Image.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Order/Bounds/Image.ir",
@@ -2879,6 +3149,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/SesquilinearForm/Basic.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/SesquilinearForm/Basic.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/SesquilinearForm/Basic.olean.private"],
+  "Mathlib.LinearAlgebra.SModEq.Basic":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/SModEq/Basic.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/SModEq/Basic.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/SModEq/Basic.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/SModEq/Basic.olean.private"],
   "Mathlib.LinearAlgebra.Quotient.Defs":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Quotient/Defs.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Quotient/Defs.ir",
@@ -2969,6 +3244,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/SemiringInverse.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/SemiringInverse.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/SemiringInverse.olean.private"],
+  "Mathlib.LinearAlgebra.Matrix.SchurComplement":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/SchurComplement.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/SchurComplement.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/SchurComplement.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/SchurComplement.olean.private"],
   "Mathlib.LinearAlgebra.Matrix.RowCol":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/RowCol.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/RowCol.ir",
@@ -3074,6 +3354,26 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/ConjTranspose.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/ConjTranspose.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/ConjTranspose.olean.private"],
+  "Mathlib.LinearAlgebra.Matrix.Charpoly.LinearMap":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Charpoly/LinearMap.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Charpoly/LinearMap.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Charpoly/LinearMap.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Charpoly/LinearMap.olean.private"],
+  "Mathlib.LinearAlgebra.Matrix.Charpoly.Coeff":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Charpoly/Coeff.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Charpoly/Coeff.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Charpoly/Coeff.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Charpoly/Coeff.olean.private"],
+  "Mathlib.LinearAlgebra.Matrix.Charpoly.Basic":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Charpoly/Basic.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Charpoly/Basic.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Charpoly/Basic.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Charpoly/Basic.olean.private"],
+  "Mathlib.LinearAlgebra.Matrix.Block":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Block.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Block.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Block.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Block.olean.private"],
   "Mathlib.LinearAlgebra.Matrix.Basis":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Basis.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Matrix/Basis.ir",
@@ -3134,6 +3434,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/FreeModule/StrongRankCondition.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/FreeModule/StrongRankCondition.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/FreeModule/StrongRankCondition.olean.private"],
+  "Mathlib.LinearAlgebra.FreeModule.Finite.Matrix":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/FreeModule/Finite/Matrix.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/FreeModule/Finite/Matrix.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/FreeModule/Finite/Matrix.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/FreeModule/Finite/Matrix.olean.private"],
   "Mathlib.LinearAlgebra.FreeModule.Finite.Basic":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/FreeModule/Finite/Basic.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/FreeModule/Finite/Basic.ir",
@@ -3244,6 +3549,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Dimension/OrzechProperty.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Dimension/OrzechProperty.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Dimension/OrzechProperty.olean.private"],
+  "Mathlib.LinearAlgebra.Dimension.Localization":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Dimension/Localization.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Dimension/Localization.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Dimension/Localization.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Dimension/Localization.olean.private"],
   "Mathlib.LinearAlgebra.Dimension.LinearMap":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Dimension/LinearMap.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/LinearAlgebra/Dimension/LinearMap.ir",
@@ -3524,6 +3834,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/SpecificGroups/Cyclic.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/SpecificGroups/Cyclic.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/SpecificGroups/Cyclic.olean.private"],
+  "Mathlib.GroupTheory.Rank":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/Rank.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/Rank.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/Rank.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/Rank.olean.private"],
   "Mathlib.GroupTheory.QuotientGroup.Finite":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/QuotientGroup/Finite.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/QuotientGroup/Finite.ir",
@@ -3634,6 +3949,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/MonoidLocalization/Basic.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/MonoidLocalization/Basic.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/MonoidLocalization/Basic.olean.private"],
+  "Mathlib.GroupTheory.MonoidLocalization.Away":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/MonoidLocalization/Away.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/MonoidLocalization/Away.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/MonoidLocalization/Away.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/MonoidLocalization/Away.olean.private"],
   "Mathlib.GroupTheory.Index":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/Index.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/Index.ir",
@@ -3759,11 +4079,51 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/Abelianization/Defs.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/Abelianization/Defs.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/GroupTheory/Abelianization/Defs.olean.private"],
+  "Mathlib.FieldTheory.Separable":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Separable.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Separable.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Separable.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Separable.olean.private"],
+  "Mathlib.FieldTheory.Perfect":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Perfect.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Perfect.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Perfect.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Perfect.olean.private"],
+  "Mathlib.FieldTheory.Minpoly.Field":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Minpoly/Field.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Minpoly/Field.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Minpoly/Field.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Minpoly/Field.olean.private"],
+  "Mathlib.FieldTheory.Minpoly.Basic":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Minpoly/Basic.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Minpoly/Basic.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Minpoly/Basic.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Minpoly/Basic.olean.private"],
+  "Mathlib.FieldTheory.KummerPolynomial":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/KummerPolynomial.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/KummerPolynomial.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/KummerPolynomial.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/KummerPolynomial.olean.private"],
+  "Mathlib.FieldTheory.IntermediateField.Basic":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/IntermediateField/Basic.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/IntermediateField/Basic.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/IntermediateField/Basic.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/IntermediateField/Basic.olean.private"],
+  "Mathlib.FieldTheory.Galois.Notation":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Notation.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Notation.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Notation.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Galois/Notation.olean.private"],
   "Mathlib.FieldTheory.Finiteness":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Finiteness.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Finiteness.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Finiteness.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Finiteness.olean.private"],
+  "Mathlib.FieldTheory.Finite.Basic":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Finite/Basic.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Finite/Basic.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Finite/Basic.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/FieldTheory/Finite/Basic.olean.private"],
   "Mathlib.Dynamics.PeriodicPts.Lemmas":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Dynamics/PeriodicPts/Lemmas.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Dynamics/PeriodicPts/Lemmas.ir",
@@ -3784,6 +4144,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Dynamics/FixedPoints/Basic.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Dynamics/FixedPoints/Basic.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Dynamics/FixedPoints/Basic.olean.private"],
+  "Mathlib.Data.ZMod.ValMinAbs":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/ZMod/ValMinAbs.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/ZMod/ValMinAbs.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/ZMod/ValMinAbs.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/ZMod/ValMinAbs.olean.private"],
   "Mathlib.Data.ZMod.QuotientGroup":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/ZMod/QuotientGroup.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/ZMod/QuotientGroup.ir",
@@ -4219,6 +4584,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Prime/Pow.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Prime/Pow.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Prime/Pow.olean.private"],
+  "Mathlib.Data.Nat.Prime.Int":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Prime/Int.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Prime/Int.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Prime/Int.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Prime/Int.olean.private"],
   "Mathlib.Data.Nat.Prime.Infinite":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Prime/Infinite.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Prime/Infinite.ir",
@@ -4319,6 +4689,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Factorization/Basic.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Factorization/Basic.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Factorization/Basic.olean.private"],
+  "Mathlib.Data.Nat.Factorial.Cast":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Factorial/Cast.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Factorial/Cast.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Factorial/Cast.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Factorial/Cast.olean.private"],
   "Mathlib.Data.Nat.Factorial.Basic":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Factorial/Basic.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Factorial/Basic.ir",
@@ -4339,6 +4714,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Count.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Count.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Count.olean.private"],
+  "Mathlib.Data.Nat.Choose.Vandermonde":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Choose/Vandermonde.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Choose/Vandermonde.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Choose/Vandermonde.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Choose/Vandermonde.olean.private"],
   "Mathlib.Data.Nat.Choose.Sum":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Choose/Sum.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Choose/Sum.ir",
@@ -4354,6 +4734,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Choose/Central.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Choose/Central.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Choose/Central.olean.private"],
+  "Mathlib.Data.Nat.Choose.Cast":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Choose/Cast.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Choose/Cast.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Choose/Cast.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Choose/Cast.olean.private"],
   "Mathlib.Data.Nat.Choose.Bounds":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Choose/Bounds.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Choose/Bounds.ir",
@@ -4424,6 +4809,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Basic.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Basic.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Nat/Basic.olean.private"],
+  "Mathlib.Data.NNRat.Order":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/NNRat/Order.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/NNRat/Order.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/NNRat/Order.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/NNRat/Order.olean.private"],
   "Mathlib.Data.NNRat.Defs":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/NNRat/Defs.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/NNRat/Defs.ir",
@@ -5259,6 +5649,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Finset/Disjoint.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Finset/Disjoint.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Finset/Disjoint.olean.private"],
+  "Mathlib.Data.Finset.Density":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Finset/Density.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Finset/Density.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Finset/Density.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Finset/Density.olean.private"],
   "Mathlib.Data.Finset.Defs":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Finset/Defs.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Data/Finset/Defs.ir",
@@ -5554,6 +5949,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Star/Basic.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Star/Basic.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Star/Basic.olean.private"],
+  "Mathlib.Algebra.Squarefree.Basic":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Squarefree/Basic.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Squarefree/Basic.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Squarefree/Basic.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Squarefree/Basic.olean.private"],
   "Mathlib.Algebra.Ring.Units":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Units.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Units.ir",
@@ -5604,6 +6004,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Semiconj.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Semiconj.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Semiconj.olean.private"],
+  "Mathlib.Algebra.Ring.Regular":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Regular.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Regular.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Regular.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Regular.olean.private"],
   "Mathlib.Algebra.Ring.Rat":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Rat.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Rat.ir",
@@ -5669,6 +6074,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Int/Parity.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Int/Parity.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Int/Parity.olean.private"],
+  "Mathlib.Algebra.Ring.Int.Field":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Int/Field.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Int/Field.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Int/Field.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Int/Field.olean.private"],
   "Mathlib.Algebra.Ring.Int.Defs":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Int/Defs.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Ring/Int/Defs.ir",
@@ -5839,6 +6249,16 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Prime/Defs.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Prime/Defs.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Prime/Defs.olean.private"],
+  "Mathlib.Algebra.Polynomial.Taylor":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Taylor.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Taylor.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Taylor.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Taylor.olean.private"],
+  "Mathlib.Algebra.Polynomial.Splits":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Splits.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Splits.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Splits.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Splits.olean.private"],
   "Mathlib.Algebra.Polynomial.Roots":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Roots.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Roots.ir",
@@ -5864,11 +6284,51 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Monic.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Monic.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Monic.olean.private"],
+  "Mathlib.Algebra.Polynomial.Lifts":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Lifts.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Lifts.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Lifts.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Lifts.olean.private"],
+  "Mathlib.Algebra.Polynomial.Laurent":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Laurent.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Laurent.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Laurent.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Laurent.olean.private"],
   "Mathlib.Algebra.Polynomial.Inductions":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Inductions.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Inductions.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Inductions.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Inductions.olean.private"],
+  "Mathlib.Algebra.Polynomial.Identities":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Identities.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Identities.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Identities.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Identities.olean.private"],
+  "Mathlib.Algebra.Polynomial.HasseDeriv":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/HasseDeriv.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/HasseDeriv.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/HasseDeriv.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/HasseDeriv.olean.private"],
+  "Mathlib.Algebra.Polynomial.FieldDivision":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/FieldDivision.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/FieldDivision.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/FieldDivision.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/FieldDivision.olean.private"],
+  "Mathlib.Algebra.Polynomial.Expand":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Expand.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Expand.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Expand.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Expand.olean.private"],
+  "Mathlib.Algebra.Polynomial.Eval.Subring":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Eval/Subring.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Eval/Subring.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Eval/Subring.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Eval/Subring.olean.private"],
+  "Mathlib.Algebra.Polynomial.Eval.SMul":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Eval/SMul.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Eval/SMul.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Eval/SMul.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Eval/SMul.olean.private"],
   "Mathlib.Algebra.Polynomial.Eval.Degree":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Eval/Degree.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Eval/Degree.ir",
@@ -5899,6 +6359,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Div.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Div.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Div.olean.private"],
+  "Mathlib.Algebra.Polynomial.Derivative":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Derivative.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Derivative.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Derivative.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Derivative.olean.private"],
   "Mathlib.Algebra.Polynomial.Degree.Units":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Degree/Units.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Degree/Units.ir",
@@ -5949,6 +6414,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Coeff.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Coeff.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/Coeff.olean.private"],
+  "Mathlib.Algebra.Polynomial.CancelLeads":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/CancelLeads.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/CancelLeads.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/CancelLeads.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/CancelLeads.olean.private"],
   "Mathlib.Algebra.Polynomial.BigOperators":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/BigOperators.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Polynomial/BigOperators.ir",
@@ -6264,6 +6734,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/GroupWithZero/Submonoid.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/GroupWithZero/Submonoid.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/GroupWithZero/Submonoid.olean.private"],
+  "Mathlib.Algebra.Order.GroupWithZero.OrderIso":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/GroupWithZero/OrderIso.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/GroupWithZero/OrderIso.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/GroupWithZero/OrderIso.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/GroupWithZero/OrderIso.olean.private"],
   "Mathlib.Algebra.Order.GroupWithZero.Defs":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/GroupWithZero/Defs.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/GroupWithZero/Defs.ir",
@@ -6394,6 +6869,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/Field/Canonical.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/Field/Canonical.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/Field/Canonical.olean.private"],
+  "Mathlib.Algebra.Order.Field.Basic":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/Field/Basic.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/Field/Basic.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/Field/Basic.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/Field/Basic.olean.private"],
   "Mathlib.Algebra.Order.BigOperators.Ring.Multiset":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/BigOperators/Ring/Multiset.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Order/BigOperators/Ring/Multiset.ir",
@@ -6719,6 +7199,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/Submodule/Basic.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/Submodule/Basic.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/Submodule/Basic.olean.private"],
+  "Mathlib.Algebra.Module.SpanRank":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/SpanRank.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/SpanRank.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/SpanRank.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/SpanRank.olean.private"],
   "Mathlib.Algebra.Module.Shrink":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/Shrink.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/Shrink.ir",
@@ -6764,6 +7249,21 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/NatInt.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/NatInt.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/NatInt.olean.private"],
+  "Mathlib.Algebra.Module.LocalizedModule.Submodule":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/LocalizedModule/Submodule.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/LocalizedModule/Submodule.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/LocalizedModule/Submodule.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/LocalizedModule/Submodule.olean.private"],
+  "Mathlib.Algebra.Module.LocalizedModule.IsLocalization":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/LocalizedModule/IsLocalization.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/LocalizedModule/IsLocalization.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/LocalizedModule/IsLocalization.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/LocalizedModule/IsLocalization.olean.private"],
+  "Mathlib.Algebra.Module.LocalizedModule.Basic":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/LocalizedModule/Basic.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/LocalizedModule/Basic.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/LocalizedModule/Basic.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/LocalizedModule/Basic.olean.private"],
   "Mathlib.Algebra.Module.LinearMap.Star":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/LinearMap/Star.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Module/LinearMap/Star.ir",
@@ -7504,6 +8004,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Group/Defs.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Group/Defs.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Group/Defs.olean.private"],
+  "Mathlib.Algebra.Group.ConjFinite":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Group/ConjFinite.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Group/ConjFinite.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Group/ConjFinite.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Group/ConjFinite.olean.private"],
   "Mathlib.Algebra.Group.Conj":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Group/Conj.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Group/Conj.ir",
@@ -7799,6 +8304,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/CharP/Basic.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/CharP/Basic.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/CharP/Basic.olean.private"],
+  "Mathlib.Algebra.CharP.Algebra":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/CharP/Algebra.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/CharP/Algebra.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/CharP/Algebra.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/CharP/Algebra.olean.private"],
   "Mathlib.Algebra.BigOperators.RingEquiv":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/BigOperators/RingEquiv.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/BigOperators/RingEquiv.ir",
@@ -7934,6 +8444,11 @@
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/BigOperators/Fin.ir",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/BigOperators/Fin.olean.server",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/BigOperators/Fin.olean.private"],
+  "Mathlib.Algebra.BigOperators.Associated":
+  ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/BigOperators/Associated.olean",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/BigOperators/Associated.ir",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/BigOperators/Associated.olean.server",
+   "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/BigOperators/Associated.olean.private"],
   "Mathlib.Algebra.Algebra.Tower":
   ["/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Algebra/Tower.olean",
    "/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean/Mathlib/Algebra/Algebra/Tower.ir",

@@ -21,8 +21,6 @@ open V14Formalization.GeometricV14Carrier
 open V14Formalization
 open WeilRep
 
-set_option maxHeartbeats 40000000
-set_option maxRecDepth 4096
 noncomputable section
 
 namespace V14Formalization
@@ -656,7 +654,12 @@ private theorem card_sylow11 (Q : Sylow 11 PSL2F11) : Nat.card Q = 11 := by
   haveI : Fact (Nat.Prime 11) := ⟨by decide⟩
   rw [Sylow.card_eq_multiplicity]
   have hfac : Nat.factorization (Nat.card PSL2F11) 11 = 1 := by
-    rw [card_G_nat]; native_decide
+    rw [card_G_nat]
+    have hp : Nat.Prime 11 := by decide
+    rw [show 660 = 11 * 60 by norm_num,
+      Nat.factorization_mul (by norm_num) (by norm_num), Finsupp.add_apply,
+      hp.factorization_self,
+      Nat.factorization_eq_zero_of_not_dvd (by norm_num : ¬ 11 ∣ 60)]
   rw [hfac]; norm_num
 
 private theorem orderOf_ne_one_of_mem_sylow11 (Q : Sylow 11 PSL2F11)
@@ -779,6 +782,29 @@ private noncomputable instance (Q : Sylow 11 PSL2F11) : Fintype (sylow11NonId Q)
   classical
   exact Subtype.fintype _
 
+/-- Reindex a filtered finite sum through its predicate subtype.  This small
+equivalence avoids the large elaboration term produced by `Finset.sum_nbij`
+on the concrete quotient-group types below. -/
+private theorem sum_filter_eq_subtype
+    {A M : Type} [Fintype A] [DecidableEq A] [AddCommMonoid M]
+    (p : A → Prop) [DecidablePred p] (f : A → M) :
+    ∑ x ∈ (Finset.univ : Finset A).filter p, f x =
+      ∑ x : {x : A // p x}, f x := by
+  classical
+  let e : {x : A // p x} ≃
+      {x // x ∈ (Finset.univ : Finset A).filter p} :=
+    { toFun := fun x ↦ ⟨x.1, by simp [x.2]⟩
+      invFun := fun x ↦ ⟨x.1, (Finset.mem_filter.mp x.2).2⟩
+      left_inv := fun x ↦ Subtype.ext rfl
+      right_inv := fun x ↦ Subtype.ext rfl }
+  symm
+  calc
+    (∑ x : {x : A // p x}, f x) =
+        ∑ x : {x // x ∈ (Finset.univ : Finset A).filter p}, f x :=
+      Fintype.sum_equiv e _ _ (fun _ ↦ rfl)
+    _ = ∑ x ∈ (Finset.univ : Finset A).filter p, f x :=
+      Finset.sum_attach _ _
+
 /-- Non-id sum on ⟨tGen⟩ = −15. -/
 private theorem sum_chiLambda2_sylow_tGen_nonId :
     (∑ y : sylow11NonId sylow_tGen, chiLambda2 y.1) = (-15 : k) := by
@@ -788,11 +814,9 @@ private theorem sum_chiLambda2_sylow_tGen_nonId :
       (∑ y : sylow11NonId sylow_tGen, chiLambda2 y.1) =
         ∑ g ∈ Finset.univ.filter (fun g : PSL2F11 =>
           g ∈ (sylow_tGen : Set PSL2F11) ∧ g ≠ 1), chiLambda2 g := by
-    refine Finset.sum_nbij (fun y : sylow11NonId sylow_tGen => y.1)
-      (fun y _ => Finset.mem_filter.mpr ⟨Finset.mem_univ _, y.2⟩)
-      (fun a _ b _ h => Subtype.ext h)
-      (fun g hg => ⟨⟨g, (Finset.mem_filter.mp hg).2⟩, Finset.mem_univ _, rfl⟩)
-      (fun _ _ => rfl)
+    exact (sum_filter_eq_subtype
+      (fun g : PSL2F11 ↦ g ∈ (sylow_tGen : Set PSL2F11) ∧ g ≠ 1)
+      chiLambda2).symm
   have h2 :
       Finset.univ.filter (fun g : PSL2F11 =>
           g ∈ (sylow_tGen : Set PSL2F11) ∧ g ≠ 1) =
@@ -932,11 +956,8 @@ private theorem sum_over_order_fiber (n : ℕ) :
         chi10' g * chiLambda2 g) =
       ∑ g : {g : PSL2F11 // orderOf g = n}, chi10' g.1 * chiLambda2 g.1 := by
   classical
-  refine (Finset.sum_nbij (fun g : {g : PSL2F11 // orderOf g = n} => g.1)
-    (fun g _ => Finset.mem_filter.mpr ⟨Finset.mem_univ _, g.2⟩)
-    (fun a _ b _ h => Subtype.ext h)
-    (fun g hg => ⟨⟨g, (Finset.mem_filter.mp hg).2⟩, Finset.mem_univ _, rfl⟩)
-    (fun _ _ => rfl)).symm
+  exact sum_filter_eq_subtype (fun g : PSL2F11 ↦ orderOf g = n)
+    (fun g ↦ chi10' g * chiLambda2 g)
 
 private theorem sum_order_one_fiber :
     (∑ g : {g : PSL2F11 // orderOf g = 1}, chi10' g.1 * chiLambda2 g.1) =

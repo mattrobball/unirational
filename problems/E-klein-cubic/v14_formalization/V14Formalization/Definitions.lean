@@ -102,10 +102,102 @@ lemma mem_minusEigenspace_iff (R : FaithfulLinearRep k G V) (σ : G) {v : V} :
     v ∈ R.minusEigenspace σ ↔ R.act σ v = -v := by
   simp [minusEigenspace, Module.End.mem_eigenspace_iff]
 
+/-- The centralizer of `σ` preserves its `+1` eigenspace in every honest
+linear representation. -/
+theorem plusEigenspace_centralizer_stable
+    (R : FaithfulLinearRep k G V) (σ : G)
+    (n : centralizer σ) {v : V}
+    (hv : v ∈ R.plusEigenspace σ) :
+    R.act (n : G) v ∈ R.plusEigenspace σ := by
+  rw [R.mem_plusEigenspace_iff] at hv ⊢
+  have hc : (n : G) * σ = σ * (n : G) :=
+    mem_centralizer_iff.mp n.property
+  calc
+    R.act σ (R.act (n : G) v) = R.act (σ * (n : G)) v := by
+      rw [R.act_mul]
+      rfl
+    _ = R.act ((n : G) * σ) v := by rw [hc]
+    _ = R.act (n : G) (R.act σ v) := by
+      rw [R.act_mul]
+      rfl
+    _ = R.act (n : G) v := by rw [hv]
+
+/-- The centralizer of `σ` preserves its `-1` eigenspace in every honest
+linear representation. -/
+theorem minusEigenspace_centralizer_stable
+    (R : FaithfulLinearRep k G V) (σ : G)
+    (n : centralizer σ) {v : V}
+    (hv : v ∈ R.minusEigenspace σ) :
+    R.act (n : G) v ∈ R.minusEigenspace σ := by
+  rw [R.mem_minusEigenspace_iff] at hv ⊢
+  have hc : (n : G) * σ = σ * (n : G) :=
+    mem_centralizer_iff.mp n.property
+  calc
+    R.act σ (R.act (n : G) v) = R.act (σ * (n : G)) v := by
+      rw [R.act_mul]
+      rfl
+    _ = R.act ((n : G) * σ) v := by rw [hc]
+    _ = R.act (n : G) (R.act σ v) := by
+      rw [R.act_mul]
+      rfl
+    _ = -R.act (n : G) v := by rw [hv, map_neg]
+
 lemma act_act (R : FaithfulLinearRep k G V) {σ : G} (hσ : IsInvolution σ) (v : V) :
     R.act σ (R.act σ v) = v := by
   simpa [LinearMap.comp_apply] using
     congr_arg (fun L : V →ₗ[k] V => L v) (R.act_sq_of_involution hσ)
+
+/-- In characteristic zero, an involution splits every honest linear
+representation as its `+1` and `-1` eigenspaces. -/
+theorem isCompl_plus_minus (R : FaithfulLinearRep k G V) {σ : G}
+    [CharZero k] (hσ : IsInvolution σ) :
+    IsCompl (R.plusEigenspace σ) (R.minusEigenspace σ) := by
+  apply IsCompl.of_eq
+  · apply le_antisymm
+    · intro v hv
+      have hvp : v ∈ R.plusEigenspace σ := hv.1
+      have hvm : v ∈ R.minusEigenspace σ := hv.2
+      rw [R.mem_plusEigenspace_iff] at hvp
+      rw [R.mem_minusEigenspace_iff] at hvm
+      have hneg : v = -v := hvp.symm.trans hvm
+      have hadd : v + v = 0 := by
+        calc
+          v + v = -v + v := congrArg (fun z => z + v) hneg
+          _ = 0 := neg_add_cancel v
+      have hsmul : (2 : k) • v = 0 := by simpa [two_smul k v] using hadd
+      have h2 : (2 : k) ≠ 0 := by norm_num
+      have hv0 : v = 0 := (smul_eq_zero.mp hsmul).resolve_left h2
+      simpa [Submodule.mem_bot] using hv0
+    · exact bot_le
+  · apply top_unique
+    intro v _
+    have h2 : (2 : k) ≠ 0 := by norm_num
+    let vp : V := (2 : k)⁻¹ • (v + R.act σ v)
+    let vm : V := (2 : k)⁻¹ • (v - R.act σ v)
+    have hvp : vp ∈ R.plusEigenspace σ := by
+      rw [R.mem_plusEigenspace_iff]
+      dsimp [vp]
+      rw [map_smul, map_add, R.act_act hσ]
+      congr 1
+      abel
+    have hvm : vm ∈ R.minusEigenspace σ := by
+      rw [R.mem_minusEigenspace_iff]
+      dsimp [vm]
+      rw [map_smul, map_sub, R.act_act hσ]
+      module
+    have hvsum : vp + vm = v := by
+      dsimp [vp, vm]
+      rw [← smul_add]
+      calc
+        (2 : k)⁻¹ • ((v + R.act σ v) + (v - R.act σ v)) =
+            (2 : k)⁻¹ • ((2 : k) • v) := by congr 1; module
+        _ = v := by rw [smul_smul, inv_mul_cancel₀ h2, one_smul]
+    rw [← hvsum]
+    exact (R.plusEigenspace σ ⊔ R.minusEigenspace σ).add_mem
+      ((le_sup_left : R.plusEigenspace σ ≤
+        R.plusEigenspace σ ⊔ R.minusEigenspace σ) hvp)
+      ((le_sup_right : R.minusEigenspace σ ≤
+        R.plusEigenspace σ ⊔ R.minusEigenspace σ) hvm)
 
 /-- If V₊ = ⊥ then ρ(σ) = −id. -/
 theorem act_eq_neg_id_of_plus_bot (R : FaithfulLinearRep k G V) {σ : G}

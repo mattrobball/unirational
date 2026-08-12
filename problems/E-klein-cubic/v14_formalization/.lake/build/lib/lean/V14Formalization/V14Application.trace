@@ -7,7 +7,7 @@
   "c": "f14001ac8db1bac1.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Cli/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/batteries/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Qq/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/aesop/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/importGraph/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/plausible/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean:/Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean /Users/worker/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/V14Formalization/V14Application.lean -o /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/V14Application.olean -i /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/V14Application.ilean -c /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/V14Application.c --setup /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/V14Application.setup.json --json",
+   ".> LEAN_PATH=/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Cli/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/batteries/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Qq/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/aesop/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/importGraph/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/plausible/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/BConicBundleMultisections/problems/B-conic-bundle-multisections/.lake/build/lib/lean:/Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean /Users/worker/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/V14Formalization/V14Application.lean -o /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/V14Application.olean -i /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/V14Application.ilean -c /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/V14Application.c --setup /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/V14Application.setup.json --json",
    "level": "trace"},
   {"message":
    "V14Formalization/V14Application.lean:199:23: Try `simp at ha2` instead of `simpa using ha2`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
@@ -28,15 +28,15 @@
        [["@V14Formalization:extraDep", "00000000000006bb"]]],
       ["imports",
        [["V14Formalization.CentralizerObstruction transitive imports (legacy)",
-         "593829c03f2d1c9c"],
+         "40d2a0957b150728"],
         ["V14Formalization.CentralizerObstruction:importAllArts",
-         "b18036b207206067"],
+         "834cf38735695aa2"],
         ["V14Formalization.CentralizerD12 transitive imports (legacy)",
          "35f36aeec4f414a6"],
-        ["V14Formalization.CentralizerD12:importAllArts", "7b7bf84a8cc843c9"],
+        ["V14Formalization.CentralizerD12:importAllArts", "3fca20c7cd3bf949"],
         ["V14Formalization.GeometricCarrier transitive imports (legacy)",
-         "74f8affa14760176"],
-        ["V14Formalization.GeometricCarrier:importAllArts", "31086378204ef358"],
+         "5add8d19626b3844"],
+        ["V14Formalization.GeometricCarrier:importAllArts", "71b74c807bb9a89e"],
         ["Mathlib.GroupTheory.SpecificGroups.Dihedral transitive imports (legacy)",
          "4fc96547aed249a0"],
         ["Mathlib.GroupTheory.SpecificGroups.Dihedral:importAllArts",
@@ -93,4 +93,4 @@
   ["Module.name: V14Formalization.V14Application", "32a27fb66109fb22"],
   ["Package.id?: (some V14Formalization)", "3206da5f56731469"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "705228f277fe7054"}
+ "depHash": "98cf984604c8bb41"}

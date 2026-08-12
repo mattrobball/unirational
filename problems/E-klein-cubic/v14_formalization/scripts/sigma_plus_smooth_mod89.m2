@@ -1,0 +1,14 @@
+R=ZZ/89[U,V,W];
+F=45*U^3+20*U^2*V+38*U*V^2+6*U*V*W+42*U*W^2+26*V^3+18*V^2*W+20*V*W^2+1*W^3;
+J=ideal(diff(U,F),diff(V,F),diff(W,F));
+JU=J+ideal(U-1); JV=J+ideal(V-1); JW=J+ideal(W-1);
+uok=(1_R % gens gb JU == 0_R);
+vok=(1_R % gens gb JV == 0_R);
+wok=(1_R % gens gb JW == 0_R);
+assert(uok and vok and wok);
+CU=1_R // gens JU; CV=1_R // gens JV; CW=1_R // gens JW;
+assert(gens JU*CU==matrix{{1_R}}); assert(gens JV*CV==matrix{{1_R}}); assert(gens JW*CW==matrix{{1_R}});
+<< "zroot=2 iroot=34 F=" << F << endl;
+<< "chart_smooth=" << {uok,vok,wok} << endl;
+<< "smooth=" << (uok and vok and wok) << endl;
+<< "CU=" << CU << endl << "CV=" << CV << endl << "CW=" << CW << endl;

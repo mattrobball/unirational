@@ -1,58 +1,94 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["a7e922f9ee9555d9.olean"],
+ {"o": ["a82bdd88dfc67991.olean"],
   "m": false,
-  "i": "be89580bf61e7cd1.ilean",
-  "c": "839184f579298bb5.c"},
+  "i": "db5e0a521fafcbff.ilean",
+  "c": "b7c697cb60d427b6.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Cli/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/batteries/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Qq/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/aesop/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/importGraph/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/plausible/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean:/Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean /Users/worker/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/V14Formalization/PSLCard.lean -o /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/PSLCard.olean -i /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/PSLCard.ilean -c /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/PSLCard.c --setup /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/PSLCard.setup.json --json",
+   ".> LEAN_PATH=/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Cli/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/batteries/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Qq/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/aesop/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/importGraph/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/plausible/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/BConicBundleMultisections/problems/B-conic-bundle-multisections/.lake/build/lib/lean:/Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean /Users/worker/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/V14Formalization/PSLCard.lean -o /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/PSLCard.olean -i /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/PSLCard.ilean -c /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/PSLCard.c --setup /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/PSLCard.setup.json --json",
    "level": "trace"},
   {"message":
-   "V14Formalization/PSLCard.lean:161:47: This simp argument is unused:\n  Matrix.one_apply\n\nHint: Omit it from the simp argument list.\n  simp [scalar, diagonal, negI, hij,̵ ̵M̵a̵t̵r̵i̵x̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/PSLCard.lean:171:47: This simp argument is unused:\n  Matrix.one_apply\n\nHint: Omit it from the simp argument list.\n  simp [scalar, diagonal, negI, hij,̵ ̵M̵a̵t̵r̵i̵x̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/PSLCard.lean:162:47: This simp argument is unused:\n  Matrix.one_apply\n\nHint: Omit it from the simp argument list.\n  simp [scalar, diagonal, negI, hij,̵ ̵M̵a̵t̵r̵i̵x̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/PSLCard.lean:172:47: This simp argument is unused:\n  Matrix.one_apply\n\nHint: Omit it from the simp argument list.\n  simp [scalar, diagonal, negI, hij,̵ ̵M̵a̵t̵r̵i̵x̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/PSLCard.lean:629:20: This simp argument is unused:\n  Matrix.one_apply\n\nHint: Omit it from the simp argument list.\n  simp [toM4, one4,̵ ̵M̵a̵t̵r̵i̵x̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/PSLCard.lean:271:20: This simp argument is unused:\n  Matrix.one_apply\n\nHint: Omit it from the simp argument list.\n  simp [toM4, one4,̵ ̵M̵a̵t̵r̵i̵x̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/PSLCard.lean:632:27: This simp argument is unused:\n  scalar\n\nHint: Omit it from the simp argument list.\n  simp [toM4, negI, negI4, s̵c̵a̵l̵a̵r̵,̵ ̵diagonal, Matrix.one_apply]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/PSLCard.lean:763:10: This simp argument is unused:\n  h1\n\nHint: Omit it from the simp argument list.\n  simp [h1̵,̵ ̵h̵2, chi10Int]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/PSLCard.lean:632:35: This simp argument is unused:\n  diagonal\n\nHint: Omit it from the simp argument list.\n  simp [toM4, negI, negI4, scalar, d̵i̵a̵g̵o̵n̵a̵l̵,̵ ̵Matrix.one_apply]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/PSLCard.lean:765:10: This simp argument is unused:\n  h1\n\nHint: Omit it from the simp argument list.\n  simp [h1̵,̵ ̵h̵2, h3, chi10Int]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/PSLCard.lean:632:45: This simp argument is unused:\n  Matrix.one_apply\n\nHint: Omit it from the simp argument list.\n  simp [toM4, negI, negI4, scalar, diagonal,̵ ̵M̵a̵t̵r̵i̵x̵.̵o̵n̵e̵_̵a̵p̵p̵l̵y̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/PSLCard.lean:765:14: This simp argument is unused:\n  h2\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2̵,̵ ̵h̵3, chi10Int]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/PSLCard.lean:801:25: This simp argument is unused:\n  pow_one\n\nHint: Omit it from the simp argument list.\n  simp ̵[̵p̵o̵w̵_̵o̵n̵e̵]̵\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/PSLCard.lean:767:10: This simp argument is unused:\n  h1\n\nHint: Omit it from the simp argument list.\n  simp [h1̵,̵ ̵h̵2, h3, h5, chi10Int]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/PSLCard.lean:845:0: 'V14Formalization.PSLCard.card_PSL2_F11' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/PSLCard.lean:767:14: This simp argument is unused:\n  h2\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2̵,̵ ̵h̵3, h5, chi10Int]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "V14Formalization/PSLCard.lean:767:18: This simp argument is unused:\n  h3\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3̵,̵ ̵h̵5, chi10Int]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "V14Formalization/PSLCard.lean:769:10: This simp argument is unused:\n  h1\n\nHint: Omit it from the simp argument list.\n  simp [h1̵,̵ ̵h̵2, h3, h5, h6, chi10Int]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "V14Formalization/PSLCard.lean:769:14: This simp argument is unused:\n  h2\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2̵,̵ ̵h̵3, h5, h6, chi10Int]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "V14Formalization/PSLCard.lean:769:18: This simp argument is unused:\n  h3\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3̵,̵ ̵h̵5, h6, chi10Int]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "V14Formalization/PSLCard.lean:769:22: This simp argument is unused:\n  h5\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3, h5̵,̵ ̵h̵6, chi10Int]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "V14Formalization/PSLCard.lean:771:10: This simp argument is unused:\n  h1\n\nHint: Omit it from the simp argument list.\n  simp [h1̵,̵ ̵h̵2, h3, h5, h6, h11, chi10Int]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "V14Formalization/PSLCard.lean:771:14: This simp argument is unused:\n  h2\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2̵,̵ ̵h̵3, h5, h6, h11, chi10Int]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "V14Formalization/PSLCard.lean:771:18: This simp argument is unused:\n  h3\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3̵,̵ ̵h̵5, h6, h11, chi10Int]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "V14Formalization/PSLCard.lean:771:22: This simp argument is unused:\n  h5\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3, h5̵,̵ ̵h̵6, h11, chi10Int]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "V14Formalization/PSLCard.lean:771:26: This simp argument is unused:\n  h6\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3, h5, h6̵,̵ ̵h̵11, chi10Int]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "level": "warning"},
+  {"message":
+   "V14Formalization/PSLCard.lean:775:16: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "level": "warning"},
+  {"message":
+   "V14Formalization/PSLCard.lean:2793:0: 'V14Formalization.PSLCard.card_PSL2_F11' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/PSLCard.lean:846:0: 'V14Formalization.PSLCard.orderOf_mk_eq_pslOrd' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/PSLCard.lean:2794:0: 'V14Formalization.PSLCard.orderOf_mk_eq_pslOrd' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/PSLCard.lean:847:0: 'V14Formalization.PSLCard.slChiSumSq_eq' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n slChiSumSq_eq._native.native_decide.ax_1_1]",
+   "V14Formalization/PSLCard.lean:2795:0: 'V14Formalization.PSLCard.slChiSumSq_eq' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/PSLCard.lean:848:0: 'V14Formalization.PSLCard.sum_comp_mk' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/PSLCard.lean:2796:0: 'V14Formalization.PSLCard.sum_comp_mk' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/PSLCard.lean:849:0: 'V14Formalization.PSLCard.chi10Int_sum_sq_psl' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n slCardOrder_zero._native.native_decide.ax_1_1,\n slChiSumSq_eq._native.native_decide.ax_1_1]",
+   "V14Formalization/PSLCard.lean:2797:0: 'V14Formalization.PSLCard.chi10Int_sum_sq_psl' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/PSLCard.lean:850:0: 'V14Formalization.PSLCard.card_psl_order_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n slCardOrder_two._native.native_decide.ax_1_1,\n slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/PSLCard.lean:2798:0: 'V14Formalization.PSLCard.card_psl_order_two' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/PSLCard.lean:851:0: 'V14Formalization.PSLCard.convAt_eq' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n conv4FailCount_eq_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/PSLCard.lean:2799:0: 'V14Formalization.PSLCard.convAt_eq' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/PSLCard.lean:852:0: 'V14Formalization.PSLCard.chi10Int_convolution' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n conv4FailCount_eq_zero._native.native_decide.ax_1_1,\n slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/PSLCard.lean:2800:0: 'V14Formalization.PSLCard.chi10Int_convolution' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"}],
  "inputs":
  [["V14Formalization.PSLCard:deps",
@@ -121,7 +157,41 @@
         ["Mathlib.LinearAlgebra.Matrix.Determinant.Basic transitive imports (legacy)",
          "d05d0716f713c43e"],
         ["Mathlib.LinearAlgebra.Matrix.Determinant.Basic:importAllArts",
-         "775c78a530979926"]]]]],
+         "775c78a530979926"],
+        ["Mathlib.Tactic.FinCases transitive imports (legacy)",
+         "1f2d00a601309115"],
+        ["Mathlib.Tactic.FinCases:importAllArts", "833fddf333b86ec3"],
+        ["Mathlib.GroupTheory.GroupAction.Quotient transitive imports (legacy)",
+         "82c8e79709d030d3"],
+        ["Mathlib.GroupTheory.GroupAction.Quotient:importAllArts",
+         "bbdcc68653dcc7d3"],
+        ["Mathlib.GroupTheory.GroupAction.ConjAct transitive imports (legacy)",
+         "1342af0aaaaf0ca6"],
+        ["Mathlib.GroupTheory.GroupAction.ConjAct:importAllArts",
+         "44a0bb08429eee22"],
+        ["Mathlib.GroupTheory.Rank transitive imports (legacy)",
+         "7342ff51a600f659"],
+        ["Mathlib.GroupTheory.Rank:importAllArts", "90c4f714942201fb"],
+        ["Mathlib.Algebra.Group.Conj transitive imports (legacy)",
+         "aac30919ac813c81"],
+        ["Mathlib.Algebra.Group.Conj:importAllArts", "c02948813bd809a4"],
+        ["Mathlib.Algebra.Group.ConjFinite transitive imports (legacy)",
+         "7d8720213a8f3643"],
+        ["Mathlib.Algebra.Group.ConjFinite:importAllArts", "667fea6b837f2c70"],
+        ["Mathlib.LinearAlgebra.Matrix.Trace transitive imports (legacy)",
+         "77b125e548dfc4cc"],
+        ["Mathlib.LinearAlgebra.Matrix.Trace:importAllArts",
+         "c2c51496e0205898"],
+        ["Mathlib.Data.Fintype.Sum transitive imports (legacy)",
+         "cf31136d3c90287a"],
+        ["Mathlib.Data.Fintype.Sum:importAllArts", "01ccfed2c3b9f8a3"],
+        ["Mathlib.Algebra.Group.End transitive imports (legacy)",
+         "b35ecf9b83f88013"],
+        ["Mathlib.Algebra.Group.End:importAllArts", "65352c5ca9a2565a"],
+        ["Mathlib.FieldTheory.Finite.Basic transitive imports (legacy)",
+         "230badb1af702ff8"],
+        ["Mathlib.FieldTheory.Finite.Basic:importAllArts",
+         "5883508b1c824a40"]]]]],
     ["libs",
      [["import dynlibs", "00000000000006bb"],
       ["package external libraries", "00000000000006bb"],
@@ -130,7 +200,7 @@
   ["Lean 4.32.1, commit f054605aea4b840552cca2e725580bffd1e1b704",
    "4ce1780d8d26fd00"],
   ["/Users/worker/unirational/problems/E-klein-cubic/v14_formalization/V14Formalization/PSLCard.lean",
-   "c390071686dce0b3"],
+   "5726188a45d1fcd8"],
   ["options",
    [["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
     ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
@@ -138,4 +208,4 @@
   ["Module.name: V14Formalization.PSLCard", "7e745adbca9b7790"],
   ["Package.id?: (some V14Formalization)", "3206da5f56731469"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "62c91e0870a9f122"}
+ "depHash": "95145b7765c00232"}

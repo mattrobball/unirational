@@ -1,37 +1,37 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["98e238c9c8ab11cb.olean"],
+ {"o": ["afc5957d6e53dde0.olean"],
   "m": false,
-  "i": "1fa951b266f1a275.ilean",
+  "i": "28441bbc0f19dbbc.ilean",
   "c": "b25ae6d324d571c6.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Cli/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/batteries/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Qq/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/aesop/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/importGraph/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/plausible/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean:/Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean /Users/worker/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/V14Formalization/WeilHom.lean -o /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/WeilHom.olean -i /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/WeilHom.ilean -c /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/WeilHom.c --setup /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/WeilHom.setup.json --json",
+   ".> LEAN_PATH=/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Cli/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/batteries/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Qq/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/aesop/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/importGraph/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/plausible/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/BConicBundleMultisections/problems/B-conic-bundle-multisections/.lake/build/lib/lean:/Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean /Users/worker/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/V14Formalization/WeilHom.lean -o /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/WeilHom.olean -i /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/WeilHom.ilean -c /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/WeilHom.c --setup /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/WeilHom.setup.json --json",
    "level": "trace"},
   {"message":
-   "V14Formalization/WeilHom.lean:670:48: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.",
-   "level": "info"},
-  {"message":
-   "V14Formalization/WeilHom.lean:847:34: This simp argument is unused:\n  LinearMap.comp_apply\n\nHint: Omit it from the simp argument list.\n  simp only [LinearMap.neg_apply,̵ ̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/WeilHom.lean:165:48: Variable name `hg` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/WeilHom.lean:884:13: This simp argument is unused:\n  LinearMap.comp_id\n\nHint: Omit it from the simp argument list.\n  simp only [̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵c̵o̵m̵p̵_̵i̵d̵,̵ ̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵i̵d̵_̵c̵o̵m̵p̵,̵[̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲i̲d̲_̲c̲o̲m̲p̲,̲ Wfull_sq_R]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/WeilHom.lean:679:48: Try this:\n  [apply] ring_nf\n  \n  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.\n    \n  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.",
+   "level": "info"},
+  {"message":
+   "V14Formalization/WeilHom.lean:856:34: This simp argument is unused:\n  LinearMap.comp_apply\n\nHint: Omit it from the simp argument list.\n  simp only [LinearMap.neg_apply,̵ ̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵c̵o̵m̵p̵_̵a̵p̵p̵l̵y̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/WeilHom.lean:1076:38: Variable name `hf` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "V14Formalization/WeilHom.lean:893:13: This simp argument is unused:\n  LinearMap.comp_id\n\nHint: Omit it from the simp argument list.\n  simp only [̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵c̵o̵m̵p̵_̵i̵d̵,̵ ̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵i̵d̵_̵c̵o̵m̵p̵,̵[̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲i̲d̲_̲c̲o̲m̲p̲,̲ Wfull_sq_R]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/WeilHom.lean:1235:0: 'V14Formalization.WeilHom.weilUHom' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/WeilHom.lean:1352:0: 'V14Formalization.WeilHom.weilUHom' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/WeilHom.lean:1236:0: 'V14Formalization.WeilHom.weilU_mul' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/WeilHom.lean:1353:0: 'V14Formalization.WeilHom.weilU_mul' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/WeilHom.lean:1237:0: 'V14Formalization.WeilHom.weilFun_mul_big_borel' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/WeilHom.lean:1354:0: 'V14Formalization.WeilHom.weilFun_mul_big_borel' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/WeilHom.lean:1238:0: 'V14Formalization.WeilHom.big_big_pos_eq_negR_pos' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/WeilHom.lean:1355:0: 'V14Formalization.WeilHom.big_big_pos_eq_negR_pos' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"}],
  "inputs":
  [["V14Formalization.WeilHom:deps",
@@ -40,11 +40,11 @@
        [["@V14Formalization:extraDep", "00000000000006bb"]]],
       ["imports",
        [["V14Formalization.WeilMul transitive imports (legacy)",
-         "8ef219b0608ef5e7"],
-        ["V14Formalization.WeilMul:importAllArts", "eb3159101b04e52d"],
+         "7bee3c33c15bee65"],
+        ["V14Formalization.WeilMul:importAllArts", "f3841da6d7e67733"],
         ["V14Formalization.WeilWN transitive imports (legacy)",
-         "df7e9b65dcf5b9c9"],
-        ["V14Formalization.WeilWN:importAllArts", "0fb5687e303d1c47"]]]]],
+         "2ccf87b627c06201"],
+        ["V14Formalization.WeilWN:importAllArts", "85730be3b7e78852"]]]]],
     ["libs",
      [["import dynlibs", "00000000000006bb"],
       ["package external libraries", "00000000000006bb"],
@@ -53,7 +53,7 @@
   ["Lean 4.32.1, commit f054605aea4b840552cca2e725580bffd1e1b704",
    "4ce1780d8d26fd00"],
   ["/Users/worker/unirational/problems/E-klein-cubic/v14_formalization/V14Formalization/WeilHom.lean",
-   "08c9cb5f81bc1a27"],
+   "0bab9dfa80d41ab8"],
   ["options",
    [["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
     ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
@@ -61,4 +61,4 @@
   ["Module.name: V14Formalization.WeilHom", "018e03b2b460dbaa"],
   ["Package.id?: (some V14Formalization)", "3206da5f56731469"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "db4704312614275a"}
+ "depHash": "27f62046abd6228d"}

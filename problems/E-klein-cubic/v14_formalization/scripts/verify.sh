@@ -4,11 +4,20 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
-echo "== lake build =="
-lake build
+echo "== build every V14Formalization module =="
+MODULES=()
+while IFS= read -r file; do
+  module="${file%.lean}"
+  module="${module//\//.}"
+  MODULES+=("$module")
+done < <(rg --files V14Formalization --glob '*.lean' | LC_ALL=C sort)
+lake build "${MODULES[@]}"
+
+echo "== build root library =="
+lake build V14Formalization
 
 echo "== lake build AxiomAudit =="
-lake build AxiomAudit 2>/dev/null || true
+lake build AxiomAudit
 
 echo "== zero project axiom / sorry / admit / sorryAx census =="
 # Exclude comments: require line not only a module-doc mention.
@@ -17,47 +26,26 @@ if rg -n --glob '*.lean' --glob '!.lake/**' '^\s*axiom\s' .; then
   echo "FAIL: project-declared axiom found" >&2
   FAIL=1
 fi
-if rg -n --glob '*.lean' --glob '!.lake/**' --glob '!probe*.lean' \
-    '(^|[^a-zA-Z/`_])sorry([^a-zA-Z`]|$)|(^|[^a-zA-Z])admit([^a-zA-Z]|$)|sorryAx' . \
-    | grep -v 'zero `sorry`' | grep -v 'no sorry' | grep -v '# Zero' ; then
+if rg -n --glob '*.lean' --glob '!.lake/**' \
+    '(^|[^a-zA-Z/`_])sorry([^a-zA-Z`]|$)|(^|[^a-zA-Z])admit([^a-zA-Z]|$)|sorryAx' . ; then
   echo "FAIL: found sorry/admit/sorryAx" >&2
   FAIL=1
 fi
 if [[ "$FAIL" -ne 0 ]]; then exit 1; fi
 echo "OK: no project axiom/sorry/admit/sorryAx"
 
-echo "== #print axioms (headline theorems; only classical Lean axioms) =="
-AUDIT_OUT="$(mktemp)"
-lake env lean AxiomAudit.lean >"$AUDIT_OUT" 2>&1 || {
-  echo "FAIL: AxiomAudit lean run failed" >&2
-  cat "$AUDIT_OUT" >&2
+echo "== no native evaluator proofs in the library =="
+if rg -n '\bnative_decide\b' V14Formalization --glob '*.lean'; then
+  echo "FAIL: native_decide found in the formal library" >&2
   exit 1
-}
-cat "$AUDIT_OUT"
-if grep -E 'sorryAx|V14Formalization\.[A-Za-z0-9_]*\.?axiom|depends on axioms: \[.*axiom' "$AUDIT_OUT" \
-    | grep -v 'propext\|Classical.choice\|Quot.sound' ; then
-  # Also fail if any non-classical axiom appears
-  :
 fi
-# Explicitly require only classical triple
-while IFS= read -r line; do
-  if [[ "$line" == *"depends on axioms:"* ]]; then
-    # strip to list contents
-    list="${line#*depends on axioms: }"
-    # allow only propext, Classical.choice, Quot.sound
-    cleaned=$(echo "$list" | tr -d '[] ' | tr ',' '\n' | sed '/^$/d')
-    while IFS= read -r ax; do
-      case "$ax" in
-        propext|Classical.choice|Quot.sound) ;;
-        *)
-          echo "FAIL: non-classical axiom on path: $ax (line: $line)" >&2
-          exit 1
-          ;;
-      esac
-    done <<< "$cleaned"
-  fi
-done < "$AUDIT_OUT"
-echo "OK: only classical axioms on headline paths"
+echo "OK: no native_decide in the formal library"
+
+echo "== kernel trust guard =="
+# TrustGuard uses Lean's collectAxioms API and therefore checks the complete
+# transitive axiom set, including declarations printed across multiple lines.
+lake build V14Formalization.TrustGuard
+echo "OK: only standard classical axioms on guarded paths"
 
 echo "== headline theorems present =="
 for t in \

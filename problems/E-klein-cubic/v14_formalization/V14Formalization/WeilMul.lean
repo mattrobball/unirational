@@ -14,8 +14,6 @@ noncomputable section
 namespace V14Formalization
 namespace WeilMul
 
-set_option maxHeartbeats 8000000
-
 abbrev F := ZMod 11
 abbrev SLG := SpecialLinearGroup (Fin 2) F
 
@@ -125,31 +123,79 @@ theorem borel_comp_expand {ag ah bg bh : F} (hag : ag ≠ 0) (hah : ah ≠ 0) :
 
 /-! ## Borel × Borel map_mul -/
 
-theorem weilFun_mul_borel {g h : SLG} (hg : ec g = 0) (hh : ec h = 0) :
-    weilFun (g * h) = weilFun g ∘ₗ weilFun h := by
-  have hgh := ec_mul_borel hg hh
-  have hag := ea_ne_zero_of_ec_zero g hg
-  have hah := ea_ne_zero_of_ec_zero h hh
-  have hagh := ea_ne_zero_of_ec_zero (g * h) hgh
-  have hform_g : weilFun g = Nfull (eb g * ea g) ∘ₗ Dfull (ea g) hag := by
-    dsimp [weilFun]; rw [dif_pos hg]; rfl
-  have hform_h : weilFun h = Nfull (eb h * ea h) ∘ₗ Dfull (ea h) hah := by
-    dsimp [weilFun]; rw [dif_pos hh]; rfl
-  have hform_gh :
-      weilFun (g * h) =
-        Nfull (eb (g * h) * ea (g * h)) ∘ₗ Dfull (ea (g * h)) hagh := by
-    dsimp [weilFun]; rw [dif_pos hgh]; rfl
-  rw [hform_g, hform_h, hform_gh]
+private def borelProductNormal (g h : SLG) (hg : ec g = 0) (hh : ec h = 0) :
+    Fun →ₗ[K] Fun :=
+  Nfull (eb g * ea g + ea g * ea g * (eb h * ea h)) ∘ₗ
+    Dfull (ea g * ea h)
+      (mul_ne_zero (ea_ne_zero_of_ec_zero g hg) (ea_ne_zero_of_ec_zero h hh))
+
+private theorem borelFun_mul_eq_normal {g h : SLG}
+    (hg : ec g = 0) (hh : ec h = 0) :
+    borelFun (g * h) (ec_mul_borel hg hh) = borelProductNormal g h hg hh := by
+  let hgh := ec_mul_borel hg hh
+  let hag := ea_ne_zero_of_ec_zero g hg
+  let hah := ea_ne_zero_of_ec_zero h hh
+  let hagh := ea_ne_zero_of_ec_zero (g * h) hgh
+  change Nfull (eb (g * h) * ea (g * h)) ∘ₗ Dfull (ea (g * h)) hagh =
+    borelProductNormal g h hg hh
   have hparam := borel_N_param hg hh
   have hea := ea_mul_borel (g := g) hh
-  have hrhs := borel_comp_expand (bg := eb g) (bh := eb h) hag hah
   have hN : Nfull (eb (g * h) * ea (g * h)) =
       Nfull (eb g * ea g + ea g * ea g * (eb h * ea h)) := by rw [hparam]
   have hD : Dfull (ea (g * h)) hagh =
       Dfull (ea g * ea h) (mul_ne_zero hag hah) :=
     Dfull_congr hea hagh (mul_ne_zero hag hah)
   rw [hN, hD]
-  exact hrhs.symm
+  rfl
+
+private theorem borelFun_comp_apply_eq_normal {g h : SLG}
+    (hg : ec g = 0) (hh : ec h = 0) (f : Fun) :
+    (borelFun g hg ∘ₗ borelFun h hh) f = borelProductNormal g h hg hh f := by
+  let hag := ea_ne_zero_of_ec_zero g hg
+  let hah := ea_ne_zero_of_ec_zero h hh
+  let bg := eb g * ea g
+  let bh := eb h * ea h
+  let middle := ea g * ea g * bh
+  change Nfull bg (Dfull (ea g) hag (Nfull bh (Dfull (ea h) hah f))) =
+    Nfull (bg + middle)
+      (Dfull (ea g * ea h) (mul_ne_zero hag hah) f)
+  have hconj := congrArg (fun L : Fun →ₗ[K] Fun => L (Dfull (ea h) hah f))
+    (Dfull_conj_Nfull (ea g) bh hag)
+  have hadd := congrArg (fun L : Fun →ₗ[K] Fun =>
+      L (Dfull (ea g) hag (Dfull (ea h) hah f))) (Nfull_add bg middle)
+  have hmul := congrArg (fun L : Fun →ₗ[K] Fun => L f)
+    (Dfull_mul (ea g) (ea h) hag hah)
+  calc
+    Nfull bg (Dfull (ea g) hag (Nfull bh (Dfull (ea h) hah f))) =
+        Nfull bg (Nfull middle (Dfull (ea g) hag (Dfull (ea h) hah f))) :=
+      congrArg (Nfull bg) hconj
+    _ = Nfull (bg + middle) (Dfull (ea g) hag (Dfull (ea h) hah f)) := by
+      simpa only [LinearMap.comp_apply] using hadd.symm
+    _ = Nfull (bg + middle)
+        (Dfull (ea g * ea h) (mul_ne_zero hag hah) f) := by
+      exact congrArg (Nfull (bg + middle)) hmul.symm
+
+theorem weilFun_mul_borel {g h : SLG} (hg : ec g = 0) (hh : ec h = 0) :
+    weilFun (g * h) = weilFun g ∘ₗ weilFun h := by
+  let hgh := ec_mul_borel hg hh
+  apply LinearMap.ext
+  intro f
+  have hgh' : weilFun (g * h) = borelFun (g * h) hgh := by
+    dsimp [weilFun]
+    rw [dif_pos hgh]
+  have hg' : weilFun g = borelFun g hg := by
+    dsimp [weilFun]
+    rw [dif_pos hg]
+  have hh' : weilFun h = borelFun h hh := by
+    dsimp [weilFun]
+    rw [dif_pos hh]
+  calc
+    weilFun (g * h) f = borelFun (g * h) hgh f := congrArg (fun L => L f) hgh'
+    _ = borelProductNormal g h hg hh f :=
+      congrArg (fun L : Fun →ₗ[K] Fun => L f) (borelFun_mul_eq_normal hg hh)
+    _ = (borelFun g hg ∘ₗ borelFun h hh) f :=
+      (borelFun_comp_apply_eq_normal hg hh f).symm
+    _ = (weilFun g ∘ₗ weilFun h) f := by rw [hg', hh']
 
 theorem weilU_mul_borel {g h : SLG} (hg : ec g = 0) (hh : ec h = 0) :
     weilU (g * h) = weilU g ∘ₗ weilU h := by

@@ -4,9 +4,14 @@ Source: `../writeups/v14_not_weakly_versal.tex` §2–3 (Thm 3.1) and §6 (Cor 6
 
 ## Axiom / sorry census
 
-**Zero** project `axiom` / `sorry` / `admit` / `sorryAx` on the shipped path
-and on all green geometric lemmas in `GeometricV14Carrier`.
-`#print axioms` → only `propext`, `Classical.choice`, `Quot.sound`.
+**Zero** project `axiom` / `sorry` / `admit` declarations occur on the root import
+path.  `ResidualNotInM` is now imported and elaborates without `sorryAx`.
+`TrustGuard.lean` checks complete transitive axiom sets with `Lean.collectAxioms`;
+the build deliberately remains red while the last raw finite-group
+`native_decide` certificates in `PSLCard` are being replaced.  The six legacy
+operational headlines themselves depend only on `propext`, `Classical.choice`,
+and `Quot.sound`, but they are still the unfaithful surrogate statements described
+below.
 
 ## Theorem 3.1 — complete (classical)
 
@@ -16,12 +21,12 @@ and on all green geometric lemmas in `GeometricV14Carrier`.
 
 | Gap | Status |
 |---|---|
-| Y is writeup V₁₄ = Gr∩ℙ(M), not coset | **OPEN**: Application still uses coset `GeometricCarrier`; M-cut `V14MPoint`/`actV14M`/`embedV14M` scaffolded; needs residual ∉ M + `SmoothProjectiveGVariety` + rewire. **Uniqueness sealed**: any R-stable 2-plane = `residualKer`. **F₂₃ pure-M/mixed cert GREEN** (`ResidualNotInM.pureMWitness_ne_zero` / `minor01_ne_zero` / `residual_mixed_F23`; lake build OK, axioms propext+Quot.sound+native_decide only). **K-lift open**: pure-M_K ⇒ tDiff=0 ⇒ reduce(tDiff)=pureMWitness=0 along ℤ[ζ₁₁,1/11]→F₂₃ (ζ↦2), contradicted by cert; needs evalEven conjugation + ring hom model match |
+| Y is writeup V₁₄ = Gr∩ℙ(M), not coset | **OPEN**: Application still uses coset `GeometricCarrier`; M-cut `V14MPoint`/`actV14M`/`embedV14M` scaffolded; needs residual ∉ M over K (model match) + `SmoothProjectiveGVariety` + rewire. **Uniqueness sealed**: residual support = residualKer. **F₂₃ cert GREEN** (`pureMWitness_ne_zero` / `residual_mixed_F23`). **Ring hom GREEN** (`reduceCyclo : ℤ[ζ₁₁]→F₂₃`, `Phi11_eval_two_F23`, ζ↦2). **∑χ₁₀'=0 GREEN**. **tDiff gate GREEN**. **Architecture GREEN**: `pureM_implies_F23_pureM_architecture` + `residual_plucker_not_mem_Msub_of_model_match` (zero sorryAx). **Non-pure-M ∉MFix GREEN**. **K model match OPEN**: free S-module Plücker coords of residual-type tDiff + reduce = pureMWitness. External char-0: residual tDiff≠0 over K. |
 | hyp (a) writeup shape (genus-1 + 2 pts) | **Partial**: operational linear-RCC hyp A **proved** on pure Gr; writeup shape not constructed |
 | Gr2/M10/SigmaFixedLocusShape unused | Still scaffolding; M-cut uses `chi10'`/`projectorM`/`Msub`/`IsV14MPoint` instead |
 | Dirac embedding | Pure-Gr `V14Variety` is infinite Grassmannian points, not Dirac; Application still coset Dirac |
 | FAITHFULNESS admits non-Fano Y | Honest: Cor 6.1 Application Y is still coset, not writeup V₁₄ |
-| **`finrank Msub = 10`** | **GREEN** (`Ord11CharacterSum.finrank_Msub_eq_ten`): ∑χ χ_Λ²=660 sealed |
+| **`finrank Msub = 10`** | The mathematical derivation is present (`Ord11CharacterSum.finrank_Msub_eq_ten`: ∑χ χ_Λ²=660); the trust guard stays red until its remaining upstream raw finite certificate is kernel-checked. |
 
 ## Green geometric lemmas (classical)
 

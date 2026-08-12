@@ -18,8 +18,6 @@ noncomputable section
 namespace V14Formalization
 namespace WeilRepSL2
 
-set_option maxHeartbeats 8000000
-
 abbrev F := ZMod 11
 abbrev SLG := SpecialLinearGroup (Fin 2) F
 

@@ -1,0 +1,389 @@
+#!/usr/bin/env python3
+"""Emit bounded stock-limit certificates for the standard PSL generators.
+
+The Fourier generator is factored as a common scalar times a sparse integral
+phase matrix.  Each output module proves one of the five dependent ambient
+rows, with ten separately elaborated coordinate identities modulo Phi11.
+"""
+
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+from fractions import Fraction as F
+from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+JSON_PATH = ROOT / "results" / "d12_lean_K.json"
+OUT_ROOT = ROOT / "V14Formalization"
+
+PAIR = [(i, j) for i in range(6) for j in range(i + 1, 6)]
+ROWS = {
+    5: (3, F(-1, 2)),
+    8: (1, F(1, 2)),
+    10: (2, F(-1, 2)),
+    12: (4, F(1, 2)),
+    13: (0, F(-1, 2)),
+}
+B_SUPPORT = {
+    0: [(0, F(1)), (13, F(-1, 2))],
+    1: [(1, F(1)), (8, F(1, 2))],
+    2: [(2, F(1)), (10, F(-1, 2))],
+    3: [(3, F(1)), (5, F(-1, 2))],
+    4: [(4, F(1)), (12, F(1, 2))],
+    5: [(6, F(1))],
+    6: [(7, F(1))],
+    7: [(9, F(1))],
+    8: [(11, F(1))],
+    9: [(14, F(1))],
+}
+
+
+def norm(a):
+    a = list(a)
+    while a and not a[-1]:
+        a.pop()
+    return a
+
+
+def add(a, b):
+    c = [F(0)] * max(len(a), len(b))
+    for i, x in enumerate(a):
+        c[i] += x
+    for i, x in enumerate(b):
+        c[i] += x
+    return norm(c)
+
+
+def neg(a):
+    return [-x for x in a]
+
+
+def sub(a, b):
+    return add(a, neg(b))
+
+
+def scale(c, a):
+    return norm([c * x for x in a])
+
+
+def mul(a, b):
+    if not a or not b:
+        return []
+    c = [F(0)] * (len(a) + len(b) - 1)
+    for i, x in enumerate(a):
+        for j, y in enumerate(b):
+            c[i + j] += x * y
+    return norm(c)
+
+
+def xpow(n):
+    return [F(0)] * n + [F(1)]
+
+
+def matmul(a, b):
+    out = [[[] for _ in range(len(b[0]))] for _ in range(len(a))]
+    for i in range(len(a)):
+        for k in range(len(b)):
+            if not a[i][k]:
+                continue
+            for j in range(len(b[0])):
+                if b[k][j]:
+                    out[i][j] = add(out[i][j], mul(a[i][k], b[k][j]))
+    return out
+
+
+def compound(a):
+    return [
+        [
+            sub(mul(a[i][u], a[j][v]), mul(a[i][v], a[j][u]))
+            for u, v in PAIR
+        ]
+        for i, j in PAIR
+    ]
+
+
+def div_phi(r):
+    rem = list(r)
+    q = [F(0)] * max(0, len(rem) - 10)
+    while len(rem) > 10:
+        c = rem[-1]
+        k = len(rem) - 11
+        q[k] = c
+        for e in range(11):
+            rem[k + e] -= c
+        rem = norm(rem)
+    if rem:
+        raise ValueError(f"not divisible by Phi11: {rem}")
+    return norm(q)
+
+
+def json_poly(e):
+    return norm(F(n, d) for n, d in e)
+
+
+def json_matrix(m):
+    return [[json_poly(e) for e in row] for row in m]
+
+
+def lean_rat(x: F):
+    if x.denominator == 1:
+        return f"({x.numerator} : ℚ)"
+    return f"({x.numerator} / {x.denominator} : ℚ)"
+
+
+def lean_poly(p):
+    terms = []
+    for i, c in enumerate(p):
+        if not c:
+            continue
+        atom = f"C {lean_rat(c)}"
+        terms.append(atom if i == 0 else f"{atom} * X ^ {i}")
+    return " + ".join(terms) if terms else "0"
+
+
+def phase_matrix():
+    return [
+        [
+            [F(1)] if j == 0
+            else add(xpow((i * j) % 11), xpow((-i * j) % 11))
+            for j in range(6)
+        ]
+        for i in range(6)
+    ]
+
+
+def expected_b():
+    b = [[[] for _ in range(10)] for _ in range(15)]
+    for j, support in B_SUPPORT.items():
+        for i, c in support:
+            b[i][j] = [c]
+    return b
+
+
+def expansion(name: str, r: int, k: int):
+    a, b = PAIR[r]
+    u, v = PAIR[k]
+    return f"""private theorem {name}_{r}_{k} :
+    PluckerNaturality.compound2Lex S6Phase_poly {r} {k} =
+      S6Phase_poly {a} {u} * S6Phase_poly {b} {v} -
+        S6Phase_poly {a} {v} * S6Phase_poly {b} {u} := by
+  exact D12GeneratorPolynomialCore.compound2Lex_apply_pairLex
+    S6Phase_poly {r} {k}
+"""
+
+
+def val_facts(i: int, j: int) -> str:
+    """The two tiny ZMod reductions used by one phase entry."""
+    n = i * j
+    if n == 0:
+        return ""
+    return (
+        f"    show (({n} : ZMod 11).val) = {n % 11} by decide,\n"
+        f"    show ((-{n} : ZMod 11).val) = {(-n) % 11} by decide,"
+    )
+
+
+def phase_entry_name(i, j):
+    return f"phase_{i}_{j}"
+
+
+def phase_entry_def(i, j, h):
+    return f"def {phase_entry_name(i, j)} : Polynomial ℚ := {lean_poly(h[i][j])}\n"
+
+
+def emit_row(row: int, h, phase_product, out_root: Path, source_sha: str):
+    src, coeff = ROWS[row]
+    residual = [
+        sub(phase_product[row][j], scale(coeff, phase_product[src][j]))
+        for j in range(10)
+    ]
+    quotients = [div_phi(r) for r in residual]
+    module = f"D12GeneratorSPhaseRow{row}"
+    lines = [
+        f"""/-
+  Sparse standard-generator certificate, dependent ambient row {row}.
+  Auto-generated by scripts/export_d12_generator_relations_lean.py.
+  Source JSON sha256: {source_sha}
+  Stock limits; no evaluator escape.
+-/
+import V14Formalization.D12GeneratorPolynomialCore
+
+noncomputable section
+
+open Matrix Polynomial
+
+namespace V14Formalization.{module}
+
+open D12PolynomialData D12GeneratorPolynomialCore
+
+private theorem two_as_C : (2 : Polynomial ℚ) = C 2 :=
+  (map_natCast C 2).symm
+
+private theorem three_as_C : (3 : Polynomial ℚ) = C 3 :=
+  (map_natCast C 3).symm
+
+private theorem C_eq_smul_one (a : ℚ) :
+    C a = a • (1 : Polynomial ℚ) := by
+  rw [Polynomial.smul_eq_C_mul, mul_one]
+
+private theorem smul_one_sq (a : ℚ) :
+    (a • (1 : Polynomial ℚ)) ^ 2 =
+      (a * a) • (1 : Polynomial ℚ) := by
+  rw [pow_two, smul_mul_assoc, one_mul, smul_smul]
+"""
+    ]
+    needed_entries = set()
+    needed_compounds = set()
+    for r in (row, src):
+        for j in range(10):
+            for k, _ in B_SUPPORT[j]:
+                needed_compounds.add((r, k))
+                a, b = PAIR[r]
+                u, v = PAIR[k]
+                needed_entries.update(((a, u), (b, v), (a, v), (b, u)))
+    for i, j in sorted(needed_entries):
+        lines.append(phase_entry_def(i, j, h))
+        lines.append(f"""private theorem phase_entry_{i}_{j} :
+    S6Phase_poly {i} {j} = {phase_entry_name(i, j)} := by
+  unfold S6Phase_poly
+  simp only [Matrix.of_apply]
+  norm_num [D12U6Semantic.phasePoly, {phase_entry_name(i, j)},
+{val_facts(i, j)}] <;>
+    (try simp only [two_as_C, three_as_C, C_eq_smul_one,
+      smul_mul_assoc, mul_smul_comm, one_mul, mul_one, smul_smul]) <;>
+    module
+
+""")
+    for r in (row, src):
+        for k in range(15):
+            if (r, k) not in needed_compounds:
+                continue
+            lines.append(expansion("phaseCompound", r, k))
+            a, b = PAIR[r]
+            u, v = PAIR[k]
+            lines.append(f"""private theorem phaseCompoundValue_{r}_{k} :
+    PluckerNaturality.compound2Lex S6Phase_poly {r} {k} =
+      {lean_poly(compound(h)[r][k])} := by
+  rw [phaseCompound_{r}_{k}, phase_entry_{a}_{u}, phase_entry_{b}_{v},
+    phase_entry_{a}_{v}, phase_entry_{b}_{u}]
+  norm_num [{phase_entry_name(a, u)}, {phase_entry_name(b, v)},
+    {phase_entry_name(a, v)}, {phase_entry_name(b, u)}] <;>
+    ring_nf <;>
+    (try simp only [two_as_C, three_as_C, C_eq_smul_one,
+      smul_mul_assoc, mul_smul_comm, one_mul, mul_one, smul_smul]) <;>
+    module
+
+""")
+    for j, q in enumerate(quotients):
+        support = [k for k, _ in B_SUPPORT[j]]
+        rewrites = [f"phaseCompoundValue_{r}_{k}" for r in (row, src) for k in support]
+        lines.append(f"def quotient_{j} : Polynomial ℚ := {lean_poly(q)}\n")
+        lines.append(
+            f"""theorem phase_relation_{j} :
+    (PluckerNaturality.compound2Lex S6Phase_poly * B_poly) {row} {j} -
+      C {lean_rat(coeff)} *
+        (PluckerNaturality.compound2Lex S6Phase_poly * B_poly) {src} {j} =
+      Phi11 * quotient_{j} := by
+  rw [mul_B_col{j}, mul_B_col{j}]
+  rw [{', '.join(rewrites)}]
+  simp only [quotient_{j}, Phi11, Finset.sum_range_succ]
+  ring_nf
+  simp only [two_as_C, three_as_C, C_eq_smul_one, smul_one_sq,
+    smul_mul_assoc, mul_smul_comm, one_mul, mul_one, smul_smul]
+  module
+
+theorem generator_relation_{j} :
+    (PluckerNaturality.compound2Lex S6_poly * B_poly) {row} {j} -
+      C {lean_rat(coeff)} *
+        (PluckerNaturality.compound2Lex S6_poly * B_poly) {src} {j} =
+      Phi11 *
+        ((D12U6Semantic.cFourierPoly * D12U6Semantic.cFourierPoly) *
+          quotient_{j}) := by
+  exact D12GeneratorPolynomialCore.relation_of_smul_factor
+    (PluckerNaturality.compound2Lex S6_poly * B_poly)
+    (PluckerNaturality.compound2Lex S6Phase_poly * B_poly)
+    (D12U6Semantic.cFourierPoly * D12U6Semantic.cFourierPoly)
+    quotient_{j} {lean_rat(coeff)} {row} {src} {j}
+    D12GeneratorPolynomialCore.compound_S6_mul_B_factor phase_relation_{j}
+
+theorem eval_relation_{j}
+    {{R : Type*}} [CommRing R] [Algebra ℚ R]
+    (z : R) (hPhi : D12PolynomialEvaluation.evalPolyAt z Phi11 = 0) :
+    D12PolynomialEvaluation.evalPolyAt z
+        ((PluckerNaturality.compound2Lex S6_poly * B_poly) {row} {j}) =
+      algebraMap ℚ R {lean_rat(coeff)} *
+        D12PolynomialEvaluation.evalPolyAt z
+          ((PluckerNaturality.compound2Lex S6_poly * B_poly) {src} {j}) := by
+  exact D12GeneratorPolynomialCore.eval_relation_of_modPhi z hPhi _ _ _ {lean_rat(coeff)}
+    generator_relation_{j}
+"""
+        )
+    if row == 13:
+        for j in range(10):
+            support = [k for k, _ in B_SUPPORT[j]]
+            rewrites = [f"phaseCompoundValue_{src}_{k}" for k in support]
+            lines.append(f"""theorem source_phase_product_0_{j} :
+    (PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 0 {j} =
+      {lean_poly(phase_product[src][j])} := by
+  rw [mul_B_col{j}, {', '.join(rewrites)}]
+  all_goals
+    ring_nf
+    simp only [two_as_C, three_as_C, C_eq_smul_one, smul_one_sq,
+      smul_mul_assoc, mul_smul_comm, one_mul, mul_one, smul_smul]
+    module
+
+""")
+    arms = "\n".join(
+        f"  | ⟨{j}, _⟩ => eval_relation_{j} z hPhi" for j in range(10)
+    )
+    lines.append(
+        f"""theorem eval_relation
+    {{R : Type*}} [CommRing R] [Algebra ℚ R]
+    (z : R) (hPhi : D12PolynomialEvaluation.evalPolyAt z Phi11 = 0)
+    (j : Fin 10) :
+    D12PolynomialEvaluation.evalPolyAt z
+        ((PluckerNaturality.compound2Lex S6_poly * B_poly) {row} j) =
+      algebraMap ℚ R {lean_rat(coeff)} *
+        D12PolynomialEvaluation.evalPolyAt z
+          ((PluckerNaturality.compound2Lex S6_poly * B_poly) {src} j) :=
+  match j with
+{arms}
+
+end V14Formalization.{module}
+"""
+    )
+    text = "\n".join(lines)
+    path = out_root / f"{module}.lean"
+    path.write_text(text)
+    return path, text
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--out-dir", type=Path, default=OUT_ROOT)
+    parser.add_argument(
+        "--rows", default="5,8,10,12,13",
+        help="comma-separated dependent rows",
+    )
+    args = parser.parse_args()
+    selected = [int(x) for x in args.rows.split(",") if x]
+    if any(r not in ROWS for r in selected):
+        raise SystemExit(f"rows must lie in {sorted(ROWS)}")
+    raw = JSON_PATH.read_bytes()
+    payload = json.loads(raw)
+    b = json_matrix(payload["m"]["B15x10"])
+    if b != expected_b():
+        raise SystemExit("B15x10 no longer matches the sparse kernel interface")
+    h = phase_matrix()
+    phase_product = matmul(compound(h), b)
+    args.out_dir.mkdir(parents=True, exist_ok=True)
+    source_sha = hashlib.sha256(raw).hexdigest()
+    for row in selected:
+        path, text = emit_row(row, h, phase_product, args.out_dir, source_sha)
+        print(f"wrote {path} ({len(text.encode())} bytes)")
+
+
+if __name__ == "__main__":
+    main()

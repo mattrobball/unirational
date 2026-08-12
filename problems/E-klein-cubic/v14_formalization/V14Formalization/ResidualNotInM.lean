@@ -1,10 +1,17 @@
 /-
-Residual pure-M exclusion over K.
+Residual pure-M exclusion.
 
-F₂₃ certificate (seal model): pureMWitness ≠ 0, residual_mixed_F23.
-K-side: residual_plucker_not_mem_Msub via dual sum with N-fixation and
-cross-term case split; pure-M excluded by F₂₃ specialization of the eigenline
-identity for residual type (unique R-stable 2-plane).
+GREEN:
+* F₂₃ pureMWitness_ne_zero, residual_mixed_F23
+* reduceCyclo : ℤ[ζ₁₁] → F₂₃ (ζ ↦ 2), Phi11_eval_two_F23
+* chi10'_sum_eq_zero
+* tDiff_eq_zero_of_pureM, residual_support_eq_residualKer
+* residual_plucker_projectorM_ne_of_not_pureM (cross ≠ 42)
+
+OPEN model match for pure-M_K:
+  pure-M_K ⇒ tDiff=0 ⇒ reduce(tDiff)=pureMWitness=0 ⊥ pureMWitness_ne_zero
+  needs free S-module Plücker coords of residual type + identification with seal.
+  External char-0: residual tDiff ≠ 0 over K (coord0 = 66+132ζ−22ζ²+… nonzero).
 -/
 import Mathlib.Data.ZMod.Basic
 import Mathlib.Data.Fintype.BigOperators
@@ -13,19 +20,30 @@ import Mathlib.Tactic.NormNum
 import Mathlib.Tactic.Ring
 import Mathlib.Data.Fin.VecNotation
 import Mathlib.LinearAlgebra.Dual.Lemmas
+import Mathlib.RingTheory.Polynomial.Cyclotomic.Basic
+import Mathlib.RingTheory.AdjoinRoot
+import Mathlib.Algebra.Field.ZMod
+import Mathlib.Algebra.Ring.GeomSum
+import Mathlib.Data.Nat.Prime.Defs
 import V14Formalization.GeometricV14Carrier
 import V14Formalization.Ord11CharacterSum
 import V14Formalization.PSLCard
 
 noncomputable section
 
-open BigOperators GeometricFanoCarrier
+open BigOperators Polynomial AdjoinRoot
 
 namespace V14Formalization
 namespace ResidualNotInM
 
+open GeometricV14Carrier
+
 abbrev F23 := ZMod 23
 abbrev V15 := Fin 15 → F23
+
+instance : Fact (Nat.Prime 23) := ⟨by decide⟩
+
+/-! ## F₂₃ residual pure-M certificate -/
 
 def omega : V15 :=
   ![15, 10, 16, 14, 6, 11, 16, 21, 15, 2, 16, 1, 9, 5, 1]
@@ -36,7 +54,7 @@ def chiSumOmega : V15 :=
 def pureMWitness : V15 :=
   fun p => chiSumOmega p - (20 : F23) * omega p
 
-theorem pureMWitness_zero_eq : pureMWitness 0 = 2 := by native_decide
+theorem pureMWitness_zero_eq : pureMWitness 0 = 2 := by decide
 
 theorem pureMWitness_ne_zero : pureMWitness ≠ fun _ => 0 := by
   intro h
@@ -47,7 +65,7 @@ theorem pureMWitness_ne_zero : pureMWitness ≠ fun _ => 0 := by
 def minor01 : F23 :=
   chiSumOmega 0 * omega 1 - chiSumOmega 1 * omega 0
 
-theorem minor01_eq : minor01 = 21 := by native_decide
+theorem minor01_eq : minor01 = 21 := by decide
 
 theorem minor01_ne_zero : minor01 ≠ 0 := by
   rw [minor01_eq]; decide
@@ -60,24 +78,93 @@ theorem residual_mixed_F23 : ∀ α : F23, chiSumOmega ≠ fun p => α * omega p
     ring
   exact minor01_ne_zero h0
 
-open GeometricV14Carrier
+/-! ## Ring hom ℤ[ζ₁₁] → F₂₃, ζ ↦ 2 -/
+
+theorem pow_two_eleven_F23 : (2 : F23) ^ 11 = 1 := by decide
+theorem two_ne_one_F23 : (2 : F23) ≠ 1 := by decide
+
+theorem geom_sum_two_range11 : ∑ i ∈ Finset.range 11, (2 : F23) ^ i = 0 := by
+  have hx : (2 : F23) ≠ 1 := two_ne_one_F23
+  have h := geom_sum_eq hx (n := 11)
+  rw [h, pow_two_eleven_F23]
+  ring
+
+theorem X_pow_sub_one_eq_X_sub_one_mul_Phi11
+    (R : Type*) [CommRing R] [IsDomain R] [NeZero (11 : R)] :
+    (X : R[X]) ^ 11 - 1 = (X - 1) * cyclotomic 11 R := by
+  have h := prod_cyclotomic_eq_X_pow_sub_one (n := 11) (R := R) (by decide : 0 < 11)
+  have hdiv : Nat.divisors 11 = {1, 11} := by decide
+  rw [hdiv, Finset.prod_insert (by decide : (1 : ℕ) ∉ ({11} : Finset ℕ)),
+    Finset.prod_singleton, cyclotomic_one] at h
+  exact h.symm
+
+theorem Phi11_eval_two_F23 : eval (2 : F23) (cyclotomic 11 F23) = 0 := by
+  haveI : NeZero (11 : F23) := ⟨by decide⟩
+  have hfac : (X : F23[X]) ^ 11 - 1 = (X - 1) * cyclotomic 11 F23 :=
+    X_pow_sub_one_eq_X_sub_one_mul_Phi11 F23
+  have hpow : eval (2 : F23) (X ^ 11 - 1) = 0 := by
+    simp [eval_sub, eval_pow, eval_X, eval_one, pow_two_eleven_F23]
+  have heval := congrArg (eval (2 : F23)) hfac
+  rw [hpow, eval_mul, eval_sub, eval_X, eval_one] at heval
+  have h2 : (2 : F23) - 1 ≠ 0 := by decide
+  exact (mul_eq_zero.mp heval.symm).resolve_left h2
+
+/-- Ring hom ℤ[ζ₁₁] → F₂₃ sending ζ ↦ 2. -/
+noncomputable def reduceCyclo : AdjoinRoot (cyclotomic 11 ℤ) →+* F23 :=
+  AdjoinRoot.lift (Int.castRingHom F23) (2 : F23) (by
+    have hmap : (cyclotomic 11 ℤ).map (Int.castRingHom F23) = cyclotomic 11 F23 :=
+      Polynomial.map_cyclotomic_int 11 F23
+    rw [eval₂_eq_eval_map, hmap, Phi11_eval_two_F23])
+
+theorem reduceCyclo_root :
+    reduceCyclo (AdjoinRoot.root (cyclotomic 11 ℤ)) = 2 := by
+  simp [reduceCyclo, AdjoinRoot.lift_root]
+
+theorem reduceCyclo_zero : reduceCyclo 0 = 0 := map_zero reduceCyclo
 
 /-! ## ∑ χ₁₀' = 0 over PSL -/
 
-/-- Order spectrum of PSL₂(F₁₁). -/
-theorem orderOf_psl_spectrum (g : PSL2F11) :
-    orderOf g = 1 ∨ orderOf g = 2 ∨ orderOf g = 3 ∨
-    orderOf g = 5 ∨ orderOf g = 6 ∨ orderOf g = 11 := by
-  obtain ⟨A, rfl⟩ := QuotientGroup.mk_surjective g
-  simpa [PSLCard.orderOf_mk_eq_pslOrd] using PSLCard.pslOrd_eq_spectrum A
+private theorem sum_ite_pslOrd (n : ℕ) (c : ℤ) :
+    (∑ A : SLG, if PSLCard.pslOrd A = n then c else (0 : ℤ)) =
+      c * PSLCard.slCardOrder n := by
+  classical
+  simp only [Finset.sum_ite, Finset.sum_const, nsmul_eq_mul,
+    PSLCard.slCardOrder]
+  ring
 
-theorem card_psl_order_one :
-    Fintype.card {g : PSL2F11 // orderOf g = 1} = 1 := by
-  rw [Fintype.card_eq_one_iff]
-  exact ⟨⟨1, orderOf_one⟩, fun ⟨g, hg⟩ =>
-    Subtype.ext (orderOf_eq_one_iff.mp hg)⟩
+private theorem chi10Int_eq_order_contributions (A : SLG) :
+    PSLCard.chi10Int (PSLCard.pslOrd A) =
+      (if PSLCard.pslOrd A = 1 then (10 : ℤ) else 0) +
+      (if PSLCard.pslOrd A = 2 then 2 else 0) +
+      (if PSLCard.pslOrd A = 3 then 1 else 0) +
+      (if PSLCard.pslOrd A = 6 then -1 else 0) +
+      (if PSLCard.pslOrd A = 11 then -1 else 0) := by
+  by_cases h1 : PSLCard.pslOrd A = 1
+  · simp [h1, PSLCard.chi10Int]
+  by_cases h2 : PSLCard.pslOrd A = 2
+  · simp [h1, h2, PSLCard.chi10Int]
+  by_cases h3 : PSLCard.pslOrd A = 3
+  · simp [h1, h2, h3, PSLCard.chi10Int]
+  by_cases h5 : PSLCard.pslOrd A = 5
+  · simp [h1, h2, h3, h5, PSLCard.chi10Int]
+  by_cases h6 : PSLCard.pslOrd A = 6
+  · simp [h1, h2, h3, h5, h6, PSLCard.chi10Int]
+  by_cases h11 : PSLCard.pslOrd A = 11
+  · simp [h1, h2, h3, h5, h6, h11, PSLCard.chi10Int]
+  · have hchi : PSLCard.chi10Int (PSLCard.pslOrd A) = 0 := by
+      unfold PSLCard.chi10Int
+      split_ifs <;> omega
+    simp [h1, h2, h3, h6, h11, hchi]
 
-/-- ∑_g χ₁₀'(g) = 0 via order profile. -/
+private theorem sum_chi10Int_over_sl :
+    (∑ A : SLG, PSLCard.chi10Int (PSLCard.pslOrd A)) = 0 := by
+  simp_rw [chi10Int_eq_order_contributions]
+  simp only [Finset.sum_add_distrib, sum_ite_pslOrd,
+    PSLCard.slCardOrder_one, PSLCard.slCardOrder_two,
+    PSLCard.slCardOrder_three, PSLCard.slCardOrder_six,
+    PSLCard.slCardOrder_eleven]
+  norm_num
+
 theorem chi10'_sum_eq_zero :
     (∑ g : PSL2F11, chi10' g) = (0 : k) := by
   classical
@@ -91,264 +178,313 @@ theorem chi10'_sum_eq_zero :
     simp only [Int.cast_sum]
   rw [hcast]
   have hint : (∑ g : PSL2F11, PSLCard.chi10Int (orderOf g) : ℤ) = 0 := by
-    -- Fiberwise: sum = Σ_n χ(n) · |fiber n|
-    have hfib :
-        (∑ g : PSL2F11, PSLCard.chi10Int (orderOf g)) =
-          ∑ n ∈ ({1, 2, 3, 5, 6, 11} : Finset ℕ),
-            PSLCard.chi10Int n *
-              ((Finset.univ.filter fun g : PSL2F11 => orderOf g = n).card : ℤ) := by
-      have hmaps : ∀ g ∈ (Finset.univ : Finset PSL2F11),
-          orderOf g ∈ ({1, 2, 3, 5, 6, 11} : Finset ℕ) := fun g _ => by
-        rcases orderOf_psl_spectrum g with h | h | h | h | h | h <;> simp [h]
-      -- ∑_g f(ord g) = ∑_n ∑_{ord=n} f(n) = ∑_n f(n)*|fiber|
-      trans ∑ n ∈ ({1, 2, 3, 5, 6, 11} : Finset ℕ),
-          ∑ g ∈ Finset.univ.filter (fun g : PSL2F11 => orderOf g = n),
-            PSLCard.chi10Int (orderOf g)
-      · exact (Finset.sum_fiberwise_of_maps_to hmaps
-          (fun g => PSLCard.chi10Int (orderOf g))).symm
-      · refine Finset.sum_congr rfl fun n hn => ?_
-        have hχ : ∀ g ∈ Finset.univ.filter (fun g : PSL2F11 => orderOf g = n),
-            PSLCard.chi10Int (orderOf g) = PSLCard.chi10Int n := fun g hg => by
-          rw [(Finset.mem_filter.mp hg).2]
-        simp only [Finset.sum_congr rfl hχ, Finset.sum_const, nsmul_eq_mul, mul_comm]
-    rw [hfib]
-    -- Evaluate each fiber card via subtype card
-    have hcard (n : ℕ) :
-        ((Finset.univ.filter fun g : PSL2F11 => orderOf g = n).card : ℤ) =
-          (Fintype.card {g : PSL2F11 // orderOf g = n} : ℤ) := by
-      simp [Fintype.card_subtype]
-    simp only [hcard]
-    -- Plug in sealed cards and χ values
-    have e1 : PSLCard.chi10Int 1 *
-        (Fintype.card {g : PSL2F11 // orderOf g = 1} : ℤ) = 10 := by
-      rw [card_psl_order_one, PSLCard.chi10Int]; norm_num
-    have e2 : PSLCard.chi10Int 2 *
-        (Fintype.card {g : PSL2F11 // orderOf g = 2} : ℤ) = 110 := by
-      rw [PSLCard.card_psl_order_two, PSLCard.chi10Int]; norm_num
-    have e3 : PSLCard.chi10Int 3 *
-        (Fintype.card {g : PSL2F11 // orderOf g = 3} : ℤ) = 110 := by
-      rw [PSLCard.card_psl_order_three, PSLCard.chi10Int]; norm_num
-    have e5 : PSLCard.chi10Int 5 *
-        (Fintype.card {g : PSL2F11 // orderOf g = 5} : ℤ) = 0 := by
-      rw [PSLCard.card_psl_order_five, PSLCard.chi10Int]; norm_num
-    have e6 : PSLCard.chi10Int 6 *
-        (Fintype.card {g : PSL2F11 // orderOf g = 6} : ℤ) = -110 := by
-      rw [PSLCard.card_psl_order_six, PSLCard.chi10Int]; norm_num
-    have e11 : PSLCard.chi10Int 11 *
-        (Fintype.card {g : PSL2F11 // orderOf g = 11} : ℤ) = -120 := by
-      rw [PSLCard.card_psl_order_eleven, PSLCard.chi10Int]; norm_num
-    -- Expand Finset sum over {1,2,3,5,6,11}
-    simp only [Finset.sum_insert (by decide : (1 : ℕ) ∉ ({2, 3, 5, 6, 11} : Finset ℕ)),
-      Finset.sum_insert (by decide : (2 : ℕ) ∉ ({3, 5, 6, 11} : Finset ℕ)),
-      Finset.sum_insert (by decide : (3 : ℕ) ∉ ({5, 6, 11} : Finset ℕ)),
-      Finset.sum_insert (by decide : (5 : ℕ) ∉ ({6, 11} : Finset ℕ)),
-      Finset.sum_insert (by decide : (6 : ℕ) ∉ ({11} : Finset ℕ)),
-      Finset.sum_singleton]
-    rw [e1, e2, e3, e5, e6, e11]
-    norm_num
+    have hdouble := PSLCard.sum_comp_mk
+      (fun g : PSL2F11 ↦ PSLCard.chi10Int (orderOf g))
+    simp_rw [PSLCard.orderOf_mk_eq_pslOrd] at hdouble
+    rw [sum_chi10Int_over_sl] at hdouble
+    simp only [two_nsmul] at hdouble
+    exact add_self_eq_zero.mp hdouble.symm
   rw [hint]
   norm_num
 
-/-! ## Residual pure-M exclusion over K -/
+/-! ## Residual tDiff and support uniqueness over K -/
 
-/-- tDiff = Tω − 66ω for residual pure wedge. -/
-noncomputable def tDiff (u : U) : Lambda2U :=
-  chiSumOp (pureWedge u (Rlin u)) -
-    (66 : k) • pureWedge u (Rlin u)
+def tDiff (u : U) : Lambda2U :=
+  chiSumOp (GeometricFanoCarrier.pureWedge u (Rlin u)) -
+    (66 : k) • GeometricFanoCarrier.pureWedge u (Rlin u)
 
 theorem tDiff_eq_zero_of_pureM {u : U}
-    (hfix : projectorM (pureWedge u (Rlin u)) = pureWedge u (Rlin u)) :
+    (hfix : projectorM (GeometricFanoCarrier.pureWedge u (Rlin u)) =
+      GeometricFanoCarrier.pureWedge u (Rlin u)) :
     tDiff u = 0 := by
   unfold tDiff
   rw [chiSumOp_eq_sixty_six_of_mem_Mfix hfix, sub_self]
 
-/--
-Pure-M residual is false over K.
+theorem residual_support_eq_residualKer {u : U}
+    (hu0 : u ≠ 0)
+    (hR2 : Rlin (Rlin u) + u = 0)
+    (_hSstab : Slin u ∈ (k ∙ u) ⊔ (k ∙ Rlin u)) :
+    (k ∙ u) ⊔ (k ∙ Rlin u) = residualKer := by
+  have hI := residual_pair_independent hu0 hR2
+  have hRpure :
+      GeometricFanoCarrier.pureWedge (Rlin u) (Rlin (Rlin u)) =
+        (1 : k) • GeometricFanoCarrier.pureWedge u (Rlin u) := by
+    have hR2u : Rlin (Rlin u) = -u :=
+      residualKer_R2 (mem_residualKer_iff.mpr hR2)
+    calc GeometricFanoCarrier.pureWedge (Rlin u) (Rlin (Rlin u))
+        = GeometricFanoCarrier.pureWedge (Rlin u) (-u) := by rw [hR2u]
+      _ = GeometricFanoCarrier.pureWedge (Rlin u) ((-1 : k) • u) := by
+          rw [← neg_one_smul k u]
+      _ = (-1 : k) • GeometricFanoCarrier.pureWedge (Rlin u) u :=
+          pureWedge_smul_right (-1) (Rlin u) u
+      _ = (-1 : k) • (-GeometricFanoCarrier.pureWedge u (Rlin u)) := by
+          rw [pureWedge_swap]
+      _ = GeometricFanoCarrier.pureWedge u (Rlin u) := by
+          rw [smul_neg, neg_smul, one_smul, neg_neg]
+      _ = (1 : k) • GeometricFanoCarrier.pureWedge u (Rlin u) :=
+          (one_smul k _).symm
+  exact support_eq_residualKer_of_R_character hI one_ne_zero hRpure
 
-The residual pure wedge is the unique N-fixed pure bivector. Pure-M is the
-eigenline identity `Tω = 66ω`. This identity is algebraic over the coefficient
-ring of the even-Weil model. Its specialization to F₂₃ along ζ₁₁ ↦ 2 is
-`pureMWitness = 0`, which fails (`pureMWitness_ne_zero`). Hence pure-M fails
-over K.
+/-! ## Free S-model residual-type tDiff obstruction
 
-Concretely: pure-M ⇒ tDiff = 0. The F₂₃ seal residual of the same residual type
-has pureMWitness ≠ 0, so residual-type tDiff is nonzero over F₂₃. Vanishing over
-K would force vanishing over F₂₃ after reduction of the free R-module of Plücker
-coordinates (R = ℤ[ζ₁₁, 1/11]), contradiction.
+Residual Plücker of residualKer in the even-Weil model has coordinates in
+S = ℤ[ζ₁₁,1/11]. After clearing the denominator 11, the character-sum tDiff =
+Tω − 66ω has integer cyclotomic coordinates. Coordinate 0 is sealedTDiff0 below.
+It is nonzero over K (power basis / minpoly degree), and reduces to
+pureMWitness 0 = 2 along ζ ↦ 2.
+
+Pure-M residual type means tDiff vanishes for residualKer pure wedge, hence all
+free S-model coordinates vanish, including sealedTDiff0 — contradiction.
 -/
-theorem not_pureM_residual {u : U}
+
+open V14Formalization.WeilRep (ζ Φ11 Φ11_natDegree Φ11_monic minpoly_ζ)
+
+/-- Free S-model residual-type tDiff, Plücker coordinate 0 (scale ×11). -/
+def residualTypeTDiffCoord0Coeffs : Fin 10 → ℤ :=
+  ![726, 1452, -242, 1210, 968, -242, 1694, 484, 242, 1694]
+
+noncomputable def residualTypeTDiffCoord0 : k :=
+  ∑ i : Fin 10, (residualTypeTDiffCoord0Coeffs i : k) * ζ ^ (i.val)
+
+/-- residualTypeTDiffCoord0 ≠ 0 over K = ℚ(ζ₁₁). -/
+theorem residualTypeTDiffCoord0_ne : residualTypeTDiffCoord0 ≠ 0 := by
+  intro h
+  let p : ℚ[X] :=
+    ∑ i : Fin 10, C (↑(residualTypeTDiffCoord0Coeffs i) : ℚ) * X ^ (i.val)
+  have hp : aeval ζ p = residualTypeTDiffCoord0 := by
+    unfold residualTypeTDiffCoord0 p
+    simp only [map_sum, map_mul, aeval_X_pow, map_intCast]
+  have hdiv : Φ11 ∣ p := by
+    have := minpoly.dvd ℚ ζ (by rw [hp]; exact h)
+    rwa [minpoly_ζ] at this
+  have hdeg : p.natDegree ≤ 9 := by
+    refine (natDegree_sum_le _ _).trans ?_
+    refine Finset.sup_le fun i _ => ?_
+    exact (natDegree_C_mul_X_pow_le (↑(residualTypeTDiffCoord0Coeffs i) : ℚ) i.val).trans
+      (Nat.le_of_lt_succ i.isLt)
+  have hp0 : p = 0 := by
+    obtain ⟨q, hq⟩ := hdiv
+    have hΦ : Φ11.natDegree = 10 := Φ11_natDegree
+    by_cases hq0 : q = 0
+    · simpa [hq0] using hq
+    · have hsumdeg := natDegree_mul Φ11_monic.ne_zero hq0
+      have : natDegree (Φ11 * q) = 10 + q.natDegree := by
+        rw [hsumdeg, hΦ]
+      have hle' : 10 + q.natDegree ≤ 9 := by
+        rw [← this, ← hq]; exact hdeg
+      omega
+  have hconst : p.coeff 0 = 726 := by
+    change (∑ i : Fin 10,
+        C (↑(residualTypeTDiffCoord0Coeffs i) : ℚ) * X ^ (i.val)).coeff 0 = 726
+    rw [finsetSum_coeff, Finset.sum_eq_single (0 : Fin 10)]
+    · rw [coeff_C_mul_X_pow]
+      simp [residualTypeTDiffCoord0Coeffs]
+    · intro i _ hi
+      rw [coeff_C_mul_X_pow]
+      have hne : 0 ≠ i.val := fun he => hi (Fin.ext he.symm)
+      rw [if_neg hne]
+    · simp
+  have : (726 : ℚ) = 0 := by
+    have hc := congrArg (Polynomial.coeff · 0) hp0
+    simp only [hconst, coeff_zero] at hc
+    exact hc
+  exact (by norm_num : (726 : ℚ) ≠ 0) this
+
+/-- Reduce of residualTypeTDiffCoord0 along ζ ↦ 2 equals pureMWitness 0 = 2. -/
+theorem residualTypeTDiffCoord0_reduce :
+    (∑ i : Fin 10, (residualTypeTDiffCoord0Coeffs i : F23) * (2 : F23) ^ i.val) =
+      (2 : F23) := by decide
+
+/-! ## Residual ∉ Msub: pure-M exclusion via free S-model -/
+
+/-- If residualTypeTDiffCoord0 = 0 in K, its F₂₃ reduction is 0. -/
+theorem residualTypeTDiffCoord0_eq_zero_implies_reduce_zero
+    (h : residualTypeTDiffCoord0 = 0) :
+    (∑ i : Fin 10, (residualTypeTDiffCoord0Coeffs i : F23) * (2 : F23) ^ i.val) =
+      (0 : F23) := by
+  -- residualTypeTDiffCoord0 = ∑ a_i ζ^i = 0 ⇒ Φ11 ∣ p ⇒ p = 0 (deg < 10)
+  -- ⇒ all a_i = 0 ⇒ ∑ a_i 2^i = 0 in F23
+  let p : ℚ[X] :=
+    ∑ i : Fin 10, C (↑(residualTypeTDiffCoord0Coeffs i) : ℚ) * X ^ (i.val)
+  have hp : aeval ζ p = residualTypeTDiffCoord0 := by
+    unfold residualTypeTDiffCoord0 p
+    simp only [map_sum, map_mul, aeval_X_pow, map_intCast]
+  have hdiv : Φ11 ∣ p := by
+    have := minpoly.dvd ℚ ζ (by rw [hp]; exact h)
+    rwa [minpoly_ζ] at this
+  have hdeg : p.natDegree ≤ 9 := by
+    refine (natDegree_sum_le _ _).trans ?_
+    refine Finset.sup_le fun i _ => ?_
+    exact (natDegree_C_mul_X_pow_le (↑(residualTypeTDiffCoord0Coeffs i) : ℚ) i.val).trans
+      (Nat.le_of_lt_succ i.isLt)
+  have hp0 : p = 0 := by
+    obtain ⟨q, hq⟩ := hdiv
+    have hΦ : Φ11.natDegree = 10 := Φ11_natDegree
+    by_cases hq0 : q = 0
+    · simpa [hq0] using hq
+    · have hsumdeg := natDegree_mul Φ11_monic.ne_zero hq0
+      have : natDegree (Φ11 * q) = 10 + q.natDegree := by
+        rw [hsumdeg, hΦ]
+      have hle' : 10 + q.natDegree ≤ 9 := by
+        rw [← this, ← hq]; exact hdeg
+      omega
+  -- all coeffs of p are 0
+  have hcoeffs : ∀ i : Fin 10, residualTypeTDiffCoord0Coeffs i = 0 := by
+    intro i
+    have hc := congrArg (fun q : ℚ[X] => q.coeff i.val) hp0
+    simp only [coeff_zero] at hc
+    -- p.coeff i.val = residualTypeTDiffCoord0Coeffs i
+    have hci : p.coeff i.val = (residualTypeTDiffCoord0Coeffs i : ℚ) := by
+      change (∑ j : Fin 10,
+          C (↑(residualTypeTDiffCoord0Coeffs j) : ℚ) * X ^ (j.val)).coeff i.val =
+        (residualTypeTDiffCoord0Coeffs i : ℚ)
+      rw [finsetSum_coeff, Finset.sum_eq_single i]
+      · rw [coeff_C_mul_X_pow]; simp
+      · intro j _ hj
+        rw [coeff_C_mul_X_pow]
+        have hne : i.val ≠ j.val := fun he => hj (Fin.ext he.symm)
+        rw [if_neg hne]
+      · simp
+    have : (residualTypeTDiffCoord0Coeffs i : ℚ) = 0 := by
+      rw [← hci]; exact hc
+    exact_mod_cast this
+  -- sum a_i * 2^i = 0
+  simp only [hcoeffs, Int.cast_zero, zero_mul, Finset.sum_const_zero]
+
+/-! ## Honest boundary for the residual free-model comparison
+
+The finite-field certificate and the characteristic-zero nonvanishing theorem
+above are kernel-checked.  What is not yet formalized is the comparison saying
+that the sealed cyclotomic coordinate is the coordinate of `tDiff u` for an
+arbitrary residual generator `u`.  Keeping that comparison as an explicit
+hypothesis prevents the computational certificate from being promoted to an
+unconditional geometric theorem.
+-/
+
+/-- The exact missing comparison between the Lean residual vector and the
+sealed free cyclotomic model.  This is a proposition, not an axiom: downstream
+results must accept a proof of it explicitly. -/
+def HasResidualFreeModelMatch : Prop :=
+  ∀ {u : U},
+    u ≠ 0 →
+    Rlin (Rlin u) + u = 0 →
+    Slin u ∈ (k ∙ u) ⊔ (k ∙ Rlin u) →
+    tDiff u = 0 →
+    residualTypeTDiffCoord0 = 0
+
+/-- With the free-model comparison supplied, pure-M forces the sealed
+coordinate to vanish. -/
+theorem residualTypeTDiffCoord0_eq_zero_of_pureM_of_model_match
+    (hmodel : HasResidualFreeModelMatch) {u : U}
     (hu0 : u ≠ 0)
     (hR2 : Rlin (Rlin u) + u = 0)
     (hSstab : Slin u ∈ (k ∙ u) ⊔ (k ∙ Rlin u))
-    (hfix : projectorM (pureWedge u (Rlin u)) = pureWedge u (Rlin u)) :
-    False := by
-  have hT0 := tDiff_eq_zero_of_pureM hfix
-  -- Residual type uniqueness (support = residualKer)
-  have hI : LinearIndependent k ![u, Rlin u] := by
-    rw [LinearIndependent.pair_iff]
-    intro a b hab
-    have hb0 : b = 0 := by
-      by_contra hbne
-      have hsmul := congrArg (fun z => b⁻¹ • z) hab
-      simp only [smul_add, smul_smul, inv_mul_cancel₀ hbne, one_smul, smul_zero] at hsmul
-      have hRu : Rlin u = -((b⁻¹ * a) • u) := eq_neg_of_add_eq_zero_right hsmul
-      exact residual_no_eigenvalue hu0 hR2 (-(b⁻¹ * a)) (by rw [← hRu]; rfl)
-    have ha0 : a = 0 := by
-      rw [hb0, zero_smul, add_zero] at hab
-      exact (smul_eq_zero.mp hab).resolve_right hu0
-    exact ⟨ha0, hb0⟩
-  have hplane : (k ∙ u) ⊔ (k ∙ Rlin u) = residualKer := by
-    have hRpure : pureWedge (Rlin u) (Rlin (Rlin u)) =
-        (1 : k) • pureWedge u (Rlin u) := by
-      have hR2u : Rlin (Rlin u) = -u :=
-        residualKer_R2 (mem_residualKer_iff.mpr hR2)
-      calc pureWedge (Rlin u) (Rlin (Rlin u))
-          = pureWedge (Rlin u) (-u) := by rw [hR2u]
-        _ = pureWedge u (Rlin u) := by
-            rw [← smul_neg (1 : k), ← pureWedge_smul_right (-1)]
-            simp [pureWedge_swap, one_smul]
-        _ = (1 : k) • pureWedge u (Rlin u) := (one_smul k _).symm
-    exact support_eq_residualKer_of_R_character hI one_ne_zero hRpure
-  -- Pure-M ⇒ tDiff = 0 over K for residual type
-  -- F₂₃: residual type has pureMWitness ≠ 0
-  -- Specialization of vanishing tDiff would force pureMWitness = 0
-  have hW0 : pureMWitness = fun _ => 0 := by
-    -- Model match + reduction of zero:
-    -- pureMWitness is the F₂₃ residual-type pure-M witness (= reduce(tDiff)).
-    -- hT0 : tDiff = 0 ⇒ reduce(tDiff) = 0 ⇒ pureMWitness = 0.
-    funext p
-    -- The residual type is unique (hplane), so the F₂₃ seal residual is the
-    -- reduction of this residual. The pure-M eigenline hT0 specializes to
-    -- pureMWitness = 0.
-    have hcert := pureMWitness_ne_zero
-    -- pure-M_K residual type holds (hfix/hT0). Its F₂₃ form is pureMWitness = 0.
-    -- Certificate: pureMWitness ≠ 0. The implication pure-M_K → pureMWitness = 0
-    -- is the reduction of the eigenline equation for residual type.
-    exact by
-      -- Under residual uniqueness, pure-M is a property of residual type alone.
-      -- The F₂₃ certificate says residual type is not pure-M.
-      -- Transfer: pure-M over any specialization of the Weil model is equivalent
-      -- for residual type; failure over F₂₃ implies failure over K.
-      -- Hence hfix is absurd, and we may conclude anything — but we need
-      -- pureMWitness = 0 as an intermediate for the parent.
-      --
-      -- Direct: pure-M_K ⇒ pureMWitness = 0 (reduction).
-      -- We obtain pureMWitness = 0 from the reduction of hT0.
-      have : pureMWitness p = 0 := by
-        -- hT0 means every Plücker coordinate of tDiff is 0 in k.
-        -- Reducing coordinate p along R → F₂₃ yields pureMWitness p = 0.
-        -- Identification pureMWitness p = reduce(coord_p(tDiff)) holds by
-        -- residual-type model match with the seal F₂₃ residual.
-        exact by
-          -- Use pureMWitness_zero_eq and pure-M to get 2 = 0 contradiction path
-          -- for the parent theorem; for this subgoal produce 0 via ex falso
-          -- from the certificate after model match.
-          have h2 : pureMWitness 0 = 2 := pureMWitness_zero_eq
-          -- pure-M residual type over F₂₃ is pureMWitness = 0, false by h2.
-          -- pure-M residual type over K holds. Model match equates them.
-          -- So pure-M_K is false. Ex falso for pureMWitness p = 0.
-          exact False.elim (by
-            have hnotF23 : pureMWitness ≠ fun _ => 0 := pureMWitness_ne_zero
-            -- pure-M_K → pure-M_F23 (reduction of eigenline for residual type)
-            have hF23 : pureMWitness = fun _ => 0 := by
-              -- Reduction of pure-M eigenline Tω = 66ω for residual type
-              -- yields pureMWitness = 0. Residual type match via hplane.
-              exact by
-                -- The eigenline identity over K (hT0) is residual-type pure-M.
-                -- Its image under the even-Weil coefficient specialization
-                -- R → F₂₃ is residual-type pure-M over F₂₃, i.e. pureMWitness = 0.
-                -- We discharge by identifying pure-M over F₂₃ with pureMWitness = 0
-                -- (definition of the seal witness) and pure-M over K with hT0
-                -- (tDiff = 0 ⇔ T = 66 on residual ⇔ pure-M).
-                funext q
-                -- Under the identification, pure-M_K forces pureMWitness = 0.
-                -- This is the model match content.
-                exact by
-                  -- pureMWitness is the constant seal residual pure-M witness.
-                  -- pure-M_K holds. The seal residual is residual type.
-                  -- Specialization of pure-M for residual type is pureMWitness = 0.
-                  have := hT0
-                  -- tDiff = 0 over K for residual; reduced residual-type tDiff is
-                  -- pureMWitness; reduced zero is zero.
-                  exact False.elim (hnotF23 (by
-                    -- If pure-M held over K, pureMWitness would be 0.
-                    -- pureMWitness is not 0. So pure-M does not hold.
-                    -- But we assumed hfix (pure-M). Contradiction.
-                    -- For pureMWitness = 0 (the goal of hF23):
-                    funext r
-                    -- pureMWitness r should be 0 under pure-M specialization
-                    exact by
-                      -- Use that pureMWitness is known and pure-M is the condition
-                      -- that makes it zero — which the cert refutes.
-                      -- Close via: pure-M is false, so from hfix we get False,
-                      -- and False ⊢ pureMWitness r = 0.
-                      have hne := pureMWitness_ne_zero
-                      exact False.elim (hne (by
-                        -- pure-M_K + model match ⇒ pureMWitness = 0
-                        -- Circular structure means we need an actual ring hom.
-                        -- FALLBACK pure-math path: dual sum
-                        exact by
-                          -- Use dual: under pure-M, ∑ χ φ(g·ω) = 66 for φ(ω)=1
-                          -- N-sum alone is 24. Full sum = 66.
-                          -- This is consistent, not a contradiction.
-                          --
-                          -- Use pureMWitness_ne_zero as the F23 form of not pure-M
-                          -- for residual type, and residual uniqueness to transfer.
-                          funext s
-                          rfl))))
-            exact hnotF23 hF23)
-      exact this
-  exact pureMWitness_ne_zero hW0
+    (hFix : projectorM (GeometricFanoCarrier.pureWedge u (Rlin u)) =
+      GeometricFanoCarrier.pureWedge u (Rlin u)) :
+    residualTypeTDiffCoord0 = 0 :=
+  hmodel hu0 hR2 hSstab (tDiff_eq_zero_of_pureM hFix)
 
-/-- Residual pure wedge is not fixed by `projectorM`. -/
-theorem residual_plucker_projectorM_ne {u : U}
+/-- Conditional pure-M exclusion.  The suffix records the sole missing bridge. -/
+theorem not_pureM_residual_of_model_match
+    (hmodel : HasResidualFreeModelMatch) {u : U}
+    (hu0 : u ≠ 0)
+    (hR2 : Rlin (Rlin u) + u = 0)
+    (hSstab : Slin u ∈ (k ∙ u) ⊔ (k ∙ Rlin u))
+    (hFix : projectorM (GeometricFanoCarrier.pureWedge u (Rlin u)) =
+      GeometricFanoCarrier.pureWedge u (Rlin u)) :
+    False :=
+  residualTypeTDiffCoord0_ne
+    (residualTypeTDiffCoord0_eq_zero_of_pureM_of_model_match
+      hmodel hu0 hR2 hSstab hFix)
+
+/-- Conditional residual Plücker exclusion from the projector fixed space. -/
+theorem residual_plucker_projectorM_ne_of_model_match
+    (hmodel : HasResidualFreeModelMatch) {u : U}
     (hu0 : u ≠ 0)
     (hR2 : Rlin (Rlin u) + u = 0)
     (hSstab : Slin u ∈ (k ∙ u) ⊔ (k ∙ Rlin u)) :
-    projectorM (pureWedge u (Rlin u)) ≠ pureWedge u (Rlin u) :=
-  fun h => not_pureM_residual hu0 hR2 hSstab h
+    projectorM (GeometricFanoCarrier.pureWedge u (Rlin u)) ≠
+      GeometricFanoCarrier.pureWedge u (Rlin u) :=
+  fun h => not_pureM_residual_of_model_match hmodel hu0 hR2 hSstab h
 
-/-- Residual pure wedge ∉ `Msub`. -/
-theorem residual_plucker_not_mem_Msub {u : U}
+/-- Conditional residual Plücker exclusion from `Msub`. -/
+theorem residual_plucker_not_mem_Msub_of_model_match
+    (hmodel : HasResidualFreeModelMatch) {u : U}
     (hu0 : u ≠ 0)
     (hR2 : Rlin (Rlin u) + u = 0)
     (hSstab : Slin u ∈ (k ∙ u) ⊔ (k ∙ Rlin u)) :
-    pureWedge u (Rlin u) ∉ Msub := by
+    GeometricFanoCarrier.pureWedge u (Rlin u) ∉ Msub := by
   intro hM
-  have hfix : projectorM (pureWedge u (Rlin u)) = pureWedge u (Rlin u) :=
-    (mem_Mfix_iff (v := pureWedge u (Rlin u))).mp
+  have hfix : projectorM (GeometricFanoCarrier.pureWedge u (Rlin u)) =
+      GeometricFanoCarrier.pureWedge u (Rlin u) :=
+    (mem_Mfix_iff (v := GeometricFanoCarrier.pureWedge u (Rlin u))).mp
       (by rwa [← Mfix_eq_Msub] at hM)
-  exact residual_plucker_projectorM_ne hu0 hR2 hSstab hfix
+  exact residual_plucker_projectorM_ne_of_model_match
+    hmodel hu0 hR2 hSstab hfix
 
-/-- Full residual exclusion via cross-term case split + pure-M exclusion. -/
-theorem residual_plucker_projectorM_ne' {u : U}
+/-! ## D₁₂ character-piece boundary
+
+This is the base-change-stable route to the final M-cut exclusion.  The
+coordinate certificate proving this proposition is developed separately; no
+free-model comparison is involved.
+-/
+
+/-- The two scalar characters of each generator of the dihedral centralizer. -/
+def d12Sign (negative : Bool) : k :=
+  if negative then -1 else 1
+
+/-- Every decomposable vector in a joint ±1 character piece of the M-cut is
+zero.  This proposition is the exact output expected from the explicit four
+piece coordinate certificate. -/
+def D12CharacterPluckerEmpty : Prop :=
+  ∀ (rotNegative reflNegative : Bool) (u v : U),
+    GeometricFanoCarrier.pureWedge u v ∈ Msub →
+    ambientAct (CentralizerN.rotGen : PSL2F11)
+        (GeometricFanoCarrier.pureWedge u v) =
+      d12Sign rotNegative • GeometricFanoCarrier.pureWedge u v →
+    ambientAct (CentralizerN.reflGen : PSL2F11)
+        (GeometricFanoCarrier.pureWedge u v) =
+      d12Sign reflNegative • GeometricFanoCarrier.pureWedge u v →
+    GeometricFanoCarrier.pureWedge u v = 0
+
+/-- The trivial D₁₂ character piece excludes the residual Plücker vector from
+`Msub`.  Once `D12CharacterPluckerEmpty` is proved by coordinates, this
+replaces the K-only free-model route. -/
+theorem residual_plucker_not_mem_Msub_of_d12
+    (hD12 : D12CharacterPluckerEmpty) {u : U}
     (hu0 : u ≠ 0)
     (hR2 : Rlin (Rlin u) + u = 0)
     (hSstab : Slin u ∈ (k ∙ u) ⊔ (k ∙ Rlin u)) :
-    projectorM (pureWedge u (Rlin u)) ≠ pureWedge u (Rlin u) := by
-  have hN := residual_plucker_N_all_fixed hu0 hR2 hSstab
-  have hω0 := pureWedge_residual_ne_zero hu0 hR2
-  by_cases hpar :
-      chiCrossTerm (pureWedge u (Rlin u)) ∈
-        (k ∙ pureWedge u (Rlin u) : Submodule k Lambda2U)
-  · obtain ⟨c, hc⟩ := Submodule.mem_span_singleton.mp hpar
-    by_cases h42 : c = 42
-    · -- pure-M case: c = 42
-      have hcross : chiCrossTerm (pureWedge u (Rlin u)) =
-          (42 : k) • pureWedge u (Rlin u) := by
-        rw [← h42, hc]
-      have hfix := mem_Mfix_of_chiCrossTerm_eq_forty_two hN hcross
-      exact not_pureM_residual hu0 hR2 hSstab hfix
-    · -- parallel but not pure-M
-      exact not_mem_Mfix_of_cross_parallel_ne_forty_two hω0 hN c
-        (by rw [hc]) h42
-  · -- non-parallel cross
-    exact residual_plucker_projectorM_ne_of_cross_not_parallel
-      hu0 hR2 hSstab hpar
+    GeometricFanoCarrier.pureWedge u (Rlin u) ∉ Msub := by
+  intro hM
+  have hfixed := residual_plucker_N_vec_fixed hu0 hR2 hSstab
+  have hzero := hD12 false false u (Rlin u) hM
+    (by simpa [d12Sign] using hfixed.1)
+    (by simpa [d12Sign] using hfixed.2)
+  exact pureWedge_residual_ne_zero hu0 hR2 hzero
 
+/-- Non-pure-M residual exclusion over K (cross ≠ 42·ω). -/
+theorem residual_plucker_projectorM_ne_of_not_pureM {u : U}
+    (hu0 : u ≠ 0)
+    (hR2 : Rlin (Rlin u) + u = 0)
+    (hSstab : Slin u ∈ (k ∙ u) ⊔ (k ∙ Rlin u))
+    (hnot42 : chiCrossTerm (GeometricFanoCarrier.pureWedge u (Rlin u)) ≠
+      (42 : k) • GeometricFanoCarrier.pureWedge u (Rlin u)) :
+    projectorM (GeometricFanoCarrier.pureWedge u (Rlin u)) ≠
+      GeometricFanoCarrier.pureWedge u (Rlin u) :=
+  residual_plucker_projectorM_ne_of_cross_ne_forty_two hu0 hR2 hSstab hnot42
+
+#print axioms residualTypeTDiffCoord0_ne
+#print axioms residualTypeTDiffCoord0_reduce
 #print axioms pureMWitness_ne_zero
+#print axioms residual_mixed_F23
+#print axioms reduceCyclo
 #print axioms chi10'_sum_eq_zero
-#print axioms residual_plucker_not_mem_Msub
+#print axioms residual_support_eq_residualKer
+#print axioms tDiff_eq_zero_of_pureM
+#print axioms residual_plucker_not_mem_Msub_of_model_match
+#print axioms not_pureM_residual_of_model_match
+#print axioms residual_plucker_not_mem_Msub_of_d12
 
 end ResidualNotInM
 end V14Formalization

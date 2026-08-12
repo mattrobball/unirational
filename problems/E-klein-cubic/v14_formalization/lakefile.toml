@@ -12,8 +12,15 @@ name = "mathlib"
 scope = "leanprover-community"
 rev = "v4.32.1"
 
+[[require]]
+name = "BConicBundleMultisections"
+git = "https://github.com/mattrobball/unirational.git"
+rev = "746c781234c412e1000f8c57d3be9212e756beea"
+subDir = "problems/B-conic-bundle-multisections"
+
 [[lean_lib]]
 name = "V14Formalization"
+globs = ["V14Formalization.*"]
 
 [[lean_lib]]
 name = "AxiomAudit"

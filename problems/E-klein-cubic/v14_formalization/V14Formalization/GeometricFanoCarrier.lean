@@ -36,8 +36,6 @@ noncomputable section
 namespace V14Formalization
 namespace GeometricFanoCarrier
 
-set_option maxHeartbeats 8000000
-
 abbrev k := WeilRep.K
 abbrev F := ZMod 11
 abbrev SLG := SpecialLinearGroup (Fin 2) F

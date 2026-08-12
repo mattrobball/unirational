@@ -22,7 +22,7 @@
          "e581f45cb09a784d"],
         ["V14Formalization.Definitions:importAllArts", "3cfb4b46629fcff3"],
         ["V14Formalization.GeometricV14 transitive imports (legacy)",
-         "2c97170022dca8e0"],
+         "779f3ff0585fccb4"],
         ["V14Formalization.GeometricV14:importAllArts", "57d5af060390e5b7"],
         ["Mathlib.LinearAlgebra.Dimension.Finrank transitive imports (legacy)",
          "7b90367c76da02e8"],
@@ -48,4 +48,4 @@
   ["Module.name: V14Formalization.GeometricFanoV14", "9e6303faa42265cb"],
   ["Package.id?: (some V14Formalization)", "3206da5f56731469"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "69fde76865d8c660"}
+ "depHash": "7dfd764e254c4477"}

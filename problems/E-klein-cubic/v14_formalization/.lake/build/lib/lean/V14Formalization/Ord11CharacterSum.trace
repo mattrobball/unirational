@@ -1,31 +1,31 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["10288760ca01c793.olean"],
+ {"o": ["312e36968f7dd00e.olean"],
   "m": false,
-  "i": "f1bb39a99c299a2d.ilean",
+  "i": "e21f983754a9fb66.ilean",
   "c": "c0992885600f11f7.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Cli/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/batteries/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Qq/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/aesop/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/importGraph/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/plausible/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean:/Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean /Users/worker/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/V14Formalization/Ord11CharacterSum.lean -o /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/Ord11CharacterSum.olean -i /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/Ord11CharacterSum.ilean -c /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/Ord11CharacterSum.c --setup /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/Ord11CharacterSum.setup.json --json",
+   ".> LEAN_PATH=/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Cli/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/batteries/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Qq/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/aesop/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/importGraph/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/plausible/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/BConicBundleMultisections/problems/B-conic-bundle-multisections/.lake/build/lib/lean:/Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean /Users/worker/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/V14Formalization/Ord11CharacterSum.lean -o /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/Ord11CharacterSum.olean -i /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/Ord11CharacterSum.ilean -c /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/Ord11CharacterSum.c --setup /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/Ord11CharacterSum.setup.json --json",
    "level": "trace"},
   {"message":
-   "V14Formalization/Ord11CharacterSum.lean:179:46: This simp argument is unused:\n  ψ_zero\n\nHint: Omit it from the simp argument list.\n  simp [zero_pow (by decide : (2 : ℕ) ≠ 0),̵ ̵ψ̵_̵z̵e̵r̵o̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/Ord11CharacterSum.lean:177:46: This simp argument is unused:\n  ψ_zero\n\nHint: Omit it from the simp argument list.\n  simp [zero_pow (by decide : (2 : ℕ) ≠ 0),̵ ̵ψ̵_̵z̵e̵r̵o̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/Ord11CharacterSum.lean:198:54: This simp argument is unused:\n  ψ_zero\n\nHint: Omit it from the simp argument list.\n  simp [zero_pow (by decide : (2 : ℕ) ≠ 0), mul_zero,̵ ̵ψ̵_̵z̵e̵r̵o̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/Ord11CharacterSum.lean:196:54: This simp argument is unused:\n  ψ_zero\n\nHint: Omit it from the simp argument list.\n  simp [zero_pow (by decide : (2 : ℕ) ≠ 0), mul_zero,̵ ̵ψ̵_̵z̵e̵r̵o̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/Ord11CharacterSum.lean:409:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
+   "V14Formalization/Ord11CharacterSum.lean:407:24: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/Ord11CharacterSum.lean:1021:0: 'V14Formalization.Ord11CharacterSum.sum_chi_chiLambda2_order_eleven' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.slCardOrder_eleven._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1,\n card_sylow11._native.native_decide.ax_1_1]",
+   "V14Formalization/Ord11CharacterSum.lean:1042:0: 'V14Formalization.Ord11CharacterSum.sum_chi_chiLambda2_order_eleven' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/Ord11CharacterSum.lean:1022:0: 'V14Formalization.Ord11CharacterSum.sum_chi_chiLambda2_eq_sixsixty' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.slCardOrder_eleven._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_six._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_three._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_two._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1,\n V14Formalization.GeometricV14Carrier.card_sylow3._native.native_decide.ax_1_1✝,\n card_sylow11._native.native_decide.ax_1_1]",
+   "V14Formalization/Ord11CharacterSum.lean:1043:0: 'V14Formalization.Ord11CharacterSum.sum_chi_chiLambda2_eq_sixsixty' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/Ord11CharacterSum.lean:1023:0: 'V14Formalization.Ord11CharacterSum.finrank_Msub_eq_ten' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.conv4FailCount_eq_zero._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_eleven._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_six._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_three._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_two._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1,\n V14Formalization.GeometricV14Carrier.card_sylow3._native.native_decide.ax_1_1✝,\n card_sylow11._native.native_decide.ax_1_1]",
+   "V14Formalization/Ord11CharacterSum.lean:1044:0: 'V14Formalization.Ord11CharacterSum.finrank_Msub_eq_ten' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"}],
  "inputs":
  [["V14Formalization.Ord11CharacterSum:deps",
@@ -34,12 +34,12 @@
        [["@V14Formalization:extraDep", "00000000000006bb"]]],
       ["imports",
        [["V14Formalization.GeometricV14Carrier transitive imports (legacy)",
-         "880cd04da137292a"],
+         "297e4d8021ffeb57"],
         ["V14Formalization.GeometricV14Carrier:importAllArts",
-         "f0c062c087b7624a"],
+         "3dd2debbd3964f20"],
         ["V14Formalization.PSLCard transitive imports (legacy)",
-         "36b33137cb2d6b88"],
-        ["V14Formalization.PSLCard:importAllArts", "531ade7327bc51c6"],
+         "9adbfdc95bc09c1e"],
+        ["V14Formalization.PSLCard:importAllArts", "d3c9db01741448c5"],
         ["Mathlib.GroupTheory.Sylow transitive imports (legacy)",
          "ccc4b7d44cdd850e"],
         ["Mathlib.GroupTheory.Sylow:importAllArts", "1c9a5cf40e31d0b8"],
@@ -85,7 +85,7 @@
   ["Lean 4.32.1, commit f054605aea4b840552cca2e725580bffd1e1b704",
    "4ce1780d8d26fd00"],
   ["/Users/worker/unirational/problems/E-klein-cubic/v14_formalization/V14Formalization/Ord11CharacterSum.lean",
-   "e515ad2dac67771f"],
+   "faa4d455ffa983e3"],
   ["options",
    [["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
     ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
@@ -93,4 +93,4 @@
   ["Module.name: V14Formalization.Ord11CharacterSum", "75821ab8ee1280be"],
   ["Package.id?: (some V14Formalization)", "3206da5f56731469"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "a8362c80be7c7fab"}
+ "depHash": "a7a6fa23035f1e91"}

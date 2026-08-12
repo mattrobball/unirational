@@ -16,8 +16,6 @@ noncomputable section
 namespace V14Formalization
 namespace WeilWN
 
-set_option maxHeartbeats 8000000
-
 abbrev F := ZMod 11
 
 private lemma two_ne : (2 : F) ≠ 0 := by decide

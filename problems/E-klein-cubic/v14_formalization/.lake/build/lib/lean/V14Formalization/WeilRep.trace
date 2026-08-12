@@ -1,13 +1,13 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["a0be4dbb45b62c44.olean"],
+ {"o": ["4a90abc557ffb886.olean"],
   "m": false,
-  "i": "1238a8e77963a93a.ilean",
+  "i": "de31de5c8c1dcb08.ilean",
   "c": "b7f0852499495ae5.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Cli/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/batteries/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Qq/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/aesop/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/importGraph/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/plausible/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean:/Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean /Users/worker/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/V14Formalization/WeilRep.lean -o /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/WeilRep.olean -i /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/WeilRep.ilean -c /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/WeilRep.c --setup /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/WeilRep.setup.json --json",
+   ".> LEAN_PATH=/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Cli/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/batteries/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Qq/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/aesop/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/importGraph/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/plausible/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/BConicBundleMultisections/problems/B-conic-bundle-multisections/.lake/build/lib/lean:/Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean /Users/worker/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/V14Formalization/WeilRep.lean -o /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/WeilRep.olean -i /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/WeilRep.ilean -c /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/WeilRep.c --setup /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/WeilRep.setup.json --json",
    "level": "trace"}],
  "inputs":
  [["V14Formalization.WeilRep:deps",
@@ -105,7 +105,7 @@
   ["Lean 4.32.1, commit f054605aea4b840552cca2e725580bffd1e1b704",
    "4ce1780d8d26fd00"],
   ["/Users/worker/unirational/problems/E-klein-cubic/v14_formalization/V14Formalization/WeilRep.lean",
-   "bdbff97d7ad154ae"],
+   "ce58519d24aea08f"],
   ["options",
    [["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
     ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
@@ -113,4 +113,4 @@
   ["Module.name: V14Formalization.WeilRep", "9a451325349982cd"],
   ["Package.id?: (some V14Formalization)", "3206da5f56731469"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "11e68085381ea67c"}
+ "depHash": "4fb6c10d5520be8d"}

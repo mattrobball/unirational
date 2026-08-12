@@ -27,8 +27,6 @@ abbrev F := ZMod 11
 abbrev SLG := SpecialLinearGroup (Fin 2) F
 abbrev PSL2F11 := PSL(2, F)
 
-set_option maxHeartbeats 8000000
-
 def Smat : SLG := ⟨!![0, -1; 1, 0], by simp [Matrix.det_fin_two_of]⟩
 def sigma : PSL2F11 := QuotientGroup.mk Smat
 

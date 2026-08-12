@@ -18,8 +18,6 @@ noncomputable section
 namespace V14Formalization
 namespace WeilHom
 
-set_option maxHeartbeats 8000000
-
 abbrev F := ZMod 11
 abbrev SLG := SpecialLinearGroup (Fin 2) F
 
@@ -164,128 +162,139 @@ theorem ed_mul_big_borel {g h : SLG} (_hh : ec h = 0) :
   rw [Matrix.mul_apply, Fin.sum_univ_two]
   rfl
 
-theorem weilFun_mul_big_borel {g h : SLG} (hg : ec g ≠ 0) (hh : ec h = 0) :
-    weilFun (g * h) = weilFun g ∘ₗ weilFun h := by
-  have hgh_ne := ec_big_borel_ne hg hh
+private theorem big_borel_N1_param {g h : SLG} (hg : ec g ≠ 0) (hh : ec h = 0) :
+    ea (g * h) * (ec (g * h))⁻¹ = ea g * (ec g)⁻¹ := by
+  have hah := ea_ne_zero_of_ec_zero h hh
+  rw [ea_mul_big_borel hh, ec_mul_big_borel hh, _root_.mul_inv_rev]
+  calc
+    (ea g * ea h) * ((ea h)⁻¹ * (ec g)⁻¹) =
+        ea g * (ea h * (ea h)⁻¹) * (ec g)⁻¹ := by ring
+    _ = ea g * 1 * (ec g)⁻¹ := by rw [mul_inv_cancel₀ hah]
+    _ = ea g * (ec g)⁻¹ := by ring
+
+private theorem big_borel_N2_param {g h : SLG} (hg : ec g ≠ 0) (hh : ec h = 0) :
+    (ec (g * h))⁻¹ * ed (g * h) =
+      (ec g * ea h)⁻¹ * (ec g * ea h)⁻¹ *
+        (ec g * ec g * ((ec g)⁻¹ * ed g + eb h * ea h)) := by
   have hah := ea_ne_zero_of_ec_zero h hh
   have hed_h : ed h = (ea h)⁻¹ := ed_of_borel hh
-  have hec_gh : ec (g * h) = ec g * ea h := ec_mul_big_borel hh
-  have hea_gh : ea (g * h) = ea g * ea h := ea_mul_big_borel hh
-  have hform_h : weilFun h = Nfull (eb h * ea h) ∘ₗ Dfull (ea h) hah := by
-    dsimp [weilFun]; rw [dif_pos hh]; rfl
-  rw [hform_h, weilFun_of_big hg, weilFun_of_big hgh_ne]
-  have hpos :
-      bigCellPos (g * h) hgh_ne =
-        bigCellPos g hg ∘ₗ Nfull (eb h * ea h) ∘ₗ Dfull (ea h) hah := by
-    have hconjN := Dfull_conj_Nfull (ec g) ((ec g)⁻¹ * ed g + eb h * ea h) hg
-    have hND := Nfull_Dfull
-      (ec g * ec g * ((ec g)⁻¹ * ed g + eb h * ea h)) (ec g * ea h)
-      (mul_ne_zero hg hah)
-    have hrhs :
-        Nfull (ea g * (ec g)⁻¹) ∘ₗ Wfull ∘ₗ Dfull (ec g) hg ∘ₗ
-            Nfull ((ec g)⁻¹ * ed g) ∘ₗ Nfull (eb h * ea h) ∘ₗ Dfull (ea h) hah =
-          Nfull (ea g * (ec g)⁻¹) ∘ₗ Wfull ∘ₗ
-            Dfull (ec g * ea h) (mul_ne_zero hg hah) ∘ₗ
-            Nfull ((ec g * ea h)⁻¹ * (ec g * ea h)⁻¹ *
-              (ec g * ec g * ((ec g)⁻¹ * ed g + eb h * ea h))) := by
-      have hNadd :
-          Nfull ((ec g)⁻¹ * ed g) ∘ₗ Nfull (eb h * ea h) =
-            Nfull ((ec g)⁻¹ * ed g + eb h * ea h) :=
-        (Nfull_add _ _).symm
-      apply LinearMap.ext; intro φ
-      have h1 :
-          Dfull (ec g) hg (Nfull ((ec g)⁻¹ * ed g)
-            (Nfull (eb h * ea h) (Dfull (ea h) hah φ))) =
-            Nfull (ec g * ec g * ((ec g)⁻¹ * ed g + eb h * ea h))
-              (Dfull (ec g * ea h) (mul_ne_zero hg hah) φ) := by
-        have hcomb := LinearMap.ext_iff.mp hNadd (Dfull (ea h) hah φ)
-        have hconj := LinearMap.ext_iff.mp hconjN (Dfull (ea h) hah φ)
-        have hDmul := LinearMap.ext_iff.mp
-          (Dfull_mul (ec g) (ea h) hg hah).symm φ
-        calc Dfull (ec g) hg (Nfull ((ec g)⁻¹ * ed g)
-                (Nfull (eb h * ea h) (Dfull (ea h) hah φ)))
-            = Dfull (ec g) hg (Nfull ((ec g)⁻¹ * ed g + eb h * ea h)
-                (Dfull (ea h) hah φ)) :=
-              congrArg (Dfull (ec g) hg) hcomb
-          _ = Nfull (ec g * ec g * ((ec g)⁻¹ * ed g + eb h * ea h))
-                (Dfull (ec g) hg (Dfull (ea h) hah φ)) := by
-              simpa [LinearMap.comp_apply] using hconj
-          _ = Nfull (ec g * ec g * ((ec g)⁻¹ * ed g + eb h * ea h))
-                (Dfull (ec g * ea h) (mul_ne_zero hg hah) φ) :=
-              congrArg _ hDmul
-      have h2 := LinearMap.ext_iff.mp hND φ
-      change Nfull (ea g * (ec g)⁻¹) (Wfull (Dfull (ec g) hg
-          (Nfull ((ec g)⁻¹ * ed g) (Nfull (eb h * ea h) (Dfull (ea h) hah φ))))) =
-        Nfull (ea g * (ec g)⁻¹) (Wfull (Dfull (ec g * ea h) (mul_ne_zero hg hah)
-          (Nfull ((ec g * ea h)⁻¹ * (ec g * ea h)⁻¹ *
-            (ec g * ec g * ((ec g)⁻¹ * ed g + eb h * ea h))) φ)))
-      rw [h1]
-      exact congrArg (fun t => Nfull (ea g * (ec g)⁻¹) (Wfull t))
-        (by simpa [LinearMap.comp_apply] using h2)
-    have hN1 : ea (g * h) * (ec (g * h))⁻¹ = ea g * (ec g)⁻¹ := by
-      rw [hea_gh, hec_gh]
-      have : (ec g * ea h)⁻¹ = (ea h)⁻¹ * (ec g)⁻¹ := by rw [_root_.mul_inv_rev]
-      rw [this]
-      calc (ea g * ea h) * ((ea h)⁻¹ * (ec g)⁻¹)
-          = ea g * (ea h * (ea h)⁻¹) * (ec g)⁻¹ := by ring
-        _ = ea g * 1 * (ec g)⁻¹ := by rw [mul_inv_cancel₀ hah]
-        _ = ea g * (ec g)⁻¹ := by ring
-    have hN2 :
-        (ec (g * h))⁻¹ * ed (g * h) =
-          (ec g * ea h)⁻¹ * (ec g * ea h)⁻¹ *
-            (ec g * ec g * ((ec g)⁻¹ * ed g + eb h * ea h)) := by
-      rw [hec_gh, ed_mul_big_borel hh, hed_h]
-      have hinv : (ec g * ea h)⁻¹ = (ea h)⁻¹ * (ec g)⁻¹ := by
-        rw [_root_.mul_inv_rev]
-      have hs' :
-          (ec g * ea h)⁻¹ * (ec g * ea h)⁻¹ *
-              (ec g * ec g * ((ec g)⁻¹ * ed g + eb h * ea h)) =
-            (ea h)⁻¹ * eb h + (ec g)⁻¹ * ed g * (ea h)⁻¹ * (ea h)⁻¹ := by
-        rw [hinv]
-        have hcg : (ec g)⁻¹ * ec g = 1 := inv_mul_cancel₀ hg
-        calc ((ea h)⁻¹ * (ec g)⁻¹) * ((ea h)⁻¹ * (ec g)⁻¹) *
-                (ec g * ec g * ((ec g)⁻¹ * ed g + eb h * ea h))
-            = (ea h)⁻¹ * (ea h)⁻¹ * (ec g)⁻¹ * (ec g)⁻¹ * ec g * ec g *
-                ((ec g)⁻¹ * ed g + eb h * ea h) := by ring
-          _ = (ea h)⁻¹ * (ea h)⁻¹ * ((ec g)⁻¹ * ec g) * ((ec g)⁻¹ * ec g) *
-                ((ec g)⁻¹ * ed g + eb h * ea h) := by ring
-          _ = (ea h)⁻¹ * (ea h)⁻¹ * 1 * 1 *
-                ((ec g)⁻¹ * ed g + eb h * ea h) := by rw [hcg]
-          _ = (ea h)⁻¹ * (ea h)⁻¹ * ((ec g)⁻¹ * ed g) +
-                (ea h)⁻¹ * (ea h)⁻¹ * (eb h * ea h) := by ring
-          _ = (ec g)⁻¹ * ed g * (ea h)⁻¹ * (ea h)⁻¹ +
-                (ea h)⁻¹ * eb h * ((ea h)⁻¹ * ea h) := by ring
-          _ = (ec g)⁻¹ * ed g * (ea h)⁻¹ * (ea h)⁻¹ +
-                (ea h)⁻¹ * eb h * 1 := by rw [inv_mul_cancel₀ hah]
-          _ = (ea h)⁻¹ * eb h + (ec g)⁻¹ * ed g * (ea h)⁻¹ * (ea h)⁻¹ := by ring
-      have hL :
-          (ec g * ea h)⁻¹ * (ec g * eb h + ed g * (ea h)⁻¹) =
-            (ea h)⁻¹ * eb h + (ec g)⁻¹ * ed g * (ea h)⁻¹ * (ea h)⁻¹ := by
-        rw [hinv]
-        have hcg : (ec g)⁻¹ * ec g = 1 := inv_mul_cancel₀ hg
-        calc ((ea h)⁻¹ * (ec g)⁻¹) * (ec g * eb h + ed g * (ea h)⁻¹)
-            = (ea h)⁻¹ * (ec g)⁻¹ * ec g * eb h +
-                (ea h)⁻¹ * (ec g)⁻¹ * ed g * (ea h)⁻¹ := by ring
-          _ = (ea h)⁻¹ * ((ec g)⁻¹ * ec g) * eb h +
-                (ec g)⁻¹ * ed g * (ea h)⁻¹ * (ea h)⁻¹ := by ring
-          _ = (ea h)⁻¹ * 1 * eb h +
-                (ec g)⁻¹ * ed g * (ea h)⁻¹ * (ea h)⁻¹ := by rw [hcg]
-          _ = (ea h)⁻¹ * eb h + (ec g)⁻¹ * ed g * (ea h)⁻¹ * (ea h)⁻¹ := by ring
-      exact hL.trans hs'.symm
-    dsimp [bigCellPos]
-    have hN1' : Nfull (ea (g * h) * (ec (g * h))⁻¹) =
-        Nfull (ea g * (ec g)⁻¹) := by rw [hN1]
-    have hD' : Dfull (ec (g * h)) hgh_ne =
-        Dfull (ec g * ea h) (mul_ne_zero hg hah) :=
-      Dfull_congr hec_gh hgh_ne (mul_ne_zero hg hah)
-    have hN2' : Nfull ((ec (g * h))⁻¹ * ed (g * h)) =
-        Nfull ((ec g * ea h)⁻¹ * (ec g * ea h)⁻¹ *
-          (ec g * ec g * ((ec g)⁻¹ * ed g + eb h * ea h))) := by rw [hN2]
-    rw [hN1', hD', hN2']
-    exact hrhs.symm
-  rw [hpos]
-  apply LinearMap.ext; intro φ
-  simp only [LinearMap.comp_apply, LinearMap.neg_apply]
+  rw [ec_mul_big_borel hh, ed_mul_big_borel hh, hed_h]
+  have hinv : (ec g * ea h)⁻¹ = (ea h)⁻¹ * (ec g)⁻¹ := by
+    rw [_root_.mul_inv_rev]
+  have hs' :
+      (ec g * ea h)⁻¹ * (ec g * ea h)⁻¹ *
+          (ec g * ec g * ((ec g)⁻¹ * ed g + eb h * ea h)) =
+        (ea h)⁻¹ * eb h + (ec g)⁻¹ * ed g * (ea h)⁻¹ * (ea h)⁻¹ := by
+    rw [hinv]
+    have hcg : (ec g)⁻¹ * ec g = 1 := inv_mul_cancel₀ hg
+    calc
+      ((ea h)⁻¹ * (ec g)⁻¹) * ((ea h)⁻¹ * (ec g)⁻¹) *
+            (ec g * ec g * ((ec g)⁻¹ * ed g + eb h * ea h)) =
+          (ea h)⁻¹ * (ea h)⁻¹ * (ec g)⁻¹ * (ec g)⁻¹ * ec g * ec g *
+            ((ec g)⁻¹ * ed g + eb h * ea h) := by ring
+      _ = (ea h)⁻¹ * (ea h)⁻¹ * ((ec g)⁻¹ * ec g) * ((ec g)⁻¹ * ec g) *
+            ((ec g)⁻¹ * ed g + eb h * ea h) := by ring
+      _ = (ea h)⁻¹ * (ea h)⁻¹ * 1 * 1 *
+            ((ec g)⁻¹ * ed g + eb h * ea h) := by rw [hcg]
+      _ = (ea h)⁻¹ * (ea h)⁻¹ * ((ec g)⁻¹ * ed g) +
+            (ea h)⁻¹ * (ea h)⁻¹ * (eb h * ea h) := by ring
+      _ = (ec g)⁻¹ * ed g * (ea h)⁻¹ * (ea h)⁻¹ +
+            (ea h)⁻¹ * eb h * ((ea h)⁻¹ * ea h) := by ring
+      _ = (ec g)⁻¹ * ed g * (ea h)⁻¹ * (ea h)⁻¹ +
+            (ea h)⁻¹ * eb h * 1 := by rw [inv_mul_cancel₀ hah]
+      _ = (ea h)⁻¹ * eb h + (ec g)⁻¹ * ed g * (ea h)⁻¹ * (ea h)⁻¹ := by ring
+  have hL :
+      (ec g * ea h)⁻¹ * (ec g * eb h + ed g * (ea h)⁻¹) =
+        (ea h)⁻¹ * eb h + (ec g)⁻¹ * ed g * (ea h)⁻¹ * (ea h)⁻¹ := by
+    rw [hinv]
+    have hcg : (ec g)⁻¹ * ec g = 1 := inv_mul_cancel₀ hg
+    calc
+      ((ea h)⁻¹ * (ec g)⁻¹) * (ec g * eb h + ed g * (ea h)⁻¹) =
+          (ea h)⁻¹ * (ec g)⁻¹ * ec g * eb h +
+            (ea h)⁻¹ * (ec g)⁻¹ * ed g * (ea h)⁻¹ := by ring
+      _ = (ea h)⁻¹ * ((ec g)⁻¹ * ec g) * eb h +
+            (ec g)⁻¹ * ed g * (ea h)⁻¹ * (ea h)⁻¹ := by ring
+      _ = (ea h)⁻¹ * 1 * eb h +
+            (ec g)⁻¹ * ed g * (ea h)⁻¹ * (ea h)⁻¹ := by rw [hcg]
+      _ = (ea h)⁻¹ * eb h + (ec g)⁻¹ * ed g * (ea h)⁻¹ * (ea h)⁻¹ := by ring
+  exact hL.trans hs'.symm
+
+private def bigBorelNormal (g h : SLG) (hg : ec g ≠ 0) (hh : ec h = 0) :
+    Fun →ₗ[K] Fun :=
+  let hah := ea_ne_zero_of_ec_zero h hh
+  Nfull (ea g * (ec g)⁻¹) ∘ₗ Wfull ∘ₗ
+    Dfull (ec g * ea h) (mul_ne_zero hg hah) ∘ₗ
+    Nfull ((ec g * ea h)⁻¹ * (ec g * ea h)⁻¹ *
+      (ec g * ec g * ((ec g)⁻¹ * ed g + eb h * ea h)))
+
+private theorem bigCellPos_mul_eq_bigBorelNormal {g h : SLG}
+    (hg : ec g ≠ 0) (hh : ec h = 0) :
+    bigCellPos (g * h) (ec_big_borel_ne hg hh) = bigBorelNormal g h hg hh := by
+  let hah := ea_ne_zero_of_ec_zero h hh
+  let hgh := ec_big_borel_ne hg hh
+  change Nfull (ea (g * h) * (ec (g * h))⁻¹) ∘ₗ Wfull ∘ₗ
+      Dfull (ec (g * h)) hgh ∘ₗ Nfull ((ec (g * h))⁻¹ * ed (g * h)) =
+    bigBorelNormal g h hg hh
+  have hN1 := congrArg Nfull (big_borel_N1_param hg hh)
+  have hD := Dfull_congr (ec_mul_big_borel hh) hgh (mul_ne_zero hg hah)
+  have hN2 := congrArg Nfull (big_borel_N2_param hg hh)
+  rw [hN1, hD, hN2]
+  rfl
+
+private theorem bigBorel_comp_apply_eq_normal {g h : SLG}
+    (hg : ec g ≠ 0) (hh : ec h = 0) (f : Fun) :
+    (bigCellPos g hg ∘ₗ Nfull (eb h * ea h) ∘ₗ
+      Dfull (ea h) (ea_ne_zero_of_ec_zero h hh)) f = bigBorelNormal g h hg hh f := by
+  let hah := ea_ne_zero_of_ec_zero h hh
+  let n := (ec g)⁻¹ * ed g + eb h * ea h
+  let t := ec g * ec g * n
+  let s := ec g * ea h
+  let u := s⁻¹ * s⁻¹ * t
+  have hNadd := congrArg (fun L : Fun →ₗ[K] Fun => L (Dfull (ea h) hah f))
+    (Nfull_add ((ec g)⁻¹ * ed g) (eb h * ea h))
+  have hconj := congrArg (fun L : Fun →ₗ[K] Fun => L (Dfull (ea h) hah f))
+    (Dfull_conj_Nfull (ec g) n hg)
+  have hDmul := congrArg (fun L : Fun →ₗ[K] Fun => L f)
+    (Dfull_mul (ec g) (ea h) hg hah)
+  have hND := congrArg (fun L : Fun →ₗ[K] Fun => L f)
+    (Nfull_Dfull t s (mul_ne_zero hg hah))
+  change Nfull (ea g * (ec g)⁻¹)
+      (Wfull (Dfull (ec g) hg
+        (Nfull ((ec g)⁻¹ * ed g)
+          (Nfull (eb h * ea h) (Dfull (ea h) hah f))))) =
+    Nfull (ea g * (ec g)⁻¹)
+      (Wfull (Dfull s (mul_ne_zero hg hah) (Nfull u f)))
+  apply congrArg (fun z => Nfull (ea g * (ec g)⁻¹) (Wfull z))
+  calc
+    Dfull (ec g) hg
+        (Nfull ((ec g)⁻¹ * ed g)
+          (Nfull (eb h * ea h) (Dfull (ea h) hah f))) =
+      Dfull (ec g) hg (Nfull n (Dfull (ea h) hah f)) := by
+        exact congrArg (Dfull (ec g) hg) (by simpa [n, LinearMap.comp_apply] using hNadd.symm)
+    _ = Nfull t (Dfull (ec g) hg (Dfull (ea h) hah f)) := by
+      simpa [n, t, LinearMap.comp_apply] using hconj
+    _ = Nfull t (Dfull s (mul_ne_zero hg hah) f) := by
+      exact congrArg (Nfull t) (by simpa [s, LinearMap.comp_apply] using hDmul.symm)
+    _ = Dfull s (mul_ne_zero hg hah) (Nfull u f) := by
+      simpa [t, s, u, LinearMap.comp_apply] using hND
+
+theorem weilFun_mul_big_borel {g h : SLG} (hg : ec g ≠ 0) (hh : ec h = 0) :
+    weilFun (g * h) = weilFun g ∘ₗ weilFun h := by
+  apply LinearMap.ext
+  intro f
+  have hgh := ec_big_borel_ne hg hh
+  have hah := ea_ne_zero_of_ec_zero h hh
+  have hL := congrArg (fun L : Fun →ₗ[K] Fun => L f)
+    (bigCellPos_mul_eq_bigBorelNormal hg hh)
+  have hR := bigBorel_comp_apply_eq_normal hg hh f
+  rw [weilFun_of_big hgh, weilFun_of_big hg]
+  have hform : weilFun h = Nfull (eb h * ea h) ∘ₗ Dfull (ea h) hah := by
+    dsimp [weilFun]
+    rw [dif_pos hh]
+    rfl
+  rw [hform]
+  simpa only [LinearMap.comp_apply, LinearMap.neg_apply] using
+    congrArg (fun z : Fun => -z) (hL.trans hR.symm)
 
 /-! ## D(−1) = −R; on even functions R = id so D(−1) = −id -/
 
@@ -1072,7 +1081,7 @@ theorem big_big_borel_N_param {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
   -- Conclude
   rw [hea, heb, hLHS, hLexp, ← hRexp, ← hRHS]
 
-theorem big_big_pos_borel_even {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
+/- theorem big_big_pos_borel_even {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
     (hgh : ec (g * h) = 0) {f : Fun} (hf : ∀ x, f (-x) = f x) :
     bigCellPos g hg (bigCellPos h hh f) = borelFun (g * h) hgh f := by
   have hs : bigBigS g h = 0 := bigBigS_eq_zero_of_ec_zero hg hh hgh
@@ -1176,7 +1185,115 @@ theorem big_big_pos_borel_even {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
     exact this
   rw [hNadd, big_big_borel_N_param hg hh hgh]
   -- borelFun = N(eb*ea) ∘ D(ea)
+  rfl -/
+
+private theorem big_big_pos_borel_reduce_zero_op {g h : SLG}
+    (hg : ec g ≠ 0) (hh : ec h ≠ 0) (hgh : ec (g * h) = 0) :
+    bigCellPos g hg ∘ₗ bigCellPos h hh =
+      Nfull (ea g * (ec g)⁻¹) ∘ₗ Wfull ∘ₗ Wfull ∘ₗ
+        Dfull ((ec g)⁻¹ * ec h) (mul_ne_zero (inv_ne_zero hg) hh) ∘ₗ
+        Nfull ((ec h)⁻¹ * ed h) := by
+  rw [big_big_pos_reduce hg hh]
+  have hs : bigBigS g h = 0 := bigBigS_eq_zero_of_ec_zero hg hh hgh
+  have hs0 :
+      Nfull (ec g * ec g * ((ec g)⁻¹ * ed g + ea h * (ec h)⁻¹)) =
+        LinearMap.id := by
+    change Nfull (bigBigS g h) = LinearMap.id
+    rw [hs, Nfull_zero]
+  rw [hs0]
+  apply LinearMap.ext
+  intro f
   rfl
+
+private theorem big_big_pos_borel_reduce_zero {g h : SLG}
+    (hg : ec g ≠ 0) (hh : ec h ≠ 0) (hgh : ec (g * h) = 0) (f : Fun) :
+    bigCellPos g hg (bigCellPos h hh f) =
+      Nfull (ea g * (ec g)⁻¹)
+        (Wfull (Wfull (Dfull ((ec g)⁻¹ * ec h)
+          (mul_ne_zero (inv_ne_zero hg) hh) (Nfull ((ec h)⁻¹ * ed h) f)))) := by
+  simpa only [LinearMap.comp_apply] using
+    congrArg (fun L : Fun →ₗ[K] Fun => L f)
+      (big_big_pos_borel_reduce_zero_op hg hh hgh)
+
+private theorem Wfull_twice_eq_negR (f : Fun) :
+    Wfull (Wfull f) = (-Rfull) f := by
+  simpa [LinearMap.comp_apply] using
+    congrArg (fun L : Fun →ₗ[K] Fun => L f) Wfull_sq_R
+
+private theorem negR_twice (f : Fun) : (-Rfull) ((-Rfull) f) = f := by
+  have hR2 : Rfull (Rfull f) = f := by
+    simpa [LinearMap.comp_apply] using
+      congrArg (fun L : Fun →ₗ[K] Fun => L f) Rfull_sq
+  calc
+    (-Rfull) ((-Rfull) f) = -Rfull (-Rfull f) := rfl
+    _ = -(-Rfull (Rfull f)) := by rw [map_neg Rfull]
+    _ = Rfull (Rfull f) := neg_neg _
+    _ = f := hR2
+
+private theorem big_big_pos_borel_to_double_negR {g h : SLG}
+    (hg : ec g ≠ 0) (hh : ec h ≠ 0) (hgh : ec (g * h) = 0) (f : Fun) :
+    bigCellPos g hg (bigCellPos h hh f) =
+      Nfull (ea g * (ec g)⁻¹)
+        ((-Rfull) ((-Rfull)
+          (Dfull (ea (g * h)) (ea_ne_zero_of_ec_zero (g * h) hgh)
+            (Nfull ((ec h)⁻¹ * ed h) f)))) := by
+  let hag := ea_ne_zero_of_ec_zero (g * h) hgh
+  let hβne : (ec g)⁻¹ * ec h ≠ 0 := mul_ne_zero (inv_ne_zero hg) hh
+  rw [big_big_pos_borel_reduce_zero hg hh hgh f]
+  rw [Wfull_twice_eq_negR]
+  have hβ : (ec g)⁻¹ * ec h = -ea (g * h) := big_big_beta_eq_neg_ea hg hh hgh
+  have hDβ :
+      Dfull ((ec g)⁻¹ * ec h) hβne = Dfull (-ea (g * h)) (neg_ne_zero.mpr hag) :=
+    Dfull_congr hβ hβne (neg_ne_zero.mpr hag)
+  rw [hDβ]
+  have hDneg :
+      Dfull (-ea (g * h)) (neg_ne_zero.mpr hag) =
+        (-Rfull) ∘ₗ Dfull (ea (g * h)) hag := by
+    rw [Dfull_neg (ea (g * h)) hag, Dfull_neg_one]
+  rw [hDneg]
+  rfl
+
+private theorem big_big_borel_DN_eq {g h : SLG}
+    (hg : ec g ≠ 0) (hh : ec h ≠ 0) (hgh : ec (g * h) = 0) (f : Fun) :
+    Nfull (ea g * (ec g)⁻¹)
+        (Dfull (ea (g * h)) (ea_ne_zero_of_ec_zero (g * h) hgh)
+          (Nfull ((ec h)⁻¹ * ed h) f)) =
+      borelFun (g * h) hgh f := by
+  let hag := ea_ne_zero_of_ec_zero (g * h) hgh
+  let α := ea g * (ec g)⁻¹
+  let δ := (ec h)⁻¹ * ed h
+  let γ := ea (g * h) * ea (g * h) * δ
+  have hconj := congrArg (fun L : Fun →ₗ[K] Fun => L f)
+    (Dfull_conj_Nfull (ea (g * h)) δ hag)
+  have hNadd := congrArg
+    (fun L : Fun →ₗ[K] Fun => L (Dfull (ea (g * h)) hag f))
+    (Nfull_add α γ)
+  change Nfull α (Dfull (ea (g * h)) hag (Nfull δ f)) = borelFun (g * h) hgh f
+  calc
+    Nfull α (Dfull (ea (g * h)) hag (Nfull δ f)) =
+        Nfull α (Nfull γ (Dfull (ea (g * h)) hag f)) := by
+      exact congrArg (Nfull α) (by simpa [γ, LinearMap.comp_apply] using hconj)
+    _ = Nfull (α + γ) (Dfull (ea (g * h)) hag f) := by
+      simpa [LinearMap.comp_apply] using hNadd.symm
+    _ = Nfull (eb (g * h) * ea (g * h)) (Dfull (ea (g * h)) hag f) := by
+      rw [big_big_borel_N_param hg hh hgh]
+    _ = borelFun (g * h) hgh f := rfl
+
+theorem big_big_pos_borel_even {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
+    (hgh : ec (g * h) = 0) {f : Fun} (_hf : ∀ x, f (-x) = f x) :
+    bigCellPos g hg (bigCellPos h hh f) = borelFun (g * h) hgh f := by
+  calc
+    bigCellPos g hg (bigCellPos h hh f) =
+        Nfull (ea g * (ec g)⁻¹)
+          ((-Rfull) ((-Rfull)
+            (Dfull (ea (g * h)) (ea_ne_zero_of_ec_zero (g * h) hgh)
+              (Nfull ((ec h)⁻¹ * ed h) f)))) :=
+      big_big_pos_borel_to_double_negR hg hh hgh f
+    _ = Nfull (ea g * (ec g)⁻¹)
+          (Dfull (ea (g * h)) (ea_ne_zero_of_ec_zero (g * h) hgh)
+            (Nfull ((ec h)⁻¹ * ed h) f)) := by
+      rw [negR_twice]
+    _ = borelFun (g * h) hgh f := big_big_borel_DN_eq hg hh hgh f
 
 theorem weilU_mul_big_big_zero {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
     (hgh : ec (g * h) = 0) :

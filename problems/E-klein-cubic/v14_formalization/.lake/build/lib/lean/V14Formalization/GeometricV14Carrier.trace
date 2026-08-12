@@ -1,589 +1,544 @@
 {"synthetic": false,
  "schemaVersion": "2025-09-10",
  "outputs":
- {"o": ["c2c4e30932ee3f69.olean"],
+ {"o": ["10fcc416cb0c4cf2.olean"],
   "m": false,
-  "i": "fb139d34b38c20b2.ilean",
+  "i": "a0915eaac11d0db1.ilean",
   "c": "876a8ba5ddaf4adb.c"},
  "log":
  [{"message":
-   ".> LEAN_PATH=/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Cli/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/batteries/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Qq/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/aesop/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/importGraph/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/plausible/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean:/Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean /Users/worker/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/V14Formalization/GeometricV14Carrier.lean -o /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/GeometricV14Carrier.olean -i /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/GeometricV14Carrier.ilean -c /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/GeometricV14Carrier.c --setup /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/GeometricV14Carrier.setup.json --json",
+   ".> LEAN_PATH=/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Cli/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/batteries/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/Qq/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/aesop/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/proofwidgets/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/importGraph/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/plausible/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/mathlib/.lake/build/lib/lean:/Users/worker/unirational/problems/B-conic-bundle-multisections/.lake/packages/BConicBundleMultisections/problems/B-conic-bundle-multisections/.lake/build/lib/lean:/Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean /Users/worker/.elan/toolchains/leanprover--lean4---v4.32.1/bin/lean /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/V14Formalization/GeometricV14Carrier.lean -o /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/GeometricV14Carrier.olean -i /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/lib/lean/V14Formalization/GeometricV14Carrier.ilean -c /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/GeometricV14Carrier.c --setup /Users/worker/unirational/problems/E-klein-cubic/v14_formalization/.lake/build/ir/V14Formalization/GeometricV14Carrier.setup.json --json",
    "level": "trace"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:331:10: This simp argument is unused:\n  Pi.basisFun_repr\n\nHint: Omit it from the simp argument list.\n  simp [̵P̵i̵.̵b̵a̵s̵i̵s̵F̵u̵n̵_̵r̵e̵p̵r̵,̵ ̵P̵i̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵]̵[̲P̲i̲.̲s̲i̲n̲g̲l̲e̲_̲a̲p̲p̲l̲y̲]̲\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:329:10: This simp argument is unused:\n  Pi.basisFun_repr\n\nHint: Omit it from the simp argument list.\n  simp [̵P̵i̵.̵b̵a̵s̵i̵s̵F̵u̵n̵_̵r̵e̵p̵r̵,̵ ̵P̵i̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵]̵[̲P̲i̲.̲s̲i̲n̲g̲l̲e̲_̲a̲p̲p̲l̲y̲]̲\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:331:28: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  simp [Pi.basisFun_repr,̵ ̵P̵i̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:329:28: This simp argument is unused:\n  Pi.single_apply\n\nHint: Omit it from the simp argument list.\n  simp [Pi.basisFun_repr,̵ ̵P̵i̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:410:4: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "V14Formalization/GeometricV14Carrier.lean:408:4: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:554:6: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  simp only [map_add, map_smul, d02_02, d02_12, smul_eq_mul, mul_zero, add_zero,\n  ̵  ̵ ̵ ̵ ̵ ̵z̵e̵r̵o̵_̵a̵d̵d̵,̵ ̵mul_one] at hd\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:552:6: This simp argument is unused:\n  zero_add\n\nHint: Omit it from the simp argument list.\n  simp only [map_add, map_smul, d02_02, d02_12, smul_eq_mul, mul_zero, add_zero,\n  ̵  ̵ ̵ ̵ ̵ ̵z̵e̵r̵o̵_̵a̵d̵d̵,̵ ̵mul_one] at hd\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:559:73: This simp argument is unused:\n  add_zero\n\nHint: Omit it from the simp argument list.\n  simp only [map_add, map_smul, d12_02, d12_12, smul_eq_mul, mul_zero, a̵d̵d̵_̵z̵e̵r̵o̵,̵zero_add, mul_one,\n  ̲  ̲ ̲ ̲ ̲ ̲hmu] at hd\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:557:73: This simp argument is unused:\n  add_zero\n\nHint: Omit it from the simp argument list.\n  simp only [map_add, map_smul, d12_02, d12_12, smul_eq_mul, mul_zero, a̵d̵d̵_̵z̵e̵r̵o̵,̵zero_add, mul_one,\n  ̲  ̲ ̲ ̲ ̲ ̲hmu] at hd\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:715:33: Try `simp at hr` instead of `simpa using hr`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "V14Formalization/GeometricV14Carrier.lean:713:33: Try `simp at hr` instead of `simpa using hr`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1130:26: This simp argument is unused:\n  pow_two\n\nHint: Omit it from the simp argument list.\n  simp only [pow_three, p̵o̵w̵_̵t̵w̵o̵,̵ ̵SpecialLinearGroup.coe_mul, Matrix.mul_apply, Fin.sum_univ_two,\n  ̲  ̲ ̲ ̲ ̲ ̲CentralizerN.mkRot, CentralizerN.rotPt, WeilRep.Smat, Matrix.of_apply, Matrix.cons_val_zero,\n  ̲  ̲ ̲ ̲ ̲ ̲Matrix.cons_val_one, Matrix.head_cons]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:1128:26: This simp argument is unused:\n  pow_two\n\nHint: Omit it from the simp argument list.\n  simp only [pow_three, p̵o̵w̵_̵t̵w̵o̵,̵ ̵SpecialLinearGroup.coe_mul, Matrix.mul_apply, Fin.sum_univ_two,\n  ̲  ̲ ̲ ̲ ̲ ̲CentralizerN.mkRot, CentralizerN.rotPt, WeilRep.Smat, Matrix.of_apply, Matrix.cons_val_zero,\n  ̲  ̲ ̲ ̲ ̲ ̲Matrix.cons_val_one, Matrix.head_cons]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1130:35: This simp argument is unused:\n  SpecialLinearGroup.coe_mul\n\nHint: Omit it from the simp argument list.\n  simp only [pow_three, pow_two, S̵p̵e̵c̵i̵a̵l̵L̵i̵n̵e̵a̵r̵G̵r̵o̵u̵p̵.̵c̵o̵e̵_̵m̵u̵l̵,̵ ̵Matrix.mul_apply, Fin.sum_univ_two, CentralizerN.mkRot,\n  ̲  ̲ ̲ ̲ ̲ ̲CentralizerN.rotPt, WeilRep.Smat, Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one,\n  ̲  ̲ ̲ ̲ ̲ ̲Matrix.head_cons]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:1128:35: This simp argument is unused:\n  SpecialLinearGroup.coe_mul\n\nHint: Omit it from the simp argument list.\n  simp only [pow_three, pow_two, S̵p̵e̵c̵i̵a̵l̵L̵i̵n̵e̵a̵r̵G̵r̵o̵u̵p̵.̵c̵o̵e̵_̵m̵u̵l̵,̵ ̵Matrix.mul_apply, Fin.sum_univ_two, CentralizerN.mkRot,\n  ̲  ̲ ̲ ̲ ̲ ̲CentralizerN.rotPt, WeilRep.Smat, Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one,\n  ̲  ̲ ̲ ̲ ̲ ̲Matrix.head_cons]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1130:63: This simp argument is unused:\n  Matrix.mul_apply\n\nHint: Omit it from the simp argument list.\n  simp only [pow_three, pow_two, SpecialLinearGroup.coe_mul, M̵a̵t̵r̵i̵x̵.̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵\n  ̵ ̵ ̵ ̵ ̵ ̵ ̵Fin.sum_univ_two, CentralizerN.mkRot,\n  ̲  ̲ ̲ ̲ ̲ ̲CentralizerN.rotPt, WeilRep.Smat,\n  ̵  ̵ ̵ ̵ ̵ ̵Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one,\n  ̲  ̲ ̲ ̲ ̲ ̲Matrix.head_cons]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:1128:63: This simp argument is unused:\n  Matrix.mul_apply\n\nHint: Omit it from the simp argument list.\n  simp only [pow_three, pow_two, SpecialLinearGroup.coe_mul, M̵a̵t̵r̵i̵x̵.̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵\n  ̵ ̵ ̵ ̵ ̵ ̵ ̵Fin.sum_univ_two, CentralizerN.mkRot,\n  ̲  ̲ ̲ ̲ ̲ ̲CentralizerN.rotPt, WeilRep.Smat,\n  ̵  ̵ ̵ ̵ ̵ ̵Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one,\n  ̲  ̲ ̲ ̲ ̲ ̲Matrix.head_cons]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1131:6: This simp argument is unused:\n  Fin.sum_univ_two\n\nHint: Omit it from the simp argument list.\n  simp only [pow_three, pow_two, SpecialLinearGroup.coe_mul, Matrix.mul_apply,\n  ̵  ̵ ̵ ̵ ̵ ̵F̵i̵n̵.̵s̵u̵m̵_̵u̵n̵i̵v̵_̵t̵w̵o̵,̵ ̵CentralizerN.mkRot,\n  ̲  ̲ ̲ ̲ ̲ ̲CentralizerN.rotPt, WeilRep.Smat,\n  ̵  ̵ ̵ ̵ ̵ ̵Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one,\n  ̲  ̲ ̲ ̲ ̲ ̲Matrix.head_cons]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:1129:6: This simp argument is unused:\n  Fin.sum_univ_two\n\nHint: Omit it from the simp argument list.\n  simp only [pow_three, pow_two, SpecialLinearGroup.coe_mul, Matrix.mul_apply,\n  ̵  ̵ ̵ ̵ ̵ ̵F̵i̵n̵.̵s̵u̵m̵_̵u̵n̵i̵v̵_̵t̵w̵o̵,̵ ̵CentralizerN.mkRot,\n  ̲  ̲ ̲ ̲ ̲ ̲CentralizerN.rotPt, WeilRep.Smat,\n  ̵  ̵ ̵ ̵ ̵ ̵Matrix.of_apply, Matrix.cons_val_zero, Matrix.cons_val_one,\n  ̲  ̲ ̲ ̲ ̲ ̲Matrix.head_cons]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1132:23: This simp argument is unused:\n  Matrix.cons_val_zero\n\nHint: Omit it from the simp argument list.\n  simp only [pow_three, pow_two, SpecialLinearGroup.coe_mul, Matrix.mul_apply, Fin.sum_univ_two,\n  ̲  ̲ ̲ ̲ ̲ ̲CentralizerN.mkRot, CentralizerN.rotPt, WeilRep.Smat, Matrix.of_apply, M̵a̵t̵r̵i̵x̵.̵c̵o̵n̵s̵_̵v̵a̵l̵_̵z̵e̵r̵o̵,̵ ̵Matrix.cons_val_one,\n  ̲  ̲ ̲ ̲ ̲ ̲Matrix.head_cons]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:1130:23: This simp argument is unused:\n  Matrix.cons_val_zero\n\nHint: Omit it from the simp argument list.\n  simp only [pow_three, pow_two, SpecialLinearGroup.coe_mul, Matrix.mul_apply, Fin.sum_univ_two,\n  ̲  ̲ ̲ ̲ ̲ ̲CentralizerN.mkRot, CentralizerN.rotPt, WeilRep.Smat, Matrix.of_apply, M̵a̵t̵r̵i̵x̵.̵c̵o̵n̵s̵_̵v̵a̵l̵_̵z̵e̵r̵o̵,̵ ̵Matrix.cons_val_one,\n  ̲  ̲ ̲ ̲ ̲ ̲Matrix.head_cons]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1132:45: This simp argument is unused:\n  Matrix.cons_val_one\n\nHint: Omit it from the simp argument list.\n  simp only [pow_three, pow_two, SpecialLinearGroup.coe_mul, Matrix.mul_apply, Fin.sum_univ_two,\n  ̲  ̲ ̲ ̲ ̲ ̲CentralizerN.mkRot, CentralizerN.rotPt, WeilRep.Smat, Matrix.of_apply, Matrix.cons_val_zero,\n  ̲  ̲ ̲ ̲ ̲ ̲M̵a̵t̵r̵i̵x̵.̵c̵o̵n̵s̵_̵v̵a̵l̵_̵o̵n̵e̵,̵ ̵Matrix.head_cons]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:1130:45: This simp argument is unused:\n  Matrix.cons_val_one\n\nHint: Omit it from the simp argument list.\n  simp only [pow_three, pow_two, SpecialLinearGroup.coe_mul, Matrix.mul_apply, Fin.sum_univ_two,\n  ̲  ̲ ̲ ̲ ̲ ̲CentralizerN.mkRot, CentralizerN.rotPt, WeilRep.Smat, Matrix.of_apply, Matrix.cons_val_zero,\n  ̲  ̲ ̲ ̲ ̲ ̲M̵a̵t̵r̵i̵x̵.̵c̵o̵n̵s̵_̵v̵a̵l̵_̵o̵n̵e̵,̵ ̵Matrix.head_cons]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1132:66: This simp argument is unused:\n  Matrix.head_cons\n\nHint: Omit it from the simp argument list.\n  simp only [pow_three, pow_two, SpecialLinearGroup.coe_mul, Matrix.mul_apply, Fin.sum_univ_two,\n  ̲  ̲ ̲ ̲ ̲ ̲CentralizerN.mkRot, CentralizerN.rotPt, WeilRep.Smat, Matrix.of_apply, Matrix.cons_val_zero,\n  ̲  ̲ ̲ ̲ ̲ ̲M̵a̵t̵r̵i̵x̵.̵c̵o̵n̵s̵_̵v̵a̵l̵_̵o̵n̵e̵,̵ ̵M̵a̵t̵r̵i̵x̵.̵h̵e̵a̵d̵_̵c̵o̵n̵s̵]̵M̲a̲t̲r̲i̲x̲.̲c̲o̲n̲s̲_̲v̲a̲l̲_̲o̲n̲e̲]̲\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:1130:66: This simp argument is unused:\n  Matrix.head_cons\n\nHint: Omit it from the simp argument list.\n  simp only [pow_three, pow_two, SpecialLinearGroup.coe_mul, Matrix.mul_apply, Fin.sum_univ_two,\n  ̲  ̲ ̲ ̲ ̲ ̲CentralizerN.mkRot, CentralizerN.rotPt, WeilRep.Smat, Matrix.of_apply, Matrix.cons_val_zero,\n  ̲  ̲ ̲ ̲ ̲ ̲M̵a̵t̵r̵i̵x̵.̵c̵o̵n̵s̵_̵v̵a̵l̵_̵o̵n̵e̵,̵ ̵M̵a̵t̵r̵i̵x̵.̵h̵e̵a̵d̵_̵c̵o̵n̵s̵]̵M̲a̲t̲r̲i̲x̲.̲c̲o̲n̲s̲_̲v̲a̲l̲_̲o̲n̲e̲]̲\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1133:24: 'decide' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "V14Formalization/GeometricV14Carrier.lean:1131:24: 'decide' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1133:24: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "V14Formalization/GeometricV14Carrier.lean:1131:24: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1462:5: Variable name `hμ` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "V14Formalization/GeometricV14Carrier.lean:1460:5: Variable name `hμ` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1552:0: 'V14Formalization.GeometricV14Carrier.support_eq_of_parallel_pure' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:1550:0: 'V14Formalization.GeometricV14Carrier.support_eq_of_parallel_pure' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1553:0: 'V14Formalization.GeometricV14Carrier.planes_meet_of_product_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:1551:0: 'V14Formalization.GeometricV14Carrier.planes_meet_of_product_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1554:0: 'V14Formalization.GeometricV14Carrier.pure_wedges_product_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:1552:0: 'V14Formalization.GeometricV14Carrier.pure_wedges_product_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1555:0: 'V14Formalization.GeometricV14Carrier.pureWedges_mul_comm' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:1553:0: 'V14Formalization.GeometricV14Carrier.pureWedges_mul_comm' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1556:0: 'V14Formalization.GeometricV14Carrier.j_stable_odd_forces_neg_one' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:1554:0: 'V14Formalization.GeometricV14Carrier.j_stable_odd_forces_neg_one' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1557:0: 'V14Formalization.GeometricV14Carrier.pureWedge_sq' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:1555:0: 'V14Formalization.GeometricV14Carrier.pureWedge_sq' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1558:0: 'V14Formalization.GeometricV14Carrier.bivector_polar_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:1556:0: 'V14Formalization.GeometricV14Carrier.bivector_polar_zero' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1559:0: 'V14Formalization.GeometricV14Carrier.ιMulti_ne_zero_of_linearIndependent' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:1557:0: 'V14Formalization.GeometricV14Carrier.ιMulti_ne_zero_of_linearIndependent' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:1749:17: Variable name `hne` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "V14Formalization/GeometricV14Carrier.lean:1747:17: Variable name `hne` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2045:0: 'V14Formalization.GeometricV14Carrier.ambientAct_sigma_pure' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:2043:0: 'V14Formalization.GeometricV14Carrier.ambientAct_sigma_pure' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2046:0: 'V14Formalization.GeometricV14Carrier.sigma_fixed_plane_j_stable' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:2044:0: 'V14Formalization.GeometricV14Carrier.sigma_fixed_plane_j_stable' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2047:0: 'V14Formalization.GeometricV14Carrier.same_plane_parallel_pure' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:2045:0: 'V14Formalization.GeometricV14Carrier.same_plane_parallel_pure' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2048:0: 'V14Formalization.GeometricV14Carrier.pureWedge_linear_combo' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:2046:0: 'V14Formalization.GeometricV14Carrier.pureWedge_linear_combo' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2049:0: 'V14Formalization.GeometricV14Carrier.pure_pair_product_zero_of_sum_pure' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:2047:0: 'V14Formalization.GeometricV14Carrier.pure_pair_product_zero_of_sum_pure' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2050:0: 'V14Formalization.GeometricV14Carrier.V14_hypothesisA' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:2048:0: 'V14Formalization.GeometricV14Carrier.V14_hypothesisA' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2051:0: 'V14Formalization.GeometricV14Carrier.support_eq_of_parallel_pure' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:2049:0: 'V14Formalization.GeometricV14Carrier.support_eq_of_parallel_pure' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2052:0: 'V14Formalization.GeometricV14Carrier.planes_meet_of_product_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:2050:0: 'V14Formalization.GeometricV14Carrier.planes_meet_of_product_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2053:0: 'V14Formalization.GeometricV14Carrier.j_stable_odd_forces_neg_one' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:2051:0: 'V14Formalization.GeometricV14Carrier.j_stable_odd_forces_neg_one' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2054:0: 'V14Formalization.GeometricV14Carrier.not_isSquare_neg_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:2052:0: 'V14Formalization.GeometricV14Carrier.not_isSquare_neg_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2360:2: 'change (g * n * g⁻¹) • x = x' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "V14Formalization/GeometricV14Carrier.lean:2358:2: 'change (g * n * g⁻¹) • x = x' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2357:2: Try this: intro n hn g x",
+   "V14Formalization/GeometricV14Carrier.lean:2355:2: Try this: intro n hn g x",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2653:29: This simp argument is unused:\n  ← C_add\n\nHint: Omit it from the simp argument list.\n  simp only [←̵ ̵C̵_̵add,̵ ̵a̵d̵d̵_mul, mul_add, add_assoc, add_left_comm, add_comm]\n\nNote: Simp arguments with `←` have the additional effect of removing the other direction from the simp set, even if the simp argument itself is unused. If the hint above does not work, try replacing `←` with `-` to only get that effect and silence this warning.\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:2608:19: This simp argument is unused:\n  coeff_C_mul\n\nHint: Omit it from the simp argument list.\n  simp [coeff_add, coeff_C̵_̵m̵u̵l̵,̵ ̵c̵o̵e̵f̵f̵_̵X_pow, coeff_X, coeff_C]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2653:38: This simp argument is unused:\n  add_mul\n\nHint: Omit it from the simp argument list.\n  simp only [← C_add, a̵d̵d̵_̵mul,̵ ̵m̵u̵l̵_add, add_assoc, add_left_comm, add_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:2854:52: Try `simp at this` instead of `simpa using this`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2653:47: This simp argument is unused:\n  mul_add\n\nHint: Omit it from the simp argument list.\n  simp only [← C_add, add_mul, m̵u̵l̵_̵add,̵ ̵a̵d̵d̵_assoc, add_left_comm, add_comm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:3706:48: Variable name `hu0` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2666:25: This simp argument is unused:\n  coeff_C_mul\n\nHint: Omit it from the simp argument list.\n  simp [coeff_add, coeff_C̵_̵m̵u̵l̵,̵ ̵c̵o̵e̵f̵f̵_̵X_pow, coeff_X, coeff_C]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4087:13: This simp argument is unused:\n  LinearMap.smul_apply\n\nHint: Omit it from the simp argument list.\n  simp only [̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵ ̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵u̵m̵_̵a̵p̵p̵l̵y̵,̵[̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲s̲u̲m̲_̲a̲p̲p̲l̲y̲,̲ hterm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2668:51: This simp argument is unused:\n  coeff_X\n\nHint: Omit it from the simp argument list.\n  simp [coeff_add, coeff_C_mul, coeff_X_pow, coeff_X̵,̵ ̵c̵o̵e̵f̵f̵_̵C]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4495:10: This simp argument is unused:\n  h1\n\nHint: Omit it from the simp argument list.\n  simp [h1̵,̵ ̵h̵2]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2670:51: This simp argument is unused:\n  coeff_X\n\nHint: Omit it from the simp argument list.\n  simp [coeff_add, coeff_C_mul, coeff_X_pow, coeff_X̵,̵ ̵c̵o̵e̵f̵f̵_̵C]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4497:10: This simp argument is unused:\n  h1\n\nHint: Omit it from the simp argument list.\n  simp [h1̵,̵ ̵h̵2, h3]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2670:60: This simp argument is unused:\n  coeff_C\n\nHint: Omit it from the simp argument list.\n  simp [coeff_add, coeff_C_mul, coeff_X_pow, coeff_X,̵ ̵c̵o̵e̵f̵f̵_̵C̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4497:14: This simp argument is unused:\n  h2\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2̵,̵ ̵h̵3]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2672:51: This simp argument is unused:\n  coeff_X\n\nHint: Omit it from the simp argument list.\n  simp [coeff_add, coeff_C_mul, coeff_X_pow, coeff_X̵,̵ ̵c̵o̵e̵f̵f̵_̵C]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4499:10: This simp argument is unused:\n  h1\n\nHint: Omit it from the simp argument list.\n  simp [h1̵,̵ ̵h̵2, h3, h5]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2672:60: This simp argument is unused:\n  coeff_C\n\nHint: Omit it from the simp argument list.\n  simp [coeff_add, coeff_C_mul, coeff_X_pow, coeff_X,̵ ̵c̵o̵e̵f̵f̵_̵C̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4499:14: This simp argument is unused:\n  h2\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2̵,̵ ̵h̵3, h5]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2674:51: This simp argument is unused:\n  coeff_X\n\nHint: Omit it from the simp argument list.\n  simp [coeff_add, coeff_C_mul, coeff_X_pow, coeff_X̵,̵ ̵c̵o̵e̵f̵f̵_̵C]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4499:18: This simp argument is unused:\n  h3\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3̵,̵ ̵h̵5]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2674:60: This simp argument is unused:\n  coeff_C\n\nHint: Omit it from the simp argument list.\n  simp [coeff_add, coeff_C_mul, coeff_X_pow, coeff_X,̵ ̵c̵o̵e̵f̵f̵_̵C̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4501:10: This simp argument is unused:\n  h1\n\nHint: Omit it from the simp argument list.\n  simp [h1̵,̵ ̵h̵2, h3, h5, h6]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2676:25: This simp argument is unused:\n  coeff_C_mul\n\nHint: Omit it from the simp argument list.\n  simp [coeff_add, coeff_C̵_̵m̵u̵l̵,̵ ̵c̵o̵e̵f̵f̵_̵X_pow, coeff_X, coeff_C]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4501:14: This simp argument is unused:\n  h2\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2̵,̵ ̵h̵3, h5, h6]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2676:51: This simp argument is unused:\n  coeff_X\n\nHint: Omit it from the simp argument list.\n  simp [coeff_add, coeff_C_mul, coeff_X_pow, coeff_X̵,̵ ̵c̵o̵e̵f̵f̵_̵C]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4501:18: This simp argument is unused:\n  h3\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3̵,̵ ̵h̵5, h6]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2676:60: This simp argument is unused:\n  coeff_C\n\nHint: Omit it from the simp argument list.\n  simp [coeff_add, coeff_C_mul, coeff_X_pow, coeff_X,̵ ̵c̵o̵e̵f̵f̵_̵C̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4501:22: This simp argument is unused:\n  h5\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3, h5̵,̵ ̵h̵6]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2677:8: 'all_goals (try omega)' tactic does nothing\n\nNote: This linter can be disabled with `set_option linter.unusedTactic false`",
+   "V14Formalization/GeometricV14Carrier.lean:4503:10: This simp argument is unused:\n  h1\n\nHint: Omit it from the simp argument list.\n  simp [h1̵,̵ ̵h̵2, h3, h5, h6, h11]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2677:18: this tactic is never executed\n\nNote: This linter can be disabled with `set_option linter.unreachableTactic false`",
+   "V14Formalization/GeometricV14Carrier.lean:4503:14: This simp argument is unused:\n  h2\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2̵,̵ ̵h̵3, h5, h6, h11]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:2875:52: Try `simp at this` instead of `simpa using this`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "V14Formalization/GeometricV14Carrier.lean:4503:18: This simp argument is unused:\n  h3\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3̵,̵ ̵h̵5, h6, h11]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:3727:48: Variable name `hu0` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "V14Formalization/GeometricV14Carrier.lean:4503:22: This simp argument is unused:\n  h5\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3, h5̵,̵ ̵h̵6, h11]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4108:13: This simp argument is unused:\n  LinearMap.smul_apply\n\nHint: Omit it from the simp argument list.\n  simp only [̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵m̵u̵l̵_̵a̵p̵p̵l̵y̵,̵ ̵L̵i̵n̵e̵a̵r̵M̵a̵p̵.̵s̵u̵m̵_̵a̵p̵p̵l̵y̵,̵[̲L̲i̲n̲e̲a̲r̲M̲a̲p̲.̲s̲u̲m̲_̲a̲p̲p̲l̲y̲,̲ hterm]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4503:26: This simp argument is unused:\n  h6\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3, h5, h6̵,̵ ̵h̵11]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4516:10: This simp argument is unused:\n  h1\n\nHint: Omit it from the simp argument list.\n  simp [h1̵,̵ ̵h̵2]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4772:5: Variable name `hu0` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4518:10: This simp argument is unused:\n  h1\n\nHint: Omit it from the simp argument list.\n  simp [h1̵,̵ ̵h̵2, h3]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4773:5: Variable name `hR2` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4518:14: This simp argument is unused:\n  h2\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2̵,̵ ̵h̵3]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4774:5: Variable name `hSstab` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4520:10: This simp argument is unused:\n  h1\n\nHint: Omit it from the simp argument list.\n  simp [h1̵,̵ ̵h̵2, h3, h5]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4801:4: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4520:14: This simp argument is unused:\n  h2\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2̵,̵ ̵h̵3, h5]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4871:37: This simp argument is unused:\n  Units.val_inv_eq_inv_val\n\nHint: Omit it from the simp argument list.\n  simp only [Module.End.mul_eq_comp, U̵n̵i̵t̵s̵.̵v̵a̵l̵_̵i̵n̵v̵_̵e̵q̵_̵i̵n̵v̵_̵v̵a̵l̵,̵ ̵Units.inv_mk]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4520:18: This simp argument is unused:\n  h3\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3̵,̵ ̵h̵5]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4871:63: This simp argument is unused:\n  Units.inv_mk\n\nHint: Omit it from the simp argument list.\n  simp only [Module.End.mul_eq_comp, Units.val_inv_eq_inv_val,̵ ̵U̵n̵i̵t̵s̵.̵i̵n̵v̵_̵m̵k̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4522:10: This simp argument is unused:\n  h1\n\nHint: Omit it from the simp argument list.\n  simp [h1̵,̵ ̵h̵2, h3, h5, h6]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:4924:34: Variable name `m` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4522:14: This simp argument is unused:\n  h2\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2̵,̵ ̵h̵3, h5, h6]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:5202:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4522:18: This simp argument is unused:\n  h3\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3̵,̵ ̵h̵5, h6]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:5205:18: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4522:22: This simp argument is unused:\n  h5\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3, h5̵,̵ ̵h̵6]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:5243:2: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4524:10: This simp argument is unused:\n  h1\n\nHint: Omit it from the simp argument list.\n  simp [h1̵,̵ ̵h̵2, h3, h5, h6, h11]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:5632:6: Try `simp at hc` instead of `simpa using hc`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4524:14: This simp argument is unused:\n  h2\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2̵,̵ ̵h̵3, h5, h6, h11]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:5880:21: `LinearMap.coeFn_sum` has been deprecated: Use `LinearMap.coe_sum` instead",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4524:18: This simp argument is unused:\n  h3\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3̵,̵ ̵h̵5, h6, h11]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:5894:14: This simp argument is unused:\n  coeff_monomial\n\nHint: Omit it from the simp argument list.\n  simp ̵[̵c̵o̵e̵f̵f̵_̵m̵o̵n̵o̵m̵i̵a̵l̵]̵\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4524:22: This simp argument is unused:\n  h5\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3, h5̵,̵ ̵h̵6, h11]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:6092:10: This simp argument is unused:\n  mul_comm\n\nHint: Omit it from the simp argument list.\n  simp ̵[̵m̵u̵l̵_̵c̵o̵m̵m̵]̵\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4524:26: This simp argument is unused:\n  h6\n\nHint: Omit it from the simp argument list.\n  simp [h1, h2, h3, h5, h6̵,̵ ̵h̵11]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:6094:34: This simp argument is unused:\n  one_mul\n\nHint: Omit it from the simp argument list.\n  simp only [ite_mul, zero_mul,̵ ̵o̵n̵e̵_̵m̵u̵l̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4792:5: Variable name `hu0` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "V14Formalization/GeometricV14Carrier.lean:6272:12: This simp argument is unused:\n  Finsupp.single_apply\n\nHint: Omit it from the simp argument list.\n  simp ̵[̵F̵i̵n̵s̵u̵p̵p̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵]̵\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4793:5: Variable name `hR2` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "V14Formalization/GeometricV14Carrier.lean:6476:12: This simp argument is unused:\n  Finsupp.single_apply\n\nHint: Omit it from the simp argument list.\n  simp ̵[̵F̵i̵n̵s̵u̵p̵p̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵]̵\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4794:5: Variable name `hSstab` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
+   "V14Formalization/GeometricV14Carrier.lean:6484:12: This simp argument is unused:\n  Finsupp.single_apply\n\nHint: Omit it from the simp argument list.\n  simp ̵[̵F̵i̵n̵s̵u̵p̵p̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵]̵\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4821:4: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
+   "V14Formalization/GeometricV14Carrier.lean:6580:37: This simp argument is unused:\n  Rrestrict_apply\n\nHint: Omit it from the simp argument list.\n  simp only [LinearMap.comp_apply, R̵r̵e̵s̵t̵r̵i̵c̵t̵_̵a̵p̵p̵l̵y̵,̵ ̵LinearMap.id_apply]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4891:37: This simp argument is unused:\n  Units.val_inv_eq_inv_val\n\nHint: Omit it from the simp argument list.\n  simp only [Module.End.mul_eq_comp, U̵n̵i̵t̵s̵.̵v̵a̵l̵_̵i̵n̵v̵_̵e̵q̵_̵i̵n̵v̵_̵v̵a̵l̵,̵ ̵Units.inv_mk]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:6615:39: This simp argument is unused:\n  Rrestrict_apply\n\nHint: Omit it from the simp argument list.\n  simp only [LinearMap.comp_apply,̵ ̵R̵r̵e̵s̵t̵r̵i̵c̵t̵_̵a̵p̵p̵l̵y̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4891:63: This simp argument is unused:\n  Units.inv_mk\n\nHint: Omit it from the simp argument list.\n  simp only [Module.End.mul_eq_comp, Units.val_inv_eq_inv_val,̵ ̵U̵n̵i̵t̵s̵.̵i̵n̵v̵_̵m̵k̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
+   "V14Formalization/GeometricV14Carrier.lean:6620:39: This simp argument is unused:\n  Rrestrict_apply\n\nHint: Omit it from the simp argument list.\n  simp only [LinearMap.comp_apply,̵ ̵R̵r̵e̵s̵t̵r̵i̵c̵t̵_̵a̵p̵p̵l̵y̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
    "level": "warning"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:4944:34: Variable name `m` is not explicitly referenced.\n\nThe binding can be removed (if unused) or named `_` (if used implicitly).\n\nNote: This linter can be disabled with `set_option linter.unusedVariables false`",
-   "level": "warning"},
-  {"message":
-   "V14Formalization/GeometricV14Carrier.lean:5222:19: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
-   "level": "warning"},
-  {"message":
-   "V14Formalization/GeometricV14Carrier.lean:5225:18: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice\n\nNote: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`",
-   "level": "warning"},
-  {"message":
-   "V14Formalization/GeometricV14Carrier.lean:5260:4: try 'simp' instead of 'simpa'\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
-   "level": "warning"},
-  {"message":
-   "V14Formalization/GeometricV14Carrier.lean:5639:6: Try `simp at hc` instead of `simpa using hc`\n\nNote: This linter can be disabled with `set_option linter.unnecessarySimpa false`",
-   "level": "warning"},
-  {"message":
-   "V14Formalization/GeometricV14Carrier.lean:5887:21: `LinearMap.coeFn_sum` has been deprecated: Use `LinearMap.coe_sum` instead",
-   "level": "warning"},
-  {"message":
-   "V14Formalization/GeometricV14Carrier.lean:5901:14: This simp argument is unused:\n  coeff_monomial\n\nHint: Omit it from the simp argument list.\n  simp ̵[̵c̵o̵e̵f̵f̵_̵m̵o̵n̵o̵m̵i̵a̵l̵]̵\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
-   "level": "warning"},
-  {"message":
-   "V14Formalization/GeometricV14Carrier.lean:6099:10: This simp argument is unused:\n  mul_comm\n\nHint: Omit it from the simp argument list.\n  simp ̵[̵m̵u̵l̵_̵c̵o̵m̵m̵]̵\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
-   "level": "warning"},
-  {"message":
-   "V14Formalization/GeometricV14Carrier.lean:6101:34: This simp argument is unused:\n  one_mul\n\nHint: Omit it from the simp argument list.\n  simp only [ite_mul, zero_mul,̵ ̵o̵n̵e̵_̵m̵u̵l̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
-   "level": "warning"},
-  {"message":
-   "V14Formalization/GeometricV14Carrier.lean:6301:12: This simp argument is unused:\n  Finsupp.single_apply\n\nHint: Omit it from the simp argument list.\n  simp ̵[̵F̵i̵n̵s̵u̵p̵p̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵]̵\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
-   "level": "warning"},
-  {"message":
-   "V14Formalization/GeometricV14Carrier.lean:6505:12: This simp argument is unused:\n  Finsupp.single_apply\n\nHint: Omit it from the simp argument list.\n  simp ̵[̵F̵i̵n̵s̵u̵p̵p̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵]̵\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
-   "level": "warning"},
-  {"message":
-   "V14Formalization/GeometricV14Carrier.lean:6513:12: This simp argument is unused:\n  Finsupp.single_apply\n\nHint: Omit it from the simp argument list.\n  simp ̵[̵F̵i̵n̵s̵u̵p̵p̵.̵s̵i̵n̵g̵l̵e̵_̵a̵p̵p̵l̵y̵]̵\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
-   "level": "warning"},
-  {"message":
-   "V14Formalization/GeometricV14Carrier.lean:6609:37: This simp argument is unused:\n  Rrestrict_apply\n\nHint: Omit it from the simp argument list.\n  simp only [LinearMap.comp_apply, R̵r̵e̵s̵t̵r̵i̵c̵t̵_̵a̵p̵p̵l̵y̵,̵ ̵LinearMap.id_apply]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
-   "level": "warning"},
-  {"message":
-   "V14Formalization/GeometricV14Carrier.lean:6644:39: This simp argument is unused:\n  Rrestrict_apply\n\nHint: Omit it from the simp argument list.\n  simp only [LinearMap.comp_apply,̵ ̵R̵r̵e̵s̵t̵r̵i̵c̵t̵_̵a̵p̵p̵l̵y̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
-   "level": "warning"},
-  {"message":
-   "V14Formalization/GeometricV14Carrier.lean:6649:39: This simp argument is unused:\n  Rrestrict_apply\n\nHint: Omit it from the simp argument list.\n  simp only [LinearMap.comp_apply,̵ ̵R̵r̵e̵s̵t̵r̵i̵c̵t̵_̵a̵p̵p̵l̵y̵]\n\nNote: This linter can be disabled with `set_option linter.unusedSimpArgs false`",
-   "level": "warning"},
-  {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7440:0: 'V14Formalization.GeometricV14Carrier.Rrestrict_residual_sq_add_id' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7413:0: 'V14Formalization.GeometricV14Carrier.Rrestrict_residual_sq_add_id' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7441:0: 'V14Formalization.GeometricV14Carrier.Rrestrict_residual_no_eigen' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7414:0: 'V14Formalization.GeometricV14Carrier.Rrestrict_residual_no_eigen' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7442:0: 'V14Formalization.GeometricV14Carrier.smul_one_mul_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7415:0: 'V14Formalization.GeometricV14Carrier.smul_one_mul_matrix' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7443:0: 'V14Formalization.GeometricV14Carrier.mem_centralizer_sigma_of_mem_centralizer_rotGen' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7416:0: 'V14Formalization.GeometricV14Carrier.mem_centralizer_sigma_of_mem_centralizer_rotGen' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7444:0: 'V14Formalization.GeometricV14Carrier.reflGen_not_mem_centralizer_rotGen' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7417:0: 'V14Formalization.GeometricV14Carrier.reflGen_not_mem_centralizer_rotGen' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7445:0: 'V14Formalization.GeometricV14Carrier.card_centralizer_rotGen' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7418:0: 'V14Formalization.GeometricV14Carrier.card_centralizer_rotGen' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7446:0: 'V14Formalization.GeometricV14Carrier.card_carrier_rotGen' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7419:0: 'V14Formalization.GeometricV14Carrier.card_carrier_rotGen' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7447:0: 'V14Formalization.GeometricV14Carrier.isConj_rotGen_of_order_six' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.slCardOrder_six._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7420:0: 'V14Formalization.GeometricV14Carrier.isConj_rotGen_of_order_six' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7448:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_eq_zero_of_order_six' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.slCardOrder_six._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7421:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_eq_zero_of_order_six' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7449:0: 'V14Formalization.GeometricV14Carrier.sum_chi_chiLambda2_order_six' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.slCardOrder_six._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7422:0: 'V14Formalization.GeometricV14Carrier.sum_chi_chiLambda2_order_six' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7450:0: 'V14Formalization.GeometricV14Carrier.card_centralizer_rotGen_pow_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.slCardOrder_three._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1,\n card_sylow3._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7423:0: 'V14Formalization.GeometricV14Carrier.card_centralizer_rotGen_pow_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7451:0: 'V14Formalization.GeometricV14Carrier.isConj_rotGen_pow_two_of_order_three' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.slCardOrder_three._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1,\n card_sylow3._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7424:0: 'V14Formalization.GeometricV14Carrier.isConj_rotGen_pow_two_of_order_three' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7452:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_eq_zero_of_order_three' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.slCardOrder_three._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1,\n card_sylow3._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7425:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_eq_zero_of_order_three' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7453:0: 'V14Formalization.GeometricV14Carrier.sum_chi_chiLambda2_order_three' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.slCardOrder_three._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1,\n card_sylow3._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7426:0: 'V14Formalization.GeometricV14Carrier.sum_chi_chiLambda2_order_three' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7454:0: 'V14Formalization.GeometricV14Carrier.Rrestrict_residual_pow4_trace' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7427:0: 'V14Formalization.GeometricV14Carrier.Rrestrict_residual_pow4_trace' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7455:0: 'V14Formalization.GeometricV14Carrier.Rrestrict_Wker_pow4_trace' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7428:0: 'V14Formalization.GeometricV14Carrier.Rrestrict_Wker_pow4_trace' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7456:0: 'V14Formalization.GeometricV14Carrier.Rlin_pow4_trace' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7429:0: 'V14Formalization.GeometricV14Carrier.Rlin_pow4_trace' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7457:0: 'V14Formalization.GeometricV14Carrier.ambientAct_rotGen_pow_two_eq_map_R2' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7430:0: 'V14Formalization.GeometricV14Carrier.ambientAct_rotGen_pow_two_eq_map_R2' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7458:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_rotGen_pow_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7431:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_rotGen_pow_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7459:0: 'V14Formalization.GeometricV14Carrier.orderOf_rotGen_pow_two' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7432:0: 'V14Formalization.GeometricV14Carrier.orderOf_rotGen_pow_two' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7460:0: 'V14Formalization.GeometricV14Carrier.Rrestrict_residual_sq_trace' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7433:0: 'V14Formalization.GeometricV14Carrier.Rrestrict_residual_sq_trace' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7461:0: 'V14Formalization.GeometricV14Carrier.Rrestrict_Wker_sq_trace' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7434:0: 'V14Formalization.GeometricV14Carrier.Rrestrict_Wker_sq_trace' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7462:0: 'V14Formalization.GeometricV14Carrier.Rlin_sq_trace' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7435:0: 'V14Formalization.GeometricV14Carrier.Rlin_sq_trace' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7463:0: 'V14Formalization.GeometricV14Carrier.ambientAct_rotGen_eq_map_Rlin' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7436:0: 'V14Formalization.GeometricV14Carrier.ambientAct_rotGen_eq_map_Rlin' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7464:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_rotGen' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7437:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_rotGen' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7465:0: 'V14Formalization.GeometricV14Carrier.Rrestrict_residual_trace' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7438:0: 'V14Formalization.GeometricV14Carrier.Rrestrict_residual_trace' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7466:0: 'V14Formalization.GeometricV14Carrier.Rrestrict_Wker_trace' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7439:0: 'V14Formalization.GeometricV14Carrier.Rrestrict_Wker_trace' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7467:0: 'V14Formalization.GeometricV14Carrier.Rlin_eq_conj_prodMap' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7440:0: 'V14Formalization.GeometricV14Carrier.Rlin_eq_conj_prodMap' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7468:0: 'V14Formalization.GeometricV14Carrier.Rlin_trace' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7441:0: 'V14Formalization.GeometricV14Carrier.Rlin_trace' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7469:0: 'V14Formalization.GeometricV14Carrier.sum_chi_eq_N_plus_cross' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7442:0: 'V14Formalization.GeometricV14Carrier.sum_chi_eq_N_plus_cross' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7470:0: 'V14Formalization.GeometricV14Carrier.chiCrossTerm_of_mem_Mfix' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7443:0: 'V14Formalization.GeometricV14Carrier.chiCrossTerm_of_mem_Mfix' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7471:0: 'V14Formalization.GeometricV14Carrier.not_mem_Mfix_of_cross_ne_forty_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7444:0: 'V14Formalization.GeometricV14Carrier.not_mem_Mfix_of_cross_ne_forty_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7472:0: 'V14Formalization.GeometricV14Carrier.not_mem_Mfix_of_cross_not_parallel' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7445:0: 'V14Formalization.GeometricV14Carrier.not_mem_Mfix_of_cross_not_parallel' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7473:0: 'V14Formalization.GeometricV14Carrier.exists_dual_sum_twentyfour_of_cross_not_parallel' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7446:0: 'V14Formalization.GeometricV14Carrier.exists_dual_sum_twentyfour_of_cross_not_parallel' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7474:0: 'V14Formalization.GeometricV14Carrier.residual_plucker_projectorM_ne_of_cross_ne_forty_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7447:0: 'V14Formalization.GeometricV14Carrier.residual_plucker_projectorM_ne_of_cross_ne_forty_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7475:0: 'V14Formalization.GeometricV14Carrier.residual_plucker_projectorM_ne_of_cross_not_parallel' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7448:0: 'V14Formalization.GeometricV14Carrier.residual_plucker_projectorM_ne_of_cross_not_parallel' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7476:0: 'V14Formalization.GeometricV14Carrier.residual_cross_ne_forty_two_of_mul_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7449:0: 'V14Formalization.GeometricV14Carrier.residual_cross_ne_forty_two_of_mul_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7477:0: 'V14Formalization.GeometricV14Carrier.pureWedge_residual_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7450:0: 'V14Formalization.GeometricV14Carrier.pureWedge_residual_ne_zero' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7478:0: 'V14Formalization.GeometricV14Carrier.projectorM_N_partial_residual_ne_id' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7451:0: 'V14Formalization.GeometricV14Carrier.projectorM_N_partial_residual_ne_id' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7479:0: 'V14Formalization.GeometricV14Carrier.finrank_Lambda2U' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7452:0: 'V14Formalization.GeometricV14Carrier.finrank_Lambda2U' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7480:0: 'V14Formalization.GeometricV14Carrier.residual_plucker_N_all_fixed' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7453:0: 'V14Formalization.GeometricV14Carrier.residual_plucker_N_all_fixed' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7481:0: 'V14Formalization.GeometricV14Carrier.projectorM_ne_of_dual_sum_eq_twentyfour' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7454:0: 'V14Formalization.GeometricV14Carrier.projectorM_ne_of_dual_sum_eq_twentyfour' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7482:0: 'V14Formalization.GeometricV14Carrier.chi10'_sum_sq' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1,\n PSLCard.slChiSumSq_eq._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7455:0: 'V14Formalization.GeometricV14Carrier.chi10'_sum_sq' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7483:0: 'V14Formalization.GeometricV14Carrier.chiSumOp_orbit_eq_sixty_six_of_pureM' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7456:0: 'V14Formalization.GeometricV14Carrier.chiSumOp_orbit_eq_sixty_six_of_pureM' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7484:0: 'V14Formalization.GeometricV14Carrier.gspan_mem_eigen_of_pureM' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7457:0: 'V14Formalization.GeometricV14Carrier.gspan_mem_eigen_of_pureM' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7485:0: 'V14Formalization.PSLCard.sum_comp_mk' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7458:0: 'V14Formalization.PSLCard.sum_comp_mk' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7486:0: 'V14Formalization.PSLCard.chi10Int_sum_sq_psl' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1,\n PSLCard.slChiSumSq_eq._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7459:0: 'V14Formalization.PSLCard.chi10Int_sum_sq_psl' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7487:0: 'V14Formalization.PSLCard.chi10Int_convolution' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.conv4FailCount_eq_zero._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7460:0: 'V14Formalization.PSLCard.chi10Int_convolution' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7488:0: 'V14Formalization.GeometricV14Carrier.chi10'_convolution' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.conv4FailCount_eq_zero._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7461:0: 'V14Formalization.GeometricV14Carrier.chi10'_convolution' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7489:0: 'V14Formalization.GeometricV14Carrier.chiSumOp_sq_apply' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.conv4FailCount_eq_zero._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7462:0: 'V14Formalization.GeometricV14Carrier.chiSumOp_sq_apply' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7490:0: 'V14Formalization.GeometricV14Carrier.projectorM_sq_apply' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.conv4FailCount_eq_zero._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7463:0: 'V14Formalization.GeometricV14Carrier.projectorM_sq_apply' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7491:0: 'V14Formalization.GeometricV14Carrier.Mfix_eq_Msub' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.conv4FailCount_eq_zero._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7464:0: 'V14Formalization.GeometricV14Carrier.Mfix_eq_Msub' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7492:0: 'V14Formalization.GeometricV14Carrier.chiSumOp_eq_smul_projectorM' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7465:0: 'V14Formalization.GeometricV14Carrier.chiSumOp_eq_smul_projectorM' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7493:0: 'V14Formalization.GeometricV14Carrier.mem_Msub_of_mem_Mfix' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7466:0: 'V14Formalization.GeometricV14Carrier.mem_Msub_of_mem_Mfix' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7494:0: 'V14Formalization.GeometricV14Carrier.ambientAct_mem_Msub_of_pureM' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7467:0: 'V14Formalization.GeometricV14Carrier.ambientAct_mem_Msub_of_pureM' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7495:0: 'V14Formalization.GeometricV14Carrier.residual_plucker_mem_Msub_of_pureM' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7468:0: 'V14Formalization.GeometricV14Carrier.residual_plucker_mem_Msub_of_pureM' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7496:0: 'V14Formalization.GeometricV14Carrier.residual_plucker_mem_Msub_of_mem_Mfix' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7469:0: 'V14Formalization.GeometricV14Carrier.residual_plucker_mem_Msub_of_mem_Mfix' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7497:0: 'V14Formalization.GeometricV14Carrier.projectorM_isProj' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.conv4FailCount_eq_zero._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7470:0: 'V14Formalization.GeometricV14Carrier.projectorM_isProj' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7498:0: 'V14Formalization.GeometricV14Carrier.projectorM_trace_eq_finrank' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.conv4FailCount_eq_zero._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7471:0: 'V14Formalization.GeometricV14Carrier.projectorM_trace_eq_finrank' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7499:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7472:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7500:0: 'V14Formalization.GeometricV14Carrier.card_carrier_sigma' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7473:0: 'V14Formalization.GeometricV14Carrier.card_carrier_sigma' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7501:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_isConj' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7474:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_isConj' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7502:0: 'V14Formalization.GeometricV14Carrier.isConj_sigma_of_order_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.slCardOrder_two._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7475:0: 'V14Formalization.GeometricV14Carrier.isConj_sigma_of_order_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7503:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_eq_of_order_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.slCardOrder_two._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7476:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_eq_of_order_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7504:0: 'V14Formalization.GeometricV14Carrier.chiSumOp_trace' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7477:0: 'V14Formalization.GeometricV14Carrier.chiSumOp_trace' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7505:0: 'V14Formalization.GeometricV14Carrier.sum_chi_chiLambda2' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.conv4FailCount_eq_zero._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7478:0: 'V14Formalization.GeometricV14Carrier.sum_chi_chiLambda2' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7506:0: 'V14Formalization.GeometricV14Carrier.projectorM_trace_eq_scaled_sum' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7479:0: 'V14Formalization.GeometricV14Carrier.projectorM_trace_eq_scaled_sum' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7507:0: 'V14Formalization.GeometricV14Carrier.finrank_Msub_eq_ten_of_sum_chi_chiLambda2' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.conv4FailCount_eq_zero._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7480:0: 'V14Formalization.GeometricV14Carrier.finrank_Msub_eq_ten_of_sum_chi_chiLambda2' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7508:0: 'V14Formalization.GeometricV14Carrier.algebra_trace_iRoot' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7481:0: 'V14Formalization.GeometricV14Carrier.algebra_trace_iRoot' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7509:0: 'V14Formalization.GeometricV14Carrier.LtoEnd_root' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7482:0: 'V14Formalization.GeometricV14Carrier.LtoEnd_root' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7510:0: 'V14Formalization.GeometricV14Carrier.finrank_Ladj_U' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7483:0: 'V14Formalization.GeometricV14Carrier.finrank_Ladj_U' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7511:0: 'V14Formalization.GeometricV14Carrier.Jlin_trace' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7484:0: 'V14Formalization.GeometricV14Carrier.Jlin_trace' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7512:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_sigma' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7485:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_sigma' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7513:0: 'V14Formalization.GeometricV14Carrier.trace_exterior_newton' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7486:0: 'V14Formalization.GeometricV14Carrier.trace_exterior_newton' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7514:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_eq_three_of_order_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.slCardOrder_two._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7487:0: 'V14Formalization.GeometricV14Carrier.chiLambda2_eq_three_of_order_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7515:0: 'V14Formalization.GeometricV14Carrier.sum_chi_chiLambda2_order_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.slCardOrder_two._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7488:0: 'V14Formalization.GeometricV14Carrier.sum_chi_chiLambda2_order_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7516:0: 'V14Formalization.GeometricV14Carrier.sum_chi_chiLambda2_order_one' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7489:0: 'V14Formalization.GeometricV14Carrier.sum_chi_chiLambda2_order_one' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7517:0: 'V14Formalization.GeometricV14Carrier.sum_chi_chiLambda2_order_five' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7490:0: 'V14Formalization.GeometricV14Carrier.sum_chi_chiLambda2_order_five' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7518:0: 'V14Formalization.GeometricV14Carrier.sum_chi_chiLambda2_orders_one_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound,\n PSLCard.slCardOrder_two._native.native_decide.ax_1_1,\n PSLCard.slCardOrder_zero._native.native_decide.ax_1_1]",
+   "V14Formalization/GeometricV14Carrier.lean:7491:0: 'V14Formalization.GeometricV14Carrier.sum_chi_chiLambda2_orders_one_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7520:0: 'V14Formalization.GeometricV14Carrier.aeval_Rlin_X6_add_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7493:0: 'V14Formalization.GeometricV14Carrier.aeval_Rlin_X6_add_one' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7521:0: 'V14Formalization.GeometricV14Carrier.isCoprime_X2p1_X4' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7494:0: 'V14Formalization.GeometricV14Carrier.isCoprime_X2p1_X4' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7522:0: 'V14Formalization.GeometricV14Carrier.isCompl_residualKer_Wker' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7495:0: 'V14Formalization.GeometricV14Carrier.isCompl_residualKer_Wker' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7523:0: 'V14Formalization.GeometricV14Carrier.not_dvd_X2p1_X4' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7496:0: 'V14Formalization.GeometricV14Carrier.not_dvd_X2p1_X4' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7524:0: 'V14Formalization.GeometricV14Carrier.no_root_X4_sub_X2_add_one' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7497:0: 'V14Formalization.GeometricV14Carrier.no_root_X4_sub_X2_add_one' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7525:0: 'V14Formalization.GeometricV14Carrier.not_exists_monic_quad_dvd_X4' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7498:0: 'V14Formalization.GeometricV14Carrier.not_exists_monic_quad_dvd_X4' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7527:0: 'V14Formalization.GeometricV14Carrier.irreducible_X4_sub_X2_add_one' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7500:0: 'V14Formalization.GeometricV14Carrier.irreducible_X4_sub_X2_add_one' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7528:0: 'V14Formalization.GeometricV14Carrier.Rlin_mem_Wker' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7501:0: 'V14Formalization.GeometricV14Carrier.Rlin_mem_Wker' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7529:0: 'V14Formalization.GeometricV14Carrier.Wker_ne_bot' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7502:0: 'V14Formalization.GeometricV14Carrier.Wker_ne_bot' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7530:0: 'V14Formalization.GeometricV14Carrier.residualKer_ne_bot' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7503:0: 'V14Formalization.GeometricV14Carrier.residualKer_ne_bot' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7531:0: 'V14Formalization.GeometricV14Carrier.aeval_Rlin_pW_of_residual_bot' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7504:0: 'V14Formalization.GeometricV14Carrier.aeval_Rlin_pW_of_residual_bot' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7533:0: 'V14Formalization.GeometricV14Carrier.finrank_residualKer_ge_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7506:0: 'V14Formalization.GeometricV14Carrier.finrank_residualKer_ge_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7534:0: 'V14Formalization.GeometricV14Carrier.finrank_Wker_ge_four' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7507:0: 'V14Formalization.GeometricV14Carrier.finrank_Wker_ge_four' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7535:0: 'V14Formalization.GeometricV14Carrier.finrank_residualKer_eq_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7508:0: 'V14Formalization.GeometricV14Carrier.finrank_residualKer_eq_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7536:0: 'V14Formalization.GeometricV14Carrier.finrank_Wker_eq_four' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7509:0: 'V14Formalization.GeometricV14Carrier.finrank_Wker_eq_four' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7537:0: 'V14Formalization.GeometricV14Carrier.linearIndependent_Rpow_Wker' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7510:0: 'V14Formalization.GeometricV14Carrier.linearIndependent_Rpow_Wker' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7539:0: 'V14Formalization.GeometricV14Carrier.finrank_residualKer_ge_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7512:0: 'V14Formalization.GeometricV14Carrier.finrank_residualKer_ge_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7540:0: 'V14Formalization.GeometricV14Carrier.finrank_Wker_ge_four' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7513:0: 'V14Formalization.GeometricV14Carrier.finrank_Wker_ge_four' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7541:0: 'V14Formalization.GeometricV14Carrier.finrank_residualKer_eq_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7514:0: 'V14Formalization.GeometricV14Carrier.finrank_residualKer_eq_two' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7542:0: 'V14Formalization.GeometricV14Carrier.finrank_Wker_eq_four' depends on axioms: [propext, Classical.choice, Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7515:0: 'V14Formalization.GeometricV14Carrier.finrank_Wker_eq_four' depends on axioms: [propext, Classical.choice, Quot.sound]",
    "level": "info"},
   {"message":
-   "V14Formalization/GeometricV14Carrier.lean:7543:0: 'V14Formalization.GeometricV14Carrier.linearIndependent_Rpow_Wker' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+   "V14Formalization/GeometricV14Carrier.lean:7516:0: 'V14Formalization.GeometricV14Carrier.linearIndependent_Rpow_Wker' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
    "level": "info"}],
  "inputs":
  [["V14Formalization.GeometricV14Carrier:deps",
@@ -592,15 +547,15 @@
        [["@V14Formalization:extraDep", "00000000000006bb"]]],
       ["imports",
        [["V14Formalization.GeometricFanoCarrier transitive imports (legacy)",
-         "363bfa6b25db97a6"],
+         "b2b43d037b2d3a28"],
         ["V14Formalization.GeometricFanoCarrier:importAllArts",
-         "5afa0f80a615b01e"],
+         "8e43f78ede7cf0c6"],
         ["V14Formalization.CentralizerD12 transitive imports (legacy)",
          "35f36aeec4f414a6"],
-        ["V14Formalization.CentralizerD12:importAllArts", "7b7bf84a8cc843c9"],
+        ["V14Formalization.CentralizerD12:importAllArts", "3fca20c7cd3bf949"],
         ["V14Formalization.PSLCard transitive imports (legacy)",
-         "36b33137cb2d6b88"],
-        ["V14Formalization.PSLCard:importAllArts", "531ade7327bc51c6"],
+         "9adbfdc95bc09c1e"],
+        ["V14Formalization.PSLCard:importAllArts", "d3c9db01741448c5"],
         ["Mathlib.LinearAlgebra.Projectivization.Basic transitive imports (legacy)",
          "8de74a37cafddbad"],
         ["Mathlib.LinearAlgebra.Projectivization.Basic:importAllArts",
@@ -850,7 +805,7 @@
   ["Lean 4.32.1, commit f054605aea4b840552cca2e725580bffd1e1b704",
    "4ce1780d8d26fd00"],
   ["/Users/worker/unirational/problems/E-klein-cubic/v14_formalization/V14Formalization/GeometricV14Carrier.lean",
-   "50734ee1697f1c36"],
+   "ebaf303b713537be"],
   ["options",
    [["-DrelaxedAutoImplicit=false", "74a2b5546b55be80"],
     ["-Dpp.unicode.fun=true", "9b94070140457fab"]]],
@@ -858,4 +813,4 @@
   ["Module.name: V14Formalization.GeometricV14Carrier", "f2236378541aaac4"],
   ["Package.id?: (some V14Formalization)", "3206da5f56731469"],
   ["Module.leanArgs: #[]", "00000000000006bb"]],
- "depHash": "2afe6e9ccb2104c0"}
+ "depHash": "669b91f8deea2bc8"}

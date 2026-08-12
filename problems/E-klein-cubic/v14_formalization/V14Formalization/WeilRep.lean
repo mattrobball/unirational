@@ -38,8 +38,6 @@ noncomputable section
 namespace V14Formalization
 namespace WeilRep
 
-set_option maxHeartbeats 8000000
-
 instance : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
 instance : NeZero (11 : ℕ) := ⟨by decide⟩
 
