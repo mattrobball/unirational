@@ -38,6 +38,17 @@ exists); scripts `director_worked_example.py`, `director_finish_d35.py`,
   lie in the span of the plain line-evaluation functionals
   (joint rank 10 = rank V1; on the 37-cell the line-vanishing system has
   rank 8). If confirmed, record the geometric reason if you can find one.
+- **T6 (premise inheritance — added 2026-08-11 after a director check):**
+  the 39-space is the sealed `(m, r) = (1, 6)` window cell
+  (`D34_GUIDED_SWEEP/THEOREM.md`, the `d = 35` box). The plane conditions
+  are theorem-forced (parity: `m` odd hence `≥ 1`; sweep: plus-part
+  `≥ 2`), and the space CONTAINS every profile with `r ≥ 6` (deeper
+  line-vanishing is a subspace), so those cells inherit the kills. What
+  the session did NOT re-derive: that `ord_{ℓ_V}(T) ≥ 6` holds for every
+  landing covariant ("the cone order r = 6", inherited by D34 from
+  FIX-P1/Note II rather than re-proved). Verify that Note II / FIX-P1
+  chain: if `r < 6` were possible, cells outside the 39-space would exist
+  at `d = 35` and the census scope statement must be corrected.
 
 ## The linkage repair (required, same packet)
 
