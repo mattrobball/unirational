@@ -31,7 +31,18 @@ PHI9-DELTA-COMPUTED
 PHI8-NOT-CLEAN
 PHI9-NOT-CLEAN
 RETRACTION-BRANCH-CARRIER-ONLY
-CARRIER-EXCLUSION-NOT-ACHIEVED
+CARRIER-EXCLUSION-NOT-ACHIEVED                     [superseded 2026-08-12]
+PHI8-BASE-SCHEME-CURVE-DEGREE-1224
+PHI8-BASE-NO-DIVISORIAL-COMPONENT-REPROVED
+PHI8-BASE-DECOMPOSED
+PHI8-CARRIER-FORCED-UNCONDITIONALLY
+CARRIER-EXCLUSION-IMPOSSIBLE-FOR-PHI8
+S2-DETECTION-LEVER-VOID
+CARRIER-LINES-CONSTANT-CLASS-DEAD-AND-EMPTY
+CARRIER-D8-UNDECIDED
+CARRIER-POINT-ORBIT-60-UNDECIDED
+PHI8-CARRIER-CANDIDATE-BOXED
+RETRACTION-BRANCH-UNDECIDED
 ```
 
 ## Executive summary
@@ -152,12 +163,20 @@ Key intermediate output, verbatim:
    `PHI8_DEGREE.md`.
 2. ~~**Boxing `V_8` over `Q`.**~~ **DONE 2026-08-12**: integer coefficients,
    `40` terms per component, max `|coefficient| = 24`; `V_9` likewise.
-3. **Excluding CARRIER for `phi_8`** — the whole remaining distance to
-   `RETRACTION-BRANCH-DEAD`, and still untouched. The candidate supports are the
-   components of `Bs(J_{phi_8}) = D_8 ∪ {l_x ⊂ X}`; `D_8` is the reduced
-   degree-`72` curve computed in `PHI8_DEGREE.md` §2, whose primary
-   decomposition, genera and CM data are **not** computed. One exclusion of
-   `(AHS-Gamma)` over that curve kills the retraction branch.
+3. ~~**Excluding CARRIER for `phi_8`.**~~ **CLOSED AS IMPOSSIBLE 2026-08-12**:
+   see `PHI8_CARRIER.md`. The restricted dichotomy's provenance clause is
+   inert, so Theorem 3.1 applies to `phi_8` directly; `delta = 208` is not a
+   norm; hence `r_{phi_8} != 0` **unconditionally** and `(AHS-Gamma)` holds.
+   The exclusion asked for here is a statement whose negation is a theorem, and
+   the detection lever (S2) is void for every `psi in Self` whose `delta` is
+   not a norm. Base scheme computed: a curve of degree `1224`, a proper
+   complete intersection of type `(3,24,17)`, reduced degree
+   `864 = 72 (D_8) + 792 (Lambda)`, both components irreducible and
+   `G`-invariant. The carrier candidate is boxed on `Lambda`.
+   **The retraction branch is untouched and remains open.** What is now open on
+   this side is only *which* support carries the block: `g(D̃_8)`,
+   `Hom(Jac(D̃_8), E_{-11})`, and the fibres of `Gamma -> X` over `D_8` and over
+   the `60`-point orbit.
 4. **The Segre class of `Bs(J_{phi_8})`.** `delta = 25^3 - 25 zeta - a` is
    checked for consistency only; `zeta` and `a` are not computed. This is the
    only route that would give a third, purely intersection-theoretic
