@@ -1,0 +1,77 @@
+{
+ "p": 661,
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "J_r5": 1264,
+ "K_r5": 756,
+ "N_ext": 508,
+ "per_layer_deaths_508": {
+  "multidegree_m_in_3_5": 298,
+  "line_order_nu_ge_2": 148,
+  "arc_jet_ladder_period3": 62,
+  "live_among_508": 0,
+  "total": 508,
+  "check": true
+ },
+ "strat_756_sealed": {
+  "multidegree": 336,
+  "line_order": 398,
+  "live_22": 22
+ },
+ "final_census_1264": {
+  "dead_multidegree": 634,
+  "dead_line_order": 546,
+  "dead_arc_jet_ext": 62,
+  "live": 22,
+  "live_dims": [
+   37
+  ],
+  "formula": "1264 = 634(multi) + 546(line) + 62(arc-jet) + 22(live)",
+  "sum_ok": true
+ },
+ "anchor_22": {
+  "sealed_22_hashes": [
+   "039cafe9e9fdf89e",
+   "0a0ab8e19311ac4e",
+   "39309437eafbce57",
+   "669ab2b99ee64deb",
+   "67e43d50008bd07e",
+   "6c16dbd3bde8925f",
+   "715a76b256ac0691",
+   "720ce6bad4a5f5a0",
+   "7b4482ecc6edb606",
+   "7b566c53097eee4c",
+   "810e57a489655daa",
+   "939c890dfe55afb4",
+   "ad3d1ae2b7e6dcac",
+   "c399cb8afa6b62ff",
+   "c81e7042b7aba13b",
+   "e70f4b5ce4d5ca21",
+   "e8558c465207aea8",
+   "eb7f7ed304b4ec9d",
+   "f3292bd5371a70d4",
+   "f62173fd3520e0a0",
+   "fa3376b88dfe1309",
+   "fac04ea70c1810eb"
+  ],
+  "n_sealed": 22,
+  "n_present_in_strat_live": 22,
+  "all_present": true,
+  "strat_live_count": 22,
+  "note": "22 must reappear unchanged among stratified live after multidegree+line-order+six-flips; sealed count was 22 at dim\u226437."
+ },
+ "ladder_mechanisms": {
+  "level2_assert_all_kappa_equiv2_vanish": 62
+ },
+ "p3_vanishing": {
+  "n_kappa2_zero": 4,
+  "n_kappa5_zero": 12,
+  "n_kappa8_zero": 4
+ },
+ "ext_508_all_dead": true,
+ "FLAG": "EXTENDED-508-ALL-DEAD \u2014 FLAGGED, not claimed as degree exclusion; 22 stratified survivors remain live at dim\u226437. ODDZERO-standard audit gate before any promotion of the 508-kill.",
+ "not_claimed": [
+  "No degree exclusion",
+  "No char-0 emptiness of the 22",
+  "508 all-dead is modular finite-exact, FLAGGED pending audit"
+ ]
+}

@@ -1,0 +1,8 @@
+{
+  "331": {
+    "candidate": "polarization degeneracy from linear T_c \u2282 M_35",
+    "status": "partial_structural",
+    "statement": "On nested random r-planes in the 37-cell: \u03bc is FULL rank on Sym^3 for r\u226415 (P3=N3). Image dimension reaches the cell value 1380 by r\u224825 and then plateaus while N3=binom(r+2,3) grows \u2014 so the 7759-dim kernel is the excess of Sym^3(cell) over a 1380-dim image that already saturates on a proper subspace. Full M_35 has P3 \u2265 5400 (timeboxed, unsaturated), far above the cell: the Layer-0/flip cut is a major source of rank drop, but even full M stays below I(105). The pure 'linear family in quadratic M' slogan is therefore only half the story: small linear slices are actually non-degenerate (full rank), and degeneracy onsets with dimension ~20.",
+    "dead_end_rejected": "Simple dim-W=5 pointwise image bound does not explain P3=1380 (it only caps each single cubic F(T_c(x)))."
+  }
+}

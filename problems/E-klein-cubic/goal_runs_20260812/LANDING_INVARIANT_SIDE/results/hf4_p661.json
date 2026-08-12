@@ -1,0 +1,33 @@
+{
+  "p": 661,
+  "K": 37,
+  "P3": 1380,
+  "N4": 91390,
+  "P4_upper": 51060,
+  "P4_lower": 6000,
+  "P4_certified": null,
+  "P4": 6000,
+  "P4_is_lower_bound": true,
+  "HF4_lower": 40330,
+  "HF4_upper": 85390,
+  "HF4_exact": null,
+  "probes": [
+    {
+      "k": 6000,
+      "ranks": [
+        6000,
+        6000
+      ]
+    }
+  ],
+  "k_schedule": [
+    6000
+  ],
+  "seeds": [
+    13,
+    41
+  ],
+  "seconds": 488.5301921367645,
+  "method": "kxk_sketch_two_seeds",
+  "note": "HF4_lower=40330 is characteristic-free (37*1380 < binom(40,4)). Sketch ranks are Tier-2 modular lower bounds on P4. Exact P4 not reached (sketch full rank at k=6000; multiply not pushed further)."
+}

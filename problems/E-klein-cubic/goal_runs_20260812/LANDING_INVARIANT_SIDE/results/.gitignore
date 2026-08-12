@@ -1,0 +1,10 @@
+# Heavy binaries exceed the 50 MB hosting limit; fully regenerable.
+*.npy
+*.npz
+*.npzz
+*.ms
+*.m2
+*.out
+*.gb
+*.log
+__pycache__/

@@ -1,0 +1,18 @@
+{
+  "331": {
+    "P4_lower": 6000,
+    "P4_certified": null,
+    "HF4_lower": 40330,
+    "HF4_upper": 85390,
+    "HF4_exact": null,
+    "seconds": 481.1443967819214
+  },
+  "661": {
+    "P4_lower": 6000,
+    "P4_certified": null,
+    "HF4_lower": 40330,
+    "HF4_upper": 85390,
+    "HF4_exact": null,
+    "seconds": 488.5301921367645
+  }
+}

@@ -1,0 +1,280 @@
+{
+  "headline": "Problem E remains OPEN; this packet excludes no degree.",
+  "method": "inv_eval_matrix (sketched Inv dual via point evals of F(T_c))",
+  "rows": [
+    {
+      "d": 35,
+      "I_3d": 8555,
+      "K_expect": 37,
+      "p331": {
+        "P3": 1380,
+        "HF3": 7759,
+        "K": 37,
+        "N3": 9139,
+        "saturated": true,
+        "deficit_vs_I": 7175,
+        "ratio_P3_I": 0.16130917592051433,
+        "seconds": 38.30142307281494
+      },
+      "p661": {
+        "P3": 1380,
+        "HF3": 7759,
+        "K": 37,
+        "N3": 9139,
+        "saturated": true,
+        "deficit_vs_I": 7175,
+        "ratio_P3_I": 0.16130917592051433,
+        "seconds": 41.78122806549072
+      },
+      "agree": true,
+      "P3": 1380,
+      "HF3": 7759,
+      "K": 37,
+      "N3": 9139,
+      "ratio_P3_I": 0.16130917592051433,
+      "deficit_vs_I": 7175
+    },
+    {
+      "d": 36,
+      "I_3d": 9545,
+      "K_expect": 63,
+      "p331": {
+        "P3": 1850,
+        "HF3": 41830,
+        "K": 63,
+        "N3": 43680,
+        "saturated": true,
+        "deficit_vs_I": 7695,
+        "ratio_P3_I": 0.19381875327396542,
+        "seconds": 139.2194151878357
+      },
+      "p661": {
+        "P3": 1850,
+        "HF3": 41830,
+        "K": 63,
+        "N3": 43680,
+        "saturated": true,
+        "deficit_vs_I": 7695,
+        "ratio_P3_I": 0.19381875327396542,
+        "seconds": 158.50303411483765
+      },
+      "agree": true,
+      "P3": 1850,
+      "HF3": 41830,
+      "K": 63,
+      "N3": 43680,
+      "ratio_P3_I": 0.19381875327396542,
+      "deficit_vs_I": 7695
+    },
+    {
+      "d": 37,
+      "I_3d": 10614,
+      "K_expect": 119,
+      "p331": {
+        "P3": 2642,
+        "HF3": 285338,
+        "K": 119,
+        "N3": 287980,
+        "saturated": true,
+        "deficit_vs_I": 7972,
+        "ratio_P3_I": 0.24891652534388545,
+        "seconds": 243.52502608299255
+      },
+      "p661": {
+        "P3": 2642,
+        "HF3": 285338,
+        "K": 119,
+        "N3": 287980,
+        "saturated": true,
+        "deficit_vs_I": 7972,
+        "ratio_P3_I": 0.24891652534388545,
+        "seconds": 252.9142620563507
+      },
+      "agree": true,
+      "P3": 2642,
+      "HF3": 285338,
+      "K": 119,
+      "N3": 287980,
+      "ratio_P3_I": 0.24891652534388545,
+      "deficit_vs_I": 7972
+    },
+    {
+      "d": 38,
+      "I_3d": 11776,
+      "K_expect": 151,
+      "p331": {
+        "P3": 3285,
+        "HF3": 581991,
+        "K": 151,
+        "N3": 585276,
+        "saturated": true,
+        "deficit_vs_I": 8491,
+        "ratio_P3_I": 0.27895720108695654,
+        "seconds": 365.8363199234009
+      },
+      "p661": {
+        "P3": 3285,
+        "HF3": 581991,
+        "K": 151,
+        "N3": 585276,
+        "saturated": true,
+        "deficit_vs_I": 8491,
+        "ratio_P3_I": 0.27895720108695654,
+        "seconds": 326.7810580730438
+      },
+      "agree": true,
+      "P3": 3285,
+      "HF3": 581991,
+      "K": 151,
+      "N3": 585276,
+      "ratio_P3_I": 0.27895720108695654,
+      "deficit_vs_I": 8491
+    }
+  ],
+  "growth": [
+    {
+      "from": 35,
+      "to": 36,
+      "dP3": 470,
+      "dI": 990,
+      "d_deficit": 520
+    },
+    {
+      "from": 36,
+      "to": 37,
+      "dP3": 792,
+      "dI": 1069,
+      "d_deficit": 277
+    },
+    {
+      "from": 37,
+      "to": 38,
+      "dP3": 643,
+      "dI": 1162,
+      "d_deficit": 519
+    }
+  ],
+  "observation": {
+    "P3_seq": [
+      1380,
+      1850,
+      2642,
+      3285
+    ],
+    "ratio_P3_I_seq": [
+      0.16130917592051433,
+      0.19381875327396542,
+      0.24891652534388545,
+      0.27895720108695654
+    ],
+    "deficit_vs_I_seq": [
+      7175,
+      7695,
+      7972,
+      8491
+    ],
+    "note": "P3/I(3d) rises ~0.16\u21920.28 over d=35..38; deficit I\u2212P3 grows slowly (~7175\u21928491). No low-degree polynomial closed form forced."
+  },
+  "hf4_d35": {
+    "331": {
+      "p": 331,
+      "K": 37,
+      "P3": 1380,
+      "N4": 91390,
+      "P4_upper": 51060,
+      "P4_lower": 6000,
+      "P4_certified": null,
+      "P4": 6000,
+      "P4_is_lower_bound": true,
+      "HF4_lower": 40330,
+      "HF4_upper": 85390,
+      "HF4_exact": null,
+      "probes": [
+        {
+          "k": 6000,
+          "ranks": [
+            6000,
+            6000
+          ]
+        }
+      ],
+      "k_schedule": [
+        6000
+      ],
+      "seeds": [
+        13,
+        41
+      ],
+      "seconds": 481.1443967819214,
+      "method": "kxk_sketch_two_seeds",
+      "note": "HF4_lower=40330 is characteristic-free (37*1380 < binom(40,4)). Sketch ranks are Tier-2 modular lower bounds on P4. Exact P4 not reached (sketch full rank at k=6000; multiply not pushed further)."
+    },
+    "661": {
+      "p": 661,
+      "K": 37,
+      "P3": 1380,
+      "N4": 91390,
+      "P4_upper": 51060,
+      "P4_lower": 6000,
+      "P4_certified": null,
+      "P4": 6000,
+      "P4_is_lower_bound": true,
+      "HF4_lower": 40330,
+      "HF4_upper": 85390,
+      "HF4_exact": null,
+      "probes": [
+        {
+          "k": 6000,
+          "ranks": [
+            6000,
+            6000
+          ]
+        }
+      ],
+      "k_schedule": [
+        6000
+      ],
+      "seeds": [
+        13,
+        41
+      ],
+      "seconds": 488.5301921367645,
+      "method": "kxk_sketch_two_seeds",
+      "note": "HF4_lower=40330 is characteristic-free (37*1380 < binom(40,4)). Sketch ranks are Tier-2 modular lower bounds on P4. Exact P4 not reached (sketch full rank at k=6000; multiply not pushed further)."
+    },
+    "summary": {
+      "331": {
+        "P4_lower": 6000,
+        "P4_certified": null,
+        "HF4_lower": 40330,
+        "HF4_upper": 85390,
+        "HF4_exact": null,
+        "seconds": 481.1443967819214
+      },
+      "661": {
+        "P4_lower": 6000,
+        "P4_certified": null,
+        "HF4_lower": 40330,
+        "HF4_upper": 85390,
+        "HF4_exact": null,
+        "seconds": 488.5301921367645
+      }
+    }
+  },
+  "kernel": {
+    "candidate": "polarization degeneracy from linear T_c \u2282 M_35",
+    "status": "partial_structural",
+    "statement": "On nested random r-planes in the 37-cell: \u03bc is FULL rank on Sym^3 for r\u226415 (P3=N3). Image dimension reaches the cell value 1380 by r\u224825 and then plateaus while N3=binom(r+2,3) grows \u2014 so the 7759-dim kernel is the excess of Sym^3(cell) over a 1380-dim image that already saturates on a proper subspace. Full M_35 has P3 \u2265 5400 (timeboxed, unsaturated), far above the cell: the Layer-0/flip cut is a major source of rank drop, but even full M stays below I(105). The pure 'linear family in quadratic M' slogan is therefore only half the story: small linear slices are actually non-degenerate (full rank), and degeneracy onsets with dimension ~20.",
+    "dead_end_rejected": "Simple dim-W=5 pointwise image bound does not explain P3=1380 (it only caps each single cubic F(T_c(x)))."
+  },
+  "ceilings_I_3d": {
+    "35": 8555,
+    "36": 9545,
+    "37": 10614,
+    "38": 11776,
+    "39": 13026,
+    "40": 14379,
+    "41": 15828,
+    "42": 17391
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "p": 331,
+  "d": 35,
+  "K3_tuple_image": {
+    "note": "rank of {T_j(x)} in W=F^5 is at most 5 by dimension; not explanatory",
+    "rank_max_forced": 5
+  },
+  "K2_nested": [
+    {
+      "r": 5,
+      "P3": 35,
+      "N3": 35,
+      "saturated": true,
+      "ratio": 1.0
+    },
+    {
+      "r": 10,
+      "P3": 220,
+      "N3": 220,
+      "saturated": true,
+      "ratio": 1.0
+    },
+    {
+      "r": 15,
+      "P3": 680,
+      "N3": 680,
+      "saturated": true,
+      "ratio": 1.0
+    },
+    {
+      "r": 20,
+      "P3": 1300,
+      "N3": 1540,
+      "saturated": false,
+      "ratio": 0.844
+    },
+    {
+      "r": 25,
+      "P3": 1380,
+      "N3": 2925,
+      "saturated": false,
+      "ratio": 0.472
+    },
+    {
+      "r": 30,
+      "P3": 1380,
+      "N3": 4960,
+      "saturated": false,
+      "ratio": 0.278
+    },
+    {
+      "r": 37,
+      "P3": 1380,
+      "N3": 9139,
+      "saturated": true,
+      "ratio": 0.151
+    }
+  ],
+  "K1_full_M": {
+    "dim_M": 637,
+    "P3_lower": 5400,
+    "n_func_last": 5500,
+    "I_105": 8555,
+    "saturated": false,
+    "note": "rank still climbing at timebox; P3_full \u2265 5400 \u226b cell P3=1380, and still below I(105)=8555",
+    "timeboxed": true
+  },
+  "verdict": {
+    "candidate": "polarization degeneracy from linear T_c \u2282 M_35",
+    "status": "partial_structural",
+    "statement": "On nested random r-planes in the 37-cell: \u03bc is FULL rank on Sym^3 for r\u226415 (P3=N3). Image dimension reaches the cell value 1380 by r\u224825 and then plateaus while N3=binom(r+2,3) grows \u2014 so the 7759-dim kernel is the excess of Sym^3(cell) over a 1380-dim image that already saturates on a proper subspace. Full M_35 has P3 \u2265 5400 (timeboxed, unsaturated), far above the cell: the Layer-0/flip cut is a major source of rank drop, but even full M stays below I(105). The pure 'linear family in quadratic M' slogan is therefore only half the story: small linear slices are actually non-degenerate (full rank), and degeneracy onsets with dimension ~20.",
+    "dead_end_rejected": "Simple dim-W=5 pointwise image bound does not explain P3=1380 (it only caps each single cubic F(T_c(x)))."
+  },
+  "HF3_kernel_dim": 7759,
+  "I105": 8555,
+  "P3_cell": 1380
+}

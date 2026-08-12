@@ -1,0 +1,53 @@
+== D35_EXTENDED_SIEVE verifier
+OK: p331 joint 1264
+OK: p331 extended 508
+OK: p331 strat 756
+OK: p331 anchor22 hashes present in joint
+OK: p331 split_ext n
+OK: p331 split_ext partition
+OK: p331 sieve 508 partition
+OK: p331 finisher empty
+OK: p331 six flips rank 2
+OK: p331 strat live 22
+OK: p331 22-anchor in strat live
+OK: p331 strat multi 336
+OK: p331 strat line 398
+OK: p331 12 period-3
+OK: p331 ladder input = sieve live
+OK: p331 ladder partition
+OK: p331 cell37 saved
+OK: p331 census sum 1264
+OK: p331 live count
+OK: p331 census anchor
+OK: p331 headline OPEN
+OK: p661 joint 1264
+OK: p661 extended 508
+OK: p661 strat 756
+OK: p661 anchor22 hashes present in joint
+OK: p661 split_ext n
+OK: p661 split_ext partition
+OK: p661 sieve 508 partition
+OK: p661 finisher empty
+OK: p661 six flips rank 2
+OK: p661 strat live 22
+OK: p661 22-anchor in strat live
+OK: p661 strat multi 336
+OK: p661 strat line 398
+OK: p661 12 period-3
+OK: p661 ladder input = sieve live
+OK: p661 ladder partition
+OK: p661 cell37 saved
+OK: p661 census sum 1264
+OK: p661 live count
+OK: p661 census anchor
+OK: p661 headline OPEN
+OK: cross-prime 508 multidegree_m_in_3_5
+OK: cross-prime 508 line_order_nu_ge_2
+OK: cross-prime 508 arc_jet_ladder_period3
+OK: cross-prime 508 live_among_508
+OK: cross-prime final live
+OK: no REPORT.md
+OK: THEOREM.md present
+
+D35_EXTENDED_SIEVE_VERIFY_OK
+ALLGREEN

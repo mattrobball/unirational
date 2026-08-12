@@ -1780,6 +1780,28 @@
    "char0_scope": "VERDICT: no class-at-infinity zero; Corollary 3.4 not triggered. The joint tuple-level census J = 11594/1408/2018/10752/1596/1264 for d = 0..5 mod 6 EXTENDS the corrected K table (the stratified enumeration flipped only the six period-2 children; the audited depth table licenses period-3 level-2 escapes, adding +526/+230/+506/+4536/+252/+508). The cone-order layer cuts nothing at order 0 (the ell_V-band's single pattern already satisfies ord >= 6; Theorem-S-prime growth checks pass). Trivialized join reproduces K exactly; both sealed parities fall out; cross-prime identical; STAGE2 pinning excluded (map-level).\nConsequences: K is a LOWER bound at tuple level (banner placed on STAGE1_STRATIFIED sec. 3; J supersedes as the tuple-level census); the d=35 blueprint base grows by 508 (scope banner on PAIR_ATTACK_D35; extended sieve dispatched).\nNOT claimed: any degree exclusion.",
    "tracked": true,
    "notes": "Cycle-5 lane B: the transport program's first live shot. Headline: Problem E remains OPEN; this packet excludes no degree. Honest strategic readout (adjudication sec.): completing the order-0 semantics GROWS tuple-level counts -- order-0 systems will not produce a class zero; the transport program's next targets are tuple-level realization layers (the Phi_J closure of Stage-2 remains the queued upgrade). Run-history note: an intermediate cut-direction table was superseded by the final, principled extend-semantics; the final table is the record. Machine markers: TUPLE_JOINT_RESIDUE_VERIFY_OK, ALLGREEN (68 checks, director-replayed)."
+  },
+  {
+   "path": "goal_runs_20260812/D35_EXTENDED_SIEVE",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "content-addressed materialization of the 508 extended blueprints; sealed kill layers + NEW arc-jet ladder to kappa=5/8 at the twelve period-3 children (rigidity-anchored); both primes; 22-anchor hash match; director-replayed ALLGREEN",
+   "primary_exit": "D35-EXT-SIEVE-ALL-508-DEAD-FLAGGED",
+   "superseded_by": null,
+   "char0_scope": "All 508 extended blueprints dead by closed conditions: 298 multidegree (m in {3,5}, sealed emptiness), 148 line-order (nu >= 2 impossible, sealed rank 39), 62 by the arc-jet ladder (period-3 level-2 assertions with all admissible levels identically zero against a closure-demanded different value). Final tuple-complete census at d = 35: 1264 = 1242 dead + 22 live at dim <= 37; the sealed 22 reappear with unchanged hashes. Cross-prime identical.\nFLAGGED: the 62 arc-jet kills rest on a new instrument; ODDZERO-standard audit is the promotion gate (queued).\nNOT claimed: any degree exclusion (22 remain; d = 35 not closed).",
+   "tracked": true,
+   "notes": "The widened blueprint base collapses back to exactly the sealed 22. Headline: Problem E remains OPEN; this packet excludes no degree. Machine markers: D35_EXTENDED_SIEVE_VERIFY_OK, ALLGREEN (both primes, director-replayed)."
+  },
+  {
+   "path": "goal_runs_20260812/LANDING_INVARIANT_SIDE",
+   "entry": "E56",
+   "kind": "goal_run",
+   "verification_class": "landing system in invariant coordinates; exact saturated P3 at d = 35..38, both primes; HF4 two-sided bounds at 35 (domain-exact lower, two-seed sketch); first worker session externally terminated, resumed to completion; director-replayed ALLGREEN (53)",
+   "primary_exit": "LANDING-INV-P3-TABLE-35-38",
+   "superseded_by": null,
+   "char0_scope": "Exact, saturated, both primes: P3 = 1380/1850/2642/3285 at d = 35/36/37/38 against Molien ceilings I(3d) = 8555/9545/10614/11776 (director probe) -- the landing system's rank deficit grows across four consecutive degrees (7175/7695/7972/8491); HF3 = 7759/41830/285338/581991. HF4 at 35: [40330, 85390], exact P4 unreached -- the linear-algebra ladder cannot close the d=35 certificate (settled twice). Kernel question: partial_structural (nested r-planes full-rank to r <= 15; image saturates by r ~ 25).\nNOT claimed: any degree exclusion; any closed form for P3.",
+   "tracked": true,
+   "notes": "Cycle-5 lane A, resumed and sealed. Headline: Problem E remains OPEN; this packet excludes no degree. The four-point deficit curve is the constraint any structural explanation of the landing kernel must reproduce. Machine markers: LANDING_INV_VERIFY_OK, ALLGREEN (53 checks, director-replayed)."
   }
  ]
 }

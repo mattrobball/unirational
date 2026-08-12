@@ -1,0 +1,88 @@
+{
+ "anchor_22": {
+  "all_22_hashes_present": true,
+  "n_present": 22,
+  "sealed_hashes": [
+   "2955f30c0593ff1d",
+   "29bd5a4e397c0790",
+   "2c7513acc00d7368",
+   "2f9b8e8ba5ba6288",
+   "337226b957ffdc34",
+   "6635c24184e4be43",
+   "6ae7ffa6dbd79c50",
+   "6fb4d2d4d5a56413",
+   "88ca456f7d4537e6",
+   "8b6af44c6a58b736",
+   "a51f1461a34945c2",
+   "a6a8ab1ae0fdfe22",
+   "aac84803b75ad54e",
+   "b357be64b49d4511",
+   "bdbc702f4f11afa8",
+   "be7f55ce39e664a6",
+   "c197d9761918cc70",
+   "cbc5e8bf02feaf22",
+   "d743d7a4fc7d0414",
+   "e87fb26421304593",
+   "f24058be9349945b",
+   "f2639db1fe05652f"
+  ],
+  "sealed_ids": [
+   5,
+   7,
+   13,
+   15,
+   21,
+   23,
+   29,
+   31,
+   37,
+   39,
+   45,
+   47,
+   53,
+   55,
+   61,
+   63,
+   69,
+   71,
+   697,
+   699,
+   701,
+   703
+  ]
+ },
+ "expected": {
+  "J": 1264,
+  "K": 756,
+  "ext": 508
+ },
+ "ff_table_sizes": {
+  "1": 10,
+  "2": 10
+ },
+ "headline": "Problem E remains OPEN; this packet excludes no degree.",
+ "m_hist_by_min_m": {
+  "1": 630,
+  "3": 424,
+  "5": 210
+ },
+ "n_extended": 508,
+ "n_patterns_joint": 1264,
+ "n_stratified_overlap": 756,
+ "prime": 331,
+ "split_all_1264": {
+  "m1": 630,
+  "multidegree_dead_m_ne_1": 634,
+  "n": 1264,
+  "ord0_L": 84,
+  "ord_ge2_L_only": 546
+ },
+ "split_ext_508": {
+  "m1": 210,
+  "multidegree_dead_m_ne_1": 298,
+  "n": 508,
+  "ord0_L": 62,
+  "ord_ge2_L_only": 148
+ },
+ "wall_s": 210.62
+}

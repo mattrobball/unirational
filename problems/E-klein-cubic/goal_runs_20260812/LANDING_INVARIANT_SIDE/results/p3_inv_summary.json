@@ -1,0 +1,106 @@
+{
+  "35": {
+    "331": {
+      "P3": 1380,
+      "HF3": 7759,
+      "K": 37,
+      "N3": 9139,
+      "I_3d": 8555,
+      "saturated": true,
+      "P3_is_lower_bound": false,
+      "deficit_vs_I": 7175,
+      "seconds": 38.30142307281494,
+      "error": null
+    },
+    "661": {
+      "P3": 1380,
+      "HF3": 7759,
+      "K": 37,
+      "N3": 9139,
+      "I_3d": 8555,
+      "saturated": true,
+      "P3_is_lower_bound": false,
+      "deficit_vs_I": 7175,
+      "seconds": 41.78122806549072,
+      "error": null
+    }
+  },
+  "36": {
+    "331": {
+      "P3": 1850,
+      "HF3": 41830,
+      "K": 63,
+      "N3": 43680,
+      "I_3d": 9545,
+      "saturated": true,
+      "P3_is_lower_bound": false,
+      "deficit_vs_I": 7695,
+      "seconds": 139.2194151878357,
+      "error": null
+    },
+    "661": {
+      "P3": 1850,
+      "HF3": 41830,
+      "K": 63,
+      "N3": 43680,
+      "I_3d": 9545,
+      "saturated": true,
+      "P3_is_lower_bound": false,
+      "deficit_vs_I": 7695,
+      "seconds": 158.50303411483765,
+      "error": null
+    }
+  },
+  "37": {
+    "331": {
+      "P3": 2642,
+      "HF3": 285338,
+      "K": 119,
+      "N3": 287980,
+      "I_3d": 10614,
+      "saturated": true,
+      "P3_is_lower_bound": false,
+      "deficit_vs_I": 7972,
+      "seconds": 243.52502608299255,
+      "error": null
+    },
+    "661": {
+      "P3": 2642,
+      "HF3": 285338,
+      "K": 119,
+      "N3": 287980,
+      "I_3d": 10614,
+      "saturated": true,
+      "P3_is_lower_bound": false,
+      "deficit_vs_I": 7972,
+      "seconds": 252.9142620563507,
+      "error": null
+    }
+  },
+  "38": {
+    "331": {
+      "P3": 3285,
+      "HF3": 581991,
+      "K": 151,
+      "N3": 585276,
+      "I_3d": 11776,
+      "saturated": true,
+      "P3_is_lower_bound": false,
+      "deficit_vs_I": 8491,
+      "seconds": 365.8363199234009,
+      "error": null
+    },
+    "661": {
+      "P3": 3285,
+      "HF3": 581991,
+      "K": 151,
+      "N3": 585276,
+      "I_3d": 11776,
+      "saturated": true,
+      "P3_is_lower_bound": false,
+      "deficit_vs_I": 8491,
+      "seconds": 326.7810580730438,
+      "error": null
+    }
+  }
+}
