@@ -28,6 +28,7 @@ import V14Formalization.BlockSemidirectConstructor
 import V14Formalization.BlockSourceFieldMap
 import V14Formalization.BlockNormalSigma
 import V14Formalization.FaithfulHeadlineReduction
+import V14Formalization.HeadlineStatement
 import V14Formalization.CorrectedSourceFunctionFieldRatio
 import V14Formalization.V14SchemeModel
 import V14Formalization.V14SchemeBaseChange

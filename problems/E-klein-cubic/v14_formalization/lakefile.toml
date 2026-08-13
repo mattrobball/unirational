@@ -24,3 +24,9 @@ globs = ["V14Formalization.*"]
 
 [[lean_lib]]
 name = "AxiomAudit"
+
+[[lean_lib]]
+name = "V14Challenge"
+
+[[lean_lib]]
+name = "V14Solution"

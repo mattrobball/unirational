@@ -1,1 +1,7 @@
 .lake/
+.container-app/
+.container-logs/
+.home/
+.wtest
+.wtest2
+.comparator-*
