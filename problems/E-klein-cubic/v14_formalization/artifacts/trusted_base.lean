@@ -1,105 +1,4 @@
-import Mathlib.LinearAlgebra.Center
-import Mathlib.LinearAlgebra.FreeModule.Basic
-import Mathlib.LinearAlgebra.Dimension.Finrank
-import Mathlib.LinearAlgebra.Dimension.Finite
-import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Basic
-import Mathlib.AlgebraicGeometry.Pullbacks
-import Mathlib.RingTheory.MvPolynomial.Homogeneous
-import Mathlib.RingTheory.MvPolynomial.Ideal
-import Mathlib.AlgebraicGeometry.Birational.Composition
-import Mathlib.CategoryTheory.Action.Basic
-import Mathlib.CategoryTheory.Comma.Over.Basic
-import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
-import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs
-import Mathlib.LinearAlgebra.Basis.Prod
-import Mathlib.LinearAlgebra.Dimension.Free
-import Mathlib.RingTheory.Polynomial.Cyclotomic.Basic
-import Mathlib.RingTheory.Polynomial.Cyclotomic.Roots
-import Mathlib.RingTheory.AdjoinRoot
-import Mathlib.NumberTheory.LegendreSymbol.AddCharacter
-import Mathlib.NumberTheory.GaussSum
-import Mathlib.NumberTheory.MulChar.Basic
-import Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic
-import Mathlib.LinearAlgebra.FreeModule.Finite.Basic
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Algebra.Field.ZMod
-import Mathlib.Data.Nat.Prime.Basic
-import Mathlib.GroupTheory.OrderOfElement
-import Mathlib.Algebra.Module.Pi
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Algebra.BigOperators.Ring.Finset
-import Mathlib.Data.Fintype.BigOperators
-import Mathlib.Algebra.Algebra.Basic
-import Mathlib.Algebra.CharP.Basic
-import Mathlib.FieldTheory.Minpoly.Field
-import Mathlib.LinearAlgebra.Matrix.ToLin
-import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
-import Mathlib.Data.Matrix.Basic
-import Mathlib.LinearAlgebra.ExteriorPower.Basic
-import Mathlib.LinearAlgebra.ExteriorPower.Basis
-import Mathlib.LinearAlgebra.Dimension.StrongRankCondition
-import Mathlib.LinearAlgebra.Basis.VectorSpace
-import Mathlib.LinearAlgebra.Projectivization.Basic
-import Mathlib.LinearAlgebra.Projectivization.PSL.PSL2
-import Mathlib.GroupTheory.QuotientGroup.Basic
-import Mathlib.GroupTheory.Subgroup.Center
-import Mathlib.GroupTheory.Subgroup.Simple
-import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
-import Mathlib.Data.Set.PowersetCard
-import Mathlib.Order.Hom.PowersetCard
-import Mathlib.Data.Finset.Sort
-import Mathlib.Tactic.FinCases
-import Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup
-import Mathlib.Data.Nat.Prime.Defs
-import Mathlib.GroupTheory.SpecificGroups.Dihedral
-import Mathlib.Algebra.Group.Subgroup.Finite
-import Mathlib.GroupTheory.Subgroup.Centralizer
-import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Card
-import Mathlib.GroupTheory.Index
-import Mathlib.GroupTheory.SpecificGroups.Cyclic
-import Mathlib.RingTheory.RootsOfUnity.Basic
-import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
-import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-import Mathlib.RingTheory.PowerBasis
-import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-import Mathlib.FieldTheory.IntermediateField.Algebraic
-import Mathlib.FieldTheory.KummerPolynomial
-import Mathlib.RingTheory.PrincipalIdealDomain
-import Mathlib.LinearAlgebra.Charpoly.Basic
-import Mathlib.Algebra.Module.LinearMap.End
-import Mathlib.Algebra.Polynomial.Degree.SmallDegree
-import Mathlib.Algebra.Polynomial.EraseLead
-import Mathlib.Algebra.Polynomial.RingDivision
-import Mathlib.Algebra.Polynomial.Div
-import Mathlib.Algebra.Polynomial.FieldDivision
-import Mathlib.Algebra.Polynomial.SpecificDegree
-import Mathlib.Data.Rat.Lemmas
-import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
-import Mathlib.LinearAlgebra.Dimension.OrzechProperty
-import Mathlib.LinearAlgebra.Dual.Lemmas
-import Mathlib.GroupTheory.Coset.Card
-import Mathlib.GroupTheory.Sylow
-import Mathlib.GroupTheory.PGroup
-import Mathlib.Data.Nat.Factorization.Basic
-import Mathlib.Data.Fintype.Card
-import Mathlib.Data.Set.Card
-import Mathlib.LinearAlgebra.Trace
-import Mathlib.LinearAlgebra.Projection
-import Mathlib.Algebra.Group.Idempotent
-import Mathlib.LinearAlgebra.Semisimple
-import Mathlib.LinearAlgebra.Matrix.Charpoly.Coeff
-import Mathlib.LinearAlgebra.Charpoly.ToMatrix
-import Mathlib.RingTheory.Trace.Basic
-import Mathlib.LinearAlgebra.Dimension.Constructions
-import Mathlib.RingTheory.AlgebraTower
-import Mathlib.LinearAlgebra.Matrix.Trace
-import Mathlib.Algebra.Polynomial.Eval.Defs
-import Mathlib.RingTheory.Ideal.Quotient.Defs
-import Mathlib.Data.Finset.Card
-import Mathlib.RingTheory.Polynomial.Basic
-import Mathlib.Algebra.GroupWithZero.Associated
-import Mathlib.AlgebraicGeometry.IdealSheaf.Functorial
-import Mathlib.Algebra.CharZero.Infinite
+import Mathlib
 
 /-! # Trusted base
 
@@ -107,7 +6,7 @@ Target: `V14Formalization.Comparator.noEquivariantRationalMap_from_ambient`
 
 Boundary: V14Formalization, BConicBundleMultisections
 
-155 declarations from 22 modules, inlined in dependency order with every proof replaced by `sorry`. Imports above are outside the boundary and are trusted as given.
+172 declarations from 22 modules, inlined in dependency order with every proof replaced by `sorry`. Imports above are outside the boundary and are trusted as given.
 -/
 
 universe u v w
@@ -133,6 +32,9 @@ variable {k : Type u} [Field k] {G : Type u} [Group G]
 
 def act (R : FaithfulLinearRep k G V) (g : G) : V →ₗ[k] V := R.ρ g
 
+def DegeneratesToPlusMinusId (R : FaithfulLinearRep k G V) (σ : G) : Prop :=
+  R.act σ = LinearMap.id ∨ R.act σ = -LinearMap.id
+
 def plusEigenspace (R : FaithfulLinearRep k G V) (σ : G) : Submodule k V :=
   Module.End.eigenspace (R.act σ) (1 : k)
 
@@ -146,14 +48,6 @@ theorem isCompl_plus_minus (R : FaithfulLinearRep k G V) {σ : G}
     IsCompl (R.plusEigenspace σ) (R.minusEigenspace σ)  := sorry
 
 end FaithfulLinearRep
-namespace SmoothProjectiveGVariety
-variable {k : Type u} [Field k] {G : Type u} [Group G]
-  (Y : SmoothProjectiveGVariety k G)
-end SmoothProjectiveGVariety
-namespace FaithfulLinearRep
-variable {k : Type u} [Field k] {G : Type u} [Group G]
-  {V : Type u} [AddCommGroup V] [Module k V]
-end FaithfulLinearRep
 end V14Formalization
 
 -- ═══ ProjectiveSpace ═══
@@ -163,6 +57,7 @@ open scoped AlgebraicGeometry
 namespace BConicBundleMultisections
 noncomputable section
 open AlgebraicGeometry
+attribute [local instance] MvPolynomial.gradedAlgebra
 
 /-- Scheme-level projective `n`-space over a commutative ring `R`. -/
 abbrev ProjectiveSpace (n : ℕ) (R : Type u) [CommRing R] : Scheme.{u} :=
@@ -210,8 +105,6 @@ def standardChartι (n : ℕ) (R : Type u) [CommRing R] (i : Fin (n + 1)) :
     (MvPolynomial.isHomogeneous_X R i) zero_lt_one
 
 end ProjectiveSpace
-namespace BiprojectiveSpace
-end BiprojectiveSpace
 end
 end BConicBundleMultisections
 
@@ -265,11 +158,6 @@ structure EquivariantRationalMap {S : Scheme.{u}} {G : Type v} [Group G]
   equivariant : ∀ g : G,
     actionPrecomp X g map = map.compHom (Y.ρ g).left
 
-namespace EquivariantRationalMap
-variable {S : Scheme.{u}} {G : Type v} [Group G]
-  {X Y : Action (Over S) G} [IrreducibleSpace X.V.left]
-end EquivariantRationalMap
-
 /-- Existence of a genuine equivariant rational map of schemes. -/
 def HasEquivariantRationalMap {S : Scheme.{u}} {G : Type v} [Group G]
     (X Y : Action (Over S) G) [IrreducibleSpace X.V.left] : Prop :=
@@ -291,6 +179,10 @@ def linearSubst (n : ℕ) (M : Matrix (Fin (n + 1)) (Fin (n + 1)) R) :
     Fin (n + 1) → MvPolynomial (Fin (n + 1)) R :=
   fun j => ∑ l : Fin (n + 1), C (M j l) * X l
 
+/-- Each substituted form is homogeneous of degree one. -/
+theorem isHomogeneous_linearSubst (n : ℕ) (M : Matrix (Fin (n + 1)) (Fin (n + 1)) R)
+    (j : Fin (n + 1)) : (linearSubst n M j).IsHomogeneous 1  := sorry
+
 end
 end BConicBundleMultisections
 
@@ -300,6 +192,7 @@ namespace BConicBundleMultisections
 noncomputable section
 open CategoryTheory
 open AlgebraicGeometry HomogeneousIdeal MvPolynomial ProjectiveSpace
+attribute [local instance] MvPolynomial.gradedAlgebra
 variable {k : Type u} [CommRing k]
 
 /-- A linear change of homogeneous coordinates, as a graded ring homomorphism.
@@ -339,6 +232,7 @@ open scoped AlgebraicGeometry
 namespace V14Formalization
 namespace SchemeGeometry
 open AlgebraicGeometry BConicBundleMultisections
+attribute [local instance] MvPolynomial.gradedAlgebra
 variable {k : Type u} [Field k] {G : Type v} [Group G]
 
 /-- A matrix representation on the `n+1` homogeneous coordinates of
@@ -378,6 +272,12 @@ def projectiveAction (n : ℕ)
       map_one' := projectiveActionHom_one R
       map_mul' := projectiveActionHom_mul R }
 
+/-- Each projective action morphism preserves the canonical structure map to
+`Spec k`. -/
+instance projectiveActionHom_isOver {n : ℕ}
+    (R : MatrixRepresentation (k := k) (G := G) n) (g : G) :
+    (projectiveActionHom R g).IsOver (Spec (.of k))  := sorry
+
 /-- Scheme-level projective space with its matrix action, genuinely packaged
 as a scheme over `Spec k`. -/
 def projectiveActionOver (n : ℕ)
@@ -398,6 +298,7 @@ end V14Formalization
 open scoped TensorProduct
 namespace BConicBundleMultisections
 noncomputable section
+attribute [local instance] MvPolynomial.gradedAlgebra
 namespace ProjectiveSpace
 
 /-- The homogeneous coordinate `Xₗ`, divided by the distinguished chart coordinate `Xᵢ`. -/
@@ -410,8 +311,6 @@ def normalizedCoordinate (n : ℕ) (R : Type u) [CommRing R] (i l : Fin (n + 1))
     (by simpa using MvPolynomial.isHomogeneous_X R l)
 
 end ProjectiveSpace
-namespace BiprojectiveSpace
-end BiprojectiveSpace
 end
 end BConicBundleMultisections
 
@@ -423,6 +322,7 @@ open scoped AlgebraicGeometry
 namespace V14Formalization
 namespace SchemeGeometry
 open AlgebraicGeometry BConicBundleMultisections Module
+attribute [local instance] MvPolynomial.gradedAlgebra
 variable {k : Type u} [Field k] {G : Type u} [Group G]
   {V : Type u} [AddCommGroup V] [Module k V]
 
@@ -484,6 +384,16 @@ def plusMinusAmbientBasis [CharZero k]
     Basis (Fin ((p + q + 1) + 1)) k V :=
   ((bp.prod bm).map (plusMinusLinearEquiv R sigma hσ).symm).reindex
     (plusMinusFinEquiv p q)
+
+/-- Nondegeneracy of the involution supplies projective bases for both
+eigenspaces. -/
+theorem exists_plus_minus_projective_bases [CharZero k]
+    (R : FaithfulLinearRep k G V) (sigma : G)
+    (hσ : IsInvolution sigma)
+    (hnd : ¬ R.DegeneratesToPlusMinusId sigma) :
+    ∃ (p q : ℕ),
+      Nonempty (Basis (Fin (p + 1)) k (R.plusEigenspace sigma)) ∧
+      Nonempty (Basis (Fin (q + 1)) k (R.minusEigenspace sigma))  := sorry
 
 end SchemeGeometry
 end V14Formalization
@@ -648,6 +558,10 @@ def bigCellFun (g : SLG) (hc : ec g ≠ 0) : Fun →ₗ[K] Fun :=
 def weilFun (g : SLG) : Fun →ₗ[K] Fun :=
   if hc : ec g = 0 then borelFun g hc else bigCellFun g hc
 
+theorem weilFun_preserves_even (g : SLG) {f : Fun}
+    (hf : ∀ x, f (-x) = f x) (x : ZMod 11) :
+    weilFun g f (-x) = weilFun g f x  := sorry
+
 /-- Weil action on the even module U. -/
 def weilU (g : SLG) : U →ₗ[K] U where
   toFun f := ⟨weilFun g f.1, fun x => weilFun_preserves_even g (fun z => f.2 z) x⟩
@@ -670,8 +584,6 @@ end V14Formalization
 open Matrix Matrix.SpecialLinearGroup
 open V14Formalization.WeilRep
 open V14Formalization.WeilRepSL2
-open V14Formalization.WeilMul
-open V14Formalization.WeilWN
 noncomputable section
 namespace V14Formalization
 namespace WeilHom
@@ -719,6 +631,39 @@ def evalEven : U →ₗ[k] (Fin 6 → k) where
   map_add' _ _ := funext fun _ => rfl
   map_smul' _ _ := funext fun _ => rfl
 
+/-- Pointwise even extension of a 6-tuple (before packaging as an element of `U`). -/
+def extendEvenFun (v : Fin 6 → k) : ZMod 11 → k := fun x =>
+  if hle : x.val ≤ 5 then v ⟨x.val, Nat.lt_succ_of_le hle⟩
+  else v ⟨11 - x.val, by
+    have : 6 ≤ x.val := by omega
+    have : x.val ≤ 10 := Nat.lt_succ_iff.mp (ZMod.val_lt x)
+    omega⟩
+
+theorem extendEvenFun_even (v : Fin 6 → k) (x : ZMod 11) :
+    extendEvenFun v (-x) = extendEvenFun v x  := sorry
+
+/-- Even extension of a 6-tuple of values. -/
+def extendEven : (Fin 6 → k) →ₗ[k] U where
+  toFun v := ⟨extendEvenFun v, extendEvenFun_even v⟩
+  map_add' := by
+    intro v w
+    apply Subtype.ext
+    funext x
+    change extendEvenFun (v + w) x = extendEvenFun v x + extendEvenFun w x
+    simp only [extendEvenFun, Pi.add_apply]
+    split_ifs <;> rfl
+  map_smul' := by
+    intro r v
+    apply Subtype.ext
+    funext x
+    change extendEvenFun (r • v) x = (r • extendEvenFun v) x
+    simp only [extendEvenFun, Pi.smul_apply, smul_eq_mul]
+    split_ifs <;> rfl
+
+theorem evalEven_extendEven : evalEven ∘ₗ extendEven = LinearMap.id  := sorry
+
+theorem evalEven_injective : Function.Injective evalEven  := sorry
+
 abbrev Lambda2U : Type := ↥(⋀[k]^2 U)
 
 instance : AddCommGroup Lambda2U := inferInstance
@@ -743,6 +688,8 @@ theorem weilLambda2Hom_ker_center :
 
 def pslLambda2Hom : PSL2F11 →* (Lambda2U →ₗ[k] Lambda2U) :=
   QuotientGroup.lift (N := Subgroup.center SLG) weilLambda2Hom weilLambda2Hom_ker_center
+
+theorem pslLambda2Hom_injective : Function.Injective pslLambda2Hom  := sorry
 
 end GeometricFanoCarrier
 end V14Formalization
@@ -822,9 +769,13 @@ noncomputable section
 namespace V14Formalization
 namespace CentralizerN
 
+instance fact_prime_eleven' : Fact (Nat.Prime 11)  := sorry
+
 abbrev F := ZMod 11
 
 abbrev PSL2F11 := PSL(2, F)
+
+def Circle1 := { p : F × F // p.1 ^ 2 + p.2 ^ 2 = 1 }
 
 instance : Fintype Circle1 :=
   Fintype.subtype ((Finset.univ : Finset (F × F)).filter fun p => p.1 ^ 2 + p.2 ^ 2 = 1)
@@ -893,6 +844,7 @@ namespace BConicBundleMultisections
 noncomputable section
 open AlgebraicGeometry
 namespace ProjectiveSpace
+attribute [local instance] MvPolynomial.gradedAlgebra
 
 /-- The value of a homogeneous polynomial in normalized coordinates on a standard chart. -/
 def hypersurfaceChartEquation
@@ -1049,6 +1001,10 @@ variable {A : Action Scheme G} {I : A.V.IdealSheafData}
 def hom (hI : IsInvariantIdeal A I) (g : G) : I.subscheme ⟶ I.subscheme :=
   I.subschemeMap I (A.ρ g) (hI.le_map g)
 
+@[reassoc]
+theorem hom_subschemeι (hI : IsInvariantIdeal A I) (g : G) :
+    hI.hom g ≫ I.subschemeι = I.subschemeι ≫ A.ρ g  := sorry
+
 @[simp]
 theorem hom_one (hI : IsInvariantIdeal A I) : hI.hom 1 = 𝟙 _  := sorry
 
@@ -1143,6 +1099,10 @@ open scoped AlgebraicGeometry
 namespace V14Formalization.SchemeGeometry
 open AlgebraicGeometry GeometricV14Carrier Module
 
+private abbrev k := V14SchemeModel.k
+
+private abbrev G := V14SchemeModel.G
+
 abbrev ambientFor
     {V : Type} [AddCommGroup V] [Module k V]
     (R : FaithfulLinearRep k G V) (p q : ℕ)
@@ -1150,6 +1110,13 @@ abbrev ambientFor
     (bm : Basis (Fin (q + 1)) k (R.minusEigenspace sigma)) :=
   ambientProjectiveActionOver R (p + q + 1)
     (plusMinusAmbientBasis R sigma sigma_isInvolution p q bp bm)
+
+/-- `σ` cannot act as `±id` on a faithful representation of this centerless
+group, so both eigenspaces are available for coordinates. -/
+theorem not_degenerates
+    {V : Type} [AddCommGroup V] [Module k V]
+    (R : FaithfulLinearRep k G V) :
+    ¬ R.DegeneratesToPlusMinusId sigma  := sorry
 
 /-- Plus/minus homogeneous coordinates used by the normal chart.  Not a
 hypothesis of the public theorem: any faithful `R` supplies some. -/
@@ -1183,8 +1150,6 @@ abbrev ambientOf
   ambientFor R (PlusMinusCoords.ofRep R).p (PlusMinusCoords.ofRep R).q
     (PlusMinusCoords.ofRep R).bp (PlusMinusCoords.ofRep R).bm
 
-namespace ProjectiveGVariety
-end ProjectiveGVariety
 end V14Formalization.SchemeGeometry
 
 -- ═══ V14Challenge ═══
