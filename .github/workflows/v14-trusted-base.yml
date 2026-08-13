@@ -61,7 +61,7 @@ env:
   # mattrobball/lean-informal, branch bump/lean-v4.32.1. Pinned: the emitter
   # must be built on the same toolchain as the project whose environment it
   # loads, because oleans are version-specific.
-  TFB_TOOL_REV: 18592b8d15d0467eeb570a826fcbdbe9138c7c0a
+  TFB_TOOL_REV: 35b993e1a4ac2abdba1debabd7873c8bee20fac9
 
 jobs:
   regenerate:
@@ -162,6 +162,15 @@ jobs:
             grep "source not found" /tmp/tfb.err >&2
             exit 1
           fi
+
+      # The artifact is meant to be read AND loaded in the Lean playground, so
+      # publishing one that does not elaborate is worse than publishing
+      # nothing. This is cheap here: the environment is already built. An
+      # earlier artifact was committed and linked before anyone checked it
+      # compiled -- it had 46 errors.
+      - name: Verify the artifact elaborates
+        working-directory: ${{ env.PROJECT_DIR }}
+        run: lake env lean artifacts/trusted_base.lean
 
       - name: Summarise
         run: |
