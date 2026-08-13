@@ -58,7 +58,7 @@ env:
   # mattrobball/lean-informal, branch bump/lean-v4.32.1. Pinned: the emitter
   # must be built on the same toolchain as the project whose environment it
   # loads, because oleans are version-specific.
-  TFB_TOOL_REV: 3f01d39b8befc8a5aeff45a0da1149c773482566
+  TFB_TOOL_REV: 56cb84e3f5e00ffee7030442d865ed6d9fa56d5c
 
 jobs:
   regenerate:
@@ -84,6 +84,16 @@ jobs:
           key: oleans-v14-${{ hashFiles('problems/E-klein-cubic/v14_formalization/lean-toolchain') }}-${{ hashFiles('problems/E-klein-cubic/v14_formalization/lake-manifest.json') }}-${{ hashFiles('problems/E-klein-cubic/v14_formalization/**/*.lean') }}
           restore-keys: |
             oleans-v14-${{ hashFiles('problems/E-klein-cubic/v14_formalization/lean-toolchain') }}-${{ hashFiles('problems/E-klein-cubic/v14_formalization/lake-manifest.json') }}-
+
+      # Mathlib has `lake exe cache get`; BConicBundleMultisections is an
+      # in-house package with no such cache behind it, so without this it
+      # compiles from source on every run. It sits inside the trust boundary,
+      # so its modules are needed whatever the target.
+      - name: Restore BConicBundleMultisections cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.PROJECT_DIR }}/.lake/packages/BConicBundleMultisections/.lake/build
+          key: bconic-${{ hashFiles('problems/E-klein-cubic/v14_formalization/lean-toolchain') }}-746c781234c412e1000f8c57d3be9212e756beea
 
       - name: Get Mathlib cache
         working-directory: ${{ env.PROJECT_DIR }}
@@ -125,7 +135,21 @@ jobs:
             --root BConicBundleMultisections \
             --env ${{ env.TFB_ENV_MODULE }} \
             ${{ env.TFB_TARGET }} \
-            artifacts/trusted_base.lean
+            artifacts/trusted_base.lean 2> >(tee /tmp/tfb.err >&2)
+
+      # A root-matching bug once made the closure come back holding only the
+      # target, and the run still went green with an artifact that had no
+      # trusted base in it. An empty closure is always a bug, never a fact
+      # about the statement, so fail loudly on it.
+      - name: Assert the closure is non-trivial
+        run: |
+          n=$(sed -n 's/^Inside boundary: \([0-9]*\) declarations$/\1/p' /tmp/tfb.err | tail -1)
+          echo "closure size: ${n:-unknown}"
+          if [ -z "$n" ] || [ "$n" -lt 2 ]; then
+            echo "::error::Closure has ${n:-no} declarations -- the target alone, or worse." >&2
+            echo "The statement depends on definitions, so this means they were filtered out." >&2
+            exit 1
+          fi
 
       - name: Summarise
         run: |
@@ -142,6 +166,10 @@ jobs:
       - name: Detect changes
         id: diff
         run: |
+          # `git add -N` first: git diff does not report untracked files, so
+          # a brand-new artifact reads as "no change" and the PR step below
+          # is skipped. That is exactly what happened on the first run.
+          git add -N -- "$TFB_OUTPUT"
           if git diff --quiet -- "$TFB_OUTPUT"; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "$TFB_OUTPUT is up to date"
