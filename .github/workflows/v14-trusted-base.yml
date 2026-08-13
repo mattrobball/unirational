@@ -47,7 +47,13 @@ env:
   # Lives in V14Solution, which V14Formalization does not import, so --env
   # has to name it explicitly.
   TFB_TARGET: V14Formalization.Comparator.noEquivariantRationalMap_from_ambient
-  TFB_ENV_MODULE: V14Solution
+  # V14Challenge, not V14Solution. Both declare this name with the same
+  # statement -- that identity is precisely what Comparator verifies -- but
+  # the challenge imports only HeadlineStatement, so building it costs the
+  # statement's 28-module closure instead of the entire proof's ~1800.
+  # collectDeps walks types only (proofIrrelevant := true), so the emitted
+  # closure is identical either way; the challenge's `sorry` is never read.
+  TFB_ENV_MODULE: V14Challenge
   TFB_OUTPUT: problems/E-klein-cubic/v14_formalization/artifacts/trusted_base.lean
   # mattrobball/lean-informal, branch bump/lean-v4.32.1. Pinned: the emitter
   # must be built on the same toolchain as the project whose environment it
@@ -58,10 +64,9 @@ jobs:
   regenerate:
     name: Regenerate trusted_base.lean
     runs-on: ubuntu-latest
-    # The first run has no olean cache and builds the project outright, which
-    # measured ~12 CPU-hours on faster hardware. Later runs restore the cache
-    # and only rebuild what changed.
-    timeout-minutes: 350
+    # Only the statement's closure gets built, not the proof, so this is
+    # minutes rather than the multi-hour full-project build.
+    timeout-minutes: 60
 
     steps:
       - uses: actions/checkout@v4
@@ -84,7 +89,7 @@ jobs:
         working-directory: ${{ env.PROJECT_DIR }}
         run: lake exe cache get
 
-      - name: Build the solution module
+      - name: Build the statement's closure
         working-directory: ${{ env.PROJECT_DIR }}
         run: lake build ${{ env.TFB_ENV_MODULE }}
 
