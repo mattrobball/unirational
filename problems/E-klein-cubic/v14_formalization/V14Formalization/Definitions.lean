@@ -263,11 +263,17 @@ def NoFaithfulRepDegenerates (k : Type u) [Field k] (G : Type u) [Group G] (σ :
   ∀ (V : Type u) [AddCommGroup V] [Module k V] (R : FaithfulLinearRep k G V),
     ¬ R.DegeneratesToPlusMinusId σ
 
-/-! ## Smooth projective G-varieties (with ambient linear data)
+/-! ## Smooth projective G-varieties (linear-algebra point model)
 
-Writeup Y is smooth projective: we package an ambient finite-dimensional free
-module and a projective embedding as **data** (not a mere Prop), so that
-equivariant maps and RCC can be required to be linear-projective.
+This is the **point-set** model used by the older RCC writeup: an abstract
+type of points, a linear-algebra embedding into `ℙ k V`, and a set-theoretic
+`G`-action.  It does **not** carry a Mathlib `AlgebraicGeometry.Scheme`
+structure.  Morphisms are total functions induced by injective linear maps,
+not `Scheme.RationalMap`.
+
+The scheme-theoretic object is `SchemeGeometry.ProjectiveGVariety` in
+`ProjectiveGVariety.lean`: a closed subscheme of `Proj` with a `G`-action
+over `Spec k`.
 -/
 
 structure SmoothProjectiveGVariety (k : Type u) [Field k] (G : Type u) [Group G] where

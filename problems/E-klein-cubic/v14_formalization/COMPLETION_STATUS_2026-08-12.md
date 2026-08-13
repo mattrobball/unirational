@@ -185,3 +185,8 @@ Exact remaining blocker, if any:
 - `noEquivariantRationalMap_from_ambient` compiles; axioms propext, Classical.choice, Quot.sound.
 - Umbrella and TrustGuard import/guard it.
 - lakefile.toml requires BConic from github.com/mattrobball/unirational (not a local path).
+
+### 2026-08-12 — ProjectiveGVariety is a Mathlib scheme
+- Added `SchemeGeometry.ProjectiveGVariety`: closed subscheme of `Proj` with a `G`-action over `Spec k`.
+- `SmoothProjectiveGVariety` is documented as the linear-algebra point model (not a Scheme).
+- Headline restated as `noEquivariantRationalMap_projectiveGVariety`.

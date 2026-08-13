@@ -44,6 +44,7 @@ import V14Formalization.BlockSourceFieldMap
 import V14Formalization.BlockNormalSigma
 import V14Formalization.FaithfulHeadlineReduction
 import V14Formalization.FaithfulHeadline
+import V14Formalization.ProjectiveGVariety
 import V14Formalization.V14FixedRationalConstancy
 import V14Formalization.V14FixedFieldPointDescent
 import V14Formalization.D12SigmaPlusDescent
