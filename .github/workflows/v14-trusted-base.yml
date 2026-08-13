@@ -1,0 +1,176 @@
+name: Update V14 Trusted Formalization Base
+
+# Keeps the V14 comparator target's trusted base in sync with the source.
+#
+# Comparator establishes that the solution proves the challenge's statements
+# on permitted axioms under kernel replay. It cannot establish that those
+# statements MEAN what we intend -- that rests on the definitions the
+# challenge's imports bring in. This artifact is those definitions, inlined
+# into one file with proofs replaced by `sorry`, so the meaning can be read
+# rather than trusted.
+#
+# Modelled on mattrobball/BridgelandStability's update-trusted-base.yml,
+# with three differences forced by this repo:
+#
+#   1. The Lean project is a subdirectory of a monorepo, so every Lean step
+#      runs in PROJECT_DIR and the cache path is scoped to it.
+#   2. It uses tfb_boundary rather than tfb_skeleton. tfb_skeleton takes one
+#      root prefix; the V14 statement's closure spans V14Formalization AND
+#      BConicBundleMultisections, and a single-prefix run would silently
+#      import the latter as if it were external, understating the boundary.
+#   3. The tooling is checked out and built separately rather than added to
+#      the project's lakefile. Adding a generator to the dependency graph of
+#      the very project Comparator verifies would enlarge that project's
+#      trusted surface to prove a point about its trusted surface.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'problems/E-klein-cubic/v14_formalization/**/*.lean'
+      - 'problems/E-klein-cubic/v14_formalization/lakefile.toml'
+      - 'problems/E-klein-cubic/v14_formalization/lean-toolchain'
+      - 'problems/E-klein-cubic/v14_formalization/lake-manifest.json'
+      - '.github/workflows/v14-trusted-base.yml'
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  PROJECT_DIR: problems/E-klein-cubic/v14_formalization
+  # Lives in V14Solution, which V14Formalization does not import, so --env
+  # has to name it explicitly.
+  TFB_TARGET: V14Formalization.Comparator.noEquivariantRationalMap_from_ambient
+  TFB_ENV_MODULE: V14Solution
+  TFB_OUTPUT: problems/E-klein-cubic/v14_formalization/artifacts/trusted_base.lean
+  # mattrobball/lean-informal, branch bump/lean-v4.32.1. Pinned: the emitter
+  # must be built on the same toolchain as the project whose environment it
+  # loads, because oleans are version-specific.
+  TFB_TOOL_REV: 3f01d39b8befc8a5aeff45a0da1149c773482566
+
+jobs:
+  regenerate:
+    name: Regenerate trusted_base.lean
+    runs-on: ubuntu-latest
+    # The first run has no olean cache and builds the project outright, which
+    # measured ~12 CPU-hours on faster hardware. Later runs restore the cache
+    # and only rebuild what changed.
+    timeout-minutes: 350
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install elan
+        run: |
+          curl -sSf https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh \
+            | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> $GITHUB_PATH
+
+      - name: Restore olean cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.PROJECT_DIR }}/.lake/build
+          key: oleans-v14-${{ hashFiles('problems/E-klein-cubic/v14_formalization/lean-toolchain') }}-${{ hashFiles('problems/E-klein-cubic/v14_formalization/lake-manifest.json') }}-${{ hashFiles('problems/E-klein-cubic/v14_formalization/**/*.lean') }}
+          restore-keys: |
+            oleans-v14-${{ hashFiles('problems/E-klein-cubic/v14_formalization/lean-toolchain') }}-${{ hashFiles('problems/E-klein-cubic/v14_formalization/lake-manifest.json') }}-
+
+      - name: Get Mathlib cache
+        working-directory: ${{ env.PROJECT_DIR }}
+        run: lake exe cache get
+
+      - name: Build the solution module
+        working-directory: ${{ env.PROJECT_DIR }}
+        run: lake build ${{ env.TFB_ENV_MODULE }}
+
+      - name: Check out the TFB emitter
+        uses: actions/checkout@v4
+        with:
+          repository: mattrobball/lean-informal
+          ref: ${{ env.TFB_TOOL_REV }}
+          path: .tfb-tool
+          persist-credentials: false
+
+      - name: Cache the emitter build
+        uses: actions/cache@v4
+        with:
+          path: .tfb-tool/tfb/.lake/build
+          key: tfb-tool-${{ env.TFB_TOOL_REV }}
+
+      # The tfb package depends on Lean core alone -- roughly 20 build jobs,
+      # no verso -- so this is cheap even on a cache miss.
+      - name: Build tfb_boundary
+        working-directory: .tfb-tool/tfb
+        run: lake build tfb_boundary
+
+      # `lake env` supplies the project's LEAN_PATH so the emitter can load
+      # its compiled environment, without the project depending on the
+      # emitter.
+      - name: Regenerate the trusted base
+        working-directory: ${{ env.PROJECT_DIR }}
+        run: |
+          mkdir -p artifacts
+          lake env "$GITHUB_WORKSPACE/.tfb-tool/tfb/.lake/build/bin/tfb_boundary" \
+            --root V14Formalization \
+            --root BConicBundleMultisections \
+            --env ${{ env.TFB_ENV_MODULE }} \
+            ${{ env.TFB_TARGET }} \
+            artifacts/trusted_base.lean
+
+      - name: Summarise
+        run: |
+          {
+            echo "### Trusted base"
+            echo ""
+            echo "\`$TFB_OUTPUT\`"
+            echo ""
+            echo "- $(wc -l < "$TFB_OUTPUT") lines"
+            echo "- $(grep -c '^import ' "$TFB_OUTPUT" || true) imports (outside the boundary)"
+            echo "- $(grep -c 'sorry' "$TFB_OUTPUT" || true) proofs elided"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Detect changes
+        id: diff
+        run: |
+          if git diff --quiet -- "$TFB_OUTPUT"; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "$TFB_OUTPUT is up to date"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            git diff --stat -- "$TFB_OUTPUT"
+          fi
+
+      - name: Open auto-PR with the regenerated artifact
+        if: steps.diff.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v6
+        with:
+          commit-message: "chore: regenerate V14 trusted_base.lean"
+          title: "chore: regenerate V14 trusted_base.lean"
+          body: |
+            Automated regeneration of `${{ env.TFB_OUTPUT }}` (trigger:
+            `${{ github.event_name }}`).
+
+            Generated by:
+
+            ```bash
+            cd ${{ env.PROJECT_DIR }}
+            lake env tfb_boundary \
+              --root V14Formalization \
+              --root BConicBundleMultisections \
+              --env ${{ env.TFB_ENV_MODULE }} \
+              ${{ env.TFB_TARGET }} \
+              artifacts/trusted_base.lean
+            ```
+
+            This file is the non-Mathlib surface the V14 comparator statements
+            rest on. Comparator checks the proof; this is for reading the
+            meaning.
+          branch: chore/regenerate-v14-trusted-base
+          base: main
+          delete-branch: true
+          add-paths: ${{ env.TFB_OUTPUT }}
