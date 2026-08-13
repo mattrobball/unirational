@@ -1,0 +1,10 @@
+{
+  "challenge_module": "V14Challenge",
+  "solution_module": "V14Solution",
+  "theorem_names": [
+    "V14Formalization.Comparator.noEquivariantRationalMap_from_ambient",
+    "V14Formalization.Comparator.noEquivariantRationalMap_projectiveGVariety"
+  ],
+  "permitted_axioms": ["propext", "Quot.sound", "Classical.choice"],
+  "enable_nanoda": true
+}
