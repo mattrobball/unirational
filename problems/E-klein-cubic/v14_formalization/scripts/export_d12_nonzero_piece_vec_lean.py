@@ -10,8 +10,9 @@ from fractions import Fraction
 from pathlib import Path
 
 from export_d12_piece_vec_lean import (
-    DEFAULT_JSON, add_vectors, as_fractions, q_fraction, reduced_mul,
-    scalar_vec_def, vec_fractions, write_if_changed,
+    DEFAULT_JSON, add_vectors, as_fractions, emit_htarget, emit_mul_sum,
+    emit_scale_thm, emit_vecz_match, lcm_denoms, q_fraction, reduced_mul,
+    scale_ints, scalar_vec_def, vec_fractions, write_if_changed,
 )
 
 
@@ -173,54 +174,95 @@ def emit_entry(payload: dict, sha: str, piece: str, row: int, col: int) -> str:
     p = payload["pieces"][piece]
     d = p["dim"]
     ns = f"D12Piece{piece}SplitEntry{row}_{col}"
-    lines = [
-        f"/- {piece} split identity entry ({row},{col}). Auto-generated. -/",
-        f"import V14Formalization.D12Piece{piece}Data", "", "noncomputable section",
-        "open Matrix", f"namespace V14Formalization.{ns}",
-        f"open D12CyclotomicVec D12Piece{piece}Data", f'def payloadSha256 : String := "{sha}"', "",
-    ]
-    xa_targets, xa_values = [], []
-    for k in range(20):
-        target, value = emit_product(
-            lines, f"xaProduct{k}", f"XCell{row}_{k}", f"ACell{k}_{col}",
-            as_fractions(p["X10x20"][row][k]), as_fractions(p["A20x10"][k][col]))
-        xa_targets.append(target); xa_values.append(value)
-        lines += [
-            f"theorem XAMatrixProduct{k} :",
-            f"    mul (XVec ({row} : Fin 10) ({k} : Fin 20))",
-            f"      (AVec ({k} : Fin 20) ({col} : Fin 10)) = {target} := by",
-            f"  change xaProduct{k} = _", f"  exact xaProduct{k}_eq", "",
-        ]
-    lines += ["def XAMatrixTerm (k : Fin 20) : Vec :=",
-              f"  mul (XVec ({row} : Fin 10) k) (AVec k ({col} : Fin 10))", ""]
-    xa_total = emit_sum(lines, "XA", 20, xa_targets, xa_values)
-
-    ky_targets, ky_values = [], []
-    for k in range(d):
-        target, value = emit_product(
-            lines, f"kyProduct{k}", f"KCell{row}_{k}", f"YCell{k}_{col}",
-            as_fractions(p["K10xd"][row][k]), as_fractions(p["Ydx10"][k][col]))
-        ky_targets.append(target); ky_values.append(value)
-        lines += [
-            f"theorem KYMatrixProduct{k} :",
-            f"    mul (KVec ({row} : Fin 10) ({k} : Fin {d}))",
-            f"      (YVec ({k} : Fin {d}) ({col} : Fin 10)) = {target} := by",
-            f"  change kyProduct{k} = _", f"  exact kyProduct{k}_eq", "",
-        ]
-    lines += [f"def KYMatrixTerm (k : Fin {d}) : Vec :=",
-              f"  mul (KVec ({row} : Fin 10) k) (YVec k ({col} : Fin 10))", ""]
-    ky_total = emit_sum(lines, "KY", d, ky_targets, ky_values)
+    xs = [as_fractions(p["X10x20"][row][k]) for k in range(20)]
+    a_cols = [as_fractions(p["A20x10"][k][col]) for k in range(20)]
+    ks = [as_fractions(p["K10xd"][row][k]) for k in range(d)]
+    ys = [as_fractions(p["Ydx10"][k][col]) for k in range(d)]
+    xa_total = add_vectors([reduced_mul(xs[k], a_cols[k]) for k in range(20)])
+    ky_total = add_vectors([reduced_mul(ks[k], ys[k]) for k in range(d)]) \
+        if d else [Fraction() for _ in range(10)]
     total = add_vectors([xa_total, ky_total])
     assert total == [Fraction(int(row == col))] + [Fraction()] * 9
+    scale = lcm_denoms(xs + a_cols + ks + ys)
+    x_scaled = [scale_ints(v, scale) for v in xs]
+    a_scaled = [scale_ints(v, scale) for v in a_cols]
+    k_scaled = [scale_ints(v, scale) for v in ks]
+    y_scaled = [scale_ints(v, scale) for v in ys]
+    expected_z = "scaleSqE0 scale" if row == col else "zeroZ"
+    lines = [
+        f"/- {piece} split identity entry ({row},{col}). Auto-generated. -/",
+        f"import V14Formalization.D12Piece{piece}Data",
+        "import V14Formalization.D12CyclotomicVecZ",
+        "",
+        "noncomputable section",
+        "open Matrix",
+        f"namespace V14Formalization.{ns}",
+        f"open D12CyclotomicVec D12CyclotomicVecZ D12Piece{piece}Data",
+        f'def payloadSha256 : String := "{sha}"',
+        "",
+        f"def scale : ℤ := {scale}",
+        "",
+    ]
+    lines += emit_vecz_match("XZ", 20, x_scaled)
+    lines += emit_vecz_match("AZ", 20, a_scaled)
+    lines += emit_vecz_match("KZ", d, k_scaled)
+    lines += emit_vecz_match("YZ", d, y_scaled)
+    xa_lines, _xa_ints = emit_mul_sum("xa", "XZ", "AZ", xs, a_cols, scale)
+    ky_lines, _ky_ints = emit_mul_sum("ky", "KZ", "YZ", ks, ys, scale)
+    lines += xa_lines
+    lines += ky_lines
+    lines += [
+        "def xaEntryZ : VecZ := sumFin (fun k => mulZ (XZ k) (AZ k))",
+        "def kyEntryZ : VecZ := sumFin (fun k => mulZ (KZ k) (YZ k))",
+        "def entryZ : VecZ := addZ xaEntryZ kyEntryZ",
+        "",
+        f"theorem entryZ_eq : entryZ = {expected_z} := by",
+        "  unfold entryZ xaEntryZ kyEntryZ",
+        "  rw [xaSum_eq, kySum_eq]",
+        "  decide",
+        "",
+        "theorem scale_ne_zero : scale ≠ 0 := by",
+        "  decide",
+        "",
+    ]
+    lines += emit_scale_thm(
+        "XZ_scale", "XZ",
+        f"(scale : ℚ) • XVec ({row} : Fin 10) k",
+        [f"XCell{row}_{k}" for k in range(20)],
+        [f"XVec, XRow{row}"] * 20, x_scaled, xs)
+    lines += emit_scale_thm(
+        "AZ_scale", "AZ",
+        f"(scale : ℚ) • AVec k ({col} : Fin 10)",
+        [f"ACell{k}_{col}" for k in range(20)],
+        [f"AVec, ARow{k}" for k in range(20)], a_scaled, a_cols)
+    lines += emit_scale_thm(
+        "KZ_scale", "KZ",
+        f"(scale : ℚ) • KVec ({row} : Fin 10) k",
+        [f"KCell{row}_{k}" for k in range(d)],
+        [f"KVec, KRow{k}" for k in range(d)], k_scaled, ks)
+    lines += emit_scale_thm(
+        "YZ_scale", "YZ",
+        f"(scale : ℚ) • YVec k ({col} : Fin 10)",
+        [f"YCell{k}_{col}" for k in range(d)],
+        [f"YVec, YRow{k}" for k in range(d)], y_scaled, ys)
     lines += [
         "theorem entry_eq :",
         "    (matrixMul XVec AVec + matrixMul KVec YVec)",
         f"        ({row} : Fin 10) ({col} : Fin 10) = {vec_fractions(total)} := by",
-        "  change (∑ k : Fin 20, XAMatrixTerm k) +",
-        f"    (∑ k : Fin {d}, KYMatrixTerm k) = _",
-        "  rw [XAMatrixTerm_sum_eq, KYMatrixTerm_sum_eq,",
-        "    XAResult_sum_eq, KYResult_sum_eq]",
-        "  funext n", "  fin_cases n <;> norm_num", "",
+        f"  change (∑ k : Fin 20, mul (XVec ({row} : Fin 10) k)",
+        f"      (AVec k ({col} : Fin 10))) +",
+        f"    (∑ k : Fin {d}, mul (KVec ({row} : Fin 10) k)",
+        f"      (YVec k ({col} : Fin 10))) = _",
+        "  refine add_sum_mul_eq_of_scaled scale scale_ne_zero",
+        f"    (fun k => XVec ({row} : Fin 10) k)",
+        f"    (fun k => AVec k ({col} : Fin 10))",
+        f"    (fun k => KVec ({row} : Fin 10) k)",
+        f"    (fun k => YVec k ({col} : Fin 10))",
+        "    XZ AZ KZ YZ XZ_scale AZ_scale KZ_scale YZ_scale entryZ rfl _ ?_",
+    ]
+    lines += emit_htarget(row == col)
+    lines += [
+        "",
         "theorem entry_eq_matrixOne :",
         "    (matrixMul XVec AVec + matrixMul KVec YVec)",
         f"        ({row} : Fin 10) ({col} : Fin 10) =",
@@ -229,8 +271,13 @@ def emit_entry(payload: dict, sha: str, piece: str, row: int, col: int) -> str:
     ]
     if row != col:
         lines.append(f"  have hne : ({row} : Fin 10) ≠ ({col} : Fin 10) := by decide")
-    lines += ["  funext n", "  fin_cases n <;> simp [matrixOne, constVec, basis, *]", "",
-              f"end V14Formalization.{ns}", ""]
+    lines += [
+        "  funext n",
+        "  fin_cases n <;> simp [matrixOne, *]",
+        "",
+        f"end V14Formalization.{ns}",
+        "",
+    ]
     return "\n".join(lines)
 
 

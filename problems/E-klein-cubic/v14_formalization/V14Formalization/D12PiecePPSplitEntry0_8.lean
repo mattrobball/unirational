@@ -1,1290 +1,1379 @@
 /- PP split identity entry (0,8). Auto-generated. -/
 import V14Formalization.D12PiecePPData
+import V14Formalization.D12CyclotomicVecZ
 
 noncomputable section
 open Matrix
 namespace V14Formalization.D12PiecePPSplitEntry0_8
-open D12CyclotomicVec D12PiecePPData
+open D12CyclotomicVec D12CyclotomicVecZ D12PiecePPData
 def payloadSha256 : String := "76c6196f29afe1a8398af99502447f48ebeed4bcb3805fc5dbec693940bc04b0"
 
-def xaProduct0 : Vec := mul XCell0_0 ACell0_8
+def scale : ℤ := 33
 
-def xaProduct0Value (i : Fin 10) : ℚ :=
-  match i.val with
-  | 0 => (-178 / 363 : ℚ)
-  | 1 => (-40 / 363 : ℚ)
-  | 2 => (-32 / 121 : ℚ)
-  | 3 => (-36 / 121 : ℚ)
-  | 4 => (-124 / 363 : ℚ)
-  | 5 => (-38 / 363 : ℚ)
-  | 6 => (-98 / 121 : ℚ)
-  | 7 => (-20 / 121 : ℚ)
-  | 8 => 0
-  | 9 => (-120 / 121 : ℚ)
-  | _ => 0
-
-theorem xaProduct0_apply_0 :
-    xaProduct0 (0 : Fin 10) = xaProduct0Value (0 : Fin 10) := by
-  norm_num [xaProduct0, xaProduct0Value, XCell0_0, ACell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct0_apply_1 :
-    xaProduct0 (1 : Fin 10) = xaProduct0Value (1 : Fin 10) := by
-  norm_num [xaProduct0, xaProduct0Value, XCell0_0, ACell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct0_apply_2 :
-    xaProduct0 (2 : Fin 10) = xaProduct0Value (2 : Fin 10) := by
-  norm_num [xaProduct0, xaProduct0Value, XCell0_0, ACell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct0_apply_3 :
-    xaProduct0 (3 : Fin 10) = xaProduct0Value (3 : Fin 10) := by
-  norm_num [xaProduct0, xaProduct0Value, XCell0_0, ACell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct0_apply_4 :
-    xaProduct0 (4 : Fin 10) = xaProduct0Value (4 : Fin 10) := by
-  norm_num [xaProduct0, xaProduct0Value, XCell0_0, ACell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct0_apply_5 :
-    xaProduct0 (5 : Fin 10) = xaProduct0Value (5 : Fin 10) := by
-  norm_num [xaProduct0, xaProduct0Value, XCell0_0, ACell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct0_apply_6 :
-    xaProduct0 (6 : Fin 10) = xaProduct0Value (6 : Fin 10) := by
-  norm_num [xaProduct0, xaProduct0Value, XCell0_0, ACell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct0_apply_7 :
-    xaProduct0 (7 : Fin 10) = xaProduct0Value (7 : Fin 10) := by
-  norm_num [xaProduct0, xaProduct0Value, XCell0_0, ACell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct0_apply_8 :
-    xaProduct0 (8 : Fin 10) = xaProduct0Value (8 : Fin 10) := by
-  norm_num [xaProduct0, xaProduct0Value, XCell0_0, ACell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct0_apply_9 :
-    xaProduct0 (9 : Fin 10) = xaProduct0Value (9 : Fin 10) := by
-  norm_num [xaProduct0, xaProduct0Value, XCell0_0, ACell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct0_eq : xaProduct0 = xaProduct0Value := by
-  funext n
-  fin_cases n
-  · exact xaProduct0_apply_0
-  · exact xaProduct0_apply_1
-  · exact xaProduct0_apply_2
-  · exact xaProduct0_apply_3
-  · exact xaProduct0_apply_4
-  · exact xaProduct0_apply_5
-  · exact xaProduct0_apply_6
-  · exact xaProduct0_apply_7
-  · exact xaProduct0_apply_8
-  · exact xaProduct0_apply_9
-
-theorem XAMatrixProduct0 :
-    mul (XVec (0 : Fin 10) (0 : Fin 20))
-      (AVec (0 : Fin 20) (8 : Fin 10)) = xaProduct0Value := by
-  change xaProduct0 = _
-  exact xaProduct0_eq
-
-def xaProduct1 : Vec := mul XCell0_1 ACell1_8
-
-def xaProduct1Value (i : Fin 10) : ℚ :=
-  match i.val with
-  | 0 => (252 / 121 : ℚ)
-  | 1 => (-2 / 121 : ℚ)
-  | 2 => (250 / 363 : ℚ)
-  | 3 => (202 / 121 : ℚ)
-  | 4 => (-18 / 121 : ℚ)
-  | 5 => (476 / 363 : ℚ)
-  | 6 => (376 / 363 : ℚ)
-  | 7 => (4 / 363 : ℚ)
-  | 8 => (192 / 121 : ℚ)
-  | 9 => (250 / 363 : ℚ)
-  | _ => 0
-
-theorem xaProduct1_apply_0 :
-    xaProduct1 (0 : Fin 10) = xaProduct1Value (0 : Fin 10) := by
-  norm_num [xaProduct1, xaProduct1Value, XCell0_1, ACell1_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct1_apply_1 :
-    xaProduct1 (1 : Fin 10) = xaProduct1Value (1 : Fin 10) := by
-  norm_num [xaProduct1, xaProduct1Value, XCell0_1, ACell1_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct1_apply_2 :
-    xaProduct1 (2 : Fin 10) = xaProduct1Value (2 : Fin 10) := by
-  norm_num [xaProduct1, xaProduct1Value, XCell0_1, ACell1_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct1_apply_3 :
-    xaProduct1 (3 : Fin 10) = xaProduct1Value (3 : Fin 10) := by
-  norm_num [xaProduct1, xaProduct1Value, XCell0_1, ACell1_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct1_apply_4 :
-    xaProduct1 (4 : Fin 10) = xaProduct1Value (4 : Fin 10) := by
-  norm_num [xaProduct1, xaProduct1Value, XCell0_1, ACell1_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct1_apply_5 :
-    xaProduct1 (5 : Fin 10) = xaProduct1Value (5 : Fin 10) := by
-  norm_num [xaProduct1, xaProduct1Value, XCell0_1, ACell1_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct1_apply_6 :
-    xaProduct1 (6 : Fin 10) = xaProduct1Value (6 : Fin 10) := by
-  norm_num [xaProduct1, xaProduct1Value, XCell0_1, ACell1_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct1_apply_7 :
-    xaProduct1 (7 : Fin 10) = xaProduct1Value (7 : Fin 10) := by
-  norm_num [xaProduct1, xaProduct1Value, XCell0_1, ACell1_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct1_apply_8 :
-    xaProduct1 (8 : Fin 10) = xaProduct1Value (8 : Fin 10) := by
-  norm_num [xaProduct1, xaProduct1Value, XCell0_1, ACell1_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct1_apply_9 :
-    xaProduct1 (9 : Fin 10) = xaProduct1Value (9 : Fin 10) := by
-  norm_num [xaProduct1, xaProduct1Value, XCell0_1, ACell1_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct1_eq : xaProduct1 = xaProduct1Value := by
-  funext n
-  fin_cases n
-  · exact xaProduct1_apply_0
-  · exact xaProduct1_apply_1
-  · exact xaProduct1_apply_2
-  · exact xaProduct1_apply_3
-  · exact xaProduct1_apply_4
-  · exact xaProduct1_apply_5
-  · exact xaProduct1_apply_6
-  · exact xaProduct1_apply_7
-  · exact xaProduct1_apply_8
-  · exact xaProduct1_apply_9
-
-theorem XAMatrixProduct1 :
-    mul (XVec (0 : Fin 10) (1 : Fin 20))
-      (AVec (1 : Fin 20) (8 : Fin 10)) = xaProduct1Value := by
-  change xaProduct1 = _
-  exact xaProduct1_eq
-
-def xaProduct2 : Vec := mul XCell0_2 ACell2_8
-
-def xaProduct2Value (i : Fin 10) : ℚ :=
-  match i.val with
-  | 0 => (-6 / 121 : ℚ)
-  | 1 => (136 / 363 : ℚ)
-  | 2 => (-18 / 121 : ℚ)
-  | 3 => (-70 / 363 : ℚ)
-  | 4 => (26 / 121 : ℚ)
-  | 5 => (-16 / 363 : ℚ)
-  | 6 => (56 / 363 : ℚ)
-  | 7 => (36 / 121 : ℚ)
-  | 8 => (-68 / 363 : ℚ)
-  | 9 => (-20 / 363 : ℚ)
-  | _ => 0
-
-theorem xaProduct2_apply_0 :
-    xaProduct2 (0 : Fin 10) = xaProduct2Value (0 : Fin 10) := by
-  norm_num [xaProduct2, xaProduct2Value, XCell0_2, ACell2_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct2_apply_1 :
-    xaProduct2 (1 : Fin 10) = xaProduct2Value (1 : Fin 10) := by
-  norm_num [xaProduct2, xaProduct2Value, XCell0_2, ACell2_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct2_apply_2 :
-    xaProduct2 (2 : Fin 10) = xaProduct2Value (2 : Fin 10) := by
-  norm_num [xaProduct2, xaProduct2Value, XCell0_2, ACell2_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct2_apply_3 :
-    xaProduct2 (3 : Fin 10) = xaProduct2Value (3 : Fin 10) := by
-  norm_num [xaProduct2, xaProduct2Value, XCell0_2, ACell2_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct2_apply_4 :
-    xaProduct2 (4 : Fin 10) = xaProduct2Value (4 : Fin 10) := by
-  norm_num [xaProduct2, xaProduct2Value, XCell0_2, ACell2_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct2_apply_5 :
-    xaProduct2 (5 : Fin 10) = xaProduct2Value (5 : Fin 10) := by
-  norm_num [xaProduct2, xaProduct2Value, XCell0_2, ACell2_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct2_apply_6 :
-    xaProduct2 (6 : Fin 10) = xaProduct2Value (6 : Fin 10) := by
-  norm_num [xaProduct2, xaProduct2Value, XCell0_2, ACell2_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct2_apply_7 :
-    xaProduct2 (7 : Fin 10) = xaProduct2Value (7 : Fin 10) := by
-  norm_num [xaProduct2, xaProduct2Value, XCell0_2, ACell2_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct2_apply_8 :
-    xaProduct2 (8 : Fin 10) = xaProduct2Value (8 : Fin 10) := by
-  norm_num [xaProduct2, xaProduct2Value, XCell0_2, ACell2_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct2_apply_9 :
-    xaProduct2 (9 : Fin 10) = xaProduct2Value (9 : Fin 10) := by
-  norm_num [xaProduct2, xaProduct2Value, XCell0_2, ACell2_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct2_eq : xaProduct2 = xaProduct2Value := by
-  funext n
-  fin_cases n
-  · exact xaProduct2_apply_0
-  · exact xaProduct2_apply_1
-  · exact xaProduct2_apply_2
-  · exact xaProduct2_apply_3
-  · exact xaProduct2_apply_4
-  · exact xaProduct2_apply_5
-  · exact xaProduct2_apply_6
-  · exact xaProduct2_apply_7
-  · exact xaProduct2_apply_8
-  · exact xaProduct2_apply_9
-
-theorem XAMatrixProduct2 :
-    mul (XVec (0 : Fin 10) (2 : Fin 20))
-      (AVec (2 : Fin 20) (8 : Fin 10)) = xaProduct2Value := by
-  change xaProduct2 = _
-  exact xaProduct2_eq
-
-def xaProduct3 : Vec := mul XCell0_3 ACell3_8
-
-def xaProduct3Value (i : Fin 10) : ℚ :=
-  match i.val with
-  | 0 => (-668 / 363 : ℚ)
-  | 1 => (-126 / 121 : ℚ)
-  | 2 => (-56 / 121 : ℚ)
-  | 3 => (-724 / 363 : ℚ)
-  | 4 => (-60 / 121 : ℚ)
-  | 5 => (-344 / 363 : ℚ)
-  | 6 => (-736 / 363 : ℚ)
-  | 7 => (4 / 363 : ℚ)
-  | 8 => (-168 / 121 : ℚ)
-  | 9 => (-212 / 121 : ℚ)
-  | _ => 0
-
-theorem xaProduct3_apply_0 :
-    xaProduct3 (0 : Fin 10) = xaProduct3Value (0 : Fin 10) := by
-  norm_num [xaProduct3, xaProduct3Value, XCell0_3, ACell3_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct3_apply_1 :
-    xaProduct3 (1 : Fin 10) = xaProduct3Value (1 : Fin 10) := by
-  norm_num [xaProduct3, xaProduct3Value, XCell0_3, ACell3_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct3_apply_2 :
-    xaProduct3 (2 : Fin 10) = xaProduct3Value (2 : Fin 10) := by
-  norm_num [xaProduct3, xaProduct3Value, XCell0_3, ACell3_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct3_apply_3 :
-    xaProduct3 (3 : Fin 10) = xaProduct3Value (3 : Fin 10) := by
-  norm_num [xaProduct3, xaProduct3Value, XCell0_3, ACell3_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct3_apply_4 :
-    xaProduct3 (4 : Fin 10) = xaProduct3Value (4 : Fin 10) := by
-  norm_num [xaProduct3, xaProduct3Value, XCell0_3, ACell3_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct3_apply_5 :
-    xaProduct3 (5 : Fin 10) = xaProduct3Value (5 : Fin 10) := by
-  norm_num [xaProduct3, xaProduct3Value, XCell0_3, ACell3_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct3_apply_6 :
-    xaProduct3 (6 : Fin 10) = xaProduct3Value (6 : Fin 10) := by
-  norm_num [xaProduct3, xaProduct3Value, XCell0_3, ACell3_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct3_apply_7 :
-    xaProduct3 (7 : Fin 10) = xaProduct3Value (7 : Fin 10) := by
-  norm_num [xaProduct3, xaProduct3Value, XCell0_3, ACell3_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct3_apply_8 :
-    xaProduct3 (8 : Fin 10) = xaProduct3Value (8 : Fin 10) := by
-  norm_num [xaProduct3, xaProduct3Value, XCell0_3, ACell3_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct3_apply_9 :
-    xaProduct3 (9 : Fin 10) = xaProduct3Value (9 : Fin 10) := by
-  norm_num [xaProduct3, xaProduct3Value, XCell0_3, ACell3_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct3_eq : xaProduct3 = xaProduct3Value := by
-  funext n
-  fin_cases n
-  · exact xaProduct3_apply_0
-  · exact xaProduct3_apply_1
-  · exact xaProduct3_apply_2
-  · exact xaProduct3_apply_3
-  · exact xaProduct3_apply_4
-  · exact xaProduct3_apply_5
-  · exact xaProduct3_apply_6
-  · exact xaProduct3_apply_7
-  · exact xaProduct3_apply_8
-  · exact xaProduct3_apply_9
-
-theorem XAMatrixProduct3 :
-    mul (XVec (0 : Fin 10) (3 : Fin 20))
-      (AVec (3 : Fin 20) (8 : Fin 10)) = xaProduct3Value := by
-  change xaProduct3 = _
-  exact xaProduct3_eq
-
-def xaProduct4 : Vec := mul XCell0_4 ACell4_8
-
-def xaProduct4Value (i : Fin 10) : ℚ :=
-  match i.val with
-  | 0 => (4 / 121 : ℚ)
-  | 1 => (-24 / 121 : ℚ)
-  | 2 => (-86 / 363 : ℚ)
-  | 3 => (-40 / 363 : ℚ)
-  | 4 => (-32 / 363 : ℚ)
-  | 5 => (20 / 121 : ℚ)
-  | 6 => (-20 / 121 : ℚ)
-  | 7 => (-94 / 363 : ℚ)
-  | 8 => (14 / 363 : ℚ)
-  | 9 => (-32 / 363 : ℚ)
-  | _ => 0
-
-theorem xaProduct4_apply_0 :
-    xaProduct4 (0 : Fin 10) = xaProduct4Value (0 : Fin 10) := by
-  norm_num [xaProduct4, xaProduct4Value, XCell0_4, ACell4_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct4_apply_1 :
-    xaProduct4 (1 : Fin 10) = xaProduct4Value (1 : Fin 10) := by
-  norm_num [xaProduct4, xaProduct4Value, XCell0_4, ACell4_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct4_apply_2 :
-    xaProduct4 (2 : Fin 10) = xaProduct4Value (2 : Fin 10) := by
-  norm_num [xaProduct4, xaProduct4Value, XCell0_4, ACell4_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct4_apply_3 :
-    xaProduct4 (3 : Fin 10) = xaProduct4Value (3 : Fin 10) := by
-  norm_num [xaProduct4, xaProduct4Value, XCell0_4, ACell4_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct4_apply_4 :
-    xaProduct4 (4 : Fin 10) = xaProduct4Value (4 : Fin 10) := by
-  norm_num [xaProduct4, xaProduct4Value, XCell0_4, ACell4_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct4_apply_5 :
-    xaProduct4 (5 : Fin 10) = xaProduct4Value (5 : Fin 10) := by
-  norm_num [xaProduct4, xaProduct4Value, XCell0_4, ACell4_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct4_apply_6 :
-    xaProduct4 (6 : Fin 10) = xaProduct4Value (6 : Fin 10) := by
-  norm_num [xaProduct4, xaProduct4Value, XCell0_4, ACell4_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct4_apply_7 :
-    xaProduct4 (7 : Fin 10) = xaProduct4Value (7 : Fin 10) := by
-  norm_num [xaProduct4, xaProduct4Value, XCell0_4, ACell4_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct4_apply_8 :
-    xaProduct4 (8 : Fin 10) = xaProduct4Value (8 : Fin 10) := by
-  norm_num [xaProduct4, xaProduct4Value, XCell0_4, ACell4_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct4_apply_9 :
-    xaProduct4 (9 : Fin 10) = xaProduct4Value (9 : Fin 10) := by
-  norm_num [xaProduct4, xaProduct4Value, XCell0_4, ACell4_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct4_eq : xaProduct4 = xaProduct4Value := by
-  funext n
-  fin_cases n
-  · exact xaProduct4_apply_0
-  · exact xaProduct4_apply_1
-  · exact xaProduct4_apply_2
-  · exact xaProduct4_apply_3
-  · exact xaProduct4_apply_4
-  · exact xaProduct4_apply_5
-  · exact xaProduct4_apply_6
-  · exact xaProduct4_apply_7
-  · exact xaProduct4_apply_8
-  · exact xaProduct4_apply_9
-
-theorem XAMatrixProduct4 :
-    mul (XVec (0 : Fin 10) (4 : Fin 20))
-      (AVec (4 : Fin 20) (8 : Fin 10)) = xaProduct4Value := by
-  change xaProduct4 = _
-  exact xaProduct4_eq
-
-def xaProduct5 : Vec := mul XCell0_5 ACell5_8
-
-def xaProduct5Value (i : Fin 10) : ℚ :=
-  match i.val with
-  | 0 => (-784 / 363 : ℚ)
-  | 1 => (-194 / 363 : ℚ)
-  | 2 => (-60 / 121 : ℚ)
-  | 3 => (-274 / 121 : ℚ)
-  | 4 => (2 / 11 : ℚ)
-  | 5 => (-544 / 363 : ℚ)
-  | 6 => (-554 / 363 : ℚ)
-  | 7 => (-2 / 33 : ℚ)
-  | 8 => (-204 / 121 : ℚ)
-  | 9 => (-156 / 121 : ℚ)
-  | _ => 0
-
-theorem xaProduct5_apply_0 :
-    xaProduct5 (0 : Fin 10) = xaProduct5Value (0 : Fin 10) := by
-  norm_num [xaProduct5, xaProduct5Value, XCell0_5, ACell5_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct5_apply_1 :
-    xaProduct5 (1 : Fin 10) = xaProduct5Value (1 : Fin 10) := by
-  norm_num [xaProduct5, xaProduct5Value, XCell0_5, ACell5_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct5_apply_2 :
-    xaProduct5 (2 : Fin 10) = xaProduct5Value (2 : Fin 10) := by
-  norm_num [xaProduct5, xaProduct5Value, XCell0_5, ACell5_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct5_apply_3 :
-    xaProduct5 (3 : Fin 10) = xaProduct5Value (3 : Fin 10) := by
-  norm_num [xaProduct5, xaProduct5Value, XCell0_5, ACell5_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct5_apply_4 :
-    xaProduct5 (4 : Fin 10) = xaProduct5Value (4 : Fin 10) := by
-  norm_num [xaProduct5, xaProduct5Value, XCell0_5, ACell5_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct5_apply_5 :
-    xaProduct5 (5 : Fin 10) = xaProduct5Value (5 : Fin 10) := by
-  norm_num [xaProduct5, xaProduct5Value, XCell0_5, ACell5_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct5_apply_6 :
-    xaProduct5 (6 : Fin 10) = xaProduct5Value (6 : Fin 10) := by
-  norm_num [xaProduct5, xaProduct5Value, XCell0_5, ACell5_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct5_apply_7 :
-    xaProduct5 (7 : Fin 10) = xaProduct5Value (7 : Fin 10) := by
-  norm_num [xaProduct5, xaProduct5Value, XCell0_5, ACell5_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct5_apply_8 :
-    xaProduct5 (8 : Fin 10) = xaProduct5Value (8 : Fin 10) := by
-  norm_num [xaProduct5, xaProduct5Value, XCell0_5, ACell5_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct5_apply_9 :
-    xaProduct5 (9 : Fin 10) = xaProduct5Value (9 : Fin 10) := by
-  norm_num [xaProduct5, xaProduct5Value, XCell0_5, ACell5_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct5_eq : xaProduct5 = xaProduct5Value := by
-  funext n
-  fin_cases n
-  · exact xaProduct5_apply_0
-  · exact xaProduct5_apply_1
-  · exact xaProduct5_apply_2
-  · exact xaProduct5_apply_3
-  · exact xaProduct5_apply_4
-  · exact xaProduct5_apply_5
-  · exact xaProduct5_apply_6
-  · exact xaProduct5_apply_7
-  · exact xaProduct5_apply_8
-  · exact xaProduct5_apply_9
-
-theorem XAMatrixProduct5 :
-    mul (XVec (0 : Fin 10) (5 : Fin 20))
-      (AVec (5 : Fin 20) (8 : Fin 10)) = xaProduct5Value := by
-  change xaProduct5 = _
-  exact xaProduct5_eq
-
-def xaProduct6 : Vec := mul XCell0_6 ACell6_8
-
-def xaProduct6Value (i : Fin 10) : ℚ :=
-  match i.val with
-  | 0 => (740 / 363 : ℚ)
-  | 1 => (824 / 363 : ℚ)
-  | 2 => (-64 / 363 : ℚ)
-  | 3 => (1082 / 363 : ℚ)
-  | 4 => (514 / 363 : ℚ)
-  | 5 => (94 / 363 : ℚ)
-  | 6 => (1244 / 363 : ℚ)
-  | 7 => (238 / 363 : ℚ)
-  | 8 => (130 / 121 : ℚ)
-  | 9 => (1120 / 363 : ℚ)
-  | _ => 0
-
-theorem xaProduct6_apply_0 :
-    xaProduct6 (0 : Fin 10) = xaProduct6Value (0 : Fin 10) := by
-  norm_num [xaProduct6, xaProduct6Value, XCell0_6, ACell6_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct6_apply_1 :
-    xaProduct6 (1 : Fin 10) = xaProduct6Value (1 : Fin 10) := by
-  norm_num [xaProduct6, xaProduct6Value, XCell0_6, ACell6_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct6_apply_2 :
-    xaProduct6 (2 : Fin 10) = xaProduct6Value (2 : Fin 10) := by
-  norm_num [xaProduct6, xaProduct6Value, XCell0_6, ACell6_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct6_apply_3 :
-    xaProduct6 (3 : Fin 10) = xaProduct6Value (3 : Fin 10) := by
-  norm_num [xaProduct6, xaProduct6Value, XCell0_6, ACell6_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct6_apply_4 :
-    xaProduct6 (4 : Fin 10) = xaProduct6Value (4 : Fin 10) := by
-  norm_num [xaProduct6, xaProduct6Value, XCell0_6, ACell6_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct6_apply_5 :
-    xaProduct6 (5 : Fin 10) = xaProduct6Value (5 : Fin 10) := by
-  norm_num [xaProduct6, xaProduct6Value, XCell0_6, ACell6_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct6_apply_6 :
-    xaProduct6 (6 : Fin 10) = xaProduct6Value (6 : Fin 10) := by
-  norm_num [xaProduct6, xaProduct6Value, XCell0_6, ACell6_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct6_apply_7 :
-    xaProduct6 (7 : Fin 10) = xaProduct6Value (7 : Fin 10) := by
-  norm_num [xaProduct6, xaProduct6Value, XCell0_6, ACell6_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct6_apply_8 :
-    xaProduct6 (8 : Fin 10) = xaProduct6Value (8 : Fin 10) := by
-  norm_num [xaProduct6, xaProduct6Value, XCell0_6, ACell6_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct6_apply_9 :
-    xaProduct6 (9 : Fin 10) = xaProduct6Value (9 : Fin 10) := by
-  norm_num [xaProduct6, xaProduct6Value, XCell0_6, ACell6_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct6_eq : xaProduct6 = xaProduct6Value := by
-  funext n
-  fin_cases n
-  · exact xaProduct6_apply_0
-  · exact xaProduct6_apply_1
-  · exact xaProduct6_apply_2
-  · exact xaProduct6_apply_3
-  · exact xaProduct6_apply_4
-  · exact xaProduct6_apply_5
-  · exact xaProduct6_apply_6
-  · exact xaProduct6_apply_7
-  · exact xaProduct6_apply_8
-  · exact xaProduct6_apply_9
-
-theorem XAMatrixProduct6 :
-    mul (XVec (0 : Fin 10) (6 : Fin 20))
-      (AVec (6 : Fin 20) (8 : Fin 10)) = xaProduct6Value := by
-  change xaProduct6 = _
-  exact xaProduct6_eq
-
-def xaProduct7 : Vec := mul XCell0_7 ACell7_8
-
-def xaProduct7Value (i : Fin 10) : ℚ :=
-  match i.val with
-  | 0 => (-34 / 121 : ℚ)
-  | 1 => (-90 / 121 : ℚ)
-  | 2 => (-86 / 363 : ℚ)
-  | 3 => (-166 / 363 : ℚ)
-  | 4 => (-268 / 363 : ℚ)
-  | 5 => (70 / 363 : ℚ)
-  | 6 => (-274 / 363 : ℚ)
-  | 7 => (-178 / 363 : ℚ)
-  | 8 => (-38 / 363 : ℚ)
-  | 9 => (-338 / 363 : ℚ)
-  | _ => 0
-
-theorem xaProduct7_apply_0 :
-    xaProduct7 (0 : Fin 10) = xaProduct7Value (0 : Fin 10) := by
-  norm_num [xaProduct7, xaProduct7Value, XCell0_7, ACell7_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct7_apply_1 :
-    xaProduct7 (1 : Fin 10) = xaProduct7Value (1 : Fin 10) := by
-  norm_num [xaProduct7, xaProduct7Value, XCell0_7, ACell7_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct7_apply_2 :
-    xaProduct7 (2 : Fin 10) = xaProduct7Value (2 : Fin 10) := by
-  norm_num [xaProduct7, xaProduct7Value, XCell0_7, ACell7_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct7_apply_3 :
-    xaProduct7 (3 : Fin 10) = xaProduct7Value (3 : Fin 10) := by
-  norm_num [xaProduct7, xaProduct7Value, XCell0_7, ACell7_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct7_apply_4 :
-    xaProduct7 (4 : Fin 10) = xaProduct7Value (4 : Fin 10) := by
-  norm_num [xaProduct7, xaProduct7Value, XCell0_7, ACell7_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct7_apply_5 :
-    xaProduct7 (5 : Fin 10) = xaProduct7Value (5 : Fin 10) := by
-  norm_num [xaProduct7, xaProduct7Value, XCell0_7, ACell7_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct7_apply_6 :
-    xaProduct7 (6 : Fin 10) = xaProduct7Value (6 : Fin 10) := by
-  norm_num [xaProduct7, xaProduct7Value, XCell0_7, ACell7_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct7_apply_7 :
-    xaProduct7 (7 : Fin 10) = xaProduct7Value (7 : Fin 10) := by
-  norm_num [xaProduct7, xaProduct7Value, XCell0_7, ACell7_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct7_apply_8 :
-    xaProduct7 (8 : Fin 10) = xaProduct7Value (8 : Fin 10) := by
-  norm_num [xaProduct7, xaProduct7Value, XCell0_7, ACell7_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct7_apply_9 :
-    xaProduct7 (9 : Fin 10) = xaProduct7Value (9 : Fin 10) := by
-  norm_num [xaProduct7, xaProduct7Value, XCell0_7, ACell7_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem xaProduct7_eq : xaProduct7 = xaProduct7Value := by
-  funext n
-  fin_cases n
-  · exact xaProduct7_apply_0
-  · exact xaProduct7_apply_1
-  · exact xaProduct7_apply_2
-  · exact xaProduct7_apply_3
-  · exact xaProduct7_apply_4
-  · exact xaProduct7_apply_5
-  · exact xaProduct7_apply_6
-  · exact xaProduct7_apply_7
-  · exact xaProduct7_apply_8
-  · exact xaProduct7_apply_9
-
-theorem XAMatrixProduct7 :
-    mul (XVec (0 : Fin 10) (7 : Fin 20))
-      (AVec (7 : Fin 20) (8 : Fin 10)) = xaProduct7Value := by
-  change xaProduct7 = _
-  exact xaProduct7_eq
-
-def xaProduct8 : Vec := mul XCell0_8 ACell8_8
-
-theorem xaProduct8_left_eq_zero : XCell0_8 = 0 := by
-  funext n
-  fin_cases n <;> rfl
-
-theorem xaProduct8_eq : xaProduct8 = 0 := by
-  rw [xaProduct8, xaProduct8_left_eq_zero, mul_zero_left]
-
-theorem XAMatrixProduct8 :
-    mul (XVec (0 : Fin 10) (8 : Fin 20))
-      (AVec (8 : Fin 20) (8 : Fin 10)) = 0 := by
-  change xaProduct8 = _
-  exact xaProduct8_eq
-
-def xaProduct9 : Vec := mul XCell0_9 ACell9_8
-
-theorem xaProduct9_left_eq_zero : XCell0_9 = 0 := by
-  funext n
-  fin_cases n <;> rfl
-
-theorem xaProduct9_eq : xaProduct9 = 0 := by
-  rw [xaProduct9, xaProduct9_left_eq_zero, mul_zero_left]
-
-theorem XAMatrixProduct9 :
-    mul (XVec (0 : Fin 10) (9 : Fin 20))
-      (AVec (9 : Fin 20) (8 : Fin 10)) = 0 := by
-  change xaProduct9 = _
-  exact xaProduct9_eq
-
-def xaProduct10 : Vec := mul XCell0_10 ACell10_8
-
-theorem xaProduct10_left_eq_zero : XCell0_10 = 0 := by
-  funext n
-  fin_cases n <;> rfl
-
-theorem xaProduct10_eq : xaProduct10 = 0 := by
-  rw [xaProduct10, xaProduct10_left_eq_zero, mul_zero_left]
-
-theorem XAMatrixProduct10 :
-    mul (XVec (0 : Fin 10) (10 : Fin 20))
-      (AVec (10 : Fin 20) (8 : Fin 10)) = 0 := by
-  change xaProduct10 = _
-  exact xaProduct10_eq
-
-def xaProduct11 : Vec := mul XCell0_11 ACell11_8
-
-theorem xaProduct11_left_eq_zero : XCell0_11 = 0 := by
-  funext n
-  fin_cases n <;> rfl
-
-theorem xaProduct11_eq : xaProduct11 = 0 := by
-  rw [xaProduct11, xaProduct11_left_eq_zero, mul_zero_left]
-
-theorem XAMatrixProduct11 :
-    mul (XVec (0 : Fin 10) (11 : Fin 20))
-      (AVec (11 : Fin 20) (8 : Fin 10)) = 0 := by
-  change xaProduct11 = _
-  exact xaProduct11_eq
-
-def xaProduct12 : Vec := mul XCell0_12 ACell12_8
-
-theorem xaProduct12_left_eq_zero : XCell0_12 = 0 := by
-  funext n
-  fin_cases n <;> rfl
-
-theorem xaProduct12_eq : xaProduct12 = 0 := by
-  rw [xaProduct12, xaProduct12_left_eq_zero, mul_zero_left]
-
-theorem XAMatrixProduct12 :
-    mul (XVec (0 : Fin 10) (12 : Fin 20))
-      (AVec (12 : Fin 20) (8 : Fin 10)) = 0 := by
-  change xaProduct12 = _
-  exact xaProduct12_eq
-
-def xaProduct13 : Vec := mul XCell0_13 ACell13_8
-
-theorem xaProduct13_left_eq_zero : XCell0_13 = 0 := by
-  funext n
-  fin_cases n <;> rfl
-
-theorem xaProduct13_eq : xaProduct13 = 0 := by
-  rw [xaProduct13, xaProduct13_left_eq_zero, mul_zero_left]
-
-theorem XAMatrixProduct13 :
-    mul (XVec (0 : Fin 10) (13 : Fin 20))
-      (AVec (13 : Fin 20) (8 : Fin 10)) = 0 := by
-  change xaProduct13 = _
-  exact xaProduct13_eq
-
-def xaProduct14 : Vec := mul XCell0_14 ACell14_8
-
-theorem xaProduct14_left_eq_zero : XCell0_14 = 0 := by
-  funext n
-  fin_cases n <;> rfl
-
-theorem xaProduct14_eq : xaProduct14 = 0 := by
-  rw [xaProduct14, xaProduct14_left_eq_zero, mul_zero_left]
-
-theorem XAMatrixProduct14 :
-    mul (XVec (0 : Fin 10) (14 : Fin 20))
-      (AVec (14 : Fin 20) (8 : Fin 10)) = 0 := by
-  change xaProduct14 = _
-  exact xaProduct14_eq
-
-def xaProduct15 : Vec := mul XCell0_15 ACell15_8
-
-theorem xaProduct15_left_eq_zero : XCell0_15 = 0 := by
-  funext n
-  fin_cases n <;> rfl
-
-theorem xaProduct15_eq : xaProduct15 = 0 := by
-  rw [xaProduct15, xaProduct15_left_eq_zero, mul_zero_left]
-
-theorem XAMatrixProduct15 :
-    mul (XVec (0 : Fin 10) (15 : Fin 20))
-      (AVec (15 : Fin 20) (8 : Fin 10)) = 0 := by
-  change xaProduct15 = _
-  exact xaProduct15_eq
-
-def xaProduct16 : Vec := mul XCell0_16 ACell16_8
-
-theorem xaProduct16_left_eq_zero : XCell0_16 = 0 := by
-  funext n
-  fin_cases n <;> rfl
-
-theorem xaProduct16_eq : xaProduct16 = 0 := by
-  rw [xaProduct16, xaProduct16_left_eq_zero, mul_zero_left]
-
-theorem XAMatrixProduct16 :
-    mul (XVec (0 : Fin 10) (16 : Fin 20))
-      (AVec (16 : Fin 20) (8 : Fin 10)) = 0 := by
-  change xaProduct16 = _
-  exact xaProduct16_eq
-
-def xaProduct17 : Vec := mul XCell0_17 ACell17_8
-
-theorem xaProduct17_left_eq_zero : XCell0_17 = 0 := by
-  funext n
-  fin_cases n <;> rfl
-
-theorem xaProduct17_eq : xaProduct17 = 0 := by
-  rw [xaProduct17, xaProduct17_left_eq_zero, mul_zero_left]
-
-theorem XAMatrixProduct17 :
-    mul (XVec (0 : Fin 10) (17 : Fin 20))
-      (AVec (17 : Fin 20) (8 : Fin 10)) = 0 := by
-  change xaProduct17 = _
-  exact xaProduct17_eq
-
-def xaProduct18 : Vec := mul XCell0_18 ACell18_8
-
-theorem xaProduct18_left_eq_zero : XCell0_18 = 0 := by
-  funext n
-  fin_cases n <;> rfl
-
-theorem xaProduct18_eq : xaProduct18 = 0 := by
-  rw [xaProduct18, xaProduct18_left_eq_zero, mul_zero_left]
-
-theorem XAMatrixProduct18 :
-    mul (XVec (0 : Fin 10) (18 : Fin 20))
-      (AVec (18 : Fin 20) (8 : Fin 10)) = 0 := by
-  change xaProduct18 = _
-  exact xaProduct18_eq
-
-def xaProduct19 : Vec := mul XCell0_19 ACell19_8
-
-theorem xaProduct19_left_eq_zero : XCell0_19 = 0 := by
-  funext n
-  fin_cases n <;> rfl
-
-theorem xaProduct19_eq : xaProduct19 = 0 := by
-  rw [xaProduct19, xaProduct19_left_eq_zero, mul_zero_left]
-
-theorem XAMatrixProduct19 :
-    mul (XVec (0 : Fin 10) (19 : Fin 20))
-      (AVec (19 : Fin 20) (8 : Fin 10)) = 0 := by
-  change xaProduct19 = _
-  exact xaProduct19_eq
-
-def XAMatrixTerm (k : Fin 20) : Vec :=
-  mul (XVec (0 : Fin 10) k) (AVec k (8 : Fin 10))
-
-def XAResult (k : Fin 20) : Vec :=
+def XZ (k : Fin 20) : VecZ :=
   match k.val with
-  | 0 => xaProduct0Value
-  | 1 => xaProduct1Value
-  | 2 => xaProduct2Value
-  | 3 => xaProduct3Value
-  | 4 => xaProduct4Value
-  | 5 => xaProduct5Value
-  | 6 => xaProduct6Value
-  | 7 => xaProduct7Value
-  | 8 => 0
-  | 9 => 0
-  | 10 => 0
-  | 11 => 0
-  | 12 => 0
-  | 13 => 0
-  | 14 => 0
-  | 15 => 0
-  | 16 => 0
-  | 17 => 0
-  | 18 => 0
-  | 19 => 0
-  | _ => 0
+  | 0 => #v[-199, 9, -46, -127, 13, -112, -77, 7, -128, -44]
+  | 1 => #v[145, -7, 37, 137, -35, 88, 92, -38, 153, 22]
+  | 2 => #v[-17, 21, 29, 1, 1, 0, -1, 20, -13, 25]
+  | 3 => #v[-144, -24, -47, -124, -10, -95, -94, -14, -120, -65]
+  | 4 => #v[-54, -20, -12, -50, -21, -25, -17, -32, -58, -8]
+  | 5 => #v[98, -24, 0, 92, -54, 80, 72, -80, 104, -2]
+  | 6 => #v[-236, -32, -48, -210, 12, -126, -148, 44, -218, -72]
+  | 7 => #v[-88, 22, -46, -74, 68, -84, -70, 42, -58, -42]
+  | 8 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 9 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 10 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 11 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 12 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 13 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 14 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 15 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 16 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 17 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 18 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 19 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | _ => zeroZ
 
-theorem XAMatrixProduct (k : Fin 20) :
-    XAMatrixTerm k = XAResult k := by
-  fin_cases k
-  · exact XAMatrixProduct0
-  · exact XAMatrixProduct1
-  · exact XAMatrixProduct2
-  · exact XAMatrixProduct3
-  · exact XAMatrixProduct4
-  · exact XAMatrixProduct5
-  · exact XAMatrixProduct6
-  · exact XAMatrixProduct7
-  · exact XAMatrixProduct8
-  · exact XAMatrixProduct9
-  · exact XAMatrixProduct10
-  · exact XAMatrixProduct11
-  · exact XAMatrixProduct12
-  · exact XAMatrixProduct13
-  · exact XAMatrixProduct14
-  · exact XAMatrixProduct15
-  · exact XAMatrixProduct16
-  · exact XAMatrixProduct17
-  · exact XAMatrixProduct18
-  · exact XAMatrixProduct19
-
-theorem XAMatrixTerm_sum_eq :
-    (∑ k : Fin 20, XAMatrixTerm k) =
-      ∑ k : Fin 20, XAResult k := by
-  apply Finset.sum_congr rfl
-  intro k _
-  exact XAMatrixProduct k
-
-theorem XAResult_sum_apply_0 :
-    (∑ k : Fin 20, XAResult k) (0 : Fin 10) =
-      (-2 / 3 : ℚ) := by
-  norm_num [XAResult, Fin.sum_univ_succ,
-    xaProduct0Value,
-    xaProduct1Value,
-    xaProduct2Value,
-    xaProduct3Value,
-    xaProduct4Value,
-    xaProduct5Value,
-    xaProduct6Value,
-    xaProduct7Value]
-
-theorem XAResult_sum_apply_1 :
-    (∑ k : Fin 20, XAResult k) (1 : Fin 10) =
-      0 := by
-  norm_num [XAResult, Fin.sum_univ_succ,
-    xaProduct0Value,
-    xaProduct1Value,
-    xaProduct2Value,
-    xaProduct3Value,
-    xaProduct4Value,
-    xaProduct5Value,
-    xaProduct6Value,
-    xaProduct7Value]
-
-theorem XAResult_sum_apply_2 :
-    (∑ k : Fin 20, XAResult k) (2 : Fin 10) =
-      (-4 / 3 : ℚ) := by
-  norm_num [XAResult, Fin.sum_univ_succ,
-    xaProduct0Value,
-    xaProduct1Value,
-    xaProduct2Value,
-    xaProduct3Value,
-    xaProduct4Value,
-    xaProduct5Value,
-    xaProduct6Value,
-    xaProduct7Value]
-
-theorem XAResult_sum_apply_3 :
-    (∑ k : Fin 20, XAResult k) (3 : Fin 10) =
-      (-2 / 3 : ℚ) := by
-  norm_num [XAResult, Fin.sum_univ_succ,
-    xaProduct0Value,
-    xaProduct1Value,
-    xaProduct2Value,
-    xaProduct3Value,
-    xaProduct4Value,
-    xaProduct5Value,
-    xaProduct6Value,
-    xaProduct7Value]
-
-theorem XAResult_sum_apply_4 :
-    (∑ k : Fin 20, XAResult k) (4 : Fin 10) =
-      0 := by
-  norm_num [XAResult, Fin.sum_univ_succ,
-    xaProduct0Value,
-    xaProduct1Value,
-    xaProduct2Value,
-    xaProduct3Value,
-    xaProduct4Value,
-    xaProduct5Value,
-    xaProduct6Value,
-    xaProduct7Value]
-
-theorem XAResult_sum_apply_5 :
-    (∑ k : Fin 20, XAResult k) (5 : Fin 10) =
-      (-2 / 3 : ℚ) := by
-  norm_num [XAResult, Fin.sum_univ_succ,
-    xaProduct0Value,
-    xaProduct1Value,
-    xaProduct2Value,
-    xaProduct3Value,
-    xaProduct4Value,
-    xaProduct5Value,
-    xaProduct6Value,
-    xaProduct7Value]
-
-theorem XAResult_sum_apply_6 :
-    (∑ k : Fin 20, XAResult k) (6 : Fin 10) =
-      (-2 / 3 : ℚ) := by
-  norm_num [XAResult, Fin.sum_univ_succ,
-    xaProduct0Value,
-    xaProduct1Value,
-    xaProduct2Value,
-    xaProduct3Value,
-    xaProduct4Value,
-    xaProduct5Value,
-    xaProduct6Value,
-    xaProduct7Value]
-
-theorem XAResult_sum_apply_7 :
-    (∑ k : Fin 20, XAResult k) (7 : Fin 10) =
-      0 := by
-  norm_num [XAResult, Fin.sum_univ_succ,
-    xaProduct0Value,
-    xaProduct1Value,
-    xaProduct2Value,
-    xaProduct3Value,
-    xaProduct4Value,
-    xaProduct5Value,
-    xaProduct6Value,
-    xaProduct7Value]
-
-theorem XAResult_sum_apply_8 :
-    (∑ k : Fin 20, XAResult k) (8 : Fin 10) =
-      (-2 / 3 : ℚ) := by
-  norm_num [XAResult, Fin.sum_univ_succ,
-    xaProduct0Value,
-    xaProduct1Value,
-    xaProduct2Value,
-    xaProduct3Value,
-    xaProduct4Value,
-    xaProduct5Value,
-    xaProduct6Value,
-    xaProduct7Value]
-
-theorem XAResult_sum_apply_9 :
-    (∑ k : Fin 20, XAResult k) (9 : Fin 10) =
-      (-4 / 3 : ℚ) := by
-  norm_num [XAResult, Fin.sum_univ_succ,
-    xaProduct0Value,
-    xaProduct1Value,
-    xaProduct2Value,
-    xaProduct3Value,
-    xaProduct4Value,
-    xaProduct5Value,
-    xaProduct6Value,
-    xaProduct7Value]
-
-theorem XAResult_sum_eq :
-    (∑ k : Fin 20, XAResult k) = ![(-2 / 3 : ℚ), 0, (-4 / 3 : ℚ), (-2 / 3 : ℚ), 0, (-2 / 3 : ℚ), (-2 / 3 : ℚ), 0, (-2 / 3 : ℚ), (-4 / 3 : ℚ)] := by
-  funext n
-  fin_cases n
-  · exact XAResult_sum_apply_0
-  · exact XAResult_sum_apply_1
-  · exact XAResult_sum_apply_2
-  · exact XAResult_sum_apply_3
-  · exact XAResult_sum_apply_4
-  · exact XAResult_sum_apply_5
-  · exact XAResult_sum_apply_6
-  · exact XAResult_sum_apply_7
-  · exact XAResult_sum_apply_8
-  · exact XAResult_sum_apply_9
-
-def kyProduct0 : Vec := mul KCell0_0 YCell0_8
-
-def kyProduct0Value (i : Fin 10) : ℚ :=
-  match i.val with
-  | 0 => (2 / 3 : ℚ)
-  | 1 => 0
-  | 2 => (4 / 3 : ℚ)
-  | 3 => (2 / 3 : ℚ)
-  | 4 => 0
-  | 5 => (2 / 3 : ℚ)
-  | 6 => (2 / 3 : ℚ)
-  | 7 => 0
-  | 8 => (2 / 3 : ℚ)
-  | 9 => (4 / 3 : ℚ)
-  | _ => 0
-
-theorem kyProduct0_apply_0 :
-    kyProduct0 (0 : Fin 10) = kyProduct0Value (0 : Fin 10) := by
-  norm_num [kyProduct0, kyProduct0Value, KCell0_0, YCell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem kyProduct0_apply_1 :
-    kyProduct0 (1 : Fin 10) = kyProduct0Value (1 : Fin 10) := by
-  norm_num [kyProduct0, kyProduct0Value, KCell0_0, YCell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem kyProduct0_apply_2 :
-    kyProduct0 (2 : Fin 10) = kyProduct0Value (2 : Fin 10) := by
-  norm_num [kyProduct0, kyProduct0Value, KCell0_0, YCell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem kyProduct0_apply_3 :
-    kyProduct0 (3 : Fin 10) = kyProduct0Value (3 : Fin 10) := by
-  norm_num [kyProduct0, kyProduct0Value, KCell0_0, YCell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem kyProduct0_apply_4 :
-    kyProduct0 (4 : Fin 10) = kyProduct0Value (4 : Fin 10) := by
-  norm_num [kyProduct0, kyProduct0Value, KCell0_0, YCell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem kyProduct0_apply_5 :
-    kyProduct0 (5 : Fin 10) = kyProduct0Value (5 : Fin 10) := by
-  norm_num [kyProduct0, kyProduct0Value, KCell0_0, YCell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem kyProduct0_apply_6 :
-    kyProduct0 (6 : Fin 10) = kyProduct0Value (6 : Fin 10) := by
-  norm_num [kyProduct0, kyProduct0Value, KCell0_0, YCell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem kyProduct0_apply_7 :
-    kyProduct0 (7 : Fin 10) = kyProduct0Value (7 : Fin 10) := by
-  norm_num [kyProduct0, kyProduct0Value, KCell0_0, YCell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem kyProduct0_apply_8 :
-    kyProduct0 (8 : Fin 10) = kyProduct0Value (8 : Fin 10) := by
-  norm_num [kyProduct0, kyProduct0Value, KCell0_0, YCell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem kyProduct0_apply_9 :
-    kyProduct0 (9 : Fin 10) = kyProduct0Value (9 : Fin 10) := by
-  norm_num [kyProduct0, kyProduct0Value, KCell0_0, YCell0_8,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
-
-theorem kyProduct0_eq : kyProduct0 = kyProduct0Value := by
-  funext n
-  fin_cases n
-  · exact kyProduct0_apply_0
-  · exact kyProduct0_apply_1
-  · exact kyProduct0_apply_2
-  · exact kyProduct0_apply_3
-  · exact kyProduct0_apply_4
-  · exact kyProduct0_apply_5
-  · exact kyProduct0_apply_6
-  · exact kyProduct0_apply_7
-  · exact kyProduct0_apply_8
-  · exact kyProduct0_apply_9
-
-theorem KYMatrixProduct0 :
-    mul (KVec (0 : Fin 10) (0 : Fin 2))
-      (YVec (0 : Fin 2) (8 : Fin 10)) = kyProduct0Value := by
-  change kyProduct0 = _
-  exact kyProduct0_eq
-
-def kyProduct1 : Vec := mul KCell0_1 YCell1_8
-
-theorem kyProduct1_left_eq_zero : KCell0_1 = 0 := by
-  funext n
-  fin_cases n <;> rfl
-
-theorem kyProduct1_eq : kyProduct1 = 0 := by
-  rw [kyProduct1, kyProduct1_left_eq_zero, mul_zero_left]
-
-theorem KYMatrixProduct1 :
-    mul (KVec (0 : Fin 10) (1 : Fin 2))
-      (YVec (1 : Fin 2) (8 : Fin 10)) = 0 := by
-  change kyProduct1 = _
-  exact kyProduct1_eq
-
-def KYMatrixTerm (k : Fin 2) : Vec :=
-  mul (KVec (0 : Fin 10) k) (YVec k (8 : Fin 10))
-
-def KYResult (k : Fin 2) : Vec :=
+def AZ (k : Fin 20) : VecZ :=
   match k.val with
-  | 0 => kyProduct0Value
-  | 1 => 0
-  | _ => 0
+  | 0 => #v[0, -6, 0, -6, 0, 0, 6, 0, 0, 6]
+  | 1 => #v[0, 0, -6, 6, 0, 0, 0, 0, 6, -6]
+  | 2 => #v[0, -6, 0, 6, 0, 6, 0, -6, 0, 0]
+  | 3 => #v[6, 6, 6, 6, 6, 6, 6, 0, 12, 12]
+  | 4 => #v[-6, -6, -12, -12, -6, -6, 0, -6, -6, -6]
+  | 5 => #v[-3, 0, 0, -3, 0, 3, -3, 6, -3, 3]
+  | 6 => #v[0, 0, 0, -6, -3, -3, -9, -3, -3, -6]
+  | 7 => #v[0, 3, 6, 3, 6, -3, 6, 3, 6, 3]
+  | 8 => #v[-36, -3, 3, 0, 0, 3, -3, -3, 0, 6]
+  | 9 => #v[-6, -9, -6, 0, -3, -3, 0, 0, -3, -3]
+  | 10 => #v[0, -6, 6, 0, 0, 0, 0, 6, -6, 0]
+  | 11 => #v[0, -12, -6, -6, -6, -6, -6, -6, -6, -12]
+  | 12 => #v[6, 6, 12, 6, 6, 6, 12, 6, 6, 0]
+  | 13 => #v[6, 6, 6, 6, 0, 6, 12, 6, 12, 6]
+  | 14 => #v[-6, -6, -12, -6, -12, -6, -6, 0, -6, -6]
+  | 15 => #v[-3, -3, 0, -6, -6, -3, 3, -3, -6, -6]
+  | 16 => #v[-3, 0, -3, -6, -6, -3, 0, -3, 0, -9]
+  | 17 => #v[-6, -9, -6, 0, -3, -3, 0, 0, -3, -3]
+  | 18 => #v[-27, 0, 0, 3, -3, -3, -3, -3, 3, 0]
+  | 19 => #v[-3, 3, -6, 3, -3, 0, 3, 0, 0, 3]
+  | _ => zeroZ
 
-theorem KYMatrixProduct (k : Fin 2) :
-    KYMatrixTerm k = KYResult k := by
+def KZ (k : Fin 2) : VecZ :=
+  match k.val with
+  | 0 => #v[33, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 1 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | _ => zeroZ
+
+def YZ (k : Fin 2) : VecZ :=
+  match k.val with
+  | 0 => #v[22, 0, 44, 22, 0, 22, 22, 0, 22, 44]
+  | 1 => #v[0, 0, 0, 0, 22, 0, 0, 22, 0, 0]
+  | _ => zeroZ
+
+theorem xaMulZ0 :
+    mulZ (XZ 0) (AZ 0) = #v[-534, -120, -288, -324, -372, -114, -882, -180, 0, -1080] := by
+  decide
+
+theorem xaMulZ1 :
+    mulZ (XZ 1) (AZ 1) = #v[2268, -18, 750, 1818, -162, 1428, 1128, 12, 1728, 750] := by
+  decide
+
+theorem xaMulZ2 :
+    mulZ (XZ 2) (AZ 2) = #v[-54, 408, -162, -210, 234, -48, 168, 324, -204, -60] := by
+  decide
+
+theorem xaMulZ3 :
+    mulZ (XZ 3) (AZ 3) = #v[-2004, -1134, -504, -2172, -540, -1032, -2208, 12, -1512, -1908] := by
+  decide
+
+theorem xaMulZ4 :
+    mulZ (XZ 4) (AZ 4) = #v[36, -216, -258, -120, -96, 180, -180, -282, 42, -96] := by
+  decide
+
+theorem xaMulZ5 :
+    mulZ (XZ 5) (AZ 5) = #v[-2352, -582, -540, -2466, 198, -1632, -1662, -66, -1836, -1404] := by
+  decide
+
+theorem xaMulZ6 :
+    mulZ (XZ 6) (AZ 6) = #v[2220, 2472, -192, 3246, 1542, 282, 3732, 714, 1170, 3360] := by
+  decide
+
+theorem xaMulZ7 :
+    mulZ (XZ 7) (AZ 7) = #v[-306, -810, -258, -498, -804, 210, -822, -534, -114, -1014] := by
+  decide
+
+theorem xaMulZ8 :
+    mulZ (XZ 8) (AZ 8) = #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
+  decide
+
+theorem xaMulZ9 :
+    mulZ (XZ 9) (AZ 9) = #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
+  decide
+
+theorem xaMulZ10 :
+    mulZ (XZ 10) (AZ 10) = #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
+  decide
+
+theorem xaMulZ11 :
+    mulZ (XZ 11) (AZ 11) = #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
+  decide
+
+theorem xaMulZ12 :
+    mulZ (XZ 12) (AZ 12) = #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
+  decide
+
+theorem xaMulZ13 :
+    mulZ (XZ 13) (AZ 13) = #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
+  decide
+
+theorem xaMulZ14 :
+    mulZ (XZ 14) (AZ 14) = #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
+  decide
+
+theorem xaMulZ15 :
+    mulZ (XZ 15) (AZ 15) = #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
+  decide
+
+theorem xaMulZ16 :
+    mulZ (XZ 16) (AZ 16) = #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
+  decide
+
+theorem xaMulZ17 :
+    mulZ (XZ 17) (AZ 17) = #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
+  decide
+
+theorem xaMulZ18 :
+    mulZ (XZ 18) (AZ 18) = #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
+  decide
+
+theorem xaMulZ19 :
+    mulZ (XZ 19) (AZ 19) = #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
+  decide
+
+def xaMuls (k : Fin 20) : VecZ :=
+  match k.val with
+  | 0 => #v[-534, -120, -288, -324, -372, -114, -882, -180, 0, -1080]
+  | 1 => #v[2268, -18, 750, 1818, -162, 1428, 1128, 12, 1728, 750]
+  | 2 => #v[-54, 408, -162, -210, 234, -48, 168, 324, -204, -60]
+  | 3 => #v[-2004, -1134, -504, -2172, -540, -1032, -2208, 12, -1512, -1908]
+  | 4 => #v[36, -216, -258, -120, -96, 180, -180, -282, 42, -96]
+  | 5 => #v[-2352, -582, -540, -2466, 198, -1632, -1662, -66, -1836, -1404]
+  | 6 => #v[2220, 2472, -192, 3246, 1542, 282, 3732, 714, 1170, 3360]
+  | 7 => #v[-306, -810, -258, -498, -804, 210, -822, -534, -114, -1014]
+  | 8 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 9 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 10 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 11 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 12 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 13 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 14 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 15 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 16 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 17 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 18 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | 19 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | _ => zeroZ
+
+theorem xaMulZ (k : Fin 20) :
+    mulZ (XZ k) (AZ k) = xaMuls k := by
   fin_cases k
-  · exact KYMatrixProduct0
-  · exact KYMatrixProduct1
+  · exact xaMulZ0
+  · exact xaMulZ1
+  · exact xaMulZ2
+  · exact xaMulZ3
+  · exact xaMulZ4
+  · exact xaMulZ5
+  · exact xaMulZ6
+  · exact xaMulZ7
+  · exact xaMulZ8
+  · exact xaMulZ9
+  · exact xaMulZ10
+  · exact xaMulZ11
+  · exact xaMulZ12
+  · exact xaMulZ13
+  · exact xaMulZ14
+  · exact xaMulZ15
+  · exact xaMulZ16
+  · exact xaMulZ17
+  · exact xaMulZ18
+  · exact xaMulZ19
 
-theorem KYMatrixTerm_sum_eq :
-    (∑ k : Fin 2, KYMatrixTerm k) =
-      ∑ k : Fin 2, KYResult k := by
-  apply Finset.sum_congr rfl
-  intro k _
-  exact KYMatrixProduct k
+theorem xaSum_eq :
+    sumFin (fun k => mulZ (XZ k) (AZ k)) = #v[-726, 0, -1452, -726, 0, -726, -726, 0, -726, -1452] := by
+  have h : sumFin (fun k => mulZ (XZ k) (AZ k)) =
+      sumFin xaMuls := congrArg sumFin (funext xaMulZ)
+  rw [h]
+  decide
 
-theorem KYResult_sum_apply_0 :
-    (∑ k : Fin 2, KYResult k) (0 : Fin 10) =
-      (2 / 3 : ℚ) := by
-  norm_num [KYResult, Fin.sum_univ_succ,
-    kyProduct0Value]
+theorem kyMulZ0 :
+    mulZ (KZ 0) (YZ 0) = #v[726, 0, 1452, 726, 0, 726, 726, 0, 726, 1452] := by
+  decide
 
-theorem KYResult_sum_apply_1 :
-    (∑ k : Fin 2, KYResult k) (1 : Fin 10) =
-      0 := by
-  norm_num [KYResult, Fin.sum_univ_succ,
-    kyProduct0Value]
+theorem kyMulZ1 :
+    mulZ (KZ 1) (YZ 1) = #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
+  decide
 
-theorem KYResult_sum_apply_2 :
-    (∑ k : Fin 2, KYResult k) (2 : Fin 10) =
-      (4 / 3 : ℚ) := by
-  norm_num [KYResult, Fin.sum_univ_succ,
-    kyProduct0Value]
+def kyMuls (k : Fin 2) : VecZ :=
+  match k.val with
+  | 0 => #v[726, 0, 1452, 726, 0, 726, 726, 0, 726, 1452]
+  | 1 => #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  | _ => zeroZ
 
-theorem KYResult_sum_apply_3 :
-    (∑ k : Fin 2, KYResult k) (3 : Fin 10) =
-      (2 / 3 : ℚ) := by
-  norm_num [KYResult, Fin.sum_univ_succ,
-    kyProduct0Value]
+theorem kyMulZ (k : Fin 2) :
+    mulZ (KZ k) (YZ k) = kyMuls k := by
+  fin_cases k
+  · exact kyMulZ0
+  · exact kyMulZ1
 
-theorem KYResult_sum_apply_4 :
-    (∑ k : Fin 2, KYResult k) (4 : Fin 10) =
-      0 := by
-  norm_num [KYResult, Fin.sum_univ_succ,
-    kyProduct0Value]
+theorem kySum_eq :
+    sumFin (fun k => mulZ (KZ k) (YZ k)) = #v[726, 0, 1452, 726, 0, 726, 726, 0, 726, 1452] := by
+  have h : sumFin (fun k => mulZ (KZ k) (YZ k)) =
+      sumFin kyMuls := congrArg sumFin (funext kyMulZ)
+  rw [h]
+  decide
 
-theorem KYResult_sum_apply_5 :
-    (∑ k : Fin 2, KYResult k) (5 : Fin 10) =
-      (2 / 3 : ℚ) := by
-  norm_num [KYResult, Fin.sum_univ_succ,
-    kyProduct0Value]
+def xaEntryZ : VecZ := sumFin (fun k => mulZ (XZ k) (AZ k))
+def kyEntryZ : VecZ := sumFin (fun k => mulZ (KZ k) (YZ k))
+def entryZ : VecZ := addZ xaEntryZ kyEntryZ
 
-theorem KYResult_sum_apply_6 :
-    (∑ k : Fin 2, KYResult k) (6 : Fin 10) =
-      (2 / 3 : ℚ) := by
-  norm_num [KYResult, Fin.sum_univ_succ,
-    kyProduct0Value]
+theorem entryZ_eq : entryZ = zeroZ := by
+  unfold entryZ xaEntryZ kyEntryZ
+  rw [xaSum_eq, kySum_eq]
+  decide
 
-theorem KYResult_sum_apply_7 :
-    (∑ k : Fin 2, KYResult k) (7 : Fin 10) =
-      0 := by
-  norm_num [KYResult, Fin.sum_univ_succ,
-    kyProduct0Value]
+theorem scale_ne_zero : scale ≠ 0 := by
+  decide
 
-theorem KYResult_sum_apply_8 :
-    (∑ k : Fin 2, KYResult k) (8 : Fin 10) =
-      (2 / 3 : ℚ) := by
-  norm_num [KYResult, Fin.sum_univ_succ,
-    kyProduct0Value]
+theorem XZ_scale_0 : toVec (XZ 0) = (scale : ℚ) • XCell0_0 := by
+  funext i
+  fin_cases i
+  · change ((-199 : ℤ) : ℚ) = (scale : ℚ) * (-199 / 33 : ℚ)
+    exact eq_smul_div (-199) scale (-199) (33) (by decide) (by decide)
+  · change ((9 : ℤ) : ℚ) = (scale : ℚ) * (3 / 11 : ℚ)
+    exact eq_smul_div (9) scale (3) (11) (by decide) (by decide)
+  · change ((-46 : ℤ) : ℚ) = (scale : ℚ) * (-46 / 33 : ℚ)
+    exact eq_smul_div (-46) scale (-46) (33) (by decide) (by decide)
+  · change ((-127 : ℤ) : ℚ) = (scale : ℚ) * (-127 / 33 : ℚ)
+    exact eq_smul_div (-127) scale (-127) (33) (by decide) (by decide)
+  · change ((13 : ℤ) : ℚ) = (scale : ℚ) * (13 / 33 : ℚ)
+    exact eq_smul_div (13) scale (13) (33) (by decide) (by decide)
+  · change ((-112 : ℤ) : ℚ) = (scale : ℚ) * (-112 / 33 : ℚ)
+    exact eq_smul_div (-112) scale (-112) (33) (by decide) (by decide)
+  · change ((-77 : ℤ) : ℚ) = (scale : ℚ) * (-7 / 3 : ℚ)
+    exact eq_smul_div (-77) scale (-7) (3) (by decide) (by decide)
+  · change ((7 : ℤ) : ℚ) = (scale : ℚ) * (7 / 33 : ℚ)
+    exact eq_smul_div (7) scale (7) (33) (by decide) (by decide)
+  · change ((-128 : ℤ) : ℚ) = (scale : ℚ) * (-128 / 33 : ℚ)
+    exact eq_smul_div (-128) scale (-128) (33) (by decide) (by decide)
+  · change ((-44 : ℤ) : ℚ) = (scale : ℚ) * (-4 / 3 : ℚ)
+    exact eq_smul_div (-44) scale (-4) (3) (by decide) (by decide)
 
-theorem KYResult_sum_apply_9 :
-    (∑ k : Fin 2, KYResult k) (9 : Fin 10) =
-      (4 / 3 : ℚ) := by
-  norm_num [KYResult, Fin.sum_univ_succ,
-    kyProduct0Value]
+theorem XZ_scale_1 : toVec (XZ 1) = (scale : ℚ) • XCell0_1 := by
+  funext i
+  fin_cases i
+  · change ((145 : ℤ) : ℚ) = (scale : ℚ) * (145 / 33 : ℚ)
+    exact eq_smul_div (145) scale (145) (33) (by decide) (by decide)
+  · change ((-7 : ℤ) : ℚ) = (scale : ℚ) * (-7 / 33 : ℚ)
+    exact eq_smul_div (-7) scale (-7) (33) (by decide) (by decide)
+  · change ((37 : ℤ) : ℚ) = (scale : ℚ) * (37 / 33 : ℚ)
+    exact eq_smul_div (37) scale (37) (33) (by decide) (by decide)
+  · change ((137 : ℤ) : ℚ) = (scale : ℚ) * (137 / 33 : ℚ)
+    exact eq_smul_div (137) scale (137) (33) (by decide) (by decide)
+  · change ((-35 : ℤ) : ℚ) = (scale : ℚ) * (-35 / 33 : ℚ)
+    exact eq_smul_div (-35) scale (-35) (33) (by decide) (by decide)
+  · change ((88 : ℤ) : ℚ) = (scale : ℚ) * (8 / 3 : ℚ)
+    exact eq_smul_div (88) scale (8) (3) (by decide) (by decide)
+  · change ((92 : ℤ) : ℚ) = (scale : ℚ) * (92 / 33 : ℚ)
+    exact eq_smul_div (92) scale (92) (33) (by decide) (by decide)
+  · change ((-38 : ℤ) : ℚ) = (scale : ℚ) * (-38 / 33 : ℚ)
+    exact eq_smul_div (-38) scale (-38) (33) (by decide) (by decide)
+  · change ((153 : ℤ) : ℚ) = (scale : ℚ) * (51 / 11 : ℚ)
+    exact eq_smul_div (153) scale (51) (11) (by decide) (by decide)
+  · change ((22 : ℤ) : ℚ) = (scale : ℚ) * (2 / 3 : ℚ)
+    exact eq_smul_div (22) scale (2) (3) (by decide) (by decide)
 
-theorem KYResult_sum_eq :
-    (∑ k : Fin 2, KYResult k) = ![(2 / 3 : ℚ), 0, (4 / 3 : ℚ), (2 / 3 : ℚ), 0, (2 / 3 : ℚ), (2 / 3 : ℚ), 0, (2 / 3 : ℚ), (4 / 3 : ℚ)] := by
-  funext n
-  fin_cases n
-  · exact KYResult_sum_apply_0
-  · exact KYResult_sum_apply_1
-  · exact KYResult_sum_apply_2
-  · exact KYResult_sum_apply_3
-  · exact KYResult_sum_apply_4
-  · exact KYResult_sum_apply_5
-  · exact KYResult_sum_apply_6
-  · exact KYResult_sum_apply_7
-  · exact KYResult_sum_apply_8
-  · exact KYResult_sum_apply_9
+theorem XZ_scale_2 : toVec (XZ 2) = (scale : ℚ) • XCell0_2 := by
+  funext i
+  fin_cases i
+  · change ((-17 : ℤ) : ℚ) = (scale : ℚ) * (-17 / 33 : ℚ)
+    exact eq_smul_div (-17) scale (-17) (33) (by decide) (by decide)
+  · change ((21 : ℤ) : ℚ) = (scale : ℚ) * (7 / 11 : ℚ)
+    exact eq_smul_div (21) scale (7) (11) (by decide) (by decide)
+  · change ((29 : ℤ) : ℚ) = (scale : ℚ) * (29 / 33 : ℚ)
+    exact eq_smul_div (29) scale (29) (33) (by decide) (by decide)
+  · change ((1 : ℤ) : ℚ) = (scale : ℚ) * (1 / 33 : ℚ)
+    exact eq_smul_div (1) scale (1) (33) (by decide) (by decide)
+  · change ((1 : ℤ) : ℚ) = (scale : ℚ) * (1 / 33 : ℚ)
+    exact eq_smul_div (1) scale (1) (33) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-1 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 33 : ℚ)
+    exact eq_smul_div (-1) scale (-1) (33) (by decide) (by decide)
+  · change ((20 : ℤ) : ℚ) = (scale : ℚ) * (20 / 33 : ℚ)
+    exact eq_smul_div (20) scale (20) (33) (by decide) (by decide)
+  · change ((-13 : ℤ) : ℚ) = (scale : ℚ) * (-13 / 33 : ℚ)
+    exact eq_smul_div (-13) scale (-13) (33) (by decide) (by decide)
+  · change ((25 : ℤ) : ℚ) = (scale : ℚ) * (25 / 33 : ℚ)
+    exact eq_smul_div (25) scale (25) (33) (by decide) (by decide)
+
+theorem XZ_scale_3 : toVec (XZ 3) = (scale : ℚ) • XCell0_3 := by
+  funext i
+  fin_cases i
+  · change ((-144 : ℤ) : ℚ) = (scale : ℚ) * (-48 / 11 : ℚ)
+    exact eq_smul_div (-144) scale (-48) (11) (by decide) (by decide)
+  · change ((-24 : ℤ) : ℚ) = (scale : ℚ) * (-8 / 11 : ℚ)
+    exact eq_smul_div (-24) scale (-8) (11) (by decide) (by decide)
+  · change ((-47 : ℤ) : ℚ) = (scale : ℚ) * (-47 / 33 : ℚ)
+    exact eq_smul_div (-47) scale (-47) (33) (by decide) (by decide)
+  · change ((-124 : ℤ) : ℚ) = (scale : ℚ) * (-124 / 33 : ℚ)
+    exact eq_smul_div (-124) scale (-124) (33) (by decide) (by decide)
+  · change ((-10 : ℤ) : ℚ) = (scale : ℚ) * (-10 / 33 : ℚ)
+    exact eq_smul_div (-10) scale (-10) (33) (by decide) (by decide)
+  · change ((-95 : ℤ) : ℚ) = (scale : ℚ) * (-95 / 33 : ℚ)
+    exact eq_smul_div (-95) scale (-95) (33) (by decide) (by decide)
+  · change ((-94 : ℤ) : ℚ) = (scale : ℚ) * (-94 / 33 : ℚ)
+    exact eq_smul_div (-94) scale (-94) (33) (by decide) (by decide)
+  · change ((-14 : ℤ) : ℚ) = (scale : ℚ) * (-14 / 33 : ℚ)
+    exact eq_smul_div (-14) scale (-14) (33) (by decide) (by decide)
+  · change ((-120 : ℤ) : ℚ) = (scale : ℚ) * (-40 / 11 : ℚ)
+    exact eq_smul_div (-120) scale (-40) (11) (by decide) (by decide)
+  · change ((-65 : ℤ) : ℚ) = (scale : ℚ) * (-65 / 33 : ℚ)
+    exact eq_smul_div (-65) scale (-65) (33) (by decide) (by decide)
+
+theorem XZ_scale_4 : toVec (XZ 4) = (scale : ℚ) • XCell0_4 := by
+  funext i
+  fin_cases i
+  · change ((-54 : ℤ) : ℚ) = (scale : ℚ) * (-18 / 11 : ℚ)
+    exact eq_smul_div (-54) scale (-18) (11) (by decide) (by decide)
+  · change ((-20 : ℤ) : ℚ) = (scale : ℚ) * (-20 / 33 : ℚ)
+    exact eq_smul_div (-20) scale (-20) (33) (by decide) (by decide)
+  · change ((-12 : ℤ) : ℚ) = (scale : ℚ) * (-4 / 11 : ℚ)
+    exact eq_smul_div (-12) scale (-4) (11) (by decide) (by decide)
+  · change ((-50 : ℤ) : ℚ) = (scale : ℚ) * (-50 / 33 : ℚ)
+    exact eq_smul_div (-50) scale (-50) (33) (by decide) (by decide)
+  · change ((-21 : ℤ) : ℚ) = (scale : ℚ) * (-7 / 11 : ℚ)
+    exact eq_smul_div (-21) scale (-7) (11) (by decide) (by decide)
+  · change ((-25 : ℤ) : ℚ) = (scale : ℚ) * (-25 / 33 : ℚ)
+    exact eq_smul_div (-25) scale (-25) (33) (by decide) (by decide)
+  · change ((-17 : ℤ) : ℚ) = (scale : ℚ) * (-17 / 33 : ℚ)
+    exact eq_smul_div (-17) scale (-17) (33) (by decide) (by decide)
+  · change ((-32 : ℤ) : ℚ) = (scale : ℚ) * (-32 / 33 : ℚ)
+    exact eq_smul_div (-32) scale (-32) (33) (by decide) (by decide)
+  · change ((-58 : ℤ) : ℚ) = (scale : ℚ) * (-58 / 33 : ℚ)
+    exact eq_smul_div (-58) scale (-58) (33) (by decide) (by decide)
+  · change ((-8 : ℤ) : ℚ) = (scale : ℚ) * (-8 / 33 : ℚ)
+    exact eq_smul_div (-8) scale (-8) (33) (by decide) (by decide)
+
+theorem XZ_scale_5 : toVec (XZ 5) = (scale : ℚ) • XCell0_5 := by
+  funext i
+  fin_cases i
+  · change ((98 : ℤ) : ℚ) = (scale : ℚ) * (98 / 33 : ℚ)
+    exact eq_smul_div (98) scale (98) (33) (by decide) (by decide)
+  · change ((-24 : ℤ) : ℚ) = (scale : ℚ) * (-8 / 11 : ℚ)
+    exact eq_smul_div (-24) scale (-8) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((92 : ℤ) : ℚ) = (scale : ℚ) * (92 / 33 : ℚ)
+    exact eq_smul_div (92) scale (92) (33) (by decide) (by decide)
+  · change ((-54 : ℤ) : ℚ) = (scale : ℚ) * (-18 / 11 : ℚ)
+    exact eq_smul_div (-54) scale (-18) (11) (by decide) (by decide)
+  · change ((80 : ℤ) : ℚ) = (scale : ℚ) * (80 / 33 : ℚ)
+    exact eq_smul_div (80) scale (80) (33) (by decide) (by decide)
+  · change ((72 : ℤ) : ℚ) = (scale : ℚ) * (24 / 11 : ℚ)
+    exact eq_smul_div (72) scale (24) (11) (by decide) (by decide)
+  · change ((-80 : ℤ) : ℚ) = (scale : ℚ) * (-80 / 33 : ℚ)
+    exact eq_smul_div (-80) scale (-80) (33) (by decide) (by decide)
+  · change ((104 : ℤ) : ℚ) = (scale : ℚ) * (104 / 33 : ℚ)
+    exact eq_smul_div (104) scale (104) (33) (by decide) (by decide)
+  · change ((-2 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 33 : ℚ)
+    exact eq_smul_div (-2) scale (-2) (33) (by decide) (by decide)
+
+theorem XZ_scale_6 : toVec (XZ 6) = (scale : ℚ) • XCell0_6 := by
+  funext i
+  fin_cases i
+  · change ((-236 : ℤ) : ℚ) = (scale : ℚ) * (-236 / 33 : ℚ)
+    exact eq_smul_div (-236) scale (-236) (33) (by decide) (by decide)
+  · change ((-32 : ℤ) : ℚ) = (scale : ℚ) * (-32 / 33 : ℚ)
+    exact eq_smul_div (-32) scale (-32) (33) (by decide) (by decide)
+  · change ((-48 : ℤ) : ℚ) = (scale : ℚ) * (-16 / 11 : ℚ)
+    exact eq_smul_div (-48) scale (-16) (11) (by decide) (by decide)
+  · change ((-210 : ℤ) : ℚ) = (scale : ℚ) * (-70 / 11 : ℚ)
+    exact eq_smul_div (-210) scale (-70) (11) (by decide) (by decide)
+  · change ((12 : ℤ) : ℚ) = (scale : ℚ) * (4 / 11 : ℚ)
+    exact eq_smul_div (12) scale (4) (11) (by decide) (by decide)
+  · change ((-126 : ℤ) : ℚ) = (scale : ℚ) * (-42 / 11 : ℚ)
+    exact eq_smul_div (-126) scale (-42) (11) (by decide) (by decide)
+  · change ((-148 : ℤ) : ℚ) = (scale : ℚ) * (-148 / 33 : ℚ)
+    exact eq_smul_div (-148) scale (-148) (33) (by decide) (by decide)
+  · change ((44 : ℤ) : ℚ) = (scale : ℚ) * (4 / 3 : ℚ)
+    exact eq_smul_div (44) scale (4) (3) (by decide) (by decide)
+  · change ((-218 : ℤ) : ℚ) = (scale : ℚ) * (-218 / 33 : ℚ)
+    exact eq_smul_div (-218) scale (-218) (33) (by decide) (by decide)
+  · change ((-72 : ℤ) : ℚ) = (scale : ℚ) * (-24 / 11 : ℚ)
+    exact eq_smul_div (-72) scale (-24) (11) (by decide) (by decide)
+
+theorem XZ_scale_7 : toVec (XZ 7) = (scale : ℚ) • XCell0_7 := by
+  funext i
+  fin_cases i
+  · change ((-88 : ℤ) : ℚ) = (scale : ℚ) * (-8 / 3 : ℚ)
+    exact eq_smul_div (-88) scale (-8) (3) (by decide) (by decide)
+  · change ((22 : ℤ) : ℚ) = (scale : ℚ) * (2 / 3 : ℚ)
+    exact eq_smul_div (22) scale (2) (3) (by decide) (by decide)
+  · change ((-46 : ℤ) : ℚ) = (scale : ℚ) * (-46 / 33 : ℚ)
+    exact eq_smul_div (-46) scale (-46) (33) (by decide) (by decide)
+  · change ((-74 : ℤ) : ℚ) = (scale : ℚ) * (-74 / 33 : ℚ)
+    exact eq_smul_div (-74) scale (-74) (33) (by decide) (by decide)
+  · change ((68 : ℤ) : ℚ) = (scale : ℚ) * (68 / 33 : ℚ)
+    exact eq_smul_div (68) scale (68) (33) (by decide) (by decide)
+  · change ((-84 : ℤ) : ℚ) = (scale : ℚ) * (-28 / 11 : ℚ)
+    exact eq_smul_div (-84) scale (-28) (11) (by decide) (by decide)
+  · change ((-70 : ℤ) : ℚ) = (scale : ℚ) * (-70 / 33 : ℚ)
+    exact eq_smul_div (-70) scale (-70) (33) (by decide) (by decide)
+  · change ((42 : ℤ) : ℚ) = (scale : ℚ) * (14 / 11 : ℚ)
+    exact eq_smul_div (42) scale (14) (11) (by decide) (by decide)
+  · change ((-58 : ℤ) : ℚ) = (scale : ℚ) * (-58 / 33 : ℚ)
+    exact eq_smul_div (-58) scale (-58) (33) (by decide) (by decide)
+  · change ((-42 : ℤ) : ℚ) = (scale : ℚ) * (-14 / 11 : ℚ)
+    exact eq_smul_div (-42) scale (-14) (11) (by decide) (by decide)
+
+theorem XZ_scale_8 : toVec (XZ 8) = (scale : ℚ) • XCell0_8 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem XZ_scale_9 : toVec (XZ 9) = (scale : ℚ) • XCell0_9 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem XZ_scale_10 : toVec (XZ 10) = (scale : ℚ) • XCell0_10 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem XZ_scale_11 : toVec (XZ 11) = (scale : ℚ) • XCell0_11 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem XZ_scale_12 : toVec (XZ 12) = (scale : ℚ) • XCell0_12 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem XZ_scale_13 : toVec (XZ 13) = (scale : ℚ) • XCell0_13 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem XZ_scale_14 : toVec (XZ 14) = (scale : ℚ) • XCell0_14 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem XZ_scale_15 : toVec (XZ 15) = (scale : ℚ) • XCell0_15 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem XZ_scale_16 : toVec (XZ 16) = (scale : ℚ) • XCell0_16 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem XZ_scale_17 : toVec (XZ 17) = (scale : ℚ) • XCell0_17 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem XZ_scale_18 : toVec (XZ 18) = (scale : ℚ) • XCell0_18 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem XZ_scale_19 : toVec (XZ 19) = (scale : ℚ) • XCell0_19 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem XZ_scale (k : Fin 20) :
+    toVec (XZ k) = (scale : ℚ) • XVec (0 : Fin 10) k := by
+  fin_cases k
+  · simp [XVec, XRow0]; exact XZ_scale_0
+  · simp [XVec, XRow0]; exact XZ_scale_1
+  · simp [XVec, XRow0]; exact XZ_scale_2
+  · simp [XVec, XRow0]; exact XZ_scale_3
+  · simp [XVec, XRow0]; exact XZ_scale_4
+  · simp [XVec, XRow0]; exact XZ_scale_5
+  · simp [XVec, XRow0]; exact XZ_scale_6
+  · simp [XVec, XRow0]; exact XZ_scale_7
+  · simp [XVec, XRow0]; exact XZ_scale_8
+  · simp [XVec, XRow0]; exact XZ_scale_9
+  · simp [XVec, XRow0]; exact XZ_scale_10
+  · simp [XVec, XRow0]; exact XZ_scale_11
+  · simp [XVec, XRow0]; exact XZ_scale_12
+  · simp [XVec, XRow0]; exact XZ_scale_13
+  · simp [XVec, XRow0]; exact XZ_scale_14
+  · simp [XVec, XRow0]; exact XZ_scale_15
+  · simp [XVec, XRow0]; exact XZ_scale_16
+  · simp [XVec, XRow0]; exact XZ_scale_17
+  · simp [XVec, XRow0]; exact XZ_scale_18
+  · simp [XVec, XRow0]; exact XZ_scale_19
+
+theorem AZ_scale_0 : toVec (AZ 0) = (scale : ℚ) • ACell0_8 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+
+theorem AZ_scale_1 : toVec (AZ 1) = (scale : ℚ) • ACell1_8 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+
+theorem AZ_scale_2 : toVec (AZ 2) = (scale : ℚ) • ACell2_8 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem AZ_scale_3 : toVec (AZ 3) = (scale : ℚ) • ACell3_8 := by
+  funext i
+  fin_cases i
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((12 : ℤ) : ℚ) = (scale : ℚ) * (4 / 11 : ℚ)
+    exact eq_smul_div (12) scale (4) (11) (by decide) (by decide)
+  · change ((12 : ℤ) : ℚ) = (scale : ℚ) * (4 / 11 : ℚ)
+    exact eq_smul_div (12) scale (4) (11) (by decide) (by decide)
+
+theorem AZ_scale_4 : toVec (AZ 4) = (scale : ℚ) • ACell4_8 := by
+  funext i
+  fin_cases i
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-12 : ℤ) : ℚ) = (scale : ℚ) * (-4 / 11 : ℚ)
+    exact eq_smul_div (-12) scale (-4) (11) (by decide) (by decide)
+  · change ((-12 : ℤ) : ℚ) = (scale : ℚ) * (-4 / 11 : ℚ)
+    exact eq_smul_div (-12) scale (-4) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+
+theorem AZ_scale_5 : toVec (AZ 5) = (scale : ℚ) • ACell5_8 := by
+  funext i
+  fin_cases i
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((3 : ℤ) : ℚ) = (scale : ℚ) * (1 / 11 : ℚ)
+    exact eq_smul_div (3) scale (1) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((3 : ℤ) : ℚ) = (scale : ℚ) * (1 / 11 : ℚ)
+    exact eq_smul_div (3) scale (1) (11) (by decide) (by decide)
+
+theorem AZ_scale_6 : toVec (AZ 6) = (scale : ℚ) • ACell6_8 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((-9 : ℤ) : ℚ) = (scale : ℚ) * (-3 / 11 : ℚ)
+    exact eq_smul_div (-9) scale (-3) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+
+theorem AZ_scale_7 : toVec (AZ 7) = (scale : ℚ) • ACell7_8 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((3 : ℤ) : ℚ) = (scale : ℚ) * (1 / 11 : ℚ)
+    exact eq_smul_div (3) scale (1) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((3 : ℤ) : ℚ) = (scale : ℚ) * (1 / 11 : ℚ)
+    exact eq_smul_div (3) scale (1) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((3 : ℤ) : ℚ) = (scale : ℚ) * (1 / 11 : ℚ)
+    exact eq_smul_div (3) scale (1) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((3 : ℤ) : ℚ) = (scale : ℚ) * (1 / 11 : ℚ)
+    exact eq_smul_div (3) scale (1) (11) (by decide) (by decide)
+
+theorem AZ_scale_8 : toVec (AZ 8) = (scale : ℚ) • ACell8_8 := by
+  funext i
+  fin_cases i
+  · change ((-36 : ℤ) : ℚ) = (scale : ℚ) * (-12 / 11 : ℚ)
+    exact eq_smul_div (-36) scale (-12) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((3 : ℤ) : ℚ) = (scale : ℚ) * (1 / 11 : ℚ)
+    exact eq_smul_div (3) scale (1) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((3 : ℤ) : ℚ) = (scale : ℚ) * (1 / 11 : ℚ)
+    exact eq_smul_div (3) scale (1) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+
+theorem AZ_scale_9 : toVec (AZ 9) = (scale : ℚ) • ACell9_8 := by
+  funext i
+  fin_cases i
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-9 : ℤ) : ℚ) = (scale : ℚ) * (-3 / 11 : ℚ)
+    exact eq_smul_div (-9) scale (-3) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+
+theorem AZ_scale_10 : toVec (AZ 10) = (scale : ℚ) • ACell10_8 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem AZ_scale_11 : toVec (AZ 11) = (scale : ℚ) • ACell11_8 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-12 : ℤ) : ℚ) = (scale : ℚ) * (-4 / 11 : ℚ)
+    exact eq_smul_div (-12) scale (-4) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-12 : ℤ) : ℚ) = (scale : ℚ) * (-4 / 11 : ℚ)
+    exact eq_smul_div (-12) scale (-4) (11) (by decide) (by decide)
+
+theorem AZ_scale_12 : toVec (AZ 12) = (scale : ℚ) • ACell12_8 := by
+  funext i
+  fin_cases i
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((12 : ℤ) : ℚ) = (scale : ℚ) * (4 / 11 : ℚ)
+    exact eq_smul_div (12) scale (4) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((12 : ℤ) : ℚ) = (scale : ℚ) * (4 / 11 : ℚ)
+    exact eq_smul_div (12) scale (4) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem AZ_scale_13 : toVec (AZ 13) = (scale : ℚ) • ACell13_8 := by
+  funext i
+  fin_cases i
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((12 : ℤ) : ℚ) = (scale : ℚ) * (4 / 11 : ℚ)
+    exact eq_smul_div (12) scale (4) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+  · change ((12 : ℤ) : ℚ) = (scale : ℚ) * (4 / 11 : ℚ)
+    exact eq_smul_div (12) scale (4) (11) (by decide) (by decide)
+  · change ((6 : ℤ) : ℚ) = (scale : ℚ) * (2 / 11 : ℚ)
+    exact eq_smul_div (6) scale (2) (11) (by decide) (by decide)
+
+theorem AZ_scale_14 : toVec (AZ 14) = (scale : ℚ) • ACell14_8 := by
+  funext i
+  fin_cases i
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-12 : ℤ) : ℚ) = (scale : ℚ) * (-4 / 11 : ℚ)
+    exact eq_smul_div (-12) scale (-4) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-12 : ℤ) : ℚ) = (scale : ℚ) * (-4 / 11 : ℚ)
+    exact eq_smul_div (-12) scale (-4) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+
+theorem AZ_scale_15 : toVec (AZ 15) = (scale : ℚ) • ACell15_8 := by
+  funext i
+  fin_cases i
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((3 : ℤ) : ℚ) = (scale : ℚ) * (1 / 11 : ℚ)
+    exact eq_smul_div (3) scale (1) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+
+theorem AZ_scale_16 : toVec (AZ 16) = (scale : ℚ) • ACell16_8 := by
+  funext i
+  fin_cases i
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-9 : ℤ) : ℚ) = (scale : ℚ) * (-3 / 11 : ℚ)
+    exact eq_smul_div (-9) scale (-3) (11) (by decide) (by decide)
+
+theorem AZ_scale_17 : toVec (AZ 17) = (scale : ℚ) • ACell17_8 := by
+  funext i
+  fin_cases i
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((-9 : ℤ) : ℚ) = (scale : ℚ) * (-3 / 11 : ℚ)
+    exact eq_smul_div (-9) scale (-3) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+
+theorem AZ_scale_18 : toVec (AZ 18) = (scale : ℚ) • ACell18_8 := by
+  funext i
+  fin_cases i
+  · change ((-27 : ℤ) : ℚ) = (scale : ℚ) * (-9 / 11 : ℚ)
+    exact eq_smul_div (-27) scale (-9) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((3 : ℤ) : ℚ) = (scale : ℚ) * (1 / 11 : ℚ)
+    exact eq_smul_div (3) scale (1) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((3 : ℤ) : ℚ) = (scale : ℚ) * (1 / 11 : ℚ)
+    exact eq_smul_div (3) scale (1) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem AZ_scale_19 : toVec (AZ 19) = (scale : ℚ) • ACell19_8 := by
+  funext i
+  fin_cases i
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((3 : ℤ) : ℚ) = (scale : ℚ) * (1 / 11 : ℚ)
+    exact eq_smul_div (3) scale (1) (11) (by decide) (by decide)
+  · change ((-6 : ℤ) : ℚ) = (scale : ℚ) * (-2 / 11 : ℚ)
+    exact eq_smul_div (-6) scale (-2) (11) (by decide) (by decide)
+  · change ((3 : ℤ) : ℚ) = (scale : ℚ) * (1 / 11 : ℚ)
+    exact eq_smul_div (3) scale (1) (11) (by decide) (by decide)
+  · change ((-3 : ℤ) : ℚ) = (scale : ℚ) * (-1 / 11 : ℚ)
+    exact eq_smul_div (-3) scale (-1) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((3 : ℤ) : ℚ) = (scale : ℚ) * (1 / 11 : ℚ)
+    exact eq_smul_div (3) scale (1) (11) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((3 : ℤ) : ℚ) = (scale : ℚ) * (1 / 11 : ℚ)
+    exact eq_smul_div (3) scale (1) (11) (by decide) (by decide)
+
+theorem AZ_scale (k : Fin 20) :
+    toVec (AZ k) = (scale : ℚ) • AVec k (8 : Fin 10) := by
+  fin_cases k
+  · simp [AVec, ARow0]; exact AZ_scale_0
+  · simp [AVec, ARow1]; exact AZ_scale_1
+  · simp [AVec, ARow2]; exact AZ_scale_2
+  · simp [AVec, ARow3]; exact AZ_scale_3
+  · simp [AVec, ARow4]; exact AZ_scale_4
+  · simp [AVec, ARow5]; exact AZ_scale_5
+  · simp [AVec, ARow6]; exact AZ_scale_6
+  · simp [AVec, ARow7]; exact AZ_scale_7
+  · simp [AVec, ARow8]; exact AZ_scale_8
+  · simp [AVec, ARow9]; exact AZ_scale_9
+  · simp [AVec, ARow10]; exact AZ_scale_10
+  · simp [AVec, ARow11]; exact AZ_scale_11
+  · simp [AVec, ARow12]; exact AZ_scale_12
+  · simp [AVec, ARow13]; exact AZ_scale_13
+  · simp [AVec, ARow14]; exact AZ_scale_14
+  · simp [AVec, ARow15]; exact AZ_scale_15
+  · simp [AVec, ARow16]; exact AZ_scale_16
+  · simp [AVec, ARow17]; exact AZ_scale_17
+  · simp [AVec, ARow18]; exact AZ_scale_18
+  · simp [AVec, ARow19]; exact AZ_scale_19
+
+theorem KZ_scale_0 : toVec (KZ 0) = (scale : ℚ) • KCell0_0 := by
+  funext i
+  fin_cases i
+  · change ((33 : ℤ) : ℚ) = (scale : ℚ) * (1 : ℚ)
+    exact eq_smul_int (33) scale (1) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem KZ_scale_1 : toVec (KZ 1) = (scale : ℚ) • KCell0_1 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem KZ_scale (k : Fin 2) :
+    toVec (KZ k) = (scale : ℚ) • KVec (0 : Fin 10) k := by
+  fin_cases k
+  · simp [KVec, KRow0]; exact KZ_scale_0
+  · simp [KVec, KRow1]; exact KZ_scale_1
+
+theorem YZ_scale_0 : toVec (YZ 0) = (scale : ℚ) • YCell0_8 := by
+  funext i
+  fin_cases i
+  · change ((22 : ℤ) : ℚ) = (scale : ℚ) * (2 / 3 : ℚ)
+    exact eq_smul_div (22) scale (2) (3) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((44 : ℤ) : ℚ) = (scale : ℚ) * (4 / 3 : ℚ)
+    exact eq_smul_div (44) scale (4) (3) (by decide) (by decide)
+  · change ((22 : ℤ) : ℚ) = (scale : ℚ) * (2 / 3 : ℚ)
+    exact eq_smul_div (22) scale (2) (3) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((22 : ℤ) : ℚ) = (scale : ℚ) * (2 / 3 : ℚ)
+    exact eq_smul_div (22) scale (2) (3) (by decide) (by decide)
+  · change ((22 : ℤ) : ℚ) = (scale : ℚ) * (2 / 3 : ℚ)
+    exact eq_smul_div (22) scale (2) (3) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((22 : ℤ) : ℚ) = (scale : ℚ) * (2 / 3 : ℚ)
+    exact eq_smul_div (22) scale (2) (3) (by decide) (by decide)
+  · change ((44 : ℤ) : ℚ) = (scale : ℚ) * (4 / 3 : ℚ)
+    exact eq_smul_div (44) scale (4) (3) (by decide) (by decide)
+
+theorem YZ_scale_1 : toVec (YZ 1) = (scale : ℚ) • YCell1_8 := by
+  funext i
+  fin_cases i
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((22 : ℤ) : ℚ) = (scale : ℚ) * (2 / 3 : ℚ)
+    exact eq_smul_div (22) scale (2) (3) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((22 : ℤ) : ℚ) = (scale : ℚ) * (2 / 3 : ℚ)
+    exact eq_smul_div (22) scale (2) (3) (by decide) (by decide)
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+  · change ((0 : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)
+    exact eq_smul_zero scale
+
+theorem YZ_scale (k : Fin 2) :
+    toVec (YZ k) = (scale : ℚ) • YVec k (8 : Fin 10) := by
+  fin_cases k
+  · simp [YVec, YRow0]; exact YZ_scale_0
+  · simp [YVec, YRow1]; exact YZ_scale_1
 
 theorem entry_eq :
     (matrixMul XVec AVec + matrixMul KVec YVec)
         (0 : Fin 10) (8 : Fin 10) = ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  change (∑ k : Fin 20, XAMatrixTerm k) +
-    (∑ k : Fin 2, KYMatrixTerm k) = _
-  rw [XAMatrixTerm_sum_eq, KYMatrixTerm_sum_eq,
-    XAResult_sum_eq, KYResult_sum_eq]
-  funext n
-  fin_cases n <;> norm_num
+  change (∑ k : Fin 20, mul (XVec (0 : Fin 10) k)
+      (AVec k (8 : Fin 10))) +
+    (∑ k : Fin 2, mul (KVec (0 : Fin 10) k)
+      (YVec k (8 : Fin 10))) = _
+  refine add_sum_mul_eq_of_scaled scale scale_ne_zero
+    (fun k => XVec (0 : Fin 10) k)
+    (fun k => AVec k (8 : Fin 10))
+    (fun k => KVec (0 : Fin 10) k)
+    (fun k => YVec k (8 : Fin 10))
+    XZ AZ KZ YZ XZ_scale AZ_scale KZ_scale YZ_scale entryZ rfl _ ?_
+  rw [entryZ_eq, toVec_zeroZ_smul, vec_zero_eq]
 
 theorem entry_eq_matrixOne :
     (matrixMul XVec AVec + matrixMul KVec YVec)

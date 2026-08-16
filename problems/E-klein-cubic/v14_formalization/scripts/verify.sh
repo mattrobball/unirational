@@ -4,6 +4,9 @@ set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 
+echo "== scaled SplitEntry generator tests =="
+python3 "$ROOT/scripts/test_d12_piece_vec_scale.py"
+
 echo "== build every V14Formalization module =="
 MODULES=()
 while IFS= read -r file; do

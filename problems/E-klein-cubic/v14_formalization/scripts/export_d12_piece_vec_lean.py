@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import math
 from fractions import Fraction
 from pathlib import Path
 
@@ -64,6 +65,128 @@ def vec_fractions(v: list[Fraction]) -> str:
 
 def q_fraction(x: Fraction) -> str:
     return q([x.numerator, x.denominator])
+
+
+def lcm_denoms(vecs: list[list[Fraction]]) -> int:
+    acc = 1
+    for vec in vecs:
+        for value in vec:
+            acc = math.lcm(acc, value.denominator)
+    return acc
+
+
+def scale_ints(vec: list[Fraction], scale: int) -> list[int]:
+    out: list[int] = []
+    for value in vec:
+        scaled = value * scale
+        if scaled.denominator != 1:
+            raise ValueError(f"scale {scale} does not clear {value}")
+        out.append(int(scaled.numerator))
+    return out
+
+
+def vecz_lit(ints: list[int]) -> str:
+    return "#v[" + ", ".join(str(n) for n in ints) + "]"
+
+
+def emit_vecz_match(name: str, count: int, rows: list[list[int]]) -> list[str]:
+    lines = [f"def {name} (k : Fin {count}) : VecZ :=", "  match k.val with"]
+    for index, row in enumerate(rows):
+        lines.append(f"  | {index} => {vecz_lit(row)}")
+    lines += ["  | _ => zeroZ", ""]
+    return lines
+
+
+def emit_coord_case(n: int, value: Fraction) -> list[str]:
+    if value == 0:
+        return [
+            f"  · change (({n} : ℤ) : ℚ) = (scale : ℚ) * (0 : ℚ)",
+            "    exact eq_smul_zero scale",
+        ]
+    if value.denominator == 1:
+        return [
+            f"  · change (({n} : ℤ) : ℚ) = (scale : ℚ) * ({value.numerator} : ℚ)",
+            f"    exact eq_smul_int ({n}) scale ({value.numerator}) (by decide)",
+        ]
+    return [
+        f"  · change (({n} : ℤ) : ℚ) = (scale : ℚ) * "
+        f"({value.numerator} / {value.denominator} : ℚ)",
+        f"    exact eq_smul_div ({n}) scale ({value.numerator}) "
+        f"({value.denominator}) (by decide) (by decide)",
+    ]
+
+
+def emit_scale_thm(thm: str, fn: str, rhs: str, cells: list[str],
+                   matrix_simps: list[str], scaled_rows: list[list[int]],
+                   frac_rows: list[list[Fraction]]) -> list[str]:
+    lines: list[str] = []
+    for index, cell in enumerate(cells):
+        lines += [
+            f"theorem {thm}_{index} : toVec ({fn} {index}) = (scale : ℚ) • {cell} := by",
+            "  funext i",
+            "  fin_cases i",
+        ]
+        for n, value in zip(scaled_rows[index], frac_rows[index], strict=True):
+            lines += emit_coord_case(n, value)
+        lines.append("")
+    count = len(cells)
+    lines += [
+        f"theorem {thm} (k : Fin {count}) :",
+        f"    toVec ({fn} k) = {rhs} := by",
+        "  fin_cases k",
+    ]
+    for index, matrix_simp in enumerate(matrix_simps):
+        lines.append(f"  · simp [{matrix_simp}]; exact {thm}_{index}")
+    lines.append("")
+    return lines
+
+
+def emit_mul_sum(tag: str, left_fn: str, right_fn: str,
+                 lefts: list[list[Fraction]], rights: list[list[Fraction]],
+                 scale: int) -> tuple[list[str], list[int]]:
+    sq = scale * scale
+    lines: list[str] = []
+    lits: list[list[int]] = []
+    count = len(lefts)
+    for index, (left, right) in enumerate(zip(lefts, rights, strict=True)):
+        ints = scale_ints(reduced_mul(left, right), sq)
+        lits.append(ints)
+        lines += [
+            f"theorem {tag}MulZ{index} :",
+            f"    mulZ ({left_fn} {index}) ({right_fn} {index}) = {vecz_lit(ints)} := by",
+            "  decide",
+            "",
+        ]
+    total = [sum(col) for col in zip(*lits)] if lits else [0] * 10
+    lines += [f"def {tag}Muls (k : Fin {count}) : VecZ :=", "  match k.val with"]
+    for index, ints in enumerate(lits):
+        lines.append(f"  | {index} => {vecz_lit(ints)}")
+    lines += [
+        "  | _ => zeroZ",
+        "",
+        f"theorem {tag}MulZ (k : Fin {count}) :",
+        f"    mulZ ({left_fn} k) ({right_fn} k) = {tag}Muls k := by",
+        "  fin_cases k",
+    ]
+    for index in range(count):
+        lines.append(f"  · exact {tag}MulZ{index}")
+    lines += [
+        "",
+        f"theorem {tag}Sum_eq :",
+        f"    sumFin (fun k => mulZ ({left_fn} k) ({right_fn} k)) = {vecz_lit(total)} := by",
+        f"  have h : sumFin (fun k => mulZ ({left_fn} k) ({right_fn} k)) =",
+        f"      sumFin {tag}Muls := congrArg sumFin (funext {tag}MulZ)",
+        "  rw [h]",
+        "  decide",
+        "",
+    ]
+    return lines, total
+
+
+def emit_htarget(diagonal: bool) -> list[str]:
+    if diagonal:
+        return ["  rw [entryZ_eq, toVec_scaleSqE0, constVec_one_eq]"]
+    return ["  rw [entryZ_eq, toVec_zeroZ_smul, vec_zero_eq]"]
 
 
 def row_def(name: str, row: list[list[list[int]]], cols: int) -> list[str]:
@@ -393,157 +516,73 @@ def emit_pa_data(payload: dict, payload_sha: str) -> str:
 def emit_pa_entry(payload: dict, payload_sha: str, row: int, col: int,
                   direct_products: bool = False,
                   grouped_products: bool = False) -> str:
+    del direct_products, grouped_products
     assert 0 <= row < 10 and 0 <= col < 10
     x = payload["pieces"]["PA"]["X10x20"]
     a = payload["pieces"]["PA"]["A20x10"]
-    products = [
-        reduced_mul(as_fractions(x[row][k]), as_fractions(a[k][col]))
-        for k in range(20)
-    ]
+    xs = [as_fractions(x[row][k]) for k in range(20)]
+    a_cols = [as_fractions(a[k][col]) for k in range(20)]
+    products = [reduced_mul(xs[k], a_cols[k]) for k in range(20)]
     total = add_vectors(products)
     expected = [Fraction(int(row == col))] + [Fraction()] * 9
     assert total == expected
+    scale = lcm_denoms(xs + a_cols)
+    x_scaled = [scale_ints(v, scale) for v in xs]
+    a_scaled = [scale_ints(v, scale) for v in a_cols]
     ns = f"D12PiecePASplitEntry{row}_{col}"
+    expected_z = "scaleSqE0 scale" if row == col else "zeroZ"
     lines = [
         f"/- PA split identity, entry ({row},{col}). Auto-generated. -/",
         "import V14Formalization.D12PiecePAData",
+        "import V14Formalization.D12CyclotomicVecZ",
         "",
         "noncomputable section",
         "open Matrix",
         f"namespace V14Formalization.{ns}",
-        "open D12CyclotomicVec D12PiecePAData",
+        "open D12CyclotomicVec D12CyclotomicVecZ D12PiecePAData",
         f'def payloadSha256 : String := "{payload_sha}"',
         "",
-    ]
-    nonzero_values = []
-    for k in range(20):
-        left = as_fractions(x[row][k])
-        right = as_fractions(a[k][col])
-        left_zero = all(value == 0 for value in left)
-        right_zero = all(value == 0 for value in right)
-        product_zero = left_zero or right_zero
-        lines += [f"def product{k} : Vec := mul XCell{row}_{k} ACell{k}_{col}", ""]
-        if product_zero:
-            if left_zero:
-                lines += [
-                    f"theorem left{k}_eq_zero : XCell{row}_{k} = 0 := by",
-                    "  funext n",
-                    "  fin_cases n <;> rfl",
-                    "",
-                    f"theorem product{k}_eq : product{k} = 0 := by",
-                    f"  rw [product{k}, left{k}_eq_zero, mul_zero_left]",
-                    "",
-                ]
-            else:
-                lines += [
-                    f"theorem right{k}_eq_zero : ACell{k}_{col} = 0 := by",
-                    "  funext n",
-                    "  fin_cases n <;> rfl",
-                    "",
-                    f"theorem product{k}_eq : product{k} = 0 := by",
-                    f"  rw [product{k}, right{k}_eq_zero, mul_zero_right]",
-                    "",
-                ]
-        else:
-            nonzero_values.append(f"productValue{k}")
-            lines += scalar_vec_def(f"productValue{k}", products[k]) + [""]
-            if direct_products:
-                lines += [
-                    f"theorem product{k}_eq : product{k} = productValue{k} := by",
-                    "  funext n",
-                    "  fin_cases n <;>",
-                    f"    norm_num [product{k}, productValue{k}, XCell{row}_{k}, ACell{k}_{col},",
-                    "      mul, conv, coeffAt, Fin.sum_univ_succ]",
-                    "",
-                ]
-            elif grouped_products:
-                for half, offset in (("low", 0), ("high", 5)):
-                    lines += [
-                        f"theorem product{k}_{half} (n : Fin 5) :",
-                        f"    product{k} ⟨n.val + {offset}, by omega⟩ =",
-                        f"      productValue{k} ⟨n.val + {offset}, by omega⟩ := by",
-                        "  fin_cases n <;>",
-                        f"    norm_num [product{k}, productValue{k}, XCell{row}_{k}, ACell{k}_{col},",
-                        "      mul, conv, coeffAt, Fin.sum_univ_succ]",
-                        "",
-                    ]
-                lines += [f"theorem product{k}_eq : product{k} = productValue{k} := by",
-                          "  funext n", "  fin_cases n"]
-                for degree in range(10):
-                    half = "low" if degree < 5 else "high"
-                    idx = degree if degree < 5 else degree - 5
-                    lines.append(f"  · exact product{k}_{half} ({idx} : Fin 5)")
-                lines.append("")
-            else:
-                for degree in range(10):
-                    lines += [
-                        f"theorem product{k}_apply_{degree} :",
-                        f"    product{k} ({degree} : Fin 10) =",
-                        f"      productValue{k} ({degree} : Fin 10) := by",
-                        f"  norm_num [product{k}, productValue{k}, XCell{row}_{k}, ACell{k}_{col},",
-                        "    mul, conv, coeffAt, Fin.sum_univ_succ]",
-                        "",
-                    ]
-                lines += [f"theorem product{k}_eq : product{k} = productValue{k} := by",
-                          "  funext n", "  fin_cases n"]
-                for degree in range(10):
-                    lines.append(f"  · exact product{k}_apply_{degree}")
-                lines.append("")
-        target = "0" if product_zero else f"productValue{k}"
-        lines += [
-            f"theorem matrixProduct{k}_eq :",
-            f"    mul (XVec ({row} : Fin 10) ({k} : Fin 20))",
-            f"      (AVec ({k} : Fin 20) ({col} : Fin 10)) = {target} := by",
-            f"  change product{k} = _",
-            f"  exact product{k}_eq",
-            "",
-        ]
-    lines += ["def productResult (k : Fin 20) : Vec :=", "  match k.val with"]
-    for k in range(20):
-        left_zero = all(value == 0 for value in as_fractions(x[row][k]))
-        right_zero = all(value == 0 for value in as_fractions(a[k][col]))
-        target = "0" if left_zero or right_zero else f"productValue{k}"
-        lines.append(f"  | {k} => {target}")
-    lines += ["  | _ => 0", "", "theorem matrixProduct (k : Fin 20) :",
-              f"    mul (XVec ({row} : Fin 10) k) (AVec k ({col} : Fin 10)) =",
-              "      productResult k := by", "  fin_cases k"]
-    for k in range(20):
-        lines.append(f"  · exact matrixProduct{k}_eq")
-    lines.append("")
-    for degree, value in enumerate(total):
-        lines += [
-            f"theorem productResult_sum_apply_{degree} :",
-            f"    (∑ k : Fin 20, productResult k) ({degree} : Fin 10) =",
-            f"      {q_fraction(value)} := by",
-            "  norm_num [productResult, Fin.sum_univ_succ,",
-        ]
-        for idx, name in enumerate(nonzero_values):
-            suffix = "," if idx < len(nonzero_values) - 1 else "]"
-            lines.append(f"    {name}{suffix}")
-        if not nonzero_values:
-            lines[-1] = "  norm_num [productResult, Fin.sum_univ_succ]"
-        lines.append("")
-    lines += [
-        "theorem productResult_sum_eq :",
-        f"    (∑ k : Fin 20, productResult k) = {vec_fractions(total)} := by",
-        "  funext n",
-        "  fin_cases n",
-    ]
-    for degree in range(10):
-        lines.append(f"  · exact productResult_sum_apply_{degree}")
-    lines += [
+        f"def scale : ℤ := {scale}",
         "",
+    ]
+    lines += emit_vecz_match("XZ", 20, x_scaled)
+    lines += emit_vecz_match("AZ", 20, a_scaled)
+    mul_lines, _xa_ints = emit_mul_sum("xa", "XZ", "AZ", xs, a_cols, scale)
+    lines += mul_lines
+    lines += [
+        "def entryZ : VecZ := sumFin (fun k => mulZ (XZ k) (AZ k))",
+        "",
+        f"theorem entryZ_eq : entryZ = {expected_z} := by",
+        "  unfold entryZ",
+        "  rw [xaSum_eq]",
+        "  decide",
+        "",
+        "theorem scale_ne_zero : scale ≠ 0 := by",
+        "  decide",
+        "",
+    ]
+    lines += emit_scale_thm(
+        "XZ_scale", "XZ",
+        f"(scale : ℚ) • XVec ({row} : Fin 10) k",
+        [f"XCell{row}_{k}" for k in range(20)],
+        [f"XVec, XRow{row}"] * 20, x_scaled, xs)
+    lines += emit_scale_thm(
+        "AZ_scale", "AZ",
+        f"(scale : ℚ) • AVec k ({col} : Fin 10)",
+        [f"ACell{k}_{col}" for k in range(20)],
+        [f"AVec, ARow{k}" for k in range(20)], a_scaled, a_cols)
+    lines += [
         "theorem entry_eq :",
         f"    (matrixMul XVec AVec) ({row} : Fin 10) ({col} : Fin 10) =",
         f"      {vec_fractions(total)} := by",
         "  unfold matrixMul",
-        "  calc",
-        f"    (∑ k : Fin 20, mul (XVec ({row} : Fin 10) k)",
-        f"        (AVec k ({col} : Fin 10))) = ∑ k : Fin 20, productResult k := by",
-        "      apply Finset.sum_congr rfl",
-        "      intro k _",
-        "      exact matrixProduct k",
-        "    _ = _ := productResult_sum_eq",
+        "  refine sum_mul_eq_of_scaled scale scale_ne_zero",
+        f"    (fun k => XVec ({row} : Fin 10) k)",
+        f"    (fun k => AVec k ({col} : Fin 10))",
+        "    XZ AZ XZ_scale AZ_scale entryZ rfl _ ?_",
+    ]
+    lines += emit_htarget(row == col)
+    lines += [
         "",
         "theorem entry_eq_matrixOne :",
         f"    (matrixMul XVec AVec) ({row} : Fin 10) ({col} : Fin 10) =",
@@ -556,7 +595,7 @@ def emit_pa_entry(payload: dict, payload_sha: str, row: int, col: int,
         ]
     lines += [
         "  funext n",
-        "  fin_cases n <;> simp [matrixOne, constVec, basis, *]",
+        "  fin_cases n <;> simp [matrixOne, *]",
         "",
         f"end V14Formalization.{ns}",
         "",
