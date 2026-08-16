@@ -114,11 +114,34 @@ Three consequences, all measured on the v4.32.1 toolchain:
 
 ## The fix, and the evidence for it
 
-Every coefficient seen so far has a denominator that is a power of 11
-(`ACell` entries are `k/11`, products land in `1/121`). 11 is the only
-ramified prime in `ℚ(ζ₁₁)`, so this is expected rather than lucky.
+**Measured 2026-08-16 across all 1796 files: 142,909 rational literals, 126
+distinct denominators, and 43,934 `norm_num` invocations in 621 files.**
 
-If that holds everywhere, the identity rescales to **ℤ[ζ₁₁]**, and integer
+My first guess was that every denominator is a power of 11. It is not — 116
+of the 126 carry another prime (3, 43, 89, 1231, 1847, 48619, 267433,
+649573; worst single denominator 34,559,831,724 = 2²·3·11²·89·267433). But
+the distribution splits along exactly the line that matters:
+
+| family | worst denominator |
+|---|---|
+| `D12PiecePAData` | 44 |
+| `D12PieceAAData` | 66 |
+| `D12PieceAPData` | 66 |
+| `D12PiecePPData` | 33 |
+| `*SmoothCU/CV/CW`, `*UProd/VProd/WProd`, `SegreBezoutData` | up to 3.5×10¹⁰ |
+
+The four `D12Piece*Data` families — the `SplitEntry` certificates that are
+**64.6% of all oleans** — clear at 132. The ugly primes are confined to the
+`Segre`/`Smooth` families.
+
+**The scaling factor does not need to be a power of 11.** Clearing
+denominators only requires multiplying by their LCM, computed PER MODULE.
+The global LCM across the corpus (≈2.1×10²⁹) is an artifact of taking one
+LCM over everything and is irrelevant. Even the worst local case scales
+numerators to roughly 10¹⁵, and the kernel does 30-digit multiplication
+instantly.
+
+So the identity rescales to **ℤ[ζ₁₁]** module by module, and integer
 arithmetic *does* reduce in the kernel, GMP-accelerated (`Nat.add`, `mul`,
 `sub`, `div`, `mod`, `gcd`, `beq`, `ble` dispatch to native bignum ops).
 
@@ -143,9 +166,10 @@ up. Changing one entry of the literal makes `decide` prove the statement
 
 ## What to do next
 
-1. **Confirm the scaling.** Scan all four `*Data` families for the worst
-   denominator. If every one is `2^a · 11^b`, the LCM is the scaling factor.
-   Any other prime factor kills the plan as stated — report it first.
+1. ~~Confirm the scaling.~~ **Done 2026-08-16** — see the table above.
+   Start with the four `D12Piece*Data` families: they clear at 132 and are
+   64.6% of the weight. Treat the `Segre`/`Smooth` families as a second,
+   harder pass with per-module LCMs in the 10¹⁰ range.
 2. **Prototype one entry end-to-end over ℤ**, scaling lemma included, and
    compare olean size and compile time against `D12PieceAPSplitEntry7_9`.
 3. **Change the generator, not the output.** These files come from
@@ -160,8 +184,11 @@ up. Changing one entry of the literal makes `decide` prove the statement
 
 ## Open risks
 
-- Only two of four `*Data` families have been read by hand. Step 1 exists to
-  settle that.
+- ~~Only two of four `*Data` families have been read.~~ Settled: all 1796
+  files scanned. The residual risk moved — the `Segre`/`Smooth` families
+  carry six-digit primes in their denominators, so per-module scaling there
+  produces much larger integers than in the `Piece` families. GMP should
+  absorb it, but that is untested at their scale.
 - `Vec` is used well beyond the generated modules — `eval`, `eval_add`,
   `eval_smul` feed into `WeilRep.K`. Changing the representation means
   providing the same API over the new type, or an equivalence between them,
