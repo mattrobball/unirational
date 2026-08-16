@@ -13,19 +13,16 @@ namespace V14Formalization.Comparator
 open V14Formalization.SchemeGeometry
 open AlgebraicGeometry Module
 
-private abbrev k := V14SchemeModel.k
-private abbrev G := V14SchemeModel.G
-
 theorem noEquivariantRationalMap_from_ambient
-    {V : Type} [AddCommGroup V] [Module k V]
-    (R : FaithfulLinearRep k G V) :
+    {V : Type} [AddCommGroup V] [Module V14SchemeModel.k V]
+    (R : FaithfulLinearRep V14SchemeModel.k V14SchemeModel.G V) :
     ¬ HasEquivariantRationalMap (ambientOf R)
       V14SchemeModel.actionOver :=
   SchemeGeometry.noEquivariantRationalMap_from_ambient R
 
 theorem noEquivariantRationalMap_projectiveGVariety
-    {V : Type} [AddCommGroup V] [Module k V]
-    (R : FaithfulLinearRep k G V) :
+    {V : Type} [AddCommGroup V] [Module V14SchemeModel.k V]
+    (R : FaithfulLinearRep V14SchemeModel.k V14SchemeModel.G V) :
     ¬ ProjectiveGVariety.HasEquivariantRationalMap
         (ProjectiveGVariety.ofFaithfulRep R)
         ProjectiveGVariety.v14 :=
