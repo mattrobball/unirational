@@ -5,6 +5,7 @@ Released under Apache 2.0 license.
 import V14Formalization.FaithfulHeadlineReduction
 import V14Formalization.V14FixedRationalConstancy
 import V14Formalization.HeadlineStatement
+import V14Formalization.SchemeModelAliases
 
 /-!
 # Unconditional faithful no-map theorem
@@ -24,8 +25,6 @@ namespace V14Formalization.SchemeGeometry
 
 open AlgebraicGeometry GeometricV14Carrier Module
 
-private abbrev k := V14SchemeModel.k
-private abbrev G := V14SchemeModel.G
 
 /-- Same statement after an explicit choice of plus/minus coordinates.
 The public theorems below hide this choice. -/

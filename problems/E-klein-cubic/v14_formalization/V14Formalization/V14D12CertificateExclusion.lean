@@ -4,6 +4,7 @@ Released under Apache 2.0 license.
 -/
 import V14Formalization.D12CertificateK
 import V14Formalization.V14D12FixedPointExclusion
+import V14Formalization.SchemeModelAliases
 
 /-!
 # The concrete D12 fixed-point exclusion
@@ -23,7 +24,6 @@ namespace V14Formalization.SchemeGeometry
 
 open AlgebraicGeometry GeometricV14Carrier
 
-private abbrev G := V14SchemeModel.G
 
 /-- The checked four-piece certificate eliminates the matrix hypotheses from
 the V14 rational-map obstruction. -/

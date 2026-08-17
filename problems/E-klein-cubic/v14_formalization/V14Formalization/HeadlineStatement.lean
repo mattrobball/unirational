@@ -6,6 +6,7 @@ module
 
 public import V14Formalization.ProjectiveGVariety
 public import V14Formalization.CentralizerObstruction
+public import V14Formalization.SchemeModelAliases
 
 /-!
 # Public no-map statement (vocabulary only)
@@ -24,8 +25,6 @@ namespace V14Formalization.SchemeGeometry
 
 open AlgebraicGeometry GeometricV14Carrier Module
 
-public abbrev k := V14SchemeModel.k
-public abbrev G := V14SchemeModel.G
 
 public abbrev ambientFor
     {V : Type} [AddCommGroup V] [Module k V]

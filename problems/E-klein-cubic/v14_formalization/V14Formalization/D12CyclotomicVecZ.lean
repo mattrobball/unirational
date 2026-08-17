@@ -4,8 +4,6 @@ Released under Apache 2.0 license.
 -/
 module
 
-import all Init.Data.Vector.Basic
-import all Init.Data.Array.DecidableEq
 public import V14Formalization.D12CyclotomicVec
 
 /-!
@@ -65,6 +63,51 @@ where
 @[expose] public def toVec (v : VecZ) : Vec :=
   fun i => (v[i.val] : ℚ)
 
+/-! ### Kernel-reducible equality test
+
+`VecZ = Vector Int 10`, and `Vector`'s `DecidableEq` instance does **not**
+reduce: `instDecidableEqVector.decEq` and `Array.instDecidableEqImpl` are
+`public` but not `@[expose]`d in the Lean 4.32.1 toolchain, so `decide` — and
+`decide +kernel` — get stuck even on `#v[1,2,3] = #v[1,2,3]`.  Project-side
+annotations cannot fix a toolchain declaration, and the previous remedy was
+`import all Init.Data.Vector.Basic` / `import all Init.Data.Array.DecidableEq`
+in every deciding module.
+
+`eqZ` replaces that with a coordinatewise `Bool` test.  `Int`'s `BEq` and
+`Bool`'s `&&` reduce in the kernel, so `decide +kernel` discharges `eqZ a b`
+with no `import all` anywhere, and the two lemmas below carry the result to
+the `Eq`/`Ne` the certificates state.  The arithmetic content is unchanged:
+the kernel still evaluates every convolution coefficient and compares all ten
+of them. -/
+
+/-- Coordinatewise equality test on `VecZ`, in a form the kernel reduces. -/
+@[expose] public def eqZ (a b : VecZ) : Bool :=
+  a[0] == b[0] && a[1] == b[1] && a[2] == b[2] && a[3] == b[3] && a[4] == b[4] &&
+    a[5] == b[5] && a[6] == b[6] && a[7] == b[7] && a[8] == b[8] && a[9] == b[9]
+
+/-- All ten coordinates agree, so the vectors are equal. -/
+public theorem eq_of_eqZ {a b : VecZ} (h : eqZ a b = true) : a = b := by
+  simp only [eqZ, Bool.and_eq_true, beq_iff_eq] at h
+  obtain ⟨⟨⟨⟨⟨⟨⟨⟨⟨h0, h1⟩, h2⟩, h3⟩, h4⟩, h5⟩, h6⟩, h7⟩, h8⟩, h9⟩ := h
+  ext i hi
+  match i, hi with
+  | 0, _ => exact h0
+  | 1, _ => exact h1
+  | 2, _ => exact h2
+  | 3, _ => exact h3
+  | 4, _ => exact h4
+  | 5, _ => exact h5
+  | 6, _ => exact h6
+  | 7, _ => exact h7
+  | 8, _ => exact h8
+  | 9, _ => exact h9
+
+/-- Some coordinate differs, so the vectors are distinct. -/
+public theorem ne_of_eqZ_false {a b : VecZ} (h : eqZ a b = false) : a ≠ b := by
+  intro hab
+  rw [hab] at h
+  simp [eqZ] at h
+
 /-! ### Sample product from `D12PieceAPSplitEntry7_9`, first nonzero XA term.
 
 Scaled by the entry LCM `132`.  `decide` succeeds on the true product and
@@ -77,11 +120,14 @@ def sampleProd : VecZ :=
 def sampleProdMutated : VecZ :=
   #v[289, 3888, 1152, 1440, 3024, 2592, 5544, -1728, 2808, 6336]
 
-theorem sample_mul_eq : mulZ sampleX sampleA = sampleProd := by
-  decide
+theorem sample_mul_eq : mulZ sampleX sampleA = sampleProd :=
+  eq_of_eqZ (by decide +kernel)
 
-theorem sample_mul_ne_mutated : mulZ sampleX sampleA ≠ sampleProdMutated := by
-  decide
+/-- Canary: the deliberately mutated product must NOT be provable.  The kernel
+still evaluates the full convolution and compares all ten coordinates, so a
+silent arithmetic regression fails this. -/
+theorem sample_mul_ne_mutated : mulZ sampleX sampleA ≠ sampleProdMutated :=
+  ne_of_eqZ_false (by decide +kernel)
 
 /-! ### Cast and homomorphism -/
 

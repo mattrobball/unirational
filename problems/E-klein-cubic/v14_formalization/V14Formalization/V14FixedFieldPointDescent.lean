@@ -9,6 +9,7 @@ import V14Formalization.D12SigmaMinusDescent
 import V14Formalization.D12SigmaPlusDescent
 import V14Formalization.WeierstrassSchemeDescent
 import V14Formalization.SchemeFixedLocus
+import V14Formalization.SchemeModelAliases
 
 /-!
 # Descent of a pure-transcendental V14 sigma-fixed field point
@@ -27,7 +28,6 @@ open EllipticPolynomialConstancy
 open D12SigmaPlusDescent D12SigmaMinusDescent
 open WeierstrassSchemeDescent
 
-private abbrev k := V14SchemeModel.k
 
 theorem pluckerValue_eq_eval_map {F : Type*} [Field F] [Algebra k F]
     (x : Fin 15 → F) (q : Fin 15) :

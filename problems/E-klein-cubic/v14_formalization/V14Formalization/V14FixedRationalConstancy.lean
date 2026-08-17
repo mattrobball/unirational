@@ -7,6 +7,7 @@ import V14Formalization.SchemeRationalConstancy
 import V14Formalization.GenericCharts
 import V14Formalization.UniversalNormalDivisor
 import V14Formalization.V14SchemeBaseChange
+import V14Formalization.SchemeModelAliases
 
 /-!
 # Constancy of an over-base rational map from the exceptional divisor
@@ -23,7 +24,6 @@ open AlgebraicGeometry BConicBundleMultisections
 open GeometricV14Carrier
 open EllipticPolynomialConstancy
 
-private abbrev k := V14SchemeModel.k
 
 /-- The `Action` wrapper is not needed: only the underlying scheme over the
 base appears in the generic-point comparison. -/

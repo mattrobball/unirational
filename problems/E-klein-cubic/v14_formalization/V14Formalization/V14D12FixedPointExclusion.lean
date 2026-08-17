@@ -8,6 +8,7 @@ public import V14Formalization.D12MatrixCertificate
 public import V14Formalization.ProjectiveEigenvectorReduction
 public import V14Formalization.SchemeRationalConstancy
 public import V14Formalization.V14FixedPointEquations
+public import V14Formalization.SchemeModelAliases
 
 /-!
 # Excluding base-field fixed sections from a D12 certificate
@@ -30,7 +31,6 @@ open AlgebraicGeometry BConicBundleMultisections
 open GeometricV14Carrier Lambda2Coordinates
 open D12Certificate
 
-public abbrev G := V14SchemeModel.G
 
 /-- The actual ambient matrix of the distinguished D12 rotation. -/
 public abbrev d12ActualRotMatrix :

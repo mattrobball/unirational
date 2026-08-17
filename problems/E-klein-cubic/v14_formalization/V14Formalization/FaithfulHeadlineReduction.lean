@@ -1,5 +1,6 @@
 import V14Formalization.BlockNormalSigma
 import V14Formalization.V14D12CertificateExclusion
+import V14Formalization.SchemeModelAliases
 
 noncomputable section
 open CategoryTheory
@@ -8,8 +9,6 @@ open scoped AlgebraicGeometry
 namespace V14Formalization.SchemeGeometry
 open AlgebraicGeometry GeometricV14Carrier Module
 
-private abbrev k := V14SchemeModel.k
-private abbrev G := V14SchemeModel.G
 
 private abbrev v14FixedAction :=
   fixedByCentralizerAction V14SchemeModel.actionOver sigma

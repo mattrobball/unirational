@@ -7,6 +7,7 @@ module
 public import V14Formalization.ProjectiveFamilyFieldPointLift
 public import V14Formalization.V14SchemeModel
 public import V14Formalization.V14FixedPointEquations
+public import V14Formalization.SchemeModelAliases
 
 /-!
 # Base morphisms from descended V14 coordinates
@@ -21,7 +22,6 @@ namespace V14Formalization.SchemeGeometry
 
 open AlgebraicGeometry BConicBundleMultisections Lambda2Coordinates
 
-public abbrev k := V14SchemeModel.k
 
 public theorem v14Equations_of_projector_and_plucker
     {L : Type} [Field L] [Algebra k L]
