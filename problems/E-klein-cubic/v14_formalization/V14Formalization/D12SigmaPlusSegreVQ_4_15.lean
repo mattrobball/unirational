@@ -5,6 +5,7 @@ Stock-limit, kernel-checkable plus Segre span identities.
 import V14Formalization.D12SigmaPlusSegreEval
 import V14Formalization.D12PolyZReflectionBridges
 import V14Formalization.D12SigmaPlusSegreSpanCore
+import V14Formalization.D12PolyZExpand
 
 noncomputable section
 open Matrix Polynomial
@@ -13,11 +14,8 @@ open D12PolynomialData
 open V14Formalization.D12PolyZReflection
 
 def VQ_qre_4_15 : Polynomial ℚ := C (-10) * X ^ 3 + C (-4) * X ^ 4 + C (4) * X ^ 5 + C (-10) * X ^ 6 + C (8) * X ^ 8
-theorem z_VQ_qre_4_15 : VQ_qre_4_15 = interpQ 1 [0, 0, 0, -10, -4, 4, -10, 0, 8] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_qre_4_15, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_qre_4_15 : VQ_qre_4_15 = interpQ 1 [0, 0, 0, -10, -4, 4, -10, 0, 8] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_9_18 (-10) (-4) 4 (-10) 8
 
 def VQ_qim_4_15 : Polynomial ℚ := (0 : Polynomial ℚ)
 theorem z_VQ_qim_4_15 : VQ_qim_4_15 = interpQ 1 [] := by
@@ -41,11 +39,8 @@ theorem VQ_term_4_15_0 :
   simp [ofLadj_zero]
 
 def VQ_pre_4_15_1 : Polynomial ℚ := C (-12) + C (-6) * X ^ 2 + C (4) * X ^ 3 + C (4) * X ^ 4 + C (4) * X ^ 5 + C (4) * X ^ 6 + C (4) * X ^ 7 + C (4) * X ^ 8 + C (-6) * X ^ 9
-theorem z_VQ_pre_4_15_1 : VQ_pre_4_15_1 = interpQ 1 [-12, 0, -6, 4, 4, 4, 4, 4, 4, -6] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pre_4_15_1, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pre_4_15_1 : VQ_pre_4_15_1 = interpQ 1 [-12, 0, -6, 4, 4, 4, 4, 4, 4, -6] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_10_20 (-12) (-6) 4 4 4 4 4 4 (-6)
 
 def VQ_pim_4_15_1 : Polynomial ℚ := (0 : Polynomial ℚ)
 theorem z_VQ_pim_4_15_1 : VQ_pim_4_15_1 = interpQ 1 [] := by
@@ -140,11 +135,8 @@ theorem VQ_term_4_15_5 :
   simp [ofLadj_zero]
 
 def VQ_pre_4_15_6 : Polynomial ℚ := C (16) + C (26) * X ^ 2 + C (10) * X ^ 3 + C (18) * X ^ 4 + C (16) * X ^ 5 + C (8) * X ^ 6 + C (-2) * X ^ 8 + C (6) * X ^ 9 + C (-26) * X ^ 10 + C (-16) * X ^ 11 + C (-26) * X ^ 12 + C (-20) * X ^ 13 + C (-12) * X ^ 14 + C (-8) * X ^ 15 + C (-4) * X ^ 16 + C (4) * X ^ 17 + C (10) * X ^ 18
-theorem z_VQ_pre_4_15_6 : VQ_pre_4_15_6 = interpQ 1 [16, 0, 26, 10, 18, 16, 8, 0, -2, 6, -26, -16, -26, -20, -12, -8, -4, 4, 10] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pre_4_15_6, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pre_4_15_6 : VQ_pre_4_15_6 = interpQ 1 [16, 0, 26, 10, 18, 16, 8, 0, -2, 6, -26, -16, -26, -20, -12, -8, -4, 4, 10] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_102 16 26 10 18 16 8 (-2) 6 (-26) (-16) (-26) (-20) (-12) (-8) (-4) 4 10
 
 def VQ_pim_4_15_6 : Polynomial ℚ := (0 : Polynomial ℚ)
 theorem z_VQ_pim_4_15_6 : VQ_pim_4_15_6 = interpQ 1 [] := by
@@ -223,11 +215,8 @@ theorem VQ_term_4_15_9 :
   simp [ofLadj_zero]
 
 def VQ_pre_4_15_10 : Polynomial ℚ := C (-2) + C (-4) * X ^ 2 + C (4) * X ^ 3 + C (10) * X ^ 5 + C (8) * X ^ 6 + C (12) * X ^ 7 + C (14) * X ^ 8 + C (4) * X ^ 9 + C (14) * X ^ 10 + C (4) * X ^ 11 + C (14) * X ^ 12 + C (8) * X ^ 13 + C (10) * X ^ 14 + C (10) * X ^ 15 + C (2) * X ^ 16 + C (4) * X ^ 17 + C (-2) * X ^ 18
-theorem z_VQ_pre_4_15_10 : VQ_pre_4_15_10 = interpQ 1 [-2, 0, -4, 4, 0, 10, 8, 12, 14, 4, 14, 4, 14, 8, 10, 10, 2, 4, -2] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pre_4_15_10, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pre_4_15_10 : VQ_pre_4_15_10 = interpQ 1 [-2, 0, -4, 4, 0, 10, 8, 12, 14, 4, 14, 4, 14, 8, 10, 10, 2, 4, -2] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_104 (-2) (-4) 4 10 8 12 14 4 14 4 14 8 10 10 2 4 (-2)
 
 def VQ_pim_4_15_10 : Polynomial ℚ := (0 : Polynomial ℚ)
 theorem z_VQ_pim_4_15_10 : VQ_pim_4_15_10 = interpQ 1 [] := by

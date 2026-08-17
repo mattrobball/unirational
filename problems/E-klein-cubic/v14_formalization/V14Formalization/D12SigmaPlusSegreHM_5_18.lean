@@ -7,6 +7,7 @@ import V14Formalization.D12PolyZReflectionBridges
 import V14Formalization.D12SigmaPlusSegreApplyH
 import V14Formalization.D12SigmaPlusSegreMinorQ
 import V14Formalization.D12SigmaPlusSegreGeom
+import V14Formalization.D12PolyZExpand
 
 noncomputable section
 open Matrix Polynomial
@@ -16,18 +17,12 @@ open V14Formalization.D12PolyZReflection
 open D12SigmaPlusQuadric6
 
 def HM_5_18_A_pre : Polynomial ℚ := C (3) + C (12) * X + C (7) * X ^ 2 + C (-1) * X ^ 3 + C (9) * X ^ 4 + C (-15) * X ^ 5 + C (22) * X ^ 6 + C (-24) * X ^ 7 + C (67) * X ^ 8 + C (-5) * X ^ 9 + C (100) * X ^ 10 + C (4) * X ^ 11 + C (88) * X ^ 12 + C (-12) * X ^ 13 + C (68) * X ^ 14 + C (-13) * X ^ 15 + C (35) * X ^ 16 + C (-2) * X ^ 17 + C (20) * X ^ 18
-theorem z_HM_5_18_A_pre : HM_5_18_A_pre = interpQ 1 [3, 12, 7, -1, 9, -15, 22, -24, 67, -5, 100, 4, 88, -12, 68, -13, 35, -2, 20] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_5_18_A_pre, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_5_18_A_pre : HM_5_18_A_pre = interpQ 1 [3, 12, 7, -1, 9, -15, 22, -24, 67, -5, 100, 4, 88, -12, 68, -13, 35, -2, 20] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_73 3 12 7 (-1) 9 (-15) 22 (-24) 67 (-5) 100 4 88 (-12) 68 (-13) 35 (-2) 20
 
 def HM_5_18_A_pim : Polynomial ℚ := C (-15) + C (-30) * X + C (-17) * X ^ 2 + C (-81) * X ^ 3 + C (-65) * X ^ 4 + C (-143) * X ^ 5 + C (-130) * X ^ 6 + C (-212) * X ^ 7 + C (-173) * X ^ 8 + C (-223) * X ^ 9 + C (-178) * X ^ 10 + C (-150) * X ^ 11 + C (-122) * X ^ 12 + C (-90) * X ^ 13 + C (-76) * X ^ 14 + C (-33) * X ^ 15 + C (-49) * X ^ 16 + C (-8) * X ^ 17 + C (-20) * X ^ 18
-theorem z_HM_5_18_A_pim : HM_5_18_A_pim = interpQ 1 [-15, -30, -17, -81, -65, -143, -130, -212, -173, -223, -178, -150, -122, -90, -76, -33, -49, -8, -20] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_5_18_A_pim, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_5_18_A_pim : HM_5_18_A_pim = interpQ 1 [-15, -30, -17, -81, -65, -143, -130, -212, -173, -223, -178, -150, -122, -90, -76, -33, -49, -8, -20] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_73 (-15) (-30) (-17) (-81) (-65) (-143) (-130) (-212) (-173) (-223) (-178) (-150) (-122) (-90) (-76) (-33) (-49) (-8) (-20)
 
 theorem HM_5_18_A_pre_eq :
     H_re_1_4 * H_re_8_4 - H_im_1_4 * H_im_8_4 =
@@ -54,18 +49,12 @@ theorem HM_5_18_A_mul :
     HM_5_18_A_pre_eq, HM_5_18_A_pim_eq]
 
 def HM_5_18_B_pre : Polynomial ℚ := C (-34) + C (-16) * X + C (-87) * X ^ 2 + C (-52) * X ^ 3 + C (-111) * X ^ 4 + C (-70) * X ^ 5 + C (-80) * X ^ 6 + C (-65) * X ^ 7 + C (-15) * X ^ 8 + C (-73) * X ^ 9 + C (33) * X ^ 10 + C (-20) * X ^ 11 + C (49) * X ^ 12 + C (14) * X ^ 13 + C (37) * X ^ 14 + C (24) * X ^ 15 + C (-3) * X ^ 16 + C (7) * X ^ 17 + C (-22) * X ^ 18
-theorem z_HM_5_18_B_pre : HM_5_18_B_pre = interpQ 1 [-34, -16, -87, -52, -111, -70, -80, -65, -15, -73, 33, -20, 49, 14, 37, 24, -3, 7, -22] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_5_18_B_pre, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_5_18_B_pre : HM_5_18_B_pre = interpQ 1 [-34, -16, -87, -52, -111, -70, -80, -65, -15, -73, 33, -20, 49, 14, 37, 24, -3, 7, -22] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_73 (-34) (-16) (-87) (-52) (-111) (-70) (-80) (-65) (-15) (-73) 33 (-20) 49 14 37 24 (-3) 7 (-22)
 
 def HM_5_18_B_pim : Polynomial ℚ := C (2) + C (4) * X + C (13) * X ^ 2 + C (8) * X ^ 3 + C (11) * X ^ 4 + C (-42) * X ^ 5 + C (-4) * X ^ 6 + C (-85) * X ^ 7 + C (-37) * X ^ 8 + C (-81) * X ^ 9 + C (-41) * X ^ 10 + C (-24) * X ^ 11 + C (-7) * X ^ 12 + C (24) * X ^ 13 + C (-15) * X ^ 14 + C (36) * X ^ 15 + C (1) * X ^ 16 + C (1) * X ^ 17 + C (-6) * X ^ 18
-theorem z_HM_5_18_B_pim : HM_5_18_B_pim = interpQ 1 [2, 4, 13, 8, 11, -42, -4, -85, -37, -81, -41, -24, -7, 24, -15, 36, 1, 1, -6] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_5_18_B_pim, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_5_18_B_pim : HM_5_18_B_pim = interpQ 1 [2, 4, 13, 8, 11, -42, -4, -85, -37, -81, -41, -24, -7, 24, -15, 36, 1, 1, -6] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_73 2 4 13 8 11 (-42) (-4) (-85) (-37) (-81) (-41) (-24) (-7) 24 (-15) 36 1 1 (-6)
 
 theorem HM_5_18_B_pre_eq :
     H_re_2_4 * H_re_7_4 - H_im_2_4 * H_im_7_4 =
@@ -92,18 +81,12 @@ theorem HM_5_18_B_mul :
     HM_5_18_B_pre_eq, HM_5_18_B_pim_eq]
 
 def HM_5_18_qre : Polynomial ℚ := C (43) + C (-15) * X + C (65) * X ^ 2 + C (-57) * X ^ 3 + C (68) * X ^ 4 + C (-75) * X ^ 5 + C (47) * X ^ 6 + C (-51) * X ^ 7 + C (42) * X ^ 8
-theorem z_HM_5_18_qre : HM_5_18_qre = interpQ 1 [43, -15, 65, -57, 68, -75, 47, -51, 42] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_5_18_qre, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_5_18_qre : HM_5_18_qre = interpQ 1 [43, -15, 65, -57, 68, -75, 47, -51, 42] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_9_7 43 (-15) 65 (-57) 68 (-75) 47 (-51) 42
 
 def HM_5_18_qim : Polynomial ℚ := C (-11) + C (-11) * X + C (-1) * X ^ 2 + C (-53) * X ^ 3 + C (8) * X ^ 4 + C (-19) * X ^ 5 + C (-41) * X ^ 6 + C (5) * X ^ 7 + C (-14) * X ^ 8
-theorem z_HM_5_18_qim : HM_5_18_qim = interpQ 1 [-11, -11, -1, -53, 8, -19, -41, 5, -14] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_5_18_qim, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_5_18_qim : HM_5_18_qim = interpQ 1 [-11, -11, -1, -53, 8, -19, -41, 5, -14] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_9_7 (-11) (-11) (-1) (-53) 8 (-19) (-41) 5 (-14)
 
 theorem HM_5_18_bilin :
     bilinearCoeffs (Hrow 1) (Hrow 8) 18 -

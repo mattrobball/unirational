@@ -5,6 +5,7 @@ Stock-limit, kernel-checkable plus Segre span identities.
 import V14Formalization.D12SigmaPlusSegreEval
 import V14Formalization.D12PolyZReflectionBridges
 import V14Formalization.D12SigmaPlusSegreSpanCore
+import V14Formalization.D12PolyZExpand
 
 noncomputable section
 open Matrix Polynomial
@@ -13,11 +14,8 @@ open D12PolynomialData
 open V14Formalization.D12PolyZReflection
 
 def VQ_qre_0_17 : Polynomial ℚ := C (-8) + C (8) * X + C (-20) * X ^ 2 + C (-8) * X ^ 3 + C (-12) * X ^ 4 + C (-24) * X ^ 5 + C (-4) * X ^ 6 + C (-8) * X ^ 7 + C (4) * X ^ 8
-theorem z_VQ_qre_0_17 : VQ_qre_0_17 = interpQ 1 [-8, 8, -20, -8, -12, -24, -4, -8, 4] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_qre_0_17, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_qre_0_17 : VQ_qre_0_17 = interpQ 1 [-8, 8, -20, -8, -12, -24, -4, -8, 4] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_9_7 (-8) 8 (-20) (-8) (-12) (-24) (-4) (-8) 4
 
 def VQ_qim_0_17 : Polynomial ℚ := (0 : Polynomial ℚ)
 theorem z_VQ_qim_0_17 : VQ_qim_0_17 = interpQ 1 [] := by
@@ -73,11 +71,8 @@ theorem VQ_term_0_17_2 :
   simp [ofLadj_zero]
 
 def VQ_pre_0_17_3 : Polynomial ℚ := C (-20) + C (4) * X ^ 2 + C (56) * X ^ 3 + C (68) * X ^ 4 + C (80) * X ^ 5 + C (80) * X ^ 6 + C (68) * X ^ 7 + C (56) * X ^ 8 + C (4) * X ^ 9
-theorem z_VQ_pre_0_17_3 : VQ_pre_0_17_3 = interpQ 1 [-20, 0, 4, 56, 68, 80, 80, 68, 56, 4] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pre_0_17_3, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pre_0_17_3 : VQ_pre_0_17_3 = interpQ 1 [-20, 0, 4, 56, 68, 80, 80, 68, 56, 4] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_10_20 (-20) 4 56 68 80 80 68 56 4
 
 def VQ_pim_0_17_3 : Polynomial ℚ := (0 : Polynomial ℚ)
 theorem z_VQ_pim_0_17_3 : VQ_pim_0_17_3 = interpQ 1 [] := by
@@ -140,11 +135,8 @@ theorem VQ_term_0_17_5 :
   simp [ofLadj_zero]
 
 def VQ_pre_0_17_6 : Polynomial ℚ := C (4) + C (-28) * X ^ 2 + C (-72) * X ^ 3 + C (-108) * X ^ 4 + C (-124) * X ^ 5 + C (-124) * X ^ 6 + C (-108) * X ^ 7 + C (-72) * X ^ 8 + C (-28) * X ^ 9
-theorem z_VQ_pre_0_17_6 : VQ_pre_0_17_6 = interpQ 1 [4, 0, -28, -72, -108, -124, -124, -108, -72, -28] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pre_0_17_6, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pre_0_17_6 : VQ_pre_0_17_6 = interpQ 1 [4, 0, -28, -72, -108, -124, -124, -108, -72, -28] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_10_20 4 (-28) (-72) (-108) (-124) (-124) (-108) (-72) (-28)
 
 def VQ_pim_0_17_6 : Polynomial ℚ := (0 : Polynomial ℚ)
 theorem z_VQ_pim_0_17_6 : VQ_pim_0_17_6 = interpQ 1 [] := by
@@ -223,11 +215,8 @@ theorem VQ_term_0_17_9 :
   simp [ofLadj_zero]
 
 def VQ_pre_0_17_10 : Polynomial ℚ := C (8) + C (12) * X ^ 2 + C (-12) * X ^ 3 + C (-4) * X ^ 4 + C (-24) * X ^ 5 + C (-28) * X ^ 6 + C (-40) * X ^ 7 + C (-56) * X ^ 8 + C (-40) * X ^ 9 + C (-72) * X ^ 10 + C (-64) * X ^ 11 + C (-72) * X ^ 12 + C (-52) * X ^ 13 + C (-44) * X ^ 14 + C (-32) * X ^ 15 + C (-8) * X ^ 16 + C (-4) * X ^ 17 + C (4) * X ^ 18
-theorem z_VQ_pre_0_17_10 : VQ_pre_0_17_10 = interpQ 1 [8, 0, 12, -12, -4, -24, -28, -40, -56, -40, -72, -64, -72, -52, -44, -32, -8, -4, 4] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pre_0_17_10, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pre_0_17_10 : VQ_pre_0_17_10 = interpQ 1 [8, 0, 12, -12, -4, -24, -28, -40, -56, -40, -72, -64, -72, -52, -44, -32, -8, -4, 4] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_99 8 12 (-12) (-4) (-24) (-28) (-40) (-56) (-40) (-72) (-64) (-72) (-52) (-44) (-32) (-8) (-4) 4
 
 def VQ_pim_0_17_10 : Polynomial ℚ := (0 : Polynomial ℚ)
 theorem z_VQ_pim_0_17_10 : VQ_pim_0_17_10 = interpQ 1 [] := by

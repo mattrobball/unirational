@@ -5,6 +5,7 @@ Stock-limit, kernel-checkable plus Segre span identities.
 import V14Formalization.D12SigmaPlusSegreEval
 import V14Formalization.D12PolyZReflectionBridges
 import V14Formalization.D12SigmaPlusSegreSpanCore
+import V14Formalization.D12PolyZExpand
 
 noncomputable section
 open Matrix Polynomial
@@ -182,18 +183,12 @@ theorem VQ_term_5_20_9 :
   simp [ofLadj_zero]
 
 def VQ_pre_5_20_10 : Polynomial ℚ := C (4) + C (4) * X ^ 2 + C (-8) * X ^ 3 + C (-8) * X ^ 4 + C (-12) * X ^ 5 + C (-12) * X ^ 6 + C (-8) * X ^ 7 + C (-8) * X ^ 8 + C (4) * X ^ 9
-theorem z_VQ_pre_5_20_10 : VQ_pre_5_20_10 = interpQ 1 [4, 0, 4, -8, -8, -12, -12, -8, -8, 4] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pre_5_20_10, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pre_5_20_10 : VQ_pre_5_20_10 = interpQ 1 [4, 0, 4, -8, -8, -12, -12, -8, -8, 4] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_10_20 4 4 (-8) (-8) (-12) (-12) (-8) (-8) 4
 
 def VQ_pim_5_20_10 : Polynomial ℚ := C (12) + C (24) * X + C (36) * X ^ 2 + C (48) * X ^ 3 + C (16) * X ^ 4 + C (28) * X ^ 5 + C (-4) * X ^ 6 + C (8) * X ^ 7 + C (-24) * X ^ 8 + C (-12) * X ^ 9
-theorem z_VQ_pim_5_20_10 : VQ_pim_5_20_10 = interpQ 1 [12, 24, 36, 48, 16, 28, -4, 8, -24, -12] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pim_5_20_10, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pim_5_20_10 : VQ_pim_5_20_10 = interpQ 1 [12, 24, 36, 48, 16, 28, -4, 8, -24, -12] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_10_19 12 24 36 48 16 28 (-4) 8 (-24) (-12)
 
 theorem VQ_pre_eq_5_20_10 :
     spanV_re_5_10 * Qplus_re_10_20 - spanV_im_5_10 * Qplus_im_10_20 =

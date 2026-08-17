@@ -5,6 +5,7 @@ Stock-limit, kernel-checkable plus Segre span identities.
 import V14Formalization.D12SigmaPlusSegreEval
 import V14Formalization.D12PolyZReflectionBridges
 import V14Formalization.D12SigmaPlusSegreSpanCore
+import V14Formalization.D12PolyZExpand
 
 noncomputable section
 open Matrix Polynomial
@@ -182,11 +183,8 @@ theorem VQ_term_8_20_9 :
   simp [ofLadj_zero]
 
 def VQ_pre_8_20_10 : Polynomial ℚ := C (20) + C (20) * X ^ 2 + C (-40) * X ^ 3 + C (-40) * X ^ 4 + C (-60) * X ^ 5 + C (-60) * X ^ 6 + C (-40) * X ^ 7 + C (-40) * X ^ 8 + C (20) * X ^ 9
-theorem z_VQ_pre_8_20_10 : VQ_pre_8_20_10 = interpQ 1 [20, 0, 20, -40, -40, -60, -60, -40, -40, 20] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pre_8_20_10, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pre_8_20_10 : VQ_pre_8_20_10 = interpQ 1 [20, 0, 20, -40, -40, -60, -60, -40, -40, 20] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_10_20 20 20 (-40) (-40) (-60) (-60) (-40) (-40) 20
 
 def VQ_pim_8_20_10 : Polynomial ℚ := (0 : Polynomial ℚ)
 theorem z_VQ_pim_8_20_10 : VQ_pim_8_20_10 = interpQ 1 [] := by

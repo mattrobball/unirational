@@ -7,6 +7,7 @@ import V14Formalization.D12PolyZReflectionBridges
 import V14Formalization.D12SigmaPlusSegreApplyH
 import V14Formalization.D12SigmaPlusSegreMinorQ
 import V14Formalization.D12SigmaPlusSegreGeom
+import V14Formalization.D12PolyZExpand
 
 noncomputable section
 open Matrix Polynomial
@@ -16,18 +17,12 @@ open V14Formalization.D12PolyZReflection
 open D12SigmaPlusQuadric6
 
 def HM_5_0_A_pre : Polynomial ℚ := C (4) + C (16) * X + C (40) * X ^ 2 + C (68) * X ^ 3 + C (94) * X ^ 4 + C (112) * X ^ 5 + C (102) * X ^ 6 + C (94) * X ^ 7 + C (58) * X ^ 8 + C (7) * X ^ 9 + C (-20) * X ^ 10 + C (-18) * X ^ 11 + C (-36) * X ^ 12 + C (-33) * X ^ 13 + C (-10) * X ^ 14 + C (4) * X ^ 15 + C (-6) * X ^ 16 + C (4) * X ^ 17 + C (4) * X ^ 18
-theorem z_HM_5_0_A_pre : HM_5_0_A_pre = interpQ 1 [4, 16, 40, 68, 94, 112, 102, 94, 58, 7, -20, -18, -36, -33, -10, 4, -6, 4, 4] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_5_0_A_pre, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_5_0_A_pre : HM_5_0_A_pre = interpQ 1 [4, 16, 40, 68, 94, 112, 102, 94, 58, 7, -20, -18, -36, -33, -10, 4, -6, 4, 4] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_73 4 16 40 68 94 112 102 94 58 7 (-20) (-18) (-36) (-33) (-10) 4 (-6) 4 4
 
 def HM_5_0_A_pim : Polynomial ℚ := C (-4) + C (-8) * X + C (-12) * X ^ 2 + C (8) * X ^ 3 + C (30) * X ^ 4 + C (76) * X ^ 5 + C (116) * X ^ 6 + C (154) * X ^ 7 + C (182) * X ^ 8 + C (173) * X ^ 9 + C (128) * X ^ 10 + C (92) * X ^ 11 + C (56) * X ^ 12 + C (15) * X ^ 13 + C (-14) * X ^ 14 + C (-8) * X ^ 15 + C (-4) * X ^ 16 + C (-12) * X ^ 17
-theorem z_HM_5_0_A_pim : HM_5_0_A_pim = interpQ 1 [-4, -8, -12, 8, 30, 76, 116, 154, 182, 173, 128, 92, 56, 15, -14, -8, -4, -12] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_5_0_A_pim, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_5_0_A_pim : HM_5_0_A_pim = interpQ 1 [-4, -8, -12, 8, 30, 76, 116, 154, 182, 173, 128, 92, 56, 15, -14, -8, -4, -12] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_18_38 (-4) (-8) (-12) 8 30 76 116 154 182 173 128 92 56 15 (-14) (-8) (-4) (-12)
 
 theorem HM_5_0_A_pre_eq :
     H_re_1_0 * H_re_8_0 - H_im_1_0 * H_im_8_0 =
@@ -54,18 +49,12 @@ theorem HM_5_0_A_mul :
     HM_5_0_A_pre_eq, HM_5_0_A_pim_eq]
 
 def HM_5_0_B_pre : Polynomial ℚ := C (-8) * X + C (-14) * X ^ 2 + C (-34) * X ^ 3 + C (-44) * X ^ 4 + C (-56) * X ^ 5 + C (-82) * X ^ 6 + C (-106) * X ^ 7 + C (-140) * X ^ 8 + C (-189) * X ^ 9 + C (-217) * X ^ 10 + C (-210) * X ^ 11 + C (-209) * X ^ 12 + C (-175) * X ^ 13 + C (-106) * X ^ 14 + C (-60) * X ^ 15 + C (-36) * X ^ 16 + C (-10) * X ^ 17 + C (2) * X ^ 18
-theorem z_HM_5_0_B_pre : HM_5_0_B_pre = interpQ 1 [0, -8, -14, -34, -44, -56, -82, -106, -140, -189, -217, -210, -209, -175, -106, -60, -36, -10, 2] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_5_0_B_pre, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_5_0_B_pre : HM_5_0_B_pre = interpQ 1 [0, -8, -14, -34, -44, -56, -82, -106, -140, -189, -217, -210, -209, -175, -106, -60, -36, -10, 2] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_111 (-8) (-14) (-34) (-44) (-56) (-82) (-106) (-140) (-189) (-217) (-210) (-209) (-175) (-106) (-60) (-36) (-10) 2
 
 def HM_5_0_B_pim : Polynomial ℚ := C (-4) + C (-8) * X + C (-18) * X ^ 2 + C (-14) * X ^ 3 + C (-8) * X ^ 4 + C (26) * X ^ 5 + C (54) * X ^ 6 + C (78) * X ^ 7 + C (102) * X ^ 8 + C (105) * X ^ 9 + C (61) * X ^ 10 + C (26) * X ^ 11 + C (-9) * X ^ 12 + C (-43) * X ^ 13 + C (-44) * X ^ 14 + C (-32) * X ^ 15 + C (-26) * X ^ 16 + C (-10) * X ^ 17 + C (6) * X ^ 18
-theorem z_HM_5_0_B_pim : HM_5_0_B_pim = interpQ 1 [-4, -8, -18, -14, -8, 26, 54, 78, 102, 105, 61, 26, -9, -43, -44, -32, -26, -10, 6] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_5_0_B_pim, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_5_0_B_pim : HM_5_0_B_pim = interpQ 1 [-4, -8, -18, -14, -8, 26, 54, 78, 102, 105, 61, 26, -9, -43, -44, -32, -26, -10, 6] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_73 (-4) (-8) (-18) (-14) (-8) 26 54 78 102 105 61 26 (-9) (-43) (-44) (-32) (-26) (-10) 6
 
 theorem HM_5_0_B_pre_eq :
     H_re_2_0 * H_re_7_0 - H_im_2_0 * H_im_7_0 =
@@ -92,18 +81,12 @@ theorem HM_5_0_B_mul :
     HM_5_0_B_pre_eq, HM_5_0_B_pim_eq]
 
 def HM_5_0_qre : Polynomial ℚ := C (5) + C (19) * X + C (31) * X ^ 2 + C (46) * X ^ 3 + C (32) * X ^ 4 + C (34) * X ^ 5 + C (16) * X ^ 6 + C (12) * X ^ 7 + C (2) * X ^ 8
-theorem z_HM_5_0_qre : HM_5_0_qre = interpQ 1 [5, 19, 31, 46, 32, 34, 16, 12, 2] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_5_0_qre, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_5_0_qre : HM_5_0_qre = interpQ 1 [5, 19, 31, 46, 32, 34, 16, 12, 2] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_9_7 5 19 31 46 32 34 16 12 2
 
 def HM_5_0_qim : Polynomial ℚ := C (1) + C (1) * X + C (7) * X ^ 2 + C (28) * X ^ 3 + C (6) * X ^ 4 + C (2) * X ^ 5 + C (24) * X ^ 6 + C (4) * X ^ 7 + C (-6) * X ^ 8
-theorem z_HM_5_0_qim : HM_5_0_qim = interpQ 1 [1, 1, 7, 28, 6, 2, 24, 4, -6] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_5_0_qim, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_5_0_qim : HM_5_0_qim = interpQ 1 [1, 1, 7, 28, 6, 2, 24, 4, -6] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_9_7 1 1 7 28 6 2 24 4 (-6)
 
 theorem HM_5_0_bilin :
     bilinearCoeffs (Hrow 1) (Hrow 8) 0 -

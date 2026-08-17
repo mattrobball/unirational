@@ -7,6 +7,7 @@ import V14Formalization.D12PolyZReflectionBridges
 import V14Formalization.D12SigmaPlusSegreApplyH
 import V14Formalization.D12SigmaPlusSegreMinorQ
 import V14Formalization.D12SigmaPlusSegreGeom
+import V14Formalization.D12PolyZExpand
 
 noncomputable section
 open Matrix Polynomial
@@ -16,18 +17,12 @@ open V14Formalization.D12PolyZReflection
 open D12SigmaPlusQuadric6
 
 def HM_2_18_A_pre : Polynomial ℚ := C (-23) + C (8) * X + C (-30) * X ^ 2 + C (-5) * X ^ 3 + C (-72) * X ^ 4 + C (-47) * X ^ 5 + C (-81) * X ^ 6 + C (-67) * X ^ 7 + C (-30) * X ^ 8 + C (-19) * X ^ 9 + C (50) * X ^ 10 + C (50) * X ^ 11 + C (42) * X ^ 12 + C (11) * X ^ 13 + C (-25) * X ^ 14 + C (-19) * X ^ 15 + C (-58) * X ^ 16 + C (-24) * X ^ 17 + C (-24) * X ^ 18
-theorem z_HM_2_18_A_pre : HM_2_18_A_pre = interpQ 1 [-23, 8, -30, -5, -72, -47, -81, -67, -30, -19, 50, 50, 42, 11, -25, -19, -58, -24, -24] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_2_18_A_pre, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_2_18_A_pre : HM_2_18_A_pre = interpQ 1 [-23, 8, -30, -5, -72, -47, -81, -67, -30, -19, 50, 50, 42, 11, -25, -19, -58, -24, -24] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_73 (-23) 8 (-30) (-5) (-72) (-47) (-81) (-67) (-30) (-19) 50 50 42 11 (-25) (-19) (-58) (-24) (-24)
 
 def HM_2_18_A_pim : Polynomial ℚ := C (-15) + C (-30) * X + C (-32) * X ^ 2 + C (-61) * X ^ 3 + C (-60) * X ^ 4 + C (-129) * X ^ 5 + C (-129) * X ^ 6 + C (-217) * X ^ 7 + C (-190) * X ^ 8 + C (-227) * X ^ 9 + C (-164) * X ^ 10 + C (-106) * X ^ 11 + C (-48) * X ^ 12 + C (17) * X ^ 13 + C (9) * X ^ 14 + C (43) * X ^ 15 + C (4) * X ^ 16 + C (12) * X ^ 17 + C (-8) * X ^ 18
-theorem z_HM_2_18_A_pim : HM_2_18_A_pim = interpQ 1 [-15, -30, -32, -61, -60, -129, -129, -217, -190, -227, -164, -106, -48, 17, 9, 43, 4, 12, -8] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_2_18_A_pim, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_2_18_A_pim : HM_2_18_A_pim = interpQ 1 [-15, -30, -32, -61, -60, -129, -129, -217, -190, -227, -164, -106, -48, 17, 9, 43, 4, 12, -8] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_73 (-15) (-30) (-32) (-61) (-60) (-129) (-129) (-217) (-190) (-227) (-164) (-106) (-48) 17 9 43 4 12 (-8)
 
 theorem HM_2_18_A_pre_eq :
     H_re_1_4 * H_re_5_4 - H_im_1_4 * H_im_5_4 =
@@ -54,18 +49,12 @@ theorem HM_2_18_A_mul :
     HM_2_18_A_pre_eq, HM_2_18_A_pim_eq]
 
 def HM_2_18_B_pre : Polynomial ℚ := C (-4) + C (-16) * X + C (-42) * X ^ 2 + C (-74) * X ^ 3 + C (-104) * X ^ 4 + C (-125) * X ^ 5 + C (-117) * X ^ 6 + C (-106) * X ^ 7 + C (-45) * X ^ 8 + C (-22) * X ^ 9 + C (47) * X ^ 10 + C (32) * X ^ 11 + C (63) * X ^ 12 + C (20) * X ^ 13 + C (29) * X ^ 14 + C (-6) * X ^ 15 + C (-1) * X ^ 16 + C (-9) * X ^ 17 + C (-4) * X ^ 18
-theorem z_HM_2_18_B_pre : HM_2_18_B_pre = interpQ 1 [-4, -16, -42, -74, -104, -125, -117, -106, -45, -22, 47, 32, 63, 20, 29, -6, -1, -9, -4] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_2_18_B_pre, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_2_18_B_pre : HM_2_18_B_pre = interpQ 1 [-4, -16, -42, -74, -104, -125, -117, -106, -45, -22, 47, 32, 63, 20, 29, -6, -1, -9, -4] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_73 (-4) (-16) (-42) (-74) (-104) (-125) (-117) (-106) (-45) (-22) 47 32 63 20 29 (-6) (-1) (-9) (-4)
 
 def HM_2_18_B_pim : Polynomial ℚ := C (12) + C (24) * X + C (58) * X ^ 2 + C (46) * X ^ 3 + C (68) * X ^ 4 + C (-3) * X ^ 5 + C (1) * X ^ 6 + C (-84) * X ^ 7 + C (-69) * X ^ 8 + C (-106) * X ^ 9 + C (-43) * X ^ 10 + C (-12) * X ^ 11 + C (19) * X ^ 12 + C (48) * X ^ 13 + C (23) * X ^ 14 + C (36) * X ^ 15 + C (-1) * X ^ 16 + C (3) * X ^ 17 + C (-20) * X ^ 18
-theorem z_HM_2_18_B_pim : HM_2_18_B_pim = interpQ 1 [12, 24, 58, 46, 68, -3, 1, -84, -69, -106, -43, -12, 19, 48, 23, 36, -1, 3, -20] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_2_18_B_pim, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_2_18_B_pim : HM_2_18_B_pim = interpQ 1 [12, 24, 58, 46, 68, -3, 1, -84, -69, -106, -43, -12, 19, 48, 23, 36, -1, 3, -20] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_73 12 24 58 46 68 (-3) 1 (-84) (-69) (-106) (-43) (-12) 19 48 23 36 (-1) 3 (-20)
 
 theorem HM_2_18_B_pre_eq :
     H_re_2_4 * H_re_4_4 - H_im_2_4 * H_im_4_4 =
@@ -92,18 +81,12 @@ theorem HM_2_18_B_mul :
     HM_2_18_B_pre_eq, HM_2_18_B_pim_eq]
 
 def HM_2_18_qre : Polynomial ℚ := C (-15) + C (39) * X + C (-12) * X ^ 2 + C (45) * X ^ 3 + C (-41) * X ^ 4 + C (44) * X ^ 5 + C (-42) * X ^ 6 + C (5) * X ^ 7 + C (-20) * X ^ 8
-theorem z_HM_2_18_qre : HM_2_18_qre = interpQ 1 [-15, 39, -12, 45, -41, 44, -42, 5, -20] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_2_18_qre, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_2_18_qre : HM_2_18_qre = interpQ 1 [-15, 39, -12, 45, -41, 44, -42, 5, -20] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_9_7 (-15) 39 (-12) 45 (-41) 44 (-42) 5 (-20)
 
 def HM_2_18_qim : Polynomial ℚ := C (-27) + C (-27) * X + C (-36) * X ^ 2 + C (-17) * X ^ 3 + C (-21) * X ^ 4 + C (2) * X ^ 5 + C (-4) * X ^ 6 + C (-3) * X ^ 7 + C (12) * X ^ 8
-theorem z_HM_2_18_qim : HM_2_18_qim = interpQ 1 [-27, -27, -36, -17, -21, 2, -4, -3, 12] := by
-  refine Polynomial.funext fun r => ?_
-  simp [HM_2_18_qim, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_HM_2_18_qim : HM_2_18_qim = interpQ 1 [-27, -27, -36, -17, -21, 2, -4, -3, 12] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_9_7 (-27) (-27) (-36) (-17) (-21) 2 (-4) (-3) 12
 
 theorem HM_2_18_bilin :
     bilinearCoeffs (Hrow 1) (Hrow 5) 18 -

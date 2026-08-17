@@ -5,6 +5,7 @@ Stock-limit, kernel-checkable plus Segre span identities.
 import V14Formalization.D12SigmaPlusSegreEval
 import V14Formalization.D12PolyZReflectionBridges
 import V14Formalization.D12SigmaPlusSegreSpanCore
+import V14Formalization.D12PolyZExpand
 
 noncomputable section
 open Matrix Polynomial
@@ -13,33 +14,21 @@ open D12PolynomialData
 open V14Formalization.D12PolyZReflection
 
 def VQ_qre_5_4 : Polynomial ℚ := C (-1) + C (1) * X + C (7) * X ^ 3 + C (5) * X ^ 4 + C (-10) * X ^ 5 + C (-14) * X ^ 6 + C (-14) * X ^ 7 + C (-7) * X ^ 8
-theorem z_VQ_qre_5_4 : VQ_qre_5_4 = interpQ 1 [-1, 1, 0, 7, 5, -10, -14, -14, -7] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_qre_5_4, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_qre_5_4 : VQ_qre_5_4 = interpQ 1 [-1, 1, 0, 7, 5, -10, -14, -14, -7] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_9_13 (-1) 1 7 5 (-10) (-14) (-14) (-7)
 
 def VQ_qim_5_4 : Polynomial ℚ := C (-31) + C (-31) * X + C (-14) * X ^ 2 + C (-57) * X ^ 3 + C (-35) * X ^ 4 + C (-10) * X ^ 5 + C (4) * X ^ 6 + C (26) * X ^ 7 + C (5) * X ^ 8
-theorem z_VQ_qim_5_4 : VQ_qim_5_4 = interpQ 1 [-31, -31, -14, -57, -35, -10, 4, 26, 5] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_qim_5_4, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_qim_5_4 : VQ_qim_5_4 = interpQ 1 [-31, -31, -14, -57, -35, -10, 4, 26, 5] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_9_7 (-31) (-31) (-14) (-57) (-35) (-10) 4 26 5
 
 
 def VQ_pre_5_4_0 : Polynomial ℚ := C (-7) + C (-19) * X ^ 2 + C (-33) * X ^ 3 + C (-41) * X ^ 4 + C (-56) * X ^ 5 + C (-37) * X ^ 6 + C (-8) * X ^ 7 + C (15) * X ^ 8 + C (56) * X ^ 9 + C (89) * X ^ 10 + C (96) * X ^ 11 + C (89) * X ^ 12 + C (75) * X ^ 13 + C (48) * X ^ 14 + C (33) * X ^ 15 + C (19) * X ^ 16
-theorem z_VQ_pre_5_4_0 : VQ_pre_5_4_0 = interpQ 1 [-7, 0, -19, -33, -41, -56, -37, -8, 15, 56, 89, 96, 89, 75, 48, 33, 19] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pre_5_4_0, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pre_5_4_0 : VQ_pre_5_4_0 = interpQ 1 [-7, 0, -19, -33, -41, -56, -37, -8, 15, 56, 89, 96, 89, 75, 48, 33, 19] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_17_31 (-7) (-19) (-33) (-41) (-56) (-37) (-8) 15 56 89 96 89 75 48 33 19
 
 def VQ_pim_5_4_0 : Polynomial ℚ := C (-25) + C (-50) * X + C (-53) * X ^ 2 + C (-67) * X ^ 3 + C (-23) * X ^ 4 + C (10) * X ^ 5 + C (43) * X ^ 6 + C (90) * X ^ 7 + C (115) * X ^ 8 + C (96) * X ^ 9 + C (77) * X ^ 10 + C (50) * X ^ 11 + C (23) * X ^ 12 + C (7) * X ^ 13 + C (2) * X ^ 14 + C (-17) * X ^ 15 + C (-3) * X ^ 16
-theorem z_VQ_pim_5_4_0 : VQ_pim_5_4_0 = interpQ 1 [-25, -50, -53, -67, -23, 10, 43, 90, 115, 96, 77, 50, 23, 7, 2, -17, -3] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pim_5_4_0, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pim_5_4_0 : VQ_pim_5_4_0 = interpQ 1 [-25, -50, -53, -67, -23, 10, 43, 90, 115, 96, 77, 50, 23, 7, 2, -17, -3] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_17_28 (-25) (-50) (-53) (-67) (-23) 10 43 90 115 96 77 50 23 7 2 (-17) (-3)
 
 theorem VQ_pre_eq_5_4_0 :
     spanV_re_5_0 * Qplus_re_0_4 - spanV_im_5_0 * Qplus_im_0_4 =
@@ -82,18 +71,12 @@ theorem VQ_term_5_4_1 :
   simp [ofLadj_zero]
 
 def VQ_pre_5_4_2 : Polynomial ℚ := C (-10) + C (-15) * X ^ 2 + C (11) * X ^ 3 + C (5) * X ^ 4 + C (20) * X ^ 5 + C (30) * X ^ 6 + C (21) * X ^ 7 + C (36) * X ^ 8 + C (14) * X ^ 9 + C (24) * X ^ 10 + C (28) * X ^ 11 + C (24) * X ^ 12 + C (29) * X ^ 13 + C (25) * X ^ 14 + C (11) * X ^ 15 + C (13) * X ^ 16 + C (3) * X ^ 17 + C (-5) * X ^ 18
-theorem z_VQ_pre_5_4_2 : VQ_pre_5_4_2 = interpQ 1 [-10, 0, -15, 11, 5, 20, 30, 21, 36, 14, 24, 28, 24, 29, 25, 11, 13, 3, -5] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pre_5_4_2, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pre_5_4_2 : VQ_pre_5_4_2 = interpQ 1 [-10, 0, -15, 11, 5, 20, 30, 21, 36, 14, 24, 28, 24, 29, 25, 11, 13, 3, -5] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_99 (-10) (-15) 11 5 20 30 21 36 14 24 28 24 29 25 11 13 3 (-5)
 
 def VQ_pim_5_4_2 : Polynomial ℚ := C (2) + C (4) * X + C (7) * X ^ 2 + C (11) * X ^ 3 + C (15) * X ^ 4 + C (-2) * X ^ 5 + C (26) * X ^ 6 + C (-1) * X ^ 7 + C (6) * X ^ 8 + C (14) * X ^ 9 + C (6) * X ^ 11 + C (12) * X ^ 12 + C (-5) * X ^ 13 + C (-1) * X ^ 14 + C (3) * X ^ 15 + C (-5) * X ^ 16 + C (-3) * X ^ 17 + C (-1) * X ^ 18
-theorem z_VQ_pim_5_4_2 : VQ_pim_5_4_2 = interpQ 1 [2, 4, 7, 11, 15, -2, 26, -1, 6, 14, 0, 6, 12, -5, -1, 3, -5, -3, -1] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pim_5_4_2, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pim_5_4_2 : VQ_pim_5_4_2 = interpQ 1 [2, 4, 7, 11, 15, -2, 26, -1, 6, 14, 0, 6, 12, -5, -1, 3, -5, -3, -1] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_86 2 4 7 11 15 (-2) 26 (-1) 6 14 6 12 (-5) (-1) 3 (-5) (-3) (-1)
 
 theorem VQ_pre_eq_5_4_2 :
     spanV_re_5_2 * Qplus_re_2_4 - spanV_im_5_2 * Qplus_im_2_4 =
@@ -120,18 +103,12 @@ theorem VQ_term_5_4_2 :
     VQ_pre_eq_5_4_2, VQ_pim_eq_5_4_2]
 
 def VQ_pre_5_4_3 : Polynomial ℚ := C (-4) + C (6) * X ^ 2 + C (15) * X ^ 3 + C (26) * X ^ 4 + C (32) * X ^ 5 + C (32) * X ^ 6 + C (26) * X ^ 7 + C (15) * X ^ 8 + C (6) * X ^ 9
-theorem z_VQ_pre_5_4_3 : VQ_pre_5_4_3 = interpQ 1 [-4, 0, 6, 15, 26, 32, 32, 26, 15, 6] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pre_5_4_3, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pre_5_4_3 : VQ_pre_5_4_3 = interpQ 1 [-4, 0, 6, 15, 26, 32, 32, 26, 15, 6] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_10_20 (-4) 6 15 26 32 32 26 15 6
 
 def VQ_pim_5_4_3 : Polynomial ℚ := C (10) + C (20) * X + C (30) * X ^ 2 + C (29) * X ^ 3 + C (28) * X ^ 4 + C (16) * X ^ 5 + C (4) * X ^ 6 + C (-8) * X ^ 7 + C (-9) * X ^ 8 + C (-10) * X ^ 9
-theorem z_VQ_pim_5_4_3 : VQ_pim_5_4_3 = interpQ 1 [10, 20, 30, 29, 28, 16, 4, -8, -9, -10] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pim_5_4_3, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pim_5_4_3 : VQ_pim_5_4_3 = interpQ 1 [10, 20, 30, 29, 28, 16, 4, -8, -9, -10] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_10_19 10 20 30 29 28 16 4 (-8) (-9) (-10)
 
 theorem VQ_pre_eq_5_4_3 :
     spanV_re_5_3 * Qplus_re_3_4 - spanV_im_5_3 * Qplus_im_3_4 =
@@ -174,18 +151,12 @@ theorem VQ_term_5_4_4 :
   simp [ofLadj_zero]
 
 def VQ_pre_5_4_5 : Polynomial ℚ := C (13) + C (27) * X ^ 2 + C (15) * X ^ 3 + C (34) * X ^ 4 + C (24) * X ^ 5 + C (-4) * X ^ 6 + C (-41) * X ^ 7 + C (-83) * X ^ 8 + C (-102) * X ^ 9 + C (-153) * X ^ 10 + C (-150) * X ^ 11 + C (-153) * X ^ 12 + C (-129) * X ^ 13 + C (-98) * X ^ 14 + C (-75) * X ^ 15 + C (-55) * X ^ 16 + C (-27) * X ^ 17
-theorem z_VQ_pre_5_4_5 : VQ_pre_5_4_5 = interpQ 1 [13, 0, 27, 15, 34, 24, -4, -41, -83, -102, -153, -150, -153, -129, -98, -75, -55, -27] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pre_5_4_5, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pre_5_4_5 : VQ_pre_5_4_5 = interpQ 1 [13, 0, 27, 15, 34, 24, -4, -41, -83, -102, -153, -150, -153, -129, -98, -75, -55, -27] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_18_46 13 27 15 34 24 (-4) (-41) (-83) (-102) (-153) (-150) (-153) (-129) (-98) (-75) (-55) (-27)
 
 def VQ_pim_5_4_5 : Polynomial ℚ := C (19) + C (38) * X + C (35) * X ^ 2 + C (35) * X ^ 3 + C (-28) * X ^ 4 + C (-36) * X ^ 5 + C (-88) * X ^ 6 + C (-93) * X ^ 7 + C (-139) * X ^ 8 + C (-108) * X ^ 9 + C (-99) * X ^ 10 + C (-76) * X ^ 11 + C (-53) * X ^ 12 + C (-41) * X ^ 13 + C (-10) * X ^ 14 + C (7) * X ^ 15 + C (13) * X ^ 16 + C (-3) * X ^ 17
-theorem z_VQ_pim_5_4_5 : VQ_pim_5_4_5 = interpQ 1 [19, 38, 35, 35, -28, -36, -88, -93, -139, -108, -99, -76, -53, -41, -10, 7, 13, -3] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pim_5_4_5, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pim_5_4_5 : VQ_pim_5_4_5 = interpQ 1 [19, 38, 35, 35, -28, -36, -88, -93, -139, -108, -99, -76, -53, -41, -10, 7, 13, -3] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_18_38 19 38 35 35 (-28) (-36) (-88) (-93) (-139) (-108) (-99) (-76) (-53) (-41) (-10) 7 13 (-3)
 
 theorem VQ_pre_eq_5_4_5 :
     spanV_re_5_5 * Qplus_re_5_4 - spanV_im_5_5 * Qplus_im_5_4 =
@@ -228,18 +199,12 @@ theorem VQ_term_5_4_6 :
   simp [ofLadj_zero]
 
 def VQ_pre_5_4_7 : Polynomial ℚ := C (10) + C (2) * X ^ 2 + C (-10) * X ^ 3 + C (-27) * X ^ 4 + C (-35) * X ^ 5 + C (-57) * X ^ 6 + C (-54) * X ^ 7 + C (-47) * X ^ 8 + C (-35) * X ^ 9 + C (-25) * X ^ 10 + C (-40) * X ^ 11 + C (-25) * X ^ 12 + C (-37) * X ^ 13 + C (-37) * X ^ 14 + C (-27) * X ^ 15 + C (-20) * X ^ 16 + C (2) * X ^ 17
-theorem z_VQ_pre_5_4_7 : VQ_pre_5_4_7 = interpQ 1 [10, 0, 2, -10, -27, -35, -57, -54, -47, -35, -25, -40, -25, -37, -37, -27, -20, 2] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pre_5_4_7, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pre_5_4_7 : VQ_pre_5_4_7 = interpQ 1 [10, 0, 2, -10, -27, -35, -57, -54, -47, -35, -25, -40, -25, -37, -37, -27, -20, 2] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_18_46 10 2 (-10) (-27) (-35) (-57) (-54) (-47) (-35) (-25) (-40) (-25) (-37) (-37) (-27) (-20) 2
 
 def VQ_pim_5_4_7 : Polynomial ℚ := C (-16) + C (-32) * X + C (-48) * X ^ 2 + C (-58) * X ^ 3 + C (-79) * X ^ 4 + C (-67) * X ^ 5 + C (-55) * X ^ 6 + C (-32) * X ^ 7 + C (-25) * X ^ 8 + C (-29) * X ^ 9 + C (-33) * X ^ 10 + C (-32) * X ^ 11 + C (-31) * X ^ 12 + C (-19) * X ^ 13 + C (-13) * X ^ 14 + C (15) * X ^ 15 + C (10) * X ^ 16 + C (16) * X ^ 17
-theorem z_VQ_pim_5_4_7 : VQ_pim_5_4_7 = interpQ 1 [-16, -32, -48, -58, -79, -67, -55, -32, -25, -29, -33, -32, -31, -19, -13, 15, 10, 16] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pim_5_4_7, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pim_5_4_7 : VQ_pim_5_4_7 = interpQ 1 [-16, -32, -48, -58, -79, -67, -55, -32, -25, -29, -33, -32, -31, -19, -13, 15, 10, 16] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_18_38 (-16) (-32) (-48) (-58) (-79) (-67) (-55) (-32) (-25) (-29) (-33) (-32) (-31) (-19) (-13) 15 10 16
 
 theorem VQ_pre_eq_5_4_7 :
     spanV_re_5_7 * Qplus_re_7_4 - spanV_im_5_7 * Qplus_im_7_4 =
@@ -298,18 +263,12 @@ theorem VQ_term_5_4_9 :
   simp [ofLadj_zero]
 
 def VQ_pre_5_4_10 : Polynomial ℚ := C (-2) * X ^ 2 + C (-3) * X ^ 3 + C (-4) * X ^ 4 + C (-2) * X ^ 5 + C (5) * X ^ 6 + C (11) * X ^ 7 + C (19) * X ^ 8 + C (27) * X ^ 9 + C (32) * X ^ 10 + C (34) * X ^ 11 + C (32) * X ^ 12 + C (29) * X ^ 13 + C (22) * X ^ 14 + C (13) * X ^ 15 + C (8) * X ^ 16 + C (1) * X ^ 17 + C (-2) * X ^ 18
-theorem z_VQ_pre_5_4_10 : VQ_pre_5_4_10 = interpQ 1 [0, 0, -2, -3, -4, -2, 5, 11, 19, 27, 32, 34, 32, 29, 22, 13, 8, 1, -2] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pre_5_4_10, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pre_5_4_10 : VQ_pre_5_4_10 = interpQ 1 [0, 0, -2, -3, -4, -2, 5, 11, 19, 27, 32, 34, 32, 29, 22, 13, 8, 1, -2] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_113 (-2) (-3) (-4) (-2) 5 11 19 27 32 34 32 29 22 13 8 1 (-2)
 
 def VQ_pim_5_4_10 : Polynomial ℚ := C (-6) * X ^ 2 + C (-21) * X ^ 3 + C (-42) * X ^ 4 + C (-72) * X ^ 5 + C (-89) * X ^ 6 + C (-101) * X ^ 7 + C (-111) * X ^ 8 + C (-105) * X ^ 9 + C (-88) * X ^ 10 + C (-60) * X ^ 11 + C (-32) * X ^ 12 + C (-9) * X ^ 13 + C (12) * X ^ 14 + C (17) * X ^ 15 + C (20) * X ^ 16 + C (21) * X ^ 17 + C (6) * X ^ 18
-theorem z_VQ_pim_5_4_10 : VQ_pim_5_4_10 = interpQ 1 [0, 0, -6, -21, -42, -72, -89, -101, -111, -105, -88, -60, -32, -9, 12, 17, 20, 21, 6] := by
-  refine Polynomial.funext fun r => ?_
-  simp [VQ_pim_5_4_10, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+theorem z_VQ_pim_5_4_10 : VQ_pim_5_4_10 = interpQ 1 [0, 0, -6, -21, -42, -72, -89, -101, -111, -105, -88, -60, -32, -9, 12, 17, 20, 21, 6] :=
+  V14Formalization.D12PolyZReflection.interpQ_expand_19_113 (-6) (-21) (-42) (-72) (-89) (-101) (-111) (-105) (-88) (-60) (-32) (-9) 12 17 20 21 6
 
 theorem VQ_pre_eq_5_4_10 :
     spanV_re_5_10 * Qplus_re_10_4 - spanV_im_5_10 * Qplus_im_10_4 =
