@@ -1,33 +1,35 @@
 /- Sparse ambient image-basis matrix in the rational-vector model. -/
-import V14Formalization.D12PieceVecBase
+module
+
+public import V14Formalization.D12PieceVecBase
 
 noncomputable section
 open Matrix
 namespace V14Formalization.D12PieceAmbientVec
 open D12CyclotomicVec D12PieceVecBase D12PolynomialData D12PolynomialEvaluation
-def payloadSha256 : String := "76c6196f29afe1a8398af99502447f48ebeed4bcb3805fc5dbec693940bc04b0"
+@[expose] public def payloadSha256 : String := "76c6196f29afe1a8398af99502447f48ebeed4bcb3805fc5dbec693940bc04b0"
 
-def BCell0_0 : Vec := constVec (1)
+@[expose] public def BCell0_0 : Vec := constVec (1)
 
-def BCell0_1 : Vec := constVec (0)
+@[expose] public def BCell0_1 : Vec := constVec (0)
 
-def BCell0_2 : Vec := constVec (0)
+@[expose] public def BCell0_2 : Vec := constVec (0)
 
-def BCell0_3 : Vec := constVec (0)
+@[expose] public def BCell0_3 : Vec := constVec (0)
 
-def BCell0_4 : Vec := constVec (0)
+@[expose] public def BCell0_4 : Vec := constVec (0)
 
-def BCell0_5 : Vec := constVec (0)
+@[expose] public def BCell0_5 : Vec := constVec (0)
 
-def BCell0_6 : Vec := constVec (0)
+@[expose] public def BCell0_6 : Vec := constVec (0)
 
-def BCell0_7 : Vec := constVec (0)
+@[expose] public def BCell0_7 : Vec := constVec (0)
 
-def BCell0_8 : Vec := constVec (0)
+@[expose] public def BCell0_8 : Vec := constVec (0)
 
-def BCell0_9 : Vec := constVec (0)
+@[expose] public def BCell0_9 : Vec := constVec (0)
 
-def BRow0 (j : Fin 10) : Vec :=
+@[expose] public def BRow0 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => BCell0_0
   | 1 => BCell0_1
@@ -41,27 +43,27 @@ def BRow0 (j : Fin 10) : Vec :=
   | 9 => BCell0_9
   | _ => 0
 
-def BCell1_0 : Vec := constVec (0)
+@[expose] public def BCell1_0 : Vec := constVec (0)
 
-def BCell1_1 : Vec := constVec (1)
+@[expose] public def BCell1_1 : Vec := constVec (1)
 
-def BCell1_2 : Vec := constVec (0)
+@[expose] public def BCell1_2 : Vec := constVec (0)
 
-def BCell1_3 : Vec := constVec (0)
+@[expose] public def BCell1_3 : Vec := constVec (0)
 
-def BCell1_4 : Vec := constVec (0)
+@[expose] public def BCell1_4 : Vec := constVec (0)
 
-def BCell1_5 : Vec := constVec (0)
+@[expose] public def BCell1_5 : Vec := constVec (0)
 
-def BCell1_6 : Vec := constVec (0)
+@[expose] public def BCell1_6 : Vec := constVec (0)
 
-def BCell1_7 : Vec := constVec (0)
+@[expose] public def BCell1_7 : Vec := constVec (0)
 
-def BCell1_8 : Vec := constVec (0)
+@[expose] public def BCell1_8 : Vec := constVec (0)
 
-def BCell1_9 : Vec := constVec (0)
+@[expose] public def BCell1_9 : Vec := constVec (0)
 
-def BRow1 (j : Fin 10) : Vec :=
+@[expose] public def BRow1 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => BCell1_0
   | 1 => BCell1_1
@@ -75,27 +77,27 @@ def BRow1 (j : Fin 10) : Vec :=
   | 9 => BCell1_9
   | _ => 0
 
-def BCell2_0 : Vec := constVec (0)
+@[expose] public def BCell2_0 : Vec := constVec (0)
 
-def BCell2_1 : Vec := constVec (0)
+@[expose] public def BCell2_1 : Vec := constVec (0)
 
-def BCell2_2 : Vec := constVec (1)
+@[expose] public def BCell2_2 : Vec := constVec (1)
 
-def BCell2_3 : Vec := constVec (0)
+@[expose] public def BCell2_3 : Vec := constVec (0)
 
-def BCell2_4 : Vec := constVec (0)
+@[expose] public def BCell2_4 : Vec := constVec (0)
 
-def BCell2_5 : Vec := constVec (0)
+@[expose] public def BCell2_5 : Vec := constVec (0)
 
-def BCell2_6 : Vec := constVec (0)
+@[expose] public def BCell2_6 : Vec := constVec (0)
 
-def BCell2_7 : Vec := constVec (0)
+@[expose] public def BCell2_7 : Vec := constVec (0)
 
-def BCell2_8 : Vec := constVec (0)
+@[expose] public def BCell2_8 : Vec := constVec (0)
 
-def BCell2_9 : Vec := constVec (0)
+@[expose] public def BCell2_9 : Vec := constVec (0)
 
-def BRow2 (j : Fin 10) : Vec :=
+@[expose] public def BRow2 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => BCell2_0
   | 1 => BCell2_1
@@ -109,27 +111,27 @@ def BRow2 (j : Fin 10) : Vec :=
   | 9 => BCell2_9
   | _ => 0
 
-def BCell3_0 : Vec := constVec (0)
+@[expose] public def BCell3_0 : Vec := constVec (0)
 
-def BCell3_1 : Vec := constVec (0)
+@[expose] public def BCell3_1 : Vec := constVec (0)
 
-def BCell3_2 : Vec := constVec (0)
+@[expose] public def BCell3_2 : Vec := constVec (0)
 
-def BCell3_3 : Vec := constVec (1)
+@[expose] public def BCell3_3 : Vec := constVec (1)
 
-def BCell3_4 : Vec := constVec (0)
+@[expose] public def BCell3_4 : Vec := constVec (0)
 
-def BCell3_5 : Vec := constVec (0)
+@[expose] public def BCell3_5 : Vec := constVec (0)
 
-def BCell3_6 : Vec := constVec (0)
+@[expose] public def BCell3_6 : Vec := constVec (0)
 
-def BCell3_7 : Vec := constVec (0)
+@[expose] public def BCell3_7 : Vec := constVec (0)
 
-def BCell3_8 : Vec := constVec (0)
+@[expose] public def BCell3_8 : Vec := constVec (0)
 
-def BCell3_9 : Vec := constVec (0)
+@[expose] public def BCell3_9 : Vec := constVec (0)
 
-def BRow3 (j : Fin 10) : Vec :=
+@[expose] public def BRow3 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => BCell3_0
   | 1 => BCell3_1
@@ -143,27 +145,27 @@ def BRow3 (j : Fin 10) : Vec :=
   | 9 => BCell3_9
   | _ => 0
 
-def BCell4_0 : Vec := constVec (0)
+@[expose] public def BCell4_0 : Vec := constVec (0)
 
-def BCell4_1 : Vec := constVec (0)
+@[expose] public def BCell4_1 : Vec := constVec (0)
 
-def BCell4_2 : Vec := constVec (0)
+@[expose] public def BCell4_2 : Vec := constVec (0)
 
-def BCell4_3 : Vec := constVec (0)
+@[expose] public def BCell4_3 : Vec := constVec (0)
 
-def BCell4_4 : Vec := constVec (1)
+@[expose] public def BCell4_4 : Vec := constVec (1)
 
-def BCell4_5 : Vec := constVec (0)
+@[expose] public def BCell4_5 : Vec := constVec (0)
 
-def BCell4_6 : Vec := constVec (0)
+@[expose] public def BCell4_6 : Vec := constVec (0)
 
-def BCell4_7 : Vec := constVec (0)
+@[expose] public def BCell4_7 : Vec := constVec (0)
 
-def BCell4_8 : Vec := constVec (0)
+@[expose] public def BCell4_8 : Vec := constVec (0)
 
-def BCell4_9 : Vec := constVec (0)
+@[expose] public def BCell4_9 : Vec := constVec (0)
 
-def BRow4 (j : Fin 10) : Vec :=
+@[expose] public def BRow4 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => BCell4_0
   | 1 => BCell4_1
@@ -177,27 +179,27 @@ def BRow4 (j : Fin 10) : Vec :=
   | 9 => BCell4_9
   | _ => 0
 
-def BCell5_0 : Vec := constVec (0)
+@[expose] public def BCell5_0 : Vec := constVec (0)
 
-def BCell5_1 : Vec := constVec (0)
+@[expose] public def BCell5_1 : Vec := constVec (0)
 
-def BCell5_2 : Vec := constVec (0)
+@[expose] public def BCell5_2 : Vec := constVec (0)
 
-def BCell5_3 : Vec := constVec ((-1 / 2 : ℚ))
+@[expose] public def BCell5_3 : Vec := constVec ((-1 / 2 : ℚ))
 
-def BCell5_4 : Vec := constVec (0)
+@[expose] public def BCell5_4 : Vec := constVec (0)
 
-def BCell5_5 : Vec := constVec (0)
+@[expose] public def BCell5_5 : Vec := constVec (0)
 
-def BCell5_6 : Vec := constVec (0)
+@[expose] public def BCell5_6 : Vec := constVec (0)
 
-def BCell5_7 : Vec := constVec (0)
+@[expose] public def BCell5_7 : Vec := constVec (0)
 
-def BCell5_8 : Vec := constVec (0)
+@[expose] public def BCell5_8 : Vec := constVec (0)
 
-def BCell5_9 : Vec := constVec (0)
+@[expose] public def BCell5_9 : Vec := constVec (0)
 
-def BRow5 (j : Fin 10) : Vec :=
+@[expose] public def BRow5 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => BCell5_0
   | 1 => BCell5_1
@@ -211,27 +213,27 @@ def BRow5 (j : Fin 10) : Vec :=
   | 9 => BCell5_9
   | _ => 0
 
-def BCell6_0 : Vec := constVec (0)
+@[expose] public def BCell6_0 : Vec := constVec (0)
 
-def BCell6_1 : Vec := constVec (0)
+@[expose] public def BCell6_1 : Vec := constVec (0)
 
-def BCell6_2 : Vec := constVec (0)
+@[expose] public def BCell6_2 : Vec := constVec (0)
 
-def BCell6_3 : Vec := constVec (0)
+@[expose] public def BCell6_3 : Vec := constVec (0)
 
-def BCell6_4 : Vec := constVec (0)
+@[expose] public def BCell6_4 : Vec := constVec (0)
 
-def BCell6_5 : Vec := constVec (1)
+@[expose] public def BCell6_5 : Vec := constVec (1)
 
-def BCell6_6 : Vec := constVec (0)
+@[expose] public def BCell6_6 : Vec := constVec (0)
 
-def BCell6_7 : Vec := constVec (0)
+@[expose] public def BCell6_7 : Vec := constVec (0)
 
-def BCell6_8 : Vec := constVec (0)
+@[expose] public def BCell6_8 : Vec := constVec (0)
 
-def BCell6_9 : Vec := constVec (0)
+@[expose] public def BCell6_9 : Vec := constVec (0)
 
-def BRow6 (j : Fin 10) : Vec :=
+@[expose] public def BRow6 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => BCell6_0
   | 1 => BCell6_1
@@ -245,27 +247,27 @@ def BRow6 (j : Fin 10) : Vec :=
   | 9 => BCell6_9
   | _ => 0
 
-def BCell7_0 : Vec := constVec (0)
+@[expose] public def BCell7_0 : Vec := constVec (0)
 
-def BCell7_1 : Vec := constVec (0)
+@[expose] public def BCell7_1 : Vec := constVec (0)
 
-def BCell7_2 : Vec := constVec (0)
+@[expose] public def BCell7_2 : Vec := constVec (0)
 
-def BCell7_3 : Vec := constVec (0)
+@[expose] public def BCell7_3 : Vec := constVec (0)
 
-def BCell7_4 : Vec := constVec (0)
+@[expose] public def BCell7_4 : Vec := constVec (0)
 
-def BCell7_5 : Vec := constVec (0)
+@[expose] public def BCell7_5 : Vec := constVec (0)
 
-def BCell7_6 : Vec := constVec (1)
+@[expose] public def BCell7_6 : Vec := constVec (1)
 
-def BCell7_7 : Vec := constVec (0)
+@[expose] public def BCell7_7 : Vec := constVec (0)
 
-def BCell7_8 : Vec := constVec (0)
+@[expose] public def BCell7_8 : Vec := constVec (0)
 
-def BCell7_9 : Vec := constVec (0)
+@[expose] public def BCell7_9 : Vec := constVec (0)
 
-def BRow7 (j : Fin 10) : Vec :=
+@[expose] public def BRow7 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => BCell7_0
   | 1 => BCell7_1
@@ -279,27 +281,27 @@ def BRow7 (j : Fin 10) : Vec :=
   | 9 => BCell7_9
   | _ => 0
 
-def BCell8_0 : Vec := constVec (0)
+@[expose] public def BCell8_0 : Vec := constVec (0)
 
-def BCell8_1 : Vec := constVec ((1 / 2 : ℚ))
+@[expose] public def BCell8_1 : Vec := constVec ((1 / 2 : ℚ))
 
-def BCell8_2 : Vec := constVec (0)
+@[expose] public def BCell8_2 : Vec := constVec (0)
 
-def BCell8_3 : Vec := constVec (0)
+@[expose] public def BCell8_3 : Vec := constVec (0)
 
-def BCell8_4 : Vec := constVec (0)
+@[expose] public def BCell8_4 : Vec := constVec (0)
 
-def BCell8_5 : Vec := constVec (0)
+@[expose] public def BCell8_5 : Vec := constVec (0)
 
-def BCell8_6 : Vec := constVec (0)
+@[expose] public def BCell8_6 : Vec := constVec (0)
 
-def BCell8_7 : Vec := constVec (0)
+@[expose] public def BCell8_7 : Vec := constVec (0)
 
-def BCell8_8 : Vec := constVec (0)
+@[expose] public def BCell8_8 : Vec := constVec (0)
 
-def BCell8_9 : Vec := constVec (0)
+@[expose] public def BCell8_9 : Vec := constVec (0)
 
-def BRow8 (j : Fin 10) : Vec :=
+@[expose] public def BRow8 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => BCell8_0
   | 1 => BCell8_1
@@ -313,27 +315,27 @@ def BRow8 (j : Fin 10) : Vec :=
   | 9 => BCell8_9
   | _ => 0
 
-def BCell9_0 : Vec := constVec (0)
+@[expose] public def BCell9_0 : Vec := constVec (0)
 
-def BCell9_1 : Vec := constVec (0)
+@[expose] public def BCell9_1 : Vec := constVec (0)
 
-def BCell9_2 : Vec := constVec (0)
+@[expose] public def BCell9_2 : Vec := constVec (0)
 
-def BCell9_3 : Vec := constVec (0)
+@[expose] public def BCell9_3 : Vec := constVec (0)
 
-def BCell9_4 : Vec := constVec (0)
+@[expose] public def BCell9_4 : Vec := constVec (0)
 
-def BCell9_5 : Vec := constVec (0)
+@[expose] public def BCell9_5 : Vec := constVec (0)
 
-def BCell9_6 : Vec := constVec (0)
+@[expose] public def BCell9_6 : Vec := constVec (0)
 
-def BCell9_7 : Vec := constVec (1)
+@[expose] public def BCell9_7 : Vec := constVec (1)
 
-def BCell9_8 : Vec := constVec (0)
+@[expose] public def BCell9_8 : Vec := constVec (0)
 
-def BCell9_9 : Vec := constVec (0)
+@[expose] public def BCell9_9 : Vec := constVec (0)
 
-def BRow9 (j : Fin 10) : Vec :=
+@[expose] public def BRow9 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => BCell9_0
   | 1 => BCell9_1
@@ -347,27 +349,27 @@ def BRow9 (j : Fin 10) : Vec :=
   | 9 => BCell9_9
   | _ => 0
 
-def BCell10_0 : Vec := constVec (0)
+@[expose] public def BCell10_0 : Vec := constVec (0)
 
-def BCell10_1 : Vec := constVec (0)
+@[expose] public def BCell10_1 : Vec := constVec (0)
 
-def BCell10_2 : Vec := constVec ((-1 / 2 : ℚ))
+@[expose] public def BCell10_2 : Vec := constVec ((-1 / 2 : ℚ))
 
-def BCell10_3 : Vec := constVec (0)
+@[expose] public def BCell10_3 : Vec := constVec (0)
 
-def BCell10_4 : Vec := constVec (0)
+@[expose] public def BCell10_4 : Vec := constVec (0)
 
-def BCell10_5 : Vec := constVec (0)
+@[expose] public def BCell10_5 : Vec := constVec (0)
 
-def BCell10_6 : Vec := constVec (0)
+@[expose] public def BCell10_6 : Vec := constVec (0)
 
-def BCell10_7 : Vec := constVec (0)
+@[expose] public def BCell10_7 : Vec := constVec (0)
 
-def BCell10_8 : Vec := constVec (0)
+@[expose] public def BCell10_8 : Vec := constVec (0)
 
-def BCell10_9 : Vec := constVec (0)
+@[expose] public def BCell10_9 : Vec := constVec (0)
 
-def BRow10 (j : Fin 10) : Vec :=
+@[expose] public def BRow10 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => BCell10_0
   | 1 => BCell10_1
@@ -381,27 +383,27 @@ def BRow10 (j : Fin 10) : Vec :=
   | 9 => BCell10_9
   | _ => 0
 
-def BCell11_0 : Vec := constVec (0)
+@[expose] public def BCell11_0 : Vec := constVec (0)
 
-def BCell11_1 : Vec := constVec (0)
+@[expose] public def BCell11_1 : Vec := constVec (0)
 
-def BCell11_2 : Vec := constVec (0)
+@[expose] public def BCell11_2 : Vec := constVec (0)
 
-def BCell11_3 : Vec := constVec (0)
+@[expose] public def BCell11_3 : Vec := constVec (0)
 
-def BCell11_4 : Vec := constVec (0)
+@[expose] public def BCell11_4 : Vec := constVec (0)
 
-def BCell11_5 : Vec := constVec (0)
+@[expose] public def BCell11_5 : Vec := constVec (0)
 
-def BCell11_6 : Vec := constVec (0)
+@[expose] public def BCell11_6 : Vec := constVec (0)
 
-def BCell11_7 : Vec := constVec (0)
+@[expose] public def BCell11_7 : Vec := constVec (0)
 
-def BCell11_8 : Vec := constVec (1)
+@[expose] public def BCell11_8 : Vec := constVec (1)
 
-def BCell11_9 : Vec := constVec (0)
+@[expose] public def BCell11_9 : Vec := constVec (0)
 
-def BRow11 (j : Fin 10) : Vec :=
+@[expose] public def BRow11 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => BCell11_0
   | 1 => BCell11_1
@@ -415,27 +417,27 @@ def BRow11 (j : Fin 10) : Vec :=
   | 9 => BCell11_9
   | _ => 0
 
-def BCell12_0 : Vec := constVec (0)
+@[expose] public def BCell12_0 : Vec := constVec (0)
 
-def BCell12_1 : Vec := constVec (0)
+@[expose] public def BCell12_1 : Vec := constVec (0)
 
-def BCell12_2 : Vec := constVec (0)
+@[expose] public def BCell12_2 : Vec := constVec (0)
 
-def BCell12_3 : Vec := constVec (0)
+@[expose] public def BCell12_3 : Vec := constVec (0)
 
-def BCell12_4 : Vec := constVec ((1 / 2 : ℚ))
+@[expose] public def BCell12_4 : Vec := constVec ((1 / 2 : ℚ))
 
-def BCell12_5 : Vec := constVec (0)
+@[expose] public def BCell12_5 : Vec := constVec (0)
 
-def BCell12_6 : Vec := constVec (0)
+@[expose] public def BCell12_6 : Vec := constVec (0)
 
-def BCell12_7 : Vec := constVec (0)
+@[expose] public def BCell12_7 : Vec := constVec (0)
 
-def BCell12_8 : Vec := constVec (0)
+@[expose] public def BCell12_8 : Vec := constVec (0)
 
-def BCell12_9 : Vec := constVec (0)
+@[expose] public def BCell12_9 : Vec := constVec (0)
 
-def BRow12 (j : Fin 10) : Vec :=
+@[expose] public def BRow12 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => BCell12_0
   | 1 => BCell12_1
@@ -449,27 +451,27 @@ def BRow12 (j : Fin 10) : Vec :=
   | 9 => BCell12_9
   | _ => 0
 
-def BCell13_0 : Vec := constVec ((-1 / 2 : ℚ))
+@[expose] public def BCell13_0 : Vec := constVec ((-1 / 2 : ℚ))
 
-def BCell13_1 : Vec := constVec (0)
+@[expose] public def BCell13_1 : Vec := constVec (0)
 
-def BCell13_2 : Vec := constVec (0)
+@[expose] public def BCell13_2 : Vec := constVec (0)
 
-def BCell13_3 : Vec := constVec (0)
+@[expose] public def BCell13_3 : Vec := constVec (0)
 
-def BCell13_4 : Vec := constVec (0)
+@[expose] public def BCell13_4 : Vec := constVec (0)
 
-def BCell13_5 : Vec := constVec (0)
+@[expose] public def BCell13_5 : Vec := constVec (0)
 
-def BCell13_6 : Vec := constVec (0)
+@[expose] public def BCell13_6 : Vec := constVec (0)
 
-def BCell13_7 : Vec := constVec (0)
+@[expose] public def BCell13_7 : Vec := constVec (0)
 
-def BCell13_8 : Vec := constVec (0)
+@[expose] public def BCell13_8 : Vec := constVec (0)
 
-def BCell13_9 : Vec := constVec (0)
+@[expose] public def BCell13_9 : Vec := constVec (0)
 
-def BRow13 (j : Fin 10) : Vec :=
+@[expose] public def BRow13 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => BCell13_0
   | 1 => BCell13_1
@@ -483,27 +485,27 @@ def BRow13 (j : Fin 10) : Vec :=
   | 9 => BCell13_9
   | _ => 0
 
-def BCell14_0 : Vec := constVec (0)
+@[expose] public def BCell14_0 : Vec := constVec (0)
 
-def BCell14_1 : Vec := constVec (0)
+@[expose] public def BCell14_1 : Vec := constVec (0)
 
-def BCell14_2 : Vec := constVec (0)
+@[expose] public def BCell14_2 : Vec := constVec (0)
 
-def BCell14_3 : Vec := constVec (0)
+@[expose] public def BCell14_3 : Vec := constVec (0)
 
-def BCell14_4 : Vec := constVec (0)
+@[expose] public def BCell14_4 : Vec := constVec (0)
 
-def BCell14_5 : Vec := constVec (0)
+@[expose] public def BCell14_5 : Vec := constVec (0)
 
-def BCell14_6 : Vec := constVec (0)
+@[expose] public def BCell14_6 : Vec := constVec (0)
 
-def BCell14_7 : Vec := constVec (0)
+@[expose] public def BCell14_7 : Vec := constVec (0)
 
-def BCell14_8 : Vec := constVec (0)
+@[expose] public def BCell14_8 : Vec := constVec (0)
 
-def BCell14_9 : Vec := constVec (1)
+@[expose] public def BCell14_9 : Vec := constVec (1)
 
-def BRow14 (j : Fin 10) : Vec :=
+@[expose] public def BRow14 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => BCell14_0
   | 1 => BCell14_1
@@ -517,7 +519,7 @@ def BRow14 (j : Fin 10) : Vec :=
   | 9 => BCell14_9
   | _ => 0
 
-def BVec : Matrix (Fin 15) (Fin 10) Vec :=
+@[expose] public def BVec : Matrix (Fin 15) (Fin 10) Vec :=
   fun i j => match i.val with
   | 0 => BRow0 j
   | 1 => BRow1 j
@@ -611,7 +613,7 @@ theorem eval_BRow14 (j : Fin 10) :
   fin_cases j <;>
     simp [BRow14, BCell14_0, BCell14_1, BCell14_2, BCell14_3, BCell14_4, BCell14_5, BCell14_6, BCell14_7, BCell14_8, BCell14_9, B_poly, evalK, evalPolyAt]
 
-theorem evalMatrix_BVec : evalMatrix BVec = evalMatrixK B_poly := by
+public theorem evalMatrix_BVec : evalMatrix BVec = evalMatrixK B_poly := by
   ext i j
   fin_cases i
   · exact eval_BRow0 j

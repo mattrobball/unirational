@@ -1,5 +1,7 @@
 /- PP Plucker coefficient (0,2). Auto-generated. -/
-import V14Formalization.D12PiecePPPluckerBase
+module
+
+public import V14Formalization.D12PiecePPPluckerBase
 
 noncomputable section
 namespace V14Formalization.D12PiecePPCoeff0_2
@@ -73,7 +75,7 @@ theorem coefficientVec_eq : coefficientVec = CCell0_2 := by
   · exact coefficientVec_apply_8
   · exact coefficientVec_apply_9
 
-theorem eval_coefficient :
+public theorem eval_coefficient :
     eval BKCoord0_1 * eval BKCoord10_1 - eval BKCoord1_1 * eval BKCoord7_1 + eval BKCoord3_1 * eval BKCoord5_1 =
       eval CCell0_2 := by
   calc

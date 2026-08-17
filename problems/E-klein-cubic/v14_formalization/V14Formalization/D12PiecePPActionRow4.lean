@@ -1,5 +1,7 @@
 /- PP character-stack identification row 4. Auto-generated. -/
-import V14Formalization.D12PiecePPData
+module
+
+public import V14Formalization.D12PiecePPData
 
 noncomputable section
 namespace V14Formalization.D12PiecePPActionRow4
@@ -105,7 +107,7 @@ theorem entry9 :
     norm_num [ACell4_9, RMVec, RMVecRow4,
       D12PolynomialData.RM4c9, constVec, basis]
 
-theorem row_eq (j : Fin 10) :
+public theorem row_eq (j : Fin 10) :
     AVec (4 : Fin 20) j =
       characterStackVec RMVec SMVec (1)
         (1) (4 : Fin 20) j := by

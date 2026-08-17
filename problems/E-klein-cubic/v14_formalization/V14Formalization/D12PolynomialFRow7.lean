@@ -10,9 +10,11 @@
   * BSM: collapse sparse B, rw SM_poly_row6, SMrow6_j; never simp [SM_poly].
   * FB: of10 algebra + funext/fin_cases/norm_num on coefficient vectors.
 -/
-import V14Formalization.D12PolynomialCore
-import V14Formalization.D12PolynomialSM
-import Mathlib.Tactic.FinCases
+module
+
+public import V14Formalization.D12PolynomialCore
+public import V14Formalization.D12PolynomialSM
+public import Mathlib.Tactic.FinCases
 
 noncomputable section
 
@@ -27,23 +29,23 @@ def ambientRow : Nat := 7
 def smSourceRow : Nat := 6
 
 /-! ### F row 7 coefficient vectors -/
-def F7c0 : Coeff10 := ![0, 0, 0, (1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, 0]
-def F7c1 : Coeff10 := ![0, (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (1 / 11 : ℚ), 0, 0]
-def F7c2 : Coeff10 := ![0, (-1 / 11 : ℚ), 0, 0, (1 / 11 : ℚ), 0, (1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ)]
-def F7c3 : Coeff10 := ![(-1 / 11 : ℚ), 0, 0, 0, (-1 / 11 : ℚ), 0, 0, (1 / 11 : ℚ), (1 / 11 : ℚ), 0]
-def F7c4 : Coeff10 := ![0, 0, 0, (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, 0, (1 / 11 : ℚ), (-1 / 11 : ℚ)]
-def F7c5 : Coeff10 := ![(1 / 11 : ℚ), 0, 0, 0, (1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ), 0]
-def F7c6 : Coeff10 := ![(-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0]
-def F7c7 : Coeff10 := ![(1 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ)]
-def F7c8 : Coeff10 := ![0, (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (1 / 11 : ℚ), 0, 0]
-def F7c9 : Coeff10 := ![(-1 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (-2 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ)]
-def F7c10 : Coeff10 := ![0, (1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, 0, (1 / 11 : ℚ)]
-def F7c11 : Coeff10 := ![(-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (-3 / 11 : ℚ)]
-def F7c12 : Coeff10 := ![0, 0, 0, (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, 0, (1 / 11 : ℚ), (-1 / 11 : ℚ)]
-def F7c13 : Coeff10 := ![0, 0, 0, (-1 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), 0, 0, 0]
-def F7c14 : Coeff10 := ![(2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), 0]
+@[expose] public def F7c0 : Coeff10 := ![0, 0, 0, (1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, 0]
+@[expose] public def F7c1 : Coeff10 := ![0, (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (1 / 11 : ℚ), 0, 0]
+@[expose] public def F7c2 : Coeff10 := ![0, (-1 / 11 : ℚ), 0, 0, (1 / 11 : ℚ), 0, (1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ)]
+@[expose] public def F7c3 : Coeff10 := ![(-1 / 11 : ℚ), 0, 0, 0, (-1 / 11 : ℚ), 0, 0, (1 / 11 : ℚ), (1 / 11 : ℚ), 0]
+@[expose] public def F7c4 : Coeff10 := ![0, 0, 0, (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, 0, (1 / 11 : ℚ), (-1 / 11 : ℚ)]
+@[expose] public def F7c5 : Coeff10 := ![(1 / 11 : ℚ), 0, 0, 0, (1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ), 0]
+@[expose] public def F7c6 : Coeff10 := ![(-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0]
+@[expose] public def F7c7 : Coeff10 := ![(1 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ)]
+@[expose] public def F7c8 : Coeff10 := ![0, (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (1 / 11 : ℚ), 0, 0]
+@[expose] public def F7c9 : Coeff10 := ![(-1 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (-2 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ)]
+@[expose] public def F7c10 : Coeff10 := ![0, (1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, 0, (1 / 11 : ℚ)]
+@[expose] public def F7c11 : Coeff10 := ![(-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (-3 / 11 : ℚ)]
+@[expose] public def F7c12 : Coeff10 := ![0, 0, 0, (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, 0, (1 / 11 : ℚ), (-1 / 11 : ℚ)]
+@[expose] public def F7c13 : Coeff10 := ![0, 0, 0, (-1 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), 0, 0, 0]
+@[expose] public def F7c14 : Coeff10 := ![(2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), 0]
 
-def F_poly : Matrix (Fin 15) (Fin 15) PolyQ :=
+@[expose] public def F_poly : Matrix (Fin 15) (Fin 15) PolyQ :=
   Matrix.of fun i j =>
     match i.val, j.val with
     | 7, 0 => of10 F7c0
@@ -346,7 +348,7 @@ theorem F_mul_B_eq_B_mul_SM_row7_j9 :
 
 
 /-- Pure row dispatcher for ambient F row 7. -/
-theorem F_mul_B_eq_B_mul_SM_row7 (j : Fin 10) :
+public theorem F_mul_B_eq_B_mul_SM_row7 (j : Fin 10) :
     (F_poly * B_poly - B_poly * SM_poly) (7 : Fin 15) j = (0 : PolyQ) :=
   match j with
   | ⟨0, _⟩ => F_mul_B_eq_B_mul_SM_row7_j0

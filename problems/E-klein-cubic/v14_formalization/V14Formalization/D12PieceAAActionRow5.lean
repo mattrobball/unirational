@@ -1,5 +1,7 @@
 /- AA character-stack identification row 5. Auto-generated. -/
-import V14Formalization.D12PieceAAData
+module
+
+public import V14Formalization.D12PieceAAData
 
 noncomputable section
 namespace V14Formalization.D12PieceAAActionRow5
@@ -105,7 +107,7 @@ theorem entry9 :
     norm_num [ACell5_9, RMVec, RMVecRow5,
       D12PolynomialData.RM5c9, constVec, basis]
 
-theorem row_eq (j : Fin 10) :
+public theorem row_eq (j : Fin 10) :
     AVec (5 : Fin 20) j =
       characterStackVec RMVec SMVec (-1)
         (-1) (5 : Fin 20) j := by

@@ -57,6 +57,11 @@ def migrate_text(text: str, cfg: dict) -> str:
     public = set(cfg.get("public", []))
     expose = set(cfg.get("expose", []))
     public |= expose
+    # From stage 2 on the default posture is Mathlib's: every public def and
+    # instance carries @[expose].  Fine-grained exposure (stage 1) proved to
+    # leave latent cross-module defeq breaks that only surface when a
+    # consumer converts (see MODULE_MIGRATION.md).
+    expose_all = bool(cfg.get("expose_all_public_defs", False))
 
     lines = text.split("\n")
     out: list[str] = []
@@ -98,7 +103,9 @@ def migrate_text(text: str, cfg: dict) -> str:
                 or is_simp
                 or (name is not None and name in public)
             )
-            want_expose = name is not None and name in expose
+            want_expose = (name is not None and name in expose) or (
+                expose_all and want_public and m.group("kw") in ("def", "instance")
+            )
             if not already and want_public:
                 prefix = line[:body_start]
                 if want_expose and "@[expose]" not in attrs:

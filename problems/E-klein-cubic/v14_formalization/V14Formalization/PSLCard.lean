@@ -42,7 +42,7 @@ namespace V14Formalization
 namespace PSLCard
 
 public abbrev F := ZMod 11
-public instance : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
+@[expose] public instance : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
 public abbrev SLG := SpecialLinearGroup (Fin 2) F
 public abbrev PSL2F11 := PSL(2, F)
 
@@ -178,7 +178,7 @@ theorem mem_center_iff_one_or_negI (A : SLG) :
     · exact negI_mem_center
 
 /-- Computable projective order of an SL₂ matrix (image in PSL). -/
-public def pslOrd (g : SLG) : ℕ :=
+@[expose] public def pslOrd (g : SLG) : ℕ :=
   if g ^ 1 = 1 ∨ g ^ 1 = negI then 1
   else if g ^ 2 = 1 ∨ g ^ 2 = negI then 2
   else if g ^ 3 = 1 ∨ g ^ 3 = negI then 3
@@ -990,7 +990,7 @@ public theorem orderOf_mk_eq_pslOrd (A : SLG) :
 ∑_A f(mk A) = 2 • ∑_g f(g) via fiber ≃ center, hence
 ∑_g χ(g)² = (1/2) · ∑_A χ(pslOrd A)² = 660. -/
 
-public noncomputable def lift (g : PSL2F11) : SLG :=
+@[expose] public noncomputable def lift (g : PSL2F11) : SLG :=
   Classical.choose (QuotientGroup.mk_surjective g)
 
 theorem lift_spec (g : PSL2F11) : QuotientGroup.mk (lift g) = g :=

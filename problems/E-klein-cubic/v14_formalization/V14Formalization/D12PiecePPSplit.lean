@@ -1,20 +1,22 @@
 /- Complete PP split identity. Auto-generated structural assembly. -/
-import V14Formalization.D12PiecePPSplitRow0
-import V14Formalization.D12PiecePPSplitRow1
-import V14Formalization.D12PiecePPSplitRow2
-import V14Formalization.D12PiecePPSplitRow3
-import V14Formalization.D12PiecePPSplitRow4
-import V14Formalization.D12PiecePPSplitRow5
-import V14Formalization.D12PiecePPSplitRow6
-import V14Formalization.D12PiecePPSplitRow7
-import V14Formalization.D12PiecePPSplitRow8
-import V14Formalization.D12PiecePPSplitRow9
+module
+
+public import V14Formalization.D12PiecePPSplitRow0
+public import V14Formalization.D12PiecePPSplitRow1
+public import V14Formalization.D12PiecePPSplitRow2
+public import V14Formalization.D12PiecePPSplitRow3
+public import V14Formalization.D12PiecePPSplitRow4
+public import V14Formalization.D12PiecePPSplitRow5
+public import V14Formalization.D12PiecePPSplitRow6
+public import V14Formalization.D12PiecePPSplitRow7
+public import V14Formalization.D12PiecePPSplitRow8
+public import V14Formalization.D12PiecePPSplitRow9
 
 noncomputable section
 namespace V14Formalization.D12PiecePPSplit
 open D12CyclotomicVec D12PiecePPData
 
-theorem split_identity :
+public theorem split_identity :
     matrixMul XVec AVec + matrixMul KVec YVec = matrixOne (Fin 10) := by
   apply Matrix.ext
   intro i j

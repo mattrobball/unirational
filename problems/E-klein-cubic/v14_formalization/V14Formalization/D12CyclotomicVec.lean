@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.WeilRep
-import Mathlib.Algebra.BigOperators.Fin
+module
+
+public import V14Formalization.WeilRep
+public import Mathlib.Algebra.BigOperators.Fin
 
 /-!
 # A bounded rational-vector model of `Q(zeta_11)`
@@ -20,9 +22,9 @@ open scoped BigOperators
 
 namespace V14Formalization.D12CyclotomicVec
 
-abbrev Vec := Fin 10 → ℚ
+public abbrev Vec := Fin 10 → ℚ
 
-def basis (i : Fin 10) : Vec := fun j => if j = i then 1 else 0
+@[expose] public def basis (i : Fin 10) : Vec := fun j => if j = i then 1 else 0
 
 def basisMul (i j : Fin 10) : Vec :=
   let n := i.val + j.val
@@ -30,42 +32,42 @@ def basisMul (i j : Fin 10) : Vec :=
   else if n = 10 then fun _ => -1
   else basis ⟨n - 11, by omega⟩
 
-def coeffAt (a : Vec) (n : ℕ) : ℚ := if h : n < 10 then a ⟨n, h⟩ else 0
+@[expose] public def coeffAt (a : Vec) (n : ℕ) : ℚ := if h : n < 10 then a ⟨n, h⟩ else 0
 
-@[simp] theorem coeffAt_zero (n : ℕ) : coeffAt 0 n = 0 := by
+@[simp] public theorem coeffAt_zero (n : ℕ) : coeffAt 0 n = 0 := by
   unfold coeffAt
   split <;> rfl
 
 /-- Coefficient of degree `n` in the ordinary product before cyclotomic
 reduction.  This is a single ten-term convolution, rather than a nested
 hundred-term sum. -/
-def conv (a b : Vec) (n : ℕ) : ℚ :=
+@[expose] public def conv (a b : Vec) (n : ℕ) : ℚ :=
   ∑ i : Fin 10, if hi : i.val ≤ n then a i * coeffAt b (n - i.val) else 0
 
 /-- Multiplication reduced by `zeta^10 = -(1+...+zeta^9)` and
 `zeta^11 = 1`.  Since an unreduced product has degree at most 18, the three
 displayed convolution coefficients are exhaustive. -/
-def mul (a b : Vec) : Vec := fun k =>
+@[expose] public def mul (a b : Vec) : Vec := fun k =>
   conv a b k.val + conv a b (k.val + 11) - conv a b 10
 
-@[simp] theorem mul_zero_left (b : Vec) : mul 0 b = 0 := by
+@[simp] public theorem mul_zero_left (b : Vec) : mul 0 b = 0 := by
   funext k
   simp [mul, conv]
 
-@[simp] theorem mul_zero_right (a : Vec) : mul a 0 = 0 := by
+@[simp] public theorem mul_zero_right (a : Vec) : mul a 0 = 0 := by
   funext k
   simp [mul, conv]
 
-def eval (v : Vec) : WeilRep.K :=
+@[expose] public def eval (v : Vec) : WeilRep.K :=
   ∑ i : Fin 10, algebraMap ℚ WeilRep.K (v i) * WeilRep.ζ ^ i.val
 
-@[simp] theorem eval_zero : eval 0 = 0 := by
+@[simp] public theorem eval_zero : eval 0 = 0 := by
   simp [eval]
 
-theorem eval_add (a b : Vec) : eval (a + b) = eval a + eval b := by
+public theorem eval_add (a b : Vec) : eval (a + b) = eval a + eval b := by
   simp [eval, Pi.add_apply, map_add, add_mul, Finset.sum_add_distrib]
 
-theorem eval_smul (r : ℚ) (a : Vec) :
+public theorem eval_smul (r : ℚ) (a : Vec) :
     eval (r • a) = algebraMap ℚ WeilRep.K r * eval a := by
   simp [eval, Pi.smul_apply, smul_eq_mul, map_mul, mul_assoc, Finset.mul_sum]
 
@@ -73,7 +75,7 @@ theorem eval_neg (a : Vec) : eval (-a) = -eval a := by
   simpa only [neg_one_smul, map_neg, map_one, neg_one_mul] using
     eval_smul (-1 : ℚ) a
 
-theorem eval_sub (a b : Vec) : eval (a - b) = eval a - eval b := by
+public theorem eval_sub (a b : Vec) : eval (a - b) = eval a - eval b := by
   rw [sub_eq_add_neg, eval_add, eval_neg, sub_eq_add_neg]
 
 theorem eval_sum {ι : Type*} (s : Finset ι) (f : ι → Vec) :
@@ -285,12 +287,12 @@ theorem mul_add_right (a b c : Vec) : mul a (b + c) = mul a b + mul a c := by
   simp only [mul, Pi.add_apply, conv_add_right]
   ring
 
-theorem mul_smul_left (r : ℚ) (a b : Vec) : mul (r • a) b = r • mul a b := by
+public theorem mul_smul_left (r : ℚ) (a b : Vec) : mul (r • a) b = r • mul a b := by
   funext k
   simp only [mul, Pi.smul_apply, smul_eq_mul, conv_smul_left]
   ring
 
-theorem mul_smul_right (r : ℚ) (a b : Vec) : mul a (r • b) = r • mul a b := by
+public theorem mul_smul_right (r : ℚ) (a b : Vec) : mul a (r • b) = r • mul a b := by
   funext k
   simp only [mul, Pi.smul_apply, smul_eq_mul, conv_smul_right]
   ring
@@ -323,7 +325,7 @@ theorem mul_sum_right {ι : Type*} (a : Vec) (s : Finset ι) (f : ι → Vec) :
       simp [mul, conv]
   | insert i s hi => simp [hi, mul_add_right, *]
 
-theorem eval_mul (a b : Vec) : eval (mul a b) = eval a * eval b := by
+public theorem eval_mul (a b : Vec) : eval (mul a b) = eval a * eval b := by
   have hmul : mul a b = ∑ i : Fin 10, ∑ j : Fin 10,
       (a i * b j) • basisMul i j := by
     calc
@@ -375,7 +377,7 @@ theorem eval_eq_basis_sum (v : Vec) :
     rfl
   simp only [eval, hpow, Algebra.smul_def]
 
-theorem eval_eq_zero_iff (v : Vec) : eval v = 0 ↔ v = 0 := by
+public theorem eval_eq_zero_iff (v : Vec) : eval v = 0 ↔ v = 0 := by
   constructor
   · intro hv
     have hsum : (∑ i : Fin 10,
@@ -393,7 +395,7 @@ theorem eval_eq_zero_iff (v : Vec) : eval v = 0 ↔ v = 0 := by
   · rintro rfl
     exact eval_zero
 
-theorem eval_injective : Function.Injective eval := by
+public theorem eval_injective : Function.Injective eval := by
   intro a b h
   have hvec : a - b = 0 := (eval_eq_zero_iff (a - b)).mp (by
     unfold eval
@@ -403,29 +405,29 @@ theorem eval_injective : Function.Injective eval := by
 
 /-! ### Bounded matrix arithmetic in the vector model -/
 
-def constVec (r : ℚ) : Vec := r • basis 0
+@[expose] public def constVec (r : ℚ) : Vec := r • basis 0
 
-@[simp] theorem eval_constVec (r : ℚ) :
+@[simp] public theorem eval_constVec (r : ℚ) :
     eval (constVec r) = algebraMap ℚ WeilRep.K r := by
   rw [constVec, eval_smul, eval_basis]
   simp
 
-def matrixMul {m n p : Type*} [Fintype n]
+@[expose] public def matrixMul {m n p : Type*} [Fintype n]
     (A : Matrix m n Vec) (B : Matrix n p Vec) : Matrix m p Vec :=
   fun i j => ∑ k : n, mul (A i k) (B k j)
 
-def evalMatrix {m n : Type*} (A : Matrix m n Vec) :
+@[expose] public def evalMatrix {m n : Type*} (A : Matrix m n Vec) :
     Matrix m n WeilRep.K := fun i j => eval (A i j)
 
-def matrixOne (n : Type*) [DecidableEq n] : Matrix n n Vec :=
+@[expose] public def matrixOne (n : Type*) [DecidableEq n] : Matrix n n Vec :=
   fun i j => if i = j then constVec 1 else 0
 
-theorem evalMatrix_add {m n : Type*} (A B : Matrix m n Vec) :
+public theorem evalMatrix_add {m n : Type*} (A B : Matrix m n Vec) :
     evalMatrix (A + B) = evalMatrix A + evalMatrix B := by
   ext i j
   exact eval_add (A i j) (B i j)
 
-theorem evalMatrix_mul {m n p : Type*} [Fintype n]
+public theorem evalMatrix_mul {m n p : Type*} [Fintype n]
     (A : Matrix m n Vec) (B : Matrix n p Vec) :
     evalMatrix (matrixMul A B) = evalMatrix A * evalMatrix B := by
   ext i j
@@ -435,7 +437,7 @@ theorem evalMatrix_mul {m n p : Type*} [Fintype n]
   intro k _
   exact eval_mul (A i k) (B k j)
 
-theorem evalMatrix_one {n : Type*} [DecidableEq n] :
+public theorem evalMatrix_one {n : Type*} [DecidableEq n] :
     evalMatrix (matrixOne n) = (1 : Matrix n n WeilRep.K) := by
   ext i j
   change eval (if i = j then constVec 1 else 0) = if i = j then 1 else 0

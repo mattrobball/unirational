@@ -1,23 +1,25 @@
 /- Normalized Plucker data for the PP character plane. -/
-import V14Formalization.D12MatrixCertificate
-import V14Formalization.D12PieceAmbientVec
-import V14Formalization.D12PiecePPData
+module
+
+public import V14Formalization.D12MatrixCertificate
+public import V14Formalization.D12PieceAmbientVec
+public import V14Formalization.D12PiecePPData
 
 noncomputable section
 open Matrix
 namespace V14Formalization.D12PiecePPPluckerBase
 open D12Certificate D12CyclotomicVec D12PieceAmbientVec D12PiecePPData
 open D12PolynomialData D12PolynomialEvaluation
-def payloadSha256 : String := "76c6196f29afe1a8398af99502447f48ebeed4bcb3805fc5dbec693940bc04b0"
+@[expose] public def payloadSha256 : String := "76c6196f29afe1a8398af99502447f48ebeed4bcb3805fc5dbec693940bc04b0"
 
-def BKVec : Matrix (Fin 15) (Fin 2) Vec := matrixMul BVec KVec
+@[expose] public def BKVec : Matrix (Fin 15) (Fin 2) Vec := matrixMul BVec KVec
 
 theorem mul_constVec_left (r : ℚ) (v : Vec) :
     mul (constVec r) v = r • v := by
   apply eval_injective
   rw [eval_mul, eval_constVec, eval_smul]
 
-def BKCoord0_0 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord0_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 1
   | 1 => 0
@@ -31,7 +33,7 @@ def BKCoord0_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-theorem BKVec_0_0 :
+public theorem BKVec_0_0 :
     BKVec (0 : Fin 15) (0 : Fin 2) = BKCoord0_0 := by
   funext n
   fin_cases n <;>
@@ -39,7 +41,7 @@ theorem BKVec_0_0 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord0_0,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord0_1 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord0_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -53,7 +55,7 @@ def BKCoord0_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-theorem BKVec_0_1 :
+public theorem BKVec_0_1 :
     BKVec (0 : Fin 15) (1 : Fin 2) = BKCoord0_1 := by
   funext n
   fin_cases n <;>
@@ -61,7 +63,7 @@ theorem BKVec_0_1 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord0_1,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord1_0 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord1_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -75,7 +77,7 @@ def BKCoord1_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-theorem BKVec_1_0 :
+public theorem BKVec_1_0 :
     BKVec (1 : Fin 15) (0 : Fin 2) = BKCoord1_0 := by
   funext n
   fin_cases n <;>
@@ -83,7 +85,7 @@ theorem BKVec_1_0 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord1_0,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord1_1 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord1_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 1
   | 1 => 0
@@ -97,7 +99,7 @@ def BKCoord1_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-theorem BKVec_1_1 :
+public theorem BKVec_1_1 :
     BKVec (1 : Fin 15) (1 : Fin 2) = BKCoord1_1 := by
   funext n
   fin_cases n <;>
@@ -105,7 +107,7 @@ theorem BKVec_1_1 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord1_1,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord2_0 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord2_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -119,7 +121,7 @@ def BKCoord2_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-theorem BKVec_2_0 :
+public theorem BKVec_2_0 :
     BKVec (2 : Fin 15) (0 : Fin 2) = BKCoord2_0 := by
   funext n
   fin_cases n <;>
@@ -127,7 +129,7 @@ theorem BKVec_2_0 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord2_0,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord2_1 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord2_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => -1
   | 1 => 0
@@ -141,7 +143,7 @@ def BKCoord2_1 (i : Fin 10) : ℚ :=
   | 9 => 1
   | _ => 0
 
-theorem BKVec_2_1 :
+public theorem BKVec_2_1 :
     BKVec (2 : Fin 15) (1 : Fin 2) = BKCoord2_1 := by
   funext n
   fin_cases n <;>
@@ -149,7 +151,7 @@ theorem BKVec_2_1 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord2_1,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord3_0 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord3_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 1
   | 1 => 0
@@ -163,7 +165,7 @@ def BKCoord3_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-theorem BKVec_3_0 :
+public theorem BKVec_3_0 :
     BKVec (3 : Fin 15) (0 : Fin 2) = BKCoord3_0 := by
   funext n
   fin_cases n <;>
@@ -171,7 +173,7 @@ theorem BKVec_3_0 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord3_0,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord3_1 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord3_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 1
   | 1 => 0
@@ -185,7 +187,7 @@ def BKCoord3_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-theorem BKVec_3_1 :
+public theorem BKVec_3_1 :
     BKVec (3 : Fin 15) (1 : Fin 2) = BKCoord3_1 := by
   funext n
   fin_cases n <;>
@@ -193,7 +195,7 @@ theorem BKVec_3_1 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord3_1,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord4_0 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord4_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -207,7 +209,7 @@ def BKCoord4_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-theorem BKVec_4_0 :
+public theorem BKVec_4_0 :
     BKVec (4 : Fin 15) (0 : Fin 2) = BKCoord4_0 := by
   funext n
   fin_cases n <;>
@@ -215,7 +217,7 @@ theorem BKVec_4_0 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord4_0,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord4_1 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord4_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 1
   | 1 => 0
@@ -229,7 +231,7 @@ def BKCoord4_1 (i : Fin 10) : ℚ :=
   | 9 => -1
   | _ => 0
 
-theorem BKVec_4_1 :
+public theorem BKVec_4_1 :
     BKVec (4 : Fin 15) (1 : Fin 2) = BKCoord4_1 := by
   funext n
   fin_cases n <;>
@@ -237,7 +239,7 @@ theorem BKVec_4_1 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord4_1,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord5_0 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord5_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 2 : ℚ)
   | 1 => 0
@@ -251,7 +253,7 @@ def BKCoord5_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-theorem BKVec_5_0 :
+public theorem BKVec_5_0 :
     BKVec (5 : Fin 15) (0 : Fin 2) = BKCoord5_0 := by
   funext n
   fin_cases n <;>
@@ -259,7 +261,7 @@ theorem BKVec_5_0 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord5_0,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord5_1 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord5_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 2 : ℚ)
   | 1 => 0
@@ -273,7 +275,7 @@ def BKCoord5_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-theorem BKVec_5_1 :
+public theorem BKVec_5_1 :
     BKVec (5 : Fin 15) (1 : Fin 2) = BKCoord5_1 := by
   funext n
   fin_cases n <;>
@@ -281,7 +283,7 @@ theorem BKVec_5_1 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord5_1,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord7_0 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord7_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 2 : ℚ)
   | 1 => 0
@@ -295,7 +297,7 @@ def BKCoord7_0 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 2 : ℚ)
   | _ => 0
 
-theorem BKVec_7_0 :
+public theorem BKVec_7_0 :
     BKVec (7 : Fin 15) (0 : Fin 2) = BKCoord7_0 := by
   funext n
   fin_cases n <;>
@@ -303,7 +305,7 @@ theorem BKVec_7_0 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord7_0,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord7_1 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord7_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 2 : ℚ)
   | 1 => 0
@@ -317,7 +319,7 @@ def BKCoord7_1 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 2 : ℚ)
   | _ => 0
 
-theorem BKVec_7_1 :
+public theorem BKVec_7_1 :
     BKVec (7 : Fin 15) (1 : Fin 2) = BKCoord7_1 := by
   funext n
   fin_cases n <;>
@@ -325,7 +327,7 @@ theorem BKVec_7_1 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord7_1,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord8_0 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord8_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -339,7 +341,7 @@ def BKCoord8_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-theorem BKVec_8_0 :
+public theorem BKVec_8_0 :
     BKVec (8 : Fin 15) (0 : Fin 2) = BKCoord8_0 := by
   funext n
   fin_cases n <;>
@@ -347,7 +349,7 @@ theorem BKVec_8_0 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord8_0,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord8_1 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord8_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 2 : ℚ)
   | 1 => 0
@@ -361,7 +363,7 @@ def BKCoord8_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-theorem BKVec_8_1 :
+public theorem BKVec_8_1 :
     BKVec (8 : Fin 15) (1 : Fin 2) = BKCoord8_1 := by
   funext n
   fin_cases n <;>
@@ -369,7 +371,7 @@ theorem BKVec_8_1 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord8_1,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord10_0 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord10_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -383,7 +385,7 @@ def BKCoord10_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-theorem BKVec_10_0 :
+public theorem BKVec_10_0 :
     BKVec (10 : Fin 15) (0 : Fin 2) = BKCoord10_0 := by
   funext n
   fin_cases n <;>
@@ -391,7 +393,7 @@ theorem BKVec_10_0 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord10_0,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord10_1 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord10_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 2 : ℚ)
   | 1 => 0
@@ -405,7 +407,7 @@ def BKCoord10_1 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 2 : ℚ)
   | _ => 0
 
-theorem BKVec_10_1 :
+public theorem BKVec_10_1 :
     BKVec (10 : Fin 15) (1 : Fin 2) = BKCoord10_1 := by
   funext n
   fin_cases n <;>
@@ -413,7 +415,7 @@ theorem BKVec_10_1 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord10_1,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord11_0 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord11_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 2 : ℚ)
   | 1 => 0
@@ -427,7 +429,7 @@ def BKCoord11_0 (i : Fin 10) : ℚ :=
   | 9 => (1 / 2 : ℚ)
   | _ => 0
 
-theorem BKVec_11_0 :
+public theorem BKVec_11_0 :
     BKVec (11 : Fin 15) (0 : Fin 2) = BKCoord11_0 := by
   funext n
   fin_cases n <;>
@@ -435,7 +437,7 @@ theorem BKVec_11_0 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord11_0,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord11_1 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord11_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 2 : ℚ)
   | 1 => 0
@@ -449,7 +451,7 @@ def BKCoord11_1 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 2 : ℚ)
   | _ => 0
 
-theorem BKVec_11_1 :
+public theorem BKVec_11_1 :
     BKVec (11 : Fin 15) (1 : Fin 2) = BKCoord11_1 := by
   funext n
   fin_cases n <;>
@@ -457,7 +459,7 @@ theorem BKVec_11_1 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord11_1,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord12_0 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord12_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -471,7 +473,7 @@ def BKCoord12_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-theorem BKVec_12_0 :
+public theorem BKVec_12_0 :
     BKVec (12 : Fin 15) (0 : Fin 2) = BKCoord12_0 := by
   funext n
   fin_cases n <;>
@@ -479,7 +481,7 @@ theorem BKVec_12_0 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord12_0,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord12_1 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord12_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 2 : ℚ)
   | 1 => 0
@@ -493,7 +495,7 @@ def BKCoord12_1 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 2 : ℚ)
   | _ => 0
 
-theorem BKVec_12_1 :
+public theorem BKVec_12_1 :
     BKVec (12 : Fin 15) (1 : Fin 2) = BKCoord12_1 := by
   funext n
   fin_cases n <;>
@@ -501,7 +503,7 @@ theorem BKVec_12_1 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord12_1,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord13_0 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord13_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 2 : ℚ)
   | 1 => 0
@@ -515,7 +517,7 @@ def BKCoord13_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-theorem BKVec_13_0 :
+public theorem BKVec_13_0 :
     BKVec (13 : Fin 15) (0 : Fin 2) = BKCoord13_0 := by
   funext n
   fin_cases n <;>
@@ -523,7 +525,7 @@ theorem BKVec_13_0 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord13_0,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord13_1 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord13_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -537,7 +539,7 @@ def BKCoord13_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-theorem BKVec_13_1 :
+public theorem BKVec_13_1 :
     BKVec (13 : Fin 15) (1 : Fin 2) = BKCoord13_1 := by
   funext n
   fin_cases n <;>
@@ -545,7 +547,7 @@ theorem BKVec_13_1 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord13_1,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord14_0 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord14_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 2 : ℚ)
   | 1 => 0
@@ -559,7 +561,7 @@ def BKCoord14_0 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 2 : ℚ)
   | _ => 0
 
-theorem BKVec_14_0 :
+public theorem BKVec_14_0 :
     BKVec (14 : Fin 15) (0 : Fin 2) = BKCoord14_0 := by
   funext n
   fin_cases n <;>
@@ -567,7 +569,7 @@ theorem BKVec_14_0 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord14_0,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def BKCoord14_1 (i : Fin 10) : ℚ :=
+@[expose] public def BKCoord14_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 1
   | 1 => 0
@@ -581,7 +583,7 @@ def BKCoord14_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-theorem BKVec_14_1 :
+public theorem BKVec_14_1 :
     BKVec (14 : Fin 15) (1 : Fin 2) = BKCoord14_1 := by
   funext n
   fin_cases n <;>
@@ -589,7 +591,7 @@ theorem BKVec_14_1 :
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell0_1, KCell1_0, KCell1_1, KCell2_0, KCell2_1, KCell3_0, KCell3_1, KCell4_0, KCell4_1, KCell5_0, KCell5_1, KCell6_0, KCell6_1, KCell7_0, KCell7_1, KCell8_0, KCell8_1, KCell9_0, KCell9_1, BKCoord14_1,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def CCell0_0 (i : Fin 10) : ℚ :=
+@[expose] public def CCell0_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => -1
   | 1 => 0
@@ -603,7 +605,7 @@ def CCell0_0 (i : Fin 10) : ℚ :=
   | 9 => (1 / 2 : ℚ)
   | _ => 0
 
-def CCell0_1 (i : Fin 10) : ℚ :=
+@[expose] public def CCell0_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => -2
   | 1 => 0
@@ -617,7 +619,7 @@ def CCell0_1 (i : Fin 10) : ℚ :=
   | 9 => 1
   | _ => 0
 
-def CCell0_2 (i : Fin 10) : ℚ :=
+@[expose] public def CCell0_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => -2
   | 1 => 0
@@ -631,14 +633,14 @@ def CCell0_2 (i : Fin 10) : ℚ :=
   | 9 => (3 / 2 : ℚ)
   | _ => 0
 
-def CRow0 (j : Fin 3) : Vec :=
+@[expose] public def CRow0 (j : Fin 3) : Vec :=
   match j.val with
   | 0 => CCell0_0
   | 1 => CCell0_1
   | 2 => CCell0_2
   | _ => 0
 
-def CCell1_0 (i : Fin 10) : ℚ :=
+@[expose] public def CCell1_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -652,7 +654,7 @@ def CCell1_0 (i : Fin 10) : ℚ :=
   | 9 => 1
   | _ => 0
 
-def CCell1_1 (i : Fin 10) : ℚ :=
+@[expose] public def CCell1_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => -1
   | 1 => 0
@@ -666,7 +668,7 @@ def CCell1_1 (i : Fin 10) : ℚ :=
   | 9 => 1
   | _ => 0
 
-def CCell1_2 (i : Fin 10) : ℚ :=
+@[expose] public def CCell1_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => -1
   | 1 => 0
@@ -680,14 +682,14 @@ def CCell1_2 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def CRow1 (j : Fin 3) : Vec :=
+@[expose] public def CRow1 (j : Fin 3) : Vec :=
   match j.val with
   | 0 => CCell1_0
   | 1 => CCell1_1
   | 2 => CCell1_2
   | _ => 0
 
-def CCell2_0 (i : Fin 10) : ℚ :=
+@[expose] public def CCell2_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 1
   | 1 => 0
@@ -701,7 +703,7 @@ def CCell2_0 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 2 : ℚ)
   | _ => 0
 
-def CCell2_1 (i : Fin 10) : ℚ :=
+@[expose] public def CCell2_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => -3
   | 1 => 0
@@ -715,7 +717,7 @@ def CCell2_1 (i : Fin 10) : ℚ :=
   | 9 => 4
   | _ => 0
 
-def CCell2_2 (i : Fin 10) : ℚ :=
+@[expose] public def CCell2_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => -2
   | 1 => 0
@@ -729,21 +731,21 @@ def CCell2_2 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def CRow2 (j : Fin 3) : Vec :=
+@[expose] public def CRow2 (j : Fin 3) : Vec :=
   match j.val with
   | 0 => CCell2_0
   | 1 => CCell2_1
   | 2 => CCell2_2
   | _ => 0
 
-def CVec : Matrix (Fin 3) (Fin 3) Vec :=
+@[expose] public def CVec : Matrix (Fin 3) (Fin 3) Vec :=
   fun i j => match i.val with
   | 0 => CRow0 j
   | 1 => CRow1 j
   | 2 => CRow2 j
   | _ => 0
 
-def deltaVec (i : Fin 10) : ℚ :=
+@[expose] public def deltaVec (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 1
   | 1 => 0
@@ -757,12 +759,12 @@ def deltaVec (i : Fin 10) : ℚ :=
   | 9 => 1
   | _ => 0
 
-theorem evalMatrix_BKVec :
+public theorem evalMatrix_BKVec :
     evalMatrix BKVec = evalMatrixK B_poly * evalMatrix KVec := by
   change evalMatrix (matrixMul BVec KVec) = _
   rw [evalMatrix_mul, evalMatrix_BVec]
 
-theorem delta_ne_zero : eval deltaVec ≠ 0 := by
+public theorem delta_ne_zero : eval deltaVec ≠ 0 := by
   intro h
   have hv : deltaVec = 0 := (eval_eq_zero_iff deltaVec).mp h
   have hz := congrFun hv (0 : Fin 10)

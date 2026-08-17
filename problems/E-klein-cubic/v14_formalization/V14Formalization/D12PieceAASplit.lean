@@ -1,20 +1,22 @@
 /- Complete AA split identity. Auto-generated structural assembly. -/
-import V14Formalization.D12PieceAASplitRow0
-import V14Formalization.D12PieceAASplitRow1
-import V14Formalization.D12PieceAASplitRow2
-import V14Formalization.D12PieceAASplitRow3
-import V14Formalization.D12PieceAASplitRow4
-import V14Formalization.D12PieceAASplitRow5
-import V14Formalization.D12PieceAASplitRow6
-import V14Formalization.D12PieceAASplitRow7
-import V14Formalization.D12PieceAASplitRow8
-import V14Formalization.D12PieceAASplitRow9
+module
+
+public import V14Formalization.D12PieceAASplitRow0
+public import V14Formalization.D12PieceAASplitRow1
+public import V14Formalization.D12PieceAASplitRow2
+public import V14Formalization.D12PieceAASplitRow3
+public import V14Formalization.D12PieceAASplitRow4
+public import V14Formalization.D12PieceAASplitRow5
+public import V14Formalization.D12PieceAASplitRow6
+public import V14Formalization.D12PieceAASplitRow7
+public import V14Formalization.D12PieceAASplitRow8
+public import V14Formalization.D12PieceAASplitRow9
 
 noncomputable section
 namespace V14Formalization.D12PieceAASplit
 open D12CyclotomicVec D12PieceAAData
 
-theorem split_identity :
+public theorem split_identity :
     matrixMul XVec AVec + matrixMul KVec YVec = matrixOne (Fin 10) := by
   apply Matrix.ext
   intro i j

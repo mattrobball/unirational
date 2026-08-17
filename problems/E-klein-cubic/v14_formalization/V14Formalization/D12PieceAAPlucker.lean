@@ -1,7 +1,9 @@
 /- Normalized Plucker coefficient for the AA character line. -/
-import V14Formalization.D12MatrixCertificate
-import V14Formalization.D12PieceAmbientVec
-import V14Formalization.D12PieceAAData
+module
+
+public import V14Formalization.D12MatrixCertificate
+public import V14Formalization.D12PieceAmbientVec
+public import V14Formalization.D12PieceAAData
 
 noncomputable section
 open Matrix
@@ -10,7 +12,7 @@ open D12Certificate D12CyclotomicVec D12PieceAmbientVec D12PieceAAData
 open D12PolynomialData D12PolynomialEvaluation
 def payloadSha256 : String := "76c6196f29afe1a8398af99502447f48ebeed4bcb3805fc5dbec693940bc04b0"
 
-def BKVec : Matrix (Fin 15) (Fin 1) Vec := matrixMul BVec KVec
+@[expose] public def BKVec : Matrix (Fin 15) (Fin 1) Vec := matrixMul BVec KVec
 
 theorem mul_constVec_left (r : ℚ) (v : Vec) :
     mul (constVec r) v = r • v := by
@@ -143,7 +145,7 @@ theorem BKVec_5 : BKVec (5 : Fin 15) 0 = BKCoord5 := by
       KVec, KRow0, KRow1, KRow2, KRow3, KRow4, KRow5, KRow6, KRow7, KRow8, KRow9, KCell0_0, KCell1_0, KCell2_0, KCell3_0, KCell4_0, KCell5_0, KCell6_0, KCell7_0, KCell8_0, KCell9_0, BKCoord5,
       mul_constVec_left, Fin.sum_univ_succ]
 
-def deltaVec (i : Fin 10) : ℚ :=
+@[expose] public def deltaVec (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => -1
   | 1 => -1
@@ -232,7 +234,7 @@ theorem eval_coefficient :
       simp only [coefficientVec, eval_add, eval_sub, eval_mul]
     _ = eval deltaVec := congrArg eval coefficientVec_eq
 
-theorem evalMatrix_BKVec :
+public theorem evalMatrix_BKVec :
     evalMatrix BKVec = evalMatrixK B_poly * evalMatrix KVec := by
   change evalMatrix (matrixMul BVec KVec) = _
   rw [evalMatrix_mul, evalMatrix_BVec]
@@ -244,7 +246,7 @@ theorem mulVec_fin1 (M : Matrix (Fin 15) (Fin 1) WeilRep.K)
   rw [Fin.sum_univ_succ]
   simp
 
-theorem plucker_coefficient (t : Fin 1 → WeilRep.K) :
+public theorem plucker_coefficient (t : Fin 1 → WeilRep.K) :
     pluckerValue ((evalMatrix BKVec).mulVec t) 0 =
       eval deltaVec * (t 0 * t 0) := by
   change ((evalMatrix BKVec).mulVec t) 0 * ((evalMatrix BKVec).mulVec t) 9 -
@@ -258,7 +260,7 @@ theorem plucker_coefficient (t : Fin 1 → WeilRep.K) :
   rw [← eval_coefficient]
   ring
 
-theorem delta_ne_zero : eval deltaVec ≠ 0 := by
+public theorem delta_ne_zero : eval deltaVec ≠ 0 := by
   intro h
   have hv : deltaVec = 0 := (eval_eq_zero_iff deltaVec).mp h
   have hz := congrFun hv (0 : Fin 10)

@@ -1117,7 +1117,7 @@ variable {K : Type*} [Field K]
 public abbrev MvFrac (K : Type*) [Field K] (n : ℕ) :=
   FractionRing (MvPolynomial (Fin n) K)
 
-public def mvSuccToRatFuncBase (n : ℕ) :
+@[expose] public def mvSuccToRatFuncBase (n : ℕ) :
     MvPolynomial (Fin (n + 1)) K →+* RatFunc (MvFrac K n) :=
   (algebraMap (Polynomial (MvFrac K n)) (RatFunc (MvFrac K n))).comp
     ((Polynomial.mapRingHom
@@ -1131,7 +1131,7 @@ lemma mvSuccToRatFuncBase_injective (n : ℕ) :
       (IsFractionRing.injective (MvPolynomial (Fin n) K) (MvFrac K n))).comp
         (MvPolynomial.finSuccEquiv K n).injective)
 
-public def mvSuccToRatFunc (n : ℕ) : MvFrac K (n + 1) →+* RatFunc (MvFrac K n) :=
+@[expose] public def mvSuccToRatFunc (n : ℕ) : MvFrac K (n + 1) →+* RatFunc (MvFrac K n) :=
   IsFractionRing.lift (mvSuccToRatFuncBase_injective (K := K) n)
 
 @[simp] public lemma mvSuccToRatFunc_algebraMap (n : ℕ)
@@ -1149,7 +1149,7 @@ lemma mvTailRingHom_injective (n : ℕ) :
     Function.Injective (mvTailRingHom (K := K) n) :=
   (MvPolynomial.finSuccEquiv K n).symm.injective.comp Polynomial.C_injective
 
-public def mvTailBase (n : ℕ) : MvPolynomial (Fin n) K →+* MvFrac K (n + 1) :=
+@[expose] public def mvTailBase (n : ℕ) : MvPolynomial (Fin n) K →+* MvFrac K (n + 1) :=
   (algebraMap (MvPolynomial (Fin (n + 1)) K) (MvFrac K (n + 1))).comp
     (mvTailRingHom (K := K) n)
 
@@ -1158,7 +1158,7 @@ lemma mvTailBase_injective (n : ℕ) :
   (IsFractionRing.injective (MvPolynomial (Fin (n + 1)) K) (MvFrac K (n + 1))).comp
     (mvTailRingHom_injective (K := K) n)
 
-public def mvTailFrac (n : ℕ) : MvFrac K n →+* MvFrac K (n + 1) :=
+@[expose] public def mvTailFrac (n : ℕ) : MvFrac K n →+* MvFrac K (n + 1) :=
   IsFractionRing.lift (mvTailBase_injective (K := K) n)
 
 @[simp] public lemma mvTailFrac_algebraMap (n : ℕ)
@@ -1171,7 +1171,7 @@ public def mvTailFrac (n : ℕ) : MvFrac K n →+* MvFrac K (n + 1) :=
 def mvLastVariable (n : ℕ) : MvFrac K (n + 1) :=
   algebraMap (MvPolynomial (Fin (n + 1)) K) (MvFrac K (n + 1)) (X 0)
 
-public def mvRatFuncBackBase (n : ℕ) :
+@[expose] public def mvRatFuncBackBase (n : ℕ) :
     Polynomial (MvFrac K n) →+* MvFrac K (n + 1) :=
   Polynomial.eval₂RingHom (mvTailFrac (K := K) n) (mvLastVariable (K := K) n)
 
@@ -1222,7 +1222,7 @@ lemma mvRatFuncBackBase_injective (n : ℕ) :
   rw [mvSuccToRatFunc_comp_mvRatFuncBackBase] at h
   exact h
 
-public def mvRatFuncBack (n : ℕ) : RatFunc (MvFrac K n) →+* MvFrac K (n + 1) :=
+@[expose] public def mvRatFuncBack (n : ℕ) : RatFunc (MvFrac K n) →+* MvFrac K (n + 1) :=
   IsFractionRing.lift (mvRatFuncBackBase_injective (K := K) n)
 
 @[simp] public lemma mvRatFuncBack_algebraMap (n : ℕ)
@@ -1253,7 +1253,7 @@ public lemma mvSuccToRatFunc_comp_mvRatFuncBack (n : ℕ) :
 @[simp] public lemma mvFractionSuccRingEquiv_apply (n : ℕ) (z : MvFrac K (n + 1)) :
     mvFractionSuccRingEquiv (K := K) n z = mvSuccToRatFunc (K := K) n z := rfl
 
-public def mvFractionZeroAlgEquiv : MvFrac K 0 ≃ₐ[K] K :=
+@[expose] public def mvFractionZeroAlgEquiv : MvFrac K 0 ≃ₐ[K] K :=
   IsFractionRing.algEquivOfAlgEquiv (MvPolynomial.isEmptyAlgEquiv K (Fin 0))
 
 variable [CharZero K]

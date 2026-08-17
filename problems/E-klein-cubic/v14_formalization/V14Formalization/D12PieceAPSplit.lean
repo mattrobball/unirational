@@ -1,20 +1,22 @@
 /- Complete AP split identity. Auto-generated structural assembly. -/
-import V14Formalization.D12PieceAPSplitRow0
-import V14Formalization.D12PieceAPSplitRow1
-import V14Formalization.D12PieceAPSplitRow2
-import V14Formalization.D12PieceAPSplitRow3
-import V14Formalization.D12PieceAPSplitRow4
-import V14Formalization.D12PieceAPSplitRow5
-import V14Formalization.D12PieceAPSplitRow6
-import V14Formalization.D12PieceAPSplitRow7
-import V14Formalization.D12PieceAPSplitRow8
-import V14Formalization.D12PieceAPSplitRow9
+module
+
+public import V14Formalization.D12PieceAPSplitRow0
+public import V14Formalization.D12PieceAPSplitRow1
+public import V14Formalization.D12PieceAPSplitRow2
+public import V14Formalization.D12PieceAPSplitRow3
+public import V14Formalization.D12PieceAPSplitRow4
+public import V14Formalization.D12PieceAPSplitRow5
+public import V14Formalization.D12PieceAPSplitRow6
+public import V14Formalization.D12PieceAPSplitRow7
+public import V14Formalization.D12PieceAPSplitRow8
+public import V14Formalization.D12PieceAPSplitRow9
 
 noncomputable section
 namespace V14Formalization.D12PieceAPSplit
 open D12CyclotomicVec D12PieceAPData
 
-theorem split_identity :
+public theorem split_identity :
     matrixMul XVec AVec + matrixMul KVec YVec = matrixOne (Fin 10) := by
   apply Matrix.ext
   intro i j

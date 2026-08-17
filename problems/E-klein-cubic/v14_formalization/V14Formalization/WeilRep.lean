@@ -40,22 +40,22 @@ noncomputable section
 namespace V14Formalization
 namespace WeilRep
 
-public instance : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
-public instance : NeZero (11 : ℕ) := ⟨by decide⟩
+@[expose] public instance : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
+@[expose] public instance : NeZero (11 : ℕ) := ⟨by decide⟩
 
 /-! ## K = ℚ(ζ₁₁) -/
 
-public def Φ11 : ℚ[X] := cyclotomic 11 ℚ
+@[expose] public def Φ11 : ℚ[X] := cyclotomic 11 ℚ
 public lemma Φ11_irreducible : Irreducible Φ11 :=
   cyclotomic.irreducible_rat (by decide : 0 < 11)
-public instance : Fact (Irreducible Φ11) := ⟨Φ11_irreducible⟩
+@[expose] public instance : Fact (Irreducible Φ11) := ⟨Φ11_irreducible⟩
 
 public abbrev K := AdjoinRoot Φ11
-public instance : Field K := inferInstance
-public instance : CharZero K := inferInstance
-public instance : Algebra ℚ K := inferInstance
+@[expose] public instance : Field K := inferInstance
+@[expose] public instance : CharZero K := inferInstance
+@[expose] public instance : Algebra ℚ K := inferInstance
 
-public def ζ : K := AdjoinRoot.root Φ11
+@[expose] public def ζ : K := AdjoinRoot.root Φ11
 
 public theorem aeval_ζ_Φ11 : aeval ζ Φ11 = 0 := by
   exact (AdjoinRoot.aeval_eq (f := Φ11) (p := Φ11)).trans (AdjoinRoot.mk_self (f := Φ11))
@@ -120,8 +120,8 @@ public theorem ψ_add (a b : ZMod 11) : ψ (a + b) = ψ a * ψ b := map_add_eq_m
 lemma ringChar_zmod11_ne_2 : ringChar (ZMod 11) ≠ 2 := by
   rw [ZMod.ringChar_zmod_n]; decide
 
-public def χ₂ℤ : MulChar (ZMod 11) ℤ := quadraticChar (ZMod 11)
-public def χ₂ : MulChar (ZMod 11) K := χ₂ℤ.ringHomComp (algebraMap ℤ K)
+@[expose] public def χ₂ℤ : MulChar (ZMod 11) ℤ := quadraticChar (ZMod 11)
+@[expose] public def χ₂ : MulChar (ZMod 11) K := χ₂ℤ.ringHomComp (algebraMap ℤ K)
 
 public theorem χ₂_isQuadratic : IsQuadratic χ₂ :=
   (quadraticChar_isQuadratic (ZMod 11)).comp (algebraMap ℤ K)
@@ -213,7 +213,7 @@ public theorem gauss_ne_zero : gauss ≠ 0 := by
   simp only [gauss_sq, zero_pow (by decide : (2 : ℕ) ≠ 0)] at this
   exact absurd this (by norm_num : (-11 : K) ≠ 0)
 
-public def cFourier : K := gauss⁻¹
+@[expose] public def cFourier : K := gauss⁻¹
 
 public theorem cFourier_sq_mul_eleven : cFourier ^ 2 * 11 = (-1 : K) := by
   have h11 : (11 : K) ≠ 0 := by norm_num
@@ -228,8 +228,8 @@ public theorem cFourier_sq_mul_eleven : cFourier ^ 2 * 11 = (-1 : K) := by
 /-! ## Schrödinger representation on Fun = F₁₁ → K -/
 
 public abbrev Fun := ZMod 11 → K
-public instance : AddCommGroup Fun := inferInstance
-public instance : Module K Fun := inferInstance
+@[expose] public instance : AddCommGroup Fun := inferInstance
+@[expose] public instance : Module K Fun := inferInstance
 
 /-- Mathlib character sum: Σ_x ψ(x·b) = 11 if b=0 else 0. -/
 public theorem sum_ψ_mul (b : ZMod 11) :
@@ -343,7 +343,7 @@ public theorem Sfull_sq_apply (f : Fun) (x : ZMod 11) :
 
 public abbrev U := EvenSub
 
-public instance : Module K U := inferInstance
+@[expose] public instance : Module K U := inferInstance
 
 public theorem Sfull_preserves_even {f : Fun} (hf : ∀ x, f (-x) = f x) (x : ZMod 11) :
     Sfull f (-x) = Sfull f x := by
@@ -391,10 +391,10 @@ public theorem S_even_sq : S_even ∘ₗ S_even = -LinearMap.id := by
 /-! ## Coordinate model K⁶ and seal matrices -/
 
 public abbrev Ucoord := Fin 6 → K
-public instance : AddCommGroup Ucoord := inferInstance
-public instance : Module K Ucoord := inferInstance
-public instance : Module.Free K Ucoord := inferInstance
-public instance : FiniteDimensional K Ucoord :=
+@[expose] public instance : AddCommGroup Ucoord := inferInstance
+@[expose] public instance : Module K Ucoord := inferInstance
+@[expose] public instance : Module.Free K Ucoord := inferInstance
+@[expose] public instance : FiniteDimensional K Ucoord :=
   Module.Finite.equiv (Finsupp.linearEquivFunOnFinite K K (Fin 6))
 
 theorem finrank_Ucoord : Module.finrank K Ucoord = 6 := by

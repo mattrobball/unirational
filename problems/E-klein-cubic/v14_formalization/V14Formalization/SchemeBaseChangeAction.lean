@@ -30,7 +30,7 @@ variable {S T : Scheme.{u}}
 /-- Pull back every object and action morphism along a base morphism.  This is
 the ordinary categorical base change functor on the slice, applied to a
 bundled action. -/
-public def baseChangeAction (f : T ⟶ S) (A : Action (Over S) G) :
+@[expose] public def baseChangeAction (f : T ⟶ S) (A : Action (Over S) G) :
     Action (Over T) G :=
   ((Over.pullback f).mapAction G).obj A
 

@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.GrassmannianLinearSection
-import Mathlib.LinearAlgebra.Matrix.Nondegenerate
+module
+
+public import V14Formalization.GrassmannianLinearSection
+public import Mathlib.LinearAlgebra.Matrix.Nondegenerate
 
 /-!
 # A kernel-checkable matrix interface for the D12 fixed-locus certificate
@@ -26,17 +28,17 @@ universe u
 variable {Ω : Type u} [Field Ω]
 
 /-- The coordinate Plücker quadratic associated to a four-subset. -/
-def pluckerValue (v : Fin 15 → Ω) (q : Fin 15) : Ω :=
+@[expose] public def pluckerValue (v : Fin 15 → Ω) (q : Fin 15) : Ω :=
   let d := SchemeGeometry.pluckerRelation q
   v d.p1 * v d.p2 - v d.p3 * v d.p4 + v d.p5 * v d.p6
 
 /-- Degree-two monomials in the two parameters of the `(+,+)` pencil. -/
-def squareMonomials (t : Fin 2 → Ω) : Fin 3 → Ω :=
+@[expose] public def squareMonomials (t : Fin 2 → Ω) : Fin 3 → Ω :=
   ![t 0 * t 0, t 0 * t 1, t 1 * t 1]
 
 /-- Three independent Plücker equations eliminate a two-dimensional
 character piece when their coefficient matrix has nonzero determinant. -/
-theorem plucker_empty_fin2_of_coeff
+public theorem plucker_empty_fin2_of_coeff
     (BK : Matrix (Fin 15) (Fin 2) Ω) (C : Matrix (Fin 3) (Fin 3) Ω)
     (hdet : C.det ≠ 0)
     (hcoeff : ∀ t : Fin 2 → Ω,
@@ -63,7 +65,7 @@ theorem plucker_empty_fin2_of_coeff
 
 /-- A nonzero scalar multiple of the square parameter eliminates a
 one-dimensional character piece. -/
-theorem plucker_empty_fin1_of_coeff
+public theorem plucker_empty_fin1_of_coeff
     (BK : Matrix (Fin 15) (Fin 1) Ω) (q : Fin 15) (delta : Ω)
     (hdelta : delta ≠ 0)
     (hcoeff : ∀ t : Fin 1 → Ω,
@@ -80,7 +82,7 @@ theorem plucker_empty_fin1_of_coeff
 
 /-- The zero-dimensional character piece is tautologically empty in
 projective space. -/
-theorem plucker_empty_fin0
+public theorem plucker_empty_fin0
     (BK : Matrix (Fin 15) (Fin 0) Ω) :
     ∀ t : Fin 0 → Ω,
       (∀ q : Fin 15, pluckerValue (BK.mulVec t) q = 0) → t = 0 := by
@@ -88,7 +90,7 @@ theorem plucker_empty_fin0
   exact Subsingleton.elim _ _
 
 /-- Linear algebra for one simultaneous `(R,F)` character piece. -/
-structure PieceCertificate
+public structure PieceCertificate
     (B : Matrix (Fin 15) (Fin 10) Ω)
     (RM SM : Matrix (Fin 10) (Fin 10) Ω)
     (rotSign reflSign : Ω) (d : Type) [Fintype d] [DecidableEq d] where
@@ -128,7 +130,7 @@ end PieceCertificate
 
 /-- The common projector/action bridge together with the four character
 certificates `(+,+)`, `(+,-)`, `(-,+)`, `(-,-)`. -/
-structure Certificate where
+public structure Certificate where
   P : Matrix (Fin 15) (Fin 15) Ω
   R : Matrix (Fin 15) (Fin 15) Ω
   F : Matrix (Fin 15) (Fin 15) Ω
@@ -258,7 +260,7 @@ theorem no_aa (C : Certificate (Ω := Ω))
 `FRFR = 1`, the four signed certificates exclude every common projective
 eigenline in the Plücker locus.  Indeed, the corresponding eigenvalues must
 both be signs, so one of `no_pp`, `no_pa`, `no_ap`, or `no_aa` applies. -/
-theorem no_common_projective_eigenline
+public theorem no_common_projective_eigenline
     (C : Certificate (Ω := Ω))
     (hF2 : C.F * C.F = 1)
     (hFRFR : C.F * C.R * C.F * C.R = 1)

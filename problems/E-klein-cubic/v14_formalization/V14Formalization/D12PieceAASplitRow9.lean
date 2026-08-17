@@ -1,6 +1,8 @@
 /- AA split identity row 9: entry certificates inlined. Auto-generated. -/
-import V14Formalization.D12PieceAAData
-import V14Formalization.D12CyclotomicVecZ
+module
+
+public import V14Formalization.D12PieceAAData
+public import V14Formalization.D12CyclotomicVecZ
 
 noncomputable section
 open Matrix
@@ -11677,7 +11679,7 @@ end V14Formalization.D12PieceAASplitEntry9_9
 namespace V14Formalization.D12PieceAASplitRow9
 open D12CyclotomicVec D12PieceAAData
 
-theorem row_eq (j : Fin 10) :
+public theorem row_eq (j : Fin 10) :
     (matrixMul XVec AVec + matrixMul KVec YVec)
       (9 : Fin 10) j = matrixOne (Fin 10) (9 : Fin 10) j := by
   fin_cases j

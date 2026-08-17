@@ -595,4 +595,9 @@ if __name__ == "__main__":
     if "--migrate-core-only" in sys.argv[1:]:
         migrate_core_annotations()
         sys.exit(0)
-    sys.exit(main())
+    _rc = main()
+    import os as _os
+    sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+    from module_annotation_hook import reapply_module_annotations
+    reapply_module_annotations()
+    sys.exit(_rc)

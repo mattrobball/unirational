@@ -23,7 +23,7 @@ noncomputable section
 namespace V14Formalization
 namespace CentralizerN
 
-public instance fact_prime_eleven' : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
+@[expose] public instance fact_prime_eleven' : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
 
 public abbrev F := ZMod 11
 public abbrev SLG := SpecialLinearGroup (Fin 2) F
@@ -35,10 +35,10 @@ public abbrev PSL2F11 := PSL(2, F)
 @[expose] public def Circle1 := { p : F × F // p.1 ^ 2 + p.2 ^ 2 = 1 }
 @[expose] public def CircleM1 := { p : F × F // p.1 ^ 2 + p.2 ^ 2 = -1 }
 
-public instance : Fintype Circle1 :=
+@[expose] public instance : Fintype Circle1 :=
   Fintype.subtype ((Finset.univ : Finset (F × F)).filter fun p => p.1 ^ 2 + p.2 ^ 2 = 1)
     (by intro; simp)
-public instance : Fintype CircleM1 :=
+@[expose] public instance : Fintype CircleM1 :=
   Fintype.subtype ((Finset.univ : Finset (F × F)).filter fun p => p.1 ^ 2 + p.2 ^ 2 = -1)
     (by intro; simp)
 
@@ -232,9 +232,9 @@ theorem liftsToN_surjective : Function.Surjective liftsToN := by
   · exact ⟨Sum.inr p, Subtype.ext (by simp [liftsToN, hp])⟩
 
 
-public instance : Fintype PSL2F11 := QuotientGroup.fintype _
-public instance : DecidableEq PSL2F11 := Quotient.decidableEq
-public instance : Fintype (Subgroup.centralizer ({sigma} : Set PSL2F11)) :=
+@[expose] public instance : Fintype PSL2F11 := QuotientGroup.fintype _
+@[expose] public instance : DecidableEq PSL2F11 := Quotient.decidableEq
+@[expose] public instance : Fintype (Subgroup.centralizer ({sigma} : Set PSL2F11)) :=
   Fintype.ofFinite _
 
 def liftMat : Circle1 ⊕ CircleM1 → SLG
@@ -699,7 +699,7 @@ public lemma orderOf_rotGen : orderOf rotGen = 6 := by
         Matrix.of_apply, Matrix.cons_val] at he
       exact absurd he (by decide)
 
-public def dihedralToN : DihedralGroup 6 → Subgroup.centralizer ({sigma} : Set PSL2F11)
+@[expose] public def dihedralToN : DihedralGroup 6 → Subgroup.centralizer ({sigma} : Set PSL2F11)
   | .r i => rotGen ^ i.val
   | .sr i => reflGen * rotGen ^ i.val
 
@@ -761,7 +761,7 @@ lemma dihedralToN_mul (a b : DihedralGroup 6) :
         _ = rotGen ^ ((j.val + (-i).val) % 6) := by rw [add_comm]
         _ = rotGen ^ (j - i).val := by rw [← hval]
 
-public def dihedralToNHom : DihedralGroup 6 →* Subgroup.centralizer ({sigma} : Set PSL2F11) where
+@[expose] public def dihedralToNHom : DihedralGroup 6 →* Subgroup.centralizer ({sigma} : Set PSL2F11) where
   toFun := dihedralToN
   map_one' := by
     change rotGen ^ (0 : ZMod 6).val = 1

@@ -1,5 +1,7 @@
 /- PA character-stack identification, row 0. Auto-generated. -/
-import V14Formalization.D12PiecePAData
+module
+
+public import V14Formalization.D12PiecePAData
 
 noncomputable section
 namespace V14Formalization.D12PiecePAActionRow0
@@ -105,7 +107,7 @@ theorem entry9 :
     norm_num [ACell0_9, RMVec, RMVecRow0,
       D12PolynomialData.RM0c9, constVec, basis]
 
-theorem row_eq (j : Fin 10) :
+public theorem row_eq (j : Fin 10) :
     AVec (0 : Fin 20) j =
       characterStackVec RMVec SMVec 1 (-1) (0 : Fin 20) j := by
   fin_cases j

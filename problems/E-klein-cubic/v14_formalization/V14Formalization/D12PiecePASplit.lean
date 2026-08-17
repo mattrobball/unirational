@@ -1,20 +1,22 @@
 /- Complete PA split identity. Auto-generated structural assembly. -/
-import V14Formalization.D12PiecePASplitRow0
-import V14Formalization.D12PiecePASplitRow1
-import V14Formalization.D12PiecePASplitRow2
-import V14Formalization.D12PiecePASplitRow3
-import V14Formalization.D12PiecePASplitRow4
-import V14Formalization.D12PiecePASplitRow5
-import V14Formalization.D12PiecePASplitRow6
-import V14Formalization.D12PiecePASplitRow7
-import V14Formalization.D12PiecePASplitRow8
-import V14Formalization.D12PiecePASplitRow9
+module
+
+public import V14Formalization.D12PiecePASplitRow0
+public import V14Formalization.D12PiecePASplitRow1
+public import V14Formalization.D12PiecePASplitRow2
+public import V14Formalization.D12PiecePASplitRow3
+public import V14Formalization.D12PiecePASplitRow4
+public import V14Formalization.D12PiecePASplitRow5
+public import V14Formalization.D12PiecePASplitRow6
+public import V14Formalization.D12PiecePASplitRow7
+public import V14Formalization.D12PiecePASplitRow8
+public import V14Formalization.D12PiecePASplitRow9
 
 noncomputable section
 namespace V14Formalization.D12PiecePASplit
 open D12CyclotomicVec D12PiecePAData
 
-theorem split_identity : matrixMul XVec AVec = matrixOne (Fin 10) := by
+public theorem split_identity : matrixMul XVec AVec = matrixOne (Fin 10) := by
   apply Matrix.ext
   intro i j
   fin_cases i

@@ -195,3 +195,6 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+    sys.path.insert(0, __import__("os").path.dirname(__import__("os").path.abspath(__file__)))
+    from module_annotation_hook import reapply_module_annotations
+    reapply_module_annotations()

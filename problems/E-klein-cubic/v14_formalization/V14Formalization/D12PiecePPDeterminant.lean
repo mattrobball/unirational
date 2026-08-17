@@ -1,5 +1,7 @@
 /- Determinant of the normalized PP Plucker coefficient matrix. -/
-import V14Formalization.D12PiecePPPluckerBase
+module
+
+public import V14Formalization.D12PiecePPPluckerBase
 
 noncomputable section
 open Matrix
@@ -1134,7 +1136,7 @@ theorem det_evalMatrix_CVec : (evalMatrix CVec).det = eval deltaVec := by
       eval CCell0_2 * eval CCell1_1 * eval CCell2_0 = _
   exact eval_determinant
 
-theorem det_ne_zero : (evalMatrix CVec).det ≠ 0 := by
+public theorem det_ne_zero : (evalMatrix CVec).det ≠ 0 := by
   rw [det_evalMatrix_CVec]
   exact delta_ne_zero
 

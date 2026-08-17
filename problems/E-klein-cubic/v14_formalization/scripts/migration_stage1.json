@@ -1,7 +1,8 @@
 {
  "V14Formalization/Basic.lean": {
   "public": [],
-  "expose": []
+  "expose": [],
+  "expose_all_public_defs": true
  },
  "V14Formalization/BiprojectiveIntegral.lean": {
   "public": [
@@ -9,7 +10,8 @@
    "BiprojectiveSpace.standardChartIntegral",
    "BiprojectiveSpace.standardChartRanges_pairwise"
   ],
-  "expose": []
+  "expose": [],
+  "expose_all_public_defs": true
  },
  "V14Formalization/CentralizerD12.lean": {
   "public": [
@@ -65,7 +67,8 @@
    "rotGen",
    "rotPt",
    "sigma"
-  ]
+  ],
+  "expose_all_public_defs": true
  },
  "V14Formalization/D12PolyZReflection.lean": {
   "public": [
@@ -84,7 +87,8 @@
    "smulList",
    "subList",
    "toPolyZ"
-  ]
+  ],
+  "expose_all_public_defs": true
  },
  "V14Formalization/EllipticPolynomialConstancy.lean": {
   "public": [
@@ -113,7 +117,8 @@
   ],
   "expose": [
    "mvFractionSuccRingEquiv"
-  ]
+  ],
+  "expose_all_public_defs": true
  },
  "V14Formalization/MultiProjectiveZeroLocus.lean": {
   "public": [
@@ -125,7 +130,8 @@
    "projectiveZeroLocusFamilyι_isClosedImmersion",
    "projectiveZeroLocusFamilyι_isOver"
   ],
-  "expose": []
+  "expose": [],
+  "expose_all_public_defs": true
  },
  "V14Formalization/PSLCard.lean": {
   "public": [
@@ -162,20 +168,23 @@
    "chi10Int",
    "negI",
    "slCardOrder"
-  ]
+  ],
+  "expose_all_public_defs": true
  },
  "V14Formalization/ProjNaturality.lean": {
   "public": [
    "mapLinearSubst_toSpec",
    "map_toSpecZero"
   ],
-  "expose": []
+  "expose": [],
+  "expose_all_public_defs": true
  },
  "V14Formalization/SchemeBaseChangeAction.lean": {
   "public": [
    "baseChangeAction"
   ],
-  "expose": []
+  "expose": [],
+  "expose_all_public_defs": true
  },
  "V14Formalization/SchemeEquivariant.lean": {
   "public": [
@@ -189,7 +198,8 @@
   "expose": [
    "HasEquivariantRationalMap",
    "actionPrecomp"
-  ]
+  ],
+  "expose_all_public_defs": true
  },
  "V14Formalization/WeilRep.lean": {
   "public": [
@@ -254,7 +264,10 @@
    "Tmat",
    "gauss",
    "twoInv",
+   "Φ11",
+   "ζ",
    "ψ"
-  ]
+  ],
+  "expose_all_public_defs": true
  }
 }

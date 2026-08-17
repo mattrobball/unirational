@@ -63,3 +63,11 @@ if __name__ == "__main__":
         out = sys.argv[4]
         open(out, "w").write(m)
         print(f"dry: wrote {out} ({len(m.splitlines())} lines)")
+
+
+# Module-system migration hook (see MODULE_MIGRATION.md): keep annotations
+# on any files this script rewrote.
+import os as _os, sys as _sys
+_sys.path.insert(0, _os.path.dirname(_os.path.abspath(__file__)))
+from module_annotation_hook import reapply_module_annotations
+reapply_module_annotations()

@@ -1,6 +1,8 @@
 /- PP split identity row 6: entry certificates inlined. Auto-generated. -/
-import V14Formalization.D12PiecePPData
-import V14Formalization.D12CyclotomicVecZ
+module
+
+public import V14Formalization.D12PiecePPData
+public import V14Formalization.D12CyclotomicVecZ
 
 noncomputable section
 open Matrix
@@ -12197,7 +12199,7 @@ end V14Formalization.D12PiecePPSplitEntry6_9
 namespace V14Formalization.D12PiecePPSplitRow6
 open D12CyclotomicVec D12PiecePPData
 
-theorem row_eq (j : Fin 10) :
+public theorem row_eq (j : Fin 10) :
     (matrixMul XVec AVec + matrixMul KVec YVec)
       (6 : Fin 10) j = matrixOne (Fin 10) (6 : Fin 10) j := by
   fin_cases j

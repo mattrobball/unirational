@@ -10,23 +10,25 @@
   * One small theorem per ambient row → certified shard theorem.
   * Final Matrix.ext + 15-way ambient-row dispatch only (no inner fin_cases).
 -/
-import V14Formalization.D12PolynomialCore
-import V14Formalization.D12PolynomialRM
-import V14Formalization.D12PolynomialRRow0
-import V14Formalization.D12PolynomialRRow1
-import V14Formalization.D12PolynomialRRow2
-import V14Formalization.D12PolynomialRRow3
-import V14Formalization.D12PolynomialRRow4
-import V14Formalization.D12PolynomialRRow5
-import V14Formalization.D12PolynomialRRow6
-import V14Formalization.D12PolynomialRRow7
-import V14Formalization.D12PolynomialRRow8
-import V14Formalization.D12PolynomialRRow9
-import V14Formalization.D12PolynomialRRow10
-import V14Formalization.D12PolynomialRRow11
-import V14Formalization.D12PolynomialRRow12
-import V14Formalization.D12PolynomialRRow13
-import V14Formalization.D12PolynomialRRow14
+module
+
+public import V14Formalization.D12PolynomialCore
+public import V14Formalization.D12PolynomialRM
+public import V14Formalization.D12PolynomialRRow0
+public import V14Formalization.D12PolynomialRRow1
+public import V14Formalization.D12PolynomialRRow2
+public import V14Formalization.D12PolynomialRRow3
+public import V14Formalization.D12PolynomialRRow4
+public import V14Formalization.D12PolynomialRRow5
+public import V14Formalization.D12PolynomialRRow6
+public import V14Formalization.D12PolynomialRRow7
+public import V14Formalization.D12PolynomialRRow8
+public import V14Formalization.D12PolynomialRRow9
+public import V14Formalization.D12PolynomialRRow10
+public import V14Formalization.D12PolynomialRRow11
+public import V14Formalization.D12PolynomialRRow12
+public import V14Formalization.D12PolynomialRRow13
+public import V14Formalization.D12PolynomialRRow14
 
 noncomputable section
 
@@ -38,7 +40,7 @@ namespace D12PolynomialData
 namespace RFull
 
 /-- Global R assembled row-wise from the 15 ambient row shards. -/
-def R_poly : Matrix (Fin 15) (Fin 15) PolyQ :=
+@[expose] public def R_poly : Matrix (Fin 15) (Fin 15) PolyQ :=
   Matrix.of fun i j =>
     match i.val with
     | 0 => RRow0.R_poly i j
@@ -204,7 +206,7 @@ private theorem row14 (j : Fin 10) :
   simpa [Matrix.sub_apply, hRB] using RRow14.R_mul_B_eq_B_mul_RM_row14 j
 
 /-- Full matrix identity R_poly * B_poly = B_poly * RM_poly. -/
-theorem R_mul_B_eq_B_mul_RM :
+public theorem R_mul_B_eq_B_mul_RM :
     R_poly * B_poly = B_poly * RM_poly := by
   apply Matrix.ext
   intro i j

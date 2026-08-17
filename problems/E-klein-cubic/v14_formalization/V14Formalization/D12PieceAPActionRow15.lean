@@ -1,5 +1,7 @@
 /- AP character-stack identification row 15. Auto-generated. -/
-import V14Formalization.D12PieceAPData
+module
+
+public import V14Formalization.D12PieceAPData
 
 noncomputable section
 namespace V14Formalization.D12PieceAPActionRow15
@@ -105,7 +107,7 @@ theorem entry9 :
     norm_num [ACell15_9, SMVec, SMVecRow5,
       D12PolynomialData.SM5c9, constVec, basis]
 
-theorem row_eq (j : Fin 10) :
+public theorem row_eq (j : Fin 10) :
     AVec (15 : Fin 20) j =
       characterStackVec RMVec SMVec (-1)
         (1) (15 : Fin 20) j := by

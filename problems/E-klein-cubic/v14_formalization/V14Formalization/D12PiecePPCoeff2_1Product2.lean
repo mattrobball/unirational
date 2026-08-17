@@ -1,14 +1,16 @@
 /- Bounded product 2 for PP Plucker coefficient (2,1). -/
-import V14Formalization.D12PiecePPPluckerBase
+module
+
+public import V14Formalization.D12PiecePPPluckerBase
 
 noncomputable section
 namespace V14Formalization.D12PiecePPCoeff2_1Product2
 open D12CyclotomicVec D12PiecePPPluckerBase
-def payloadSha256 : String := "76c6196f29afe1a8398af99502447f48ebeed4bcb3805fc5dbec693940bc04b0"
+@[expose] public def payloadSha256 : String := "76c6196f29afe1a8398af99502447f48ebeed4bcb3805fc5dbec693940bc04b0"
 
 def productVec : Vec := mul BKCoord3_0 BKCoord13_1
 
-def productValue (i : Fin 10) : ℚ :=
+@[expose] public def productValue (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -86,7 +88,7 @@ theorem productVec_eq : productVec = productValue := by
   · exact productVec_apply_8
   · exact productVec_apply_9
 
-theorem eval_product :
+public theorem eval_product :
     eval BKCoord3_0 * eval BKCoord13_1 = eval productValue := by
   calc
     _ = eval productVec := by simp only [productVec, eval_mul]

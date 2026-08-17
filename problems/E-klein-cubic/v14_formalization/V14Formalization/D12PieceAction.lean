@@ -2,7 +2,9 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12PolynomialEvaluation
+module
+
+public import V14Formalization.D12PolynomialEvaluation
 
 /-!
 # Structural simultaneous-character kernel for the D12 restriction
@@ -19,7 +21,7 @@ open Matrix
 namespace V14Formalization.D12PieceAction
 
 /-- Vertical stack of `RM - r I` and `SM - s I`. -/
-def characterStack {K : Type*} [Field K]
+@[expose] public def characterStack {K : Type*} [Field K]
     (RM SM : Matrix (Fin 10) (Fin 10) K) (r s : K) :
     Matrix (Fin 20) (Fin 10) K :=
   Matrix.of fun i j =>
@@ -63,7 +65,7 @@ private theorem natAdd_eq (i : Fin (10 + 10)) (hi : 10 ≤ i.val) :
   change i.val = 10 + (i.val - 10)
   exact (Nat.add_sub_of_le hi).symm
 
-theorem characterStack_mulVec_eq_zero_iff {K : Type*} [Field K]
+public theorem characterStack_mulVec_eq_zero_iff {K : Type*} [Field K]
     (RM SM : Matrix (Fin 10) (Fin 10) K) (r s : K)
     (m : Fin 10 → K) :
     (characterStack RM SM r s).mulVec m = 0 ↔

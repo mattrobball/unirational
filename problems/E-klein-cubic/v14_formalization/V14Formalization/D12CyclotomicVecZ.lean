@@ -2,7 +2,9 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12CyclotomicVec
+module
+
+public import V14Formalization.D12CyclotomicVec
 
 /-!
 # Kernel-reducing integer model of `ℤ[ζ₁₁]`
@@ -19,46 +21,46 @@ namespace V14Formalization.D12CyclotomicVecZ
 open V14Formalization.D12CyclotomicVec
 open scoped BigOperators
 
-abbrev VecZ := Vector Int 10
+public abbrev VecZ := Vector Int 10
 
-def coeffAtZ (a : VecZ) (n : ℕ) : Int :=
+@[expose] public def coeffAtZ (a : VecZ) (n : ℕ) : Int :=
   if h : n < 10 then a[n] else 0
 
 /-- One convolution term.  Written as a closed `if` so the kernel reduces it. -/
-def convTerm (a b : VecZ) (n i : ℕ) : Int :=
+@[expose] public def convTerm (a b : VecZ) (n i : ℕ) : Int :=
   if h : i < 10 ∧ i ≤ n then a[i] * coeffAtZ b (n - i) else 0
 
 /-- Unrolled ten-term convolution; `Fin.foldl` does not reduce under `decide`. -/
-def convZ (a b : VecZ) (n : ℕ) : Int :=
+@[expose] public def convZ (a b : VecZ) (n : ℕ) : Int :=
   convTerm a b n 0 + convTerm a b n 1 + convTerm a b n 2 + convTerm a b n 3 +
     convTerm a b n 4 + convTerm a b n 5 + convTerm a b n 6 + convTerm a b n 7 +
       convTerm a b n 8 + convTerm a b n 9
 
-def mulCoeff (a b : VecZ) (k : ℕ) : Int :=
+@[expose] public def mulCoeff (a b : VecZ) (k : ℕ) : Int :=
   convZ a b k + convZ a b (k + 11) - convZ a b 10
 
-def mulZ (a b : VecZ) : VecZ :=
+@[expose] public def mulZ (a b : VecZ) : VecZ :=
   #v[mulCoeff a b 0, mulCoeff a b 1, mulCoeff a b 2, mulCoeff a b 3, mulCoeff a b 4,
     mulCoeff a b 5, mulCoeff a b 6, mulCoeff a b 7, mulCoeff a b 8, mulCoeff a b 9]
 
-def addZ (x y : VecZ) : VecZ :=
+@[expose] public def addZ (x y : VecZ) : VecZ :=
   #v[x[0] + y[0], x[1] + y[1], x[2] + y[2], x[3] + y[3], x[4] + y[4],
     x[5] + y[5], x[6] + y[6], x[7] + y[7], x[8] + y[8], x[9] + y[9]]
 
-def zeroZ : VecZ := #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def zeroZ : VecZ := #v[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 /-- Structural recursion, so a concrete `n` reduces under `decide`. -/
-def sumFin {n : ℕ} (f : Fin n → VecZ) : VecZ :=
+@[expose] public def sumFin {n : ℕ} (f : Fin n → VecZ) : VecZ :=
   go n (Nat.le_refl n)
 where
   go : (k : ℕ) → k ≤ n → VecZ
   | 0, _ => zeroZ
   | k + 1, h => addZ (go k (Nat.le_of_succ_le h)) (f ⟨k, Nat.lt_of_succ_le h⟩)
 
-def scaleSqE0 (s : Int) : VecZ :=
+@[expose] public def scaleSqE0 (s : Int) : VecZ :=
   #v[s * s, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
-def toVec (v : VecZ) : Vec :=
+@[expose] public def toVec (v : VecZ) : Vec :=
   fun i => (v[i.val] : ℚ)
 
 /-! ### Sample product from `D12PieceAPSplitEntry7_9`, first nonzero XA term.
@@ -142,29 +144,29 @@ theorem toVec_sumFin {n : ℕ} (f : Fin n → VecZ) :
     toVec (sumFin f) = ∑ i : Fin n, toVec (f i) := by
   simpa [sumFin] using toVec_sumFin_go f n (Nat.le_refl n)
 
-theorem toVec_scaleSqE0 (s : ℤ) :
+public theorem toVec_scaleSqE0 (s : ℤ) :
     toVec (scaleSqE0 s) = ((s : ℚ) * s) • constVec 1 := by
   funext i
   fin_cases i <;> simp [toVec, scaleSqE0, constVec, basis, Pi.smul_apply, smul_eq_mul]
 
-theorem toVec_zeroZ_smul (s : ℤ) :
+public theorem toVec_zeroZ_smul (s : ℤ) :
     toVec zeroZ = ((s : ℚ) * s) • (0 : Vec) := by
   simp [toVec_zeroZ]
 
 /-! ### Rational scaling lemmas used by generated shards -/
 
-theorem eq_smul_div (n s num den : ℤ) (hden : den ≠ 0)
+public theorem eq_smul_div (n s num den : ℤ) (hden : den ≠ 0)
     (h : n * den = s * num) :
     (n : ℚ) = (s : ℚ) * (num / den : ℚ) := by
   have : (den : ℚ) ≠ 0 := Int.cast_ne_zero.mpr hden
   field_simp
   exact_mod_cast h
 
-theorem eq_smul_int (n s m : ℤ) (h : n = s * m) :
+public theorem eq_smul_int (n s m : ℤ) (h : n = s * m) :
     (n : ℚ) = (s : ℚ) * (m : ℚ) := by
   exact_mod_cast h
 
-theorem eq_smul_zero (s : ℤ) : ((0 : ℤ) : ℚ) = (s : ℚ) * (0 : ℚ) := by
+public theorem eq_smul_zero (s : ℤ) : ((0 : ℤ) : ℚ) = (s : ℚ) * (0 : ℚ) := by
   simp
 
 theorem eq_smul_inv (n s den : ℤ) (hden : den ≠ 0) (h : n * den = s) :
@@ -189,12 +191,12 @@ theorem eq_smul_neg_mul_inv (n s num den : ℤ) (hden : den ≠ 0)
   have := eq_smul_mul_inv n (-s) num den hden (by simpa [neg_mul] using h)
   simpa [neg_mul, mul_neg] using this
 
-theorem constVec_one_eq :
+public theorem constVec_one_eq :
     constVec 1 = ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
   funext i
   fin_cases i <;> simp [constVec, basis]
 
-theorem vec_zero_eq : (0 : Vec) = ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
+public theorem vec_zero_eq : (0 : Vec) = ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
   funext i
   fin_cases i <;> rfl
 
@@ -223,7 +225,7 @@ theorem mul_smul_smul (s : ℚ) (a b : Vec) :
   rw [mul_smul_left, mul_smul_right, smul_smul]
 
 /-- One shared lift: a scaled integer sum of products implies the `Vec` sum. -/
-theorem sum_mul_eq_of_scaled {n : ℕ} (s : ℤ) (hs : s ≠ 0)
+public theorem sum_mul_eq_of_scaled {n : ℕ} (s : ℤ) (hs : s ≠ 0)
     (left right : Fin n → Vec) (leftZ rightZ : Fin n → VecZ)
     (hleft : ∀ k, toVec (leftZ k) = (s : ℚ) • left k)
     (hright : ∀ k, toVec (rightZ k) = (s : ℚ) • right k)
@@ -245,7 +247,7 @@ theorem sum_mul_eq_of_scaled {n : ℕ} (s : ℤ) (hs : s ≠ 0)
   exact smul_Vec_injective hss (hcast.symm.trans htarget)
 
 /-- Two-family form used by AP / AA / PP (`XA + KY`). -/
-theorem add_sum_mul_eq_of_scaled {n m : ℕ} (s : ℤ) (hs : s ≠ 0)
+public theorem add_sum_mul_eq_of_scaled {n m : ℕ} (s : ℤ) (hs : s ≠ 0)
     (X A : Fin n → Vec) (K Y : Fin m → Vec)
     (XZ AZ : Fin n → VecZ) (KZ YZ : Fin m → VecZ)
     (hX : ∀ k, toVec (XZ k) = (s : ℚ) • X k)

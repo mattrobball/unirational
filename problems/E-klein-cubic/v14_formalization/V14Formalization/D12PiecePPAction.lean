@@ -1,30 +1,32 @@
 /- PP literal action matrix equals its character stack. -/
-import V14Formalization.D12PiecePPActionRow0
-import V14Formalization.D12PiecePPActionRow1
-import V14Formalization.D12PiecePPActionRow2
-import V14Formalization.D12PiecePPActionRow3
-import V14Formalization.D12PiecePPActionRow4
-import V14Formalization.D12PiecePPActionRow5
-import V14Formalization.D12PiecePPActionRow6
-import V14Formalization.D12PiecePPActionRow7
-import V14Formalization.D12PiecePPActionRow8
-import V14Formalization.D12PiecePPActionRow9
-import V14Formalization.D12PiecePPActionRow10
-import V14Formalization.D12PiecePPActionRow11
-import V14Formalization.D12PiecePPActionRow12
-import V14Formalization.D12PiecePPActionRow13
-import V14Formalization.D12PiecePPActionRow14
-import V14Formalization.D12PiecePPActionRow15
-import V14Formalization.D12PiecePPActionRow16
-import V14Formalization.D12PiecePPActionRow17
-import V14Formalization.D12PiecePPActionRow18
-import V14Formalization.D12PiecePPActionRow19
+module
+
+public import V14Formalization.D12PiecePPActionRow0
+public import V14Formalization.D12PiecePPActionRow1
+public import V14Formalization.D12PiecePPActionRow2
+public import V14Formalization.D12PiecePPActionRow3
+public import V14Formalization.D12PiecePPActionRow4
+public import V14Formalization.D12PiecePPActionRow5
+public import V14Formalization.D12PiecePPActionRow6
+public import V14Formalization.D12PiecePPActionRow7
+public import V14Formalization.D12PiecePPActionRow8
+public import V14Formalization.D12PiecePPActionRow9
+public import V14Formalization.D12PiecePPActionRow10
+public import V14Formalization.D12PiecePPActionRow11
+public import V14Formalization.D12PiecePPActionRow12
+public import V14Formalization.D12PiecePPActionRow13
+public import V14Formalization.D12PiecePPActionRow14
+public import V14Formalization.D12PiecePPActionRow15
+public import V14Formalization.D12PiecePPActionRow16
+public import V14Formalization.D12PiecePPActionRow17
+public import V14Formalization.D12PiecePPActionRow18
+public import V14Formalization.D12PiecePPActionRow19
 
 noncomputable section
 namespace V14Formalization.D12PiecePPAction
 open D12PieceVecBase D12PiecePPData
 
-theorem action_matrix :
+public theorem action_matrix :
     AVec = characterStackVec RMVec SMVec (1)
       (1) := by
   apply Matrix.ext

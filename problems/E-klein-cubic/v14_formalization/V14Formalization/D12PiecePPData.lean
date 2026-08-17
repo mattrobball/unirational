@@ -1,13 +1,15 @@
 /- PP vector data. Auto-generated. -/
-import V14Formalization.D12PieceVecBase
+module
+
+public import V14Formalization.D12PieceVecBase
 
 noncomputable section
 open Matrix
 namespace V14Formalization.D12PiecePPData
 open D12CyclotomicVec D12PieceVecBase
-def payloadSha256 : String := "76c6196f29afe1a8398af99502447f48ebeed4bcb3805fc5dbec693940bc04b0"
+@[expose] public def payloadSha256 : String := "76c6196f29afe1a8398af99502447f48ebeed4bcb3805fc5dbec693940bc04b0"
 
-def ACell0_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell0_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-12 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -21,7 +23,7 @@ def ACell0_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell0_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell0_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => 0
@@ -35,7 +37,7 @@ def ACell0_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell0_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell0_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -49,7 +51,7 @@ def ACell0_2 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell0_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell0_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -63,7 +65,7 @@ def ACell0_3 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell0_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell0_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -77,7 +79,7 @@ def ACell0_4 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell0_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell0_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -91,7 +93,7 @@ def ACell0_5 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ACell0_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell0_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (2 / 11 : ℚ)
@@ -105,7 +107,7 @@ def ACell0_6 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell0_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell0_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -119,7 +121,7 @@ def ACell0_7 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell0_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell0_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-2 / 11 : ℚ)
@@ -133,7 +135,7 @@ def ACell0_8 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ACell0_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell0_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -147,7 +149,7 @@ def ACell0_9 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ARow0 (j : Fin 10) : Vec :=
+@[expose] public def ARow0 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell0_0
   | 1 => ACell0_1
@@ -161,7 +163,7 @@ def ARow0 (j : Fin 10) : Vec :=
   | 9 => ACell0_9
   | _ => 0
 
-def ACell1_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell1_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => 0
@@ -175,7 +177,7 @@ def ACell1_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell1_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell1_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => -1
   | 1 => (1 / 11 : ℚ)
@@ -189,7 +191,7 @@ def ACell1_1 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ACell1_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell1_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -203,7 +205,7 @@ def ACell1_2 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell1_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell1_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -217,7 +219,7 @@ def ACell1_3 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell1_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell1_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => (-3 / 11 : ℚ)
@@ -231,7 +233,7 @@ def ACell1_4 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell1_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell1_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -245,7 +247,7 @@ def ACell1_5 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ACell1_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell1_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (2 / 11 : ℚ)
@@ -259,7 +261,7 @@ def ACell1_6 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell1_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell1_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-2 / 11 : ℚ)
@@ -273,7 +275,7 @@ def ACell1_7 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell1_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell1_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -287,7 +289,7 @@ def ACell1_8 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell1_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell1_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-2 / 11 : ℚ)
@@ -301,7 +303,7 @@ def ACell1_9 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ARow1 (j : Fin 10) : Vec :=
+@[expose] public def ARow1 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell1_0
   | 1 => ACell1_1
@@ -315,7 +317,7 @@ def ARow1 (j : Fin 10) : Vec :=
   | 9 => ACell1_9
   | _ => 0
 
-def ACell2_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell2_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -329,7 +331,7 @@ def ACell2_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell2_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell2_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -343,7 +345,7 @@ def ACell2_1 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell2_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell2_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-14 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -357,7 +359,7 @@ def ACell2_2 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 11 : ℚ)
   | _ => 0
 
-def ACell2_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell2_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -371,7 +373,7 @@ def ACell2_3 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell2_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell2_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-2 / 11 : ℚ)
@@ -385,7 +387,7 @@ def ACell2_4 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell2_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell2_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -399,7 +401,7 @@ def ACell2_5 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell2_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell2_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -413,7 +415,7 @@ def ACell2_6 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ACell2_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell2_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => 0
@@ -427,7 +429,7 @@ def ACell2_7 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell2_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell2_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-2 / 11 : ℚ)
@@ -441,7 +443,7 @@ def ACell2_8 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell2_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell2_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -455,7 +457,7 @@ def ACell2_9 (i : Fin 10) : ℚ :=
   | 9 => (4 / 11 : ℚ)
   | _ => 0
 
-def ARow2 (j : Fin 10) : Vec :=
+@[expose] public def ARow2 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell2_0
   | 1 => ACell2_1
@@ -469,7 +471,7 @@ def ARow2 (j : Fin 10) : Vec :=
   | 9 => ACell2_9
   | _ => 0
 
-def ACell3_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell3_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -483,7 +485,7 @@ def ACell3_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell3_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell3_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -497,7 +499,7 @@ def ACell3_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell3_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell3_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -511,7 +513,7 @@ def ACell3_2 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell3_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell3_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-12 / 11 : ℚ)
   | 1 => 0
@@ -525,7 +527,7 @@ def ACell3_3 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell3_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell3_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -539,7 +541,7 @@ def ACell3_4 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell3_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell3_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -553,7 +555,7 @@ def ACell3_5 (i : Fin 10) : ℚ :=
   | 9 => (4 / 11 : ℚ)
   | _ => 0
 
-def ACell3_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell3_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => 0
@@ -567,7 +569,7 @@ def ACell3_6 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ACell3_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell3_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-2 / 11 : ℚ)
@@ -581,7 +583,7 @@ def ACell3_7 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell3_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell3_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -595,7 +597,7 @@ def ACell3_8 (i : Fin 10) : ℚ :=
   | 9 => (4 / 11 : ℚ)
   | _ => 0
 
-def ACell3_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell3_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -609,7 +611,7 @@ def ACell3_9 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ARow3 (j : Fin 10) : Vec :=
+@[expose] public def ARow3 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell3_0
   | 1 => ACell3_1
@@ -623,7 +625,7 @@ def ARow3 (j : Fin 10) : Vec :=
   | 9 => ACell3_9
   | _ => 0
 
-def ACell4_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell4_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -637,7 +639,7 @@ def ACell4_0 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell4_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell4_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => (-3 / 11 : ℚ)
@@ -651,7 +653,7 @@ def ACell4_1 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell4_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell4_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-2 / 11 : ℚ)
@@ -665,7 +667,7 @@ def ACell4_2 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell4_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell4_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -679,7 +681,7 @@ def ACell4_3 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell4_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell4_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-13 / 11 : ℚ)
   | 1 => (-2 / 11 : ℚ)
@@ -693,7 +695,7 @@ def ACell4_4 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell4_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell4_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -707,7 +709,7 @@ def ACell4_5 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell4_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell4_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-2 / 11 : ℚ)
@@ -721,7 +723,7 @@ def ACell4_6 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell4_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell4_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-2 / 11 : ℚ)
@@ -735,7 +737,7 @@ def ACell4_7 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell4_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell4_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-2 / 11 : ℚ)
@@ -749,7 +751,7 @@ def ACell4_8 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell4_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell4_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -763,7 +765,7 @@ def ACell4_9 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ARow4 (j : Fin 10) : Vec :=
+@[expose] public def ARow4 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell4_0
   | 1 => ACell4_1
@@ -777,7 +779,7 @@ def ARow4 (j : Fin 10) : Vec :=
   | 9 => ACell4_9
   | _ => 0
 
-def ACell5_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell5_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -791,7 +793,7 @@ def ACell5_0 (i : Fin 10) : ℚ :=
   | 9 => (3 / 22 : ℚ)
   | _ => 0
 
-def ACell5_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell5_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (3 / 22 : ℚ)
   | 1 => (3 / 22 : ℚ)
@@ -805,7 +807,7 @@ def ACell5_1 (i : Fin 10) : ℚ :=
   | 9 => (3 / 22 : ℚ)
   | _ => 0
 
-def ACell5_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell5_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -819,7 +821,7 @@ def ACell5_2 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 22 : ℚ)
   | _ => 0
 
-def ACell5_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell5_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (3 / 22 : ℚ)
   | 1 => (3 / 22 : ℚ)
@@ -833,7 +835,7 @@ def ACell5_3 (i : Fin 10) : ℚ :=
   | 9 => (3 / 11 : ℚ)
   | _ => 0
 
-def ACell5_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell5_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -847,7 +849,7 @@ def ACell5_4 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 22 : ℚ)
   | _ => 0
 
-def ACell5_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell5_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => -1
   | 1 => (1 / 11 : ℚ)
@@ -861,7 +863,7 @@ def ACell5_5 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell5_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell5_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -875,7 +877,7 @@ def ACell5_6 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell5_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell5_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -889,7 +891,7 @@ def ACell5_7 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell5_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell5_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => 0
@@ -903,7 +905,7 @@ def ACell5_8 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell5_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell5_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (3 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -917,7 +919,7 @@ def ACell5_9 (i : Fin 10) : ℚ :=
   | 9 => (3 / 11 : ℚ)
   | _ => 0
 
-def ARow5 (j : Fin 10) : Vec :=
+@[expose] public def ARow5 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell5_0
   | 1 => ACell5_1
@@ -931,7 +933,7 @@ def ARow5 (j : Fin 10) : Vec :=
   | 9 => ACell5_9
   | _ => 0
 
-def ACell6_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell6_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (3 / 22 : ℚ)
@@ -945,7 +947,7 @@ def ACell6_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell6_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell6_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (3 / 22 : ℚ)
@@ -959,7 +961,7 @@ def ACell6_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell6_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell6_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (3 / 22 : ℚ)
   | 1 => (3 / 22 : ℚ)
@@ -973,7 +975,7 @@ def ACell6_2 (i : Fin 10) : ℚ :=
   | 9 => (3 / 22 : ℚ)
   | _ => 0
 
-def ACell6_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell6_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (3 / 22 : ℚ)
   | 1 => 0
@@ -987,7 +989,7 @@ def ACell6_3 (i : Fin 10) : ℚ :=
   | 9 => (3 / 22 : ℚ)
   | _ => 0
 
-def ACell6_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell6_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-3 / 22 : ℚ)
@@ -1001,7 +1003,7 @@ def ACell6_4 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 22 : ℚ)
   | _ => 0
 
-def ACell6_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell6_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -1015,7 +1017,7 @@ def ACell6_5 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell6_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell6_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-12 / 11 : ℚ)
   | 1 => 0
@@ -1029,7 +1031,7 @@ def ACell6_6 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell6_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell6_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -1043,7 +1045,7 @@ def ACell6_7 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell6_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell6_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -1057,7 +1059,7 @@ def ACell6_8 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell6_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell6_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -1071,7 +1073,7 @@ def ACell6_9 (i : Fin 10) : ℚ :=
   | 9 => (3 / 11 : ℚ)
   | _ => 0
 
-def ARow6 (j : Fin 10) : Vec :=
+@[expose] public def ARow6 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell6_0
   | 1 => ACell6_1
@@ -1085,7 +1087,7 @@ def ARow6 (j : Fin 10) : Vec :=
   | 9 => ACell6_9
   | _ => 0
 
-def ACell7_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell7_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -1099,7 +1101,7 @@ def ACell7_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell7_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell7_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-3 / 22 : ℚ)
   | 1 => (-3 / 22 : ℚ)
@@ -1113,7 +1115,7 @@ def ACell7_1 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 22 : ℚ)
   | _ => 0
 
-def ACell7_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell7_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-3 / 22 : ℚ)
   | 1 => 0
@@ -1127,7 +1129,7 @@ def ACell7_2 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 22 : ℚ)
   | _ => 0
 
-def ACell7_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell7_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-3 / 22 : ℚ)
@@ -1141,7 +1143,7 @@ def ACell7_3 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell7_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell7_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-3 / 22 : ℚ)
@@ -1155,7 +1157,7 @@ def ACell7_4 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell7_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell7_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -1169,7 +1171,7 @@ def ACell7_5 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell7_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell7_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -1183,7 +1185,7 @@ def ACell7_6 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell7_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell7_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-13 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -1197,7 +1199,7 @@ def ACell7_7 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell7_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell7_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (1 / 11 : ℚ)
@@ -1211,7 +1213,7 @@ def ACell7_8 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell7_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell7_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (2 / 11 : ℚ)
@@ -1225,7 +1227,7 @@ def ACell7_9 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ARow7 (j : Fin 10) : Vec :=
+@[expose] public def ARow7 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell7_0
   | 1 => ACell7_1
@@ -1239,7 +1241,7 @@ def ARow7 (j : Fin 10) : Vec :=
   | 9 => ACell7_9
   | _ => 0
 
-def ACell8_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell8_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-3 / 22 : ℚ)
@@ -1253,7 +1255,7 @@ def ACell8_0 (i : Fin 10) : ℚ :=
   | 9 => (3 / 22 : ℚ)
   | _ => 0
 
-def ACell8_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell8_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -1267,7 +1269,7 @@ def ACell8_1 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 22 : ℚ)
   | _ => 0
 
-def ACell8_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell8_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-3 / 22 : ℚ)
@@ -1281,7 +1283,7 @@ def ACell8_2 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell8_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell8_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (3 / 22 : ℚ)
   | 1 => (3 / 22 : ℚ)
@@ -1295,7 +1297,7 @@ def ACell8_3 (i : Fin 10) : ℚ :=
   | 9 => (3 / 11 : ℚ)
   | _ => 0
 
-def ACell8_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell8_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-3 / 22 : ℚ)
   | 1 => (-3 / 22 : ℚ)
@@ -1309,7 +1311,7 @@ def ACell8_4 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 22 : ℚ)
   | _ => 0
 
-def ACell8_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell8_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => 0
@@ -1323,7 +1325,7 @@ def ACell8_5 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell8_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell8_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -1337,7 +1339,7 @@ def ACell8_6 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell8_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell8_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (1 / 11 : ℚ)
@@ -1351,7 +1353,7 @@ def ACell8_7 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell8_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell8_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-12 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -1365,7 +1367,7 @@ def ACell8_8 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ACell8_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell8_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-3 / 11 : ℚ)
@@ -1379,7 +1381,7 @@ def ACell8_9 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ARow8 (j : Fin 10) : Vec :=
+@[expose] public def ARow8 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell8_0
   | 1 => ACell8_1
@@ -1393,7 +1395,7 @@ def ARow8 (j : Fin 10) : Vec :=
   | 9 => ACell8_9
   | _ => 0
 
-def ACell9_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell9_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -1407,7 +1409,7 @@ def ACell9_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell9_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell9_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-3 / 22 : ℚ)
@@ -1421,7 +1423,7 @@ def ACell9_1 (i : Fin 10) : ℚ :=
   | 9 => (3 / 22 : ℚ)
   | _ => 0
 
-def ACell9_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell9_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (3 / 22 : ℚ)
   | 1 => (3 / 22 : ℚ)
@@ -1435,7 +1437,7 @@ def ACell9_2 (i : Fin 10) : ℚ :=
   | 9 => (3 / 11 : ℚ)
   | _ => 0
 
-def ACell9_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell9_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (3 / 22 : ℚ)
   | 1 => (3 / 22 : ℚ)
@@ -1449,7 +1451,7 @@ def ACell9_3 (i : Fin 10) : ℚ :=
   | 9 => (3 / 22 : ℚ)
   | _ => 0
 
-def ACell9_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell9_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -1463,7 +1465,7 @@ def ACell9_4 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell9_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell9_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (3 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -1477,7 +1479,7 @@ def ACell9_5 (i : Fin 10) : ℚ :=
   | 9 => (3 / 11 : ℚ)
   | _ => 0
 
-def ACell9_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell9_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -1491,7 +1493,7 @@ def ACell9_6 (i : Fin 10) : ℚ :=
   | 9 => (3 / 11 : ℚ)
   | _ => 0
 
-def ACell9_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell9_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (2 / 11 : ℚ)
@@ -1505,7 +1507,7 @@ def ACell9_7 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell9_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell9_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-3 / 11 : ℚ)
@@ -1519,7 +1521,7 @@ def ACell9_8 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell9_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell9_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => -1
   | 1 => (2 / 11 : ℚ)
@@ -1533,7 +1535,7 @@ def ACell9_9 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ARow9 (j : Fin 10) : Vec :=
+@[expose] public def ARow9 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell9_0
   | 1 => ACell9_1
@@ -1547,7 +1549,7 @@ def ARow9 (j : Fin 10) : Vec :=
   | 9 => ACell9_9
   | _ => 0
 
-def ACell10_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell10_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-8 / 11 : ℚ)
   | 1 => 0
@@ -1561,7 +1563,7 @@ def ACell10_0 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ACell10_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell10_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (1 / 11 : ℚ)
@@ -1575,7 +1577,7 @@ def ACell10_1 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell10_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell10_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -1589,7 +1591,7 @@ def ACell10_2 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell10_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell10_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -1603,7 +1605,7 @@ def ACell10_3 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell10_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell10_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-1 / 11 : ℚ)
@@ -1617,7 +1619,7 @@ def ACell10_4 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell10_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell10_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => 0
@@ -1631,7 +1633,7 @@ def ACell10_5 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell10_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell10_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -1645,7 +1647,7 @@ def ACell10_6 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell10_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell10_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (4 / 11 : ℚ)
@@ -1659,7 +1661,7 @@ def ACell10_7 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ACell10_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell10_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-2 / 11 : ℚ)
@@ -1673,7 +1675,7 @@ def ACell10_8 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell10_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell10_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -1687,7 +1689,7 @@ def ACell10_9 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ARow10 (j : Fin 10) : Vec :=
+@[expose] public def ARow10 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell10_0
   | 1 => ACell10_1
@@ -1701,7 +1703,7 @@ def ARow10 (j : Fin 10) : Vec :=
   | 9 => ACell10_9
   | _ => 0
 
-def ACell11_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell11_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -1715,7 +1717,7 @@ def ACell11_0 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell11_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell11_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-9 / 11 : ℚ)
   | 1 => 0
@@ -1729,7 +1731,7 @@ def ACell11_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell11_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell11_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (3 / 11 : ℚ)
@@ -1743,7 +1745,7 @@ def ACell11_2 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell11_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell11_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 11 : ℚ)
   | 1 => 0
@@ -1757,7 +1759,7 @@ def ACell11_3 (i : Fin 10) : ℚ :=
   | 9 => (3 / 11 : ℚ)
   | _ => 0
 
-def ACell11_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell11_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -1771,7 +1773,7 @@ def ACell11_4 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell11_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell11_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-2 / 11 : ℚ)
@@ -1785,7 +1787,7 @@ def ACell11_5 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell11_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell11_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-2 / 11 : ℚ)
@@ -1799,7 +1801,7 @@ def ACell11_6 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell11_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell11_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-2 / 11 : ℚ)
@@ -1813,7 +1815,7 @@ def ACell11_7 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell11_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell11_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-4 / 11 : ℚ)
@@ -1827,7 +1829,7 @@ def ACell11_8 (i : Fin 10) : ℚ :=
   | 9 => (-4 / 11 : ℚ)
   | _ => 0
 
-def ACell11_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell11_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -1841,7 +1843,7 @@ def ACell11_9 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ARow11 (j : Fin 10) : Vec :=
+@[expose] public def ARow11 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell11_0
   | 1 => ACell11_1
@@ -1855,7 +1857,7 @@ def ARow11 (j : Fin 10) : Vec :=
   | 9 => ACell11_9
   | _ => 0
 
-def ACell12_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell12_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-1 / 11 : ℚ)
@@ -1869,7 +1871,7 @@ def ACell12_0 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell12_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell12_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => (-3 / 11 : ℚ)
@@ -1883,7 +1885,7 @@ def ACell12_1 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell12_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell12_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-9 / 11 : ℚ)
   | 1 => 0
@@ -1897,7 +1899,7 @@ def ACell12_2 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell12_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell12_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => (-2 / 11 : ℚ)
@@ -1911,7 +1913,7 @@ def ACell12_3 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell12_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell12_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (2 / 11 : ℚ)
@@ -1925,7 +1927,7 @@ def ACell12_4 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell12_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell12_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-4 / 11 : ℚ)
@@ -1939,7 +1941,7 @@ def ACell12_5 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell12_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell12_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -1953,7 +1955,7 @@ def ACell12_6 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ACell12_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell12_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -1967,7 +1969,7 @@ def ACell12_7 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell12_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell12_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -1981,7 +1983,7 @@ def ACell12_8 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell12_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell12_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -1995,7 +1997,7 @@ def ACell12_9 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ARow12 (j : Fin 10) : Vec :=
+@[expose] public def ARow12 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell12_0
   | 1 => ACell12_1
@@ -2009,7 +2011,7 @@ def ARow12 (j : Fin 10) : Vec :=
   | 9 => ACell12_9
   | _ => 0
 
-def ACell13_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell13_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -2023,7 +2025,7 @@ def ACell13_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell13_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell13_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 11 : ℚ)
   | 1 => 0
@@ -2037,7 +2039,7 @@ def ACell13_1 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell13_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell13_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -2051,7 +2053,7 @@ def ACell13_2 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell13_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell13_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-10 / 11 : ℚ)
   | 1 => 0
@@ -2065,7 +2067,7 @@ def ACell13_3 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell13_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell13_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -2079,7 +2081,7 @@ def ACell13_4 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell13_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell13_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -2093,7 +2095,7 @@ def ACell13_5 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell13_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell13_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => 0
@@ -2107,7 +2109,7 @@ def ACell13_6 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell13_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell13_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -2121,7 +2123,7 @@ def ACell13_7 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ACell13_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell13_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -2135,7 +2137,7 @@ def ACell13_8 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ACell13_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell13_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -2149,7 +2151,7 @@ def ACell13_9 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ARow13 (j : Fin 10) : Vec :=
+@[expose] public def ARow13 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell13_0
   | 1 => ACell13_1
@@ -2163,7 +2165,7 @@ def ARow13 (j : Fin 10) : Vec :=
   | 9 => ACell13_9
   | _ => 0
 
-def ACell14_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell14_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -2177,7 +2179,7 @@ def ACell14_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell14_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell14_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -2191,7 +2193,7 @@ def ACell14_1 (i : Fin 10) : ℚ :=
   | 9 => (3 / 11 : ℚ)
   | _ => 0
 
-def ACell14_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell14_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-2 / 11 : ℚ)
@@ -2205,7 +2207,7 @@ def ACell14_2 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell14_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell14_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -2219,7 +2221,7 @@ def ACell14_3 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell14_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell14_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-8 / 11 : ℚ)
   | 1 => 0
@@ -2233,7 +2235,7 @@ def ACell14_4 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell14_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell14_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-2 / 11 : ℚ)
@@ -2247,7 +2249,7 @@ def ACell14_5 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell14_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell14_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -2261,7 +2263,7 @@ def ACell14_6 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell14_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell14_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -2275,7 +2277,7 @@ def ACell14_7 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ACell14_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell14_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-2 / 11 : ℚ)
@@ -2289,7 +2291,7 @@ def ACell14_8 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell14_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell14_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => 0
@@ -2303,7 +2305,7 @@ def ACell14_9 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ARow14 (j : Fin 10) : Vec :=
+@[expose] public def ARow14 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell14_0
   | 1 => ACell14_1
@@ -2317,7 +2319,7 @@ def ARow14 (j : Fin 10) : Vec :=
   | 9 => ACell14_9
   | _ => 0
 
-def ACell15_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell15_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (3 / 22 : ℚ)
   | 1 => 0
@@ -2331,7 +2333,7 @@ def ACell15_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell15_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell15_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (3 / 22 : ℚ)
   | 1 => (3 / 22 : ℚ)
@@ -2345,7 +2347,7 @@ def ACell15_1 (i : Fin 10) : ℚ :=
   | 9 => (3 / 11 : ℚ)
   | _ => 0
 
-def ACell15_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell15_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (3 / 22 : ℚ)
   | 1 => (3 / 11 : ℚ)
@@ -2359,7 +2361,7 @@ def ACell15_2 (i : Fin 10) : ℚ :=
   | 9 => (3 / 22 : ℚ)
   | _ => 0
 
-def ACell15_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell15_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -2373,7 +2375,7 @@ def ACell15_3 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell15_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell15_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (3 / 22 : ℚ)
@@ -2387,7 +2389,7 @@ def ACell15_4 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 22 : ℚ)
   | _ => 0
 
-def ACell15_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell15_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-8 / 11 : ℚ)
   | 1 => 0
@@ -2401,7 +2403,7 @@ def ACell15_5 (i : Fin 10) : ℚ :=
   | 9 => (2 / 11 : ℚ)
   | _ => 0
 
-def ACell15_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell15_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -2415,7 +2417,7 @@ def ACell15_6 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell15_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell15_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (1 / 11 : ℚ)
@@ -2429,7 +2431,7 @@ def ACell15_7 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell15_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell15_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -2443,7 +2445,7 @@ def ACell15_8 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell15_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell15_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -2457,7 +2459,7 @@ def ACell15_9 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ARow15 (j : Fin 10) : Vec :=
+@[expose] public def ARow15 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell15_0
   | 1 => ACell15_1
@@ -2471,7 +2473,7 @@ def ARow15 (j : Fin 10) : Vec :=
   | 9 => ACell15_9
   | _ => 0
 
-def ACell16_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell16_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -2485,7 +2487,7 @@ def ACell16_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell16_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell16_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (3 / 22 : ℚ)
@@ -2499,7 +2501,7 @@ def ACell16_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell16_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell16_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-3 / 22 : ℚ)
@@ -2513,7 +2515,7 @@ def ACell16_2 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 22 : ℚ)
   | _ => 0
 
-def ACell16_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell16_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-3 / 22 : ℚ)
   | 1 => 0
@@ -2527,7 +2529,7 @@ def ACell16_3 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell16_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell16_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -2541,7 +2543,7 @@ def ACell16_4 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 22 : ℚ)
   | _ => 0
 
-def ACell16_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell16_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -2555,7 +2557,7 @@ def ACell16_5 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell16_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell16_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-10 / 11 : ℚ)
   | 1 => 0
@@ -2569,7 +2571,7 @@ def ACell16_6 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell16_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell16_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => (-2 / 11 : ℚ)
@@ -2583,7 +2585,7 @@ def ACell16_7 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ACell16_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell16_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => 0
@@ -2597,7 +2599,7 @@ def ACell16_8 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 11 : ℚ)
   | _ => 0
 
-def ACell16_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell16_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -2611,7 +2613,7 @@ def ACell16_9 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ARow16 (j : Fin 10) : Vec :=
+@[expose] public def ARow16 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell16_0
   | 1 => ACell16_1
@@ -2625,7 +2627,7 @@ def ARow16 (j : Fin 10) : Vec :=
   | 9 => ACell16_9
   | _ => 0
 
-def ACell17_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell17_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-3 / 22 : ℚ)
   | 1 => (-3 / 11 : ℚ)
@@ -2639,7 +2641,7 @@ def ACell17_0 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 22 : ℚ)
   | _ => 0
 
-def ACell17_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell17_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (3 / 22 : ℚ)
@@ -2653,7 +2655,7 @@ def ACell17_1 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 22 : ℚ)
   | _ => 0
 
-def ACell17_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell17_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-3 / 11 : ℚ)
   | 1 => (-3 / 22 : ℚ)
@@ -2667,7 +2669,7 @@ def ACell17_2 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 22 : ℚ)
   | _ => 0
 
-def ACell17_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell17_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-3 / 22 : ℚ)
@@ -2681,7 +2683,7 @@ def ACell17_3 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 22 : ℚ)
   | _ => 0
 
-def ACell17_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell17_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -2695,7 +2697,7 @@ def ACell17_4 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell17_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell17_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -2709,7 +2711,7 @@ def ACell17_5 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell17_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell17_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 11 : ℚ)
   | 1 => (2 / 11 : ℚ)
@@ -2723,7 +2725,7 @@ def ACell17_6 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell17_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell17_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-9 / 11 : ℚ)
   | 1 => 0
@@ -2737,7 +2739,7 @@ def ACell17_7 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell17_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell17_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-3 / 11 : ℚ)
@@ -2751,7 +2753,7 @@ def ACell17_8 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell17_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell17_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-2 / 11 : ℚ)
@@ -2765,7 +2767,7 @@ def ACell17_9 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def ARow17 (j : Fin 10) : Vec :=
+@[expose] public def ARow17 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell17_0
   | 1 => ACell17_1
@@ -2779,7 +2781,7 @@ def ARow17 (j : Fin 10) : Vec :=
   | 9 => ACell17_9
   | _ => 0
 
-def ACell18_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell18_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (3 / 22 : ℚ)
   | 1 => (3 / 22 : ℚ)
@@ -2793,7 +2795,7 @@ def ACell18_0 (i : Fin 10) : ℚ :=
   | 9 => (3 / 11 : ℚ)
   | _ => 0
 
-def ACell18_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell18_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (3 / 11 : ℚ)
   | 1 => (3 / 11 : ℚ)
@@ -2807,7 +2809,7 @@ def ACell18_1 (i : Fin 10) : ℚ :=
   | 9 => (3 / 22 : ℚ)
   | _ => 0
 
-def ACell18_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell18_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-3 / 22 : ℚ)
@@ -2821,7 +2823,7 @@ def ACell18_2 (i : Fin 10) : ℚ :=
   | 9 => (3 / 22 : ℚ)
   | _ => 0
 
-def ACell18_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell18_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-3 / 22 : ℚ)
@@ -2835,7 +2837,7 @@ def ACell18_3 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell18_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell18_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (3 / 22 : ℚ)
@@ -2849,7 +2851,7 @@ def ACell18_4 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 22 : ℚ)
   | _ => 0
 
-def ACell18_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell18_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (1 / 11 : ℚ)
@@ -2863,7 +2865,7 @@ def ACell18_5 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell18_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell18_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => 0
@@ -2877,7 +2879,7 @@ def ACell18_6 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 11 : ℚ)
   | _ => 0
 
-def ACell18_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell18_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 11 : ℚ)
   | 1 => (3 / 11 : ℚ)
@@ -2891,7 +2893,7 @@ def ACell18_7 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell18_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell18_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-9 / 11 : ℚ)
   | 1 => 0
@@ -2905,7 +2907,7 @@ def ACell18_8 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell18_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell18_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-2 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -2919,7 +2921,7 @@ def ACell18_9 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 11 : ℚ)
   | _ => 0
 
-def ARow18 (j : Fin 10) : Vec :=
+@[expose] public def ARow18 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell18_0
   | 1 => ACell18_1
@@ -2933,7 +2935,7 @@ def ARow18 (j : Fin 10) : Vec :=
   | 9 => ACell18_9
   | _ => 0
 
-def ACell19_0 (i : Fin 10) : ℚ :=
+@[expose] public def ACell19_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-3 / 22 : ℚ)
@@ -2947,7 +2949,7 @@ def ACell19_0 (i : Fin 10) : ℚ :=
   | 9 => (3 / 22 : ℚ)
   | _ => 0
 
-def ACell19_1 (i : Fin 10) : ℚ :=
+@[expose] public def ACell19_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (-3 / 22 : ℚ)
@@ -2961,7 +2963,7 @@ def ACell19_1 (i : Fin 10) : ℚ :=
   | 9 => (3 / 22 : ℚ)
   | _ => 0
 
-def ACell19_2 (i : Fin 10) : ℚ :=
+@[expose] public def ACell19_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -2975,7 +2977,7 @@ def ACell19_2 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell19_3 (i : Fin 10) : ℚ :=
+@[expose] public def ACell19_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -2989,7 +2991,7 @@ def ACell19_3 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 22 : ℚ)
   | _ => 0
 
-def ACell19_4 (i : Fin 10) : ℚ :=
+@[expose] public def ACell19_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-3 / 22 : ℚ)
   | 1 => 0
@@ -3003,7 +3005,7 @@ def ACell19_4 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 22 : ℚ)
   | _ => 0
 
-def ACell19_5 (i : Fin 10) : ℚ :=
+@[expose] public def ACell19_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (1 / 11 : ℚ)
@@ -3017,7 +3019,7 @@ def ACell19_5 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell19_6 (i : Fin 10) : ℚ :=
+@[expose] public def ACell19_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 11 : ℚ)
   | 1 => (-1 / 11 : ℚ)
@@ -3031,7 +3033,7 @@ def ACell19_6 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def ACell19_7 (i : Fin 10) : ℚ :=
+@[expose] public def ACell19_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => (2 / 11 : ℚ)
@@ -3045,7 +3047,7 @@ def ACell19_7 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell19_8 (i : Fin 10) : ℚ :=
+@[expose] public def ACell19_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 11 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -3059,7 +3061,7 @@ def ACell19_8 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ACell19_9 (i : Fin 10) : ℚ :=
+@[expose] public def ACell19_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-8 / 11 : ℚ)
   | 1 => 0
@@ -3073,7 +3075,7 @@ def ACell19_9 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def ARow19 (j : Fin 10) : Vec :=
+@[expose] public def ARow19 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => ACell19_0
   | 1 => ACell19_1
@@ -3087,7 +3089,7 @@ def ARow19 (j : Fin 10) : Vec :=
   | 9 => ACell19_9
   | _ => 0
 
-def AVec : Matrix (Fin 20) (Fin 10) Vec :=
+@[expose] public def AVec : Matrix (Fin 20) (Fin 10) Vec :=
   fun i j => match i.val with
   | 0 => ARow0 j
   | 1 => ARow1 j
@@ -3111,7 +3113,7 @@ def AVec : Matrix (Fin 20) (Fin 10) Vec :=
   | 19 => ARow19 j
   | _ => 0
 
-def XCell0_0 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-199 / 33 : ℚ)
   | 1 => (3 / 11 : ℚ)
@@ -3125,7 +3127,7 @@ def XCell0_0 (i : Fin 10) : ℚ :=
   | 9 => (-4 / 3 : ℚ)
   | _ => 0
 
-def XCell0_1 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (145 / 33 : ℚ)
   | 1 => (-7 / 33 : ℚ)
@@ -3139,7 +3141,7 @@ def XCell0_1 (i : Fin 10) : ℚ :=
   | 9 => (2 / 3 : ℚ)
   | _ => 0
 
-def XCell0_2 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-17 / 33 : ℚ)
   | 1 => (7 / 11 : ℚ)
@@ -3153,7 +3155,7 @@ def XCell0_2 (i : Fin 10) : ℚ :=
   | 9 => (25 / 33 : ℚ)
   | _ => 0
 
-def XCell0_3 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-48 / 11 : ℚ)
   | 1 => (-8 / 11 : ℚ)
@@ -3167,7 +3169,7 @@ def XCell0_3 (i : Fin 10) : ℚ :=
   | 9 => (-65 / 33 : ℚ)
   | _ => 0
 
-def XCell0_4 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-18 / 11 : ℚ)
   | 1 => (-20 / 33 : ℚ)
@@ -3181,7 +3183,7 @@ def XCell0_4 (i : Fin 10) : ℚ :=
   | 9 => (-8 / 33 : ℚ)
   | _ => 0
 
-def XCell0_5 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (98 / 33 : ℚ)
   | 1 => (-8 / 11 : ℚ)
@@ -3195,7 +3197,7 @@ def XCell0_5 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 33 : ℚ)
   | _ => 0
 
-def XCell0_6 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-236 / 33 : ℚ)
   | 1 => (-32 / 33 : ℚ)
@@ -3209,7 +3211,7 @@ def XCell0_6 (i : Fin 10) : ℚ :=
   | 9 => (-24 / 11 : ℚ)
   | _ => 0
 
-def XCell0_7 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-8 / 3 : ℚ)
   | 1 => (2 / 3 : ℚ)
@@ -3223,7 +3225,7 @@ def XCell0_7 (i : Fin 10) : ℚ :=
   | 9 => (-14 / 11 : ℚ)
   | _ => 0
 
-def XCell0_8 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3237,7 +3239,7 @@ def XCell0_8 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell0_9 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3251,7 +3253,7 @@ def XCell0_9 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell0_10 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_10 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3265,7 +3267,7 @@ def XCell0_10 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell0_11 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_11 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3279,7 +3281,7 @@ def XCell0_11 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell0_12 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_12 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3293,7 +3295,7 @@ def XCell0_12 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell0_13 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_13 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3307,7 +3309,7 @@ def XCell0_13 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell0_14 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_14 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3321,7 +3323,7 @@ def XCell0_14 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell0_15 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_15 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3335,7 +3337,7 @@ def XCell0_15 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell0_16 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_16 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3349,7 +3351,7 @@ def XCell0_16 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell0_17 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_17 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3363,7 +3365,7 @@ def XCell0_17 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell0_18 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_18 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3377,7 +3379,7 @@ def XCell0_18 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell0_19 (i : Fin 10) : ℚ :=
+@[expose] public def XCell0_19 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3391,7 +3393,7 @@ def XCell0_19 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XRow0 (j : Fin 20) : Vec :=
+@[expose] public def XRow0 (j : Fin 20) : Vec :=
   match j.val with
   | 0 => XCell0_0
   | 1 => XCell0_1
@@ -3415,7 +3417,7 @@ def XRow0 (j : Fin 20) : Vec :=
   | 19 => XCell0_19
   | _ => 0
 
-def XCell1_0 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (145 / 33 : ℚ)
   | 1 => (-7 / 33 : ℚ)
@@ -3429,7 +3431,7 @@ def XCell1_0 (i : Fin 10) : ℚ :=
   | 9 => (2 / 3 : ℚ)
   | _ => 0
 
-def XCell1_1 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-73 / 11 : ℚ)
   | 1 => (-3 / 11 : ℚ)
@@ -3443,7 +3445,7 @@ def XCell1_1 (i : Fin 10) : ℚ :=
   | 9 => (-24 / 11 : ℚ)
   | _ => 0
 
-def XCell1_2 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (32 / 33 : ℚ)
   | 1 => (-2 / 33 : ℚ)
@@ -3457,7 +3459,7 @@ def XCell1_2 (i : Fin 10) : ℚ :=
   | 9 => (14 / 33 : ℚ)
   | _ => 0
 
-def XCell1_3 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (11 / 3 : ℚ)
   | 1 => (2 / 3 : ℚ)
@@ -3471,7 +3473,7 @@ def XCell1_3 (i : Fin 10) : ℚ :=
   | 9 => (38 / 33 : ℚ)
   | _ => 0
 
-def XCell1_4 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (41 / 33 : ℚ)
   | 1 => (5 / 33 : ℚ)
@@ -3485,7 +3487,7 @@ def XCell1_4 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 33 : ℚ)
   | _ => 0
 
-def XCell1_5 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-182 / 33 : ℚ)
   | 1 => (-4 / 11 : ℚ)
@@ -3499,7 +3501,7 @@ def XCell1_5 (i : Fin 10) : ℚ :=
   | 9 => (-82 / 33 : ℚ)
   | _ => 0
 
-def XCell1_6 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (266 / 33 : ℚ)
   | 1 => (26 / 33 : ℚ)
@@ -3513,7 +3515,7 @@ def XCell1_6 (i : Fin 10) : ℚ :=
   | 9 => (116 / 33 : ℚ)
   | _ => 0
 
-def XCell1_7 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (94 / 33 : ℚ)
   | 1 => (-10 / 33 : ℚ)
@@ -3527,7 +3529,7 @@ def XCell1_7 (i : Fin 10) : ℚ :=
   | 9 => (40 / 33 : ℚ)
   | _ => 0
 
-def XCell1_8 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3541,7 +3543,7 @@ def XCell1_8 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell1_9 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3555,7 +3557,7 @@ def XCell1_9 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell1_10 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_10 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3569,7 +3571,7 @@ def XCell1_10 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell1_11 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_11 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3583,7 +3585,7 @@ def XCell1_11 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell1_12 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_12 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3597,7 +3599,7 @@ def XCell1_12 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell1_13 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_13 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3611,7 +3613,7 @@ def XCell1_13 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell1_14 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_14 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3625,7 +3627,7 @@ def XCell1_14 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell1_15 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_15 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3639,7 +3641,7 @@ def XCell1_15 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell1_16 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_16 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3653,7 +3655,7 @@ def XCell1_16 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell1_17 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_17 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3667,7 +3669,7 @@ def XCell1_17 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell1_18 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_18 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3681,7 +3683,7 @@ def XCell1_18 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell1_19 (i : Fin 10) : ℚ :=
+@[expose] public def XCell1_19 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3695,7 +3697,7 @@ def XCell1_19 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XRow1 (j : Fin 20) : Vec :=
+@[expose] public def XRow1 (j : Fin 20) : Vec :=
   match j.val with
   | 0 => XCell1_0
   | 1 => XCell1_1
@@ -3719,7 +3721,7 @@ def XRow1 (j : Fin 20) : Vec :=
   | 19 => XCell1_19
   | _ => 0
 
-def XCell2_0 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-17 / 33 : ℚ)
   | 1 => (7 / 11 : ℚ)
@@ -3733,7 +3735,7 @@ def XCell2_0 (i : Fin 10) : ℚ :=
   | 9 => (25 / 33 : ℚ)
   | _ => 0
 
-def XCell2_1 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (32 / 33 : ℚ)
   | 1 => (-2 / 33 : ℚ)
@@ -3747,7 +3749,7 @@ def XCell2_1 (i : Fin 10) : ℚ :=
   | 9 => (14 / 33 : ℚ)
   | _ => 0
 
-def XCell2_2 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-34 / 33 : ℚ)
   | 1 => (20 / 33 : ℚ)
@@ -3761,7 +3763,7 @@ def XCell2_2 (i : Fin 10) : ℚ :=
   | 9 => (8 / 11 : ℚ)
   | _ => 0
 
-def XCell2_3 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-19 / 33 : ℚ)
   | 1 => (-5 / 33 : ℚ)
@@ -3775,7 +3777,7 @@ def XCell2_3 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 33 : ℚ)
   | _ => 0
 
-def XCell2_4 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-16 / 33 : ℚ)
   | 1 => (1 / 33 : ℚ)
@@ -3789,7 +3791,7 @@ def XCell2_4 (i : Fin 10) : ℚ :=
   | 9 => (10 / 33 : ℚ)
   | _ => 0
 
-def XCell2_5 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (28 / 33 : ℚ)
   | 1 => (-10 / 33 : ℚ)
@@ -3803,7 +3805,7 @@ def XCell2_5 (i : Fin 10) : ℚ :=
   | 9 => (6 / 11 : ℚ)
   | _ => 0
 
-def XCell2_6 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-50 / 33 : ℚ)
   | 1 => (-4 / 11 : ℚ)
@@ -3817,7 +3819,7 @@ def XCell2_6 (i : Fin 10) : ℚ :=
   | 9 => (-20 / 33 : ℚ)
   | _ => 0
 
-def XCell2_7 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (10 / 33 : ℚ)
   | 1 => (-2 / 33 : ℚ)
@@ -3831,7 +3833,7 @@ def XCell2_7 (i : Fin 10) : ℚ :=
   | 9 => (-8 / 33 : ℚ)
   | _ => 0
 
-def XCell2_8 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3845,7 +3847,7 @@ def XCell2_8 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell2_9 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3859,7 +3861,7 @@ def XCell2_9 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell2_10 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_10 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3873,7 +3875,7 @@ def XCell2_10 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell2_11 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_11 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3887,7 +3889,7 @@ def XCell2_11 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell2_12 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_12 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3901,7 +3903,7 @@ def XCell2_12 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell2_13 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_13 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3915,7 +3917,7 @@ def XCell2_13 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell2_14 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_14 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3929,7 +3931,7 @@ def XCell2_14 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell2_15 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_15 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3943,7 +3945,7 @@ def XCell2_15 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell2_16 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_16 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3957,7 +3959,7 @@ def XCell2_16 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell2_17 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_17 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3971,7 +3973,7 @@ def XCell2_17 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell2_18 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_18 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3985,7 +3987,7 @@ def XCell2_18 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell2_19 (i : Fin 10) : ℚ :=
+@[expose] public def XCell2_19 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -3999,7 +4001,7 @@ def XCell2_19 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XRow2 (j : Fin 20) : Vec :=
+@[expose] public def XRow2 (j : Fin 20) : Vec :=
   match j.val with
   | 0 => XCell2_0
   | 1 => XCell2_1
@@ -4023,7 +4025,7 @@ def XRow2 (j : Fin 20) : Vec :=
   | 19 => XCell2_19
   | _ => 0
 
-def XCell3_0 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-48 / 11 : ℚ)
   | 1 => (-8 / 11 : ℚ)
@@ -4037,7 +4039,7 @@ def XCell3_0 (i : Fin 10) : ℚ :=
   | 9 => (-65 / 33 : ℚ)
   | _ => 0
 
-def XCell3_1 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (11 / 3 : ℚ)
   | 1 => (2 / 3 : ℚ)
@@ -4051,7 +4053,7 @@ def XCell3_1 (i : Fin 10) : ℚ :=
   | 9 => (38 / 33 : ℚ)
   | _ => 0
 
-def XCell3_2 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-19 / 33 : ℚ)
   | 1 => (-5 / 33 : ℚ)
@@ -4065,7 +4067,7 @@ def XCell3_2 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 33 : ℚ)
   | _ => 0
 
-def XCell3_3 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-133 / 33 : ℚ)
   | 1 => (-8 / 11 : ℚ)
@@ -4079,7 +4081,7 @@ def XCell3_3 (i : Fin 10) : ℚ :=
   | 9 => (-16 / 11 : ℚ)
   | _ => 0
 
-def XCell3_4 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-41 / 33 : ℚ)
   | 1 => (-16 / 33 : ℚ)
@@ -4093,7 +4095,7 @@ def XCell3_4 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 11 : ℚ)
   | _ => 0
 
-def XCell3_5 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (30 / 11 : ℚ)
   | 1 => (4 / 33 : ℚ)
@@ -4107,7 +4109,7 @@ def XCell3_5 (i : Fin 10) : ℚ :=
   | 9 => (14 / 33 : ℚ)
   | _ => 0
 
-def XCell3_6 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-190 / 33 : ℚ)
   | 1 => (-50 / 33 : ℚ)
@@ -4121,7 +4123,7 @@ def XCell3_6 (i : Fin 10) : ℚ :=
   | 9 => (-32 / 11 : ℚ)
   | _ => 0
 
-def XCell3_7 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-64 / 33 : ℚ)
   | 1 => (26 / 33 : ℚ)
@@ -4135,7 +4137,7 @@ def XCell3_7 (i : Fin 10) : ℚ :=
   | 9 => (-38 / 33 : ℚ)
   | _ => 0
 
-def XCell3_8 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4149,7 +4151,7 @@ def XCell3_8 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell3_9 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4163,7 +4165,7 @@ def XCell3_9 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell3_10 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_10 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4177,7 +4179,7 @@ def XCell3_10 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell3_11 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_11 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4191,7 +4193,7 @@ def XCell3_11 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell3_12 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_12 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4205,7 +4207,7 @@ def XCell3_12 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell3_13 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_13 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4219,7 +4221,7 @@ def XCell3_13 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell3_14 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_14 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4233,7 +4235,7 @@ def XCell3_14 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell3_15 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_15 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4247,7 +4249,7 @@ def XCell3_15 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell3_16 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_16 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4261,7 +4263,7 @@ def XCell3_16 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell3_17 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_17 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4275,7 +4277,7 @@ def XCell3_17 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell3_18 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_18 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4289,7 +4291,7 @@ def XCell3_18 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell3_19 (i : Fin 10) : ℚ :=
+@[expose] public def XCell3_19 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4303,7 +4305,7 @@ def XCell3_19 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XRow3 (j : Fin 20) : Vec :=
+@[expose] public def XRow3 (j : Fin 20) : Vec :=
   match j.val with
   | 0 => XCell3_0
   | 1 => XCell3_1
@@ -4327,7 +4329,7 @@ def XRow3 (j : Fin 20) : Vec :=
   | 19 => XCell3_19
   | _ => 0
 
-def XCell4_0 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-18 / 11 : ℚ)
   | 1 => (-20 / 33 : ℚ)
@@ -4341,7 +4343,7 @@ def XCell4_0 (i : Fin 10) : ℚ :=
   | 9 => (-8 / 33 : ℚ)
   | _ => 0
 
-def XCell4_1 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (41 / 33 : ℚ)
   | 1 => (5 / 33 : ℚ)
@@ -4355,7 +4357,7 @@ def XCell4_1 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 33 : ℚ)
   | _ => 0
 
-def XCell4_2 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-16 / 33 : ℚ)
   | 1 => (1 / 33 : ℚ)
@@ -4369,7 +4371,7 @@ def XCell4_2 (i : Fin 10) : ℚ :=
   | 9 => (10 / 33 : ℚ)
   | _ => 0
 
-def XCell4_3 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-41 / 33 : ℚ)
   | 1 => (-16 / 33 : ℚ)
@@ -4383,7 +4385,7 @@ def XCell4_3 (i : Fin 10) : ℚ :=
   | 9 => (-3 / 11 : ℚ)
   | _ => 0
 
-def XCell4_4 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-20 / 11 : ℚ)
   | 1 => (1 / 33 : ℚ)
@@ -4397,7 +4399,7 @@ def XCell4_4 (i : Fin 10) : ℚ :=
   | 9 => (23 / 33 : ℚ)
   | _ => 0
 
-def XCell4_5 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (6 / 11 : ℚ)
   | 1 => (14 / 33 : ℚ)
@@ -4411,7 +4413,7 @@ def XCell4_5 (i : Fin 10) : ℚ :=
   | 9 => (26 / 33 : ℚ)
   | _ => 0
 
-def XCell4_6 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-76 / 33 : ℚ)
   | 1 => (-20 / 33 : ℚ)
@@ -4425,7 +4427,7 @@ def XCell4_6 (i : Fin 10) : ℚ :=
   | 9 => (-10 / 33 : ℚ)
   | _ => 0
 
-def XCell4_7 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (10 / 11 : ℚ)
   | 1 => (16 / 33 : ℚ)
@@ -4439,7 +4441,7 @@ def XCell4_7 (i : Fin 10) : ℚ :=
   | 9 => (-32 / 33 : ℚ)
   | _ => 0
 
-def XCell4_8 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4453,7 +4455,7 @@ def XCell4_8 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell4_9 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4467,7 +4469,7 @@ def XCell4_9 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell4_10 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_10 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4481,7 +4483,7 @@ def XCell4_10 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell4_11 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_11 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4495,7 +4497,7 @@ def XCell4_11 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell4_12 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_12 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4509,7 +4511,7 @@ def XCell4_12 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell4_13 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_13 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4523,7 +4525,7 @@ def XCell4_13 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell4_14 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_14 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4537,7 +4539,7 @@ def XCell4_14 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell4_15 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_15 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4551,7 +4553,7 @@ def XCell4_15 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell4_16 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_16 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4565,7 +4567,7 @@ def XCell4_16 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell4_17 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_17 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4579,7 +4581,7 @@ def XCell4_17 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell4_18 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_18 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4593,7 +4595,7 @@ def XCell4_18 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell4_19 (i : Fin 10) : ℚ :=
+@[expose] public def XCell4_19 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4607,7 +4609,7 @@ def XCell4_19 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XRow4 (j : Fin 20) : Vec :=
+@[expose] public def XRow4 (j : Fin 20) : Vec :=
   match j.val with
   | 0 => XCell4_0
   | 1 => XCell4_1
@@ -4631,7 +4633,7 @@ def XRow4 (j : Fin 20) : Vec :=
   | 19 => XCell4_19
   | _ => 0
 
-def XCell5_0 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (49 / 22 : ℚ)
   | 1 => (-6 / 11 : ℚ)
@@ -4645,7 +4647,7 @@ def XCell5_0 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 22 : ℚ)
   | _ => 0
 
-def XCell5_1 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-91 / 22 : ℚ)
   | 1 => (-3 / 11 : ℚ)
@@ -4659,7 +4661,7 @@ def XCell5_1 (i : Fin 10) : ℚ :=
   | 9 => (-41 / 22 : ℚ)
   | _ => 0
 
-def XCell5_2 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (7 / 11 : ℚ)
   | 1 => (-5 / 22 : ℚ)
@@ -4673,7 +4675,7 @@ def XCell5_2 (i : Fin 10) : ℚ :=
   | 9 => (9 / 22 : ℚ)
   | _ => 0
 
-def XCell5_3 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (45 / 22 : ℚ)
   | 1 => (1 / 11 : ℚ)
@@ -4687,7 +4689,7 @@ def XCell5_3 (i : Fin 10) : ℚ :=
   | 9 => (7 / 22 : ℚ)
   | _ => 0
 
-def XCell5_4 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (9 / 22 : ℚ)
   | 1 => (7 / 22 : ℚ)
@@ -4701,7 +4703,7 @@ def XCell5_4 (i : Fin 10) : ℚ :=
   | 9 => (13 / 22 : ℚ)
   | _ => 0
 
-def XCell5_5 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-52 / 11 : ℚ)
   | 1 => (6 / 11 : ℚ)
@@ -4715,7 +4717,7 @@ def XCell5_5 (i : Fin 10) : ℚ :=
   | 9 => (-16 / 11 : ℚ)
   | _ => 0
 
-def XCell5_6 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (58 / 11 : ℚ)
   | 1 => (6 / 11 : ℚ)
@@ -4729,7 +4731,7 @@ def XCell5_6 (i : Fin 10) : ℚ :=
   | 9 => (30 / 11 : ℚ)
   | _ => 0
 
-def XCell5_7 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (25 / 11 : ℚ)
   | 1 => (-5 / 11 : ℚ)
@@ -4743,7 +4745,7 @@ def XCell5_7 (i : Fin 10) : ℚ :=
   | 9 => (-4 / 11 : ℚ)
   | _ => 0
 
-def XCell5_8 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4757,7 +4759,7 @@ def XCell5_8 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell5_9 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4771,7 +4773,7 @@ def XCell5_9 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell5_10 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_10 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4785,7 +4787,7 @@ def XCell5_10 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell5_11 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_11 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4799,7 +4801,7 @@ def XCell5_11 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell5_12 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_12 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4813,7 +4815,7 @@ def XCell5_12 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell5_13 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_13 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4827,7 +4829,7 @@ def XCell5_13 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell5_14 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_14 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4841,7 +4843,7 @@ def XCell5_14 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell5_15 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_15 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4855,7 +4857,7 @@ def XCell5_15 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell5_16 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_16 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4869,7 +4871,7 @@ def XCell5_16 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell5_17 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_17 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4883,7 +4885,7 @@ def XCell5_17 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell5_18 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_18 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4897,7 +4899,7 @@ def XCell5_18 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell5_19 (i : Fin 10) : ℚ :=
+@[expose] public def XCell5_19 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -4911,7 +4913,7 @@ def XCell5_19 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XRow5 (j : Fin 20) : Vec :=
+@[expose] public def XRow5 (j : Fin 20) : Vec :=
   match j.val with
   | 0 => XCell5_0
   | 1 => XCell5_1
@@ -4935,7 +4937,7 @@ def XRow5 (j : Fin 20) : Vec :=
   | 19 => XCell5_19
   | _ => 0
 
-def XCell6_0 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-59 / 11 : ℚ)
   | 1 => (-8 / 11 : ℚ)
@@ -4949,7 +4951,7 @@ def XCell6_0 (i : Fin 10) : ℚ :=
   | 9 => (-18 / 11 : ℚ)
   | _ => 0
 
-def XCell6_1 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (133 / 22 : ℚ)
   | 1 => (13 / 22 : ℚ)
@@ -4963,7 +4965,7 @@ def XCell6_1 (i : Fin 10) : ℚ :=
   | 9 => (29 / 11 : ℚ)
   | _ => 0
 
-def XCell6_2 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-25 / 22 : ℚ)
   | 1 => (-3 / 11 : ℚ)
@@ -4977,7 +4979,7 @@ def XCell6_2 (i : Fin 10) : ℚ :=
   | 9 => (-5 / 11 : ℚ)
   | _ => 0
 
-def XCell6_3 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-95 / 22 : ℚ)
   | 1 => (-25 / 22 : ℚ)
@@ -4991,7 +4993,7 @@ def XCell6_3 (i : Fin 10) : ℚ :=
   | 9 => (-24 / 11 : ℚ)
   | _ => 0
 
-def XCell6_4 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-19 / 11 : ℚ)
   | 1 => (-5 / 11 : ℚ)
@@ -5005,7 +5007,7 @@ def XCell6_4 (i : Fin 10) : ℚ :=
   | 9 => (-5 / 22 : ℚ)
   | _ => 0
 
-def XCell6_5 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (58 / 11 : ℚ)
   | 1 => (6 / 11 : ℚ)
@@ -5019,7 +5021,7 @@ def XCell6_5 (i : Fin 10) : ℚ :=
   | 9 => (30 / 11 : ℚ)
   | _ => 0
 
-def XCell6_6 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-107 / 11 : ℚ)
   | 1 => (-27 / 11 : ℚ)
@@ -5033,7 +5035,7 @@ def XCell6_6 (i : Fin 10) : ℚ :=
   | 9 => (-50 / 11 : ℚ)
   | _ => 0
 
-def XCell6_7 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-31 / 11 : ℚ)
   | 1 => (4 / 11 : ℚ)
@@ -5047,7 +5049,7 @@ def XCell6_7 (i : Fin 10) : ℚ :=
   | 9 => (-14 / 11 : ℚ)
   | _ => 0
 
-def XCell6_8 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5061,7 +5063,7 @@ def XCell6_8 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell6_9 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5075,7 +5077,7 @@ def XCell6_9 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell6_10 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_10 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5089,7 +5091,7 @@ def XCell6_10 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell6_11 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_11 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5103,7 +5105,7 @@ def XCell6_11 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell6_12 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_12 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5117,7 +5119,7 @@ def XCell6_12 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell6_13 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_13 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5131,7 +5133,7 @@ def XCell6_13 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell6_14 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_14 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5145,7 +5147,7 @@ def XCell6_14 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell6_15 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_15 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5159,7 +5161,7 @@ def XCell6_15 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell6_16 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_16 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5173,7 +5175,7 @@ def XCell6_16 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell6_17 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_17 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5187,7 +5189,7 @@ def XCell6_17 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell6_18 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_18 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5201,7 +5203,7 @@ def XCell6_18 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell6_19 (i : Fin 10) : ℚ :=
+@[expose] public def XCell6_19 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5215,7 +5217,7 @@ def XCell6_19 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XRow6 (j : Fin 20) : Vec :=
+@[expose] public def XRow6 (j : Fin 20) : Vec :=
   match j.val with
   | 0 => XCell6_0
   | 1 => XCell6_1
@@ -5239,7 +5241,7 @@ def XRow6 (j : Fin 20) : Vec :=
   | 19 => XCell6_19
   | _ => 0
 
-def XCell7_0 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => -2
   | 1 => (1 / 2 : ℚ)
@@ -5253,7 +5255,7 @@ def XCell7_0 (i : Fin 10) : ℚ :=
   | 9 => (-21 / 22 : ℚ)
   | _ => 0
 
-def XCell7_1 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (47 / 22 : ℚ)
   | 1 => (-5 / 22 : ℚ)
@@ -5267,7 +5269,7 @@ def XCell7_1 (i : Fin 10) : ℚ :=
   | 9 => (10 / 11 : ℚ)
   | _ => 0
 
-def XCell7_2 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (5 / 22 : ℚ)
   | 1 => (-1 / 22 : ℚ)
@@ -5281,7 +5283,7 @@ def XCell7_2 (i : Fin 10) : ℚ :=
   | 9 => (-2 / 11 : ℚ)
   | _ => 0
 
-def XCell7_3 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-16 / 11 : ℚ)
   | 1 => (13 / 22 : ℚ)
@@ -5295,7 +5297,7 @@ def XCell7_3 (i : Fin 10) : ℚ :=
   | 9 => (-19 / 22 : ℚ)
   | _ => 0
 
-def XCell7_4 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (15 / 22 : ℚ)
   | 1 => (4 / 11 : ℚ)
@@ -5309,7 +5311,7 @@ def XCell7_4 (i : Fin 10) : ℚ :=
   | 9 => (-8 / 11 : ℚ)
   | _ => 0
 
-def XCell7_5 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (25 / 11 : ℚ)
   | 1 => (-5 / 11 : ℚ)
@@ -5323,7 +5325,7 @@ def XCell7_5 (i : Fin 10) : ℚ :=
   | 9 => (-4 / 11 : ℚ)
   | _ => 0
 
-def XCell7_6 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-31 / 11 : ℚ)
   | 1 => (4 / 11 : ℚ)
@@ -5337,7 +5339,7 @@ def XCell7_6 (i : Fin 10) : ℚ :=
   | 9 => (-14 / 11 : ℚ)
   | _ => 0
 
-def XCell7_7 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-49 / 11 : ℚ)
   | 1 => (-10 / 11 : ℚ)
@@ -5351,7 +5353,7 @@ def XCell7_7 (i : Fin 10) : ℚ :=
   | 9 => (1 / 11 : ℚ)
   | _ => 0
 
-def XCell7_8 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5365,7 +5367,7 @@ def XCell7_8 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell7_9 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5379,7 +5381,7 @@ def XCell7_9 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell7_10 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_10 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5393,7 +5395,7 @@ def XCell7_10 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell7_11 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_11 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5407,7 +5409,7 @@ def XCell7_11 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell7_12 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_12 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5421,7 +5423,7 @@ def XCell7_12 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell7_13 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_13 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5435,7 +5437,7 @@ def XCell7_13 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell7_14 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_14 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5449,7 +5451,7 @@ def XCell7_14 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell7_15 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_15 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5463,7 +5465,7 @@ def XCell7_15 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell7_16 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_16 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5477,7 +5479,7 @@ def XCell7_16 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell7_17 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_17 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5491,7 +5493,7 @@ def XCell7_17 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell7_18 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_18 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5505,7 +5507,7 @@ def XCell7_18 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell7_19 (i : Fin 10) : ℚ :=
+@[expose] public def XCell7_19 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5519,7 +5521,7 @@ def XCell7_19 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XRow7 (j : Fin 20) : Vec :=
+@[expose] public def XRow7 (j : Fin 20) : Vec :=
   match j.val with
   | 0 => XCell7_0
   | 1 => XCell7_1
@@ -5543,7 +5545,7 @@ def XRow7 (j : Fin 20) : Vec :=
   | 19 => XCell7_19
   | _ => 0
 
-def XCell8_0 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5557,7 +5559,7 @@ def XCell8_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_1 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5571,7 +5573,7 @@ def XCell8_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_2 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5585,7 +5587,7 @@ def XCell8_2 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_3 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5599,7 +5601,7 @@ def XCell8_3 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_4 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5613,7 +5615,7 @@ def XCell8_4 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_5 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5627,7 +5629,7 @@ def XCell8_5 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_6 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5641,7 +5643,7 @@ def XCell8_6 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_7 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5655,7 +5657,7 @@ def XCell8_7 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_8 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5669,7 +5671,7 @@ def XCell8_8 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_9 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5683,7 +5685,7 @@ def XCell8_9 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_10 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_10 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5697,7 +5699,7 @@ def XCell8_10 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_11 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_11 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5711,7 +5713,7 @@ def XCell8_11 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_12 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_12 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5725,7 +5727,7 @@ def XCell8_12 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_13 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_13 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5739,7 +5741,7 @@ def XCell8_13 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_14 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_14 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5753,7 +5755,7 @@ def XCell8_14 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_15 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_15 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5767,7 +5769,7 @@ def XCell8_15 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_16 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_16 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5781,7 +5783,7 @@ def XCell8_16 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_17 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_17 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5795,7 +5797,7 @@ def XCell8_17 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_18 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_18 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5809,7 +5811,7 @@ def XCell8_18 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell8_19 (i : Fin 10) : ℚ :=
+@[expose] public def XCell8_19 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5823,7 +5825,7 @@ def XCell8_19 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XRow8 (j : Fin 20) : Vec :=
+@[expose] public def XRow8 (j : Fin 20) : Vec :=
   match j.val with
   | 0 => XCell8_0
   | 1 => XCell8_1
@@ -5847,7 +5849,7 @@ def XRow8 (j : Fin 20) : Vec :=
   | 19 => XCell8_19
   | _ => 0
 
-def XCell9_0 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5861,7 +5863,7 @@ def XCell9_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_1 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5875,7 +5877,7 @@ def XCell9_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_2 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5889,7 +5891,7 @@ def XCell9_2 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_3 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5903,7 +5905,7 @@ def XCell9_3 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_4 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5917,7 +5919,7 @@ def XCell9_4 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_5 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5931,7 +5933,7 @@ def XCell9_5 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_6 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5945,7 +5947,7 @@ def XCell9_6 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_7 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5959,7 +5961,7 @@ def XCell9_7 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_8 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5973,7 +5975,7 @@ def XCell9_8 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_9 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -5987,7 +5989,7 @@ def XCell9_9 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_10 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_10 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6001,7 +6003,7 @@ def XCell9_10 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_11 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_11 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6015,7 +6017,7 @@ def XCell9_11 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_12 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_12 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6029,7 +6031,7 @@ def XCell9_12 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_13 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_13 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6043,7 +6045,7 @@ def XCell9_13 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_14 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_14 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6057,7 +6059,7 @@ def XCell9_14 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_15 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_15 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6071,7 +6073,7 @@ def XCell9_15 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_16 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_16 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6085,7 +6087,7 @@ def XCell9_16 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_17 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_17 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6099,7 +6101,7 @@ def XCell9_17 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_18 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_18 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6113,7 +6115,7 @@ def XCell9_18 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XCell9_19 (i : Fin 10) : ℚ :=
+@[expose] public def XCell9_19 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6127,7 +6129,7 @@ def XCell9_19 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def XRow9 (j : Fin 20) : Vec :=
+@[expose] public def XRow9 (j : Fin 20) : Vec :=
   match j.val with
   | 0 => XCell9_0
   | 1 => XCell9_1
@@ -6151,7 +6153,7 @@ def XRow9 (j : Fin 20) : Vec :=
   | 19 => XCell9_19
   | _ => 0
 
-def XVec : Matrix (Fin 10) (Fin 20) Vec :=
+@[expose] public def XVec : Matrix (Fin 10) (Fin 20) Vec :=
   fun i j => match i.val with
   | 0 => XRow0 j
   | 1 => XRow1 j
@@ -6165,7 +6167,7 @@ def XVec : Matrix (Fin 10) (Fin 20) Vec :=
   | 9 => XRow9 j
   | _ => 0
 
-def KCell0_0 (i : Fin 10) : ℚ :=
+@[expose] public def KCell0_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 1
   | 1 => 0
@@ -6179,7 +6181,7 @@ def KCell0_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def KCell0_1 (i : Fin 10) : ℚ :=
+@[expose] public def KCell0_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6193,13 +6195,13 @@ def KCell0_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def KRow0 (j : Fin 2) : Vec :=
+@[expose] public def KRow0 (j : Fin 2) : Vec :=
   match j.val with
   | 0 => KCell0_0
   | 1 => KCell0_1
   | _ => 0
 
-def KCell1_0 (i : Fin 10) : ℚ :=
+@[expose] public def KCell1_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6213,7 +6215,7 @@ def KCell1_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def KCell1_1 (i : Fin 10) : ℚ :=
+@[expose] public def KCell1_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 1
   | 1 => 0
@@ -6227,13 +6229,13 @@ def KCell1_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def KRow1 (j : Fin 2) : Vec :=
+@[expose] public def KRow1 (j : Fin 2) : Vec :=
   match j.val with
   | 0 => KCell1_0
   | 1 => KCell1_1
   | _ => 0
 
-def KCell2_0 (i : Fin 10) : ℚ :=
+@[expose] public def KCell2_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6247,7 +6249,7 @@ def KCell2_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def KCell2_1 (i : Fin 10) : ℚ :=
+@[expose] public def KCell2_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => -1
   | 1 => 0
@@ -6261,13 +6263,13 @@ def KCell2_1 (i : Fin 10) : ℚ :=
   | 9 => 1
   | _ => 0
 
-def KRow2 (j : Fin 2) : Vec :=
+@[expose] public def KRow2 (j : Fin 2) : Vec :=
   match j.val with
   | 0 => KCell2_0
   | 1 => KCell2_1
   | _ => 0
 
-def KCell3_0 (i : Fin 10) : ℚ :=
+@[expose] public def KCell3_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 1
   | 1 => 0
@@ -6281,7 +6283,7 @@ def KCell3_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def KCell3_1 (i : Fin 10) : ℚ :=
+@[expose] public def KCell3_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 1
   | 1 => 0
@@ -6295,13 +6297,13 @@ def KCell3_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def KRow3 (j : Fin 2) : Vec :=
+@[expose] public def KRow3 (j : Fin 2) : Vec :=
   match j.val with
   | 0 => KCell3_0
   | 1 => KCell3_1
   | _ => 0
 
-def KCell4_0 (i : Fin 10) : ℚ :=
+@[expose] public def KCell4_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6315,7 +6317,7 @@ def KCell4_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def KCell4_1 (i : Fin 10) : ℚ :=
+@[expose] public def KCell4_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 1
   | 1 => 0
@@ -6329,13 +6331,13 @@ def KCell4_1 (i : Fin 10) : ℚ :=
   | 9 => -1
   | _ => 0
 
-def KRow4 (j : Fin 2) : Vec :=
+@[expose] public def KRow4 (j : Fin 2) : Vec :=
   match j.val with
   | 0 => KCell4_0
   | 1 => KCell4_1
   | _ => 0
 
-def KCell5_0 (i : Fin 10) : ℚ :=
+@[expose] public def KCell5_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-1 / 2 : ℚ)
   | 1 => 0
@@ -6349,7 +6351,7 @@ def KCell5_0 (i : Fin 10) : ℚ :=
   | 9 => (1 / 2 : ℚ)
   | _ => 0
 
-def KCell5_1 (i : Fin 10) : ℚ :=
+@[expose] public def KCell5_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6363,13 +6365,13 @@ def KCell5_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def KRow5 (j : Fin 2) : Vec :=
+@[expose] public def KRow5 (j : Fin 2) : Vec :=
   match j.val with
   | 0 => KCell5_0
   | 1 => KCell5_1
   | _ => 0
 
-def KCell6_0 (i : Fin 10) : ℚ :=
+@[expose] public def KCell6_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 2 : ℚ)
   | 1 => 0
@@ -6383,7 +6385,7 @@ def KCell6_0 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 2 : ℚ)
   | _ => 0
 
-def KCell6_1 (i : Fin 10) : ℚ :=
+@[expose] public def KCell6_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 2 : ℚ)
   | 1 => 0
@@ -6397,13 +6399,13 @@ def KCell6_1 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 2 : ℚ)
   | _ => 0
 
-def KRow6 (j : Fin 2) : Vec :=
+@[expose] public def KRow6 (j : Fin 2) : Vec :=
   match j.val with
   | 0 => KCell6_0
   | 1 => KCell6_1
   | _ => 0
 
-def KCell7_0 (i : Fin 10) : ℚ :=
+@[expose] public def KCell7_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6417,7 +6419,7 @@ def KCell7_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def KCell7_1 (i : Fin 10) : ℚ :=
+@[expose] public def KCell7_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6431,13 +6433,13 @@ def KCell7_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def KRow7 (j : Fin 2) : Vec :=
+@[expose] public def KRow7 (j : Fin 2) : Vec :=
   match j.val with
   | 0 => KCell7_0
   | 1 => KCell7_1
   | _ => 0
 
-def KCell8_0 (i : Fin 10) : ℚ :=
+@[expose] public def KCell8_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 2 : ℚ)
   | 1 => 0
@@ -6451,7 +6453,7 @@ def KCell8_0 (i : Fin 10) : ℚ :=
   | 9 => (1 / 2 : ℚ)
   | _ => 0
 
-def KCell8_1 (i : Fin 10) : ℚ :=
+@[expose] public def KCell8_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 2 : ℚ)
   | 1 => 0
@@ -6465,13 +6467,13 @@ def KCell8_1 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 2 : ℚ)
   | _ => 0
 
-def KRow8 (j : Fin 2) : Vec :=
+@[expose] public def KRow8 (j : Fin 2) : Vec :=
   match j.val with
   | 0 => KCell8_0
   | 1 => KCell8_1
   | _ => 0
 
-def KCell9_0 (i : Fin 10) : ℚ :=
+@[expose] public def KCell9_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (1 / 2 : ℚ)
   | 1 => 0
@@ -6485,7 +6487,7 @@ def KCell9_0 (i : Fin 10) : ℚ :=
   | 9 => (-1 / 2 : ℚ)
   | _ => 0
 
-def KCell9_1 (i : Fin 10) : ℚ :=
+@[expose] public def KCell9_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 1
   | 1 => 0
@@ -6499,13 +6501,13 @@ def KCell9_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def KRow9 (j : Fin 2) : Vec :=
+@[expose] public def KRow9 (j : Fin 2) : Vec :=
   match j.val with
   | 0 => KCell9_0
   | 1 => KCell9_1
   | _ => 0
 
-def KVec : Matrix (Fin 10) (Fin 2) Vec :=
+@[expose] public def KVec : Matrix (Fin 10) (Fin 2) Vec :=
   fun i j => match i.val with
   | 0 => KRow0 j
   | 1 => KRow1 j
@@ -6519,7 +6521,7 @@ def KVec : Matrix (Fin 10) (Fin 2) Vec :=
   | 9 => KRow9 j
   | _ => 0
 
-def YCell0_0 (i : Fin 10) : ℚ :=
+@[expose] public def YCell0_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6533,7 +6535,7 @@ def YCell0_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YCell0_1 (i : Fin 10) : ℚ :=
+@[expose] public def YCell0_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6547,7 +6549,7 @@ def YCell0_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YCell0_2 (i : Fin 10) : ℚ :=
+@[expose] public def YCell0_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6561,7 +6563,7 @@ def YCell0_2 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YCell0_3 (i : Fin 10) : ℚ :=
+@[expose] public def YCell0_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6575,7 +6577,7 @@ def YCell0_3 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YCell0_4 (i : Fin 10) : ℚ :=
+@[expose] public def YCell0_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6589,7 +6591,7 @@ def YCell0_4 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YCell0_5 (i : Fin 10) : ℚ :=
+@[expose] public def YCell0_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6603,7 +6605,7 @@ def YCell0_5 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YCell0_6 (i : Fin 10) : ℚ :=
+@[expose] public def YCell0_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6617,7 +6619,7 @@ def YCell0_6 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YCell0_7 (i : Fin 10) : ℚ :=
+@[expose] public def YCell0_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6631,7 +6633,7 @@ def YCell0_7 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YCell0_8 (i : Fin 10) : ℚ :=
+@[expose] public def YCell0_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (2 / 3 : ℚ)
   | 1 => 0
@@ -6645,7 +6647,7 @@ def YCell0_8 (i : Fin 10) : ℚ :=
   | 9 => (4 / 3 : ℚ)
   | _ => 0
 
-def YCell0_9 (i : Fin 10) : ℚ :=
+@[expose] public def YCell0_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (-4 / 3 : ℚ)
   | 1 => 0
@@ -6659,7 +6661,7 @@ def YCell0_9 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YRow0 (j : Fin 10) : Vec :=
+@[expose] public def YRow0 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => YCell0_0
   | 1 => YCell0_1
@@ -6673,7 +6675,7 @@ def YRow0 (j : Fin 10) : Vec :=
   | 9 => YCell0_9
   | _ => 0
 
-def YCell1_0 (i : Fin 10) : ℚ :=
+@[expose] public def YCell1_0 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6687,7 +6689,7 @@ def YCell1_0 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YCell1_1 (i : Fin 10) : ℚ :=
+@[expose] public def YCell1_1 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6701,7 +6703,7 @@ def YCell1_1 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YCell1_2 (i : Fin 10) : ℚ :=
+@[expose] public def YCell1_2 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6715,7 +6717,7 @@ def YCell1_2 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YCell1_3 (i : Fin 10) : ℚ :=
+@[expose] public def YCell1_3 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6729,7 +6731,7 @@ def YCell1_3 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YCell1_4 (i : Fin 10) : ℚ :=
+@[expose] public def YCell1_4 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6743,7 +6745,7 @@ def YCell1_4 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YCell1_5 (i : Fin 10) : ℚ :=
+@[expose] public def YCell1_5 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6757,7 +6759,7 @@ def YCell1_5 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YCell1_6 (i : Fin 10) : ℚ :=
+@[expose] public def YCell1_6 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6771,7 +6773,7 @@ def YCell1_6 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YCell1_7 (i : Fin 10) : ℚ :=
+@[expose] public def YCell1_7 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6785,7 +6787,7 @@ def YCell1_7 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YCell1_8 (i : Fin 10) : ℚ :=
+@[expose] public def YCell1_8 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => 0
   | 1 => 0
@@ -6799,7 +6801,7 @@ def YCell1_8 (i : Fin 10) : ℚ :=
   | 9 => 0
   | _ => 0
 
-def YCell1_9 (i : Fin 10) : ℚ :=
+@[expose] public def YCell1_9 (i : Fin 10) : ℚ :=
   match i.val with
   | 0 => (8 / 3 : ℚ)
   | 1 => 0
@@ -6813,7 +6815,7 @@ def YCell1_9 (i : Fin 10) : ℚ :=
   | 9 => (4 / 3 : ℚ)
   | _ => 0
 
-def YRow1 (j : Fin 10) : Vec :=
+@[expose] public def YRow1 (j : Fin 10) : Vec :=
   match j.val with
   | 0 => YCell1_0
   | 1 => YCell1_1
@@ -6827,7 +6829,7 @@ def YRow1 (j : Fin 10) : Vec :=
   | 9 => YCell1_9
   | _ => 0
 
-def YVec : Matrix (Fin 2) (Fin 10) Vec :=
+@[expose] public def YVec : Matrix (Fin 2) (Fin 10) Vec :=
   fun i j => match i.val with
   | 0 => YRow0 j
   | 1 => YRow1 j

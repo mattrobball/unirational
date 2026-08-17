@@ -42,41 +42,43 @@
       ├─ D12PolynomialFRow14      (F row 14)
       └─ D12PolynomialFFull       (F*B = B*SM)
 -/
-import V14Formalization.D12PolynomialCore
-import V14Formalization.D12PolynomialRM
-import V14Formalization.D12PolynomialSM
-import V14Formalization.D12PolynomialRRow0
-import V14Formalization.D12PolynomialRRow1
-import V14Formalization.D12PolynomialRRow2
-import V14Formalization.D12PolynomialRRow3
-import V14Formalization.D12PolynomialRRow4
-import V14Formalization.D12PolynomialRRow5
-import V14Formalization.D12PolynomialRRow6
-import V14Formalization.D12PolynomialRRow7
-import V14Formalization.D12PolynomialRRow8
-import V14Formalization.D12PolynomialRRow9
-import V14Formalization.D12PolynomialRRow10
-import V14Formalization.D12PolynomialRRow11
-import V14Formalization.D12PolynomialRRow12
-import V14Formalization.D12PolynomialRRow13
-import V14Formalization.D12PolynomialRRow14
-import V14Formalization.D12PolynomialRFull
-import V14Formalization.D12PolynomialFRow0
-import V14Formalization.D12PolynomialFRow1
-import V14Formalization.D12PolynomialFRow2
-import V14Formalization.D12PolynomialFRow3
-import V14Formalization.D12PolynomialFRow4
-import V14Formalization.D12PolynomialFRow5
-import V14Formalization.D12PolynomialFRow6
-import V14Formalization.D12PolynomialFRow7
-import V14Formalization.D12PolynomialFRow8
-import V14Formalization.D12PolynomialFRow9
-import V14Formalization.D12PolynomialFRow10
-import V14Formalization.D12PolynomialFRow11
-import V14Formalization.D12PolynomialFRow12
-import V14Formalization.D12PolynomialFRow13
-import V14Formalization.D12PolynomialFRow14
-import V14Formalization.D12PolynomialFFull
+module
+
+public import V14Formalization.D12PolynomialCore
+public import V14Formalization.D12PolynomialRM
+public import V14Formalization.D12PolynomialSM
+public import V14Formalization.D12PolynomialRRow0
+public import V14Formalization.D12PolynomialRRow1
+public import V14Formalization.D12PolynomialRRow2
+public import V14Formalization.D12PolynomialRRow3
+public import V14Formalization.D12PolynomialRRow4
+public import V14Formalization.D12PolynomialRRow5
+public import V14Formalization.D12PolynomialRRow6
+public import V14Formalization.D12PolynomialRRow7
+public import V14Formalization.D12PolynomialRRow8
+public import V14Formalization.D12PolynomialRRow9
+public import V14Formalization.D12PolynomialRRow10
+public import V14Formalization.D12PolynomialRRow11
+public import V14Formalization.D12PolynomialRRow12
+public import V14Formalization.D12PolynomialRRow13
+public import V14Formalization.D12PolynomialRRow14
+public import V14Formalization.D12PolynomialRFull
+public import V14Formalization.D12PolynomialFRow0
+public import V14Formalization.D12PolynomialFRow1
+public import V14Formalization.D12PolynomialFRow2
+public import V14Formalization.D12PolynomialFRow3
+public import V14Formalization.D12PolynomialFRow4
+public import V14Formalization.D12PolynomialFRow5
+public import V14Formalization.D12PolynomialFRow6
+public import V14Formalization.D12PolynomialFRow7
+public import V14Formalization.D12PolynomialFRow8
+public import V14Formalization.D12PolynomialFRow9
+public import V14Formalization.D12PolynomialFRow10
+public import V14Formalization.D12PolynomialFRow11
+public import V14Formalization.D12PolynomialFRow12
+public import V14Formalization.D12PolynomialFRow13
+public import V14Formalization.D12PolynomialFRow14
+public import V14Formalization.D12PolynomialFFull
 
 namespace V14Formalization
 namespace D12PolynomialData

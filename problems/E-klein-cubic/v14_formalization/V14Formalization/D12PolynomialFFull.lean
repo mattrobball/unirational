@@ -10,23 +10,25 @@
   * One small theorem per ambient row → certified shard theorem.
   * Final Matrix.ext + 15-way ambient-row dispatch only (no inner fin_cases).
 -/
-import V14Formalization.D12PolynomialCore
-import V14Formalization.D12PolynomialSM
-import V14Formalization.D12PolynomialFRow0
-import V14Formalization.D12PolynomialFRow1
-import V14Formalization.D12PolynomialFRow2
-import V14Formalization.D12PolynomialFRow3
-import V14Formalization.D12PolynomialFRow4
-import V14Formalization.D12PolynomialFRow5
-import V14Formalization.D12PolynomialFRow6
-import V14Formalization.D12PolynomialFRow7
-import V14Formalization.D12PolynomialFRow8
-import V14Formalization.D12PolynomialFRow9
-import V14Formalization.D12PolynomialFRow10
-import V14Formalization.D12PolynomialFRow11
-import V14Formalization.D12PolynomialFRow12
-import V14Formalization.D12PolynomialFRow13
-import V14Formalization.D12PolynomialFRow14
+module
+
+public import V14Formalization.D12PolynomialCore
+public import V14Formalization.D12PolynomialSM
+public import V14Formalization.D12PolynomialFRow0
+public import V14Formalization.D12PolynomialFRow1
+public import V14Formalization.D12PolynomialFRow2
+public import V14Formalization.D12PolynomialFRow3
+public import V14Formalization.D12PolynomialFRow4
+public import V14Formalization.D12PolynomialFRow5
+public import V14Formalization.D12PolynomialFRow6
+public import V14Formalization.D12PolynomialFRow7
+public import V14Formalization.D12PolynomialFRow8
+public import V14Formalization.D12PolynomialFRow9
+public import V14Formalization.D12PolynomialFRow10
+public import V14Formalization.D12PolynomialFRow11
+public import V14Formalization.D12PolynomialFRow12
+public import V14Formalization.D12PolynomialFRow13
+public import V14Formalization.D12PolynomialFRow14
 
 noncomputable section
 
@@ -38,7 +40,7 @@ namespace D12PolynomialData
 namespace FFull
 
 /-- Global F assembled row-wise from the 15 ambient F-row shards. -/
-def F_poly : Matrix (Fin 15) (Fin 15) PolyQ :=
+@[expose] public def F_poly : Matrix (Fin 15) (Fin 15) PolyQ :=
   Matrix.of fun i j =>
     match i.val with
     | 0 => FRow0.F_poly i j
@@ -188,7 +190,7 @@ private theorem row14 (j : Fin 10) :
   simpa [Matrix.sub_apply, hFB] using FRow14.F_mul_B_eq_B_mul_SM_row14 j
 
 /-- Full matrix identity F_poly * B_poly = B_poly * SM_poly. -/
-theorem F_mul_B_eq_B_mul_SM :
+public theorem F_mul_B_eq_B_mul_SM :
     F_poly * B_poly = B_poly * SM_poly := by
   apply Matrix.ext
   intro i j

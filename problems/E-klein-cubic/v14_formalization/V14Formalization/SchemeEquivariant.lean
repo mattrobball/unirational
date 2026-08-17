@@ -38,7 +38,7 @@ first partial map is dominant.  This is the partial-map form needed to avoid
 the extra dominance assumption on the second rational map in Mathlib's
 `RationalMap.isOver_comp` instance; the rational-map type itself imposes no
 dominance condition. -/
-public instance partialMapCompIsOver
+@[expose] public instance partialMapCompIsOver
     {S X Y Z : Scheme.{u}} [PreirreducibleSpace X] [Nonempty Y]
     [X.Over S] [Y.Over S] [Z.Over S]
     (f : X.PartialMap Y) [IsDominant f.hom] [f.IsOver S]
@@ -110,7 +110,7 @@ def HasSchemeEquivariantRationalMapOver {S : Scheme.{u}} {G : Type v} [Group G]
 
 /-- Package an absolute scheme action over `S` after proving that every action
 morphism preserves the structure map. -/
-public noncomputable def actionOverOfIsOver
+@[expose] public noncomputable def actionOverOfIsOver
     {S : Scheme.{u}} {G : Type v} [Group G]
     (X : Action Scheme G) [X.V.Over S]
     (h : ∀ g : G, (X.ρ g).IsOver S) :
@@ -171,16 +171,16 @@ namespace EquivariantRationalMap
 variable {S : Scheme.{u}} {G : Type v} [Group G]
   {X Y : Action (Over S) G} [IrreducibleSpace X.V.left]
 
-public instance (f : EquivariantRationalMap X Y) : f.map.IsOver S := f.isOver
+@[expose] public instance (f : EquivariantRationalMap X Y) : f.map.IsOver S := f.isOver
 
-public instance actionRes_irreducibleSpace
+@[expose] public instance actionRes_irreducibleSpace
     {H : Type w} [Group H] (phi : H →* G) (X : Action (Over S) G)
     [IrreducibleSpace X.V.left] :
     IrreducibleSpace ((Action.res (Over S) phi).obj X).V.left := by
   change IrreducibleSpace X.V.left
   infer_instance
 
-public instance actionRes_isIntegral
+@[expose] public instance actionRes_isIntegral
     {H : Type w} [Group H] (phi : H →* G) (X : Action (Over S) G)
     [IsIntegral X.V.left] :
     IsIntegral ((Action.res (Over S) phi).obj X).V.left := by
@@ -189,7 +189,7 @@ public instance actionRes_isIntegral
 
 /-- Restrict an equivariant rational map along a group homomorphism.  The
 underlying rational map is unchanged, so no dominance hypothesis is added. -/
-public noncomputable def res {H : Type w} [Group H] (phi : H →* G)
+@[expose] public noncomputable def res {H : Type w} [Group H] (phi : H →* G)
     (f : EquivariantRationalMap X Y) :
     EquivariantRationalMap
       ((Action.res (Over S) phi).obj X)

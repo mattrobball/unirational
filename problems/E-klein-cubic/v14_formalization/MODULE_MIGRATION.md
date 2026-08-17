@@ -41,24 +41,29 @@ idempotently. Later stages add their own config files and reuse the tool.
    `@[simp]`/`@[norm_num]` declaration (they act through resolution and
    simp sets, so text scans cannot prove them unused) — the tool does this
    automatically.
-3. **Expose** (`@[expose] public`) only defs whose *bodies* importers need:
-   - defs appearing downstream inside `simp [...]`, `dsimp [...]`,
-     `unfold`, `norm_num [...]`;
-   - defs computed by `decide`/`rfl` downstream (certificate data, list
-     arithmetic);
-   - type-defs whose values are constructed/projected in public signatures
-     (e.g. `Circle1` in CentralizerD12 — field projection `.val` in an
-     exposed signature needs the body);
-   - defs a public theorem in the *same file* proves things about by
-     term-mode `rfl` (error: "This theorem is exported from the current
-     module ... definitions ... must be exposed" — e.g. `ψ` in WeilRep).
-   Public `abbrev`s are exposed automatically; do not annotate them
-   (`@[expose]` there is a warning). Strictly, tactic-context unfolding
-   (`simp [f]`, `by rfl`) works downstream even without `@[expose]`; the
-   unfold-scan is a cheap conservative proxy for the cases that do need
-   it (term-mode defeq and public-signature defeq in future module
-   importers). Over-exposing a def is harmless; under-exposing surfaces
-   as an error only when an importer converts.
+3. **Expose every public def and instance** (`expose_all_public_defs` in
+   the config; the generator also records the explicit set). Stage 1
+   tried fine-grained exposure (only downstream-unfold hits); it shipped
+   green and then broke stage 2 three separate times, one ~25-minute
+   rebuild per discovery, because reduction-based proofs surface missing
+   bodies only when a *consumer* converts:
+   - `simp [WeilRep.Φ11]` in a module consumer needs the exposed body
+     (equation lemmas of non-exposed imports don't exist);
+   - `rfl`/`change` defeq through `ζ`, `eval`, `constVec`,
+     `characterStack` got stuck;
+   - `decide` must reduce *every* def and `Decidable` instance it
+     touches (`instDecidableEqVector` etc.).
+   The static sweep that would compute the exact needed set is
+   approximated soundly from above by exposing the whole public surface —
+   Mathlib's own posture for defs files (`@[expose] public section`) —
+   plus the in-file body closure the generator computes (an exposed body
+   may only reference public names, so body-referenced private defs are
+   pulled in transitively). This is the REQUIRED pre-build posture from
+   stage 2 on, and was applied retroactively to the stage-1 leaves.
+   Public `abbrev`s are exposed automatically; do not annotate them.
+   The savings that matter (dropping private declarations and all proof
+   bodies from the importer surface) are unaffected; narrowing exposure
+   is a post-migration optimization, not a per-stage one.
 4. Everything else stays unannotated = module-private. Old-style `private`
    compiles unchanged as module-private (PSLCard's 237 `private` decls
    needed zero edits).

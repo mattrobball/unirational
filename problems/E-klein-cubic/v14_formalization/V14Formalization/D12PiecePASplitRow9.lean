@@ -1,6 +1,8 @@
 /- PA split identity row 9: entry certificates inlined. Auto-generated. -/
-import V14Formalization.D12PiecePAData
-import V14Formalization.D12CyclotomicVecZ
+module
+
+public import V14Formalization.D12PiecePAData
+public import V14Formalization.D12CyclotomicVecZ
 
 noncomputable section
 open Matrix
@@ -10917,7 +10919,7 @@ end V14Formalization.D12PiecePASplitEntry9_9
 namespace V14Formalization.D12PiecePASplitRow9
 open D12CyclotomicVec D12PiecePAData
 
-theorem row_eq (j : Fin 10) :
+public theorem row_eq (j : Fin 10) :
     (matrixMul XVec AVec) (9 : Fin 10) j =
       matrixOne (Fin 10) (9 : Fin 10) j := by
   fin_cases j

@@ -11,7 +11,9 @@
   * RM_poly_row{r} selection lemmas (rfl) — use these; never simp [RM_poly]
     inside ambient coordinate proofs.
 -/
-import V14Formalization.D12PolynomialCore
+module
+
+public import V14Formalization.D12PolynomialCore
 
 noncomputable section
 
@@ -22,19 +24,19 @@ namespace V14Formalization
 namespace D12PolynomialData
 
 /-! ### RM source row 0: coefficients + row accessor -/
-def RM0c0 : Coeff10 := ![(-1 / 11 : ℚ), (-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), 0]
-def RM0c1 : Coeff10 := ![(-1 / 11 : ℚ), 0, (1 / 11 : ℚ), (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0]
-def RM0c2 : Coeff10 := ![(1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), 0]
-def RM0c3 : Coeff10 := ![(2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), 0]
-def RM0c4 : Coeff10 := ![(-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ)]
-def RM0c5 : Coeff10 := ![0, 0, (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ)]
-def RM0c6 : Coeff10 := ![0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), 0]
-def RM0c7 : Coeff10 := ![0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, 0, 0]
-def RM0c8 : Coeff10 := ![0, (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ)]
-def RM0c9 : Coeff10 := ![0, 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0]
+@[expose] public def RM0c0 : Coeff10 := ![(-1 / 11 : ℚ), (-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), 0]
+@[expose] public def RM0c1 : Coeff10 := ![(-1 / 11 : ℚ), 0, (1 / 11 : ℚ), (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0]
+@[expose] public def RM0c2 : Coeff10 := ![(1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), 0]
+@[expose] public def RM0c3 : Coeff10 := ![(2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), 0]
+@[expose] public def RM0c4 : Coeff10 := ![(-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ)]
+@[expose] public def RM0c5 : Coeff10 := ![0, 0, (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ)]
+@[expose] public def RM0c6 : Coeff10 := ![0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), 0]
+@[expose] public def RM0c7 : Coeff10 := ![0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, 0, 0]
+@[expose] public def RM0c8 : Coeff10 := ![0, (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ)]
+@[expose] public def RM0c9 : Coeff10 := ![0, 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0]
 
 /-- Bounded column accessor for RM source row 0. -/
-def RMrow0 (j : Fin 10) : PolyQ :=
+@[expose] public def RMrow0 (j : Fin 10) : PolyQ :=
   match j.val with
   | 0 => of10 RM0c0
   | 1 => of10 RM0c1
@@ -48,31 +50,31 @@ def RMrow0 (j : Fin 10) : PolyQ :=
   | 9 => of10 RM0c9
   | _ => 0
 
-theorem RMrow0_0 : RMrow0 (0 : Fin 10) = of10 RM0c0 := rfl
-theorem RMrow0_1 : RMrow0 (1 : Fin 10) = of10 RM0c1 := rfl
-theorem RMrow0_2 : RMrow0 (2 : Fin 10) = of10 RM0c2 := rfl
-theorem RMrow0_3 : RMrow0 (3 : Fin 10) = of10 RM0c3 := rfl
-theorem RMrow0_4 : RMrow0 (4 : Fin 10) = of10 RM0c4 := rfl
-theorem RMrow0_5 : RMrow0 (5 : Fin 10) = of10 RM0c5 := rfl
-theorem RMrow0_6 : RMrow0 (6 : Fin 10) = of10 RM0c6 := rfl
-theorem RMrow0_7 : RMrow0 (7 : Fin 10) = of10 RM0c7 := rfl
-theorem RMrow0_8 : RMrow0 (8 : Fin 10) = of10 RM0c8 := rfl
-theorem RMrow0_9 : RMrow0 (9 : Fin 10) = of10 RM0c9 := rfl
+public theorem RMrow0_0 : RMrow0 (0 : Fin 10) = of10 RM0c0 := rfl
+public theorem RMrow0_1 : RMrow0 (1 : Fin 10) = of10 RM0c1 := rfl
+public theorem RMrow0_2 : RMrow0 (2 : Fin 10) = of10 RM0c2 := rfl
+public theorem RMrow0_3 : RMrow0 (3 : Fin 10) = of10 RM0c3 := rfl
+public theorem RMrow0_4 : RMrow0 (4 : Fin 10) = of10 RM0c4 := rfl
+public theorem RMrow0_5 : RMrow0 (5 : Fin 10) = of10 RM0c5 := rfl
+public theorem RMrow0_6 : RMrow0 (6 : Fin 10) = of10 RM0c6 := rfl
+public theorem RMrow0_7 : RMrow0 (7 : Fin 10) = of10 RM0c7 := rfl
+public theorem RMrow0_8 : RMrow0 (8 : Fin 10) = of10 RM0c8 := rfl
+public theorem RMrow0_9 : RMrow0 (9 : Fin 10) = of10 RM0c9 := rfl
 
 /-! ### RM source row 1: coefficients + row accessor -/
-def RM1c0 : Coeff10 := ![(-1 / 11 : ℚ), 0, (1 / 11 : ℚ), (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0]
-def RM1c1 : Coeff10 := ![0, (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ)]
-def RM1c2 : Coeff10 := ![(1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ)]
-def RM1c3 : Coeff10 := ![0, 0, (2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), 0]
-def RM1c4 : Coeff10 := ![(-1 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-3 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ)]
-def RM1c5 : Coeff10 := ![(2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ)]
-def RM1c6 : Coeff10 := ![0, (2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, 0, 0, 0]
-def RM1c7 : Coeff10 := ![(-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ)]
-def RM1c8 : Coeff10 := ![0, 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ)]
-def RM1c9 : Coeff10 := ![0, (-2 / 11 : ℚ), 0, 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (2 / 11 : ℚ)]
+@[expose] public def RM1c0 : Coeff10 := ![(-1 / 11 : ℚ), 0, (1 / 11 : ℚ), (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0]
+@[expose] public def RM1c1 : Coeff10 := ![0, (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ)]
+@[expose] public def RM1c2 : Coeff10 := ![(1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ)]
+@[expose] public def RM1c3 : Coeff10 := ![0, 0, (2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), 0]
+@[expose] public def RM1c4 : Coeff10 := ![(-1 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-3 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ)]
+@[expose] public def RM1c5 : Coeff10 := ![(2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ)]
+@[expose] public def RM1c6 : Coeff10 := ![0, (2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, 0, 0, 0]
+@[expose] public def RM1c7 : Coeff10 := ![(-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ)]
+@[expose] public def RM1c8 : Coeff10 := ![0, 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ)]
+@[expose] public def RM1c9 : Coeff10 := ![0, (-2 / 11 : ℚ), 0, 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (2 / 11 : ℚ)]
 
 /-- Bounded column accessor for RM source row 1. -/
-def RMrow1 (j : Fin 10) : PolyQ :=
+@[expose] public def RMrow1 (j : Fin 10) : PolyQ :=
   match j.val with
   | 0 => of10 RM1c0
   | 1 => of10 RM1c1
@@ -86,31 +88,31 @@ def RMrow1 (j : Fin 10) : PolyQ :=
   | 9 => of10 RM1c9
   | _ => 0
 
-theorem RMrow1_0 : RMrow1 (0 : Fin 10) = of10 RM1c0 := rfl
-theorem RMrow1_1 : RMrow1 (1 : Fin 10) = of10 RM1c1 := rfl
-theorem RMrow1_2 : RMrow1 (2 : Fin 10) = of10 RM1c2 := rfl
-theorem RMrow1_3 : RMrow1 (3 : Fin 10) = of10 RM1c3 := rfl
-theorem RMrow1_4 : RMrow1 (4 : Fin 10) = of10 RM1c4 := rfl
-theorem RMrow1_5 : RMrow1 (5 : Fin 10) = of10 RM1c5 := rfl
-theorem RMrow1_6 : RMrow1 (6 : Fin 10) = of10 RM1c6 := rfl
-theorem RMrow1_7 : RMrow1 (7 : Fin 10) = of10 RM1c7 := rfl
-theorem RMrow1_8 : RMrow1 (8 : Fin 10) = of10 RM1c8 := rfl
-theorem RMrow1_9 : RMrow1 (9 : Fin 10) = of10 RM1c9 := rfl
+public theorem RMrow1_0 : RMrow1 (0 : Fin 10) = of10 RM1c0 := rfl
+public theorem RMrow1_1 : RMrow1 (1 : Fin 10) = of10 RM1c1 := rfl
+public theorem RMrow1_2 : RMrow1 (2 : Fin 10) = of10 RM1c2 := rfl
+public theorem RMrow1_3 : RMrow1 (3 : Fin 10) = of10 RM1c3 := rfl
+public theorem RMrow1_4 : RMrow1 (4 : Fin 10) = of10 RM1c4 := rfl
+public theorem RMrow1_5 : RMrow1 (5 : Fin 10) = of10 RM1c5 := rfl
+public theorem RMrow1_6 : RMrow1 (6 : Fin 10) = of10 RM1c6 := rfl
+public theorem RMrow1_7 : RMrow1 (7 : Fin 10) = of10 RM1c7 := rfl
+public theorem RMrow1_8 : RMrow1 (8 : Fin 10) = of10 RM1c8 := rfl
+public theorem RMrow1_9 : RMrow1 (9 : Fin 10) = of10 RM1c9 := rfl
 
 /-! ### RM source row 2: coefficients + row accessor -/
-def RM2c0 : Coeff10 := ![(1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), 0]
-def RM2c1 : Coeff10 := ![(1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ)]
-def RM2c2 : Coeff10 := ![(-3 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ)]
-def RM2c3 : Coeff10 := ![(-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, (1 / 11 : ℚ)]
-def RM2c4 : Coeff10 := ![(-2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ)]
-def RM2c5 : Coeff10 := ![0, 0, 0, 0, 0, 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ)]
-def RM2c6 : Coeff10 := ![(2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ)]
-def RM2c7 : Coeff10 := ![(-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ)]
-def RM2c8 : Coeff10 := ![0, (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, 0]
-def RM2c9 : Coeff10 := ![(2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), 0, (4 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ)]
+@[expose] public def RM2c0 : Coeff10 := ![(1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), 0]
+@[expose] public def RM2c1 : Coeff10 := ![(1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ)]
+@[expose] public def RM2c2 : Coeff10 := ![(-3 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ)]
+@[expose] public def RM2c3 : Coeff10 := ![(-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, (1 / 11 : ℚ)]
+@[expose] public def RM2c4 : Coeff10 := ![(-2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ)]
+@[expose] public def RM2c5 : Coeff10 := ![0, 0, 0, 0, 0, 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ)]
+@[expose] public def RM2c6 : Coeff10 := ![(2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ)]
+@[expose] public def RM2c7 : Coeff10 := ![(-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ)]
+@[expose] public def RM2c8 : Coeff10 := ![0, (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, 0]
+@[expose] public def RM2c9 : Coeff10 := ![(2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), 0, (4 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ)]
 
 /-- Bounded column accessor for RM source row 2. -/
-def RMrow2 (j : Fin 10) : PolyQ :=
+@[expose] public def RMrow2 (j : Fin 10) : PolyQ :=
   match j.val with
   | 0 => of10 RM2c0
   | 1 => of10 RM2c1
@@ -124,31 +126,31 @@ def RMrow2 (j : Fin 10) : PolyQ :=
   | 9 => of10 RM2c9
   | _ => 0
 
-theorem RMrow2_0 : RMrow2 (0 : Fin 10) = of10 RM2c0 := rfl
-theorem RMrow2_1 : RMrow2 (1 : Fin 10) = of10 RM2c1 := rfl
-theorem RMrow2_2 : RMrow2 (2 : Fin 10) = of10 RM2c2 := rfl
-theorem RMrow2_3 : RMrow2 (3 : Fin 10) = of10 RM2c3 := rfl
-theorem RMrow2_4 : RMrow2 (4 : Fin 10) = of10 RM2c4 := rfl
-theorem RMrow2_5 : RMrow2 (5 : Fin 10) = of10 RM2c5 := rfl
-theorem RMrow2_6 : RMrow2 (6 : Fin 10) = of10 RM2c6 := rfl
-theorem RMrow2_7 : RMrow2 (7 : Fin 10) = of10 RM2c7 := rfl
-theorem RMrow2_8 : RMrow2 (8 : Fin 10) = of10 RM2c8 := rfl
-theorem RMrow2_9 : RMrow2 (9 : Fin 10) = of10 RM2c9 := rfl
+public theorem RMrow2_0 : RMrow2 (0 : Fin 10) = of10 RM2c0 := rfl
+public theorem RMrow2_1 : RMrow2 (1 : Fin 10) = of10 RM2c1 := rfl
+public theorem RMrow2_2 : RMrow2 (2 : Fin 10) = of10 RM2c2 := rfl
+public theorem RMrow2_3 : RMrow2 (3 : Fin 10) = of10 RM2c3 := rfl
+public theorem RMrow2_4 : RMrow2 (4 : Fin 10) = of10 RM2c4 := rfl
+public theorem RMrow2_5 : RMrow2 (5 : Fin 10) = of10 RM2c5 := rfl
+public theorem RMrow2_6 : RMrow2 (6 : Fin 10) = of10 RM2c6 := rfl
+public theorem RMrow2_7 : RMrow2 (7 : Fin 10) = of10 RM2c7 := rfl
+public theorem RMrow2_8 : RMrow2 (8 : Fin 10) = of10 RM2c8 := rfl
+public theorem RMrow2_9 : RMrow2 (9 : Fin 10) = of10 RM2c9 := rfl
 
 /-! ### RM source row 3: coefficients + row accessor -/
-def RM3c0 : Coeff10 := ![(2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), 0]
-def RM3c1 : Coeff10 := ![0, 0, (2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), 0]
-def RM3c2 : Coeff10 := ![(-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, (1 / 11 : ℚ)]
-def RM3c3 : Coeff10 := ![(-1 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ)]
-def RM3c4 : Coeff10 := ![(1 / 11 : ℚ), (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ)]
-def RM3c5 : Coeff10 := ![(2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), 0, (4 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ)]
-def RM3c6 : Coeff10 := ![(2 / 11 : ℚ), 0, (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ)]
-def RM3c7 : Coeff10 := ![0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), 0]
-def RM3c8 : Coeff10 := ![(2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), 0, (4 / 11 : ℚ), (4 / 11 : ℚ)]
-def RM3c9 : Coeff10 := ![(2 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ)]
+@[expose] public def RM3c0 : Coeff10 := ![(2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), 0]
+@[expose] public def RM3c1 : Coeff10 := ![0, 0, (2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), 0]
+@[expose] public def RM3c2 : Coeff10 := ![(-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, (1 / 11 : ℚ)]
+@[expose] public def RM3c3 : Coeff10 := ![(-1 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ)]
+@[expose] public def RM3c4 : Coeff10 := ![(1 / 11 : ℚ), (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ)]
+@[expose] public def RM3c5 : Coeff10 := ![(2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), 0, (4 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ)]
+@[expose] public def RM3c6 : Coeff10 := ![(2 / 11 : ℚ), 0, (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ)]
+@[expose] public def RM3c7 : Coeff10 := ![0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), 0]
+@[expose] public def RM3c8 : Coeff10 := ![(2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), 0, (4 / 11 : ℚ), (4 / 11 : ℚ)]
+@[expose] public def RM3c9 : Coeff10 := ![(2 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ)]
 
 /-- Bounded column accessor for RM source row 3. -/
-def RMrow3 (j : Fin 10) : PolyQ :=
+@[expose] public def RMrow3 (j : Fin 10) : PolyQ :=
   match j.val with
   | 0 => of10 RM3c0
   | 1 => of10 RM3c1
@@ -162,31 +164,31 @@ def RMrow3 (j : Fin 10) : PolyQ :=
   | 9 => of10 RM3c9
   | _ => 0
 
-theorem RMrow3_0 : RMrow3 (0 : Fin 10) = of10 RM3c0 := rfl
-theorem RMrow3_1 : RMrow3 (1 : Fin 10) = of10 RM3c1 := rfl
-theorem RMrow3_2 : RMrow3 (2 : Fin 10) = of10 RM3c2 := rfl
-theorem RMrow3_3 : RMrow3 (3 : Fin 10) = of10 RM3c3 := rfl
-theorem RMrow3_4 : RMrow3 (4 : Fin 10) = of10 RM3c4 := rfl
-theorem RMrow3_5 : RMrow3 (5 : Fin 10) = of10 RM3c5 := rfl
-theorem RMrow3_6 : RMrow3 (6 : Fin 10) = of10 RM3c6 := rfl
-theorem RMrow3_7 : RMrow3 (7 : Fin 10) = of10 RM3c7 := rfl
-theorem RMrow3_8 : RMrow3 (8 : Fin 10) = of10 RM3c8 := rfl
-theorem RMrow3_9 : RMrow3 (9 : Fin 10) = of10 RM3c9 := rfl
+public theorem RMrow3_0 : RMrow3 (0 : Fin 10) = of10 RM3c0 := rfl
+public theorem RMrow3_1 : RMrow3 (1 : Fin 10) = of10 RM3c1 := rfl
+public theorem RMrow3_2 : RMrow3 (2 : Fin 10) = of10 RM3c2 := rfl
+public theorem RMrow3_3 : RMrow3 (3 : Fin 10) = of10 RM3c3 := rfl
+public theorem RMrow3_4 : RMrow3 (4 : Fin 10) = of10 RM3c4 := rfl
+public theorem RMrow3_5 : RMrow3 (5 : Fin 10) = of10 RM3c5 := rfl
+public theorem RMrow3_6 : RMrow3 (6 : Fin 10) = of10 RM3c6 := rfl
+public theorem RMrow3_7 : RMrow3 (7 : Fin 10) = of10 RM3c7 := rfl
+public theorem RMrow3_8 : RMrow3 (8 : Fin 10) = of10 RM3c8 := rfl
+public theorem RMrow3_9 : RMrow3 (9 : Fin 10) = of10 RM3c9 := rfl
 
 /-! ### RM source row 4: coefficients + row accessor -/
-def RM4c0 : Coeff10 := ![(-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ)]
-def RM4c1 : Coeff10 := ![(-1 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-3 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ)]
-def RM4c2 : Coeff10 := ![(-2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ)]
-def RM4c3 : Coeff10 := ![(1 / 11 : ℚ), (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ)]
-def RM4c4 : Coeff10 := ![(-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ)]
-def RM4c5 : Coeff10 := ![0, 0, 0, (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ)]
-def RM4c6 : Coeff10 := ![0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ)]
-def RM4c7 : Coeff10 := ![0, (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0]
-def RM4c8 : Coeff10 := ![(-2 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ)]
-def RM4c9 : Coeff10 := ![0, 0, 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0]
+@[expose] public def RM4c0 : Coeff10 := ![(-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ)]
+@[expose] public def RM4c1 : Coeff10 := ![(-1 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-3 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ)]
+@[expose] public def RM4c2 : Coeff10 := ![(-2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ)]
+@[expose] public def RM4c3 : Coeff10 := ![(1 / 11 : ℚ), (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ)]
+@[expose] public def RM4c4 : Coeff10 := ![(-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ)]
+@[expose] public def RM4c5 : Coeff10 := ![0, 0, 0, (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ)]
+@[expose] public def RM4c6 : Coeff10 := ![0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ)]
+@[expose] public def RM4c7 : Coeff10 := ![0, (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0]
+@[expose] public def RM4c8 : Coeff10 := ![(-2 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ)]
+@[expose] public def RM4c9 : Coeff10 := ![0, 0, 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0]
 
 /-- Bounded column accessor for RM source row 4. -/
-def RMrow4 (j : Fin 10) : PolyQ :=
+@[expose] public def RMrow4 (j : Fin 10) : PolyQ :=
   match j.val with
   | 0 => of10 RM4c0
   | 1 => of10 RM4c1
@@ -200,31 +202,31 @@ def RMrow4 (j : Fin 10) : PolyQ :=
   | 9 => of10 RM4c9
   | _ => 0
 
-theorem RMrow4_0 : RMrow4 (0 : Fin 10) = of10 RM4c0 := rfl
-theorem RMrow4_1 : RMrow4 (1 : Fin 10) = of10 RM4c1 := rfl
-theorem RMrow4_2 : RMrow4 (2 : Fin 10) = of10 RM4c2 := rfl
-theorem RMrow4_3 : RMrow4 (3 : Fin 10) = of10 RM4c3 := rfl
-theorem RMrow4_4 : RMrow4 (4 : Fin 10) = of10 RM4c4 := rfl
-theorem RMrow4_5 : RMrow4 (5 : Fin 10) = of10 RM4c5 := rfl
-theorem RMrow4_6 : RMrow4 (6 : Fin 10) = of10 RM4c6 := rfl
-theorem RMrow4_7 : RMrow4 (7 : Fin 10) = of10 RM4c7 := rfl
-theorem RMrow4_8 : RMrow4 (8 : Fin 10) = of10 RM4c8 := rfl
-theorem RMrow4_9 : RMrow4 (9 : Fin 10) = of10 RM4c9 := rfl
+public theorem RMrow4_0 : RMrow4 (0 : Fin 10) = of10 RM4c0 := rfl
+public theorem RMrow4_1 : RMrow4 (1 : Fin 10) = of10 RM4c1 := rfl
+public theorem RMrow4_2 : RMrow4 (2 : Fin 10) = of10 RM4c2 := rfl
+public theorem RMrow4_3 : RMrow4 (3 : Fin 10) = of10 RM4c3 := rfl
+public theorem RMrow4_4 : RMrow4 (4 : Fin 10) = of10 RM4c4 := rfl
+public theorem RMrow4_5 : RMrow4 (5 : Fin 10) = of10 RM4c5 := rfl
+public theorem RMrow4_6 : RMrow4 (6 : Fin 10) = of10 RM4c6 := rfl
+public theorem RMrow4_7 : RMrow4 (7 : Fin 10) = of10 RM4c7 := rfl
+public theorem RMrow4_8 : RMrow4 (8 : Fin 10) = of10 RM4c8 := rfl
+public theorem RMrow4_9 : RMrow4 (9 : Fin 10) = of10 RM4c9 := rfl
 
 /-! ### RM source row 5: coefficients + row accessor -/
-def RM5c0 : Coeff10 := ![0, 0, (3 / 22 : ℚ), 0, 0, (-3 / 22 : ℚ), (-3 / 22 : ℚ), 0, 0, (3 / 22 : ℚ)]
-def RM5c1 : Coeff10 := ![(3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 11 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 11 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), 0, (3 / 22 : ℚ)]
-def RM5c2 : Coeff10 := ![0, 0, 0, 0, 0, 0, (-3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (-3 / 22 : ℚ)]
-def RM5c3 : Coeff10 := ![(3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), 0, (3 / 11 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 11 : ℚ)]
-def RM5c4 : Coeff10 := ![0, 0, 0, (-3 / 22 : ℚ), 0, (3 / 22 : ℚ), 0, (3 / 22 : ℚ), 0, (-3 / 22 : ℚ)]
-def RM5c5 : Coeff10 := ![0, (1 / 11 : ℚ), (1 / 11 : ℚ), 0, (2 / 11 : ℚ), (3 / 11 : ℚ), (2 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ)]
-def RM5c6 : Coeff10 := ![(-1 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), 0]
-def RM5c7 : Coeff10 := ![(-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0]
-def RM5c8 : Coeff10 := ![(-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), 0, (1 / 11 : ℚ), (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ)]
-def RM5c9 : Coeff10 := ![(3 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ)]
+@[expose] public def RM5c0 : Coeff10 := ![0, 0, (3 / 22 : ℚ), 0, 0, (-3 / 22 : ℚ), (-3 / 22 : ℚ), 0, 0, (3 / 22 : ℚ)]
+@[expose] public def RM5c1 : Coeff10 := ![(3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 11 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 11 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), 0, (3 / 22 : ℚ)]
+@[expose] public def RM5c2 : Coeff10 := ![0, 0, 0, 0, 0, 0, (-3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (-3 / 22 : ℚ)]
+@[expose] public def RM5c3 : Coeff10 := ![(3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), 0, (3 / 11 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 11 : ℚ)]
+@[expose] public def RM5c4 : Coeff10 := ![0, 0, 0, (-3 / 22 : ℚ), 0, (3 / 22 : ℚ), 0, (3 / 22 : ℚ), 0, (-3 / 22 : ℚ)]
+@[expose] public def RM5c5 : Coeff10 := ![0, (1 / 11 : ℚ), (1 / 11 : ℚ), 0, (2 / 11 : ℚ), (3 / 11 : ℚ), (2 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ)]
+@[expose] public def RM5c6 : Coeff10 := ![(-1 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), 0]
+@[expose] public def RM5c7 : Coeff10 := ![(-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0]
+@[expose] public def RM5c8 : Coeff10 := ![(-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), 0, (1 / 11 : ℚ), (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ)]
+@[expose] public def RM5c9 : Coeff10 := ![(3 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ)]
 
 /-- Bounded column accessor for RM source row 5. -/
-def RMrow5 (j : Fin 10) : PolyQ :=
+@[expose] public def RMrow5 (j : Fin 10) : PolyQ :=
   match j.val with
   | 0 => of10 RM5c0
   | 1 => of10 RM5c1
@@ -238,31 +240,31 @@ def RMrow5 (j : Fin 10) : PolyQ :=
   | 9 => of10 RM5c9
   | _ => 0
 
-theorem RMrow5_0 : RMrow5 (0 : Fin 10) = of10 RM5c0 := rfl
-theorem RMrow5_1 : RMrow5 (1 : Fin 10) = of10 RM5c1 := rfl
-theorem RMrow5_2 : RMrow5 (2 : Fin 10) = of10 RM5c2 := rfl
-theorem RMrow5_3 : RMrow5 (3 : Fin 10) = of10 RM5c3 := rfl
-theorem RMrow5_4 : RMrow5 (4 : Fin 10) = of10 RM5c4 := rfl
-theorem RMrow5_5 : RMrow5 (5 : Fin 10) = of10 RM5c5 := rfl
-theorem RMrow5_6 : RMrow5 (6 : Fin 10) = of10 RM5c6 := rfl
-theorem RMrow5_7 : RMrow5 (7 : Fin 10) = of10 RM5c7 := rfl
-theorem RMrow5_8 : RMrow5 (8 : Fin 10) = of10 RM5c8 := rfl
-theorem RMrow5_9 : RMrow5 (9 : Fin 10) = of10 RM5c9 := rfl
+public theorem RMrow5_0 : RMrow5 (0 : Fin 10) = of10 RM5c0 := rfl
+public theorem RMrow5_1 : RMrow5 (1 : Fin 10) = of10 RM5c1 := rfl
+public theorem RMrow5_2 : RMrow5 (2 : Fin 10) = of10 RM5c2 := rfl
+public theorem RMrow5_3 : RMrow5 (3 : Fin 10) = of10 RM5c3 := rfl
+public theorem RMrow5_4 : RMrow5 (4 : Fin 10) = of10 RM5c4 := rfl
+public theorem RMrow5_5 : RMrow5 (5 : Fin 10) = of10 RM5c5 := rfl
+public theorem RMrow5_6 : RMrow5 (6 : Fin 10) = of10 RM5c6 := rfl
+public theorem RMrow5_7 : RMrow5 (7 : Fin 10) = of10 RM5c7 := rfl
+public theorem RMrow5_8 : RMrow5 (8 : Fin 10) = of10 RM5c8 := rfl
+public theorem RMrow5_9 : RMrow5 (9 : Fin 10) = of10 RM5c9 := rfl
 
 /-! ### RM source row 6: coefficients + row accessor -/
-def RM6c0 : Coeff10 := ![0, (3 / 22 : ℚ), (-3 / 22 : ℚ), 0, 0, 0, 0, (-3 / 22 : ℚ), (3 / 22 : ℚ), 0]
-def RM6c1 : Coeff10 := ![0, (3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ), (3 / 22 : ℚ), 0, 0, 0, 0, 0]
-def RM6c2 : Coeff10 := ![(3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), 0, (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 11 : ℚ), (3 / 11 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ)]
-def RM6c3 : Coeff10 := ![(3 / 22 : ℚ), 0, (3 / 22 : ℚ), (3 / 11 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 11 : ℚ), (3 / 22 : ℚ)]
-def RM6c4 : Coeff10 := ![0, (-3 / 22 : ℚ), 0, 0, (3 / 22 : ℚ), 0, (3 / 22 : ℚ), 0, 0, (-3 / 22 : ℚ)]
-def RM6c5 : Coeff10 := ![(-1 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), 0]
-def RM6c6 : Coeff10 := ![(-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ)]
-def RM6c7 : Coeff10 := ![(-1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ), 0]
-def RM6c8 : Coeff10 := ![0, 0, 0, (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ)]
-def RM6c9 : Coeff10 := ![(2 / 11 : ℚ), (1 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ), 0, (1 / 11 : ℚ), (2 / 11 : ℚ), 0, (3 / 11 : ℚ)]
+@[expose] public def RM6c0 : Coeff10 := ![0, (3 / 22 : ℚ), (-3 / 22 : ℚ), 0, 0, 0, 0, (-3 / 22 : ℚ), (3 / 22 : ℚ), 0]
+@[expose] public def RM6c1 : Coeff10 := ![0, (3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ), (3 / 22 : ℚ), 0, 0, 0, 0, 0]
+@[expose] public def RM6c2 : Coeff10 := ![(3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), 0, (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 11 : ℚ), (3 / 11 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ)]
+@[expose] public def RM6c3 : Coeff10 := ![(3 / 22 : ℚ), 0, (3 / 22 : ℚ), (3 / 11 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 11 : ℚ), (3 / 22 : ℚ)]
+@[expose] public def RM6c4 : Coeff10 := ![0, (-3 / 22 : ℚ), 0, 0, (3 / 22 : ℚ), 0, (3 / 22 : ℚ), 0, 0, (-3 / 22 : ℚ)]
+@[expose] public def RM6c5 : Coeff10 := ![(-1 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), 0]
+@[expose] public def RM6c6 : Coeff10 := ![(-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (-1 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ)]
+@[expose] public def RM6c7 : Coeff10 := ![(-1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ), 0]
+@[expose] public def RM6c8 : Coeff10 := ![0, 0, 0, (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ)]
+@[expose] public def RM6c9 : Coeff10 := ![(2 / 11 : ℚ), (1 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ), 0, (1 / 11 : ℚ), (2 / 11 : ℚ), 0, (3 / 11 : ℚ)]
 
 /-- Bounded column accessor for RM source row 6. -/
-def RMrow6 (j : Fin 10) : PolyQ :=
+@[expose] public def RMrow6 (j : Fin 10) : PolyQ :=
   match j.val with
   | 0 => of10 RM6c0
   | 1 => of10 RM6c1
@@ -276,31 +278,31 @@ def RMrow6 (j : Fin 10) : PolyQ :=
   | 9 => of10 RM6c9
   | _ => 0
 
-theorem RMrow6_0 : RMrow6 (0 : Fin 10) = of10 RM6c0 := rfl
-theorem RMrow6_1 : RMrow6 (1 : Fin 10) = of10 RM6c1 := rfl
-theorem RMrow6_2 : RMrow6 (2 : Fin 10) = of10 RM6c2 := rfl
-theorem RMrow6_3 : RMrow6 (3 : Fin 10) = of10 RM6c3 := rfl
-theorem RMrow6_4 : RMrow6 (4 : Fin 10) = of10 RM6c4 := rfl
-theorem RMrow6_5 : RMrow6 (5 : Fin 10) = of10 RM6c5 := rfl
-theorem RMrow6_6 : RMrow6 (6 : Fin 10) = of10 RM6c6 := rfl
-theorem RMrow6_7 : RMrow6 (7 : Fin 10) = of10 RM6c7 := rfl
-theorem RMrow6_8 : RMrow6 (8 : Fin 10) = of10 RM6c8 := rfl
-theorem RMrow6_9 : RMrow6 (9 : Fin 10) = of10 RM6c9 := rfl
+public theorem RMrow6_0 : RMrow6 (0 : Fin 10) = of10 RM6c0 := rfl
+public theorem RMrow6_1 : RMrow6 (1 : Fin 10) = of10 RM6c1 := rfl
+public theorem RMrow6_2 : RMrow6 (2 : Fin 10) = of10 RM6c2 := rfl
+public theorem RMrow6_3 : RMrow6 (3 : Fin 10) = of10 RM6c3 := rfl
+public theorem RMrow6_4 : RMrow6 (4 : Fin 10) = of10 RM6c4 := rfl
+public theorem RMrow6_5 : RMrow6 (5 : Fin 10) = of10 RM6c5 := rfl
+public theorem RMrow6_6 : RMrow6 (6 : Fin 10) = of10 RM6c6 := rfl
+public theorem RMrow6_7 : RMrow6 (7 : Fin 10) = of10 RM6c7 := rfl
+public theorem RMrow6_8 : RMrow6 (8 : Fin 10) = of10 RM6c8 := rfl
+public theorem RMrow6_9 : RMrow6 (9 : Fin 10) = of10 RM6c9 := rfl
 
 /-! ### RM source row 7: coefficients + row accessor -/
-def RM7c0 : Coeff10 := ![0, 0, (3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ), (3 / 22 : ℚ), 0, 0, 0, 0]
-def RM7c1 : Coeff10 := ![(-3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ), 0, (-3 / 22 : ℚ), (-3 / 11 : ℚ), (-3 / 22 : ℚ), (-3 / 11 : ℚ), (-3 / 22 : ℚ)]
-def RM7c2 : Coeff10 := ![(-3 / 22 : ℚ), 0, (-3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 11 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 11 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ)]
-def RM7c3 : Coeff10 := ![0, (-3 / 22 : ℚ), 0, 0, (3 / 22 : ℚ), (3 / 22 : ℚ), 0, 0, (-3 / 22 : ℚ), 0]
-def RM7c4 : Coeff10 := ![0, (-3 / 22 : ℚ), (3 / 22 : ℚ), 0, 0, 0, (3 / 22 : ℚ), (-3 / 22 : ℚ), 0, 0]
-def RM7c5 : Coeff10 := ![(-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0]
-def RM7c6 : Coeff10 := ![(-1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ), 0]
-def RM7c7 : Coeff10 := ![(-2 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ)]
-def RM7c8 : Coeff10 := ![0, (1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ)]
-def RM7c9 : Coeff10 := ![0, (2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ)]
+@[expose] public def RM7c0 : Coeff10 := ![0, 0, (3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ), (3 / 22 : ℚ), 0, 0, 0, 0]
+@[expose] public def RM7c1 : Coeff10 := ![(-3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ), 0, (-3 / 22 : ℚ), (-3 / 11 : ℚ), (-3 / 22 : ℚ), (-3 / 11 : ℚ), (-3 / 22 : ℚ)]
+@[expose] public def RM7c2 : Coeff10 := ![(-3 / 22 : ℚ), 0, (-3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 11 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 11 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ)]
+@[expose] public def RM7c3 : Coeff10 := ![0, (-3 / 22 : ℚ), 0, 0, (3 / 22 : ℚ), (3 / 22 : ℚ), 0, 0, (-3 / 22 : ℚ), 0]
+@[expose] public def RM7c4 : Coeff10 := ![0, (-3 / 22 : ℚ), (3 / 22 : ℚ), 0, 0, 0, (3 / 22 : ℚ), (-3 / 22 : ℚ), 0, 0]
+@[expose] public def RM7c5 : Coeff10 := ![(-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0]
+@[expose] public def RM7c6 : Coeff10 := ![(-1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ), 0]
+@[expose] public def RM7c7 : Coeff10 := ![(-2 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ)]
+@[expose] public def RM7c8 : Coeff10 := ![0, (1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ)]
+@[expose] public def RM7c9 : Coeff10 := ![0, (2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ)]
 
 /-- Bounded column accessor for RM source row 7. -/
-def RMrow7 (j : Fin 10) : PolyQ :=
+@[expose] public def RMrow7 (j : Fin 10) : PolyQ :=
   match j.val with
   | 0 => of10 RM7c0
   | 1 => of10 RM7c1
@@ -314,31 +316,31 @@ def RMrow7 (j : Fin 10) : PolyQ :=
   | 9 => of10 RM7c9
   | _ => 0
 
-theorem RMrow7_0 : RMrow7 (0 : Fin 10) = of10 RM7c0 := rfl
-theorem RMrow7_1 : RMrow7 (1 : Fin 10) = of10 RM7c1 := rfl
-theorem RMrow7_2 : RMrow7 (2 : Fin 10) = of10 RM7c2 := rfl
-theorem RMrow7_3 : RMrow7 (3 : Fin 10) = of10 RM7c3 := rfl
-theorem RMrow7_4 : RMrow7 (4 : Fin 10) = of10 RM7c4 := rfl
-theorem RMrow7_5 : RMrow7 (5 : Fin 10) = of10 RM7c5 := rfl
-theorem RMrow7_6 : RMrow7 (6 : Fin 10) = of10 RM7c6 := rfl
-theorem RMrow7_7 : RMrow7 (7 : Fin 10) = of10 RM7c7 := rfl
-theorem RMrow7_8 : RMrow7 (8 : Fin 10) = of10 RM7c8 := rfl
-theorem RMrow7_9 : RMrow7 (9 : Fin 10) = of10 RM7c9 := rfl
+public theorem RMrow7_0 : RMrow7 (0 : Fin 10) = of10 RM7c0 := rfl
+public theorem RMrow7_1 : RMrow7 (1 : Fin 10) = of10 RM7c1 := rfl
+public theorem RMrow7_2 : RMrow7 (2 : Fin 10) = of10 RM7c2 := rfl
+public theorem RMrow7_3 : RMrow7 (3 : Fin 10) = of10 RM7c3 := rfl
+public theorem RMrow7_4 : RMrow7 (4 : Fin 10) = of10 RM7c4 := rfl
+public theorem RMrow7_5 : RMrow7 (5 : Fin 10) = of10 RM7c5 := rfl
+public theorem RMrow7_6 : RMrow7 (6 : Fin 10) = of10 RM7c6 := rfl
+public theorem RMrow7_7 : RMrow7 (7 : Fin 10) = of10 RM7c7 := rfl
+public theorem RMrow7_8 : RMrow7 (8 : Fin 10) = of10 RM7c8 := rfl
+public theorem RMrow7_9 : RMrow7 (9 : Fin 10) = of10 RM7c9 := rfl
 
 /-! ### RM source row 8: coefficients + row accessor -/
-def RM8c0 : Coeff10 := ![0, (-3 / 22 : ℚ), 0, (-3 / 22 : ℚ), 0, 0, (3 / 22 : ℚ), 0, 0, (3 / 22 : ℚ)]
-def RM8c1 : Coeff10 := ![0, 0, (-3 / 22 : ℚ), (3 / 22 : ℚ), 0, 0, 0, 0, (3 / 22 : ℚ), (-3 / 22 : ℚ)]
-def RM8c2 : Coeff10 := ![0, (-3 / 22 : ℚ), 0, (3 / 22 : ℚ), 0, (3 / 22 : ℚ), 0, (-3 / 22 : ℚ), 0, 0]
-def RM8c3 : Coeff10 := ![(3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), 0, (3 / 11 : ℚ), (3 / 11 : ℚ)]
-def RM8c4 : Coeff10 := ![(-3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 11 : ℚ), (-3 / 11 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ), 0, (-3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ)]
-def RM8c5 : Coeff10 := ![(-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), 0, (1 / 11 : ℚ), (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ)]
-def RM8c6 : Coeff10 := ![0, 0, 0, (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ)]
-def RM8c7 : Coeff10 := ![0, (1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ)]
-def RM8c8 : Coeff10 := ![(-1 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, (1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), 0, (2 / 11 : ℚ)]
-def RM8c9 : Coeff10 := ![(-2 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ)]
+@[expose] public def RM8c0 : Coeff10 := ![0, (-3 / 22 : ℚ), 0, (-3 / 22 : ℚ), 0, 0, (3 / 22 : ℚ), 0, 0, (3 / 22 : ℚ)]
+@[expose] public def RM8c1 : Coeff10 := ![0, 0, (-3 / 22 : ℚ), (3 / 22 : ℚ), 0, 0, 0, 0, (3 / 22 : ℚ), (-3 / 22 : ℚ)]
+@[expose] public def RM8c2 : Coeff10 := ![0, (-3 / 22 : ℚ), 0, (3 / 22 : ℚ), 0, (3 / 22 : ℚ), 0, (-3 / 22 : ℚ), 0, 0]
+@[expose] public def RM8c3 : Coeff10 := ![(3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), 0, (3 / 11 : ℚ), (3 / 11 : ℚ)]
+@[expose] public def RM8c4 : Coeff10 := ![(-3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 11 : ℚ), (-3 / 11 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ), 0, (-3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ)]
+@[expose] public def RM8c5 : Coeff10 := ![(-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), 0, (1 / 11 : ℚ), (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ)]
+@[expose] public def RM8c6 : Coeff10 := ![0, 0, 0, (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ)]
+@[expose] public def RM8c7 : Coeff10 := ![0, (1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ)]
+@[expose] public def RM8c8 : Coeff10 := ![(-1 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, (1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), 0, (2 / 11 : ℚ)]
+@[expose] public def RM8c9 : Coeff10 := ![(-2 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ)]
 
 /-- Bounded column accessor for RM source row 8. -/
-def RMrow8 (j : Fin 10) : PolyQ :=
+@[expose] public def RMrow8 (j : Fin 10) : PolyQ :=
   match j.val with
   | 0 => of10 RM8c0
   | 1 => of10 RM8c1
@@ -352,31 +354,31 @@ def RMrow8 (j : Fin 10) : PolyQ :=
   | 9 => of10 RM8c9
   | _ => 0
 
-theorem RMrow8_0 : RMrow8 (0 : Fin 10) = of10 RM8c0 := rfl
-theorem RMrow8_1 : RMrow8 (1 : Fin 10) = of10 RM8c1 := rfl
-theorem RMrow8_2 : RMrow8 (2 : Fin 10) = of10 RM8c2 := rfl
-theorem RMrow8_3 : RMrow8 (3 : Fin 10) = of10 RM8c3 := rfl
-theorem RMrow8_4 : RMrow8 (4 : Fin 10) = of10 RM8c4 := rfl
-theorem RMrow8_5 : RMrow8 (5 : Fin 10) = of10 RM8c5 := rfl
-theorem RMrow8_6 : RMrow8 (6 : Fin 10) = of10 RM8c6 := rfl
-theorem RMrow8_7 : RMrow8 (7 : Fin 10) = of10 RM8c7 := rfl
-theorem RMrow8_8 : RMrow8 (8 : Fin 10) = of10 RM8c8 := rfl
-theorem RMrow8_9 : RMrow8 (9 : Fin 10) = of10 RM8c9 := rfl
+public theorem RMrow8_0 : RMrow8 (0 : Fin 10) = of10 RM8c0 := rfl
+public theorem RMrow8_1 : RMrow8 (1 : Fin 10) = of10 RM8c1 := rfl
+public theorem RMrow8_2 : RMrow8 (2 : Fin 10) = of10 RM8c2 := rfl
+public theorem RMrow8_3 : RMrow8 (3 : Fin 10) = of10 RM8c3 := rfl
+public theorem RMrow8_4 : RMrow8 (4 : Fin 10) = of10 RM8c4 := rfl
+public theorem RMrow8_5 : RMrow8 (5 : Fin 10) = of10 RM8c5 := rfl
+public theorem RMrow8_6 : RMrow8 (6 : Fin 10) = of10 RM8c6 := rfl
+public theorem RMrow8_7 : RMrow8 (7 : Fin 10) = of10 RM8c7 := rfl
+public theorem RMrow8_8 : RMrow8 (8 : Fin 10) = of10 RM8c8 := rfl
+public theorem RMrow8_9 : RMrow8 (9 : Fin 10) = of10 RM8c9 := rfl
 
 /-! ### RM source row 9: coefficients + row accessor -/
-def RM9c0 : Coeff10 := ![0, 0, (3 / 22 : ℚ), 0, (-3 / 22 : ℚ), 0, (-3 / 22 : ℚ), 0, (3 / 22 : ℚ), 0]
-def RM9c1 : Coeff10 := ![0, (-3 / 22 : ℚ), 0, 0, 0, (-3 / 22 : ℚ), 0, 0, (3 / 22 : ℚ), (3 / 22 : ℚ)]
-def RM9c2 : Coeff10 := ![(3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), 0, (3 / 11 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 11 : ℚ)]
-def RM9c3 : Coeff10 := ![(3 / 22 : ℚ), (3 / 22 : ℚ), 0, (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 11 : ℚ), (3 / 22 : ℚ), (3 / 11 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ)]
-def RM9c4 : Coeff10 := ![0, 0, 0, 0, (3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ), (3 / 22 : ℚ), 0, 0]
-def RM9c5 : Coeff10 := ![(3 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ)]
-def RM9c6 : Coeff10 := ![(2 / 11 : ℚ), (1 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ), 0, (1 / 11 : ℚ), (2 / 11 : ℚ), 0, (3 / 11 : ℚ)]
-def RM9c7 : Coeff10 := ![0, (2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ)]
-def RM9c8 : Coeff10 := ![(-2 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ)]
-def RM9c9 : Coeff10 := ![0, (2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), 0, 0]
+@[expose] public def RM9c0 : Coeff10 := ![0, 0, (3 / 22 : ℚ), 0, (-3 / 22 : ℚ), 0, (-3 / 22 : ℚ), 0, (3 / 22 : ℚ), 0]
+@[expose] public def RM9c1 : Coeff10 := ![0, (-3 / 22 : ℚ), 0, 0, 0, (-3 / 22 : ℚ), 0, 0, (3 / 22 : ℚ), (3 / 22 : ℚ)]
+@[expose] public def RM9c2 : Coeff10 := ![(3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), 0, (3 / 11 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 11 : ℚ)]
+@[expose] public def RM9c3 : Coeff10 := ![(3 / 22 : ℚ), (3 / 22 : ℚ), 0, (3 / 22 : ℚ), (3 / 22 : ℚ), (3 / 11 : ℚ), (3 / 22 : ℚ), (3 / 11 : ℚ), (3 / 22 : ℚ), (3 / 22 : ℚ)]
+@[expose] public def RM9c4 : Coeff10 := ![0, 0, 0, 0, (3 / 22 : ℚ), (-3 / 22 : ℚ), (-3 / 22 : ℚ), (3 / 22 : ℚ), 0, 0]
+@[expose] public def RM9c5 : Coeff10 := ![(3 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ)]
+@[expose] public def RM9c6 : Coeff10 := ![(2 / 11 : ℚ), (1 / 11 : ℚ), 0, (1 / 11 : ℚ), (1 / 11 : ℚ), 0, (1 / 11 : ℚ), (2 / 11 : ℚ), 0, (3 / 11 : ℚ)]
+@[expose] public def RM9c7 : Coeff10 := ![0, (2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ)]
+@[expose] public def RM9c8 : Coeff10 := ![(-2 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ), 0, 0, (-1 / 11 : ℚ), (-1 / 11 : ℚ)]
+@[expose] public def RM9c9 : Coeff10 := ![0, (2 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), 0, 0]
 
 /-- Bounded column accessor for RM source row 9. -/
-def RMrow9 (j : Fin 10) : PolyQ :=
+@[expose] public def RMrow9 (j : Fin 10) : PolyQ :=
   match j.val with
   | 0 => of10 RM9c0
   | 1 => of10 RM9c1
@@ -390,19 +392,19 @@ def RMrow9 (j : Fin 10) : PolyQ :=
   | 9 => of10 RM9c9
   | _ => 0
 
-theorem RMrow9_0 : RMrow9 (0 : Fin 10) = of10 RM9c0 := rfl
-theorem RMrow9_1 : RMrow9 (1 : Fin 10) = of10 RM9c1 := rfl
-theorem RMrow9_2 : RMrow9 (2 : Fin 10) = of10 RM9c2 := rfl
-theorem RMrow9_3 : RMrow9 (3 : Fin 10) = of10 RM9c3 := rfl
-theorem RMrow9_4 : RMrow9 (4 : Fin 10) = of10 RM9c4 := rfl
-theorem RMrow9_5 : RMrow9 (5 : Fin 10) = of10 RM9c5 := rfl
-theorem RMrow9_6 : RMrow9 (6 : Fin 10) = of10 RM9c6 := rfl
-theorem RMrow9_7 : RMrow9 (7 : Fin 10) = of10 RM9c7 := rfl
-theorem RMrow9_8 : RMrow9 (8 : Fin 10) = of10 RM9c8 := rfl
-theorem RMrow9_9 : RMrow9 (9 : Fin 10) = of10 RM9c9 := rfl
+public theorem RMrow9_0 : RMrow9 (0 : Fin 10) = of10 RM9c0 := rfl
+public theorem RMrow9_1 : RMrow9 (1 : Fin 10) = of10 RM9c1 := rfl
+public theorem RMrow9_2 : RMrow9 (2 : Fin 10) = of10 RM9c2 := rfl
+public theorem RMrow9_3 : RMrow9 (3 : Fin 10) = of10 RM9c3 := rfl
+public theorem RMrow9_4 : RMrow9 (4 : Fin 10) = of10 RM9c4 := rfl
+public theorem RMrow9_5 : RMrow9 (5 : Fin 10) = of10 RM9c5 := rfl
+public theorem RMrow9_6 : RMrow9 (6 : Fin 10) = of10 RM9c6 := rfl
+public theorem RMrow9_7 : RMrow9 (7 : Fin 10) = of10 RM9c7 := rfl
+public theorem RMrow9_8 : RMrow9 (8 : Fin 10) = of10 RM9c8 := rfl
+public theorem RMrow9_9 : RMrow9 (9 : Fin 10) = of10 RM9c9 := rfl
 
 /-- Canonical 10×10 RM: outer-row dispatch to RMrow*. -/
-def RM_poly : Matrix (Fin 10) (Fin 10) PolyQ :=
+@[expose] public def RM_poly : Matrix (Fin 10) (Fin 10) PolyQ :=
   Matrix.of fun i j =>
     match i.val with
     | 0 => RMrow0 j
@@ -419,43 +421,43 @@ def RM_poly : Matrix (Fin 10) (Fin 10) PolyQ :=
 
 /-! ### Row-selection lemmas (use these; do not simp [RM_poly]) -/
 
-theorem RM_poly_row0 (j : Fin 10) :
+public theorem RM_poly_row0 (j : Fin 10) :
     RM_poly (0 : Fin 10) j = RMrow0 j := rfl
 
 
-theorem RM_poly_row1 (j : Fin 10) :
+public theorem RM_poly_row1 (j : Fin 10) :
     RM_poly (1 : Fin 10) j = RMrow1 j := rfl
 
 
-theorem RM_poly_row2 (j : Fin 10) :
+public theorem RM_poly_row2 (j : Fin 10) :
     RM_poly (2 : Fin 10) j = RMrow2 j := rfl
 
 
-theorem RM_poly_row3 (j : Fin 10) :
+public theorem RM_poly_row3 (j : Fin 10) :
     RM_poly (3 : Fin 10) j = RMrow3 j := rfl
 
 
-theorem RM_poly_row4 (j : Fin 10) :
+public theorem RM_poly_row4 (j : Fin 10) :
     RM_poly (4 : Fin 10) j = RMrow4 j := rfl
 
 
-theorem RM_poly_row5 (j : Fin 10) :
+public theorem RM_poly_row5 (j : Fin 10) :
     RM_poly (5 : Fin 10) j = RMrow5 j := rfl
 
 
-theorem RM_poly_row6 (j : Fin 10) :
+public theorem RM_poly_row6 (j : Fin 10) :
     RM_poly (6 : Fin 10) j = RMrow6 j := rfl
 
 
-theorem RM_poly_row7 (j : Fin 10) :
+public theorem RM_poly_row7 (j : Fin 10) :
     RM_poly (7 : Fin 10) j = RMrow7 j := rfl
 
 
-theorem RM_poly_row8 (j : Fin 10) :
+public theorem RM_poly_row8 (j : Fin 10) :
     RM_poly (8 : Fin 10) j = RMrow8 j := rfl
 
 
-theorem RM_poly_row9 (j : Fin 10) :
+public theorem RM_poly_row9 (j : Fin 10) :
     RM_poly (9 : Fin 10) j = RMrow9 j := rfl
 
 end D12PolynomialData

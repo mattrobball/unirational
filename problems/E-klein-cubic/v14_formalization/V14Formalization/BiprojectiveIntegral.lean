@@ -70,7 +70,7 @@ def BiprojectiveSpace.overlapEvalOne
     (ProjectiveSpace.overlapEvalOne n k j j')
     (fun _ _ ↦ Commute.all _ _)
 
-public instance BiprojectiveSpace.overlapRingNontrivial
+@[expose] public instance BiprojectiveSpace.overlapRingNontrivial
     (m n : ℕ) (k : Type u) [Field k]
     (i i' : Fin (m + 1)) (j j' : Fin (n + 1)) :
     Nontrivial (BiprojectiveSpace.OverlapRing m n k i i' j j') := by
@@ -130,7 +130,7 @@ public theorem BiprojectiveSpace.standardChartRanges_pairwise
   exact hx
 
 /-- Biprojective space over a field is integral. -/
-public instance BiprojectiveSpace.isIntegral
+@[expose] public instance BiprojectiveSpace.isIntegral
     (m n : ℕ) (k : Type u) [Field k] :
     IsIntegral (BiprojectiveSpace m n k) := by
   let U := BiprojectiveSpace.standardOpenCover m n k

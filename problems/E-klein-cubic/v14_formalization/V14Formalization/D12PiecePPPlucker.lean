@@ -2,16 +2,18 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12PiecePPCoeff0_0
-import V14Formalization.D12PiecePPCoeff0_1
-import V14Formalization.D12PiecePPCoeff0_2
-import V14Formalization.D12PiecePPCoeff1_0
-import V14Formalization.D12PiecePPCoeff1_1
-import V14Formalization.D12PiecePPCoeff1_2
-import V14Formalization.D12PiecePPCoeff2_0
-import V14Formalization.D12PiecePPCoeff2_1
-import V14Formalization.D12PiecePPCoeff2_2
-import V14Formalization.D12PiecePPDeterminant
+module
+
+public import V14Formalization.D12PiecePPCoeff0_0
+public import V14Formalization.D12PiecePPCoeff0_1
+public import V14Formalization.D12PiecePPCoeff0_2
+public import V14Formalization.D12PiecePPCoeff1_0
+public import V14Formalization.D12PiecePPCoeff1_1
+public import V14Formalization.D12PiecePPCoeff1_2
+public import V14Formalization.D12PiecePPCoeff2_0
+public import V14Formalization.D12PiecePPCoeff2_1
+public import V14Formalization.D12PiecePPCoeff2_2
+public import V14Formalization.D12PiecePPDeterminant
 
 /-! # The normalized Plucker certificate for the `(+,+)` character plane. -/
 
@@ -23,7 +25,7 @@ namespace V14Formalization.D12PiecePPPlucker
 
 open D12Certificate D12CyclotomicVec D12PiecePPPluckerBase
 
-abbrev C : Matrix (Fin 3) (Fin 3) WeilRep.K := evalMatrix CVec
+public abbrev C : Matrix (Fin 3) (Fin 3) WeilRep.K := evalMatrix CVec
 
 theorem mulVec_fin2 (M : Matrix (Fin 15) (Fin 2) WeilRep.K)
     (t : Fin 2 → WeilRep.K) (i : Fin 15) :
@@ -138,7 +140,7 @@ theorem plucker_row2 (t : Fin 2 → WeilRep.K) :
         D12PiecePPCoeff2_1.eval_coefficient,
         D12PiecePPCoeff2_2.eval_coefficient]
 
-theorem coefficient_identity (t : Fin 2 → WeilRep.K) :
+public theorem coefficient_identity (t : Fin 2 → WeilRep.K) :
     C.mulVec (squareMonomials t) =
       ![pluckerValue ((evalMatrix BKVec).mulVec t) 1,
         pluckerValue ((evalMatrix BKVec).mulVec t) 2,
@@ -161,7 +163,7 @@ theorem coefficient_identity (t : Fin 2 → WeilRep.K) :
     simp [C, Matrix.mulVec, dotProduct, squareMonomials, evalMatrix, CVec, CRow2,
       Fin.sum_univ_three]
 
-theorem det_ne_zero : C.det ≠ 0 :=
+public theorem det_ne_zero : C.det ≠ 0 :=
   D12PiecePPDeterminant.det_ne_zero
 
 end V14Formalization.D12PiecePPPlucker
