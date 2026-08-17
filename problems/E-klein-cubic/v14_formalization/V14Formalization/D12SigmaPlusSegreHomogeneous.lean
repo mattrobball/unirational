@@ -2,7 +2,9 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12SigmaPlusSegreCore
+module
+
+public import V14Formalization.D12SigmaPlusSegreCore
 
 noncomputable section
 
@@ -10,7 +12,7 @@ open MvPolynomial
 
 namespace V14Formalization.D12SigmaPlusSegreCore
 
-theorem Fplus_isHomogeneous : Fplus.IsHomogeneous 3 := by
+public theorem Fplus_isHomogeneous : Fplus.IsHomogeneous 3 := by
   unfold Fplus
   repeat' apply IsHomogeneous.add
   · exact ((isHomogeneous_X Ki 0).pow 3).C_mul _

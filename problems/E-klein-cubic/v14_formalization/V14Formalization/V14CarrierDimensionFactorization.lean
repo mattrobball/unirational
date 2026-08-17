@@ -1,4 +1,6 @@
-import V14Formalization.V14ProjectorEigenspaceFactorization
+module
+
+public import V14Formalization.V14ProjectorEigenspaceFactorization
 
 /-!
 # Dimension-based factorization through the sigma carriers
@@ -24,7 +26,7 @@ universe u
 variable {L : Type u} [Field L]
 
 /-- The direct-sum coordinate map for the plus and minus carrier matrices. -/
-def plusMinusCarrierMap
+public def plusMinusCarrierMap
     (Bplus : Matrix (Fin 15) (Fin 6) L)
     (Bminus : Matrix (Fin 15) (Fin 4) L) :
     ((Fin 6 → L) × (Fin 4 → L)) →ₗ[L] (Fin 15 → L) where
@@ -34,7 +36,7 @@ def plusMinusCarrierMap
 
 /-- Left inverses and opposite sigma eigenvalues make the combined carrier
 map injective. -/
-theorem plusMinusCarrierMap_injective [NeZero (2 : L)]
+public theorem plusMinusCarrierMap_injective [NeZero (2 : L)]
     (S : Matrix (Fin 15) (Fin 15) L)
     (Bplus : Matrix (Fin 15) (Fin 6) L)
     (Lplus : Matrix (Fin 6) (Fin 15) L)
@@ -84,7 +86,7 @@ theorem plusMinusCarrierMap_injective [NeZero (2 : L)]
   exact sub_eq_zero.mp this
 
 /-- The two carrier images exhaust the projector image by dimension. -/
-theorem exists_plusMinusCarrier_coordinates
+public theorem exists_plusMinusCarrier_coordinates
     [NeZero (2 : L)]
     (P S : Matrix (Fin 15) (Fin 15) L)
     (B : Matrix (Fin 15) (Fin 10) L)
@@ -142,7 +144,7 @@ theorem exists_plusMinusCarrier_coordinates
 
 /-- A nonzero sigma eigenvector in the projector image belongs to exactly one
 of the plus or minus carrier images. -/
-theorem exists_plus_or_minus_carrier_of_eigen
+public theorem exists_plus_or_minus_carrier_of_eigen
     [NeZero (2 : L)]
     (P S : Matrix (Fin 15) (Fin 15) L)
     (B : Matrix (Fin 15) (Fin 10) L)

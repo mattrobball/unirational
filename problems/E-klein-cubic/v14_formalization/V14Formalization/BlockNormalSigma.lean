@@ -1,4 +1,6 @@
-import V14Formalization.BlockSourceFieldMap
+module
+
+public import V14Formalization.BlockSourceFieldMap
 
 noncomputable section
 open CategoryTheory CategoryTheory.Limits
@@ -10,7 +12,7 @@ variable {Omega : Type u} [Field Omega]
   {G : Type u} [Group G]
   {V : Type u} [AddCommGroup V] [Module Omega V]
 
-theorem exceptionalPlusRowForm_one_succ
+public theorem exceptionalPlusRowForm_one_succ
     (r q : ℕ) (i : Fin (r + 1)) :
     exceptionalPlusRowForm (Omega := Omega) (r + 1) q
         (1 : Matrix (Fin ((r + 1) + 1)) (Fin ((r + 1) + 1)) Omega) i.succ /
@@ -22,7 +24,7 @@ theorem exceptionalPlusRowForm_one_succ
   unfold orderedResidualGenerator orderedResidualPlusIndex
   congr 2
 
-theorem exceptionalMinusRowForm_neg_one_succ
+public theorem exceptionalMinusRowForm_neg_one_succ
     (p r : ℕ) (i : Fin (r + 1)) :
     exceptionalMinusRowForm (Omega := Omega) p (r + 1)
         (-1 : Matrix (Fin ((r + 1) + 1)) (Fin ((r + 1) + 1)) Omega) i.succ /
@@ -120,7 +122,7 @@ theorem orderedResidualField_ringHom_ext_base_X
       exact hX i
   exact DFunLike.congr_fun hpoly P
 
-theorem orderedBlockSemidirectElement_sigma_right_eq_one
+public theorem orderedBlockSemidirectElement_sigma_right_eq_one
     (R : FaithfulLinearRep Omega G V) (sigma : G) (p q : ℕ)
     (bp : Basis (Fin (p + 1)) Omega (R.plusEigenspace sigma))
     (bm : Basis (Fin (q + 1)) Omega (R.minusEigenspace sigma)) :
@@ -151,7 +153,7 @@ theorem orderedBlockSemidirectElement_sigma_right_eq_one
   intro x
   exact DFunLike.congr_fun hmaps x
 
-theorem orderedPlusMinusEquivariantNormalDataOfCorrectedChartActual_sigma
+public theorem orderedPlusMinusEquivariantNormalDataOfCorrectedChartActual_sigma
     [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma) (p q : ℕ)

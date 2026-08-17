@@ -1,4 +1,6 @@
-import V14Formalization.BlockSemidirectConstructor
+module
+
+public import V14Formalization.BlockSemidirectConstructor
 
 noncomputable section
 open CategoryTheory CategoryTheory.Limits
@@ -397,7 +399,7 @@ theorem correctedChart_coefficient_minusRowForm
     rw [map_div₀]
     rw [mul_assoc, div_mul_cancel₀ _ ht]
 
-theorem correctedSource_coefficient_plusGenerator [CharZero Omega]
+public theorem correctedSource_coefficient_plusGenerator [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma) (n : centralizer sigma)
     (r q : ℕ)
@@ -705,7 +707,7 @@ theorem ambientSource_coefficient_minusGenerator_row [CharZero Omega]
     exact ((map_ne_zero _).2 hform) hrow
   exact div_div_same_denominator _ _ _ hplus
 
-theorem correctedSource_coefficient_minusGenerator [CharZero Omega]
+public theorem correctedSource_coefficient_minusGenerator [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma) (n : centralizer sigma)
     (p r : ℕ)
@@ -825,7 +827,7 @@ theorem div_div_mul_same_denominator {K : Type u} [Field K]
     ((a / t) / b) * t = a / b := by
   field_simp
 
-theorem correctedSource_parameter [CharZero Omega]
+public theorem correctedSource_parameter [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma) (n : centralizer sigma)
     (p q : ℕ)
@@ -930,7 +932,7 @@ theorem correctedSource_parameter [CharZero Omega]
   have hright := hscaled.trans (hproduct.trans hcancel)
   exact hleft.trans hright.symm
 
-theorem correctedSource_coefficient_generator [CharZero Omega]
+public theorem correctedSource_coefficient_generator [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma) (n : centralizer sigma)
     (p q : ℕ)
@@ -959,7 +961,7 @@ theorem correctedSource_coefficient_generator [CharZero Omega]
       exact correctedSource_coefficient_minusGenerator
         R sigma hsigma n p r bp bm j
 
-theorem correctedOrdered_sourceFieldMap [CharZero Omega]
+public theorem correctedOrdered_sourceFieldMap [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma) (p q : ℕ)
     (bp : Basis (Fin (p + 1)) Omega (R.plusEigenspace sigma))
@@ -977,7 +979,7 @@ theorem correctedOrdered_sourceFieldMap [CharZero Omega]
     (correctedSource_coefficient_generator R sigma hsigma n p q bp bm)
     (correctedSource_parameter R sigma hsigma n p q bp bm)
 
-noncomputable def orderedPlusMinusEquivariantNormalDataOfCorrectedChartActual
+@[expose] public noncomputable def orderedPlusMinusEquivariantNormalDataOfCorrectedChartActual
     [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma) (p q : ℕ)

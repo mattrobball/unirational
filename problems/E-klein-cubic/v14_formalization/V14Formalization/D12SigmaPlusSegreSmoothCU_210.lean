@@ -1,10 +1,12 @@
 /-
 Auto-generated Fplus chart Nullstellensatz identities.
 -/
-import V14Formalization.D12SigmaPlusSegreEval
-import V14Formalization.D12SigmaPlusSegreMul
-import V14Formalization.D12SigmaPlusSegrePartials
-import V14Formalization.D12SigmaPlusSegreBezoutData
+module
+
+public import V14Formalization.D12SigmaPlusSegreEval
+public import V14Formalization.D12SigmaPlusSegreMul
+public import V14Formalization.D12SigmaPlusSegrePartials
+public import V14Formalization.D12SigmaPlusSegreBezoutData
 
 noncomputable section
 open Matrix Polynomial
@@ -79,7 +81,7 @@ theorem CU_210_2_mul :
 
 theorem CU_210_3_mul : CU_3_c_110 = ofLadj CU_3_re_110 CU_3_im_110 := rfl
 
-def CU_coeff_210 : Ki := CU_0_c_010 * Fplus_dU_c_200 + CU_1_c_010 * Fplus_dV_c_200 + CU_2_c_010 * Fplus_dW_c_200 + CU_3_c_110
+@[expose] public def CU_coeff_210 : Ki := CU_0_c_010 * Fplus_dU_c_200 + CU_1_c_010 * Fplus_dV_c_200 + CU_2_c_010 * Fplus_dW_c_200 + CU_3_c_110
 
 theorem CU_coeff_210_sum :
     CU_coeff_210 = ofLadj (CU_210_0_pre + CU_210_1_pre + CU_210_2_pre + CU_3_re_110) (CU_210_0_pim + CU_210_1_pim + CU_210_2_pim + CU_3_im_110) := by
@@ -106,7 +108,7 @@ theorem CU_coeff_210_poly_im :
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
   try ring
-theorem CU_coeff_210_eq :
+public theorem CU_coeff_210_eq :
     CU_coeff_210 = (0 : Ki) := by
   rw [CU_coeff_210_sum, CU_coeff_210_poly_re,
     CU_coeff_210_poly_im, ofLadj_add_Phi11]

@@ -1,8 +1,10 @@
 /-
 Auto-generated Fplus / det(bilinearN) coefficient identities.
 -/
-import V14Formalization.D12SigmaPlusSegreEval
-import V14Formalization.D12SigmaPlusSegreMul
+module
+
+public import V14Formalization.D12SigmaPlusSegreEval
+public import V14Formalization.D12SigmaPlusSegreMul
 
 noncomputable section
 open Matrix Polynomial
@@ -1188,7 +1190,7 @@ theorem DC011_17_smul :
       ofLadj DC011_17_spre DC011_17_spim := by
   rw [DC011_17_mul, ofLadj_neg, DC011_17_spre_eq, DC011_17_spim_eq]
 
-def detCoeff_011 : Ki :=
+@[expose] public def detCoeff_011 : Ki :=
   N_entry_0_0 * N_entry_1_4 * N_entry_2_5 + N_entry_0_1 * N_entry_1_5 * N_entry_2_3 + N_entry_0_2 * N_entry_1_3 * N_entry_2_4 + (-(N_entry_0_0 * N_entry_1_5 * N_entry_2_4)) + (-(N_entry_0_1 * N_entry_1_3 * N_entry_2_5)) + (-(N_entry_0_2 * N_entry_1_4 * N_entry_2_3)) + N_entry_0_3 * N_entry_1_1 * N_entry_2_5 + N_entry_0_4 * N_entry_1_2 * N_entry_2_3 + N_entry_0_5 * N_entry_1_0 * N_entry_2_4 + (-(N_entry_0_3 * N_entry_1_2 * N_entry_2_4)) + (-(N_entry_0_4 * N_entry_1_0 * N_entry_2_5)) + (-(N_entry_0_5 * N_entry_1_1 * N_entry_2_3)) + N_entry_0_3 * N_entry_1_4 * N_entry_2_2 + N_entry_0_4 * N_entry_1_5 * N_entry_2_0 + N_entry_0_5 * N_entry_1_3 * N_entry_2_1 + (-(N_entry_0_3 * N_entry_1_5 * N_entry_2_1)) + (-(N_entry_0_4 * N_entry_1_3 * N_entry_2_2)) + (-(N_entry_0_5 * N_entry_1_4 * N_entry_2_0))
 
 theorem detCoeff_011_sum :
@@ -1616,7 +1618,7 @@ theorem detCoeff_011_sum_poly_im :
     _ = Fplus_im_011 + Phi11 * (DC011_g0_qim + DC011_g1_qim + DC011_g2_qim + DC011_g3_qim) := by
       ring
 
-theorem detCoeff_011_eq :
+public theorem detCoeff_011_eq :
     detCoeff_011 = ofLadj Fplus_re_011 Fplus_im_011 := by
   rw [detCoeff_011_sum, detCoeff_011_sum_poly_re,
     detCoeff_011_sum_poly_im, ofLadj_add_Phi11]

@@ -1,10 +1,12 @@
 /-
 Auto-generated Fplus chart Nullstellensatz identities.
 -/
-import V14Formalization.D12SigmaPlusSegreEval
-import V14Formalization.D12SigmaPlusSegreMul
-import V14Formalization.D12SigmaPlusSegrePartials
-import V14Formalization.D12SigmaPlusSegreBezoutData
+module
+
+public import V14Formalization.D12SigmaPlusSegreEval
+public import V14Formalization.D12SigmaPlusSegreMul
+public import V14Formalization.D12SigmaPlusSegrePartials
+public import V14Formalization.D12SigmaPlusSegreBezoutData
 
 noncomputable section
 open Matrix Polynomial
@@ -77,7 +79,7 @@ theorem CU_030_2_mul :
     CU_2_c_010 * Fplus_dW_c_020 = ofLadj CU_030_2_pre CU_030_2_pim := by
   rw [CU_2_c_010, Fplus_dW_c_020, ofLadj_mul, CU_030_2_pre_eq, CU_030_2_pim_eq]
 
-def CU_coeff_030 : Ki := CU_0_c_010 * Fplus_dU_c_020 + CU_1_c_010 * Fplus_dV_c_020 + CU_2_c_010 * Fplus_dW_c_020
+@[expose] public def CU_coeff_030 : Ki := CU_0_c_010 * Fplus_dU_c_020 + CU_1_c_010 * Fplus_dV_c_020 + CU_2_c_010 * Fplus_dW_c_020
 
 theorem CU_coeff_030_sum :
     CU_coeff_030 = ofLadj (CU_030_0_pre + CU_030_1_pre + CU_030_2_pre) (CU_030_0_pim + CU_030_1_pim + CU_030_2_pim) := by
@@ -104,7 +106,7 @@ theorem CU_coeff_030_poly_im :
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
   try ring
-theorem CU_coeff_030_eq :
+public theorem CU_coeff_030_eq :
     CU_coeff_030 = (0 : Ki) := by
   rw [CU_coeff_030_sum, CU_coeff_030_poly_re,
     CU_coeff_030_poly_im, ofLadj_add_Phi11]

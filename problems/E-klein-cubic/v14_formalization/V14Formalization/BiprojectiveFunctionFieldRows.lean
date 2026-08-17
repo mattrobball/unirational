@@ -1,5 +1,7 @@
-import V14Formalization.BiprojectiveActionFunctionField
-import V14Formalization.ProjectiveActionFunctionFieldRatio
+module
+
+public import V14Formalization.BiprojectiveActionFunctionField
+public import V14Formalization.ProjectiveActionFunctionFieldRatio
 
 noncomputable section
 
@@ -13,14 +15,14 @@ open AlgebraicGeometry BConicBundleMultisections Module
 universe u
 variable {Omega : Type u} [Field Omega]
 
-local instance projectiveActionOver_isIntegral_row
+public local instance projectiveActionOver_isIntegral_row
     {N : Type u} [Group N]
     (d : ℕ) (M : MatrixRepresentation (k := Omega) (G := N) d) :
     IsIntegral (projectiveActionOver d M).V.left := by
   change IsIntegral (ProjectiveSpace d Omega)
   infer_instance
 
-local instance plusProjectiveActionOver_isIntegral_row
+public local instance plusProjectiveActionOver_isIntegral_row
     {G : Type u} [Group G]
     {V : Type u} [AddCommGroup V] [Module Omega V]
     (R : FaithfulLinearRep Omega G V) (sigma : G) (d : ℕ)
@@ -29,7 +31,7 @@ local instance plusProjectiveActionOver_isIntegral_row
   change IsIntegral (ProjectiveSpace d Omega)
   infer_instance
 
-local instance minusProjectiveActionOver_isIntegral_row
+public local instance minusProjectiveActionOver_isIntegral_row
     {G : Type u} [Group G]
     {V : Type u} [AddCommGroup V] [Module Omega V]
     (R : FaithfulLinearRep Omega G V) (sigma : G) (d : ℕ)
@@ -38,7 +40,7 @@ local instance minusProjectiveActionOver_isIntegral_row
   change IsIntegral (ProjectiveSpace d Omega)
   infer_instance
 
-local instance plusMinusPullback_isIntegral_row
+public local instance plusMinusPullback_isIntegral_row
     {G : Type u} [Group G]
     {V : Type u} [AddCommGroup V] [Module Omega V]
     (R : FaithfulLinearRep Omega G V) (sigma : G) (p q : ℕ)
@@ -50,7 +52,7 @@ local instance plusMinusPullback_isIntegral_row
   change IsIntegral (BiprojectiveSpace p q Omega)
   infer_instance
 
-theorem chartDehomogenization_linearSubst_eq_row
+public theorem chartDehomogenization_linearSubst_eq_row
     (r : ℕ) (M : Matrix (Fin (r + 1)) (Fin (r + 1)) Omega)
     (i : Fin (r + 1)) :
     ProjectiveSpace.chartDehomogenization r Omega 0 (linearSubst r M i) =
@@ -63,21 +65,21 @@ theorem chartDehomogenization_linearSubst_eq_row
   intro j hj
   rfl
 
-def exceptionalPlusGenericVector (p q : ℕ) :
+@[expose] public def exceptionalPlusGenericVector (p q : ℕ) :
     Fin (p + 1) → LinearExceptionalFunctionField ((p + q) + 1) Omega :=
   Fin.cases 1 fun i =>
     algebraMap (MvPolynomial (Fin (((p + q) + 1) - 1)) Omega)
       (LinearExceptionalFunctionField ((p + q) + 1) Omega)
       (MvPolynomial.X ⟨i, by omega⟩)
 
-def exceptionalMinusGenericVector (p q : ℕ) :
+@[expose] public def exceptionalMinusGenericVector (p q : ℕ) :
     Fin (q + 1) → LinearExceptionalFunctionField ((p + q) + 1) Omega :=
   Fin.cases 1 fun j =>
     algebraMap (MvPolynomial (Fin (((p + q) + 1) - 1)) Omega)
       (LinearExceptionalFunctionField ((p + q) + 1) Omega)
       (MvPolynomial.X ⟨p + j, by omega⟩)
 
-def exceptionalPlusRowForm (p q : ℕ)
+@[expose] public def exceptionalPlusRowForm (p q : ℕ)
     (A : Matrix (Fin (p + 1)) (Fin (p + 1)) Omega)
     (i : Fin (p + 1)) :
     LinearExceptionalFunctionField ((p + q) + 1) Omega :=
@@ -85,7 +87,7 @@ def exceptionalPlusRowForm (p q : ℕ)
       (LinearExceptionalFunctionField ((p + q) + 1) Omega) (A i j) *
     exceptionalPlusGenericVector p q j
 
-def exceptionalMinusRowForm (p q : ℕ)
+@[expose] public def exceptionalMinusRowForm (p q : ℕ)
     (B : Matrix (Fin (q + 1)) (Fin (q + 1)) Omega)
     (i : Fin (q + 1)) :
     LinearExceptionalFunctionField ((p + q) + 1) Omega :=
@@ -93,7 +95,7 @@ def exceptionalMinusRowForm (p q : ℕ)
       (LinearExceptionalFunctionField ((p + q) + 1) Omega) (B i j) *
     exceptionalMinusGenericVector p q j
 
-def projectiveRowForm (r : ℕ)
+public def projectiveRowForm (r : ℕ)
     (A : Matrix (Fin ((r + 1) + 1)) (Fin ((r + 1) + 1)) Omega)
     (i : Fin ((r + 1) + 1)) :
     FractionRing (MvPolynomial (Fin (r + 1)) Omega) :=
@@ -103,7 +105,7 @@ def projectiveRowForm (r : ℕ)
       Fin.cases (1 : MvPolynomial (Fin (r + 1)) Omega)
         (fun k : Fin (r + 1) => MvPolynomial.X k) j)
 
-theorem projectiveActionOver_actionFunctionFieldMap_X_row
+public theorem projectiveActionOver_actionFunctionFieldMap_X_row
     {N : Type u} [Group N]
     (r : ℕ) (M : MatrixRepresentation (k := Omega) (G := N) (r + 1))
     (n : N) (i : Fin (r + 1)) :
@@ -301,7 +303,7 @@ theorem biprojectiveFunctionFieldEquiv_minusRowTerm
       (FractionRing (MvPolynomial (Fin (r + 1)) Omega)) c
   rw [hinput]
 
-theorem biprojectiveFunctionFieldEquiv_plusRowForm
+public theorem biprojectiveFunctionFieldEquiv_plusRowForm
     (r q : ℕ)
     (A : Matrix (Fin ((r + 1) + 1)) (Fin ((r + 1) + 1)) Omega)
     (i : Fin ((r + 1) + 1)) :
@@ -318,7 +320,7 @@ theorem biprojectiveFunctionFieldEquiv_plusRowForm
   intro j hj
   exact biprojectiveFunctionFieldEquiv_plusRowTerm r q (A i j) j
 
-theorem biprojectiveFunctionFieldEquiv_minusRowForm
+public theorem biprojectiveFunctionFieldEquiv_minusRowForm
     (p r : ℕ)
     (B : Matrix (Fin ((r + 1) + 1)) (Fin ((r + 1) + 1)) Omega)
     (i : Fin ((r + 1) + 1)) :
@@ -365,7 +367,7 @@ theorem plusMinusPullback_snd_functionFieldMap
 
 /-- The first pullback projection preserves division, stated across the typed
 carrier bridge so downstream proofs never unfold `projectiveActionOver`. -/
-theorem plusMinusPullback_fst_functionFieldMap_div
+public theorem plusMinusPullback_fst_functionFieldMap_div
     {G : Type u} [Group G]
     {V : Type u} [AddCommGroup V] [Module Omega V]
     (R : FaithfulLinearRep Omega G V) (sigma : G) (p q : ℕ)
@@ -382,7 +384,7 @@ theorem plusMinusPullback_fst_functionFieldMap_div
   exact map_div₀ (BiprojectiveSpace.fst p q Omega).functionFieldMap.hom x y
 
 /-- The analogous division bridge for the second projection. -/
-theorem plusMinusPullback_snd_functionFieldMap_div
+public theorem plusMinusPullback_snd_functionFieldMap_div
     {G : Type u} [Group G]
     {V : Type u} [AddCommGroup V] [Module Omega V]
     (R : FaithfulLinearRep Omega G V) (sigma : G) (p q : ℕ)
@@ -401,7 +403,7 @@ theorem plusMinusPullback_snd_functionFieldMap_div
 /-- On every genuine plus-factor affine generator, the diagonal exceptional
 action is the expected quotient of the corresponding transformed row by its
 zeroth row. -/
-theorem normalDivisorAction_functionFieldMap_plusGenerator
+public theorem normalDivisorAction_functionFieldMap_plusGenerator
     {G : Type u} [Group G]
     {V : Type u} [AddCommGroup V] [Module Omega V]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
@@ -459,7 +461,7 @@ theorem normalDivisorAction_functionFieldMap_plusGenerator
 
 /-- The corresponding row-ratio formula for every genuine minus-factor
 affine generator. -/
-theorem normalDivisorAction_functionFieldMap_minusGenerator
+public theorem normalDivisorAction_functionFieldMap_minusGenerator
     {G : Type u} [Group G]
     {V : Type u} [AddCommGroup V] [Module Omega V]
     (R : FaithfulLinearRep Omega G V) (sigma : G)

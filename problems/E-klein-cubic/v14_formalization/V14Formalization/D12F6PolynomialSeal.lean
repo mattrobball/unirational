@@ -2,7 +2,9 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12F6PolynomialData
+module
+
+public import V14Formalization.D12F6PolynomialData
 
 /-!
 # Evaluation of the six-dimensional D12 reflection seal
@@ -22,13 +24,13 @@ namespace V14Formalization.D12F6PolynomialSeal
 open D12PolynomialData D12PolynomialEvaluation
 open D12F6Semantic D12F6PolynomialData
 
-theorem Phi11_eq_WeilRep :
+public theorem Phi11_eq_WeilRep :
     D12PolynomialData.Phi11 = WeilRep.Φ11 := by
   symm
   simpa [WeilRep.Φ11, D12PolynomialData.Phi11] using
     (cyclotomic_prime (R := ℚ) 11)
 
-theorem evalPhi11_ζ :
+public theorem evalPhi11_ζ :
     evalPolyAt WeilRep.ζ D12PolynomialData.Phi11 = 0 := by
   change aeval WeilRep.ζ D12PolynomialData.Phi11 = 0
   rw [Phi11_eq_WeilRep]
@@ -127,7 +129,7 @@ theorem eval_F6_entry (i j : Fin 6) :
 
 /-- The generated six-dimensional reflection evaluates to the actual Weil
 reflection matrix. -/
-theorem evalMatrixK_F6_eq_actualF6 :
+public theorem evalMatrixK_F6_eq_actualF6 :
     evalMatrixK F6_poly = actualF6 := by
   apply Matrix.ext
   intro i j

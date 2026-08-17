@@ -1,10 +1,12 @@
 /-
 Auto-generated Fplus chart Nullstellensatz identities.
 -/
-import V14Formalization.D12SigmaPlusSegreEval
-import V14Formalization.D12SigmaPlusSegreMul
-import V14Formalization.D12SigmaPlusSegrePartials
-import V14Formalization.D12SigmaPlusSegreBezoutData
+module
+
+public import V14Formalization.D12SigmaPlusSegreEval
+public import V14Formalization.D12SigmaPlusSegreMul
+public import V14Formalization.D12SigmaPlusSegrePartials
+public import V14Formalization.D12SigmaPlusSegreBezoutData
 
 noncomputable section
 open Matrix Polynomial
@@ -143,7 +145,7 @@ theorem CV_202_5_mul :
     CV_2_c_002 * Fplus_dW_c_200 = ofLadj CV_202_5_pre CV_202_5_pim := by
   rw [CV_2_c_002, Fplus_dW_c_200, ofLadj_mul, CV_202_5_pre_eq, CV_202_5_pim_eq]
 
-def CV_coeff_202 : Ki := CV_0_c_101 * Fplus_dU_c_101 + CV_0_c_002 * Fplus_dU_c_200 + CV_1_c_101 * Fplus_dV_c_101 + CV_1_c_002 * Fplus_dV_c_200 + CV_2_c_101 * Fplus_dW_c_101 + CV_2_c_002 * Fplus_dW_c_200
+@[expose] public def CV_coeff_202 : Ki := CV_0_c_101 * Fplus_dU_c_101 + CV_0_c_002 * Fplus_dU_c_200 + CV_1_c_101 * Fplus_dV_c_101 + CV_1_c_002 * Fplus_dV_c_200 + CV_2_c_101 * Fplus_dW_c_101 + CV_2_c_002 * Fplus_dW_c_200
 
 theorem CV_coeff_202_sum :
     CV_coeff_202 = ofLadj (CV_202_0_pre + CV_202_1_pre + CV_202_2_pre + CV_202_3_pre + CV_202_4_pre + CV_202_5_pre) (CV_202_0_pim + CV_202_1_pim + CV_202_2_pim + CV_202_3_pim + CV_202_4_pim + CV_202_5_pim) := by
@@ -170,7 +172,7 @@ theorem CV_coeff_202_poly_im :
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
   try ring
-theorem CV_coeff_202_eq :
+public theorem CV_coeff_202_eq :
     CV_coeff_202 = (0 : Ki) := by
   rw [CV_coeff_202_sum, CV_coeff_202_poly_re,
     CV_coeff_202_poly_im, ofLadj_add_Phi11]

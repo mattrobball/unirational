@@ -1,4 +1,6 @@
-import V14Formalization.ProjectiveGermRatio
+module
+
+public import V14Formalization.ProjectiveGermRatio
 
 noncomputable section
 
@@ -312,7 +314,7 @@ theorem mapLinearSubst_functionFieldMap_projectiveGeneral_normalized
 
 /-- Generator form of the preceding theorem: the `j`-th affine coordinate
 pulls back to matrix row `0.succAbove j` divided by row zero. -/
-theorem mapLinearSubst_functionFieldMap_projectiveGeneral_X
+public theorem mapLinearSubst_functionFieldMap_projectiveGeneral_X
     (r : ℕ)
     (M N : Matrix (Fin ((r + 1) + 1)) (Fin ((r + 1) + 1)) Omega)
     (hNM : N * M = 1)

@@ -1,9 +1,11 @@
-import V14Formalization.ActionSpecific
-import V14Formalization.CorrectedOrderedConstructor
-import V14Formalization.CorrectedOrderedProjectiveChart
-import V14Formalization.CorrectedSourceFunctionFieldRatio
-import V14Formalization.GenericCharts
-import V14Formalization.BiprojectiveFunctionFieldRows
+module
+
+public import V14Formalization.ActionSpecific
+public import V14Formalization.CorrectedOrderedConstructor
+public import V14Formalization.CorrectedOrderedProjectiveChart
+public import V14Formalization.CorrectedSourceFunctionFieldRatio
+public import V14Formalization.GenericCharts
+public import V14Formalization.BiprojectiveFunctionFieldRows
 
 noncomputable section
 
@@ -24,7 +26,7 @@ variable {Omega : Type u} [Field Omega]
 centralizer blocks.  Its left component is the explicit quotient
 `B₀(v)/A₀(u)`, while its right component is transported from the actual
 exceptional action. -/
-noncomputable def orderedBlockSemidirectElement
+@[expose] public noncomputable def orderedBlockSemidirectElement
     (R : FaithfulLinearRep Omega G V) (sigma : G) (p q : ℕ)
     (bp : Basis (Fin (p + 1)) Omega (R.plusEigenspace sigma))
     (bm : Basis (Fin (q + 1)) Omega (R.minusEigenspace sigma))
@@ -38,7 +40,7 @@ noncomputable def orderedBlockSemidirectElement
     (blockNormalMultiplier R sigma p q bp bm) n
 
 @[simp]
-theorem orderedBlockSemidirectElement_left
+public theorem orderedBlockSemidirectElement_left
     (R : FaithfulLinearRep Omega G V) (sigma : G) (p q : ℕ)
     (bp : Basis (Fin (p + 1)) Omega (R.plusEigenspace sigma))
     (bm : Basis (Fin (q + 1)) Omega (R.minusEigenspace sigma))
@@ -62,7 +64,7 @@ theorem orderedBlockSemidirectElement_sigma_left
   rw [orderedBlockSemidirectElement_left, blockNormalMultiplier_sigma]
   rfl
 
-theorem orderedBlockSemidirectElement_exceptional_field_map
+public theorem orderedBlockSemidirectElement_exceptional_field_map
     (R : FaithfulLinearRep Omega G V) (sigma : G) (p q : ℕ)
     (bp : Basis (Fin (p + 1)) Omega (R.plusEigenspace sigma))
     (bm : Basis (Fin (q + 1)) Omega (R.minusEigenspace sigma))
@@ -83,7 +85,7 @@ theorem orderedBlockSemidirectElement_exceptional_field_map
 /-- Pointwise form of the exceptional comparison.  Keeping this as a named
 bridge prevents downstream row calculations from unfolding the pullback
 action package and its proof-dependent carrier. -/
-theorem orderedBlockSemidirectElement_right_map
+public theorem orderedBlockSemidirectElement_right_map
     (R : FaithfulLinearRep Omega G V) (sigma : G) (p q : ℕ)
     (bp : Basis (Fin (p + 1)) Omega (R.plusEigenspace sigma))
     (bm : Basis (Fin (q + 1)) Omega (R.minusEigenspace sigma))
@@ -106,7 +108,7 @@ theorem orderedBlockSemidirectElement_right_map
 
 /-- The residual action on a genuine plus-chart generator is the expected
 row ratio of the plus centralizer block. -/
-theorem orderedBlockSemidirectElement_right_plusGenerator
+public theorem orderedBlockSemidirectElement_right_plusGenerator
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (r q : ℕ)
     (bp : Basis (Fin ((r + 1) + 1)) Omega (R.plusEigenspace sigma))
@@ -139,7 +141,7 @@ theorem orderedBlockSemidirectElement_right_plusGenerator
     R sigma r q bp bm n i
 
 /-- The analogous row-ratio formula on a genuine minus-chart generator. -/
-theorem orderedBlockSemidirectElement_right_minusGenerator
+public theorem orderedBlockSemidirectElement_right_minusGenerator
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (p r : ℕ)
     (bp : Basis (Fin (p + 1)) Omega (R.plusEigenspace sigma))
@@ -171,7 +173,7 @@ theorem orderedBlockSemidirectElement_right_minusGenerator
 /-- The residual component chosen from the actual exceptional action fixes
 the embedded ground field.  Opaque local abbreviations keep this proof within
 the stock recursion limit; no elaboration limit is raised. -/
-theorem orderedBlockSemidirectElement_right_C_base
+public theorem orderedBlockSemidirectElement_right_C_base
     (R : FaithfulLinearRep Omega G V) (sigma : G) (p q : ℕ)
     (bp : Basis (Fin (p + 1)) Omega (R.plusEigenspace sigma))
     (bm : Basis (Fin (q + 1)) Omega (R.minusEigenspace sigma))
@@ -201,7 +203,7 @@ theorem orderedBlockSemidirectElement_right_C_base
 comparison is reduced to the `p+q` residual generators and the one normal
 parameter. Ground-field constants are discharged structurally from the two
 over-base actions. -/
-theorem correctedOrdered_sourceFieldMap_of_residual_X_T
+public theorem correctedOrdered_sourceFieldMap_of_residual_X_T
     [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma) (p q : ℕ)
@@ -270,7 +272,7 @@ theorem correctedOrdered_sourceFieldMap_of_residual_X_T
 /-- With the block multiplier and canonical exceptional component fixed, the
 whole equivariant normal datum needs only the corrected source chart
 comparison. -/
-noncomputable def orderedPlusMinusEquivariantNormalDataOfBlocks
+@[expose] public noncomputable def orderedPlusMinusEquivariantNormalDataOfBlocks
     [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma) (p q : ℕ)
@@ -318,7 +320,7 @@ noncomputable def orderedPlusMinusEquivariantNormalDataOfBlocks
 /-- Concrete corrected-chart constructor.  Both chart equivalences and both
 base squares are discharged; the only remaining hypothesis is the actual
 projective source-action comparison. -/
-noncomputable def orderedPlusMinusEquivariantNormalDataOfCorrectedChart
+@[expose] public noncomputable def orderedPlusMinusEquivariantNormalDataOfCorrectedChart
     [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma) (p q : ℕ)

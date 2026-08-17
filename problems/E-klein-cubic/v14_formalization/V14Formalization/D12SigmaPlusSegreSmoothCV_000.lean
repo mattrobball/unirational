@@ -1,10 +1,12 @@
 /-
 Auto-generated Fplus chart Nullstellensatz identities.
 -/
-import V14Formalization.D12SigmaPlusSegreEval
-import V14Formalization.D12SigmaPlusSegreMul
-import V14Formalization.D12SigmaPlusSegrePartials
-import V14Formalization.D12SigmaPlusSegreBezoutData
+module
+
+public import V14Formalization.D12SigmaPlusSegreEval
+public import V14Formalization.D12SigmaPlusSegreMul
+public import V14Formalization.D12SigmaPlusSegrePartials
+public import V14Formalization.D12SigmaPlusSegreBezoutData
 
 noncomputable section
 open Matrix Polynomial
@@ -30,7 +32,7 @@ theorem CV_000_0_neg_im : -CV_3_im_000 = CV_000_0_pim := by
 theorem CV_000_0_mul : -CV_3_c_000 = ofLadj CV_000_0_pre CV_000_0_pim := by
   rw [CV_3_c_000, ofLadj_neg, CV_000_0_neg_re, CV_000_0_neg_im]
 
-def CV_coeff_000 : Ki := (-CV_3_c_000)
+@[expose] public def CV_coeff_000 : Ki := (-CV_3_c_000)
 
 theorem CV_coeff_000_sum :
     CV_coeff_000 = ofLadj (CV_000_0_pre) (CV_000_0_pim) := by
@@ -56,7 +58,7 @@ theorem CV_coeff_000_poly_im :
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
   try ring
-theorem CV_coeff_000_eq :
+public theorem CV_coeff_000_eq :
     CV_coeff_000 = (1 : Ki) := by
   rw [CV_coeff_000_sum, CV_coeff_000_poly_re,
     CV_coeff_000_poly_im, ofLadj_add_Phi11]

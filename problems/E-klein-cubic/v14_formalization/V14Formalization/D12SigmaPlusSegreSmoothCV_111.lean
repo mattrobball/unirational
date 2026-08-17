@@ -1,10 +1,12 @@
 /-
 Auto-generated Fplus chart Nullstellensatz identities.
 -/
-import V14Formalization.D12SigmaPlusSegreEval
-import V14Formalization.D12SigmaPlusSegreMul
-import V14Formalization.D12SigmaPlusSegrePartials
-import V14Formalization.D12SigmaPlusSegreBezoutData
+module
+
+public import V14Formalization.D12SigmaPlusSegreEval
+public import V14Formalization.D12SigmaPlusSegreMul
+public import V14Formalization.D12SigmaPlusSegrePartials
+public import V14Formalization.D12SigmaPlusSegreBezoutData
 
 noncomputable section
 open Matrix Polynomial
@@ -164,7 +166,7 @@ theorem CV_111_6_mul : -CV_3_c_111 = ofLadj CV_111_6_pre CV_111_6_pim := by
 
 theorem CV_111_7_mul : CV_3_c_101 = ofLadj CV_3_re_101 CV_3_im_101 := rfl
 
-def CV_coeff_111 : Ki := CV_0_c_100 * Fplus_dU_c_011 + CV_0_c_001 * Fplus_dU_c_110 + CV_1_c_100 * Fplus_dV_c_011 + CV_1_c_001 * Fplus_dV_c_110 + CV_2_c_100 * Fplus_dW_c_011 + CV_2_c_001 * Fplus_dW_c_110 + (-CV_3_c_111) + CV_3_c_101
+@[expose] public def CV_coeff_111 : Ki := CV_0_c_100 * Fplus_dU_c_011 + CV_0_c_001 * Fplus_dU_c_110 + CV_1_c_100 * Fplus_dV_c_011 + CV_1_c_001 * Fplus_dV_c_110 + CV_2_c_100 * Fplus_dW_c_011 + CV_2_c_001 * Fplus_dW_c_110 + (-CV_3_c_111) + CV_3_c_101
 
 theorem CV_coeff_111_sum :
     CV_coeff_111 = ofLadj (CV_111_0_pre + CV_111_1_pre + CV_111_2_pre + CV_111_3_pre + CV_111_4_pre + CV_111_5_pre + CV_111_6_pre + CV_3_re_101) (CV_111_0_pim + CV_111_1_pim + CV_111_2_pim + CV_111_3_pim + CV_111_4_pim + CV_111_5_pim + CV_111_6_pim + CV_3_im_101) := by
@@ -191,7 +193,7 @@ theorem CV_coeff_111_poly_im :
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
   try ring
-theorem CV_coeff_111_eq :
+public theorem CV_coeff_111_eq :
     CV_coeff_111 = (0 : Ki) := by
   rw [CV_coeff_111_sum, CV_coeff_111_poly_re,
     CV_coeff_111_poly_im, ofLadj_add_Phi11]

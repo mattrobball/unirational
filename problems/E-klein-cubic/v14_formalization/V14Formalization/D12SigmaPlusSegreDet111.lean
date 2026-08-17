@@ -1,8 +1,10 @@
 /-
 Auto-generated Fplus / det(bilinearN) coefficient identities.
 -/
-import V14Formalization.D12SigmaPlusSegreEval
-import V14Formalization.D12SigmaPlusSegreMul
+module
+
+public import V14Formalization.D12SigmaPlusSegreEval
+public import V14Formalization.D12SigmaPlusSegreMul
 
 noncomputable section
 open Matrix Polynomial
@@ -402,7 +404,7 @@ theorem DC111_5_smul :
       ofLadj DC111_5_spre DC111_5_spim := by
   rw [DC111_5_mul, ofLadj_neg, DC111_5_spre_eq, DC111_5_spim_eq]
 
-def detCoeff_111 : Ki :=
+@[expose] public def detCoeff_111 : Ki :=
   N_entry_0_3 * N_entry_1_4 * N_entry_2_5 + N_entry_0_4 * N_entry_1_5 * N_entry_2_3 + N_entry_0_5 * N_entry_1_3 * N_entry_2_4 + (-(N_entry_0_3 * N_entry_1_5 * N_entry_2_4)) + (-(N_entry_0_4 * N_entry_1_3 * N_entry_2_5)) + (-(N_entry_0_5 * N_entry_1_4 * N_entry_2_3))
 
 theorem detCoeff_111_sum :
@@ -433,7 +435,7 @@ theorem detCoeff_111_sum_poly_im :
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
   try ring
 
-theorem detCoeff_111_eq :
+public theorem detCoeff_111_eq :
     detCoeff_111 = ofLadj Fplus_re_111 Fplus_im_111 := by
   rw [detCoeff_111_sum, detCoeff_111_sum_poly_re,
     detCoeff_111_sum_poly_im, ofLadj_add_Phi11]

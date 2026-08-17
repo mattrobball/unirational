@@ -1,10 +1,12 @@
 /-
 Auto-generated Fplus chart Nullstellensatz identities.
 -/
-import V14Formalization.D12SigmaPlusSegreEval
-import V14Formalization.D12SigmaPlusSegreMul
-import V14Formalization.D12SigmaPlusSegrePartials
-import V14Formalization.D12SigmaPlusSegreBezoutData
+module
+
+public import V14Formalization.D12SigmaPlusSegreEval
+public import V14Formalization.D12SigmaPlusSegreMul
+public import V14Formalization.D12SigmaPlusSegrePartials
+public import V14Formalization.D12SigmaPlusSegreBezoutData
 
 noncomputable section
 open Matrix Polynomial
@@ -77,7 +79,7 @@ theorem CW_310_2_mul :
     CW_2_c_110 * Fplus_dW_c_200 = ofLadj CW_310_2_pre CW_310_2_pim := by
   rw [CW_2_c_110, Fplus_dW_c_200, ofLadj_mul, CW_310_2_pre_eq, CW_310_2_pim_eq]
 
-def CW_coeff_310 : Ki := CW_0_c_110 * Fplus_dU_c_200 + CW_1_c_110 * Fplus_dV_c_200 + CW_2_c_110 * Fplus_dW_c_200
+@[expose] public def CW_coeff_310 : Ki := CW_0_c_110 * Fplus_dU_c_200 + CW_1_c_110 * Fplus_dV_c_200 + CW_2_c_110 * Fplus_dW_c_200
 
 theorem CW_coeff_310_sum :
     CW_coeff_310 = ofLadj (CW_310_0_pre + CW_310_1_pre + CW_310_2_pre) (CW_310_0_pim + CW_310_1_pim + CW_310_2_pim) := by
@@ -104,7 +106,7 @@ theorem CW_coeff_310_poly_im :
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
   try ring
-theorem CW_coeff_310_eq :
+public theorem CW_coeff_310_eq :
     CW_coeff_310 = (0 : Ki) := by
   rw [CW_coeff_310_sum, CW_coeff_310_poly_re,
     CW_coeff_310_poly_im, ofLadj_add_Phi11]

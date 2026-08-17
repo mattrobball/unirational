@@ -1,7 +1,9 @@
-import V14Formalization.D12ProjectorReduction
-import V14Formalization.D12U6Semantic
-import V14Formalization.D12F6Semantic
-import V14Formalization.D12CompoundR
+module
+
+public import V14Formalization.D12ProjectorReduction
+public import V14Formalization.D12U6Semantic
+public import V14Formalization.D12F6Semantic
+public import V14Formalization.D12CompoundR
 
 noncomputable section
 
@@ -11,21 +13,21 @@ namespace V14Formalization.D12GeneratorPolynomialCore
 
 open D12PolynomialData D12PolynomialEvaluation
 
-def S6_poly : Matrix (Fin 6) (Fin 6) (Polynomial ℚ) :=
+@[expose] public def S6_poly : Matrix (Fin 6) (Fin 6) (Polynomial ℚ) :=
   Matrix.of fun i j =>
     if j.val = 0 then D12U6Semantic.cFourierPoly
     else D12U6Semantic.cFourierPoly *
       (D12U6Semantic.phasePoly ((i.val : ZMod 11) * (j.val : ZMod 11)) +
         D12U6Semantic.phasePoly (-((i.val : ZMod 11) * (j.val : ZMod 11))))
 
-def T6_poly : Matrix (Fin 6) (Fin 6) (Polynomial ℚ) :=
+@[expose] public def T6_poly : Matrix (Fin 6) (Fin 6) (Polynomial ℚ) :=
   Matrix.diagonal fun j =>
     D12U6Semantic.phasePoly ((j.val : ZMod 11) ^ 2)
 
 /-- The integral phase matrix underlying the Fourier generator.  Factoring the
 common Fourier scalar before checking invariance keeps every generated
 certificate sparse and bounded. -/
-def S6Phase_poly : Matrix (Fin 6) (Fin 6) (Polynomial ℚ) :=
+@[expose] public def S6Phase_poly : Matrix (Fin 6) (Fin 6) (Polynomial ℚ) :=
   Matrix.of fun i j =>
     if j.val = 0 then 1
     else
@@ -54,7 +56,7 @@ theorem compound2Lex_smul {R : Type*} [CommRing R]
 /-- Entrywise two-by-two determinant formula in the fixed lexicographic pair
 coordinates.  Generated shards use this without unfolding order-embedding
 proofs. -/
-theorem compound2Lex_apply_pairLex {R : Type*} [CommRing R]
+public theorem compound2Lex_apply_pairLex {R : Type*} [CommRing R]
     (A : Matrix (Fin 6) (Fin 6) R) (i j : Fin 15) :
     PluckerNaturality.compound2Lex A i j =
       A (PluckerNaturality.pairLexVec i 0)
@@ -71,14 +73,14 @@ theorem compound2Lex_apply_pairLex {R : Type*} [CommRing R]
     PluckerNaturality.pairEmb_eq_pairLexEmb, Matrix.det_fin_two]
   rfl
 
-theorem compound_S6_mul_B_factor :
+public theorem compound_S6_mul_B_factor :
     PluckerNaturality.compound2Lex S6_poly * B_poly =
       (D12U6Semantic.cFourierPoly * D12U6Semantic.cFourierPoly) •
         (PluckerNaturality.compound2Lex S6Phase_poly * B_poly) := by
   rw [S6_poly_eq_cFourier_smul, compound2Lex_smul, Matrix.smul_mul]
 
 /-- Lift a sparse phase-matrix relation through a common scalar factor. -/
-theorem relation_of_smul_factor
+public theorem relation_of_smul_factor
     (G H : Matrix (Fin 15) (Fin 10) (Polynomial ℚ))
     (s q : Polynomial ℚ) (c : ℚ) (i k : Fin 15) (j : Fin 10)
     (hfactor : G = s • H)
@@ -188,7 +190,7 @@ theorem evalMatrixK_compound_T6_poly :
 
 /-- The polynomial Fourier generator evaluates to the genuine projective
 exterior-square action. -/
-theorem evalMatrixK_compound_S6_poly_eq_actualS :
+public theorem evalMatrixK_compound_S6_poly_eq_actualS :
     evalMatrixK (PluckerNaturality.compound2Lex S6_poly) =
       (Lambda2Coordinates.lambda2MatrixRepresentation.ρ
         (QuotientGroup.mk PSLCard.Smat) :
@@ -197,7 +199,7 @@ theorem evalMatrixK_compound_S6_poly_eq_actualS :
 
 /-- The polynomial diagonal generator evaluates to the genuine action of
 `Tmat²`. -/
-theorem evalMatrixK_compound_T6_poly_eq_actualT2 :
+public theorem evalMatrixK_compound_T6_poly_eq_actualT2 :
     evalMatrixK (PluckerNaturality.compound2Lex T6_poly) =
       (Lambda2Coordinates.lambda2MatrixRepresentation.ρ
         (QuotientGroup.mk (PSLCard.Tmat ^ 2)) :
@@ -207,7 +209,7 @@ theorem evalMatrixK_compound_T6_poly_eq_actualT2 :
 /-- A single polynomial relation modulo `Φ₁₁` becomes the corresponding
 linear relation after evaluation at a root of `Φ₁₁`.  Generated row
 shards use this lemma one coordinate at a time. -/
-theorem eval_relation_of_modPhi
+public theorem eval_relation_of_modPhi
     {R : Type*} [CommRing R] [Algebra ℚ R]
     (z : R) (hPhi : evalPolyAt z Phi11 = 0)
     (a b q : Polynomial ℚ) (c : ℚ)
@@ -224,67 +226,67 @@ theorem eval_relation_of_modPhi
 Keeping these ten formulas in the core prevents every generator shard from
 re-expanding a fifteen-term matrix product. -/
 
-theorem mul_B_col0
+public theorem mul_B_col0
     (G : Matrix (Fin 15) (Fin 15) (Polynomial ℚ)) (i : Fin 15) :
     (G * B_poly) i 0 = G i 0 + G i 13 * C (-1 / 2) := by
   simp [Matrix.mul_apply, B_poly, Matrix.of_apply,
     Fin.sum_univ_succ]
 
-theorem mul_B_col1
+public theorem mul_B_col1
     (G : Matrix (Fin 15) (Fin 15) (Polynomial ℚ)) (i : Fin 15) :
     (G * B_poly) i 1 = G i 1 + G i 8 * C (1 / 2) := by
   simp [Matrix.mul_apply, B_poly, Matrix.of_apply,
     Fin.sum_univ_succ]
 
-theorem mul_B_col2
+public theorem mul_B_col2
     (G : Matrix (Fin 15) (Fin 15) (Polynomial ℚ)) (i : Fin 15) :
     (G * B_poly) i 2 = G i 2 + G i 10 * C (-1 / 2) := by
   simp [Matrix.mul_apply, B_poly, Matrix.of_apply,
     Fin.sum_univ_succ]
 
-theorem mul_B_col3
+public theorem mul_B_col3
     (G : Matrix (Fin 15) (Fin 15) (Polynomial ℚ)) (i : Fin 15) :
     (G * B_poly) i 3 = G i 3 + G i 5 * C (-1 / 2) := by
   simp [Matrix.mul_apply, B_poly, Matrix.of_apply,
     Fin.sum_univ_succ]
 
-theorem mul_B_col4
+public theorem mul_B_col4
     (G : Matrix (Fin 15) (Fin 15) (Polynomial ℚ)) (i : Fin 15) :
     (G * B_poly) i 4 = G i 4 + G i 12 * C (1 / 2) := by
   simp [Matrix.mul_apply, B_poly, Matrix.of_apply,
     Fin.sum_univ_succ]
 
-theorem mul_B_col5
+public theorem mul_B_col5
     (G : Matrix (Fin 15) (Fin 15) (Polynomial ℚ)) (i : Fin 15) :
     (G * B_poly) i 5 = G i 6 := by
   simp [Matrix.mul_apply, B_poly, Matrix.of_apply,
     Fin.sum_univ_succ]
 
-theorem mul_B_col6
+public theorem mul_B_col6
     (G : Matrix (Fin 15) (Fin 15) (Polynomial ℚ)) (i : Fin 15) :
     (G * B_poly) i 6 = G i 7 := by
   simp [Matrix.mul_apply, B_poly, Matrix.of_apply,
     Fin.sum_univ_succ]
 
-theorem mul_B_col7
+public theorem mul_B_col7
     (G : Matrix (Fin 15) (Fin 15) (Polynomial ℚ)) (i : Fin 15) :
     (G * B_poly) i 7 = G i 9 := by
   simp [Matrix.mul_apply, B_poly, Matrix.of_apply,
     Fin.sum_univ_succ]
 
-theorem mul_B_col8
+public theorem mul_B_col8
     (G : Matrix (Fin 15) (Fin 15) (Polynomial ℚ)) (i : Fin 15) :
     (G * B_poly) i 8 = G i 11 := by
   simp [Matrix.mul_apply, B_poly, Matrix.of_apply,
     Fin.sum_univ_succ]
 
-theorem mul_B_col9
+public theorem mul_B_col9
     (G : Matrix (Fin 15) (Fin 15) (Polynomial ℚ)) (i : Fin 15) :
     (G * B_poly) i 9 = G i 14 := by
   simp [Matrix.mul_apply, B_poly, Matrix.of_apply,
     Fin.sum_univ_succ]
 
-def freeRow : Fin 10 → Fin 15
+@[expose] public def freeRow : Fin 10 → Fin 15
   | ⟨0, h⟩ => ⟨0, by omega⟩
   | ⟨1, h⟩ => ⟨1, by omega⟩
   | ⟨2, h⟩ => ⟨2, by omega⟩
@@ -296,7 +298,7 @@ def freeRow : Fin 10 → Fin 15
   | ⟨8, h⟩ => ⟨11, by omega⟩
   | ⟨9, h⟩ => ⟨14, by omega⟩
 
-def restrictedAction {R : Type*} [CommRing R]
+@[expose] public def restrictedAction {R : Type*} [CommRing R]
     (Cmat : Matrix (Fin 15) (Fin 10) R) :
     Matrix (Fin 10) (Fin 10) R :=
   Matrix.of fun i j => Cmat (freeRow i) j
@@ -403,7 +405,7 @@ private theorem row14 {R : Type*} [CommRing R] [Algebra ℚ R]
   simp [evalMatrixAt, B_poly, restrictedAction, freeRow,
     Matrix.mul_apply, Fin.sum_univ_succ]
 
-theorem mul_B_eq_B_mul_restrictedAction_of_relations
+public theorem mul_B_eq_B_mul_restrictedAction_of_relations
     {R : Type*} [CommRing R] [Algebra ℚ R]
     (z : R) (Cmat : Matrix (Fin 15) (Fin 10) R)
     (h5 : ∀ j, Cmat 5 j = algebraMap ℚ R (-1 / 2) * Cmat 3 j)

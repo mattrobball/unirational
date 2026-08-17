@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12SigmaPlusSegreCore
-import Mathlib.Algebra.MvPolynomial.PDeriv
+module
+
+public import V14Formalization.D12SigmaPlusSegreCore
+public import Mathlib.Algebra.MvPolynomial.PDeriv
 
 noncomputable section
 
@@ -11,18 +13,18 @@ open MvPolynomial
 
 namespace V14Formalization.D12SigmaPlusSegreCore
 
-abbrev c000 : Ki := ofLadj Fplus_re_000 Fplus_im_000
-abbrev c001 : Ki := ofLadj Fplus_re_001 Fplus_im_001
-abbrev c002 : Ki := ofLadj Fplus_re_002 Fplus_im_002
-abbrev c011 : Ki := ofLadj Fplus_re_011 Fplus_im_011
-abbrev c012 : Ki := ofLadj Fplus_re_012 Fplus_im_012
-abbrev c022 : Ki := ofLadj Fplus_re_022 Fplus_im_022
-abbrev c111 : Ki := ofLadj Fplus_re_111 Fplus_im_111
-abbrev c112 : Ki := ofLadj Fplus_re_112 Fplus_im_112
-abbrev c122 : Ki := ofLadj Fplus_re_122 Fplus_im_122
-abbrev c222 : Ki := ofLadj Fplus_re_222 Fplus_im_222
+public abbrev c000 : Ki := ofLadj Fplus_re_000 Fplus_im_000
+public abbrev c001 : Ki := ofLadj Fplus_re_001 Fplus_im_001
+public abbrev c002 : Ki := ofLadj Fplus_re_002 Fplus_im_002
+public abbrev c011 : Ki := ofLadj Fplus_re_011 Fplus_im_011
+public abbrev c012 : Ki := ofLadj Fplus_re_012 Fplus_im_012
+public abbrev c022 : Ki := ofLadj Fplus_re_022 Fplus_im_022
+public abbrev c111 : Ki := ofLadj Fplus_re_111 Fplus_im_111
+public abbrev c112 : Ki := ofLadj Fplus_re_112 Fplus_im_112
+public abbrev c122 : Ki := ofLadj Fplus_re_122 Fplus_im_122
+public abbrev c222 : Ki := ofLadj Fplus_re_222 Fplus_im_222
 
-theorem eval_Fplus_explicit (r : Fin 3 → Ki) :
+public theorem eval_Fplus_explicit (r : Fin 3 → Ki) :
     eval r Fplus =
       c000 * r 0 ^ 3 + c001 * (r 0 ^ 2 * r 1) + c002 * (r 0 ^ 2 * r 2) +
         c011 * (r 0 * r 1 ^ 2) + c012 * (r 0 * r 1 * r 2) +

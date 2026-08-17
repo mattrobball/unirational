@@ -1,8 +1,10 @@
 /-
 Auto-generated Fplus / det(bilinearN) coefficient identities.
 -/
-import V14Formalization.D12SigmaPlusSegreEval
-import V14Formalization.D12SigmaPlusSegreMul
+module
+
+public import V14Formalization.D12SigmaPlusSegreEval
+public import V14Formalization.D12SigmaPlusSegreMul
 
 noncomputable section
 open Matrix Polynomial
@@ -402,7 +404,7 @@ theorem DC000_5_smul :
       ofLadj DC000_5_spre DC000_5_spim := by
   rw [DC000_5_mul, ofLadj_neg, DC000_5_spre_eq, DC000_5_spim_eq]
 
-def detCoeff_000 : Ki :=
+@[expose] public def detCoeff_000 : Ki :=
   N_entry_0_0 * N_entry_1_1 * N_entry_2_2 + N_entry_0_1 * N_entry_1_2 * N_entry_2_0 + N_entry_0_2 * N_entry_1_0 * N_entry_2_1 + (-(N_entry_0_0 * N_entry_1_2 * N_entry_2_1)) + (-(N_entry_0_1 * N_entry_1_0 * N_entry_2_2)) + (-(N_entry_0_2 * N_entry_1_1 * N_entry_2_0))
 
 theorem detCoeff_000_sum :
@@ -433,7 +435,7 @@ theorem detCoeff_000_sum_poly_im :
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
   try ring
 
-theorem detCoeff_000_eq :
+public theorem detCoeff_000_eq :
     detCoeff_000 = ofLadj Fplus_re_000 Fplus_im_000 := by
   rw [detCoeff_000_sum, detCoeff_000_sum_poly_re,
     detCoeff_000_sum_poly_im, ofLadj_add_Phi11]

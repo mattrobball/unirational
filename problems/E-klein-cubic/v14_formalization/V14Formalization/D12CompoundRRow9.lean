@@ -6,10 +6,12 @@
   Source JSON sha256: 76c6196f29afe1a8398af99502447f48ebeed4bcb3805fc5dbec693940bc04b0
   R6/R15 payload sha256: 63733640fb7719b33dbfe3a8402cbce6ad9eff6bf90b8017b2473dce371a8877
 -/
-import V14Formalization.D12U6PolynomialSeal
-import V14Formalization.D12PolynomialRRow9
-import V14Formalization.PluckerNaturality
-import Mathlib.Tactic.FinCases
+module
+
+public import V14Formalization.D12U6PolynomialSeal
+public import V14Formalization.D12PolynomialRRow9
+public import V14Formalization.PluckerNaturality
+public import Mathlib.Tactic.FinCases
 
 noncomputable section
 open Matrix Polynomial
@@ -36,14 +38,14 @@ private theorem C_one_over_11_sq :
   congr 1
   ring_nf
 
-abbrev QuotCoeff := Fin 9 → ℤ
-def ofQuotNumerator (v : QuotCoeff) : Polynomial ℚ :=
+public abbrev QuotCoeff := Fin 9 → ℤ
+@[expose] public def ofQuotNumerator (v : QuotCoeff) : Polynomial ℚ :=
   ∑ i : Fin 9, (v i : Polynomial ℚ) *
     (C (1 / 11 : ℚ) * C (1 / 11 : ℚ)) * X ^ i.val
 
 def compoundEntry_0 : Polynomial ℚ :=
   R6c_2_0 * R6c_3_1 - R6c_2_1 * R6c_3_0
-def quotient_0 : Polynomial ℚ :=
+@[expose] public def quotient_0 : Polynomial ℚ :=
   ofQuotNumerator ![2, 6, -5, 13, 2, -14, 0, -4, 0]
 theorem cert_0 :
     compoundEntry_0 - D12PolynomialData.RRow9.R_poly 9 0 =
@@ -59,7 +61,7 @@ theorem cert_0 :
 
 def compoundEntry_1 : Polynomial ℚ :=
   R6c_2_0 * R6c_3_2 - R6c_2_2 * R6c_3_0
-def quotient_1 : Polynomial ℚ :=
+@[expose] public def quotient_1 : Polynomial ℚ :=
   ofQuotNumerator ![13, -4, 2, 6, -7, 4, 4, 0, 4]
 theorem cert_1 :
     compoundEntry_1 - D12PolynomialData.RRow9.R_poly 9 1 =
@@ -75,7 +77,7 @@ theorem cert_1 :
 
 def compoundEntry_2 : Polynomial ℚ :=
   R6c_2_0 * R6c_3_3 - R6c_2_3 * R6c_3_0
-def quotient_2 : Polynomial ℚ :=
+@[expose] public def quotient_2 : Polynomial ℚ :=
   ofQuotNumerator ![7, -15, 7, 0, -4, 2, -8, 0, 0]
 theorem cert_2 :
     compoundEntry_2 - D12PolynomialData.RRow9.R_poly 9 2 =
@@ -91,7 +93,7 @@ theorem cert_2 :
 
 def compoundEntry_3 : Polynomial ℚ :=
   R6c_2_0 * R6c_3_4 - R6c_2_4 * R6c_3_0
-def quotient_3 : Polynomial ℚ :=
+@[expose] public def quotient_3 : Polynomial ℚ :=
   ofQuotNumerator ![2, 10, -2, 0, -7, 4, 4, 0, 0]
 theorem cert_3 :
     compoundEntry_3 - D12PolynomialData.RRow9.R_poly 9 3 =
@@ -107,7 +109,7 @@ theorem cert_3 :
 
 def compoundEntry_4 : Polynomial ℚ :=
   R6c_2_0 * R6c_3_5 - R6c_2_5 * R6c_3_0
-def quotient_4 : Polynomial ℚ :=
+@[expose] public def quotient_4 : Polynomial ℚ :=
   ofQuotNumerator ![-2, 14, -13, 3, -6, 4, 0, 4, -4]
 theorem cert_4 :
     compoundEntry_4 - D12PolynomialData.RRow9.R_poly 9 4 =
@@ -123,7 +125,7 @@ theorem cert_4 :
 
 def compoundEntry_5 : Polynomial ℚ :=
   R6c_2_1 * R6c_3_2 - R6c_2_2 * R6c_3_1
-def quotient_5 : Polynomial ℚ :=
+@[expose] public def quotient_5 : Polynomial ℚ :=
   ofQuotNumerator ![-4, -13, 2, -9, 11, 1, -10, 8, -8]
 theorem cert_5 :
     compoundEntry_5 - D12PolynomialData.RRow9.R_poly 9 5 =
@@ -139,7 +141,7 @@ theorem cert_5 :
 
 def compoundEntry_6 : Polynomial ℚ :=
   R6c_2_1 * R6c_3_3 - R6c_2_3 * R6c_3_1
-def quotient_6 : Polynomial ℚ :=
+@[expose] public def quotient_6 : Polynomial ℚ :=
   ofQuotNumerator ![26, -7, 0, 23, -7, 4, 12, 4, 0]
 theorem cert_6 :
     compoundEntry_6 - D12PolynomialData.RRow9.R_poly 9 6 =
@@ -155,7 +157,7 @@ theorem cert_6 :
 
 def compoundEntry_7 : Polynomial ℚ :=
   R6c_2_1 * R6c_3_4 - R6c_2_4 * R6c_3_1
-def quotient_7 : Polynomial ℚ :=
+@[expose] public def quotient_7 : Polynomial ℚ :=
   ofQuotNumerator ![10, -17, -17, -4, 21, -5, -8, -2, 0]
 theorem cert_7 :
     compoundEntry_7 - D12PolynomialData.RRow9.R_poly 9 7 =
@@ -171,7 +173,7 @@ theorem cert_7 :
 
 def compoundEntry_8 : Polynomial ℚ :=
   R6c_2_1 * R6c_3_5 - R6c_2_5 * R6c_3_1
-def quotient_8 : Polynomial ℚ :=
+@[expose] public def quotient_8 : Polynomial ℚ :=
   ofQuotNumerator ![14, -1, -12, 3, -1, 8, 6, -14, 8]
 theorem cert_8 :
     compoundEntry_8 - D12PolynomialData.RRow9.R_poly 9 8 =
@@ -187,7 +189,7 @@ theorem cert_8 :
 
 def compoundEntry_9 : Polynomial ℚ :=
   R6c_2_2 * R6c_3_3 - R6c_2_3 * R6c_3_2
-def quotient_9 : Polynomial ℚ :=
+@[expose] public def quotient_9 : Polynomial ℚ :=
   ofQuotNumerator ![18, -37, 23, -21, -9, 7, -14, 4, -4]
 theorem cert_9 :
     compoundEntry_9 - D12PolynomialData.RRow9.R_poly 9 9 =
@@ -203,7 +205,7 @@ theorem cert_9 :
 
 def compoundEntry_10 : Polynomial ℚ :=
   R6c_2_2 * R6c_3_4 - R6c_2_4 * R6c_3_2
-def quotient_10 : Polynomial ℚ :=
+@[expose] public def quotient_10 : Polynomial ℚ :=
   ofQuotNumerator ![-8, 9, -5, 14, -3, 2, 0, 0, 2]
 theorem cert_10 :
     compoundEntry_10 - D12PolynomialData.RRow9.R_poly 9 10 =
@@ -235,7 +237,7 @@ theorem cert_11 :
 
 def compoundEntry_12 : Polynomial ℚ :=
   R6c_2_3 * R6c_3_4 - R6c_2_4 * R6c_3_3
-def quotient_12 : Polynomial ℚ :=
+@[expose] public def quotient_12 : Polynomial ℚ :=
   ofQuotNumerator ![-2, 7, -16, 9, 1, 1, 0, 0, 0]
 theorem cert_12 :
     compoundEntry_12 - D12PolynomialData.RRow9.R_poly 9 12 =
@@ -251,7 +253,7 @@ theorem cert_12 :
 
 def compoundEntry_13 : Polynomial ℚ :=
   R6c_2_3 * R6c_3_5 - R6c_2_5 * R6c_3_3
-def quotient_13 : Polynomial ℚ :=
+@[expose] public def quotient_13 : Polynomial ℚ :=
   ofQuotNumerator ![-2, 0, 13, -18, 1, 12, -10, 8, -4]
 theorem cert_13 :
     compoundEntry_13 - D12PolynomialData.RRow9.R_poly 9 13 =
@@ -281,7 +283,7 @@ theorem cert_14 :
   norm_num
   linear_combination (-(2 * X + X ^ 2 + X ^ 3 + 2 * X ^ 4 + X ^ 7 + 3 * X ^ 8 + X ^ 9)) * C_one_over_11_sq
 
-theorem row_cert (j : Fin 15) :
+public theorem row_cert (j : Fin 15) :
     ∃ q : Polynomial ℚ,
       (PluckerNaturality.compound2Lex R6_poly) 9 j -
           D12PolynomialData.RRow9.R_poly 9 j = Phi11 * q := by

@@ -1,8 +1,10 @@
 /-
 Auto-generated Fplus / det(bilinearN) coefficient identities.
 -/
-import V14Formalization.D12SigmaPlusSegreEval
-import V14Formalization.D12SigmaPlusSegreMul
+module
+
+public import V14Formalization.D12SigmaPlusSegreEval
+public import V14Formalization.D12SigmaPlusSegreMul
 
 noncomputable section
 open Matrix Polynomial
@@ -240,7 +242,7 @@ theorem DC002_5_smul :
       ofLadj DC002_5_spre DC002_5_spim := by
   rw [DC002_5_mul, ofLadj_neg, DC002_5_spre_eq, DC002_5_spim_eq]
 
-def detCoeff_002 : Ki :=
+@[expose] public def detCoeff_002 : Ki :=
   N_entry_0_0 * N_entry_1_1 + (-(N_entry_0_1 * N_entry_1_0)) + N_entry_0_0 * N_entry_2_2 + (-(N_entry_0_2 * N_entry_2_0)) + N_entry_1_1 * N_entry_2_2 + (-(N_entry_1_2 * N_entry_2_1))
 
 theorem detCoeff_002_sum :
@@ -271,7 +273,7 @@ theorem detCoeff_002_sum_poly_im :
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
   try ring
 
-theorem detCoeff_002_eq :
+public theorem detCoeff_002_eq :
     detCoeff_002 = ofLadj Fplus_re_002 Fplus_im_002 := by
   rw [detCoeff_002_sum, detCoeff_002_sum_poly_re,
     detCoeff_002_sum_poly_im, ofLadj_add_Phi11]

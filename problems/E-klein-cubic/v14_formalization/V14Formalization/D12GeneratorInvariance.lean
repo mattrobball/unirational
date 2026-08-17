@@ -2,13 +2,15 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12GeneratorSPhaseRow5
-import V14Formalization.D12GeneratorSPhaseRow8
-import V14Formalization.D12GeneratorSPhaseRow10
-import V14Formalization.D12GeneratorSPhaseRow12
-import V14Formalization.D12GeneratorSPhaseRow13
-import V14Formalization.D12GeneratorT2Relations
-import V14Formalization.D12U6PolynomialSeal
+module
+
+public import V14Formalization.D12GeneratorSPhaseRow5
+public import V14Formalization.D12GeneratorSPhaseRow8
+public import V14Formalization.D12GeneratorSPhaseRow10
+public import V14Formalization.D12GeneratorSPhaseRow12
+public import V14Formalization.D12GeneratorSPhaseRow13
+public import V14Formalization.D12GeneratorT2Relations
+public import V14Formalization.D12U6PolynomialSeal
 
 /-!
 # Sparse standard-generator invariance of the D12 ten-space
@@ -29,7 +31,7 @@ open D12PolynomialData D12PolynomialEvaluation
 open D12GeneratorPolynomialCore
 
 /-- The restricted Fourier-generator action read from the ten free rows. -/
-def SrestrictedAction : Matrix (Fin 10) (Fin 10) WeilRep.K :=
+public def SrestrictedAction : Matrix (Fin 10) (Fin 10) WeilRep.K :=
   restrictedAction
     (evalMatrixK
       (PluckerNaturality.compound2Lex S6_poly * B_poly))
@@ -58,7 +60,7 @@ theorem evalMatrixK_compound_S6_mul_B_eq :
 
 /-- The genuine exterior-square representation of `Smat` preserves the
 generated ten-space. -/
-theorem actualS_mul_B_eq :
+public theorem actualS_mul_B_eq :
     (Lambda2Coordinates.lambda2MatrixRepresentation.ρ
         (QuotientGroup.mk PSLCard.Smat) :
           Matrix (Fin 15) (Fin 15) WeilRep.K) * evalMatrixK B_poly =
@@ -68,7 +70,7 @@ theorem actualS_mul_B_eq :
 
 /-- The restricted diagonal-generator action read from the same ten free
 rows. -/
-def T2restrictedAction : Matrix (Fin 10) (Fin 10) WeilRep.K :=
+public def T2restrictedAction : Matrix (Fin 10) (Fin 10) WeilRep.K :=
   restrictedAction
     (evalMatrixK
       (PluckerNaturality.compound2Lex T6_poly * B_poly))
@@ -76,7 +78,7 @@ def T2restrictedAction : Matrix (Fin 10) (Fin 10) WeilRep.K :=
 /-- In the emitted basis, the restricted diagonal generator is literally
 diagonal.  The ten exponents are kept as their polynomial exponents; at
 `WeilRep.ζ` they represent the ten distinct nonzero residue classes mod 11. -/
-theorem T2restrictedAction_eq_diagonal :
+public theorem T2restrictedAction_eq_diagonal :
     T2restrictedAction = Matrix.diagonal fun i =>
       WeilRep.ζ ^ D12GeneratorT2Relations.eigenExponent i := by
   exact D12GeneratorT2Relations.restrictedAction_eval WeilRep.ζ
@@ -105,7 +107,7 @@ theorem evalMatrixK_compound_T6_mul_B_eq :
 
 /-- The genuine exterior-square representation of `Tmat²` preserves the
 generated ten-space. -/
-theorem actualT2_mul_B_eq :
+public theorem actualT2_mul_B_eq :
     (Lambda2Coordinates.lambda2MatrixRepresentation.ρ
         (QuotientGroup.mk (PSLCard.Tmat ^ 2)) :
           Matrix (Fin 15) (Fin 15) WeilRep.K) * evalMatrixK B_poly =
@@ -115,7 +117,7 @@ theorem actualT2_mul_B_eq :
 
 /-- Invariance under the two standard generators implies invariance under the
 genuine character projector, without expanding its `660` summands. -/
-theorem projector_mul_B_eq :
+public theorem projector_mul_B_eq :
     ∃ A : Matrix (Fin 10) (Fin 10) WeilRep.K,
       V14SchemeModel.projectorMatrix * evalMatrixK B_poly =
         evalMatrixK B_poly * A := by

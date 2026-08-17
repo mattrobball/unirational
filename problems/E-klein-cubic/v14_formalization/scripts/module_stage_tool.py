@@ -3,7 +3,7 @@
 Stage driver tooling for the module-system migration (stages 2-5).
 
 Subcommands:
-  gen-config <files.txt> <out.json>
+  gen-config [--narrow-expose] <files.txt> <out.json>
       Compute a migration config (public/expose sets per file) for the
       listed modules, from downstream usage scans:
         public  = declaration names referenced by any transitive importer
@@ -89,7 +89,7 @@ def transitive_importers(imports):
     return rev
 
 
-def gen_config(stage_files, out_path):
+def gen_config(stage_files, out_path, narrow=False):
     files, imports = load_graph()
     rev = transitive_importers(imports)
     tok_re = re.compile(IDENT)
@@ -131,12 +131,19 @@ def gen_config(stage_files, out_path):
         by_last = {}
         for name, kind, _, _ in spans:
             by_last.setdefault(name.split(".")[-1], (name, kind))
-        # blanket posture (see MODULE_MIGRATION.md): every public def is
-        # exposed, so reduction (decide/rfl/change) never gets stuck on a
-        # converted module's public surface.
-        for name, kind, _, _ in spans:
-            if name in public and kind == "def":
-                expose.add(name)
+        # Blanket posture (stages 1-3): expose every public def, so reduction
+        # (decide/rfl/change) can never get stuck on a converted module's
+        # public surface. Sound but far wider than necessary. With
+        # --narrow-expose the config carries only the exposures the usage scan
+        # and the closure rules below actually justify, and the build's `fix`
+        # loop adds any the scan missed. Stage 2 warned that fine-grained
+        # exposure surfaces late, but that was because CONSUMERS converted in
+        # a later stage; when a wave converts a module and its consumers
+        # together, a missing exposure fails in the same build.
+        if not narrow:
+            for name, kind, _, _ in spans:
+                if name in public and kind == "def":
+                    expose.add(name)
         tok = re.compile(IDENT)
         changed = True
         while changed:
@@ -170,7 +177,7 @@ def gen_config(stage_files, out_path):
         cfg[rel] = {
             "public": sorted(public),
             "expose": sorted(expose),
-            "expose_all_public_defs": True,
+            "expose_all_public_defs": not narrow,
         }
     Path(out_path).write_text(json.dumps(cfg, indent=1, ensure_ascii=False))
     print(f"wrote {out_path}: {len(cfg)} files")
@@ -246,8 +253,10 @@ def fix(cfg_paths, log_path):
 if __name__ == "__main__":
     cmd = sys.argv[1]
     if cmd == "gen-config":
-        stage_files = [l.strip() for l in open(sys.argv[2]) if l.strip()]
-        gen_config(stage_files, sys.argv[3])
+        narrow = "--narrow-expose" in sys.argv
+        args = [a for a in sys.argv[2:] if not a.startswith("--")]
+        stage_files = [l.strip() for l in open(args[0]) if l.strip()]
+        gen_config(stage_files, args[1], narrow=narrow)
     elif cmd == "fix":
         raise SystemExit(fix(sys.argv[2:-1], sys.argv[-1]))
     else:

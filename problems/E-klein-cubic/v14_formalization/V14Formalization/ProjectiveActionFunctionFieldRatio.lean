@@ -1,5 +1,7 @@
-import V14Formalization.ProjectiveFunctionFieldRatio
-import V14Formalization.SchemeProjectiveAction
+module
+
+public import V14Formalization.ProjectiveFunctionFieldRatio
+public import V14Formalization.SchemeProjectiveAction
 
 noncomputable section
 
@@ -16,7 +18,7 @@ universe u v
 variable {Omega : Type u} [Field Omega]
   {G : Type v} [Group G]
 
-local instance projectiveActionOver_isIntegral
+public local instance projectiveActionOver_isIntegral
     (d : ℕ) (R : MatrixRepresentation (k := Omega) (G := G) d) :
     IsIntegral (projectiveActionOver d R).V.left := by
   change IsIntegral (ProjectiveSpace d Omega)
@@ -24,7 +26,7 @@ local instance projectiveActionOver_isIntegral
 
 /-- The canonical function-field action of a projective matrix representation
 has the expected row-ratio formula on the standard affine generators. -/
-theorem projectiveActionOver_actionFunctionFieldMap_X
+public theorem projectiveActionOver_actionFunctionFieldMap_X
     (r : ℕ) (R : MatrixRepresentation (k := Omega) (G := G) (r + 1))
     (g : G) (j : Fin (r + 1)) :
     let e := projectiveGeneralFunctionFieldEquiv r Omega

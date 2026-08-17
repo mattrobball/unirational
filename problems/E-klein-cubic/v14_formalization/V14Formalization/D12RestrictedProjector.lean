@@ -1,5 +1,7 @@
-import V14Formalization.D12GeneratorSRow0Nonzero
-import V14Formalization.D12ProjectorReduction
+module
+
+public import V14Formalization.D12GeneratorSRow0Nonzero
+public import V14Formalization.D12ProjectorReduction
 
 noncomputable section
 
@@ -29,7 +31,7 @@ theorem pow_eigen_eq_psi (i : Fin 10) :
     WeilRep.ζ ^ (eigenExponent i % 11)
   exact pow_eq_pow_mod _ WeilRep.ζ_pow_eleven
 
-theorem eigenPower_injective :
+public theorem eigenPower_injective :
     Function.Injective (fun i : Fin 10 =>
       WeilRep.ζ ^ eigenExponent i) := by
   intro i j hij
@@ -51,7 +53,7 @@ theorem offDiagonal_eq_zero_of_commutes_diagonal
     A i j * (e j - e i) = A i j * e j - e i * A i j := by ring
     _ = 0 := sub_eq_zero.mpr hijEntry
 
-theorem eq_diagonal_const_of_two_commutants
+public theorem eq_diagonal_const_of_two_commutants
     {K d : Type*} [Field K] [Fintype d] [DecidableEq d]
     (e : d → K) (he : Function.Injective e)
     (S A : Matrix d d K) (r : d)
@@ -82,10 +84,10 @@ theorem eq_diagonal_const_of_two_commutants
     exact (hconst i).symm
   · simp [Matrix.diagonal_apply_ne _ hij]
 
-def restrictedProjector : Matrix (Fin 10) (Fin 10) WeilRep.K :=
+public def restrictedProjector : Matrix (Fin 10) (Fin 10) WeilRep.K :=
   evalMatrixK L_poly * V14SchemeModel.projectorMatrix * evalMatrixK B_poly
 
-theorem projector_mul_B_eq_restrictedProjector :
+public theorem projector_mul_B_eq_restrictedProjector :
     V14SchemeModel.projectorMatrix * evalMatrixK B_poly =
       evalMatrixK B_poly * restrictedProjector := by
   obtain ⟨A, hA⟩ := projector_mul_B_eq
@@ -250,13 +252,13 @@ theorem restrictedProjector_scalar_eq_one : restrictedProjector 0 0 = 1 := by
     simp
   · exact hone
 
-theorem restrictedProjector_eq_one : restrictedProjector = 1 := by
+public theorem restrictedProjector_eq_one : restrictedProjector = 1 := by
   rw [restrictedProjector_eq_diagonal_const,
     restrictedProjector_scalar_eq_one]
   ext i j
   simp [Matrix.one_apply]
 
-theorem projector_factor :
+public theorem projector_factor :
     evalMatrixK B_poly * evalMatrixK L_poly *
         V14SchemeModel.projectorMatrix =
       V14SchemeModel.projectorMatrix := by

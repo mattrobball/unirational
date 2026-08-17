@@ -1,10 +1,12 @@
 /-
 Plus Segre span matrix bundle.
 -/
-import V14Formalization.D12SigmaPlusSegreSpanU
-import V14Formalization.D12SigmaPlusSegreSpanV
-import V14Formalization.D12SigmaPlusSegreMinorQ
-import V14Formalization.D12SigmaPlusSegreQplus
+module
+
+public import V14Formalization.D12SigmaPlusSegreSpanU
+public import V14Formalization.D12SigmaPlusSegreSpanV
+public import V14Formalization.D12SigmaPlusSegreMinorQ
+public import V14Formalization.D12SigmaPlusSegreQplus
 
 noncomputable section
 namespace V14Formalization.D12SigmaPlusSegreCore

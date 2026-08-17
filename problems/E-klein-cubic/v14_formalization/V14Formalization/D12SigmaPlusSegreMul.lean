@@ -2,7 +2,9 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12SigmaPlusSegreCore
+module
+
+public import V14Formalization.D12SigmaPlusSegreCore
 
 noncomputable section
 
@@ -18,7 +20,7 @@ theorem iRoot_sq : (iRoot : Ki) ^ 2 = -1 := by
       map_pow] using h
   linear_combination this
 
-theorem ofLadj_mul (a b c d : Polynomial ℚ) :
+public theorem ofLadj_mul (a b c d : Polynomial ℚ) :
     ofLadj a b * ofLadj c d = ofLadj (a * c - b * d) (a * d + b * c) := by
   have hi := iRoot_sq
   have hre : ofPoly (a * c - b * d) =

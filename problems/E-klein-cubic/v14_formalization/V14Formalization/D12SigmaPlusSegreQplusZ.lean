@@ -1,25 +1,27 @@
 /- Auto-generated integer-reflection bridges. DO NOT HAND-EDIT. -/
-import V14Formalization.D12PolyZReflection
-import V14Formalization.D12SigmaPlusSegreQplus
+module
+
+public import V14Formalization.D12PolyZReflection
+public import V14Formalization.D12SigmaPlusSegreQplus
 
 noncomputable section
 open Polynomial
 namespace V14Formalization.D12SigmaPlusSegreCore
 open V14Formalization.D12PolyZReflection
 
-theorem z_Qplus_im_0_0 : Qplus_im_0_0 = interpQ 1 [] := by
+public theorem z_Qplus_im_0_0 : Qplus_im_0_0 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_0_1 : Qplus_im_0_1 = interpQ 1 [] := by
+public theorem z_Qplus_im_0_1 : Qplus_im_0_1 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_0_10 : Qplus_im_0_10 = interpQ 1 [] := by
+public theorem z_Qplus_im_0_10 : Qplus_im_0_10 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_0_11 : Qplus_im_0_11 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_0_12 : Qplus_im_0_12 = interpQ 1 [] := by
+public theorem z_Qplus_im_0_12 : Qplus_im_0_12 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_0_13 : Qplus_im_0_13 = interpQ 1 [] := by
@@ -43,19 +45,19 @@ theorem z_Qplus_im_0_18 : Qplus_im_0_18 = interpQ 1 [] := by
 theorem z_Qplus_im_0_19 : Qplus_im_0_19 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_0_2 : Qplus_im_0_2 = interpQ 1 [] := by
+public theorem z_Qplus_im_0_2 : Qplus_im_0_2 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_0_20 : Qplus_im_0_20 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_0_3 : Qplus_im_0_3 = interpQ 1 [] := by
+public theorem z_Qplus_im_0_3 : Qplus_im_0_3 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_0_4 : Qplus_im_0_4 = interpQ 1 [] := by
+public theorem z_Qplus_im_0_4 : Qplus_im_0_4 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_0_5 : Qplus_im_0_5 = interpQ 1 [] := by
+public theorem z_Qplus_im_0_5 : Qplus_im_0_5 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_0_6 : Qplus_im_0_6 = interpQ 1 [] := by
@@ -70,67 +72,67 @@ theorem z_Qplus_im_0_8 : Qplus_im_0_8 = interpQ 1 [] := by
 theorem z_Qplus_im_0_9 : Qplus_im_0_9 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_0 : Qplus_im_10_0 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_0 : Qplus_im_10_0 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_1 : Qplus_im_10_1 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_1 : Qplus_im_10_1 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_10 : Qplus_im_10_10 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_10 : Qplus_im_10_10 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_11 : Qplus_im_10_11 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_11 : Qplus_im_10_11 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_12 : Qplus_im_10_12 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_12 : Qplus_im_10_12 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_13 : Qplus_im_10_13 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_13 : Qplus_im_10_13 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_14 : Qplus_im_10_14 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_14 : Qplus_im_10_14 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_15 : Qplus_im_10_15 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_15 : Qplus_im_10_15 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_16 : Qplus_im_10_16 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_16 : Qplus_im_10_16 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_17 : Qplus_im_10_17 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_17 : Qplus_im_10_17 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_18 : Qplus_im_10_18 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_18 : Qplus_im_10_18 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_19 : Qplus_im_10_19 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_19 : Qplus_im_10_19 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_2 : Qplus_im_10_2 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_2 : Qplus_im_10_2 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_20 : Qplus_im_10_20 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_20 : Qplus_im_10_20 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_3 : Qplus_im_10_3 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_3 : Qplus_im_10_3 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_4 : Qplus_im_10_4 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_4 : Qplus_im_10_4 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_5 : Qplus_im_10_5 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_5 : Qplus_im_10_5 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_6 : Qplus_im_10_6 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_6 : Qplus_im_10_6 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_7 : Qplus_im_10_7 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_7 : Qplus_im_10_7 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_8 : Qplus_im_10_8 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_8 : Qplus_im_10_8 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_10_9 : Qplus_im_10_9 = interpQ 1 [] := by
+public theorem z_Qplus_im_10_9 : Qplus_im_10_9 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_11_0 : Qplus_im_11_0 = interpQ 1 [] := by
@@ -388,10 +390,10 @@ theorem z_Qplus_im_14_9 : Qplus_im_14_9 = interpQ 1 [] := by
 theorem z_Qplus_im_1_0 : Qplus_im_1_0 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_1_1 : Qplus_im_1_1 = interpQ 1 [] := by
+public theorem z_Qplus_im_1_1 : Qplus_im_1_1 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_1_10 : Qplus_im_1_10 = interpQ 1 [] := by
+public theorem z_Qplus_im_1_10 : Qplus_im_1_10 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_1_11 : Qplus_im_1_11 = interpQ 1 [] := by
@@ -406,7 +408,7 @@ theorem z_Qplus_im_1_13 : Qplus_im_1_13 = interpQ 1 [] := by
 theorem z_Qplus_im_1_14 : Qplus_im_1_14 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_1_15 : Qplus_im_1_15 = interpQ 1 [] := by
+public theorem z_Qplus_im_1_15 : Qplus_im_1_15 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_1_16 : Qplus_im_1_16 = interpQ 1 [] := by
@@ -421,7 +423,7 @@ theorem z_Qplus_im_1_18 : Qplus_im_1_18 = interpQ 1 [] := by
 theorem z_Qplus_im_1_19 : Qplus_im_1_19 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_1_2 : Qplus_im_1_2 = interpQ 1 [] := by
+public theorem z_Qplus_im_1_2 : Qplus_im_1_2 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_1_20 : Qplus_im_1_20 = interpQ 1 [] := by
@@ -436,22 +438,22 @@ theorem z_Qplus_im_1_4 : Qplus_im_1_4 = interpQ 1 [] := by
 theorem z_Qplus_im_1_5 : Qplus_im_1_5 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_1_6 : Qplus_im_1_6 = interpQ 1 [] := by
+public theorem z_Qplus_im_1_6 : Qplus_im_1_6 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_1_7 : Qplus_im_1_7 = interpQ 1 [] := by
+public theorem z_Qplus_im_1_7 : Qplus_im_1_7 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_1_8 : Qplus_im_1_8 = interpQ 1 [] := by
+public theorem z_Qplus_im_1_8 : Qplus_im_1_8 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_1_9 : Qplus_im_1_9 = interpQ 1 [] := by
+public theorem z_Qplus_im_1_9 : Qplus_im_1_9 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_2_0 : Qplus_im_2_0 = interpQ 1 [] := by
+public theorem z_Qplus_im_2_0 : Qplus_im_2_0 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_2_1 : Qplus_im_2_1 = interpQ 1 [] := by
+public theorem z_Qplus_im_2_1 : Qplus_im_2_1 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_2_10 : Qplus_im_2_10 = interpQ 1 [] := by
@@ -472,7 +474,7 @@ theorem z_Qplus_im_2_14 : Qplus_im_2_14 = interpQ 1 [] := by
 theorem z_Qplus_im_2_15 : Qplus_im_2_15 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_2_16 : Qplus_im_2_16 = interpQ 1 [] := by
+public theorem z_Qplus_im_2_16 : Qplus_im_2_16 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_2_17 : Qplus_im_2_17 = interpQ 1 [] := by
@@ -484,22 +486,22 @@ theorem z_Qplus_im_2_18 : Qplus_im_2_18 = interpQ 1 [] := by
 theorem z_Qplus_im_2_19 : Qplus_im_2_19 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_2_2 : Qplus_im_2_2 = interpQ 1 [] := by
+public theorem z_Qplus_im_2_2 : Qplus_im_2_2 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_2_20 : Qplus_im_2_20 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_2_3 : Qplus_im_2_3 = interpQ 1 [] := by
+public theorem z_Qplus_im_2_3 : Qplus_im_2_3 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_2_4 : Qplus_im_2_4 = interpQ 1 [] := by
+public theorem z_Qplus_im_2_4 : Qplus_im_2_4 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_2_5 : Qplus_im_2_5 = interpQ 1 [] := by
+public theorem z_Qplus_im_2_5 : Qplus_im_2_5 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_2_6 : Qplus_im_2_6 = interpQ 1 [] := by
+public theorem z_Qplus_im_2_6 : Qplus_im_2_6 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_2_7 : Qplus_im_2_7 = interpQ 1 [] := by
@@ -520,16 +522,16 @@ theorem z_Qplus_im_3_1 : Qplus_im_3_1 = interpQ 1 [] := by
 theorem z_Qplus_im_3_10 : Qplus_im_3_10 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_3_11 : Qplus_im_3_11 = interpQ 1 [] := by
+public theorem z_Qplus_im_3_11 : Qplus_im_3_11 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_3_12 : Qplus_im_3_12 = interpQ 1 [] := by
+public theorem z_Qplus_im_3_12 : Qplus_im_3_12 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_3_13 : Qplus_im_3_13 = interpQ 1 [] := by
+public theorem z_Qplus_im_3_13 : Qplus_im_3_13 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_3_14 : Qplus_im_3_14 = interpQ 1 [] := by
+public theorem z_Qplus_im_3_14 : Qplus_im_3_14 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_3_15 : Qplus_im_3_15 = interpQ 1 [] := by
@@ -538,7 +540,7 @@ theorem z_Qplus_im_3_15 : Qplus_im_3_15 = interpQ 1 [] := by
 theorem z_Qplus_im_3_16 : Qplus_im_3_16 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_3_17 : Qplus_im_3_17 = interpQ 1 [] := by
+public theorem z_Qplus_im_3_17 : Qplus_im_3_17 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_3_18 : Qplus_im_3_18 = interpQ 1 [] := by
@@ -547,7 +549,7 @@ theorem z_Qplus_im_3_18 : Qplus_im_3_18 = interpQ 1 [] := by
 theorem z_Qplus_im_3_19 : Qplus_im_3_19 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_3_2 : Qplus_im_3_2 = interpQ 1 [] := by
+public theorem z_Qplus_im_3_2 : Qplus_im_3_2 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_3_20 : Qplus_im_3_20 = interpQ 1 [] := by
@@ -556,7 +558,7 @@ theorem z_Qplus_im_3_20 : Qplus_im_3_20 = interpQ 1 [] := by
 theorem z_Qplus_im_3_3 : Qplus_im_3_3 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_3_4 : Qplus_im_3_4 = interpQ 1 [] := by
+public theorem z_Qplus_im_3_4 : Qplus_im_3_4 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_3_5 : Qplus_im_3_5 = interpQ 1 [] := by
@@ -565,7 +567,7 @@ theorem z_Qplus_im_3_5 : Qplus_im_3_5 = interpQ 1 [] := by
 theorem z_Qplus_im_3_6 : Qplus_im_3_6 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_3_7 : Qplus_im_3_7 = interpQ 1 [] := by
+public theorem z_Qplus_im_3_7 : Qplus_im_3_7 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_3_8 : Qplus_im_3_8 = interpQ 1 [] := by
@@ -574,7 +576,7 @@ theorem z_Qplus_im_3_8 : Qplus_im_3_8 = interpQ 1 [] := by
 theorem z_Qplus_im_3_9 : Qplus_im_3_9 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_4_0 : Qplus_im_4_0 = interpQ 1 [] := by
+public theorem z_Qplus_im_4_0 : Qplus_im_4_0 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_4_1 : Qplus_im_4_1 = interpQ 1 [] := by
@@ -607,7 +609,7 @@ theorem z_Qplus_im_4_17 : Qplus_im_4_17 = interpQ 1 [] := by
 theorem z_Qplus_im_4_18 : Qplus_im_4_18 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_4_19 : Qplus_im_4_19 = interpQ 1 [] := by
+public theorem z_Qplus_im_4_19 : Qplus_im_4_19 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_4_2 : Qplus_im_4_2 = interpQ 1 [] := by
@@ -628,7 +630,7 @@ theorem z_Qplus_im_4_5 : Qplus_im_4_5 = interpQ 1 [] := by
 theorem z_Qplus_im_4_6 : Qplus_im_4_6 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_4_7 : Qplus_im_4_7 = interpQ 1 [] := by
+public theorem z_Qplus_im_4_7 : Qplus_im_4_7 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_4_8 : Qplus_im_4_8 = interpQ 1 [] := by
@@ -637,10 +639,10 @@ theorem z_Qplus_im_4_8 : Qplus_im_4_8 = interpQ 1 [] := by
 theorem z_Qplus_im_4_9 : Qplus_im_4_9 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_5_0 : Qplus_im_5_0 = interpQ 1 [] := by
+public theorem z_Qplus_im_5_0 : Qplus_im_5_0 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_5_1 : Qplus_im_5_1 = interpQ 1 [] := by
+public theorem z_Qplus_im_5_1 : Qplus_im_5_1 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_5_10 : Qplus_im_5_10 = interpQ 1 [] := by
@@ -652,7 +654,7 @@ theorem z_Qplus_im_5_11 : Qplus_im_5_11 = interpQ 1 [] := by
 theorem z_Qplus_im_5_12 : Qplus_im_5_12 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_5_13 : Qplus_im_5_13 = interpQ 1 [] := by
+public theorem z_Qplus_im_5_13 : Qplus_im_5_13 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_5_14 : Qplus_im_5_14 = interpQ 1 [] := by
@@ -661,31 +663,31 @@ theorem z_Qplus_im_5_14 : Qplus_im_5_14 = interpQ 1 [] := by
 theorem z_Qplus_im_5_15 : Qplus_im_5_15 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_5_16 : Qplus_im_5_16 = interpQ 1 [] := by
+public theorem z_Qplus_im_5_16 : Qplus_im_5_16 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_5_17 : Qplus_im_5_17 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_5_18 : Qplus_im_5_18 = interpQ 1 [] := by
+public theorem z_Qplus_im_5_18 : Qplus_im_5_18 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_5_19 : Qplus_im_5_19 = interpQ 1 [] := by
+public theorem z_Qplus_im_5_19 : Qplus_im_5_19 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_5_2 : Qplus_im_5_2 = interpQ 1 [] := by
+public theorem z_Qplus_im_5_2 : Qplus_im_5_2 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_5_20 : Qplus_im_5_20 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_5_3 : Qplus_im_5_3 = interpQ 1 [] := by
+public theorem z_Qplus_im_5_3 : Qplus_im_5_3 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_5_4 : Qplus_im_5_4 = interpQ 1 [] := by
+public theorem z_Qplus_im_5_4 : Qplus_im_5_4 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_5_5 : Qplus_im_5_5 = interpQ 1 [] := by
+public theorem z_Qplus_im_5_5 : Qplus_im_5_5 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_5_6 : Qplus_im_5_6 = interpQ 1 [] := by
@@ -694,10 +696,10 @@ theorem z_Qplus_im_5_6 : Qplus_im_5_6 = interpQ 1 [] := by
 theorem z_Qplus_im_5_7 : Qplus_im_5_7 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_5_8 : Qplus_im_5_8 = interpQ 1 [] := by
+public theorem z_Qplus_im_5_8 : Qplus_im_5_8 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_5_9 : Qplus_im_5_9 = interpQ 1 [] := by
+public theorem z_Qplus_im_5_9 : Qplus_im_5_9 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_6_0 : Qplus_im_6_0 = interpQ 1 [] := by
@@ -709,10 +711,10 @@ theorem z_Qplus_im_6_1 : Qplus_im_6_1 = interpQ 1 [] := by
 theorem z_Qplus_im_6_10 : Qplus_im_6_10 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_6_11 : Qplus_im_6_11 = interpQ 1 [] := by
+public theorem z_Qplus_im_6_11 : Qplus_im_6_11 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_6_12 : Qplus_im_6_12 = interpQ 1 [] := by
+public theorem z_Qplus_im_6_12 : Qplus_im_6_12 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_6_13 : Qplus_im_6_13 = interpQ 1 [] := by
@@ -721,13 +723,13 @@ theorem z_Qplus_im_6_13 : Qplus_im_6_13 = interpQ 1 [] := by
 theorem z_Qplus_im_6_14 : Qplus_im_6_14 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_6_15 : Qplus_im_6_15 = interpQ 1 [] := by
+public theorem z_Qplus_im_6_15 : Qplus_im_6_15 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_6_16 : Qplus_im_6_16 = interpQ 1 [] := by
+public theorem z_Qplus_im_6_16 : Qplus_im_6_16 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_6_17 : Qplus_im_6_17 = interpQ 1 [] := by
+public theorem z_Qplus_im_6_17 : Qplus_im_6_17 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_6_18 : Qplus_im_6_18 = interpQ 1 [] := by
@@ -742,7 +744,7 @@ theorem z_Qplus_im_6_2 : Qplus_im_6_2 = interpQ 1 [] := by
 theorem z_Qplus_im_6_20 : Qplus_im_6_20 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_6_3 : Qplus_im_6_3 = interpQ 1 [] := by
+public theorem z_Qplus_im_6_3 : Qplus_im_6_3 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_6_4 : Qplus_im_6_4 = interpQ 1 [] := by
@@ -757,49 +759,49 @@ theorem z_Qplus_im_6_6 : Qplus_im_6_6 = interpQ 1 [] := by
 theorem z_Qplus_im_6_7 : Qplus_im_6_7 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_6_8 : Qplus_im_6_8 = interpQ 1 [] := by
+public theorem z_Qplus_im_6_8 : Qplus_im_6_8 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_6_9 : Qplus_im_6_9 = interpQ 1 [] := by
+public theorem z_Qplus_im_6_9 : Qplus_im_6_9 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_7_0 : Qplus_im_7_0 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_7_1 : Qplus_im_7_1 = interpQ 1 [] := by
+public theorem z_Qplus_im_7_1 : Qplus_im_7_1 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_7_10 : Qplus_im_7_10 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_7_11 : Qplus_im_7_11 = interpQ 1 [] := by
+public theorem z_Qplus_im_7_11 : Qplus_im_7_11 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_7_12 : Qplus_im_7_12 = interpQ 1 [] := by
+public theorem z_Qplus_im_7_12 : Qplus_im_7_12 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_7_13 : Qplus_im_7_13 = interpQ 1 [] := by
+public theorem z_Qplus_im_7_13 : Qplus_im_7_13 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_7_14 : Qplus_im_7_14 = interpQ 1 [] := by
+public theorem z_Qplus_im_7_14 : Qplus_im_7_14 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_7_15 : Qplus_im_7_15 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_7_16 : Qplus_im_7_16 = interpQ 1 [] := by
+public theorem z_Qplus_im_7_16 : Qplus_im_7_16 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_7_17 : Qplus_im_7_17 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_7_18 : Qplus_im_7_18 = interpQ 1 [] := by
+public theorem z_Qplus_im_7_18 : Qplus_im_7_18 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_7_19 : Qplus_im_7_19 = interpQ 1 [] := by
+public theorem z_Qplus_im_7_19 : Qplus_im_7_19 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_7_2 : Qplus_im_7_2 = interpQ 1 [] := by
+public theorem z_Qplus_im_7_2 : Qplus_im_7_2 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_7_20 : Qplus_im_7_20 = interpQ 1 [] := by
@@ -808,7 +810,7 @@ theorem z_Qplus_im_7_20 : Qplus_im_7_20 = interpQ 1 [] := by
 theorem z_Qplus_im_7_3 : Qplus_im_7_3 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_7_4 : Qplus_im_7_4 = interpQ 1 [] := by
+public theorem z_Qplus_im_7_4 : Qplus_im_7_4 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_7_5 : Qplus_im_7_5 = interpQ 1 [] := by
@@ -817,13 +819,13 @@ theorem z_Qplus_im_7_5 : Qplus_im_7_5 = interpQ 1 [] := by
 theorem z_Qplus_im_7_6 : Qplus_im_7_6 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_7_7 : Qplus_im_7_7 = interpQ 1 [] := by
+public theorem z_Qplus_im_7_7 : Qplus_im_7_7 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_7_8 : Qplus_im_7_8 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_im_7_9 : Qplus_im_7_9 = interpQ 1 [] := by
+public theorem z_Qplus_im_7_9 : Qplus_im_7_9 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
 theorem z_Qplus_im_8_0 : Qplus_im_8_0 = interpQ 1 [] := by
@@ -952,19 +954,19 @@ theorem z_Qplus_im_9_8 : Qplus_im_9_8 = interpQ 1 [] := by
 theorem z_Qplus_im_9_9 : Qplus_im_9_9 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_0_0 : Qplus_re_0_0 = interpQ 2 [-1, 0, 0, -1, 0, 0, 0, 0, -1] := by
+public theorem z_Qplus_re_0_0 : Qplus_re_0_0 = interpQ 2 [-1, 0, 0, -1, 0, 0, 0, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_0_0, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_0_1 : Qplus_re_0_1 = interpQ 2 [0, 0, 0, 0, 0, -1, -1] := by
+public theorem z_Qplus_re_0_1 : Qplus_re_0_1 = interpQ 2 [0, 0, 0, 0, 0, -1, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_0_1, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_0_10 : Qplus_re_0_10 = interpQ 1 [-1] := by
+public theorem z_Qplus_re_0_10 : Qplus_re_0_10 = interpQ 1 [-1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_0_10, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -973,7 +975,7 @@ theorem z_Qplus_re_0_10 : Qplus_re_0_10 = interpQ 1 [-1] := by
 theorem z_Qplus_re_0_11 : Qplus_re_0_11 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_0_12 : Qplus_re_0_12 = interpQ 2 [-1] := by
+public theorem z_Qplus_re_0_12 : Qplus_re_0_12 = interpQ 2 [-1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_0_12, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1000,7 +1002,7 @@ theorem z_Qplus_re_0_18 : Qplus_re_0_18 = interpQ 1 [] := by
 theorem z_Qplus_re_0_19 : Qplus_re_0_19 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_0_2 : Qplus_re_0_2 = interpQ 2 [-1, 0, -1, 0, 0, 0, 0, 0, 0, -1] := by
+public theorem z_Qplus_re_0_2 : Qplus_re_0_2 = interpQ 2 [-1, 0, -1, 0, 0, 0, 0, 0, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_0_2, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1009,19 +1011,19 @@ theorem z_Qplus_re_0_2 : Qplus_re_0_2 = interpQ 2 [-1, 0, -1, 0, 0, 0, 0, 0, 0, 
 theorem z_Qplus_re_0_20 : Qplus_re_0_20 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_0_3 : Qplus_re_0_3 = interpQ 2 [1, 0, 1, 1, 1, 1, 1, 1, 1, 1] := by
+public theorem z_Qplus_re_0_3 : Qplus_re_0_3 = interpQ 2 [1, 0, 1, 1, 1, 1, 1, 1, 1, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_0_3, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_0_4 : Qplus_re_0_4 = interpQ 2 [1, 0, 0, 0, -1, 0, 0, -1] := by
+public theorem z_Qplus_re_0_4 : Qplus_re_0_4 = interpQ 2 [1, 0, 0, 0, -1, 0, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_0_4, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_0_5 : Qplus_re_0_5 = interpQ 1 [-1] := by
+public theorem z_Qplus_re_0_5 : Qplus_re_0_5 = interpQ 1 [-1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_0_5, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1039,127 +1041,127 @@ theorem z_Qplus_re_0_8 : Qplus_re_0_8 = interpQ 1 [] := by
 theorem z_Qplus_re_0_9 : Qplus_re_0_9 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_10_0 : Qplus_re_10_0 = interpQ 4 [0, 0, 0, 0, 0, 1, 1] := by
+public theorem z_Qplus_re_10_0 : Qplus_re_10_0 = interpQ 4 [0, 0, 0, 0, 0, 1, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_0, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_1 : Qplus_re_10_1 = interpQ 2 [1, 0, 0, 1, 0, -1, -1, 0, 1] := by
+public theorem z_Qplus_re_10_1 : Qplus_re_10_1 = interpQ 2 [1, 0, 0, 1, 0, -1, -1, 0, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_1, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_10 : Qplus_re_10_10 = interpQ 2 [1, 0, -1, 0, 0, 1, 1, 0, 0, -1] := by
+public theorem z_Qplus_re_10_10 : Qplus_re_10_10 = interpQ 2 [1, 0, -1, 0, 0, 1, 1, 0, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_10, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_11 : Qplus_re_10_11 = interpQ 4 [1, 0, 1, 0, 1, 0, 0, 1, 0, 1] := by
+public theorem z_Qplus_re_10_11 : Qplus_re_10_11 = interpQ 4 [1, 0, 1, 0, 1, 0, 0, 1, 0, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_11, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_12 : Qplus_re_10_12 = interpQ 4 [-1, 0, -3, 0, -2, -1, -1, -2, 0, -3] := by
+public theorem z_Qplus_re_10_12 : Qplus_re_10_12 = interpQ 4 [-1, 0, -3, 0, -2, -1, -1, -2, 0, -3] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_12, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_13 : Qplus_re_10_13 = interpQ 4 [1, 0, 1, 1, -1, 0, 0, -1, 1, 1] := by
+public theorem z_Qplus_re_10_13 : Qplus_re_10_13 = interpQ 4 [1, 0, 1, 1, -1, 0, 0, -1, 1, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_13, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_14 : Qplus_re_10_14 = interpQ 2 [2, 0, 1, -1, 0, 0, 0, 0, -1, 1] := by
+public theorem z_Qplus_re_10_14 : Qplus_re_10_14 = interpQ 2 [2, 0, 1, -1, 0, 0, 0, 0, -1, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_14, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_15 : Qplus_re_10_15 = interpQ 4 [1, 0, 1, 0, 1, 0, 0, 1, 0, 1] := by
+public theorem z_Qplus_re_10_15 : Qplus_re_10_15 = interpQ 4 [1, 0, 1, 0, 1, 0, 0, 1, 0, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_15, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_16 : Qplus_re_10_16 = interpQ 4 [-2, 0, 0, -1, -1, -1, -1, -1, -1] := by
+public theorem z_Qplus_re_10_16 : Qplus_re_10_16 = interpQ 4 [-2, 0, 0, -1, -1, -1, -1, -1, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_16, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_17 : Qplus_re_10_17 = interpQ 2 [-2, 0, -1, -1, -2, -1, -1, -2, -1, -1] := by
+public theorem z_Qplus_re_10_17 : Qplus_re_10_17 = interpQ 2 [-2, 0, -1, -1, -2, -1, -1, -2, -1, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_17, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_18 : Qplus_re_10_18 = interpQ 4 [1, 0, 0, 1, 1, 2, 2, 1, 1] := by
+public theorem z_Qplus_re_10_18 : Qplus_re_10_18 = interpQ 4 [1, 0, 0, 1, 1, 2, 2, 1, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_18, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_19 : Qplus_re_10_19 = interpQ 2 [-1, 0, 0, 0, 1, -1, -1, 1] := by
+public theorem z_Qplus_re_10_19 : Qplus_re_10_19 = interpQ 2 [-1, 0, 0, 0, 1, -1, -1, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_19, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_2 : Qplus_re_10_2 = interpQ 4 [-1, 0, 1, 0, 2, 1, 1, 2, 0, 1] := by
+public theorem z_Qplus_re_10_2 : Qplus_re_10_2 = interpQ 4 [-1, 0, 1, 0, 2, 1, 1, 2, 0, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_2, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_20 : Qplus_re_10_20 = interpQ 1 [1] := by
+public theorem z_Qplus_re_10_20 : Qplus_re_10_20 = interpQ 1 [1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_20, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_3 : Qplus_re_10_3 = interpQ 4 [-1, 0, 1, 1, 0, 2, 2, 0, 1, 1] := by
+public theorem z_Qplus_re_10_3 : Qplus_re_10_3 = interpQ 4 [-1, 0, 1, 1, 0, 2, 2, 0, 1, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_3, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_4 : Qplus_re_10_4 = interpQ 4 [0, 0, -2, -3, -2, -3, -3, -2, -3, -2] := by
+public theorem z_Qplus_re_10_4 : Qplus_re_10_4 = interpQ 4 [0, 0, -2, -3, -2, -3, -3, -2, -3, -2] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_4, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_5 : Qplus_re_10_5 = interpQ 2 [1, 0, 1, 2, 1, 1, 1, 1, 2, 1] := by
+public theorem z_Qplus_re_10_5 : Qplus_re_10_5 = interpQ 2 [1, 0, 1, 2, 1, 1, 1, 1, 2, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_5, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_6 : Qplus_re_10_6 = interpQ 4 [0, 0, 0, -1, -1, 1, 1, -1, -1] := by
+public theorem z_Qplus_re_10_6 : Qplus_re_10_6 = interpQ 4 [0, 0, 0, -1, -1, 1, 1, -1, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_6, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_7 : Qplus_re_10_7 = interpQ 4 [-1, 0, -1, -1, -1, 0, 0, -1, -1, -1] := by
+public theorem z_Qplus_re_10_7 : Qplus_re_10_7 = interpQ 4 [-1, 0, -1, -1, -1, 0, 0, -1, -1, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_7, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_8 : Qplus_re_10_8 = interpQ 4 [1, 0, 0, 0, 1, 0, 0, 1] := by
+public theorem z_Qplus_re_10_8 : Qplus_re_10_8 = interpQ 4 [1, 0, 0, 0, 1, 0, 0, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_8, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_10_9 : Qplus_re_10_9 = interpQ 4 [-2, 0, 1, 1, 2, 0, 0, 2, 1, 1] := by
+public theorem z_Qplus_re_10_9 : Qplus_re_10_9 = interpQ 4 [-2, 0, 1, 1, 2, 0, 0, 2, 1, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_10_9, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1618,13 +1620,13 @@ theorem z_Qplus_re_14_9 : Qplus_re_14_9 = interpQ 4 [0, 0, 2, 2, 2, 1, 1, 2, 2, 
 theorem z_Qplus_re_1_0 : Qplus_re_1_0 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_1_1 : Qplus_re_1_1 = interpQ 2 [0, 0, 1, 1, 1, 1, 1, 1, 1, 1] := by
+public theorem z_Qplus_re_1_1 : Qplus_re_1_1 = interpQ 2 [0, 0, 1, 1, 1, 1, 1, 1, 1, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_1_1, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_1_10 : Qplus_re_1_10 = interpQ 1 [1] := by
+public theorem z_Qplus_re_1_10 : Qplus_re_1_10 = interpQ 1 [1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_1_10, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1642,7 +1644,7 @@ theorem z_Qplus_re_1_13 : Qplus_re_1_13 = interpQ 1 [] := by
 theorem z_Qplus_re_1_14 : Qplus_re_1_14 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_1_15 : Qplus_re_1_15 = interpQ 2 [-1] := by
+public theorem z_Qplus_re_1_15 : Qplus_re_1_15 = interpQ 2 [-1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_1_15, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1660,7 +1662,7 @@ theorem z_Qplus_re_1_18 : Qplus_re_1_18 = interpQ 1 [] := by
 theorem z_Qplus_re_1_19 : Qplus_re_1_19 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_1_2 : Qplus_re_1_2 = interpQ 2 [-1] := by
+public theorem z_Qplus_re_1_2 : Qplus_re_1_2 = interpQ 2 [-1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_1_2, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1678,37 +1680,37 @@ theorem z_Qplus_re_1_4 : Qplus_re_1_4 = interpQ 1 [] := by
 theorem z_Qplus_re_1_5 : Qplus_re_1_5 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_1_6 : Qplus_re_1_6 = interpQ 2 [1, 0, -1, 0, 0, 0, 0, 0, 0, -1] := by
+public theorem z_Qplus_re_1_6 : Qplus_re_1_6 = interpQ 2 [1, 0, -1, 0, 0, 0, 0, 0, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_1_6, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_1_7 : Qplus_re_1_7 = interpQ 2 [0, 0, 0, -1, 0, 0, 0, 0, -1] := by
+public theorem z_Qplus_re_1_7 : Qplus_re_1_7 = interpQ 2 [0, 0, 0, -1, 0, 0, 0, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_1_7, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_1_8 : Qplus_re_1_8 = interpQ 2 [-1, 0, 0, 0, -1, 0, 0, -1] := by
+public theorem z_Qplus_re_1_8 : Qplus_re_1_8 = interpQ 2 [-1, 0, 0, 0, -1, 0, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_1_8, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_1_9 : Qplus_re_1_9 = interpQ 2 [0, 0, 0, 0, 0, -1, -1] := by
+public theorem z_Qplus_re_1_9 : Qplus_re_1_9 = interpQ 2 [0, 0, 0, 0, 0, -1, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_1_9, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_2_0 : Qplus_re_2_0 = interpQ 2 [1, 0, 1, 1, 0, 0, 0, 0, 1, 1] := by
+public theorem z_Qplus_re_2_0 : Qplus_re_2_0 = interpQ 2 [1, 0, 1, 1, 0, 0, 0, 0, 1, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_2_0, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_2_1 : Qplus_re_2_1 = interpQ 2 [1, 0, 0, 0, 1, 1, 1, 1] := by
+public theorem z_Qplus_re_2_1 : Qplus_re_2_1 = interpQ 2 [1, 0, 0, 0, 1, 1, 1, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_2_1, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1732,7 +1734,7 @@ theorem z_Qplus_re_2_14 : Qplus_re_2_14 = interpQ 1 [] := by
 theorem z_Qplus_re_2_15 : Qplus_re_2_15 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_2_16 : Qplus_re_2_16 = interpQ 2 [-1] := by
+public theorem z_Qplus_re_2_16 : Qplus_re_2_16 = interpQ 2 [-1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_2_16, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1747,7 +1749,7 @@ theorem z_Qplus_re_2_18 : Qplus_re_2_18 = interpQ 1 [] := by
 theorem z_Qplus_re_2_19 : Qplus_re_2_19 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_2_2 : Qplus_re_2_2 = interpQ 2 [2, 0, 1, 0, 0, 1, 1, 0, 0, 1] := by
+public theorem z_Qplus_re_2_2 : Qplus_re_2_2 = interpQ 2 [2, 0, 1, 0, 0, 1, 1, 0, 0, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_2_2, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1756,25 +1758,25 @@ theorem z_Qplus_re_2_2 : Qplus_re_2_2 = interpQ 2 [2, 0, 1, 0, 0, 1, 1, 0, 0, 1]
 theorem z_Qplus_re_2_20 : Qplus_re_2_20 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_2_3 : Qplus_re_2_3 = interpQ 2 [-2, 0, -1, 0, -1, -1, -1, -1, 0, -1] := by
+public theorem z_Qplus_re_2_3 : Qplus_re_2_3 = interpQ 2 [-2, 0, -1, 0, -1, -1, -1, -1, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_2_3, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_2_4 : Qplus_re_2_4 = interpQ 2 [-2, 0, -1, -1, 0, -1, -1, 0, -1, -1] := by
+public theorem z_Qplus_re_2_4 : Qplus_re_2_4 = interpQ 2 [-2, 0, -1, -1, 0, -1, -1, 0, -1, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_2_4, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_2_5 : Qplus_re_2_5 = interpQ 1 [1] := by
+public theorem z_Qplus_re_2_5 : Qplus_re_2_5 = interpQ 1 [1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_2_5, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_2_6 : Qplus_re_2_6 = interpQ 2 [-1] := by
+public theorem z_Qplus_re_2_6 : Qplus_re_2_6 = interpQ 2 [-1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_2_6, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1798,25 +1800,25 @@ theorem z_Qplus_re_3_1 : Qplus_re_3_1 = interpQ 1 [] := by
 theorem z_Qplus_re_3_10 : Qplus_re_3_10 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_3_11 : Qplus_re_3_11 = interpQ 2 [0, 0, 0, -1, 0, 0, 0, 0, -1] := by
+public theorem z_Qplus_re_3_11 : Qplus_re_3_11 = interpQ 2 [0, 0, 0, -1, 0, 0, 0, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_3_11, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_3_12 : Qplus_re_3_12 = interpQ 2 [-1, 0, 0, 0, -1, 0, 0, -1] := by
+public theorem z_Qplus_re_3_12 : Qplus_re_3_12 = interpQ 2 [-1, 0, 0, 0, -1, 0, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_3_12, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_3_13 : Qplus_re_3_13 = interpQ 2 [0, 0, 0, 0, 0, -1, -1] := by
+public theorem z_Qplus_re_3_13 : Qplus_re_3_13 = interpQ 2 [0, 0, 0, 0, 0, -1, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_3_13, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_3_14 : Qplus_re_3_14 = interpQ 1 [1] := by
+public theorem z_Qplus_re_3_14 : Qplus_re_3_14 = interpQ 1 [1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_3_14, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1828,7 +1830,7 @@ theorem z_Qplus_re_3_15 : Qplus_re_3_15 = interpQ 1 [] := by
 theorem z_Qplus_re_3_16 : Qplus_re_3_16 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_3_17 : Qplus_re_3_17 = interpQ 1 [1] := by
+public theorem z_Qplus_re_3_17 : Qplus_re_3_17 = interpQ 1 [1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_3_17, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1840,7 +1842,7 @@ theorem z_Qplus_re_3_18 : Qplus_re_3_18 = interpQ 1 [] := by
 theorem z_Qplus_re_3_19 : Qplus_re_3_19 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_3_2 : Qplus_re_3_2 = interpQ 2 [0, 0, 1, 1, 1, 1, 1, 1, 1, 1] := by
+public theorem z_Qplus_re_3_2 : Qplus_re_3_2 = interpQ 2 [0, 0, 1, 1, 1, 1, 1, 1, 1, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_3_2, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1852,7 +1854,7 @@ theorem z_Qplus_re_3_20 : Qplus_re_3_20 = interpQ 1 [] := by
 theorem z_Qplus_re_3_3 : Qplus_re_3_3 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_3_4 : Qplus_re_3_4 = interpQ 2 [1] := by
+public theorem z_Qplus_re_3_4 : Qplus_re_3_4 = interpQ 2 [1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_3_4, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1864,7 +1866,7 @@ theorem z_Qplus_re_3_5 : Qplus_re_3_5 = interpQ 1 [] := by
 theorem z_Qplus_re_3_6 : Qplus_re_3_6 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_3_7 : Qplus_re_3_7 = interpQ 2 [1, 0, -1, 0, 0, 0, 0, 0, 0, -1] := by
+public theorem z_Qplus_re_3_7 : Qplus_re_3_7 = interpQ 2 [1, 0, -1, 0, 0, 0, 0, 0, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_3_7, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1876,7 +1878,7 @@ theorem z_Qplus_re_3_8 : Qplus_re_3_8 = interpQ 1 [] := by
 theorem z_Qplus_re_3_9 : Qplus_re_3_9 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_4_0 : Qplus_re_4_0 = interpQ 2 [-1] := by
+public theorem z_Qplus_re_4_0 : Qplus_re_4_0 = interpQ 2 [-1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_4_0, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1912,7 +1914,7 @@ theorem z_Qplus_re_4_17 : Qplus_re_4_17 = interpQ 1 [] := by
 theorem z_Qplus_re_4_18 : Qplus_re_4_18 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_4_19 : Qplus_re_4_19 = interpQ 1 [1] := by
+public theorem z_Qplus_re_4_19 : Qplus_re_4_19 = interpQ 1 [1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_4_19, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1936,7 +1938,7 @@ theorem z_Qplus_re_4_5 : Qplus_re_4_5 = interpQ 1 [] := by
 theorem z_Qplus_re_4_6 : Qplus_re_4_6 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_4_7 : Qplus_re_4_7 = interpQ 2 [-1] := by
+public theorem z_Qplus_re_4_7 : Qplus_re_4_7 = interpQ 2 [-1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_4_7, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1948,13 +1950,13 @@ theorem z_Qplus_re_4_8 : Qplus_re_4_8 = interpQ 1 [] := by
 theorem z_Qplus_re_4_9 : Qplus_re_4_9 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_5_0 : Qplus_re_5_0 = interpQ 2 [0, 0, -1, -1, 0, -1, -1, 0, -1, -1] := by
+public theorem z_Qplus_re_5_0 : Qplus_re_5_0 = interpQ 2 [0, 0, -1, -1, 0, -1, -1, 0, -1, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_5_0, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_5_1 : Qplus_re_5_1 = interpQ 2 [-1, 0, 1, 1, 0, 0, 0, 0, 1, 1] := by
+public theorem z_Qplus_re_5_1 : Qplus_re_5_1 = interpQ 2 [-1, 0, 1, 1, 0, 0, 0, 0, 1, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_5_1, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1969,7 +1971,7 @@ theorem z_Qplus_re_5_11 : Qplus_re_5_11 = interpQ 1 [] := by
 theorem z_Qplus_re_5_12 : Qplus_re_5_12 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_5_13 : Qplus_re_5_13 = interpQ 2 [0, 0, 0, 1, 0, 0, 0, 0, 1] := by
+public theorem z_Qplus_re_5_13 : Qplus_re_5_13 = interpQ 2 [0, 0, 0, 1, 0, 0, 0, 0, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_5_13, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1981,7 +1983,7 @@ theorem z_Qplus_re_5_14 : Qplus_re_5_14 = interpQ 1 [] := by
 theorem z_Qplus_re_5_15 : Qplus_re_5_15 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_5_16 : Qplus_re_5_16 = interpQ 2 [1, 0, 0, 0, 1, 0, 0, 1] := by
+public theorem z_Qplus_re_5_16 : Qplus_re_5_16 = interpQ 2 [1, 0, 0, 0, 1, 0, 0, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_5_16, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -1990,19 +1992,19 @@ theorem z_Qplus_re_5_16 : Qplus_re_5_16 = interpQ 2 [1, 0, 0, 0, 1, 0, 0, 1] := 
 theorem z_Qplus_re_5_17 : Qplus_re_5_17 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_5_18 : Qplus_re_5_18 = interpQ 2 [0, 0, 0, 0, 0, 1, 1] := by
+public theorem z_Qplus_re_5_18 : Qplus_re_5_18 = interpQ 2 [0, 0, 0, 0, 0, 1, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_5_18, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_5_19 : Qplus_re_5_19 = interpQ 1 [-1] := by
+public theorem z_Qplus_re_5_19 : Qplus_re_5_19 = interpQ 1 [-1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_5_19, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_5_2 : Qplus_re_5_2 = interpQ 2 [-2, 0, -1, 0, -1, -1, -1, -1, 0, -1] := by
+public theorem z_Qplus_re_5_2 : Qplus_re_5_2 = interpQ 2 [-2, 0, -1, 0, -1, -1, -1, -1, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_5_2, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -2011,19 +2013,19 @@ theorem z_Qplus_re_5_2 : Qplus_re_5_2 = interpQ 2 [-2, 0, -1, 0, -1, -1, -1, -1,
 theorem z_Qplus_re_5_20 : Qplus_re_5_20 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_5_3 : Qplus_re_5_3 = interpQ 2 [2, 0, 0, 0, 1, 1, 1, 1] := by
+public theorem z_Qplus_re_5_3 : Qplus_re_5_3 = interpQ 2 [2, 0, 0, 0, 1, 1, 1, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_5_3, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_5_4 : Qplus_re_5_4 = interpQ 2 [1, 0, 0, -1, -1, 0, 0, -1, -1] := by
+public theorem z_Qplus_re_5_4 : Qplus_re_5_4 = interpQ 2 [1, 0, 0, -1, -1, 0, 0, -1, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_5_4, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_5_5 : Qplus_re_5_5 = interpQ 1 [-1] := by
+public theorem z_Qplus_re_5_5 : Qplus_re_5_5 = interpQ 1 [-1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_5_5, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -2035,13 +2037,13 @@ theorem z_Qplus_re_5_6 : Qplus_re_5_6 = interpQ 1 [] := by
 theorem z_Qplus_re_5_7 : Qplus_re_5_7 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_5_8 : Qplus_re_5_8 = interpQ 2 [-1] := by
+public theorem z_Qplus_re_5_8 : Qplus_re_5_8 = interpQ 2 [-1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_5_8, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_5_9 : Qplus_re_5_9 = interpQ 2 [-1, 0, 1, 0, 0, 0, 0, 0, 0, 1] := by
+public theorem z_Qplus_re_5_9 : Qplus_re_5_9 = interpQ 2 [-1, 0, 1, 0, 0, 0, 0, 0, 0, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_5_9, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -2056,13 +2058,13 @@ theorem z_Qplus_re_6_1 : Qplus_re_6_1 = interpQ 1 [] := by
 theorem z_Qplus_re_6_10 : Qplus_re_6_10 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_6_11 : Qplus_re_6_11 = interpQ 2 [1] := by
+public theorem z_Qplus_re_6_11 : Qplus_re_6_11 = interpQ 2 [1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_6_11, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_6_12 : Qplus_re_6_12 = interpQ 2 [-1, 0, -1, 0, 0, 0, 0, 0, 0, -1] := by
+public theorem z_Qplus_re_6_12 : Qplus_re_6_12 = interpQ 2 [-1, 0, -1, 0, 0, 0, 0, 0, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_6_12, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -2074,19 +2076,19 @@ theorem z_Qplus_re_6_13 : Qplus_re_6_13 = interpQ 1 [] := by
 theorem z_Qplus_re_6_14 : Qplus_re_6_14 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_6_15 : Qplus_re_6_15 = interpQ 2 [1, 0, 1, 1, 1, 1, 1, 1, 1, 1] := by
+public theorem z_Qplus_re_6_15 : Qplus_re_6_15 = interpQ 2 [1, 0, 1, 1, 1, 1, 1, 1, 1, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_6_15, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_6_16 : Qplus_re_6_16 = interpQ 2 [1, 0, 0, 0, -1, 0, 0, -1] := by
+public theorem z_Qplus_re_6_16 : Qplus_re_6_16 = interpQ 2 [1, 0, 0, 0, -1, 0, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_6_16, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_6_17 : Qplus_re_6_17 = interpQ 1 [-1] := by
+public theorem z_Qplus_re_6_17 : Qplus_re_6_17 = interpQ 1 [-1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_6_17, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -2104,7 +2106,7 @@ theorem z_Qplus_re_6_2 : Qplus_re_6_2 = interpQ 1 [] := by
 theorem z_Qplus_re_6_20 : Qplus_re_6_20 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_6_3 : Qplus_re_6_3 = interpQ 2 [-1, 0, 0, -1, 0, 0, 0, 0, -1] := by
+public theorem z_Qplus_re_6_3 : Qplus_re_6_3 = interpQ 2 [-1, 0, 0, -1, 0, 0, 0, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_6_3, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -2122,13 +2124,13 @@ theorem z_Qplus_re_6_6 : Qplus_re_6_6 = interpQ 1 [] := by
 theorem z_Qplus_re_6_7 : Qplus_re_6_7 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_6_8 : Qplus_re_6_8 = interpQ 2 [0, 0, 0, 0, 0, -1, -1] := by
+public theorem z_Qplus_re_6_8 : Qplus_re_6_8 = interpQ 2 [0, 0, 0, 0, 0, -1, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_6_8, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_6_9 : Qplus_re_6_9 = interpQ 2 [1] := by
+public theorem z_Qplus_re_6_9 : Qplus_re_6_9 = interpQ 2 [1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_6_9, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -2137,7 +2139,7 @@ theorem z_Qplus_re_6_9 : Qplus_re_6_9 = interpQ 2 [1] := by
 theorem z_Qplus_re_7_0 : Qplus_re_7_0 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_7_1 : Qplus_re_7_1 = interpQ 2 [-1] := by
+public theorem z_Qplus_re_7_1 : Qplus_re_7_1 = interpQ 2 [-1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_7_1, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -2146,25 +2148,25 @@ theorem z_Qplus_re_7_1 : Qplus_re_7_1 = interpQ 2 [-1] := by
 theorem z_Qplus_re_7_10 : Qplus_re_7_10 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_7_11 : Qplus_re_7_11 = interpQ 2 [-2, 0, -1, 0, 0, -1, -1, 0, 0, -1] := by
+public theorem z_Qplus_re_7_11 : Qplus_re_7_11 = interpQ 2 [-2, 0, -1, 0, 0, -1, -1, 0, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_7_11, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_7_12 : Qplus_re_7_12 = interpQ 2 [2, 0, 1, 0, 1, 1, 1, 1, 0, 1] := by
+public theorem z_Qplus_re_7_12 : Qplus_re_7_12 = interpQ 2 [2, 0, 1, 0, 1, 1, 1, 1, 0, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_7_12, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_7_13 : Qplus_re_7_13 = interpQ 2 [1, 0, 0, 1, 0, 1, 1, 0, 1] := by
+public theorem z_Qplus_re_7_13 : Qplus_re_7_13 = interpQ 2 [1, 0, 0, 1, 0, 1, 1, 0, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_7_13, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_7_14 : Qplus_re_7_14 = interpQ 1 [-1] := by
+public theorem z_Qplus_re_7_14 : Qplus_re_7_14 = interpQ 1 [-1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_7_14, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -2173,7 +2175,7 @@ theorem z_Qplus_re_7_14 : Qplus_re_7_14 = interpQ 1 [-1] := by
 theorem z_Qplus_re_7_15 : Qplus_re_7_15 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_7_16 : Qplus_re_7_16 = interpQ 2 [1, 0, 1, 1, 1, 1, 1, 1, 1, 1] := by
+public theorem z_Qplus_re_7_16 : Qplus_re_7_16 = interpQ 2 [1, 0, 1, 1, 1, 1, 1, 1, 1, 1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_7_16, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -2182,19 +2184,19 @@ theorem z_Qplus_re_7_16 : Qplus_re_7_16 = interpQ 2 [1, 0, 1, 1, 1, 1, 1, 1, 1, 
 theorem z_Qplus_re_7_17 : Qplus_re_7_17 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_7_18 : Qplus_re_7_18 = interpQ 2 [1, 0, 0, 0, -1, 0, 0, -1] := by
+public theorem z_Qplus_re_7_18 : Qplus_re_7_18 = interpQ 2 [1, 0, 0, 0, -1, 0, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_7_18, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_7_19 : Qplus_re_7_19 = interpQ 1 [-1] := by
+public theorem z_Qplus_re_7_19 : Qplus_re_7_19 = interpQ 1 [-1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_7_19, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
   try ring
 
-theorem z_Qplus_re_7_2 : Qplus_re_7_2 = interpQ 2 [-1, 0, -1, -1, 0, 0, 0, 0, -1, -1] := by
+public theorem z_Qplus_re_7_2 : Qplus_re_7_2 = interpQ 2 [-1, 0, -1, -1, 0, 0, 0, 0, -1, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_7_2, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -2206,7 +2208,7 @@ theorem z_Qplus_re_7_20 : Qplus_re_7_20 = interpQ 1 [] := by
 theorem z_Qplus_re_7_3 : Qplus_re_7_3 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_7_4 : Qplus_re_7_4 = interpQ 2 [-1, 0, 0, -1, 0, 0, 0, 0, -1] := by
+public theorem z_Qplus_re_7_4 : Qplus_re_7_4 = interpQ 2 [-1, 0, 0, -1, 0, 0, 0, 0, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_7_4, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -2218,7 +2220,7 @@ theorem z_Qplus_re_7_5 : Qplus_re_7_5 = interpQ 1 [] := by
 theorem z_Qplus_re_7_6 : Qplus_re_7_6 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_7_7 : Qplus_re_7_7 = interpQ 2 [-1, 0, 0, 0, -1, -1, -1, -1] := by
+public theorem z_Qplus_re_7_7 : Qplus_re_7_7 = interpQ 2 [-1, 0, 0, 0, -1, -1, -1, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_7_7, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
@@ -2227,7 +2229,7 @@ theorem z_Qplus_re_7_7 : Qplus_re_7_7 = interpQ 2 [-1, 0, 0, 0, -1, -1, -1, -1] 
 theorem z_Qplus_re_7_8 : Qplus_re_7_8 = interpQ 1 [] := by
   rw [interpQ_nil]; rfl
 
-theorem z_Qplus_re_7_9 : Qplus_re_7_9 = interpQ 2 [0, 0, 0, 0, 0, -1, -1] := by
+public theorem z_Qplus_re_7_9 : Qplus_re_7_9 = interpQ 2 [0, 0, 0, 0, 0, -1, -1] := by
   refine Polynomial.funext fun r => ?_
   simp [Qplus_re_7_9, interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]

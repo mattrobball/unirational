@@ -2,23 +2,25 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12CompoundRRow0
-import V14Formalization.D12CompoundRRow1
-import V14Formalization.D12CompoundRRow2
-import V14Formalization.D12CompoundRRow3
-import V14Formalization.D12CompoundRRow4
-import V14Formalization.D12CompoundRRow5
-import V14Formalization.D12CompoundRRow6
-import V14Formalization.D12CompoundRRow7
-import V14Formalization.D12CompoundRRow8
-import V14Formalization.D12CompoundRRow9
-import V14Formalization.D12CompoundRRow10
-import V14Formalization.D12CompoundRRow11
-import V14Formalization.D12CompoundRRow12
-import V14Formalization.D12CompoundRRow13
-import V14Formalization.D12CompoundRRow14
-import V14Formalization.D12PolynomialRFull
-import V14Formalization.GeometricV14Carrier
+module
+
+public import V14Formalization.D12CompoundRRow0
+public import V14Formalization.D12CompoundRRow1
+public import V14Formalization.D12CompoundRRow2
+public import V14Formalization.D12CompoundRRow3
+public import V14Formalization.D12CompoundRRow4
+public import V14Formalization.D12CompoundRRow5
+public import V14Formalization.D12CompoundRRow6
+public import V14Formalization.D12CompoundRRow7
+public import V14Formalization.D12CompoundRRow8
+public import V14Formalization.D12CompoundRRow9
+public import V14Formalization.D12CompoundRRow10
+public import V14Formalization.D12CompoundRRow11
+public import V14Formalization.D12CompoundRRow12
+public import V14Formalization.D12CompoundRRow13
+public import V14Formalization.D12CompoundRRow14
+public import V14Formalization.D12PolynomialRFull
+public import V14Formalization.GeometricV14Carrier
 
 /-!
 # The sealed rotation is the compound of the six-dimensional rotation
@@ -62,7 +64,7 @@ private theorem compound_sub_R_row (i j : Fin 15) :
   · simpa [RFull.R_poly, Matrix.of_apply] using D12CompoundRRow14.row_cert j
 
 /-- Entrywise evaluation commutes with the order-two compound construction. -/
-theorem evalMatrixAt_compound2Lex
+public theorem evalMatrixAt_compound2Lex
     {S : Type*} [CommRing S] [Algebra ℚ S] (z : S)
     (A : Matrix (Fin 6) (Fin 6) (Polynomial ℚ)) :
     evalMatrixAt z (PluckerNaturality.compound2Lex A) =
@@ -76,7 +78,7 @@ theorem evalMatrixAt_compound2Lex
 
 /-- The generated 15-dimensional rotation evaluates to the compound matrix of
 the generated six-dimensional rotation. -/
-theorem evalMatrixK_R_eq_compound_R6 :
+public theorem evalMatrixK_R_eq_compound_R6 :
     evalMatrixK RFull.R_poly =
       PluckerNaturality.compound2Lex (evalMatrixK R6_poly) := by
   apply Matrix.ext
@@ -100,7 +102,7 @@ theorem evalMatrixK_R_eq_compound_R6 :
 
 /-- The generated 15-dimensional rotation is the compound of the actual
 six-dimensional Weil rotation. -/
-theorem evalMatrixK_R_eq_compound_actualU6 :
+public theorem evalMatrixK_R_eq_compound_actualU6 :
     evalMatrixK RFull.R_poly =
       PluckerNaturality.compound2Lex D12U6Semantic.actualU6 := by
   rw [evalMatrixK_R_eq_compound_R6,
@@ -108,7 +110,7 @@ theorem evalMatrixK_R_eq_compound_actualU6 :
 
 /-- The actual exterior-square rotation is structurally the compound matrix
 of the actual six-dimensional Weil rotation. -/
-theorem actualRot_eq_compound_actualU6 :
+public theorem actualRot_eq_compound_actualU6 :
     (lambda2MatrixRepresentation.ρ
         (CentralizerN.rotGen : GeometricV14Carrier.PSL2F11) :
       Matrix (Fin 15) (Fin 15) WeilRep.K) =
@@ -134,7 +136,7 @@ theorem actualRot_eq_compound_actualU6 :
 
 /-- The generated 15-dimensional rotation evaluates to the actual geometric
 exterior-square rotation. -/
-theorem evalMatrixK_R_eq_actualRot :
+public theorem evalMatrixK_R_eq_actualRot :
     evalMatrixK RFull.R_poly =
       (lambda2MatrixRepresentation.ρ
         (CentralizerN.rotGen : GeometricV14Carrier.PSL2F11) :

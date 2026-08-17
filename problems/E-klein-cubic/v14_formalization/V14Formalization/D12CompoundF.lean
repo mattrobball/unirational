@@ -2,23 +2,25 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12CompoundFRow0
-import V14Formalization.D12CompoundFRow1
-import V14Formalization.D12CompoundFRow2
-import V14Formalization.D12CompoundFRow3
-import V14Formalization.D12CompoundFRow4
-import V14Formalization.D12CompoundFRow5
-import V14Formalization.D12CompoundFRow6
-import V14Formalization.D12CompoundFRow7
-import V14Formalization.D12CompoundFRow8
-import V14Formalization.D12CompoundFRow9
-import V14Formalization.D12CompoundFRow10
-import V14Formalization.D12CompoundFRow11
-import V14Formalization.D12CompoundFRow12
-import V14Formalization.D12CompoundFRow13
-import V14Formalization.D12CompoundFRow14
-import V14Formalization.D12PolynomialFFull
-import V14Formalization.GeometricV14Carrier
+module
+
+public import V14Formalization.D12CompoundFRow0
+public import V14Formalization.D12CompoundFRow1
+public import V14Formalization.D12CompoundFRow2
+public import V14Formalization.D12CompoundFRow3
+public import V14Formalization.D12CompoundFRow4
+public import V14Formalization.D12CompoundFRow5
+public import V14Formalization.D12CompoundFRow6
+public import V14Formalization.D12CompoundFRow7
+public import V14Formalization.D12CompoundFRow8
+public import V14Formalization.D12CompoundFRow9
+public import V14Formalization.D12CompoundFRow10
+public import V14Formalization.D12CompoundFRow11
+public import V14Formalization.D12CompoundFRow12
+public import V14Formalization.D12CompoundFRow13
+public import V14Formalization.D12CompoundFRow14
+public import V14Formalization.D12PolynomialFFull
+public import V14Formalization.GeometricV14Carrier
 
 /-!
 # The sealed reflection is the compound of the six-dimensional reflection
@@ -61,7 +63,7 @@ private theorem compound_sub_F_row (i j : Fin 15) :
   · simpa [FFull.F_poly, Matrix.of_apply] using D12CompoundFRow14.row_cert j
 
 /-- Entrywise evaluation commutes with the order-two compound construction. -/
-theorem evalMatrixAt_compound2Lex
+public theorem evalMatrixAt_compound2Lex
     {S : Type*} [CommRing S] [Algebra ℚ S] (z : S)
     (A : Matrix (Fin 6) (Fin 6) (Polynomial ℚ)) :
     evalMatrixAt z (PluckerNaturality.compound2Lex A) =
@@ -75,7 +77,7 @@ theorem evalMatrixAt_compound2Lex
 
 /-- The generated 15-dimensional reflection evaluates to the compound matrix
 of the generated six-dimensional reflection. -/
-theorem evalMatrixK_F_eq_compound_F6 :
+public theorem evalMatrixK_F_eq_compound_F6 :
     evalMatrixK FFull.F_poly =
       PluckerNaturality.compound2Lex (evalMatrixK F6_poly) := by
   apply Matrix.ext
@@ -107,7 +109,7 @@ theorem evalMatrixK_F_eq_compound_actualF6 :
 
 /-- The actual exterior-square reflection is structurally the compound matrix
 of the actual six-dimensional Weil reflection. -/
-theorem actualRefl_eq_compound_actualF6 :
+public theorem actualRefl_eq_compound_actualF6 :
     (lambda2MatrixRepresentation.ρ
         (CentralizerN.reflGen : GeometricV14Carrier.PSL2F11) :
       Matrix (Fin 15) (Fin 15) WeilRep.K) =
@@ -131,7 +133,7 @@ theorem actualRefl_eq_compound_actualF6 :
 
 /-- The generated 15-dimensional reflection evaluates to the actual geometric
 exterior-square reflection. -/
-theorem evalMatrixK_F_eq_actualRefl :
+public theorem evalMatrixK_F_eq_actualRefl :
     evalMatrixK FFull.F_poly =
       (lambda2MatrixRepresentation.ρ
         (CentralizerN.reflGen : GeometricV14Carrier.PSL2F11) :

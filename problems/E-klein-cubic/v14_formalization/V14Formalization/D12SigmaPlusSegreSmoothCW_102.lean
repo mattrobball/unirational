@@ -1,10 +1,12 @@
 /-
 Auto-generated Fplus chart Nullstellensatz identities.
 -/
-import V14Formalization.D12SigmaPlusSegreEval
-import V14Formalization.D12SigmaPlusSegreMul
-import V14Formalization.D12SigmaPlusSegrePartials
-import V14Formalization.D12SigmaPlusSegreBezoutData
+module
+
+public import V14Formalization.D12SigmaPlusSegreEval
+public import V14Formalization.D12SigmaPlusSegreMul
+public import V14Formalization.D12SigmaPlusSegrePartials
+public import V14Formalization.D12SigmaPlusSegreBezoutData
 
 noncomputable section
 open Matrix Polynomial
@@ -79,7 +81,7 @@ theorem CW_102_2_mul :
 
 theorem CW_102_3_mul : CW_3_c_101 = ofLadj CW_3_re_101 CW_3_im_101 := rfl
 
-def CW_coeff_102 : Ki := CW_0_c_100 * Fplus_dU_c_002 + CW_1_c_100 * Fplus_dV_c_002 + CW_2_c_100 * Fplus_dW_c_002 + CW_3_c_101
+@[expose] public def CW_coeff_102 : Ki := CW_0_c_100 * Fplus_dU_c_002 + CW_1_c_100 * Fplus_dV_c_002 + CW_2_c_100 * Fplus_dW_c_002 + CW_3_c_101
 
 theorem CW_coeff_102_sum :
     CW_coeff_102 = ofLadj (CW_102_0_pre + CW_102_1_pre + CW_102_2_pre + CW_3_re_101) (CW_102_0_pim + CW_102_1_pim + CW_102_2_pim + CW_3_im_101) := by
@@ -106,7 +108,7 @@ theorem CW_coeff_102_poly_im :
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
   try ring
-theorem CW_coeff_102_eq :
+public theorem CW_coeff_102_eq :
     CW_coeff_102 = (0 : Ki) := by
   rw [CW_coeff_102_sum, CW_coeff_102_poly_re,
     CW_coeff_102_poly_im, ofLadj_add_Phi11]

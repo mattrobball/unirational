@@ -1,6 +1,8 @@
-import V14Formalization.ProjectiveActionFunctionFieldRatio
-import V14Formalization.CorrectedOrderedConstructor
-import V14Formalization.CorrectedOrderedProjectiveChart
+module
+
+public import V14Formalization.ProjectiveActionFunctionFieldRatio
+public import V14Formalization.CorrectedOrderedConstructor
+public import V14Formalization.CorrectedOrderedProjectiveChart
 
 noncomputable section
 
@@ -20,7 +22,7 @@ variable {Omega : Type u} [Field Omega]
 
 /-- The actual corrected ordered source action has the canonical projective
 row-ratio formula on every ambient affine generator. -/
-theorem correctedOrderedPlusMinusSource_actionFunctionFieldMap_X
+public theorem correctedOrderedPlusMinusSource_actionFunctionFieldMap_X
     [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma) (p q : ℕ)
@@ -72,7 +74,7 @@ theorem correctedOrderedPlusMinusSource_actionFunctionFieldMap_X
 /-- The actual corrected source action fixes ground-field constants in the
 normal function field.  This discharges the constant part of the finite
 generator comparison without unfolding the ordered birational chart. -/
-theorem correctedSource_actionFunctionFieldMap_C_base
+public theorem correctedSource_actionFunctionFieldMap_C_base
     [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma) (p q : ℕ)
