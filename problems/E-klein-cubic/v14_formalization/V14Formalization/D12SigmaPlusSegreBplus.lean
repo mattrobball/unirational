@@ -2,10 +2,12 @@
 Identify the emitted Bplus polynomial matrix with B_poly * Kplus_poly
 and with the concrete plus carrier after evaluation.
 -/
-import V14Formalization.D12SigmaPlusSegreApply_BplusPoly
-import V14Formalization.D12SigmaPlusQuadric6
-import V14Formalization.D12SigmaCarrierConcrete
-import V14Formalization.D12SigmaCarrierPolynomialCore
+module
+
+public import V14Formalization.D12SigmaPlusSegreApply_BplusPoly
+public import V14Formalization.D12SigmaPlusQuadric6
+public import V14Formalization.D12SigmaCarrierConcrete
+public import V14Formalization.D12SigmaCarrierPolynomialCore
 
 noncomputable section
 open Matrix Polynomial
@@ -760,14 +762,14 @@ theorem evalMatrixK_Bplus_poly :
   rw [evalMatrixAt_mul]
   rfl
 
-def BplusKi : Matrix (Fin 15) (Fin 6) Ki :=
+@[expose] public def BplusKi : Matrix (Fin 15) (Fin 6) Ki :=
   (D12SigmaCarrierConcrete.core.Bplus).map (algebraMap k Ki)
 
 theorem BplusKi_eq_map_eval :
     BplusKi = (evalMatrixK Bplus_poly).map (algebraMap k Ki) := by
   rw [BplusKi, evalMatrixK_Bplus_poly]
 
-theorem restrictedPluckerCoeffs_BplusKi_map (q : Fin 15) :
+public theorem restrictedPluckerCoeffs_BplusKi_map (q : Fin 15) :
     restrictedPluckerCoeffs BplusKi q =
       fun m => algebraMap k Ki
         (restrictedPluckerCoeffs (evalMatrixK Bplus_poly) q m) := by
@@ -775,7 +777,7 @@ theorem restrictedPluckerCoeffs_BplusKi_map (q : Fin 15) :
   exact restrictedPluckerCoeffs_map (algebraMap k Ki)
     (evalMatrixK Bplus_poly) q
 
-theorem restrictedPluckerCoeffs_evalMatrixK (q : Fin 15) :
+public theorem restrictedPluckerCoeffs_evalMatrixK (q : Fin 15) :
     restrictedPluckerCoeffs (evalMatrixK Bplus_poly) q =
       fun m => ofPoly (restrictedPluckerCoeffs Bplus_poly q m) := by
   simpa [evalMatrixK, evalMatrixAt, ofPoly] using

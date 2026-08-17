@@ -672,7 +672,7 @@
   "public": [
    "Phi11_eq_WeilRep",
    "evalMatrixK_R6_eq_actualU6",
-   "evalPhi11_\u03b6",
+   "evalPhi11_ζ",
    "eval_R6_entry"
   ]
  },
@@ -909,7 +909,7 @@
    "weilLambda2Hom_ker_center",
    "weilLambda2_mul",
    "weilLambda2_one",
-   "\u03c8_half_ne_one"
+   "ψ_half_ne_one"
   ]
  },
  "V14Formalization/GeometricFanoV14.lean": {
@@ -993,8 +993,8 @@
    "chiSumOp",
    "chiSumOp_eq_sixty_six_of_mem_Mfix",
    "conjEnd",
-   "eval\u2082Jlin",
-   "eval\u2082Jlin_span_eq_zero",
+   "eval₂Jlin",
+   "eval₂Jlin_span_eq_zero",
    "finrank_Ladj_U",
    "finrank_Msub_eq_ten_of_sum_chi_chiLambda2",
    "iRoot",
@@ -1055,7 +1055,7 @@
    "hom",
    "hom_mul",
    "hom_one",
-   "hom_subscheme\u03b9",
+   "hom_subschemeι",
    "of_comap_le"
   ]
  },
@@ -1418,7 +1418,7 @@
    "mem_coordGraded_X",
    "mem_coordGraded_s_mul_X",
    "projectiveZeroLocusFamilyIdeal_comap_mapLinearSubst_aeval",
-   "projectiveZeroLocusIdeal_comap_away\u03b9",
+   "projectiveZeroLocusIdeal_comap_awayι",
    "projectiveZeroLocusIdeal_comap_mapLinearSubst"
   ]
  },
@@ -1442,7 +1442,7 @@
    "diagonalChartHom_normalizedCoordinate_eq_self_of_eq",
    "diagonalUnscaleAway",
    "linearSubst_diagonal",
-   "standardChart\u03b9_comp_mapLinearSubst_diagonal"
+   "standardChartι_comp_mapLinearSubst_diagonal"
   ]
  },
  "V14Formalization/ProjectiveEigenvectorReduction.lean": {
@@ -1464,7 +1464,7 @@
   "public": [
    "aeval_eq_zero_of_projectiveZeroLocusIdeal_le_normalizedPoint_ker",
    "eval_map_eq_zero_of_projectiveZeroLocusFamily_point",
-   "standardChartAlgebraPoint_appTop_hypersurfaceChart\u0393Iso",
+   "standardChartAlgebraPoint_appTop_hypersurfaceChartΓIso",
    "standardChartEvalAlgebra_hypersurfaceChartEquation"
   ]
  },
@@ -1477,41 +1477,41 @@
    "pointOfNormalizedCoordinates_fixed_of_mulVec_eq_smul",
    "pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily",
    "pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily_toSpec",
-   "pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily_\u03b9",
+   "pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily_ι",
    "projectiveZeroLocusFamilyIdeal_le_pointOfNormalizedCoordinatesAlgebra_ker"
   ]
  },
  "V14Formalization/ProjectiveFamilyNaturality.lean": {
   "expose": [
-   "awayChart\u0393Iso",
+   "awayChartΓIso",
    "awayEquation",
    "awayEquationSection",
    "awayHypersurfaceIdealSheaf",
-   "missing_projectiveZeroLocusIdeal_comap_away\u03b9"
+   "missing_projectiveZeroLocusIdeal_comap_awayι"
   ],
   "expose_all_public_defs": true,
   "public": [
    "Away_map_awayEquation",
-   "awayChart\u0393Iso",
+   "awayChartΓIso",
    "awayEquation",
    "awayEquationSection",
    "awayHypersurfaceIdealSheaf",
    "chartSectionRingHom",
    "comap_le_projectiveZeroLocusFamilyIdeal_forall_of_span_le",
    "comap_le_projectiveZeroLocusFamilyIdeal_of_span_le",
-   "comap_linearAway\u03b9_agree_of_chart_and_away",
+   "comap_linearAwayι_agree_of_chart_and_away",
    "coordGraded",
    "familyIdeal_eq_of_span_eq",
    "idealSheafData_eq_of_comap_openImmersion_eq",
    "isInvariantIdeal_of_comap_le",
-   "linearAway\u03b9",
-   "linearAway\u03b9_comp_mapLinearSubst",
+   "linearAwayι",
+   "linearAwayι_comp_mapLinearSubst",
    "linearSubstGradedRingHom_X",
    "linearSubstGradedRingHom_eq_aeval",
-   "missing_projectiveZeroLocusIdeal_comap_away\u03b9",
-   "opensRange_linearAway\u03b9",
+   "missing_projectiveZeroLocusIdeal_comap_awayι",
+   "opensRange_linearAwayι",
    "projectiveZeroLocusFamilyIdeal_comap_mapLinearSubst_aeval_of_single",
-   "projectiveZeroLocusIdeal_comap_linearAway\u03b9_comp_mapLinearSubst_of_chart",
+   "projectiveZeroLocusIdeal_comap_linearAwayι_comp_mapLinearSubst_of_chart",
    "projectiveZeroLocusIdeal_comap_mapLinearSubst_of_away_restriction"
   ]
  },
@@ -1609,16 +1609,16 @@
    "FixedByPair",
    "centralizerRestriction",
    "fixedByCentralizerAction",
-   "fixedByCentralizerAction_\u03c1",
+   "fixedByCentralizerAction_ρ",
    "fixedByCentralizerHom",
    "fixedByCentralizerHom_mul",
    "fixedByCentralizerHom_one",
-   "fixedByCentralizerHom_\u03b9",
+   "fixedByCentralizerHom_ι",
    "fixedByLift",
-   "fixedByLift_\u03b9",
-   "fixedByPair\u03b9",
-   "fixedBy\u03b9",
-   "fixedBy\u03b9_comp_action",
+   "fixedByLift_ι",
+   "fixedByPairι",
+   "fixedByι",
+   "fixedByι_comp_action",
    "sigmaInCentralizer"
   ]
  },
@@ -1639,7 +1639,7 @@
   "public": [
    "fromFunctionField_compHom",
    "rationalMapToFixedBy",
-   "rationalMapToFixedBy_comp_\u03b9"
+   "rationalMapToFixedBy_comp_ι"
   ]
  },
  "V14Formalization/SchemeFunctionFieldNaturality.lean": {
@@ -1881,7 +1881,7 @@
    "v14SchemePointOfNormalizedCoordinates",
    "v14SchemePointOfNormalizedCoordinates_sigma_fixed",
    "v14SchemePointOfNormalizedCoordinates_toSpec",
-   "v14SchemePointOfNormalizedCoordinates_\u03b9"
+   "v14SchemePointOfNormalizedCoordinates_ι"
   ]
  },
  "V14Formalization/V14FixedPointEquations.lean": {
@@ -1949,13 +1949,13 @@
    "action",
    "actionOver",
    "actionOver_carrier",
-   "actionOver_hom_v14Scheme\u03b9",
-   "action_hom_v14Scheme\u03b9",
+   "actionOver_hom_v14Schemeι",
+   "action_hom_v14Schemeι",
    "action_of_plucker",
    "ambientSchemeAction",
    "equationDegree",
    "equations_isHomogeneous",
-   "fixed_comp_v14Scheme\u03b9",
+   "fixed_comp_v14Schemeι",
    "invariantIdeal",
    "invariantIdeal_of_plucker",
    "k",
@@ -1967,7 +1967,7 @@
    "v14Ideal",
    "v14Ideal_naturality",
    "v14Scheme",
-   "v14Scheme\u03b9"
+   "v14Schemeι"
   ]
  },
  "V14Formalization/WeierstrassSchemeDescent.lean": {
@@ -1978,7 +1978,7 @@
    "AffineToBase",
    "affine_morphism_descends_mvfrac",
    "affine_morphism_descends_of_point_baseChange_surjective",
-   "eval\u2082_polynomial_eq_evalEval",
+   "eval₂_polynomial_eq_evalEval",
    "projectiveSpace_morphism_descends_weierstrass_mvfrac",
    "projectiveSpace_morphism_descends_weierstrass_mvfrac_of_coordinates",
    "projective_weierstrass_triple_descends_mvfrac",
@@ -2027,9 +2027,9 @@
    "ec_mul_borel_big",
    "ed_of_borel",
    "weilU_mul_borel",
-   "\u03c7\u2082_inv",
-   "\u03c7\u2082_sq_one",
-   "\u03c7\u2082_two"
+   "χ₂_inv",
+   "χ₂_sq_one",
+   "χ₂_two"
   ]
  },
  "V14Formalization/WeilRepSL2.lean": {
@@ -2075,7 +2075,7 @@
    "weilU_Tmat",
    "weilU_negI",
    "weilU_one",
-   "\u03c7\u2082_one"
+   "χ₂_one"
   ]
  },
  "V14Formalization/WeilWN.lean": {

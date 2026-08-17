@@ -2,12 +2,14 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12SigmaPlusSegreSmoothAsm
-import V14Formalization.D12SigmaPlusSegreSmoothPartial
-import V14Formalization.D12SigmaPlusSegreHomogeneous
-import Mathlib.Algebra.MvPolynomial.Funext
-import Mathlib.Algebra.MvPolynomial.PDeriv
-import Mathlib.Algebra.CharZero.Infinite
+module
+
+public import V14Formalization.D12SigmaPlusSegreSmoothAsm
+public import V14Formalization.D12SigmaPlusSegreSmoothPartial
+public import V14Formalization.D12SigmaPlusSegreHomogeneous
+public import Mathlib.Algebra.MvPolynomial.Funext
+public import Mathlib.Algebra.MvPolynomial.PDeriv
+public import Mathlib.Algebra.CharZero.Infinite
 
 noncomputable section
 
@@ -73,7 +75,7 @@ theorem Fplus_dU_c_002_eq :
   unfold Fplus_dU_c_002 Fplus_dU_re_002 Fplus_dU_im_002 Fplus_re_022 Fplus_im_022
   rfl
 
-theorem eval_pderiv0 (a : Fin 3 → Ki) :
+public theorem eval_pderiv0 (a : Fin 3 → Ki) :
     eval a (pderiv 0 Fplus) =
       (3 : Ki) * ofLadj Fplus_re_000 Fplus_im_000 * a 0 ^ 2 +
         (2 : Ki) * ofLadj Fplus_re_001 Fplus_im_001 * (a 0 * a 1) +
@@ -92,7 +94,7 @@ theorem eval_pderiv0_eq_dU (a : Fin 3 → Ki) :
     Fplus_dU_c_101_eq, Fplus_dU_c_020_eq, Fplus_dU_c_011_eq, Fplus_dU_c_002_eq]
   ring
 
-instance : CharZero Ki where
+public instance : CharZero Ki where
   cast_injective := by
     intro m n hmn
     have hK : ((m : GeometricV14Carrier.k) : Ki) = (n : GeometricV14Carrier.k) := by
@@ -100,13 +102,13 @@ instance : CharZero Ki where
     have := (algebraMap GeometricV14Carrier.k Ki).injective hK
     exact Nat.cast_injective this
 
-instance : Infinite Ki := CharZero.infinite (M := Ki)
+public instance : Infinite Ki := CharZero.infinite (M := Ki)
 
 theorem pderiv_zero_Fplus : pderiv 0 Fplus = Fplus_dU :=
   MvPolynomial.funext eval_pderiv0_eq_dU
 
 -- V and W partials, used for the other charts.
-theorem eval_pderiv1 (a : Fin 3 → Ki) :
+public theorem eval_pderiv1 (a : Fin 3 → Ki) :
     eval a (pderiv 1 Fplus) =
       ofLadj Fplus_re_001 Fplus_im_001 * a 0 ^ 2 +
         (2 : Ki) * ofLadj Fplus_re_011 Fplus_im_011 * (a 0 * a 1) +
@@ -119,7 +121,7 @@ theorem eval_pderiv1 (a : Fin 3 → Ki) :
     eval_add, eval_mul, eval_C, eval_X, eval_pow]
   ring
 
-theorem eval_pderiv2 (a : Fin 3 → Ki) :
+public theorem eval_pderiv2 (a : Fin 3 → Ki) :
     eval a (pderiv 2 Fplus) =
       ofLadj Fplus_re_002 Fplus_im_002 * a 0 ^ 2 +
         ofLadj Fplus_re_012 Fplus_im_012 * (a 0 * a 1) +
@@ -298,7 +300,7 @@ theorem eval_pderiv2_smul (s : Ki) (a : Fin 3 → Ki) :
   ring
 
 /-- Same proposition as `Standard.IsSmoothPlaneCubic Fplus`. -/
-theorem Fplus_isSmoothPlaneCubic :
+public theorem Fplus_isSmoothPlaneCubic :
     Fplus.IsHomogeneous 3 ∧
       ∀ r : Fin 3 → Ki, r ≠ 0 → eval r Fplus = 0 →
         ∃ i : Fin 3, eval r (pderiv i Fplus) ≠ 0 := by
@@ -387,7 +389,7 @@ theorem eval_map_CW_identity {L : Type*} [CommRing L] (f : Ki →+* L)
 
 /-- Smoothness after any coefficient homomorphism, by evaluating the
 mapped Nullstellensatz identities. -/
-theorem Fplus_isSmoothPlaneCubic_map {L : Type*} [Field L] [Infinite L]
+public theorem Fplus_isSmoothPlaneCubic_map {L : Type*} [Field L] [Infinite L]
     (f : Ki →+* L) :
     (map f Fplus).IsHomogeneous 3 ∧
       ∀ r : Fin 3 → L, r ≠ 0 → eval r (map f Fplus) = 0 →

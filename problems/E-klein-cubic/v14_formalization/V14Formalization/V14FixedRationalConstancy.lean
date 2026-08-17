@@ -2,12 +2,14 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.V14FixedFieldPointDescent
-import V14Formalization.SchemeRationalConstancy
-import V14Formalization.GenericCharts
-import V14Formalization.UniversalNormalDivisor
-import V14Formalization.V14SchemeBaseChange
-import V14Formalization.SchemeModelAliases
+module
+
+public import V14Formalization.V14FixedFieldPointDescent
+public import V14Formalization.SchemeRationalConstancy
+public import V14Formalization.GenericCharts
+public import V14Formalization.UniversalNormalDivisor
+public import V14Formalization.V14SchemeBaseChange
+public import V14Formalization.SchemeModelAliases
 
 /-!
 # Constancy of an over-base rational map from the exceptional divisor
@@ -72,7 +74,7 @@ theorem rationalMapIsConstantOver_fixedBy_of_comp_descends_over
 
 /-- An over-base rational map from the biprojective exceptional divisor to
 the scheme-theoretic sigma-fixed locus is constant. -/
-theorem rationalMapIsConstantOver_v14FixedBy
+public theorem rationalMapIsConstantOver_v14FixedBy
     (p q : ℕ)
     (z : Scheme.RationalMap
       (BiprojectiveSpace p q k)

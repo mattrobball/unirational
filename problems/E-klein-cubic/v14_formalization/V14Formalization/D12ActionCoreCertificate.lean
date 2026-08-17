@@ -2,11 +2,13 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12MatrixCertificate
-import V14Formalization.D12PolynomialEvaluation
-import V14Formalization.D12CompoundR
-import V14Formalization.D12CompoundF
-import V14Formalization.D12RestrictedProjector
+module
+
+public import V14Formalization.D12MatrixCertificate
+public import V14Formalization.D12PolynomialEvaluation
+public import V14Formalization.D12CompoundR
+public import V14Formalization.D12CompoundF
+public import V14Formalization.D12RestrictedProjector
 
 /-!
 # The unconditional ambient-action core of the D12 certificate
@@ -31,7 +33,7 @@ open Lambda2Coordinates
 
 /-- The common ambient and restricted action data, before adjoining the four
 simultaneous-character certificates. -/
-structure ActionCore where
+public structure ActionCore where
   P : Matrix (Fin 15) (Fin 15) WeilRep.K
   R : Matrix (Fin 15) (Fin 15) WeilRep.K
   F : Matrix (Fin 15) (Fin 15) WeilRep.K
@@ -47,7 +49,7 @@ structure ActionCore where
 namespace ActionCore
 
 /-- Adjoin the four finite character-piece certificates to an action core. -/
-def toCertificate (C : ActionCore)
+@[expose] public def toCertificate (C : ActionCore)
     (pp : PieceCertificate C.B C.RM C.SM 1 1 (Fin 2))
     (pa : PieceCertificate C.B C.RM C.SM 1 (-1) (Fin 0))
     (ap : PieceCertificate C.B C.RM C.SM (-1) 1 (Fin 1))
@@ -72,7 +74,7 @@ def toCertificate (C : ActionCore)
 end ActionCore
 
 /-- The checked action core over the cyclotomic base field. -/
-def actionCore : ActionCore where
+@[expose] public def actionCore : ActionCore where
   P := V14SchemeModel.projectorMatrix
   R := lambda2MatrixRepresentation.ρ
     (CentralizerN.rotGen : GeometricV14Carrier.PSL2F11)
@@ -91,16 +93,16 @@ def actionCore : ActionCore where
     rw [← D12CompoundF.evalMatrixK_F_eq_actualRefl]
     exact evalMatrixK_F_mul_B_eq_B_mul_SM
 
-@[simp] theorem actionCore_P :
+@[simp] public theorem actionCore_P :
     actionCore.P = V14SchemeModel.projectorMatrix := rfl
 
-@[simp] theorem actionCore_R :
+@[simp] public theorem actionCore_R :
     actionCore.R =
       (lambda2MatrixRepresentation.ρ
         (CentralizerN.rotGen : GeometricV14Carrier.PSL2F11) :
           Matrix (Fin 15) (Fin 15) WeilRep.K) := rfl
 
-@[simp] theorem actionCore_F :
+@[simp] public theorem actionCore_F :
     actionCore.F =
       (lambda2MatrixRepresentation.ρ
         (CentralizerN.reflGen : GeometricV14Carrier.PSL2F11) :

@@ -2,9 +2,11 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12CertificateK
-import V14Formalization.V14D12FixedPointExclusion
-import V14Formalization.SchemeModelAliases
+module
+
+public import V14Formalization.D12CertificateK
+public import V14Formalization.V14D12FixedPointExclusion
+public import V14Formalization.SchemeModelAliases
 
 /-!
 # The concrete D12 fixed-point exclusion
@@ -27,7 +29,7 @@ open AlgebraicGeometry GeometricV14Carrier
 
 /-- The checked four-piece certificate eliminates the matrix hypotheses from
 the V14 rational-map obstruction. -/
-theorem noEquivariantRationalMap_of_normal_specialization
+public theorem noEquivariantRationalMap_of_normal_specialization
     (X : Action (Over (Spec (.of V14SchemeModel.k))) G)
     [IsIntegral X.V.left]
     {E : Action (Over (Spec (.of V14SchemeModel.k)))

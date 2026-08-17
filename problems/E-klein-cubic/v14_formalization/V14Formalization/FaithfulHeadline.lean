@@ -2,10 +2,12 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.FaithfulHeadlineReduction
-import V14Formalization.V14FixedRationalConstancy
-import V14Formalization.HeadlineStatement
-import V14Formalization.SchemeModelAliases
+module
+
+public import V14Formalization.FaithfulHeadlineReduction
+public import V14Formalization.V14FixedRationalConstancy
+public import V14Formalization.HeadlineStatement
+public import V14Formalization.SchemeModelAliases
 
 /-!
 # Unconditional faithful no-map theorem
@@ -28,7 +30,7 @@ open AlgebraicGeometry GeometricV14Carrier Module
 
 /-- Same statement after an explicit choice of plus/minus coordinates.
 The public theorems below hide this choice. -/
-theorem noEquivariantRationalMap_from_ambient_of_plusMinusBases
+public theorem noEquivariantRationalMap_from_ambient_of_plusMinusBases
     {V : Type} [AddCommGroup V] [Module k V]
     (R : FaithfulLinearRep k G V)
     (p q : ℕ)
@@ -42,7 +44,7 @@ theorem noEquivariantRationalMap_from_ambient_of_plusMinusBases
 
 /-- There is no equivariant rational map from the projectivization of a
 faithful linear representation to the coordinate V14. -/
-theorem noEquivariantRationalMap_from_ambient
+public theorem noEquivariantRationalMap_from_ambient
     {V : Type} [AddCommGroup V] [Module k V]
     (R : FaithfulLinearRep k G V) :
     ¬ HasEquivariantRationalMap (ambientOf R)
@@ -52,7 +54,7 @@ theorem noEquivariantRationalMap_from_ambient
 
 /-- Same statement, packaged as projective `G`-varieties: closed subschemes
 of Mathlib `Proj` with a `G`-action over `Spec k`. -/
-theorem noEquivariantRationalMap_projectiveGVariety
+public theorem noEquivariantRationalMap_projectiveGVariety
     {V : Type} [AddCommGroup V] [Module k V]
     (R : FaithfulLinearRep k G V) :
     ¬ ProjectiveGVariety.HasEquivariantRationalMap

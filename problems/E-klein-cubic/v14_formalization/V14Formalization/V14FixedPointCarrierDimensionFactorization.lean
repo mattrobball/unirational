@@ -2,10 +2,12 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.V14CarrierDimensionFactorization
-import V14Formalization.V14FixedPointEquations
-import V14Formalization.ProjectiveEigenvectorReduction
-import V14Formalization.D12ActionCoreCertificate
+module
+
+public import V14Formalization.V14CarrierDimensionFactorization
+public import V14Formalization.V14FixedPointEquations
+public import V14Formalization.ProjectiveEigenvectorReduction
+public import V14Formalization.D12ActionCoreCertificate
 
 /-!
 # Dimension-based carrier factorization of V14 fixed field points
@@ -31,7 +33,7 @@ open SigmaProjectorLinearAlgebra
 /-- A field-valued point of the scheme-theoretic sigma fixed locus factors
 through either the six-dimensional plus carrier or the four-dimensional minus
 carrier. The proof uses the checked rank-ten D12 projector factorization. -/
-theorem exists_normalizedCoordinates_v14FixedBy_plus_or_minus_carrier_of_dimension
+public theorem exists_normalizedCoordinates_v14FixedBy_plus_or_minus_carrier_of_dimension
     (L : Type) [Field L] [Algebra V14SchemeModel.k L] [NeZero (2 : L)]
     (p : v14FieldPointOver L ⟶
       FixedBy V14SchemeModel.actionOver GeometricV14Carrier.sigma)

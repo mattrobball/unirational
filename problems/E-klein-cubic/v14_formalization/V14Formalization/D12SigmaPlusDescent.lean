@@ -2,18 +2,20 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12SigmaPlusSegrePoint
-import V14Formalization.D12SigmaPlusSegreSection
-import V14Formalization.D12SigmaPlusSegreGeom
-import V14Formalization.D12SigmaPlusSegreRankTwo
-import V14Formalization.D12SigmaPlusSegreFplusMap
-import V14Formalization.D12SigmaPlusSegreSmooth
-import V14Formalization.SmoothPlaneCubicMvFracDescent
-import V14Formalization.KernelLineDescent
-import V14Formalization.MvFracConstantField
-import V14Formalization.D12SigmaCarrierConcrete
-import V14Formalization.V14SchemeModel
-import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
+module
+
+public import V14Formalization.D12SigmaPlusSegrePoint
+public import V14Formalization.D12SigmaPlusSegreSection
+public import V14Formalization.D12SigmaPlusSegreGeom
+public import V14Formalization.D12SigmaPlusSegreRankTwo
+public import V14Formalization.D12SigmaPlusSegreFplusMap
+public import V14Formalization.D12SigmaPlusSegreSmooth
+public import V14Formalization.SmoothPlaneCubicMvFracDescent
+public import V14Formalization.KernelLineDescent
+public import V14Formalization.MvFracConstantField
+public import V14Formalization.D12SigmaCarrierConcrete
+public import V14Formalization.V14SchemeModel
+public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
 
 /-!
 # Descent of a plus-carrier Plücker zero
@@ -31,10 +33,10 @@ open D12SigmaPlusSegreCore
 open EllipticPolynomialConstancy MvFracConstantField
 open SmoothPlaneCubicMvFracDescent KernelLineDescent
 
-private abbrev k := V14SchemeModel.k
+public abbrev k := V14SchemeModel.k
 private abbrev Ki := GeometricV14Carrier.Ladj
 
-instance : Algebra.IsAlgebraic k Ki :=
+public instance : Algebra.IsAlgebraic k Ki :=
   Algebra.IsAlgebraic.of_finite k Ki
 
 theorem plus_reconstruct_Ki
@@ -96,7 +98,7 @@ theorem align_projective_scalars_fin6
       simpa [hcj] using hj
     field_simp [hcj0]
 
-instance : Infinite (AlgebraicClosure Ki) :=
+public instance : Infinite (AlgebraicClosure Ki) :=
   CharZero.infinite (M := AlgebraicClosure Ki)
 
 theorem Fplus_smooth_algClosure :
@@ -184,13 +186,13 @@ theorem plusCarrier_commonPluckerZero_descends_mvfrac_Ki
   have hrec := plus_reconstruct_map φ u a b hsegr
   rw [hrec, hsegr', Matrix.mulVec_smul, L_map_mulVec_map]
 
-theorem pluckerValue_map {F F' : Type*} [Field F] [Field F']
+public theorem pluckerValue_map {F F' : Type*} [Field F] [Field F']
     (φ : F →+* F') (x : Fin 15 → F) (q : Fin 15) :
     D12Certificate.pluckerValue (fun i => φ (x i)) q =
       φ (D12Certificate.pluckerValue x q) := by
   simp [D12Certificate.pluckerValue, map_mul, map_sub, map_add]
 
-theorem mulVec_comp_map {m n : ℕ} {R S T : Type*}
+public theorem mulVec_comp_map {m n : ℕ} {R S T : Type*}
     [Semiring R] [Semiring S] [Semiring T]
     (f : S →+* T) (g : R →+* S)
     (M : Matrix (Fin m) (Fin n) R) (v : Fin n → S) :
@@ -202,7 +204,7 @@ theorem mulVec_comp_map {m n : ℕ} {R S T : Type*}
 /-- A plus-carrier Plücker zero over `MvFrac k n` is a scalar multiple of a
 base-field plus-carrier vector.  The Segre packet is used after extending
 coefficients to `Ki`, then ratios return to `k`. -/
-theorem plusCarrier_commonPluckerZero_descends_mvfrac
+public theorem plusCarrier_commonPluckerZero_descends_mvfrac
     (n : ℕ) (u : Fin 6 → MvFrac k n) (hu : u ≠ 0)
     (hQ : ∀ q : Fin 15,
       D12Certificate.pluckerValue
@@ -296,7 +298,7 @@ theorem plusCarrier_commonPluckerZero_descends_mvfrac
   funext i
   rw [Pi.smul_apply, smul_eq_mul, hu0i i, mul_comm]
 
-theorem plusCarrier_ambient_descends_mvfrac
+public theorem plusCarrier_ambient_descends_mvfrac
     (n : ℕ) (x : Fin 15 → MvFrac k n)
     (u : Fin 6 → MvFrac k n) (hu : u ≠ 0)
     (hx : x = ((D12SigmaCarrierConcrete.core.Bplus).map

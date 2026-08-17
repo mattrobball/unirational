@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12SigmaPlusSegreSpanVDir
-import V14Formalization.D12SigmaPlusSegreGeom
+module
+
+public import V14Formalization.D12SigmaPlusSegreSpanVDir
+public import V14Formalization.D12SigmaPlusSegreGeom
 
 noncomputable section
 

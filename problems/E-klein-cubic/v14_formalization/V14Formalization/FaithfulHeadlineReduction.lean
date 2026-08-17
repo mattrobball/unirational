@@ -1,6 +1,15 @@
-import V14Formalization.BlockNormalSigma
-import V14Formalization.V14D12CertificateExclusion
-import V14Formalization.SchemeModelAliases
+module
+
+public import V14Formalization.BlockNormalSigma
+public import V14Formalization.V14D12CertificateExclusion
+public import V14Formalization.SchemeModelAliases
+-- `ambientFor` is the headline statement's vocabulary; this module used to
+-- carry a byte-identical `private abbrev` copy of it, which only worked
+-- because legacy `private` mangles per module. A public signature may not
+-- mention a private declaration, and two public declarations of one name
+-- cannot be imported together (FaithfulHeadline imports both modules), so
+-- the copy is gone and the definition comes from where it belongs.
+public import V14Formalization.HeadlineStatement
 
 noncomputable section
 open CategoryTheory
@@ -10,28 +19,20 @@ namespace V14Formalization.SchemeGeometry
 open AlgebraicGeometry GeometricV14Carrier Module
 
 
-private abbrev v14FixedAction :=
+public abbrev v14FixedAction :=
   fixedByCentralizerAction V14SchemeModel.actionOver sigma
 
-private abbrev exceptionalFor
+public abbrev exceptionalFor
     {V : Type} [AddCommGroup V] [Module k V]
     (R : FaithfulLinearRep k G V) (p q : ℕ)
     (bp : Basis (Fin (p + 1)) k (R.plusEigenspace sigma))
     (bm : Basis (Fin (q + 1)) k (R.minusEigenspace sigma)) :=
   normalDivisorActionOver R sigma p q bp bm
 
-private abbrev ambientFor
-    {V : Type} [AddCommGroup V] [Module k V]
-    (R : FaithfulLinearRep k G V) (p q : ℕ)
-    (bp : Basis (Fin (p + 1)) k (R.plusEigenspace sigma))
-    (bm : Basis (Fin (q + 1)) k (R.minusEigenspace sigma)) :=
-  ambientProjectiveActionOver R (p + q + 1)
-    (plusMinusAmbientBasis R sigma sigma_isInvolution p q bp bm)
-
 /-- For every faithful representation with chosen plus/minus coordinates, the
 actual corrected normal valuation reduces the genuine scheme-level no-map
 statement to rational-map constancy on its biprojective exceptional divisor. -/
-theorem noEquivariantRationalMap_from_ambient_of_constancy
+public theorem noEquivariantRationalMap_from_ambient_of_constancy
     {V : Type} [AddCommGroup V] [Module k V]
     (R : FaithfulLinearRep k G V)
     (p q : ℕ)

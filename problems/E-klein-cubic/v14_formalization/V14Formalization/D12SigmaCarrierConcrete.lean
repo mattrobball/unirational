@@ -2,26 +2,28 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12SigmaCarrierBridgeRow0
-import V14Formalization.D12SigmaCarrierBridgeRow1
-import V14Formalization.D12SigmaCarrierBridgeRow2
-import V14Formalization.D12SigmaCarrierBridgeRow3
-import V14Formalization.D12SigmaCarrierBridgeRow4
-import V14Formalization.D12SigmaCarrierBridgeRow5
-import V14Formalization.D12SigmaCarrierBridgeRow6
-import V14Formalization.D12SigmaCarrierBridgeRow7
-import V14Formalization.D12SigmaCarrierBridgeRow8
-import V14Formalization.D12SigmaCarrierBridgeRow9
-import V14Formalization.D12SigmaCarrierPlusCol0
-import V14Formalization.D12SigmaCarrierPlusCol1
-import V14Formalization.D12SigmaCarrierPlusCol2
-import V14Formalization.D12SigmaCarrierPlusCol3
-import V14Formalization.D12SigmaCarrierPlusCol4
-import V14Formalization.D12SigmaCarrierPlusCol5
-import V14Formalization.D12SigmaCarrierMinusCol0
-import V14Formalization.D12SigmaCarrierMinusCol1
-import V14Formalization.D12SigmaCarrierMinusCol2
-import V14Formalization.D12SigmaCarrierMinusCol3
+module
+
+public import V14Formalization.D12SigmaCarrierBridgeRow0
+public import V14Formalization.D12SigmaCarrierBridgeRow1
+public import V14Formalization.D12SigmaCarrierBridgeRow2
+public import V14Formalization.D12SigmaCarrierBridgeRow3
+public import V14Formalization.D12SigmaCarrierBridgeRow4
+public import V14Formalization.D12SigmaCarrierBridgeRow5
+public import V14Formalization.D12SigmaCarrierBridgeRow6
+public import V14Formalization.D12SigmaCarrierBridgeRow7
+public import V14Formalization.D12SigmaCarrierBridgeRow8
+public import V14Formalization.D12SigmaCarrierBridgeRow9
+public import V14Formalization.D12SigmaCarrierPlusCol0
+public import V14Formalization.D12SigmaCarrierPlusCol1
+public import V14Formalization.D12SigmaCarrierPlusCol2
+public import V14Formalization.D12SigmaCarrierPlusCol3
+public import V14Formalization.D12SigmaCarrierPlusCol4
+public import V14Formalization.D12SigmaCarrierPlusCol5
+public import V14Formalization.D12SigmaCarrierMinusCol0
+public import V14Formalization.D12SigmaCarrierMinusCol1
+public import V14Formalization.D12SigmaCarrierMinusCol2
+public import V14Formalization.D12SigmaCarrierMinusCol3
 
 /-!
 # Concrete sigma carriers
@@ -42,7 +44,7 @@ open D12PolynomialData D12PolynomialEvaluation
 open D12GeneratorPolynomialCore D12GeneratorInvariance
 open D12SigmaCarrier D12SigmaCarrierPolynomial
 
-theorem evalMatrixK_Srestricted_reduced_poly :
+public theorem evalMatrixK_Srestricted_reduced_poly :
     evalMatrixK Srestricted_reduced_poly = SrestrictedAction := by
   rw [← evalMatrixK_Srestricted_poly]
   symm
@@ -60,7 +62,7 @@ theorem evalMatrixK_Srestricted_reduced_poly :
   · exact D12SigmaCarrierBridgeRow8.eval_row j
   · exact D12SigmaCarrierBridgeRow9.eval_row j
 
-theorem plus_eigen_eval :
+public theorem plus_eigen_eval :
     evalMatrixK Srestricted_reduced_poly * evalMatrixK Kplus_poly =
       evalMatrixK Kplus_poly := by
   apply Matrix.ext
@@ -79,7 +81,7 @@ theorem plus_eigen_eval :
   · exact D12SigmaCarrierPlusCol5.eval_column WeilRep.ζ
       D12U6PolynomialSeal.evalPhi11_ζ i
 
-theorem minus_eigen_eval :
+public theorem minus_eigen_eval :
     evalMatrixK Srestricted_reduced_poly * evalMatrixK Kminus_poly =
       -evalMatrixK Kminus_poly := by
   apply Matrix.ext
@@ -131,7 +133,7 @@ private theorem plusTopRow5 (j : Fin 6) :
   fin_cases j <;> norm_num [selectPlus, evalMatrixK, evalMatrixAt, Kplus_poly,
     Kplus_poly_row5, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply] <;> decide
 
-theorem plus_top : selectPlus * evalMatrixK Kplus_poly = 1 := by
+public theorem plus_top : selectPlus * evalMatrixK Kplus_poly = 1 := by
   apply Matrix.ext
   intro i j
   fin_cases i
@@ -166,7 +168,7 @@ private theorem minusTopRow3 (j : Fin 4) :
   fin_cases j <;> norm_num [selectMinus, evalMatrixK, evalMatrixAt, Kminus_poly,
     Kminus_poly_row3, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply] <;> decide
 
-theorem minus_top : selectMinus * evalMatrixK Kminus_poly = 1 := by
+public theorem minus_top : selectMinus * evalMatrixK Kminus_poly = 1 := by
   apply Matrix.ext
   intro i j
   fin_cases i
@@ -176,7 +178,7 @@ theorem minus_top : selectMinus * evalMatrixK Kminus_poly = 1 := by
   · exact minusTopRow3 j
 
 /-- The concrete, kernel-checked plus/minus sigma carriers. -/
-def core : D12SigmaCarrier.Core where
+@[expose] public def core : D12SigmaCarrier.Core where
   Kplus := evalMatrixK Kplus_poly
   Kminus := evalMatrixK Kminus_poly
   plus_top := plus_top

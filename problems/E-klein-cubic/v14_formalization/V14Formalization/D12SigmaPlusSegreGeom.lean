@@ -44,7 +44,7 @@ first Segre factor. -/
 @[expose] public def bilinearN (a : Fin 3 → Ki) : Matrix (Fin 3) (Fin 3) Ki :=
   fun r j => ∑ i : Fin 3, N r (crossIndex i j) * a i
 
-public def segrVec (a b : Fin 3 → Ki) : Fin 9 → Ki :=
+@[expose] public def segrVec (a b : Fin 3 → Ki) : Fin 9 → Ki :=
   fun p =>
     a ⟨p.val / 3, Nat.div_lt_of_lt_mul (by
       have := p.isLt

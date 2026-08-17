@@ -2,26 +2,28 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12SigmaCarrierConcrete
-import V14Formalization.D12SigmaMinusAmbient
-import V14Formalization.D12SigmaMinusQuadric0
-import V14Formalization.D12SigmaMinusQuadric1
-import V14Formalization.D12SigmaMinusQuadric2
-import V14Formalization.D12SigmaMinusQuadric3
-import V14Formalization.D12SigmaMinusQuadric4
-import V14Formalization.D12SigmaMinusQuadric5
-import V14Formalization.D12SigmaMinusQuadric6
-import V14Formalization.D12SigmaMinusQuadric7
-import V14Formalization.D12SigmaMinusReverse0
-import V14Formalization.D12SigmaMinusReverse1
-import V14Formalization.D12SigmaMinusReverse2
-import V14Formalization.D12SigmaMinusReverse3
-import V14Formalization.D12SigmaMinusReverse4
-import V14Formalization.D12SigmaMinusReverse5
-import V14Formalization.D12SigmaMinusReverse6
-import V14Formalization.D12SigmaMinusReverse7
-import V14Formalization.D12SigmaMinusReference
-import V14Formalization.D12U6PolynomialSeal
+module
+
+public import V14Formalization.D12SigmaCarrierConcrete
+public import V14Formalization.D12SigmaMinusAmbient
+public import V14Formalization.D12SigmaMinusQuadric0
+public import V14Formalization.D12SigmaMinusQuadric1
+public import V14Formalization.D12SigmaMinusQuadric2
+public import V14Formalization.D12SigmaMinusQuadric3
+public import V14Formalization.D12SigmaMinusQuadric4
+public import V14Formalization.D12SigmaMinusQuadric5
+public import V14Formalization.D12SigmaMinusQuadric6
+public import V14Formalization.D12SigmaMinusQuadric7
+public import V14Formalization.D12SigmaMinusReverse0
+public import V14Formalization.D12SigmaMinusReverse1
+public import V14Formalization.D12SigmaMinusReverse2
+public import V14Formalization.D12SigmaMinusReverse3
+public import V14Formalization.D12SigmaMinusReverse4
+public import V14Formalization.D12SigmaMinusReverse5
+public import V14Formalization.D12SigmaMinusReverse6
+public import V14Formalization.D12SigmaMinusReverse7
+public import V14Formalization.D12SigmaMinusReference
+public import V14Formalization.D12U6PolynomialSeal
 
 noncomputable section
 open Matrix Polynomial
@@ -30,14 +32,14 @@ open D12PolynomialData D12PolynomialEvaluation
 open D12SigmaCarrier D12SigmaCarrierPolynomial D12SigmaCarrierConcrete
 open D12SigmaMinusNormalForm D12SigmaMinusNormalFormData
 
-theorem evalMatrixK_Bminus_poly :
+public theorem evalMatrixK_Bminus_poly :
     evalMatrixK Bminus_poly = D12SigmaCarrierConcrete.core.Bminus := by
   rw [← D12SigmaMinusAmbient.B_mul_Kminus_poly]
   change evalMatrixAt WeilRep.ζ (B_poly * Kminus_poly) = _
   rw [evalMatrixAt_mul]
   rfl
 
-theorem plucker_eq_evalQuadratic
+public theorem plucker_eq_evalQuadratic
     {S : Type*} [Field S] [Algebra ℚ S] (z : S)
     (hPhi : evalPolyAt z Phi11 = 0) (q : Fin 8) (y : Fin 4 → S) :
     D12Certificate.pluckerValue ((evalMatrixAt z Bminus_poly).mulVec y)
@@ -52,7 +54,7 @@ theorem plucker_eq_evalQuadratic
   · exact D12SigmaMinusQuadric6.plucker_eq_evalQuadratic z hPhi y
   · exact D12SigmaMinusQuadric7.plucker_eq_evalQuadratic z hPhi y
 
-theorem linears_zero_of_quadrics
+public theorem linears_zero_of_quadrics
     {S : Type*} [Field S] [Algebra ℚ S] (z : S)
     (hPhi : evalPolyAt z Phi11 = 0) {y : Fin 4 → S} (hy : y ≠ 0)
     (hQ : ∀ q : Fin 8, evalQuadratic z q y = 0) :
@@ -106,7 +108,7 @@ theorem linears_zero_of_quadrics
 
 /-- Every nonzero common Plücker zero in the concrete minus carrier
 lies on the emitted projective line and satisfies its binary quadratic. -/
-theorem common_plucker_zero_parametric
+public theorem common_plucker_zero_parametric
     (S : Type*) [Field S] [Algebra ℚ S] [Algebra WeilRep.K S]
     [IsScalarTower ℚ WeilRep.K S] {y : Fin 4 → S} (hy : y ≠ 0)
     (hQ : ∀ q : Fin 15, D12Certificate.pluckerValue

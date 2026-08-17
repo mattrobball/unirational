@@ -2,7 +2,9 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12SigmaPlusSegreRank
+module
+
+public import V14Formalization.D12SigmaPlusSegreRank
 
 /-!
 # Rank exactly two at a smooth `Fplus` point
@@ -201,7 +203,7 @@ theorem eval_pderiv_eq_zero_of_rank_le_one
     (adjugate_eq_zero_of_rank_le_one _ h)
     (det_eq_zero_of_rank_lt_card _ (lt_of_le_of_lt h (by decide)))
 
-theorem smooth_detCubic_rank_eq_two
+public theorem smooth_detCubic_rank_eq_two
     (a : Fin 3 → Ki) (ha : a ≠ 0)
     (hF : eval a Fplus = 0) :
     (bilinearN a).rank = 2 := by

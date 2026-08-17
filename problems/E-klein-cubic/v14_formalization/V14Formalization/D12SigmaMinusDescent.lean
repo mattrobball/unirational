@@ -2,9 +2,11 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.BinaryQuadraticDescent
-import V14Formalization.D12SigmaMinusConcrete
-import V14Formalization.V14SchemeModel
+module
+
+public import V14Formalization.BinaryQuadraticDescent
+public import V14Formalization.D12SigmaMinusConcrete
+public import V14Formalization.V14SchemeModel
 
 /-!
 # Descent of a minus-carrier Plücker zero to the base field
@@ -21,7 +23,7 @@ open D12SigmaMinusNormalForm D12SigmaMinusNormalFormData
 open D12SigmaMinusConcrete
 open EllipticPolynomialConstancy MvFracConstantField BinaryQuadraticDescent
 
-private abbrev k := V14SchemeModel.k
+public abbrev k := V14SchemeModel.k
 
 private lemma evalA_map {S : Type*} [CommRing S] [Algebra ℚ S]
     [Algebra k S] [IsScalarTower ℚ k S] :
@@ -81,7 +83,7 @@ private lemma lineParam_smul {R : Type*} [CommRing R]
   funext i
   fin_cases i <;> simp [lineParam, Pi.smul_apply, smul_eq_mul] <;> ring
 
-theorem minusCarrier_commonPluckerZero_descends_mvfrac
+public theorem minusCarrier_commonPluckerZero_descends_mvfrac
     (n : ℕ) (v : Fin 4 → MvFrac k n)
     (hv : v ≠ 0)
     (hQ : ∀ q : Fin 15,
@@ -142,7 +144,7 @@ theorem minusCarrier_commonPluckerZero_descends_mvfrac
   funext i
   simp [Pi.smul_apply, smul_eq_mul, v0, lineParam_map]
 
-theorem minusCarrier_ambient_descends_mvfrac
+public theorem minusCarrier_ambient_descends_mvfrac
     (n : ℕ) (x : Fin 15 → MvFrac k n)
     (v : Fin 4 → MvFrac k n) (hv : v ≠ 0)
     (hx : x = ((D12SigmaCarrierConcrete.core.Bminus).map

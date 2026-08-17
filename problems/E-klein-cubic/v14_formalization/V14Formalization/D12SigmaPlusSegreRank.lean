@@ -2,11 +2,13 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import Mathlib.LinearAlgebra.Matrix.Adjugate
-import Mathlib.LinearAlgebra.Matrix.Rank
-import Mathlib.LinearAlgebra.Matrix.ToLinearEquiv
-import V14Formalization.D12SigmaPlusSegreFplusDet
-import V14Formalization.D12SigmaPlusSegreSmooth
+module
+
+public import Mathlib.LinearAlgebra.Matrix.Adjugate
+public import Mathlib.LinearAlgebra.Matrix.Rank
+public import Mathlib.LinearAlgebra.Matrix.ToLinearEquiv
+public import V14Formalization.D12SigmaPlusSegreFplusDet
+public import V14Formalization.D12SigmaPlusSegreSmooth
 
 /-!
 # Rank of the plus determinantal matrix
@@ -25,7 +27,7 @@ namespace V14Formalization.D12SigmaPlusSegreCore
 
 variable {K : Type*} [Field K]
 
-theorem det_eq_zero_of_rank_lt_card
+public theorem det_eq_zero_of_rank_lt_card
     {n : Type*} [Fintype n] [DecidableEq n]
     (A : Matrix n n K) (h : A.rank < Fintype.card n) : A.det = 0 := by
   by_contra hne
@@ -33,7 +35,7 @@ theorem det_eq_zero_of_rank_lt_card
     (isUnit_iff_isUnit_det A).mpr (isUnit_iff_ne_zero.mpr hne)
   exact h.not_ge (rank_of_isUnit A hunit).ge
 
-theorem adjugate_eq_zero_of_rank_le_one
+public theorem adjugate_eq_zero_of_rank_le_one
     (A : Matrix (Fin 3) (Fin 3) K) (h : A.rank ≤ 1) :
     A.adjugate = 0 := by
   ext i j
@@ -46,7 +48,7 @@ theorem adjugate_eq_zero_of_rank_le_one
   rw [adjugate_fin_succ_eq_det_submatrix, hdet, mul_zero]
   simp
 
-theorem det_add_smul_expansion {R : Type*} [CommRing R]
+public theorem det_add_smul_expansion {R : Type*} [CommRing R]
     (M B : Matrix (Fin 3) (Fin 3) R) (t : R) :
     det (M + t • B) =
       det M + t * ∑ i : Fin 3, ∑ j : Fin 3, adjugate M j i * B i j +
@@ -66,7 +68,7 @@ theorem bilinearN_smul (c : Ki) (a : Fin 3 → Ki) :
   ext r j
   simp [bilinearN, Pi.smul_apply, smul_eq_mul, mul_left_comm, Finset.mul_sum]
 
-theorem eval_Fplus_add_smul (a d : Fin 3 → Ki) (t : Ki) :
+public theorem eval_Fplus_add_smul (a d : Fin 3 → Ki) (t : Ki) :
     MvPolynomial.eval (a + t • d) Fplus =
       det (bilinearN a + t • bilinearN d) := by
   rw [eval_Fplus_eq_det, bilinearN_add, bilinearN_smul]
@@ -88,7 +90,7 @@ theorem rank_le_two_of_det_eq_zero
     simpa [Matrix.rank, hdom] using hsum
   omega
 
-theorem rank_le_two_of_Fplus
+public theorem rank_le_two_of_Fplus
     (a : Fin 3 → Ki) (hF : MvPolynomial.eval a Fplus = 0) :
     (bilinearN a).rank ≤ 2 :=
   rank_le_two_of_det_eq_zero _ ((eval_Fplus_eq_det a).symm.trans hF)

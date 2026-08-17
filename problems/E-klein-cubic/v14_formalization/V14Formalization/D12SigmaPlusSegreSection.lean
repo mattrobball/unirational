@@ -2,9 +2,11 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12SigmaPlusSegreData
-import V14Formalization.D12SigmaPlusSegreTinv
-import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
+module
+
+public import V14Formalization.D12SigmaPlusSegreData
+public import V14Formalization.D12SigmaPlusSegreTinv
+public import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
 
 /-!
 # Left-inverse, annihilator, and `Nz = 0 → z = H(Lz)`
@@ -116,7 +118,7 @@ theorem plusT_mulVec_of_ker
     simp [plusT, Matrix.of_apply, hi, Matrix.mulVec] at hw ⊢
     exact hw
 
-theorem eq_H_mulVec_L_of_N_mulVec
+public theorem eq_H_mulVec_L_of_N_mulVec
     (z : Fin 9 → Ki) (hN : N.mulVec z = 0) :
     z = H.mulVec (L.mulVec z) := by
   let w : Fin 9 → Ki := z - H.mulVec (L.mulVec z)

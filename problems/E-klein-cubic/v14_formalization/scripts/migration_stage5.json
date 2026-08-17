@@ -1,0 +1,887 @@
+{
+ "V14Formalization/D12ActionCoreCertificate.lean": {
+  "public": [
+   "ActionCore",
+   "actionCore",
+   "toCertificate"
+  ],
+  "expose": [
+   "actionCore",
+   "toCertificate"
+  ],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreHMDir.lean": {
+  "public": [
+   "minorCoeffsH_eq_minorQ"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreSection.lean": {
+  "public": [
+   "eq_H_mulVec_L_of_N_mulVec"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreSmooth.lean": {
+  "public": [
+   "Fplus_isSmoothPlaneCubic",
+   "Fplus_isSmoothPlaneCubic_map",
+   "eval_pderiv0",
+   "eval_pderiv1",
+   "eval_pderiv2"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreSpanVDir.lean": {
+  "public": [
+   "spanV_mul_Qplus"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12PieceAACertificate.lean": {
+  "public": [
+   "A",
+   "K",
+   "X",
+   "Y",
+   "certificate",
+   "plucker_empty",
+   "split_identity"
+  ],
+  "expose": [
+   "certificate"
+  ],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12PieceAPCertificate.lean": {
+  "public": [
+   "A",
+   "K",
+   "X",
+   "Y",
+   "certificate",
+   "plucker_empty",
+   "split_identity"
+  ],
+  "expose": [
+   "certificate"
+  ],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12PiecePACertificate.lean": {
+  "public": [
+   "A",
+   "K",
+   "X",
+   "Y",
+   "certificate",
+   "split_identity"
+  ],
+  "expose": [
+   "certificate"
+  ],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12PiecePPCertificate.lean": {
+  "public": [
+   "A",
+   "K",
+   "X",
+   "Y",
+   "certificate",
+   "plucker_empty",
+   "split_identity"
+  ],
+  "expose": [
+   "certificate"
+  ],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreRank.lean": {
+  "public": [
+   "adjugate_eq_zero_of_rank_le_one",
+   "det_add_smul_expansion",
+   "det_eq_zero_of_rank_lt_card",
+   "eval_Fplus_add_smul",
+   "rank_le_two_of_Fplus"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreSpanEval.lean": {
+  "public": [],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/V14FixedPointCarrierDimensionFactorization.lean": {
+  "public": [
+   "exists_normalizedCoordinates_v14FixedBy_plus_or_minus_carrier_of_dimension"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12CertificateK.lean": {
+  "public": [
+   "certificate",
+   "certificate_F",
+   "certificate_P",
+   "certificate_R"
+  ],
+  "expose": [
+   "certificate"
+  ],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrier.lean": {
+  "public": [
+   "Bminus",
+   "Bplus",
+   "Core",
+   "K",
+   "Lminus",
+   "Lplus",
+   "ambient_factor_minus",
+   "ambient_factor_plus",
+   "left_inverse_minus",
+   "left_inverse_plus",
+   "selectMinus",
+   "selectPlus",
+   "sigma_eigen_minus",
+   "sigma_eigen_plus"
+  ],
+  "expose": [
+   "Bminus",
+   "Bplus",
+   "selectMinus",
+   "selectPlus"
+  ],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreRankTwo.lean": {
+  "public": [
+   "smooth_detCubic_rank_eq_two"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierPolynomialCore.lean": {
+  "public": [
+   "Kminus_poly",
+   "Kminus_poly_row0",
+   "Kminus_poly_row1",
+   "Kminus_poly_row2",
+   "Kminus_poly_row3",
+   "Kminus_poly_row4",
+   "Kminus_poly_row5",
+   "Kminus_poly_row6",
+   "Kminus_poly_row7",
+   "Kminus_poly_row8",
+   "Kminus_poly_row9",
+   "Kplus_poly",
+   "Kplus_poly_row0",
+   "Kplus_poly_row1",
+   "Kplus_poly_row2",
+   "Kplus_poly_row3",
+   "Kplus_poly_row4",
+   "Kplus_poly_row5",
+   "Kplus_poly_row6",
+   "Kplus_poly_row7",
+   "Kplus_poly_row8",
+   "Kplus_poly_row9",
+   "Srestricted_poly",
+   "Srestricted_reduced_poly",
+   "Srestricted_reduced_poly_row0",
+   "Srestricted_reduced_poly_row1",
+   "Srestricted_reduced_poly_row2",
+   "Srestricted_reduced_poly_row3",
+   "Srestricted_reduced_poly_row4",
+   "Srestricted_reduced_poly_row5",
+   "Srestricted_reduced_poly_row6",
+   "Srestricted_reduced_poly_row7",
+   "Srestricted_reduced_poly_row8",
+   "Srestricted_reduced_poly_row9",
+   "evalMatrixK_Srestricted_poly",
+   "eval_eq_of_modPhi"
+  ],
+  "expose": [
+   "Kminus_poly",
+   "Kminus_poly_row0",
+   "Kminus_poly_row1",
+   "Kminus_poly_row2",
+   "Kminus_poly_row3",
+   "Kminus_poly_row4",
+   "Kminus_poly_row5",
+   "Kminus_poly_row6",
+   "Kminus_poly_row7",
+   "Kminus_poly_row8",
+   "Kminus_poly_row9",
+   "Kplus_poly",
+   "Kplus_poly_row0",
+   "Kplus_poly_row1",
+   "Kplus_poly_row2",
+   "Kplus_poly_row3",
+   "Kplus_poly_row4",
+   "Kplus_poly_row5",
+   "Kplus_poly_row6",
+   "Kplus_poly_row7",
+   "Kplus_poly_row8",
+   "Kplus_poly_row9",
+   "Srestricted_poly",
+   "Srestricted_reduced_poly",
+   "Srestricted_reduced_poly_row0",
+   "Srestricted_reduced_poly_row1",
+   "Srestricted_reduced_poly_row2",
+   "Srestricted_reduced_poly_row3",
+   "Srestricted_reduced_poly_row4",
+   "Srestricted_reduced_poly_row5",
+   "Srestricted_reduced_poly_row6",
+   "Srestricted_reduced_poly_row7",
+   "Srestricted_reduced_poly_row8",
+   "Srestricted_reduced_poly_row9"
+  ],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/V14D12CertificateExclusion.lean": {
+  "public": [
+   "noEquivariantRationalMap_of_normal_specialization"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierMinusCol0.lean": {
+  "public": [
+   "eval_column"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierMinusCol1.lean": {
+  "public": [
+   "eval_column"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierMinusCol2.lean": {
+  "public": [
+   "eval_column"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierMinusCol3.lean": {
+  "public": [
+   "eval_column"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierPlusCol0.lean": {
+  "public": [
+   "eval_column"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierPlusCol1.lean": {
+  "public": [
+   "eval_column"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierPlusCol2.lean": {
+  "public": [
+   "eval_column"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierPlusCol3.lean": {
+  "public": [
+   "eval_column"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierPlusCol4.lean": {
+  "public": [
+   "eval_column"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierPlusCol5.lean": {
+  "public": [
+   "eval_column"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierS6Explicit.lean": {
+  "public": [
+   "S6_explicit_poly",
+   "S6_explicit_row0",
+   "S6_explicit_row1",
+   "S6_explicit_row2",
+   "S6_explicit_row3",
+   "S6_explicit_row4",
+   "S6_explicit_row5",
+   "S6_poly_eq_explicit"
+  ],
+  "expose": [
+   "S6_explicit_poly",
+   "S6_explicit_row0",
+   "S6_explicit_row1",
+   "S6_explicit_row2",
+   "S6_explicit_row3",
+   "S6_explicit_row4",
+   "S6_explicit_row5"
+  ],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusNormalFormData.lean": {
+  "public": [
+   "A_poly",
+   "BB_poly",
+   "Bminus_poly",
+   "Bminus_poly_row0",
+   "Bminus_poly_row1",
+   "Bminus_poly_row10",
+   "Bminus_poly_row11",
+   "Bminus_poly_row12",
+   "Bminus_poly_row13",
+   "Bminus_poly_row14",
+   "Bminus_poly_row2",
+   "Bminus_poly_row3",
+   "Bminus_poly_row4",
+   "Bminus_poly_row5",
+   "Bminus_poly_row6",
+   "Bminus_poly_row7",
+   "Bminus_poly_row8",
+   "Bminus_poly_row9",
+   "C_poly",
+   "Qcoeff_poly",
+   "Qcoeff_poly_row0",
+   "Qcoeff_poly_row1",
+   "Qcoeff_poly_row2",
+   "Qcoeff_poly_row3",
+   "Qcoeff_poly_row4",
+   "Qcoeff_poly_row5",
+   "Qcoeff_poly_row6",
+   "Qcoeff_poly_row7",
+   "a_poly",
+   "b_poly",
+   "c_poly",
+   "d_poly",
+   "disc_poly",
+   "evalA",
+   "evalB",
+   "evalBinaryA",
+   "evalBinaryB",
+   "evalBinaryC",
+   "evalC",
+   "evalD",
+   "evalQuadratic",
+   "reverseCoeff_poly",
+   "reverseCoeff_poly_row0",
+   "reverseCoeff_poly_row1",
+   "reverseCoeff_poly_row2",
+   "reverseCoeff_poly_row3",
+   "reverseCoeff_poly_row4",
+   "reverseCoeff_poly_row5",
+   "reverseCoeff_poly_row6",
+   "reverseCoeff_poly_row7"
+  ],
+  "expose": [
+   "A_poly",
+   "BB_poly",
+   "Bminus_poly",
+   "Bminus_poly_row0",
+   "Bminus_poly_row1",
+   "Bminus_poly_row10",
+   "Bminus_poly_row11",
+   "Bminus_poly_row12",
+   "Bminus_poly_row13",
+   "Bminus_poly_row14",
+   "Bminus_poly_row2",
+   "Bminus_poly_row3",
+   "Bminus_poly_row4",
+   "Bminus_poly_row5",
+   "Bminus_poly_row6",
+   "Bminus_poly_row7",
+   "Bminus_poly_row8",
+   "Bminus_poly_row9",
+   "C_poly",
+   "Qcoeff_poly",
+   "Qcoeff_poly_row0",
+   "Qcoeff_poly_row1",
+   "Qcoeff_poly_row2",
+   "Qcoeff_poly_row3",
+   "Qcoeff_poly_row4",
+   "Qcoeff_poly_row5",
+   "Qcoeff_poly_row6",
+   "Qcoeff_poly_row7",
+   "a_poly",
+   "b_poly",
+   "c_poly",
+   "d_poly",
+   "disc_poly",
+   "evalA",
+   "evalB",
+   "evalBinaryA",
+   "evalBinaryB",
+   "evalBinaryC",
+   "evalC",
+   "evalD",
+   "evalQuadratic",
+   "reverseCoeff_poly",
+   "reverseCoeff_poly_row0",
+   "reverseCoeff_poly_row1",
+   "reverseCoeff_poly_row2",
+   "reverseCoeff_poly_row3",
+   "reverseCoeff_poly_row4",
+   "reverseCoeff_poly_row5",
+   "reverseCoeff_poly_row6",
+   "reverseCoeff_poly_row7"
+  ],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/FaithfulHeadlineReduction.lean": {
+  "public": [
+   "exceptionalFor",
+   "noEquivariantRationalMap_from_ambient_of_constancy",
+   "v14FixedAction"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierBridgeRow0.lean": {
+  "public": [
+   "eval_row"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierBridgeRow1.lean": {
+  "public": [
+   "eval_row"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierBridgeRow2.lean": {
+  "public": [
+   "eval_row"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierBridgeRow3.lean": {
+  "public": [
+   "eval_row"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierBridgeRow4.lean": {
+  "public": [
+   "eval_row"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierBridgeRow5.lean": {
+  "public": [
+   "eval_row"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierBridgeRow6.lean": {
+  "public": [
+   "eval_row"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierBridgeRow7.lean": {
+  "public": [
+   "eval_row"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierBridgeRow8.lean": {
+  "public": [
+   "eval_row"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierBridgeRow9.lean": {
+  "public": [
+   "eval_row"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusAmbient.lean": {
+  "public": [
+   "B_mul_Kminus_poly"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusQuadric0.lean": {
+  "public": [
+   "plucker_eq_evalQuadratic"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusQuadric1.lean": {
+  "public": [
+   "plucker_eq_evalQuadratic"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusQuadric2.lean": {
+  "public": [
+   "plucker_eq_evalQuadratic"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusQuadric3.lean": {
+  "public": [
+   "plucker_eq_evalQuadratic"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusQuadric4.lean": {
+  "public": [
+   "plucker_eq_evalQuadratic"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusQuadric5.lean": {
+  "public": [
+   "plucker_eq_evalQuadratic"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusQuadric6.lean": {
+  "public": [
+   "plucker_eq_evalQuadratic"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusQuadric7.lean": {
+  "public": [
+   "plucker_eq_evalQuadratic"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusReference.lean": {
+  "public": [
+   "eval_disc",
+   "eval_disc_K_ne_zero",
+   "pullback"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusReverse0.lean": {
+  "public": [
+   "identity"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusReverse1.lean": {
+  "public": [
+   "identity"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusReverse2.lean": {
+  "public": [
+   "identity"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusReverse3.lean": {
+  "public": [
+   "identity"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusReverse4.lean": {
+  "public": [
+   "identity"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusReverse5.lean": {
+  "public": [
+   "identity"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusReverse6.lean": {
+  "public": [
+   "identity"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusReverse7.lean": {
+  "public": [
+   "identity"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaCarrierConcrete.lean": {
+  "public": [
+   "core",
+   "evalMatrixK_Srestricted_reduced_poly",
+   "minus_eigen_eval",
+   "minus_top",
+   "plus_eigen_eval",
+   "plus_top"
+  ],
+  "expose": [
+   "core"
+  ],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusConcrete.lean": {
+  "public": [
+   "common_plucker_zero_parametric",
+   "evalMatrixK_Bminus_poly",
+   "linears_zero_of_quadrics",
+   "plucker_eq_evalQuadratic"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreBplus.lean": {
+  "public": [
+   "BplusKi",
+   "restrictedPluckerCoeffs_BplusKi_map",
+   "restrictedPluckerCoeffs_evalMatrixK"
+  ],
+  "expose": [
+   "BplusKi"
+  ],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/V14FixedPointCarrierConcrete.lean": {
+  "public": [
+   "exists_normalizedCoordinates_v14FixedBy_concrete_plus_or_minus_carrier"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaMinusDescent.lean": {
+  "public": [
+   "k",
+   "minusCarrier_ambient_descends_mvfrac",
+   "minusCarrier_commonPluckerZero_descends_mvfrac"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreQrel_0.lean": {
+  "public": [
+   "Qplus_eq_restricted_row_0"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreQrel_1.lean": {
+  "public": [
+   "Qplus_eq_restricted_row_1"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreQrel_10.lean": {
+  "public": [
+   "Qplus_eq_restricted_row_10"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreQrel_11.lean": {
+  "public": [
+   "Qplus_eq_restricted_row_11"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreQrel_12.lean": {
+  "public": [
+   "Qplus_eq_restricted_row_12"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreQrel_13.lean": {
+  "public": [
+   "Qplus_eq_restricted_row_13"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreQrel_14.lean": {
+  "public": [
+   "Qplus_eq_restricted_row_14"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreQrel_2.lean": {
+  "public": [
+   "Qplus_eq_restricted_row_2"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreQrel_3.lean": {
+  "public": [
+   "Qplus_eq_restricted_row_3"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreQrel_4.lean": {
+  "public": [
+   "Qplus_eq_restricted_row_4"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreQrel_5.lean": {
+  "public": [
+   "Qplus_eq_restricted_row_5"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreQrel_6.lean": {
+  "public": [
+   "Qplus_eq_restricted_row_6"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreQrel_7.lean": {
+  "public": [
+   "Qplus_eq_restricted_row_7"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreQrel_8.lean": {
+  "public": [
+   "Qplus_eq_restricted_row_8"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreQrel_9.lean": {
+  "public": [
+   "Qplus_eq_restricted_row_9"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegrePlucker.lean": {
+  "public": [
+   "Qplus_eq_restricted"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegrePoint.lean": {
+  "public": [
+   "bilinearNOn",
+   "leftInv_map_mul_H_map",
+   "plusCarrier_commonPluckerZero_Ki",
+   "plusCarrier_commonPluckerZero_to_determinantalCubic",
+   "segrVecOn",
+   "segrVecOn_ne_zero"
+  ],
+  "expose": [
+   "bilinearNOn",
+   "segrVecOn"
+  ],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusSegreFplusMap.lean": {
+  "public": [
+   "L_map_mulVec_map",
+   "bilinearNOn_map_of_base",
+   "bilinearNOn_smul",
+   "eval_map_Fplus",
+   "eval_map_Fplus_eq_det",
+   "segrVecOn_map",
+   "segrVecOn_smul"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12SigmaPlusDescent.lean": {
+  "public": [
+   "k",
+   "mulVec_comp_map",
+   "pluckerValue_map",
+   "plusCarrier_ambient_descends_mvfrac",
+   "plusCarrier_commonPluckerZero_descends_mvfrac"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/V14FixedFieldPointDescent.lean": {
+  "public": [
+   "v14FixedFieldPoint_descends_of_mvfrac"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/V14FixedRationalConstancy.lean": {
+  "public": [
+   "rationalMapIsConstantOver_v14FixedBy"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/FaithfulHeadline.lean": {
+  "public": [
+   "noEquivariantRationalMap_from_ambient",
+   "noEquivariantRationalMap_from_ambient_of_plusMinusBases",
+   "noEquivariantRationalMap_projectiveGVariety"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ }
+}

@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12SigmaCarrierConcrete
-import V14Formalization.V14FixedPointCarrierDimensionFactorization
+module
+
+public import V14Formalization.D12SigmaCarrierConcrete
+public import V14Formalization.V14FixedPointCarrierDimensionFactorization
 
 /-!
 # Concrete carrier factorization of V14 fixed field points
@@ -24,7 +26,7 @@ open GeometricV14Carrier Lambda2Coordinates D12SigmaCarrier
 
 /-- Every field-valued point of the actual V14 sigma-fixed scheme has
 normalized ambient coordinates in one of the two concrete sigma carriers. -/
-theorem exists_normalizedCoordinates_v14FixedBy_concrete_plus_or_minus_carrier
+public theorem exists_normalizedCoordinates_v14FixedBy_concrete_plus_or_minus_carrier
     (L : Type) [Field L] [Algebra V14SchemeModel.k L] [NeZero (2 : L)]
     (p : v14FieldPointOver L ⟶
       FixedBy V14SchemeModel.actionOver GeometricV14Carrier.sigma) :

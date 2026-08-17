@@ -228,6 +228,12 @@ def fix(cfg_paths, log_path):
     added = []
 
     def add(kind, name, err_file):
+        # Single-character names in a defeq error are structure FIELDS
+        # (`certificate.P`, `certificate.R`), not declarations; the declaration
+        # that must unfold is the projected term's head. Guessing from the
+        # field name picks an unrelated `R`/`F` in some other module.
+        if len(name) < 2:
+            return
         # prefer the file the error occurred in, else the unique declarer
         cands = [f for f in (err_file,) if f in merged and f in idx.get(name, set())]
         if not cands:

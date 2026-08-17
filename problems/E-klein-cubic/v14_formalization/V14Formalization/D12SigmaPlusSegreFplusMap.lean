@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12SigmaPlusSegrePoint
-import V14Formalization.D12SigmaPlusSegreFplusDet
+module
+
+public import V14Formalization.D12SigmaPlusSegrePoint
+public import V14Formalization.D12SigmaPlusSegreFplusDet
 
 /-!
 # Mapped evaluation: `Fplus` remains the determinantal cubic
@@ -90,7 +92,7 @@ theorem det_bilinearNOn_collect (a : Fin 3 → F) :
   simp [map_add, map_sub, map_mul]
   ring
 
-theorem eval_map_Fplus (a : Fin 3 → F) :
+public theorem eval_map_Fplus (a : Fin 3 → F) :
     eval a (map φ Fplus) =
       φ (ofLadj Fplus_re_000 Fplus_im_000) * a 0 ^ 3 +
         φ (ofLadj Fplus_re_001 Fplus_im_001) * (a 0 ^ 2 * a 1) +
@@ -106,36 +108,36 @@ theorem eval_map_Fplus (a : Fin 3 → F) :
   simp [eval_map, eval_add, eval_mul, eval_C, eval_X, eval_pow, map_add,
     map_mul, map_pow]
 
-theorem eval_map_Fplus_eq_det (a : Fin 3 → F) :
+public theorem eval_map_Fplus_eq_det (a : Fin 3 → F) :
     eval a (map φ Fplus) = det (bilinearNOn φ a) := by
   rw [eval_map_Fplus, det_bilinearNOn_collect]
   simp only [detCoeff_000_eq, detCoeff_001_eq, detCoeff_002_eq, detCoeff_011_eq,
     detCoeff_012_eq, detCoeff_022_eq, detCoeff_111_eq, detCoeff_112_eq,
     detCoeff_122_eq, detCoeff_222_eq]
 
-theorem bilinearNOn_smul (c : F) (a : Fin 3 → F) :
+public theorem bilinearNOn_smul (c : F) (a : Fin 3 → F) :
     bilinearNOn φ (c • a) = c • bilinearNOn φ a := by
   ext r j
   simp [bilinearNOn, Pi.smul_apply, smul_eq_mul, mul_left_comm, Finset.mul_sum]
 
-theorem bilinearNOn_map_of_base (a0 : Fin 3 → Ki) :
+public theorem bilinearNOn_map_of_base (a0 : Fin 3 → Ki) :
     bilinearNOn φ (fun i => φ (a0 i)) = (bilinearN a0).map φ := by
   ext r j
   simp [bilinearNOn, bilinearN, map_sum, map_mul, Matrix.map_apply]
 
-theorem segrVecOn_smul (c d : F) (a b : Fin 3 → F) :
+public theorem segrVecOn_smul (c d : F) (a b : Fin 3 → F) :
     segrVecOn (c • a) (d • b) = (c * d) • segrVecOn a b := by
   funext p
   simp [segrVecOn, Pi.smul_apply, smul_eq_mul]
   ring
 
-theorem segrVecOn_map (a b : Fin 3 → Ki) :
+public theorem segrVecOn_map (a b : Fin 3 → Ki) :
     segrVecOn (fun i => φ (a i)) (fun i => φ (b i)) =
       fun p => φ (segrVecOn a b p) := by
   funext p
   simp [segrVecOn, map_mul]
 
-theorem L_map_mulVec_map (z : Fin 9 → Ki) :
+public theorem L_map_mulVec_map (z : Fin 9 → Ki) :
     ((D12SigmaPlusSegreCore.L).map φ).mulVec (fun p => φ (z p)) =
       fun i => φ ((D12SigmaPlusSegreCore.L).mulVec z i) := by
   funext i

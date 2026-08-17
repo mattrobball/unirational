@@ -2,14 +2,16 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.V14FixedByAmbientPoint
-import V14Formalization.V14FixedPointCarrierConcrete
-import V14Formalization.V14FixedPointDescent
-import V14Formalization.D12SigmaMinusDescent
-import V14Formalization.D12SigmaPlusDescent
-import V14Formalization.WeierstrassSchemeDescent
-import V14Formalization.SchemeFixedLocus
-import V14Formalization.SchemeModelAliases
+module
+
+public import V14Formalization.V14FixedByAmbientPoint
+public import V14Formalization.V14FixedPointCarrierConcrete
+public import V14Formalization.V14FixedPointDescent
+public import V14Formalization.D12SigmaMinusDescent
+public import V14Formalization.D12SigmaPlusDescent
+public import V14Formalization.WeierstrassSchemeDescent
+public import V14Formalization.SchemeFixedLocus
+public import V14Formalization.SchemeModelAliases
 
 /-!
 # Descent of a pure-transcendental V14 sigma-fixed field point
@@ -413,7 +415,7 @@ theorem v14FixedFieldPoint_comp_ι_eq
           V14SchemeModel.v14Schemeι :=
         (Category.assoc _ _ _).symm
 
-theorem v14FixedFieldPoint_descends_of_mvfrac
+public theorem v14FixedFieldPoint_descends_of_mvfrac
     (n : ℕ) (L : Type) [Field L] [Algebra k L] [NeZero (2 : L)]
     (e : MvFrac k n ≃ₐ[k] L)
     (p : v14FieldPointOver L ⟶

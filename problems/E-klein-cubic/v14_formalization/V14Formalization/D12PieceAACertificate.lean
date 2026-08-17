@@ -2,10 +2,12 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12ActionCoreCertificate
-import V14Formalization.D12PieceAASplit
-import V14Formalization.D12PieceAAAction
-import V14Formalization.D12PieceAAPlucker
+module
+
+public import V14Formalization.D12ActionCoreCertificate
+public import V14Formalization.D12PieceAASplit
+public import V14Formalization.D12PieceAAAction
+public import V14Formalization.D12PieceAAPlucker
 
 /-! # The `(-,-)` D12 character-piece certificate. -/
 
@@ -18,14 +20,14 @@ namespace V14Formalization.D12PieceAACertificate
 open D12Certificate D12CyclotomicVec D12PieceVecBase D12PieceAAData
 open D12ActionCoreCertificate
 
-abbrev A : Matrix (Fin 20) (Fin 10) WeilRep.K :=
+public abbrev A : Matrix (Fin 20) (Fin 10) WeilRep.K :=
   D12PieceAction.characterStack actionCore.RM actionCore.SM (-1) (-1)
 
-abbrev K : Matrix (Fin 10) (Fin 1) WeilRep.K := evalMatrix KVec
+public abbrev K : Matrix (Fin 10) (Fin 1) WeilRep.K := evalMatrix KVec
 
-abbrev Y : Matrix (Fin 1) (Fin 10) WeilRep.K := evalMatrix YVec
+public abbrev Y : Matrix (Fin 1) (Fin 10) WeilRep.K := evalMatrix YVec
 
-abbrev X : Matrix (Fin 10) (Fin 20) WeilRep.K := evalMatrix XVec
+public abbrev X : Matrix (Fin 10) (Fin 20) WeilRep.K := evalMatrix XVec
 
 theorem evalMatrix_AVec_eq_A : evalMatrix AVec = A := by
   rw [D12PieceAAAction.action_matrix, eval_characterStackVec,
@@ -33,7 +35,7 @@ theorem evalMatrix_AVec_eq_A : evalMatrix AVec = A := by
   simp only [map_one, map_neg]
   rfl
 
-theorem split_identity : X * A + K * Y = 1 := by
+public theorem split_identity : X * A + K * Y = 1 := by
   have h := congrArg evalMatrix D12PieceAASplit.split_identity
   simp only [evalMatrix_add, evalMatrix_mul, evalMatrix_one] at h
   rw [evalMatrix_AVec_eq_A] at h
@@ -45,7 +47,7 @@ theorem BK_eq :
       evalMatrix KVec = evalMatrix D12PieceAAPlucker.BKVec
   exact D12PieceAAPlucker.evalMatrix_BKVec.symm
 
-theorem plucker_empty :
+public theorem plucker_empty :
     ∀ t : Fin 1 → WeilRep.K,
       (∀ q : Fin 15, pluckerValue ((actionCore.B * K).mulVec t) q = 0) →
         t = 0 := by
@@ -57,7 +59,7 @@ theorem plucker_empty :
   exact D12PieceAAPlucker.plucker_coefficient t
 
 /-- The checked `(-,-)` simultaneous-character certificate over `WeilRep.K`. -/
-def certificate : PieceCertificate actionCore.B actionCore.RM actionCore.SM
+@[expose] public def certificate : PieceCertificate actionCore.B actionCore.RM actionCore.SM
     (-1) (-1) (Fin 1) where
   A := A
   K := K

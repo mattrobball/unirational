@@ -1,28 +1,30 @@
 /-
 Dispatch restricted Plücker coefficients of BplusKi to Qplus.
 -/
-import V14Formalization.D12SigmaPlusSegreQrel_0
-import V14Formalization.D12SigmaPlusSegreQrel_1
-import V14Formalization.D12SigmaPlusSegreQrel_2
-import V14Formalization.D12SigmaPlusSegreQrel_3
-import V14Formalization.D12SigmaPlusSegreQrel_4
-import V14Formalization.D12SigmaPlusSegreQrel_5
-import V14Formalization.D12SigmaPlusSegreQrel_6
-import V14Formalization.D12SigmaPlusSegreQrel_7
-import V14Formalization.D12SigmaPlusSegreQrel_8
-import V14Formalization.D12SigmaPlusSegreQrel_9
-import V14Formalization.D12SigmaPlusSegreQrel_10
-import V14Formalization.D12SigmaPlusSegreQrel_11
-import V14Formalization.D12SigmaPlusSegreQrel_12
-import V14Formalization.D12SigmaPlusSegreQrel_13
-import V14Formalization.D12SigmaPlusSegreQrel_14
+module
+
+public import V14Formalization.D12SigmaPlusSegreQrel_0
+public import V14Formalization.D12SigmaPlusSegreQrel_1
+public import V14Formalization.D12SigmaPlusSegreQrel_2
+public import V14Formalization.D12SigmaPlusSegreQrel_3
+public import V14Formalization.D12SigmaPlusSegreQrel_4
+public import V14Formalization.D12SigmaPlusSegreQrel_5
+public import V14Formalization.D12SigmaPlusSegreQrel_6
+public import V14Formalization.D12SigmaPlusSegreQrel_7
+public import V14Formalization.D12SigmaPlusSegreQrel_8
+public import V14Formalization.D12SigmaPlusSegreQrel_9
+public import V14Formalization.D12SigmaPlusSegreQrel_10
+public import V14Formalization.D12SigmaPlusSegreQrel_11
+public import V14Formalization.D12SigmaPlusSegreQrel_12
+public import V14Formalization.D12SigmaPlusSegreQrel_13
+public import V14Formalization.D12SigmaPlusSegreQrel_14
 
 noncomputable section
 open Matrix
 namespace V14Formalization.D12SigmaPlusSegreCore
 open D12SigmaPlusQuadric6
 
-theorem Qplus_eq_restricted (q : Fin 15) (m : Fin 21) :
+public theorem Qplus_eq_restricted (q : Fin 15) (m : Fin 21) :
     restrictedPluckerCoeffs BplusKi q m = Qplus q m := by
   fin_cases q
   · exact Qplus_eq_restricted_row_0 m

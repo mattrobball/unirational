@@ -2,13 +2,15 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12SigmaPlusSegreHMDir
-import V14Formalization.D12SigmaPlusSegreSpanEval
-import V14Formalization.D12SigmaPlusSegrePlucker
-import V14Formalization.D12SigmaPlusSegreFplusDet
-import V14Formalization.D12SigmaPlusSegreSection
-import V14Formalization.D12SigmaPlusSegreSmooth
-import V14Formalization.V14FixedPointSegreBridge
+module
+
+public import V14Formalization.D12SigmaPlusSegreHMDir
+public import V14Formalization.D12SigmaPlusSegreSpanEval
+public import V14Formalization.D12SigmaPlusSegrePlucker
+public import V14Formalization.D12SigmaPlusSegreFplusDet
+public import V14Formalization.D12SigmaPlusSegreSection
+public import V14Formalization.D12SigmaPlusSegreSmooth
+public import V14Formalization.V14FixedPointSegreBridge
 
 /-!
 # Point-level plus Segre: Plücker zeros become the determinantal cubic
@@ -23,17 +25,17 @@ namespace V14Formalization.D12SigmaPlusSegreCore
 
 variable {F : Type*} [Field F]
 
-def segrVecOn (a b : Fin 3 → F) : Fin 9 → F :=
+@[expose] public def segrVecOn (a b : Fin 3 → F) : Fin 9 → F :=
   fun p =>
     a ⟨p.val / 3, Nat.div_lt_of_lt_mul (by
       have := p.isLt
       omega)⟩ *
     b ⟨p.val % 3, Nat.mod_lt _ (by decide)⟩
 
-def bilinearNOn (φ : Ki →+* F) (a : Fin 3 → F) : Matrix (Fin 3) (Fin 3) F :=
+@[expose] public def bilinearNOn (φ : Ki →+* F) (a : Fin 3 → F) : Matrix (Fin 3) (Fin 3) F :=
   fun r j => ∑ i : Fin 3, φ (N r (crossIndex i j)) * a i
 
-theorem leftInv_map_mul_H_map (φ : Ki →+* F) :
+public theorem leftInv_map_mul_H_map (φ : Ki →+* F) :
     ((D12SigmaPlusSegreCore.L).map φ) * (H.map φ) = 1 := by
   rw [← Matrix.map_mul, D12SigmaPlusSegreData.L_mul_H]
   exact Matrix.map_one φ (map_zero φ) (map_one φ)
@@ -173,7 +175,7 @@ theorem N_map_mulVec_segrVec (φ : Ki →+* F) (a b : Fin 3 → F) :
     crossIndex, Matrix.map_apply]
   ring
 
-theorem segrVecOn_ne_zero {a b : Fin 3 → F} (ha : a ≠ 0) (hb : b ≠ 0) :
+public theorem segrVecOn_ne_zero {a b : Fin 3 → F} (ha : a ≠ 0) (hb : b ≠ 0) :
     segrVecOn a b ≠ 0 := by
   intro hz
   obtain ⟨i, hi⟩ : ∃ i, a i ≠ 0 := by
@@ -200,7 +202,7 @@ theorem reshape3_segrVecOn (a b : Fin 3 → F) (i j : Fin 3) :
   simp [reshape3_apply, segrVecOn, crossIndex, hdiv, hmod]
 
 /-- A plus-carrier Plücker zero is a Segre tensor on the determinantal cubic. -/
-theorem plusCarrier_commonPluckerZero_to_determinantalCubic
+public theorem plusCarrier_commonPluckerZero_to_determinantalCubic
     (φ : Ki →+* F) (u : Fin 6 → F) (hu : u ≠ 0)
     (hQ : ∀ q : Fin 15,
       D12Certificate.pluckerValue ((BplusKi.map φ).mulVec u) q = 0) :
@@ -262,7 +264,7 @@ theorem bilinearNOn_id (a : Fin 3 → Ki) :
   ext r j
   simp [bilinearNOn, bilinearN]
 
-theorem plusCarrier_commonPluckerZero_Ki
+public theorem plusCarrier_commonPluckerZero_Ki
     (u : Fin 6 → Ki) (hu : u ≠ 0)
     (hQ : ∀ q : Fin 15, D12Certificate.pluckerValue (BplusKi.mulVec u) q = 0) :
     ∃ (a b : Fin 3 → Ki),
