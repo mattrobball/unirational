@@ -29,11 +29,11 @@ print "== 1. import all gate =="
 hits=$(grep -rn --include='*.lean' '^[[:space:]]*\(public[[:space:]]\+\)\?import all[[:space:]]' . \
          --exclude-dir=.lake 2>/dev/null || true)
 if [[ -n "$hits" ]]; then
-  print "FAIL: `import all` present:"
+  print 'FAIL: import all present:'
   print "$hits"
   fail=1
 else
-  print "OK: zero `import all`"
+  print 'OK: zero import all lines'
 fi
 
 print "== 2. axioms =="

@@ -318,36 +318,51 @@ Measure with `scripts/closure_stats.lean` (both dedup granularities; the
 270.8M baseline figure is the per-constant one — see that file's header for the
 calibration against the pilot commit).
 
-| | constants | per-constant nodes |
-|---|---:|---:|
-| baseline quoted 2026-08-16 | 160,956 | 270.8M |
-| before this session (reconstructed) | ~160k | ~260.4M |
-| after this session | 159,623 | **210.9M** |
-
-The reconstruction is exact for the part this session changed: the four
-SplitRow families measured 54.1M before (1.360M / 1.362M / 1.273M / 1.418M per
-representative module x 10 modules) and 4.7M after — 49.5M removed, an 11-13x
-shrink per module, and the largest single reduction available anywhere in the
-tree by the same technique.
-
-**Verdict: not enough.**  At the baseline's ~85 bytes/node, 210.9M is still
-~18 GB of export.  Reaching 15 GB needs roughly 176M, i.e. ~35M more; reaching
-it with margin needs far more.  The remaining weight is one shape:
-
-| family | constants | per-constant nodes | share |
+| | constants | per-constant nodes | per-module nodes |
 |---|---:|---:|---:|
-| SigmaPlusSegre* (HM/VQ/LH/Det/SmoothC*/NH/Qrel/MinorQZ) | ~34k | ~96.8M | 46% |
-| SigmaCarrier* (BridgeRow/PlusCol/MinusCol) | 1,560 | 19.1M | 9.1% |
-| Compound{R,F}Row | 2,010 | 19.6M | 9.3% |
-| SigmaMinusReverse | 2,923 | 18.0M | 8.5% |
-| everything else incl. all of Mathlib | | ~57M | 27% |
+| baseline quoted 2026-08-16 | 160,956 | 270.8M | — |
+| before this session (reconstructed) | ~160k | ~260.4M | — |
+| after the SplitRow rewrite | 159,623 | 210.9M | 112.1M |
+| after the Segre bridge rewrite | 159,776 | **177.6M** | **88.8M** |
 
-The SplitRow families are now 4.7M, 2.2% — they are done.
+Net for the session: **-31.8%** on the metric the baseline used. The SplitRow
+reconstruction is exact for the part it changed — the four families measured
+54.1M before (1.360M / 1.362M / 1.273M / 1.418M per representative module x 10)
+and 4.7M after. The Segre step is measured end to end, before and after, on the
+same tree.
 
-### The next reduction, diagnosed
+At the baseline's ~85 bytes/node that is ~15.1 GB of export against a 15 GB
+runner: at the line, without margin, and Comparator holds its own ~12 GB
+concurrently with `lean4export` (see the 2026-08-15 OOM log). **More is
+needed.** What is left, and what to do about it:
 
-The Segre families are ~7,000 copies of one idiom, e.g.
-`D12SigmaPlusSegreHM_5_0.lean`:
+| family | constants | per-constant nodes | share | shape |
+|---|---:|---:|---:|---|
+| SigmaMinusReverse | 2,923 | 18.0M | 10.1% | `relation_*`, 60-88k each |
+| SigmaCarrierBridgeRow | 1,010 | 13.5M | 7.6% | `relation_*`, 55-95k each |
+| SigmaPlusSegreLH | 1,926 | 12.2M | 6.8% | pointwise-eval `simp` + `ring` |
+| SigmaPlusSegreDet | 1,021 | 11.4M | 6.4% | pointwise-eval `simp` + `ring` |
+| Compound{R,F}Row | 2,010 | 19.6M | 11.1% | `norm_num` + `linear_combination` |
+| SigmaPlusSegreSmoothC{U,V,W} | 2,175 | 22.4M | 12.6% | pointwise-eval `simp` + `ring` |
+| SigmaPlusSegreNH | 936 | 5.8M | 3.3% | pointwise-eval `simp` + `ring` |
+
+LH, Det, SmoothC* and NH (51.8M, 29%) all prove polynomial identities the
+expensive way — `refine Polynomial.funext fun r => ?_`, a full-width `simp`
+over the `Polynomial.eval_*` lemmas, then `ring`, per identity. HM and VQ do
+NOT: they go through the integer interpolation (`interp_mul`,
+`interp_sub_gen`, `interp_eq` and `decide` on `List Int`), which is why they
+are now cheap. **Porting LH / Det / SmoothC / NH onto the same integer route
+is the next reduction**, and the `interpQ_expand_*` lemmas this session added
+make the first step of it free. The emitters hold the integer data already.
+
+Compound and the two `relation_*` families are genuine per-instance rational
+arithmetic over 1/11 denominators and need the `ℤ`-rescaling treatment
+described in CERTIFICATE_COST_2026-08-16.md, which is a larger job.
+
+### The Segre `interpQ` bridge rewrite (done this session)
+
+Recorded because the same recipe is what the remaining families need.  3,711
+theorems of the form
 
 ```lean
 def HM_5_0_A_pre : Polynomial ℚ := C 4 + C 16 * X + … + C 4 * X ^ 18
@@ -357,13 +372,19 @@ theorem z_HM_5_0_A_pre : HM_5_0_A_pre = interpQ 1 [4, 16, …, 4] := by
   try ring
 ```
 
-`funext` + a 19-term `simp` + `ring`, re-derived per polynomial.  This is
-structurally the same defect the SplitRow rewrite just fixed, and it takes the
-same remedy: a degree-indexed family of shared lemmas
-`C a₀ + C a₁ * X + … + C aₙ * X ^ n = interpQ d [a₀, …, aₙ]`, proved once, so
-each generated proof becomes one application of arguments.  Change the
-emitters (`export_sigma_plus_minor_h.py`, `export_sigma_plus_segre_lean.py`,
-`export_sigma_plus_lh.py`, `export_sigma_plus_smooth_lean.py`), not the output.
+— one shape, ~15,000 Expr nodes each.  `V14Formalization/D12PolyZExpand.lean`
+proves the expansion once.  It is one lemma per (length, support) pattern, not
+per degree, because the emitter omits zero-coefficient terms so the left-hand
+side is sparse and not definitionally the dense sum; 153 patterns cover all
+3,053 rewritable bridges.  Generated and applied by
+`scripts/interpq_expand_rewrite.py`.
+
+  * isolated degree-18 case: 14,784 nodes -> 152 (97x)
+  * `D12SigmaPlusSegreHM_5_0`: 82,333 -> 8,116 (10.1x)
+  * `D12SigmaPlusSegreVQ_4_8`: 61,668 -> 21,574 (2.9x)
+  * families: HM 21.1M -> below the reporting floor, VQ 20.4M -> 4.5M
+  * shared lemma module: 1.52M nodes, paid once
+
 
 ## Stage order
 
