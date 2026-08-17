@@ -2,15 +2,17 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import Mathlib.NumberTheory.FLT.Polynomial
-import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
-import Mathlib.AlgebraicGeometry.EllipticCurve.NormalForms
-import Mathlib.RingTheory.PrincipalIdealDomain
-import Mathlib.FieldTheory.IsAlgClosed.Basic
-import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
-import Mathlib.FieldTheory.RatFunc.AsPolynomial
-import Mathlib.Algebra.MvPolynomial.Equiv
-import Mathlib.RingTheory.Localization.FractionRing
+module
+
+public import Mathlib.NumberTheory.FLT.Polynomial
+public import Mathlib.AlgebraicGeometry.EllipticCurve.Affine.Point
+public import Mathlib.AlgebraicGeometry.EllipticCurve.NormalForms
+public import Mathlib.RingTheory.PrincipalIdealDomain
+public import Mathlib.FieldTheory.IsAlgClosed.Basic
+public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
+public import Mathlib.FieldTheory.RatFunc.AsPolynomial
+public import Mathlib.Algebra.MvPolynomial.Equiv
+public import Mathlib.RingTheory.Localization.FractionRing
 
 /-!
 # Constancy of maps to short Weierstrass elliptic curves
@@ -702,7 +704,7 @@ lemma ratfunc_xy_constant_of_split_cubic_square [CharZero k]
 
 /-- Every affine `RatFunc` point on a short Weierstrass elliptic curve over an
 algebraically closed characteristic-zero field is constant. -/
-lemma ratfunc_xy_constant_of_short_weierstrass [CharZero k]
+public lemma ratfunc_xy_constant_of_short_weierstrass [CharZero k]
     (W : WeierstrassCurve k) [W.IsShortNF] [W.IsElliptic]
     {x y : RatFunc k}
     (heq : y ^ 2 = x ^ 3 + RatFunc.C W.a₄ * x + RatFunc.C W.a₆) :
@@ -731,7 +733,7 @@ lemma ratfunc_xy_constant_of_short_weierstrass [CharZero k]
   apply ratfunc_xy_constant_of_split_cubic_square h12 h13 h23
   rw [hfac, ← heq]
 
-lemma ratfunc_coordinates_constant_of_short_weierstrass_equation [CharZero k]
+public lemma ratfunc_coordinates_constant_of_short_weierstrass_equation [CharZero k]
     (W : WeierstrassCurve k) [W.IsShortNF] [W.IsElliptic]
     {x y : RatFunc k}
     (heq : (W.baseChange (RatFunc k)).toAffine.Equation x y) :
@@ -743,7 +745,7 @@ lemma ratfunc_coordinates_constant_of_short_weierstrass_equation [CharZero k]
 /-- The point-level form needed for constancy of rational maps: base change
 from the constant field to the one-variable rational function field is
 surjective on affine Weierstrass points (including the point at infinity). -/
-lemma short_weierstrass_point_baseChange_ratfunc_surjective [CharZero k]
+public lemma short_weierstrass_point_baseChange_ratfunc_surjective [CharZero k]
     [DecidableEq k] [DecidableEq (RatFunc k)]
     (W : WeierstrassCurve k) [W.IsShortNF] [W.IsElliptic] :
     Function.Surjective
@@ -999,7 +1001,7 @@ lemma homogeneous_split_coordinates_constant_over_field
     exact eq_zero_of_dvd_of_natDegree_lt
       (homogeneous_split_invariant_numerator_dvd_over_field had h12 h13 h23 heq) hdeg
 
-lemma ratfunc_xy_constant_of_split_cubic_square_over_field
+public lemma ratfunc_xy_constant_of_split_cubic_square_over_field
     {x y : RatFunc F} {e₁ e₂ e₃ : F}
     (h12 : e₁ ≠ e₂) (h13 : e₁ ≠ e₃) (h23 : e₂ ≠ e₃)
     (heq : ((x - RatFunc.C e₁) * (x - RatFunc.C e₂)) *
@@ -1056,7 +1058,7 @@ lemma quartic_quartic_square_mason
     (by norm_num) (by norm_num) (by norm_num)
     ha hb hc hab hu hv hw heq
 
-lemma polynomial_xy_constant_of_short_weierstrass_over_field
+public lemma polynomial_xy_constant_of_short_weierstrass_over_field
     (W : WeierstrassCurve F) [W.IsShortNF] [W.IsElliptic]
     {x y : F[X]}
     (heq : y ^ 2 = x ^ 3 + C W.a₄ * x + C W.a₆) :
@@ -1086,7 +1088,7 @@ lemma polynomial_xy_constant_of_short_weierstrass_over_field
 /-- Once both rational coordinates have no finite poles, polynomial constancy
 finishes the one-variable argument.  Ruling out poles is the genuinely hard
 projective/genus step; properness alone only extends the map across them. -/
-lemma ratfunc_xy_constant_of_unit_denominators
+public lemma ratfunc_xy_constant_of_unit_denominators
     (W : WeierstrassCurve F) [W.IsShortNF] [W.IsElliptic]
     {x y : RatFunc F}
     (heq : y ^ 2 = x ^ 3 + RatFunc.C W.a₄ * x + RatFunc.C W.a₆)
@@ -1112,10 +1114,10 @@ open MvPolynomial
 
 variable {K : Type*} [Field K]
 
-abbrev MvFrac (K : Type*) [Field K] (n : ℕ) :=
+public abbrev MvFrac (K : Type*) [Field K] (n : ℕ) :=
   FractionRing (MvPolynomial (Fin n) K)
 
-def mvSuccToRatFuncBase (n : ℕ) :
+public def mvSuccToRatFuncBase (n : ℕ) :
     MvPolynomial (Fin (n + 1)) K →+* RatFunc (MvFrac K n) :=
   (algebraMap (Polynomial (MvFrac K n)) (RatFunc (MvFrac K n))).comp
     ((Polynomial.mapRingHom
@@ -1129,10 +1131,10 @@ lemma mvSuccToRatFuncBase_injective (n : ℕ) :
       (IsFractionRing.injective (MvPolynomial (Fin n) K) (MvFrac K n))).comp
         (MvPolynomial.finSuccEquiv K n).injective)
 
-def mvSuccToRatFunc (n : ℕ) : MvFrac K (n + 1) →+* RatFunc (MvFrac K n) :=
+public def mvSuccToRatFunc (n : ℕ) : MvFrac K (n + 1) →+* RatFunc (MvFrac K n) :=
   IsFractionRing.lift (mvSuccToRatFuncBase_injective (K := K) n)
 
-@[simp] lemma mvSuccToRatFunc_algebraMap (n : ℕ)
+@[simp] public lemma mvSuccToRatFunc_algebraMap (n : ℕ)
     (f : MvPolynomial (Fin (n + 1)) K) :
     mvSuccToRatFunc (K := K) n
         (algebraMap (MvPolynomial (Fin (n + 1)) K) (MvFrac K (n + 1)) f) =
@@ -1147,7 +1149,7 @@ lemma mvTailRingHom_injective (n : ℕ) :
     Function.Injective (mvTailRingHom (K := K) n) :=
   (MvPolynomial.finSuccEquiv K n).symm.injective.comp Polynomial.C_injective
 
-def mvTailBase (n : ℕ) : MvPolynomial (Fin n) K →+* MvFrac K (n + 1) :=
+public def mvTailBase (n : ℕ) : MvPolynomial (Fin n) K →+* MvFrac K (n + 1) :=
   (algebraMap (MvPolynomial (Fin (n + 1)) K) (MvFrac K (n + 1))).comp
     (mvTailRingHom (K := K) n)
 
@@ -1156,10 +1158,10 @@ lemma mvTailBase_injective (n : ℕ) :
   (IsFractionRing.injective (MvPolynomial (Fin (n + 1)) K) (MvFrac K (n + 1))).comp
     (mvTailRingHom_injective (K := K) n)
 
-def mvTailFrac (n : ℕ) : MvFrac K n →+* MvFrac K (n + 1) :=
+public def mvTailFrac (n : ℕ) : MvFrac K n →+* MvFrac K (n + 1) :=
   IsFractionRing.lift (mvTailBase_injective (K := K) n)
 
-@[simp] lemma mvTailFrac_algebraMap (n : ℕ)
+@[simp] public lemma mvTailFrac_algebraMap (n : ℕ)
     (f : MvPolynomial (Fin n) K) :
     mvTailFrac (K := K) n
         (algebraMap (MvPolynomial (Fin n) K) (MvFrac K n) f) =
@@ -1169,7 +1171,7 @@ def mvTailFrac (n : ℕ) : MvFrac K n →+* MvFrac K (n + 1) :=
 def mvLastVariable (n : ℕ) : MvFrac K (n + 1) :=
   algebraMap (MvPolynomial (Fin (n + 1)) K) (MvFrac K (n + 1)) (X 0)
 
-def mvRatFuncBackBase (n : ℕ) :
+public def mvRatFuncBackBase (n : ℕ) :
     Polynomial (MvFrac K n) →+* MvFrac K (n + 1) :=
   Polynomial.eval₂RingHom (mvTailFrac (K := K) n) (mvLastVariable (K := K) n)
 
@@ -1185,7 +1187,7 @@ lemma mvSuccToRatFunc_mvLastVariable (n : ℕ) :
   simp [mvLastVariable, mvSuccToRatFuncBase,
     MvPolynomial.finSuccEquiv_X_zero, RatFunc.algebraMap_X]
 
-lemma mvSuccToRatFunc_algebraMap_base (n : ℕ) (c : K) :
+public lemma mvSuccToRatFunc_algebraMap_base (n : ℕ) (c : K) :
     mvSuccToRatFunc (K := K) n (algebraMap K (MvFrac K (n + 1)) c) =
       RatFunc.C (algebraMap K (MvFrac K n) c) := by
   rw [IsScalarTower.algebraMap_apply K (MvPolynomial (Fin (n + 1)) K)]
@@ -1220,17 +1222,17 @@ lemma mvRatFuncBackBase_injective (n : ℕ) :
   rw [mvSuccToRatFunc_comp_mvRatFuncBackBase] at h
   exact h
 
-def mvRatFuncBack (n : ℕ) : RatFunc (MvFrac K n) →+* MvFrac K (n + 1) :=
+public def mvRatFuncBack (n : ℕ) : RatFunc (MvFrac K n) →+* MvFrac K (n + 1) :=
   IsFractionRing.lift (mvRatFuncBackBase_injective (K := K) n)
 
-@[simp] lemma mvRatFuncBack_algebraMap (n : ℕ)
+@[simp] public lemma mvRatFuncBack_algebraMap (n : ℕ)
     (p : Polynomial (MvFrac K n)) :
     mvRatFuncBack (K := K) n
         (algebraMap (Polynomial (MvFrac K n)) (RatFunc (MvFrac K n)) p) =
       mvRatFuncBackBase (K := K) n p :=
   IsFractionRing.lift_algebraMap (mvRatFuncBackBase_injective (K := K) n) p
 
-lemma mvSuccToRatFunc_comp_mvRatFuncBack (n : ℕ) :
+public lemma mvSuccToRatFunc_comp_mvRatFuncBack (n : ℕ) :
     (mvSuccToRatFunc (K := K) n).comp (mvRatFuncBack (K := K) n) =
       RingHom.id (RatFunc (MvFrac K n)) := by
   apply IsFractionRing.ringHom_ext (A := Polynomial (MvFrac K n))
@@ -1241,24 +1243,24 @@ lemma mvSuccToRatFunc_comp_mvRatFuncBack (n : ℕ) :
   rw [mvSuccToRatFunc_comp_mvRatFuncBackBase]
   rfl
 
-def mvFractionSuccRingEquiv (n : ℕ) :
+@[expose] public def mvFractionSuccRingEquiv (n : ℕ) :
     MvFrac K (n + 1) ≃+* RatFunc (MvFrac K n) :=
   RingEquiv.ofBijective (mvSuccToRatFunc (K := K) n)
     ⟨RingHom.injective _, fun z ↦
       ⟨mvRatFuncBack (K := K) n z,
         DFunLike.congr_fun (mvSuccToRatFunc_comp_mvRatFuncBack (K := K) n) z⟩⟩
 
-@[simp] lemma mvFractionSuccRingEquiv_apply (n : ℕ) (z : MvFrac K (n + 1)) :
+@[simp] public lemma mvFractionSuccRingEquiv_apply (n : ℕ) (z : MvFrac K (n + 1)) :
     mvFractionSuccRingEquiv (K := K) n z = mvSuccToRatFunc (K := K) n z := rfl
 
-def mvFractionZeroAlgEquiv : MvFrac K 0 ≃ₐ[K] K :=
+public def mvFractionZeroAlgEquiv : MvFrac K 0 ≃ₐ[K] K :=
   IsFractionRing.algEquivOfAlgEquiv (MvPolynomial.isEmptyAlgEquiv K (Fin 0))
 
 variable [CharZero K]
 
 /-- Every solution of a fixed split smooth cubic over a finite-variable pure
 transcendental extension descends to the ground field. -/
-theorem mvfrac_xy_constant_of_split_cubic_square
+public theorem mvfrac_xy_constant_of_split_cubic_square
     (n : ℕ) {e₁ e₂ e₃ : K}
     (h12 : e₁ ≠ e₂) (h13 : e₁ ≠ e₃) (h23 : e₂ ≠ e₃)
     {x y : MvFrac K n}
@@ -1350,7 +1352,7 @@ theorem mvfrac_xy_constant_of_short_weierstrass
   apply mvfrac_xy_constant_of_split_cubic_square n h12 h13 h23
   rw [hfac, ← heq]
 
-theorem mvfrac_coordinates_constant_of_short_weierstrass_equation
+public theorem mvfrac_coordinates_constant_of_short_weierstrass_equation
     (n : ℕ) (W : WeierstrassCurve K) [W.IsShortNF] [W.IsElliptic]
     {x y : MvFrac K n}
     (heq : (W.baseChange (MvFrac K n)).toAffine.Equation x y) :
@@ -1360,7 +1362,7 @@ theorem mvfrac_coordinates_constant_of_short_weierstrass_equation
   rw [WeierstrassCurve.Affine.equation_iff] at heq
   simpa using heq
 
-theorem short_weierstrass_point_baseChange_mvfrac_surjective
+public theorem short_weierstrass_point_baseChange_mvfrac_surjective
     [DecidableEq K] (n : ℕ) [DecidableEq (MvFrac K n)]
     (W : WeierstrassCurve K) [W.IsShortNF] [W.IsElliptic] :
     Function.Surjective
@@ -1387,7 +1389,7 @@ theorem short_weierstrass_point_baseChange_mvfrac_surjective
 
 /-- The exact pure-transcendental function field occurring on the standard
 affine chart of `P² × P²`. -/
-theorem short_weierstrass_point_baseChange_mvfrac_fin4_surjective
+public theorem short_weierstrass_point_baseChange_mvfrac_fin4_surjective
     [DecidableEq K]
     [DecidableEq (FractionRing (MvPolynomial (Fin 4) K))]
     (W : WeierstrassCurve K) [W.IsShortNF] [W.IsElliptic] :
@@ -1399,7 +1401,7 @@ theorem short_weierstrass_point_baseChange_mvfrac_fin4_surjective
 
 /-- Transport of the `Fin 4` endpoint to any explicitly identified
 `K`-function field. -/
-theorem short_weierstrass_point_baseChange_of_fin4_algEquiv_surjective
+public theorem short_weierstrass_point_baseChange_of_fin4_algEquiv_surjective
     {L : Type*} [Field L] [Algebra K L]
     [DecidableEq K] [DecidableEq L]
     (e : FractionRing (MvPolynomial (Fin 4) K) ≃ₐ[K] L)

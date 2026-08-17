@@ -2,16 +2,18 @@
 Centralizer N = C_G(σ) of the standard involution in PSL(2, F₁₁)
 has order 12 and is isomorphic to DihedralGroup 6.
 -/
-import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
-import Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Algebra.Field.ZMod
-import Mathlib.Data.Nat.Prime.Defs
-import Mathlib.GroupTheory.SpecificGroups.Dihedral
-import Mathlib.Data.Fintype.BigOperators
-import Mathlib.Algebra.Group.Subgroup.Finite
-import Mathlib.GroupTheory.OrderOfElement
-import Mathlib.GroupTheory.Subgroup.Centralizer
+module
+
+public import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
+public import Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.Algebra.Field.ZMod
+public import Mathlib.Data.Nat.Prime.Defs
+public import Mathlib.GroupTheory.SpecificGroups.Dihedral
+public import Mathlib.Data.Fintype.BigOperators
+public import Mathlib.Algebra.Group.Subgroup.Finite
+public import Mathlib.GroupTheory.OrderOfElement
+public import Mathlib.GroupTheory.Subgroup.Centralizer
 
 open scoped MatrixGroups
 open Matrix Matrix.SpecialLinearGroup
@@ -21,22 +23,22 @@ noncomputable section
 namespace V14Formalization
 namespace CentralizerN
 
-instance fact_prime_eleven' : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
+public instance fact_prime_eleven' : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
 
-abbrev F := ZMod 11
-abbrev SLG := SpecialLinearGroup (Fin 2) F
-abbrev PSL2F11 := PSL(2, F)
+public abbrev F := ZMod 11
+public abbrev SLG := SpecialLinearGroup (Fin 2) F
+public abbrev PSL2F11 := PSL(2, F)
 
-def Smat : SLG := ⟨!![0, -1; 1, 0], by simp [Matrix.det_fin_two_of]⟩
-def sigma : PSL2F11 := QuotientGroup.mk Smat
+@[expose] public def Smat : SLG := ⟨!![0, -1; 1, 0], by simp [Matrix.det_fin_two_of]⟩
+@[expose] public def sigma : PSL2F11 := QuotientGroup.mk Smat
 
-def Circle1 := { p : F × F // p.1 ^ 2 + p.2 ^ 2 = 1 }
-def CircleM1 := { p : F × F // p.1 ^ 2 + p.2 ^ 2 = -1 }
+@[expose] public def Circle1 := { p : F × F // p.1 ^ 2 + p.2 ^ 2 = 1 }
+@[expose] public def CircleM1 := { p : F × F // p.1 ^ 2 + p.2 ^ 2 = -1 }
 
-instance : Fintype Circle1 :=
+public instance : Fintype Circle1 :=
   Fintype.subtype ((Finset.univ : Finset (F × F)).filter fun p => p.1 ^ 2 + p.2 ^ 2 = 1)
     (by intro; simp)
-instance : Fintype CircleM1 :=
+public instance : Fintype CircleM1 :=
   Fintype.subtype ((Finset.univ : Finset (F × F)).filter fun p => p.1 ^ 2 + p.2 ^ 2 = -1)
     (by intro; simp)
 
@@ -46,11 +48,11 @@ theorem card_Circle1 : Fintype.card Circle1 = 12 := by
 theorem card_CircleM1 : Fintype.card CircleM1 = 12 := by
   unfold CircleM1; rw [Fintype.card_subtype]; decide
 
-def mkRot (p : Circle1) : SLG :=
+@[expose] public def mkRot (p : Circle1) : SLG :=
   ⟨!![p.val.1, p.val.2; -p.val.2, p.val.1], by
     simp [Matrix.det_fin_two_of]; simpa [pow_two] using p.property⟩
 
-def mkRefl (p : CircleM1) : SLG :=
+@[expose] public def mkRefl (p : CircleM1) : SLG :=
   ⟨!![p.val.1, p.val.2; p.val.2, -p.val.1], by
     simp [Matrix.det_fin_two_of]
     have h' : p.val.1 * p.val.1 + p.val.2 * p.val.2 = -1 := by
@@ -65,9 +67,9 @@ lemma mkRot_mul_S (p : Circle1) : mkRot p * Smat = Smat * mkRot p := by
   ext i j; fin_cases i <;> fin_cases j <;>
     simp [mkRot, Smat, Matrix.mul_apply, Fin.sum_univ_two, SpecialLinearGroup.coe_mul]
 
-def negI : SLG := ⟨-1, by simp [det_neg, Fintype.card_fin, pow_two]⟩
+@[expose] public def negI : SLG := ⟨-1, by simp [det_neg, Fintype.card_fin, pow_two]⟩
 
-lemma mk_negI : (QuotientGroup.mk negI : PSL2F11) = 1 := by
+public lemma mk_negI : (QuotientGroup.mk negI : PSL2F11) = 1 := by
   apply (QuotientGroup.eq_one_iff _).mpr
   rw [mem_center_iff]
   refine ⟨(-1 : F), by decide, ?_⟩
@@ -89,14 +91,14 @@ lemma mkRefl_mul_S (p : CircleM1) : mkRefl p * Smat = negS * mkRefl p := by
     simp [mkRefl, Smat, coe_negS, Matrix.mul_apply, Fin.sum_univ_two,
       SpecialLinearGroup.coe_mul, Matrix.neg_apply]
 
-theorem rot_mem (p : Circle1) :
+public theorem rot_mem (p : Circle1) :
     QuotientGroup.mk (mkRot p) ∈ Subgroup.centralizer ({sigma} : Set PSL2F11) := by
   rw [Subgroup.mem_centralizer_singleton_iff]
   change (QuotientGroup.mk (mkRot p) : PSL2F11) * QuotientGroup.mk Smat =
     QuotientGroup.mk Smat * QuotientGroup.mk (mkRot p)
   rw [← QuotientGroup.mk_mul, ← QuotientGroup.mk_mul, mkRot_mul_S]
 
-theorem refl_mem (p : CircleM1) :
+public theorem refl_mem (p : CircleM1) :
     QuotientGroup.mk (mkRefl p) ∈ Subgroup.centralizer ({sigma} : Set PSL2F11) := by
   rw [Subgroup.mem_centralizer_singleton_iff]
   change (QuotientGroup.mk (mkRefl p) : PSL2F11) * sigma =
@@ -107,11 +109,11 @@ theorem refl_mem (p : CircleM1) :
     _ = QuotientGroup.mk negS * QuotientGroup.mk (mkRefl p) := by rw [QuotientGroup.mk_mul]
     _ = sigma * QuotientGroup.mk (mkRefl p) := by rw [mk_negS]
 
-def liftsToN : Circle1 ⊕ CircleM1 → Subgroup.centralizer ({sigma} : Set PSL2F11)
+@[expose] public def liftsToN : Circle1 ⊕ CircleM1 → Subgroup.centralizer ({sigma} : Set PSL2F11)
   | .inl p => ⟨QuotientGroup.mk (mkRot p), rot_mem p⟩
   | .inr p => ⟨QuotientGroup.mk (mkRefl p), refl_mem p⟩
 
-lemma sq_eq_one_cases (r : F) (hr : r ^ 2 = 1) : r = 1 ∨ r = -1 := by
+public lemma sq_eq_one_cases (r : F) (hr : r ^ 2 = 1) : r = 1 ∨ r = -1 := by
   have fac : (r - 1) * (r + 1) = 0 := by
     have t : r ^ 2 - 1 = 0 := by rw [hr, sub_self]
     convert t using 1; ring
@@ -230,9 +232,9 @@ theorem liftsToN_surjective : Function.Surjective liftsToN := by
   · exact ⟨Sum.inr p, Subtype.ext (by simp [liftsToN, hp])⟩
 
 
-instance : Fintype PSL2F11 := QuotientGroup.fintype _
-instance : DecidableEq PSL2F11 := Quotient.decidableEq
-instance : Fintype (Subgroup.centralizer ({sigma} : Set PSL2F11)) :=
+public instance : Fintype PSL2F11 := QuotientGroup.fintype _
+public instance : DecidableEq PSL2F11 := Quotient.decidableEq
+public instance : Fintype (Subgroup.centralizer ({sigma} : Set PSL2F11)) :=
   Fintype.ofFinite _
 
 def liftMat : Circle1 ⊕ CircleM1 → SLG
@@ -268,7 +270,7 @@ lemma liftsToN_negLift (x : Circle1 ⊕ CircleM1) :
   apply Subtype.ext
   rw [liftsToN_val, liftsToN_val, liftMat_negLift, QuotientGroup.mk_mul, mk_negI, one_mul]
 
-lemma eq_zero_of_eq_neg (x : F) (h : x = -x) : x = 0 := by
+public lemma eq_zero_of_eq_neg (x : F) (h : x = -x) : x = 0 := by
   have : (2 : F) * x = 0 := by
     have hx : x + x = x + (-x) := congrArg (fun t => x + t) h
     have hx0 : x + x = 0 := hx.trans (add_neg_cancel x)
@@ -302,7 +304,7 @@ lemma negLift_involutive : Function.Involutive negLift := by
   | inl p => simp only [negLift]; congr 1; apply Subtype.ext; simp
   | inr p => simp only [negLift]; congr 1; apply Subtype.ext; simp
 
-lemma center_eq_one_or_negI (A : SLG) (hA : A ∈ Subgroup.center SLG) :
+public lemma center_eq_one_or_negI (A : SLG) (hA : A ∈ Subgroup.center SLG) :
     A = 1 ∨ A = negI := by
   obtain ⟨r, hr, hsc⟩ := (Matrix.SpecialLinearGroup.mem_center_iff (n := Fin 2) (R := F)).mp hA
   have rsq : r ^ 2 = 1 := by simpa [Fintype.card_fin] using hr
@@ -383,7 +385,7 @@ lemma liftMat_injective : Function.Injective liftMat := by
     exact (absurd (by simpa [ha0, hb0, pow_two] using p.property)
       (by decide : ¬((0 : F) + (0 : F) = -1)))
 
-lemma negI_mem_center : negI ∈ Subgroup.center SLG := by
+public lemma negI_mem_center : negI ∈ Subgroup.center SLG := by
   rw [Matrix.SpecialLinearGroup.mem_center_iff]
   refine ⟨(-1 : F), by decide, ?_⟩
   ext i j
@@ -470,7 +472,7 @@ lemma fiber_card (y : Subgroup.centralizer ({sigma} : Set PSL2F11)) :
     _ = s.card := Fintype.card_coe s
     _ = 2 := hs_card
 
-theorem centralizer_sigma_card :
+public theorem centralizer_sigma_card :
     Fintype.card (Subgroup.centralizer ({sigma} : Set PSL2F11)) = 12 := by
   classical
   set N := Subgroup.centralizer ({sigma} : Set PSL2F11)
@@ -502,16 +504,16 @@ theorem centralizer_sigma_card_eq_dihedral :
 
 /-! ## N ≃ DihedralGroup 6 -/
 
-def rotPt : Circle1 := ⟨(3, 5), by decide⟩
-def reflPt : CircleM1 := ⟨(1, 3), by decide⟩
+@[expose] public def rotPt : Circle1 := ⟨(3, 5), by decide⟩
+@[expose] public def reflPt : CircleM1 := ⟨(1, 3), by decide⟩
 
-def rotGen : Subgroup.centralizer ({sigma} : Set PSL2F11) :=
+@[expose] public def rotGen : Subgroup.centralizer ({sigma} : Set PSL2F11) :=
   liftsToN (.inl rotPt)
 
-def reflGen : Subgroup.centralizer ({sigma} : Set PSL2F11) :=
+@[expose] public def reflGen : Subgroup.centralizer ({sigma} : Set PSL2F11) :=
   liftsToN (.inr reflPt)
 
-lemma mkRot_pow_six : (mkRot rotPt : SLG) ^ 6 = negI := by
+public lemma mkRot_pow_six : (mkRot rotPt : SLG) ^ 6 = negI := by
   apply Subtype.ext
   ext i j
   fin_cases i <;> fin_cases j
@@ -521,13 +523,13 @@ lemma mkRot_pow_six : (mkRot rotPt : SLG) ^ 6 = negI := by
       Matrix.neg_apply, Matrix.of_apply, Matrix.cons_val]
     decide
 
-lemma rotGen_pow_six : rotGen ^ 6 = 1 := by
+public lemma rotGen_pow_six : rotGen ^ 6 = 1 := by
   apply Subtype.ext
   change (QuotientGroup.mk (mkRot rotPt) : PSL2F11) ^ 6 = 1
   rw [← QuotientGroup.mk_pow]
   exact (QuotientGroup.eq_one_iff _).mpr (by rw [mkRot_pow_six]; exact negI_mem_center)
 
-lemma mkRefl_pow_two : (mkRefl reflPt : SLG) ^ 2 = negI := by
+public lemma mkRefl_pow_two : (mkRefl reflPt : SLG) ^ 2 = negI := by
   apply Subtype.ext
   ext i j
   fin_cases i <;> fin_cases j
@@ -543,10 +545,10 @@ lemma reflGen_sq : reflGen ^ 2 = 1 := by
   rw [← QuotientGroup.mk_pow]
   exact (QuotientGroup.eq_one_iff _).mpr (by rw [mkRefl_pow_two]; exact negI_mem_center)
 
-lemma reflGen_mul_self : reflGen * reflGen = (1 : _) := by
+public lemma reflGen_mul_self : reflGen * reflGen = (1 : _) := by
   simpa [pow_two] using reflGen_sq
 
-lemma mkRefl_conj_mkRot :
+public lemma mkRefl_conj_mkRot :
     mkRefl reflPt * mkRot rotPt * mkRefl reflPt = negI * (mkRot rotPt)⁻¹ := by
   apply Subtype.ext
   ext i j
@@ -557,7 +559,7 @@ lemma mkRefl_conj_mkRot :
       Matrix.of_apply, Matrix.cons_val, Matrix.adjugate_fin_two, Matrix.one_apply]
     decide
 
-lemma reflGen_conj_rotGen : reflGen * rotGen * reflGen = rotGen⁻¹ := by
+public lemma reflGen_conj_rotGen : reflGen * rotGen * reflGen = rotGen⁻¹ := by
   apply Subtype.ext
   change (QuotientGroup.mk (mkRefl reflPt) : PSL2F11) *
       QuotientGroup.mk (mkRot rotPt) * QuotientGroup.mk (mkRefl reflPt) =
@@ -569,7 +571,7 @@ lemma reflGen_conj_rotGen : reflGen * rotGen * reflGen = rotGen⁻¹ := by
     simp [← QuotientGroup.mk_mul, mul_assoc]
   rw [hL, mkRefl_conj_mkRot, QuotientGroup.mk_mul, mk_negI, one_mul, QuotientGroup.mk_inv]
 
-lemma rotGen_mul_reflGen : rotGen * reflGen = reflGen * rotGen⁻¹ := by
+public lemma rotGen_mul_reflGen : rotGen * reflGen = reflGen * rotGen⁻¹ := by
   have h := congrArg (fun g => g * reflGen) reflGen_conj_rotGen
   have hL : reflGen * rotGen * reflGen * reflGen = reflGen * rotGen := by
     rw [mul_assoc (reflGen * rotGen), reflGen_mul_self, mul_one]
@@ -582,7 +584,7 @@ lemma rotGen_mul_reflGen : rotGen * reflGen = reflGen * rotGen⁻¹ := by
   have h3 := congrArg (fun g => g * reflGen) h2'
   simpa [mul_assoc, reflGen_mul_self, mul_one] using h3
 
-lemma rotGen_pow_mul_reflGen (k : ℕ) :
+public lemma rotGen_pow_mul_reflGen (k : ℕ) :
     rotGen ^ k * reflGen = reflGen * (rotGen⁻¹) ^ k := by
   induction k with
   | zero => simp
@@ -596,7 +598,7 @@ lemma rotGen_pow_mul_reflGen (k : ℕ) :
       _ = reflGen * ((rotGen⁻¹) ^ k * rotGen⁻¹) := by simp [mul_assoc]
       _ = reflGen * (rotGen⁻¹) ^ (k + 1) := by rw [← pow_succ]
 
-lemma rotGen_pow_mod (k : ℕ) : rotGen ^ k = rotGen ^ (k % 6) := by
+public lemma rotGen_pow_mod (k : ℕ) : rotGen ^ k = rotGen ^ (k % 6) := by
   have h6 := rotGen_pow_six
   have hk : k = 6 * (k / 6) + k % 6 := (Nat.div_add_mod k 6).symm
   calc rotGen ^ k = rotGen ^ (6 * (k / 6) + k % 6) := by rw [← hk]
@@ -604,7 +606,7 @@ lemma rotGen_pow_mod (k : ℕ) : rotGen ^ k = rotGen ^ (k % 6) := by
     _ = (1 : _) ^ (k / 6) * rotGen ^ (k % 6) := by rw [h6]
     _ = rotGen ^ (k % 6) := by simp
 
-lemma rotGen_inv_eq : rotGen⁻¹ = rotGen ^ 5 := by
+public lemma rotGen_inv_eq : rotGen⁻¹ = rotGen ^ 5 := by
   refine inv_eq_of_mul_eq_one_right ?_
   calc rotGen * rotGen ^ 5 = rotGen ^ 1 * rotGen ^ 5 := by rw [pow_one]
     _ = rotGen ^ (1 + 5) := by rw [← pow_add]
@@ -655,7 +657,7 @@ lemma exists_rot_pow (k : ℕ) :
     simp only [rotGen, liftsToN]
     rw [← QuotientGroup.mk_mul, mkRot_mul]
 
-lemma reflGen_ne_rot_pow (k : ℕ) : reflGen ≠ rotGen ^ k := by
+public lemma reflGen_ne_rot_pow (k : ℕ) : reflGen ≠ rotGen ^ k := by
   intro h
   obtain ⟨p, hp⟩ := exists_rot_pow k
   have heq : liftsToN (.inr reflPt) = liftsToN (.inl p) := h.trans hp
@@ -666,7 +668,7 @@ lemma reflGen_ne_rot_pow (k : ℕ) : reflGen ≠ rotGen ^ k := by
     rw [this] at h2
     cases h2
 
-lemma orderOf_rotGen : orderOf rotGen = 6 := by
+public lemma orderOf_rotGen : orderOf rotGen = 6 := by
   refine (orderOf_eq_iff (by decide : 0 < 6)).2 ⟨rotGen_pow_six, ?_⟩
   intro m hm6 hm0 hpow
   have hval : (rotGen : PSL2F11) ^ m = 1 := congrArg Subtype.val hpow
@@ -697,7 +699,7 @@ lemma orderOf_rotGen : orderOf rotGen = 6 := by
         Matrix.of_apply, Matrix.cons_val] at he
       exact absurd he (by decide)
 
-def dihedralToN : DihedralGroup 6 → Subgroup.centralizer ({sigma} : Set PSL2F11)
+public def dihedralToN : DihedralGroup 6 → Subgroup.centralizer ({sigma} : Set PSL2F11)
   | .r i => rotGen ^ i.val
   | .sr i => reflGen * rotGen ^ i.val
 
@@ -759,14 +761,14 @@ lemma dihedralToN_mul (a b : DihedralGroup 6) :
         _ = rotGen ^ ((j.val + (-i).val) % 6) := by rw [add_comm]
         _ = rotGen ^ (j - i).val := by rw [← hval]
 
-def dihedralToNHom : DihedralGroup 6 →* Subgroup.centralizer ({sigma} : Set PSL2F11) where
+public def dihedralToNHom : DihedralGroup 6 →* Subgroup.centralizer ({sigma} : Set PSL2F11) where
   toFun := dihedralToN
   map_one' := by
     change rotGen ^ (0 : ZMod 6).val = 1
     rw [ZMod.val_zero, pow_zero]
   map_mul' := dihedralToN_mul
 
-lemma dihedralToNHom_injective : Function.Injective dihedralToNHom := by
+public lemma dihedralToNHom_injective : Function.Injective dihedralToNHom := by
   rw [injective_iff_map_eq_one]
   intro x hx
   match x with
@@ -786,7 +788,7 @@ lemma dihedralToNHom_injective : Function.Injective dihedralToNHom := by
       rw [this, rotGen_inv_pow]
     exact absurd hfalse (reflGen_ne_rot_pow _)
 
-theorem centralizer_sigma_mulEquiv_dihedral :
+public theorem centralizer_sigma_mulEquiv_dihedral :
     Nonempty (Subgroup.centralizer ({sigma} : Set PSL2F11) ≃* DihedralGroup 6) := by
   classical
   have hinj := dihedralToNHom_injective

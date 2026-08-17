@@ -23,6 +23,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 import sys
 from fractions import Fraction
 from pathlib import Path
@@ -170,6 +171,69 @@ def f_coord_defs_for(row: int, j: int) -> str:
         if d not in seen:
             seen.append(d)
     return ", ".join(seen)
+
+
+# ---------------------------------------------------------------------------
+# Module-system migration of the byte-frozen D12PolynomialCore.
+#
+# The code that originally emitted Core predates this repository's history
+# (Core froze several milestones ago), so Core cannot be re-derived from
+# JSON by the current script.  Instead the migration is a deterministic,
+# invertible transformation of the frozen bytes, performed here so that the
+# generated file is never hand-edited: strip any existing annotations,
+# require the pristine bytes to hash to the frozen sha256, then re-insert
+# the annotations.  Two consecutive runs are byte-identical.
+# ---------------------------------------------------------------------------
+CORE_FROZEN_SHA = "401ecc8eb7cdb7bbcccd20124a2e4e000554a10d25de5a30f5c04ae42e2dc299"
+# Downstream-referenced names (usage scan over all importers, 2026-08-17).
+# Defs the importers unfold via `simp [B_poly]`, `simp [Phi11]`, rfl checks.
+CORE_EXPOSE_DEFS = {"of10", "Phi11", "B_poly", "L_poly", "payloadSha256"}
+# Theorems importers cite by name.
+CORE_PUBLIC_THMS = {"of10_add", "C_mul_of10", "of10_mul_C", "L_mul_B_poly"}
+# Abbrevs in downstream signatures (public abbrevs are exposed by default).
+CORE_PUBLIC_ABBREVS = {"PolyQ", "Coeff10"}
+
+
+def migrate_core_annotations() -> None:
+    text = CORE_PATH.read_text(encoding="utf-8")
+    # Invert a previous run: drop the module header and annotation prefixes.
+    lines = []
+    for ln in text.split("\n"):
+        if ln == "module":
+            continue
+        ln = re.sub(r"^public import ", "import ", ln)
+        ln = re.sub(r"^(?:@\[expose\] )?public (def|theorem|abbrev) ", r"\1 ", ln)
+        lines.append(ln)
+    pristine = "\n".join(lines)
+    # The `module` line is followed by a blank separator we also inserted.
+    pristine = pristine.replace("-/\n\nimport ", "-/\nimport ", 1)
+    got = hashlib.sha256(pristine.encode("utf-8")).hexdigest()
+    if got != CORE_FROZEN_SHA:
+        raise SystemExit(
+            f"REQUIRE failed: D12PolynomialCore pristine sha {got} != {CORE_FROZEN_SHA}"
+        )
+    out = []
+    first_import_seen = False
+    for ln in pristine.split("\n"):
+        if ln.startswith("import "):
+            if not first_import_seen:
+                out.append("module")
+                out.append("")
+                first_import_seen = True
+            out.append("public " + ln)
+            continue
+        m = re.match(r"^(def|theorem|abbrev) ([\w'«»]+)[ :]", ln)
+        if m:
+            kind, name = m.groups()
+            if kind == "def" and name in CORE_EXPOSE_DEFS:
+                ln = "@[expose] public " + ln
+            elif kind == "theorem" and name in CORE_PUBLIC_THMS:
+                ln = "public " + ln
+            elif kind == "abbrev" and name in CORE_PUBLIC_ABBREVS:
+                ln = "public " + ln
+        out.append(ln)
+    write_text(CORE_PATH, "\n".join(out))
+    print(f"Migrated {CORE_PATH.relative_to(ROOT)} (module annotations, frozen body)")
 
 
 def main() -> int:
@@ -514,6 +578,8 @@ end V14Formalization
         write_text(DATA_PATH, data_text)
         written.append(DATA_PATH)
 
+    migrate_core_annotations()
+
     for path in written:
         text = path.read_text(encoding="utf-8")
         print(f"Wrote {path.relative_to(ROOT)} ({len(text)} bytes, {text.count(chr(10))} lines)")
@@ -526,4 +592,7 @@ end V14Formalization
 
 
 if __name__ == "__main__":
+    if "--migrate-core-only" in sys.argv[1:]:
+        migrate_core_annotations()
+        sys.exit(0)
     sys.exit(main())

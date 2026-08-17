@@ -2,29 +2,31 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import Mathlib.Algebra.Group.Basic
-import Mathlib.Algebra.Group.Subgroup.Basic
-import Mathlib.GroupTheory.Subgroup.Center
-import Mathlib.Algebra.Group.Subgroup.Finite
-import Mathlib.Data.Fintype.Card
-import Mathlib.GroupTheory.OrderOfElement
-import Mathlib.Algebra.CharP.Basic
-import Mathlib.Algebra.Module.Basic
-import Mathlib.LinearAlgebra.FiniteDimensional.Basic
-import Mathlib.LinearAlgebra.Dimension.Finrank
-import Mathlib.LinearAlgebra.Eigenspace.Basic
-import Mathlib.LinearAlgebra.Eigenspace.Basic
-import Mathlib.LinearAlgebra.Projectivization.Basic
-import Mathlib.LinearAlgebra.Projectivization.Action
-import Mathlib.RepresentationTheory.Basic
-import Mathlib.GroupTheory.SpecificGroups.Dihedral
-import Mathlib.GroupTheory.GroupAction.Basic
-import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
-import Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup
-import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Tactic.Basic
+module
+
+public import Mathlib.Algebra.Group.Basic
+public import Mathlib.Algebra.Group.Subgroup.Basic
+public import Mathlib.GroupTheory.Subgroup.Center
+public import Mathlib.Algebra.Group.Subgroup.Finite
+public import Mathlib.Data.Fintype.Card
+public import Mathlib.GroupTheory.OrderOfElement
+public import Mathlib.Algebra.CharP.Basic
+public import Mathlib.Algebra.Module.Basic
+public import Mathlib.LinearAlgebra.FiniteDimensional.Basic
+public import Mathlib.LinearAlgebra.Dimension.Finrank
+public import Mathlib.LinearAlgebra.Eigenspace.Basic
+public import Mathlib.LinearAlgebra.Eigenspace.Basic
+public import Mathlib.LinearAlgebra.Projectivization.Basic
+public import Mathlib.LinearAlgebra.Projectivization.Action
+public import Mathlib.RepresentationTheory.Basic
+public import Mathlib.GroupTheory.SpecificGroups.Dihedral
+public import Mathlib.GroupTheory.GroupAction.Basic
+public import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
+public import Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup
+public import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.Data.Matrix.Basic
+public import Mathlib.Tactic.Basic
 
 namespace V14Formalization
 

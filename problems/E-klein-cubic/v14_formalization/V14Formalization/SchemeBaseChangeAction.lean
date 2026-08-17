@@ -2,9 +2,11 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import Mathlib.CategoryTheory.Action.Basic
-import Mathlib.CategoryTheory.Comma.Over.Pullback
-import Mathlib.AlgebraicGeometry.Limits
+module
+
+public import Mathlib.CategoryTheory.Action.Basic
+public import Mathlib.CategoryTheory.Comma.Over.Pullback
+public import Mathlib.AlgebraicGeometry.Limits
 
 /-!
 # Base change of actions on relative schemes
@@ -28,7 +30,7 @@ variable {S T : Scheme.{u}}
 /-- Pull back every object and action morphism along a base morphism.  This is
 the ordinary categorical base change functor on the slice, applied to a
 bundled action. -/
-def baseChangeAction (f : T ⟶ S) (A : Action (Over S) G) :
+public def baseChangeAction (f : T ⟶ S) (A : Action (Over S) G) :
     Action (Over T) G :=
   ((Over.pullback f).mapAction G).obj A
 

@@ -3,33 +3,35 @@ Cardinality of PSL₂(F₁₁) = 660, via |GL| → |SL| → |PSL|.
 Projective order profile of SL₂(F₁₁) via a kernel-checked M4 slice
 certificate, and the character-norm identity ∑_g χ₁₀'(g)² = 660.
 -/
-import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Card
-import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
-import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs
-import Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Algebra.Field.ZMod
-import Mathlib.Data.Fintype.Card
-import Mathlib.GroupTheory.Index
-import Mathlib.Algebra.Group.Subgroup.Finite
-import Mathlib.GroupTheory.SpecificGroups.Cyclic
-import Mathlib.GroupTheory.OrderOfElement
-import Mathlib.RingTheory.RootsOfUnity.Basic
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Data.Int.Basic
-import Mathlib.Data.Fintype.Sigma
-import Mathlib.LinearAlgebra.Matrix.Adjugate
-import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
-import Mathlib.Tactic.FinCases
-import Mathlib.GroupTheory.GroupAction.Quotient
-import Mathlib.GroupTheory.GroupAction.ConjAct
-import Mathlib.GroupTheory.Rank
-import Mathlib.Algebra.Group.Conj
-import Mathlib.Algebra.Group.ConjFinite
-import Mathlib.LinearAlgebra.Matrix.Trace
-import Mathlib.Data.Fintype.Sum
-import Mathlib.Algebra.Group.End
-import Mathlib.FieldTheory.Finite.Basic
+module
+
+public import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Card
+public import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
+public import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Defs
+public import Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.Algebra.Field.ZMod
+public import Mathlib.Data.Fintype.Card
+public import Mathlib.GroupTheory.Index
+public import Mathlib.Algebra.Group.Subgroup.Finite
+public import Mathlib.GroupTheory.SpecificGroups.Cyclic
+public import Mathlib.GroupTheory.OrderOfElement
+public import Mathlib.RingTheory.RootsOfUnity.Basic
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Data.Int.Basic
+public import Mathlib.Data.Fintype.Sigma
+public import Mathlib.LinearAlgebra.Matrix.Adjugate
+public import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
+public import Mathlib.Tactic.FinCases
+public import Mathlib.GroupTheory.GroupAction.Quotient
+public import Mathlib.GroupTheory.GroupAction.ConjAct
+public import Mathlib.GroupTheory.Rank
+public import Mathlib.Algebra.Group.Conj
+public import Mathlib.Algebra.Group.ConjFinite
+public import Mathlib.LinearAlgebra.Matrix.Trace
+public import Mathlib.Data.Fintype.Sum
+public import Mathlib.Algebra.Group.End
+public import Mathlib.FieldTheory.Finite.Basic
 
 open Matrix Matrix.SpecialLinearGroup BigOperators
 open scoped MatrixGroups
@@ -39,10 +41,10 @@ noncomputable section
 namespace V14Formalization
 namespace PSLCard
 
-abbrev F := ZMod 11
-instance : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
-abbrev SLG := SpecialLinearGroup (Fin 2) F
-abbrev PSL2F11 := PSL(2, F)
+public abbrev F := ZMod 11
+public instance : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
+public abbrev SLG := SpecialLinearGroup (Fin 2) F
+public abbrev PSL2F11 := PSL(2, F)
 
 theorem card_F11 : Fintype.card F = 11 := by decide
 
@@ -120,7 +122,7 @@ theorem card_PSL2_F11 : Nat.card PSL2F11 = 660 := by
   rw [hC, hSL] at hprod
   omega
 
-theorem card_PSL2_F11_fintype : Fintype.card PSL2F11 = 660 := by
+public theorem card_PSL2_F11_fintype : Fintype.card PSL2F11 = 660 := by
   rw [← Nat.card_eq_fintype_card, card_PSL2_F11]
 
 /-! ## Projective order profile and χ₁₀' character norm
@@ -129,9 +131,9 @@ Computable order of the image in PSL: least `n ∈ {1,2,3,5,6,11}` with
 `g^n = ±I`.  Native enumeration of the SL order multiset yields
 `∑_A χ(pslOrd A)² = 1320 = 2 · 660`, hence the PSL character norm is 660. -/
 
-def negI : SLG := ⟨-1, by simp [det_neg, Fintype.card_fin, pow_two]⟩
+@[expose] public def negI : SLG := ⟨-1, by simp [det_neg, Fintype.card_fin, pow_two]⟩
 
-theorem negI_mem_center : negI ∈ Subgroup.center SLG := by
+public theorem negI_mem_center : negI ∈ Subgroup.center SLG := by
   rw [SpecialLinearGroup.mem_center_iff]
   refine ⟨(-1 : F), by decide, ?_⟩
   ext i j
@@ -176,7 +178,7 @@ theorem mem_center_iff_one_or_negI (A : SLG) :
     · exact negI_mem_center
 
 /-- Computable projective order of an SL₂ matrix (image in PSL). -/
-def pslOrd (g : SLG) : ℕ :=
+public def pslOrd (g : SLG) : ℕ :=
   if g ^ 1 = 1 ∨ g ^ 1 = negI then 1
   else if g ^ 2 = 1 ∨ g ^ 2 = negI then 2
   else if g ^ 3 = 1 ∨ g ^ 3 = negI then 3
@@ -185,7 +187,7 @@ def pslOrd (g : SLG) : ℕ :=
   else if g ^ 11 = 1 ∨ g ^ 11 = negI then 11
   else 0
 
-def slCardOrder (n : ℕ) : ℕ :=
+@[expose] public def slCardOrder (n : ℕ) : ℕ :=
   (Finset.univ : Finset SLG).filter (fun g => pslOrd g = n) |>.card
 
 /-! ### Raw M4 model and kernel-checked order profile
@@ -706,29 +708,29 @@ theorem m4CardOrder_eleven : m4CardOrder 11 = 240 := by
   simp_rw [sliceCard_eleven]
   decide
 
-theorem slCardOrder_one : slCardOrder 1 = 2 :=
+public theorem slCardOrder_one : slCardOrder 1 = 2 :=
   (slCardOrder_eq_m4CardOrder 1).trans m4CardOrder_one
 
-theorem slCardOrder_two : slCardOrder 2 = 110 :=
+public theorem slCardOrder_two : slCardOrder 2 = 110 :=
   (slCardOrder_eq_m4CardOrder 2).trans m4CardOrder_two
 
-theorem slCardOrder_three : slCardOrder 3 = 220 :=
+public theorem slCardOrder_three : slCardOrder 3 = 220 :=
   (slCardOrder_eq_m4CardOrder 3).trans m4CardOrder_three
 
 theorem slCardOrder_five : slCardOrder 5 = 528 :=
   (slCardOrder_eq_m4CardOrder 5).trans m4CardOrder_five
 
-theorem slCardOrder_six : slCardOrder 6 = 220 :=
+public theorem slCardOrder_six : slCardOrder 6 = 220 :=
   (slCardOrder_eq_m4CardOrder 6).trans m4CardOrder_six
 
-theorem slCardOrder_eleven : slCardOrder 11 = 240 :=
+public theorem slCardOrder_eleven : slCardOrder 11 = 240 :=
   (slCardOrder_eq_m4CardOrder 11).trans m4CardOrder_eleven
 
 theorem slCardOrder_zero : slCardOrder 0 = 0 :=
   (slCardOrder_eq_m4CardOrder 0).trans m4CardOrder_zero
 
 /-- Integer character values of χ₁₀' by projective order. -/
-def chi10Int (n : ℕ) : ℤ :=
+@[expose] public def chi10Int (n : ℕ) : ℤ :=
   if n = 1 then 10
   else if n = 2 then 2
   else if n = 3 then 1
@@ -850,7 +852,7 @@ private theorem pred_false_of_filter_card_eq_zero
 theorem pslOrd_ne_zero (g : SLG) : pslOrd g ≠ 0 :=
   pred_false_of_filter_card_eq_zero (fun x : SLG => pslOrd x = 0) slCardOrder_zero g
 
-theorem pslOrd_eq_spectrum (A : SLG) :
+public theorem pslOrd_eq_spectrum (A : SLG) :
     pslOrd A = 1 ∨ pslOrd A = 2 ∨ pslOrd A = 3 ∨
       pslOrd A = 5 ∨ pslOrd A = 6 ∨ pslOrd A = 11 := by
   have hA := pslOrd_ne_zero A
@@ -865,7 +867,7 @@ private theorem not_pow_one_of_pslOrd_eq {A : SLG} {n : ℕ}
   have : pslOrd A = 1 := Nat.le_antisymm hle hge
   exact hne (hn.symm.trans this)
 
-theorem orderOf_mk_eq_pslOrd (A : SLG) :
+public theorem orderOf_mk_eq_pslOrd (A : SLG) :
     orderOf (QuotientGroup.mk A : PSL2F11) = pslOrd A := by
   have hA := pslOrd_ne_zero A
   have hcases := pslOrd_eq_cases A hA
@@ -988,7 +990,7 @@ theorem orderOf_mk_eq_pslOrd (A : SLG) :
 ∑_A f(mk A) = 2 • ∑_g f(g) via fiber ≃ center, hence
 ∑_g χ(g)² = (1/2) · ∑_A χ(pslOrd A)² = 660. -/
 
-noncomputable def lift (g : PSL2F11) : SLG :=
+public noncomputable def lift (g : PSL2F11) : SLG :=
   Classical.choose (QuotientGroup.mk_surjective g)
 
 theorem lift_spec (g : PSL2F11) : QuotientGroup.mk (lift g) = g :=
@@ -1020,7 +1022,7 @@ theorem fiber_card (g : PSL2F11) :
   rw [Fintype.card_congr (fiberEquiv g), ← Nat.card_eq_fintype_card, card_center_SL2]
 
 /-- Pullback sum: ∑_A f(mk A) = 2 • ∑_g f(g). -/
-theorem sum_comp_mk {β : Type*} [AddCommMonoid β] (f : PSL2F11 → β) :
+public theorem sum_comp_mk {β : Type*} [AddCommMonoid β] (f : PSL2F11 → β) :
     (∑ A : SLG, f (QuotientGroup.mk A)) = 2 • (∑ g : PSL2F11, f g) := by
   classical
   let π : SLG → PSL2F11 := QuotientGroup.mk
@@ -1058,7 +1060,7 @@ theorem sum_comp_mk {β : Type*} [AddCommMonoid β] (f : PSL2F11 → β) :
     _ = (2 : ℕ) • ∑ g : PSL2F11, f g := by simp only [Finset.smul_sum]
 
 /-- Integer PSL character norm: ∑_g χ(orderOf g)² = 660. -/
-theorem chi10Int_sum_sq_psl :
+public theorem chi10Int_sum_sq_psl :
     (∑ g : PSL2F11,
       (chi10Int (orderOf g) : ℤ) * chi10Int (orderOf g)) = 660 := by
   have hSL :
@@ -1123,11 +1125,11 @@ theorem card_psl_order (n : ℕ) :
       _ = Fintype.card OrderPSL * 2 := hsig
   omega
 
-theorem card_psl_order_two :
+public theorem card_psl_order_two :
     Fintype.card {g : PSL2F11 // orderOf g = 2} = 55 := by
   rw [card_psl_order, slCardOrder_two]
 
-theorem card_psl_order_three :
+public theorem card_psl_order_three :
     Fintype.card {g : PSL2F11 // orderOf g = 3} = 110 := by
   rw [card_psl_order, slCardOrder_three]
 
@@ -1135,20 +1137,20 @@ theorem card_psl_order_five :
     Fintype.card {g : PSL2F11 // orderOf g = 5} = 264 := by
   rw [card_psl_order, slCardOrder_five]
 
-theorem card_psl_order_six :
+public theorem card_psl_order_six :
     Fintype.card {g : PSL2F11 // orderOf g = 6} = 110 := by
   rw [card_psl_order, slCardOrder_six]
 
-theorem card_psl_order_eleven :
+public theorem card_psl_order_eleven :
     Fintype.card {g : PSL2F11 // orderOf g = 11} = 120 := by
   rw [card_psl_order, slCardOrder_eleven]
 
 /-! ### Representatives of the eight relevant conjugacy classes -/
 
-def Smat : SLG := ⟨!![0, -1; 1, 0], by simp [Matrix.det_fin_two_of]⟩
+@[expose] public def Smat : SLG := ⟨!![0, -1; 1, 0], by simp [Matrix.det_fin_two_of]⟩
 theorem pslOrd_Smat : pslOrd Smat = 2 := by decide
 
-def Tmat : SLG := ⟨!![1, 1; 0, 1], by simp [Matrix.det_fin_two_of]⟩
+@[expose] public def Tmat : SLG := ⟨!![1, 1; 0, 1], by simp [Matrix.det_fin_two_of]⟩
 theorem pslOrd_Tmat : pslOrd Tmat = 11 := by decide
 
 def el3 : SLG := ⟨!![0, -1; 1, -1], by simp [Matrix.det_fin_two_of]⟩
@@ -2753,7 +2755,7 @@ theorem convAt_eq (B : SLG) : convAt B = 132 * chi10Int (pslOrd B) := by
 theorem convAt_one : convAt 1 = 1320 := convAt_one_rep
 
 /-- PSL convolution: ∑_g χ(g)χ(g⁻¹k) = 66 χ(k). -/
-theorem chi10Int_convolution (k : PSL2F11) :
+public theorem chi10Int_convolution (k : PSL2F11) :
     (∑ g : PSL2F11, chi10Int (orderOf g) * chi10Int (orderOf (g⁻¹ * k))) =
       66 * chi10Int (orderOf k) := by
   obtain ⟨B, rfl⟩ := QuotientGroup.mk_surjective k

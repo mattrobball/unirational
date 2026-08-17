@@ -1,0 +1,260 @@
+{
+ "V14Formalization/Basic.lean": {
+  "public": [],
+  "expose": []
+ },
+ "V14Formalization/BiprojectiveIntegral.lean": {
+  "public": [
+   "BiprojectiveSpace.isIntegral",
+   "BiprojectiveSpace.standardChartIntegral",
+   "BiprojectiveSpace.standardChartRanges_pairwise"
+  ],
+  "expose": []
+ },
+ "V14Formalization/CentralizerD12.lean": {
+  "public": [
+   "Circle1",
+   "CircleM1",
+   "F",
+   "PSL2F11",
+   "SLG",
+   "Smat",
+   "center_eq_one_or_negI",
+   "centralizer_sigma_card",
+   "centralizer_sigma_mulEquiv_dihedral",
+   "dihedralToN",
+   "dihedralToNHom",
+   "dihedralToNHom_injective",
+   "eq_zero_of_eq_neg",
+   "mkRefl",
+   "mkRefl_conj_mkRot",
+   "mkRefl_pow_two",
+   "mkRot",
+   "mkRot_pow_six",
+   "mk_negI",
+   "negI",
+   "negI_mem_center",
+   "orderOf_rotGen",
+   "reflGen",
+   "reflGen_conj_rotGen",
+   "reflGen_mul_self",
+   "reflGen_ne_rot_pow",
+   "reflPt",
+   "refl_mem",
+   "rotGen",
+   "rotGen_inv_eq",
+   "rotGen_mul_reflGen",
+   "rotGen_pow_mod",
+   "rotGen_pow_mul_reflGen",
+   "rotGen_pow_six",
+   "rotPt",
+   "rot_mem",
+   "sigma",
+   "sq_eq_one_cases"
+  ],
+  "expose": [
+   "Circle1",
+   "CircleM1",
+   "Smat",
+   "liftsToN",
+   "mkRefl",
+   "mkRot",
+   "negI",
+   "reflGen",
+   "reflPt",
+   "rotGen",
+   "rotPt",
+   "sigma"
+  ]
+ },
+ "V14Formalization/D12PolyZReflection.lean": {
+  "public": [
+   "interpQ",
+   "interpQ_nil",
+   "interp_add_gen",
+   "interp_eq",
+   "interp_mul",
+   "interp_sub_gen",
+   "toPolyZ"
+  ],
+  "expose": [
+   "addList",
+   "convList",
+   "interpQ",
+   "smulList",
+   "subList",
+   "toPolyZ"
+  ]
+ },
+ "V14Formalization/EllipticPolynomialConstancy.lean": {
+  "public": [
+   "MvFrac",
+   "mvFractionSuccRingEquiv",
+   "mvFractionZeroAlgEquiv",
+   "mvRatFuncBack",
+   "mvRatFuncBackBase",
+   "mvSuccToRatFunc",
+   "mvSuccToRatFuncBase",
+   "mvSuccToRatFunc_algebraMap_base",
+   "mvSuccToRatFunc_comp_mvRatFuncBack",
+   "mvTailBase",
+   "mvTailFrac",
+   "mvfrac_coordinates_constant_of_short_weierstrass_equation",
+   "mvfrac_xy_constant_of_split_cubic_square",
+   "polynomial_xy_constant_of_short_weierstrass_over_field",
+   "ratfunc_coordinates_constant_of_short_weierstrass_equation",
+   "ratfunc_xy_constant_of_short_weierstrass",
+   "ratfunc_xy_constant_of_split_cubic_square_over_field",
+   "ratfunc_xy_constant_of_unit_denominators",
+   "short_weierstrass_point_baseChange_mvfrac_fin4_surjective",
+   "short_weierstrass_point_baseChange_mvfrac_surjective",
+   "short_weierstrass_point_baseChange_of_fin4_algEquiv_surjective",
+   "short_weierstrass_point_baseChange_ratfunc_surjective"
+  ],
+  "expose": [
+   "mvFractionSuccRingEquiv"
+  ]
+ },
+ "V14Formalization/MultiProjectiveZeroLocus.lean": {
+  "public": [
+   "ker_projectiveZeroLocusFamilyι",
+   "projectiveZeroLocusFamily",
+   "projectiveZeroLocusFamilyIdeal",
+   "projectiveZeroLocusFamilyToSpec",
+   "projectiveZeroLocusFamilyι",
+   "projectiveZeroLocusFamilyι_isClosedImmersion",
+   "projectiveZeroLocusFamilyι_isOver"
+  ],
+  "expose": []
+ },
+ "V14Formalization/PSLCard.lean": {
+  "public": [
+   "F",
+   "PSL2F11",
+   "SLG",
+   "Smat",
+   "Tmat",
+   "card_PSL2_F11_fintype",
+   "card_psl_order_eleven",
+   "card_psl_order_six",
+   "card_psl_order_three",
+   "card_psl_order_two",
+   "chi10Int",
+   "chi10Int_convolution",
+   "chi10Int_sum_sq_psl",
+   "lift",
+   "negI",
+   "negI_mem_center",
+   "orderOf_mk_eq_pslOrd",
+   "pslOrd",
+   "pslOrd_eq_spectrum",
+   "slCardOrder",
+   "slCardOrder_eleven",
+   "slCardOrder_one",
+   "slCardOrder_six",
+   "slCardOrder_three",
+   "slCardOrder_two",
+   "sum_comp_mk"
+  ],
+  "expose": [
+   "Smat",
+   "Tmat",
+   "chi10Int",
+   "negI",
+   "slCardOrder"
+  ]
+ },
+ "V14Formalization/ProjNaturality.lean": {
+  "public": [
+   "mapLinearSubst_toSpec",
+   "map_toSpecZero"
+  ],
+  "expose": []
+ },
+ "V14Formalization/SchemeBaseChangeAction.lean": {
+  "public": [
+   "baseChangeAction"
+  ],
+  "expose": []
+ },
+ "V14Formalization/SchemeEquivariant.lean": {
+  "public": [
+   "EquivariantRationalMap",
+   "HasEquivariantRationalMap",
+   "actionOverOfIsOver",
+   "actionPrecomp",
+   "actionPrecomp_eq_self_of_rho_eq_id",
+   "res"
+  ],
+  "expose": [
+   "HasEquivariantRationalMap",
+   "actionPrecomp"
+  ]
+ },
+ "V14Formalization/WeilRep.lean": {
+  "public": [
+   "Fun",
+   "K",
+   "S6",
+   "S_even",
+   "S_even_sq",
+   "Sfull",
+   "Sfull_preserves_even",
+   "Sfull_sq_apply",
+   "Smat",
+   "T6",
+   "T_even_b",
+   "T_even_b_add",
+   "T_even_b_zero",
+   "Tfull_b",
+   "Tfull_b_preserves_even",
+   "Tmat",
+   "U",
+   "Ucoord",
+   "aeval_ζ_Φ11",
+   "cFourier",
+   "cFourier_sq_mul_eleven",
+   "card_sq_eq",
+   "gauss",
+   "gauss_eq_gaussSum",
+   "gauss_ne_zero",
+   "gauss_sq",
+   "minpoly_ζ",
+   "orderOf_ζ",
+   "sum_ψ_eq_zero",
+   "sum_ψ_mul",
+   "twoInv",
+   "two_mul_twoInv",
+   "Φ11",
+   "Φ11_irreducible",
+   "Φ11_monic",
+   "Φ11_natDegree",
+   "ζ",
+   "ζ_pow_eleven",
+   "χ₂",
+   "χ₂_isQuadratic",
+   "χ₂_ne_one",
+   "χ₂_neg_one",
+   "χ₂ℤ",
+   "ψ",
+   "ψ_add",
+   "ψ_apply",
+   "ψ_primitive",
+   "ψ_zero"
+  ],
+  "expose": [
+   "EvenSub",
+   "S6",
+   "S_even",
+   "Sfull",
+   "Smat",
+   "T6",
+   "T_even_b",
+   "Tfull_b",
+   "Tmat",
+   "gauss",
+   "twoInv",
+   "ψ"
+  ]
+ }
+}

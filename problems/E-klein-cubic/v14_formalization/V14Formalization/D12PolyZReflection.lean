@@ -2,12 +2,14 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.Polynomial.Coeff
-import Mathlib.Algebra.Polynomial.Roots
-import Mathlib.Data.Rat.Denumerable
-import Mathlib.Tactic.Ring
-import Mathlib.Tactic.NormNum
+module
+
+public import Mathlib.Algebra.Polynomial.Basic
+public import Mathlib.Algebra.Polynomial.Coeff
+public import Mathlib.Algebra.Polynomial.Roots
+public import Mathlib.Data.Rat.Denumerable
+public import Mathlib.Tactic.Ring
+public import Mathlib.Tactic.NormNum
 
 /-!
 # Integer reflection for generated `Polynomial ℚ` certificates
@@ -29,12 +31,12 @@ namespace V14Formalization.D12PolyZReflection
 open Polynomial
 
 /-- Dense integer coefficient list; index = degree. -/
-def toPolyZ : List Int → Polynomial ℚ
+@[expose] public def toPolyZ : List Int → Polynomial ℚ
   | [] => 0
   | c :: cs => C (c : ℚ) + toPolyZ cs * X
 
 /-- List convolution (polynomial multiplication on coefficients). -/
-def convList : List Int → List Int → List Int
+@[expose] public def convList : List Int → List Int → List Int
   | [], _ => []
   | _ :: _, [] => []
   | a :: as, bs =>
@@ -47,14 +49,14 @@ def convList : List Int → List Int → List Int
       addPad head (0 :: tail)
 
 /-- Pointwise addition with padding. -/
-def addList : List Int → List Int → List Int
+@[expose] public def addList : List Int → List Int → List Int
   | xs, [] => xs
   | [], ys => ys
   | x :: xs, y :: ys => (x + y) :: addList xs ys
 
-def smulList (k : Int) (xs : List Int) : List Int := xs.map (k * ·)
+@[expose] public def smulList (k : Int) (xs : List Int) : List Int := xs.map (k * ·)
 
-def subList (xs ys : List Int) : List Int := addList xs (ys.map (- ·))
+@[expose] public def subList (xs ys : List Int) : List Int := addList xs (ys.map (- ·))
 
 theorem toPolyZ_add (xs ys : List Int) :
     toPolyZ (addList xs ys) = toPolyZ xs + toPolyZ ys := by
@@ -107,13 +109,13 @@ theorem toPolyZ_conv (xs ys : List Int) :
           ring
 
 /-- `zs` lists the numerators of `p` against the positive denominator `d`. -/
-def interpQ (d : ℕ) (zs : List Int) : Polynomial ℚ :=
+@[expose] public def interpQ (d : ℕ) (zs : List Int) : Polynomial ℚ :=
   C ((d : ℚ)⁻¹) * toPolyZ zs
 
-theorem interpQ_nil (d : ℕ) : interpQ d [] = 0 := by
+public theorem interpQ_nil (d : ℕ) : interpQ d [] = 0 := by
   simp [interpQ, toPolyZ]
 
-theorem interp_mul (d₁ d₂ : ℕ) (n₁ n₂ : List Int) :
+public theorem interp_mul (d₁ d₂ : ℕ) (n₁ n₂ : List Int) :
     interpQ d₁ n₁ * interpQ d₂ n₂ = interpQ (d₁ * d₂) (convList n₁ n₂) := by
   simp only [interpQ, toPolyZ_conv]
   rw [show ((d₁ * d₂ : ℕ) : ℚ)⁻¹ = ((d₁ : ℚ))⁻¹ * ((d₂ : ℚ))⁻¹ by
@@ -143,14 +145,14 @@ theorem interp_up (k d : ℕ) (hk : k ≠ 0) (n : List Int) :
 
 /-- Denominator-mixing addition; side conditions are literal `≠ 0` facts
     discharged by `decide`. -/
-theorem interp_add_gen (d₁ d₂ : ℕ) (h₁ : d₁ ≠ 0) (h₂ : d₂ ≠ 0) (n₁ n₂ : List Int) :
+public theorem interp_add_gen (d₁ d₂ : ℕ) (h₁ : d₁ ≠ 0) (h₂ : d₂ ≠ 0) (n₁ n₂ : List Int) :
     interpQ d₁ n₁ + interpQ d₂ n₂ =
       interpQ (d₁ * d₂) (addList (smulList (d₂ : Int) n₁) (smulList (d₁ : Int) n₂)) := by
   rw [interp_up d₂ d₁ h₂ n₁, interp_up d₁ d₂ h₁ n₂, mul_comm d₂ d₁]
   exact interp_add (d₁ * d₂) _ _
 
 /-- Denominator-mixing subtraction. -/
-theorem interp_sub_gen (d₁ d₂ : ℕ) (h₁ : d₁ ≠ 0) (h₂ : d₂ ≠ 0) (n₁ n₂ : List Int) :
+public theorem interp_sub_gen (d₁ d₂ : ℕ) (h₁ : d₁ ≠ 0) (h₂ : d₂ ≠ 0) (n₁ n₂ : List Int) :
     interpQ d₁ n₁ - interpQ d₂ n₂ =
       interpQ (d₁ * d₂) (subList (smulList (d₂ : Int) n₁) (smulList (d₁ : Int) n₂)) := by
   rw [interp_up d₂ d₁ h₂ n₁, interp_up d₁ d₂ h₁ n₂, mul_comm d₂ d₁]
@@ -168,7 +170,7 @@ theorem allZero_toPolyZ (xs : List Int) (h : xs.all (· == 0) = true) :
 
 /-- Two representations agree when the cross-multiplied difference vanishes
     coefficientwise (trailing zeros allowed on either side). -/
-theorem interp_eq (d₁ d₂ : ℕ) (h₁ : d₁ ≠ 0) (h₂ : d₂ ≠ 0) (n₁ n₂ : List Int)
+public theorem interp_eq (d₁ d₂ : ℕ) (h₁ : d₁ ≠ 0) (h₂ : d₂ ≠ 0) (n₁ n₂ : List Int)
     (h : (subList (smulList (d₂ : Int) n₁) (smulList (d₁ : Int) n₂)).all
       (· == 0) = true) :
     interpQ d₁ n₁ = interpQ d₂ n₂ := by

@@ -13,6 +13,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import re
 import sys
 import time
 from collections import deque
@@ -1386,7 +1387,13 @@ def emit_lean(data: dict, sha: str) -> None:
   Each field element is ten rational pairs (numerator, positive denominator)
   in the basis 1, z, …, z⁹ modulo Φ₁₁ = 1+z+…+z¹⁰.
   Data definitions only (no proofs, no kernel seals).
+
+  Module system: only the names D12SealProof consumes are public; those are
+  @[expose]d (D12SealProof unfolds them via rfl/decide), together with the
+  `_c*` shards their bodies reference.  Everything else is module-private.
 -/
+module
+
 namespace V14Formalization
 namespace D12SealData
 
@@ -1557,8 +1564,53 @@ end V14Formalization
         if bad in text and bad != "sorry":  # sha might contain? unlikely
             # allow 'sorry' only inside comments/strings — still avoid
             pass
+    text = annotate_module_visibility(text)
     with open(LEAN_PATH, "w") as f:
         f.write(text)
+
+
+# Public interface of D12SealData: exactly the names D12SealProof references
+# (token scan, 2026-08-17).  These are @[expose]d because D12SealProof's
+# proofs compute with them (rfl / decide need the bodies at elaboration).
+SEAL_PUBLIC_EXPOSE = {
+    "R15x15_flat", "F15x15_flat", "RM10x10_flat", "SM10x10_flat",
+    "piecePP_K10xd", "piecePP_Ydx10", "piecePP_X10x20_flat", "piecePP_coeffMatrix",
+    "piecePA_X10x20_flat",
+    "pieceAP_K10xd", "pieceAP_Ydx10", "pieceAP_X10x20_flat", "pieceAP_coeffMatrix",
+    "pieceAA_K10xd", "pieceAA_Ydx10", "pieceAA_X10x20_flat", "pieceAA_coeffMatrix",
+    "deltaPP", "deltaAP", "deltaAA",
+}
+# Public abbrevs (auto-exposed by the module system; RatPair is required
+# because the exposed body of KCoeff10 mentions it).
+SEAL_PUBLIC_ABBREV = {"RatPair", "KCoeff10"}
+
+
+def annotate_module_visibility(text: str) -> str:
+    """Prefix visibility annotations onto the emitted definitions.
+
+    A used aggregate `X_flat` is defined from its `X_flat_c*` chunks, so
+    exposing `X_flat` forces the chunks public+exposed as well (exposed
+    bodies may only reference public names).
+    """
+    expose = set(SEAL_PUBLIC_EXPOSE)
+    for name in SEAL_PUBLIC_EXPOSE:
+        if name.endswith("_flat"):
+            expose |= {
+                m.group(1)
+                for m in re.finditer(
+                    r"^def (" + re.escape(name) + r"_c\d+) ", text, flags=re.M
+                )
+            }
+    out = []
+    for line in text.split("\n"):
+        m = re.match(r"^(def|abbrev) ([\w'«»]+)[ :]", line)
+        if m and m.group(1) == "def" and m.group(2) in expose:
+            out.append("@[expose] public " + line)
+        elif m and m.group(1) == "abbrev" and m.group(2) in SEAL_PUBLIC_ABBREV:
+            out.append("public " + line)
+        else:
+            out.append(line)
+    return "\n".join(out)
 
 
 if __name__ == "__main__":

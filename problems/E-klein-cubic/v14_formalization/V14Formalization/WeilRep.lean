@@ -7,29 +7,31 @@ Even Weil module over K = ℚ(ζ₁₁).
 * Even subspace U ⊆ Fun; restriction S of S̃ satisfies S² = −id.
 * Coordinate model `Ucoord ≃ K⁶` and seal matrices T₆, S₆.
 -/
-import Mathlib.RingTheory.Polynomial.Cyclotomic.Basic
-import Mathlib.RingTheory.Polynomial.Cyclotomic.Roots
-import Mathlib.RingTheory.AdjoinRoot
-import Mathlib.NumberTheory.LegendreSymbol.AddCharacter
-import Mathlib.NumberTheory.GaussSum
-import Mathlib.NumberTheory.MulChar.Basic
-import Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic
-import Mathlib.LinearAlgebra.Dimension.Finrank
-import Mathlib.LinearAlgebra.FreeModule.Finite.Basic
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Algebra.Field.ZMod
-import Mathlib.Data.Nat.Prime.Basic
-import Mathlib.GroupTheory.OrderOfElement
-import Mathlib.Algebra.Module.Pi
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Algebra.BigOperators.Ring.Finset
-import Mathlib.Data.Fintype.BigOperators
-import Mathlib.Algebra.Algebra.Basic
-import Mathlib.Algebra.CharP.Basic
-import Mathlib.FieldTheory.Minpoly.Field
-import Mathlib.LinearAlgebra.Matrix.ToLin
-import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
-import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
+module
+
+public import Mathlib.RingTheory.Polynomial.Cyclotomic.Basic
+public import Mathlib.RingTheory.Polynomial.Cyclotomic.Roots
+public import Mathlib.RingTheory.AdjoinRoot
+public import Mathlib.NumberTheory.LegendreSymbol.AddCharacter
+public import Mathlib.NumberTheory.GaussSum
+public import Mathlib.NumberTheory.MulChar.Basic
+public import Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic
+public import Mathlib.LinearAlgebra.Dimension.Finrank
+public import Mathlib.LinearAlgebra.FreeModule.Finite.Basic
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.Algebra.Field.ZMod
+public import Mathlib.Data.Nat.Prime.Basic
+public import Mathlib.GroupTheory.OrderOfElement
+public import Mathlib.Algebra.Module.Pi
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Algebra.BigOperators.Ring.Finset
+public import Mathlib.Data.Fintype.BigOperators
+public import Mathlib.Algebra.Algebra.Basic
+public import Mathlib.Algebra.CharP.Basic
+public import Mathlib.FieldTheory.Minpoly.Field
+public import Mathlib.LinearAlgebra.Matrix.ToLin
+public import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
+public import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
 
 open Polynomial AddChar MulChar Matrix BigOperators
 
@@ -38,38 +40,38 @@ noncomputable section
 namespace V14Formalization
 namespace WeilRep
 
-instance : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
-instance : NeZero (11 : ℕ) := ⟨by decide⟩
+@[expose] public instance : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
+@[expose] public instance : NeZero (11 : ℕ) := ⟨by decide⟩
 
 /-! ## K = ℚ(ζ₁₁) -/
 
-def Φ11 : ℚ[X] := cyclotomic 11 ℚ
-lemma Φ11_irreducible : Irreducible Φ11 :=
+@[expose] public def Φ11 : ℚ[X] := cyclotomic 11 ℚ
+public lemma Φ11_irreducible : Irreducible Φ11 :=
   cyclotomic.irreducible_rat (by decide : 0 < 11)
-instance : Fact (Irreducible Φ11) := ⟨Φ11_irreducible⟩
+@[expose] public instance : Fact (Irreducible Φ11) := ⟨Φ11_irreducible⟩
 
-abbrev K := AdjoinRoot Φ11
-instance : Field K := inferInstance
-instance : CharZero K := inferInstance
-instance : Algebra ℚ K := inferInstance
+public abbrev K := AdjoinRoot Φ11
+@[expose] public instance : Field K := inferInstance
+@[expose] public instance : CharZero K := inferInstance
+@[expose] public instance : Algebra ℚ K := inferInstance
 
-def ζ : K := AdjoinRoot.root Φ11
+@[expose] public def ζ : K := AdjoinRoot.root Φ11
 
-theorem aeval_ζ_Φ11 : aeval ζ Φ11 = 0 := by
+public theorem aeval_ζ_Φ11 : aeval ζ Φ11 = 0 := by
   exact (AdjoinRoot.aeval_eq (f := Φ11) (p := Φ11)).trans (AdjoinRoot.mk_self (f := Φ11))
 
-theorem ζ_pow_eleven : ζ ^ (11 : ℕ) = 1 := by
+public theorem ζ_pow_eleven : ζ ^ (11 : ℕ) = 1 := by
   have hdiv : Φ11 ∣ (X : ℚ[X]) ^ 11 - 1 := cyclotomic.dvd_X_pow_sub_one 11 ℚ
   have hroot : aeval ζ ((X : ℚ[X]) ^ 11 - 1) = 0 :=
     aeval_eq_zero_of_dvd_aeval_eq_zero hdiv aeval_ζ_Φ11
   exact sub_eq_zero.mp (by simpa [map_sub, map_pow, aeval_X, map_one] using hroot)
 
-lemma Φ11_monic : Φ11.Monic := cyclotomic.monic 11 ℚ
+public lemma Φ11_monic : Φ11.Monic := cyclotomic.monic 11 ℚ
 
-lemma minpoly_ζ : minpoly ℚ ζ = Φ11 :=
+public lemma minpoly_ζ : minpoly ℚ ζ = Φ11 :=
   (minpoly.eq_of_irreducible_of_monic Φ11_irreducible aeval_ζ_Φ11 Φ11_monic).symm
 
-lemma Φ11_natDegree : Φ11.natDegree = 10 := by
+public lemma Φ11_natDegree : Φ11.natDegree = 10 := by
   change (cyclotomic 11 ℚ).natDegree = 10
   exact natDegree_cyclotomic 11 ℚ
 
@@ -83,21 +85,21 @@ theorem ζ_ne_one : ζ ≠ 1 := by
   rw [Φ11_natDegree, natDegree_X_sub_C] at this
   omega
 
-theorem orderOf_ζ : orderOf ζ = 11 := by
+public theorem orderOf_ζ : orderOf ζ = 11 := by
   have hdvd : orderOf ζ ∣ 11 := orderOf_dvd_of_pow_eq_one ζ_pow_eleven
   exact ((Nat.dvd_prime Nat.prime_eleven).mp hdvd).resolve_left fun h1 =>
     ζ_ne_one (orderOf_eq_one_iff.mp h1)
 
-def ψ : AddChar (ZMod 11) K := zmodChar 11 ζ_pow_eleven
+@[expose] public def ψ : AddChar (ZMod 11) K := zmodChar 11 ζ_pow_eleven
 
-theorem ψ_primitive : IsPrimitive ψ :=
+public theorem ψ_primitive : IsPrimitive ψ :=
   zmod_char_primitive_of_eq_one_only_at_zero 11 ψ fun a ha => by
     change ζ ^ a.val = 1 at ha
     have : orderOf ζ ∣ a.val := orderOf_dvd_iff_pow_eq_one.mpr ha
     rw [orderOf_ζ] at this
     exact (ZMod.val_eq_zero a).mp (Nat.eq_zero_of_dvd_of_lt this (ZMod.val_lt a))
 
-theorem ψ_apply (a : ZMod 11) : ψ a = ζ ^ a.val := rfl
+public theorem ψ_apply (a : ZMod 11) : ψ a = ζ ^ a.val := rfl
 
 theorem ψ_ne_one : ψ ≠ 1 := by
   intro h
@@ -106,25 +108,25 @@ theorem ψ_ne_one : ψ ≠ 1 := by
   simp only [ZMod.val_one, pow_one] at this
   exact ζ_ne_one this
 
-theorem sum_ψ_eq_zero : (∑ a : ZMod 11, ψ a) = 0 :=
+public theorem sum_ψ_eq_zero : (∑ a : ZMod 11, ψ a) = 0 :=
   AddChar.sum_eq_zero_of_ne_one ψ_ne_one
 
-theorem ψ_zero : ψ (0 : ZMod 11) = 1 := map_zero_eq_one ψ
+public theorem ψ_zero : ψ (0 : ZMod 11) = 1 := map_zero_eq_one ψ
 
-theorem ψ_add (a b : ZMod 11) : ψ (a + b) = ψ a * ψ b := map_add_eq_mul ψ a b
+public theorem ψ_add (a b : ZMod 11) : ψ (a + b) = ψ a * ψ b := map_add_eq_mul ψ a b
 
 /-! ## Gauss sum G² = −11 -/
 
 lemma ringChar_zmod11_ne_2 : ringChar (ZMod 11) ≠ 2 := by
   rw [ZMod.ringChar_zmod_n]; decide
 
-def χ₂ℤ : MulChar (ZMod 11) ℤ := quadraticChar (ZMod 11)
-def χ₂ : MulChar (ZMod 11) K := χ₂ℤ.ringHomComp (algebraMap ℤ K)
+public def χ₂ℤ : MulChar (ZMod 11) ℤ := quadraticChar (ZMod 11)
+public def χ₂ : MulChar (ZMod 11) K := χ₂ℤ.ringHomComp (algebraMap ℤ K)
 
-theorem χ₂_isQuadratic : IsQuadratic χ₂ :=
+public theorem χ₂_isQuadratic : IsQuadratic χ₂ :=
   (quadraticChar_isQuadratic (ZMod 11)).comp (algebraMap ℤ K)
 
-theorem χ₂_ne_one : χ₂ ≠ 1 := by
+public theorem χ₂_ne_one : χ₂ ≠ 1 := by
   have hinj : Function.Injective (algebraMap ℤ K) :=
     FaithfulSMul.algebraMap_injective ℤ K
   have hχ : χ₂ℤ ≠ 1 := by
@@ -132,7 +134,7 @@ theorem χ₂_ne_one : χ₂ ≠ 1 := by
     exact quadraticChar_ne_one ringChar_zmod11_ne_2
   exact (MulChar.ringHomComp_ne_one_iff hinj).mpr hχ
 
-theorem χ₂_neg_one : χ₂ (-1) = -1 := by
+public theorem χ₂_neg_one : χ₂ (-1) = -1 := by
   have hℤ : χ₂ℤ (-1) = -1 := by
     change quadraticChar (ZMod 11) (-1) = -1
     rw [quadraticChar_neg_one_iff_not_isSquare]
@@ -150,9 +152,9 @@ theorem gaussSum_χ₂_sq : (gaussSum χ₂ ψ) ^ 2 = (-11 : K) := by
     _ = (-1) * 11 := by rw [hcard]
     _ = -11 := by ring
 
-def gauss : K := ∑ x : ZMod 11, ψ (x ^ 2)
+@[expose] public def gauss : K := ∑ x : ZMod 11, ψ (x ^ 2)
 
-theorem card_sq_eq (a : ZMod 11) :
+public theorem card_sq_eq (a : ZMod 11) :
     ((Finset.univ.filter (fun x : ZMod 11 => x ^ 2 = a)).card : K) = χ₂ a + 1 := by
   have h := quadraticChar_card_sqrts (F := ZMod 11) ringChar_zmod11_ne_2 a
   have hset : ({x : ZMod 11 | x ^ 2 = a}).toFinset =
@@ -171,7 +173,7 @@ theorem card_sq_eq (a : ZMod 11) :
   rw [this, map_add, map_one]
   rfl
 
-theorem gauss_eq_gaussSum : gauss = gaussSum χ₂ ψ := by
+public theorem gauss_eq_gaussSum : gauss = gaussSum χ₂ ψ := by
   classical
   have hx : ∀ x : ZMod 11, ψ (x ^ 2) =
       ∑ a : ZMod 11, (if x ^ 2 = a then (1 : K) else 0) * ψ a := by
@@ -202,18 +204,18 @@ theorem gauss_eq_gaussSum : gauss = gaussSum χ₂ ψ := by
     rw [this, card_sq_eq]
   simp_rw [hcnt, add_mul, one_mul, Finset.sum_add_distrib, sum_ψ_eq_zero, add_zero]
 
-theorem gauss_sq : gauss ^ 2 = (-11 : K) := by
+public theorem gauss_sq : gauss ^ 2 = (-11 : K) := by
   rw [gauss_eq_gaussSum, gaussSum_χ₂_sq]
 
-theorem gauss_ne_zero : gauss ≠ 0 := by
+public theorem gauss_ne_zero : gauss ≠ 0 := by
   intro h
   have := congrArg (fun t => t ^ 2) h
   simp only [gauss_sq, zero_pow (by decide : (2 : ℕ) ≠ 0)] at this
   exact absurd this (by norm_num : (-11 : K) ≠ 0)
 
-def cFourier : K := gauss⁻¹
+public def cFourier : K := gauss⁻¹
 
-theorem cFourier_sq_mul_eleven : cFourier ^ 2 * 11 = (-1 : K) := by
+public theorem cFourier_sq_mul_eleven : cFourier ^ 2 * 11 = (-1 : K) := by
   have h11 : (11 : K) ≠ 0 := by norm_num
   calc cFourier ^ 2 * 11
       = (gauss⁻¹) ^ 2 * 11 := rfl
@@ -225,12 +227,12 @@ theorem cFourier_sq_mul_eleven : cFourier ^ 2 * 11 = (-1 : K) := by
 
 /-! ## Schrödinger representation on Fun = F₁₁ → K -/
 
-abbrev Fun := ZMod 11 → K
-instance : AddCommGroup Fun := inferInstance
-instance : Module K Fun := inferInstance
+public abbrev Fun := ZMod 11 → K
+@[expose] public instance : AddCommGroup Fun := inferInstance
+@[expose] public instance : Module K Fun := inferInstance
 
 /-- Mathlib character sum: Σ_x ψ(x·b) = 11 if b=0 else 0. -/
-theorem sum_ψ_mul (b : ZMod 11) :
+public theorem sum_ψ_mul (b : ZMod 11) :
     (∑ x : ZMod 11, ψ (x * b)) = if b = 0 then (11 : K) else 0 := by
   have h := sum_mulShift (ψ := ψ) b ψ_primitive
   -- h: sum = ↑(if b=0 then card else 0)
@@ -240,7 +242,7 @@ theorem sum_ψ_mul (b : ZMod 11) :
   · simp
 
 /-- Full Fourier transform. -/
-def Sfull : Fun →ₗ[K] Fun where
+@[expose] public def Sfull : Fun →ₗ[K] Fun where
   toFun f := fun x => cFourier * ∑ y : ZMod 11, ψ (x * y) * f y
   map_add' f g := by
     funext x
@@ -259,7 +261,7 @@ def Sfull : Fun →ₗ[K] Fun where
     rw [h, mul_left_comm]
 
 /-- Core identity: (S̃² f)(x) = − f(−x). -/
-theorem Sfull_sq_apply (f : Fun) (x : ZMod 11) :
+public theorem Sfull_sq_apply (f : Fun) (x : ZMod 11) :
     Sfull (Sfull f) x = - f (-x) := by
   classical
   change cFourier * ∑ y : ZMod 11, ψ (x * y) * Sfull f y = -f (-x)
@@ -333,17 +335,17 @@ theorem Sfull_sq_apply (f : Fun) (x : ZMod 11) :
 /-! ## Even subspace U and S² = −id -/
 
 /-- Even functions f(−x) = f(x). -/
-def EvenSub : Submodule K Fun where
+@[expose] public def EvenSub : Submodule K Fun where
   carrier := {f | ∀ x, f (-x) = f x}
   add_mem' := fun {f g} hf hg x => by simp [hf x, hg x]
   zero_mem' := fun x => rfl
   smul_mem' := fun r {f} hf x => by simp [hf x]
 
-abbrev U := EvenSub
+public abbrev U := EvenSub
 
-instance : Module K U := inferInstance
+@[expose] public instance : Module K U := inferInstance
 
-theorem Sfull_preserves_even {f : Fun} (hf : ∀ x, f (-x) = f x) (x : ZMod 11) :
+public theorem Sfull_preserves_even {f : Fun} (hf : ∀ x, f (-x) = f x) (x : ZMod 11) :
     Sfull f (-x) = Sfull f x := by
   simp only [Sfull, LinearMap.coe_mk, AddHom.coe_mk]
   congr 1
@@ -360,7 +362,7 @@ theorem Sfull_preserves_even {f : Fun} (hf : ∀ x, f (-x) = f x) (x : ZMod 11) 
     rfl
 
 /-- Fourier transform on the even subspace. -/
-def S_even : U →ₗ[K] U where
+@[expose] public def S_even : U →ₗ[K] U where
   toFun f :=
     ⟨Sfull f.1, fun x => Sfull_preserves_even (fun t => f.2 t) x⟩
   map_add' := by
@@ -373,7 +375,7 @@ def S_even : U →ₗ[K] U where
     exact Sfull.map_smul r f.1
 
 /-- S² = −id on the even Weil module. -/
-theorem S_even_sq : S_even ∘ₗ S_even = -LinearMap.id := by
+public theorem S_even_sq : S_even ∘ₗ S_even = -LinearMap.id := by
   apply LinearMap.ext
   intro f
   apply Subtype.ext
@@ -388,22 +390,22 @@ theorem S_even_sq : S_even ∘ₗ S_even = -LinearMap.id := by
 
 /-! ## Coordinate model K⁶ and seal matrices -/
 
-abbrev Ucoord := Fin 6 → K
-instance : AddCommGroup Ucoord := inferInstance
-instance : Module K Ucoord := inferInstance
-instance : Module.Free K Ucoord := inferInstance
-instance : FiniteDimensional K Ucoord :=
+public abbrev Ucoord := Fin 6 → K
+@[expose] public instance : AddCommGroup Ucoord := inferInstance
+@[expose] public instance : Module K Ucoord := inferInstance
+@[expose] public instance : Module.Free K Ucoord := inferInstance
+@[expose] public instance : FiniteDimensional K Ucoord :=
   Module.Finite.equiv (Finsupp.linearEquivFunOnFinite K K (Fin 6))
 
 theorem finrank_Ucoord : Module.finrank K Ucoord = 6 := by
   rw [Module.finrank_fintype_fun_eq_card]; decide
 
 /-- Diagonal T₆: multiplication by ψ(j²) on coordinate j. -/
-def T6 : Matrix (Fin 6) (Fin 6) K :=
+@[expose] public def T6 : Matrix (Fin 6) (Fin 6) K :=
   Matrix.diagonal fun j => ψ ((j.val : ZMod 11) ^ 2)
 
 /-- Fourier S₆ (seal formula). -/
-def S6 : Matrix (Fin 6) (Fin 6) K :=
+@[expose] public def S6 : Matrix (Fin 6) (Fin 6) K :=
   Matrix.of fun i j =>
     if j.val = 0 then cFourier
     else cFourier * (ψ ((i.val : ZMod 11) * (j.val : ZMod 11)) +
@@ -443,15 +445,15 @@ def T_even : U →ₗ[K] U where
 
 /-- Half-quadratic phase: ψ(b · x² / 2). Standard Weil normalization so that
 the Bruhat big-cell formula matches the Fourier–unipotent identity W N(t) W. -/
-def twoInv : ZMod 11 := (2 : ZMod 11)⁻¹
+@[expose] public def twoInv : ZMod 11 := (2 : ZMod 11)⁻¹
 
 lemma twoInv_eq : twoInv = (2 : ZMod 11)⁻¹ := rfl
 
-lemma two_mul_twoInv : (2 : ZMod 11) * twoInv = 1 :=
+public lemma two_mul_twoInv : (2 : ZMod 11) * twoInv = 1 :=
   mul_inv_cancel₀ (by decide : (2 : ZMod 11) ≠ 0)
 
 /-- Multiplication by ψ(b · x² / 2) on Fun; preserves even functions. -/
-def Tfull_b (b : ZMod 11) : Fun →ₗ[K] Fun where
+@[expose] public def Tfull_b (b : ZMod 11) : Fun →ₗ[K] Fun where
   toFun f := fun x => ψ (b * x ^ 2 * twoInv) * f x
   map_add' := by
     intro f g; funext x
@@ -460,14 +462,14 @@ def Tfull_b (b : ZMod 11) : Fun →ₗ[K] Fun where
     intro r f; funext x
     simp only [Pi.smul_apply, smul_eq_mul, RingHom.id_apply]; ring
 
-theorem Tfull_b_preserves_even (b : ZMod 11) {f : Fun}
+public theorem Tfull_b_preserves_even (b : ZMod 11) {f : Fun}
     (hf : ∀ x, f (-x) = f x) (x : ZMod 11) :
     Tfull_b b f (-x) = Tfull_b b f x := by
   simp only [Tfull_b, LinearMap.coe_mk, AddHom.coe_mk]
   have : ψ (b * (-x) ^ 2 * twoInv) = ψ (b * x ^ 2 * twoInv) := by congr 1; ring
   rw [this, hf x]
 
-def T_even_b (b : ZMod 11) : U →ₗ[K] U where
+@[expose] public def T_even_b (b : ZMod 11) : U →ₗ[K] U where
   toFun f := ⟨Tfull_b b f.1, fun x => Tfull_b_preserves_even b (fun t => f.2 t) x⟩
   map_add' := by
     intro f g; apply Subtype.ext
@@ -476,7 +478,7 @@ def T_even_b (b : ZMod 11) : U →ₗ[K] U where
     intro r f; apply Subtype.ext
     exact (Tfull_b b).map_smul r f.1
 
-theorem T_even_b_zero : T_even_b 0 = LinearMap.id := by
+public theorem T_even_b_zero : T_even_b 0 = LinearMap.id := by
   apply LinearMap.ext
   intro f
   apply Subtype.ext
@@ -484,7 +486,7 @@ theorem T_even_b_zero : T_even_b 0 = LinearMap.id := by
   simp only [T_even_b, Tfull_b, LinearMap.coe_mk, AddHom.coe_mk, LinearMap.id_apply,
     zero_mul, ψ_zero, one_mul]
 
-theorem T_even_b_add (b c : ZMod 11) :
+public theorem T_even_b_add (b c : ZMod 11) :
     T_even_b (b + c) = T_even_b b ∘ₗ T_even_b c := by
   apply LinearMap.ext
   intro f
@@ -513,12 +515,12 @@ def S_gen : U →ₗ[K] U := S_even
 theorem S_gen_sq : S_gen ∘ₗ S_gen = -LinearMap.id := S_even_sq
 
 /-- The matrix S = [[0,-1],[1,0]] in SL₂(F₁₁). -/
-def Smat : SpecialLinearGroup (Fin 2) (ZMod 11) :=
+@[expose] public def Smat : SpecialLinearGroup (Fin 2) (ZMod 11) :=
   ⟨!![0, -1; 1, 0], by
     simp [Matrix.det_fin_two_of]⟩
 
 /-- The matrix T = [[1,1],[0,1]] in SL₂(F₁₁). -/
-def Tmat : SpecialLinearGroup (Fin 2) (ZMod 11) :=
+@[expose] public def Tmat : SpecialLinearGroup (Fin 2) (ZMod 11) :=
   ⟨!![1, 1; 0, 1], by
     simp [Matrix.det_fin_two_of]⟩
 

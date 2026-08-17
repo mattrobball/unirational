@@ -2,9 +2,11 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import BConicBundleMultisections.BiprojectiveAffineChart
-import BConicBundleMultisections.BiprojectiveOverlapScheme
-import BConicBundleMultisections.IntegralOpenCover
+module
+
+public import BConicBundleMultisections.BiprojectiveAffineChart
+public import BConicBundleMultisections.BiprojectiveOverlapScheme
+public import BConicBundleMultisections.IntegralOpenCover
 
 /-!
 # Integrality of biprojective space
@@ -68,7 +70,7 @@ def BiprojectiveSpace.overlapEvalOne
     (ProjectiveSpace.overlapEvalOne n k j j')
     (fun _ _ ↦ Commute.all _ _)
 
-instance BiprojectiveSpace.overlapRingNontrivial
+public instance BiprojectiveSpace.overlapRingNontrivial
     (m n : ℕ) (k : Type u) [Field k]
     (i i' : Fin (m + 1)) (j j' : Fin (n + 1)) :
     Nontrivial (BiprojectiveSpace.OverlapRing m n k i i' j j') := by
@@ -79,7 +81,7 @@ instance BiprojectiveSpace.overlapRingNontrivial
   exact zero_ne_one h₀₁
 
 /-- Every member of the imported standard affine cover is integral. -/
-theorem BiprojectiveSpace.standardChartIntegral
+public theorem BiprojectiveSpace.standardChartIntegral
     (m n : ℕ) (k : Type u) [Field k]
     (ij : Fin (m + 1) × Fin (n + 1)) :
     IsIntegral ((BiprojectiveSpace.standardOpenCover m n k).X ij) := by
@@ -95,7 +97,7 @@ theorem BiprojectiveSpace.standardChartIntegral
     (BiprojectiveSpace.standardOpenCoverObjIso m n k ij).inv
 
 /-- The ranges in the imported standard affine cover meet pairwise. -/
-theorem BiprojectiveSpace.standardChartRanges_pairwise
+public theorem BiprojectiveSpace.standardChartRanges_pairwise
     (m n : ℕ) (k : Type u) [Field k] :
     _root_.Pairwise
       (Function.onFun
@@ -128,7 +130,7 @@ theorem BiprojectiveSpace.standardChartRanges_pairwise
   exact hx
 
 /-- Biprojective space over a field is integral. -/
-instance BiprojectiveSpace.isIntegral
+public instance BiprojectiveSpace.isIntegral
     (m n : ℕ) (k : Type u) [Field k] :
     IsIntegral (BiprojectiveSpace m n k) := by
   let U := BiprojectiveSpace.standardOpenCover m n k

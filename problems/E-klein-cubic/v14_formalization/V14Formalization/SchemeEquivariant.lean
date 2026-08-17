@@ -2,11 +2,13 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import BConicBundleMultisections.ProjectiveSpace
-import BConicBundleMultisections.Unirationality
-import Mathlib.AlgebraicGeometry.Birational.Composition
-import Mathlib.CategoryTheory.Action.Basic
-import Mathlib.CategoryTheory.Comma.Over.Basic
+module
+
+public import BConicBundleMultisections.ProjectiveSpace
+public import BConicBundleMultisections.Unirationality
+public import Mathlib.AlgebraicGeometry.Birational.Composition
+public import Mathlib.CategoryTheory.Action.Basic
+public import Mathlib.CategoryTheory.Comma.Over.Basic
 
 /-!
 # Equivariant rational maps of schemes
@@ -36,7 +38,7 @@ first partial map is dominant.  This is the partial-map form needed to avoid
 the extra dominance assumption on the second rational map in Mathlib's
 `RationalMap.isOver_comp` instance; the rational-map type itself imposes no
 dominance condition. -/
-instance partialMapCompIsOver
+public instance partialMapCompIsOver
     {S X Y Z : Scheme.{u}} [PreirreducibleSpace X] [Nonempty Y]
     [X.Over S] [Y.Over S] [Z.Over S]
     (f : X.PartialMap Y) [IsDominant f.hom] [f.IsOver S]
@@ -108,7 +110,7 @@ def HasSchemeEquivariantRationalMapOver {S : Scheme.{u}} {G : Type v} [Group G]
 
 /-- Package an absolute scheme action over `S` after proving that every action
 morphism preserves the structure map. -/
-noncomputable def actionOverOfIsOver
+public noncomputable def actionOverOfIsOver
     {S : Scheme.{u}} {G : Type v} [Group G]
     (X : Action Scheme G) [X.V.Over S]
     (h : ∀ g : G, (X.ρ g).IsOver S) :
@@ -126,7 +128,7 @@ noncomputable def actionOverOfIsOver
         simp }
 
 /-- Precompose a rational map by one automorphism from a group action. -/
-noncomputable def actionPrecomp {S : Scheme.{u}} {G : Type v} [Group G]
+@[expose] public noncomputable def actionPrecomp {S : Scheme.{u}} {G : Type v} [Group G]
     (X : Action (Over S) G) [IrreducibleSpace X.V.left]
     {Y : Scheme.{u}} (g : G)
     (f : X.V.left ⤏ Y) : X.V.left ⤏ Y := by
@@ -140,7 +142,7 @@ noncomputable def actionPrecomp {S : Scheme.{u}} {G : Type v} [Group G]
 
 /-- Precomposition by an element acting identically on the source leaves
 every rational map unchanged. -/
-theorem actionPrecomp_eq_self_of_rho_eq_id
+public theorem actionPrecomp_eq_self_of_rho_eq_id
     {S : Scheme.{u}} {G : Type v} [Group G]
     (X : Action (Over S) G) [IrreducibleSpace X.V.left]
     {Y : Scheme.{u}} (g : G) (h : X.ρ g = 𝟙 X.V)
@@ -157,7 +159,7 @@ theorem actionPrecomp_eq_self_of_rho_eq_id
     (Scheme.RationalMap.id_comp f)
 
 /-- A rational map over `S` commuting with the actions of `G`. -/
-structure EquivariantRationalMap {S : Scheme.{u}} {G : Type v} [Group G]
+public structure EquivariantRationalMap {S : Scheme.{u}} {G : Type v} [Group G]
     (X Y : Action (Over S) G) [IrreducibleSpace X.V.left] where
   map : X.V.left ⤏ Y.V.left
   isOver : map.IsOver S
@@ -169,16 +171,16 @@ namespace EquivariantRationalMap
 variable {S : Scheme.{u}} {G : Type v} [Group G]
   {X Y : Action (Over S) G} [IrreducibleSpace X.V.left]
 
-instance (f : EquivariantRationalMap X Y) : f.map.IsOver S := f.isOver
+public instance (f : EquivariantRationalMap X Y) : f.map.IsOver S := f.isOver
 
-instance actionRes_irreducibleSpace
+public instance actionRes_irreducibleSpace
     {H : Type w} [Group H] (phi : H →* G) (X : Action (Over S) G)
     [IrreducibleSpace X.V.left] :
     IrreducibleSpace ((Action.res (Over S) phi).obj X).V.left := by
   change IrreducibleSpace X.V.left
   infer_instance
 
-instance actionRes_isIntegral
+public instance actionRes_isIntegral
     {H : Type w} [Group H] (phi : H →* G) (X : Action (Over S) G)
     [IsIntegral X.V.left] :
     IsIntegral ((Action.res (Over S) phi).obj X).V.left := by
@@ -187,7 +189,7 @@ instance actionRes_isIntegral
 
 /-- Restrict an equivariant rational map along a group homomorphism.  The
 underlying rational map is unchanged, so no dominance hypothesis is added. -/
-noncomputable def res {H : Type w} [Group H] (phi : H →* G)
+public noncomputable def res {H : Type w} [Group H] (phi : H →* G)
     (f : EquivariantRationalMap X Y) :
     EquivariantRationalMap
       ((Action.res (Over S) phi).obj X)
@@ -199,7 +201,7 @@ noncomputable def res {H : Type w} [Group H] (phi : H →* G)
 end EquivariantRationalMap
 
 /-- Existence of a genuine equivariant rational map of schemes. -/
-def HasEquivariantRationalMap {S : Scheme.{u}} {G : Type v} [Group G]
+@[expose] public def HasEquivariantRationalMap {S : Scheme.{u}} {G : Type v} [Group G]
     (X Y : Action (Over S) G) [IrreducibleSpace X.V.left] : Prop :=
   Nonempty (EquivariantRationalMap X Y)
 

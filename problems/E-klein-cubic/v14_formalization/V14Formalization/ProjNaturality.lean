@@ -2,7 +2,9 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import BConicBundleMultisections.LinearCoordinateChange
+module
+
+public import BConicBundleMultisections.LinearCoordinateChange
 
 /-!
 # Naturality of the structure morphism of `Proj`
@@ -37,7 +39,7 @@ private theorem awayMap_comp_fromZero (f : 𝒶 →+*ᵍ ℬ) (s : A) :
   simp [fromZeroRingHom, Away.map, HomogeneousLocalization.map_mk]
 
 /-- Naturality of the structure morphism of `Proj` under a graded ring map. -/
-theorem map_toSpecZero (f : 𝒶 →+*ᵍ ℬ) (hf : ℬ₊ ≤ 𝒶₊.map f) :
+public theorem map_toSpecZero (f : 𝒶 →+*ᵍ ℬ) (hf : ℬ₊ ≤ 𝒶₊.map f) :
     map f hf ≫ toSpecZero 𝒶 =
       toSpecZero ℬ ≫ Spec.map (CommRingCat.ofHom f.gradedZeroRingHom) := by
   refine (mapAffineOpenCover f hf).openCover.hom_ext _ _ fun s ↦ ?_
@@ -80,7 +82,7 @@ private theorem linearSubst_zero_comp_algebraMap (n : ℕ)
   simp [linearSubstGradedRingHom]
 
 /-- Every projective linear coordinate change is a morphism over `Spec k`. -/
-theorem mapLinearSubst_toSpec (n : ℕ)
+public theorem mapLinearSubst_toSpec (n : ℕ)
     (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) k) (h : N * M = 1) :
     mapLinearSubst n M N h ≫ ProjectiveSpace.toSpec n k =
       ProjectiveSpace.toSpec n k := by

@@ -9,11 +9,13 @@
   * Action rows live in D12PolynomialRRow*.lean shards.
   * Stock limits; kernel-checkable only.
 -/
-import Mathlib.Algebra.Polynomial.Basic
-import Mathlib.Algebra.Polynomial.BigOperators
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Data.Matrix.Basic
-import Mathlib.Tactic.NormNum
+module
+
+public import Mathlib.Algebra.Polynomial.Basic
+public import Mathlib.Algebra.Polynomial.BigOperators
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Data.Matrix.Basic
+public import Mathlib.Tactic.NormNum
 
 noncomputable section
 
@@ -22,29 +24,29 @@ open Polynomial BigOperators Matrix
 namespace V14Formalization
 namespace D12PolynomialData
 
-abbrev PolyQ := Polynomial ℚ
-abbrev Coeff10 := Fin 10 → ℚ
+public abbrev PolyQ := Polynomial ℚ
+public abbrev Coeff10 := Fin 10 → ℚ
 
 def schema : String := "v14.fix_ix.d12_poly.v10_module_split_R5"
-def payloadSha256 : String := "5783b76c30870faabd5a4a822113f00033310745dcf8005745c1d83638964430"
+@[expose] public def payloadSha256 : String := "5783b76c30870faabd5a4a822113f00033310745dcf8005745c1d83638964430"
 
-def of10 (c : Coeff10) : PolyQ :=
+@[expose] public def of10 (c : Coeff10) : PolyQ :=
   ∑ i : Fin 10, C (c i) * X ^ (i.val : ℕ)
 
-theorem of10_add (a b : Coeff10) : of10 a + of10 b = of10 (a + b) := by
+public theorem of10_add (a b : Coeff10) : of10 a + of10 b = of10 (a + b) := by
   simp only [of10, Pi.add_apply, map_add, add_mul, ← Finset.sum_add_distrib]
 
-theorem C_mul_of10 (r : ℚ) (a : Coeff10) :
+public theorem C_mul_of10 (r : ℚ) (a : Coeff10) :
     C r * of10 a = of10 (fun i => r * a i) := by
   simp only [of10, Finset.mul_sum, ← mul_assoc, ← map_mul]
 
-theorem of10_mul_C (a : Coeff10) (r : ℚ) :
+public theorem of10_mul_C (a : Coeff10) (r : ℚ) :
     of10 a * C r = C r * of10 a := by ring
 
-def Phi11 : PolyQ := ∑ i ∈ Finset.range 11, (X : PolyQ) ^ i
+@[expose] public def Phi11 : PolyQ := ∑ i ∈ Finset.range 11, (X : PolyQ) ^ i
 
 /-! ### Sparse pure-ℚ B (15×10) -/
-def B_poly : Matrix (Fin 15) (Fin 10) PolyQ :=
+@[expose] public def B_poly : Matrix (Fin 15) (Fin 10) PolyQ :=
   Matrix.of fun i j =>
     match i.val, j.val with
     | 0, 0 => C (1)
@@ -65,7 +67,7 @@ def B_poly : Matrix (Fin 15) (Fin 10) PolyQ :=
     | _, _ => 0
 
 /-! ### Sparse pure-ℚ L (10×15) -/
-def L_poly : Matrix (Fin 10) (Fin 15) PolyQ :=
+@[expose] public def L_poly : Matrix (Fin 10) (Fin 15) PolyQ :=
   Matrix.of fun i j =>
     match i.val, j.val with
     | 0, 0 => C ((2 / 3 : ℚ))
@@ -1247,7 +1249,7 @@ theorem L_mul_B_row9 (j : Fin 10) :
   | ⟨9, _⟩ => L_mul_B_9_9
 
 
-theorem L_mul_B_poly : L_poly * B_poly = 1 := by
+public theorem L_mul_B_poly : L_poly * B_poly = 1 := by
   apply Matrix.ext
   intro i j
   match i with
