@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.SchemeNormalSpecialization
-import V14Formalization.SchemeFixedRationalMap
+module
+
+public import V14Formalization.SchemeNormalSpecialization
+public import V14Formalization.SchemeFixedRationalMap
 
 /-!
 # Equivariance of proper normal specialization
@@ -34,7 +36,7 @@ variable {S X E Y : Scheme.{u}}
 actions induced by a group action.  The last two fields identify these maps
 with precomposition by the actions on `X` and `E`; no implicit function-field
 functoriality is assumed. -/
-structure EquivariantNormalValuationData
+public structure EquivariantNormalValuationData
     {S : Scheme.{u}} {N : Type v} [Group N]
     (X E : Action (Over S) N)
     [IsIntegral X.V.left] [IsIntegral E.V.left] where
@@ -68,7 +70,7 @@ namespace NormalValuationData
 
 /-- Naturality of the specialized function-field morphism under one
 automorphism preserving the valuation and its residue map. -/
-theorem specialFiberMap_natural
+public theorem specialFiberMap_natural
     (D : NormalValuationData S X E)
     (f : X ⤏ Y) [f.IsOver S] [IsProper (Y ↘ S)]
     (aR : Spec (.of D.R) ⟶ Spec (.of D.R))
@@ -130,7 +132,7 @@ variable {S : Scheme.{u}} {N : Type v} [Group N]
 
 /-- Proper specialization along an equivariantly stable normal valuation is
 a genuine equivariant rational map. -/
-noncomputable def specialize (D : EquivariantNormalValuationData X E)
+@[expose] public noncomputable def specialize (D : EquivariantNormalValuationData X E)
     [IsProper Y.V.hom]
     (f : EquivariantRationalMap X Y) : EquivariantRationalMap E Y := by
   letI hproper : IsProper (Y.V.left ↘ S) := by
@@ -154,7 +156,7 @@ noncomputable def specialize (D : EquivariantNormalValuationData X E)
     rw [D.source_fromFunctionField, fromFunctionField_compHom] at h
     exact h
 
-private noncomputable def specializeToCentralizerFixedByOfPrecomp
+@[expose] public noncomputable def specializeToCentralizerFixedByOfPrecomp
     {G : Type v} [Group G]
     (Y : Action (Over S) G) (sigma : G)
     {X E : Action (Over S) (Subgroup.centralizer ({sigma} : Set G))}
@@ -229,7 +231,7 @@ private noncomputable def specializeToCentralizerFixedByOfPrecomp
 /-- If the distinguished involution acts trivially on the exceptional
 divisor, equivariant normal specialization lands equivariantly in the
 scheme-theoretic fixed locus, equipped with its centralizer action. -/
-noncomputable def specializeToCentralizerFixedBy
+@[expose] public noncomputable def specializeToCentralizerFixedBy
     {G : Type v} [Group G]
     (Y : Action (Over S) G) (sigma : G)
     {X E : Action (Over S) (Subgroup.centralizer ({sigma} : Set G))}
@@ -246,7 +248,7 @@ noncomputable def specializeToCentralizerFixedBy
 /-- Function-field form of `specializeToCentralizerFixedBy`.  It is enough
 that the distinguished involution act trivially on the function field of the
 exceptional divisor; no equality of scheme automorphisms is required. -/
-noncomputable def specializeToCentralizerFixedBy_of_functionField
+@[expose] public noncomputable def specializeToCentralizerFixedBy_of_functionField
     {G : Type v} [Group G]
     (Y : Action (Over S) G) (sigma : G)
     {X E : Action (Over S) (Subgroup.centralizer ({sigma} : Set G))}
@@ -266,7 +268,7 @@ noncomputable def specializeToCentralizerFixedBy_of_functionField
 /-- A centralizer-stable normal valuation turns nonexistence of equivariant
 rational maps to the fixed locus into nonexistence of a rational map for the
 full group.  The input rational map is unrestricted: it need not be dominant. -/
-theorem noEquivariantRationalMap_of_noFixedSpecialization
+public theorem noEquivariantRationalMap_of_noFixedSpecialization
     {G : Type v} [Group G]
     (X Y : Action (Over S) G) (sigma : G)
     [IsIntegral X.V.left]
@@ -287,7 +289,7 @@ theorem noEquivariantRationalMap_of_noFixedSpecialization
 /-- Function-field version of
 `noEquivariantRationalMap_of_noFixedSpecialization`.  The input rational map
 is unrestricted: it need not be dominant. -/
-theorem noEquivariantRationalMap_of_noFixedSpecialization_of_functionField
+public theorem noEquivariantRationalMap_of_noFixedSpecialization_of_functionField
     {G : Type v} [Group G]
     (X Y : Action (Over S) G) (sigma : G)
     [IsIntegral X.V.left]

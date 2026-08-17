@@ -6,15 +6,17 @@
   Source JSON sha256: 76c6196f29afe1a8398af99502447f48ebeed4bcb3805fc5dbec693940bc04b0
   R6 payload sha256: c9804957918e383cf0725dc3db10434961129f9b208846dcdba8ce2223f2c1b9
 -/
-import V14Formalization.D12U6Semantic
+module
+
+public import V14Formalization.D12U6Semantic
 
 noncomputable section
 open Polynomial Matrix
 namespace V14Formalization.D12U6PolynomialData
 open D12PolynomialData D12PolynomialEvaluation D12U6Semantic
 
-abbrev QuotCoeff := Fin 24 → ℚ
-def ofQuot (c : QuotCoeff) : Polynomial ℚ :=
+public abbrev QuotCoeff := Fin 24 → ℚ
+@[expose] public def ofQuot (c : QuotCoeff) : Polynomial ℚ :=
   ∑ i : Fin 24, C (c i) * X ^ i.val
 
 private theorem zval_0 : ZMod.val (0 : ZMod 11) = 0 := by decide
@@ -42,44 +44,44 @@ private theorem C_4_over_11 :
   rw [show (4 : Polynomial ℚ) = C 4 by exact (map_natCast C 4).symm, ← map_mul]
   norm_num
 
-def R6c_0_0 : Polynomial ℚ := D12PolynomialData.of10 ![(-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, (-2 / 11 : ℚ)]
-def R6c_0_1 : Polynomial ℚ := D12PolynomialData.of10 ![0, (-4 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-4 / 11 : ℚ), 0, (-4 / 11 : ℚ), (-4 / 11 : ℚ), (-4 / 11 : ℚ), 0]
-def R6c_0_2 : Polynomial ℚ := D12PolynomialData.of10 ![(4 / 11 : ℚ), (2 / 11 : ℚ), 0, (4 / 11 : ℚ), 0, 0, 0, (4 / 11 : ℚ), (4 / 11 : ℚ), (4 / 11 : ℚ)]
-def R6c_0_3 : Polynomial ℚ := D12PolynomialData.of10 ![(4 / 11 : ℚ), (4 / 11 : ℚ), (4 / 11 : ℚ), 0, (4 / 11 : ℚ), (2 / 11 : ℚ), 0, (4 / 11 : ℚ), 0, 0]
-def R6c_0_4 : Polynomial ℚ := D12PolynomialData.of10 ![0, 0, (-4 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-4 / 11 : ℚ), 0, (-4 / 11 : ℚ), (-4 / 11 : ℚ), (-4 / 11 : ℚ)]
-def R6c_0_5 : Polynomial ℚ := D12PolynomialData.of10 ![(4 / 11 : ℚ), 0, 0, 0, (4 / 11 : ℚ), (4 / 11 : ℚ), (4 / 11 : ℚ), 0, (4 / 11 : ℚ), (2 / 11 : ℚ)]
-def R6c_1_0 : Polynomial ℚ := D12PolynomialData.of10 ![0, (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0]
-def R6c_1_1 : Polynomial ℚ := D12PolynomialData.of10 ![(-2 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-3 / 11 : ℚ), (-4 / 11 : ℚ)]
-def R6c_1_2 : Polynomial ℚ := D12PolynomialData.of10 ![(-3 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-4 / 11 : ℚ)]
-def R6c_1_3 : Polynomial ℚ := D12PolynomialData.of10 ![(-2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), 0]
-def R6c_1_4 : Polynomial ℚ := D12PolynomialData.of10 ![(-1 / 11 : ℚ), (1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ)]
-def R6c_1_5 : Polynomial ℚ := D12PolynomialData.of10 ![(-3 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ)]
-def R6c_2_0 : Polynomial ℚ := D12PolynomialData.of10 ![(2 / 11 : ℚ), (1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, 0, 0, (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ)]
-def R6c_2_1 : Polynomial ℚ := D12PolynomialData.of10 ![(-3 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-4 / 11 : ℚ)]
-def R6c_2_2 : Polynomial ℚ := D12PolynomialData.of10 ![(1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (3 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ)]
-def R6c_2_3 : Polynomial ℚ := D12PolynomialData.of10 ![(2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ), 0, (2 / 11 : ℚ)]
-def R6c_2_4 : Polynomial ℚ := D12PolynomialData.of10 ![(-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ)]
-def R6c_2_5 : Polynomial ℚ := D12PolynomialData.of10 ![0, (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), 0]
-def R6c_3_0 : Polynomial ℚ := D12PolynomialData.of10 ![(2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ), (1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, 0]
-def R6c_3_1 : Polynomial ℚ := D12PolynomialData.of10 ![(-2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), 0]
-def R6c_3_2 : Polynomial ℚ := D12PolynomialData.of10 ![(2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ), 0, (2 / 11 : ℚ)]
-def R6c_3_3 : Polynomial ℚ := D12PolynomialData.of10 ![0, 0, (2 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0]
-def R6c_3_4 : Polynomial ℚ := D12PolynomialData.of10 ![(-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), 0, 0]
-def R6c_3_5 : Polynomial ℚ := D12PolynomialData.of10 ![(-1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, (1 / 11 : ℚ), 0, (2 / 11 : ℚ), (-2 / 11 : ℚ)]
-def R6c_4_0 : Polynomial ℚ := D12PolynomialData.of10 ![0, 0, (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ)]
-def R6c_4_1 : Polynomial ℚ := D12PolynomialData.of10 ![(-1 / 11 : ℚ), (1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ)]
-def R6c_4_2 : Polynomial ℚ := D12PolynomialData.of10 ![(-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ)]
-def R6c_4_3 : Polynomial ℚ := D12PolynomialData.of10 ![(-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), 0, 0]
-def R6c_4_4 : Polynomial ℚ := D12PolynomialData.of10 ![(2 / 11 : ℚ), 0, (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ)]
-def R6c_4_5 : Polynomial ℚ := D12PolynomialData.of10 ![(2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (3 / 11 : ℚ), 0, (4 / 11 : ℚ), (1 / 11 : ℚ)]
-def R6c_5_0 : Polynomial ℚ := D12PolynomialData.of10 ![(2 / 11 : ℚ), 0, 0, 0, (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ), (1 / 11 : ℚ)]
-def R6c_5_1 : Polynomial ℚ := D12PolynomialData.of10 ![(-3 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ)]
-def R6c_5_2 : Polynomial ℚ := D12PolynomialData.of10 ![0, (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), 0]
-def R6c_5_3 : Polynomial ℚ := D12PolynomialData.of10 ![(-1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, (1 / 11 : ℚ), 0, (2 / 11 : ℚ), (-2 / 11 : ℚ)]
-def R6c_5_4 : Polynomial ℚ := D12PolynomialData.of10 ![(2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (3 / 11 : ℚ), 0, (4 / 11 : ℚ), (1 / 11 : ℚ)]
-def R6c_5_5 : Polynomial ℚ := D12PolynomialData.of10 ![0, (1 / 11 : ℚ), (-1 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), (2 / 11 : ℚ)]
+@[expose] public def R6c_0_0 : Polynomial ℚ := D12PolynomialData.of10 ![(-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, (-2 / 11 : ℚ)]
+@[expose] public def R6c_0_1 : Polynomial ℚ := D12PolynomialData.of10 ![0, (-4 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-4 / 11 : ℚ), 0, (-4 / 11 : ℚ), (-4 / 11 : ℚ), (-4 / 11 : ℚ), 0]
+@[expose] public def R6c_0_2 : Polynomial ℚ := D12PolynomialData.of10 ![(4 / 11 : ℚ), (2 / 11 : ℚ), 0, (4 / 11 : ℚ), 0, 0, 0, (4 / 11 : ℚ), (4 / 11 : ℚ), (4 / 11 : ℚ)]
+@[expose] public def R6c_0_3 : Polynomial ℚ := D12PolynomialData.of10 ![(4 / 11 : ℚ), (4 / 11 : ℚ), (4 / 11 : ℚ), 0, (4 / 11 : ℚ), (2 / 11 : ℚ), 0, (4 / 11 : ℚ), 0, 0]
+@[expose] public def R6c_0_4 : Polynomial ℚ := D12PolynomialData.of10 ![0, 0, (-4 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-4 / 11 : ℚ), 0, (-4 / 11 : ℚ), (-4 / 11 : ℚ), (-4 / 11 : ℚ)]
+@[expose] public def R6c_0_5 : Polynomial ℚ := D12PolynomialData.of10 ![(4 / 11 : ℚ), 0, 0, 0, (4 / 11 : ℚ), (4 / 11 : ℚ), (4 / 11 : ℚ), 0, (4 / 11 : ℚ), (2 / 11 : ℚ)]
+@[expose] public def R6c_1_0 : Polynomial ℚ := D12PolynomialData.of10 ![0, (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0]
+@[expose] public def R6c_1_1 : Polynomial ℚ := D12PolynomialData.of10 ![(-2 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-3 / 11 : ℚ), (-4 / 11 : ℚ)]
+@[expose] public def R6c_1_2 : Polynomial ℚ := D12PolynomialData.of10 ![(-3 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-4 / 11 : ℚ)]
+@[expose] public def R6c_1_3 : Polynomial ℚ := D12PolynomialData.of10 ![(-2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), 0]
+@[expose] public def R6c_1_4 : Polynomial ℚ := D12PolynomialData.of10 ![(-1 / 11 : ℚ), (1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ)]
+@[expose] public def R6c_1_5 : Polynomial ℚ := D12PolynomialData.of10 ![(-3 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ)]
+@[expose] public def R6c_2_0 : Polynomial ℚ := D12PolynomialData.of10 ![(2 / 11 : ℚ), (1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, 0, 0, (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ)]
+@[expose] public def R6c_2_1 : Polynomial ℚ := D12PolynomialData.of10 ![(-3 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-4 / 11 : ℚ)]
+@[expose] public def R6c_2_2 : Polynomial ℚ := D12PolynomialData.of10 ![(1 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), (3 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ)]
+@[expose] public def R6c_2_3 : Polynomial ℚ := D12PolynomialData.of10 ![(2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ), 0, (2 / 11 : ℚ)]
+@[expose] public def R6c_2_4 : Polynomial ℚ := D12PolynomialData.of10 ![(-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ)]
+@[expose] public def R6c_2_5 : Polynomial ℚ := D12PolynomialData.of10 ![0, (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), 0]
+@[expose] public def R6c_3_0 : Polynomial ℚ := D12PolynomialData.of10 ![(2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ), (1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, 0]
+@[expose] public def R6c_3_1 : Polynomial ℚ := D12PolynomialData.of10 ![(-2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), 0]
+@[expose] public def R6c_3_2 : Polynomial ℚ := D12PolynomialData.of10 ![(2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ), 0, (2 / 11 : ℚ)]
+@[expose] public def R6c_3_3 : Polynomial ℚ := D12PolynomialData.of10 ![0, 0, (2 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0]
+@[expose] public def R6c_3_4 : Polynomial ℚ := D12PolynomialData.of10 ![(-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), 0, 0]
+@[expose] public def R6c_3_5 : Polynomial ℚ := D12PolynomialData.of10 ![(-1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, (1 / 11 : ℚ), 0, (2 / 11 : ℚ), (-2 / 11 : ℚ)]
+@[expose] public def R6c_4_0 : Polynomial ℚ := D12PolynomialData.of10 ![0, 0, (-2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ)]
+@[expose] public def R6c_4_1 : Polynomial ℚ := D12PolynomialData.of10 ![(-1 / 11 : ℚ), (1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ)]
+@[expose] public def R6c_4_2 : Polynomial ℚ := D12PolynomialData.of10 ![(-2 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (-3 / 11 : ℚ), (-3 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ)]
+@[expose] public def R6c_4_3 : Polynomial ℚ := D12PolynomialData.of10 ![(-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), 0, 0]
+@[expose] public def R6c_4_4 : Polynomial ℚ := D12PolynomialData.of10 ![(2 / 11 : ℚ), 0, (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (1 / 11 : ℚ), (2 / 11 : ℚ), (3 / 11 : ℚ)]
+@[expose] public def R6c_4_5 : Polynomial ℚ := D12PolynomialData.of10 ![(2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (3 / 11 : ℚ), 0, (4 / 11 : ℚ), (1 / 11 : ℚ)]
+@[expose] public def R6c_5_0 : Polynomial ℚ := D12PolynomialData.of10 ![(2 / 11 : ℚ), 0, 0, 0, (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ), (1 / 11 : ℚ)]
+@[expose] public def R6c_5_1 : Polynomial ℚ := D12PolynomialData.of10 ![(-3 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-4 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ)]
+@[expose] public def R6c_5_2 : Polynomial ℚ := D12PolynomialData.of10 ![0, (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (1 / 11 : ℚ), 0]
+@[expose] public def R6c_5_3 : Polynomial ℚ := D12PolynomialData.of10 ![(-1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, (1 / 11 : ℚ), 0, (2 / 11 : ℚ), (-2 / 11 : ℚ)]
+@[expose] public def R6c_5_4 : Polynomial ℚ := D12PolynomialData.of10 ![(2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (4 / 11 : ℚ), (3 / 11 : ℚ), 0, (4 / 11 : ℚ), (1 / 11 : ℚ)]
+@[expose] public def R6c_5_5 : Polynomial ℚ := D12PolynomialData.of10 ![0, (1 / 11 : ℚ), (-1 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), (2 / 11 : ℚ)]
 
-def R6_poly : Matrix (Fin 6) (Fin 6) (Polynomial ℚ) := ![
+@[expose] public def R6_poly : Matrix (Fin 6) (Fin 6) (Polynomial ℚ) := ![
   ![R6c_0_0, R6c_0_1, R6c_0_2, R6c_0_3, R6c_0_4, R6c_0_5],
   ![R6c_1_0, R6c_1_1, R6c_1_2, R6c_1_3, R6c_1_4, R6c_1_5],
   ![R6c_2_0, R6c_2_1, R6c_2_2, R6c_2_3, R6c_2_4, R6c_2_5],
@@ -88,42 +90,42 @@ def R6_poly : Matrix (Fin 6) (Fin 6) (Polynomial ℚ) := ![
   ![R6c_5_0, R6c_5_1, R6c_5_2, R6c_5_3, R6c_5_4, R6c_5_5]
 ]
 
-def quotient_0_0 : Polynomial ℚ := ofQuot ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_0_1 : Polynomial ℚ := ofQuot ![0, (4 / 11 : ℚ), (-4 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_0_2 : Polynomial ℚ := ofQuot ![(-4 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_0_3 : Polynomial ℚ := ofQuot ![(-4 / 11 : ℚ), 0, 0, (4 / 11 : ℚ), (-4 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_0_4 : Polynomial ℚ := ofQuot ![0, 0, (4 / 11 : ℚ), (-4 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_0_5 : Polynomial ℚ := ofQuot ![(-4 / 11 : ℚ), (4 / 11 : ℚ), 0, 0, (-4 / 11 : ℚ), 0, 0, (4 / 11 : ℚ), (-4 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_1_0 : Polynomial ℚ := ofQuot ![0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_1_1 : Polynomial ℚ := ofQuot ![(2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-4 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_1_2 : Polynomial ℚ := ofQuot ![(3 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_1_3 : Polynomial ℚ := ofQuot ![(2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_1_4 : Polynomial ℚ := ofQuot ![(1 / 11 : ℚ), (-2 / 11 : ℚ), (4 / 11 : ℚ), (-2 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_1_5 : Polynomial ℚ := ofQuot ![(3 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (3 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (3 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0]
-def quotient_2_0 : Polynomial ℚ := ofQuot ![(-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_2_1 : Polynomial ℚ := ofQuot ![(3 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_2_2 : Polynomial ℚ := ofQuot ![(-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_2_3 : Polynomial ℚ := ofQuot ![(-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (3 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_2_4 : Polynomial ℚ := ofQuot ![(2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_2_5 : Polynomial ℚ := ofQuot ![0, (1 / 11 : ℚ), (1 / 11 : ℚ), (-4 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-4 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0]
-def quotient_3_0 : Polynomial ℚ := ofQuot ![(-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_3_1 : Polynomial ℚ := ofQuot ![(2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_3_2 : Polynomial ℚ := ofQuot ![(-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (3 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_3_3 : Polynomial ℚ := ofQuot ![0, 0, (-2 / 11 : ℚ), (1 / 11 : ℚ), (3 / 11 : ℚ), (-4 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0]
-def quotient_3_4 : Polynomial ℚ := ofQuot ![(1 / 11 : ℚ), (1 / 11 : ℚ), (-4 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-4 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0]
-def quotient_3_5 : Polynomial ℚ := ofQuot ![(1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), (4 / 11 : ℚ), (-2 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0]
-def quotient_4_0 : Polynomial ℚ := ofQuot ![0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_4_1 : Polynomial ℚ := ofQuot ![(1 / 11 : ℚ), (-2 / 11 : ℚ), (4 / 11 : ℚ), (-2 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_4_2 : Polynomial ℚ := ofQuot ![(2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_4_3 : Polynomial ℚ := ofQuot ![(1 / 11 : ℚ), (1 / 11 : ℚ), (-4 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-4 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0]
-def quotient_4_4 : Polynomial ℚ := ofQuot ![(-2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (3 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0]
-def quotient_4_5 : Polynomial ℚ := ofQuot ![(-2 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), (1 / 11 : ℚ), (3 / 11 : ℚ), (-4 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0]
-def quotient_5_0 : Polynomial ℚ := ofQuot ![(-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-def quotient_5_1 : Polynomial ℚ := ofQuot ![(3 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (3 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (3 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0]
-def quotient_5_2 : Polynomial ℚ := ofQuot ![0, (1 / 11 : ℚ), (1 / 11 : ℚ), (-4 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-4 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0]
-def quotient_5_3 : Polynomial ℚ := ofQuot ![(1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), (4 / 11 : ℚ), (-2 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0]
-def quotient_5_4 : Polynomial ℚ := ofQuot ![(-2 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), (1 / 11 : ℚ), (3 / 11 : ℚ), (-4 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0]
-def quotient_5_5 : Polynomial ℚ := ofQuot ![0, (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ)]
+@[expose] public def quotient_0_0 : Polynomial ℚ := ofQuot ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_0_1 : Polynomial ℚ := ofQuot ![0, (4 / 11 : ℚ), (-4 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_0_2 : Polynomial ℚ := ofQuot ![(-4 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_0_3 : Polynomial ℚ := ofQuot ![(-4 / 11 : ℚ), 0, 0, (4 / 11 : ℚ), (-4 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_0_4 : Polynomial ℚ := ofQuot ![0, 0, (4 / 11 : ℚ), (-4 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_0_5 : Polynomial ℚ := ofQuot ![(-4 / 11 : ℚ), (4 / 11 : ℚ), 0, 0, (-4 / 11 : ℚ), 0, 0, (4 / 11 : ℚ), (-4 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_1_0 : Polynomial ℚ := ofQuot ![0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_1_1 : Polynomial ℚ := ofQuot ![(2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-4 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_1_2 : Polynomial ℚ := ofQuot ![(3 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_1_3 : Polynomial ℚ := ofQuot ![(2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_1_4 : Polynomial ℚ := ofQuot ![(1 / 11 : ℚ), (-2 / 11 : ℚ), (4 / 11 : ℚ), (-2 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_1_5 : Polynomial ℚ := ofQuot ![(3 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (3 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (3 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0]
+@[expose] public def quotient_2_0 : Polynomial ℚ := ofQuot ![(-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_2_1 : Polynomial ℚ := ofQuot ![(3 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_2_2 : Polynomial ℚ := ofQuot ![(-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_2_3 : Polynomial ℚ := ofQuot ![(-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (3 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_2_4 : Polynomial ℚ := ofQuot ![(2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_2_5 : Polynomial ℚ := ofQuot ![0, (1 / 11 : ℚ), (1 / 11 : ℚ), (-4 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-4 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0]
+@[expose] public def quotient_3_0 : Polynomial ℚ := ofQuot ![(-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_3_1 : Polynomial ℚ := ofQuot ![(2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_3_2 : Polynomial ℚ := ofQuot ![(-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (3 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_3_3 : Polynomial ℚ := ofQuot ![0, 0, (-2 / 11 : ℚ), (1 / 11 : ℚ), (3 / 11 : ℚ), (-4 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_3_4 : Polynomial ℚ := ofQuot ![(1 / 11 : ℚ), (1 / 11 : ℚ), (-4 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-4 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_3_5 : Polynomial ℚ := ofQuot ![(1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), (4 / 11 : ℚ), (-2 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0]
+@[expose] public def quotient_4_0 : Polynomial ℚ := ofQuot ![0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_4_1 : Polynomial ℚ := ofQuot ![(1 / 11 : ℚ), (-2 / 11 : ℚ), (4 / 11 : ℚ), (-2 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_4_2 : Polynomial ℚ := ofQuot ![(2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_4_3 : Polynomial ℚ := ofQuot ![(1 / 11 : ℚ), (1 / 11 : ℚ), (-4 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-4 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_4_4 : Polynomial ℚ := ofQuot ![(-2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (3 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_4_5 : Polynomial ℚ := ofQuot ![(-2 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), (1 / 11 : ℚ), (3 / 11 : ℚ), (-4 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0]
+@[expose] public def quotient_5_0 : Polynomial ℚ := ofQuot ![(-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+@[expose] public def quotient_5_1 : Polynomial ℚ := ofQuot ![(3 / 11 : ℚ), (-1 / 11 : ℚ), (-1 / 11 : ℚ), (3 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (3 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0]
+@[expose] public def quotient_5_2 : Polynomial ℚ := ofQuot ![0, (1 / 11 : ℚ), (1 / 11 : ℚ), (-4 / 11 : ℚ), (2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-4 / 11 : ℚ), (1 / 11 : ℚ), (1 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, 0]
+@[expose] public def quotient_5_3 : Polynomial ℚ := ofQuot ![(1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (-1 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), (4 / 11 : ℚ), (-2 / 11 : ℚ), (1 / 11 : ℚ), (-1 / 11 : ℚ), (-2 / 11 : ℚ), (2 / 11 : ℚ), (2 / 11 : ℚ), (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0]
+@[expose] public def quotient_5_4 : Polynomial ℚ := ofQuot ![(-2 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), (1 / 11 : ℚ), (3 / 11 : ℚ), (-4 / 11 : ℚ), (3 / 11 : ℚ), (1 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0, (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), (-2 / 11 : ℚ), 0, 0, 0, 0]
+@[expose] public def quotient_5_5 : Polynomial ℚ := ofQuot ![0, (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-1 / 11 : ℚ), (2 / 11 : ℚ), (-1 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ), (-2 / 11 : ℚ), 0, (2 / 11 : ℚ), 0, (-2 / 11 : ℚ)]
 
 theorem direct_expanded_0_0 :
     directEntryPoly (0 : Fin 6) (0 : Fin 6) = cFourierPoly * X ^ 0 := by
@@ -432,7 +434,7 @@ theorem direct_expanded_5_5 :
   simp only [ha, hb, hc, hd]
   rw [if_neg (by decide : (5 : Fin 6) ≠ 0)]
 
-theorem direct_sub_R6_0_0 :
+public theorem direct_sub_R6_0_0 :
     directEntryPoly (0 : Fin 6) (0 : Fin 6) -
       R6c_0_0 = Phi11 * quotient_0_0 := by
   rw [direct_expanded_0_0]
@@ -443,7 +445,7 @@ theorem direct_sub_R6_0_0 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_0_1 :
+public theorem direct_sub_R6_0_1 :
     directEntryPoly (0 : Fin 6) (1 : Fin 6) -
       R6c_0_1 = Phi11 * quotient_0_1 := by
   rw [direct_expanded_0_1]
@@ -454,7 +456,7 @@ theorem direct_sub_R6_0_1 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_0_2 :
+public theorem direct_sub_R6_0_2 :
     directEntryPoly (0 : Fin 6) (2 : Fin 6) -
       R6c_0_2 = Phi11 * quotient_0_2 := by
   rw [direct_expanded_0_2]
@@ -465,7 +467,7 @@ theorem direct_sub_R6_0_2 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_0_3 :
+public theorem direct_sub_R6_0_3 :
     directEntryPoly (0 : Fin 6) (3 : Fin 6) -
       R6c_0_3 = Phi11 * quotient_0_3 := by
   rw [direct_expanded_0_3]
@@ -476,7 +478,7 @@ theorem direct_sub_R6_0_3 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_0_4 :
+public theorem direct_sub_R6_0_4 :
     directEntryPoly (0 : Fin 6) (4 : Fin 6) -
       R6c_0_4 = Phi11 * quotient_0_4 := by
   rw [direct_expanded_0_4]
@@ -487,7 +489,7 @@ theorem direct_sub_R6_0_4 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_0_5 :
+public theorem direct_sub_R6_0_5 :
     directEntryPoly (0 : Fin 6) (5 : Fin 6) -
       R6c_0_5 = Phi11 * quotient_0_5 := by
   rw [direct_expanded_0_5]
@@ -498,7 +500,7 @@ theorem direct_sub_R6_0_5 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_1_0 :
+public theorem direct_sub_R6_1_0 :
     directEntryPoly (1 : Fin 6) (0 : Fin 6) -
       R6c_1_0 = Phi11 * quotient_1_0 := by
   rw [direct_expanded_1_0]
@@ -509,7 +511,7 @@ theorem direct_sub_R6_1_0 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_1_1 :
+public theorem direct_sub_R6_1_1 :
     directEntryPoly (1 : Fin 6) (1 : Fin 6) -
       R6c_1_1 = Phi11 * quotient_1_1 := by
   rw [direct_expanded_1_1]
@@ -520,7 +522,7 @@ theorem direct_sub_R6_1_1 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_1_2 :
+public theorem direct_sub_R6_1_2 :
     directEntryPoly (1 : Fin 6) (2 : Fin 6) -
       R6c_1_2 = Phi11 * quotient_1_2 := by
   rw [direct_expanded_1_2]
@@ -531,7 +533,7 @@ theorem direct_sub_R6_1_2 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_1_3 :
+public theorem direct_sub_R6_1_3 :
     directEntryPoly (1 : Fin 6) (3 : Fin 6) -
       R6c_1_3 = Phi11 * quotient_1_3 := by
   rw [direct_expanded_1_3]
@@ -542,7 +544,7 @@ theorem direct_sub_R6_1_3 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_1_4 :
+public theorem direct_sub_R6_1_4 :
     directEntryPoly (1 : Fin 6) (4 : Fin 6) -
       R6c_1_4 = Phi11 * quotient_1_4 := by
   rw [direct_expanded_1_4]
@@ -553,7 +555,7 @@ theorem direct_sub_R6_1_4 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_1_5 :
+public theorem direct_sub_R6_1_5 :
     directEntryPoly (1 : Fin 6) (5 : Fin 6) -
       R6c_1_5 = Phi11 * quotient_1_5 := by
   rw [direct_expanded_1_5]
@@ -564,7 +566,7 @@ theorem direct_sub_R6_1_5 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_2_0 :
+public theorem direct_sub_R6_2_0 :
     directEntryPoly (2 : Fin 6) (0 : Fin 6) -
       R6c_2_0 = Phi11 * quotient_2_0 := by
   rw [direct_expanded_2_0]
@@ -575,7 +577,7 @@ theorem direct_sub_R6_2_0 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_2_1 :
+public theorem direct_sub_R6_2_1 :
     directEntryPoly (2 : Fin 6) (1 : Fin 6) -
       R6c_2_1 = Phi11 * quotient_2_1 := by
   rw [direct_expanded_2_1]
@@ -586,7 +588,7 @@ theorem direct_sub_R6_2_1 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_2_2 :
+public theorem direct_sub_R6_2_2 :
     directEntryPoly (2 : Fin 6) (2 : Fin 6) -
       R6c_2_2 = Phi11 * quotient_2_2 := by
   rw [direct_expanded_2_2]
@@ -597,7 +599,7 @@ theorem direct_sub_R6_2_2 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_2_3 :
+public theorem direct_sub_R6_2_3 :
     directEntryPoly (2 : Fin 6) (3 : Fin 6) -
       R6c_2_3 = Phi11 * quotient_2_3 := by
   rw [direct_expanded_2_3]
@@ -608,7 +610,7 @@ theorem direct_sub_R6_2_3 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_2_4 :
+public theorem direct_sub_R6_2_4 :
     directEntryPoly (2 : Fin 6) (4 : Fin 6) -
       R6c_2_4 = Phi11 * quotient_2_4 := by
   rw [direct_expanded_2_4]
@@ -619,7 +621,7 @@ theorem direct_sub_R6_2_4 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_2_5 :
+public theorem direct_sub_R6_2_5 :
     directEntryPoly (2 : Fin 6) (5 : Fin 6) -
       R6c_2_5 = Phi11 * quotient_2_5 := by
   rw [direct_expanded_2_5]
@@ -630,7 +632,7 @@ theorem direct_sub_R6_2_5 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_3_0 :
+public theorem direct_sub_R6_3_0 :
     directEntryPoly (3 : Fin 6) (0 : Fin 6) -
       R6c_3_0 = Phi11 * quotient_3_0 := by
   rw [direct_expanded_3_0]
@@ -641,7 +643,7 @@ theorem direct_sub_R6_3_0 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_3_1 :
+public theorem direct_sub_R6_3_1 :
     directEntryPoly (3 : Fin 6) (1 : Fin 6) -
       R6c_3_1 = Phi11 * quotient_3_1 := by
   rw [direct_expanded_3_1]
@@ -652,7 +654,7 @@ theorem direct_sub_R6_3_1 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_3_2 :
+public theorem direct_sub_R6_3_2 :
     directEntryPoly (3 : Fin 6) (2 : Fin 6) -
       R6c_3_2 = Phi11 * quotient_3_2 := by
   rw [direct_expanded_3_2]
@@ -663,7 +665,7 @@ theorem direct_sub_R6_3_2 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_3_3 :
+public theorem direct_sub_R6_3_3 :
     directEntryPoly (3 : Fin 6) (3 : Fin 6) -
       R6c_3_3 = Phi11 * quotient_3_3 := by
   rw [direct_expanded_3_3]
@@ -674,7 +676,7 @@ theorem direct_sub_R6_3_3 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_3_4 :
+public theorem direct_sub_R6_3_4 :
     directEntryPoly (3 : Fin 6) (4 : Fin 6) -
       R6c_3_4 = Phi11 * quotient_3_4 := by
   rw [direct_expanded_3_4]
@@ -685,7 +687,7 @@ theorem direct_sub_R6_3_4 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_3_5 :
+public theorem direct_sub_R6_3_5 :
     directEntryPoly (3 : Fin 6) (5 : Fin 6) -
       R6c_3_5 = Phi11 * quotient_3_5 := by
   rw [direct_expanded_3_5]
@@ -696,7 +698,7 @@ theorem direct_sub_R6_3_5 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_4_0 :
+public theorem direct_sub_R6_4_0 :
     directEntryPoly (4 : Fin 6) (0 : Fin 6) -
       R6c_4_0 = Phi11 * quotient_4_0 := by
   rw [direct_expanded_4_0]
@@ -707,7 +709,7 @@ theorem direct_sub_R6_4_0 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_4_1 :
+public theorem direct_sub_R6_4_1 :
     directEntryPoly (4 : Fin 6) (1 : Fin 6) -
       R6c_4_1 = Phi11 * quotient_4_1 := by
   rw [direct_expanded_4_1]
@@ -718,7 +720,7 @@ theorem direct_sub_R6_4_1 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_4_2 :
+public theorem direct_sub_R6_4_2 :
     directEntryPoly (4 : Fin 6) (2 : Fin 6) -
       R6c_4_2 = Phi11 * quotient_4_2 := by
   rw [direct_expanded_4_2]
@@ -729,7 +731,7 @@ theorem direct_sub_R6_4_2 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_4_3 :
+public theorem direct_sub_R6_4_3 :
     directEntryPoly (4 : Fin 6) (3 : Fin 6) -
       R6c_4_3 = Phi11 * quotient_4_3 := by
   rw [direct_expanded_4_3]
@@ -740,7 +742,7 @@ theorem direct_sub_R6_4_3 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_4_4 :
+public theorem direct_sub_R6_4_4 :
     directEntryPoly (4 : Fin 6) (4 : Fin 6) -
       R6c_4_4 = Phi11 * quotient_4_4 := by
   rw [direct_expanded_4_4]
@@ -751,7 +753,7 @@ theorem direct_sub_R6_4_4 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_4_5 :
+public theorem direct_sub_R6_4_5 :
     directEntryPoly (4 : Fin 6) (5 : Fin 6) -
       R6c_4_5 = Phi11 * quotient_4_5 := by
   rw [direct_expanded_4_5]
@@ -762,7 +764,7 @@ theorem direct_sub_R6_4_5 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_5_0 :
+public theorem direct_sub_R6_5_0 :
     directEntryPoly (5 : Fin 6) (0 : Fin 6) -
       R6c_5_0 = Phi11 * quotient_5_0 := by
   rw [direct_expanded_5_0]
@@ -773,7 +775,7 @@ theorem direct_sub_R6_5_0 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_5_1 :
+public theorem direct_sub_R6_5_1 :
     directEntryPoly (5 : Fin 6) (1 : Fin 6) -
       R6c_5_1 = Phi11 * quotient_5_1 := by
   rw [direct_expanded_5_1]
@@ -784,7 +786,7 @@ theorem direct_sub_R6_5_1 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_5_2 :
+public theorem direct_sub_R6_5_2 :
     directEntryPoly (5 : Fin 6) (2 : Fin 6) -
       R6c_5_2 = Phi11 * quotient_5_2 := by
   rw [direct_expanded_5_2]
@@ -795,7 +797,7 @@ theorem direct_sub_R6_5_2 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_5_3 :
+public theorem direct_sub_R6_5_3 :
     directEntryPoly (5 : Fin 6) (3 : Fin 6) -
       R6c_5_3 = Phi11 * quotient_5_3 := by
   rw [direct_expanded_5_3]
@@ -806,7 +808,7 @@ theorem direct_sub_R6_5_3 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_5_4 :
+public theorem direct_sub_R6_5_4 :
     directEntryPoly (5 : Fin 6) (4 : Fin 6) -
       R6c_5_4 = Phi11 * quotient_5_4 := by
   rw [direct_expanded_5_4]
@@ -817,7 +819,7 @@ theorem direct_sub_R6_5_4 :
     zval_6, zval_7, zval_8, zval_9, zval_10]
   simp only [C_2_over_11, C_3_over_11, C_4_over_11] <;>
     ring
-theorem direct_sub_R6_5_5 :
+public theorem direct_sub_R6_5_5 :
     directEntryPoly (5 : Fin 6) (5 : Fin 6) -
       R6c_5_5 = Phi11 * quotient_5_5 := by
   rw [direct_expanded_5_5]

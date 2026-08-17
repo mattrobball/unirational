@@ -6,11 +6,13 @@ Writeup ambient object V₁₄ = Gr(2,U) ∩ ℙ(M) on the even Weil module U.
   isotypic identification completes with the SL₂ → GL(U) homomorphism).
 * `V14Point` packages rank-2 planes in U (Grassmannian points of the writeup model).
 -/
-import V14Formalization.WeilRep
-import V14Formalization.Definitions
-import V14Formalization.GeometricV14
-import Mathlib.LinearAlgebra.Dimension.Finrank
-import Mathlib.LinearAlgebra.Projectivization.Basic
+module
+
+public import V14Formalization.WeilRep
+public import V14Formalization.Definitions
+public import V14Formalization.GeometricV14
+public import Mathlib.LinearAlgebra.Dimension.Finrank
+public import Mathlib.LinearAlgebra.Projectivization.Basic
 
 open scoped LinearAlgebra.Projectivization
 
@@ -21,10 +23,10 @@ namespace GeometricFanoV14
 
 /-! ## Ambient: even Weil module U over K = ℚ(ζ₁₁) -/
 
-abbrev k := WeilRep.K
-abbrev WeilU := WeilRep.U
+public abbrev k := WeilRep.K
+public abbrev WeilU := WeilRep.U
 
-theorem S_sq :
+public theorem S_sq :
     WeilRep.S_even ∘ₗ WeilRep.S_even = (-LinearMap.id : WeilU →ₗ[k] WeilU) :=
   WeilRep.S_even_sq
 

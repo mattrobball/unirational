@@ -1,4 +1,6 @@
-import V14Formalization.V14FixedPointEquations
+module
+
+public import V14Formalization.V14FixedPointEquations
 
 /-!
 # Linear algebra after projective sigma fixedness
@@ -21,15 +23,15 @@ variable {L : Type u} [Field L]
 variable {ι : Type v} [Fintype ι]
 
 /-- The plus projector on the image of `P` for a commuting involution `S`. -/
-def plusProjector (P S : Matrix ι ι L) : Matrix ι ι L :=
+@[expose] public def plusProjector (P S : Matrix ι ι L) : Matrix ι ι L :=
   (2 : L)⁻¹ • (P + S * P)
 
 /-- The minus projector on the image of `P` for a commuting involution `S`. -/
-def minusProjector (P S : Matrix ι ι L) : Matrix ι ι L :=
+@[expose] public def minusProjector (P S : Matrix ι ι L) : Matrix ι ι L :=
   (2 : L)⁻¹ • (P - S * P)
 
 /-- A nonzero eigenvector of an involution has eigenvalue `+1` or `-1`. -/
-theorem eigenvalue_eq_one_or_neg_one_of_involution
+public theorem eigenvalue_eq_one_or_neg_one_of_involution
     [DecidableEq ι]
     (S : Matrix ι ι L) (x : ι → L) (a : L)
     (hS2 : S * S = 1) (hx : x ≠ 0)
@@ -50,7 +52,7 @@ theorem eigenvalue_eq_one_or_neg_one_of_involution
   exact mul_self_eq_one_iff.mp haa
 
 /-- A `+1` eigenvector in the image of `P` is fixed by `plusProjector`. -/
-theorem plusProjector_mulVec_eq_self
+public theorem plusProjector_mulVec_eq_self
     [NeZero (2 : L)]
     (P S : Matrix ι ι L) (x : ι → L)
     (hPx : P.mulVec x = x) (hSx : S.mulVec x = x) :
@@ -62,7 +64,7 @@ theorem plusProjector_mulVec_eq_self
   rw [← two_mul, ← mul_assoc, inv_mul_cancel₀ (NeZero.ne (2 : L)), one_mul]
 
 /-- A `-1` eigenvector in the image of `P` is fixed by `minusProjector`. -/
-theorem minusProjector_mulVec_eq_self
+public theorem minusProjector_mulVec_eq_self
     [NeZero (2 : L)]
     (P S : Matrix ι ι L) (x : ι → L)
     (hPx : P.mulVec x = x) (hSx : S.mulVec x = (-1 : L) • x) :
@@ -77,7 +79,7 @@ theorem minusProjector_mulVec_eq_self
 
 /-- A fixed vector of a projector `B*Lmat` is reconstructed from its certified
 coordinates `Lmat*x`. -/
-theorem eq_mulVec_mulVec_of_projector_fixed
+public theorem eq_mulVec_mulVec_of_projector_fixed
     {κ : Type w} [Fintype κ]
     (Q : Matrix ι ι L) (B : Matrix ι κ L) (Lmat : Matrix κ ι L)
     (x : ι → L) (hBL : B * Lmat = Q) (hQx : Q.mulVec x = x) :
@@ -91,7 +93,7 @@ theorem eq_mulVec_mulVec_of_projector_fixed
 the supplied certified carrier bases. The idempotence and commutation
 hypotheses record the intended projector setup; the pointwise conclusion uses
 their consequences `P*x=x` and `S^2=1` directly. -/
-theorem eq_plus_or_minus_carrier_of_projector_involution_eigenvector
+public theorem eq_plus_or_minus_carrier_of_projector_involution_eigenvector
     [DecidableEq ι] [NeZero (2 : L)]
     {κplus : Type w} {κminus : Type w}
     [Fintype κplus] [Fintype κminus]
@@ -127,7 +129,7 @@ theorem eq_plus_or_minus_carrier_of_projector_involution_eigenvector
         (minusProjector P S) Bminus Lminus x hBLminus hminus⟩
 
 /-- Exact `15 = 6 + 4` interface for the V14 sigma certificate matrices. -/
-theorem fin15_eq_plus6_or_minus4_carrier
+public theorem fin15_eq_plus6_or_minus4_carrier
     [NeZero (2 : L)]
     (P S : Matrix (Fin 15) (Fin 15) L)
     (Bplus : Matrix (Fin 15) (Fin 6) L)

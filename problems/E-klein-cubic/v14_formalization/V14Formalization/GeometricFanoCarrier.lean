@@ -6,27 +6,29 @@ Writeup Cor 6.1 geometric carrier (minimal green path):
 * Ambient = full Λ²U; carrier X = ℙ(Λ²U) with faithful linear-projective G-action
 * Packaged as `SmoothProjectiveGVariety` (`V14Variety`)
 -/
-import V14Formalization.WeilHom
-import V14Formalization.Definitions
-import Mathlib.LinearAlgebra.ExteriorPower.Basic
-import Mathlib.LinearAlgebra.ExteriorPower.Basis
-import Mathlib.LinearAlgebra.Dimension.Finrank
-import Mathlib.LinearAlgebra.Dimension.StrongRankCondition
-import Mathlib.LinearAlgebra.FreeModule.Finite.Basic
-import Mathlib.LinearAlgebra.Basis.VectorSpace
-import Mathlib.LinearAlgebra.Projectivization.Basic
-import Mathlib.LinearAlgebra.Projectivization.PSL.PSL2
-import Mathlib.LinearAlgebra.Center
-import Mathlib.GroupTheory.QuotientGroup.Basic
-import Mathlib.GroupTheory.Subgroup.Center
-import Mathlib.GroupTheory.Subgroup.Simple
-import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
-import Mathlib.Data.Matrix.Basic
-import Mathlib.NumberTheory.LegendreSymbol.AddCharacter
-import Mathlib.Data.Set.PowersetCard
-import Mathlib.Order.Hom.PowersetCard
-import Mathlib.Data.Finset.Sort
-import Mathlib.Tactic.FinCases
+module
+
+public import V14Formalization.WeilHom
+public import V14Formalization.Definitions
+public import Mathlib.LinearAlgebra.ExteriorPower.Basic
+public import Mathlib.LinearAlgebra.ExteriorPower.Basis
+public import Mathlib.LinearAlgebra.Dimension.Finrank
+public import Mathlib.LinearAlgebra.Dimension.StrongRankCondition
+public import Mathlib.LinearAlgebra.FreeModule.Finite.Basic
+public import Mathlib.LinearAlgebra.Basis.VectorSpace
+public import Mathlib.LinearAlgebra.Projectivization.Basic
+public import Mathlib.LinearAlgebra.Projectivization.PSL.PSL2
+public import Mathlib.LinearAlgebra.Center
+public import Mathlib.GroupTheory.QuotientGroup.Basic
+public import Mathlib.GroupTheory.Subgroup.Center
+public import Mathlib.GroupTheory.Subgroup.Simple
+public import Mathlib.LinearAlgebra.Matrix.Determinant.Basic
+public import Mathlib.Data.Matrix.Basic
+public import Mathlib.NumberTheory.LegendreSymbol.AddCharacter
+public import Mathlib.Data.Set.PowersetCard
+public import Mathlib.Order.Hom.PowersetCard
+public import Mathlib.Data.Finset.Sort
+public import Mathlib.Tactic.FinCases
 
 open scoped BigOperators LinearAlgebra.Projectivization MatrixGroups
 open Matrix Matrix.SpecialLinearGroup exteriorPower Module
@@ -36,32 +38,32 @@ noncomputable section
 namespace V14Formalization
 namespace GeometricFanoCarrier
 
-abbrev k := WeilRep.K
-abbrev F := ZMod 11
-abbrev SLG := SpecialLinearGroup (Fin 2) F
-abbrev PSL2F11 : Type := PSL(2, F)
-abbrev U := WeilRep.U
+public abbrev k := WeilRep.K
+public abbrev F := ZMod 11
+public abbrev SLG := SpecialLinearGroup (Fin 2) F
+public abbrev PSL2F11 : Type := PSL(2, F)
+public abbrev U := WeilRep.U
 
-instance : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
-instance : Group PSL2F11 := inferInstance
+@[expose] public instance : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
+@[expose] public instance : Group PSL2F11 := inferInstance
 
 /-! ## finrank U = 6 via evalEven / extendEven -/
 
 /-- Evaluation of even functions at coordinates 0..5. -/
-def evalEven : U →ₗ[k] (Fin 6 → k) where
+@[expose] public def evalEven : U →ₗ[k] (Fin 6 → k) where
   toFun f j := f.1 (j.val : ZMod 11)
   map_add' _ _ := funext fun _ => rfl
   map_smul' _ _ := funext fun _ => rfl
 
 /-- Pointwise even extension of a 6-tuple (before packaging as an element of `U`). -/
-def extendEvenFun (v : Fin 6 → k) : ZMod 11 → k := fun x =>
+@[expose] public def extendEvenFun (v : Fin 6 → k) : ZMod 11 → k := fun x =>
   if hle : x.val ≤ 5 then v ⟨x.val, Nat.lt_succ_of_le hle⟩
   else v ⟨11 - x.val, by
     have : 6 ≤ x.val := by omega
     have : x.val ≤ 10 := Nat.lt_succ_iff.mp (ZMod.val_lt x)
     omega⟩
 
-theorem extendEvenFun_even (v : Fin 6 → k) (x : ZMod 11) :
+public theorem extendEvenFun_even (v : Fin 6 → k) (x : ZMod 11) :
     extendEvenFun v (-x) = extendEvenFun v x := by
   simp only [extendEvenFun]
   by_cases hx0 : x = 0
@@ -91,7 +93,7 @@ theorem extendEvenFun_even (v : Fin 6 → k) (x : ZMod 11) :
       exact hneg
 
 /-- Even extension of a 6-tuple of values. -/
-def extendEven : (Fin 6 → k) →ₗ[k] U where
+@[expose] public def extendEven : (Fin 6 → k) →ₗ[k] U where
   toFun v := ⟨extendEvenFun v, extendEvenFun_even v⟩
   map_add' := by
     intro v w
@@ -108,7 +110,7 @@ def extendEven : (Fin 6 → k) →ₗ[k] U where
     simp only [extendEvenFun, Pi.smul_apply, smul_eq_mul]
     split_ifs <;> rfl
 
-theorem evalEven_extendEven : evalEven ∘ₗ extendEven = LinearMap.id := by
+public theorem evalEven_extendEven : evalEven ∘ₗ extendEven = LinearMap.id := by
   apply LinearMap.ext; intro v; funext j
   have hjlt : j.val < 11 := Nat.lt_trans j.isLt (by decide : 6 < 11)
   have hval : ((j.val : ZMod 11)).val = j.val := ZMod.val_cast_of_lt hjlt
@@ -121,7 +123,7 @@ theorem evalEven_extendEven : evalEven ∘ₗ extendEven = LinearMap.id := by
   congr 1
   exact Fin.ext hval
 
-theorem evalEven_injective : Function.Injective evalEven := by
+public theorem evalEven_injective : Function.Injective evalEven := by
   intro f g heq
   apply Subtype.ext; funext x
   have hfun := congr_fun heq
@@ -157,7 +159,7 @@ theorem extendEven_injective : Function.Injective extendEven := by
   have hw : evalEven (extendEven w) = w := LinearMap.congr_fun evalEven_extendEven w
   rwa [hv, hw] at he
 
-theorem finrank_U : Module.finrank k U = 6 := by
+public theorem finrank_U : Module.finrank k U = 6 := by
   have hfin6 : Module.finrank k (Fin 6 → k) = 6 := by
     rw [Module.finrank_fintype_fun_eq_card]; decide
   have hle : Module.finrank k U ≤ 6 := by
@@ -168,29 +170,29 @@ theorem finrank_U : Module.finrank k U = 6 := by
     rwa [hfin6] at this
   omega
 
-instance : FiniteDimensional k U :=
+@[expose] public instance : FiniteDimensional k U :=
   Module.finite_of_finrank_eq_succ (n := 5) (by rw [finrank_U])
-instance : Module.Free k U := Module.Free.of_divisionRing k U
+@[expose] public instance : Module.Free k U := Module.Free.of_divisionRing k U
 
 /-! ## Λ²U -/
 
-abbrev Lambda2U : Type := ↥(⋀[k]^2 U)
-instance : AddCommGroup Lambda2U := inferInstance
-instance : Module k Lambda2U := inferInstance
-instance : Module.Free k Lambda2U := inferInstance
-instance : FiniteDimensional k Lambda2U := inferInstance
+public abbrev Lambda2U : Type := ↥(⋀[k]^2 U)
+@[expose] public instance : AddCommGroup Lambda2U := inferInstance
+@[expose] public instance : Module k Lambda2U := inferInstance
+@[expose] public instance : Module.Free k Lambda2U := inferInstance
+@[expose] public instance : FiniteDimensional k Lambda2U := inferInstance
 
 /-! ## SL₂ / PSL action on Λ²U -/
 
-def weilLambda2 (g : SLG) : Lambda2U →ₗ[k] Lambda2U :=
+@[expose] public def weilLambda2 (g : SLG) : Lambda2U →ₗ[k] Lambda2U :=
   exteriorPower.map 2 (WeilHom.weilUHom g)
 
-theorem weilLambda2_one : weilLambda2 1 = LinearMap.id := by
+public theorem weilLambda2_one : weilLambda2 1 = LinearMap.id := by
   dsimp [weilLambda2]
   rw [map_one]
   exact exteriorPower.map_id
 
-theorem weilLambda2_mul (g h : SLG) :
+public theorem weilLambda2_mul (g h : SLG) :
     weilLambda2 (g * h) = weilLambda2 g ∘ₗ weilLambda2 h := by
   dsimp [weilLambda2]
   rw [map_mul, Module.End.mul_eq_comp, exteriorPower.map_comp]
@@ -275,40 +277,40 @@ theorem weilLambda2_center (z : SLG) (hz : z ∈ Subgroup.center SLG) :
   · convert weilLambda2_negI using 2
     exact scalar_neg_eq_negI
 
-def weilLambda2Hom : SLG →* (Lambda2U →ₗ[k] Lambda2U) where
+@[expose] public def weilLambda2Hom : SLG →* (Lambda2U →ₗ[k] Lambda2U) where
   toFun := weilLambda2
   map_one' := weilLambda2_one
   map_mul' := weilLambda2_mul
 
-theorem weilLambda2Hom_ker_center :
+public theorem weilLambda2Hom_ker_center :
     Subgroup.center SLG ≤ weilLambda2Hom.ker := by
   intro z hz
   rw [MonoidHom.mem_ker, Module.End.one_eq_id]
   exact weilLambda2_center z hz
 
-def pslLambda2Hom : PSL2F11 →* (Lambda2U →ₗ[k] Lambda2U) :=
+@[expose] public def pslLambda2Hom : PSL2F11 →* (Lambda2U →ₗ[k] Lambda2U) :=
   QuotientGroup.lift (N := Subgroup.center SLG) weilLambda2Hom weilLambda2Hom_ker_center
 
-@[simp] theorem pslLambda2_mk (g : SLG) :
+@[simp] public theorem pslLambda2_mk (g : SLG) :
     pslLambda2Hom (QuotientGroup.mk g) = weilLambda2 g := by
   rfl
 
 /-! ## Nontriviality of Λ²(T) -/
 
-def pureWedge (u v : U) : Lambda2U :=
+@[expose] public def pureWedge (u v : U) : Lambda2U :=
   exteriorPower.ιMulti k 2 ![u, v]
 
-def b0 : U := extendEven (fun i => if i = (0 : Fin 6) then (1 : k) else 0)
-def b1 : U := extendEven (fun i => if i = (1 : Fin 6) then (1 : k) else 0)
+@[expose] public def b0 : U := extendEven (fun i => if i = (0 : Fin 6) then (1 : k) else 0)
+@[expose] public def b1 : U := extendEven (fun i => if i = (1 : Fin 6) then (1 : k) else 0)
 
-theorem evalEven_b0 :
+public theorem evalEven_b0 :
     evalEven b0 = fun i => if i = (0 : Fin 6) then (1 : k) else 0 := by
   funext i
   simpa [b0, LinearMap.comp_apply] using
     congrFun (LinearMap.congr_fun evalEven_extendEven
       (fun i => if i = (0 : Fin 6) then (1 : k) else 0)) i
 
-theorem evalEven_b1 :
+public theorem evalEven_b1 :
     evalEven b1 = fun i => if i = (1 : Fin 6) then (1 : k) else 0 := by
   funext i
   simpa [b1, LinearMap.comp_apply] using
@@ -369,13 +371,13 @@ theorem std_wedge_ne_zero :
       _ = 0 := by simp
   exact absurd this one_ne_zero
 
-theorem evalEven_b0_basis :
+public theorem evalEven_b0_basis :
     evalEven b0 = Pi.basisFun k (Fin 6) 0 := by
   funext i
   rw [evalEven_b0, Pi.basisFun_apply]
   simp [Pi.single_apply]
 
-theorem evalEven_b1_basis :
+public theorem evalEven_b1_basis :
     evalEven b1 = Pi.basisFun k (Fin 6) 1 := by
   funext i
   rw [evalEven_b1, Pi.basisFun_apply]
@@ -402,7 +404,7 @@ theorem pure_b01_ne : pureWedge b0 b1 ≠ 0 := by
       _ = 0 := by rw [hz, map_zero]
   exact std_wedge_ne_zero hstd
 
-theorem ψ_half_ne_one :
+public theorem ψ_half_ne_one :
     WeilRep.ψ ((1 : F) * (2 : F)⁻¹) ≠ 1 := by
   intro h
   have hz : (1 : F) * (2 : F)⁻¹ = 0 :=
@@ -461,7 +463,7 @@ private theorem b1_support {x : ZMod 11} (hx : b1.1 x ≠ 0) :
         simpa [F_val_neg_one] using this)
     · simp [hv] at hx
 
-theorem T_b0 : WeilRep.T_even_b 1 b0 = b0 := by
+public theorem T_b0 : WeilRep.T_even_b 1 b0 = b0 := by
   apply Subtype.ext; funext x
   change WeilRep.ψ (1 * x ^ 2 * WeilRep.twoInv) * b0.1 x = b0.1 x
   by_cases hx : b0.1 x = 0
@@ -469,7 +471,7 @@ theorem T_b0 : WeilRep.T_even_b 1 b0 = b0 := by
   · have hx0 : x = 0 := b0_support hx
     simp [hx0, WeilRep.twoInv, WeilRep.ψ_zero]
 
-theorem T_b1 : WeilRep.T_even_b 1 b1 =
+public theorem T_b1 : WeilRep.T_even_b 1 b1 =
     WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • b1 := by
   apply Subtype.ext; funext x
   change WeilRep.ψ (1 * x ^ 2 * WeilRep.twoInv) * b1.1 x =
@@ -528,11 +530,11 @@ theorem weilLambda2_Tmat_ne_id : weilLambda2 WeilRep.Tmat ≠ LinearMap.id := by
     exact sub_eq_zero.mp ((smul_eq_zero.mp this).resolve_right hne)
   exact ψ_half_ne_one hψ
 
-instance PSL2F11_isSimple : IsSimpleGroup PSL2F11 :=
+@[expose] public instance PSL2F11_isSimple : IsSimpleGroup PSL2F11 :=
   Matrix.ProjectiveSpecialLinearGroup.rank_two_simple (F := F)
     (by simp only [Nat.card_zmod]; decide)
 
-theorem pslLambda2Hom_injective : Function.Injective pslLambda2Hom := by
+public theorem pslLambda2Hom_injective : Function.Injective pslLambda2Hom := by
   have hN : pslLambda2Hom.ker.Normal := inferInstance
   rcases hN.eq_bot_or_eq_top with hbot | htop
   · exact (MonoidHom.ker_eq_bot_iff _).mp hbot
@@ -606,7 +608,7 @@ theorem ST_ne_TS_psl :
   have hr2 : r ^ 2 = 1 := by simpa [Fintype.card_fin] using hr
   simp [hr0] at hr2
 
-theorem PSL2F11_isCenterless : IsCenterless PSL2F11 := by
+public theorem PSL2F11_isCenterless : IsCenterless PSL2F11 := by
   haveI : IsSimpleGroup PSL2F11 := inferInstance
   have hZ : (Subgroup.center PSL2F11).Normal := inferInstance
   rcases hZ.eq_bot_or_eq_top with h | h

@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.GeometricV14Carrier
-import V14Formalization.Lambda2Coordinates
+module
+
+public import V14Formalization.GeometricV14Carrier
+public import V14Formalization.Lambda2Coordinates
 
 /-!
 # Sparse support of the even Weil basis
@@ -17,7 +19,7 @@ noncomputable section
 
 namespace V14Formalization.D12U6Support
 
-theorem extendEven_single_apply (j : Fin 6) (x : ZMod 11) :
+public theorem extendEven_single_apply (j : Fin 6) (x : ZMod 11) :
     GeometricFanoCarrier.extendEvenFun (Pi.single j (1 : WeilRep.K)) x =
       if x = (j.val : ZMod 11) then 1
       else if x = -(j.val : ZMod 11) then 1 else 0 := by

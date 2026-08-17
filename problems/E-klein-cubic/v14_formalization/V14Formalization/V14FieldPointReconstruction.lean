@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import BConicBundleMultisections.GenericConicProjectivePoint
-import V14Formalization.SchemeProjectiveAction
+module
+
+public import BConicBundleMultisections.GenericConicProjectivePoint
+public import V14Formalization.SchemeProjectiveAction
 
 /-!
 # Reconstructing projective field-valued points from coordinates
@@ -32,7 +34,7 @@ variable {k L : Type u} [Field k] [Field L] [Algebra k L]
 
 /-- Two algebra-valued projective points reconstructed in the same normalized
 chart are equal only if all of their normalized coordinates are equal. -/
-theorem normalizedCoordinates_eq_of_pointOfNormalizedCoordinatesAlgebra_eq
+public theorem normalizedCoordinates_eq_of_pointOfNormalizedCoordinatesAlgebra_eq
     (n : ℕ) (i : Fin (n + 1))
     (x y : Fin (n + 1) → L) (hxi : x i = 1) (hyi : y i = 1)
     (hpoint :
@@ -55,7 +57,7 @@ theorem normalizedCoordinates_eq_of_pointOfNormalizedCoordinatesAlgebra_eq
 /-- A `k`-linear field-valued point of projective space is exactly the point
 reconstructed from its mapped normalized residue coordinates on any standard
 chart containing its image point. -/
-theorem fieldPoint_eq_pointOfMappedNormalizedResidueCoordinates
+public theorem fieldPoint_eq_pointOfMappedNormalizedResidueCoordinates
     (n : ℕ) (p : Spec (.of L) ⟶ ProjectiveSpace n k)
     (hpbase : p ≫ ProjectiveSpace.toSpec n k =
       Spec.map (CommRingCat.ofHom (algebraMap k L))) :
@@ -93,7 +95,7 @@ theorem fieldPoint_eq_pointOfMappedNormalizedResidueCoordinates
 
 /-- Existential chart form of
 `fieldPoint_eq_pointOfMappedNormalizedResidueCoordinates`. -/
-theorem exists_normalizedResidueCoordinates_for_fieldPoint
+public theorem exists_normalizedResidueCoordinates_for_fieldPoint
     (n : ℕ) (p : Spec (.of L) ⟶ ProjectiveSpace n k)
     (hpbase : p ≫ ProjectiveSpace.toSpec n k =
       Spec.map (CommRingCat.ofHom (algebraMap k L))) :

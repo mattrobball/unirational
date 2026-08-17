@@ -2,12 +2,14 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.MvFracConstantField
-import V14Formalization.WeierstrassSchemeDescent
-import V14Formalization.KernelLineDescent
-import BConicBundleMultisections.ShortWeierstrassNormalForm
-import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
-import Mathlib.Algebra.MvPolynomial.Eval
+module
+
+public import V14Formalization.MvFracConstantField
+public import V14Formalization.WeierstrassSchemeDescent
+public import V14Formalization.KernelLineDescent
+public import BConicBundleMultisections.ShortWeierstrassNormalForm
+public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
+public import Mathlib.Algebra.MvPolynomial.Eval
 
 /-!
 # Descent of a smooth plane cubic over an arbitrary characteristic-zero field
@@ -238,7 +240,7 @@ remains smooth after base change to an algebraic closure.
 
 `IsSmoothPlaneCubic` over `K` is not enough: it only constrains `K`-points,
 so it is not geometric smoothness and is not preserved by base change. -/
-theorem smoothPlaneCubic_projective_descends_mvfrac
+public theorem smoothPlaneCubic_projective_descends_mvfrac
     (n : ℕ) (F : MvPolynomial (Fin 3) K)
     (hFbar : Standard.IsSmoothPlaneCubic
       (map (algebraMap K (AlgebraicClosure K)) F))

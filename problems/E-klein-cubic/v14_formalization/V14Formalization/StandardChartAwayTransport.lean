@@ -1,5 +1,7 @@
-import V14Formalization.GenericCharts
-import V14Formalization.ProjectiveFamilyNaturality
+module
+
+public import V14Formalization.GenericCharts
+public import V14Formalization.ProjectiveFamilyNaturality
 
 noncomputable section
 
@@ -23,7 +25,7 @@ private abbrev standardS (r : ℕ) (Omega : Type u) [Field Omega] :
   MvPolynomial.X (0 : Fin ((r + 1) + 1))
 
 set_option backward.isDefEq.respectTransparency false in
-theorem standardChartGammaIsoTop_hom_GammaSpecIso_inv
+public theorem standardChartGammaIsoTop_hom_GammaSpecIso_inv
     (r : ℕ) (z : ProjectiveSpace.StandardChartRing (r + 1) Omega 0) :
     let X := ProjectiveSpace (r + 1) Omega
     let f := ProjectiveSpace.standardChartι (r + 1) Omega 0

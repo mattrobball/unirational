@@ -126,6 +126,29 @@ def migrate_text(text: str, cfg: dict) -> str:
                 in_block_comment += opens - closes
                 continue
 
+        # no_expose must also STRIP an @[expose] applied by an earlier run
+        # (the applier otherwise only adds annotations).
+        if no_expose and "@[expose]" in line:
+            stripped_line = re.sub(r"@\[expose\]\s*", "", line, count=1)
+            sm = DECL_RE.match(re.sub(r"^public\s+", "", stripped_line))
+            if sm:
+                sname = decl_name(sm.group("rest"))
+                if sname is not None and sname in no_expose:
+                    line = stripped_line
+
+        # Re-expose: an already-converted `public` decl whose name is in the
+        # explicit expose list but which lacks @[expose] (e.g. after a
+        # no_expose strip was reverted) gains the attribute here.
+        em = re.match(r"^(?P<attrs>(?:@\[[^\]\n]*\]\s*)*)public\s+(?P<tail>.*)$", line)
+        if em and "@[expose]" not in (em.group("attrs") or ""):
+            tm = DECL_RE.match(em.group("tail"))
+            ename = decl_name(tm.group("rest")) if tm else None
+            if ename is not None and ename in expose and ename not in no_expose:
+                line = "@[expose] " + line
+                out.append(line)
+                in_block_comment += opens - closes
+                continue
+
         m = DECL_RE.match(line)
         if m and not line.startswith(("public ", "private ", "protected ")):
             attrs = m.group("attrs") or ""

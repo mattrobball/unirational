@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.V14SchemeModel
-import V14Formalization.SchemeBaseChangeAction
+module
+
+public import V14Formalization.V14SchemeModel
+public import V14Formalization.SchemeBaseChangeAction
 
 /-!
 # Base change of the genuine V14 scheme action
@@ -25,7 +27,7 @@ namespace V14SchemeModel
 open AlgebraicGeometry SchemeGeometry
 
 /-- The coordinate V14 is proper over its cyclotomic base field. -/
-instance actionOver_isProper : IsProper actionOver.V.hom := by
+@[expose] public instance actionOver_isProper : IsProper actionOver.V.hom := by
   change IsProper
     (projectiveZeroLocusFamilyι 14 k
       (grassmannianLinearSectionEquations k projectorMatrix) ≫
@@ -35,12 +37,12 @@ instance actionOver_isProper : IsProper actionOver.V.hom := by
 variable (Omega : Type) [Field Omega] [Algebra k Omega]
 
 /-- The genuine V14 action after extending scalars from `k` to `Omega`. -/
-def actionOverBaseChange : Action (Over (Spec (.of Omega))) G :=
+@[expose] public def actionOverBaseChange : Action (Over (Spec (.of Omega))) G :=
   baseChangeAction
     (Spec.map (CommRingCat.ofHom (algebraMap k Omega))) actionOver
 
 @[simp]
-theorem actionOverBaseChange_carrier :
+public theorem actionOverBaseChange_carrier :
     (actionOverBaseChange Omega).V.left =
       pullback actionOver.V.hom
         (Spec.map (CommRingCat.ofHom (algebraMap k Omega))) := rfl
@@ -52,7 +54,7 @@ theorem actionOverBaseChange_toSpec :
         (Spec.map (CommRingCat.ofHom (algebraMap k Omega))) := rfl
 
 /-- Properness survives the field extension. -/
-instance actionOverBaseChange_isProper :
+@[expose] public instance actionOverBaseChange_isProper :
     IsProper (actionOverBaseChange Omega).V.hom := by
   change IsProper (pullback.snd actionOver.V.hom
     (Spec.map (CommRingCat.ofHom (algebraMap k Omega))))

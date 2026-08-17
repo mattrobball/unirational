@@ -4,7 +4,9 @@ Released under Apache 2.0 license.
 
 # Foundations for Theorem 3.1 — linear-projective RCC, zero axioms
 -/
-import V14Formalization.Definitions
+module
+
+public import V14Formalization.Definitions
 
 noncomputable section
 
@@ -17,7 +19,7 @@ universe u
 /-! ## Tracked stratum (writeup Claim) -/
 
 /-- N-stable, σ-fixed, linear-RCC, nonempty closed carrier (operational). -/
-structure TrackedStratum {k : Type u} [Field k] {G : Type u} [Group G]
+public structure TrackedStratum {k : Type u} [Field k] {G : Type u} [Group G]
     (X : SmoothProjectiveGVariety k G) (σ : G) where
   carrier : Set X.X
   nonempty : carrier.Nonempty
@@ -30,7 +32,7 @@ namespace TrackedStratum
 variable {k : Type u} [Field k] {G : Type u} [Group G]
 
 /-- Plus stratum of a faithful linear rep is a tracked stratum. -/
-def ofPlusStratum {V : Type u} [AddCommGroup V] [Module k V] [Module.Free k V]
+@[expose] public def ofPlusStratum {V : Type u} [AddCommGroup V] [Module k V] [Module.Free k V]
     [CharZero k]
     (R : FaithfulLinearRep k G V) (σ : G) (hG : IsCenterless G)
     (hσ : IsInvolution σ) (hnd : ¬ R.DegeneratesToPlusMinusId σ) :
@@ -153,7 +155,7 @@ theorem image_point_N_fixed
     _ = y := hfnx_y
 
 /-- Combined going-down for a morphism from a tracked stratum. -/
-theorem morphism_from_tracked_forces_N_fixed
+public theorem morphism_from_tracked_forces_N_fixed
     {k : Type u} [Field k] {G : Type u} [Group G]
     {X Y : SmoothProjectiveGVariety k G} {σ : G}
     (f : GEquivariantMorphism X Y)

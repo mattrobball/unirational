@@ -2,12 +2,14 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
-import Mathlib.LinearAlgebra.Matrix.Rank
-import Mathlib.LinearAlgebra.Matrix.Swap
-import Mathlib.LinearAlgebra.Matrix.ToLin
-import Mathlib.Tactic.LinearCombination
-import V14Formalization.V14FixedPointSegreBridge
+module
+
+public import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
+public import Mathlib.LinearAlgebra.Matrix.Rank
+public import Mathlib.LinearAlgebra.Matrix.Swap
+public import Mathlib.LinearAlgebra.Matrix.ToLin
+public import Mathlib.Tactic.LinearCombination
+public import V14Formalization.V14FixedPointSegreBridge
 
 /-!
 # Kernel lines of rank-two 3×3 matrices descend along field extension
@@ -213,7 +215,7 @@ private lemma exists_nonzero_two_minor (M : Matrix (Fin 3) (Fin 3) K)
 
 /-- After field extension, a nonzero kernel vector of a rank-two `3×3`
 matrix is a scalar multiple of a nonzero base-field kernel vector. -/
-theorem kernelLine_descends_of_rank_eq_two
+public theorem kernelLine_descends_of_rank_eq_two
     (M : Matrix (Fin 3) (Fin 3) K) (hM : M.rank = 2)
     (v : Fin 3 → L) (hv : v ≠ 0)
     (hker : (M.map (algebraMap K L)).mulVec v = 0) :

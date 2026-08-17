@@ -1,5 +1,7 @@
-import V14Formalization.ProjectiveGammaAwayTransport
-import V14Formalization.ProjectiveAwayPullback
+module
+
+public import V14Formalization.ProjectiveGammaAwayTransport
+public import V14Formalization.ProjectiveAwayPullback
 
 noncomputable section
 
@@ -18,7 +20,7 @@ variable {Omega : Type u} [Field Omega]
 set_option backward.isDefEq.respectTransparency false in
 /-- Pulling a canonical standard-chart section back to the basic open where
 the transformed denominator is invertible is exactly the graded Away map. -/
-theorem mapLinearSubst_appLE_projectiveGeneralGamma_symm
+public theorem mapLinearSubst_appLE_projectiveGeneralGamma_symm
     (r : ℕ)
     (M N : Matrix (Fin ((r + 1) + 1)) (Fin ((r + 1) + 1)) Omega)
     (hNM : N * M = 1)

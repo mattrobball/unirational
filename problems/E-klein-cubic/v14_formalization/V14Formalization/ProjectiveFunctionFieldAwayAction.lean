@@ -1,5 +1,7 @@
-import V14Formalization.ProjectiveStandardChartAction
-import V14Formalization.ProjectiveFunctionFieldChartReduction
+module
+
+public import V14Formalization.ProjectiveStandardChartAction
+public import V14Formalization.ProjectiveFunctionFieldChartReduction
 
 noncomputable section
 
@@ -18,7 +20,7 @@ variable {Omega : Type u} [Field Omega]
 set_option backward.isDefEq.respectTransparency false in
 /-- The function-field pullback of a standard-chart element, evaluated on
 the canonical basic open for its transformed denominator. -/
-theorem mapLinearSubst_functionFieldMap_projectiveGeneral_standardChart
+public theorem mapLinearSubst_functionFieldMap_projectiveGeneral_standardChart
     (r : ℕ)
     (M N : Matrix (Fin ((r + 1) + 1)) (Fin ((r + 1) + 1)) Omega)
     (hNM : N * M = 1)

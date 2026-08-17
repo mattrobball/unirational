@@ -2,7 +2,9 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.UniversalNormalDivisor
+module
+
+public import V14Formalization.UniversalNormalDivisor
 
 /-!
 # Block coordinates for the centralizer action
@@ -25,7 +27,7 @@ universe u
 variable {k : Type u} [Field k] {G : Type u} [Group G]
   {V : Type u} [AddCommGroup V] [Module k V]
 
-theorem plusMinusLinearEquiv_conjugates_centralizer [CharZero k]
+public theorem plusMinusLinearEquiv_conjugates_centralizer [CharZero k]
     (R : FaithfulLinearRep k G V) (sigma : G)
     (hsigma : IsInvolution sigma) (n : centralizer sigma) :
     (plusMinusLinearEquiv R sigma hsigma).toLinearMap.comp (R.act (n : G)) =
@@ -45,7 +47,7 @@ theorem plusMinusLinearEquiv_conjugates_centralizer [CharZero k]
   · apply Subtype.ext
     rfl
 
-theorem plusMinusMappedBasis_toMatrix [CharZero k]
+public theorem plusMinusMappedBasis_toMatrix [CharZero k]
     (R : FaithfulLinearRep k G V) (sigma : G)
     (hsigma : IsInvolution sigma) (n : centralizer sigma)
     (bp : Basis (Fin 3) k (R.plusEigenspace sigma))
@@ -68,7 +70,7 @@ theorem plusMinusMappedBasis_toMatrix [CharZero k]
     LinearMap.comp_assoc]
   simp
 
-theorem plusMinusAmbientBasis_toMatrix [CharZero k]
+public theorem plusMinusAmbientBasis_toMatrix [CharZero k]
     (R : FaithfulLinearRep k G V) (sigma : G)
     (hsigma : IsInvolution sigma) (n : centralizer sigma)
     (bp : Basis (Fin 3) k (R.plusEigenspace sigma))
@@ -91,7 +93,7 @@ theorem plusMinusAmbientBasis_toMatrix [CharZero k]
       ((plusMinusFinEquiv 2 2).symm i))
         ((plusMinusFinEquiv 2 2).symm j)
 
-theorem ambientMatrixRepresentation_centralizer_block [CharZero k]
+public theorem ambientMatrixRepresentation_centralizer_block [CharZero k]
     (R : FaithfulLinearRep k G V) (sigma : G)
     (hsigma : IsInvolution sigma) (n : centralizer sigma)
     (bp : Basis (Fin 3) k (R.plusEigenspace sigma))

@@ -2,15 +2,17 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.SchemeNormalSpecialization
-import BConicBundleMultisections.ProjectiveSpace
-import Mathlib.Algebra.Polynomial.Div
-import Mathlib.Algebra.Polynomial.Eval.Defs
-import Mathlib.FieldTheory.RatFunc.AsPolynomial
-import Mathlib.RingTheory.DedekindDomain.AdicValuation
-import Mathlib.RingTheory.DiscreteValuationRing.Basic
-import Mathlib.RingTheory.LocalRing.ResidueField.Basic
-import Mathlib.RingTheory.Valuation.ValuationSubring
+module
+
+public import V14Formalization.SchemeNormalSpecialization
+public import BConicBundleMultisections.ProjectiveSpace
+public import Mathlib.Algebra.Polynomial.Div
+public import Mathlib.Algebra.Polynomial.Eval.Defs
+public import Mathlib.FieldTheory.RatFunc.AsPolynomial
+public import Mathlib.RingTheory.DedekindDomain.AdicValuation
+public import Mathlib.RingTheory.DiscreteValuationRing.Basic
+public import Mathlib.RingTheory.LocalRing.ResidueField.Basic
+public import Mathlib.RingTheory.Valuation.ValuationSubring
 
 /-!
 # Linear normal valuation data (affine model)
@@ -99,26 +101,26 @@ def quotByXEquiv (κ : Type u) [Field κ] :
 This is the discrete valuation ring of order of vanishing at `T = 0`, which is
 the affine model of the blowup-normal valuation along a linear center after a
 transverse chart change of coordinates. -/
-abbrev XAdicIntegers (κ : Type u) [Field κ] : Type u :=
+public abbrev XAdicIntegers (κ : Type u) [Field κ] : Type u :=
   ((idealX κ).valuation (RatFunc κ)).valuationSubring
 
-instance (κ : Type u) [Field κ] : CommRing (XAdicIntegers κ) := inferInstance
-instance (κ : Type u) [Field κ] : IsDomain (XAdicIntegers κ) := inferInstance
-instance (κ : Type u) [Field κ] : ValuationRing (XAdicIntegers κ) := inferInstance
-instance (κ : Type u) [Field κ] : Algebra (XAdicIntegers κ) (RatFunc κ) := inferInstance
-instance (κ : Type u) [Field κ] : IsFractionRing (XAdicIntegers κ) (RatFunc κ) :=
+@[expose] public instance (κ : Type u) [Field κ] : CommRing (XAdicIntegers κ) := inferInstance
+@[expose] public instance (κ : Type u) [Field κ] : IsDomain (XAdicIntegers κ) := inferInstance
+@[expose] public instance (κ : Type u) [Field κ] : ValuationRing (XAdicIntegers κ) := inferInstance
+@[expose] public instance (κ : Type u) [Field κ] : Algebra (XAdicIntegers κ) (RatFunc κ) := inferInstance
+@[expose] public instance (κ : Type u) [Field κ] : IsFractionRing (XAdicIntegers κ) (RatFunc κ) :=
   inferInstance
-instance (κ : Type u) [Field κ] : IsLocalRing (XAdicIntegers κ) := inferInstance
+@[expose] public instance (κ : Type u) [Field κ] : IsLocalRing (XAdicIntegers κ) := inferInstance
 
 /-- Constants of `κ` land in the X-adic integers. -/
-theorem const_mem_XAdic {κ : Type u} [Field κ] (a : κ) :
+public theorem const_mem_XAdic {κ : Type u} [Field κ] (a : κ) :
     (algebraMap κ[X] (RatFunc κ) (C a)) ∈
       ((idealX κ).valuation (RatFunc κ)).valuationSubring := by
   rw [Valuation.mem_valuationSubring_iff]
   exact HeightOneSpectrum.valuation_le_one (idealX κ) (C a)
 
 /-- Canonical map from constants into the X-adic integers. -/
-def constToXAdic (κ : Type u) [Field κ] : κ →+* XAdicIntegers κ where
+@[expose] public def constToXAdic (κ : Type u) [Field κ] : κ →+* XAdicIntegers κ where
   toFun a := ⟨algebraMap κ[X] (RatFunc κ) (C a), const_mem_XAdic a⟩
   map_one' := Subtype.ext (by simp)
   map_mul' _ _ := Subtype.ext (by simp)
@@ -144,11 +146,11 @@ theorem isUnit_constToXAdic {κ : Type u} [Field κ] {a : κ} (ha : a ≠ 0) :
     _ = (1 : RatFunc κ) := by simp
 
 /-- Composition of constants with the residue map. -/
-def constToResidue (κ : Type u) [Field κ] :
+@[expose] public def constToResidue (κ : Type u) [Field κ] :
     κ →+* ResidueField (XAdicIntegers κ) :=
   (residue (XAdicIntegers κ)).comp (constToXAdic κ)
 
-theorem constToResidue_injective (κ : Type u) [Field κ] :
+public theorem constToResidue_injective (κ : Type u) [Field κ] :
     Function.Injective (constToResidue κ) := by
   rw [injective_iff_map_eq_zero]
   intro a ha
@@ -205,7 +207,7 @@ theorem eval_ne_zero_of_not_mem_idealX {κ : Type u} [Field κ] {d : κ[X]}
   exact hd (by simpa [idealX_span, Ideal.mem_span_singleton] using this)
 
 /-- Constants surject onto the residue field of the X-adic integers. -/
-theorem constToResidue_surjective (κ : Type u) [Field κ] :
+public theorem constToResidue_surjective (κ : Type u) [Field κ] :
     Function.Surjective (constToResidue κ) := by
   intro y
   obtain ⟨x, rfl⟩ :=
@@ -244,13 +246,13 @@ theorem constToResidue_surjective (κ : Type u) [Field κ] :
     _ = residue (XAdicIntegers κ) x := hform.symm
 
 /-- Residue field of the X-adic integers is canonically isomorphic to `κ`. -/
-def residueFieldEquiv (κ : Type u) [Field κ] :
+@[expose] public def residueFieldEquiv (κ : Type u) [Field κ] :
     ResidueField (XAdicIntegers κ) ≃+* κ :=
   (RingEquiv.ofBijective (constToResidue κ)
     ⟨constToResidue_injective κ, constToResidue_surjective κ⟩).symm
 
 /-- Residue map of the X-adic integers (surjective, kernel = maximal ideal). -/
-def xAdicResidue (κ : Type u) [Field κ] : XAdicIntegers κ →+* κ :=
+@[expose] public def xAdicResidue (κ : Type u) [Field κ] : XAdicIntegers κ →+* κ :=
   (residueFieldEquiv κ).toRingHom.comp (residue (XAdicIntegers κ))
 
 theorem xAdicResidue_surjective (κ : Type u) [Field κ] :
@@ -262,7 +264,7 @@ theorem xAdicResidue_surjective (κ : Type u) [Field κ] :
   refine ⟨x, ?_⟩
   simp [xAdicResidue, hx]
 
-theorem xAdicResidue_ker (κ : Type u) [Field κ] :
+public theorem xAdicResidue_ker (κ : Type u) [Field κ] :
     RingHom.ker (xAdicResidue κ) = maximalIdeal (XAdicIntegers κ) := by
   ext x
   simp only [xAdicResidue, RingHom.mem_ker, RingHom.coe_comp, Function.comp_apply,
@@ -278,7 +280,7 @@ theorem xAdicResidue_ker (κ : Type u) [Field κ] :
     simp [this]
 
 /-- Residue of a constant recovers the constant. -/
-theorem xAdicResidue_const (κ : Type u) [Field κ] (a : κ) :
+public theorem xAdicResidue_const (κ : Type u) [Field κ] (a : κ) :
     xAdicResidue κ (constToXAdic κ a) = a := by
   change residueFieldEquiv κ (constToResidue κ a) = a
   exact (RingEquiv.ofBijective (constToResidue κ)
@@ -290,48 +292,48 @@ theorem xAdicResidue_const (κ : Type u) [Field κ] (a : κ) :
 center: after a transverse chart change of coordinates, there are `n-1`
 free residual variables (ratios of normal directions plus free directions
 along the center). -/
-abbrev LinearResidualField (n : ℕ) (Ω : Type u) [Field Ω] : Type u :=
+public abbrev LinearResidualField (n : ℕ) (Ω : Type u) [Field Ω] : Type u :=
   FractionRing (MvPolynomial (Fin (n - 1)) Ω)
 
 /-- X-adic integers over the residual field of ambient dimension `n`.
 
 Requires `n ≥ 1` for the residual index type to match the exceptional
 function-field dimension `n-1`. -/
-abbrev LinearNormalValuationRing (n : ℕ) (Ω : Type u) [Field Ω] : Type u :=
+public abbrev LinearNormalValuationRing (n : ℕ) (Ω : Type u) [Field Ω] : Type u :=
   XAdicIntegers (LinearResidualField n Ω)
 
-instance (n : ℕ) (Ω : Type u) [Field Ω] :
+@[expose] public instance (n : ℕ) (Ω : Type u) [Field Ω] :
     CommRing (LinearNormalValuationRing n Ω) := inferInstance
-instance (n : ℕ) (Ω : Type u) [Field Ω] :
+@[expose] public instance (n : ℕ) (Ω : Type u) [Field Ω] :
     IsDomain (LinearNormalValuationRing n Ω) := inferInstance
-instance (n : ℕ) (Ω : Type u) [Field Ω] :
+@[expose] public instance (n : ℕ) (Ω : Type u) [Field Ω] :
     ValuationRing (LinearNormalValuationRing n Ω) := inferInstance
-instance (n : ℕ) (Ω : Type u) [Field Ω] :
+@[expose] public instance (n : ℕ) (Ω : Type u) [Field Ω] :
     Algebra (LinearNormalValuationRing n Ω)
       (RatFunc (LinearResidualField n Ω)) := inferInstance
-instance (n : ℕ) (Ω : Type u) [Field Ω] :
+@[expose] public instance (n : ℕ) (Ω : Type u) [Field Ω] :
     IsFractionRing (LinearNormalValuationRing n Ω)
       (RatFunc (LinearResidualField n Ω)) := inferInstance
 
 /-- Affine model of the fraction field of `ℙⁿ` after one standard chart and
 linear normal form: `κ(T)` with `κ` the residual field of dimension `n-1`. -/
-abbrev LinearNormalFractionField (n : ℕ) (Ω : Type u) [Field Ω] : Type u :=
+public abbrev LinearNormalFractionField (n : ℕ) (Ω : Type u) [Field Ω] : Type u :=
   RatFunc (LinearResidualField n Ω)
 
 /-- Affine model of the exceptional function field: the residual field itself. -/
-abbrev LinearExceptionalFunctionField (n : ℕ) (Ω : Type u) [Field Ω] : Type u :=
+public abbrev LinearExceptionalFunctionField (n : ℕ) (Ω : Type u) [Field Ω] : Type u :=
   LinearResidualField n Ω
 
 /-- Residue map of the linear normal valuation ring onto the residual field. -/
-def linearNormalResidue (n : ℕ) (Ω : Type u) [Field Ω] :
+@[expose] public def linearNormalResidue (n : ℕ) (Ω : Type u) [Field Ω] :
     LinearNormalValuationRing n Ω →+* LinearExceptionalFunctionField n Ω :=
   xAdicResidue (LinearResidualField n Ω)
 
-theorem linearNormalResidue_surjective (n : ℕ) (Ω : Type u) [Field Ω] :
+public theorem linearNormalResidue_surjective (n : ℕ) (Ω : Type u) [Field Ω] :
     Function.Surjective (linearNormalResidue n Ω) :=
   xAdicResidue_surjective _
 
-theorem linearNormalResidue_ker (n : ℕ) (Ω : Type u) [Field Ω] :
+public theorem linearNormalResidue_ker (n : ℕ) (Ω : Type u) [Field Ω] :
     RingHom.ker (linearNormalResidue n Ω) =
       maximalIdeal (LinearNormalValuationRing n Ω) :=
   xAdicResidue_ker _
@@ -345,35 +347,35 @@ theorem linearNormalResidue_const (n : ℕ) (Ω : Type u) [Field Ω]
 /-! ## Base-field embeddings and Spec morphisms over `Spec Ω` -/
 
 /-- Canonical map `Ω → κ` into the residual field. -/
-def baseToResidualField (n : ℕ) (Ω : Type u) [Field Ω] :
+@[expose] public def baseToResidualField (n : ℕ) (Ω : Type u) [Field Ω] :
     Ω →+* LinearResidualField n Ω :=
   algebraMap Ω (LinearResidualField n Ω)
 
 /-- Canonical map `Ω → R` into the linear normal valuation ring (constants). -/
-def baseToLinearNormalRing (n : ℕ) (Ω : Type u) [Field Ω] :
+@[expose] public def baseToLinearNormalRing (n : ℕ) (Ω : Type u) [Field Ω] :
     Ω →+* LinearNormalValuationRing n Ω :=
   (constToXAdic (LinearResidualField n Ω)).comp (baseToResidualField n Ω)
 
 /-- Canonical map `Ω → κ(T)` into the affine ambient function field. -/
-def baseToLinearNormalFractionField (n : ℕ) (Ω : Type u) [Field Ω] :
+@[expose] public def baseToLinearNormalFractionField (n : ℕ) (Ω : Type u) [Field Ω] :
     Ω →+* LinearNormalFractionField n Ω :=
   (algebraMap (LinearResidualField n Ω) (LinearNormalFractionField n Ω)).comp
     (baseToResidualField n Ω)
 
 /-- Spec of the valuation ring, as an `Ω`-scheme via the constant map. -/
-def linearNormalValuation_toBase (n : ℕ) (Ω : Type u) [Field Ω] :
+@[expose] public def linearNormalValuation_toBase (n : ℕ) (Ω : Type u) [Field Ω] :
     Spec (.of (LinearNormalValuationRing n Ω)) ⟶ Spec (.of Ω) :=
   Spec.map (CommRingCat.ofHom (baseToLinearNormalRing n Ω))
 
 /-- Generic point map `Spec κ(T) → Spec R` from the fraction field. -/
-def linearNormalValuation_generic (n : ℕ) (Ω : Type u) [Field Ω] :
+@[expose] public def linearNormalValuation_generic (n : ℕ) (Ω : Type u) [Field Ω] :
     Spec (.of (LinearNormalFractionField n Ω)) ⟶
       Spec (.of (LinearNormalValuationRing n Ω)) :=
   Spec.map (CommRingCat.ofHom
     (algebraMap (LinearNormalValuationRing n Ω) (LinearNormalFractionField n Ω)))
 
 /-- Special fiber map `Spec κ → Spec R` from the residue field. -/
-def linearNormalValuation_special (n : ℕ) (Ω : Type u) [Field Ω] :
+@[expose] public def linearNormalValuation_special (n : ℕ) (Ω : Type u) [Field Ω] :
     Spec (.of (LinearExceptionalFunctionField n Ω)) ⟶
       Spec (.of (LinearNormalValuationRing n Ω)) :=
   Spec.map (CommRingCat.ofHom (linearNormalResidue n Ω))
@@ -403,14 +405,14 @@ private theorem algebraMap_baseToLinearNormalRing_eq
   rfl
 
 /-- The special map lies over `Spec Ω`. -/
-theorem linearNormalValuation_special_toBase (n : ℕ) (Ω : Type u) [Field Ω] :
+public theorem linearNormalValuation_special_toBase (n : ℕ) (Ω : Type u) [Field Ω] :
     linearNormalValuation_special n Ω ≫ linearNormalValuation_toBase n Ω =
       Spec.map (CommRingCat.ofHom (baseToResidualField n Ω)) := by
   dsimp [linearNormalValuation_special, linearNormalValuation_toBase]
   rw [← Spec.map_comp, ← CommRingCat.ofHom_comp, baseToLinearNormalRing_comp_eq]
 
 /-- The generic map lies over `Spec Ω`. -/
-theorem linearNormalValuation_generic_toBase (n : ℕ) (Ω : Type u) [Field Ω] :
+public theorem linearNormalValuation_generic_toBase (n : ℕ) (Ω : Type u) [Field Ω] :
     linearNormalValuation_generic n Ω ≫ linearNormalValuation_toBase n Ω =
       Spec.map (CommRingCat.ofHom (baseToLinearNormalFractionField n Ω)) := by
   dsimp [linearNormalValuation_generic, linearNormalValuation_toBase]
@@ -420,7 +422,7 @@ theorem linearNormalValuation_generic_toBase (n : ℕ) (Ω : Type u) [Field Ω] 
 /-! ## Ambient and auxiliary rational comparison carriers -/
 
 /-- Ambient projective space of dimension `n` over the base field. -/
-abbrev linearAmbient (n : ℕ) (Ω : Type u) [Field Ω] : Scheme.{u} :=
+public abbrev linearAmbient (n : ℕ) (Ω : Type u) [Field Ω] : Scheme.{u} :=
   ProjectiveSpace n Ω
 
 /-- Auxiliary rational carrier of dimension `n-1`.
@@ -428,18 +430,18 @@ abbrev linearAmbient (n : ℕ) (Ω : Type u) [Field Ω] : Scheme.{u} :=
 This has the same rational function-field shape as a linear exceptional
 divisor, but it is not asserted to be that divisor.  The actual exceptional
 scheme is supplied separately to `linearNormalDataOfChart`. -/
-abbrev linearResidueRationalModel (n : ℕ) (Ω : Type u) [Field Ω] : Scheme.{u} :=
+public abbrev linearResidueRationalModel (n : ℕ) (Ω : Type u) [Field Ω] : Scheme.{u} :=
   ProjectiveSpace (n - 1) Ω
 
 /-- Base scheme `Spec Ω`. -/
-abbrev linearBase (Ω : Type u) [Field Ω] : Scheme.{u} :=
+public abbrev linearBase (Ω : Type u) [Field Ω] : Scheme.{u} :=
   Spec (.of Ω)
 
-instance (n : ℕ) (Ω : Type u) [Field Ω] :
+@[expose] public instance (n : ℕ) (Ω : Type u) [Field Ω] :
     (linearAmbient n Ω).Over (linearBase Ω) :=
   inferInstance
 
-instance (n : ℕ) (Ω : Type u) [Field Ω] :
+@[expose] public instance (n : ℕ) (Ω : Type u) [Field Ω] :
     (linearResidueRationalModel n Ω).Over (linearBase Ω) :=
   inferInstance
 
@@ -460,35 +462,35 @@ this section is fully constructed.
 -/
 
 /-- Valuation ring endpoint. -/
-abbrev LinearNormalAlgebraic.R (n : ℕ) (Ω : Type u) [Field Ω] : Type u :=
+public abbrev LinearNormalAlgebraic.R (n : ℕ) (Ω : Type u) [Field Ω] : Type u :=
   LinearNormalValuationRing n Ω
 
 /-- Fraction-field endpoint (affine model of `K(X)`). -/
-abbrev LinearNormalAlgebraic.K (n : ℕ) (Ω : Type u) [Field Ω] : Type u :=
+public abbrev LinearNormalAlgebraic.K (n : ℕ) (Ω : Type u) [Field Ω] : Type u :=
   LinearNormalFractionField n Ω
 
 /-- Residue-field endpoint (affine model of `K(E)`). -/
-abbrev LinearNormalAlgebraic.residueField (n : ℕ) (Ω : Type u) [Field Ω] : Type u :=
+public abbrev LinearNormalAlgebraic.residueField (n : ℕ) (Ω : Type u) [Field Ω] : Type u :=
   LinearExceptionalFunctionField n Ω
 
 /-- Residue map endpoint. -/
-abbrev LinearNormalAlgebraic.residue (n : ℕ) (Ω : Type u) [Field Ω] :
+public abbrev LinearNormalAlgebraic.residue (n : ℕ) (Ω : Type u) [Field Ω] :
     LinearNormalAlgebraic.R n Ω →+* LinearNormalAlgebraic.residueField n Ω :=
   linearNormalResidue n Ω
 
-theorem LinearNormalAlgebraic.residue_surjective
+public theorem LinearNormalAlgebraic.residue_surjective
     (n : ℕ) (Ω : Type u) [Field Ω] :
     Function.Surjective (LinearNormalAlgebraic.residue n Ω) :=
   linearNormalResidue_surjective n Ω
 
-theorem LinearNormalAlgebraic.residue_ker
+public theorem LinearNormalAlgebraic.residue_ker
     (n : ℕ) (Ω : Type u) [Field Ω] :
     RingHom.ker (LinearNormalAlgebraic.residue n Ω) =
       maximalIdeal (LinearNormalAlgebraic.R n Ω) :=
   linearNormalResidue_ker n Ω
 
 /-- Spec structure map endpoint. -/
-abbrev LinearNormalAlgebraic.toBase (n : ℕ) (Ω : Type u) [Field Ω] :
+public abbrev LinearNormalAlgebraic.toBase (n : ℕ) (Ω : Type u) [Field Ω] :
     Spec (.of (LinearNormalAlgebraic.R n Ω)) ⟶ Spec (.of Ω) :=
   linearNormalValuation_toBase n Ω
 

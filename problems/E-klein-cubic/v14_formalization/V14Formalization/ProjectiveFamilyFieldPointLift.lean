@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.ProjectiveFamilyFieldPoint
-import V14Formalization.ProjectiveEigenvectorReduction
+module
+
+public import V14Formalization.ProjectiveFamilyFieldPoint
+public import V14Formalization.ProjectiveEigenvectorReduction
 
 /-!
 # Reverse field-point construction
@@ -132,7 +134,7 @@ theorem projectiveZeroLocusIdeal_le_pointOfNormalizedCoordinatesAlgebra_ker
   rw [Scheme.Hom.ker_comp]
   exact Scheme.IdealSheafData.map_mono _ hchart
 
-theorem projectiveZeroLocusFamilyIdeal_le_pointOfNormalizedCoordinatesAlgebra_ker
+public theorem projectiveZeroLocusFamilyIdeal_le_pointOfNormalizedCoordinatesAlgebra_ker
     {k L : Type u} [Field k] [Field L] [Algebra k L]
     (n : ℕ) {ι : Type v}
     (F : ι → MvPolynomial (Fin (n + 1)) k)
@@ -152,7 +154,7 @@ theorem projectiveZeroLocusFamilyIdeal_le_pointOfNormalizedCoordinatesAlgebra_ke
 
 /-- Normalized coordinates satisfying every family equation lift to the
 scheme-theoretic family zero locus. -/
-noncomputable def pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily
+@[expose] public noncomputable def pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily
     {k L : Type u} [Field k] [Field L] [Algebra k L]
     (n : ℕ) {ι : Type v}
     (F : ι → MvPolynomial (Fin (n + 1)) k)
@@ -170,7 +172,7 @@ noncomputable def pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily
         n F d hF j x hxj hzero)
 
 @[reassoc]
-theorem pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily_ι
+public theorem pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily_ι
     {k L : Type u} [Field k] [Field L] [Algebra k L]
     (n : ℕ) {ι : Type v}
     (F : ι → MvPolynomial (Fin (n + 1)) k)
@@ -184,7 +186,7 @@ theorem pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily_ι
       ProjectiveSpace.pointOfNormalizedCoordinatesAlgebra (R := k) n j x :=
   IsClosedImmersion.lift_fac _ _ _
 
-theorem pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily_toSpec
+public theorem pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily_toSpec
     {k L : Type u} [Field k] [Field L] [Algebra k L]
     (n : ℕ) {ι : Type v}
     (F : ι → MvPolynomial (Fin (n + 1)) k)
@@ -202,7 +204,7 @@ theorem pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily_toSpec
 
 /-- If `M x = a • x` with `a ≠ 0`, the normalized projective point is fixed by
 the associated linear substitution. -/
-theorem pointOfNormalizedCoordinates_fixed_of_mulVec_eq_smul
+public theorem pointOfNormalizedCoordinates_fixed_of_mulVec_eq_smul
     {k L : Type u} [Field k] [Field L] [Algebra k L]
     (n : ℕ)
     (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) k) (hNM : N * M = 1)

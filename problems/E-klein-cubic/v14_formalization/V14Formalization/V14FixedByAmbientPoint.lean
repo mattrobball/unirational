@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.V14SchemeModel
-import V14Formalization.SchemeFixedLocus
+module
+
+public import V14Formalization.V14SchemeModel
+public import V14Formalization.SchemeFixedLocus
 
 /-!
 # Ambient projective point of a field-valued V14 fixed-locus point
@@ -22,7 +24,7 @@ namespace V14Formalization.SchemeGeometry
 open AlgebraicGeometry BConicBundleMultisections
 open Lambda2Coordinates
 
-abbrev v14FieldPointOver (L : Type) [Field L]
+public abbrev v14FieldPointOver (L : Type) [Field L]
     [Algebra V14SchemeModel.k L] :
     Over (Spec (.of V14SchemeModel.k)) :=
   Over.mk (Spec.map
@@ -30,7 +32,7 @@ abbrev v14FieldPointOver (L : Type) [Field L]
 
 /-- The ambient `P¹⁴` point obtained from a field-valued point of the
 scheme-theoretic sigma fixed locus of V14. -/
-noncomputable def ambientPointOfV14FixedBy
+@[expose] public noncomputable def ambientPointOfV14FixedBy
     (L : Type) [Field L] [Algebra V14SchemeModel.k L]
     (p : v14FieldPointOver L ⟶
       FixedBy V14SchemeModel.actionOver GeometricV14Carrier.sigma) :
@@ -41,7 +43,7 @@ noncomputable def ambientPointOfV14FixedBy
 
 /-- The ambient point associated to an over-base point of the V14 equalizer
 is over `Spec k` and is fixed by the actual projective sigma action. -/
-theorem ambientPointOfV14FixedBy_isOver_and_fixed
+public theorem ambientPointOfV14FixedBy_isOver_and_fixed
     (L : Type) [Field L] [Algebra V14SchemeModel.k L]
     (p : v14FieldPointOver L ⟶
       FixedBy V14SchemeModel.actionOver GeometricV14Carrier.sigma) :
@@ -86,7 +88,7 @@ theorem ambientPointOfV14FixedBy_isOver_and_fixed
 /-- Plain-scheme-morphism form.  The displayed base equation is necessary:
 an arbitrary morphism `Spec L ⟶ X` need not use the specified `k`-algebra
 structure on `L`. -/
-theorem v14FixedBy_schemePoint_ambient_isOver_and_fixed
+public theorem v14FixedBy_schemePoint_ambient_isOver_and_fixed
     (L : Type) [Field L] [Algebra V14SchemeModel.k L]
     (p : Spec (.of L) ⟶
       (FixedBy V14SchemeModel.actionOver GeometricV14Carrier.sigma).left)

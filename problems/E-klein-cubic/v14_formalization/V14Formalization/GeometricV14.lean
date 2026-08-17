@@ -8,11 +8,13 @@ Geometric inputs for the V14 application.
   reducing hyp (a) to the writeup fixed-locus shape (genus-1 component with
   no RCC multi-point subsets + two points).
 -/
-import V14Formalization.CentralizerD12
-import V14Formalization.Definitions
-import Mathlib.LinearAlgebra.Dimension.Finrank
-import Mathlib.LinearAlgebra.Dimension.Finite
-import Mathlib.GroupTheory.SpecificGroups.Dihedral
+module
+
+public import V14Formalization.CentralizerD12
+public import V14Formalization.Definitions
+public import Mathlib.LinearAlgebra.Dimension.Finrank
+public import Mathlib.LinearAlgebra.Dimension.Finite
+public import Mathlib.GroupTheory.SpecificGroups.Dihedral
 
 noncomputable section
 
@@ -39,20 +41,20 @@ theorem N_mulEquiv_dihedral :
 /-! ## Grassmannian ambient scaffolding (writeup §6) -/
 
 /-- 6-dimensional space `U` for the Pfaffian–Grassmannian model. -/
-abbrev U (k : Type u) := Fin 6 → k
+public abbrev U (k : Type u) := Fin 6 → k
 
 /-- Grassmannian of 2-planes in `U = k⁶`. -/
-def Gr2 (k : Type u) [Field k] : Type u :=
+@[expose] public def Gr2 (k : Type u) [Field k] : Type u :=
   { W : Submodule k (U k) // Module.finrank k W = 2 }
 
 /-- Plücker ambient `Λ²U ≃ k¹⁵`. -/
-abbrev Ext2 (k : Type u) := Fin 15 → k
+public abbrev Ext2 (k : Type u) := Fin 15 → k
 
 /-- The 10-dimensional summand `M` (writeup `10'`). -/
-abbrev M10 (k : Type u) := Fin 10 → k
+public abbrev M10 (k : Type u) := Fin 10 → k
 
 /-- Linear inclusion of the `10'` summand into Plücker space. -/
-def includeM (k : Type u) [Field k] : M10 k →ₗ[k] Ext2 k where
+@[expose] public def includeM (k : Type u) [Field k] : M10 k →ₗ[k] Ext2 k where
   toFun := fun m i => if h : i.val < 10 then m ⟨i.val, h⟩ else 0
   map_add' := by
     intro x y; ext i

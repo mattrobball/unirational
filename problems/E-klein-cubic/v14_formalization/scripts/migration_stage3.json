@@ -1,0 +1,2118 @@
+{
+ "V14Formalization/ActionSpecific.lean": {
+  "expose": [
+   "blockNormalMultiplier",
+   "minusFirstRowForm",
+   "minusGenericVector",
+   "orderedResidualGenerator",
+   "plusFirstRowForm",
+   "plusGenericVector"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "blockNormalMultiplier",
+   "blockNormalMultiplier_sigma",
+   "minusFirstRowForm",
+   "minusFirstRowForm_ne_zero",
+   "minusGenericVector",
+   "orderedResidualField",
+   "orderedResidualGenerator",
+   "plusFirstRowForm",
+   "plusFirstRowForm_ne_zero",
+   "plusGenericVector",
+   "pointwiseSemidirectSourceEquiv_eq_actionFunctionFieldMap_of_residual_C_X_T",
+   "pointwiseSemidirectSourceEquiv_eq_actionFunctionFieldMap_of_residual_generators"
+  ]
+ },
+ "V14Formalization/BinaryQuadraticDescent.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "binaryQuadratic_projective_descends_mvfrac"
+  ]
+ },
+ "V14Formalization/BiprojectiveActionFunctionField.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "biprojective_fst_functionFieldMap_base",
+   "biprojective_snd_functionFieldMap_base",
+   "diagonalPullbackAction_functionFieldMap_fst",
+   "diagonalPullbackAction_functionFieldMap_snd",
+   "functionFieldMap_comp_functionFieldBaseRingHom"
+  ]
+ },
+ "V14Formalization/BiprojectiveFunctionFieldProjection.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "GammaIsoTop_inv_eq_appLE",
+   "biprojectiveGeneralFunctionFieldEquiv_X_inl",
+   "biprojectiveGeneralFunctionFieldEquiv_X_inr",
+   "biprojectiveGeneralFunctionFieldEquiv_algebraMap",
+   "biprojective_standardChart_fst_appTop",
+   "biprojective_standardChart_snd_appTop"
+  ]
+ },
+ "V14Formalization/CentralizerObstruction.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "centralizerObstruction",
+   "centralizerObstruction_one_rep",
+   "noDegenerates_of_centerless_involution",
+   "notWeaklyVersal_of_centralizerObstruction",
+   "not_GUnirational_of_centralizerObstruction",
+   "not_degenerates_of_centerless"
+  ]
+ },
+ "V14Formalization/CorrectedBirationalField.lean": {
+  "expose": [
+   "ambientToOrderedNormalFieldEquiv",
+   "ambientToOrderedNormalFieldHom",
+   "orderedMinusTailIndex",
+   "orderedNormalIndex",
+   "orderedNormalToAmbientFieldEquiv",
+   "orderedPlusIndex"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "ambientPolynomialToOrderedFieldHom",
+   "ambientPolynomialToOrderedFieldHom_injective",
+   "ambientToOrderedNormalFieldEquiv",
+   "ambientToOrderedNormalFieldHom",
+   "ambientToOrderedNormalFieldHom_surjective",
+   "ambientToOrderedNormalPolynomialHom",
+   "orderedCoordinateField",
+   "orderedCoordinatePolynomial",
+   "orderedMinusTailIndex",
+   "orderedNormalIndex",
+   "orderedNormalToAmbientFieldEquiv",
+   "orderedNormalToAmbientFieldEquiv_C",
+   "orderedNormalToAmbientFieldEquiv_X_normal",
+   "orderedNormalToAmbientFieldEquiv_X_plus",
+   "orderedNormalToAmbientFieldEquiv_X_tail",
+   "orderedPlusIndex",
+   "orderedTailShear"
+  ]
+ },
+ "V14Formalization/CorrectedOrderedConstructor.lean": {
+  "expose": [
+   "orderedPlusMinusEquivariantNormalDataOfNormalMultiplier",
+   "orderedPlusMinusEquivariantNormalDataOfPointwiseSemidirect"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "correctedOrderedPlusMinusExceptionalAction",
+   "correctedOrderedPlusMinusSourceAction",
+   "orderedPlusMinusEquivariantNormalDataOfNormalMultiplier",
+   "orderedPlusMinusEquivariantNormalDataOfPointwiseSemidirect",
+   "orderedPlusMinusEquivariantNormalDataOfPointwiseSemidirect_sigma"
+  ]
+ },
+ "V14Formalization/CorrectedOrderedProjectiveChart.lean": {
+  "expose": [
+   "correctedOrderedLinearNormalFunctionFieldEquiv",
+   "orderedCoordinateToProjectiveFunctionFieldEquiv"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "correctedOrderedLinearNormalFunctionFieldEquiv",
+   "correctedOrderedLinearNormalFunctionFieldEquiv_C_plus",
+   "correctedOrderedLinearNormalFunctionFieldEquiv_C_tail",
+   "correctedOrderedLinearNormalFunctionFieldEquiv_X",
+   "correctedOrderedLinearNormalFunctionFieldEquiv_base",
+   "correctedOrderedLinearNormal_generic_toBase",
+   "orderedCoordinateToProjectiveFunctionFieldEquiv"
+  ]
+ },
+ "V14Formalization/D12F6PolynomialData.lean": {
+  "expose": [
+   "F6_poly",
+   "F6c_0_0",
+   "F6c_0_1",
+   "F6c_0_2",
+   "F6c_0_3",
+   "F6c_0_4",
+   "F6c_0_5",
+   "F6c_1_0",
+   "F6c_1_1",
+   "F6c_1_2",
+   "F6c_1_3",
+   "F6c_1_4",
+   "F6c_1_5",
+   "F6c_2_0",
+   "F6c_2_1",
+   "F6c_2_2",
+   "F6c_2_3",
+   "F6c_2_4",
+   "F6c_2_5",
+   "F6c_3_0",
+   "F6c_3_1",
+   "F6c_3_2",
+   "F6c_3_3",
+   "F6c_3_4",
+   "F6c_3_5",
+   "F6c_4_0",
+   "F6c_4_1",
+   "F6c_4_2",
+   "F6c_4_3",
+   "F6c_4_4",
+   "F6c_4_5",
+   "F6c_5_0",
+   "F6c_5_1",
+   "F6c_5_2",
+   "F6c_5_3",
+   "F6c_5_4",
+   "F6c_5_5",
+   "ofQuot",
+   "quotient_0_0",
+   "quotient_0_1",
+   "quotient_0_2",
+   "quotient_0_3",
+   "quotient_0_4",
+   "quotient_0_5",
+   "quotient_1_0",
+   "quotient_1_1",
+   "quotient_1_2",
+   "quotient_1_3",
+   "quotient_1_4",
+   "quotient_1_5",
+   "quotient_2_0",
+   "quotient_2_1",
+   "quotient_2_2",
+   "quotient_2_3",
+   "quotient_2_4",
+   "quotient_2_5",
+   "quotient_3_0",
+   "quotient_3_1",
+   "quotient_3_2",
+   "quotient_3_3",
+   "quotient_3_4",
+   "quotient_3_5",
+   "quotient_4_0",
+   "quotient_4_1",
+   "quotient_4_2",
+   "quotient_4_3",
+   "quotient_4_4",
+   "quotient_4_5",
+   "quotient_5_0",
+   "quotient_5_1",
+   "quotient_5_2",
+   "quotient_5_3",
+   "quotient_5_4",
+   "quotient_5_5"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "F6_poly",
+   "F6c_0_0",
+   "F6c_0_1",
+   "F6c_0_2",
+   "F6c_0_3",
+   "F6c_0_4",
+   "F6c_0_5",
+   "F6c_1_0",
+   "F6c_1_1",
+   "F6c_1_2",
+   "F6c_1_3",
+   "F6c_1_4",
+   "F6c_1_5",
+   "F6c_2_0",
+   "F6c_2_1",
+   "F6c_2_2",
+   "F6c_2_3",
+   "F6c_2_4",
+   "F6c_2_5",
+   "F6c_3_0",
+   "F6c_3_1",
+   "F6c_3_2",
+   "F6c_3_3",
+   "F6c_3_4",
+   "F6c_3_5",
+   "F6c_4_0",
+   "F6c_4_1",
+   "F6c_4_2",
+   "F6c_4_3",
+   "F6c_4_4",
+   "F6c_4_5",
+   "F6c_5_0",
+   "F6c_5_1",
+   "F6c_5_2",
+   "F6c_5_3",
+   "F6c_5_4",
+   "F6c_5_5",
+   "QuotCoeff",
+   "direct_sub_F6_0_0",
+   "direct_sub_F6_0_1",
+   "direct_sub_F6_0_2",
+   "direct_sub_F6_0_3",
+   "direct_sub_F6_0_4",
+   "direct_sub_F6_0_5",
+   "direct_sub_F6_1_0",
+   "direct_sub_F6_1_1",
+   "direct_sub_F6_1_2",
+   "direct_sub_F6_1_3",
+   "direct_sub_F6_1_4",
+   "direct_sub_F6_1_5",
+   "direct_sub_F6_2_0",
+   "direct_sub_F6_2_1",
+   "direct_sub_F6_2_2",
+   "direct_sub_F6_2_3",
+   "direct_sub_F6_2_4",
+   "direct_sub_F6_2_5",
+   "direct_sub_F6_3_0",
+   "direct_sub_F6_3_1",
+   "direct_sub_F6_3_2",
+   "direct_sub_F6_3_3",
+   "direct_sub_F6_3_4",
+   "direct_sub_F6_3_5",
+   "direct_sub_F6_4_0",
+   "direct_sub_F6_4_1",
+   "direct_sub_F6_4_2",
+   "direct_sub_F6_4_3",
+   "direct_sub_F6_4_4",
+   "direct_sub_F6_4_5",
+   "direct_sub_F6_5_0",
+   "direct_sub_F6_5_1",
+   "direct_sub_F6_5_2",
+   "direct_sub_F6_5_3",
+   "direct_sub_F6_5_4",
+   "direct_sub_F6_5_5",
+   "ofQuot",
+   "quotient_0_0",
+   "quotient_0_1",
+   "quotient_0_2",
+   "quotient_0_3",
+   "quotient_0_4",
+   "quotient_0_5",
+   "quotient_1_0",
+   "quotient_1_1",
+   "quotient_1_2",
+   "quotient_1_3",
+   "quotient_1_4",
+   "quotient_1_5",
+   "quotient_2_0",
+   "quotient_2_1",
+   "quotient_2_2",
+   "quotient_2_3",
+   "quotient_2_4",
+   "quotient_2_5",
+   "quotient_3_0",
+   "quotient_3_1",
+   "quotient_3_2",
+   "quotient_3_3",
+   "quotient_3_4",
+   "quotient_3_5",
+   "quotient_4_0",
+   "quotient_4_1",
+   "quotient_4_2",
+   "quotient_4_3",
+   "quotient_4_4",
+   "quotient_4_5",
+   "quotient_5_0",
+   "quotient_5_1",
+   "quotient_5_2",
+   "quotient_5_3",
+   "quotient_5_4",
+   "quotient_5_5"
+  ]
+ },
+ "V14Formalization/D12F6Semantic.lean": {
+  "expose": [
+   "T2",
+   "directEntryPoly",
+   "directValue"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "SLG",
+   "T2",
+   "actualF6",
+   "actualF6_apply_eq_directValue",
+   "actualF6_eq_wordMatrix",
+   "directEntryPoly",
+   "directValue",
+   "eval_directEntryPoly",
+   "toMatrix_Teven2_eq_T6",
+   "weilUHom_T2"
+  ]
+ },
+ "V14Formalization/D12ProjectorReduction.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "all_mul_eq_of_two_generators",
+   "idempotent_eq_one_of_trace_eq_card",
+   "mem_stabilizer_range_of_mul_eq",
+   "projectorMatrix_eq_character_sum",
+   "projectorMatrix_trace",
+   "projector_factor_of_invariant_trace",
+   "projector_invariant_of_all_representation",
+   "projector_invariant_of_standard_generators",
+   "projector_invariant_of_standard_generators_pow_two"
+  ]
+ },
+ "V14Formalization/D12SigmaMinusNormalForm.lean": {
+  "expose": [
+   "bilinearCoeffs",
+   "binaryQuadratic",
+   "lineParam",
+   "linePullbackA",
+   "linePullbackB",
+   "linePullbackC",
+   "linearOne",
+   "linearTwo",
+   "quadMonomials",
+   "quadValue",
+   "restrictedPluckerCoeffs"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "bilinearCoeffs",
+   "binaryQuadratic",
+   "commonZero_parametric",
+   "lineParam",
+   "linePullbackA",
+   "linePullbackB",
+   "linePullbackC",
+   "linearOne",
+   "linearTwo",
+   "quadMonomials",
+   "quadValue",
+   "quadValue_bilinearCoeffs",
+   "quadValue_lineParam",
+   "quadValue_restrictedPluckerCoeffs",
+   "restrictedPluckerCoeffs",
+   "restrictedPluckerCoeffs_map"
+  ]
+ },
+ "V14Formalization/D12SigmaPlusQuadric6.lean": {
+  "expose": [
+   "bilinearCoeffs",
+   "crossIndex",
+   "minorOrder",
+   "monomPair",
+   "quadMonomials",
+   "quadValue",
+   "reshape3",
+   "reshapeMinor",
+   "restrictedPluckerCoeffs"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "bilinearCoeffs",
+   "bilinearCoeffs_map",
+   "crossIndex",
+   "minorOrder",
+   "minorOrder_0",
+   "minorOrder_1",
+   "minorOrder_2",
+   "minorOrder_3",
+   "minorOrder_4",
+   "minorOrder_5",
+   "minorOrder_6",
+   "minorOrder_7",
+   "minorOrder_8",
+   "monomPair",
+   "monomPair_0",
+   "monomPair_1",
+   "monomPair_10",
+   "monomPair_11",
+   "monomPair_12",
+   "monomPair_13",
+   "monomPair_14",
+   "monomPair_15",
+   "monomPair_16",
+   "monomPair_17",
+   "monomPair_18",
+   "monomPair_19",
+   "monomPair_2",
+   "monomPair_20",
+   "monomPair_3",
+   "monomPair_4",
+   "monomPair_5",
+   "monomPair_6",
+   "monomPair_7",
+   "monomPair_8",
+   "monomPair_9",
+   "pluckerRelation_0",
+   "pluckerRelation_1",
+   "pluckerRelation_10",
+   "pluckerRelation_11",
+   "pluckerRelation_12",
+   "pluckerRelation_13",
+   "pluckerRelation_14",
+   "pluckerRelation_2",
+   "pluckerRelation_3",
+   "pluckerRelation_4",
+   "pluckerRelation_5",
+   "pluckerRelation_6",
+   "pluckerRelation_7",
+   "pluckerRelation_8",
+   "pluckerRelation_9",
+   "quadMonomials",
+   "quadValue",
+   "quadValue_bilinearCoeffs",
+   "quadValue_linear",
+   "quadValue_restrictedPluckerCoeffs",
+   "quadValue_sub",
+   "reshape3",
+   "reshape3_apply",
+   "reshapeMinor",
+   "restrictedPluckerCoeffs",
+   "restrictedPluckerCoeffs_map"
+  ]
+ },
+ "V14Formalization/D12U6Fourier.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "sum_indicator_one",
+   "sum_indicator_two",
+   "toMatrix_Seven_eq_S6",
+   "uBasisCore_apply"
+  ]
+ },
+ "V14Formalization/D12U6PolynomialData.lean": {
+  "expose": [
+   "R6_poly",
+   "R6c_0_0",
+   "R6c_0_1",
+   "R6c_0_2",
+   "R6c_0_3",
+   "R6c_0_4",
+   "R6c_0_5",
+   "R6c_1_0",
+   "R6c_1_1",
+   "R6c_1_2",
+   "R6c_1_3",
+   "R6c_1_4",
+   "R6c_1_5",
+   "R6c_2_0",
+   "R6c_2_1",
+   "R6c_2_2",
+   "R6c_2_3",
+   "R6c_2_4",
+   "R6c_2_5",
+   "R6c_3_0",
+   "R6c_3_1",
+   "R6c_3_2",
+   "R6c_3_3",
+   "R6c_3_4",
+   "R6c_3_5",
+   "R6c_4_0",
+   "R6c_4_1",
+   "R6c_4_2",
+   "R6c_4_3",
+   "R6c_4_4",
+   "R6c_4_5",
+   "R6c_5_0",
+   "R6c_5_1",
+   "R6c_5_2",
+   "R6c_5_3",
+   "R6c_5_4",
+   "R6c_5_5",
+   "ofQuot",
+   "quotient_0_0",
+   "quotient_0_1",
+   "quotient_0_2",
+   "quotient_0_3",
+   "quotient_0_4",
+   "quotient_0_5",
+   "quotient_1_0",
+   "quotient_1_1",
+   "quotient_1_2",
+   "quotient_1_3",
+   "quotient_1_4",
+   "quotient_1_5",
+   "quotient_2_0",
+   "quotient_2_1",
+   "quotient_2_2",
+   "quotient_2_3",
+   "quotient_2_4",
+   "quotient_2_5",
+   "quotient_3_0",
+   "quotient_3_1",
+   "quotient_3_2",
+   "quotient_3_3",
+   "quotient_3_4",
+   "quotient_3_5",
+   "quotient_4_0",
+   "quotient_4_1",
+   "quotient_4_2",
+   "quotient_4_3",
+   "quotient_4_4",
+   "quotient_4_5",
+   "quotient_5_0",
+   "quotient_5_1",
+   "quotient_5_2",
+   "quotient_5_3",
+   "quotient_5_4",
+   "quotient_5_5"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "QuotCoeff",
+   "R6_poly",
+   "R6c_0_0",
+   "R6c_0_1",
+   "R6c_0_2",
+   "R6c_0_3",
+   "R6c_0_4",
+   "R6c_0_5",
+   "R6c_1_0",
+   "R6c_1_1",
+   "R6c_1_2",
+   "R6c_1_3",
+   "R6c_1_4",
+   "R6c_1_5",
+   "R6c_2_0",
+   "R6c_2_1",
+   "R6c_2_2",
+   "R6c_2_3",
+   "R6c_2_4",
+   "R6c_2_5",
+   "R6c_3_0",
+   "R6c_3_1",
+   "R6c_3_2",
+   "R6c_3_3",
+   "R6c_3_4",
+   "R6c_3_5",
+   "R6c_4_0",
+   "R6c_4_1",
+   "R6c_4_2",
+   "R6c_4_3",
+   "R6c_4_4",
+   "R6c_4_5",
+   "R6c_5_0",
+   "R6c_5_1",
+   "R6c_5_2",
+   "R6c_5_3",
+   "R6c_5_4",
+   "R6c_5_5",
+   "direct_sub_R6_0_0",
+   "direct_sub_R6_0_1",
+   "direct_sub_R6_0_2",
+   "direct_sub_R6_0_3",
+   "direct_sub_R6_0_4",
+   "direct_sub_R6_0_5",
+   "direct_sub_R6_1_0",
+   "direct_sub_R6_1_1",
+   "direct_sub_R6_1_2",
+   "direct_sub_R6_1_3",
+   "direct_sub_R6_1_4",
+   "direct_sub_R6_1_5",
+   "direct_sub_R6_2_0",
+   "direct_sub_R6_2_1",
+   "direct_sub_R6_2_2",
+   "direct_sub_R6_2_3",
+   "direct_sub_R6_2_4",
+   "direct_sub_R6_2_5",
+   "direct_sub_R6_3_0",
+   "direct_sub_R6_3_1",
+   "direct_sub_R6_3_2",
+   "direct_sub_R6_3_3",
+   "direct_sub_R6_3_4",
+   "direct_sub_R6_3_5",
+   "direct_sub_R6_4_0",
+   "direct_sub_R6_4_1",
+   "direct_sub_R6_4_2",
+   "direct_sub_R6_4_3",
+   "direct_sub_R6_4_4",
+   "direct_sub_R6_4_5",
+   "direct_sub_R6_5_0",
+   "direct_sub_R6_5_1",
+   "direct_sub_R6_5_2",
+   "direct_sub_R6_5_3",
+   "direct_sub_R6_5_4",
+   "direct_sub_R6_5_5",
+   "ofQuot",
+   "quotient_0_0",
+   "quotient_0_1",
+   "quotient_0_2",
+   "quotient_0_3",
+   "quotient_0_4",
+   "quotient_0_5",
+   "quotient_1_0",
+   "quotient_1_1",
+   "quotient_1_2",
+   "quotient_1_3",
+   "quotient_1_4",
+   "quotient_1_5",
+   "quotient_2_0",
+   "quotient_2_1",
+   "quotient_2_2",
+   "quotient_2_3",
+   "quotient_2_4",
+   "quotient_2_5",
+   "quotient_3_0",
+   "quotient_3_1",
+   "quotient_3_2",
+   "quotient_3_3",
+   "quotient_3_4",
+   "quotient_3_5",
+   "quotient_4_0",
+   "quotient_4_1",
+   "quotient_4_2",
+   "quotient_4_3",
+   "quotient_4_4",
+   "quotient_4_5",
+   "quotient_5_0",
+   "quotient_5_1",
+   "quotient_5_2",
+   "quotient_5_3",
+   "quotient_5_4",
+   "quotient_5_5"
+  ]
+ },
+ "V14Formalization/D12U6PolynomialSeal.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "Phi11_eq_WeilRep",
+   "evalMatrixK_R6_eq_actualU6",
+   "evalPhi11_\u03b6",
+   "eval_R6_entry"
+  ]
+ },
+ "V14Formalization/D12U6Semantic.lean": {
+  "expose": [
+   "cFourierPoly",
+   "directEntryPoly",
+   "directValue",
+   "phasePoly"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "PolyQ",
+   "actualU6",
+   "actualU6_apply_eq_directValue",
+   "cFourierPoly",
+   "directEntryPoly",
+   "directValue",
+   "eval_cFourierPoly",
+   "eval_directEntryPoly",
+   "eval_phasePoly",
+   "phasePoly"
+  ]
+ },
+ "V14Formalization/D12U6Support.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "extendEven_single_apply"
+  ]
+ },
+ "V14Formalization/Definitions.lean": {
+  "expose": [
+   "DegeneratesToPlusMinusId",
+   "GEquivariantMorphism.imageSet",
+   "HasDominantGEquivariantRationalMap",
+   "HasGEquivariantRationalMap",
+   "HypothesisA",
+   "HypothesisB",
+   "IsCenterless",
+   "IsGUnirational",
+   "IsInvolution",
+   "IsLinearRCC",
+   "IsRCC",
+   "NoFaithfulRepDegenerates",
+   "NotWeaklyVersal",
+   "ReceivesFromRep",
+   "act",
+   "centralizer",
+   "fixedBy",
+   "fixedByElement",
+   "minusEigenspace",
+   "plusEigenspace",
+   "plusProjectiveStratum",
+   "projectiveSMul",
+   "projectivizationVariety"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "DegeneratesToPlusMinusId",
+   "FaithfulLinearRep",
+   "GEquivariantMorphism",
+   "GEquivariantMorphism.imageSet",
+   "HasDominantGEquivariantRationalMap",
+   "HasGEquivariantRationalMap",
+   "HypothesisA",
+   "HypothesisB",
+   "IsCenterless",
+   "IsGUnirational",
+   "IsInvolution",
+   "IsLinearRCC",
+   "IsRCC",
+   "NoFaithfulRepDegenerates",
+   "NotWeaklyVersal",
+   "ReceivesFromRep",
+   "SmoothProjectiveGVariety",
+   "act",
+   "act_act",
+   "act_injective",
+   "act_inv",
+   "act_mul",
+   "act_one",
+   "both_eigenspaces_nontrivial",
+   "centralizer",
+   "fixedBy",
+   "fixedByElement",
+   "isCompl_plus_minus",
+   "mem_center_iff",
+   "mem_centralizer_iff",
+   "mem_minusEigenspace_iff",
+   "mem_plusEigenspace_iff",
+   "mem_plusProjectiveStratum_iff",
+   "minusEigenspace",
+   "minusEigenspace_centralizer_stable",
+   "not_GUnirational_of_forall_no_map",
+   "plusEigenspace",
+   "plusEigenspace_centralizer_stable",
+   "plusProjectiveStratum",
+   "plusProjectiveStratum_N_stable",
+   "plusProjectiveStratum_fixed",
+   "plusProjectiveStratum_nonempty",
+   "plusProjectiveStratum_rcc",
+   "projectiveAction_faithful",
+   "projectiveSMul",
+   "projectiveSMul_mk",
+   "projectiveSMul_mul",
+   "projectiveSMul_one",
+   "projectivizationVariety"
+  ]
+ },
+ "V14Formalization/Foundations.lean": {
+  "expose": [
+   "ofPlusStratum"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "TrackedStratum",
+   "morphism_from_tracked_forces_N_fixed",
+   "ofPlusStratum"
+  ]
+ },
+ "V14Formalization/GenericCharts.lean": {
+  "expose": [
+   "biprojectiveGeneralBaseToFunctionField",
+   "biprojectiveGeneralFunctionFieldAlgEquiv",
+   "biprojectiveGeneralFunctionFieldAlgebra",
+   "biprojectiveGeneralFunctionFieldEquiv",
+   "biprojectiveGeneralGammaEquivMvPolynomial",
+   "projectiveGeneralBaseToFunctionField",
+   "projectiveGeneralFunctionFieldAlgEquiv",
+   "projectiveGeneralFunctionFieldAlgebra",
+   "projectiveGeneralFunctionFieldEquiv",
+   "projectiveGeneralGammaEquivMvPolynomial"
+  ],
+  "expose_all_public_defs": true,
+  "no_expose": [],
+  "public": [
+   "biprojectiveGeneralBaseToFunctionField",
+   "biprojectiveGeneralBaseToFunctionField_eq",
+   "biprojectiveGeneralChart",
+   "biprojectiveGeneralChart_nonempty",
+   "biprojectiveGeneralFunctionFieldAlgEquiv",
+   "biprojectiveGeneralFunctionFieldAlgebra",
+   "biprojectiveGeneralFunctionFieldEquiv",
+   "biprojectiveGeneralFunctionFieldEquiv_base",
+   "biprojectiveGeneralGammaEquivMvPolynomial",
+   "biprojectiveLinearNormal_special_toBase",
+   "projectiveGeneralBaseToFunctionField",
+   "projectiveGeneralBaseToFunctionField_eq",
+   "projectiveGeneralChart",
+   "projectiveGeneralChart_nonempty",
+   "projectiveGeneralFunctionFieldAlgEquiv",
+   "projectiveGeneralFunctionFieldAlgebra",
+   "projectiveGeneralFunctionFieldEquiv",
+   "projectiveGeneralFunctionFieldEquiv_base",
+   "projectiveGeneralGammaEquivMvPolynomial"
+  ]
+ },
+ "V14Formalization/GeometricCarrier.lean": {
+  "expose": [
+   "V14Variety",
+   "cosetAmbientAct",
+   "cosetEmbed",
+   "diracCoset",
+   "t",
+   "tMat"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "C11",
+   "CosetMod",
+   "P1geom",
+   "V14Variety",
+   "V14_hypothesisA",
+   "V14_hypothesisB",
+   "cosetAmbientAct",
+   "cosetAmbientAct_injective",
+   "cosetAmbientAct_mul",
+   "cosetAmbientAct_one",
+   "cosetEmbed",
+   "cosetEmbed_smul",
+   "coset_action_faithful",
+   "diracCoset",
+   "diracCoset_ne",
+   "k",
+   "sigma_isInvolution",
+   "t",
+   "tMat",
+   "tMat_pow"
+  ]
+ },
+ "V14Formalization/GeometricFanoCarrier.lean": {
+  "expose": [
+   "b0",
+   "b1",
+   "evalEven",
+   "extendEven",
+   "extendEvenFun",
+   "pslLambda2Hom",
+   "pureWedge",
+   "weilLambda2",
+   "weilLambda2Hom"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "F",
+   "Lambda2U",
+   "PSL2F11",
+   "PSL2F11_isCenterless",
+   "SLG",
+   "T_b0",
+   "T_b1",
+   "U",
+   "b0",
+   "b1",
+   "evalEven",
+   "evalEven_b0",
+   "evalEven_b0_basis",
+   "evalEven_b1",
+   "evalEven_b1_basis",
+   "evalEven_extendEven",
+   "evalEven_injective",
+   "extendEven",
+   "extendEvenFun",
+   "extendEvenFun_even",
+   "finrank_U",
+   "k",
+   "pslLambda2Hom",
+   "pslLambda2Hom_injective",
+   "pslLambda2_mk",
+   "pureWedge",
+   "weilLambda2",
+   "weilLambda2Hom",
+   "weilLambda2Hom_ker_center",
+   "weilLambda2_mul",
+   "weilLambda2_one",
+   "\u03c8_half_ne_one"
+  ]
+ },
+ "V14Formalization/GeometricFanoV14.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "S_sq",
+   "WeilU",
+   "k"
+  ]
+ },
+ "V14Formalization/GeometricV14.lean": {
+  "expose": [
+   "Gr2",
+   "includeM"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "Ext2",
+   "Gr2",
+   "M10",
+   "U",
+   "includeM"
+  ]
+ },
+ "V14Formalization/GeometricV14Carrier.lean": {
+  "expose": [
+   "Msub",
+   "ambientAct",
+   "chi10'",
+   "chiCrossTerm",
+   "chiLambda2",
+   "chiSumOp",
+   "iRoot",
+   "projectorM",
+   "residualKer",
+   "sigma"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "F",
+   "Ipoly",
+   "IsDecomposable",
+   "IsV14MPoint",
+   "IsV14MPoint_actPM",
+   "Jlin",
+   "Ladj",
+   "Lambda2U",
+   "LtoEnd",
+   "LtoEndQuot",
+   "LtoEnd_of",
+   "Mfix",
+   "Mfix_eq_Msub",
+   "Msub",
+   "PSL2F11",
+   "Rlin",
+   "SLG",
+   "Slin",
+   "U",
+   "V14MPoint",
+   "V14Point",
+   "actPM",
+   "actPM_preserves_decomposable",
+   "actV14",
+   "actV14M",
+   "actV14M_mul",
+   "actV14M_one",
+   "actV14_mul",
+   "actV14_one",
+   "aeval_iRoot",
+   "algebraMap_end_commute",
+   "ambientAct",
+   "ambientAct_injective",
+   "ambientAct_rotGen_eq_map_Rlin",
+   "card_PSL2F11",
+   "chi10'",
+   "chi10'_eq_chi10Int",
+   "chiCrossTerm",
+   "chiLambda2",
+   "chiLambda2_isConj",
+   "chiSumOp",
+   "chiSumOp_eq_sixty_six_of_mem_Mfix",
+   "conjEnd",
+   "eval\u2082Jlin",
+   "eval\u2082Jlin_span_eq_zero",
+   "finrank_Ladj_U",
+   "finrank_Msub_eq_ten_of_sum_chi_chiLambda2",
+   "iRoot",
+   "irr_X_sq_add_one",
+   "k",
+   "mem_Mfix_iff",
+   "mem_residualKer_iff",
+   "projectorM",
+   "projectorM_equivariant",
+   "projectorM_sq_apply",
+   "projectorM_trace_eq_finrank",
+   "pureWedge_residual_ne_zero",
+   "pureWedge_smul_right",
+   "pureWedge_swap",
+   "residualKer",
+   "residualKer_R2",
+   "residual_pair_independent",
+   "residual_plucker_N_vec_fixed",
+   "residual_plucker_projectorM_ne_of_cross_ne_forty_two",
+   "sigma",
+   "sigma_isInvolution",
+   "sum_chi_chiLambda2_order_five",
+   "sum_chi_chiLambda2_order_one",
+   "sum_chi_chiLambda2_order_six",
+   "sum_chi_chiLambda2_order_three",
+   "sum_chi_chiLambda2_order_two",
+   "support_eq_residualKer_of_R_character",
+   "trace_exterior_newton"
+  ]
+ },
+ "V14Formalization/HeadlineStatement.lean": {
+  "expose": [
+   "PlusMinusCoords.ofRep"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "G",
+   "PlusMinusCoords",
+   "PlusMinusCoords.ofRep",
+   "ambientFor",
+   "ambientOf",
+   "k",
+   "not_degenerates",
+   "ofFaithfulRep"
+  ]
+ },
+ "V14Formalization/InvariantSubschemeAction.lean": {
+  "expose": [
+   "action",
+   "actionOver",
+   "hom"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "IsInvariantIdeal",
+   "action",
+   "actionOver",
+   "hom",
+   "hom_mul",
+   "hom_one",
+   "hom_subscheme\u03b9",
+   "of_comap_le"
+  ]
+ },
+ "V14Formalization/KernelLineDescent.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "kernelLine_descends_of_rank_eq_two"
+  ]
+ },
+ "V14Formalization/Lambda2Coordinates.lean": {
+  "expose": [
+   "evalEvenEquivCore",
+   "lambda2Basis",
+   "lambda2MatrixRepresentation",
+   "pair",
+   "pairEnumeration",
+   "pluckerPairEquiv",
+   "uBasisCore"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "G",
+   "Lambda2U",
+   "U",
+   "evalEvenEquivCore",
+   "k",
+   "lambda2Basis",
+   "lambda2MatrixRepresentation",
+   "lambda2MatrixRepresentation_coe",
+   "pair",
+   "pairEnumeration",
+   "pairEnumeration_bijective",
+   "pluckerPairEquiv",
+   "uBasisCore"
+  ]
+ },
+ "V14Formalization/LinearNormalActionReduction.lean": {
+  "expose": [
+   "conjugateRingAction",
+   "orderedPlusMinusEquivariantNormalData",
+   "projectiveFiveChartValuationAction",
+   "xAdicRestrictAction",
+   "xAdicRestrictEquiv"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "actionPrecomp_overStructureMap",
+   "biprojectiveTwoTwoChartModelAction",
+   "biprojectiveTwoTwoChart_residue_ring",
+   "conjugateRingAction",
+   "functionFieldAction_fixes_base",
+   "functionFieldAction_fixes_base_of_fromFunctionField",
+   "orderedPlusMinusChartModelAction_fixes_base",
+   "orderedPlusMinusEquivariantNormalData",
+   "orderedPlusMinusExceptionalAction",
+   "orderedPlusMinusSourceAction",
+   "projectiveFiveChartModelAction",
+   "projectiveFiveChartValuationAction",
+   "projectiveFiveChart_base_ring",
+   "projectiveFiveChart_fraction_ring",
+   "xAdicRestrictAction",
+   "xAdicRestrictAction_residue_ring_of_constants",
+   "xAdicRestrictEquiv",
+   "xAdicSubring"
+  ]
+ },
+ "V14Formalization/LinearNormalEquivariant.lean": {
+  "expose": [
+   "linearChartGenericHom",
+   "linearChartResidueHom",
+   "linearNormalDataOfChart",
+   "linearNormalEquivariantDataOfChart",
+   "linearNormalEquivariantDataOfChart_of_actionFunctionFieldMap"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "linearChartGenericHom",
+   "linearChartResidueHom",
+   "linearNormalDataOfChart",
+   "linearNormalEquivariantDataOfChart",
+   "linearNormalEquivariantDataOfChart_of_actionFunctionFieldMap",
+   "spec_base_natural_of_ring",
+   "spec_fraction_natural_of_ring"
+  ]
+ },
+ "V14Formalization/LinearNormalOrderedPresentation.lean": {
+  "expose": [
+   "linearNormalToOrderedCoordinateFieldEquiv",
+   "orderedCoordinateFieldToLinearNormalEquiv",
+   "orderedCoordinateFieldToLinearNormalHom",
+   "orderedResidualMinusIndex",
+   "orderedResidualPlusIndex",
+   "residualCoordinateInField"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "linearNormalToOrderedCoordinateFieldEquiv",
+   "linearNormalToOrderedCoordinateFieldEquiv_C_plus",
+   "linearNormalToOrderedCoordinateFieldEquiv_C_tail",
+   "linearNormalToOrderedCoordinateFieldEquiv_X_normal",
+   "linearNormalToOrderedCoordinateFieldEquiv_base",
+   "normalTowerCoordinate",
+   "orderedCoordinateFieldToLinearNormalEquiv",
+   "orderedCoordinateFieldToLinearNormalHom",
+   "orderedCoordinateFieldToLinearNormalHom_surjective",
+   "orderedCoordinateInLinearNormalField",
+   "orderedCoordinatePolynomialToLinearNormalField",
+   "orderedCoordinatePolynomialToLinearNormalField_injective",
+   "orderedIndexToNormalSum",
+   "orderedNormalTowerField",
+   "orderedResidualIndex_cases",
+   "orderedResidualMinusIndex",
+   "orderedResidualPlusIndex",
+   "orderedResidualTowerField",
+   "residualCoordinateInField"
+  ]
+ },
+ "V14Formalization/LinearNormalProjectiveChart.lean": {
+  "expose": [
+   "biprojectiveTwoTwoFunctionFieldEquiv",
+   "biprojectiveTwoTwoGammaEquivMvPolynomial",
+   "functionFieldBaseRingHom",
+   "linearNormalEquivariantDataOfProjectiveBiprojectiveCharts",
+   "linearNormalFractionEquivMvPolynomialFive",
+   "projectiveFiveFunctionFieldEquiv",
+   "projectiveFiveGammaEquivMvPolynomial",
+   "projectiveFiveLinearNormalFunctionFieldEquiv"
+  ],
+  "expose_all_public_defs": true,
+  "no_expose": [
+   "biprojectiveTwoTwoBaseToFunctionField",
+   "biprojectiveTwoTwoFunctionFieldAlgEquiv",
+   "linearNormalFractionAlgEquivMvPolynomialFive",
+   "projectiveFiveBaseToFunctionField",
+   "projectiveFiveFunctionFieldAlgEquiv"
+  ],
+  "public": [
+   "AmbientFrac",
+   "AmbientPolyLocalized",
+   "AmbientPolyTower",
+   "ResidualFrac",
+   "ResidualPoly",
+   "SpecMap_functionFieldBaseRingHom",
+   "biprojectiveTwoTwoBaseToFunctionField",
+   "biprojectiveTwoTwoChart",
+   "biprojectiveTwoTwoFunctionFieldAlgEquiv",
+   "biprojectiveTwoTwoFunctionFieldAlgebra",
+   "biprojectiveTwoTwoFunctionFieldEquiv",
+   "biprojectiveTwoTwoGammaEquivMvPolynomial",
+   "biprojectiveTwoTwoLinearNormal_special_toBase",
+   "biprojectiveTwoTwoOver",
+   "biprojectiveTwoTwoOverAction",
+   "functionFieldBaseRingHom",
+   "linearNormalEquivariantDataOfProjectiveBiprojectiveCharts",
+   "linearNormalFractionAlgEquivMvPolynomialFive",
+   "linearNormalFractionEquivMvPolynomialFive",
+   "projectiveFiveBaseToFunctionField",
+   "projectiveFiveBaseToFunctionField_eq",
+   "projectiveFiveChart",
+   "projectiveFiveFunctionFieldAlgEquiv",
+   "projectiveFiveFunctionFieldAlgebra",
+   "projectiveFiveFunctionFieldEquiv",
+   "projectiveFiveGammaEquivMvPolynomial",
+   "projectiveFiveLinearNormalFunctionFieldEquiv",
+   "projectiveFiveLinearNormalFunctionFieldEquiv_base",
+   "projectiveFiveLinearNormal_generic_toBase",
+   "projectiveFiveOver",
+   "projectiveFiveOverAction",
+   "shortWeierstrassPoint_baseChange_biprojectiveTwoTwo_surjective"
+  ]
+ },
+ "V14Formalization/LinearNormalValuation.lean": {
+  "expose": [
+   "baseToLinearNormalFractionField",
+   "baseToLinearNormalRing",
+   "baseToResidualField",
+   "constToResidue",
+   "constToXAdic",
+   "linearNormalResidue",
+   "linearNormalValuation_generic",
+   "linearNormalValuation_special",
+   "linearNormalValuation_toBase",
+   "residueFieldEquiv",
+   "xAdicResidue"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "LinearExceptionalFunctionField",
+   "LinearNormalAlgebraic.K",
+   "LinearNormalAlgebraic.R",
+   "LinearNormalAlgebraic.residue",
+   "LinearNormalAlgebraic.residueField",
+   "LinearNormalAlgebraic.residue_ker",
+   "LinearNormalAlgebraic.residue_surjective",
+   "LinearNormalAlgebraic.toBase",
+   "LinearNormalFractionField",
+   "LinearNormalValuationRing",
+   "LinearResidualField",
+   "XAdicIntegers",
+   "baseToLinearNormalFractionField",
+   "baseToLinearNormalRing",
+   "baseToResidualField",
+   "constToResidue",
+   "constToResidue_injective",
+   "constToResidue_surjective",
+   "constToXAdic",
+   "const_mem_XAdic",
+   "linearAmbient",
+   "linearBase",
+   "linearNormalResidue",
+   "linearNormalResidue_ker",
+   "linearNormalResidue_surjective",
+   "linearNormalValuation_generic",
+   "linearNormalValuation_generic_toBase",
+   "linearNormalValuation_special",
+   "linearNormalValuation_special_toBase",
+   "linearNormalValuation_toBase",
+   "linearResidueRationalModel",
+   "residueFieldEquiv",
+   "xAdicResidue",
+   "xAdicResidue_const",
+   "xAdicResidue_ker"
+  ]
+ },
+ "V14Formalization/MvFracConstantField.lean": {
+  "expose": [
+   "mvFracBaseChange"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "mvFracBaseChange",
+   "mvFracBaseChange_algebraMap_base",
+   "mvFracBaseChange_injective",
+   "mvFrac_eq_constant_of_baseChange_eq_constant",
+   "mvFrac_eq_constant_of_map_eq_constant",
+   "mvFrac_isAlgebraic_iff_constant",
+   "ratFunc_isAlgebraic_iff_constant"
+  ]
+ },
+ "V14Formalization/Ord11CharacterSum.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "finrank_Msub_eq_ten"
+  ]
+ },
+ "V14Formalization/PSLGenerators.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "F",
+   "G",
+   "SLG",
+   "closure_mk_Smat_Tmat",
+   "closure_mk_Smat_Tmat_pow_two"
+  ]
+ },
+ "V14Formalization/PluckerNaturality.lean": {
+  "expose": [
+   "compound2Lex",
+   "four",
+   "omega",
+   "pairEmb",
+   "pairLexEmb",
+   "pairLexVec",
+   "pluckerValue"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "E2_6",
+   "E4_6",
+   "G",
+   "b4",
+   "b6",
+   "card_insert4",
+   "compound2Lex",
+   "four",
+   "fourEnumeration",
+   "fourEnumeration_bijective",
+   "fourEquiv",
+   "k",
+   "lambda2MatrixRepresentation_eq_compound2Lex",
+   "lex2Basis",
+   "lex4Basis",
+   "omega",
+   "pairEmb",
+   "pairEmb_eq_pairLexEmb",
+   "pairLexEmb",
+   "pairLexVec",
+   "pluckerValue",
+   "span_aeval_pluckerQuadric_compound_le",
+   "weilLambda2_toMatrix_eq_compound2Lex"
+  ]
+ },
+ "V14Formalization/PlusMinusBlockMatrix.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "ambientMatrixRepresentation_centralizer_block",
+   "plusMinusAmbientBasis_toMatrix",
+   "plusMinusLinearEquiv_conjugates_centralizer",
+   "plusMinusMappedBasis_toMatrix"
+  ]
+ },
+ "V14Formalization/PointwiseSemidirect.lean": {
+  "expose": [
+   "actionFunctionFieldEquiv",
+   "conjugateRingEquiv",
+   "linearEquivariantNormalDataOfPointwiseSemidirect",
+   "linearNormalCoefficientEmbedding",
+   "linearNormalEquivariantDataOfChartPointwise",
+   "linearNormalParameterElement",
+   "linearNormalScaledParameterElement",
+   "pointwiseSemidirectExceptionalEquiv",
+   "pointwiseSemidirectSourceEquiv",
+   "pointwiseSemidirectValuationEquiv",
+   "residualEquivOfAction",
+   "semidirectElementOfExceptionalAction"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "actionFunctionFieldEquiv",
+   "actionFunctionFieldMap_fixes_base",
+   "conjugateRingEquiv",
+   "linearEquivariantNormalDataOfPointwiseSemidirect",
+   "linearEquivariantNormalDataOfPointwiseSemidirect_exceptional_identity",
+   "linearNormalCoefficientEmbedding",
+   "linearNormalEquivariantDataOfChartPointwise",
+   "linearNormalParameterElement",
+   "linearNormalScaledParameterElement",
+   "pointwiseLinearSemidirectGroup",
+   "pointwiseSemidirectExceptionalEquiv",
+   "pointwiseSemidirectExceptionalEquiv_eq_one_of_right_eq_one",
+   "pointwiseSemidirectSourceEquiv",
+   "pointwiseSemidirectValuationEquiv",
+   "pointwiseSemidirect_base_ring",
+   "pointwiseSemidirect_fraction_ring",
+   "pointwiseSemidirect_residue_ring",
+   "residualEquivOfAction",
+   "residualEquivOfAction_base",
+   "semidirectElementOfExceptionalAction",
+   "semidirectElementOfExceptionalAction_exceptional_field_map"
+  ]
+ },
+ "V14Formalization/ProjectiveAwayNaturality.lean": {
+  "expose": [
+   "awayMap_X_s",
+   "awayMap_s_X"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "awayMap_X_s",
+   "awayMap_X_s_mk",
+   "awayMap_overlap_comp_eq",
+   "awayMap_s_X",
+   "awayMap_s_X_mk",
+   "mem_coordGraded_G_mul_X_pow",
+   "mem_coordGraded_G_mul_s_pow",
+   "mem_coordGraded_X",
+   "mem_coordGraded_s_mul_X",
+   "projectiveZeroLocusFamilyIdeal_comap_mapLinearSubst_aeval",
+   "projectiveZeroLocusIdeal_comap_away\u03b9",
+   "projectiveZeroLocusIdeal_comap_mapLinearSubst"
+  ]
+ },
+ "V14Formalization/ProjectiveAwayPullback.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "awayMap_linearSubst_normalizedCoordinate",
+   "mapLinearSubst_appLE_awayToSection"
+  ]
+ },
+ "V14Formalization/ProjectiveDiagonalAction.lean": {
+  "expose": [
+   "diagonalChartHom",
+   "diagonalUnscaleAway"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "diagonalChartHom",
+   "diagonalChartHom_normalizedCoordinate_eq_neg_of_eq_neg",
+   "diagonalChartHom_normalizedCoordinate_eq_self_of_eq",
+   "diagonalUnscaleAway",
+   "linearSubst_diagonal",
+   "standardChart\u03b9_comp_mapLinearSubst_diagonal"
+  ]
+ },
+ "V14Formalization/ProjectiveEigenvectorReduction.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "eval_map_linearSubst_eq_mappedMatrix_mulVec",
+   "exists_eigenScalar_of_mapLinearSubst_fixed",
+   "exists_eigenScalar_of_pointOfNormalizedCoordinatesAlgebra_fixed",
+   "mappedMatrix_mulVec_normalizingCoordinate_ne_zero_of_fixed",
+   "pointOfNormalizedCoordinatesAlgebra_comp_mapLinearSubst",
+   "standardChartEvalAlgebra_isLocalizationElem_linearSubst",
+   "standardChartEvalAlgebra_linearSubstRatio"
+  ]
+ },
+ "V14Formalization/ProjectiveFamilyFieldPoint.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "aeval_eq_zero_of_projectiveZeroLocusIdeal_le_normalizedPoint_ker",
+   "eval_map_eq_zero_of_projectiveZeroLocusFamily_point",
+   "standardChartAlgebraPoint_appTop_hypersurfaceChart\u0393Iso",
+   "standardChartEvalAlgebra_hypersurfaceChartEquation"
+  ]
+ },
+ "V14Formalization/ProjectiveFamilyFieldPointLift.lean": {
+  "expose": [
+   "pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "pointOfNormalizedCoordinates_fixed_of_mulVec_eq_smul",
+   "pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily",
+   "pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily_toSpec",
+   "pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily_\u03b9",
+   "projectiveZeroLocusFamilyIdeal_le_pointOfNormalizedCoordinatesAlgebra_ker"
+  ]
+ },
+ "V14Formalization/ProjectiveFamilyNaturality.lean": {
+  "expose": [
+   "awayChart\u0393Iso",
+   "awayEquation",
+   "awayEquationSection",
+   "awayHypersurfaceIdealSheaf",
+   "missing_projectiveZeroLocusIdeal_comap_away\u03b9"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "Away_map_awayEquation",
+   "awayChart\u0393Iso",
+   "awayEquation",
+   "awayEquationSection",
+   "awayHypersurfaceIdealSheaf",
+   "chartSectionRingHom",
+   "comap_le_projectiveZeroLocusFamilyIdeal_forall_of_span_le",
+   "comap_le_projectiveZeroLocusFamilyIdeal_of_span_le",
+   "comap_linearAway\u03b9_agree_of_chart_and_away",
+   "coordGraded",
+   "familyIdeal_eq_of_span_eq",
+   "idealSheafData_eq_of_comap_openImmersion_eq",
+   "isInvariantIdeal_of_comap_le",
+   "linearAway\u03b9",
+   "linearAway\u03b9_comp_mapLinearSubst",
+   "linearSubstGradedRingHom_X",
+   "linearSubstGradedRingHom_eq_aeval",
+   "missing_projectiveZeroLocusIdeal_comap_away\u03b9",
+   "opensRange_linearAway\u03b9",
+   "projectiveZeroLocusFamilyIdeal_comap_mapLinearSubst_aeval_of_single",
+   "projectiveZeroLocusIdeal_comap_linearAway\u03b9_comp_mapLinearSubst_of_chart",
+   "projectiveZeroLocusIdeal_comap_mapLinearSubst_of_away_restriction"
+  ]
+ },
+ "V14Formalization/ProjectiveFunctionFieldAwayAction.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "mapLinearSubst_functionFieldMap_projectiveGeneral_standardChart"
+  ]
+ },
+ "V14Formalization/ProjectiveFunctionFieldChartReduction.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "mapLinearSubst_functionFieldMap_projectiveGeneral_algebraMap"
+  ]
+ },
+ "V14Formalization/ProjectiveGVariety.lean": {
+  "expose": [
+   "HasEquivariantRationalMap",
+   "ofLinearRep",
+   "ofMatrixRepresentation",
+   "v14"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "HasEquivariantRationalMap",
+   "ProjectiveGVariety",
+   "ofLinearRep",
+   "ofLinearRep_irreducible",
+   "ofMatrixRepresentation",
+   "ofMatrixRepresentation_irreducible",
+   "toScheme",
+   "v14"
+  ]
+ },
+ "V14Formalization/ProjectiveGammaAwayTransport.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "projectiveGeneralGammaEquivMvPolynomial_symm_eq_awayToSection"
+  ]
+ },
+ "V14Formalization/ProjectiveGeneralFunctionField.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "projectiveGeneralFunctionFieldEquiv_algebraMap"
+  ]
+ },
+ "V14Formalization/ProjectiveGermRatio.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "awayToSection_germ_linear_ratio_mul",
+   "awayToSection_germ_standard_linear_ratio_isUnit"
+  ]
+ },
+ "V14Formalization/ProjectiveStandardChartAction.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "mapLinearSubst_appLE_projectiveGeneralGamma_symm"
+  ]
+ },
+ "V14Formalization/SchemeEquivariantSpecialization.lean": {
+  "expose": [
+   "specialize",
+   "specializeToCentralizerFixedBy",
+   "specializeToCentralizerFixedByOfPrecomp",
+   "specializeToCentralizerFixedBy_of_functionField"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "EquivariantNormalValuationData",
+   "noEquivariantRationalMap_of_noFixedSpecialization",
+   "noEquivariantRationalMap_of_noFixedSpecialization_of_functionField",
+   "specialFiberMap_natural",
+   "specialize",
+   "specializeToCentralizerFixedBy",
+   "specializeToCentralizerFixedByOfPrecomp",
+   "specializeToCentralizerFixedBy_of_functionField"
+  ]
+ },
+ "V14Formalization/SchemeFixedLocus.lean": {
+  "expose": [
+   "fixedByCentralizerAction",
+   "fixedByCentralizerHom",
+   "fixedByLift",
+   "sigmaInCentralizer"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "FixedBy",
+   "FixedByPair",
+   "centralizerRestriction",
+   "fixedByCentralizerAction",
+   "fixedByCentralizerAction_\u03c1",
+   "fixedByCentralizerHom",
+   "fixedByCentralizerHom_mul",
+   "fixedByCentralizerHom_one",
+   "fixedByCentralizerHom_\u03b9",
+   "fixedByLift",
+   "fixedByLift_\u03b9",
+   "fixedByPair\u03b9",
+   "fixedBy\u03b9",
+   "fixedBy\u03b9_comp_action",
+   "sigmaInCentralizer"
+  ]
+ },
+ "V14Formalization/SchemeFixedProjectiveCoordinates.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "diagonalProjectiveHom",
+   "exists_normalizedCoordinates_support_of_diagonal_sign_fixed",
+   "exists_normalizedCoordinates_support_of_projectiveActionHom_fixed"
+  ]
+ },
+ "V14Formalization/SchemeFixedRationalMap.lean": {
+  "expose": [
+   "rationalMapToFixedBy"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "fromFunctionField_compHom",
+   "rationalMapToFixedBy",
+   "rationalMapToFixedBy_comp_\u03b9"
+  ]
+ },
+ "V14Formalization/SchemeFunctionFieldNaturality.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "Hom.functionFieldMap_comp",
+   "Hom.functionFieldMap_congr",
+   "Hom.functionFieldMap_germToFunctionField"
+  ]
+ },
+ "V14Formalization/SchemeFunctionFieldPrecomp.lean": {
+  "expose": [
+   "Hom.functionFieldMap",
+   "actionFunctionFieldMap"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "Hom.functionFieldMap",
+   "Hom.map_genericPoint_of_isDominant",
+   "RationalMap",
+   "RationalMap.fromFunctionField_comp_toRationalMap",
+   "Spec_map_functionFieldMap_fromSpecStalk",
+   "actionFunctionFieldMap",
+   "actionPrecomp_fromFunctionField_generic"
+  ]
+ },
+ "V14Formalization/SchemeNormalSpecialization.lean": {
+  "expose": [
+   "properLift",
+   "properLiftStruct",
+   "specialFiberMap",
+   "specialize",
+   "square"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "NormalValuationData",
+   "generic_to_properLift",
+   "hom_ext_of_generic_eq",
+   "properLift",
+   "properLiftStruct",
+   "properLift_toBase",
+   "specialFiberMap",
+   "specialFiberMap_isOver",
+   "specialize",
+   "specialize_fromFunctionField",
+   "square"
+  ]
+ },
+ "V14Formalization/SchemeProjectiveAction.lean": {
+  "expose": [
+   "projectiveAction",
+   "projectiveActionHom",
+   "projectiveActionOver"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "FaithfulMatrixRepresentation",
+   "MatrixRepresentation",
+   "projectiveAction",
+   "projectiveActionHom",
+   "projectiveActionHom_mul",
+   "projectiveActionHom_one",
+   "projectiveActionOver"
+  ]
+ },
+ "V14Formalization/SchemeRationalConstancy.lean": {
+  "expose": [
+   "RationalMapIsConstantOver"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "RationalMapIsConstantOver",
+   "actionPrecomp_constant",
+   "noEquivariantRationalMap_of_constant",
+   "noEquivariantRationalMap_of_constant_fixedSpecialization",
+   "noEquivariantRationalMap_of_constant_fixedSpecialization_section",
+   "noEquivariantRationalMap_of_constant_section",
+   "rationalMapIsConstantOver_fixedBy_of_comp_descends",
+   "rationalMapIsConstantOver_of_fromFunctionField_descends"
+  ]
+ },
+ "V14Formalization/SemidirectChartIntegration.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "chartSemidirectGroup",
+   "semidirectBiprojectiveTwoTwoFunctionFieldAction",
+   "semidirectBiprojectiveTwoTwo_chartModel",
+   "semidirectChartFractionAction",
+   "semidirectChartResidueAction",
+   "semidirectProjectiveFiveFunctionFieldAction",
+   "semidirectProjectiveFive_chartModel"
+  ]
+ },
+ "V14Formalization/SmoothPlaneCubicMvFracDescent.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "smoothPlaneCubic_projective_descends_mvfrac"
+  ]
+ },
+ "V14Formalization/StandardChartAwayTransport.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "standardChartGammaIsoTop_hom_GammaSpecIso_inv"
+  ]
+ },
+ "V14Formalization/UniversalNormalDivisor.lean": {
+  "expose": [
+   "ambientMatrixRepresentation",
+   "ambientProjectiveActionOver",
+   "diagonalPullbackActionHom",
+   "diagonalPullbackActionOver",
+   "finSumFinEquiv",
+   "minusCentralizerMatrixRepresentation",
+   "minusCentralizerRepresentation",
+   "minusProjectiveActionOver",
+   "normalDivisorActionOver",
+   "plusCentralizerMatrixRepresentation",
+   "plusCentralizerRepresentation",
+   "plusMinusAmbientBasis",
+   "plusMinusFinEquiv",
+   "plusMinusLinearEquiv",
+   "plusProjectiveActionOver",
+   "sigmaCentralizer"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "CentralizerMinus",
+   "CentralizerPlus",
+   "ambientMatrixRepresentation",
+   "ambientProjectiveActionOver",
+   "ambientProjectiveActionOver_isIntegral",
+   "diagonalPullbackActionHom",
+   "diagonalPullbackActionHom_fst",
+   "diagonalPullbackActionHom_mul",
+   "diagonalPullbackActionHom_one",
+   "diagonalPullbackActionHom_snd",
+   "diagonalPullbackActionOver",
+   "exists_ambient_projective_basis",
+   "exists_plus_minus_projective_bases",
+   "finSumFinEquiv",
+   "minusCentralizerMatrixRepresentation",
+   "minusCentralizerMatrixRepresentation_sigma",
+   "minusCentralizerRepresentation",
+   "minusCentralizerRepresentation_sigma",
+   "minusProjectiveActionOver",
+   "normalDivisorActionOver",
+   "normalDivisorActionOver_isIntegral",
+   "plusCentralizerMatrixRepresentation",
+   "plusCentralizerMatrixRepresentation_sigma",
+   "plusCentralizerRepresentation",
+   "plusCentralizerRepresentation_sigma",
+   "plusMinusAmbientBasis",
+   "plusMinusFinEquiv",
+   "plusMinusLinearEquiv",
+   "plusMinusLinearEquiv_centralizer",
+   "plusProjectiveActionOver",
+   "sigmaCentralizer"
+  ]
+ },
+ "V14Formalization/UniversalSigmaDiagonal.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "ambientMatrixRepresentation_centralizer_block_general",
+   "ambientMatrixRepresentation_sigma_diagonal",
+   "exists_normalizedCoordinates_support_of_sigma_fixed",
+   "exists_plusMinusBasis_sigma_diagonal",
+   "plusMinusAmbientBasis_toMatrix_general",
+   "plusMinusMappedBasis_toMatrix_general",
+   "plusMinusSigmaSign"
+  ]
+ },
+ "V14Formalization/V14Application.lean": {
+  "expose": [
+   "sigma",
+   "sigmaLift"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "F",
+   "PSL2F11",
+   "PSL2F11_isCenterless",
+   "Reg",
+   "SLG",
+   "V14Variety",
+   "V14_no_equivariant_map_from_faithful_rep",
+   "V14_not_GUnirational",
+   "V14_not_weakly_versal",
+   "k",
+   "sigma",
+   "sigmaLift"
+  ]
+ },
+ "V14Formalization/V14D12FixedPointExclusion.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "G",
+   "d12ActualReflMatrix",
+   "d12ActualRotMatrix",
+   "noEquivariantRationalMap_of_d12_certificate",
+   "no_centralizer_fixed_section_of_certificate"
+  ]
+ },
+ "V14Formalization/V14FieldPointReconstruction.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "exists_normalizedResidueCoordinates_for_fieldPoint",
+   "fieldPoint_eq_pointOfMappedNormalizedResidueCoordinates",
+   "normalizedCoordinates_eq_of_pointOfNormalizedCoordinatesAlgebra_eq"
+  ]
+ },
+ "V14Formalization/V14FixedByAmbientPoint.lean": {
+  "expose": [
+   "ambientPointOfV14FixedBy"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "ambientPointOfV14FixedBy",
+   "ambientPointOfV14FixedBy_isOver_and_fixed",
+   "v14FieldPointOver",
+   "v14FixedBy_schemePoint_ambient_isOver_and_fixed"
+  ]
+ },
+ "V14Formalization/V14FixedPointDescent.lean": {
+  "expose": [
+   "v14SchemePointOfNormalizedCoordinates"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "k",
+   "v14Equations_of_projector_and_plucker",
+   "v14SchemePointOfNormalizedCoordinates",
+   "v14SchemePointOfNormalizedCoordinates_sigma_fixed",
+   "v14SchemePointOfNormalizedCoordinates_toSpec",
+   "v14SchemePointOfNormalizedCoordinates_\u03b9"
+  ]
+ },
+ "V14Formalization/V14FixedPointEquations.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "exists_normalizedCoordinates_equations_of_v14FixedBy",
+   "exists_normalizedCoordinates_v14FixedBy_projector_fixed",
+   "map_projectorLinearCut"
+  ]
+ },
+ "V14Formalization/V14FixedPointSegreBridge.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "bilinearCoefficientMatrix",
+   "det_bilinearCoefficientMatrix_eq_zero",
+   "exists_pureTensor_and_det_eq_zero_of_linearSection",
+   "exists_pureTensor_of_twoByTwoMinors_eq_zero",
+   "mem_plus_or_minus_projectiveStratum_of_fixed",
+   "minusProjectiveStratum"
+  ]
+ },
+ "V14Formalization/V14ProjectorEigenspaceFactorization.lean": {
+  "expose": [
+   "minusProjector",
+   "plusProjector"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "eigenvalue_eq_one_or_neg_one_of_involution",
+   "eq_mulVec_mulVec_of_projector_fixed",
+   "eq_plus_or_minus_carrier_of_projector_involution_eigenvector",
+   "fin15_eq_plus6_or_minus4_carrier",
+   "minusProjector",
+   "minusProjector_mulVec_eq_self",
+   "plusProjector",
+   "plusProjector_mulVec_eq_self"
+  ]
+ },
+ "V14Formalization/V14SchemeBaseChange.lean": {
+  "expose": [
+   "actionOverBaseChange"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "actionOverBaseChange",
+   "actionOverBaseChange_carrier",
+   "actionOverBaseChange_isProper",
+   "actionOver_isProper"
+  ]
+ },
+ "V14Formalization/V14SchemeModel.lean": {
+  "expose": [
+   "action",
+   "actionOver",
+   "action_of_plucker",
+   "equationDegree",
+   "projectorMatrix"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "G",
+   "Lambda2U",
+   "action",
+   "actionOver",
+   "actionOver_carrier",
+   "actionOver_hom_v14Scheme\u03b9",
+   "action_hom_v14Scheme\u03b9",
+   "action_of_plucker",
+   "ambientSchemeAction",
+   "equationDegree",
+   "equations_isHomogeneous",
+   "fixed_comp_v14Scheme\u03b9",
+   "invariantIdeal",
+   "invariantIdeal_of_plucker",
+   "k",
+   "plucker_span_aeval_lambda2_le",
+   "projectorLinearCuts_vanish_iff_mem_Msub",
+   "projectorMatrix",
+   "projectorMatrix_commutes",
+   "projectorMatrix_idempotent",
+   "v14Ideal",
+   "v14Ideal_naturality",
+   "v14Scheme",
+   "v14Scheme\u03b9"
+  ]
+ },
+ "V14Formalization/WeierstrassSchemeDescent.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "AffineScheme",
+   "AffineToBase",
+   "affine_morphism_descends_mvfrac",
+   "affine_morphism_descends_of_point_baseChange_surjective",
+   "eval\u2082_polynomial_eq_evalEval",
+   "projectiveSpace_morphism_descends_weierstrass_mvfrac",
+   "projectiveSpace_morphism_descends_weierstrass_mvfrac_of_coordinates",
+   "projective_weierstrass_triple_descends_mvfrac",
+   "projective_weierstrass_triple_descends_of_pointBaseChange_surjective",
+   "projectivization_weierstrass_descends_mvfrac",
+   "projectivization_weierstrass_descends_of_pointBaseChange_surjective",
+   "ringHomOfPoint",
+   "specMap_comp_pointOfNormalizedCoordinates"
+  ]
+ },
+ "V14Formalization/WeilHom.lean": {
+  "expose": [
+   "weilUHom"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "F",
+   "SLG",
+   "big_big_pos_eq_negR_pos",
+   "weilFun_mul_big_borel",
+   "weilFun_of_big",
+   "weilUHom",
+   "weilU_mul"
+  ]
+ },
+ "V14Formalization/WeilMul.lean": {
+  "expose": [
+   "Rfull"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "Dfull_congr",
+   "Dfull_conj_Nfull",
+   "Dfull_conj_Wfull",
+   "Dfull_mul",
+   "F",
+   "Rfull",
+   "Rfull_Nfull",
+   "Rfull_sq",
+   "SLG",
+   "Wfull_sq_R",
+   "ea_mul_borel",
+   "ec_big_borel_ne",
+   "ec_borel_big_ne",
+   "ec_mul_big_borel",
+   "ec_mul_borel_big",
+   "ed_of_borel",
+   "weilU_mul_borel",
+   "\u03c7\u2082_inv",
+   "\u03c7\u2082_sq_one",
+   "\u03c7\u2082_two"
+  ]
+ },
+ "V14Formalization/WeilRepSL2.lean": {
+  "expose": [
+   "Dfull",
+   "Nfull",
+   "Wfull",
+   "bigCellFun",
+   "bigCellPos",
+   "borelFun",
+   "ea",
+   "eb",
+   "ec",
+   "ed",
+   "negI",
+   "weilFun",
+   "weilU"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "Dfull",
+   "Dfull_preserves_even",
+   "F",
+   "Nfull",
+   "Nfull_add",
+   "Nfull_zero",
+   "SLG",
+   "Wfull",
+   "bigCellFun",
+   "bigCellPos",
+   "borelFun",
+   "det_entries",
+   "ea",
+   "ea_ne_zero_of_ec_zero",
+   "eb",
+   "ec",
+   "ed",
+   "negI",
+   "weilFun",
+   "weilFun_preserves_even",
+   "weilU",
+   "weilU_Smat",
+   "weilU_Tmat",
+   "weilU_negI",
+   "weilU_one",
+   "\u03c7\u2082_one"
+  ]
+ },
+ "V14Formalization/WeilWN.lean": {
+  "expose": [],
+  "expose_all_public_defs": true,
+  "public": [
+   "F",
+   "Wfull_Nfull_Wfull"
+  ]
+ },
+ "V14Formalization/XAdicSemidirectAction.lean": {
+  "expose": [
+   "ringAutUnitsAction",
+   "xAdicPolynomialEquiv",
+   "xAdicRatFuncEquiv",
+   "xAdicSemidirectPolynomialAction",
+   "xAdicSemidirectRatFuncAction",
+   "xAdicSemidirectValuationAction",
+   "xAdicSemidirectValuationEquiv"
+  ],
+  "expose_all_public_defs": true,
+  "public": [
+   "ringAutUnitsAction",
+   "xAdicPolynomialEquiv",
+   "xAdicPolynomialEquiv_C",
+   "xAdicPolynomialEquiv_X",
+   "xAdicRatFuncEquiv",
+   "xAdicRatFuncEquiv_algebraMap",
+   "xAdicRatFuncEquiv_mem_iff",
+   "xAdicSemidirectPolynomialAction",
+   "xAdicSemidirectRatFuncAction",
+   "xAdicSemidirectRatFuncAction_apply",
+   "xAdicSemidirectValuationAction",
+   "xAdicSemidirectValuationEquiv",
+   "xAdicSemidirect_base_ring",
+   "xAdicSemidirect_fraction_ring",
+   "xAdicSemidirect_residue_ring"
+  ]
+ }
+}

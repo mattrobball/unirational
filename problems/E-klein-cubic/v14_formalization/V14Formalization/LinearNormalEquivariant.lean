@@ -2,9 +2,11 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.LinearNormalValuation
-import V14Formalization.SchemeEquivariantSpecialization
-import V14Formalization.SchemeFunctionFieldPrecomp
+module
+
+public import V14Formalization.LinearNormalValuation
+public import V14Formalization.SchemeEquivariantSpecialization
+public import V14Formalization.SchemeFunctionFieldPrecomp
 
 /-!
 # Equivariant linear-normal chart package
@@ -34,7 +36,7 @@ universe u v
 
 /-- The chart identification transports the explicit `X`-adic inclusion to
 the actual function field of the source. -/
-def linearChartGenericHom
+@[expose] public def linearChartGenericHom
     (d : ℕ) (Omega : Type u) [Field Omega]
     (X : Scheme.{u}) [IsIntegral X]
     (eK : LinearNormalFractionField d Omega ≃+* X.functionField) :
@@ -45,7 +47,7 @@ def linearChartGenericHom
 
 /-- The exceptional chart identification transports evaluation at `X = 0`
 to the actual function field of the exceptional divisor. -/
-def linearChartResidueHom
+@[expose] public def linearChartResidueHom
     (d : ℕ) (Omega : Type u) [Field Omega]
     (E : Scheme.{u}) [IsIntegral E]
     (eE : LinearExceptionalFunctionField d Omega ≃+* E.functionField) :
@@ -54,7 +56,7 @@ def linearChartResidueHom
 
 /-- Transport the explicit `X`-adic valuation package across source and
 exceptional function-field charts. -/
-def linearNormalDataOfChart
+@[expose] public def linearNormalDataOfChart
     (d : ℕ) (Omega : Type u) [Field Omega]
     (X E : Scheme.{u})
     [X.Over (linearBase Omega)] [E.Over (linearBase Omega)]
@@ -89,7 +91,7 @@ def linearNormalDataOfChart
   exact (RingHom.ker_comp_of_injective _ eE.injective).trans
     (linearNormalResidue_ker d Omega)
 
-private theorem spec_fraction_natural_of_ring
+public theorem spec_fraction_natural_of_ring
     {R K : Type u} [CommRing R] [CommRing K]
     (i : R →+* K) (r : R →+* R) (k : K →+* K)
     (h : k.comp i = i.comp r) :
@@ -102,7 +104,7 @@ private theorem spec_fraction_natural_of_ring
       CommRingCat.ofHom (i.comp r) by rfl]
   rw [h]
 
-private theorem spec_base_natural_of_ring
+public theorem spec_base_natural_of_ring
     {R Omega : Type u} [CommRing R] [CommRing Omega]
     (b : Omega →+* R) (r : R →+* R)
     (h : r.comp b = b) :
@@ -122,7 +124,7 @@ automorphism is available.  The three families of ring equivalences are only
 required pointwise: `EquivariantNormalValuationData` uses one group element at
 a time, and pullback on function fields is contravariant, so imposing an
 unnecessary `N →* RingEquiv` structure would give the wrong orientation. -/
-def linearNormalEquivariantDataOfChart
+@[expose] public def linearNormalEquivariantDataOfChart
     (d : ℕ) (Omega : Type u) [Field Omega]
     {N : Type v} [Group N]
     (X E : Action (Over (linearBase Omega)) N)
@@ -202,7 +204,7 @@ def linearNormalEquivariantDataOfChart
 generic-stalk pullback induced by each action automorphism.  The general
 function-field precomposition theorem discharges the two quantified
 rational-map compatibility fields. -/
-def linearNormalEquivariantDataOfChart_of_actionFunctionFieldMap
+@[expose] public def linearNormalEquivariantDataOfChart_of_actionFunctionFieldMap
     (d : ℕ) (Omega : Type u) [Field Omega]
     {N : Type v} [Group N]
     (X E : Action (Over (linearBase Omega)) N)

@@ -2,16 +2,18 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.MultiProjectiveZeroLocus
-import V14Formalization.ProjNaturality
-import V14Formalization.InvariantSubschemeAction
-import BConicBundleMultisections.LinearCoordinateChange
-import BConicBundleMultisections.ProjectiveHypersurfaceScheme
-import BConicBundleMultisections.IdealSheafDescent
-import BConicBundleMultisections.ChartHomogenization
-import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Functor
-import Mathlib.AlgebraicGeometry.IdealSheaf.Functorial
-import Mathlib.AlgebraicGeometry.OpenImmersion
+module
+
+public import V14Formalization.MultiProjectiveZeroLocus
+public import V14Formalization.ProjNaturality
+public import V14Formalization.InvariantSubschemeAction
+public import BConicBundleMultisections.LinearCoordinateChange
+public import BConicBundleMultisections.ProjectiveHypersurfaceScheme
+public import BConicBundleMultisections.IdealSheafDescent
+public import BConicBundleMultisections.ChartHomogenization
+public import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Functor
+public import Mathlib.AlgebraicGeometry.IdealSheaf.Functorial
+public import Mathlib.AlgebraicGeometry.OpenImmersion
 
 /-!
 # Naturality of projective zero-locus ideals under linear coordinate change
@@ -127,14 +129,14 @@ theorem familyIdeal_comap_standardChartι (n : ℕ)
   exact ProjectiveSpace.projectiveZeroLocusIdeal_comap_standardChartι
     n R (F j) (hF j) i
 
-def chartSectionRingHom (n : ℕ) (i : Fin (n + 1)) :
+@[expose] public def chartSectionRingHom (n : ℕ) (i : Fin (n + 1)) :
     MvPolynomial (Fin (n + 1)) R →+*
       Γ(Spec (.of (ProjectiveSpace.StandardChartRing n R i)), ⊤) :=
   (ProjectiveSpace.hypersurfaceChartΓIso n R i).inv.hom.comp
     (MvPolynomial.aeval
       (fun l ↦ ProjectiveSpace.normalizedCoordinate n R i l)).toRingHom
 
-@[simp] theorem chartSectionRingHom_apply (n : ℕ) (i : Fin (n + 1))
+@[simp] public theorem chartSectionRingHom_apply (n : ℕ) (i : Fin (n + 1))
     (H : MvPolynomial (Fin (n + 1)) R) :
     chartSectionRingHom n i H =
       ProjectiveSpace.hypersurfaceChartEquationSection n R i H :=
@@ -196,7 +198,7 @@ theorem iSup_chartIdealSheaf_le_of_span_le (n : ℕ)
     ← map_span_range_chartSection (R := R) n G i]
   exact Ideal.map_mono hspan
 
-theorem familyIdeal_eq_of_span_eq (n : ℕ)
+public theorem familyIdeal_eq_of_span_eq (n : ℕ)
     {ι κ : Type v}
     (F : ι → MvPolynomial (Fin (n + 1)) R)
     (G : κ → MvPolynomial (Fin (n + 1)) R)
@@ -228,15 +230,15 @@ theorem familyIdeal_le_of_span_le (n : ℕ)
 
 /-! ## Linear Away charts and the Proj pullback square -/
 
-abbrev coordGraded (n : ℕ) :=
+public abbrev coordGraded (n : ℕ) :=
   MvPolynomial.homogeneousSubmodule (Fin (n + 1)) R
 
-theorem linearSubstGradedRingHom_X (n : ℕ)
+public theorem linearSubstGradedRingHom_X (n : ℕ)
     (M : Matrix (Fin (n + 1)) (Fin (n + 1)) R) (i : Fin (n + 1)) :
     (linearSubstGradedRingHom n M) (MvPolynomial.X i) = linearSubst n M i := by
   simp [linearSubstGradedRingHom_apply]
 
-theorem linearSubstGradedRingHom_eq_aeval (n : ℕ)
+public theorem linearSubstGradedRingHom_eq_aeval (n : ℕ)
     (M : Matrix (Fin (n + 1)) (Fin (n + 1)) R)
     (H : MvPolynomial (Fin (n + 1)) R) :
     (linearSubstGradedRingHom n M) H =
@@ -246,7 +248,7 @@ theorem linearSubstGradedRingHom_eq_aeval (n : ℕ)
 /-- Away immersion for `D(f(Xᵢ))` under a linear graded map `f`.
 
 Kept as an `abbrev` so open-immersion instances on `Proj.awayι` apply. -/
-abbrev linearAwayι (n : ℕ)
+public abbrev linearAwayι (n : ℕ)
     (M : Matrix (Fin (n + 1)) (Fin (n + 1)) R) (i : Fin (n + 1)) :
     Spec (.of (HomogeneousLocalization.Away (coordGraded (R := R) n)
       (linearSubstGradedRingHom n M (MvPolynomial.X i)))) ⟶
@@ -256,7 +258,7 @@ abbrev linearAwayι (n : ℕ)
     ((linearSubstGradedRingHom n M).map_mem (MvPolynomial.isHomogeneous_X R i))
     zero_lt_one
 
-theorem linearAwayι_comp_mapLinearSubst (n : ℕ)
+public theorem linearAwayι_comp_mapLinearSubst (n : ℕ)
     (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) R) (hNM : N * M = 1)
     (i : Fin (n + 1)) :
     linearAwayι n M i ≫ mapLinearSubst n M N hNM =
@@ -270,7 +272,7 @@ theorem linearAwayι_comp_mapLinearSubst (n : ℕ)
     (s := MvPolynomial.X i) (hs := MvPolynomial.isHomogeneous_X R i)
     (hi := zero_lt_one)
 
-theorem opensRange_linearAwayι (n : ℕ)
+public theorem opensRange_linearAwayι (n : ℕ)
     (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) R) (hNM : N * M = 1)
     (i : Fin (n + 1)) :
     (linearAwayι (R := R) n M i).opensRange =
@@ -313,14 +315,14 @@ theorem iSup_opensRange_linearAwayι (n : ℕ)
 
 /-! ## Away principal ideals -/
 
-def awayChartΓIso (n : ℕ)
+@[expose] public def awayChartΓIso (n : ℕ)
     (s : MvPolynomial (Fin (n + 1)) R) :
     Γ(Spec (.of (HomogeneousLocalization.Away (coordGraded (R := R) n) s)), ⊤) ≅
       .of (HomogeneousLocalization.Away (coordGraded (R := R) n) s) :=
   Scheme.ΓSpecIso _
 
 /-- Degree-zero form `H / s^d` in an Away chart. -/
-def awayEquation (n : ℕ)
+@[expose] public def awayEquation (n : ℕ)
     {d : ℕ} (s : MvPolynomial (Fin (n + 1)) R)
     (hs : s ∈ coordGraded (R := R) n 1)
     (H : MvPolynomial (Fin (n + 1)) R) (hH : H ∈ coordGraded (R := R) n d) :
@@ -328,21 +330,21 @@ def awayEquation (n : ℕ)
   HomogeneousLocalization.Away.mk (coordGraded (R := R) n) hs d H (by
     simpa [nsmul_one] using hH)
 
-def awayEquationSection (n : ℕ)
+@[expose] public def awayEquationSection (n : ℕ)
     {d : ℕ} (s : MvPolynomial (Fin (n + 1)) R)
     (hs : s ∈ coordGraded (R := R) n 1)
     (H : MvPolynomial (Fin (n + 1)) R) (hH : H ∈ coordGraded (R := R) n d) :
     Γ(Spec (.of (HomogeneousLocalization.Away (coordGraded (R := R) n) s)), ⊤) :=
   (awayChartΓIso n s).inv (awayEquation n s hs H hH)
 
-def awayHypersurfaceIdealSheaf (n : ℕ)
+@[expose] public def awayHypersurfaceIdealSheaf (n : ℕ)
     {d : ℕ} (s : MvPolynomial (Fin (n + 1)) R)
     (hs : s ∈ coordGraded (R := R) n 1)
     (H : MvPolynomial (Fin (n + 1)) R) (hH : H ∈ coordGraded (R := R) n d) :
     (Spec (.of (HomogeneousLocalization.Away (coordGraded (R := R) n) s))).IdealSheafData :=
   Scheme.IdealSheafData.ofIdealTop (Ideal.span {awayEquationSection n s hs H hH})
 
-theorem Away_map_awayEquation (n : ℕ)
+public theorem Away_map_awayEquation (n : ℕ)
     (M : Matrix (Fin (n + 1)) (Fin (n + 1)) R) (i : Fin (n + 1))
     {d : ℕ} (H : MvPolynomial (Fin (n + 1)) R)
     (hH : H ∈ coordGraded (R := R) n d) :
@@ -375,7 +377,7 @@ identified with `Away.mk G (X i) d`.  The linear images
 `s = linearSubstGradedRingHom M (X i)` are the instances needed for naturality
 under `mapLinearSubst`.
 -/
-def missing_projectiveZeroLocusIdeal_comap_awayι
+@[expose] public def missing_projectiveZeroLocusIdeal_comap_awayι
     (n : ℕ) {d : ℕ}
     (s : MvPolynomial (Fin (n + 1)) R)
     (hs : s ∈ coordGraded (R := R) n 1)
@@ -387,7 +389,7 @@ def missing_projectiveZeroLocusIdeal_comap_awayι
 
 /-- Chart-side half of naturality, conditional on affine `Away.map` naturality of
 the principal chart ideal. -/
-theorem projectiveZeroLocusIdeal_comap_linearAwayι_comp_mapLinearSubst_of_chart
+public theorem projectiveZeroLocusIdeal_comap_linearAwayι_comp_mapLinearSubst_of_chart
     (n : ℕ)
     (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) R) (hNM : N * M = 1)
     {d : ℕ} (H : MvPolynomial (Fin (n + 1)) R) (hH : H.IsHomogeneous d)
@@ -418,7 +420,7 @@ theorem projectiveZeroLocusIdeal_comap_linearAwayι_comp_mapLinearSubst_of_chart
 
 /-- Ideal sheaves on a scheme are determined by comap along a covering family of
 open immersions from affine schemes. -/
-theorem idealSheafData_eq_of_comap_openImmersion_eq
+public theorem idealSheafData_eq_of_comap_openImmersion_eq
     {X : Scheme.{u}} {ι : Type v}
     (Y : ι → Scheme.{u}) (f : ∀ i, Y i ⟶ X)
     [∀ i, IsOpenImmersion (f i)] [∀ i, IsAffine (Y i)]
@@ -449,7 +451,7 @@ theorem idealSheafData_eq_of_comap_openImmersion_eq
 
 If both sides restrict along each linear Away chart `D(f(Xᵢ))` to the same
 ideal sheaf, then they agree globally by the linear Away cover. -/
-theorem projectiveZeroLocusIdeal_comap_mapLinearSubst_of_away_restriction
+public theorem projectiveZeroLocusIdeal_comap_mapLinearSubst_of_away_restriction
     (n : ℕ)
     (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) R) (hNM : N * M = 1)
     {d : ℕ} (H : MvPolynomial (Fin (n + 1)) R) (_hH : H.IsHomogeneous d)
@@ -472,7 +474,7 @@ theorem projectiveZeroLocusIdeal_comap_mapLinearSubst_of_away_restriction
 
 /-- Package chart-side naturality and Away-restriction into the agreement
 hypothesis of the previous theorem. -/
-theorem comap_linearAwayι_agree_of_chart_and_away
+public theorem comap_linearAwayι_agree_of_chart_and_away
     (n : ℕ)
     (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) R) (hNM : N * M = 1)
     {d : ℕ} (H : MvPolynomial (Fin (n + 1)) R) (hH : H.IsHomogeneous d)
@@ -522,7 +524,7 @@ theorem projectiveZeroLocusFamilyIdeal_comap_mapLinearSubst_of_single (n : ℕ)
   exact hsingle j
 
 /-- Family form with the `aeval` spelling of the transformed equations. -/
-theorem projectiveZeroLocusFamilyIdeal_comap_mapLinearSubst_aeval_of_single
+public theorem projectiveZeroLocusFamilyIdeal_comap_mapLinearSubst_aeval_of_single
     (n : ℕ)
     (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) R) (hNM : N * M = 1)
     {ι : Type v} (F : ι → MvPolynomial (Fin (n + 1)) R)
@@ -570,7 +572,7 @@ theorem familyIdeal_comap_mapLinearSubst_le_of_span_le (n : ℕ)
 /-- Direct `of_comap_le` input: naturality plus span inclusion of the transformed
 family yields pullback containment, which is the hypothesis of
 `IsInvariantIdeal.of_comap_le`. -/
-theorem comap_le_projectiveZeroLocusFamilyIdeal_of_span_le (n : ℕ)
+public theorem comap_le_projectiveZeroLocusFamilyIdeal_of_span_le (n : ℕ)
     (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) R) (hNM : N * M = 1)
     {ι : Type v} (F : ι → MvPolynomial (Fin (n + 1)) R)
     (d : ι → ℕ) (hF : ∀ j, (F j).IsHomogeneous (d j))
@@ -588,7 +590,7 @@ theorem comap_le_projectiveZeroLocusFamilyIdeal_of_span_le (n : ℕ)
   familyIdeal_comap_mapLinearSubst_le_of_span_le n M N hNM F d hF hnat hspan
 
 /-- Groupwise form of the `of_comap_le` hypothesis for a matrix action. -/
-theorem comap_le_projectiveZeroLocusFamilyIdeal_forall_of_span_le
+public theorem comap_le_projectiveZeroLocusFamilyIdeal_forall_of_span_le
     {G : Type v} [Group G] (n : ℕ)
     (ρ : G → Matrix (Fin (n + 1)) (Fin (n + 1)) R)
     (ρinv : G → Matrix (Fin (n + 1)) (Fin (n + 1)) R)
@@ -615,7 +617,7 @@ theorem comap_le_projectiveZeroLocusFamilyIdeal_forall_of_span_le
 `comap_le_projectiveZeroLocusFamilyIdeal_forall_of_span_le` (or any other proof
 of the `comap ≤` condition) is available for an ambient action, invariance
 follows. -/
-theorem isInvariantIdeal_of_comap_le
+public theorem isInvariantIdeal_of_comap_le
     {G : Type v} [Group G]
     (A : Action Scheme G)
     (I : A.V.IdealSheafData)

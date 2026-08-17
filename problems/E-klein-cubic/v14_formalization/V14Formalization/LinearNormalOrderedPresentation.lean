@@ -1,6 +1,8 @@
-import V14Formalization.CorrectedBirationalField
-import Mathlib.FieldTheory.RatFunc.AsPolynomial
-import Mathlib.RingTheory.AlgebraicIndependent.Transcendental
+module
+
+public import V14Formalization.CorrectedBirationalField
+public import Mathlib.FieldTheory.RatFunc.AsPolynomial
+public import Mathlib.RingTheory.AlgebraicIndependent.Transcendental
 
 noncomputable section
 
@@ -12,15 +14,15 @@ universe u
 
 variable {Omega : Type u} [Field Omega]
 
-abbrev orderedResidualTowerField (p q : ℕ) :=
+public abbrev orderedResidualTowerField (p q : ℕ) :=
   FractionRing (MvPolynomial (Fin (p + q)) Omega)
 
-abbrev orderedNormalTowerField (p q : ℕ) :=
+public abbrev orderedNormalTowerField (p q : ℕ) :=
   RatFunc (orderedResidualTowerField (Omega := Omega) p q)
 
 /-- Reindex ordered coordinates `[u,T,v]` by the tower coordinates
 `T ⊕ [u,v]`. -/
-def orderedIndexToNormalSum (p q : ℕ) :
+@[expose] public def orderedIndexToNormalSum (p q : ℕ) :
     Fin (p + q + 1) → Unit ⊕ Fin (p + q) := fun k ↦
   if hT : (k : Nat) = p then Sum.inl ()
   else if hu : (k : Nat) < p then Sum.inr ⟨k, by omega⟩
@@ -50,17 +52,17 @@ theorem orderedIndexToNormalSum_injective (p q : ℕ) :
           apply Fin.ext
           omega
 
-def residualCoordinateInField (p q : ℕ) (i : Fin (p + q)) :
+@[expose] public def residualCoordinateInField (p q : ℕ) (i : Fin (p + q)) :
     orderedResidualTowerField (Omega := Omega) p q :=
   algebraMap (MvPolynomial (Fin (p + q)) Omega)
     (orderedResidualTowerField (Omega := Omega) p q) (MvPolynomial.X i)
 
-def normalTowerCoordinate (p q : ℕ) :
+@[expose] public def normalTowerCoordinate (p q : ℕ) :
     Unit ⊕ Fin (p + q) → orderedNormalTowerField (Omega := Omega) p q :=
   Sum.elim (fun _ ↦ RatFunc.X)
     (fun i ↦ RatFunc.C (residualCoordinateInField p q i))
 
-def orderedCoordinateInLinearNormalField (p q : ℕ) :
+@[expose] public def orderedCoordinateInLinearNormalField (p q : ℕ) :
     Fin (p + q + 1) → orderedNormalTowerField (Omega := Omega) p q :=
   normalTowerCoordinate p q ∘ orderedIndexToNormalSum p q
 
@@ -103,13 +105,13 @@ theorem orderedCoordinateInLinearNormalField_algebraicIndependent
     (Omega := Omega) p q).comp (orderedIndexToNormalSum p q)
       (orderedIndexToNormalSum_injective p q)
 
-def orderedCoordinatePolynomialToLinearNormalField (p q : ℕ) :
+@[expose] public def orderedCoordinatePolynomialToLinearNormalField (p q : ℕ) :
     orderedCoordinatePolynomial (Omega := Omega) p q →+*
       orderedNormalTowerField (Omega := Omega) p q :=
   (MvPolynomial.aeval
     (orderedCoordinateInLinearNormalField (Omega := Omega) p q)).toRingHom
 
-theorem orderedCoordinatePolynomialToLinearNormalField_injective
+public theorem orderedCoordinatePolynomialToLinearNormalField_injective
     (p q : ℕ) :
     Function.Injective
       (orderedCoordinatePolynomialToLinearNormalField
@@ -118,7 +120,7 @@ theorem orderedCoordinatePolynomialToLinearNormalField_injective
     (orderedCoordinateInLinearNormalField_algebraicIndependent
       (Omega := Omega) p q)
 
-noncomputable def orderedCoordinateFieldToLinearNormalHom (p q : ℕ) :
+@[expose] public noncomputable def orderedCoordinateFieldToLinearNormalHom (p q : ℕ) :
     orderedCoordinateField (Omega := Omega) p q →+*
       orderedNormalTowerField (Omega := Omega) p q :=
   IsFractionRing.lift
@@ -137,10 +139,10 @@ theorem orderedCoordinateFieldToLinearNormalHom_X
     IsFractionRing.lift_algebraMap]
   simp [orderedCoordinatePolynomialToLinearNormalField]
 
-def orderedResidualPlusIndex (p q : ℕ) (i : Fin p) : Fin (p + q) :=
+@[expose] public def orderedResidualPlusIndex (p q : ℕ) (i : Fin p) : Fin (p + q) :=
   ⟨i, by omega⟩
 
-def orderedResidualMinusIndex (p q : ℕ) (j : Fin q) : Fin (p + q) :=
+@[expose] public def orderedResidualMinusIndex (p q : ℕ) (j : Fin q) : Fin (p + q) :=
   ⟨p + j, by omega⟩
 
 @[simp]
@@ -225,7 +227,7 @@ theorem orderedCoordinateFieldToLinearNormalHom_C
       (orderedResidualTowerField (Omega := Omega) p q)
       (orderedNormalTowerField (Omega := Omega) p q)]
 
-theorem orderedResidualIndex_cases (p q : ℕ) (i : Fin (p + q)) :
+public theorem orderedResidualIndex_cases (p q : ℕ) (i : Fin (p + q)) :
     (∃ j : Fin p, i = orderedResidualPlusIndex p q j) ∨
       ∃ j : Fin q, i = orderedResidualMinusIndex p q j := by
   by_cases hi : (i : Nat) < p
@@ -315,7 +317,7 @@ theorem normalPolynomial_mem_orderedFieldRange
           ((orderedCoordinateFieldToLinearNormalHom
             (Omega := Omega) p q).fieldRange.pow_mem hX n)
 
-theorem orderedCoordinateFieldToLinearNormalHom_surjective
+public theorem orderedCoordinateFieldToLinearNormalHom_surjective
     (p q : ℕ) :
     Function.Surjective (orderedCoordinateFieldToLinearNormalHom
       (Omega := Omega) p q) := by
@@ -329,7 +331,7 @@ theorem orderedCoordinateFieldToLinearNormalHom_surjective
       (normalPolynomial_mem_orderedFieldRange p q a)
       (normalPolynomial_mem_orderedFieldRange p q b)
 
-noncomputable def orderedCoordinateFieldToLinearNormalEquiv (p q : ℕ) :
+@[expose] public noncomputable def orderedCoordinateFieldToLinearNormalEquiv (p q : ℕ) :
     orderedCoordinateField (Omega := Omega) p q ≃+*
       orderedNormalTowerField (Omega := Omega) p q :=
   RingEquiv.ofBijective (orderedCoordinateFieldToLinearNormalHom p q)
@@ -338,13 +340,13 @@ noncomputable def orderedCoordinateFieldToLinearNormalEquiv (p q : ℕ) :
 
 /-- Direct, generator-controlled presentation of the linear normal fraction
 field in ordered coordinates `[u,T,v]`. -/
-noncomputable def linearNormalToOrderedCoordinateFieldEquiv (p q : ℕ) :
+@[expose] public noncomputable def linearNormalToOrderedCoordinateFieldEquiv (p q : ℕ) :
     orderedNormalTowerField (Omega := Omega) p q ≃+*
       orderedCoordinateField (Omega := Omega) p q :=
   (orderedCoordinateFieldToLinearNormalEquiv p q).symm
 
 @[simp]
-theorem linearNormalToOrderedCoordinateFieldEquiv_X_normal
+public theorem linearNormalToOrderedCoordinateFieldEquiv_X_normal
     (p q : ℕ) :
     linearNormalToOrderedCoordinateFieldEquiv (Omega := Omega) p q
         (RatFunc.X : orderedNormalTowerField (Omega := Omega) p q) =
@@ -360,7 +362,7 @@ theorem linearNormalToOrderedCoordinateFieldEquiv_X_normal
   exact (orderedCoordinateFieldToLinearNormalHom_X_normal p q).symm
 
 @[simp]
-theorem linearNormalToOrderedCoordinateFieldEquiv_C_plus
+public theorem linearNormalToOrderedCoordinateFieldEquiv_C_plus
     (p q : ℕ) (i : Fin p) :
     linearNormalToOrderedCoordinateFieldEquiv (Omega := Omega) p q
         (RatFunc.C (residualCoordinateInField (Omega := Omega) p q
@@ -377,7 +379,7 @@ theorem linearNormalToOrderedCoordinateFieldEquiv_C_plus
   exact (orderedCoordinateFieldToLinearNormalHom_X_plus p q i).symm
 
 @[simp]
-theorem linearNormalToOrderedCoordinateFieldEquiv_C_tail
+public theorem linearNormalToOrderedCoordinateFieldEquiv_C_tail
     (p q : ℕ) (j : Fin q) :
     linearNormalToOrderedCoordinateFieldEquiv (Omega := Omega) p q
         (RatFunc.C (residualCoordinateInField (Omega := Omega) p q
@@ -393,7 +395,7 @@ theorem linearNormalToOrderedCoordinateFieldEquiv_C_tail
     (Omega := Omega) p q).apply_symm_apply]
   exact (orderedCoordinateFieldToLinearNormalHom_X_tail p q j).symm
 
-theorem linearNormalToOrderedCoordinateFieldEquiv_base
+public theorem linearNormalToOrderedCoordinateFieldEquiv_base
     (p q : ℕ) (c : Omega) :
     linearNormalToOrderedCoordinateFieldEquiv (Omega := Omega) p q
         (baseToLinearNormalFractionField (Nat.succ (p + q)) Omega c) =

@@ -2,10 +2,12 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.SchemeEquivariant
-import Mathlib.AlgebraicGeometry.Limits
-import Mathlib.AlgebraicGeometry.Morphisms.Separated
-import Mathlib.CategoryTheory.Limits.Shapes.Equalizers
+module
+
+public import V14Formalization.SchemeEquivariant
+public import Mathlib.AlgebraicGeometry.Limits
+public import Mathlib.AlgebraicGeometry.Morphisms.Separated
+public import Mathlib.CategoryTheory.Limits.Shapes.Equalizers
 
 /-!
 # Fixed loci of automorphisms of schemes
@@ -77,26 +79,26 @@ theorem absoluteFixedByPairι_comp_rightAction
   simp only [Category.assoc, absoluteFixedByι_comp_action]
 
 /-- The scheme-theoretic fixed locus of `g`, formed in schemes over `S`. -/
-abbrev FixedBy (X : Action (Over S) G) (g : G) : Over S :=
+public abbrev FixedBy (X : Action (Over S) G) (g : G) : Over S :=
   equalizer (𝟙 X.V) (X.ρ g)
 
 /-- The canonical inclusion of the fixed locus into the original scheme. -/
-abbrev fixedByι (X : Action (Over S) G) (g : G) : FixedBy X g ⟶ X.V :=
+public abbrev fixedByι (X : Action (Over S) G) (g : G) : FixedBy X g ⟶ X.V :=
   equalizer.ι (𝟙 X.V) (X.ρ g)
 
 @[reassoc]
-theorem fixedByι_comp_action (X : Action (Over S) G) (g : G) :
+public theorem fixedByι_comp_action (X : Action (Over S) G) (g : G) :
     fixedByι X g ≫ X.ρ g = fixedByι X g := by
   simpa only [fixedByι, Category.comp_id] using
     (equalizer.condition (𝟙 X.V) (X.ρ g)).symm
 
 /-- A map whose image is fixed by `g` factors through the fixed subscheme. -/
-noncomputable def fixedByLift {Z : Over S} (X : Action (Over S) G) (g : G)
+@[expose] public noncomputable def fixedByLift {Z : Over S} (X : Action (Over S) G) (g : G)
     (p : Z ⟶ X.V) (hp : p ≫ X.ρ g = p) : Z ⟶ FixedBy X g :=
   equalizer.lift p (by simpa only [Category.comp_id] using hp.symm)
 
 @[reassoc (attr := simp)]
-theorem fixedByLift_ι {Z : Over S} (X : Action (Over S) G) (g : G)
+public theorem fixedByLift_ι {Z : Over S} (X : Action (Over S) G) (g : G)
     (p : Z ⟶ X.V) (hp : p ≫ X.ρ g = p) :
     fixedByLift X g p hp ≫ fixedByι X g = p :=
   equalizer.lift_ι _ _
@@ -110,7 +112,7 @@ theorem fixedBy_hom_ext {Z : Over S} (X : Action (Over S) G) (g : G)
 /-! ## The centralizer action on a fixed locus -/
 
 /-- The distinguished element as an element of its own centralizer. -/
-def sigmaInCentralizer (sigma : G) :
+@[expose] public def sigmaInCentralizer (sigma : G) :
     Subgroup.centralizer ({sigma} : Set G) :=
   ⟨sigma, by
     rw [Subgroup.mem_centralizer_iff]
@@ -124,14 +126,14 @@ theorem sigmaInCentralizer_coe (sigma : G) :
     (sigmaInCentralizer sigma : G) = sigma := rfl
 
 /-- Restrict an action to the centralizer of `sigma`. -/
-abbrev centralizerRestriction (X : Action (Over S) G) (sigma : G) :
+public abbrev centralizerRestriction (X : Action (Over S) G) (sigma : G) :
     Action (Over S) (Subgroup.centralizer ({sigma} : Set G)) where
   V := X.V
   ρ := X.ρ.comp (Subgroup.subtype _)
 
 /-- An element centralizing `sigma` restricts to an automorphism of the
 scheme-theoretic `sigma`-fixed locus. -/
-noncomputable def fixedByCentralizerHom (X : Action (Over S) G) (sigma : G)
+@[expose] public noncomputable def fixedByCentralizerHom (X : Action (Over S) G) (sigma : G)
     (n : Subgroup.centralizer ({sigma} : Set G)) :
     FixedBy X sigma ⟶ FixedBy X sigma :=
   fixedByLift X sigma (fixedByι X sigma ≫ X.ρ n.1) (by
@@ -152,19 +154,19 @@ noncomputable def fixedByCentralizerHom (X : Action (Over S) G) (sigma : G)
       _ = fixedByι X sigma ≫ X.ρ n.1 := by rw [fixedByι_comp_action])
 
 @[reassoc (attr := simp)]
-theorem fixedByCentralizerHom_ι (X : Action (Over S) G) (sigma : G)
+public theorem fixedByCentralizerHom_ι (X : Action (Over S) G) (sigma : G)
     (n : Subgroup.centralizer ({sigma} : Set G)) :
     fixedByCentralizerHom X sigma n ≫ fixedByι X sigma =
       fixedByι X sigma ≫ X.ρ n.1 :=
   fixedByLift_ι _ _ _ _
 
 @[simp]
-theorem fixedByCentralizerHom_one (X : Action (Over S) G) (sigma : G) :
+public theorem fixedByCentralizerHom_one (X : Action (Over S) G) (sigma : G) :
     fixedByCentralizerHom X sigma 1 = 𝟙 _ := by
   apply fixedBy_hom_ext X sigma
   simp
 
-theorem fixedByCentralizerHom_mul (X : Action (Over S) G) (sigma : G)
+public theorem fixedByCentralizerHom_mul (X : Action (Over S) G) (sigma : G)
     (n m : Subgroup.centralizer ({sigma} : Set G)) :
     fixedByCentralizerHom X sigma (n * m) =
       fixedByCentralizerHom X sigma m ≫ fixedByCentralizerHom X sigma n := by
@@ -190,7 +192,7 @@ theorem fixedByCentralizerHom_mul (X : Action (Over S) G) (sigma : G)
 
 /-- The centralizer of `sigma` acts canonically on the scheme-theoretic
 `sigma`-fixed locus. -/
-noncomputable def fixedByCentralizerAction (X : Action (Over S) G) (sigma : G) :
+@[expose] public noncomputable def fixedByCentralizerAction (X : Action (Over S) G) (sigma : G) :
     Action (Over S) (Subgroup.centralizer ({sigma} : Set G)) where
   V := FixedBy X sigma
   ρ :=
@@ -199,7 +201,7 @@ noncomputable def fixedByCentralizerAction (X : Action (Over S) G) (sigma : G) :
       map_mul' := fixedByCentralizerHom_mul X sigma }
 
 @[simp]
-theorem fixedByCentralizerAction_ρ (X : Action (Over S) G) (sigma : G)
+public theorem fixedByCentralizerAction_ρ (X : Action (Over S) G) (sigma : G)
     (n : Subgroup.centralizer ({sigma} : Set G)) :
     (fixedByCentralizerAction X sigma).ρ n = fixedByCentralizerHom X sigma n :=
   rfl
@@ -207,11 +209,11 @@ theorem fixedByCentralizerAction_ρ (X : Action (Over S) G) (sigma : G)
 /-! ## Simultaneous fixed loci -/
 
 /-- The scheme-theoretic intersection of the fixed loci of `g` and `h`. -/
-abbrev FixedByPair (X : Action (Over S) G) (g h : G) : Over S :=
+public abbrev FixedByPair (X : Action (Over S) G) (g h : G) : Over S :=
   pullback (fixedByι X g) (fixedByι X h)
 
 /-- The simultaneous fixed-locus inclusion into the original scheme. -/
-abbrev fixedByPairι (X : Action (Over S) G) (g h : G) :
+public abbrev fixedByPairι (X : Action (Over S) G) (g h : G) :
     FixedByPair X g h ⟶ X.V :=
   pullback.fst (fixedByι X g) (fixedByι X h) ≫ fixedByι X g
 
@@ -259,13 +261,13 @@ theorem fixedByPair_hom_ext {Z : Over S} (X : Action (Over S) G) (g h : G)
 
 /-- If the target scheme is separated over `S`, its fixed locus is a closed
 subscheme. -/
-instance fixedByι_isClosedImmersion (X : Action (Over S) G) (g : G)
+@[expose] public instance fixedByι_isClosedImmersion (X : Action (Over S) G) (g : G)
     [IsSeparated X.V.hom] : IsClosedImmersion (fixedByι X g).left := by
   infer_instance
 
 /-- A simultaneous fixed locus is a closed subscheme when the acted scheme is
 separated over the base. -/
-instance fixedByPairι_isClosedImmersion (X : Action (Over S) G) (g h : G)
+@[expose] public instance fixedByPairι_isClosedImmersion (X : Action (Over S) G) (g h : G)
     [IsSeparated X.V.hom] : IsClosedImmersion (fixedByPairι X g h).left := by
   let f := fixedByι X g
   let k := fixedByι X h

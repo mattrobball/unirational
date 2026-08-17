@@ -1,4 +1,6 @@
-import V14Formalization.StandardChartAwayTransport
+module
+
+public import V14Formalization.StandardChartAwayTransport
 
 noncomputable section
 
@@ -15,7 +17,7 @@ universe u
 variable {Omega : Type u} [Field Omega]
 
 set_option backward.isDefEq.respectTransparency false in
-theorem projectiveGeneralGammaEquivMvPolynomial_symm_eq_awayToSection
+public theorem projectiveGeneralGammaEquivMvPolynomial_symm_eq_awayToSection
     (r : ℕ) (P : MvPolynomial (Fin (r + 1)) Omega) :
     (projectiveGeneralGammaEquivMvPolynomial r Omega).symm P =
       (ProjectiveSpace (r + 1) Omega).presheaf.map

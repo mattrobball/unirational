@@ -1,4 +1,6 @@
-import V14Formalization.ProjectiveFamilyNaturality
+module
+
+public import V14Formalization.ProjectiveFamilyNaturality
 
 noncomputable section
 
@@ -18,7 +20,7 @@ variable {Omega : Type u} [Field Omega]
 /-- Pullback by a projective linear substitution on an arbitrary degree-zero
 homogeneous-localization element.  This is the canonical `Proj` chart square;
 the matrix occurs with the same (row) orientation as `mapLinearSubst`. -/
-theorem mapLinearSubst_appLE_awayToSection
+public theorem mapLinearSubst_appLE_awayToSection
     (n : ℕ)
     (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) Omega)
     (hNM : N * M = 1)
@@ -49,7 +51,7 @@ theorem mapLinearSubst_appLE_awayToSection
 
 /-- On a standard normalized homogeneous coordinate, the preceding Away map
 is literally the quotient of the corresponding matrix row by row zero. -/
-theorem awayMap_linearSubst_normalizedCoordinate
+public theorem awayMap_linearSubst_normalizedCoordinate
     (n : ℕ)
     (M : Matrix (Fin (n + 1)) (Fin (n + 1)) Omega)
     (i : Fin (n + 1)) :

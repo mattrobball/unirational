@@ -1,6 +1,8 @@
-import V14Formalization.GenericCharts
-import V14Formalization.SchemeFunctionFieldPrecomp
-import V14Formalization.ProjectiveFamilyNaturality
+module
+
+public import V14Formalization.GenericCharts
+public import V14Formalization.SchemeFunctionFieldPrecomp
+public import V14Formalization.ProjectiveFamilyNaturality
 
 noncomputable section
 
@@ -17,7 +19,7 @@ universe u
 
 variable {Omega : Type u} [Field Omega]
 
-theorem projectiveGeneralFunctionFieldEquiv_algebraMap
+public theorem projectiveGeneralFunctionFieldEquiv_algebraMap
     (r : ℕ) (P : MvPolynomial (Fin (r + 1)) Omega) :
     projectiveGeneralFunctionFieldEquiv r Omega
         (algebraMap (MvPolynomial (Fin (r + 1)) Omega)

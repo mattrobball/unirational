@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.SchemeEquivariant
-import Mathlib.AlgebraicGeometry.IdealSheaf.Functorial
+module
+
+public import V14Formalization.SchemeEquivariant
+public import Mathlib.AlgebraicGeometry.IdealSheaf.Functorial
 
 /-!
 # Restricting scheme actions to invariant closed subschemes
@@ -27,7 +29,7 @@ variable {G : Type v} [Group G]
 its associated closed subscheme.  The reverse inclusion follows by applying
 the condition to the inverse group element, but is not needed to construct
 the restricted action. -/
-structure IsInvariantIdeal (A : Action Scheme G)
+public structure IsInvariantIdeal (A : Action Scheme G)
     (I : A.V.IdealSheafData) : Prop where
   le_map : ∀ g : G, I ≤ I.map (A.ρ g)
 
@@ -36,26 +38,26 @@ namespace IsInvariantIdeal
 variable {A : Action Scheme G} {I : A.V.IdealSheafData}
 
 /-- The pullback-of-equations formulation of invariance. -/
-theorem of_comap_le (h : ∀ g : G, I.comap (A.ρ g) ≤ I) :
+public theorem of_comap_le (h : ∀ g : G, I.comap (A.ρ g) ≤ I) :
     IsInvariantIdeal A I where
   le_map g := Scheme.IdealSheafData.le_map_iff_comap_le.mpr (h g)
 
 /-- The restriction of one action morphism to the invariant subscheme. -/
-def hom (hI : IsInvariantIdeal A I) (g : G) : I.subscheme ⟶ I.subscheme :=
+@[expose] public def hom (hI : IsInvariantIdeal A I) (g : G) : I.subscheme ⟶ I.subscheme :=
   I.subschemeMap I (A.ρ g) (hI.le_map g)
 
 @[reassoc]
-theorem hom_subschemeι (hI : IsInvariantIdeal A I) (g : G) :
+public theorem hom_subschemeι (hI : IsInvariantIdeal A I) (g : G) :
     hI.hom g ≫ I.subschemeι = I.subschemeι ≫ A.ρ g :=
   I.subschemeMap_subschemeι I (A.ρ g) (hI.le_map g)
 
 @[simp]
-theorem hom_one (hI : IsInvariantIdeal A I) : hI.hom 1 = 𝟙 _ := by
+public theorem hom_one (hI : IsInvariantIdeal A I) : hI.hom 1 = 𝟙 _ := by
   apply (cancel_mono I.subschemeι).1
   rw [hI.hom_subschemeι]
   simp
 
-theorem hom_mul (hI : IsInvariantIdeal A I) (g h : G) :
+public theorem hom_mul (hI : IsInvariantIdeal A I) (g h : G) :
     hI.hom (g * h) = hI.hom h ≫ hI.hom g := by
   apply (cancel_mono I.subschemeι).1
   rw [hI.hom_subschemeι, Category.assoc, hI.hom_subschemeι,
@@ -65,7 +67,7 @@ theorem hom_mul (hI : IsInvariantIdeal A I) (g h : G) :
   rw [hmul]
 
 /-- The induced action on the invariant closed subscheme. -/
-def action (hI : IsInvariantIdeal A I) : Action Scheme G where
+@[expose] public def action (hI : IsInvariantIdeal A I) : Action Scheme G where
   V := I.subscheme
   ρ :=
     { toFun := hI.hom
@@ -74,7 +76,7 @@ def action (hI : IsInvariantIdeal A I) : Action Scheme G where
 
 /-- If the ambient action is over `S`, so is the induced action on the
 invariant closed subscheme. -/
-def actionOver {S : Scheme.{u}} (hI : IsInvariantIdeal A I)
+@[expose] public def actionOver {S : Scheme.{u}} (hI : IsInvariantIdeal A I)
     [A.V.Over S] (hA : ∀ g : G, (A.ρ g).IsOver S) :
     Action (Over S) G := by
   letI hsub : I.subscheme.Over S :=

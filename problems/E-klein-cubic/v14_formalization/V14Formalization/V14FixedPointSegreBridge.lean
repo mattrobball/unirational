@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.Definitions
-import Mathlib.LinearAlgebra.Matrix.Adjugate
+module
+
+public import V14Formalization.Definitions
+public import Mathlib.LinearAlgebra.Matrix.Adjugate
 
 /-!
 # Point-level fixed-locus and Segre bridges
@@ -29,7 +31,7 @@ variable {k : Type u} [Field k] {G : Type u} [Group G]
 
 /-- The projectivization of the `-1` eigenspace, symmetric to
 `plusProjectiveStratum`. -/
-def minusProjectiveStratum (R : FaithfulLinearRep k G V) (sigma : G) : Set (ℙ k V) :=
+@[expose] public def minusProjectiveStratum (R : FaithfulLinearRep k G V) (sigma : G) : Set (ℙ k V) :=
   { x : ℙ k V | x.submodule ≤ R.minusEigenspace sigma }
 
 theorem mem_minusProjectiveStratum_iff
@@ -48,7 +50,7 @@ theorem mem_minusProjectiveStratum_iff
 /-- The projective fixed points of an involution are exhausted by the
 projectivizations of its `+1` and `-1` eigenspaces. This is a theorem about
 `Projectivization`; it does not identify a scheme-theoretic equalizer. -/
-theorem mem_plus_or_minus_projectiveStratum_of_fixed
+public theorem mem_plus_or_minus_projectiveStratum_of_fixed
     (R : FaithfulLinearRep k G V) {sigma : G} (hsigma : IsInvolution sigma)
     (x : ℙ k V) (hfixed : R.projectiveSMul sigma x = x) :
     x ∈ R.plusProjectiveStratum sigma ∨ x ∈ R.minusProjectiveStratum sigma := by
@@ -94,7 +96,7 @@ variable {m : Type v} {n : Type w} [Fintype m] [Fintype n]
 
 /-- A nonzero matrix over a field whose `2 × 2` minors all vanish is a
 nonzero pure tensor. No algebraic-closedness hypothesis is needed. -/
-theorem exists_pureTensor_of_twoByTwoMinors_eq_zero
+public theorem exists_pureTensor_of_twoByTwoMinors_eq_zero
     (z : Matrix m n k) (hz : z ≠ 0)
     (hminor : ∀ i i' j j', z i j * z i' j' = z i j' * z i' j) :
     ∃ (a : m → k) (b : n → k),
@@ -127,14 +129,14 @@ theorem exists_pureTensor_of_twoByTwoMinors_eq_zero
 
 /-- Coefficient matrix of a system of bilinear equations after fixing the
 first factor of a pure tensor. -/
-def bilinearCoefficientMatrix
+@[expose] public def bilinearCoefficientMatrix
     {r : Type*} [Fintype r]
     (C : r → m → n → k) (a : m → k) : Matrix r n k :=
   fun i j ↦ ∑ t, C i t j * a t
 
 /-- A nonzero second tensor factor in the kernel of a square bilinear
 coefficient matrix forces its determinant to vanish. -/
-theorem det_bilinearCoefficientMatrix_eq_zero
+public theorem det_bilinearCoefficientMatrix_eq_zero
     {r : Type*} [Fintype r] [DecidableEq r]
     (C : r → m → r → k) (a : m → k) (b : r → k) (hb : b ≠ 0)
     (hbilinear : ∀ i, ∑ j, (∑ t, C i t j * a t) * b j = 0) :
@@ -155,7 +157,7 @@ theorem det_bilinearCoefficientMatrix_eq_zero
 /-- Point-level Segre-to-determinant implication. Vanishing `2 × 2` minors
 write a nonzero matrix as `a ⊗ b`; square bilinear section equations then
 force the determinant polynomial in `a` to vanish. -/
-theorem exists_pureTensor_and_det_eq_zero_of_linearSection
+public theorem exists_pureTensor_and_det_eq_zero_of_linearSection
     {r : Type*} [Fintype r] [DecidableEq r]
     (C : r → m → r → k) (z : Matrix m r k) (hz : z ≠ 0)
     (hminor : ∀ i i' j j', z i j * z i' j' = z i j' * z i' j)

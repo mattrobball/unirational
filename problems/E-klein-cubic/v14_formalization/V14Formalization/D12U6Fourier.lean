@@ -2,7 +2,9 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12U6Support
+module
+
+public import V14Formalization.D12U6Support
 
 /-!
 # Fourier matrix on the even Weil basis
@@ -26,12 +28,12 @@ theorem evalEvenEquivCore_symm_apply (v : Fin 6 → WeilRep.K) :
   exact (evalEvenEquivCore.apply_symm_apply v).trans
     (LinearMap.congr_fun GeometricFanoCarrier.evalEven_extendEven v).symm
 
-theorem uBasisCore_apply (j : Fin 6) :
+public theorem uBasisCore_apply (j : Fin 6) :
     uBasisCore j = GeometricFanoCarrier.extendEven (Pi.single j 1) := by
   rw [uBasisCore, Module.Basis.coe_ofEquivFun]
   exact evalEvenEquivCore_symm_apply _
 
-theorem sum_indicator_one (a : ZMod 11) (f : ZMod 11 → WeilRep.K) :
+public theorem sum_indicator_one (a : ZMod 11) (f : ZMod 11 → WeilRep.K) :
     (∑ x : ZMod 11, if x = a then f x else 0) = f a := by
   classical
   rw [Finset.sum_eq_single a]
@@ -40,7 +42,7 @@ theorem sum_indicator_one (a : ZMod 11) (f : ZMod 11 → WeilRep.K) :
     simp [hb]
   · simp
 
-theorem sum_indicator_two (a b : ZMod 11) (hba : b ≠ a)
+public theorem sum_indicator_two (a b : ZMod 11) (hba : b ≠ a)
     (f : ZMod 11 → WeilRep.K) :
     (∑ x : ZMod 11,
       if x = a then f x else if x = b then f x else 0) = f a + f b := by
@@ -62,7 +64,7 @@ theorem sum_indicator_two (a b : ZMod 11) (hba : b ≠ a)
         · simp [hxa, hxb]
     _ = f a + f b := by rw [sum_indicator_one, sum_indicator_one]
 
-theorem toMatrix_Seven_eq_S6 :
+public theorem toMatrix_Seven_eq_S6 :
     LinearMap.toMatrix uBasisCore uBasisCore WeilRep.S_even = WeilRep.S6 := by
   classical
   ext i j

@@ -4,7 +4,9 @@ Released under Apache 2.0 license.
 
 # Theorem 3.1 — Centralizer obstruction (zero axioms, full proof)
 -/
-import V14Formalization.Foundations
+module
+
+public import V14Formalization.Foundations
 
 noncomputable section
 
@@ -59,7 +61,7 @@ theorem not_act_neg_id_of_centerless {k : Type u} [Field k] [CharZero k]
     exact Subgroup.mem_bot.mp this
   exact hσ.2 hσ1
 
-theorem noDegenerates_of_centerless_involution
+public theorem noDegenerates_of_centerless_involution
     (k : Type u) [Field k] [CharZero k] (G : Type u) [Group G]
     (hG : IsCenterless G) (σ : G) (hσ : IsInvolution σ) :
     NoFaithfulRepDegenerates k G σ := by
@@ -68,7 +70,7 @@ theorem noDegenerates_of_centerless_involution
   | inl hid => exact hσ.2 (eq_one_of_act_id R hid)
   | inr hneg => exact not_act_neg_id_of_centerless R hG hσ hneg
 
-theorem not_degenerates_of_centerless
+public theorem not_degenerates_of_centerless
     {k : Type u} [Field k] [CharZero k] {G : Type u} [Group G]
     (hG : IsCenterless G) {σ : G} (hσ : IsInvolution σ)
     {V : Type u} [AddCommGroup V] [Module k V]
@@ -82,7 +84,7 @@ theorem not_degenerates_of_centerless
 
 Under hyp (a)(b), centerless G, involution σ: no G-equivariant (resolved)
 rational map `ℙ(V) → Y` from any faithful linear representation `V`. -/
-theorem centralizerObstruction_one_rep
+public theorem centralizerObstruction_one_rep
     {k : Type u} [Field k] [CharZero k] {G : Type u} [Group G]
     (Y : SmoothProjectiveGVariety k G)
     (σ : G) (hσ : IsInvolution σ)
@@ -104,7 +106,7 @@ theorem centralizerObstruction_one_rep
   exact this
 
 /-- **Theorem 3.1** — universal form over all faithful linear representations. -/
-theorem centralizerObstruction
+public theorem centralizerObstruction
     {k : Type u} [Field k] [CharZero k] {G : Type u} [Group G]
     (Y : SmoothProjectiveGVariety k G)
     (σ : G) (hσ : IsInvolution σ)
@@ -116,7 +118,7 @@ theorem centralizerObstruction
       ¬ ReceivesFromRep Y hG R :=
   fun _V _ _ _ R => centralizerObstruction_one_rep Y σ hσ hG ha hb R
 
-theorem notWeaklyVersal_of_centralizerObstruction
+public theorem notWeaklyVersal_of_centralizerObstruction
     {k : Type u} [Field k] [CharZero k] {G : Type u} [Group G]
     (Y : SmoothProjectiveGVariety k G)
     (σ : G) (hσ : IsInvolution σ)
@@ -129,7 +131,7 @@ theorem notWeaklyVersal_of_centralizerObstruction
   ⟨V, inferInstance, inferInstance, inferInstance, R₀,
     centralizerObstruction Y σ hσ hG ha hb V R₀⟩
 
-theorem not_GUnirational_of_centralizerObstruction
+public theorem not_GUnirational_of_centralizerObstruction
     {k : Type u} [Field k] [CharZero k] {G : Type u} [Group G]
     (Y : SmoothProjectiveGVariety k G)
     (σ : G) (hσ : IsInvolution σ)

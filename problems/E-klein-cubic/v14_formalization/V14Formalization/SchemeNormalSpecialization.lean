@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.SchemeEquivariant
-import Mathlib.AlgebraicGeometry.ValuativeCriterion
+module
+
+public import V14Formalization.SchemeEquivariant
+public import Mathlib.AlgebraicGeometry.ValuativeCriterion
 
 /-!
 # Proper specialization at a normal valuation
@@ -36,7 +38,7 @@ variable {S X E Y : Scheme.{u}}
 /-- A valuation centered on `S`, with fraction field `K(X)` and residue field
 `K(E)`.  The surjectivity and kernel conditions record that the displayed
 map to `K(E)` is genuinely the residue map of the valuation ring. -/
-structure NormalValuationData (S X E : Scheme.{u}) [X.Over S] [E.Over S]
+public structure NormalValuationData (S X E : Scheme.{u}) [X.Over S] [E.Over S]
     [IsIntegral X] [IsIntegral E] where
   R : Type u
   [commRing : CommRing R]
@@ -61,14 +63,14 @@ attribute [instance] commRing domain valuationRing algebra isFractionRing
 
 variable [X.Over S] [E.Over S] [IsIntegral X] [IsIntegral E]
 
-local instance specFunctionFieldX_over : (Spec (.of X.functionField)).Over S where
+public local instance specFunctionFieldX_over : (Spec (.of X.functionField)).Over S where
   hom := X.fromSpecStalk _ ≫ X ↘ S
 
-local instance specFunctionFieldE_over : (Spec (.of E.functionField)).Over S where
+public local instance specFunctionFieldE_over : (Spec (.of E.functionField)).Over S where
   hom := E.fromSpecStalk _ ≫ E ↘ S
 
 /-- The valuative square obtained from a rational map over `S`. -/
-noncomputable def square (D : NormalValuationData S X E)
+@[expose] public noncomputable def square (D : NormalValuationData S X E)
     [Y.Over S] (f : X ⤏ Y) [f.IsOver S] [LocallyOfFiniteType (Y ↘ S)] :
     ValuativeCommSq (Y ↘ S) where
   R := D.R
@@ -83,7 +85,7 @@ noncomputable def square (D : NormalValuationData S X E)
     exact ffOver.2.comp_over.trans D.generic_toBase.symm
 
 /-- The unique proper lift of the function-field map to the valuation ring. -/
-private noncomputable def properLiftStruct (D : NormalValuationData S X E)
+@[expose] public noncomputable def properLiftStruct (D : NormalValuationData S X E)
     [Y.Over S] (f : X ⤏ Y) [f.IsOver S] [IsProper (Y ↘ S)] :
     (D.square f).commSq.LiftStruct := by
   have hp : IsProper (Y ↘ S) := inferInstance
@@ -93,20 +95,20 @@ private noncomputable def properLiftStruct (D : NormalValuationData S X E)
   exact u.default
 
 /-- The morphism underlying the unique proper valuative lift. -/
-noncomputable def properLift (D : NormalValuationData S X E)
+@[expose] public noncomputable def properLift (D : NormalValuationData S X E)
     [Y.Over S] (f : X ⤏ Y) [f.IsOver S] [IsProper (Y ↘ S)] :
     Spec (.of D.R) ⟶ Y :=
   (D.properLiftStruct f).l
 
 @[reassoc]
-theorem properLift_toBase (D : NormalValuationData S X E)
+public theorem properLift_toBase (D : NormalValuationData S X E)
     [Y.Over S] (f : X ⤏ Y) [f.IsOver S] [IsProper (Y ↘ S)] :
     D.properLift f ≫ Y ↘ S = D.toBase := by
   exact (D.properLiftStruct f).fac_right
 
 /-- The proper lift extends the original function-field morphism. -/
 @[reassoc]
-theorem generic_to_properLift (D : NormalValuationData S X E)
+public theorem generic_to_properLift (D : NormalValuationData S X E)
     [Y.Over S] (f : X ⤏ Y) [f.IsOver S] [IsProper (Y ↘ S)] :
     Spec.map (CommRingCat.ofHom (algebraMap D.R X.functionField)) ≫
       D.properLift f = f.fromFunctionField := by
@@ -130,7 +132,7 @@ theorem properLift_unique (D : NormalValuationData S X E)
 
 /-- Two morphisms from the valuation ring to a separated target agree once
 they agree generically and have the same map to the base. -/
-theorem hom_ext_of_generic_eq (D : NormalValuationData S X E)
+public theorem hom_ext_of_generic_eq (D : NormalValuationData S X E)
     [Y.Over S] [IsSeparated (Y ↘ S)]
     (l₁ l₂ : Spec (.of D.R) ⟶ Y)
     (hbase₁ : l₁ ≫ Y ↘ S = D.toBase)
@@ -153,12 +155,12 @@ theorem hom_ext_of_generic_eq (D : NormalValuationData S X E)
   exact congrArg CommSq.LiftStruct.l (hu.elim L₁ L₂)
 
 /-- Restrict the proper lift to the residue field `K(E)`. -/
-noncomputable def specialFiberMap (D : NormalValuationData S X E)
+@[expose] public noncomputable def specialFiberMap (D : NormalValuationData S X E)
     [Y.Over S] (f : X ⤏ Y) [f.IsOver S] [IsProper (Y ↘ S)] :
     Spec (.of E.functionField) ⟶ Y :=
   Spec.map (CommRingCat.ofHom D.residue) ≫ D.properLift f
 
-instance specialFiberMap_isOver (D : NormalValuationData S X E)
+@[expose] public instance specialFiberMap_isOver (D : NormalValuationData S X E)
     [Y.Over S] (f : X ⤏ Y) [f.IsOver S] [IsProper (Y ↘ S)] :
     (D.specialFiberMap f).IsOver S where
   comp_over := by
@@ -167,14 +169,14 @@ instance specialFiberMap_isOver (D : NormalValuationData S X E)
 
 /-- Proper specialization at the normal valuation produces a genuine
 rational map from the exceptional divisor over the same base. -/
-noncomputable def specialize (D : NormalValuationData S X E)
+@[expose] public noncomputable def specialize (D : NormalValuationData S X E)
     [Y.Over S] (f : X ⤏ Y) [f.IsOver S] [IsProper (Y ↘ S)] :
     { q : E ⤏ Y // q.IsOver S } :=
   (Scheme.RationalMap.equivFunctionFieldOver (S := S)).toFun
     ⟨D.specialFiberMap f, D.specialFiberMap_isOver f⟩
 
 @[simp]
-theorem specialize_fromFunctionField (D : NormalValuationData S X E)
+public theorem specialize_fromFunctionField (D : NormalValuationData S X E)
     [Y.Over S] (f : X ⤏ Y) [f.IsOver S] [IsProper (Y ↘ S)] :
     (D.specialize f).1.fromFunctionField = D.specialFiberMap f := by
   exact congrArg Subtype.val

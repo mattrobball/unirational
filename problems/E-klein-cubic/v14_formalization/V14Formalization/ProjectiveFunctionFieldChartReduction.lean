@@ -1,6 +1,8 @@
-import V14Formalization.SchemeFunctionFieldNaturality
-import V14Formalization.ProjectiveGeneralFunctionField
-import V14Formalization.ProjectiveAwayPullback
+module
+
+public import V14Formalization.SchemeFunctionFieldNaturality
+public import V14Formalization.ProjectiveGeneralFunctionField
+public import V14Formalization.ProjectiveAwayPullback
 
 noncomputable section
 
@@ -20,7 +22,7 @@ variable {Omega : Type u} [Field Omega]
 /-- The canonical function-field pullback along a projective linear
 automorphism, reduced to its map on the chosen standard-chart section.  No
 chart-compatibility assumption occurs here. -/
-theorem mapLinearSubst_functionFieldMap_projectiveGeneral_algebraMap
+public theorem mapLinearSubst_functionFieldMap_projectiveGeneral_algebraMap
     (r : ℕ)
     (M N : Matrix (Fin ((r + 1) + 1)) (Fin ((r + 1) + 1)) Omega)
     (hNM : N * M = 1)

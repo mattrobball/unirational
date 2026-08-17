@@ -2,7 +2,9 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.SchemeEquivariant
+module
+
+public import V14Formalization.SchemeEquivariant
 
 /-!
 # Function-field pullback and rational-map precomposition
@@ -21,7 +23,7 @@ namespace AlgebraicGeometry.Scheme
 
 variable {X Y Z : Scheme.{u}}
 
-lemma Hom.map_genericPoint_of_isDominant
+public lemma Hom.map_genericPoint_of_isDominant
     [IrreducibleSpace X] [IrreducibleSpace Y]
     (f : X ⟶ Y) [IsDominant f] :
     f (genericPoint X) = genericPoint Y := by
@@ -32,7 +34,7 @@ lemma Hom.map_genericPoint_of_isDominant
   exact (Set.eq_univ_of_forall f.denseRange).symm
 
 /-- The pullback on function fields induced by a dominant morphism. -/
-noncomputable def Hom.functionFieldMap
+@[expose] public noncomputable def Hom.functionFieldMap
     [IrreducibleSpace X] [IrreducibleSpace Y]
     (f : X ⟶ Y) [IsDominant f] :
     Y.functionField ⟶ X.functionField := by
@@ -40,7 +42,7 @@ noncomputable def Hom.functionFieldMap
   exact (Y.presheaf.stalkCongr (.of_eq h)).inv ≫ f.stalkMap (genericPoint X)
 
 @[reassoc]
-lemma Spec_map_functionFieldMap_fromSpecStalk
+public lemma Spec_map_functionFieldMap_fromSpecStalk
     [IrreducibleSpace X] [IrreducibleSpace Y]
     (f : X ⟶ Y) [IsDominant f] :
     Spec.map f.functionFieldMap ≫ Y.fromSpecStalk (genericPoint Y) =
@@ -106,7 +108,7 @@ theorem PartialMap.fromFunctionField_comp_toPartialMap
   rw [PartialMap.fromSpecStalkOfMem_toPartialMap]
   exact (Spec_map_functionFieldMap_fromSpecStalk f).symm
 
-theorem RationalMap.fromFunctionField_comp_toRationalMap
+public theorem RationalMap.fromFunctionField_comp_toRationalMap
     [IrreducibleSpace X] [IrreducibleSpace Y]
     (f : X ⟶ Y) [IsDominant f] (q : Y.RationalMap Z) :
     (f.toRationalMap.comp q).fromFunctionField =
@@ -121,7 +123,7 @@ theorem RationalMap.fromFunctionField_comp_toRationalMap_of_isIso
       Spec.map f.functionFieldMap ≫ q.fromFunctionField :=
   q.fromFunctionField_comp_toRationalMap f
 
-noncomputable def actionFunctionFieldMap
+@[expose] public noncomputable def actionFunctionFieldMap
     {S : Scheme.{u}} {G : Type v} [Group G]
     (X : Action (Over S) G) [IrreducibleSpace X.V.left]
     (g : G) : X.V.left.functionField ⟶ X.V.left.functionField := by
@@ -132,7 +134,7 @@ noncomputable def actionFunctionFieldMap
   letI : IsDominant (X.ρ g).left := inferInstance
   exact (X.ρ g).left.functionFieldMap
 
-theorem actionPrecomp_fromFunctionField_generic
+public theorem actionPrecomp_fromFunctionField_generic
     {S : Scheme.{u}} {G : Type v} [Group G]
     (X : Action (Over S) G) [IrreducibleSpace X.V.left]
     {W : Scheme.{u}} (g : G) (q : X.V.left.RationalMap W) :

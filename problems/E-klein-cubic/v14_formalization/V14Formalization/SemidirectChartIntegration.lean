@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.XAdicSemidirectAction
-import V14Formalization.LinearNormalActionReduction
+module
+
+public import V14Formalization.XAdicSemidirectAction
+public import V14Formalization.LinearNormalActionReduction
 
 /-!
 # Semidirect normal-chart actions on the geometric function fields
@@ -29,12 +31,12 @@ variable {Omega : Type u} [Field Omega]
   {V : Type u} [AddCommGroup V] [Module Omega V]
   {sigma : G}
 
-private abbrev chartSemidirectGroup :=
+public abbrev chartSemidirectGroup :=
   (LinearResidualField 5 Omega)ˣ ⋊[
     ringAutUnitsAction (LinearResidualField 5 Omega)]
       (LinearResidualField 5 Omega ≃+* LinearResidualField 5 Omega)
 
-noncomputable abbrev semidirectChartFractionAction
+public noncomputable abbrev semidirectChartFractionAction
     (a : centralizer sigma →* chartSemidirectGroup (Omega := Omega)) :
     centralizer sigma →* (LinearNormalFractionField 5 Omega ≃+*
       LinearNormalFractionField 5 Omega) :=
@@ -46,7 +48,7 @@ noncomputable abbrev semidirectChartValuationAction
       LinearNormalValuationRing 5 Omega) :=
   (xAdicSemidirectValuationAction (LinearResidualField 5 Omega)).comp a
 
-noncomputable abbrev semidirectChartResidueAction
+public noncomputable abbrev semidirectChartResidueAction
     (a : centralizer sigma →* chartSemidirectGroup (Omega := Omega)) :
     centralizer sigma →* (LinearExceptionalFunctionField 5 Omega ≃+*
       LinearExceptionalFunctionField 5 Omega) :=
@@ -54,7 +56,7 @@ noncomputable abbrev semidirectChartResidueAction
 
 /-- Transport the semidirect chart actions to the two actual geometric
 function fields. -/
-noncomputable abbrev semidirectProjectiveFiveFunctionFieldAction
+public noncomputable abbrev semidirectProjectiveFiveFunctionFieldAction
     (a : centralizer sigma →* chartSemidirectGroup (Omega := Omega)) :
     centralizer sigma →*
       ((ProjectiveSpace 5 Omega).functionField ≃+*
@@ -63,7 +65,7 @@ noncomputable abbrev semidirectProjectiveFiveFunctionFieldAction
     (projectiveFiveLinearNormalFunctionFieldEquiv Omega).symm
     (semidirectChartFractionAction a)
 
-noncomputable abbrev semidirectBiprojectiveTwoTwoFunctionFieldAction
+public noncomputable abbrev semidirectBiprojectiveTwoTwoFunctionFieldAction
     (a : centralizer sigma →* chartSemidirectGroup (Omega := Omega)) :
     centralizer sigma →*
       ((BiprojectiveSpace 2 2 Omega).functionField ≃+*
@@ -72,7 +74,7 @@ noncomputable abbrev semidirectBiprojectiveTwoTwoFunctionFieldAction
     (biprojectiveTwoTwoFunctionFieldEquiv Omega).symm
     (semidirectChartResidueAction a)
 
-theorem semidirectProjectiveFive_chartModel
+public theorem semidirectProjectiveFive_chartModel
     (a : centralizer sigma →* chartSemidirectGroup (Omega := Omega)) :
     projectiveFiveChartModelAction
         (semidirectProjectiveFiveFunctionFieldAction a) =
@@ -82,7 +84,7 @@ theorem semidirectProjectiveFive_chartModel
     semidirectProjectiveFiveFunctionFieldAction,
     semidirectChartFractionAction, conjugateRingAction]
 
-theorem semidirectBiprojectiveTwoTwo_chartModel
+public theorem semidirectBiprojectiveTwoTwo_chartModel
     (a : centralizer sigma →* chartSemidirectGroup (Omega := Omega)) :
     biprojectiveTwoTwoChartModelAction
         (semidirectBiprojectiveTwoTwoFunctionFieldAction a) =

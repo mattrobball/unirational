@@ -1,9 +1,11 @@
 /-
 Weil representation multiplication: Borel×Borel, operator identities.
 -/
-import V14Formalization.WeilRepSL2
-import Mathlib.Algebra.BigOperators.Ring.Finset
-import Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic
+module
+
+public import V14Formalization.WeilRepSL2
+public import Mathlib.Algebra.BigOperators.Ring.Finset
+public import Mathlib.NumberTheory.LegendreSymbol.QuadraticChar.Basic
 
 open Matrix Matrix.SpecialLinearGroup BigOperators
 open V14Formalization.WeilRep
@@ -14,12 +16,12 @@ noncomputable section
 namespace V14Formalization
 namespace WeilMul
 
-abbrev F := ZMod 11
-abbrev SLG := SpecialLinearGroup (Fin 2) F
+public abbrev F := ZMod 11
+public abbrev SLG := SpecialLinearGroup (Fin 2) F
 
 /-! ## Operator identities -/
 
-theorem Dfull_conj_Nfull (s t : F) (hs : s ≠ 0) :
+public theorem Dfull_conj_Nfull (s t : F) (hs : s ≠ 0) :
     Dfull s hs ∘ₗ Nfull t = Nfull (s * s * t) ∘ₗ Dfull s hs := by
   apply LinearMap.ext
   intro f
@@ -31,7 +33,7 @@ theorem Dfull_conj_Nfull (s t : F) (hs : s ≠ 0) :
   rw [hψ]
   ring
 
-theorem Dfull_mul (s t : F) (hs : s ≠ 0) (ht : t ≠ 0) :
+public theorem Dfull_mul (s t : F) (hs : s ≠ 0) (ht : t ≠ 0) :
     Dfull (s * t) (mul_ne_zero hs ht) = Dfull s hs ∘ₗ Dfull t ht := by
   apply LinearMap.ext
   intro f
@@ -47,7 +49,7 @@ theorem Dfull_proof_irrel (t : F) (h1 h2 : t ≠ 0) :
     Dfull t h1 = Dfull t h2 := rfl
 
 /-- Congruence for Dfull under equality of the scaling parameter. -/
-theorem Dfull_congr {t s : F} (h : t = s) (ht : t ≠ 0) (hs : s ≠ 0) :
+public theorem Dfull_congr {t s : F} (h : t = s) (ht : t ≠ 0) (hs : s ≠ 0) :
     Dfull t ht = Dfull s hs := by
   subst h
   exact Dfull_proof_irrel t _ _
@@ -63,7 +65,7 @@ theorem ec_mul_borel {g h : SLG} (hg : ec g = 0) (hh : ec h = 0) :
   have hh10 : (h : Matrix (Fin 2) (Fin 2) F) 1 0 = 0 := hh
   rw [hg10, hh10, zero_mul, mul_zero, zero_add]
 
-theorem ea_mul_borel {g h : SLG} (hh : ec h = 0) :
+public theorem ea_mul_borel {g h : SLG} (hh : ec h = 0) :
     ea (g * h) = ea g * ea h := by
   change ((g : Matrix (Fin 2) (Fin 2) F) * (h : Matrix (Fin 2) (Fin 2) F)) 0 0 =
     ea g * ea h
@@ -79,7 +81,7 @@ theorem eb_mul_borel {g h : SLG} :
   rw [Matrix.mul_apply, Fin.sum_univ_two]
   rfl
 
-theorem ed_of_borel {g : SLG} (hg : ec g = 0) : ed g = (ea g)⁻¹ := by
+public theorem ed_of_borel {g : SLG} (hg : ec g = 0) : ed g = (ea g)⁻¹ := by
   have h := det_entries g
   change ea g * ed g - eb g * ec g = 1 at h
   rw [hg, mul_zero, sub_zero] at h
@@ -197,7 +199,7 @@ theorem weilFun_mul_borel {g h : SLG} (hg : ec g = 0) (hh : ec h = 0) :
       (borelFun_comp_apply_eq_normal hg hh f).symm
     _ = (weilFun g ∘ₗ weilFun h) f := by rw [hg', hh']
 
-theorem weilU_mul_borel {g h : SLG} (hg : ec g = 0) (hh : ec h = 0) :
+public theorem weilU_mul_borel {g h : SLG} (hg : ec g = 0) (hh : ec h = 0) :
     weilU (g * h) = weilU g ∘ₗ weilU h := by
   apply LinearMap.ext
   intro f
@@ -207,7 +209,7 @@ theorem weilU_mul_borel {g h : SLG} (hg : ec g = 0) (hh : ec h = 0) :
 
 /-! ## Quadratic character: χ(s⁻¹) = χ(s) for s ≠ 0 -/
 
-theorem χ₂_sq_one {s : F} (hs : s ≠ 0) : χ₂ s * χ₂ s = 1 := by
+public theorem χ₂_sq_one {s : F} (hs : s ≠ 0) : χ₂ s * χ₂ s = 1 := by
   have hℤ : (quadraticChar (ZMod 11) s) ^ 2 = 1 :=
     quadraticChar_sq_one (F := ZMod 11) hs
   have hℤ' : χ₂ℤ s * χ₂ℤ s = 1 := by
@@ -218,7 +220,7 @@ theorem χ₂_sq_one {s : F} (hs : s ≠ 0) : χ₂ s * χ₂ s = 1 := by
     _ = (algebraMap ℤ K) 1 := by rw [hℤ']
     _ = 1 := map_one _
 
-theorem χ₂_inv {s : F} (hs : s ≠ 0) : χ₂ s⁻¹ = χ₂ s := by
+public theorem χ₂_inv {s : F} (hs : s ≠ 0) : χ₂ s⁻¹ = χ₂ s := by
   have h1 : χ₂ s * χ₂ s⁻¹ = 1 := by
     rw [← map_mul, mul_inv_cancel₀ hs, χ₂_one]
   have hsq := χ₂_sq_one hs
@@ -233,7 +235,7 @@ theorem χ₂_inv {s : F} (hs : s ≠ 0) : χ₂ s⁻¹ = χ₂ s := by
 
 /-! ## Fourier–diagonal: D(s) ∘ W = W ∘ D(s⁻¹) -/
 
-theorem Dfull_conj_Wfull (s : F) (hs : s ≠ 0) :
+public theorem Dfull_conj_Wfull (s : F) (hs : s ≠ 0) :
     Dfull s hs ∘ₗ Wfull = Wfull ∘ₗ Dfull s⁻¹ (inv_ne_zero hs) := by
   apply LinearMap.ext
   intro f
@@ -282,24 +284,24 @@ theorem Dfull_conj_Wfull (s : F) (hs : s ≠ 0) :
 
 /-! ## Reflection R f (x) = f(-x); W² = -R -/
 
-def Rfull : Fun →ₗ[K] Fun where
+@[expose] public def Rfull : Fun →ₗ[K] Fun where
   toFun f := fun x => f (-x)
   map_add' := by intro f g; funext x; rfl
   map_smul' := by intro r f; funext x; rfl
 
-theorem Rfull_sq : Rfull ∘ₗ Rfull = LinearMap.id := by
+public theorem Rfull_sq : Rfull ∘ₗ Rfull = LinearMap.id := by
   ext f x
   dsimp [Rfull]
   rw [neg_neg]
 
-theorem Wfull_sq_R : Wfull ∘ₗ Wfull = -Rfull := by
+public theorem Wfull_sq_R : Wfull ∘ₗ Wfull = -Rfull := by
   apply LinearMap.ext
   intro f
   funext x
   dsimp [Wfull, Rfull]
   simpa [LinearMap.comp_apply, LinearMap.neg_apply] using Sfull_sq_apply f x
 
-theorem Rfull_Nfull (t : F) : Rfull ∘ₗ Nfull t = Nfull t ∘ₗ Rfull := by
+public theorem Rfull_Nfull (t : F) : Rfull ∘ₗ Nfull t = Nfull t ∘ₗ Rfull := by
   apply LinearMap.ext
   intro f
   funext x
@@ -319,7 +321,7 @@ theorem Rfull_Dfull (s : F) (hs : s ≠ 0) :
 
 /-! ## Product lower-left entry formulas -/
 
-theorem ec_mul_borel_big {g h : SLG} (hg : ec g = 0) :
+public theorem ec_mul_borel_big {g h : SLG} (hg : ec g = 0) :
     ec (g * h) = ed g * ec h := by
   change ((g : Matrix (Fin 2) (Fin 2) F) * (h : Matrix (Fin 2) (Fin 2) F)) 1 0 =
     ed g * ec h
@@ -329,7 +331,7 @@ theorem ec_mul_borel_big {g h : SLG} (hg : ec g = 0) :
   rw [hg10, zero_mul, zero_add]
   rfl
 
-theorem ec_mul_big_borel {g h : SLG} (hh : ec h = 0) :
+public theorem ec_mul_big_borel {g h : SLG} (hh : ec h = 0) :
     ec (g * h) = ec g * ea h := by
   change ((g : Matrix (Fin 2) (Fin 2) F) * (h : Matrix (Fin 2) (Fin 2) F)) 1 0 =
     ec g * ea h
@@ -339,7 +341,7 @@ theorem ec_mul_big_borel {g h : SLG} (hh : ec h = 0) :
   rw [hh10, mul_zero, add_zero]
   rfl
 
-theorem ec_borel_big_ne {g h : SLG} (hg : ec g = 0) (hh : ec h ≠ 0) :
+public theorem ec_borel_big_ne {g h : SLG} (hg : ec g = 0) (hh : ec h ≠ 0) :
     ec (g * h) ≠ 0 := by
   rw [ec_mul_borel_big hg]
   have ha := ea_ne_zero_of_ec_zero g hg
@@ -347,7 +349,7 @@ theorem ec_borel_big_ne {g h : SLG} (hg : ec g = 0) (hh : ec h ≠ 0) :
   rw [hed]
   exact mul_ne_zero (inv_ne_zero ha) hh
 
-theorem ec_big_borel_ne {g h : SLG} (hg : ec g ≠ 0) (hh : ec h = 0) :
+public theorem ec_big_borel_ne {g h : SLG} (hg : ec g ≠ 0) (hh : ec h = 0) :
     ec (g * h) ≠ 0 := by
   rw [ec_mul_big_borel hh]
   exact mul_ne_zero hg (ea_ne_zero_of_ec_zero h hh)
@@ -355,7 +357,7 @@ theorem ec_big_borel_ne {g h : SLG} (hg : ec g ≠ 0) (hh : ec h = 0) :
 
 /-! ## Quadratic character values used by Fourier conjugation -/
 
-theorem χ₂_two : χ₂ (2 : F) = -1 := by
+public theorem χ₂_two : χ₂ (2 : F) = -1 := by
   have hℤ : χ₂ℤ (2 : ZMod 11) = -1 := by
     change quadraticChar (ZMod 11) 2 = -1
     exact quadraticChar_neg_one_iff_not_isSquare.mpr

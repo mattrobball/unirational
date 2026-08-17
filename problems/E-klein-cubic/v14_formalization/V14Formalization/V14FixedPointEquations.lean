@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.ProjectiveFamilyFieldPoint
-import V14Formalization.V14FixedByAmbientPoint
+module
+
+public import V14Formalization.ProjectiveFamilyFieldPoint
+public import V14Formalization.V14FixedByAmbientPoint
 
 /-!
 # Coordinate equations of field-valued V14 fixed points
@@ -24,7 +26,7 @@ namespace V14Formalization.SchemeGeometry
 
 open AlgebraicGeometry BConicBundleMultisections
 
-theorem map_projectorLinearCut
+public theorem map_projectorLinearCut
     {R S : Type} [CommRing R] [CommRing S]
     (f : R →+* S) (P : Matrix (Fin 15) (Fin 15) R) (i : Fin 15) :
     MvPolynomial.map f (projectorLinearCut R P i) =
@@ -33,7 +35,7 @@ theorem map_projectorLinearCut
 
 /-- Normalized coordinates of a field-valued point of the sigma fixed locus
 satisfy all thirty base-changed equations defining the coordinate V14. -/
-theorem exists_normalizedCoordinates_equations_of_v14FixedBy
+public theorem exists_normalizedCoordinates_equations_of_v14FixedBy
     (L : Type) [Field L] [Algebra V14SchemeModel.k L]
     (p : v14FieldPointOver L ⟶
       FixedBy V14SchemeModel.actionOver GeometricV14Carrier.sigma) :
@@ -86,7 +88,7 @@ theorem exists_normalizedCoordinates_equations_of_v14FixedBy
 
 /-- The preceding equations imply both `P x = x` for the base-changed
 character projector and all fifteen base-changed Plücker relations. -/
-theorem exists_normalizedCoordinates_v14FixedBy_projector_fixed
+public theorem exists_normalizedCoordinates_v14FixedBy_projector_fixed
     (L : Type) [Field L] [Algebra V14SchemeModel.k L]
     (p : v14FieldPointOver L ⟶
       FixedBy V14SchemeModel.actionOver GeometricV14Carrier.sigma) :

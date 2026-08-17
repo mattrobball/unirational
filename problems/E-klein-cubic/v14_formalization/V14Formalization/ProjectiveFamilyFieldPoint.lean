@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.ProjectiveFamilyNaturality
-import V14Formalization.V14FieldPointReconstruction
+module
+
+public import V14Formalization.ProjectiveFamilyNaturality
+public import V14Formalization.V14FieldPointReconstruction
 
 /-!
 # Equations satisfied by field-valued projective zero-locus points
@@ -30,7 +32,7 @@ attribute [local instance] MvPolynomial.gradedAlgebra
 universe u v
 
 @[reassoc]
-theorem standardChartAlgebraPoint_appTop_hypersurfaceChartΓIso
+public theorem standardChartAlgebraPoint_appTop_hypersurfaceChartΓIso
     {R S : Type u} [CommRing R] [CommRing S] [Algebra R S]
     (n : ℕ) (i : Fin (n + 1)) (x : Fin (n + 1) → S) :
     (Spec.map (CommRingCat.ofHom
@@ -43,7 +45,7 @@ theorem standardChartAlgebraPoint_appTop_hypersurfaceChartΓIso
     (CommRingCat.ofHom
       (ProjectiveSpace.standardChartEvalAlgebra (R := R) n i x))
 
-theorem standardChartEvalAlgebra_hypersurfaceChartEquation
+public theorem standardChartEvalAlgebra_hypersurfaceChartEquation
     {R S : Type u} [CommRing R] [CommRing S] [Algebra R S]
     (n : ℕ) (i : Fin (n + 1)) (x : Fin (n + 1) → S)
     (hxi : x i = 1) (Q : MvPolynomial (Fin (n + 1)) R) :
@@ -71,7 +73,7 @@ theorem standardChartEvalAlgebra_hypersurfaceChartEquation
 
 /-- If the projective hypersurface ideal is contained in the kernel of an
 algebra-valued normalized projective point, its equation vanishes there. -/
-theorem aeval_eq_zero_of_projectiveZeroLocusIdeal_le_normalizedPoint_ker
+public theorem aeval_eq_zero_of_projectiveZeroLocusIdeal_le_normalizedPoint_ker
     {R S : Type u} [CommRing R] [CommRing S] [Algebra R S]
     (n : ℕ) (i : Fin (n + 1)) (x : Fin (n + 1) → S)
     (hxi : x i = 1) {d : ℕ}
@@ -121,7 +123,7 @@ theorem aeval_eq_zero_of_projectiveZeroLocusIdeal_le_normalizedPoint_ker
 /-- A field-valued point of a projective family zero locus satisfies every
 base-changed family equation in any normalized coordinates reconstructing its
 ambient projective point. -/
-theorem eval_map_eq_zero_of_projectiveZeroLocusFamily_point
+public theorem eval_map_eq_zero_of_projectiveZeroLocusFamily_point
     {k L : Type u} [Field k] [Field L] [Algebra k L]
     (n : ℕ) {ι : Type v}
     (F : ι → MvPolynomial (Fin (n + 1)) k)

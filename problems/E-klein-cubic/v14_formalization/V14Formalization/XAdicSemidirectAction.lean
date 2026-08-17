@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.LinearNormalValuation
-import Mathlib.GroupTheory.SemidirectProduct
+module
+
+public import V14Formalization.LinearNormalValuation
+public import Mathlib.GroupTheory.SemidirectProduct
 
 /-!
 # Semidirect automorphisms of the X-adic normal valuation
@@ -22,7 +24,7 @@ namespace V14Formalization.SchemeGeometry
 universe u
 
 /-- Ring automorphisms act on units. -/
-def ringAutUnitsAction (κ : Type u) [Field κ] :
+@[expose] public def ringAutUnitsAction (κ : Type u) [Field κ] :
     (κ ≃+* κ) →* MulAut κˣ where
   toFun tau := Units.mapEquiv tau.toMulEquiv
   map_one' := by
@@ -34,7 +36,7 @@ def ringAutUnitsAction (κ : Type u) [Field κ] :
 
 /-- The semilinear polynomial automorphism which acts on coefficients by
 `tau` and sends `X` to `u * X`. -/
-noncomputable def xAdicPolynomialEquiv
+@[expose] public noncomputable def xAdicPolynomialEquiv
     (κ : Type u) [Field κ] (tau : κ ≃+* κ) (u : κˣ) :
     κ[X] ≃+* κ[X] :=
   RingEquiv.ofRingHom
@@ -52,20 +54,20 @@ noncomputable def xAdicPolynomialEquiv
       · simp)
 
 @[simp]
-theorem xAdicPolynomialEquiv_C
+public theorem xAdicPolynomialEquiv_C
     (κ : Type u) [Field κ] (tau : κ ≃+* κ) (u : κˣ) (a : κ) :
     xAdicPolynomialEquiv κ tau u (C a) = C (tau a) := by
   simp [xAdicPolynomialEquiv]
 
 @[simp]
-theorem xAdicPolynomialEquiv_X
+public theorem xAdicPolynomialEquiv_X
     (κ : Type u) [Field κ] (tau : κ ≃+* κ) (u : κˣ) :
     xAdicPolynomialEquiv κ tau u X = C (u : κ) * X := by
   simp [xAdicPolynomialEquiv]
 
 /-- The coefficient automorphism and the unit scaling form the expected
 semidirect action on the polynomial ring. -/
-noncomputable def xAdicSemidirectPolynomialAction
+@[expose] public noncomputable def xAdicSemidirectPolynomialAction
     (κ : Type u) [Field κ] :
     (κˣ ⋊[ringAutUnitsAction κ] (κ ≃+* κ)) →* (κ[X] ≃+* κ[X]) where
   toFun g := xAdicPolynomialEquiv κ g.right g.left
@@ -105,28 +107,28 @@ theorem xAdicPolynomialEquiv_symm_X
   simp [xAdicPolynomialEquiv]
 
 /-- The induced automorphism of the rational function field. -/
-noncomputable def xAdicRatFuncEquiv
+@[expose] public noncomputable def xAdicRatFuncEquiv
     (κ : Type u) [Field κ] (tau : κ ≃+* κ) (u : κˣ) :
     RatFunc κ ≃+* RatFunc κ :=
   IsFractionRing.ringEquivOfRingEquiv (K := RatFunc κ)
     (xAdicPolynomialEquiv κ tau u)
 
 /-- The semidirect polynomial action extended to `κ(X)`. -/
-noncomputable def xAdicSemidirectRatFuncAction
+@[expose] public noncomputable def xAdicSemidirectRatFuncAction
     (κ : Type u) [Field κ] :
     (κˣ ⋊[ringAutUnitsAction κ] (κ ≃+* κ)) →*
       (RatFunc κ ≃+* RatFunc κ) :=
   (IsFractionRing.ringEquivOfRingEquivHom κ[X] (RatFunc κ)).comp
     (xAdicSemidirectPolynomialAction κ)
 
-theorem xAdicSemidirectRatFuncAction_apply
+public theorem xAdicSemidirectRatFuncAction_apply
     (κ : Type u) [Field κ]
     (g : κˣ ⋊[ringAutUnitsAction κ] (κ ≃+* κ)) :
     xAdicSemidirectRatFuncAction κ g =
       xAdicRatFuncEquiv κ g.right g.left := rfl
 
 @[simp]
-theorem xAdicRatFuncEquiv_algebraMap
+public theorem xAdicRatFuncEquiv_algebraMap
     (κ : Type u) [Field κ] (tau : κ ≃+* κ) (u : κˣ) (p : κ[X]) :
     xAdicRatFuncEquiv κ tau u (algebraMap κ[X] (RatFunc κ) p) =
       algebraMap κ[X] (RatFunc κ) (xAdicPolynomialEquiv κ tau u p) :=
@@ -192,7 +194,7 @@ private theorem mem_xAdic_of_polyEquiv
 
 /-- The semilinear automorphism `a ↦ tau a`, `X ↦ uX` preserves the X-adic
 valuation ring. -/
-theorem xAdicRatFuncEquiv_mem_iff
+public theorem xAdicRatFuncEquiv_mem_iff
     (κ : Type u) [Field κ] (tau : κ ≃+* κ) (u : κˣ)
     (x : RatFunc κ) :
     x ∈ ((idealX κ).valuation (RatFunc κ)).valuationSubring ↔
@@ -222,7 +224,7 @@ theorem xAdicRatFuncEquiv_mem_iff
 
 /-- Restriction of a semidirect coefficient/scaling automorphism to the
 X-adic valuation ring. -/
-noncomputable def xAdicSemidirectValuationEquiv
+@[expose] public noncomputable def xAdicSemidirectValuationEquiv
     (κ : Type u) [Field κ]
     (g : κˣ ⋊[ringAutUnitsAction κ] (κ ≃+* κ)) :
     XAdicIntegers κ ≃+* XAdicIntegers κ where
@@ -249,7 +251,7 @@ theorem xAdicSemidirectValuationEquiv_coe
 
 /-- The semidirect coefficient/scaling group acts on the X-adic valuation
 ring. -/
-noncomputable def xAdicSemidirectValuationAction
+@[expose] public noncomputable def xAdicSemidirectValuationAction
     (κ : Type u) [Field κ] :
     (κˣ ⋊[ringAutUnitsAction κ] (κ ≃+* κ)) →*
       (XAdicIntegers κ ≃+* XAdicIntegers κ) where
@@ -272,7 +274,7 @@ theorem xAdicSemidirectValuationAction_apply
     xAdicSemidirectValuationAction κ g =
       xAdicSemidirectValuationEquiv κ g := rfl
 
-theorem xAdicSemidirect_fraction_ring
+public theorem xAdicSemidirect_fraction_ring
     (κ : Type u) [Field κ]
     (g : κˣ ⋊[ringAutUnitsAction κ] (κ ≃+* κ)) :
     (xAdicSemidirectRatFuncAction κ g).toRingHom.comp
@@ -321,7 +323,7 @@ theorem xAdicSemidirect_residue
   exact (sub_eq_zero.mp (by
     simpa [a, map_sub, xAdicResidue_const] using himage)).symm
 
-theorem xAdicSemidirect_residue_ring
+public theorem xAdicSemidirect_residue_ring
     (κ : Type u) [Field κ]
     (g : κˣ ⋊[ringAutUnitsAction κ] (κ ≃+* κ)) :
     g.right.toRingHom.comp (xAdicResidue κ) =
@@ -332,7 +334,7 @@ theorem xAdicSemidirect_residue_ring
 
 /-- Base-ring naturality is reduced to the statement that the residual
 coefficient automorphism fixes the chosen base embedding. -/
-theorem xAdicSemidirect_base_ring
+public theorem xAdicSemidirect_base_ring
     (Omega : Type u) [CommRing Omega]
     (κ : Type u) [Field κ]
     (base : Omega →+* κ)

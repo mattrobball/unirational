@@ -1,4 +1,6 @@
-import V14Formalization.SchemeFunctionFieldPrecomp
+module
+
+public import V14Formalization.SchemeFunctionFieldPrecomp
 
 open CategoryTheory TopologicalSpace
 open AlgebraicGeometry
@@ -12,7 +14,7 @@ variable {X Y Z : Scheme.{u}}
 /-- Function-field pullback is independent of the displayed representative
 of an equal dominant scheme morphism.  Naming this proof avoids dependent
 typeclass transport when a geometric commutative square is used below. -/
-theorem Hom.functionFieldMap_congr
+public theorem Hom.functionFieldMap_congr
     [IsIntegral X] [IsIntegral Y]
     (f g : X ⟶ Y) [IsDominant f] [IsDominant g] (h : f = g) :
     f.functionFieldMap = g.functionFieldMap := by
@@ -21,7 +23,7 @@ theorem Hom.functionFieldMap_congr
 
 /-- Function-field pullback reverses composition, with the explicit order
 used by the scheme action conventions in this project. -/
-theorem Hom.functionFieldMap_comp
+public theorem Hom.functionFieldMap_comp
     [IsIntegral X] [IsIntegral Y] [IsIntegral Z]
     (f : X ⟶ Y) (g : Y ⟶ Z) [IsDominant f] [IsDominant g]
     [IsDominant (f ≫ g)] :
@@ -35,7 +37,7 @@ theorem Hom.functionFieldMap_comp
   simpa only [Category.assoc] using congrArg (fun h => h ≫ g)
     (Spec_map_functionFieldMap_fromSpecStalk f).symm
 
-theorem Hom.functionFieldMap_germToFunctionField
+public theorem Hom.functionFieldMap_germToFunctionField
     [IsIntegral X] [IsIntegral Y]
     (f : X ⟶ Y) [IsDominant f]
     (U : Y.Opens) [Nonempty U] (s : Γ(Y, U)) :

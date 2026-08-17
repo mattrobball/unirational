@@ -1,4 +1,6 @@
-import V14Formalization.LinearNormalProjectiveChart
+module
+
+public import V14Formalization.LinearNormalProjectiveChart
 
 noncomputable section
 
@@ -174,12 +176,12 @@ private theorem general_restrict_comp_GammaIsoTop_inv
   rw [← X.presheaf.map_id]
   exact congrArg X.presheaf.map (Subsingleton.elim _ _)
 
-private abbrev projectiveGeneralChart
+public abbrev projectiveGeneralChart
     (r : ℕ) (Omega : Type u) [Field Omega] :
     (ProjectiveSpace (r + 1) Omega).Opens :=
   (ProjectiveSpace.standardChartι (r + 1) Omega 0).opensRange
 
-private instance projectiveGeneralChart_nonempty
+public instance projectiveGeneralChart_nonempty
     (r : ℕ) (Omega : Type u) [Field Omega] :
     Nonempty (projectiveGeneralChart r Omega) := by
   refine ⟨⟨ProjectiveSpace.genericPoint (r + 1) Omega, ?_⟩⟩
@@ -187,7 +189,7 @@ private instance projectiveGeneralChart_nonempty
     ProjectiveSpace.opensRange_standardChartι] using
       ProjectiveSpace.genericPoint_mem_standardChart (r + 1) Omega 0
 
-noncomputable def projectiveGeneralGammaEquivMvPolynomial
+@[expose] public noncomputable def projectiveGeneralGammaEquivMvPolynomial
     (r : ℕ) (Omega : Type u) [Field Omega] :
     Γ(ProjectiveSpace (r + 1) Omega, projectiveGeneralChart r Omega) ≃+*
       MvPolynomial (Fin (r + 1)) Omega :=
@@ -200,7 +202,7 @@ noncomputable def projectiveGeneralGammaEquivMvPolynomial
     |>.trans (ProjectiveSpace.standardChartRingEquivMvPolynomial
       (r + 1) Omega 0).toRingEquiv
 
-def projectiveGeneralBaseToFunctionField
+@[expose] public def projectiveGeneralBaseToFunctionField
     (r : ℕ) (Omega : Type u) [Field Omega] :
     Omega →+* (ProjectiveSpace (r + 1) Omega).functionField :=
   ((ProjectiveSpace (r + 1) Omega).germToFunctionField
@@ -208,12 +210,12 @@ def projectiveGeneralBaseToFunctionField
     ((projectiveGeneralGammaEquivMvPolynomial r Omega).symm.toRingHom.comp
       (algebraMap Omega (MvPolynomial (Fin (r + 1)) Omega)))
 
-private noncomputable local instance projectiveGeneralFunctionFieldAlgebra
+@[expose] public noncomputable local instance projectiveGeneralFunctionFieldAlgebra
     (r : ℕ) (Omega : Type u) [Field Omega] :
     Algebra Omega (ProjectiveSpace (r + 1) Omega).functionField :=
   (projectiveGeneralBaseToFunctionField r Omega).toAlgebra
 
-noncomputable def projectiveGeneralFunctionFieldAlgEquiv
+@[expose] public noncomputable def projectiveGeneralFunctionFieldAlgEquiv
     (r : ℕ) (Omega : Type u) [Field Omega] :
     FractionRing (MvPolynomial (Fin (r + 1)) Omega) ≃ₐ[Omega]
       (ProjectiveSpace (r + 1) Omega).functionField := by
@@ -240,13 +242,13 @@ noncomputable def projectiveGeneralFunctionFieldAlgEquiv
   exact (FractionRing.algEquiv (MvPolynomial (Fin (r + 1)) Omega)
     X.functionField).restrictScalars Omega
 
-noncomputable def projectiveGeneralFunctionFieldEquiv
+@[expose] public noncomputable def projectiveGeneralFunctionFieldEquiv
     (r : ℕ) (Omega : Type u) [Field Omega] :
     FractionRing (MvPolynomial (Fin (r + 1)) Omega) ≃+*
       (ProjectiveSpace (r + 1) Omega).functionField :=
   (projectiveGeneralFunctionFieldAlgEquiv r Omega).toRingEquiv
 
-theorem projectiveGeneralFunctionFieldEquiv_base
+public theorem projectiveGeneralFunctionFieldEquiv_base
     (r : ℕ) (Omega : Type u) [Field Omega] (a : Omega) :
     projectiveGeneralFunctionFieldEquiv r Omega
         (algebraMap Omega
@@ -254,7 +256,7 @@ theorem projectiveGeneralFunctionFieldEquiv_base
       projectiveGeneralBaseToFunctionField r Omega a := by
   exact (projectiveGeneralFunctionFieldAlgEquiv r Omega).commutes a
 
-theorem projectiveGeneralBaseToFunctionField_eq
+public theorem projectiveGeneralBaseToFunctionField_eq
     (r : ℕ) (Omega : Type u) [Field Omega] :
     projectiveGeneralBaseToFunctionField r Omega =
       functionFieldBaseRingHom Omega (ProjectiveSpace (r + 1) Omega)
@@ -321,12 +323,12 @@ theorem projectiveGeneralBaseToFunctionField_eq
     (((genericPoint_spec X).mem_open_set_iff U.isOpen).mpr
       (by simpa using (inferInstance : Nonempty U))) _
 
-private abbrev biprojectiveGeneralChart
+public abbrev biprojectiveGeneralChart
     (p q : ℕ) (Omega : Type u) [Field Omega] :
     (BiprojectiveSpace p q Omega).Opens :=
   (BiprojectiveSpace.standardChartι p q Omega 0 0).opensRange
 
-private instance biprojectiveGeneralChart_nonempty
+public instance biprojectiveGeneralChart_nonempty
     (p q : ℕ) (Omega : Type u) [Field Omega] :
     Nonempty (biprojectiveGeneralChart p q Omega) := by
   let f := BiprojectiveSpace.standardChartι p q Omega 0 0
@@ -340,7 +342,7 @@ private instance biprojectiveGeneralChart_nonempty
   let x := e.inv (Classical.choice hs)
   exact ⟨⟨f x, ⟨x, rfl⟩⟩⟩
 
-noncomputable def biprojectiveGeneralGammaEquivMvPolynomial
+@[expose] public noncomputable def biprojectiveGeneralGammaEquivMvPolynomial
     (p q : ℕ) (Omega : Type u) [Field Omega] :
     Γ(BiprojectiveSpace p q Omega, biprojectiveGeneralChart p q Omega) ≃+*
       MvPolynomial (Fin (p + q)) Omega :=
@@ -354,7 +356,7 @@ noncomputable def biprojectiveGeneralGammaEquivMvPolynomial
     |>.trans (MvPolynomial.renameEquiv Omega
       (@finSumFinEquiv p q)).toRingEquiv
 
-def biprojectiveGeneralBaseToFunctionField
+@[expose] public def biprojectiveGeneralBaseToFunctionField
     (p q : ℕ) (Omega : Type u) [Field Omega] :
     Omega →+* (BiprojectiveSpace p q Omega).functionField :=
   ((BiprojectiveSpace p q Omega).germToFunctionField
@@ -362,12 +364,12 @@ def biprojectiveGeneralBaseToFunctionField
     ((biprojectiveGeneralGammaEquivMvPolynomial p q Omega).symm.toRingHom.comp
       (algebraMap Omega (MvPolynomial (Fin (p + q)) Omega)))
 
-private noncomputable local instance biprojectiveGeneralFunctionFieldAlgebra
+@[expose] public noncomputable local instance biprojectiveGeneralFunctionFieldAlgebra
     (p q : ℕ) (Omega : Type u) [Field Omega] :
     Algebra Omega (BiprojectiveSpace p q Omega).functionField :=
   (biprojectiveGeneralBaseToFunctionField p q Omega).toAlgebra
 
-noncomputable def biprojectiveGeneralFunctionFieldAlgEquiv
+@[expose] public noncomputable def biprojectiveGeneralFunctionFieldAlgEquiv
     (p q : ℕ) (Omega : Type u) [Field Omega] :
     LinearExceptionalFunctionField ((p + q) + 1) Omega ≃ₐ[Omega]
       (BiprojectiveSpace p q Omega).functionField := by
@@ -394,20 +396,20 @@ noncomputable def biprojectiveGeneralFunctionFieldAlgEquiv
   exact (FractionRing.algEquiv (MvPolynomial (Fin (p + q)) Omega)
     E.functionField).restrictScalars Omega
 
-noncomputable def biprojectiveGeneralFunctionFieldEquiv
+@[expose] public noncomputable def biprojectiveGeneralFunctionFieldEquiv
     (p q : ℕ) (Omega : Type u) [Field Omega] :
     LinearExceptionalFunctionField ((p + q) + 1) Omega ≃+*
       (BiprojectiveSpace p q Omega).functionField :=
   (biprojectiveGeneralFunctionFieldAlgEquiv p q Omega).toRingEquiv
 
-theorem biprojectiveGeneralFunctionFieldEquiv_base
+public theorem biprojectiveGeneralFunctionFieldEquiv_base
     (p q : ℕ) (Omega : Type u) [Field Omega] (a : Omega) :
     biprojectiveGeneralFunctionFieldEquiv p q Omega
         (baseToResidualField ((p + q) + 1) Omega a) =
       biprojectiveGeneralBaseToFunctionField p q Omega a := by
   exact (biprojectiveGeneralFunctionFieldAlgEquiv p q Omega).commutes a
 
-theorem biprojectiveGeneralBaseToFunctionField_eq
+public theorem biprojectiveGeneralBaseToFunctionField_eq
     (p q : ℕ) (Omega : Type u) [Field Omega] :
     biprojectiveGeneralBaseToFunctionField p q Omega =
       functionFieldBaseRingHom Omega (BiprojectiveSpace p q Omega)
@@ -523,7 +525,7 @@ theorem biprojectiveGeneralBaseToFunctionField_eq
     (((genericPoint_spec E).mem_open_set_iff U.isOpen).mpr
       (by simpa using (inferInstance : Nonempty U))) _
 
-theorem biprojectiveLinearNormal_special_toBase
+public theorem biprojectiveLinearNormal_special_toBase
     (p q : ℕ) (Omega : Type u) [Field Omega] :
     Spec.map (CommRingCat.ofHom
         (linearChartResidueHom ((p + q) + 1) Omega

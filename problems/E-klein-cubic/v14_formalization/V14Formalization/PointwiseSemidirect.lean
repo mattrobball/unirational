@@ -1,4 +1,6 @@
-import V14Formalization.SemidirectChartIntegration
+module
+
+public import V14Formalization.SemidirectChartIntegration
 
 noncomputable section
 
@@ -13,12 +15,12 @@ universe u
 
 variable {Omega : Type u} [Field Omega]
 
-abbrev pointwiseLinearSemidirectGroup (d : ℕ) :=
+public abbrev pointwiseLinearSemidirectGroup (d : ℕ) :=
   (LinearResidualField d Omega)ˣ ⋊[
     ringAutUnitsAction (LinearResidualField d Omega)]
       (LinearResidualField d Omega ≃+* LinearResidualField d Omega)
 
-noncomputable def conjugateRingEquiv
+@[expose] public noncomputable def conjugateRingEquiv
     {K L : Type u} [CommRing K] [CommRing L]
     (e : K ≃+* L) (t : K ≃+* K) : L ≃+* L :=
   e.symm.trans (t.trans e)
@@ -31,13 +33,13 @@ private theorem conjugateRingEquiv_natural
   ext x
   simp [conjugateRingEquiv]
 
-noncomputable def pointwiseSemidirectValuationEquiv
+@[expose] public noncomputable def pointwiseSemidirectValuationEquiv
     (d : ℕ) (g : pointwiseLinearSemidirectGroup (Omega := Omega) d) :
     LinearNormalValuationRing d Omega ≃+*
       LinearNormalValuationRing d Omega :=
   xAdicSemidirectValuationEquiv (LinearResidualField d Omega) g
 
-noncomputable def pointwiseSemidirectSourceEquiv
+@[expose] public noncomputable def pointwiseSemidirectSourceEquiv
     (d : ℕ) {X : Scheme.{u}} [IsIntegral X]
     (eK : LinearNormalFractionField d Omega ≃+* X.functionField)
     (g : pointwiseLinearSemidirectGroup (Omega := Omega) d) :
@@ -47,7 +49,7 @@ noncomputable def pointwiseSemidirectSourceEquiv
 
 /-- Embed the residue coefficient field into a source function field through
 an explicit linear-normal chart. -/
-noncomputable def linearNormalCoefficientEmbedding
+@[expose] public noncomputable def linearNormalCoefficientEmbedding
     (d : ℕ) {X : Scheme.{u}} [IsIntegral X]
     (eK : LinearNormalFractionField d Omega ≃+* X.functionField) :
     LinearResidualField d Omega →+* X.functionField :=
@@ -56,7 +58,7 @@ noncomputable def linearNormalCoefficientEmbedding
       (LinearNormalFractionField d Omega)).comp Polynomial.C)
 
 /-- The image of the normal parameter in an explicit source chart. -/
-noncomputable def linearNormalParameterElement
+@[expose] public noncomputable def linearNormalParameterElement
     (d : ℕ) {X : Scheme.{u}} [IsIntegral X]
     (eK : LinearNormalFractionField d Omega ≃+* X.functionField) :
     X.functionField :=
@@ -65,7 +67,7 @@ noncomputable def linearNormalParameterElement
     (@Polynomial.X (LinearResidualField d Omega) _))
 
 /-- The chart image of a residue coefficient times the normal parameter. -/
-noncomputable def linearNormalScaledParameterElement
+@[expose] public noncomputable def linearNormalScaledParameterElement
     (d : ℕ) {X : Scheme.{u}} [IsIntegral X]
     (eK : LinearNormalFractionField d Omega ≃+* X.functionField)
     (u : LinearResidualField d Omega) : X.functionField :=
@@ -74,7 +76,7 @@ noncomputable def linearNormalScaledParameterElement
     ((Polynomial.C u : Polynomial (LinearResidualField d Omega)) *
       (@Polynomial.X (LinearResidualField d Omega) _)))
 
-noncomputable def pointwiseSemidirectExceptionalEquiv
+@[expose] public noncomputable def pointwiseSemidirectExceptionalEquiv
     (d : ℕ) {E : Scheme.{u}} [IsIntegral E]
     (eE : LinearExceptionalFunctionField d Omega ≃+* E.functionField)
     (g : pointwiseLinearSemidirectGroup (Omega := Omega) d) :
@@ -83,7 +85,7 @@ noncomputable def pointwiseSemidirectExceptionalEquiv
 
 /-- The canonical generic-stalk pullback of one over-base action
 automorphism fixes the embedded base field. -/
-theorem actionFunctionFieldMap_fixes_base
+public theorem actionFunctionFieldMap_fixes_base
     {N : Type u} [Group N]
     (X : Action (Over (Spec (.of Omega))) N)
     [IsIntegral X.V.left] (n : N) :
@@ -109,7 +111,7 @@ theorem actionFunctionFieldMap_fixes_base
 
 /-- A single action automorphism induces a ring equivalence of the function
 field.  This is intentionally pointwise; pullback is contravariant. -/
-noncomputable def actionFunctionFieldEquiv
+@[expose] public noncomputable def actionFunctionFieldEquiv
     {N : Type u} [Group N]
     (X : Action (Over (linearBase Omega)) N)
     [IsIntegral X.V.left] (n : N) :
@@ -134,7 +136,7 @@ theorem actionFunctionFieldEquiv_toRingHom
     (actionFunctionFieldEquiv X n).toRingHom =
       (Scheme.actionFunctionFieldMap X n).hom := rfl
 
-noncomputable def residualEquivOfAction
+@[expose] public noncomputable def residualEquivOfAction
     {N : Type u} [Group N] (d : ℕ)
     (E : Action (Over (linearBase Omega)) N) [IsIntegral E.V.left]
     (eE : LinearExceptionalFunctionField d Omega ≃+* E.V.left.functionField)
@@ -146,7 +148,7 @@ noncomputable def residualEquivOfAction
 /-- Conjugating a scheme action through a residue-field chart fixes the
 embedded ground field whenever the chart identifies that embedding with the
 canonical function-field base map. -/
-theorem residualEquivOfAction_base
+public theorem residualEquivOfAction_base
     {N : Type u} [Group N] (d : ℕ)
     (E : Action (Over (linearBase Omega)) N) [IsIntegral E.V.left]
     (eE : LinearExceptionalFunctionField d Omega ≃+* E.V.left.functionField)
@@ -170,7 +172,7 @@ theorem residualEquivOfAction_base
       ((functionFieldBaseRingHom Omega E.V.left E.V.hom) c) = _
   exact hbase
 
-noncomputable def semidirectElementOfExceptionalAction
+@[expose] public noncomputable def semidirectElementOfExceptionalAction
     {N : Type u} [Group N] (d : ℕ)
     (E : Action (Over (linearBase Omega)) N) [IsIntegral E.V.left]
     (eE : LinearExceptionalFunctionField d Omega ≃+* E.V.left.functionField)
@@ -178,7 +180,7 @@ noncomputable def semidirectElementOfExceptionalAction
     (n : N) : pointwiseLinearSemidirectGroup (Omega := Omega) d :=
   ⟨normalMultiplier n, residualEquivOfAction d E eE n⟩
 
-theorem semidirectElementOfExceptionalAction_exceptional_field_map
+public theorem semidirectElementOfExceptionalAction_exceptional_field_map
     {N : Type u} [Group N] (d : ℕ)
     (E : Action (Over (linearBase Omega)) N) [IsIntegral E.V.left]
     (eE : LinearExceptionalFunctionField d Omega ≃+* E.V.left.functionField)
@@ -214,7 +216,7 @@ theorem semidirectElementOfExceptionalAction_right_eq_one
 
 /-- Pointwise form of the linear-normal constructor.  No group law on the
 chosen ring equivalences is needed by `EquivariantNormalValuationData`. -/
-noncomputable def linearNormalEquivariantDataOfChartPointwise
+@[expose] public noncomputable def linearNormalEquivariantDataOfChartPointwise
     {N : Type u} [Group N] (d : ℕ)
     (X E : Action (Over (linearBase Omega)) N)
     [IsIntegral X.V.left] [IsIntegral E.V.left]
@@ -254,7 +256,7 @@ noncomputable def linearNormalEquivariantDataOfChartPointwise
     d Omega X E eK eE generic_toBase special_toBase rAct kAct eAct
     fraction_ring residue_ring base_ring source_field_map exceptional_field_map
 
-private theorem pointwiseSemidirect_fraction_ring
+public theorem pointwiseSemidirect_fraction_ring
     (d : ℕ) {X : Scheme.{u}} [IsIntegral X]
     (eK : LinearNormalFractionField d Omega ≃+* X.functionField)
     (g : pointwiseLinearSemidirectGroup (Omega := Omega) d) :
@@ -277,7 +279,7 @@ private theorem pointwiseSemidirect_fraction_ring
   rw [← RingHom.comp_assoc, hconj, RingHom.comp_assoc, hfrac,
     ← RingHom.comp_assoc]
 
-private theorem pointwiseSemidirect_residue_ring
+public theorem pointwiseSemidirect_residue_ring
     (d : ℕ) {E : Scheme.{u}} [IsIntegral E]
     (eE : LinearExceptionalFunctionField d Omega ≃+* E.functionField)
     (g : pointwiseLinearSemidirectGroup (Omega := Omega) d) :
@@ -330,7 +332,7 @@ private theorem linearChartGenericHom_comp_base_pointwise
   rw [Spec.map_injective.eq_iff] at hspec
   exact congrArg CommRingCat.Hom.hom hspec
 
-private theorem pointwiseSemidirect_base_ring
+public theorem pointwiseSemidirect_base_ring
     {N : Type u} [Group N] (d : ℕ)
     (X : Action (Over (linearBase Omega)) N) [IsIntegral X.V.left]
     (eK : LinearNormalFractionField d Omega ≃+* X.V.left.functionField)
@@ -378,7 +380,7 @@ private theorem pointwiseSemidirect_base_ring
 
 /-- Pointwise semidirect action constructor.  The family `a` need not satisfy
 a group homomorphism law. -/
-noncomputable def linearEquivariantNormalDataOfPointwiseSemidirect
+@[expose] public noncomputable def linearEquivariantNormalDataOfPointwiseSemidirect
     {N : Type u} [Group N] (d : ℕ)
     (X E : Action (Over (linearBase Omega)) N)
     [IsIntegral X.V.left] [IsIntegral E.V.left]
@@ -414,7 +416,7 @@ noncomputable def linearEquivariantNormalDataOfPointwiseSemidirect
   · exact source_field_map
   · exact exceptional_field_map
 
-theorem pointwiseSemidirectExceptionalEquiv_eq_one_of_right_eq_one
+public theorem pointwiseSemidirectExceptionalEquiv_eq_one_of_right_eq_one
     (d : ℕ) {E : Scheme.{u}} [IsIntegral E]
     (eE : LinearExceptionalFunctionField d Omega ≃+* E.functionField)
     (g : pointwiseLinearSemidirectGroup (Omega := Omega) d)
@@ -423,7 +425,7 @@ theorem pointwiseSemidirectExceptionalEquiv_eq_one_of_right_eq_one
   ext x
   simp [pointwiseSemidirectExceptionalEquiv, conjugateRingEquiv, h]
 
-theorem linearEquivariantNormalDataOfPointwiseSemidirect_exceptional_identity
+public theorem linearEquivariantNormalDataOfPointwiseSemidirect_exceptional_identity
     {N : Type u} [Group N] (d : ℕ)
     (X E : Action (Over (linearBase Omega)) N)
     [IsIntegral X.V.left] [IsIntegral E.V.left]

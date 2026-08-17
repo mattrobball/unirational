@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12PolynomialEvaluation
-import V14Formalization.D12U6Fourier
+module
+
+public import V14Formalization.D12PolynomialEvaluation
+public import V14Formalization.D12U6Fourier
 
 /-!
 # Semantic formula for the six-dimensional D12 rotation
@@ -24,11 +26,11 @@ open Lambda2Coordinates D12U6Fourier D12U6Support
 open D12PolynomialData D12PolynomialEvaluation
 
 /-- The actual six-dimensional rotation matrix in the even Weil basis. -/
-abbrev actualU6 : Matrix (Fin 6) (Fin 6) WeilRep.K :=
+public abbrev actualU6 : Matrix (Fin 6) (Fin 6) WeilRep.K :=
   LinearMap.toMatrix uBasisCore uBasisCore GeometricV14Carrier.Rlin
 
 /-- Entry formula obtained by evaluating the two supported Fourier terms. -/
-def directValue (i j : Fin 6) : WeilRep.K :=
+@[expose] public def directValue (i j : Fin 6) : WeilRep.K :=
   WeilRep.cFourier * WeilRep.ψ (3 * (i.val : ZMod 11) ^ 2) *
     (if j = 0 then 1 else
       WeilRep.ψ (3 * (j.val : ZMod 11) ^ 2) *
@@ -43,7 +45,7 @@ private theorem chi2_six : WeilRep.χ₂ (6 : ZMod 11) = -1 := by
   rw [hcard] at h
   exact eq_neg_of_add_eq_zero_left h.symm
 
-theorem actualU6_apply_eq_directValue (i j : Fin 6) :
+public theorem actualU6_apply_eq_directValue (i j : Fin 6) :
     actualU6 i j = directValue i j := by
   classical
   simp only [actualU6, LinearMap.toMatrix_apply, uBasisCore]
@@ -187,19 +189,19 @@ theorem actualU6_apply_eq_directValue (i j : Fin 6) :
       hfourierPos, hfourierNeg]
     ring
 
-abbrev PolyQ := Polynomial ℚ
+public abbrev PolyQ := Polynomial ℚ
 
 /-- Polynomial encoding of the Fourier normalization. -/
-def cFourierPoly : PolyQ :=
+@[expose] public def cFourierPoly : PolyQ :=
   C (-1 / 11) + C (-2 / 11) * X + C (-2 / 11) * X ^ 3 +
     C (-2 / 11) * X ^ 4 + C (-2 / 11) * X ^ 5 +
       C (-2 / 11) * X ^ 9
 
-def phasePoly (a : ZMod 11) : PolyQ := X ^ a.val
+@[expose] public def phasePoly (a : ZMod 11) : PolyQ := X ^ a.val
 
 /-- Polynomial encoding of `directValue`; equality is required only modulo
 the eleventh cyclotomic polynomial. -/
-def directEntryPoly (i j : Fin 6) : PolyQ :=
+@[expose] public def directEntryPoly (i j : Fin 6) : PolyQ :=
   cFourierPoly * phasePoly (3 * (i.val : ZMod 11) ^ 2) *
     (if j = 0 then 1 else
       phasePoly (3 * (j.val : ZMod 11) ^ 2) *
@@ -243,17 +245,17 @@ theorem gauss_explicit :
   norm_num [WeilRep.ψ_apply, h1, h4, h9, h16, h25, h36, h49, h64, h81, h100]
   ring
 
-theorem eval_cFourierPoly :
+public theorem eval_cFourierPoly :
     evalPolyAt WeilRep.ζ cFourierPoly = WeilRep.cFourier := by
   rw [cFourier_eq_neg_gauss_div_eleven, gauss_explicit]
   simp [cFourierPoly, evalPolyAt]
   ring
 
-theorem eval_phasePoly (a : ZMod 11) :
+public theorem eval_phasePoly (a : ZMod 11) :
     evalPolyAt WeilRep.ζ (phasePoly a) = WeilRep.ψ a := by
   simp [phasePoly, evalPolyAt, WeilRep.ψ_apply]
 
-theorem eval_directEntryPoly (i j : Fin 6) :
+public theorem eval_directEntryPoly (i j : Fin 6) :
     evalPolyAt WeilRep.ζ (directEntryPoly i j) = directValue i j := by
   by_cases hj : j = 0 <;>
     simp [directEntryPoly, directValue, hj, eval_cFourierPoly, eval_phasePoly]

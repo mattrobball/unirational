@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.SchemeFixedLocus
-import V14Formalization.SchemeNormalSpecialization
+module
+
+public import V14Formalization.SchemeFixedLocus
+public import V14Formalization.SchemeNormalSpecialization
 
 /-!
 # Rational maps into a scheme-theoretic fixed locus
@@ -30,12 +32,12 @@ variable {S E : Scheme.{u}} {G : Type v} [Group G]
   (Y : Action (Over S) G) (sigma : G)
   [E.Over S] [IsIntegral E]
 
-local instance specFunctionFieldE_over : (Spec (.of E.functionField)).Over S where
+public local instance specFunctionFieldE_over : (Spec (.of E.functionField)).Over S where
   hom := E.fromSpecStalk _ ≫ E ↘ S
 
 /-- Passing from a rational map to its function-field morphism commutes with
 postcomposition by a scheme morphism. -/
-theorem fromFunctionField_compHom
+public theorem fromFunctionField_compHom
     {A B C : Scheme.{u}} [IrreducibleSpace A]
     (q : A ⤏ B) (a : B ⟶ C) :
     (q.compHom a).fromFunctionField = q.fromFunctionField ≫ a := by
@@ -44,7 +46,7 @@ theorem fromFunctionField_compHom
 
 /-- A rational map fixed by `sigma` factors through the scheme-theoretic
 `sigma`-fixed locus. -/
-noncomputable def rationalMapToFixedBy
+@[expose] public noncomputable def rationalMapToFixedBy
     (q : E ⤏ Y.V.left) [q.IsOver S]
     (hfixed : q.compHom (Y.ρ sigma).left = q)
     [LocallyOfFiniteType Y.V.hom]
@@ -77,7 +79,7 @@ noncomputable def rationalMapToFixedBy
 /-- The factorization really recovers the original rational map after
 composing with the fixed-locus inclusion. -/
 @[simp]
-theorem rationalMapToFixedBy_comp_ι
+public theorem rationalMapToFixedBy_comp_ι
     (q : E ⤏ Y.V.left) [q.IsOver S]
     (hfixed : q.compHom (Y.ρ sigma).left = q)
     [LocallyOfFiniteType Y.V.hom]

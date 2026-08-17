@@ -4,11 +4,13 @@ Released under Apache 2.0 license.
 
 # Zero-axiom vocabulary for Theorem 3.1
 -/
-import V14Formalization.Basic
-import Mathlib.LinearAlgebra.Center
-import Mathlib.LinearAlgebra.FreeModule.Basic
-import Mathlib.LinearAlgebra.Dimension.Finrank
-import Mathlib.LinearAlgebra.Dimension.Finite
+module
+
+public import V14Formalization.Basic
+public import Mathlib.LinearAlgebra.Center
+public import Mathlib.LinearAlgebra.FreeModule.Basic
+public import Mathlib.LinearAlgebra.Dimension.Finrank
+public import Mathlib.LinearAlgebra.Dimension.Finite
 
 noncomputable section
 
@@ -20,29 +22,29 @@ universe u
 
 /-! ## Group primitives -/
 
-def IsInvolution {G : Type u} [Monoid G] (σ : G) : Prop :=
+@[expose] public def IsInvolution {G : Type u} [Monoid G] (σ : G) : Prop :=
   σ ^ 2 = 1 ∧ σ ≠ 1
 
-def centralizer {G : Type u} [Group G] (σ : G) : Subgroup G :=
+@[expose] public def centralizer {G : Type u} [Group G] (σ : G) : Subgroup G :=
   Subgroup.centralizer ({σ} : Set G)
 
-lemma mem_centralizer_iff {G : Type u} [Group G] {σ g : G} :
+public lemma mem_centralizer_iff {G : Type u} [Group G] {σ g : G} :
     g ∈ centralizer σ ↔ Commute g σ := by
   simp only [centralizer, Subgroup.mem_centralizer_iff, Set.mem_singleton_iff]
   constructor
   · intro h; exact (h σ rfl).symm
   · intro h x hx; rw [hx]; exact h.symm
 
-def IsCenterless (G : Type u) [Group G] : Prop :=
+@[expose] public def IsCenterless (G : Type u) [Group G] : Prop :=
   Subgroup.center G = ⊥
 
-lemma mem_center_iff {G : Type u} [Group G] {z : G} :
+public lemma mem_center_iff {G : Type u} [Group G] {z : G} :
     z ∈ Subgroup.center G ↔ ∀ g : G, g * z = z * g :=
   Subgroup.mem_center_iff
 
 /-! ## Faithful linear representations -/
 
-structure FaithfulLinearRep (k : Type u) [Field k] (G : Type u) [Monoid G]
+public structure FaithfulLinearRep (k : Type u) [Field k] (G : Type u) [Monoid G]
     (V : Type u) [AddCommGroup V] [Module k V] where
   ρ : Representation k G V
   finiteDimensional : FiniteDimensional k V
@@ -53,15 +55,15 @@ namespace FaithfulLinearRep
 variable {k : Type u} [Field k] {G : Type u} [Group G]
   {V : Type u} [AddCommGroup V] [Module k V]
 
-def act (R : FaithfulLinearRep k G V) (g : G) : V →ₗ[k] V := R.ρ g
+@[expose] public def act (R : FaithfulLinearRep k G V) (g : G) : V →ₗ[k] V := R.ρ g
 
-@[simp] lemma act_one (R : FaithfulLinearRep k G V) :
+@[simp] public lemma act_one (R : FaithfulLinearRep k G V) :
     R.act (1 : G) = LinearMap.id := map_one R.ρ
 
-lemma act_mul (R : FaithfulLinearRep k G V) (g h : G) :
+public lemma act_mul (R : FaithfulLinearRep k G V) (g h : G) :
     R.act (g * h) = R.act g ∘ₗ R.act h := map_mul R.ρ g h
 
-lemma act_inv (R : FaithfulLinearRep k G V) (g : G) (v : V) :
+public lemma act_inv (R : FaithfulLinearRep k G V) (g : G) (v : V) :
     R.act g (R.act g⁻¹ v) = v := by
   have h := congr_arg (fun L : V →ₗ[k] V => L v) (R.act_mul g g⁻¹)
   rw [mul_inv_cancel, act_one, LinearMap.id_coe, id_eq] at h
@@ -73,20 +75,20 @@ lemma act_inv' (R : FaithfulLinearRep k G V) (g : G) (v : V) :
   rw [inv_mul_cancel, act_one, LinearMap.id_coe, id_eq] at h
   exact h.symm
 
-lemma act_injective (R : FaithfulLinearRep k G V) (g : G) :
+public lemma act_injective (R : FaithfulLinearRep k G V) (g : G) :
     Function.Injective (R.act g) := by
   intro v w hvw
   calc v = R.act g⁻¹ (R.act g v) := (R.act_inv' g v).symm
     _ = R.act g⁻¹ (R.act g w) := by rw [hvw]
     _ = w := R.act_inv' g w
 
-def DegeneratesToPlusMinusId (R : FaithfulLinearRep k G V) (σ : G) : Prop :=
+@[expose] public def DegeneratesToPlusMinusId (R : FaithfulLinearRep k G V) (σ : G) : Prop :=
   R.act σ = LinearMap.id ∨ R.act σ = -LinearMap.id
 
-def plusEigenspace (R : FaithfulLinearRep k G V) (σ : G) : Submodule k V :=
+@[expose] public def plusEigenspace (R : FaithfulLinearRep k G V) (σ : G) : Submodule k V :=
   Module.End.eigenspace (R.act σ) (1 : k)
 
-def minusEigenspace (R : FaithfulLinearRep k G V) (σ : G) : Submodule k V :=
+@[expose] public def minusEigenspace (R : FaithfulLinearRep k G V) (σ : G) : Submodule k V :=
   Module.End.eigenspace (R.act σ) (-1 : k)
 
 lemma act_sq_of_involution (R : FaithfulLinearRep k G V) {σ : G}
@@ -94,17 +96,17 @@ lemma act_sq_of_involution (R : FaithfulLinearRep k G V) {σ : G}
   have h : σ * σ = (1 : G) := by simpa [pow_two] using hσ.1
   rw [← act_mul, h, act_one]
 
-lemma mem_plusEigenspace_iff (R : FaithfulLinearRep k G V) (σ : G) {v : V} :
+public lemma mem_plusEigenspace_iff (R : FaithfulLinearRep k G V) (σ : G) {v : V} :
     v ∈ R.plusEigenspace σ ↔ R.act σ v = v := by
   simp [plusEigenspace, Module.End.mem_eigenspace_iff, one_smul]
 
-lemma mem_minusEigenspace_iff (R : FaithfulLinearRep k G V) (σ : G) {v : V} :
+public lemma mem_minusEigenspace_iff (R : FaithfulLinearRep k G V) (σ : G) {v : V} :
     v ∈ R.minusEigenspace σ ↔ R.act σ v = -v := by
   simp [minusEigenspace, Module.End.mem_eigenspace_iff]
 
 /-- The centralizer of `σ` preserves its `+1` eigenspace in every honest
 linear representation. -/
-theorem plusEigenspace_centralizer_stable
+public theorem plusEigenspace_centralizer_stable
     (R : FaithfulLinearRep k G V) (σ : G)
     (n : centralizer σ) {v : V}
     (hv : v ∈ R.plusEigenspace σ) :
@@ -124,7 +126,7 @@ theorem plusEigenspace_centralizer_stable
 
 /-- The centralizer of `σ` preserves its `-1` eigenspace in every honest
 linear representation. -/
-theorem minusEigenspace_centralizer_stable
+public theorem minusEigenspace_centralizer_stable
     (R : FaithfulLinearRep k G V) (σ : G)
     (n : centralizer σ) {v : V}
     (hv : v ∈ R.minusEigenspace σ) :
@@ -142,14 +144,14 @@ theorem minusEigenspace_centralizer_stable
       rfl
     _ = -R.act (n : G) v := by rw [hv, map_neg]
 
-lemma act_act (R : FaithfulLinearRep k G V) {σ : G} (hσ : IsInvolution σ) (v : V) :
+public lemma act_act (R : FaithfulLinearRep k G V) {σ : G} (hσ : IsInvolution σ) (v : V) :
     R.act σ (R.act σ v) = v := by
   simpa [LinearMap.comp_apply] using
     congr_arg (fun L : V →ₗ[k] V => L v) (R.act_sq_of_involution hσ)
 
 /-- In characteristic zero, an involution splits every honest linear
 representation as its `+1` and `-1` eigenspaces. -/
-theorem isCompl_plus_minus (R : FaithfulLinearRep k G V) {σ : G}
+public theorem isCompl_plus_minus (R : FaithfulLinearRep k G V) {σ : G}
     [CharZero k] (hσ : IsInvolution σ) :
     IsCompl (R.plusEigenspace σ) (R.minusEigenspace σ) := by
   apply IsCompl.of_eq
@@ -250,7 +252,7 @@ theorem act_eq_id_of_minus_bot (R : FaithfulLinearRep k G V) {σ : G}
   have : R.act σ v = v := (eq_of_sub_eq_zero hsub).symm
   simpa [LinearMap.id_apply] using this
 
-theorem both_eigenspaces_nontrivial (R : FaithfulLinearRep k G V) {σ : G}
+public theorem both_eigenspaces_nontrivial (R : FaithfulLinearRep k G V) {σ : G}
     [CharZero k] (hσ : IsInvolution σ) (hnd : ¬ R.DegeneratesToPlusMinusId σ) :
     R.plusEigenspace σ ≠ ⊥ ∧ R.minusEigenspace σ ≠ ⊥ := by
   constructor
@@ -259,7 +261,7 @@ theorem both_eigenspaces_nontrivial (R : FaithfulLinearRep k G V) {σ : G}
 
 end FaithfulLinearRep
 
-def NoFaithfulRepDegenerates (k : Type u) [Field k] (G : Type u) [Group G] (σ : G) : Prop :=
+@[expose] public def NoFaithfulRepDegenerates (k : Type u) [Field k] (G : Type u) [Group G] (σ : G) : Prop :=
   ∀ (V : Type u) [AddCommGroup V] [Module k V] (R : FaithfulLinearRep k G V),
     ¬ R.DegeneratesToPlusMinusId σ
 
@@ -276,7 +278,7 @@ The scheme-theoretic object is `SchemeGeometry.ProjectiveGVariety` in
 over `Spec k`.
 -/
 
-structure SmoothProjectiveGVariety (k : Type u) [Field k] (G : Type u) [Group G] where
+public structure SmoothProjectiveGVariety (k : Type u) [Field k] (G : Type u) [Group G] where
   X : Type u
   ambient : Type u
   ambientAdd : AddCommGroup ambient := by infer_instance
@@ -313,18 +315,18 @@ namespace SmoothProjectiveGVariety
 variable {k : Type u} [Field k] {G : Type u} [Group G]
   (Y : SmoothProjectiveGVariety k G)
 
-instance : SMul G Y.X where smul := Y.smul
-instance : MulAction G Y.X where
+@[expose] public instance : SMul G Y.X where smul := Y.smul
+@[expose] public instance : MulAction G Y.X where
   one_smul := Y.one_smul'
   mul_smul := Y.mul_smul'
 
-def fixedBy (H : Subgroup G) : Set Y.X :=
+@[expose] public def fixedBy (H : Subgroup G) : Set Y.X :=
   { y | ∀ h : H, (h : G) • y = y }
 
-def fixedByElement (σ : G) : Set Y.X :=
+@[expose] public def fixedByElement (σ : G) : Set Y.X :=
   { y | σ • y = y }
 
-@[simp] lemma mem_fixedByElement_iff {σ : G} {y : Y.X} :
+@[simp] public lemma mem_fixedByElement_iff {σ : G} {y : Y.X} :
     y ∈ Y.fixedByElement σ ↔ σ • y = y := Iff.rfl
 
 /-- Legacy Prop: embedding data implies projectively embedded. -/
@@ -349,7 +351,7 @@ a degree-≥2 curve contains no linear `ℙ¹`.
 -/
 
 /-- Linear RCC inside `ℙ(V)`: the full projectivization of a nonzero linear subspace. -/
-def IsLinearRCC (k : Type u) [Field k] {V : Type u}
+@[expose] public def IsLinearRCC (k : Type u) [Field k] {V : Type u}
     [AddCommGroup V] [Module k V] (S : Set (ℙ k V)) : Prop :=
   ∃ (W : Submodule k V),
     Module.finrank k W ≥ 1 ∧
@@ -357,19 +359,19 @@ def IsLinearRCC (k : Type u) [Field k] {V : Type u}
 
 /-- Operational RCC for a subset of a projectively embedded G-variety:
 the embedded image is a linear projective subspace of the ambient. -/
-def IsRCC (k : Type u) [Field k] {G : Type u} [Group G]
+@[expose] public def IsRCC (k : Type u) [Field k] {G : Type u} [Group G]
     (Y : SmoothProjectiveGVariety k G) (S : Set Y.X) : Prop :=
   IsLinearRCC k (Y.embed '' S)
 
 /-- **Hypothesis (a)** (linear-projective): every linear-RCC subset of `Y^σ`
 is a singleton.  Equivalently, `Y^σ` contains no positive-dimensional linear
 subspace of the ambient projective space. -/
-def HypothesisA (k : Type u) [Field k] {G : Type u} [Group G]
+@[expose] public def HypothesisA (k : Type u) [Field k] {G : Type u} [Group G]
     (Y : SmoothProjectiveGVariety k G) (σ : G) : Prop :=
   ∀ (S : Set Y.X), S ⊆ Y.fixedByElement σ → IsRCC k Y S → ∃ y : Y.X, S = {y}
 
 /-- **Hypothesis (b)**. -/
-def HypothesisB {k : Type u} [Field k] {G : Type u} [Group G]
+@[expose] public def HypothesisB {k : Type u} [Field k] {G : Type u} [Group G]
     (Y : SmoothProjectiveGVariety k G) (N : Subgroup G) : Prop :=
   Y.fixedBy N = ∅
 
@@ -377,7 +379,7 @@ def HypothesisB {k : Type u} [Field k] {G : Type u} [Group G]
 
 /-- A G-equivariant map induced by a linear map of ambients (writeup: morphism
 of projective varieties after resolving the graph). -/
-structure GEquivariantMorphism {k : Type u} [Field k] {G : Type u} [Group G]
+public structure GEquivariantMorphism {k : Type u} [Field k] {G : Type u} [Group G]
     (X Y : SmoothProjectiveGVariety k G) where
   toFun : X.X → Y.X
   equivariant : ∀ (g : G) (x : X.X), toFun (g • x) = g • toFun x
@@ -390,16 +392,16 @@ structure GEquivariantMorphism {k : Type u} [Field k] {G : Type u} [Group G]
     Y.embed (toFun x) =
       Projectivization.map lin lin_injective (X.embed x)
 
-def GEquivariantMorphism.imageSet {k : Type u} [Field k] {G : Type u} [Group G]
+@[expose] public def GEquivariantMorphism.imageSet {k : Type u} [Field k] {G : Type u} [Group G]
     {X Y : SmoothProjectiveGVariety k G}
     (f : GEquivariantMorphism X Y) (S : Set X.X) : Set Y.X :=
   f.toFun '' S
 
-def HasGEquivariantRationalMap {k : Type u} [Field k] {G : Type u} [Group G]
+@[expose] public def HasGEquivariantRationalMap {k : Type u} [Field k] {G : Type u} [Group G]
     (X Y : SmoothProjectiveGVariety k G) : Prop :=
   Nonempty (GEquivariantMorphism X Y)
 
-def HasDominantGEquivariantRationalMap {k : Type u} [Field k] {G : Type u} [Group G]
+@[expose] public def HasDominantGEquivariantRationalMap {k : Type u} [Field k] {G : Type u} [Group G]
     (X Y : SmoothProjectiveGVariety k G) : Prop :=
   ∃ f : GEquivariantMorphism X Y, Function.Surjective f.toFun
 
@@ -416,21 +418,21 @@ namespace FaithfulLinearRep
 variable {k : Type u} [Field k] {G : Type u} [Group G]
   {V : Type u} [AddCommGroup V] [Module k V]
 
-def projectiveSMul (R : FaithfulLinearRep k G V) (g : G) (x : ℙ k V) : ℙ k V :=
+@[expose] public def projectiveSMul (R : FaithfulLinearRep k G V) (g : G) (x : ℙ k V) : ℙ k V :=
   Projectivization.map (R.act g) (R.act_injective g) x
 
-lemma projectiveSMul_one (R : FaithfulLinearRep k G V) (x : ℙ k V) :
+public lemma projectiveSMul_one (R : FaithfulLinearRep k G V) (x : ℙ k V) :
     R.projectiveSMul 1 x = x := by
   simp only [projectiveSMul, act_one]
   exact congr_fun (Projectivization.map_id (K := k) (V := V)) x
 
-lemma projectiveSMul_mk (R : FaithfulLinearRep k G V) (g : G) {v : V} (hv : v ≠ 0) :
+public lemma projectiveSMul_mk (R : FaithfulLinearRep k G V) (g : G) {v : V} (hv : v ≠ 0) :
     R.projectiveSMul g (Projectivization.mk k v hv) =
       Projectivization.mk k (R.act g v)
         (fun h0 => hv ((R.act_injective g) (by simpa using h0))) := by
   simp only [projectiveSMul, Projectivization.map_mk]
 
-lemma projectiveSMul_mul (R : FaithfulLinearRep k G V) (g h : G) (x : ℙ k V) :
+public lemma projectiveSMul_mul (R : FaithfulLinearRep k G V) (g h : G) (x : ℙ k V) :
     R.projectiveSMul (g * h) x = R.projectiveSMul g (R.projectiveSMul h x) := by
   classical
   rw [← Projectivization.mk_rep x]
@@ -463,7 +465,7 @@ theorem central_of_act_scalar (R : FaithfulLinearRep k G V) (g : G) (c : k)
   exact R.faithful hgx.symm
 
 /-- Line-preserving ⇒ scalar (Mathlib) + centerless ⇒ g = 1. -/
-theorem projectiveAction_faithful [Module.Free k V] (R : FaithfulLinearRep k G V)
+public theorem projectiveAction_faithful [Module.Free k V] (R : FaithfulLinearRep k G V)
     (hG : IsCenterless G) (g : G)
     (hg : ∀ x : ℙ k V, R.projectiveSMul g x = x) : g = 1 := by
   have hcoll : ∀ v : V, ¬ LinearIndependent k ![v, R.act g v] := by
@@ -492,7 +494,7 @@ theorem projectiveAction_faithful [Module.Free k V] (R : FaithfulLinearRep k G V
   have : g ∈ (⊥ : Subgroup G) := by rwa [hG] at hcent
   exact Subgroup.mem_bot.mp this
 
-def projectivizationVariety [Module.Free k V] (R : FaithfulLinearRep k G V)
+@[expose] public def projectivizationVariety [Module.Free k V] (R : FaithfulLinearRep k G V)
     (hG : IsCenterless G) : SmoothProjectiveGVariety k G where
   X := ℙ k V
   ambient := V
@@ -516,10 +518,10 @@ def projectivizationVariety [Module.Free k V] (R : FaithfulLinearRep k G V)
     rfl
 
 /-- Plus stratum = projective points in V₊ (coupled to plusEigenspace). -/
-def plusProjectiveStratum (R : FaithfulLinearRep k G V) (σ : G) : Set (ℙ k V) :=
+@[expose] public def plusProjectiveStratum (R : FaithfulLinearRep k G V) (σ : G) : Set (ℙ k V) :=
   { x : ℙ k V | x.submodule ≤ R.plusEigenspace σ }
 
-theorem mem_plusProjectiveStratum_iff (R : FaithfulLinearRep k G V) (σ : G) {x : ℙ k V} :
+public theorem mem_plusProjectiveStratum_iff (R : FaithfulLinearRep k G V) (σ : G) {x : ℙ k V} :
     x ∈ R.plusProjectiveStratum σ ↔ x.rep ∈ R.plusEigenspace σ := by
   constructor
   · intro hx
@@ -531,7 +533,7 @@ theorem mem_plusProjectiveStratum_iff (R : FaithfulLinearRep k G V) (σ : G) {x 
     rw [Projectivization.submodule_eq]
     exact (Submodule.span_singleton_le_iff_mem _ _).mpr hrep
 
-theorem plusProjectiveStratum_nonempty (R : FaithfulLinearRep k G V) {σ : G}
+public theorem plusProjectiveStratum_nonempty (R : FaithfulLinearRep k G V) {σ : G}
     [CharZero k] (hσ : IsInvolution σ) (hnd : ¬ R.DegeneratesToPlusMinusId σ) :
     (R.plusProjectiveStratum σ).Nonempty := by
   obtain ⟨hplus, _⟩ := R.both_eigenspaces_nontrivial hσ hnd
@@ -541,7 +543,7 @@ theorem plusProjectiveStratum_nonempty (R : FaithfulLinearRep k G V) {σ : G}
   rw [Projectivization.submodule_mk]
   exact (Submodule.span_singleton_le_iff_mem _ _).mpr hv
 
-theorem plusProjectiveStratum_fixed [Module.Free k V] (R : FaithfulLinearRep k G V)
+public theorem plusProjectiveStratum_fixed [Module.Free k V] (R : FaithfulLinearRep k G V)
     (σ : G) (hG : IsCenterless G) :
     R.plusProjectiveStratum σ ⊆ (R.projectivizationVariety hG).fixedByElement σ := by
   intro x hx
@@ -556,7 +558,7 @@ theorem plusProjectiveStratum_fixed [Module.Free k V] (R : FaithfulLinearRep k G
     _ = Projectivization.mk k x.rep hv := by simp only [heig]
     _ = x := Projectivization.mk_rep x
 
-theorem plusProjectiveStratum_N_stable (R : FaithfulLinearRep k G V) (σ : G)
+public theorem plusProjectiveStratum_N_stable (R : FaithfulLinearRep k G V) (σ : G)
     (n : centralizer σ) {x : ℙ k V} (hx : x ∈ R.plusProjectiveStratum σ) :
     R.projectiveSMul (n : G) x ∈ R.plusProjectiveStratum σ := by
   have hcomm : Commute (n : G) σ := (mem_centralizer_iff).mp n.property
@@ -589,7 +591,7 @@ theorem plusProjectiveStratum_N_stable (R : FaithfulLinearRep k G V) (σ : G)
   exact (Submodule.span_singleton_le_iff_mem _ _).mpr hnrep
 
 
-theorem plusProjectiveStratum_rcc (R : FaithfulLinearRep k G V) (σ : G)
+public theorem plusProjectiveStratum_rcc (R : FaithfulLinearRep k G V) (σ : G)
     [CharZero k] [Module.Free k V] (hG : IsCenterless G)
     (hσ : IsInvolution σ) (hnd : ¬ R.DegeneratesToPlusMinusId σ) :
     IsRCC k (R.projectivizationVariety hG) (R.plusProjectiveStratum σ) := by
@@ -621,24 +623,24 @@ end FaithfulLinearRep
 
 /-! ## Weak versality -/
 
-def ReceivesFromRep {k : Type u} [Field k] {G : Type u} [Group G]
+@[expose] public def ReceivesFromRep {k : Type u} [Field k] {G : Type u} [Group G]
     (Y : SmoothProjectiveGVariety k G) (hG : IsCenterless G)
     {V : Type u} [AddCommGroup V] [Module k V] [Module.Free k V]
     (R : FaithfulLinearRep k G V) : Prop :=
   HasGEquivariantRationalMap (R.projectivizationVariety hG) Y
 
-def NotWeaklyVersal {k : Type u} [Field k] {G : Type u} [Group G]
+@[expose] public def NotWeaklyVersal {k : Type u} [Field k] {G : Type u} [Group G]
     (Y : SmoothProjectiveGVariety k G) (hG : IsCenterless G) : Prop :=
   ∃ (V : Type u) (_ : AddCommGroup V) (_ : Module k V) (_ : Module.Free k V)
     (R : FaithfulLinearRep k G V), ¬ ReceivesFromRep Y hG R
 
-def IsGUnirational {k : Type u} [Field k] {G : Type u} [Group G]
+@[expose] public def IsGUnirational {k : Type u} [Field k] {G : Type u} [Group G]
     (Y : SmoothProjectiveGVariety k G) (hG : IsCenterless G) : Prop :=
   ∃ (V : Type u) (_ : AddCommGroup V) (_ : Module k V) (_ : Module.Free k V)
     (R : FaithfulLinearRep k G V),
     HasDominantGEquivariantRationalMap (R.projectivizationVariety hG) Y
 
-lemma not_GUnirational_of_forall_no_map {k : Type u} [Field k] {G : Type u} [Group G]
+public lemma not_GUnirational_of_forall_no_map {k : Type u} [Field k] {G : Type u} [Group G]
     {Y : SmoothProjectiveGVariety k G} {hG : IsCenterless G}
     (h : ∀ (V : Type u) [AddCommGroup V] [Module k V] [Module.Free k V]
       (R : FaithfulLinearRep k G V), ¬ ReceivesFromRep Y hG R) :

@@ -1,5 +1,7 @@
-import V14Formalization.LinearNormalValuation
-import Mathlib.Algebra.MonoidAlgebra.MapDomain
+module
+
+public import V14Formalization.LinearNormalValuation
+public import Mathlib.Algebra.MonoidAlgebra.MapDomain
 
 noncomputable section
 
@@ -11,19 +13,19 @@ universe u
 
 variable {Omega : Type u} [Field Omega]
 
-def orderedNormalIndex (p q : ℕ) : Fin (p + q + 1) :=
+@[expose] public def orderedNormalIndex (p q : ℕ) : Fin (p + q + 1) :=
   ⟨p, by omega⟩
 
-def orderedPlusIndex (p q : ℕ) (i : Fin p) : Fin (p + q + 1) :=
+@[expose] public def orderedPlusIndex (p q : ℕ) (i : Fin p) : Fin (p + q + 1) :=
   ⟨i, by omega⟩
 
-def orderedMinusTailIndex (p q : ℕ) (j : Fin q) : Fin (p + q + 1) :=
+@[expose] public def orderedMinusTailIndex (p q : ℕ) (j : Fin q) : Fin (p + q + 1) :=
   ⟨p + 1 + j, by omega⟩
 
 /-- Exponent shear realizing `z_(p+1+j) ↦ T*v_j`: it leaves all
 exponents except the `T` exponent unchanged and adds every tail exponent to
 the `T` exponent. -/
-def orderedTailShear (p q : ℕ) :
+@[expose] public def orderedTailShear (p q : ℕ) :
     (Fin (p + q + 1) →₀ ℕ) →+ (Fin (p + q + 1) →₀ ℕ) where
   toFun m := Finsupp.equivFunOnFinite.symm fun k ↦
     if k = orderedNormalIndex p q then
@@ -88,7 +90,7 @@ theorem orderedTailShear_injective (p q : ℕ) :
 
 /-- Polynomial substitution from ambient affine-chart coordinates to the
 ordered normal polynomial coordinates. -/
-def ambientToOrderedNormalPolynomialHom (p q : ℕ) :
+@[expose] public def ambientToOrderedNormalPolynomialHom (p q : ℕ) :
     MvPolynomial (Fin (p + q + 1)) Omega →+*
       MvPolynomial (Fin (p + q + 1)) Omega :=
   AddMonoidAlgebra.mapDomainRingHom Omega (orderedTailShear p q)
@@ -177,20 +179,20 @@ theorem ambientToOrderedNormalPolynomialHom_X_tail
     simp [orderedTailShear, orderedMinusTailIndex_ne_normal, hsum]
   · simp [orderedTailShear, hk]
 
-abbrev orderedCoordinatePolynomial (p q : ℕ) :=
+public abbrev orderedCoordinatePolynomial (p q : ℕ) :=
   MvPolynomial (Fin (p + q + 1)) Omega
 
-abbrev orderedCoordinateField (p q : ℕ) :=
+public abbrev orderedCoordinateField (p q : ℕ) :=
   FractionRing (orderedCoordinatePolynomial (Omega := Omega) p q)
 
-def ambientPolynomialToOrderedFieldHom (p q : ℕ) :
+@[expose] public def ambientPolynomialToOrderedFieldHom (p q : ℕ) :
     orderedCoordinatePolynomial (Omega := Omega) p q →+*
       orderedCoordinateField (Omega := Omega) p q :=
   (algebraMap (orderedCoordinatePolynomial (Omega := Omega) p q)
     (orderedCoordinateField (Omega := Omega) p q)).comp
       (ambientToOrderedNormalPolynomialHom p q)
 
-theorem ambientPolynomialToOrderedFieldHom_injective (p q : ℕ) :
+public theorem ambientPolynomialToOrderedFieldHom_injective (p q : ℕ) :
     Function.Injective (ambientPolynomialToOrderedFieldHom
       (Omega := Omega) p q) :=
   (FaithfulSMul.algebraMap_injective
@@ -200,7 +202,7 @@ theorem ambientPolynomialToOrderedFieldHom_injective (p q : ℕ) :
 
 /-- Fraction-field map induced by the polynomial substitution
 `z_tail ↦ T*v`. -/
-noncomputable def ambientToOrderedNormalFieldHom (p q : ℕ) :
+@[expose] public noncomputable def ambientToOrderedNormalFieldHom (p q : ℕ) :
     orderedCoordinateField (Omega := Omega) p q →+*
       orderedCoordinateField (Omega := Omega) p q :=
   IsFractionRing.lift
@@ -338,7 +340,7 @@ theorem orderedCoordinate_algebraMap_mem_fieldRange (p q : ℕ)
         (ambientToOrderedNormalFieldHom (Omega := Omega) p q).fieldRange.mul_mem
           hP (orderedCoordinate_X_mem_fieldRange p q i)
 
-theorem ambientToOrderedNormalFieldHom_surjective (p q : ℕ) :
+public theorem ambientToOrderedNormalFieldHom_surjective (p q : ℕ) :
     Function.Surjective (ambientToOrderedNormalFieldHom
       (Omega := Omega) p q) := by
   rw [← RingHom.fieldRange_eq_top_iff]
@@ -350,7 +352,7 @@ theorem ambientToOrderedNormalFieldHom_surjective (p q : ℕ) :
     (orderedCoordinate_algebraMap_mem_fieldRange p q a)
     (orderedCoordinate_algebraMap_mem_fieldRange p q b)
 
-noncomputable def ambientToOrderedNormalFieldEquiv (p q : ℕ) :
+@[expose] public noncomputable def ambientToOrderedNormalFieldEquiv (p q : ℕ) :
     orderedCoordinateField (Omega := Omega) p q ≃+*
       orderedCoordinateField (Omega := Omega) p q :=
   RingEquiv.ofBijective (ambientToOrderedNormalFieldHom p q)
@@ -359,13 +361,13 @@ noncomputable def ambientToOrderedNormalFieldEquiv (p q : ℕ) :
 /-- Corrected birational substitution from ordered normal coordinates to
 the ambient affine chart: `u_i ↦ z_i`, `T ↦ z_p`, and
 `v_j ↦ z_(p+1+j)/z_p`. -/
-noncomputable def orderedNormalToAmbientFieldEquiv (p q : ℕ) :
+@[expose] public noncomputable def orderedNormalToAmbientFieldEquiv (p q : ℕ) :
     orderedCoordinateField (Omega := Omega) p q ≃+*
       orderedCoordinateField (Omega := Omega) p q :=
   (ambientToOrderedNormalFieldEquiv p q).symm
 
 @[simp]
-theorem orderedNormalToAmbientFieldEquiv_C
+public theorem orderedNormalToAmbientFieldEquiv_C
     (p q : ℕ) (c : Omega) :
     orderedNormalToAmbientFieldEquiv (Omega := Omega) p q
         (algebraMap (orderedCoordinatePolynomial (Omega := Omega) p q)
@@ -381,7 +383,7 @@ theorem orderedNormalToAmbientFieldEquiv_C
   exact (ambientToOrderedNormalFieldHom_C p q c).symm
 
 @[simp]
-theorem orderedNormalToAmbientFieldEquiv_X_normal (p q : ℕ) :
+public theorem orderedNormalToAmbientFieldEquiv_X_normal (p q : ℕ) :
     orderedNormalToAmbientFieldEquiv (Omega := Omega) p q
         (algebraMap (orderedCoordinatePolynomial (Omega := Omega) p q)
           (orderedCoordinateField (Omega := Omega) p q)
@@ -396,7 +398,7 @@ theorem orderedNormalToAmbientFieldEquiv_X_normal (p q : ℕ) :
   exact (ambientToOrderedNormalFieldHom_X_normal p q).symm
 
 @[simp]
-theorem orderedNormalToAmbientFieldEquiv_X_plus
+public theorem orderedNormalToAmbientFieldEquiv_X_plus
     (p q : ℕ) (i : Fin p) :
     orderedNormalToAmbientFieldEquiv (Omega := Omega) p q
         (algebraMap (orderedCoordinatePolynomial (Omega := Omega) p q)
@@ -411,7 +413,7 @@ theorem orderedNormalToAmbientFieldEquiv_X_plus
   rw [(ambientToOrderedNormalFieldEquiv (Omega := Omega) p q).apply_symm_apply]
   exact (ambientToOrderedNormalFieldHom_X_plus p q i).symm
 
-theorem orderedNormalToAmbientFieldEquiv_X_tail
+public theorem orderedNormalToAmbientFieldEquiv_X_tail
     (p q : ℕ) (j : Fin q) :
     orderedNormalToAmbientFieldEquiv (Omega := Omega) p q
         (algebraMap (orderedCoordinatePolynomial (Omega := Omega) p q)

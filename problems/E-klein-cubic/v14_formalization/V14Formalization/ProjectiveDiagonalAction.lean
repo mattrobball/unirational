@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.ProjectiveFamilyNaturality
-import BConicBundleMultisections.GenericConicProjectivePoint
+module
+
+public import V14Formalization.ProjectiveFamilyNaturality
+public import BConicBundleMultisections.GenericConicProjectivePoint
 
 noncomputable section
 
@@ -21,7 +23,7 @@ attribute [local instance] MvPolynomial.gradedAlgebra
 
 variable {k : Type u} [Field k]
 
-theorem linearSubst_diagonal (n : ℕ) (d : Fin (n + 1) → k)
+public theorem linearSubst_diagonal (n : ℕ) (d : Fin (n + 1) → k)
     (j : Fin (n + 1)) :
     linearSubst n (Matrix.diagonal d) j = C (d j) * X j := by
   classical
@@ -119,7 +121,7 @@ def diagonalScaleAway (n : ℕ) (d : Fin (n + 1) → k)
         linearSubst_diagonal]
       ac_rfl)
 
-def diagonalUnscaleAway (n : ℕ) (d : Fin (n + 1) → k)
+@[expose] public def diagonalUnscaleAway (n : ℕ) (d : Fin (n + 1) → k)
     (i : Fin (n + 1)) (hdi : d i ≠ 0) :
     Away (coordGraded (R := k) n)
         ((linearSubstGradedRingHom n (Matrix.diagonal d)) (X i)) →+*
@@ -176,14 +178,14 @@ theorem diagonalUnscaleAway_comp_diagonalScaleAway
   rw [mul_assoc, ← mul_pow, ← map_mul, mul_inv_cancel₀ hdi,
     map_one, one_pow, mul_one]
 
-def diagonalChartHom (n : ℕ) (d : Fin (n + 1) → k)
+@[expose] public def diagonalChartHom (n : ℕ) (d : Fin (n + 1) → k)
     (i : Fin (n + 1)) (hdi : d i ≠ 0) :
     ProjectiveSpace.StandardChartRing n k i →+*
       ProjectiveSpace.StandardChartRing n k i :=
   (diagonalUnscaleAway n d i hdi).comp
     (Away.map (linearSubstGradedRingHom n (Matrix.diagonal d)) (X i))
 
-theorem diagonalChartHom_normalizedCoordinate_eq_self_of_eq
+public theorem diagonalChartHom_normalizedCoordinate_eq_self_of_eq
     (n : ℕ) (d : Fin (n + 1) → k)
     (i : Fin (n + 1)) (hdi : d i ≠ 0) (l : Fin (n + 1))
     (hli : d l = d i) :
@@ -204,7 +206,7 @@ theorem diagonalChartHom_normalizedCoordinate_eq_self_of_eq
     C (d i) * X l * C (d i)⁻¹ = (C (d i) * C (d i)⁻¹) * X l := by ring
     _ = X l := by rw [← C_mul, mul_inv_cancel₀ hdi, C_1, one_mul]
 
-theorem diagonalChartHom_normalizedCoordinate_eq_neg_of_eq_neg
+public theorem diagonalChartHom_normalizedCoordinate_eq_neg_of_eq_neg
     (n : ℕ) (d : Fin (n + 1) → k)
     (i : Fin (n + 1)) (hdi : d i ≠ 0) (l : Fin (n + 1))
     (hli : d l = -d i) :
@@ -258,7 +260,7 @@ theorem SpecMap_unscaleAway_comp_linearAwayι_diagonal
   simpa using Category.id_comp
     (ProjectiveSpace.standardChartι n k i)
 
-theorem standardChartι_comp_mapLinearSubst_diagonal
+public theorem standardChartι_comp_mapLinearSubst_diagonal
     (n : ℕ) (d : Fin (n + 1) → k) (hd : ∀ i, d i ≠ 0)
     (i : Fin (n + 1)) :
     ProjectiveSpace.standardChartι n k i ≫

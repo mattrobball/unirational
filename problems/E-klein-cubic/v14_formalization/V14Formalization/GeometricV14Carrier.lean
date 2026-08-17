@@ -1,76 +1,78 @@
 /-
 Geometric Cor 6.1 carrier: Gr(2,U) ⊂ ℙ(Λ²U) as decomposable points.
 -/
-import V14Formalization.GeometricFanoCarrier
-import V14Formalization.CentralizerD12
-import V14Formalization.PSLCard
-import Mathlib.LinearAlgebra.Projectivization.Basic
-import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Card
-import Mathlib.GroupTheory.Index
-import Mathlib.Algebra.Field.ZMod
-import Mathlib.GroupTheory.SpecificGroups.Cyclic
-import Mathlib.RingTheory.RootsOfUnity.Basic
-import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
-import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
-import Mathlib.RingTheory.PowerBasis
-import Mathlib.RingTheory.Polynomial.Cyclotomic.Basic
-import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
-import Mathlib.FieldTheory.IntermediateField.Algebraic
-import Mathlib.FieldTheory.KummerPolynomial
-import Mathlib.FieldTheory.Minpoly.Field
-import Mathlib.RingTheory.PrincipalIdealDomain
-import Mathlib.LinearAlgebra.FreeModule.Basic
-import Mathlib.LinearAlgebra.FreeModule.Finite.Basic
-import Mathlib.LinearAlgebra.Basis.VectorSpace
-import Mathlib.LinearAlgebra.Charpoly.Basic
-import Mathlib.Algebra.Module.LinearMap.End
-import Mathlib.Algebra.Polynomial.Degree.SmallDegree
-import Mathlib.Algebra.Polynomial.EraseLead
-import Mathlib.Algebra.Polynomial.RingDivision
-import Mathlib.Algebra.Polynomial.Div
-import Mathlib.Algebra.Polynomial.FieldDivision
-import Mathlib.Algebra.Polynomial.SpecificDegree
-import Mathlib.Data.Rat.Lemmas
-import Mathlib.Data.Set.PowersetCard
-import Mathlib.Order.Hom.PowersetCard
-import Mathlib.Data.Finset.Sort
-import Mathlib.Tactic.FinCases
-import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
-import Mathlib.LinearAlgebra.Dimension.OrzechProperty
-import Mathlib.LinearAlgebra.Dual.Lemmas
-import Mathlib.GroupTheory.Coset.Card
-import Mathlib.GroupTheory.Sylow
-import Mathlib.GroupTheory.PGroup
-import Mathlib.GroupTheory.Index
-import Mathlib.Algebra.Group.Subgroup.Finite
-import Mathlib.Data.Nat.Factorization.Basic
-import Mathlib.Data.Fintype.Card
-import Mathlib.Data.Set.Card
-import Mathlib.LinearAlgebra.Trace
-import Mathlib.LinearAlgebra.Projection
-import Mathlib.Algebra.Group.Idempotent
-import Mathlib.LinearAlgebra.Semisimple
-import Mathlib.LinearAlgebra.ExteriorPower.Basic
-import Mathlib.LinearAlgebra.ExteriorPower.Basis
-import Mathlib.LinearAlgebra.Matrix.Charpoly.Coeff
-import Mathlib.LinearAlgebra.Charpoly.ToMatrix
-import Mathlib.RingTheory.AdjoinRoot
-import Mathlib.RingTheory.Trace.Basic
-import Mathlib.LinearAlgebra.Dimension.Constructions
-import Mathlib.RingTheory.AlgebraTower
-import Mathlib.LinearAlgebra.Matrix.ToLin
-import Mathlib.LinearAlgebra.Matrix.Trace
-import Mathlib.Algebra.Polynomial.Eval.Defs
-import Mathlib.RingTheory.Ideal.Quotient.Defs
-import Mathlib.Algebra.BigOperators.Ring.Finset
-import Mathlib.Data.Fintype.BigOperators
-import Mathlib.Data.Finset.Card
-import Mathlib.RingTheory.Polynomial.Basic
-import Mathlib.Algebra.GroupWithZero.Associated
-import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
-import Mathlib.LinearAlgebra.Charpoly.Basic
-import Mathlib.FieldTheory.Minpoly.Field
-import Mathlib.RingTheory.PrincipalIdealDomain
+module
+
+public import V14Formalization.GeometricFanoCarrier
+public import V14Formalization.CentralizerD12
+public import V14Formalization.PSLCard
+public import Mathlib.LinearAlgebra.Projectivization.Basic
+public import Mathlib.LinearAlgebra.Matrix.GeneralLinearGroup.Card
+public import Mathlib.GroupTheory.Index
+public import Mathlib.Algebra.Field.ZMod
+public import Mathlib.GroupTheory.SpecificGroups.Cyclic
+public import Mathlib.RingTheory.RootsOfUnity.Basic
+public import Mathlib.NumberTheory.Cyclotomic.PrimitiveRoots
+public import Mathlib.RingTheory.RootsOfUnity.PrimitiveRoots
+public import Mathlib.RingTheory.PowerBasis
+public import Mathlib.RingTheory.Polynomial.Cyclotomic.Basic
+public import Mathlib.FieldTheory.IntermediateField.Adjoin.Basic
+public import Mathlib.FieldTheory.IntermediateField.Algebraic
+public import Mathlib.FieldTheory.KummerPolynomial
+public import Mathlib.FieldTheory.Minpoly.Field
+public import Mathlib.RingTheory.PrincipalIdealDomain
+public import Mathlib.LinearAlgebra.FreeModule.Basic
+public import Mathlib.LinearAlgebra.FreeModule.Finite.Basic
+public import Mathlib.LinearAlgebra.Basis.VectorSpace
+public import Mathlib.LinearAlgebra.Charpoly.Basic
+public import Mathlib.Algebra.Module.LinearMap.End
+public import Mathlib.Algebra.Polynomial.Degree.SmallDegree
+public import Mathlib.Algebra.Polynomial.EraseLead
+public import Mathlib.Algebra.Polynomial.RingDivision
+public import Mathlib.Algebra.Polynomial.Div
+public import Mathlib.Algebra.Polynomial.FieldDivision
+public import Mathlib.Algebra.Polynomial.SpecificDegree
+public import Mathlib.Data.Rat.Lemmas
+public import Mathlib.Data.Set.PowersetCard
+public import Mathlib.Order.Hom.PowersetCard
+public import Mathlib.Data.Finset.Sort
+public import Mathlib.Tactic.FinCases
+public import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
+public import Mathlib.LinearAlgebra.Dimension.OrzechProperty
+public import Mathlib.LinearAlgebra.Dual.Lemmas
+public import Mathlib.GroupTheory.Coset.Card
+public import Mathlib.GroupTheory.Sylow
+public import Mathlib.GroupTheory.PGroup
+public import Mathlib.GroupTheory.Index
+public import Mathlib.Algebra.Group.Subgroup.Finite
+public import Mathlib.Data.Nat.Factorization.Basic
+public import Mathlib.Data.Fintype.Card
+public import Mathlib.Data.Set.Card
+public import Mathlib.LinearAlgebra.Trace
+public import Mathlib.LinearAlgebra.Projection
+public import Mathlib.Algebra.Group.Idempotent
+public import Mathlib.LinearAlgebra.Semisimple
+public import Mathlib.LinearAlgebra.ExteriorPower.Basic
+public import Mathlib.LinearAlgebra.ExteriorPower.Basis
+public import Mathlib.LinearAlgebra.Matrix.Charpoly.Coeff
+public import Mathlib.LinearAlgebra.Charpoly.ToMatrix
+public import Mathlib.RingTheory.AdjoinRoot
+public import Mathlib.RingTheory.Trace.Basic
+public import Mathlib.LinearAlgebra.Dimension.Constructions
+public import Mathlib.RingTheory.AlgebraTower
+public import Mathlib.LinearAlgebra.Matrix.ToLin
+public import Mathlib.LinearAlgebra.Matrix.Trace
+public import Mathlib.Algebra.Polynomial.Eval.Defs
+public import Mathlib.RingTheory.Ideal.Quotient.Defs
+public import Mathlib.Algebra.BigOperators.Ring.Finset
+public import Mathlib.Data.Fintype.BigOperators
+public import Mathlib.Data.Finset.Card
+public import Mathlib.RingTheory.Polynomial.Basic
+public import Mathlib.Algebra.GroupWithZero.Associated
+public import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
+public import Mathlib.LinearAlgebra.Charpoly.Basic
+public import Mathlib.FieldTheory.Minpoly.Field
+public import Mathlib.RingTheory.PrincipalIdealDomain
 
 open scoped LinearAlgebra.Projectivization MatrixGroups
 open Matrix Matrix.SpecialLinearGroup exteriorPower Module Polynomial IntermediateField
@@ -85,21 +87,21 @@ namespace GeometricV14Carrier
 
 open GeometricFanoCarrier
 
-abbrev k := GeometricFanoCarrier.k
-abbrev F := GeometricFanoCarrier.F
-abbrev SLG := GeometricFanoCarrier.SLG
-abbrev PSL2F11 := GeometricFanoCarrier.PSL2F11
-abbrev U := GeometricFanoCarrier.U
-abbrev Lambda2U := GeometricFanoCarrier.Lambda2U
+public abbrev k := GeometricFanoCarrier.k
+public abbrev F := GeometricFanoCarrier.F
+public abbrev SLG := GeometricFanoCarrier.SLG
+public abbrev PSL2F11 := GeometricFanoCarrier.PSL2F11
+public abbrev U := GeometricFanoCarrier.U
+public abbrev Lambda2U := GeometricFanoCarrier.Lambda2U
 
 /-! ## Decomposable points -/
 
-def IsDecomposable (p : ℙ k Lambda2U) : Prop :=
+@[expose] public def IsDecomposable (p : ℙ k Lambda2U) : Prop :=
   ∃ (u v : U) (hne : pureWedge u v ≠ 0),
     LinearIndependent k ![u, v] ∧
       p = Projectivization.mk k (pureWedge u v) hne
 
-def V14Point : Type := { p : ℙ k Lambda2U // IsDecomposable p }
+@[expose] public def V14Point : Type := { p : ℙ k Lambda2U // IsDecomposable p }
 
 theorem b01_independent : LinearIndependent k ![b0, b1] := by
   rw [LinearIndependent.pair_iff]
@@ -111,7 +113,7 @@ theorem b01_independent : LinearIndependent k ![b0, b1] := by
     smul_eq_mul] at r0 r1
   exact ⟨by simpa using r0, by simpa using r1⟩
 
-def ambientAct (g : PSL2F11) : Lambda2U →ₗ[k] Lambda2U := pslLambda2Hom g
+@[expose] public def ambientAct (g : PSL2F11) : Lambda2U →ₗ[k] Lambda2U := pslLambda2Hom g
 
 theorem ambientAct_one : ambientAct 1 = LinearMap.id := by
   change pslLambda2Hom 1 = LinearMap.id
@@ -121,7 +123,7 @@ theorem ambientAct_mul (g h : PSL2F11) :
     ambientAct (g * h) = ambientAct g ∘ₗ ambientAct h := by
   ext x; simp [ambientAct, map_mul, LinearMap.comp_apply]
 
-theorem ambientAct_injective (g : PSL2F11) : Function.Injective (ambientAct g) := by
+public theorem ambientAct_injective (g : PSL2F11) : Function.Injective (ambientAct g) := by
   intro a b hab
   have hinv : ambientAct g⁻¹ ∘ₗ ambientAct g = LinearMap.id := by
     rw [← ambientAct_mul, inv_mul_cancel, ambientAct_one]
@@ -130,7 +132,7 @@ theorem ambientAct_injective (g : PSL2F11) : Function.Injective (ambientAct g) :
   change (ambientAct g⁻¹ ∘ₗ ambientAct g) a = (ambientAct g⁻¹ ∘ₗ ambientAct g) b at h
   rwa [hinv, LinearMap.id_apply, LinearMap.id_apply] at h
 
-def actPM (g : PSL2F11) (p : ℙ k Lambda2U) : ℙ k Lambda2U :=
+@[expose] public def actPM (g : PSL2F11) (p : ℙ k Lambda2U) : ℙ k Lambda2U :=
   Projectivization.map (ambientAct g) (ambientAct_injective g) p
 
 theorem pureWedge_map (g : SLG) (u v : U) :
@@ -140,7 +142,7 @@ theorem pureWedge_map (g : SLG) (u v : U) :
   rw [exteriorPower.map_apply_ιMulti]
   congr 1; funext i; fin_cases i <;> rfl
 
-theorem actPM_preserves_decomposable (g : PSL2F11) {p : ℙ k Lambda2U}
+public theorem actPM_preserves_decomposable (g : PSL2F11) {p : ℙ k Lambda2U}
     (hp : IsDecomposable p) : IsDecomposable (actPM g p) := by
   obtain ⟨u, v, hne, ⟨hI, rfl⟩⟩ := hp
   classical
@@ -193,7 +195,7 @@ theorem actPM_preserves_decomposable (g : PSL2F11) {p : ℙ k Lambda2U}
   rw [← hg, pslLambda2_mk]
   exact hpure
 
-def actV14 (g : PSL2F11) (x : V14Point) : V14Point :=
+@[expose] public def actV14 (g : PSL2F11) (x : V14Point) : V14Point :=
   ⟨actPM g x.1, actPM_preserves_decomposable g x.2⟩
 
 theorem actPM_one (p : ℙ k Lambda2U) : actPM 1 p = p := by
@@ -215,15 +217,15 @@ theorem actPM_mul (g h : PSL2F11) (p : ℙ k Lambda2U) :
       rw [ambientAct_mul, LinearMap.comp_apply]
     exact (Projectivization.mk_eq_mk_iff' k _ _ _ _).mpr ⟨1, by rw [one_smul, hA]⟩
 
-theorem actV14_one (x : V14Point) : actV14 1 x = x :=
+public theorem actV14_one (x : V14Point) : actV14 1 x = x :=
   Subtype.ext (actPM_one x.1)
 
-theorem actV14_mul (g h : PSL2F11) (x : V14Point) :
+public theorem actV14_mul (g h : PSL2F11) (x : V14Point) :
     actV14 (g * h) x = actV14 g (actV14 h x) :=
   Subtype.ext (actPM_mul g h x.1)
 
-instance : SMul PSL2F11 V14Point where smul := actV14
-instance : MulAction PSL2F11 V14Point where
+@[expose] public instance : SMul PSL2F11 V14Point where smul := actV14
+@[expose] public instance : MulAction PSL2F11 V14Point where
   one_smul := actV14_one
   mul_smul := actV14_mul
 
@@ -688,9 +690,9 @@ def V14Variety : SmoothProjectiveGVariety k PSL2F11 where
   ambientAct_mul := ambientAct_mul
   embed_smul := embedV14_smul
 
-def sigma : PSL2F11 := QuotientGroup.mk WeilRep.Smat
+@[expose] public def sigma : PSL2F11 := QuotientGroup.mk WeilRep.Smat
 
-theorem sigma_isInvolution : IsInvolution sigma := by
+public theorem sigma_isInvolution : IsInvolution sigma := by
   constructor
   · have hmem : WeilRep.Smat ^ 2 ∈ Subgroup.center SLG := by
       rw [Matrix.SpecialLinearGroup.mem_center_iff]
@@ -1058,7 +1060,7 @@ theorem weilU_S_sq :
   change WeilRepSL2.weilU WeilRep.Smat ∘ₗ WeilRepSL2.weilU WeilRep.Smat = -LinearMap.id
   rw [← hmul', ← pow_two, hS2, WeilRepSL2.weilU_negI]
 
-abbrev Jlin : U →ₗ[k] U := WeilHom.weilUHom WeilRep.Smat
+public abbrev Jlin : U →ₗ[k] U := WeilHom.weilUHom WeilRep.Smat
 theorem Jlin_sq : Jlin ∘ₗ Jlin = (-LinearMap.id : U →ₗ[k] U) := weilU_S_sq
 
 theorem eigenline_forces_neg_one {u : U} (hu : u ≠ 0) {μ : k}
@@ -1618,7 +1620,7 @@ theorem sigma_fixed_plane_j_stable {u v : U} (hI : LinearIndependent k ![u, v])
   exact add_mem (Submodule.smul_mem _ a hJu) (Submodule.smul_mem _ b hJv)
 
 /-- Pure wedge is alternating: v∧u = −u∧v. -/
-theorem pureWedge_swap (u v : U) : pureWedge v u = -pureWedge u v := by
+public theorem pureWedge_swap (u v : U) : pureWedge v u = -pureWedge u v := by
   dsimp [pureWedge]
   let σ : Equiv.Perm (Fin 2) := Equiv.swap (0 : Fin 2) 1
   have hsign : Equiv.Perm.sign σ = -1 := by
@@ -1672,7 +1674,7 @@ theorem pureWedge_add_right (u v v' : U) :
   rw [h1, pureWedge_add_left, pureWedge_swap v u, pureWedge_swap v' u]
   abel
 
-theorem pureWedge_smul_right (a : k) (u v : U) :
+public theorem pureWedge_smul_right (a : k) (u v : U) :
     pureWedge u (a • v) = a • pureWedge u v := by
   calc pureWedge u (a • v)
       = - pureWedge (a • v) u := pureWedge_swap (a • v) u
@@ -2074,7 +2076,7 @@ M-cut carrier (isotypic projector for `χ₁₀'`, integer-valued on element ord
 -/
 
 /-- Weil operator of the order-12 rotation generating the cyclic half of `N`. -/
-abbrev Rlin : U →ₗ[k] U :=
+public abbrev Rlin : U →ₗ[k] U :=
   WeilHom.weilUHom (CentralizerN.mkRot CentralizerN.rotPt)
 
 theorem Rlin_pow_three_eq_Jlin : (Rlin ^ 3 : Module.End k U) = Jlin := by
@@ -2131,7 +2133,7 @@ Modular check: `⟨χ_{Λ²U}, χ₁₀'⟩ = 1` and `⟨χ_{Λ²U}, χ₁₀⟩
 
 /-- Character values of the irreducible `10'` of `PSL₂(𝔽₁₁)`, determined by element order.
     Table: `1A↦10, 2A↦2, 3A↦1, 5A/5B↦0, 6A↦-1, 11A/11B↦-1`. -/
-noncomputable def chi10' (g : PSL2F11) : k :=
+@[expose] public noncomputable def chi10' (g : PSL2F11) : k :=
   let n := orderOf g
   if n = 1 then 10
   else if n = 2 then 2
@@ -2176,12 +2178,12 @@ theorem chi10'_conj (g h : PSL2F11) : chi10' (h * g * h⁻¹) = chi10' g :=
 
 /-- Isotypic projector onto the 10′ summand `M ⊂ Λ²U`.
     `π = (10/|G|) ∑_g χ₁₀'(g) · ambientAct g`, with `|G| = 660`. -/
-noncomputable def projectorM : Module.End k Lambda2U :=
+@[expose] public noncomputable def projectorM : Module.End k Lambda2U :=
   (10 * (660 : k)⁻¹) •
     ∑ g : PSL2F11, chi10' g • (ambientAct g : Module.End k Lambda2U)
 
 /-- The writeup ambient summand `M = 10'`. -/
-noncomputable def Msub : Submodule k Lambda2U :=
+@[expose] public noncomputable def Msub : Submodule k Lambda2U :=
   LinearMap.range projectorM
 
 theorem projectorM_apply (v : Lambda2U) :
@@ -2260,7 +2262,7 @@ theorem sum_chi_ambient_equivariant (h : PSL2F11) (v : Lambda2U) :
     (fun g => rfl)
 
 /-- The character projector intertwines the ambient G-action. -/
-theorem projectorM_equivariant (h : PSL2F11) (v : Lambda2U) :
+public theorem projectorM_equivariant (h : PSL2F11) (v : Lambda2U) :
     projectorM (ambientAct h v) = ambientAct h (projectorM v) := by
   rw [projectorM_apply, projectorM_apply, map_smul, sum_chi_ambient_equivariant]
 
@@ -2272,10 +2274,10 @@ theorem Msub_smul_mem (h : PSL2F11) {v : Lambda2U} (hv : v ∈ Msub) :
   exact LinearMap.mem_range_self _ _
 
 /-- Writeup V₁₄ point: decomposable with Plücker representative in `M`. -/
-def IsV14MPoint (p : ℙ k Lambda2U) : Prop :=
+@[expose] public def IsV14MPoint (p : ℙ k Lambda2U) : Prop :=
   IsDecomposable p ∧ Projectivization.rep p ∈ Msub
 
-theorem IsV14MPoint_actPM (g : PSL2F11) {p : ℙ k Lambda2U}
+public theorem IsV14MPoint_actPM (g : PSL2F11) {p : ℙ k Lambda2U}
     (hp : IsV14MPoint p) : IsV14MPoint (actPM g p) := by
   obtain ⟨hdec, hM⟩ := hp
   refine ⟨actPM_preserves_decomposable g hdec, ?_⟩
@@ -2310,20 +2312,20 @@ Full `SmoothProjectiveGVariety` instance and hyp (b) require:
 * residual N-fixed pure-Gr plane ∉ `Msub`.
 Both are recorded below as the next proof targets; equivariance of `projectorM` is sealed. -/
 
-def V14MPoint : Type := { p : ℙ k Lambda2U // IsV14MPoint p }
+@[expose] public def V14MPoint : Type := { p : ℙ k Lambda2U // IsV14MPoint p }
 
-def actV14M (g : PSL2F11) (x : V14MPoint) : V14MPoint :=
+@[expose] public def actV14M (g : PSL2F11) (x : V14MPoint) : V14MPoint :=
   ⟨actPM g x.1, IsV14MPoint_actPM g x.2⟩
 
-theorem actV14M_one (x : V14MPoint) : actV14M 1 x = x :=
+public theorem actV14M_one (x : V14MPoint) : actV14M 1 x = x :=
   Subtype.ext (actPM_one x.1)
 
-theorem actV14M_mul (g h : PSL2F11) (x : V14MPoint) :
+public theorem actV14M_mul (g h : PSL2F11) (x : V14MPoint) :
     actV14M (g * h) x = actV14M g (actV14M h x) :=
   Subtype.ext (actPM_mul g h x.1)
 
-instance : SMul PSL2F11 V14MPoint where smul := actV14M
-instance : MulAction PSL2F11 V14MPoint where
+@[expose] public instance : SMul PSL2F11 V14MPoint where smul := actV14M
+@[expose] public instance : MulAction PSL2F11 V14MPoint where
   one_smul := actV14M_one
   mul_smul := actV14M_mul
 
@@ -2372,14 +2374,14 @@ Scaffolded here: `residualKer` and R-stability.  `not_isSquare_three` is proved
 above (classical).  Remaining for hyp B: N-fixed ⇒ R²=-id on support, residual
 Plücker ∉ Msub, V14MVariety faithfulness, rewire Application. -/
 
-noncomputable def residualKer : Submodule k U :=
+@[expose] public noncomputable def residualKer : Submodule k U :=
   LinearMap.ker (Rlin ∘ₗ Rlin + LinearMap.id)
 
-theorem mem_residualKer_iff {u : U} :
+public theorem mem_residualKer_iff {u : U} :
     u ∈ residualKer ↔ Rlin (Rlin u) + u = 0 := by
   simp [residualKer, LinearMap.mem_ker, LinearMap.add_apply, LinearMap.comp_apply]
 
-theorem residualKer_R2 {u : U} (hu : u ∈ residualKer) :
+public theorem residualKer_R2 {u : U} (hu : u ∈ residualKer) :
     Rlin (Rlin u) = -u :=
   eq_neg_of_add_eq_zero_left (mem_residualKer_iff.mp hu)
 
@@ -2759,12 +2761,12 @@ so we conjugate via a Fin-2 basis to `Module.End k (Fin 2 → k)`. -/
 
 /-- Conjugate an endomorphism along a linear equivalence (avoids End-on-submodule
 Ring TC diamond). -/
-noncomputable def conjEnd {R M N : Type*} [Semiring R]
+@[expose] public noncomputable def conjEnd {R M N : Type*} [Semiring R]
     [AddCommMonoid M] [Module R M] [AddCommMonoid N] [Module R N]
     (e : M ≃ₗ[R] N) (f : Module.End R M) : Module.End R N :=
   e.toLinearMap ∘ₗ f ∘ₗ e.symm.toLinearMap
 
-@[simp] theorem conjEnd_apply {R M N : Type*} [Semiring R]
+@[simp] public theorem conjEnd_apply {R M N : Type*} [Semiring R]
     [AddCommMonoid M] [Module R M] [AddCommMonoid N] [Module R N]
     (e : M ≃ₗ[R] N) (f : Module.End R M) (x : N) :
     conjEnd e f x = e (f (e.symm x)) := rfl
@@ -3096,7 +3098,7 @@ theorem residual_no_eigenvalue {u : U} (hu0 : u ≠ 0)
   exact not_isSquare_neg_one ⟨a, by simpa [pow_two, eq_comm] using ha2⟩
 
 /-- `{u, Ru}` is a basis of a residual line through `u`. -/
-theorem residual_pair_independent {u : U} (hu0 : u ≠ 0)
+public theorem residual_pair_independent {u : U} (hu0 : u ≠ 0)
     (hR2 : Rlin (Rlin u) + u = 0) :
     LinearIndependent k ![u, Rlin u] := by
   rw [LinearIndependent.pair_iff]
@@ -3138,7 +3140,7 @@ theorem residual_plucker_rotGen_det_one {u : U} (_hu0 : u ≠ 0)
 packaging uses `S R = -R S` on residualKer (from SL conjugacy) — in progress.
 -/
 
-abbrev Slin : U →ₗ[k] U :=
+public abbrev Slin : U →ₗ[k] U :=
   WeilHom.weilUHom (CentralizerN.mkRefl CentralizerN.reflPt)
 
 theorem Slin_sq : (Slin ∘ₗ Slin : U →ₗ[k] U) = -LinearMap.id := by
@@ -3568,7 +3570,7 @@ theorem ten_div_sixsixty_mul_twentyfour :
     _ = (4 : k) * (11 : k)⁻¹ := by ring
 
 /-- Residual pure wedge is fixed (as a vector) by `rotGen` and `reflGen`. -/
-theorem residual_plucker_N_vec_fixed {u : U} (hu0 : u ≠ 0)
+public theorem residual_plucker_N_vec_fixed {u : U} (hu0 : u ≠ 0)
     (hR2 : Rlin (Rlin u) + u = 0)
     (hSstab : Slin u ∈ (k ∙ u) ⊔ (k ∙ Rlin u)) :
     ambientAct (CentralizerN.rotGen : PSL2F11) (pureWedge u (Rlin u)) =
@@ -3757,10 +3759,10 @@ theorem projector_N_weight_ne_one :
 
 `v ∈ Mfix ↔ projectorM v = v`.  Once convolution gives `π² = π`, this equals
 `range(π)` and the writeup 10′ summand.  Residual exclusion targets `Mfix`. -/
-noncomputable def Mfix : Submodule k Lambda2U :=
+@[expose] public noncomputable def Mfix : Submodule k Lambda2U :=
   LinearMap.ker (projectorM - LinearMap.id)
 
-theorem mem_Mfix_iff {v : Lambda2U} :
+public theorem mem_Mfix_iff {v : Lambda2U} :
     v ∈ Mfix ↔ projectorM v = v := by
   simp only [Mfix, LinearMap.mem_ker, LinearMap.sub_apply, LinearMap.id_apply, sub_eq_zero]
 
@@ -4058,7 +4060,7 @@ theorem dual_sum_N_contribution {ω : Lambda2U}
 /-! ## Residual pure ≠ 0 and N-partial projector (4/11 weight) -/
 
 /-- Residual pure wedge is nonzero. -/
-theorem pureWedge_residual_ne_zero {u : U} (hu0 : u ≠ 0)
+public theorem pureWedge_residual_ne_zero {u : U} (hu0 : u ≠ 0)
     (hR2 : Rlin (Rlin u) + u = 0) :
     pureWedge u (Rlin u) ≠ 0 := by
   intro hz
@@ -4126,13 +4128,13 @@ theorem finrank_Lambda2U : Module.finrank k Lambda2U = 15 := by
   rw [exteriorPower.finrank_eq (R := k) (M := U) (n := 2), hU]
   decide
 
-theorem card_PSL2F11 : Fintype.card PSL2F11 = 660 :=
+public theorem card_PSL2F11 : Fintype.card PSL2F11 = 660 :=
   PSLCard.card_PSL2_F11_fintype
 
 /-! ## Cross-term algebra: N-fixed `πω = ω` ⇔ `cross = 42 · ω` -/
 
 /-- Character sum outside the N-contribution, for bookkeeping on N-fixed vectors. -/
-noncomputable def chiCrossTerm (ω : Lambda2U) : Lambda2U :=
+@[expose] public noncomputable def chiCrossTerm (ω : Lambda2U) : Lambda2U :=
   (∑ g : PSL2F11, chi10' g • ambientAct g ω) -
     (∑ n : Subgroup.centralizer ({CentralizerN.sigma} : Set PSL2F11),
       chi10' (n : PSL2F11) • ambientAct (n : PSL2F11) ω)
@@ -4459,7 +4461,7 @@ theorem residual_chiCrossTerm_ne_forty_two_of_mul {u : U}
   residual_cross_ne_forty_two_of_mul_ne_zero hmul
 
 /-- Residual pure wedge not fixed by `projectorM` from `cross ≠ 42 · ω`. -/
-theorem residual_plucker_projectorM_ne_of_cross_ne_forty_two {u : U}
+public theorem residual_plucker_projectorM_ne_of_cross_ne_forty_two {u : U}
     (hu0 : u ≠ 0)
     (hR2 : Rlin (Rlin u) + u = 0)
     (hSstab : Slin u ∈ (k ∙ u) ⊔ (k ∙ Rlin u))
@@ -4486,7 +4488,7 @@ theorem residual_plucker_projectorM_ne_of_cross_not_parallel {u : U}
 
 From `PSLCard.chi10Int_sum_sq_psl` (SL native count + 2-to-1 quotient sum). -/
 
-theorem chi10'_eq_chi10Int (g : PSL2F11) :
+public theorem chi10'_eq_chi10Int (g : PSL2F11) :
     chi10' g = (PSLCard.chi10Int (orderOf g) : k) := by
   unfold chi10' PSLCard.chi10Int
   by_cases h1 : orderOf g = 1
@@ -4531,7 +4533,7 @@ theorem chi10'_sum_sq :
 /-! ### Pure-M infrastructure: χ-sum operator acts as 66 on pure-M vectors -/
 
 /-- Unnormalized isotypic sum `T = ∑_g χ(g) · ρ(g)`. -/
-noncomputable def chiSumOp : Module.End k Lambda2U :=
+@[expose] public noncomputable def chiSumOp : Module.End k Lambda2U :=
   ∑ g : PSL2F11, chi10' g • ambientAct g
 
 theorem chiSumOp_apply (v : Lambda2U) :
@@ -4544,7 +4546,7 @@ theorem projectorM_eq_smul_chiSumOp (v : Lambda2U) :
   rw [projectorM_apply, chiSumOp_apply]
 
 /-- Pure-M (`πω = ω`) implies `T ω = 66 ω`. -/
-theorem chiSumOp_eq_sixty_six_of_mem_Mfix {ω : Lambda2U}
+public theorem chiSumOp_eq_sixty_six_of_mem_Mfix {ω : Lambda2U}
     (hfix : projectorM ω = ω) :
     chiSumOp ω = (66 : k) • ω := by
   have h1 : ω = (10 * (660 : k)⁻¹) • chiSumOp ω := by
@@ -4692,7 +4694,7 @@ theorem chiSumOp_sq_apply (v : Lambda2U) :
     _ = (66 : k) • chiSumOp v := by rw [← chiSumOp_apply]
 
 /-- Pointwise projector idempotence: `π(π v) = π v`. -/
-theorem projectorM_sq_apply (v : Lambda2U) :
+public theorem projectorM_sq_apply (v : Lambda2U) :
     projectorM (projectorM v) = projectorM v := by
   set c : k := 10 * (660 : k)⁻¹
   have hc (w : Lambda2U) : projectorM w = c • chiSumOp w := by
@@ -4718,7 +4720,7 @@ theorem projectorM_sq_apply (v : Lambda2U) :
   exact hstep.trans (hstep2.trans (hstep3.trans hstep4))
 
 /-- Fixed space of π equals its range (since π is a projector). -/
-theorem Mfix_eq_Msub : Mfix = Msub := by
+public theorem Mfix_eq_Msub : Mfix = Msub := by
   classical
   apply le_antisymm
   · intro v hv
@@ -4805,7 +4807,7 @@ theorem projectorM_isProj : IsProj Msub projectorM where
     exact (mem_Mfix_iff (v := v)).mp hv'
 
 /-- Trace of the isotypic projector equals `finrank Msub`. -/
-theorem projectorM_trace_eq_finrank :
+public theorem projectorM_trace_eq_finrank :
     LinearMap.trace k Lambda2U projectorM =
       (Module.finrank k Msub : k) := by
   haveI : Module.Free k Msub := inferInstance
@@ -4815,7 +4817,7 @@ theorem projectorM_trace_eq_finrank :
   exact projectorM_isProj.trace
 
 /-- Character of the ambient Λ² representation. -/
-noncomputable def chiLambda2 (g : PSL2F11) : k :=
+@[expose] public noncomputable def chiLambda2 (g : PSL2F11) : k :=
   LinearMap.trace k Lambda2U (ambientAct g)
 
 theorem chiLambda2_one : chiLambda2 1 = 15 := by
@@ -4853,7 +4855,7 @@ theorem card_carrier_sigma :
     _ = 55 := by decide
 
 /-- `χ_Λ²` is a class function. -/
-theorem chiLambda2_isConj {g h : PSL2F11} (hc : IsConj g h) :
+public theorem chiLambda2_isConj {g h : PSL2F11} (hc : IsConj g h) :
     chiLambda2 g = chiLambda2 h := by
   obtain ⟨c, rfl⟩ := isConj_iff.mp hc
   dsimp [chiLambda2]
@@ -5009,7 +5011,7 @@ theorem ten_div_sixsixty_mul_sixsixty :
     _ = 10 := by ring
 
 /-- If the weighted ambient sum is `660`, then `finrank Msub = 10`. -/
-theorem finrank_Msub_eq_ten_of_sum_chi_chiLambda2
+public theorem finrank_Msub_eq_ten_of_sum_chi_chiLambda2
     (hsum : (∑ g : PSL2F11, chi10' g * chiLambda2 g) = (660 : k)) :
     Module.finrank k Msub = 10 := by
   have htr : LinearMap.trace k Lambda2U projectorM = (10 : k) := by
@@ -5025,7 +5027,7 @@ theorem finrank_Msub_eq_ten_of_sum_chi_chiLambda2
 the matrix of `Jlin` is block-diagonal of `[[0,-1],[1,0]]` blocks, so `tr(Jlin)=0`.
 -/
 
-theorem irr_X_sq_add_one : Irreducible ((X : k[X]) ^ 2 + C (1 : k)) := by
+public theorem irr_X_sq_add_one : Irreducible ((X : k[X]) ^ 2 + C (1 : k)) := by
   have heq : (X : k[X]) ^ 2 + C 1 = X ^ 2 - C (-1 : k) := by
     ext n; simp [sub_eq_add_neg]
   rw [heq]
@@ -5033,14 +5035,14 @@ theorem irr_X_sq_add_one : Irreducible ((X : k[X]) ^ 2 + C (1 : k)) := by
       (a := (-1 : k))).2 fun b hb =>
     not_isSquare_neg_one ⟨b, by simpa [pow_two] using hb.symm⟩
 
-instance fact_irr_X2p1 : Fact (Irreducible ((X : k[X]) ^ 2 + C (1 : k))) :=
+@[expose] public instance fact_irr_X2p1 : Fact (Irreducible ((X : k[X]) ^ 2 + C (1 : k))) :=
   ⟨irr_X_sq_add_one⟩
 
 /-- `L = k[i] = k[X]/(X²+1)`. -/
-abbrev Ladj : Type := AdjoinRoot ((X : k[X]) ^ 2 + C (1 : k))
-def iRoot : Ladj := root ((X : k[X]) ^ 2 + C (1 : k))
+public abbrev Ladj : Type := AdjoinRoot ((X : k[X]) ^ 2 + C (1 : k))
+@[expose] public def iRoot : Ladj := root ((X : k[X]) ^ 2 + C (1 : k))
 
-theorem aeval_iRoot : aeval iRoot ((X : k[X]) ^ 2 + C (1 : k)) = 0 :=
+public theorem aeval_iRoot : aeval iRoot ((X : k[X]) ^ 2 + C (1 : k)) = 0 :=
   (aeval_eq (f := (X : k[X]) ^ 2 + C 1) (p := (X : k[X]) ^ 2 + C 1)).trans
     (mk_self (f := (X : k[X]) ^ 2 + C 1))
 
@@ -5072,7 +5074,7 @@ theorem algebra_trace_iRoot : Algebra.trace k Ladj iRoot = 0 := by
     _ = - nextCoeff ((X : k[X]) ^ 2 + C 1) := by rw [minpoly_iRoot]
     _ = 0 := by rw [nextCoeff_X2p1, neg_zero]
 
-theorem algebraMap_end_commute (r : k) :
+public theorem algebraMap_end_commute (r : k) :
     Commute (algebraMap k (Module.End k U) r) (Jlin : Module.End k U) := by
   rw [commute_iff_eq]
   ext u
@@ -5080,7 +5082,7 @@ theorem algebraMap_end_commute (r : k) :
     LinearMap.comp_apply, LinearMap.smul_apply, Module.End.one_eq_id,
     LinearMap.id_apply, map_smul]
 
-noncomputable def eval₂Jlin : k[X] →+* Module.End k U :=
+@[expose] public noncomputable def eval₂Jlin : k[X] →+* Module.End k U :=
   eval₂RingHom' (algebraMap k (Module.End k U)) Jlin algebraMap_end_commute
 
 theorem eval₂Jlin_X2p1 : eval₂Jlin ((X : k[X]) ^ 2 + C 1) = 0 := by
@@ -5095,25 +5097,25 @@ theorem eval₂Jlin_X2p1 : eval₂Jlin ((X : k[X]) ^ 2 + C 1) = 0 := by
   rw [hpow]
   ext x; simp [Module.End.one_eq_id]
 
-theorem eval₂Jlin_span_eq_zero :
+public theorem eval₂Jlin_span_eq_zero :
     ∀ g : k[X], g ∈ Ideal.span {((X : k[X]) ^ 2 + C (1 : k))} → eval₂Jlin g = 0 := by
   intro g hg
   obtain ⟨h, rfl⟩ := Ideal.mem_span_singleton.mp hg
   rw [map_mul, eval₂Jlin_X2p1, zero_mul]
 
-abbrev Ipoly : Ideal k[X] := Ideal.span {((X : k[X]) ^ 2 + C (1 : k))}
+public abbrev Ipoly : Ideal k[X] := Ideal.span {((X : k[X]) ^ 2 + C (1 : k))}
 
-noncomputable def LtoEndQuot : (k[X] ⧸ Ipoly) →+* Module.End k U :=
+@[expose] public noncomputable def LtoEndQuot : (k[X] ⧸ Ipoly) →+* Module.End k U :=
   Ideal.Quotient.lift Ipoly eval₂Jlin eval₂Jlin_span_eq_zero
 
-noncomputable def LtoEnd : Ladj →+* Module.End k U := LtoEndQuot
+@[expose] public noncomputable def LtoEnd : Ladj →+* Module.End k U := LtoEndQuot
 
 theorem LtoEnd_root : LtoEnd iRoot = Jlin := by
   show LtoEndQuot (Ideal.Quotient.mk Ipoly X) = Jlin
   rw [LtoEndQuot, Ideal.Quotient.lift_mk]
   exact eval₂_X (algebraMap k (Module.End k U)) Jlin
 
-theorem LtoEnd_of (r : k) :
+public theorem LtoEnd_of (r : k) :
     LtoEnd (algebraMap k Ladj r) = algebraMap k (Module.End k U) r := by
   show LtoEndQuot (Ideal.Quotient.mk Ipoly (C r)) = algebraMap k (Module.End k U) r
   rw [LtoEndQuot, Ideal.Quotient.lift_mk]
@@ -5121,9 +5123,9 @@ theorem LtoEnd_of (r : k) :
     algebraMap k (Module.End k U) r
   rw [eval₂_C]
 
-instance moduleL_U : Module Ladj U := Module.compHom U LtoEnd
+@[expose] public instance moduleL_U : Module Ladj U := Module.compHom U LtoEnd
 
-instance isScalarTower_kLU : IsScalarTower k Ladj U where
+@[expose] public instance isScalarTower_kLU : IsScalarTower k Ladj U where
   smul_assoc r l u := by
     have hdef : (r • l : Ladj) = algebraMap k Ladj r * l := Algebra.smul_def r l
     show LtoEnd (r • l) u = r • (LtoEnd l u)
@@ -5141,15 +5143,15 @@ theorem finrank_Ladj : Module.finrank k Ladj = 2 := by
     exact natDegree_X_pow_add_C
   exact h.trans hdim
 
-instance instFreeLadj : Module.Free k Ladj := Module.Free.of_basis
+@[expose] public instance instFreeLadj : Module.Free k Ladj := Module.Free.of_basis
   (powerBasis (K := k) (f := (X : k[X]) ^ 2 + C 1) irr_X_sq_add_one.ne_zero).basis
 
-instance instFiniteLadj : Module.Finite k Ladj := Module.Finite.of_basis
+@[expose] public instance instFiniteLadj : Module.Finite k Ladj := Module.Finite.of_basis
   (powerBasis (K := k) (f := (X : k[X]) ^ 2 + C 1) irr_X_sq_add_one.ne_zero).basis
 
-instance instFreeLadjU : Module.Free Ladj U := Module.Free.of_divisionRing Ladj U
+@[expose] public instance instFreeLadjU : Module.Free Ladj U := Module.Free.of_divisionRing Ladj U
 
-theorem finrank_Ladj_U : Module.finrank Ladj U = 3 := by
+public theorem finrank_Ladj_U : Module.finrank Ladj U = 3 := by
   have hmul : Module.finrank k Ladj * Module.finrank Ladj U = Module.finrank k U :=
     Module.finrank_mul_finrank k Ladj U
   have hU : Module.finrank k U = 6 := GeometricFanoCarrier.finrank_U
@@ -5161,7 +5163,7 @@ theorem finrank_Ladj_U : Module.finrank Ladj U = 3 := by
       _ = 6 := hU
   exact Nat.eq_of_mul_eq_mul_left (by decide : 0 < 2) h
 
-instance instFiniteLadjU : Module.Finite Ladj U :=
+@[expose] public instance instFiniteLadjU : Module.Finite Ladj U :=
   Module.finite_of_finrank_eq_succ (n := 2) (by rw [finrank_Ladj_U])
 
 theorem iRoot_smul_eq_Jlin (u : U) : iRoot • u = Jlin u := by
@@ -5345,7 +5347,7 @@ theorem det_submatrix_emb {ι : Type*} [DecidableEq ι]
   simp [Matrix.submatrix_apply]
 
 /-- Newton identity for the exterior square: `tr(Λ² f) = ((tr f)² - tr(f²))/2`. -/
-theorem trace_exterior_newton
+public theorem trace_exterior_newton
     {V : Type*} [AddCommGroup V] [Module k V]
     [Module.Free k V] [Module.Finite k V]
     (f : Module.End k V) :
@@ -5486,7 +5488,7 @@ theorem chiLambda2_eq_three_of_order_two {g : PSL2F11} (hg : orderOf g = 2) :
   rw [chiLambda2_eq_of_order_two hg, chiLambda2_sigma]
 
 /-- Order-2 contribution to `∑ χ χ_Λ²` is `330`. -/
-theorem sum_chi_chiLambda2_order_two :
+public theorem sum_chi_chiLambda2_order_two :
     (∑ g : {g : PSL2F11 // orderOf g = 2}, chi10' g.1 * chiLambda2 g.1) =
       (330 : k) := by
   classical
@@ -5508,12 +5510,12 @@ theorem sum_chi_chiLambda2_order_two :
     _ = 330 := by norm_num
 
 /-- Identity contribution: `χ(1)·χ_Λ²(1) = 10·15 = 150`. -/
-theorem sum_chi_chiLambda2_order_one :
+public theorem sum_chi_chiLambda2_order_one :
     chi10' (1 : PSL2F11) * chiLambda2 (1 : PSL2F11) = (150 : k) := by
   rw [chi10'_one, chiLambda2_one]; norm_num
 
 /-- On order-5 elements, `χ₁₀' = 0`, so the weighted sum vanishes. -/
-theorem sum_chi_chiLambda2_order_five :
+public theorem sum_chi_chiLambda2_order_five :
     (∑ g : {g : PSL2F11 // orderOf g = 5}, chi10' g.1 * chiLambda2 g.1) =
       (0 : k) := by
   classical
@@ -5985,7 +5987,7 @@ theorem eq_residualKer_of_R_stable_plane (P : Submodule k U)
   exact Submodule.eq_of_le_of_finrank_eq hle hfr
 
 /-- Support of an R-character pure wedge is exactly `residualKer`. -/
-theorem support_eq_residualKer_of_R_character {u v : U} {μ : k}
+public theorem support_eq_residualKer_of_R_character {u v : U} {μ : k}
     (hI : LinearIndependent k ![u, v])
     (hμ : μ ≠ 0)
     (hRpure : pureWedge (Rlin u) (Rlin v) = μ • pureWedge u v) :
@@ -6529,7 +6531,7 @@ theorem Rlin_sq_trace :
   norm_num
 
 /-- ambientAct rotGen = exteriorPower.map 2 Rlin. -/
-theorem ambientAct_rotGen_eq_map_Rlin :
+public theorem ambientAct_rotGen_eq_map_Rlin :
     ambientAct (CentralizerN.rotGen : PSL2F11) = exteriorPower.map 2 Rlin := by
   dsimp [ambientAct, Rlin, CentralizerN.rotGen]
   -- ambientAct (mk rot) = pslLambda2Hom (mk (mkRot rotPt)) = weilLambda2 (mkRot) = map 2 (weilU)
@@ -6930,7 +6932,7 @@ theorem chiLambda2_eq_zero_of_order_six {g : PSL2F11} (hg : orderOf g = 6) :
   have h := chiLambda2_isConj hc
   rw [← h, chiLambda2_rotGen]
 
-theorem sum_chi_chiLambda2_order_six :
+public theorem sum_chi_chiLambda2_order_six :
     (∑ g : {g : PSL2F11 // orderOf g = 6}, chi10' g.1 * chiLambda2 g.1) =
       (0 : k) := by
   classical
@@ -7388,7 +7390,7 @@ theorem chiLambda2_eq_zero_of_order_three {g : PSL2F11} (hg : orderOf g = 3) :
   have h := chiLambda2_isConj hc
   rw [← h, chiLambda2_rotGen_pow_two]
 
-theorem sum_chi_chiLambda2_order_three :
+public theorem sum_chi_chiLambda2_order_three :
     (∑ g : {g : PSL2F11 // orderOf g = 3}, chi10' g.1 * chiLambda2 g.1) =
       (0 : k) := by
   classical

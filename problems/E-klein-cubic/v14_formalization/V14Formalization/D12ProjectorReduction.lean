@@ -2,13 +2,15 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.V14SchemeModel
-import V14Formalization.Ord11CharacterSum
-import V14Formalization.PSLGenerators
-import Mathlib.LinearAlgebra.Trace
-import Mathlib.LinearAlgebra.FixedSubmodule
-import Mathlib.LinearAlgebra.Dimension.Finrank
-import Mathlib.Algebra.Module.Submodule.Pointwise
+module
+
+public import V14Formalization.V14SchemeModel
+public import V14Formalization.Ord11CharacterSum
+public import V14Formalization.PSLGenerators
+public import Mathlib.LinearAlgebra.Trace
+public import Mathlib.LinearAlgebra.FixedSubmodule
+public import Mathlib.LinearAlgebra.Dimension.Finrank
+public import Mathlib.Algebra.Module.Submodule.Pointwise
 
 /-!
 # A structural reduction for the D12 projector factor
@@ -33,7 +35,7 @@ variable {K : Type*} [Field K]
 /-- A matrix relation `gB = BA` says exactly that the column space of `B` is
 stabilized by the linear equivalence represented by `g`.  Equality, rather
 than merely inclusion, follows from preservation of finite dimension. -/
-theorem mem_stabilizer_range_of_mul_eq
+public theorem mem_stabilizer_range_of_mul_eq
     {m n : Type*} [Fintype m] [DecidableEq m]
     [Fintype n] [DecidableEq n]
     (g : GL m K) (B : Matrix m n K) (A : Matrix n n K)
@@ -64,7 +66,7 @@ noncomputable def matrixRepresentationLinearEquiv
 
 /-- If two elements generate the group, two bounded restriction identities
 imply invariance of the column space under the entire representation. -/
-theorem all_mul_eq_of_two_generators
+public theorem all_mul_eq_of_two_generators
     {m n G : Type*} [Fintype m] [DecidableEq m]
     [Fintype n] [DecidableEq n] [Group G]
     (R : G →* GL m K) (s t : G)
@@ -133,7 +135,7 @@ variable [CharZero K]
 
 /-- An idempotent square matrix whose trace is the full dimension is the
 identity. -/
-theorem idempotent_eq_one_of_trace_eq_card
+public theorem idempotent_eq_one_of_trace_eq_card
     {d : Type*} [Fintype d] [DecidableEq d]
     (A : Matrix d d K) (hA : A * A = A)
     (htr : A.trace = (Fintype.card d : K)) : A = 1 := by
@@ -250,7 +252,7 @@ open GeometricV14Carrier Lambda2Coordinates V14SchemeModel
 /-- Coordinate form of the character-average definition of the genuine
 projector.  This equality is structural: it is functoriality of `toMatrix`
 for sums and scalar multiples. -/
-theorem projectorMatrix_eq_character_sum :
+public theorem projectorMatrix_eq_character_sum :
     V14SchemeModel.projectorMatrix =
       (10 * (660 : V14SchemeModel.k)⁻¹) •
         ∑ g : V14SchemeModel.G,
@@ -263,7 +265,7 @@ theorem projectorMatrix_eq_character_sum :
 
 /-- Invariance under every group matrix implies invariance under their
 character-weighted projector. -/
-theorem projector_invariant_of_all_representation
+public theorem projector_invariant_of_all_representation
     (B : Matrix (Fin 15) (Fin 10) V14SchemeModel.k)
     (hAll : ∀ g : V14SchemeModel.G,
       ∃ A : Matrix (Fin 10) (Fin 10) V14SchemeModel.k,
@@ -299,7 +301,7 @@ theorem projector_invariant_of_all_representation
 
 /-- Consequently, only the two standard generator restriction identities are
 needed to prove invariance under the genuine character projector. -/
-theorem projector_invariant_of_standard_generators
+public theorem projector_invariant_of_standard_generators
     (B : Matrix (Fin 15) (Fin 10) V14SchemeModel.k)
     (L : Matrix (Fin 10) (Fin 15) V14SchemeModel.k)
     (hLB : L * B = 1)
@@ -322,7 +324,7 @@ theorem projector_invariant_of_standard_generators
 class of `Smat`, and `T₆` represents the PSL class of `Tmat²`.  Thus the
 generated restriction certificates can be used directly, without extracting a
 matrix square root or expanding the full projector. -/
-theorem projector_invariant_of_standard_generators_pow_two
+public theorem projector_invariant_of_standard_generators_pow_two
     (B : Matrix (Fin 15) (Fin 10) V14SchemeModel.k)
     (L : Matrix (Fin 10) (Fin 15) V14SchemeModel.k)
     (hLB : L * B = 1)
@@ -344,7 +346,7 @@ theorem projector_invariant_of_standard_generators_pow_two
     B L hLB As At2 hS hT2
 
 /-- The genuine coordinate character projector has trace ten. -/
-theorem projectorMatrix_trace :
+public theorem projectorMatrix_trace :
     Matrix.trace V14SchemeModel.projectorMatrix = (10 : V14SchemeModel.k) := by
   unfold V14SchemeModel.projectorMatrix
   rw [← LinearMap.trace_eq_matrix_trace V14SchemeModel.k
@@ -355,7 +357,7 @@ theorem projectorMatrix_trace :
 
 /-- For the genuine V14 projector, only invariance of the emitted ten-space
 and the trace of its restricted projector remain. -/
-theorem projector_factor_of_invariant_trace
+public theorem projector_factor_of_invariant_trace
     (B : Matrix (Fin 15) (Fin 10) V14SchemeModel.k)
     (L : Matrix (Fin 10) (Fin 15) V14SchemeModel.k)
     (hLB : L * B = 1)

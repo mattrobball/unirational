@@ -2,14 +2,16 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.LinearNormalEquivariant
-import V14Formalization.BiprojectiveIntegral
-import V14Formalization.EllipticPolynomialConstancy
-import BConicBundleMultisections.BiprojectiveZeroLocus
-import BConicBundleMultisections.BiprojectiveAffineZeroLocus
-import BConicBundleMultisections.ProjectiveSpaceChartDominance
-import Mathlib.RingTheory.Localization.LocalizationLocalization
-import Mathlib.RingTheory.Localization.Algebra
+module
+
+public import V14Formalization.LinearNormalEquivariant
+public import V14Formalization.BiprojectiveIntegral
+public import V14Formalization.EllipticPolynomialConstancy
+public import BConicBundleMultisections.BiprojectiveZeroLocus
+public import BConicBundleMultisections.BiprojectiveAffineZeroLocus
+public import BConicBundleMultisections.ProjectiveSpaceChartDominance
+public import Mathlib.RingTheory.Localization.LocalizationLocalization
+public import Mathlib.RingTheory.Localization.Algebra
 
 /-!
 # Explicit function-field charts for the normal divisor
@@ -35,14 +37,14 @@ attribute [local instance] MvPolynomial.gradedAlgebra
 
 /-! ## Canonical base map into a scheme function field -/
 
-def functionFieldBaseRingHom
+@[expose] public def functionFieldBaseRingHom
     (Omega : Type u) [Field Omega]
     (X : Scheme.{u}) [IsIntegral X]
     (f : X ⟶ Spec (.of Omega)) : Omega →+* X.functionField :=
   (X.presheaf.germ (⊤ : X.Opens) (genericPoint X) trivial).hom.comp
     (f.appTop.hom.comp (Scheme.ΓSpecIso (.of Omega)).inv.hom)
 
-theorem SpecMap_functionFieldBaseRingHom
+public theorem SpecMap_functionFieldBaseRingHom
     (Omega : Type u) [Field Omega]
     (X : Scheme.{u}) [IsIntegral X]
     (f : X ⟶ Spec (.of Omega)) :
@@ -94,19 +96,19 @@ private theorem restrict_comp_ΓIsoTop_inv
 
 /-! ## The explicit five-dimensional ambient rational field -/
 
-private abbrev ResidualPoly (Omega : Type u) [Field Omega] :=
+public abbrev ResidualPoly (Omega : Type u) [Field Omega] :=
   MvPolynomial (Fin 4) Omega
 
-private abbrev ResidualFrac (Omega : Type u) [Field Omega] :=
+public abbrev ResidualFrac (Omega : Type u) [Field Omega] :=
   FractionRing (ResidualPoly Omega)
 
-private abbrev AmbientPolyTower (Omega : Type u) [Field Omega] :=
+public abbrev AmbientPolyTower (Omega : Type u) [Field Omega] :=
   Polynomial (ResidualPoly Omega)
 
-private abbrev AmbientPolyLocalized (Omega : Type u) [Field Omega] :=
+public abbrev AmbientPolyLocalized (Omega : Type u) [Field Omega] :=
   Polynomial (ResidualFrac Omega)
 
-private abbrev AmbientFrac (Omega : Type u) [Field Omega] :=
+public abbrev AmbientFrac (Omega : Type u) [Field Omega] :=
   FractionRing (AmbientPolyTower Omega)
 
 private abbrev ambientCoeffSubmonoid (Omega : Type u) [Field Omega] :
@@ -194,7 +196,7 @@ private local instance ambientPolyLocalizedFraction
     (ambientCoeffSubmonoid Omega) (AmbientPolyLocalized Omega) (AmbientFrac Omega)
 
 /-- `Omega(x₁,…,x₄)(T)` is the fraction field of a polynomial ring in five variables. -/
-noncomputable def linearNormalFractionAlgEquivMvPolynomialFive
+public noncomputable def linearNormalFractionAlgEquivMvPolynomialFive
     (Omega : Type u) [Field Omega] :
     LinearNormalFractionField 5 Omega ≃ₐ[Omega]
       FractionRing (MvPolynomial (Fin 5) Omega) :=
@@ -204,7 +206,7 @@ noncomputable def linearNormalFractionAlgEquivMvPolynomialFive
     (IsFractionRing.algEquivOfAlgEquiv
       (MvPolynomial.finSuccEquiv Omega 4)).symm
 
-noncomputable def linearNormalFractionEquivMvPolynomialFive
+@[expose] public noncomputable def linearNormalFractionEquivMvPolynomialFive
     (Omega : Type u) [Field Omega] :
     LinearNormalFractionField 5 Omega ≃+*
       FractionRing (MvPolynomial (Fin 5) Omega) :=
@@ -212,7 +214,7 @@ noncomputable def linearNormalFractionEquivMvPolynomialFive
 
 /-! ## Standard-chart function fields -/
 
-private abbrev projectiveFiveChart
+public abbrev projectiveFiveChart
     (Omega : Type u) [Field Omega] :
     (ProjectiveSpace 5 Omega).Opens :=
   (ProjectiveSpace.standardChartι 5 Omega 0).opensRange
@@ -226,7 +228,7 @@ private instance projectiveFiveChart_nonempty
     ProjectiveSpace.opensRange_standardChartι] using
       ProjectiveSpace.genericPoint_mem_standardChart 5 Omega 0
 
-noncomputable def projectiveFiveGammaEquivMvPolynomial
+@[expose] public noncomputable def projectiveFiveGammaEquivMvPolynomial
     (Omega : Type u) [Field Omega] :
     Γ(ProjectiveSpace 5 Omega, projectiveFiveChart Omega) ≃+*
       MvPolynomial (Fin 5) Omega :=
@@ -239,7 +241,7 @@ noncomputable def projectiveFiveGammaEquivMvPolynomial
     |>.trans (ProjectiveSpace.standardChartRingEquivMvPolynomial
       5 Omega 0).toRingEquiv
 
-def projectiveFiveBaseToFunctionField
+public def projectiveFiveBaseToFunctionField
     (Omega : Type u) [Field Omega] :
     Omega →+* (ProjectiveSpace 5 Omega).functionField :=
   ((ProjectiveSpace 5 Omega).germToFunctionField
@@ -247,13 +249,13 @@ def projectiveFiveBaseToFunctionField
     ((projectiveFiveGammaEquivMvPolynomial Omega).symm.toRingHom.comp
       (algebraMap Omega (MvPolynomial (Fin 5) Omega)))
 
-private noncomputable local instance projectiveFiveFunctionFieldAlgebra
+public noncomputable local instance projectiveFiveFunctionFieldAlgebra
     (Omega : Type u) [Field Omega] :
     Algebra Omega (ProjectiveSpace 5 Omega).functionField :=
   (projectiveFiveBaseToFunctionField Omega).toAlgebra
 
 /-- The actual function field of `P⁵` in its zero-th standard chart. -/
-noncomputable def projectiveFiveFunctionFieldAlgEquiv
+public noncomputable def projectiveFiveFunctionFieldAlgEquiv
     (Omega : Type u) [Field Omega] :
     FractionRing (MvPolynomial (Fin 5) Omega) ≃ₐ[Omega]
       (ProjectiveSpace 5 Omega).functionField := by
@@ -276,14 +278,14 @@ noncomputable def projectiveFiveFunctionFieldAlgEquiv
   exact (FractionRing.algEquiv (MvPolynomial (Fin 5) Omega)
     X.functionField).restrictScalars Omega
 
-noncomputable def projectiveFiveFunctionFieldEquiv
+@[expose] public noncomputable def projectiveFiveFunctionFieldEquiv
     (Omega : Type u) [Field Omega] :
     FractionRing (MvPolynomial (Fin 5) Omega) ≃+*
       (ProjectiveSpace 5 Omega).functionField :=
   (projectiveFiveFunctionFieldAlgEquiv Omega).toRingEquiv
 
 /-- Actual ambient function-field identification used by the linear-normal package. -/
-noncomputable def projectiveFiveLinearNormalFunctionFieldEquiv
+@[expose] public noncomputable def projectiveFiveLinearNormalFunctionFieldEquiv
     (Omega : Type u) [Field Omega] :
     LinearNormalFractionField 5 Omega ≃+*
       (ProjectiveSpace 5 Omega).functionField :=
@@ -297,7 +299,7 @@ theorem projectiveFiveFunctionFieldEquiv_base
       projectiveFiveBaseToFunctionField Omega a := by
   exact (projectiveFiveFunctionFieldAlgEquiv Omega).commutes a
 
-theorem projectiveFiveBaseToFunctionField_eq
+public theorem projectiveFiveBaseToFunctionField_eq
     (Omega : Type u) [Field Omega] :
     projectiveFiveBaseToFunctionField Omega =
       functionFieldBaseRingHom Omega (ProjectiveSpace 5 Omega)
@@ -369,7 +371,7 @@ theorem linearNormalFractionEquivMvPolynomialFive_base
       algebraMap Omega (FractionRing (MvPolynomial (Fin 5) Omega)) a := by
   exact (linearNormalFractionAlgEquivMvPolynomialFive Omega).commutes a
 
-private abbrev biprojectiveTwoTwoChart
+public abbrev biprojectiveTwoTwoChart
     (Omega : Type u) [Field Omega] :
     (BiprojectiveSpace 2 2 Omega).Opens :=
   (BiprojectiveSpace.standardChartι 2 2 Omega 0 0).opensRange
@@ -388,7 +390,7 @@ private instance biprojectiveTwoTwoChart_nonempty
   let x := e.inv (Classical.choice hs)
   exact ⟨⟨f x, ⟨x, rfl⟩⟩⟩
 
-noncomputable def biprojectiveTwoTwoGammaEquivMvPolynomial
+@[expose] public noncomputable def biprojectiveTwoTwoGammaEquivMvPolynomial
     (Omega : Type u) [Field Omega] :
     Γ(BiprojectiveSpace 2 2 Omega, biprojectiveTwoTwoChart Omega) ≃+*
       MvPolynomial (Fin 4) Omega :=
@@ -402,7 +404,7 @@ noncomputable def biprojectiveTwoTwoGammaEquivMvPolynomial
     |>.trans (MvPolynomial.renameEquiv Omega
       (@finSumFinEquiv 2 2)).toRingEquiv
 
-def biprojectiveTwoTwoBaseToFunctionField
+public def biprojectiveTwoTwoBaseToFunctionField
     (Omega : Type u) [Field Omega] :
     Omega →+* (BiprojectiveSpace 2 2 Omega).functionField :=
   ((BiprojectiveSpace 2 2 Omega).germToFunctionField
@@ -410,13 +412,13 @@ def biprojectiveTwoTwoBaseToFunctionField
     ((biprojectiveTwoTwoGammaEquivMvPolynomial Omega).symm.toRingHom.comp
       (algebraMap Omega (MvPolynomial (Fin 4) Omega)))
 
-private noncomputable local instance biprojectiveTwoTwoFunctionFieldAlgebra
+public noncomputable local instance biprojectiveTwoTwoFunctionFieldAlgebra
     (Omega : Type u) [Field Omega] :
     Algebra Omega (BiprojectiveSpace 2 2 Omega).functionField :=
   (biprojectiveTwoTwoBaseToFunctionField Omega).toAlgebra
 
 /-- The actual function field of `P² × P²` in its `(0,0)` standard chart. -/
-noncomputable def biprojectiveTwoTwoFunctionFieldAlgEquiv
+public noncomputable def biprojectiveTwoTwoFunctionFieldAlgEquiv
     (Omega : Type u) [Field Omega] :
     LinearExceptionalFunctionField 5 Omega ≃ₐ[Omega]
       (BiprojectiveSpace 2 2 Omega).functionField := by
@@ -440,7 +442,7 @@ noncomputable def biprojectiveTwoTwoFunctionFieldAlgEquiv
   exact (FractionRing.algEquiv (MvPolynomial (Fin 4) Omega)
     E.functionField).restrictScalars Omega
 
-noncomputable def biprojectiveTwoTwoFunctionFieldEquiv
+@[expose] public noncomputable def biprojectiveTwoTwoFunctionFieldEquiv
     (Omega : Type u) [Field Omega] :
     LinearExceptionalFunctionField 5 Omega ≃+*
       (BiprojectiveSpace 2 2 Omega).functionField :=
@@ -450,7 +452,7 @@ noncomputable def biprojectiveTwoTwoFunctionFieldEquiv
 function field of `P² × P²` descends to the algebraically closed base
 field.  The function-field identification is the explicit standard-chart
 equivalence constructed above. -/
-theorem shortWeierstrassPoint_baseChange_biprojectiveTwoTwo_surjective
+public theorem shortWeierstrassPoint_baseChange_biprojectiveTwoTwo_surjective
     (Omega : Type u) [Field Omega] [IsAlgClosed Omega] [CharZero Omega]
     [DecidableEq Omega]
     [DecidableEq (BiprojectiveSpace 2 2 Omega).functionField]
@@ -589,7 +591,7 @@ theorem biprojectiveTwoTwoBaseToFunctionField_eq
 
 /-! ## Actual base squares for the two geometric carriers -/
 
-theorem projectiveFiveLinearNormalFunctionFieldEquiv_base
+public theorem projectiveFiveLinearNormalFunctionFieldEquiv_base
     (Omega : Type u) [Field Omega] (a : Omega) :
     projectiveFiveLinearNormalFunctionFieldEquiv Omega
         (baseToLinearNormalFractionField 5 Omega a) =
@@ -600,7 +602,7 @@ theorem projectiveFiveLinearNormalFunctionFieldEquiv_base
   rw [linearNormalFractionEquivMvPolynomialFive_base]
   exact projectiveFiveFunctionFieldEquiv_base Omega a
 
-theorem projectiveFiveLinearNormal_generic_toBase
+public theorem projectiveFiveLinearNormal_generic_toBase
     (Omega : Type u) [Field Omega] :
     Spec.map (CommRingCat.ofHom
         (linearChartGenericHom 5 Omega (ProjectiveSpace 5 Omega)
@@ -654,7 +656,7 @@ theorem projectiveFiveLinearNormal_generic_toBase
       SpecMap_functionFieldBaseRingHom Omega (ProjectiveSpace 5 Omega)
         (ProjectiveSpace.toSpec 5 Omega)
 
-theorem biprojectiveTwoTwoLinearNormal_special_toBase
+public theorem biprojectiveTwoTwoLinearNormal_special_toBase
     (Omega : Type u) [Field Omega] :
     Spec.map (CommRingCat.ofHom
         (linearChartResidueHom 5 Omega (BiprojectiveSpace 2 2 Omega)
@@ -709,15 +711,15 @@ theorem biprojectiveTwoTwoLinearNormal_special_toBase
 
 /-! ## A constructor with the geometric carriers and base squares fixed -/
 
-abbrev projectiveFiveOver
+public abbrev projectiveFiveOver
     (Omega : Type u) [Field Omega] : Over (linearBase Omega) :=
   Over.mk (ProjectiveSpace.toSpec 5 Omega)
 
-abbrev biprojectiveTwoTwoOver
+public abbrev biprojectiveTwoTwoOver
     (Omega : Type u) [Field Omega] : Over (linearBase Omega) :=
   Over.mk (BiprojectiveSpace.toSpec 2 2 Omega)
 
-abbrev projectiveFiveOverAction
+public abbrev projectiveFiveOverAction
     (Omega : Type u) [Field Omega]
     {N : Type v} [Monoid N]
     (rho : N →* End (projectiveFiveOver Omega)) :
@@ -725,7 +727,7 @@ abbrev projectiveFiveOverAction
   { V := projectiveFiveOver Omega
     ρ := rho }
 
-abbrev biprojectiveTwoTwoOverAction
+public abbrev biprojectiveTwoTwoOverAction
     (Omega : Type u) [Field Omega]
     {N : Type v} [Monoid N]
     (rho : N →* End (biprojectiveTwoTwoOver Omega)) :
@@ -733,7 +735,7 @@ abbrev biprojectiveTwoTwoOverAction
   { V := biprojectiveTwoTwoOver Omega
     ρ := rho }
 
-instance projectiveFiveOverAction_isIntegral
+@[expose] public instance projectiveFiveOverAction_isIntegral
     (Omega : Type u) [Field Omega]
     {N : Type v} [Monoid N]
     (rho : N →* End (projectiveFiveOver Omega)) :
@@ -741,7 +743,7 @@ instance projectiveFiveOverAction_isIntegral
   change IsIntegral (ProjectiveSpace 5 Omega)
   infer_instance
 
-instance biprojectiveTwoTwoOverAction_isIntegral
+@[expose] public instance biprojectiveTwoTwoOverAction_isIntegral
     (Omega : Type u) [Field Omega]
     {N : Type v} [Monoid N]
     (rho : N →* End (biprojectiveTwoTwoOver Omega)) :
@@ -752,7 +754,7 @@ instance biprojectiveTwoTwoOverAction_isIntegral
 /-- The chart equivalences and both base squares are now canonical.  The remaining
 hypotheses are exactly the action identities required by
 `linearNormalEquivariantDataOfChart`. -/
-def linearNormalEquivariantDataOfProjectiveBiprojectiveCharts
+@[expose] public def linearNormalEquivariantDataOfProjectiveBiprojectiveCharts
     (Omega : Type u) [Field Omega]
     {N : Type v} [Group N]
     (sourceAction : N →* End (projectiveFiveOver Omega))

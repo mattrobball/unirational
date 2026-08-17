@@ -2,17 +2,19 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.ProjectiveFamilyNaturality
-import BConicBundleMultisections.BiprojectiveAffineChart
-import BConicBundleMultisections.LinearCoordinateChange
-import BConicBundleMultisections.ProjectiveHypersurfaceScheme
-import BConicBundleMultisections.IdealSheafDescent
-import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Functor
-import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Basic
-import Mathlib.AlgebraicGeometry.IdealSheaf.Functorial
-import Mathlib.AlgebraicGeometry.OpenImmersion
-import Mathlib.RingTheory.Ideal.Span
-import Mathlib.Algebra.Ring.Int.Defs
+module
+
+public import V14Formalization.ProjectiveFamilyNaturality
+public import BConicBundleMultisections.BiprojectiveAffineChart
+public import BConicBundleMultisections.LinearCoordinateChange
+public import BConicBundleMultisections.ProjectiveHypersurfaceScheme
+public import BConicBundleMultisections.IdealSheafDescent
+public import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Functor
+public import Mathlib.AlgebraicGeometry.ProjectiveSpectrum.Basic
+public import Mathlib.AlgebraicGeometry.IdealSheaf.Functorial
+public import Mathlib.AlgebraicGeometry.OpenImmersion
+public import Mathlib.RingTheory.Ideal.Span
+public import Mathlib.Algebra.Ring.Int.Defs
 
 /-!
 # Away-chart restriction of projective zero-locus ideals
@@ -305,18 +307,18 @@ private theorem nsmul_two_eq (d : ℕ) : (d • 2 : ℕ) = d + d • 1 := by
   rw [nsmul_eq_mul (α := ℕ) d 2, nsmul_eq_mul (α := ℕ) d 1, mul_one]
   exact Nat.mul_two d
 
-theorem mem_coordGraded_X (n : ℕ) (i : Fin (n + 1)) :
+public theorem mem_coordGraded_X (n : ℕ) (i : Fin (n + 1)) :
     (MvPolynomial.X i : MvPolynomial (Fin (n + 1)) R) ∈ coordGraded (R := R) n 1 :=
   MvPolynomial.isHomogeneous_X R i
 
-theorem mem_coordGraded_s_mul_X
+public theorem mem_coordGraded_s_mul_X
     (n : ℕ) {s : MvPolynomial (Fin (n + 1)) R}
     (hs : s ∈ coordGraded (R := R) n 1) (i : Fin (n + 1)) :
     s * MvPolynomial.X i ∈ coordGraded (R := R) n 2 := by
   change s * MvPolynomial.X i ∈ coordGraded (R := R) n (1 + 1)
   exact SetLike.mul_mem_graded hs (mem_coordGraded_X (R := R) n i)
 
-theorem mem_coordGraded_G_mul_s_pow
+public theorem mem_coordGraded_G_mul_s_pow
     (n : ℕ) {d : ℕ} {G : MvPolynomial (Fin (n + 1)) R}
     (hG : G ∈ coordGraded (R := R) n d)
     {s : MvPolynomial (Fin (n + 1)) R} (hs : s ∈ coordGraded (R := R) n 1) :
@@ -324,7 +326,7 @@ theorem mem_coordGraded_G_mul_s_pow
   rw [nsmul_two_eq d]
   exact SetLike.mul_mem_graded hG (SetLike.pow_mem_graded d hs)
 
-theorem mem_coordGraded_G_mul_X_pow
+public theorem mem_coordGraded_G_mul_X_pow
     (n : ℕ) {d : ℕ} {G : MvPolynomial (Fin (n + 1)) R}
     (hG : G ∈ coordGraded (R := R) n d) (i : Fin (n + 1)) :
     G * MvPolynomial.X i ^ d ∈ coordGraded (R := R) n (d • 2) := by
@@ -408,7 +410,7 @@ theorem span_Away_mk_G_X_eq_span_Away_mk_G_s
 /-! ## Away overlap maps and open immersions -/
 
 /-- Ring map `Away s → Away (s · Xᵢ)` from Mathlib's `awayMap`. -/
-def awayMap_s_X (n : ℕ) (s : MvPolynomial (Fin (n + 1)) R)
+@[expose] public def awayMap_s_X (n : ℕ) (s : MvPolynomial (Fin (n + 1)) R)
     (_hs : s ∈ coordGraded (R := R) n 1) (i : Fin (n + 1)) :
     HomogeneousLocalization.Away (coordGraded (R := R) n) s →+*
       HomogeneousLocalization.Away (coordGraded (R := R) n) (s * MvPolynomial.X i) :=
@@ -417,7 +419,7 @@ def awayMap_s_X (n : ℕ) (s : MvPolynomial (Fin (n + 1)) R)
     (rfl : s * MvPolynomial.X i = s * MvPolynomial.X i)
 
 /-- `Spec.map` of `awayMap_s_X` is an open immersion (pullback of `awayι`). -/
-instance isOpenImmersion_SpecMap_awayMap_s_X
+@[expose] public instance isOpenImmersion_SpecMap_awayMap_s_X
     (n : ℕ) (s : MvPolynomial (Fin (n + 1)) R)
     (hs : s ∈ coordGraded (R := R) n 1) (i : Fin (n + 1)) :
     IsOpenImmersion
@@ -435,14 +437,14 @@ instance isOpenImmersion_SpecMap_awayMap_s_X
 
 Matches Mathlib's `pullbackAwayιIso` right map: `awayMap` with roles of `s` and `Xᵢ`
 swapped and `hx` transported by `mul_comm`. -/
-def awayMap_X_s (n : ℕ) (s : MvPolynomial (Fin (n + 1)) R)
+@[expose] public def awayMap_X_s (n : ℕ) (s : MvPolynomial (Fin (n + 1)) R)
     (hs : s ∈ coordGraded (R := R) n 1) (i : Fin (n + 1)) :
     HomogeneousLocalization.Away (coordGraded (R := R) n) (MvPolynomial.X i) →+*
       HomogeneousLocalization.Away (coordGraded (R := R) n) (s * MvPolynomial.X i) :=
   HomogeneousLocalization.awayMap (coordGraded (R := R) n) hs
     (mul_comm s (MvPolynomial.X i))
 
-theorem awayMap_s_X_mk
+public theorem awayMap_s_X_mk
     (n : ℕ) (s : MvPolynomial (Fin (n + 1)) R)
     (hs : s ∈ coordGraded (R := R) n 1) (i : Fin (n + 1))
     {d : ℕ} (G : MvPolynomial (Fin (n + 1)) R)
@@ -458,7 +460,15 @@ theorem awayMap_s_X_mk
     (rfl : s * MvPolynomial.X i = s * MvPolynomial.X i)
     (hf := hs) d G (by simpa [nsmul_one] using hG)
 
-theorem awayMap_X_s_mk
+/- Module-system note: the `(by simpa using hG)` embedded in this STATEMENT
+assigns the implicit degree metavariable of `awayEquation`. The exported
+re-elaboration delays statement tactics on unassigned metavariables
+(BuiltinTerm.lean:196, a private-data-leak guard), which makes it stuck.
+The metavariable is the signature's own bound `d` — nothing private can
+leak — so the backward flag safely restores the legacy behavior for this
+one declaration. Statement unchanged. -/
+set_option backward.proofsInPublic true in
+public theorem awayMap_X_s_mk
     (n : ℕ) (s : MvPolynomial (Fin (n + 1)) R)
     (hs : s ∈ coordGraded (R := R) n 1) (i : Fin (n + 1))
     {d : ℕ} (G : MvPolynomial (Fin (n + 1)) R)
@@ -476,7 +486,7 @@ theorem awayMap_X_s_mk
     (hf := mem_coordGraded_X (R := R) n i) d G (by simpa [nsmul_one] using hG)
 
 /-- Overlap square: the two ways `Spec Away(s·Xᵢ) → Proj` agree. -/
-theorem awayMap_overlap_comp_eq
+public theorem awayMap_overlap_comp_eq
     (n : ℕ) (s : MvPolynomial (Fin (n + 1)) R)
     (hs : s ∈ coordGraded (R := R) n 1) (i : Fin (n + 1)) :
     Spec.map (CommRingCat.ofHom (awayMap_s_X n s hs i)) ≫
@@ -626,7 +636,7 @@ theorem awayHypersurface_comap_awayMap_eq_chart_comap
 
 /-- Restriction of `projectiveZeroLocusIdeal` to an arbitrary homogeneous degree-one
 Away open equals the principal Away hypersurface ideal. -/
-theorem projectiveZeroLocusIdeal_comap_awayι
+public theorem projectiveZeroLocusIdeal_comap_awayι
     (n : ℕ) {d : ℕ}
     (s : MvPolynomial (Fin (n + 1)) R)
     (hs : s ∈ coordGraded (R := R) n 1)
@@ -693,7 +703,7 @@ theorem comap_linearAwayι_agree
       ((linearSubstGradedRingHom n M).map_mem hH))
 
 /-- Unconditional single-equation naturality under linear coordinate change. -/
-theorem projectiveZeroLocusIdeal_comap_mapLinearSubst
+public theorem projectiveZeroLocusIdeal_comap_mapLinearSubst
     (n : ℕ)
     (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) R) (hNM : N * M = 1)
     {d : ℕ} (H : MvPolynomial (Fin (n + 1)) R) (hH : H.IsHomogeneous d) :
@@ -718,7 +728,7 @@ theorem projectiveZeroLocusIdeal_comap_mapLinearSubst_aeval
 
 /-- Unconditional naturality for a homogeneous family under a linear
 coordinate change. -/
-theorem projectiveZeroLocusFamilyIdeal_comap_mapLinearSubst_aeval
+public theorem projectiveZeroLocusFamilyIdeal_comap_mapLinearSubst_aeval
     (n : ℕ)
     (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) R) (hNM : N * M = 1)
     {ι : Type v} (F : ι → MvPolynomial (Fin (n + 1)) R)

@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.ProjectiveGVariety
-import V14Formalization.CentralizerObstruction
+module
+
+public import V14Formalization.ProjectiveGVariety
+public import V14Formalization.CentralizerObstruction
 
 /-!
 # Public no-map statement (vocabulary only)
@@ -22,10 +24,10 @@ namespace V14Formalization.SchemeGeometry
 
 open AlgebraicGeometry GeometricV14Carrier Module
 
-private abbrev k := V14SchemeModel.k
-private abbrev G := V14SchemeModel.G
+public abbrev k := V14SchemeModel.k
+public abbrev G := V14SchemeModel.G
 
-abbrev ambientFor
+public abbrev ambientFor
     {V : Type} [AddCommGroup V] [Module k V]
     (R : FaithfulLinearRep k G V) (p q : ℕ)
     (bp : Basis (Fin (p + 1)) k (R.plusEigenspace sigma))
@@ -35,7 +37,7 @@ abbrev ambientFor
 
 /-- `σ` cannot act as `±id` on a faithful representation of this centerless
 group, so both eigenspaces are available for coordinates. -/
-theorem not_degenerates
+public theorem not_degenerates
     {V : Type} [AddCommGroup V] [Module k V]
     (R : FaithfulLinearRep k G V) :
     ¬ R.DegeneratesToPlusMinusId sigma :=
@@ -44,7 +46,7 @@ theorem not_degenerates
 
 /-- Plus/minus homogeneous coordinates used by the normal chart.  Not a
 hypothesis of the public theorem: any faithful `R` supplies some. -/
-structure PlusMinusCoords
+public structure PlusMinusCoords
     {V : Type} [AddCommGroup V] [Module k V]
     (R : FaithfulLinearRep k G V) where
   p : ℕ
@@ -55,7 +57,7 @@ structure PlusMinusCoords
 /-- Choose plus/minus bases from nondegeneracy.  The numbered `Proj` and the
 `(u,T,v)` chart are built from this choice; this is not a basis-free
 identification of `ℙ(V)`. -/
-noncomputable def PlusMinusCoords.ofRep
+@[expose] public noncomputable def PlusMinusCoords.ofRep
     {V : Type} [AddCommGroup V] [Module k V]
     (R : FaithfulLinearRep k G V) : PlusMinusCoords R :=
   let h := exists_plus_minus_projective_bases R sigma sigma_isInvolution
@@ -67,7 +69,7 @@ noncomputable def PlusMinusCoords.ofRep
 
 /-- The numbered projective action of `R` in the chosen plus/minus
 coordinates. -/
-abbrev ambientOf
+public abbrev ambientOf
     {V : Type} [AddCommGroup V] [Module k V]
     (R : FaithfulLinearRep k G V) :
     Action (Over (Spec (.of k))) G :=
@@ -78,7 +80,7 @@ namespace ProjectiveGVariety
 
 /-- Projectivization of a faithful linear representation, as a closed
 subscheme of the numbered `Proj` in the chosen plus/minus coordinates. -/
-abbrev ofFaithfulRep
+public abbrev ofFaithfulRep
     {V : Type} [AddCommGroup V] [Module k V]
     (R : FaithfulLinearRep k G V) : ProjectiveGVariety k G :=
   ofLinearRep R
@@ -87,7 +89,7 @@ abbrev ofFaithfulRep
       (PlusMinusCoords.ofRep R).p (PlusMinusCoords.ofRep R).q
       (PlusMinusCoords.ofRep R).bp (PlusMinusCoords.ofRep R).bm)
 
-instance ofFaithfulRep_irreducible
+@[expose] public instance ofFaithfulRep_irreducible
     {V : Type} [AddCommGroup V] [Module k V]
     (R : FaithfulLinearRep k G V) :
     IrreducibleSpace (ofFaithfulRep R).toScheme :=

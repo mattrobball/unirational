@@ -130,13 +130,13 @@
   "expose": [],
   "expose_all_public_defs": true,
   "public": [
-   "ker_projectiveZeroLocusFamily\u03b9",
+   "ker_projectiveZeroLocusFamilyι",
    "projectiveZeroLocusFamily",
    "projectiveZeroLocusFamilyIdeal",
    "projectiveZeroLocusFamilyToSpec",
-   "projectiveZeroLocusFamily\u03b9",
-   "projectiveZeroLocusFamily\u03b9_isClosedImmersion",
-   "projectiveZeroLocusFamily\u03b9_isOver"
+   "projectiveZeroLocusFamilyι",
+   "projectiveZeroLocusFamilyι_isClosedImmersion",
+   "projectiveZeroLocusFamilyι_isOver"
   ]
  },
  "V14Formalization/PSLCard.lean": {
@@ -220,9 +220,9 @@
    "Tmat",
    "gauss",
    "twoInv",
-   "\u03a611",
-   "\u03b6",
-   "\u03c8"
+   "Φ11",
+   "ζ",
+   "ψ"
   ],
   "expose_all_public_defs": true,
   "public": [
@@ -244,7 +244,7 @@
    "Tmat",
    "U",
    "Ucoord",
-   "aeval_\u03b6_\u03a611",
+   "aeval_ζ_Φ11",
    "cFourier",
    "cFourier_sq_mul_eleven",
    "card_sq_eq",
@@ -252,28 +252,28 @@
    "gauss_eq_gaussSum",
    "gauss_ne_zero",
    "gauss_sq",
-   "minpoly_\u03b6",
-   "orderOf_\u03b6",
-   "sum_\u03c8_eq_zero",
-   "sum_\u03c8_mul",
+   "minpoly_ζ",
+   "orderOf_ζ",
+   "sum_ψ_eq_zero",
+   "sum_ψ_mul",
    "twoInv",
    "two_mul_twoInv",
-   "\u03a611",
-   "\u03a611_irreducible",
-   "\u03a611_monic",
-   "\u03a611_natDegree",
-   "\u03b6",
-   "\u03b6_pow_eleven",
-   "\u03c7\u2082",
-   "\u03c7\u2082_isQuadratic",
-   "\u03c7\u2082_ne_one",
-   "\u03c7\u2082_neg_one",
-   "\u03c7\u2082\u2124",
-   "\u03c8",
-   "\u03c8_add",
-   "\u03c8_apply",
-   "\u03c8_primitive",
-   "\u03c8_zero"
+   "Φ11",
+   "Φ11_irreducible",
+   "Φ11_monic",
+   "Φ11_natDegree",
+   "ζ",
+   "ζ_pow_eleven",
+   "χ₂",
+   "χ₂_isQuadratic",
+   "χ₂_ne_one",
+   "χ₂_neg_one",
+   "χ₂ℤ",
+   "ψ",
+   "ψ_add",
+   "ψ_apply",
+   "ψ_primitive",
+   "ψ_zero"
   ]
  }
 }

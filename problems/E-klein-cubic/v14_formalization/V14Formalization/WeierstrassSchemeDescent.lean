@@ -2,11 +2,13 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.EllipticPolynomialConstancy
-import V14Formalization.SchemeRationalConstancy
-import V14Formalization.V14FieldPointReconstruction
-import Mathlib.AlgebraicGeometry.EllipticCurve.Projective.Basic
-import Mathlib.LinearAlgebra.Projectivization.Basic
+module
+
+public import V14Formalization.EllipticPolynomialConstancy
+public import V14Formalization.SchemeRationalConstancy
+public import V14Formalization.V14FieldPointReconstruction
+public import Mathlib.AlgebraicGeometry.EllipticCurve.Projective.Basic
+public import Mathlib.LinearAlgebra.Projectivization.Basic
 
 /-!
 # Descent of Weierstrass field-valued points
@@ -37,10 +39,10 @@ universe u
 variable {k K : Type u} [Field k] [Field K] [Algebra k K]
 variable (W : WeierstrassCurve k)
 
-noncomputable abbrev AffineScheme : Scheme :=
+public noncomputable abbrev AffineScheme : Scheme :=
   Spec (.of W.toAffine.CoordinateRing)
 
-noncomputable def AffineToBase : AffineScheme W ⟶ Spec (.of k) :=
+@[expose] public noncomputable def AffineToBase : AffineScheme W ⟶ Spec (.of k) :=
   Spec.map (CommRingCat.ofHom (algebraMap k W.toAffine.CoordinateRing))
 
 lemma preimage_comp_algebraMap {f : Spec (.of K) ⟶ AffineScheme W}
@@ -100,7 +102,7 @@ lemma equation_xOfHom_yOfHom
   rw [WeierstrassCurve.Affine.map_polynomial]
   simpa only [Polynomial.eval₂_eval₂RingHom_apply, yOfHom] using hr
 
-lemma eval₂_polynomial_eq_evalEval (x y : k) :
+public lemma eval₂_polynomial_eq_evalEval (x y : k) :
     W.toAffine.polynomial.eval₂ (Polynomial.evalRingHom x) y =
       W.toAffine.polynomial.evalEval x y := by
   simpa only [Polynomial.evalRingHom, Polynomial.mapRingHom_id,
@@ -108,24 +110,24 @@ lemma eval₂_polynomial_eq_evalEval (x y : k) :
     (Polynomial.eval₂_eval₂RingHom_apply (RingHom.id k) x y
       W.toAffine.polynomial)
 
-noncomputable def ringHomOfPoint {x y : k}
+@[expose] public noncomputable def ringHomOfPoint {x y : k}
     (h : W.toAffine.Equation x y) :
     W.toAffine.CoordinateRing →+* k :=
   AdjoinRoot.lift (Polynomial.evalRingHom x) y <| by
     rw [eval₂_polynomial_eq_evalEval, ← WeierstrassCurve.Affine.Equation]
     exact h
 
-@[simp] lemma ringHomOfPoint_root {x y : k}
+@[simp] public lemma ringHomOfPoint_root {x y : k}
     (h : W.toAffine.Equation x y) :
     ringHomOfPoint W h (AdjoinRoot.root W.toAffine.polynomial) = y := by
   apply AdjoinRoot.lift_root
 
-@[simp] lemma ringHomOfPoint_of {x y : k}
+@[simp] public lemma ringHomOfPoint_of {x y : k}
     (h : W.toAffine.Equation x y) (p : Polynomial k) :
     ringHomOfPoint W h (AdjoinRoot.of W.toAffine.polynomial p) = p.eval x := by
   apply AdjoinRoot.lift_of
 
-@[simp] lemma ringHomOfPoint_algebraMap {x y : k}
+@[simp] public lemma ringHomOfPoint_algebraMap {x y : k}
     (h : W.toAffine.Equation x y) (a : k) :
     ringHomOfPoint W h (algebraMap k W.toAffine.CoordinateRing a) = a := by
   have ha := DFunLike.congr_fun
@@ -136,7 +138,7 @@ noncomputable def ringHomOfPoint {x y : k}
 
 /-- Surjectivity on bundled Weierstrass points turns every over-base affine
 scheme point over `K` into the scalar extension of a point over `k`. -/
-theorem affine_morphism_descends_of_point_baseChange_surjective
+public theorem affine_morphism_descends_of_point_baseChange_surjective
     [DecidableEq k] [DecidableEq K] [W.IsElliptic]
     (hsurj : Function.Surjective
       (WeierstrassCurve.Affine.Point.baseChange
@@ -215,7 +217,7 @@ theorem affine_morphism_descends_of_point_baseChange_surjective
 homogeneous triple on the projective Weierstrass cubic is a nonzero scalar
 multiple of a triple over `k`.  The `z = 0` branch is the unique point at
 infinity; the `z ≠ 0` branch is the affine descent hypothesis. -/
-theorem projective_weierstrass_triple_descends_of_pointBaseChange_surjective
+public theorem projective_weierstrass_triple_descends_of_pointBaseChange_surjective
     {k K : Type u} [Field k] [Field K] [Algebra k K]
     [DecidableEq k] [DecidableEq K]
     (W : WeierstrassCurve k) [W.IsElliptic]
@@ -295,7 +297,7 @@ theorem projective_weierstrass_triple_descends_of_pointBaseChange_surjective
 
 /-- Projective-space form of
 `projective_weierstrass_triple_descends_of_pointBaseChange_surjective`. -/
-theorem projectivization_weierstrass_descends_of_pointBaseChange_surjective
+public theorem projectivization_weierstrass_descends_of_pointBaseChange_surjective
     {k K : Type u} [Field k] [Field K] [Algebra k K]
     [DecidableEq k] [DecidableEq K]
     (W : WeierstrassCurve k) [W.IsElliptic]
@@ -326,7 +328,7 @@ theorem projectivization_weierstrass_descends_of_pointBaseChange_surjective
 
 /-- Homogeneous short-Weierstrass points over a pure transcendental field
 descend to the algebraically closed base, in coordinates. -/
-theorem projective_weierstrass_triple_descends_mvfrac
+public theorem projective_weierstrass_triple_descends_mvfrac
     (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
     [DecidableEq k] (n : ℕ) [DecidableEq (MvFrac k n)]
     (W : WeierstrassCurve k) [W.IsShortNF] [W.IsElliptic]
@@ -340,7 +342,7 @@ theorem projective_weierstrass_triple_descends_mvfrac
 
 /-- Homogeneous short-Weierstrass points over a pure transcendental field
 descend as literal points of projective space. -/
-theorem projectivization_weierstrass_descends_mvfrac
+public theorem projectivization_weierstrass_descends_mvfrac
     (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
     [DecidableEq k] (n : ℕ) [DecidableEq (MvFrac k n)]
     (W : WeierstrassCurve k) [W.IsShortNF] [W.IsElliptic]
@@ -356,7 +358,7 @@ theorem projectivization_weierstrass_descends_mvfrac
 
 /-- Dimension-generic pure-transcendental specialization of the affine
 scheme bridge. -/
-theorem affine_morphism_descends_mvfrac
+public theorem affine_morphism_descends_mvfrac
     (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
     [DecidableEq k] (n : ℕ) [DecidableEq (MvFrac k n)]
     (W : WeierstrassCurve k) [W.IsShortNF] [W.IsElliptic]
@@ -371,7 +373,7 @@ theorem affine_morphism_descends_mvfrac
 
 /-- A base-field normalized projective point, after scalar extension on the source,
 is the algebra-valued normalized point obtained by mapping its coordinates. -/
-theorem specMap_comp_pointOfNormalizedCoordinates
+public theorem specMap_comp_pointOfNormalizedCoordinates
     {R S : Type u} [Field R] [Field S] [Algebra R S]
     (n : ℕ) (i : Fin (n + 1)) (x : Fin (n + 1) → R)
     (hxi : x i = 1) :
@@ -407,7 +409,7 @@ theorem specMap_comp_pointOfNormalizedCoordinates
 /-- If normalized coordinates reconstructing a pure-transcendental field point
 of `P²` satisfy the short Weierstrass equation, the corresponding scheme
 morphism descends to the base field. -/
-theorem projectiveSpace_morphism_descends_weierstrass_mvfrac_of_coordinates
+public theorem projectiveSpace_morphism_descends_weierstrass_mvfrac_of_coordinates
     (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
     [DecidableEq k] (n : ℕ) [DecidableEq (MvFrac k n)]
     (W : WeierstrassCurve k) [W.IsShortNF] [W.IsElliptic]
@@ -471,7 +473,7 @@ theorem projectiveSpace_morphism_descends_weierstrass_mvfrac_of_coordinates
 
 /-- Reconstruction-API wrapper: it suffices to verify the Weierstrass equation
 for the normalized triple returned from any chart reconstruction of `f`. -/
-theorem projectiveSpace_morphism_descends_weierstrass_mvfrac
+public theorem projectiveSpace_morphism_descends_weierstrass_mvfrac
     (k : Type u) [Field k] [IsAlgClosed k] [CharZero k]
     [DecidableEq k] (n : ℕ) [DecidableEq (MvFrac k n)]
     (W : WeierstrassCurve k) [W.IsShortNF] [W.IsElliptic]

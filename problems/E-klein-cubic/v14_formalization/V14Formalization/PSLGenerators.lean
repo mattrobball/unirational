@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.PSLCard
-import V14Formalization.GeometricCarrier
+module
+
+public import V14Formalization.PSLCard
+public import V14Formalization.GeometricCarrier
 
 /-!
 # Two generators for `PSL₂(F₁₁)`
@@ -21,9 +23,9 @@ noncomputable section
 namespace V14Formalization
 namespace PSLGenerators
 
-abbrev F := ZMod 11
-abbrev SLG := PSLCard.SLG
-abbrev G := SLG ⧸ Subgroup.center SLG
+public abbrev F := ZMod 11
+public abbrev SLG := PSLCard.SLG
+public abbrev G := SLG ⧸ Subgroup.center SLG
 
 def Nraw (t : F) : Matrix (Fin 2) (Fin 2) F := !![1, t; 0, 1]
 def Wraw : Matrix (Fin 2) (Fin 2) F := !![0, -1; 1, 0]
@@ -182,7 +184,7 @@ theorem mk_mem_closure (A : SLG) :
       (Dmat_mem_closure (A 1 0) hc)) (hN _)
 
 /-- The standard Fourier and translation matrices generate `PSL₂(F₁₁)`. -/
-theorem closure_mk_Smat_Tmat :
+public theorem closure_mk_Smat_Tmat :
     Subgroup.closure ({QuotientGroup.mk PSLCard.Smat,
       QuotientGroup.mk PSLCard.Tmat} : Set G) = ⊤ := by
   apply top_unique
@@ -194,7 +196,7 @@ theorem closure_mk_Smat_Tmat :
 generate `PSL₂(F₁₁)`.  This is the convention used by the six-dimensional
 Weil matrices: `S₆` represents `-Smat` (the same PSL element), while `T₆`
 represents `Tmat²`. -/
-theorem closure_mk_Smat_Tmat_pow_two :
+public theorem closure_mk_Smat_Tmat_pow_two :
     Subgroup.closure ({QuotientGroup.mk PSLCard.Smat,
       QuotientGroup.mk (PSLCard.Tmat ^ 2)} : Set G) = ⊤ := by
   let H : Subgroup G := Subgroup.closure ({QuotientGroup.mk PSLCard.Smat,

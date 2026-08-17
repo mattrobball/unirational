@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.V14FieldPointReconstruction
-import V14Formalization.ProjectiveDiagonalAction
+module
+
+public import V14Formalization.V14FieldPointReconstruction
+public import V14Formalization.ProjectiveDiagonalAction
 
 /-!
 # Fixed field-valued projective points for a diagonal sign action
@@ -39,7 +41,7 @@ private theorem mapLinearSubst_congr_matrices
   rfl
 
 /-- The projective automorphism induced by an invertible diagonal matrix. -/
-def diagonalProjectiveHom (n : ℕ) (d : Fin (n + 1) → k)
+@[expose] public def diagonalProjectiveHom (n : ℕ) (d : Fin (n + 1) → k)
     (hd : ∀ i, d i ≠ 0) :
     ProjectiveSpace n k ⟶ ProjectiveSpace n k :=
   mapLinearSubst n (Matrix.diagonal d)
@@ -53,7 +55,7 @@ coordinate in the sign block opposite to the distinguished coordinate.
 The conclusion is stated directly as normalized-coordinate support.  This is
 the exact point-level replacement for a global equalizer decomposition.
 -/
-theorem exists_normalizedCoordinates_support_of_diagonal_sign_fixed
+public theorem exists_normalizedCoordinates_support_of_diagonal_sign_fixed
     [NeZero (2 : k)]
     (n : ℕ) (d : Fin (n + 1) → k)
     (hsign : ∀ l, d l = 1 ∨ d l = -1)
@@ -127,7 +129,7 @@ theorem exists_normalizedCoordinates_support_of_diagonal_sign_fixed
 /-- Wrapper phrased with the actual `projectiveActionHom` API.  The only
 representation-specific input is the equality saying that the chosen group
 element acts by the indicated diagonal sign matrix. -/
-theorem exists_normalizedCoordinates_support_of_projectiveActionHom_fixed
+public theorem exists_normalizedCoordinates_support_of_projectiveActionHom_fixed
     {G : Type u} [Group G] [NeZero (2 : k)]
     (n : ℕ) (R : MatrixRepresentation (k := k) (G := G) n) (sigma : G)
     (d : Fin (n + 1) → k)

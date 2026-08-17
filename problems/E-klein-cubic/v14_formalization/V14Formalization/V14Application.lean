@@ -13,20 +13,22 @@ Zero project axioms / zero `sorry` tokens.
   Hyp (a)(b) proved without freeness of G (σ has no fixed coset; |N|=12 ∤ 11).
   See `GeometricCarrier.lean` and FAITHFULNESS_CHECK.md.
 -/
-import V14Formalization.CentralizerObstruction
-import V14Formalization.CentralizerD12
-import V14Formalization.GeometricCarrier
-import Mathlib.GroupTheory.SpecificGroups.Dihedral
-import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
-import Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Algebra.Field.ZMod
-import Mathlib.Data.Nat.Prime.Defs
-import Mathlib.GroupTheory.Subgroup.Center
-import Mathlib.RepresentationTheory.Basic
-import Mathlib.LinearAlgebra.FreeModule.Finite.Basic
-import Mathlib.Algebra.Module.Pi
-import Mathlib.LinearAlgebra.Projectivization.Basic
+module
+
+public import V14Formalization.CentralizerObstruction
+public import V14Formalization.CentralizerD12
+public import V14Formalization.GeometricCarrier
+public import Mathlib.GroupTheory.SpecificGroups.Dihedral
+public import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
+public import Mathlib.LinearAlgebra.Matrix.ProjectiveSpecialLinearGroup
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.Algebra.Field.ZMod
+public import Mathlib.Data.Nat.Prime.Defs
+public import Mathlib.GroupTheory.Subgroup.Center
+public import Mathlib.RepresentationTheory.Basic
+public import Mathlib.LinearAlgebra.FreeModule.Finite.Basic
+public import Mathlib.Algebra.Module.Pi
+public import Mathlib.LinearAlgebra.Projectivization.Basic
 
 noncomputable section
 
@@ -38,14 +40,14 @@ namespace V14App
 
 /-! ## Field F₁₁ -/
 
-instance fact_prime_eleven : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
+@[expose] public instance fact_prime_eleven : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
 
-abbrev F := ZMod 11
-abbrev SLG := SpecialLinearGroup (Fin 2) F
-abbrev PSL2F11 : Type := PSL(2, F)
+public abbrev F := ZMod 11
+public abbrev SLG := SpecialLinearGroup (Fin 2) F
+public abbrev PSL2F11 : Type := PSL(2, F)
 
-instance : Group PSL2F11 := inferInstance
-instance : Fintype PSL2F11 := QuotientGroup.fintype _
+@[expose] public instance : Group PSL2F11 := inferInstance
+@[expose] public instance : Fintype PSL2F11 := QuotientGroup.fintype _
 
 private lemma F_two_ne : (2 : F) ≠ 0 := by decide
 private lemma F_zero_ne_one : (0 : F) ≠ 1 := by decide
@@ -214,7 +216,7 @@ theorem mk_eq_one_of_mem_center (A : SLG)
     simp only [ha0, hd0, hc0, mul_zero, sub_zero] at hdet
     exact absurd hdet F_zero_ne_one
 
-theorem PSL2F11_isCenterless : IsCenterless PSL2F11 := by
+public theorem PSL2F11_isCenterless : IsCenterless PSL2F11 := by
   ext g
   constructor
   · intro hg
@@ -227,9 +229,9 @@ theorem PSL2F11_isCenterless : IsCenterless PSL2F11 := by
 
 /-! ## Involution σ = image of S = [[0,-1],[1,0]] -/
 
-def sigmaLift : SLG := ⟨!![0, -1; 1, 0], by simp [Matrix.det_fin_two_of]⟩
+@[expose] public def sigmaLift : SLG := ⟨!![0, -1; 1, 0], by simp [Matrix.det_fin_two_of]⟩
 
-def sigma : PSL2F11 := QuotientGroup.mk sigmaLift
+@[expose] public def sigma : PSL2F11 := QuotientGroup.mk sigmaLift
 
 theorem sigma_isInvolution : IsInvolution sigma := by
   constructor
@@ -258,13 +260,13 @@ theorem sigma_isInvolution : IsInvolution sigma := by
 
 /-! ## Faithful regular representation over ℚ -/
 
-abbrev k := ℚ
-abbrev Reg := PSL2F11 → k
+public abbrev k := ℚ
+public abbrev Reg := PSL2F11 → k
 
-instance : AddCommGroup Reg := inferInstance
-instance : Module k Reg := inferInstance
-instance : Module.Free k Reg := inferInstance
-instance : FiniteDimensional k Reg :=
+@[expose] public instance : AddCommGroup Reg := inferInstance
+@[expose] public instance : Module k Reg := inferInstance
+@[expose] public instance : Module.Free k Reg := inferInstance
+@[expose] public instance : FiniteDimensional k Reg :=
   Module.Finite.equiv (Finsupp.linearEquivFunOnFinite k k PSL2F11)
 
 def regularRep : FaithfulLinearRep k PSL2F11 Reg where
@@ -305,7 +307,7 @@ order 11 (not free).  Hyp (a)(b) proved via fixed-locus emptiness of σ and N,
 using |N|=12 ∤ 11 — not freeness of the G-action. -/
 
 /-- Operational V14 carrier: left cosets of the order-11 unipotent C₁₁. -/
-def V14Variety : SmoothProjectiveGVariety k PSL2F11 :=
+@[expose] public def V14Variety : SmoothProjectiveGVariety k PSL2F11 :=
   GeometricCarrier.V14Variety
 
 theorem V14_hypothesisB : HypothesisB V14Variety (centralizer sigma) :=
@@ -316,7 +318,7 @@ theorem V14_hypothesisA : HypothesisA k V14Variety sigma :=
 
 /-! ## Cor 6.1: centralizer obstruction on geometric non-free carrier -/
 
-theorem V14_no_equivariant_map_from_faithful_rep :
+public theorem V14_no_equivariant_map_from_faithful_rep :
     ∀ (V : Type) [AddCommGroup V] [Module k V] [Module.Free k V]
       (R : FaithfulLinearRep k PSL2F11 V),
       ¬ ReceivesFromRep V14Variety PSL2F11_isCenterless R :=
@@ -324,13 +326,13 @@ theorem V14_no_equivariant_map_from_faithful_rep :
     V14Variety sigma sigma_isInvolution PSL2F11_isCenterless
     V14_hypothesisA V14_hypothesisB
 
-theorem V14_not_weakly_versal :
+public theorem V14_not_weakly_versal :
     NotWeaklyVersal V14Variety PSL2F11_isCenterless :=
   notWeaklyVersal_of_centralizerObstruction (k := k) (G := PSL2F11)
     V14Variety sigma sigma_isInvolution PSL2F11_isCenterless
     V14_hypothesisA V14_hypothesisB regularRep
 
-theorem V14_not_GUnirational :
+public theorem V14_not_GUnirational :
     ¬ IsGUnirational V14Variety PSL2F11_isCenterless :=
   not_GUnirational_of_centralizerObstruction (k := k) (G := PSL2F11)
     V14Variety sigma sigma_isInvolution PSL2F11_isCenterless

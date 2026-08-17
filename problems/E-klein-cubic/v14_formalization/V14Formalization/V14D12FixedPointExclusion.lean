@@ -2,10 +2,12 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12MatrixCertificate
-import V14Formalization.ProjectiveEigenvectorReduction
-import V14Formalization.SchemeRationalConstancy
-import V14Formalization.V14FixedPointEquations
+module
+
+public import V14Formalization.D12MatrixCertificate
+public import V14Formalization.ProjectiveEigenvectorReduction
+public import V14Formalization.SchemeRationalConstancy
+public import V14Formalization.V14FixedPointEquations
 
 /-!
 # Excluding base-field fixed sections from a D12 certificate
@@ -28,17 +30,17 @@ open AlgebraicGeometry BConicBundleMultisections
 open GeometricV14Carrier Lambda2Coordinates
 open D12Certificate
 
-private abbrev G := V14SchemeModel.G
+public abbrev G := V14SchemeModel.G
 
 /-- The actual ambient matrix of the distinguished D12 rotation. -/
-abbrev d12ActualRotMatrix :
+public abbrev d12ActualRotMatrix :
     Matrix (Fin 15) (Fin 15) V14SchemeModel.k :=
   (lambda2MatrixRepresentation.ρ
     (CentralizerN.rotGen : G) :
       Matrix (Fin 15) (Fin 15) V14SchemeModel.k)
 
 /-- The actual ambient matrix of the distinguished D12 reflection. -/
-abbrev d12ActualReflMatrix :
+public abbrev d12ActualReflMatrix :
     Matrix (Fin 15) (Fin 15) V14SchemeModel.k :=
   (lambda2MatrixRepresentation.ρ
     (CentralizerN.reflGen : G) :
@@ -186,7 +188,7 @@ private theorem no_centralizer_fixed_section_of_certificate_core
 
 /-- A checked D12 matrix certificate rules out every honest base-field section
 of the centralizer-fixed sigma locus. -/
-theorem no_centralizer_fixed_section_of_certificate
+public theorem no_centralizer_fixed_section_of_certificate
     (C : D12Certificate.Certificate (Ω := V14SchemeModel.k))
     (hP : C.P = V14SchemeModel.projectorMatrix)
     (hR : C.R = d12ActualRotMatrix)
@@ -210,7 +212,7 @@ theorem no_centralizer_fixed_section_of_certificate
 rational-map constancy reduce nonexistence to the three semantic matrix seals
 of a checked D12 certificate.  No dominance hypothesis is imposed on the
 rational map. -/
-theorem noEquivariantRationalMap_of_d12_certificate
+public theorem noEquivariantRationalMap_of_d12_certificate
     (X : Action (Over (Spec (.of V14SchemeModel.k))) G)
     [IsIntegral X.V.left]
     {E : Action (Over (Spec (.of V14SchemeModel.k)))

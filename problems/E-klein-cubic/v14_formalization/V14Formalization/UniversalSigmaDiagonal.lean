@@ -1,5 +1,7 @@
-import V14Formalization.SchemeFixedProjectiveCoordinates
-import V14Formalization.PlusMinusBlockMatrix
+module
+
+public import V14Formalization.SchemeFixedProjectiveCoordinates
+public import V14Formalization.PlusMinusBlockMatrix
 
 /-!
 # The involution matrix in the universal plus/minus basis
@@ -26,7 +28,7 @@ variable {k L : Type u} [Field k] [Field L] [Algebra k L]
 
 /-- General-dimensional version of the block-matrix calculation already used
 in dimension `3+3`. -/
-theorem plusMinusMappedBasis_toMatrix_general [CharZero k]
+public theorem plusMinusMappedBasis_toMatrix_general [CharZero k]
     (R : FaithfulLinearRep k G V) (sigma : G)
     (hsigma : IsInvolution sigma) (n : centralizer sigma)
     (p q : ℕ)
@@ -50,7 +52,7 @@ theorem plusMinusMappedBasis_toMatrix_general [CharZero k]
     LinearMap.comp_assoc]
   simp
 
-theorem plusMinusAmbientBasis_toMatrix_general [CharZero k]
+public theorem plusMinusAmbientBasis_toMatrix_general [CharZero k]
     (R : FaithfulLinearRep k G V) (sigma : G)
     (hsigma : IsInvolution sigma) (n : centralizer sigma)
     (p q : ℕ)
@@ -74,7 +76,7 @@ theorem plusMinusAmbientBasis_toMatrix_general [CharZero k]
       ((plusMinusFinEquiv p q).symm i))
         ((plusMinusFinEquiv p q).symm j)
 
-theorem ambientMatrixRepresentation_centralizer_block_general [CharZero k]
+public theorem ambientMatrixRepresentation_centralizer_block_general [CharZero k]
     (R : FaithfulLinearRep k G V) (sigma : G)
     (hsigma : IsInvolution sigma) (n : centralizer sigma)
     (p q : ℕ)
@@ -96,7 +98,7 @@ theorem ambientMatrixRepresentation_centralizer_block_general [CharZero k]
     R sigma hsigma n p q bp bm
 
 /-- Coordinate sign in the concatenated plus-then-minus basis. -/
-def plusMinusSigmaSign (p q : ℕ) :
+@[expose] public def plusMinusSigmaSign (p q : ℕ) :
     Fin ((p + q + 1) + 1) → k := fun i ↦
   Sum.elim (fun _ ↦ 1) (fun _ ↦ -1) ((plusMinusFinEquiv p q).symm i)
 
@@ -121,7 +123,7 @@ theorem plusMinusSigmaSign_eq_one_or_neg_one (p q : ℕ)
 
 /-- In the universal plus/minus ambient basis, `sigma` is literally diagonal:
 `+1` on the plus block and `-1` on the minus block. -/
-theorem ambientMatrixRepresentation_sigma_diagonal [CharZero k]
+public theorem ambientMatrixRepresentation_sigma_diagonal [CharZero k]
     (R : FaithfulLinearRep k G V) (sigma : G)
     (hsigma : IsInvolution sigma) (p q : ℕ)
     (bp : Basis (Fin (p + 1)) k (R.plusEigenspace sigma))
@@ -174,7 +176,7 @@ theorem ambientMatrixRepresentation_sigma_diagonal [CharZero k]
 
 /-- A nondegenerate involution supplies projective bases in which the preceding
 diagonal formula and its sign predicate hold. -/
-theorem exists_plusMinusBasis_sigma_diagonal [CharZero k]
+public theorem exists_plusMinusBasis_sigma_diagonal [CharZero k]
     (R : FaithfulLinearRep k G V) (sigma : G)
     (hsigma : IsInvolution sigma)
     (hnd : ¬ R.DegeneratesToPlusMinusId sigma) :
@@ -195,7 +197,7 @@ theorem exists_plusMinusBasis_sigma_diagonal [CharZero k]
 
 /-- The checked point classifier specialized to the actual involution matrix
 in the universal plus/minus basis. -/
-theorem exists_normalizedCoordinates_support_of_sigma_fixed
+public theorem exists_normalizedCoordinates_support_of_sigma_fixed
     [CharZero k]
     (R : FaithfulLinearRep k G V) (sigma : G)
     (hsigma : IsInvolution sigma) (pdim qdim : ℕ)

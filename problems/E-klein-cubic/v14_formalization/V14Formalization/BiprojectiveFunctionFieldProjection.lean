@@ -1,7 +1,9 @@
-import V14Formalization.GenericCharts
-import V14Formalization.ProjectiveGeneralFunctionField
-import V14Formalization.SchemeFunctionFieldNaturality
-import V14Formalization.UniversalNormalDivisor
+module
+
+public import V14Formalization.GenericCharts
+public import V14Formalization.ProjectiveGeneralFunctionField
+public import V14Formalization.SchemeFunctionFieldNaturality
+public import V14Formalization.UniversalNormalDivisor
 
 open CategoryTheory CategoryTheory.Limits TopologicalSpace
 open scoped AlgebraicGeometry
@@ -18,7 +20,7 @@ attribute [local instance] MvPolynomial.gradedAlgebra
 
 variable {Omega : Type u} [Field Omega]
 
-theorem GammaIsoTop_inv_eq_appLE
+public theorem GammaIsoTop_inv_eq_appLE
     {X Y : Scheme.{u}} (j : X ⟶ Y) [IsOpenImmersion j] :
     (IsOpenImmersion.ΓIsoTop j).inv =
       j.appLE j.opensRange ⊤ (by simp) := by
@@ -30,7 +32,7 @@ theorem GammaIsoTop_inv_eq_appLE
   rw [← Functor.map_comp]
   congr 1
 
-theorem biprojectiveGeneralFunctionFieldEquiv_algebraMap
+public theorem biprojectiveGeneralFunctionFieldEquiv_algebraMap
     (p q : ℕ) (P : MvPolynomial (Fin (p + q)) Omega) :
     biprojectiveGeneralFunctionFieldEquiv p q Omega
         (algebraMap (MvPolynomial (Fin (p + q)) Omega)
@@ -65,7 +67,7 @@ theorem biprojectiveGeneralFunctionFieldEquiv_algebraMap
   rw [AlgEquiv.commutes]
   rfl
 
-theorem biprojective_standardChart_fst_appTop
+public theorem biprojective_standardChart_fst_appTop
     (p q : ℕ) (z : ProjectiveSpace.StandardChartRing p Omega 0) :
     (BiprojectiveSpace.standardChartΓIso p q Omega 0 0).hom
         (((pullback.fst
@@ -136,7 +138,7 @@ theorem biprojective_standardChart_fst_appTop
     simp
   exact congrArg (fun f => f.hom z) hfinal
 
-theorem biprojective_standardChart_snd_appTop
+public theorem biprojective_standardChart_snd_appTop
     (p q : ℕ) (z : ProjectiveSpace.StandardChartRing q Omega 0) :
     (BiprojectiveSpace.standardChartΓIso p q Omega 0 0).hom
         (((pullback.snd
@@ -210,7 +212,7 @@ theorem biprojective_standardChart_snd_appTop
     simp
   exact congrArg (fun f => f.hom z) hfinal
 
-theorem biprojectiveGeneralFunctionFieldEquiv_X_inl
+public theorem biprojectiveGeneralFunctionFieldEquiv_X_inl
     (r q : ℕ) (i : Fin (r + 1)) :
     (BiprojectiveSpace.fst (r + 1) q Omega).functionFieldMap
         (projectiveGeneralFunctionFieldEquiv r Omega
@@ -345,7 +347,7 @@ theorem biprojectiveGeneralFunctionFieldEquiv_X_inl
   rw [BiprojectiveSpace.standardChartRingEquivMvPolynomial_normalizedCoordinate_tmul_one]
   simp [MvPolynomial.renameEquiv]
 
-theorem biprojectiveGeneralFunctionFieldEquiv_X_inr
+public theorem biprojectiveGeneralFunctionFieldEquiv_X_inr
     (p r : ℕ) (i : Fin (r + 1)) :
     (BiprojectiveSpace.snd p (r + 1) Omega).functionFieldMap
         (projectiveGeneralFunctionFieldEquiv r Omega

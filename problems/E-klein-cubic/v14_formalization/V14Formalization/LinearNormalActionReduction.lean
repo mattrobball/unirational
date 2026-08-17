@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.LinearNormalProjectiveChart
-import V14Formalization.UniversalNormalDivisor
+module
+
+public import V14Formalization.LinearNormalProjectiveChart
+public import V14Formalization.UniversalNormalDivisor
 
 /-!
 # Transporting normal-valuation actions to projective charts
@@ -27,10 +29,10 @@ universe u v
 
 /-! ## Restricting a function-field action to the X-adic valuation ring -/
 
-abbrev xAdicSubring (κ : Type u) [Field κ] : ValuationSubring (RatFunc κ) :=
+public abbrev xAdicSubring (κ : Type u) [Field κ] : ValuationSubring (RatFunc κ) :=
   ((idealX κ).valuation (RatFunc κ)).valuationSubring
 
-noncomputable def xAdicRestrictEquiv
+@[expose] public noncomputable def xAdicRestrictEquiv
     (κ : Type u) [Field κ]
     (e : RatFunc κ ≃+* RatFunc κ)
     (hpres : ∀ x : RatFunc κ, x ∈ xAdicSubring κ ↔ e x ∈ xAdicSubring κ) :
@@ -42,7 +44,7 @@ noncomputable def xAdicRestrictEquiv
   map_mul' x y := Subtype.ext (e.map_mul x y)
   map_add' x y := Subtype.ext (e.map_add x y)
 
-noncomputable def xAdicRestrictAction
+@[expose] public noncomputable def xAdicRestrictAction
     (κ : Type u) [Field κ]
     {N : Type v} [Group N]
     (kAct : N →* (RatFunc κ ≃+* RatFunc κ))
@@ -115,7 +117,7 @@ theorem xAdicRestrictEquiv_residue_of_constants
   exact (sub_eq_zero.mp (by
     simpa [a, map_sub, xAdicResidue_const] using himage)).symm
 
-theorem xAdicRestrictAction_residue_ring_of_constants
+public theorem xAdicRestrictAction_residue_ring_of_constants
     (κ : Type u) [Field κ]
     {N : Type v} [Group N]
     (kAct : N →* (RatFunc κ ≃+* RatFunc κ))
@@ -155,7 +157,7 @@ theorem linearNormalRestrictAction_base_ring
 
 /-! ## Transport through the checked source and exceptional charts -/
 
-noncomputable def conjugateRingAction
+@[expose] public noncomputable def conjugateRingAction
     {K L : Type u} [CommRing K] [CommRing L]
     {N : Type v} [Group N]
     (e : K ≃+* L) (a : N →* (L ≃+* L)) :
@@ -208,7 +210,7 @@ theorem transported_xAdic_residue_ring
   apply eE.symm.injective
   simpa [conjugateRingAction] using hresidue n x
 
-theorem actionPrecomp_overStructureMap
+public theorem actionPrecomp_overStructureMap
     {S : Scheme.{u}} {N : Type v} [Group N]
     (X : Action (Over S) N) [IrreducibleSpace X.V.left]
     (n : N) :
@@ -225,7 +227,7 @@ theorem actionPrecomp_overStructureMap
   rw [Scheme.RationalMap.comp_toRationalMap]
   exact congrArg Scheme.Hom.toRationalMap (X.ρ n).w
 
-theorem functionFieldAction_fixes_base_of_fromFunctionField
+public theorem functionFieldAction_fixes_base_of_fromFunctionField
     (Omega : Type u) [Field Omega]
     {N : Type v} [Group N]
     (X : Action (Over (Spec (.of Omega))) N)
@@ -257,7 +259,7 @@ theorem functionFieldAction_fixes_base_of_fromFunctionField
 
 /-- The canonical generic-stalk pullback of an over-base action fixes the
 embedded base field. -/
-theorem functionFieldAction_fixes_base
+public theorem functionFieldAction_fixes_base
     (Omega : Type u) [Field Omega]
     {N : Type v} [Group N]
     (X : Action (Over (Spec (.of Omega))) N)
@@ -280,7 +282,7 @@ variable {Omega : Type u} [Field Omega]
   {G : Type u} [Group G]
   {V : Type u} [AddCommGroup V] [Module Omega V]
 
-abbrev orderedPlusMinusSourceAction
+public abbrev orderedPlusMinusSourceAction
     [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma)
@@ -292,7 +294,7 @@ abbrev orderedPlusMinusSourceAction
       (ambientProjectiveActionOver R 5
         (plusMinusAmbientBasis R sigma hsigma 2 2 bp bm))
 
-abbrev orderedPlusMinusExceptionalAction
+public abbrev orderedPlusMinusExceptionalAction
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (bp : Basis (Fin 3) Omega (R.plusEigenspace sigma))
     (bm : Basis (Fin 3) Omega (R.minusEigenspace sigma)) :
@@ -329,7 +331,7 @@ theorem orderedPlusMinusExceptionalAction_carrier
 /-! The checked chart equivalences turn arbitrary function-field actions on the
 two actual carriers into actions on the explicit normal model. -/
 
-noncomputable abbrev projectiveFiveChartModelAction
+public noncomputable abbrev projectiveFiveChartModelAction
     {N : Type v} [Group N]
     (kAct : N →* ((ProjectiveSpace 5 Omega).functionField ≃+*
       (ProjectiveSpace 5 Omega).functionField)) :
@@ -338,7 +340,7 @@ noncomputable abbrev projectiveFiveChartModelAction
   conjugateRingAction
     (projectiveFiveLinearNormalFunctionFieldEquiv Omega) kAct
 
-noncomputable abbrev biprojectiveTwoTwoChartModelAction
+public noncomputable abbrev biprojectiveTwoTwoChartModelAction
     {N : Type v} [Group N]
     (eAct : N →* ((BiprojectiveSpace 2 2 Omega).functionField ≃+*
       (BiprojectiveSpace 2 2 Omega).functionField)) :
@@ -347,7 +349,7 @@ noncomputable abbrev biprojectiveTwoTwoChartModelAction
   conjugateRingAction
     (biprojectiveTwoTwoFunctionFieldEquiv Omega) eAct
 
-noncomputable def projectiveFiveChartValuationAction
+@[expose] public noncomputable def projectiveFiveChartValuationAction
     {N : Type v} [Group N]
     (kAct : N →* ((ProjectiveSpace 5 Omega).functionField ≃+*
       (ProjectiveSpace 5 Omega).functionField))
@@ -360,7 +362,7 @@ noncomputable def projectiveFiveChartValuationAction
   xAdicRestrictAction (LinearResidualField 5 Omega)
     (projectiveFiveChartModelAction kAct) hpres
 
-theorem projectiveFiveChart_fraction_ring
+public theorem projectiveFiveChart_fraction_ring
     {N : Type v} [Group N]
     (kAct : N →* ((ProjectiveSpace 5 Omega).functionField ≃+*
       (ProjectiveSpace 5 Omega).functionField))
@@ -381,7 +383,7 @@ theorem projectiveFiveChart_fraction_ring
     (projectiveFiveLinearNormalFunctionFieldEquiv Omega)
     kAct hpres n
 
-theorem biprojectiveTwoTwoChart_residue_ring
+public theorem biprojectiveTwoTwoChart_residue_ring
     {N : Type v} [Group N]
     (kAct : N →* ((ProjectiveSpace 5 Omega).functionField ≃+*
       (ProjectiveSpace 5 Omega).functionField))
@@ -409,7 +411,7 @@ theorem biprojectiveTwoTwoChart_residue_ring
     conjugateRingAction, projectiveFiveChartValuationAction] using
       hresidue n x
 
-theorem projectiveFiveChart_base_ring
+public theorem projectiveFiveChart_base_ring
     {N : Type v} [Group N]
     (kAct : N →* ((ProjectiveSpace 5 Omega).functionField ≃+*
       (ProjectiveSpace 5 Omega).functionField))
@@ -428,7 +430,7 @@ theorem projectiveFiveChart_base_ring
   linearNormalRestrictAction_base_ring Omega
     (projectiveFiveChartModelAction kAct) hpres hbase n
 
-theorem orderedPlusMinusChartModelAction_fixes_base
+public theorem orderedPlusMinusChartModelAction_fixes_base
     [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma)
@@ -468,7 +470,7 @@ theorem orderedPlusMinusChartModelAction_fixes_base
 /-- For the actual ordered plus/minus centralizer actions, the three ring
 naturality hypotheses are consequences of preservation of the X-adic subring,
 compatibility with residue, and preservation of base constants. -/
-noncomputable def orderedPlusMinusEquivariantNormalData
+@[expose] public noncomputable def orderedPlusMinusEquivariantNormalData
     [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma)

@@ -1,5 +1,7 @@
-import V14Formalization.ProjectiveFunctionFieldAwayAction
-import Mathlib.RingTheory.Localization.AtPrime.Basic
+module
+
+public import V14Formalization.ProjectiveFunctionFieldAwayAction
+public import Mathlib.RingTheory.Localization.AtPrime.Basic
 
 /-! Generic germ identities for ratios of homogeneous linear forms. -/
 
@@ -17,7 +19,7 @@ attribute [local instance] MvPolynomial.gradedAlgebra
 universe u
 variable {Omega : Type u} [Field Omega]
 
-theorem awayToSection_germ_linear_ratio_mul
+public theorem awayToSection_germ_linear_ratio_mul
     (n : ℕ)
     (f g : MvPolynomial (Fin (n + 1)) Omega)
     (hf : f ∈ MvPolynomial.homogeneousSubmodule (Fin (n + 1)) Omega 1)
@@ -124,7 +126,7 @@ theorem awayToSection_germ_linear_ratio_mul
   rw [mul_comm sf sx0]
   exact hcancel
 
-theorem awayToSection_germ_standard_linear_ratio_isUnit
+public theorem awayToSection_germ_standard_linear_ratio_isUnit
     (n : ℕ)
     (f : MvPolynomial (Fin (n + 1)) Omega)
     (hf : f ∈ MvPolynomial.homogeneousSubmodule (Fin (n + 1)) Omega 1)

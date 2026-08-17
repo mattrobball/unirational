@@ -2,11 +2,13 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.EllipticPolynomialConstancy
-import Mathlib.FieldTheory.RatFunc.IntermediateField
-import Mathlib.RingTheory.Algebraic.Basic
-import Mathlib.RingTheory.Algebraic.Integral
-import Mathlib.RingTheory.Localization.FractionRing
+module
+
+public import V14Formalization.EllipticPolynomialConstancy
+public import Mathlib.FieldTheory.RatFunc.IntermediateField
+public import Mathlib.RingTheory.Algebraic.Basic
+public import Mathlib.RingTheory.Algebraic.Integral
+public import Mathlib.RingTheory.Localization.FractionRing
 
 /-!
 # Relative constants of pure transcendental function fields
@@ -25,7 +27,7 @@ open EllipticPolynomialConstancy
 
 variable {K : Type*} [Field K]
 
-theorem ratFunc_isAlgebraic_iff_constant (x : RatFunc K) :
+public theorem ratFunc_isAlgebraic_iff_constant (x : RatFunc K) :
     IsAlgebraic K x ↔ ∃ a : K, x = RatFunc.C a := by
   constructor
   · intro hx
@@ -55,7 +57,7 @@ lemma isAlgebraic_map_of_isAlgebraic_mvSucc (n : ℕ) {x : MvFrac K (n + 1)}
   change aeval (mvFractionSuccAlgEquiv (K := K) n x) p = 0
   simpa [hp, map_zero] using hφ
 
-theorem mvFrac_isAlgebraic_iff_constant (n : ℕ) (x : MvFrac K n) :
+public theorem mvFrac_isAlgebraic_iff_constant (n : ℕ) (x : MvFrac K n) :
     IsAlgebraic K x ↔ ∃ a : K, x = algebraMap K (MvFrac K n) a := by
   induction n with
   | zero =>
@@ -92,7 +94,7 @@ theorem mvFrac_isAlgebraic_iff_constant (n : ℕ) (x : MvFrac K n) :
         exact isAlgebraic_algebraMap a
 
 /-- Coefficient extension of a finite-variable rational function field. -/
-def mvFracBaseChange {L : Type*} [Field L] (f : K →+* L)
+@[expose] public def mvFracBaseChange {L : Type*} [Field L] (f : K →+* L)
     (hf : Function.Injective f) (n : ℕ) :
     MvFrac K n →+* MvFrac L n :=
   IsFractionRing.map (K := MvFrac K n) (L := MvFrac L n)
@@ -107,7 +109,7 @@ lemma mvFracBaseChange_algebraMap {L : Type*} [Field L] (f : K →+* L)
   rw [mvFracBaseChange]
   exact IsLocalization.map_eq _ p
 
-lemma mvFracBaseChange_algebraMap_base {L : Type*} [Field L] (f : K →+* L)
+public lemma mvFracBaseChange_algebraMap_base {L : Type*} [Field L] (f : K →+* L)
     (hf : Function.Injective f) (n : ℕ) (a : K) :
     mvFracBaseChange f hf n (algebraMap K (MvFrac K n) a) =
       algebraMap L (MvFrac L n) (f a) := by
@@ -116,7 +118,7 @@ lemma mvFracBaseChange_algebraMap_base {L : Type*} [Field L] (f : K →+* L)
   simp [MvPolynomial.algebraMap_eq, MvPolynomial.map_C,
     IsScalarTower.algebraMap_apply L (MvPolynomial (Fin n) L) (MvFrac L n)]
 
-lemma mvFracBaseChange_injective {L : Type*} [Field L] (f : K →+* L)
+public lemma mvFracBaseChange_injective {L : Type*} [Field L] (f : K →+* L)
     (hf : Function.Injective f) (n : ℕ) :
     Function.Injective (mvFracBaseChange f hf n) :=
   RingHom.injective _
@@ -133,7 +135,7 @@ def mvFracBaseChangeAlg {L : Type*} [Field L] [Algebra K L] (n : ℕ) :
 
 /-- If an element becomes a constant after injective coefficient extension along
 an algebraic field map, then it was already a base-field constant. -/
-theorem mvFrac_eq_constant_of_map_eq_constant
+public theorem mvFrac_eq_constant_of_map_eq_constant
     {L : Type*} [Field L] [Algebra K L] [Algebra.IsAlgebraic K L]
     (n : ℕ)
     (f : MvFrac K n →ₐ[K] MvFrac L n)
@@ -149,7 +151,7 @@ theorem mvFrac_eq_constant_of_map_eq_constant
     ((isAlgebraic_algHom_iff f hf).mp hK)
 
 /-- Specialization of the previous corollary to coefficient base change. -/
-theorem mvFrac_eq_constant_of_baseChange_eq_constant
+public theorem mvFrac_eq_constant_of_baseChange_eq_constant
     {L : Type*} [Field L] [Algebra K L] [Algebra.IsAlgebraic K L]
     (n : ℕ) (x : MvFrac K n) (a : L)
     (h : mvFracBaseChange (algebraMap K L)

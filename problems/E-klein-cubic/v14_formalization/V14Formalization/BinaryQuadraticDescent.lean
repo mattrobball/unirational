@@ -2,7 +2,9 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.MvFracConstantField
+module
+
+public import V14Formalization.MvFracConstantField
 
 /-!
 # Projective descent of a nonsingular binary quadratic
@@ -36,7 +38,7 @@ private lemma binary_poly_ne_zero {qA qB qC : K}
     simpa using this
   exact hdisc (by simp [hA, hB, hC])
 
-theorem binaryQuadratic_projective_descends_mvfrac
+public theorem binaryQuadratic_projective_descends_mvfrac
     (n : ℕ) (A B C : K) (hdisc : B ^ 2 - 4 * A * C ≠ 0)
     (s t : MvFrac K n) (hst : s ≠ 0 ∨ t ≠ 0)
     (hq : (algebraMap K (MvFrac K n) A) * s ^ 2 +

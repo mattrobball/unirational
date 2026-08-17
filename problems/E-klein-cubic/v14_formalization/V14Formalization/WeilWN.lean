@@ -4,7 +4,9 @@ Fourier–unipotent conjugation for the Weil representation.
 Key identity (t ≠ 0):
   W ∘ N(t) ∘ W = N(−1/(4t)) ∘ W ∘ D(−2t) ∘ N(−1/(4t))
 -/
-import V14Formalization.WeilMul
+module
+
+public import V14Formalization.WeilMul
 
 open BigOperators
 open V14Formalization.WeilRep
@@ -16,7 +18,7 @@ noncomputable section
 namespace V14Formalization
 namespace WeilWN
 
-abbrev F := ZMod 11
+public abbrev F := ZMod 11
 
 private lemma two_ne : (2 : F) ≠ 0 := by decide
 private lemma four_ne : (4 : F) ≠ 0 := by decide
@@ -228,7 +230,7 @@ theorem sum_ψ_quadratic_half (t b : F) (ht : t ≠ 0) :
     Then W N_new(2t) W = N_new(-1/(2t)) W D(-2t) N_new(-1/(2t)).
     Set s = 2t (so t = s/2): W N_new(s) W = N_new(-1/s) W D(-s) N_new(-1/s). ✓ -/
 
-theorem Wfull_Nfull_Wfull (t : F) (ht : t ≠ 0) :
+public theorem Wfull_Nfull_Wfull (t : F) (ht : t ≠ 0) :
     Wfull ∘ₗ Nfull t ∘ₗ Wfull =
       Nfull (-t⁻¹) ∘ₗ Wfull ∘ₗ Dfull (-t) (neg_ne_zero.mpr ht) ∘ₗ
         Nfull (-t⁻¹) := by

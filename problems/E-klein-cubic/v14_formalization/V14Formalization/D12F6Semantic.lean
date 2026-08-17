@@ -2,7 +2,9 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12U6Semantic
+module
+
+public import V14Formalization.D12U6Semantic
 
 /-!
 # Semantic formula for the six-dimensional D12 reflection
@@ -24,13 +26,13 @@ namespace V14Formalization.D12F6Semantic
 open Lambda2Coordinates D12U6Support D12U6Fourier D12U6Semantic
 open D12PolynomialData D12PolynomialEvaluation
 
-abbrev SLG := Matrix.SpecialLinearGroup (Fin 2) (ZMod 11)
+public abbrev SLG := Matrix.SpecialLinearGroup (Fin 2) (ZMod 11)
 
 /-- The actual six-dimensional reflection matrix in the even Weil basis. -/
-abbrev actualF6 : Matrix (Fin 6) (Fin 6) WeilRep.K :=
+public abbrev actualF6 : Matrix (Fin 6) (Fin 6) WeilRep.K :=
   LinearMap.toMatrix uBasisCore uBasisCore GeometricV14Carrier.Slin
 
-def T2 : SLG := WeilRep.Tmat ^ 2
+@[expose] public def T2 : SLG := WeilRep.Tmat ^ 2
 def S2p : SLG := -WeilRep.Smat
 def reflWord : SLG := T2 ^ 4 * S2p * T2 ^ 7 * S2p
 
@@ -46,7 +48,7 @@ theorem S2p_eq_negI_mul_Smat :
   ext i j
   fin_cases i <;> fin_cases j <;> decide
 
-theorem weilUHom_T2 :
+public theorem weilUHom_T2 :
     WeilHom.weilUHom T2 = WeilRep.T_even_b 2 := by
   rw [T2, map_pow]
   change WeilRepSL2.weilU WeilRep.Tmat ^ 2 = WeilRep.T_even_b 2
@@ -63,7 +65,7 @@ theorem weilUHom_S2p :
   ext f
   simp
 
-theorem toMatrix_Teven2_eq_T6 :
+public theorem toMatrix_Teven2_eq_T6 :
     LinearMap.toMatrix uBasisCore uBasisCore (WeilRep.T_even_b 2) =
       WeilRep.T6 := by
   have hinv : (2 : ZMod 11)⁻¹ = 6 :=
@@ -81,7 +83,7 @@ theorem toMatrix_Teven2_eq_T6 :
   all_goals norm_num [ZMod.val_ofNat, ZMod.val_natCast, ZMod.val_one]
 
 /-- The actual Weil reflection matrix is the word recorded by the exporter. -/
-theorem actualF6_eq_wordMatrix :
+public theorem actualF6_eq_wordMatrix :
     actualF6 =
       WeilRep.T6 ^ 4 * WeilRep.S6 * WeilRep.T6 ^ 7 * WeilRep.S6 := by
   rw [show actualF6 =
@@ -102,7 +104,7 @@ theorem actualF6_eq_wordMatrix :
     D12U6Fourier.toMatrix_Seven_eq_S6, toMatrix_Teven2_eq_T6]
 
 /-- Closed entry formula for the actual reflection. -/
-def directValue (i j : Fin 6) : WeilRep.K :=
+@[expose] public def directValue (i j : Fin 6) : WeilRep.K :=
   -WeilRep.cFourier * WeilRep.ψ (2 * (i.val : ZMod 11) ^ 2) *
     (if j = 0 then 1 else
       WeilRep.ψ (9 * (j.val : ZMod 11) ^ 2) *
@@ -123,7 +125,7 @@ private theorem chi2_three : WeilRep.χ₂ (3 : ZMod 11) = 1 := by
     _ = 2 - 1 := by rw [← h]
     _ = 1 := by ring
 
-theorem actualF6_apply_eq_directValue (i j : Fin 6) :
+public theorem actualF6_apply_eq_directValue (i j : Fin 6) :
     actualF6 i j = directValue i j := by
   classical
   simp only [actualF6, LinearMap.toMatrix_apply, uBasisCore]
@@ -274,14 +276,14 @@ theorem actualF6_apply_eq_directValue (i j : Fin 6) :
     ring
 
 /-- Polynomial encoding of the closed reflection entry formula. -/
-def directEntryPoly (i j : Fin 6) : Polynomial ℚ :=
+@[expose] public def directEntryPoly (i j : Fin 6) : Polynomial ℚ :=
   -cFourierPoly * phasePoly (2 * (i.val : ZMod 11) ^ 2) *
     (if j = 0 then 1 else
       phasePoly (9 * (j.val : ZMod 11) ^ 2) *
         (phasePoly (4 * (i.val : ZMod 11) * (j.val : ZMod 11)) +
           phasePoly (-(4 * (i.val : ZMod 11) * (j.val : ZMod 11)))))
 
-theorem eval_directEntryPoly (i j : Fin 6) :
+public theorem eval_directEntryPoly (i j : Fin 6) :
     evalPolyAt WeilRep.ζ (directEntryPoly i j) = directValue i j := by
   by_cases hj : j = 0 <;>
     simp [directEntryPoly, directValue, hj, eval_cFourierPoly, eval_phasePoly]

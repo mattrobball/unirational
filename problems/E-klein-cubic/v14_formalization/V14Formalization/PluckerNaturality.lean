@@ -2,16 +2,18 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.Lambda2Coordinates
-import V14Formalization.GrassmannianLinearSection
-import V14Formalization.GeometricFanoCarrier
-import Mathlib.LinearAlgebra.ExteriorPower.Basis
-import Mathlib.LinearAlgebra.ExteriorAlgebra.Basis
-import Mathlib.Algebra.MvPolynomial.Funext
-import Mathlib.Order.Hom.PowersetCard
-import Mathlib.GroupTheory.QuotientGroup.Basic
-import Mathlib.Data.Finset.Card
-import Mathlib.Tactic.FinCases
+module
+
+public import V14Formalization.Lambda2Coordinates
+public import V14Formalization.GrassmannianLinearSection
+public import V14Formalization.GeometricFanoCarrier
+public import Mathlib.LinearAlgebra.ExteriorPower.Basis
+public import Mathlib.LinearAlgebra.ExteriorAlgebra.Basis
+public import Mathlib.Algebra.MvPolynomial.Funext
+public import Mathlib.Order.Hom.PowersetCard
+public import Mathlib.GroupTheory.QuotientGroup.Basic
+public import Mathlib.Data.Finset.Card
+public import Mathlib.Tactic.FinCases
 
 /-!
 # Plücker span naturality under the exterior-square representation
@@ -52,8 +54,8 @@ open Lambda2Coordinates
 open GeometricFanoCarrier (PSL2F11 SLG weilLambda2 pslLambda2Hom pslLambda2_mk)
 open SchemeGeometry
 
-abbrev k := Lambda2Coordinates.k
-abbrev G := Lambda2Coordinates.G
+public abbrev k := Lambda2Coordinates.k
+public abbrev G := Lambda2Coordinates.G
 
 variable {R : Type*} [CommRing R]
 variable {ι : Type*} [LinearOrder ι] [Fintype ι] [DecidableEq ι]
@@ -116,12 +118,12 @@ theorem toMatrix_exteriorPower_eq_compound2Powerset
 /-! ### Step 3: lex pair compound matrix = sealed `ρ(g)` -/
 
 /-- Ordered embedding of the `i`-th lex pair into `Fin 6`. -/
-def pairEmb (i : Fin 15) : Fin 2 ↪o Fin 6 :=
+@[expose] public def pairEmb (i : Fin 15) : Fin 2 ↪o Fin 6 :=
   powersetCard.ofFinEmbEquiv.symm (pairEnumeration i)
 
 /-- Order-2 compound matrix in the sealed lex Plücker coordinate order
 `01,02,...,45`. -/
-def compound2Lex (A : Matrix (Fin 6) (Fin 6) R) : Matrix (Fin 15) (Fin 15) R :=
+@[expose] public def compound2Lex (A : Matrix (Fin 6) (Fin 6) R) : Matrix (Fin 15) (Fin 15) R :=
   Matrix.of fun i j => (A.submatrix (pairEmb i) (pairEmb j)).det
 
 theorem pluckerPairEquiv_symm_apply (i : Fin 15) :
@@ -138,7 +140,7 @@ theorem toMatrix_lambda2Basis_reindex
 
 /-- The exterior-square Weil action in lex Plücker coordinates is the compound
 matrix of the coordinate Weil action on `U`. -/
-theorem weilLambda2_toMatrix_eq_compound2Lex (g : SLG) :
+public theorem weilLambda2_toMatrix_eq_compound2Lex (g : SLG) :
     LinearMap.toMatrix lambda2Basis lambda2Basis (weilLambda2 g) =
       compound2Lex
         (LinearMap.toMatrix uBasisCore uBasisCore (WeilHom.weilUHom g)) := by
@@ -164,7 +166,7 @@ theorem pslLambda2_toMatrix_eq_compound2Lex (g : PSL2F11) :
   simpa [pslLambda2_mk] using weilLambda2_toMatrix_eq_compound2Lex g
 
 /-- Every sealed matrix `ρ(g)` is an order-2 compound matrix in lex coordinates. -/
-theorem lambda2MatrixRepresentation_eq_compound2Lex (g : G) :
+public theorem lambda2MatrixRepresentation_eq_compound2Lex (g : G) :
     ∃ A : Matrix (Fin 6) (Fin 6) k,
       (lambda2MatrixRepresentation.ρ g : Matrix (Fin 15) (Fin 15) k) =
         compound2Lex A := by
@@ -173,7 +175,7 @@ theorem lambda2MatrixRepresentation_eq_compound2Lex (g : G) :
 
 /-! ### Step 4: lex four-subset enumeration (matches `pluckerRelation` order) -/
 
-lemma card_insert4 {α : Type*} [DecidableEq α] (a b c d : α)
+public lemma card_insert4 {α : Type*} [DecidableEq α] (a b c d : α)
     (hab : a ≠ b) (hac : a ≠ c) (had : a ≠ d)
     (hbc : b ≠ c) (hbd : b ≠ d) (hcd : c ≠ d) :
     ({a, b, c, d} : Finset α).card = 4 := by
@@ -186,7 +188,7 @@ lemma card_insert4 {α : Type*} [DecidableEq α] (a b c d : α)
   simp [Finset.card_insert_of_notMem, h1, h2, h3, Finset.card_singleton]
 
 /-- Four-subset with an explicit cardinality certificate. -/
-def four (a b c d : Fin 6)
+@[expose] public def four (a b c d : Fin 6)
     (hab : a ≠ b) (hac : a ≠ c) (had : a ≠ d)
     (hbc : b ≠ c) (hbd : b ≠ d) (hcd : c ≠ d) :
     powersetCard (Fin 6) 4 :=
@@ -194,7 +196,7 @@ def four (a b c d : Fin 6)
 
 /-- Lexicographic enumeration of 4-subsets of `Fin 6`, in the same order as
 `SchemeGeometry.pluckerRelation` / `pluckerQuadric`. -/
-def fourEnumeration : Fin 15 → powersetCard (Fin 6) 4
+@[expose] public def fourEnumeration : Fin 15 → powersetCard (Fin 6) 4
   | ⟨0, _⟩ => four 0 1 2 3 (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
   | ⟨1, _⟩ => four 0 1 2 4 (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
   | ⟨2, _⟩ => four 0 1 2 5 (by decide) (by decide) (by decide) (by decide) (by decide) (by decide)
@@ -218,7 +220,7 @@ theorem fourEnumeration_injective : Function.Injective fourEnumeration := by
   fin_cases a <;> fin_cases b <;> try rfl
   all_goals (simp [fourEnumeration, four] at hv; exact absurd hv (by decide))
 
-theorem fourEnumeration_bijective : Function.Bijective fourEnumeration := by
+public theorem fourEnumeration_bijective : Function.Bijective fourEnumeration := by
   refine (Fintype.bijective_iff_injective_and_card fourEnumeration).mpr
     ⟨fourEnumeration_injective, ?_⟩
   rw [Fintype.card_fin, Fintype.card_eq_nat_card, powersetCard.card, Nat.card_fin]
@@ -237,7 +239,7 @@ def compound4Lex (A : Matrix (Fin 6) (Fin 6) R) (t s : Fin 15) : R :=
   (A.submatrix (fourEmb t) (fourEmb s)).det
 
 /-- Pointwise Plücker value of a coordinate vector (evaluation of `pluckerQuadric`). -/
-def pluckerValue (x : Fin 15 → R) (t : Fin 15) : R :=
+@[expose] public def pluckerValue (x : Fin 15 → R) (t : Fin 15) : R :=
   let d := pluckerRelation t
   x d.p1 * x d.p2 - x d.p3 * x d.p4 + x d.p5 * x d.p6
 
@@ -247,7 +249,7 @@ theorem pluckerValue_eq_eval (x : Fin 15 → R) (t : Fin 15) :
 
 /-! ### Step 5: the compound Plücker identity and ideal-span naturality -/
 
-noncomputable abbrev b4 : Basis (Fin 4) R (Fin 4 → R) := Pi.basisFun R (Fin 4)
+public noncomputable abbrev b4 : Basis (Fin 4) R (Fin 4 → R) := Pi.basisFun R (Fin 4)
 
 theorem fin4Vec_eq_id : (![0, 1, 2, 3] : Fin 4 → Fin 4) = id := by
   funext x
@@ -290,7 +292,7 @@ theorem b4Vec_eq_b4 :
   funext x
   fin_cases x <;> rfl
 
-noncomputable def omega (i j : Fin 4) : ExteriorAlgebra R (Fin 4 → R) :=
+@[expose] public noncomputable def omega (i j : Fin 4) : ExteriorAlgebra R (Fin 4 → R) :=
   ExteriorAlgebra.ιMulti R 2 ![b4 (R := R) i, b4 (R := R) j]
 
 noncomputable def vol : ExteriorAlgebra R (Fin 4 → R) :=
@@ -458,9 +460,9 @@ theorem stdBiv_sq (a b c d e f : R) :
 
 /-! Restrict a bivector in six coordinates to an ordered four-subset. -/
 
-noncomputable abbrev b6 : Basis (Fin 6) R (Fin 6 → R) := Pi.basisFun R (Fin 6)
+public noncomputable abbrev b6 : Basis (Fin 6) R (Fin 6 → R) := Pi.basisFun R (Fin 6)
 
-def pairLexVec : Fin 15 → Fin 2 → Fin 6 := ![
+@[expose] public def pairLexVec : Fin 15 → Fin 2 → Fin 6 := ![
   ![0, 1], ![0, 2], ![0, 3], ![0, 4], ![0, 5],
   ![1, 2], ![1, 3], ![1, 4], ![1, 5],
   ![2, 3], ![2, 4], ![2, 5], ![3, 4], ![3, 5], ![4, 5]]
@@ -720,12 +722,12 @@ theorem map_sourceWedge_sq_restrict4 (x : Fin 15 → R) (t : Fin 15) :
   rw [stdBiv_sq]
   rfl
 
-def pairLexEmb (i : Fin 15) : Fin 2 ↪o Fin 6 :=
+@[expose] public def pairLexEmb (i : Fin 15) : Fin 2 ↪o Fin 6 :=
   OrderEmbedding.ofStrictMono (pairLexVec i) (by
     intro a b hab
     fin_cases i <;> fin_cases a <;> fin_cases b <;> simp_all [pairLexVec])
 
-theorem pairEmb_eq_pairLexEmb (i : Fin 15) :
+public theorem pairEmb_eq_pairLexEmb (i : Fin 15) :
     V14Formalization.PluckerNaturality.pairEmb i = pairLexEmb i := by
   apply Set.powersetCard.ofFinEmbEquiv.injective
   simp only [V14Formalization.PluckerNaturality.pairEmb, Equiv.apply_symm_apply]
@@ -736,14 +738,14 @@ theorem pairEmb_eq_pairLexEmb (i : Fin 15) :
       V14Formalization.Lambda2Coordinates.pair,
       Set.powersetCard.ofFinEmbEquiv_apply]
 
-noncomputable abbrev E2_6 := ⋀[R]^2 (Fin 6 → R)
-noncomputable abbrev E4_6 := ⋀[R]^4 (Fin 6 → R)
+public noncomputable abbrev E2_6 := ⋀[R]^2 (Fin 6 → R)
+public noncomputable abbrev E4_6 := ⋀[R]^4 (Fin 6 → R)
 
-noncomputable def lex2Basis : Basis (Fin 15) R (E2_6 (R := R)) :=
+@[expose] public noncomputable def lex2Basis : Basis (Fin 15) R (E2_6 (R := R)) :=
   ((b6 (R := R)).exteriorPower 2).reindex
     V14Formalization.Lambda2Coordinates.pluckerPairEquiv
 
-@[simp] theorem lex2Basis_apply (i : Fin 15) :
+@[simp] public theorem lex2Basis_apply (i : Fin 15) :
     lex2Basis (R := R) i =
       (b6 (R := R)).exteriorPower 2
         (V14Formalization.Lambda2Coordinates.pairEnumeration i) := by
@@ -1040,11 +1042,11 @@ theorem restrict4_det (t s : Fin 15) :
   · exact restrict4_det_13 s
   · exact restrict4_det_14 s
 
-noncomputable def fourEquiv : Fin 15 ≃ powersetCard (Fin 6) 4 :=
+@[expose] public noncomputable def fourEquiv : Fin 15 ≃ powersetCard (Fin 6) 4 :=
   Equiv.ofBijective V14Formalization.PluckerNaturality.fourEnumeration
     V14Formalization.PluckerNaturality.fourEnumeration_bijective
 
-@[simp] theorem fourEquiv_apply (s : Fin 15) :
+@[simp] public theorem fourEquiv_apply (s : Fin 15) :
     fourEquiv s = V14Formalization.PluckerNaturality.fourEnumeration s := rfl
 
 theorem restrict4_top_repr (z : E4_6 (R := R)) (t : Fin 15) :
@@ -1122,10 +1124,10 @@ theorem sourceBivector_eq_equivFun_symm (x : Fin 15 → R) :
     sourceBivector x = (lex2Basis (R := R)).equivFun.symm x := by
   rfl
 
-noncomputable def lex4Basis : Basis (Fin 15) R (E4_6 (R := R)) :=
+@[expose] public noncomputable def lex4Basis : Basis (Fin 15) R (E4_6 (R := R)) :=
   ((b6 (R := R)).exteriorPower 4).reindex fourEquiv.symm
 
-@[simp] theorem lex4Basis_apply (t : Fin 15) :
+@[simp] public theorem lex4Basis_apply (t : Fin 15) :
     lex4Basis (R := R) t =
       (b6 (R := R)).exteriorPower 4
         (V14Formalization.PluckerNaturality.fourEnumeration t) := by
@@ -1329,7 +1331,7 @@ theorem aeval_pluckerQuadric_compound_transform [IsDomain R] [Infinite R]
   simpa [V14Formalization.PluckerNaturality.pluckerValue_eq_eval] using
     pluckerValue_compound_transform (R := R) h2 A x t
 
-theorem span_aeval_pluckerQuadric_compound_le [IsDomain R] [Infinite R]
+public theorem span_aeval_pluckerQuadric_compound_le [IsDomain R] [Infinite R]
     (h2 : (2 : R) ≠ 0) (A : Matrix (Fin 6) (Fin 6) R) :
     Ideal.span (Set.range (fun t : Fin 15 ↦
       (MvPolynomial.aeval

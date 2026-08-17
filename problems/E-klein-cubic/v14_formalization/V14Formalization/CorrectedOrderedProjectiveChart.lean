@@ -1,6 +1,8 @@
-import V14Formalization.CorrectedBirationalField
-import V14Formalization.LinearNormalOrderedPresentation
-import V14Formalization.GenericCharts
+module
+
+public import V14Formalization.CorrectedBirationalField
+public import V14Formalization.LinearNormalOrderedPresentation
+public import V14Formalization.GenericCharts
 
 noncomputable section
 
@@ -19,7 +21,7 @@ variable {Omega : Type u} [Field Omega]
 chart of `P^(p+q+1)`.  On coordinates it sends
 `u_i ↦ x_(i+1)/x_0`, `T ↦ y_0/x_0`, and
 `v_j ↦ y_(j+1)/y_0`. -/
-noncomputable def orderedCoordinateToProjectiveFunctionFieldEquiv
+@[expose] public noncomputable def orderedCoordinateToProjectiveFunctionFieldEquiv
     (p q : ℕ) :
     orderedCoordinateField (Omega := Omega) p q ≃+*
       (ProjectiveSpace (p + q + 1) Omega).functionField :=
@@ -99,14 +101,14 @@ theorem orderedCoordinateToProjectiveFunctionFieldEquiv_X_tail
 /-- The fully corrected ordered `(u,T,v)` function-field chart for
 `P^(p+q+1)`.  Unlike the old `finSuccEquiv` chart, the `RatFunc.X` variable is
 the normal parameter `y₀/x₀`. -/
-noncomputable def correctedOrderedLinearNormalFunctionFieldEquiv
+@[expose] public noncomputable def correctedOrderedLinearNormalFunctionFieldEquiv
     (p q : ℕ) :
     LinearNormalFractionField (Nat.succ (p + q)) Omega ≃+*
       (ProjectiveSpace (p + q + 1) Omega).functionField :=
   (linearNormalToOrderedCoordinateFieldEquiv p q).trans
     (orderedCoordinateToProjectiveFunctionFieldEquiv p q)
 
-theorem correctedOrderedLinearNormalFunctionFieldEquiv_X
+public theorem correctedOrderedLinearNormalFunctionFieldEquiv_X
     (p q : ℕ) :
     correctedOrderedLinearNormalFunctionFieldEquiv (Omega := Omega) p q
         (RatFunc.X : LinearNormalFractionField (Nat.succ (p + q)) Omega) =
@@ -120,7 +122,7 @@ theorem correctedOrderedLinearNormalFunctionFieldEquiv_X
   rw [linearNormalToOrderedCoordinateFieldEquiv_X_normal,
     orderedCoordinateToProjectiveFunctionFieldEquiv_X_normal]
 
-theorem correctedOrderedLinearNormalFunctionFieldEquiv_C_plus
+public theorem correctedOrderedLinearNormalFunctionFieldEquiv_C_plus
     (p q : ℕ) (i : Fin p) :
     correctedOrderedLinearNormalFunctionFieldEquiv (Omega := Omega) p q
         (RatFunc.C (residualCoordinateInField (Omega := Omega) p q
@@ -136,7 +138,7 @@ theorem correctedOrderedLinearNormalFunctionFieldEquiv_C_plus
   rw [linearNormalToOrderedCoordinateFieldEquiv_C_plus,
     orderedCoordinateToProjectiveFunctionFieldEquiv_X_plus]
 
-theorem correctedOrderedLinearNormalFunctionFieldEquiv_C_tail
+public theorem correctedOrderedLinearNormalFunctionFieldEquiv_C_tail
     (p q : ℕ) (j : Fin q) :
     correctedOrderedLinearNormalFunctionFieldEquiv (Omega := Omega) p q
         (RatFunc.C (residualCoordinateInField (Omega := Omega) p q
@@ -155,7 +157,7 @@ theorem correctedOrderedLinearNormalFunctionFieldEquiv_C_tail
   rw [linearNormalToOrderedCoordinateFieldEquiv_C_tail,
     orderedCoordinateToProjectiveFunctionFieldEquiv_X_tail]
 
-theorem correctedOrderedLinearNormalFunctionFieldEquiv_base
+public theorem correctedOrderedLinearNormalFunctionFieldEquiv_base
     (p q : ℕ) (c : Omega) :
     correctedOrderedLinearNormalFunctionFieldEquiv (Omega := Omega) p q
         (baseToLinearNormalFractionField (Nat.succ (p + q)) Omega c) =
@@ -208,7 +210,7 @@ theorem linearChartGeneric_toBase_of_base
     _ = X.fromSpecStalk _ ≫ f :=
       SpecMap_functionFieldBaseRingHom Omega X f
 
-theorem correctedOrderedLinearNormal_generic_toBase
+public theorem correctedOrderedLinearNormal_generic_toBase
     (p q : ℕ) :
     Spec.map (CommRingCat.ofHom
         (linearChartGenericHom (Nat.succ (p + q)) Omega

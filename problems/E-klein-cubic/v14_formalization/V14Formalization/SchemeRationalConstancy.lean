@@ -2,8 +2,10 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.SchemeEquivariantSpecialization
-import Mathlib.AlgebraicGeometry.Morphisms.Flat
+module
+
+public import V14Formalization.SchemeEquivariantSpecialization
+public import Mathlib.AlgebraicGeometry.Morphisms.Flat
 
 /-!
 # Constancy as the last geometric input to the fixed-locus obstruction
@@ -31,7 +33,7 @@ variable {S : Scheme.{u}} {N : Type u} [Group N]
 
 /-- Precomposition by an over-base action fixes a rational map induced by a
 point of the base. -/
-theorem actionPrecomp_constant
+public theorem actionPrecomp_constant
     (X : Action (Over S) N) [IrreducibleSpace X.V.left]
     {Z : Scheme.{u}} (n : N) (y : S ⟶ Z) :
     actionPrecomp X n (X.V.hom ≫ y).toRationalMap =
@@ -47,7 +49,7 @@ variable {k : Type u} [Field k]
 /-- A rational map between schemes over the base is induced by a base-field
 point of the target.  The definition is deliberately independent of any
 group actions carried by the two schemes. -/
-def RationalMapIsConstantOver
+@[expose] public def RationalMapIsConstantOver
     {E Z : Over (Spec (.of k))}
     (q : Scheme.RationalMap E.left Z.left) : Prop :=
   ∃ y : Spec (.of k) ⟶ Z.left,
@@ -58,7 +60,7 @@ variable {E Z : Over (Spec (.of k))}
 
 /-- Descent of the generic-point morphism to a base point implies constancy
 of the rational map. -/
-theorem rationalMapIsConstantOver_of_fromFunctionField_descends
+public theorem rationalMapIsConstantOver_of_fromFunctionField_descends
     (q : Scheme.RationalMap E.left Z.left)
     (hdesc : ∃ y : Spec (.of k) ⟶ Z.left,
       q.fromFunctionField =
@@ -77,7 +79,7 @@ variable {E Z : Action (Over (Spec (.of k))) N}
 base point, implies constancy as a map to the scheme-theoretic fixed locus.
 This lets the geometric input classify only the generic field-valued point;
 no global decomposition theorem for the equalizer is required. -/
-theorem rationalMapIsConstantOver_fixedBy_of_comp_descends
+public theorem rationalMapIsConstantOver_fixedBy_of_comp_descends
     {G : Type u} [Group G]
     (Y : Action (Over (Spec (.of k))) G) (sigma : G)
     [IsSeparated Y.V.hom]
@@ -127,7 +129,7 @@ theorem rationalMapIsConstantOver_fixedBy_of_comp_descends
 
 /-- If every over-base rational map is constant and the target has no
 `N`-fixed base point, no `N`-equivariant rational map exists. -/
-theorem noEquivariantRationalMap_of_constant
+public theorem noEquivariantRationalMap_of_constant
     (hconst : ∀ q : Scheme.RationalMap E.V.left Z.V.left,
       q.IsOver (Spec (.of k)) → RationalMapIsConstantOver q)
     (hno : ¬ ∃ y : Spec (.of k) ⟶ Z.V.left,
@@ -156,7 +158,7 @@ The constant value of an over-base rational map is automatically a section of
 the target structure morphism.  Thus applications only need to exclude honest
 base-field points fixed by the action, rather than arbitrary scheme morphisms
 from `Spec k`. -/
-theorem noEquivariantRationalMap_of_constant_section
+public theorem noEquivariantRationalMap_of_constant_section
     [LocallyOfFiniteType Z.V.hom]
     (hconst : ∀ q : Scheme.RationalMap E.V.left Z.V.left,
       q.IsOver (Spec (.of k)) → RationalMapIsConstantOver q)
@@ -214,7 +216,7 @@ variable {G : Type u} [Group G]
 valuation, function-field triviality of the involution on the normal divisor,
 constancy of rational maps into the fixed locus, and absence of a fixed base
 point together exclude every equivariant rational map, dominant or not. -/
-theorem noEquivariantRationalMap_of_constant_fixedSpecialization
+public theorem noEquivariantRationalMap_of_constant_fixedSpecialization
     (X Y : Action (Over (Spec (.of k))) G) (sigma : G)
     [IsIntegral X.V.left]
     {E : Action (Over (Spec (.of k)))
@@ -242,7 +244,7 @@ theorem noEquivariantRationalMap_of_constant_fixedSpecialization
 /-- Section-valued version of
 `noEquivariantRationalMap_of_constant_fixedSpecialization`.  This is the
 natural endpoint for a coordinate certificate excluding fixed `k`-points. -/
-theorem noEquivariantRationalMap_of_constant_fixedSpecialization_section
+public theorem noEquivariantRationalMap_of_constant_fixedSpecialization_section
     (X Y : Action (Over (Spec (.of k))) G) (sigma : G)
     [IsIntegral X.V.left]
     {E : Action (Over (Spec (.of k)))

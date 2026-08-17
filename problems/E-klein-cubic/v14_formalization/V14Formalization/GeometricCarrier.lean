@@ -7,17 +7,19 @@ Non-free G-set (point stabilizers order 11). Hyp (a)(b) without freeness of whol
 
 N ≃ D₁₂ from `CentralizerN`. Dirac projective embedding of the finite coset space.
 -/
-import V14Formalization.CentralizerD12
-import V14Formalization.Definitions
-import Mathlib.GroupTheory.OrderOfElement
-import Mathlib.GroupTheory.GroupAction.Quotient
-import Mathlib.GroupTheory.Coset.Card
-import Mathlib.Algebra.Group.Subgroup.Finite
-import Mathlib.Data.Fintype.BigOperators
-import Mathlib.LinearAlgebra.Projectivization.Basic
-import Mathlib.LinearAlgebra.FreeModule.Finite.Basic
-import Mathlib.Algebra.Module.Pi
-import Mathlib.Data.Int.ModEq
+module
+
+public import V14Formalization.CentralizerD12
+public import V14Formalization.Definitions
+public import Mathlib.GroupTheory.OrderOfElement
+public import Mathlib.GroupTheory.GroupAction.Quotient
+public import Mathlib.GroupTheory.Coset.Card
+public import Mathlib.Algebra.Group.Subgroup.Finite
+public import Mathlib.Data.Fintype.BigOperators
+public import Mathlib.LinearAlgebra.Projectivization.Basic
+public import Mathlib.LinearAlgebra.FreeModule.Finite.Basic
+public import Mathlib.Algebra.Module.Pi
+public import Mathlib.Data.Int.ModEq
 
 open scoped MatrixGroups LinearAlgebra.Projectivization
 open Matrix Matrix.SpecialLinearGroup
@@ -30,10 +32,10 @@ namespace GeometricCarrier
 
 /-! ## Unipotent generator of order 11 -/
 
-def tMat : SLG := ⟨!![1, 1; 0, 1], by simp [Matrix.det_fin_two_of]⟩
-def t : PSL2F11 := QuotientGroup.mk tMat
+@[expose] public def tMat : SLG := ⟨!![1, 1; 0, 1], by simp [Matrix.det_fin_two_of]⟩
+@[expose] public def t : PSL2F11 := QuotientGroup.mk tMat
 
-lemma tMat_pow (n : ℕ) : (tMat ^ n).1 = !![(1 : F), (n : F); 0, 1] := by
+public lemma tMat_pow (n : ℕ) : (tMat ^ n).1 = !![(1 : F), (n : F); 0, 1] := by
   induction n with
   | zero =>
     ext i j; fin_cases i <;> fin_cases j <;> simp [pow_zero]
@@ -77,19 +79,19 @@ theorem orderOf_t : orderOf t = 11 :=
 
 /-! ## C₁₁ and coset space -/
 
-def C11 : Subgroup PSL2F11 := Subgroup.zpowers t
-instance : DecidablePred (· ∈ C11) := by classical exact inferInstance
-instance : Fintype C11 := Subtype.fintype _
+@[expose] public def C11 : Subgroup PSL2F11 := Subgroup.zpowers t
+@[expose] public instance : DecidablePred (· ∈ C11) := by classical exact inferInstance
+@[expose] public instance : Fintype C11 := Subtype.fintype _
 
 lemma card_C11 : Fintype.card C11 = 11 := by
   classical
   change Fintype.card (Subgroup.zpowers t) = 11
   rw [Fintype.card_zpowers, orderOf_t]
 
-abbrev P1geom := PSL2F11 ⧸ C11
-instance : MulAction PSL2F11 P1geom := inferInstance
-instance : Fintype P1geom := QuotientGroup.fintype _
-instance : DecidableEq P1geom := Quotient.decidableEq
+public abbrev P1geom := PSL2F11 ⧸ C11
+@[expose] public instance : MulAction PSL2F11 P1geom := inferInstance
+@[expose] public instance : Fintype P1geom := QuotientGroup.fintype _
+@[expose] public instance : DecidableEq P1geom := Quotient.decidableEq
 
 /-! ## Involution σ -/
 
@@ -114,7 +116,7 @@ lemma sigma_ne_one : sigma ≠ 1 := by
       simpa [Smat, negI] using congrArg (fun M : SLG => M.1 0 0) hneg
     exact absurd this (by decide)
 
-theorem sigma_isInvolution : IsInvolution sigma :=
+public theorem sigma_isInvolution : IsInvolution sigma :=
   ⟨by simpa [pow_two] using sigma_mul_self, sigma_ne_one⟩
 
 lemma C11_no_order_two {g : PSL2F11} (hg : g ∈ C11) (h2 : g * g = 1) : g = 1 := by
@@ -294,7 +296,7 @@ lemma normalCore_C11_eq_bot : C11.normalCore = ⊥ := by
     rwa [heq] at this
   exact C11_not_normal hNorm
 
-theorem coset_action_faithful (g : PSL2F11)
+public theorem coset_action_faithful (g : PSL2F11)
     (hg : ∀ x : P1geom, g • x = x) : g = 1 := by
   have hgker : g ∈ (MulAction.toPermHom PSL2F11 P1geom).ker := by
     rw [MonoidHom.mem_ker]; ext x; exact hg x
@@ -304,23 +306,23 @@ theorem coset_action_faithful (g : PSL2F11)
 
 /-! ## Dirac projective embedding -/
 
-abbrev k := ℚ
-abbrev CosetMod := P1geom → k
+public abbrev k := ℚ
+public abbrev CosetMod := P1geom → k
 
-instance : AddCommGroup CosetMod := inferInstance
-instance : Module k CosetMod := inferInstance
-instance : Module.Free k CosetMod := inferInstance
-instance : FiniteDimensional k CosetMod :=
+@[expose] public instance : AddCommGroup CosetMod := inferInstance
+@[expose] public instance : Module k CosetMod := inferInstance
+@[expose] public instance : Module.Free k CosetMod := inferInstance
+@[expose] public instance : FiniteDimensional k CosetMod :=
   Module.Finite.equiv (Finsupp.linearEquivFunOnFinite k k P1geom)
 
-def diracCoset (x : P1geom) : CosetMod := fun y => if y = x then (1 : k) else 0
+@[expose] public def diracCoset (x : P1geom) : CosetMod := fun y => if y = x then (1 : k) else 0
 
-lemma diracCoset_ne (x : P1geom) : diracCoset x ≠ 0 := by
+public lemma diracCoset_ne (x : P1geom) : diracCoset x ≠ 0 := by
   intro h
   have : (diracCoset x) x = 0 := by rw [h]; rfl
   simp [diracCoset] at this
 
-def cosetEmbed : P1geom ↪ ℙ k CosetMod where
+@[expose] public def cosetEmbed : P1geom ↪ ℙ k CosetMod where
   toFun x := Projectivization.mk k (diracCoset x) (diracCoset_ne x)
   inj' := by
     intro x y heq
@@ -343,22 +345,22 @@ def cosetEmbed : P1geom ↪ ℙ k CosetMod where
 /-! ## Smooth projective G-variety on G/C₁₁ (linear-projective data) -/
 
 /-- Linear G-action on Dirac ambient `CosetMod = P1geom → k`. -/
-def cosetAmbientAct (g : PSL2F11) : CosetMod →ₗ[k] CosetMod where
+@[expose] public def cosetAmbientAct (g : PSL2F11) : CosetMod →ₗ[k] CosetMod where
   toFun := fun f x => f (g⁻¹ • x)
   map_add' := fun _ _ => funext fun _ => rfl
   map_smul' := fun _ _ => funext fun _ => rfl
 
-lemma cosetAmbientAct_one : cosetAmbientAct 1 = LinearMap.id := by
+public lemma cosetAmbientAct_one : cosetAmbientAct 1 = LinearMap.id := by
   apply LinearMap.ext; intro f; funext x
   simp [cosetAmbientAct]
 
-lemma cosetAmbientAct_mul (g h : PSL2F11) :
+public lemma cosetAmbientAct_mul (g h : PSL2F11) :
     cosetAmbientAct (g * h) = cosetAmbientAct g ∘ₗ cosetAmbientAct h := by
   apply LinearMap.ext; intro f; funext x
   simp only [cosetAmbientAct, LinearMap.comp_apply, LinearMap.coe_mk, AddHom.coe_mk]
   rw [_root_.mul_inv_rev, mul_smul]
 
-lemma cosetAmbientAct_injective (g : PSL2F11) :
+public lemma cosetAmbientAct_injective (g : PSL2F11) :
     Function.Injective (cosetAmbientAct g) := by
   intro a b hab
   funext y
@@ -375,7 +377,7 @@ lemma diracCoset_smul (g : PSL2F11) (x : P1geom) :
   · have hne : g⁻¹ • y ≠ x := fun he => hy (by rw [← he, smul_inv_smul])
     simp [hy, hne]
 
-lemma cosetEmbed_smul (g : PSL2F11) (x : P1geom) :
+public lemma cosetEmbed_smul (g : PSL2F11) (x : P1geom) :
     cosetEmbed (g • x) =
       Projectivization.map (cosetAmbientAct g) (cosetAmbientAct_injective g)
         (cosetEmbed x) := by
@@ -388,7 +390,7 @@ lemma cosetEmbed_smul (g : PSL2F11) (x : P1geom) :
   simp only [Projectivization.submodule_mk]
   rw [diracCoset_smul]
 
-def V14Variety : SmoothProjectiveGVariety k PSL2F11 where
+@[expose] public def V14Variety : SmoothProjectiveGVariety k PSL2F11 where
   X := P1geom
   ambient := CosetMod
   ambientAdd := inferInstance
@@ -407,7 +409,7 @@ def V14Variety : SmoothProjectiveGVariety k PSL2F11 where
 
 /-! ## Hyp (a)(b) without freeness of G -/
 
-theorem V14_hypothesisB : HypothesisB V14Variety (centralizer sigma) := by
+public theorem V14_hypothesisB : HypothesisB V14Variety (centralizer sigma) := by
   change V14Variety.fixedBy (centralizer sigma) = ∅
   apply Set.eq_empty_iff_forall_notMem.mpr
   intro y hy
@@ -419,7 +421,7 @@ theorem V14_hypothesisB : HypothesisB V14Variety (centralizer sigma) := by
   change (n : PSL2F11) • (y : P1geom) = y
   exact h
 
-theorem V14_hypothesisA : HypothesisA k V14Variety sigma := by
+public theorem V14_hypothesisA : HypothesisA k V14Variety sigma := by
   intro S hS hRCC
   have hempty : V14Variety.fixedByElement sigma = ∅ := by
     apply Set.eq_empty_iff_forall_notMem.mpr

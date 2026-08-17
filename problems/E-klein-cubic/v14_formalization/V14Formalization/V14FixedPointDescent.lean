@@ -2,9 +2,11 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.ProjectiveFamilyFieldPointLift
-import V14Formalization.V14SchemeModel
-import V14Formalization.V14FixedPointEquations
+module
+
+public import V14Formalization.ProjectiveFamilyFieldPointLift
+public import V14Formalization.V14SchemeModel
+public import V14Formalization.V14FixedPointEquations
 
 /-!
 # Base morphisms from descended V14 coordinates
@@ -19,9 +21,9 @@ namespace V14Formalization.SchemeGeometry
 
 open AlgebraicGeometry BConicBundleMultisections Lambda2Coordinates
 
-private abbrev k := V14SchemeModel.k
+public abbrev k := V14SchemeModel.k
 
-theorem v14Equations_of_projector_and_plucker
+public theorem v14Equations_of_projector_and_plucker
     {L : Type} [Field L] [Algebra k L]
     (x : Fin 15 → L)
     (hproj : (V14SchemeModel.projectorMatrix.map (algebraMap k L)).mulVec x = x)
@@ -48,7 +50,7 @@ theorem v14Equations_of_projector_and_plucker
 
 /-- A normalized base-field V14 vector satisfying the projector and Plücker
 equations determines a section `Spec k ⟶ v14Scheme` over the base. -/
-noncomputable def v14SchemePointOfNormalizedCoordinates
+@[expose] public noncomputable def v14SchemePointOfNormalizedCoordinates
     (j : Fin 15) (x : Fin 15 → k) (hxj : x j = 1)
     (hproj : V14SchemeModel.projectorMatrix.mulVec x = x)
     (hQ : ∀ q : Fin 15, MvPolynomial.eval x (pluckerQuadric k q) = 0) :
@@ -67,7 +69,7 @@ noncomputable def v14SchemePointOfNormalizedCoordinates
         (fun q => by simpa using hQ q)
       simpa using hzero s)
 
-theorem v14SchemePointOfNormalizedCoordinates_toSpec
+public theorem v14SchemePointOfNormalizedCoordinates_toSpec
     (j : Fin 15) (x : Fin 15 → k) (hxj : x j = 1)
     (hproj : V14SchemeModel.projectorMatrix.mulVec x = x)
     (hQ : ∀ q : Fin 15, MvPolynomial.eval x (pluckerQuadric k q) = 0) :
@@ -95,7 +97,7 @@ theorem v14SchemePointOfNormalizedCoordinates_toSpec
       V14SchemeModel.equationDegree V14SchemeModel.equations_isHomogeneous
       j x hxj hzero)
 
-theorem v14SchemePointOfNormalizedCoordinates_ι
+public theorem v14SchemePointOfNormalizedCoordinates_ι
     (j : Fin 15) (x : Fin 15 → k) (hxj : x j = 1)
     (hproj : V14SchemeModel.projectorMatrix.mulVec x = x)
     (hQ : ∀ q : Fin 15, MvPolynomial.eval x (pluckerQuadric k q) = 0) :
@@ -122,7 +124,7 @@ theorem v14SchemePointOfNormalizedCoordinates_ι
       j x hxj hzero)
 
 /-- A descended eigenvector for `lambda²(σ)` is a `σ`-fixed V14 point. -/
-theorem v14SchemePointOfNormalizedCoordinates_sigma_fixed
+public theorem v14SchemePointOfNormalizedCoordinates_sigma_fixed
     (j : Fin 15) (x : Fin 15 → k) (hxj : x j = 1)
     (hproj : V14SchemeModel.projectorMatrix.mulVec x = x)
     (hQ : ∀ q : Fin 15, MvPolynomial.eval x (pluckerQuadric k q) = 0)

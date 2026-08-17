@@ -2,12 +2,14 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.Lambda2Coordinates
-import V14Formalization.GeometricV14Carrier
-import V14Formalization.GrassmannianLinearSection
-import V14Formalization.ProjectiveAwayNaturality
-import V14Formalization.PluckerNaturality
-import Mathlib.Algebra.CharZero.Infinite
+module
+
+public import V14Formalization.Lambda2Coordinates
+public import V14Formalization.GeometricV14Carrier
+public import V14Formalization.GrassmannianLinearSection
+public import V14Formalization.ProjectiveAwayNaturality
+public import V14Formalization.PluckerNaturality
+public import Mathlib.Algebra.CharZero.Infinite
 
 /-!
 # The coordinate scheme model of V14
@@ -33,13 +35,13 @@ namespace V14SchemeModel
 open GeometricFanoCarrier GeometricV14Carrier Lambda2Coordinates SchemeGeometry
   BConicBundleMultisections
 
-abbrev k := GeometricV14Carrier.k
-abbrev G := GeometricV14Carrier.PSL2F11
-abbrev Lambda2U := GeometricV14Carrier.Lambda2U
+public abbrev k := GeometricV14Carrier.k
+public abbrev G := GeometricV14Carrier.PSL2F11
+public abbrev Lambda2U := GeometricV14Carrier.Lambda2U
 
 /-- The character projector in the exact Plücker coordinate basis
 `01,02,03,04,05,12,...,45`. -/
-noncomputable def projectorMatrix : Matrix (Fin 15) (Fin 15) k :=
+@[expose] public noncomputable def projectorMatrix : Matrix (Fin 15) (Fin 15) k :=
   LinearMap.toMatrix lambda2Basis lambda2Basis projectorM
 
 /-- Matrix multiplication by the coordinate projector is the coordinate form
@@ -62,7 +64,7 @@ theorem representationMatrix_mulVec_equivFun (g : G) (v : Lambda2U) :
       (GeometricFanoCarrier.pslLambda2Hom g) v
 
 /-- The coordinate projector is idempotent. -/
-theorem projectorMatrix_idempotent :
+public theorem projectorMatrix_idempotent :
     projectorMatrix * projectorMatrix = projectorMatrix := by
   rw [Matrix.ext_iff_mulVec]
   intro x
@@ -72,7 +74,7 @@ theorem projectorMatrix_idempotent :
 
 /-- The coordinate projector commutes with the genuine exterior-square
 representation. -/
-theorem projectorMatrix_commutes (g : G) :
+public theorem projectorMatrix_commutes (g : G) :
     projectorMatrix *
         (lambda2MatrixRepresentation.ρ g : Matrix (Fin 15) (Fin 15) k) =
       (lambda2MatrixRepresentation.ρ g : Matrix (Fin 15) (Fin 15) k) *
@@ -116,18 +118,18 @@ theorem projectorM_fixed_iff_mem_Msub (v : Lambda2U) :
 
 /-- The linear equations in the coordinate scheme are exactly the condition
 that a Plücker representative lies in `M`. -/
-theorem projectorLinearCuts_vanish_iff_mem_Msub (v : Lambda2U) :
+public theorem projectorLinearCuts_vanish_iff_mem_Msub (v : Lambda2U) :
     (∀ i : Fin 15, MvPolynomial.eval (lambda2Basis.repr v)
         (projectorLinearCut k projectorMatrix i) = 0) ↔ v ∈ Msub := by
   rw [projectorLinearCuts_vanish_iff, projectorMatrix_fixed_iff,
     projectorM_fixed_iff_mem_Msub]
 
 /-- Degree of each equation in the combined Plücker/projector family. -/
-def equationDegree : Fin 15 ⊕ Fin 15 → ℕ :=
+@[expose] public def equationDegree : Fin 15 ⊕ Fin 15 → ℕ :=
   Sum.elim (fun _ ↦ 2) (fun _ ↦ 1)
 
 /-- The combined equations have their advertised degrees. -/
-theorem equations_isHomogeneous (s : Fin 15 ⊕ Fin 15) :
+public theorem equations_isHomogeneous (s : Fin 15 ⊕ Fin 15) :
     (grassmannianLinearSectionEquations k projectorMatrix s).IsHomogeneous
       (equationDegree s) := by
   rcases s with q | i
@@ -150,7 +152,7 @@ theorem projector_span_aeval_lambda2_le (g : G) :
 /-- The Plücker quadrics are stable under the actual exterior-square
 representation.  This is the coordinate form of functoriality of the
 Grassmannian under linear changes of the underlying six-space. -/
-theorem plucker_span_aeval_lambda2_le (g : G) :
+public theorem plucker_span_aeval_lambda2_le (g : G) :
     Ideal.span (Set.range (fun q : Fin 15 ↦
       (MvPolynomial.aeval (linearSubst 14
         (lambda2MatrixRepresentation.ρ g : Matrix (Fin 15) (Fin 15) k)) :
@@ -187,24 +189,24 @@ theorem equations_span_aeval_lambda2_le_of_plucker
 
 /-- The scheme-theoretic intersection `Gr(2,6) ∩ P(M)` in the actual
 representation coordinates. -/
-abbrev v14Scheme : AlgebraicGeometry.Scheme :=
+public abbrev v14Scheme : AlgebraicGeometry.Scheme :=
   grassmannianLinearSection k projectorMatrix
 
 /-- The canonical closed immersion of the coordinate V14 into `P¹⁴`. -/
-abbrev v14Schemeι : v14Scheme ⟶ ProjectiveSpace 14 k :=
+public abbrev v14Schemeι : v14Scheme ⟶ ProjectiveSpace 14 k :=
   grassmannianLinearSectionι k projectorMatrix
 
 /-- The genuine projective action before restriction to the V14 subscheme. -/
-abbrev ambientSchemeAction : Action AlgebraicGeometry.Scheme G :=
+public abbrev ambientSchemeAction : Action AlgebraicGeometry.Scheme G :=
   projectiveAction 14 lambda2MatrixRepresentation.ρ
 
 /-- The ideal sheaf defining the coordinate V14 inside `P¹⁴`. -/
-abbrev v14Ideal : (ProjectiveSpace 14 k).IdealSheafData :=
+public abbrev v14Ideal : (ProjectiveSpace 14 k).IdealSheafData :=
   projectiveZeroLocusFamilyIdeal 14 k
     (grassmannianLinearSectionEquations k projectorMatrix)
 
 /-- Projective-family naturality for the actual V14 equation family. -/
-theorem v14Ideal_naturality (g : G) :
+public theorem v14Ideal_naturality (g : G) :
     v14Ideal.comap
         (mapLinearSubst 14
           (lambda2MatrixRepresentation.ρ g : Matrix (Fin 15) (Fin 15) k)
@@ -224,7 +226,7 @@ theorem v14Ideal_naturality (g : G) :
 /-- Honest assembly boundary for the scheme action.  Projective-family
 naturality, the projector part, and all homogeneity obligations are discharged
 internally.  The remaining input is exactly Plücker-span naturality. -/
-theorem invariantIdeal_of_plucker
+public theorem invariantIdeal_of_plucker
     (hplucker : ∀ g : G,
       Ideal.span (Set.range (fun q : Fin 15 ↦
         (MvPolynomial.aeval (linearSubst 14
@@ -249,7 +251,7 @@ theorem invariantIdeal_of_plucker
     (equations_span_aeval_lambda2_le_of_plucker g (hplucker g))
 
 /-- The genuine V14 scheme action once Plücker-span naturality is supplied. -/
-noncomputable def action_of_plucker
+@[expose] public noncomputable def action_of_plucker
     (hplucker : ∀ g : G,
       Ideal.span (Set.range (fun q : Fin 15 ↦
         (MvPolynomial.aeval (linearSubst 14
@@ -262,18 +264,18 @@ noncomputable def action_of_plucker
 
 /-- The defining ideal sheaf of the coordinate V14 is invariant under the
 genuine projective `PSL₂(F₁₁)` action. -/
-theorem invariantIdeal : IsInvariantIdeal ambientSchemeAction v14Ideal :=
+public theorem invariantIdeal : IsInvariantIdeal ambientSchemeAction v14Ideal :=
   invariantIdeal_of_plucker plucker_span_aeval_lambda2_le
 
 /-- The unconditional genuine `PSL₂(F₁₁)` action on the coordinate V14
 scheme. -/
-noncomputable def action : Action AlgebraicGeometry.Scheme G :=
+@[expose] public noncomputable def action : Action AlgebraicGeometry.Scheme G :=
   invariantIdeal.action
 
 /-- The canonical closed immersion is equivariant for the restricted V14
 action and the ambient projective action. -/
 @[reassoc]
-theorem action_hom_v14Schemeι (g : G) :
+public theorem action_hom_v14Schemeι (g : G) :
     action.ρ g ≫ v14Schemeι =
       v14Schemeι ≫ projectiveActionHom lambda2MatrixRepresentation.ρ g :=
   invariantIdeal.hom_subschemeι g
@@ -281,7 +283,7 @@ theorem action_hom_v14Schemeι (g : G) :
 /-- The unconditional V14 action with its canonical structure morphism to
 `Spec k`.  This is the base-preserving target used by equivariant rational
 maps and proper specialization. -/
-noncomputable def actionOver :
+@[expose] public noncomputable def actionOver :
     Action (Over (AlgebraicGeometry.Spec (.of k))) G := by
   letI : ambientSchemeAction.V.Over (AlgebraicGeometry.Spec (.of k)) := by
     change (ProjectiveSpace 14 k).Over (AlgebraicGeometry.Spec (.of k))
@@ -292,19 +294,19 @@ noncomputable def actionOver :
     infer_instance
 
 @[simp]
-theorem actionOver_carrier : actionOver.V.left = v14Scheme := rfl
+public theorem actionOver_carrier : actionOver.V.left = v14Scheme := rfl
 
 /-- The equivariance square, phrased for the over-base action used by rational
 maps and proper specialization. -/
 @[reassoc]
-theorem actionOver_hom_v14Schemeι (g : G) :
+public theorem actionOver_hom_v14Schemeι (g : G) :
     (actionOver.ρ g).left ≫ v14Schemeι =
       v14Schemeι ≫ projectiveActionHom lambda2MatrixRepresentation.ρ g :=
   invariantIdeal.hom_subschemeι g
 
 /-- A fixed field-valued point of V14 remains fixed after composing with the
 canonical closed immersion into the ambient projective space. -/
-theorem fixed_comp_v14Schemeι
+public theorem fixed_comp_v14Schemeι
     {L : Type} [Field L]
     (g : G) (p : AlgebraicGeometry.Spec (.of L) ⟶ actionOver.V.left)
     (hfixed : p ≫ (actionOver.ρ g).left = p) :

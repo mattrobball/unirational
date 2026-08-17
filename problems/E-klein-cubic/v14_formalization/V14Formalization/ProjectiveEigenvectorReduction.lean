@@ -1,5 +1,7 @@
-import V14Formalization.V14FieldPointReconstruction
-import V14Formalization.ProjectiveAwayNaturality
+module
+
+public import V14Formalization.V14FieldPointReconstruction
+public import V14Formalization.ProjectiveAwayNaturality
 
 noncomputable section
 
@@ -18,7 +20,7 @@ universe u
 /-- Evaluation confirms the coordinate orientation of Problem B's linear
 substitution: its induced point vector is `M.mulVec x`, with no transpose or
 inverse. -/
-theorem eval_map_linearSubst_eq_mappedMatrix_mulVec
+public theorem eval_map_linearSubst_eq_mappedMatrix_mulVec
     {k L : Type u} [Field k] [Field L] [Algebra k L]
     (n : ℕ) (M : Matrix (Fin (n + 1)) (Fin (n + 1)) k)
     (x : Fin (n + 1) → L) (i : Fin (n + 1)) :
@@ -30,7 +32,7 @@ theorem eval_map_linearSubst_eq_mappedMatrix_mulVec
 
 /-- On the `j`-th standard chart, the degree-zero fraction whose numerator is
 the `i`-th transformed linear coordinate evaluates to `(M x) i` when `x j = 1`. -/
-theorem standardChartEvalAlgebra_linearSubstRatio
+public theorem standardChartEvalAlgebra_linearSubstRatio
     {k L : Type u} [Field k] [Field L] [Algebra k L]
     (n : ℕ) (M : Matrix (Fin (n + 1)) (Fin (n + 1)) k)
     (j i : Fin (n + 1)) (x : Fin (n + 1) → L) (hxj : x j = 1) :
@@ -65,7 +67,7 @@ theorem standardChartEvalAlgebra_linearSubstRatio
 
 /-- The localization element cutting out the inverse image of the `i`-th
 target chart evaluates to the `i`-th coordinate of `M x`. -/
-theorem standardChartEvalAlgebra_isLocalizationElem_linearSubst
+public theorem standardChartEvalAlgebra_isLocalizationElem_linearSubst
     {k L : Type u} [Field k] [Field L] [Algebra k L]
     (n : ℕ) (M : Matrix (Fin (n + 1)) (Fin (n + 1)) k)
     (j i : Fin (n + 1)) (x : Fin (n + 1) → L) (hxj : x j = 1) :
@@ -92,7 +94,7 @@ theorem standardChartEvalAlgebra_isLocalizationElem_linearSubst
 
 /-- A normalized point fixed by the projective linear substitution has nonzero
 transformed coordinate in its normalizing chart. -/
-theorem mappedMatrix_mulVec_normalizingCoordinate_ne_zero_of_fixed
+public theorem mappedMatrix_mulVec_normalizingCoordinate_ne_zero_of_fixed
     {k L : Type u} [Field k] [Field L] [Algebra k L]
     (n : ℕ)
     (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) k)
@@ -183,7 +185,7 @@ theorem mappedMatrix_mulVec_normalizingCoordinate_ne_zero_of_fixed
 
 /-- If the transformed `j`-coordinate is nonzero, Problem B's `Proj.map`
 construction sends the normalized point `x` to the normalized point `M x /(M x)_j`. -/
-theorem pointOfNormalizedCoordinatesAlgebra_comp_mapLinearSubst
+public theorem pointOfNormalizedCoordinatesAlgebra_comp_mapLinearSubst
     {k L : Type u} [Field k] [Field L] [Algebra k L]
     (n : ℕ)
     (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) k)
@@ -486,7 +488,7 @@ theorem pointOfNormalizedCoordinatesAlgebra_comp_mapLinearSubst
 
 /-- A normalized field-valued projective point fixed by an invertible linear
 substitution is represented by an eigenvector of the scalar-extended matrix. -/
-theorem exists_eigenScalar_of_pointOfNormalizedCoordinatesAlgebra_fixed
+public theorem exists_eigenScalar_of_pointOfNormalizedCoordinatesAlgebra_fixed
     {k L : Type u} [Field k] [Field L] [Algebra k L]
     (n : ℕ)
     (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) k)
@@ -527,7 +529,7 @@ theorem exists_eigenScalar_of_pointOfNormalizedCoordinatesAlgebra_fixed
 
 /-- Requested wrapper with an explicitly named scheme point reconstructed from
 normalized coordinates. -/
-theorem exists_eigenScalar_of_mapLinearSubst_fixed
+public theorem exists_eigenScalar_of_mapLinearSubst_fixed
     {k L : Type u} [Field k] [Field L] [Algebra k L]
     (n : ℕ)
     (M N : Matrix (Fin (n + 1)) (Fin (n + 1)) k)

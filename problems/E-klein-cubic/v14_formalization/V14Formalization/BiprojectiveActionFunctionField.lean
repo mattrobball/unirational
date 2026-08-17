@@ -1,4 +1,6 @@
-import V14Formalization.BiprojectiveFunctionFieldProjection
+module
+
+public import V14Formalization.BiprojectiveFunctionFieldProjection
 
 noncomputable section
 
@@ -13,7 +15,7 @@ universe u
 
 variable {Omega : Type u} [Field Omega]
 
-local instance diagonalPullbackActionHom_isIso
+public local instance diagonalPullbackActionHom_isIso
     {N : Type u} [Group N] {S : Scheme.{u}}
     (A B : Action (Over S) N) (n : N) :
     IsIso (diagonalPullbackActionHom A B n) := by
@@ -27,7 +29,7 @@ local instance diagonalPullbackActionHom_isIso
 /-- Function-field pullback by a diagonal action commutes with the first
 projection.  This is the contravariant function-field form of
 `diagonalPullbackActionHom_fst`. -/
-theorem diagonalPullbackAction_functionFieldMap_fst
+public theorem diagonalPullbackAction_functionFieldMap_fst
     {N : Type u} [Group N] {S : Scheme.{u}}
     (A B : Action (Over S) N)
     [IsIntegral A.V.left] [IsIntegral B.V.left]
@@ -68,7 +70,7 @@ theorem diagonalPullbackAction_functionFieldMap_fst
 
 /-- Function-field pullback by a diagonal action commutes with the second
 projection. -/
-theorem diagonalPullbackAction_functionFieldMap_snd
+public theorem diagonalPullbackAction_functionFieldMap_snd
     {N : Type u} [Group N] {S : Scheme.{u}}
     (A B : Action (Over S) N)
     [IsIntegral A.V.left] [IsIntegral B.V.left]
@@ -109,7 +111,7 @@ theorem diagonalPullbackAction_functionFieldMap_snd
 
 /-- A dominant morphism over a field preserves the canonical ground-field
 embeddings in function fields. -/
-theorem functionFieldMap_comp_functionFieldBaseRingHom
+public theorem functionFieldMap_comp_functionFieldBaseRingHom
     {X Y : Scheme.{u}} [IsIntegral X] [IsIntegral Y]
     (f : X ⟶ Y) [IsDominant f]
     (qX : X ⟶ Spec (.of Omega)) (qY : Y ⟶ Spec (.of Omega))
@@ -129,7 +131,7 @@ theorem functionFieldMap_comp_functionFieldBaseRingHom
     exact (SpecMap_functionFieldBaseRingHom Omega X qX).symm
   exact congrArg CommRingCat.Hom.hom h
 
-theorem biprojective_fst_functionFieldMap_base
+public theorem biprojective_fst_functionFieldMap_base
     (p q : ℕ) (c : Omega) :
     (BiprojectiveSpace.fst p q Omega).functionFieldMap
         (functionFieldBaseRingHom Omega (ProjectiveSpace p Omega)
@@ -142,7 +144,7 @@ theorem biprojective_fst_functionFieldMap_base
     (ProjectiveSpace.toSpec p Omega) (by rfl)
   exact DFunLike.congr_fun h c
 
-theorem biprojective_snd_functionFieldMap_base
+public theorem biprojective_snd_functionFieldMap_base
     (p q : ℕ) (c : Omega) :
     (BiprojectiveSpace.snd p q Omega).functionFieldMap
         (functionFieldBaseRingHom Omega (ProjectiveSpace q Omega)

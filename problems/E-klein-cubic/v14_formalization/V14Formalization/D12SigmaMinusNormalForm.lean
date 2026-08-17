@@ -2,7 +2,9 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12MatrixCertificate
+module
+
+public import V14Formalization.D12MatrixCertificate
 
 /-!
 # Structural normal form for the four-dimensional sigma carrier
@@ -27,27 +29,27 @@ variable {R : Type u} [CommRing R]
 
 /-- The ten degree-two monomials in four variables, in upper-triangular
 lexicographic order. -/
-def quadMonomials (y : Fin 4 → R) : Fin 10 → R :=
+@[expose] public def quadMonomials (y : Fin 4 → R) : Fin 10 → R :=
   ![y 0 * y 0, y 0 * y 1, y 0 * y 2, y 0 * y 3,
     y 1 * y 1, y 1 * y 2, y 1 * y 3,
     y 2 * y 2, y 2 * y 3, y 3 * y 3]
 
 /-- Evaluation of a quadratic coefficient vector. -/
-def quadValue (Q : Fin 10 → R) (y : Fin 4 → R) : R :=
+@[expose] public def quadValue (Q : Fin 10 → R) (y : Fin 4 → R) : R :=
   dotProduct Q (quadMonomials y)
 
-@[simp] theorem quadValue_add (Q₁ Q₂ : Fin 10 → R) (y : Fin 4 → R) :
+@[simp] public theorem quadValue_add (Q₁ Q₂ : Fin 10 → R) (y : Fin 4 → R) :
     quadValue (Q₁ + Q₂) y = quadValue Q₁ y + quadValue Q₂ y := by
   simp only [quadValue, dotProduct, Pi.add_apply, add_mul,
     Finset.sum_add_distrib]
 
-@[simp] theorem quadValue_sub (Q₁ Q₂ : Fin 10 → R) (y : Fin 4 → R) :
+@[simp] public theorem quadValue_sub (Q₁ Q₂ : Fin 10 → R) (y : Fin 4 → R) :
     quadValue (Q₁ - Q₂) y = quadValue Q₁ y - quadValue Q₂ y := by
   simp only [quadValue, dotProduct, Pi.sub_apply, sub_mul,
     Finset.sum_sub_distrib]
 
 /-- Coefficients of the product of two four-variable linear forms. -/
-def bilinearCoeffs (a b : Fin 4 → R) : Fin 10 → R :=
+@[expose] public def bilinearCoeffs (a b : Fin 4 → R) : Fin 10 → R :=
   ![a 0 * b 0,
     a 0 * b 1 + a 1 * b 0,
     a 0 * b 2 + a 2 * b 0,
@@ -59,7 +61,7 @@ def bilinearCoeffs (a b : Fin 4 → R) : Fin 10 → R :=
     a 2 * b 3 + a 3 * b 2,
     a 3 * b 3]
 
-theorem quadValue_bilinearCoeffs (a b y : Fin 4 → R) :
+public theorem quadValue_bilinearCoeffs (a b y : Fin 4 → R) :
     quadValue (bilinearCoeffs a b) y =
       dotProduct a y * dotProduct b y := by
   simp [quadValue, bilinearCoeffs, quadMonomials, dotProduct,
@@ -68,14 +70,14 @@ theorem quadValue_bilinearCoeffs (a b y : Fin 4 → R) :
 
 /-- Coefficients of a Plücker quadratic after substituting the columns of a
 four-parameter ambient matrix. -/
-def restrictedPluckerCoeffs
+@[expose] public def restrictedPluckerCoeffs
     (B : Matrix (Fin 15) (Fin 4) R) (q : Fin 15) : Fin 10 → R :=
   let d := SchemeGeometry.pluckerRelation q
   bilinearCoeffs (B d.p1) (B d.p2) -
     bilinearCoeffs (B d.p3) (B d.p4) +
       bilinearCoeffs (B d.p5) (B d.p6)
 
-theorem restrictedPluckerCoeffs_map
+public theorem restrictedPluckerCoeffs_map
     {S : Type*} [CommRing S] (f : R →+* S)
     (B : Matrix (Fin 15) (Fin 4) R) (q : Fin 15) :
     restrictedPluckerCoeffs (B.map f) q =
@@ -83,7 +85,7 @@ theorem restrictedPluckerCoeffs_map
   funext m
   fin_cases m <;> simp [restrictedPluckerCoeffs, bilinearCoeffs]
 
-theorem quadValue_restrictedPluckerCoeffs
+public theorem quadValue_restrictedPluckerCoeffs
     {S : Type*} [Field S] (B : Matrix (Fin 15) (Fin 4) S)
     (q : Fin 15) (y : Fin 4 → S) :
     quadValue (restrictedPluckerCoeffs B q) y =
@@ -93,22 +95,22 @@ theorem quadValue_restrictedPluckerCoeffs
   rfl
 
 /-- First normalized linear equation cutting out the emitted projective line. -/
-def linearOne (a b : R) (y : Fin 4 → R) : R :=
+@[expose] public def linearOne (a b : R) (y : Fin 4 → R) : R :=
   y 1 + a * y 2 + b * y 3
 
 /-- Second normalized linear equation cutting out the emitted projective line. -/
-def linearTwo (c d : R) (y : Fin 4 → R) : R :=
+@[expose] public def linearTwo (c d : R) (y : Fin 4 → R) : R :=
   y 0 + c * y 2 + d * y 3
 
 /-- The canonical parametrization of the intersection of the two normalized
 hyperplanes. -/
-def lineParam (a b c d s t : R) : Fin 4 → R :=
+@[expose] public def lineParam (a b c d s t : R) : Fin 4 → R :=
   ![-c * s - d * t, -a * s - b * t, s, t]
 
-@[simp] theorem lineParam_two (a b c d s t : R) :
+@[simp] public theorem lineParam_two (a b c d s t : R) :
     lineParam a b c d s t 2 = s := rfl
 
-@[simp] theorem lineParam_three (a b c d s t : R) :
+@[simp] public theorem lineParam_three (a b c d s t : R) :
     lineParam a b c d s t 3 = t := rfl
 
 theorem lineParam_linearOne (a b c d s t : R) :
@@ -138,25 +140,25 @@ theorem eq_lineParam_of_linears_zero
 
 /-- The binary quadratic left after restricting the reference Plücker
 equation to the emitted projective line. -/
-def binaryQuadratic (A B C s t : R) : R :=
+@[expose] public def binaryQuadratic (A B C s t : R) : R :=
   A * s ^ 2 + B * s * t + C * t ^ 2
 
 /-- The three coefficients obtained by restricting a four-variable quadratic
 to the normalized line.  Keeping these formulas separate prevents numerical
 certificates from expanding the whole binary quadratic in one tactic call. -/
-def linePullbackA (Q : Fin 10 → R) (a c : R) : R :=
+@[expose] public def linePullbackA (Q : Fin 10 → R) (a c : R) : R :=
   Q 0 * c ^ 2 + Q 1 * c * a - Q 2 * c +
     Q 4 * a ^ 2 - Q 5 * a + Q 7
 
-def linePullbackB (Q : Fin 10 → R) (a b c d : R) : R :=
+@[expose] public def linePullbackB (Q : Fin 10 → R) (a b c d : R) : R :=
   2 * Q 0 * c * d + Q 1 * (c * b + d * a) - Q 2 * d - Q 3 * c +
     2 * Q 4 * a * b - Q 5 * b - Q 6 * a + Q 8
 
-def linePullbackC (Q : Fin 10 → R) (b d : R) : R :=
+@[expose] public def linePullbackC (Q : Fin 10 → R) (b d : R) : R :=
   Q 0 * d ^ 2 + Q 1 * d * b - Q 3 * d +
     Q 4 * b ^ 2 - Q 6 * b + Q 9
 
-theorem quadValue_lineParam (Q : Fin 10 → R) (a b c d s t : R) :
+public theorem quadValue_lineParam (Q : Fin 10 → R) (a b c d s t : R) :
     quadValue Q (lineParam a b c d s t) =
       binaryQuadratic (linePullbackA Q a c) (linePullbackB Q a b c d)
         (linePullbackC Q b d) s t := by
@@ -164,7 +166,7 @@ theorem quadValue_lineParam (Q : Fin 10 → R) (a b c d s t : R) :
     lineParam, binaryQuadratic, linePullbackA, linePullbackB, linePullbackC]
   ring
 
-theorem commonZero_parametric
+public theorem commonZero_parametric
     (Q : Fin 8 → Fin 10 → R) (a b c d A B C : R)
     {y : Fin 4 → R}
     (hlinear : (∀ q : Fin 8, quadValue (Q q) y = 0) →

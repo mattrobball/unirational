@@ -6,9 +6,11 @@ Weil representation pieces for SL₂(F₁₁) on Fun and even U.
 * Generators Tmat, Smat match Nfull 1 and Wfull
 * weilU (−I) = −id on the even module
 -/
-import V14Formalization.WeilRep
-import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
-import Mathlib.Data.Matrix.Basic
+module
+
+public import V14Formalization.WeilRep
+public import Mathlib.LinearAlgebra.Matrix.SpecialLinearGroup
+public import Mathlib.Data.Matrix.Basic
 
 open Matrix Matrix.SpecialLinearGroup AddChar MulChar BigOperators
 open V14Formalization.WeilRep
@@ -18,24 +20,24 @@ noncomputable section
 namespace V14Formalization
 namespace WeilRepSL2
 
-abbrev F := ZMod 11
-abbrev SLG := SpecialLinearGroup (Fin 2) F
+public abbrev F := ZMod 11
+public abbrev SLG := SpecialLinearGroup (Fin 2) F
 
-instance : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
+@[expose] public instance : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
 
 /-! ## Entries -/
 
-def ea (g : SLG) : F := (g : Matrix (Fin 2) (Fin 2) F) 0 0
-def eb (g : SLG) : F := (g : Matrix (Fin 2) (Fin 2) F) 0 1
-def ec (g : SLG) : F := (g : Matrix (Fin 2) (Fin 2) F) 1 0
-def ed (g : SLG) : F := (g : Matrix (Fin 2) (Fin 2) F) 1 1
+@[expose] public def ea (g : SLG) : F := (g : Matrix (Fin 2) (Fin 2) F) 0 0
+@[expose] public def eb (g : SLG) : F := (g : Matrix (Fin 2) (Fin 2) F) 0 1
+@[expose] public def ec (g : SLG) : F := (g : Matrix (Fin 2) (Fin 2) F) 1 0
+@[expose] public def ed (g : SLG) : F := (g : Matrix (Fin 2) (Fin 2) F) 1 1
 
-theorem det_entries (g : SLG) : ea g * ed g - eb g * ec g = 1 := by
+public theorem det_entries (g : SLG) : ea g * ed g - eb g * ec g = 1 := by
   have h : (g : Matrix (Fin 2) (Fin 2) F).det = 1 := g.property
   rw [Matrix.det_fin_two] at h
   exact h
 
-theorem ea_ne_zero_of_ec_zero (g : SLG) (hc : ec g = 0) : ea g ≠ 0 := by
+public theorem ea_ne_zero_of_ec_zero (g : SLG) (hc : ec g = 0) : ea g ≠ 0 := by
   intro ha
   have h := det_entries g
   rw [hc, ha] at h
@@ -46,21 +48,21 @@ theorem ea_ne_zero_of_ec_zero (g : SLG) (hc : ec g = 0) : ea g ≠ 0 := by
 /-! ## Diagonal action -/
 
 /-- ρ(diag(t)): f(x) ↦ χ₂(t) · f(t · x).  (Right scaling so D∘N(t)=N(t s²)∘D.) -/
-def Dfull (t : F) (_ht : t ≠ 0) : Fun →ₗ[K] Fun where
+@[expose] public def Dfull (t : F) (_ht : t ≠ 0) : Fun →ₗ[K] Fun where
   toFun f := fun x => χ₂ t * f (t * x)
   map_add' := by
     intro f g; funext x; simp [Pi.add_apply]; ring
   map_smul' := by
     intro r f; funext x; simp [Pi.smul_apply, smul_eq_mul]; ring
 
-theorem Dfull_preserves_even (t : F) (ht : t ≠ 0) {f : Fun}
+public theorem Dfull_preserves_even (t : F) (ht : t ≠ 0) {f : Fun}
     (hf : ∀ x, f (-x) = f x) (x : ZMod 11) :
     Dfull t ht f (-x) = Dfull t ht f x := by
   dsimp [Dfull]
   have hneg : t * (-x) = -(t * x) := by ring
   rw [hneg, hf (t * x)]
 
-theorem χ₂_one : χ₂ (1 : F) = 1 := by
+public theorem χ₂_one : χ₂ (1 : F) = 1 := by
   change (algebraMap ℤ K) (χ₂ℤ 1) = 1
   have : χ₂ℤ 1 = 1 := by
     change quadraticChar (ZMod 11) 1 = 1
@@ -76,10 +78,10 @@ theorem Dfull_one : Dfull (1 : F) one_ne_zero = LinearMap.id := by
 
 /-! ## Unipotent / Fourier -/
 
-def Nfull (t : F) : Fun →ₗ[K] Fun := Tfull_b t
-def Wfull : Fun →ₗ[K] Fun := Sfull
+@[expose] public def Nfull (t : F) : Fun →ₗ[K] Fun := Tfull_b t
+@[expose] public def Wfull : Fun →ₗ[K] Fun := Sfull
 
-theorem Nfull_zero : Nfull 0 = LinearMap.id := by
+public theorem Nfull_zero : Nfull 0 = LinearMap.id := by
   apply LinearMap.ext
   intro f
   funext x
@@ -88,7 +90,7 @@ theorem Nfull_zero : Nfull 0 = LinearMap.id := by
   have h0 : (0 : ZMod 11) * x ^ 2 * twoInv = 0 := by ring
   rw [h0, ψ_zero, one_mul]
 
-theorem Nfull_add (s t : F) : Nfull (s + t) = Nfull s ∘ₗ Nfull t := by
+public theorem Nfull_add (s t : F) : Nfull (s + t) = Nfull s ∘ₗ Nfull t := by
   apply LinearMap.ext
   intro f
   funext x
@@ -100,24 +102,24 @@ theorem Nfull_add (s t : F) : Nfull (s + t) = Nfull s ∘ₗ Nfull t := by
 
 /-! ## Bruhat assembly -/
 
-def borelFun (g : SLG) (hc : ec g = 0) : Fun →ₗ[K] Fun :=
+@[expose] public def borelFun (g : SLG) (hc : ec g = 0) : Fun →ₗ[K] Fun :=
   Nfull (eb g * ea g) ∘ₗ Dfull (ea g) (ea_ne_zero_of_ec_zero g hc)
 
 /-- Positive NWDN kernel of a big-cell Bruhat factor. -/
-def bigCellPos (g : SLG) (hc : ec g ≠ 0) : Fun →ₗ[K] Fun :=
+@[expose] public def bigCellPos (g : SLG) (hc : ec g ≠ 0) : Fun →ₗ[K] Fun :=
   Nfull (ea g * (ec g)⁻¹) ∘ₗ Wfull ∘ₗ Dfull (ec g) hc ∘ₗ
     Nfull ((ec g)⁻¹ * ed g)
 
 /-- Big-cell factor with the metaplectic sign so that the even Weil
 representation of SL₂ is a true monoid homomorphism (D(−ec) = −D(ec)
 on even functions forces this overall minus). -/
-def bigCellFun (g : SLG) (hc : ec g ≠ 0) : Fun →ₗ[K] Fun :=
+@[expose] public def bigCellFun (g : SLG) (hc : ec g ≠ 0) : Fun →ₗ[K] Fun :=
   - bigCellPos g hc
 
-def weilFun (g : SLG) : Fun →ₗ[K] Fun :=
+@[expose] public def weilFun (g : SLG) : Fun →ₗ[K] Fun :=
   if hc : ec g = 0 then borelFun g hc else bigCellFun g hc
 
-theorem weilFun_preserves_even (g : SLG) {f : Fun}
+public theorem weilFun_preserves_even (g : SLG) {f : Fun}
     (hf : ∀ x, f (-x) = f x) (x : ZMod 11) :
     weilFun g f (-x) = weilFun g f x := by
   dsimp [weilFun]
@@ -155,7 +157,7 @@ theorem weilFun_preserves_even (g : SLG) {f : Fun}
     rw [hPos]
 
 /-- Weil action on the even module U. -/
-def weilU (g : SLG) : U →ₗ[K] U where
+@[expose] public def weilU (g : SLG) : U →ₗ[K] U where
   toFun f := ⟨weilFun g f.1, fun x => weilFun_preserves_even g (fun z => f.2 z) x⟩
   map_add' := by
     intro f₁ f₂
@@ -194,7 +196,7 @@ theorem weilFun_Smat : weilFun Smat = -Wfull := by
 
 /-! ## ρ(−I) = −id on even U -/
 
-def negI : SLG :=
+@[expose] public def negI : SLG :=
   ⟨(-1 : Matrix (Fin 2) (Fin 2) F), by
     simp [det_neg, Fintype.card_fin]⟩
 
@@ -207,7 +209,7 @@ theorem ea_negI : ea negI = -1 := by
 theorem eb_negI : eb negI = 0 := by
   simp [eb, negI, Matrix.neg_apply]
 
-theorem weilU_negI : weilU negI = -LinearMap.id := by
+public theorem weilU_negI : weilU negI = -LinearMap.id := by
   apply LinearMap.ext
   intro f
   apply Subtype.ext
@@ -239,7 +241,7 @@ theorem S_even_sq' : S_even ∘ₗ S_even = (-LinearMap.id : U →ₗ[K] U) :=
   S_even_sq
 
 /-- Weil operator for Tmat on even U is T_even_b 1. -/
-theorem weilU_Tmat : weilU Tmat = T_even_b 1 := by
+public theorem weilU_Tmat : weilU Tmat = T_even_b 1 := by
   apply LinearMap.ext
   intro f
   apply Subtype.ext
@@ -249,7 +251,7 @@ theorem weilU_Tmat : weilU Tmat = T_even_b 1 := by
   dsimp [Nfull, Tfull_b, T_even_b]
 
 /-- Weil operator for Smat on even U is −S_even (metaplectic big-cell sign). -/
-theorem weilU_Smat : weilU Smat = -S_even := by
+public theorem weilU_Smat : weilU Smat = -S_even := by
   apply LinearMap.ext
   intro f
   apply Subtype.ext
@@ -272,7 +274,7 @@ theorem weilFun_one : weilFun (1 : SLG) = LinearMap.id := by
   simp only [ea_one, eb_one, zero_mul]
   rw [Nfull_zero, Dfull_one, LinearMap.id_comp]
 
-theorem weilU_one : weilU (1 : SLG) = LinearMap.id := by
+public theorem weilU_one : weilU (1 : SLG) = LinearMap.id := by
   apply LinearMap.ext
   intro f
   apply Subtype.ext

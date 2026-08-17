@@ -2,7 +2,9 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.D12U6PolynomialData
+module
+
+public import V14Formalization.D12U6PolynomialData
 
 /-!
 # Evaluation of the six-dimensional D12 polynomial seal
@@ -21,13 +23,13 @@ namespace V14Formalization.D12U6PolynomialSeal
 open D12PolynomialData D12PolynomialEvaluation
 open D12U6Semantic D12U6PolynomialData
 
-theorem Phi11_eq_WeilRep :
+public theorem Phi11_eq_WeilRep :
     D12PolynomialData.Phi11 = WeilRep.Φ11 := by
   symm
   simpa [WeilRep.Φ11, D12PolynomialData.Phi11] using
     (cyclotomic_prime (R := ℚ) 11)
 
-theorem evalPhi11_ζ :
+public theorem evalPhi11_ζ :
     evalPolyAt WeilRep.ζ D12PolynomialData.Phi11 = 0 := by
   change aeval WeilRep.ζ D12PolynomialData.Phi11 = 0
   rw [Phi11_eq_WeilRep]
@@ -110,7 +112,7 @@ private theorem direct_sub_R6 (i j : Fin 6) :
   · exact direct_sub_R6_row4 j
   · exact direct_sub_R6_row5 j
 
-theorem eval_R6_entry (i j : Fin 6) :
+public theorem eval_R6_entry (i j : Fin 6) :
     evalPolyAt WeilRep.ζ (R6_poly i j) = actualU6 i j := by
   obtain ⟨q, hq⟩ := direct_sub_R6 i j
   have hq' := congrArg (evalPolyAt WeilRep.ζ) hq
@@ -126,7 +128,7 @@ theorem eval_R6_entry (i j : Fin 6) :
 
 /-- The generated polynomial matrix evaluates to the actual six-dimensional
 Weil rotation matrix. -/
-theorem evalMatrixK_R6_eq_actualU6 :
+public theorem evalMatrixK_R6_eq_actualU6 :
     evalMatrixK R6_poly = actualU6 := by
   apply Matrix.ext
   intro i j

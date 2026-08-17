@@ -4,8 +4,10 @@ Complete monoidHom SL₂ → End(U) for the even Weil representation.
 Big-cell factors carry a global minus (metaplectic sign) so that
 D(−ec) ≡ −D(ec) on the even module U is absorbed into a true homomorphism.
 -/
-import V14Formalization.WeilMul
-import V14Formalization.WeilWN
+module
+
+public import V14Formalization.WeilMul
+public import V14Formalization.WeilWN
 
 open Matrix Matrix.SpecialLinearGroup
 open V14Formalization.WeilRep
@@ -18,10 +20,10 @@ noncomputable section
 namespace V14Formalization
 namespace WeilHom
 
-abbrev F := ZMod 11
-abbrev SLG := SpecialLinearGroup (Fin 2) F
+public abbrev F := ZMod 11
+public abbrev SLG := SpecialLinearGroup (Fin 2) F
 
-theorem weilFun_of_big {g : SLG} (hg : ec g ≠ 0) :
+public theorem weilFun_of_big {g : SLG} (hg : ec g ≠ 0) :
     weilFun g = - bigCellPos g hg := by
   dsimp [weilFun, bigCellFun]
   rw [dif_neg hg]
@@ -278,7 +280,7 @@ private theorem bigBorel_comp_apply_eq_normal {g h : SLG}
     _ = Dfull s (mul_ne_zero hg hah) (Nfull u f) := by
       simpa [t, s, u, LinearMap.comp_apply] using hND
 
-theorem weilFun_mul_big_borel {g h : SLG} (hg : ec g ≠ 0) (hh : ec h = 0) :
+public theorem weilFun_mul_big_borel {g h : SLG} (hg : ec g ≠ 0) (hh : ec h = 0) :
     weilFun (g * h) = weilFun g ∘ₗ weilFun h := by
   apply LinearMap.ext
   intro f
@@ -712,7 +714,7 @@ theorem N_W_negR (α : F) :
 
 /-! ## Big×Big: Pos∘Pos = (−R) ∘ Pos(gh) when product is big -/
 
-theorem big_big_pos_eq_negR_pos {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
+public theorem big_big_pos_eq_negR_pos {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
     (hgh : ec (g * h) ≠ 0) :
     bigCellPos g hg ∘ₗ bigCellPos h hh =
       (-Rfull) ∘ₗ bigCellPos (g * h) hgh := by
@@ -1334,7 +1336,7 @@ theorem weilU_mul_big_big {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0) :
   · exact weilU_mul_big_big_zero hg hh hgh
   · exact weilU_mul_big_big_ne hg hh hgh
 
-theorem weilU_mul (g h : SLG) : weilU (g * h) = weilU g ∘ₗ weilU h := by
+public theorem weilU_mul (g h : SLG) : weilU (g * h) = weilU g ∘ₗ weilU h := by
   by_cases hg : ec g = 0
   · by_cases hh : ec h = 0
     · exact weilU_mul_borel hg hh
@@ -1344,7 +1346,7 @@ theorem weilU_mul (g h : SLG) : weilU (g * h) = weilU g ∘ₗ weilU h := by
     · exact weilU_mul_big_big hg hh
 
 /-- The even Weil representation as a monoid homomorphism SL₂(F₁₁) → End(U). -/
-def weilUHom : SLG →* (U →ₗ[K] U) where
+@[expose] public def weilUHom : SLG →* (U →ₗ[K] U) where
   toFun := weilU
   map_one' := weilU_one
   map_mul' := weilU_mul

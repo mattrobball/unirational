@@ -1,5 +1,7 @@
-import V14Formalization.PointwiseSemidirect
-import V14Formalization.PlusMinusBlockMatrix
+module
+
+public import V14Formalization.PointwiseSemidirect
+public import V14Formalization.PlusMinusBlockMatrix
 
 noncomputable section
 
@@ -16,7 +18,7 @@ variable {Omega : Type u} [Field Omega]
   {G : Type u} [Group G]
   {V : Type u} [AddCommGroup V] [Module Omega V]
 
-abbrev correctedOrderedPlusMinusSourceAction
+public abbrev correctedOrderedPlusMinusSourceAction
     [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma) (p q : ℕ)
@@ -28,7 +30,7 @@ abbrev correctedOrderedPlusMinusSourceAction
       (ambientProjectiveActionOver R (p + q + 1)
         (plusMinusAmbientBasis R sigma hsigma p q bp bm))
 
-abbrev correctedOrderedPlusMinusExceptionalAction
+public abbrev correctedOrderedPlusMinusExceptionalAction
     (R : FaithfulLinearRep Omega G V) (sigma : G) (p q : ℕ)
     (bp : Basis (Fin (p + 1)) Omega (R.plusEigenspace sigma))
     (bm : Basis (Fin (q + 1)) Omega (R.minusEigenspace sigma)) :
@@ -39,7 +41,7 @@ abbrev correctedOrderedPlusMinusExceptionalAction
 be the blowup-aligned coordinates
 `u_i = x_i/x_0`, `T = y_0/x_0`, `v_j = y_j/y_0`; no claim is made for the
 old `finSuccEquiv` chart. -/
-noncomputable def orderedPlusMinusEquivariantNormalDataOfPointwiseSemidirect
+@[expose] public noncomputable def orderedPlusMinusEquivariantNormalDataOfPointwiseSemidirect
     [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma) (p q : ℕ)
@@ -95,7 +97,7 @@ noncomputable def orderedPlusMinusEquivariantNormalDataOfPointwiseSemidirect
 from the actual exceptional action.  This discharges the exceptional
 function-field comparison definitionally; only the normal multiplier and
 the corrected source chart formula remain. -/
-noncomputable def orderedPlusMinusEquivariantNormalDataOfNormalMultiplier
+@[expose] public noncomputable def orderedPlusMinusEquivariantNormalDataOfNormalMultiplier
     [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma) (p q : ℕ)
@@ -151,7 +153,7 @@ noncomputable def orderedPlusMinusEquivariantNormalDataOfNormalMultiplier
       (correctedOrderedPlusMinusExceptionalAction R sigma p q bp bm)
       eE normalMultiplier)
 
-theorem orderedPlusMinusEquivariantNormalDataOfPointwiseSemidirect_sigma
+public theorem orderedPlusMinusEquivariantNormalDataOfPointwiseSemidirect_sigma
     [CharZero Omega]
     (R : FaithfulLinearRep Omega G V) (sigma : G)
     (hsigma : IsInvolution sigma) (p q : ℕ)

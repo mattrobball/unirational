@@ -2,19 +2,21 @@
 Order-11 unipotent character sum: Newton, Sylow partition, weighted 180.
 Leads to ∑_g χ₁₀' χ_Λ² = 660 and finrank Msub = 10.
 -/
-import V14Formalization.GeometricV14Carrier
-import V14Formalization.PSLCard
-import Mathlib.GroupTheory.Sylow
-import Mathlib.GroupTheory.PGroup
-import Mathlib.GroupTheory.Index
-import Mathlib.Data.Nat.Factorization.Basic
-import Mathlib.LinearAlgebra.Trace
-import Mathlib.LinearAlgebra.Dimension.Finite
-import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
-import Mathlib.LinearAlgebra.Matrix.ToLin
-import Mathlib.LinearAlgebra.Matrix.Diagonal
-import Mathlib.Data.Matrix.Mul
-import Mathlib.Tactic.Abel
+module
+
+public import V14Formalization.GeometricV14Carrier
+public import V14Formalization.PSLCard
+public import Mathlib.GroupTheory.Sylow
+public import Mathlib.GroupTheory.PGroup
+public import Mathlib.GroupTheory.Index
+public import Mathlib.Data.Nat.Factorization.Basic
+public import Mathlib.LinearAlgebra.Trace
+public import Mathlib.LinearAlgebra.Dimension.Finite
+public import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
+public import Mathlib.LinearAlgebra.Matrix.ToLin
+public import Mathlib.LinearAlgebra.Matrix.Diagonal
+public import Mathlib.Data.Matrix.Mul
+public import Mathlib.Tactic.Abel
 
 open Module LinearMap BigOperators Finset
 open V14Formalization.GeometricV14Carrier
@@ -1035,7 +1037,7 @@ theorem sum_chi_chiLambda2_eq_sixsixty :
   norm_num
 
 /-- Unconditional: `finrank Msub = 10`. -/
-theorem finrank_Msub_eq_ten :
+public theorem finrank_Msub_eq_ten :
     Module.finrank k Msub = 10 :=
   finrank_Msub_eq_ten_of_sum_chi_chiLambda2 sum_chi_chiLambda2_eq_sixsixty
 
