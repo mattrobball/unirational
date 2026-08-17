@@ -31,7 +31,7 @@ open D12PolynomialData D12PolynomialEvaluation
 open D12GeneratorPolynomialCore
 
 /-- The restricted Fourier-generator action read from the ten free rows. -/
-public def SrestrictedAction : Matrix (Fin 10) (Fin 10) WeilRep.K :=
+@[expose] public def SrestrictedAction : Matrix (Fin 10) (Fin 10) WeilRep.K :=
   restrictedAction
     (evalMatrixK
       (PluckerNaturality.compound2Lex S6_poly * B_poly))

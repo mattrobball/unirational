@@ -305,7 +305,7 @@ theorem product_row_14 (j : Fin 10) :
   fin_cases j <;> simp [B_poly] <;> ring
 
 
-public def eigenExponent : Fin 10 → Nat := ![1, 4, 9, 5, 3, 10, 6, 13, 7, 8]
+@[expose] public def eigenExponent : Fin 10 → Nat := ![1, 4, 9, 5, 3, 10, 6, 13, 7, 8]
 
 theorem restrictedAction_eval_row_0
     {R : Type*} [CommRing R] [Algebra ℚ R] (z : R) (j : Fin 10) :

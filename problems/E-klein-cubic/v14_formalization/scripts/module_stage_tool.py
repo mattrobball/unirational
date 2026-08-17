@@ -38,10 +38,21 @@ DECL_RE = re.compile(
     r"\s+(?P<name>[\w.«»'!?ₐ-ₜ₀-₉Ͱ-Ͽᵢ-ᵫ]+)",
     re.M,
 )
+# Contexts in which a consumer forces DEFEQ through a name, so the defining
+# module must `@[expose]` its body:
+#   * a simp/dsimp/norm_num/decide unfold list, or `unfold f`;
+#   * `change e` / `show e` — every name in `e` has to unfold to match the goal
+#     (this is what broke D12GeneratorSRow0Nonzero's `change` through
+#     `SrestrictedAction` when exposure was first computed narrowly).
 UNFOLD_CTX_RE = re.compile(
     r"(?:simp(?: only)?|norm_num|dsimp(?: only)?|unfold_let|decide)\s*\[([^\]]*)\]"
     r"|unfold\s+((?:[\w.'!?«»₀-ₜͰ-Ͽᵢ-ᵫ]+\s*)+)"
+    r"|(?:change|show)\s+([^\n]*(?:\n\s{4,}[^\n]*)*)"
 )
+
+
+# Tactics (and term-mode proofs) that force the goal to reduce.
+DEFEQ_PROOF_RE = re.compile(r"(?:^|\W)(?:change|show|rfl|decide|Iff\.rfl|native_decide)(?:\W|$)")
 
 
 def strip_comments(t: str) -> str:
@@ -100,9 +111,23 @@ def gen_config(stage_files, out_path, narrow=False):
         for tok in set(tok_re.findall(t)):
             tok_where[tok].add(m)
         for mm in UNFOLD_CTX_RE.finditer(t):
-            inner = (mm.group(1) or "") + " " + (mm.group(2) or "")
+            inner = (mm.group(1) or "") + " " + (mm.group(2) or "") + " " + (mm.group(3) or "")
             for tok in set(tok_re.findall(inner)):
                 unfold_where[tok].add(m)
+        # A proof that runs `change` / `show` / `rfl` / `decide` forces defeq
+        # against its OWN statement, so the definitions named in that
+        # statement must unfold too — and the statement's head need not appear
+        # in the tactic's argument (D12GeneratorSRow0Nonzero `change`s a goal
+        # stated in terms of `SrestrictedAction`, which the tactic text never
+        # mentions). Attribute the head identifiers of any such declaration.
+        st = strip_comments(t)
+        ds = list(DECL_RE.finditer(st))
+        for i, d in enumerate(ds):
+            end = ds[i + 1].start() if i + 1 < len(ds) else len(st)
+            head, _, proof = st[d.start():end].partition(":=")
+            if DEFEQ_PROOF_RE.search(proof):
+                for tok in set(tok_re.findall(head)):
+                    unfold_where[tok].add(m)
     cfg = {}
     for m in stage_files:
         p = files[m]

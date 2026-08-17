@@ -1269,7 +1269,7 @@ namespace V14Formalization.D12SigmaPlusSegreCore
 @[expose] public def Qplus_im_14_20 : Polynomial ℚ := (0 : Polynomial ℚ)
 @[expose] public def Qplus_entry_14_20 : Ki := ofLadj Qplus_re_14_20 Qplus_im_14_20
 
-public def Qplus : Matrix (Fin 15) (Fin 21) Ki :=
+@[expose] public def Qplus : Matrix (Fin 15) (Fin 21) Ki :=
   fun i j =>
     match i.val, j.val with
     | 0, 0 => Qplus_entry_0_0
