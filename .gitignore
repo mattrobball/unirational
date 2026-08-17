@@ -14,3 +14,9 @@ __pycache__/
 
 # Claude Code local harness state
 .claude/
+
+# Local comparator harness scratch (never commit)
+problems/E-klein-cubic/v14_formalization/.push-clone/
+problems/E-klein-cubic/v14_formalization/.comparator-harness/
+problems/E-klein-cubic/v14_formalization/.harness-write-test
+problems/E-klein-cubic/v14_formalization/.run-comparator-container.sh
