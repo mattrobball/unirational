@@ -6,6 +6,11 @@ defaultTargets = ["V14Formalization"]
 [leanOptions]
 pp.unicode.fun = true
 relaxedAutoImplicit = false
+# Mathlib style linters are noise on the generated certificate layer and their
+# warnings alone overflowed the CI log cap (189 MB); they cost elaboration
+# time as well. Correctness is unaffected.
+weak.linter.unusedSimpArgs = false
+weak.linter.unnecessarySimpa = false
 
 [[require]]
 name = "mathlib"

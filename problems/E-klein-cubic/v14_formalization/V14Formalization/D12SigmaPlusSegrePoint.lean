@@ -4,7 +4,6 @@ Released under Apache 2.0 license.
 -/
 import V14Formalization.D12SigmaPlusSegreHMDir
 import V14Formalization.D12SigmaPlusSegreSpanEval
-import V14Formalization.D12SigmaPlusSegreSpanUDir
 import V14Formalization.D12SigmaPlusSegrePlucker
 import V14Formalization.D12SigmaPlusSegreFplusDet
 import V14Formalization.D12SigmaPlusSegreSection
