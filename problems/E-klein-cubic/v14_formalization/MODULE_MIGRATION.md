@@ -79,6 +79,57 @@ idempotently. Later stages add their own config files and reuse the tool.
 7. **Never touch statements or proofs.** Every fix in this migration is a
    visibility annotation.
 
+## Remedy preference order for reduction failures (directive, 2026-08-17)
+
+When a `decide` / `rfl` / defeq proof fails in a converted module, fix it
+in this order — `import all` is a last resort, not a standard remedy:
+
+1. **Move the computation to where the bodies live.** Do the `decide` in
+   the module that DEFINES the data and export only the resulting theorem
+   as `public`; consumers reference the constant instead of re-reducing.
+   Best outcome: shrinks terms as well as imports.
+2. **Prove a characterization lemma once**; consumers rewrite with it
+   rather than unfold (the `v14/expose-pilot` branch cut one certificate
+   module 9.2x deduped / 87x raw this way).
+3. **`@[expose]` the specific definitions needed** — narrow and named,
+   not a blanket section.
+4. **`import all`** — only when 1–3 are impossible, listed and justified
+   here.
+
+### `import all` audit (complete inventory as of stage 2)
+
+82 lines on exactly two core edges, in 41 files (D12CyclotomicVecZ + the
+40 D12Piece{PP,PA,AP,AA}SplitRow shards):
+
+* `import all Init.Data.Vector.Basic`
+* `import all Init.Data.Array.DecidableEq`
+
+Justification per the order above:
+
+* Option 3 is impossible: the stuck definitions
+  (`instDecidableEqVector.decEq`, `Array.instDecidableEqImpl`) live in the
+  Lean 4.32.1 TOOLCHAIN; we cannot annotate core.
+* Option 1 is already satisfied structurally: every `decide` sits in the
+  module that defines the data it reduces (each SplitRow decides its own
+  `entryZ`; D12CyclotomicVecZ decides its own samples) and exports only
+  the theorem. No consumer re-reduces a Vector anywhere. The gap is the
+  core `DecidableEq (Vector Int 10)` instance AT the defining site, so
+  relocation cannot remove it.
+* Option 2 is inapplicable for the same reason — there is no repeated
+  consumer-side unfolding to factor into a lemma; the one kernel check per
+  certificate IS the proof, and replacing the `Vector` decidability route
+  would rewrite proofs (prohibited).
+* Cost containment: these are PRIVATE `import all` edges (not
+  `public import all`). They load two small core files' private parts into
+  the elaboration of the 41 deciding modules only; the exported surface is
+  unchanged and nothing downstream inherits the import. Importer-side
+  probe numbers are unaffected.
+
+Stages 3–5 censuses (2026-08-17) found no Vector/Array kernel reduction
+anywhere else: ZMod/Fin/Nat/Int/List/Finset/Matrix-as-function decides all
+reduce against module Mathlib (probed). Expected `import all` count added
+by the remaining stages: zero.
+
 ## REQUIRED pre-build static sweep (stage 2 on)
 
 Stage 2 initially burned three ~25-minute closure rebuilds discovering one
@@ -106,7 +157,9 @@ build is attempted exactly once:
      so `decide` on `Vector α n` / `Array α` equality is unfixable by
      project-side exposure — even `#v[1,2] = #v[1,2]` gets stuck. `List`,
      `Int`, `Nat`, `Fin` decides all reduce fine.
-   * **Fix:** private-scope `import all Init.Data.Vector.Basic` and
+   * **Fix (option 4 of the preference order above — options 1–3 are
+     impossible here, see the audit):** private-scope
+     `import all Init.Data.Vector.Basic` and
      `import all Init.Data.Array.DecidableEq` in every module whose proofs
      decide a `Vector` equality (both plain `decide` and `decide +kernel`).
      `import all` does not propagate: each deciding module needs its own

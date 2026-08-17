@@ -39,10 +39,14 @@ DECL_KWS = ("def", "theorem", "lemma", "abbrev", "structure", "inductive",
             "class", "instance", "opaque", "macro", "macro_rules", "example")
 DECL_LINE = re.compile(
     r"^(?P<prefix>(?:@\[[^\]\n]*\]\s*)*(?:public\s+|private\s+|protected\s+)?"
-    r"(?:noncomputable\s+)?(?:unsafe\s+)?(?:partial\s+)?)"
+    r"(?:noncomputable\s+)?(?:unsafe\s+)?(?:partial\s+)?(?:(?:local|scoped)\s+)?)"
     r"(?P<kw>" + "|".join(DECL_KWS) + r")\b\s*(?P<rest>.*)$"
 )
 IDENT = re.compile(r"[A-Za-zα-ωΑ-Ωͱ-ϿͰ_][\w'!?ₐ-ₜ₀-₉ᵢ-ᵫα-ωΑ-Ωͱ-Ͽ]*")
+# declaration names may be written dotted (def Foo.bar); references via dot
+# notation appear as the bare last component.
+DOTTED = re.compile(IDENT.pattern + r"(?:\." + IDENT.pattern + r")*")
+SIMP_ATTR = re.compile(r"@\[[^\]\n]*\b(?:simp|norm_num)\b[^\]\n]*\]")
 
 
 def strip_comments(t: str) -> str:
@@ -63,10 +67,11 @@ def parse_decls(text: str):
         decl_text = "\n".join(lines[i:end])
         prefix = m.group("prefix") or ""
         rest = m.group("rest").strip()
-        nm = IDENT.match(rest)
+        nm = DOTTED.match(rest)
         name = nm.group(0) if nm else None
-        yield (name, m.group("kw"), "public" in prefix, "@[expose]" in prefix,
-               "private" in prefix, decl_text)
+        auto_pub = m.group("kw") == "instance" or bool(SIMP_ATTR.search(prefix))
+        yield (name, m.group("kw"), "public" in prefix or auto_pub,
+               "@[expose]" in prefix, "private " in prefix, decl_text)
 
 
 def split_sig_body(decl_text: str):
@@ -89,60 +94,71 @@ def split_sig_body(decl_text: str):
     return decl_text, ""
 
 
-def sweep_file(path: Path, cfg: dict) -> set[str]:
+def sweep_file(path: Path, cfg: dict):
     text = strip_comments(path.read_text())
     expose_all = bool(cfg.get("expose_all_public_defs", False))
     decls = list(parse_decls(text))
     pub_cfg = set(cfg.get("public", [])) | set(cfg.get("expose", []))
+    cfg_expose = set(cfg.get("expose", []))
+    no_expose = set(cfg.get("no_expose", []))
     by_name: dict[str, tuple] = {}
     for d in decls:
         if d[0]:
             by_name.setdefault(d[0], d)
+            by_name.setdefault(d[0].split(".")[-1], d)
 
-    def is_public(name):
-        d = by_name.get(name)
-        if d is None:
-            return True  # not a same-file decl; out of scope
-        if d[4]:  # explicitly `private`: module-private by design, skip
-            return True
-        return d[2] or name in pub_cfg
-
-    def is_exposed(name):
-        d = by_name.get(name)
-        if d is None:
-            return False
-        return d[3] or (expose_all and is_public(name) and d[1] in ("def", "instance"))
-
-    added: set[str] = set()
+    added: set[str] = set()          # names to pull `public`
+    added_no_expose: set[str] = set()  # defs whose exposure must be dropped
     changed = True
     while changed:
         changed = False
         for (name, kw, pub, exp, priv, dtext) in decls:
-            if priv:
+            if priv or name is None:
                 continue
             eff_pub = pub or (name in pub_cfg) or (name in added)
-            eff_exp = exp or (
-                expose_all and eff_pub and kw in ("def", "instance"))
+            eff_exp = (exp or (expose_all and eff_pub
+                               and kw in ("def", "instance"))) \
+                and name not in no_expose and name not in added_no_expose
             if not eff_pub:
                 continue
             sig, body = split_sig_body(dtext)
-            # exported surface: signature always; body if exposed def, or
-            # term-mode (non-`by`) proof of a public theorem is NOT exported,
-            # so only defs/instances/abbrevs count.
-            scan = sig
+            # exported surface: signature always; the body only for exposed
+            # defs/instances/abbrevs (term proofs of theorems stay private).
+            scans = [("sig", sig)]
             if eff_exp and kw in ("def", "instance", "abbrev"):
-                scan = dtext
-            for ref in set(IDENT.findall(scan)):
-                if ref == name or ref in added:
-                    continue
-                d = by_name.get(ref)
-                if d is None or d[4]:
-                    continue
-                if not (d[2] or ref in pub_cfg):
-                    added.add(ref)
-                    changed = True
+                # a Prop-classed instance's `:= by ...` block is a PROOF, not
+                # an exported body — never part of the exposure surface.
+                is_proof_body = kw == "instance" and \
+                    re.match(r"(?::=|where)?\s*by\b", body.strip())
+                if not is_proof_body:
+                    scans = [("sig", sig), ("body", body)]
+            for region, scan in scans:
+                for ref in set(IDENT.findall(scan)):
+                    if ref == name or ref == name.split(".")[-1]:
+                        continue
+                    d = by_name.get(ref)
+                    if d is None:
+                        continue
+                    tgt = d[0]
+                    if d[4]:  # explicitly `private` in the source
+                        if region == "body":
+                            # an exposed body may not mention it: drop the
+                            # exposure unless downstream needs the unfold,
+                            # in which case the private name must go public.
+                            if name in cfg_expose:
+                                if tgt not in added:
+                                    added.add(tgt); changed = True
+                                    print(f"  NOTE {path.name}: exposed-by-need "
+                                          f"`{name}` forces private `{tgt}` public")
+                            elif name not in added_no_expose:
+                                added_no_expose.add(name); changed = True
+                        # private in a public SIGNATURE would be a hard error
+                        # even in legacy-style modules; leave for the build.
+                        continue
+                    if not (d[2] or tgt in pub_cfg or tgt in added):
+                        added.add(tgt); changed = True
         pub_cfg |= added
-    return added
+    return added, added_no_expose
 
 
 def main() -> int:
@@ -153,12 +169,19 @@ def main() -> int:
         cfg_all = json.loads(Path(cpath).read_text())
         dirty = False
         for rel, cfg in cfg_all.items():
-            added = sweep_file(ROOT / rel, cfg)
-            if added:
-                total += len(added)
-                print(f"{rel}: +public {sorted(added)}")
+            added, added_ne = sweep_file(ROOT / rel, cfg)
+            if added or added_ne:
+                total += len(added) + len(added_ne)
+                if added:
+                    print(f"{rel}: +public {sorted(added)}")
+                if added_ne:
+                    print(f"{rel}: +no_expose {sorted(added_ne)}")
                 if apply:
-                    cfg["public"] = sorted(set(cfg.get("public", [])) | added)
+                    if added:
+                        cfg["public"] = sorted(set(cfg.get("public", [])) | added)
+                    if added_ne:
+                        cfg["no_expose"] = sorted(
+                            set(cfg.get("no_expose", [])) | added_ne)
                     dirty = True
         if apply and dirty:
             Path(cpath).write_text(json.dumps(cfg_all, indent=1, sort_keys=True) + "\n")

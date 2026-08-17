@@ -46,11 +46,12 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 
 DECL_KWS = r"(?:def|theorem|lemma|abbrev|structure|inductive|class|instance|opaque)"
-# column-0 declaration line, optionally preceded (same line) by attributes
-# and/or `noncomputable`.
+# column-0 declaration line, optionally preceded (same line) by attributes,
+# `noncomputable`, and/or a `local`/`scoped` instance scope.
 DECL_RE = re.compile(
     r"^(?P<attrs>(?:@\[[^\]\n]*\]\s*)*)"
     r"(?P<nc>noncomputable\s+)?"
+    r"(?P<scope>(?:local|scoped)\s+)?"
     r"(?P<kw>" + DECL_KWS + r")"
     r"(?P<rest>\s+[^\s:(\[{⦃]+|\s*(?=[:\[({⦃]))",
 )
@@ -65,6 +66,7 @@ def decl_name(rest: str) -> str | None:
 def migrate_text(text: str, cfg: dict) -> str:
     public = set(cfg.get("public", []))
     expose = set(cfg.get("expose", []))
+    no_expose = set(cfg.get("no_expose", []))
     public |= expose
     # From stage 2 on the default posture is Mathlib's: every public def and
     # instance carries @[expose].  Fine-grained exposure (stage 1) proved to
@@ -74,7 +76,16 @@ def migrate_text(text: str, cfg: dict) -> str:
 
     lines = text.split("\n")
     out: list[str] = []
-    inserted_module = any(l.strip() == "module" for l in lines)
+    # A `module` header can only appear before the first import/declaration;
+    # matching anywhere in the file false-positives on Mathlib's `module`
+    # TACTIC on its own proof line (seen: Definitions.lean:187).
+    inserted_module = False
+    for l in lines:
+        if l.rstrip() == "module":
+            inserted_module = True
+            break
+        if re.match(r"^(?:public\s+)?import\s", l) or DECL_RE.match(l):
+            break
     in_block_comment = 0
 
     for line in lines:
@@ -99,10 +110,27 @@ def migrate_text(text: str, cfg: dict) -> str:
             in_block_comment += opens - closes
             continue
 
+        # De-private: an explicitly `private` decl whose name is in the
+        # config's public list is promoted (module semantics can force this:
+        # an exposed def body may not reference module-private names, and
+        # downstream unfold needs can force the exposure — see the sweep's
+        # "exposed-by-need" notes). Only names LISTED in "public" qualify;
+        # unlisted private decls stay module-private, as before.
+        pm = re.match(r"^(?P<attrs>(?:@\[[^\]\n]*\]\s*)*)private\s+(?P<tail>.*)$", line)
+        if pm:
+            tm = DECL_RE.match(pm.group("tail"))
+            tname = decl_name(tm.group("rest")) if tm else None
+            if tname is not None and tname in set(cfg.get("public", [])):
+                line = pm.group("attrs") + "public " + pm.group("tail")
+                out.append(line)
+                in_block_comment += opens - closes
+                continue
+
         m = DECL_RE.match(line)
         if m and not line.startswith(("public ", "private ", "protected ")):
             attrs = m.group("attrs") or ""
-            body_start = m.start("nc") if m.group("nc") else m.start("kw")
+            body_start = m.start("nc") if m.group("nc") else (
+                m.start("scope") if m.group("scope") else m.start("kw"))
             name = decl_name(m.group("rest"))
             is_instance = m.group("kw") == "instance"
             is_simp = bool(SIMP_ATTR_RE.search(attrs))
@@ -112,9 +140,15 @@ def migrate_text(text: str, cfg: dict) -> str:
                 or is_simp
                 or (name is not None and name in public)
             )
+            # a local/scoped instance's DEF must still be public when an
+            # exported signature's instance synthesis embeds it; the
+            # registration scope is untouched (`public local instance`).
             want_expose = (name is not None and name in expose) or (
                 expose_all and want_public and m.group("kw") in ("def", "instance")
+                and not m.group("scope")
             )
+            if name is not None and name in no_expose:
+                want_expose = False
             if not already and want_public:
                 prefix = line[:body_start]
                 if want_expose and "@[expose]" not in attrs:
