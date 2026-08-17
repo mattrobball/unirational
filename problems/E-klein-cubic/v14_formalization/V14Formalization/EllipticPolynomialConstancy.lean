@@ -1124,7 +1124,7 @@ public abbrev MvFrac (K : Type*) [Field K] (n : ℕ) :=
       (algebraMap (MvPolynomial (Fin n) K) (MvFrac K n))).comp
         (MvPolynomial.finSuccEquiv K n).toRingHom)
 
-lemma mvSuccToRatFuncBase_injective (n : ℕ) :
+public lemma mvSuccToRatFuncBase_injective (n : ℕ) :
     Function.Injective (mvSuccToRatFuncBase (K := K) n) :=
   (IsFractionRing.injective (Polynomial (MvFrac K n)) (RatFunc (MvFrac K n))).comp
     ((Polynomial.map_injective _
@@ -1141,7 +1141,7 @@ lemma mvSuccToRatFuncBase_injective (n : ℕ) :
       mvSuccToRatFuncBase (K := K) n f :=
   IsFractionRing.lift_algebraMap (mvSuccToRatFuncBase_injective (K := K) n) f
 
-def mvTailRingHom (n : ℕ) :
+@[expose] public def mvTailRingHom (n : ℕ) :
     MvPolynomial (Fin n) K →+* MvPolynomial (Fin (n + 1)) K :=
   (MvPolynomial.finSuccEquiv K n).symm.toRingHom.comp Polynomial.C
 
@@ -1153,7 +1153,7 @@ lemma mvTailRingHom_injective (n : ℕ) :
   (algebraMap (MvPolynomial (Fin (n + 1)) K) (MvFrac K (n + 1))).comp
     (mvTailRingHom (K := K) n)
 
-lemma mvTailBase_injective (n : ℕ) :
+public lemma mvTailBase_injective (n : ℕ) :
     Function.Injective (mvTailBase (K := K) n) :=
   (IsFractionRing.injective (MvPolynomial (Fin (n + 1)) K) (MvFrac K (n + 1))).comp
     (mvTailRingHom_injective (K := K) n)
@@ -1168,7 +1168,7 @@ lemma mvTailBase_injective (n : ℕ) :
       mvTailBase (K := K) n f :=
   IsFractionRing.lift_algebraMap (mvTailBase_injective (K := K) n) f
 
-def mvLastVariable (n : ℕ) : MvFrac K (n + 1) :=
+@[expose] public def mvLastVariable (n : ℕ) : MvFrac K (n + 1) :=
   algebraMap (MvPolynomial (Fin (n + 1)) K) (MvFrac K (n + 1)) (X 0)
 
 @[expose] public def mvRatFuncBackBase (n : ℕ) :
@@ -1210,7 +1210,7 @@ lemma mvSuccToRatFunc_comp_mvRatFuncBackBase (n : ℕ) :
       DFunLike.congr_fun (mvSuccToRatFunc_comp_mvTailFrac (K := K) n) z
   · simpa [mvRatFuncBackBase] using mvSuccToRatFunc_mvLastVariable (K := K) n
 
-lemma mvRatFuncBackBase_injective (n : ℕ) :
+public lemma mvRatFuncBackBase_injective (n : ℕ) :
     Function.Injective (mvRatFuncBackBase (K := K) n) := by
   intro p q hpq
   apply IsFractionRing.injective (Polynomial (MvFrac K n)) (RatFunc (MvFrac K n))

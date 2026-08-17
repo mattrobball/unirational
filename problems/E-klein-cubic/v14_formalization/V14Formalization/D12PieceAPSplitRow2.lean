@@ -1,6 +1,8 @@
 /- AP split identity row 2: entry certificates inlined. Auto-generated. -/
 module
 
+import all Init.Data.Vector.Basic
+import all Init.Data.Array.DecidableEq
 public import V14Formalization.D12PieceAPData
 public import V14Formalization.D12CyclotomicVecZ
 

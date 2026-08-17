@@ -79,6 +79,44 @@ idempotently. Later stages add their own config files and reuse the tool.
 7. **Never touch statements or proofs.** Every fix in this migration is a
    visibility annotation.
 
+## REQUIRED pre-build static sweep (stage 2 on)
+
+Stage 2 initially burned three ~25-minute closure rebuilds discovering one
+reduction failure each. Before every stage build, run this sweep so the
+build is attempted exactly once:
+
+1. **Enumerate every reduction-based proof** in the stage's files: `decide`,
+   `decide +kernel`, tactic and term-mode `rfl`, `simp [f]` / `norm_num [f]`
+   / `dsimp [f]` with explicit def names, and `unfold f`. Generated families
+   are uniform, so normalizing digits collapses the census to a few dozen
+   idioms (script: strip comments, match tactic lines, `re.sub(r'-?\d+','N')`,
+   count per family).
+2. **Resolve every name in unfold-lists and defeq chains** to its defining
+   module and check it is `public` + `@[expose]`d there (the
+   `expose_all_public_defs` posture covers defs; theorems in simp lists need
+   `public` only, which the usage scan records).
+3. **Probe core/Mathlib reducibility in isolation.** For each `Decidable`
+   instance a `decide` evaluates (work outward from the proposition's head:
+   `Eq`/`Ne` on which type), elaborate a scratch `module` file with a
+   minimal literal instance of the same proposition. This costs seconds and
+   finds gaps that no annotation in this repo can see, because they live in
+   the toolchain:
+   * **Known core gap (Lean 4.32.1):** `instDecidableEqVector.decEq` and
+     `Array.instDecidableEqImpl` are `public` but not `@[expose]`d in core,
+     so `decide` on `Vector α n` / `Array α` equality is unfixable by
+     project-side exposure — even `#v[1,2] = #v[1,2]` gets stuck. `List`,
+     `Int`, `Nat`, `Fin` decides all reduce fine.
+   * **Fix:** private-scope `import all Init.Data.Vector.Basic` and
+     `import all Init.Data.Array.DecidableEq` in every module whose proofs
+     decide a `Vector` equality (both plain `decide` and `decide +kernel`).
+     `import all` does not propagate: each deciding module needs its own
+     lines. Recorded per file as the `import_all` key in the stage config;
+     `module_migrate.py` inserts the lines idempotently after `module`.
+     The exported surface is unchanged (private imports), so this stays
+     within the annotation-only rule. Stage 2 applied it to
+     D12CyclotomicVecZ + the 40 D12Piece{PP,PA,AP,AA}SplitRow files.
+4. Only after the sweep is clean, run the stage checkpoint build.
+
 ## Generated families
 
 Never hand-edit outputs: change the emitter, regenerate, and check the

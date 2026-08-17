@@ -703,7 +703,7 @@ public lemma orderOf_rotGen : orderOf rotGen = 6 := by
   | .r i => rotGen ^ i.val
   | .sr i => reflGen * rotGen ^ i.val
 
-lemma dihedralToN_mul (a b : DihedralGroup 6) :
+public lemma dihedralToN_mul (a b : DihedralGroup 6) :
     dihedralToN (a * b) = dihedralToN a * dihedralToN b := by
   cases a with
   | r i =>

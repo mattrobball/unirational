@@ -4,6 +4,8 @@ Released under Apache 2.0 license.
 -/
 module
 
+import all Init.Data.Vector.Basic
+import all Init.Data.Array.DecidableEq
 public import V14Formalization.D12CyclotomicVec
 
 /-!

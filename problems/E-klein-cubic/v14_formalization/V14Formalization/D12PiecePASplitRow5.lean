@@ -1,6 +1,8 @@
 /- PA split identity row 5: entry certificates inlined. Auto-generated. -/
 module
 
+import all Init.Data.Vector.Basic
+import all Init.Data.Array.DecidableEq
 public import V14Formalization.D12PiecePAData
 public import V14Formalization.D12CyclotomicVecZ
 

@@ -22,10 +22,19 @@ Usage:
   python3 scripts/module_migrate.py scripts/migration_stage1.json [--check]
 
 The config maps file path (relative to repo root) to:
-  {"public": [names...], "expose": [names...]}
+  {"public": [names...], "expose": [names...], "import_all": [modules...]}
 Names are matched against the declaration name exactly as written in the
 file (including a namespace prefix if the decl is written with one).
 `expose` implies `public`. Running twice is a no-op (--check verifies).
+
+`import_all` inserts `import all <M>` lines right after the `module`
+keyword. Needed when a proof kernel-reduces through core/Mathlib bodies
+that the exporting module does not `@[expose]` (Lean 4.32.1 core gap:
+`instDecidableEqVector.decEq` / `Array.instDecidableEqImpl` have public
+signatures but unexposed bodies, so `decide` on `Vector Int n` equality
+gets stuck without `import all Init.Data.Vector.Basic` and
+`import all Init.Data.Array.DecidableEq`). Private-scope imports only;
+the module's exported surface is unchanged.
 """
 from __future__ import annotations
 
@@ -85,7 +94,7 @@ def migrate_text(text: str, cfg: dict) -> str:
             out.append("")
             inserted_module = True
 
-        if re.match(r"^import\s", line):
+        if re.match(r"^import\s(?!all\b)", line):
             out.append("public " + line)
             in_block_comment += opens - closes
             continue
@@ -117,7 +126,28 @@ def migrate_text(text: str, cfg: dict) -> str:
         out.append(line)
         in_block_comment += opens - closes
 
-    return "\n".join(out)
+    return ensure_import_all("\n".join(out), cfg.get("import_all", []))
+
+
+def ensure_import_all(text: str, mods: list[str]) -> str:
+    """Insert `import all <M>` for each missing M, right after `module`."""
+    missing = [
+        m
+        for m in mods
+        if not re.search(rf"^import all {re.escape(m)}\s*$", text, flags=re.M)
+    ]
+    if not missing:
+        return text
+    lines = text.split("\n")
+    for i, l in enumerate(lines):
+        if l.strip() == "module":
+            j = i + 1
+            while j < len(lines) and lines[j].strip() == "":
+                j += 1
+            return "\n".join(
+                lines[:j] + [f"import all {m}" for m in missing] + lines[j:]
+            )
+    raise RuntimeError("import_all requested but no `module` keyword found")
 
 
 def main() -> int:
