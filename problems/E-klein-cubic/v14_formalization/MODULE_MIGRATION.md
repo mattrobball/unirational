@@ -96,39 +96,45 @@ in this order — `import all` is a last resort, not a standard remedy:
 4. **`import all`** — only when 1–3 are impossible, listed and justified
    here.
 
-### `import all` audit (complete inventory as of stage 2)
+### `import all`: RESOLVED, count is zero and must stay zero (2026-08-17)
 
-82 lines on exactly two core edges, in 41 files (D12CyclotomicVecZ + the
-40 D12Piece{PP,PA,AP,AA}SplitRow shards):
+Stage 2 left 82 lines on two core edges, in 41 files (D12CyclotomicVecZ +
+the 40 D12Piece{PP,PA,AP,AA}SplitRow shards):
 
 * `import all Init.Data.Vector.Basic`
 * `import all Init.Data.Array.DecidableEq`
 
-Justification per the order above:
+The diagnosis was right and the remedy was wrong.
 
-* Option 3 is impossible: the stuck definitions
-  (`instDecidableEqVector.decEq`, `Array.instDecidableEqImpl`) live in the
-  Lean 4.32.1 TOOLCHAIN; we cannot annotate core.
-* Option 1 is already satisfied structurally: every `decide` sits in the
-  module that defines the data it reduces (each SplitRow decides its own
-  `entryZ`; D12CyclotomicVecZ decides its own samples) and exports only
-  the theorem. No consumer re-reduces a Vector anywhere. The gap is the
-  core `DecidableEq (Vector Int 10)` instance AT the defining site, so
-  relocation cannot remove it.
-* Option 2 is inapplicable for the same reason — there is no repeated
-  consumer-side unfolding to factor into a lemma; the one kernel check per
-  certificate IS the proof, and replacing the `Vector` decidability route
-  would rewrite proofs (prohibited).
-* Cost containment: these are PRIVATE `import all` edges (not
-  `public import all`). They load two small core files' private parts into
-  the elaboration of the 41 deciding modules only; the exported surface is
-  unchanged and nothing downstream inherits the import. Importer-side
-  probe numbers are unaffected.
+The diagnosis: `VecZ = Vector Int 10`, and the Lean 4.32.1 toolchain's
+`instDecidableEqVector.decEq` and `Array.instDecidableEqImpl` are `public`
+but not `@[expose]`d, so inside a `module` file `decide` — and
+`decide +kernel` — get stuck on *any* `Vector` equality, including
+`#v[1,2,3] = #v[1,2,3]`. Re-verified in isolation on 2026-08-17. No
+project-side annotation can reach a toolchain declaration, so remedy 3 is
+genuinely impossible.
 
-Stages 3–5 censuses (2026-08-17) found no Vector/Array kernel reduction
-anywhere else: ZMod/Fin/Nat/Int/List/Finset/Matrix-as-function decides all
-reduce against module Mathlib (probed). Expected `import all` count added
-by the remaining stages: zero.
+The error was concluding that remedy 2 was also impossible. It is not: the
+route through `Vector`'s `DecidableEq` instance is not the only way to
+decide the equality. `D12CyclotomicVecZ` — the module that DEFINES `VecZ` —
+now carries
+
+```lean
+@[expose] public def eqZ (a b : VecZ) : Bool :=  -- coordinatewise
+  a[0] == b[0] && … && a[9] == b[9]
+public theorem eq_of_eqZ      {a b : VecZ} (h : eqZ a b = true)  : a = b
+public theorem ne_of_eqZ_false {a b : VecZ} (h : eqZ a b = false) : a ≠ b
+```
+
+`Int.beq` and `Bool.and` reduce in the kernel, so every certificate keeps
+deciding its own arithmetic — all ten convolution coefficients evaluated
+and compared, the mutated-product canary still an honest disequality — with
+no `import all` anywhere in the tree. **Zero is now the required count**;
+`scripts/check_module_invariants.sh` fails the checkpoint if any reappears.
+
+Generalisable lesson for later stages: when a `decide` is stuck on a core
+type whose `DecidableEq` will not reduce, the fix is a decidable
+characterisation *in the module that defines the data*, not a wider import.
 
 ## REQUIRED pre-build static sweep (stage 2 on)
 
@@ -157,17 +163,12 @@ build is attempted exactly once:
      so `decide` on `Vector α n` / `Array α` equality is unfixable by
      project-side exposure — even `#v[1,2] = #v[1,2]` gets stuck. `List`,
      `Int`, `Nat`, `Fin` decides all reduce fine.
-   * **Fix (option 4 of the preference order above — options 1–3 are
-     impossible here, see the audit):** private-scope
-     `import all Init.Data.Vector.Basic` and
-     `import all Init.Data.Array.DecidableEq` in every module whose proofs
-     decide a `Vector` equality (both plain `decide` and `decide +kernel`).
-     `import all` does not propagate: each deciding module needs its own
-     lines. Recorded per file as the `import_all` key in the stage config;
-     `module_migrate.py` inserts the lines idempotently after `module`.
-     The exported surface is unchanged (private imports), so this stays
-     within the annotation-only rule. Stage 2 applied it to
-     D12CyclotomicVecZ + the 40 D12Piece{PP,PA,AP,AA}SplitRow files.
+   * **Fix (option 2 of the preference order above):** a decidable
+     characterisation in the module that DEFINES the data.
+     `D12CyclotomicVecZ.eqZ` tests the ten coordinates as `Int`s and returns
+     a `Bool`, which the kernel does reduce; `eq_of_eqZ` / `ne_of_eqZ_false`
+     carry the result to the `Eq` / `Ne` the certificates state. `import all`
+     is NOT the remedy and is banned outright — see the audit above.
 4. Only after the sweep is clean, run the stage checkpoint build.
 
 ## Generated families
@@ -188,8 +189,41 @@ diff contains only the intended annotations (`git diff` must show only
   (`--migrate-core-only`). Idempotent; the pristine bytes can always be
   recovered mechanically.
 
+* **Post-pass on a frozen merge output**
+  (`scripts/splitrow_intro_rewrite.py`, the 40 D12Piece*SplitRow shards).
+  The chain is `export_d12_piece_vec_lean.py` -> SplitEntry shards ->
+  `merge_split_entry_rows.py` -> SplitRow shards -> this pass, in place.
+  It rewrites PROOFS only and proves it: it extracts every statement line
+  from input and output and refuses to write if any differs. Strict (every
+  rewritable proof must match a known shape) and idempotent.
+
 Data files expose what they publish: downstream certificate proofs consume
 the arrays via `rfl`/`decide`, which need bodies at elaboration time.
+
+## Duplicate `abbrev`s in a shared namespace (the stage-3 blocker)
+
+Eight modules each declared their own `abbrev k := V14SchemeModel.k` /
+`abbrev G := V14SchemeModel.G` inside `V14Formalization.SchemeGeometry`.
+Under the legacy elaborator that works only because `private` mangles the
+name per module. In the module system it cannot be made to work:
+
+* a `public` signature may not mention a `private` declaration
+  (`Unknown identifier`, "would need to be public"), so the aliases must be
+  published wherever a public theorem's statement uses them; and
+* two `public` declarations of one name cannot coexist —
+  `import M.C failed, environment already contains 'Foo.G' from M.B` — and a
+  downstream legacy `private abbrev` of the same name then fails with
+  `a non-private declaration 'Foo.G' has already been declared`.
+
+Both were reproduced in four-line isolated files. There is no annotation-only
+fix. The resolution is one shared declaration
+(`V14Formalization/SchemeModelAliases.lean`) that the eight modules import;
+their source text is otherwise unchanged. This does not touch the published
+Comparator statements, which spell `V14SchemeModel.k` / `V14SchemeModel.G` in
+full (commit 7680055a) and must keep doing so.
+
+Before each stage, sweep for the same shape: any name declared in more than
+one file where at least one declaration is `public`.
 
 ## Validation (what the legacy build cannot tell you)
 
@@ -265,6 +299,71 @@ pre-conversion reasons:
 * `D12SigmaPlusSegreApply_span{U 0-14, V 0-8}` (24 shards) — reference
   `spanU_row*`/`spanV_row*` lemmas that are defined nowhere in the tree;
   can never have compiled; no warm oleans.
+
+## What the annotation migration can and cannot do (measured 2026-08-17)
+
+The migration's purpose is to let Comparator verify this proof on a 15 GB
+runner.  Comparator OOMs at 22-24 GB during `lean4export`, and that memory is
+the proof-term closure of the two published theorems, not the environment
+(merely importing `V14Solution` costs 4.05 GB, measured again here at 3.80 GB).
+
+`public`, `@[expose]` and `import all` do not change a single proof term.  They
+move *loading* around, i.e. at most the 4 GB term.  **No amount of annotation
+work can fix the export.**  What fixes the export is relocating computation:
+proving a case split or a normalisation once and applying it, so the generated
+proofs stop re-inlining it.  The two goals coincide only when the migration is
+done that way.
+
+Measure with `scripts/closure_stats.lean` (both dedup granularities; the
+270.8M baseline figure is the per-constant one — see that file's header for the
+calibration against the pilot commit).
+
+| | constants | per-constant nodes |
+|---|---:|---:|
+| baseline quoted 2026-08-16 | 160,956 | 270.8M |
+| before this session (reconstructed) | ~160k | ~260.4M |
+| after this session | 159,623 | **210.9M** |
+
+The reconstruction is exact for the part this session changed: the four
+SplitRow families measured 54.1M before (1.360M / 1.362M / 1.273M / 1.418M per
+representative module x 10 modules) and 4.7M after — 49.5M removed, an 11-13x
+shrink per module, and the largest single reduction available anywhere in the
+tree by the same technique.
+
+**Verdict: not enough.**  At the baseline's ~85 bytes/node, 210.9M is still
+~18 GB of export.  Reaching 15 GB needs roughly 176M, i.e. ~35M more; reaching
+it with margin needs far more.  The remaining weight is one shape:
+
+| family | constants | per-constant nodes | share |
+|---|---:|---:|---:|
+| SigmaPlusSegre* (HM/VQ/LH/Det/SmoothC*/NH/Qrel/MinorQZ) | ~34k | ~96.8M | 46% |
+| SigmaCarrier* (BridgeRow/PlusCol/MinusCol) | 1,560 | 19.1M | 9.1% |
+| Compound{R,F}Row | 2,010 | 19.6M | 9.3% |
+| SigmaMinusReverse | 2,923 | 18.0M | 8.5% |
+| everything else incl. all of Mathlib | | ~57M | 27% |
+
+The SplitRow families are now 4.7M, 2.2% — they are done.
+
+### The next reduction, diagnosed
+
+The Segre families are ~7,000 copies of one idiom, e.g.
+`D12SigmaPlusSegreHM_5_0.lean`:
+
+```lean
+def HM_5_0_A_pre : Polynomial ℚ := C 4 + C 16 * X + … + C 4 * X ^ 18
+theorem z_HM_5_0_A_pre : HM_5_0_A_pre = interpQ 1 [4, 16, …, 4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [HM_5_0_A_pre, interpQ, toPolyZ, Polynomial.eval_add, …]
+  try ring
+```
+
+`funext` + a 19-term `simp` + `ring`, re-derived per polynomial.  This is
+structurally the same defect the SplitRow rewrite just fixed, and it takes the
+same remedy: a degree-indexed family of shared lemmas
+`C a₀ + C a₁ * X + … + C aₙ * X ^ n = interpQ d [a₀, …, aₙ]`, proved once, so
+each generated proof becomes one application of arguments.  Change the
+emitters (`export_sigma_plus_minor_h.py`, `export_sigma_plus_segre_lean.py`,
+`export_sigma_plus_lh.py`, `export_sigma_plus_smooth_lean.py`), not the output.
 
 ## Stage order
 

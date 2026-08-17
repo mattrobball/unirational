@@ -8,14 +8,22 @@ Reports, for the transitive proof-term closure of the two published theorems:
   * the number of constants in the closure;
   * DAG-deduplicated `Expr` nodes, per defining module, aggregated by family.
 
-Deduplicated nodes are the right unit: `lean4export` writes each distinct
-subterm once, so its peak memory tracks the deduplicated closure, not the raw
-node count.  Dedup is done per defining module (a set per module, released
-before the next one), which keeps the measurement's own footprint bounded and
-matches how the per-module pilot numbers were taken.
+Two dedup granularities are reported, because they differ by ~1.9x and it
+matters which one a quoted figure used:
 
-Baseline to compare against (measured before this migration, 2026-08-16/17):
-160,956 constants / 270.8M deduped Expr nodes; export peak 22-24 GB.
+  * `dedup-per-module`   — one dedup set per defining module.  Closest to what
+    `lean4export` pays, since it writes each distinct subterm once.
+  * `dedup-per-constant` — a fresh dedup set per constant, so a subterm shared
+    between two theorems is counted twice.
+
+**Calibration (2026-08-17).**  The published baseline figure — 160,956
+constants / 270.8M nodes, export peak 22-24 GB — is the *per-constant* metric.
+Verified: this file's per-constant count for `D12PieceAASplitRow1` before the
+SplitRow rewrite is 1,360,772, against the 1,381,831 the v14/expose-pilot
+commit reported for the neighbouring `D12PieceAASplitRow0`; and the four
+SplitRow families summed to 54.1M, against the 55.2M (20.4% of 270.8M) the
+baseline attributed to them.  Quote per-constant numbers when comparing to
+270.8M, per-module numbers when reasoning about export memory.
 -/
 import V14Solution
 
@@ -28,10 +36,8 @@ def roots : Array Name :=
 /-- Strip trailing digits and `_`-separated index groups so that
 `D12PieceAASplitRow7` and `D12PieceAASplitEntry7_9` fold into one family. -/
 def familyOf (m : Name) : String :=
-  let s := m.toString
-  let s := if s.startsWith "V14Formalization." then s.drop "V14Formalization.".length else s
-  let cs := s.toList.filter (fun c => !c.isDigit && c != '_')
-  String.mk cs
+  let s := (m.toString).replace "V14Formalization." ""
+  String.ofList (s.toList.filter (fun c => !c.isDigit && c != '_'))
 
 run_meta do
   let env ← getEnv
@@ -48,7 +54,7 @@ run_meta do
     | some ci =>
       for c in ci.type.getUsedConstants do
         if !visited.contains c then stack := stack.push c
-      if let some v := ci.value? then
+      if let some v := ci.value? (allowOpaque := true) then
         for c in v.getUsedConstants do
           if !visited.contains c then stack := stack.push c
 
@@ -63,15 +69,14 @@ run_meta do
       byMod := byMod.insert m ((byMod.getD m #[]).push n)
 
   -- 3. deduplicated Expr nodes, one dedup set per module
-  let mut perMod : Array (Name × Nat × Nat) := #[]
-  let mut total := 0
-  for (m, names) in byMod.toList do
+  let count (names : Array Name) (perConstant : Bool) : MetaM Nat := do
     let mut seen : Std.HashSet Expr := {}
     let mut nodes := 0
     for n in names do
+      if perConstant then seen := {}
       let some ci := env.find? n | continue
       let mut st : Array Expr := #[ci.type]
-      if let some v := ci.value? then st := st.push v
+      if let some v := ci.value? (allowOpaque := true) then st := st.push v
       while h : st.size > 0 do
         let e := st[st.size - 1]
         st := st.pop
@@ -84,24 +89,34 @@ run_meta do
         | .letE _ t v b _ => st := st.push t |>.push v |>.push b
         | .mdata _ b | .proj _ _ b => st := st.push b
         | _ => pure ()
-    perMod := perMod.push (m, names.size, nodes)
+    return nodes
+  let mut perMod : Array (Name × Nat × Nat × Nat) := #[]
+  let mut total := 0
+  let mut totalPerConst := 0
+  for (m, names) in byMod.toList do
+    let nodes ← count names false
+    let nodesPC ← count names true
+    totalPerConst := totalPerConst + nodesPC
+    perMod := perMod.push (m, names.size, nodes, nodesPC)
     total := total + nodes
+  IO.println s!"closure-dedup-expr-nodes-per-constant={totalPerConst}"
 
   -- 4. report
   IO.println s!"closure-constants={visited.size}"
   IO.println s!"closure-constants-without-module={noMod}"
   IO.println s!"closure-dedup-expr-nodes={total}"
   IO.println "--- per family (constants, deduped nodes, % of closure) ---"
-  let mut fam : Std.HashMap String (Nat × Nat) := {}
-  for (m, c, nd) in perMod do
+  let mut fam : Std.HashMap String (Nat × Nat × Nat) := {}
+  for (m, c, nd, pc) in perMod do
     let f := familyOf m
-    let (c0, n0) := fam.getD f (0, 0)
-    fam := fam.insert f (c0 + c, n0 + nd)
-  let rows := fam.toList.toArray.qsort (fun a b => a.2.2 > b.2.2)
-  for (f, c, nd) in rows do
-    if nd * 1000 >= total then
-      IO.println s!"{f}\t{c}\t{nd}\t{(nd * 10000 / total).toFloat / 100.0}%"
+    let (c0, n0, p0) := fam.getD f (0, 0, 0)
+    fam := fam.insert f (c0 + c, n0 + nd, p0 + pc)
+  let rows := fam.toList.toArray.qsort (fun a b => a.2.2.2 > b.2.2.2)
+  IO.println "family\tconstants\tdedup-per-module\tdedup-per-constant\t% of per-constant closure"
+  for (f, c, nd, pc) in rows do
+    if pc * 2000 >= totalPerConst then
+      IO.println s!"{f}\t{c}\t{nd}\t{pc}\t{(pc * 10000 / totalPerConst).toFloat / 100.0}%"
   IO.println "--- top modules ---"
-  let mods := perMod.qsort (fun a b => a.2.2 > b.2.2)
-  for (m, c, nd) in mods[0:25] do
-    IO.println s!"{m}\t{c}\t{nd}"
+  let mods := perMod.qsort (fun a b => a.2.2.2 > b.2.2.2)
+  for (m, c, nd, pc) in mods[0:20] do
+    IO.println s!"{m}\t{c}\t{nd}\t{pc}"
