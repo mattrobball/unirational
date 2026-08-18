@@ -248,6 +248,30 @@ def rewrite_table(text: str) -> str:
     return add_reflection_header("\n".join(final), [])
 
 
+def tables_changed_only_defs(old: str, new: str) -> bool:
+    """In `--tables` the `_def` equations of the reflected polynomials are the
+    only statements allowed to move, and each must move from `C (..) + ..` to
+    the `interpQ` of the same rationals."""
+    a, b = statement_lines(old), statement_lines(new)
+    if len(a) != len(b):
+        return False
+    for x, y in zip(a, b):
+        if x == y:
+            continue
+        mx, my = _DEF_THM.match(x), _DEF_THM.match(y)
+        if not mx or not my or mx.group(1) != my.group(1):
+            return False
+        cx = parse_poly(mx.group(3))
+        iy = parse_interp(my.group(3))
+        if cx is None or iy is None:
+            return False
+        d, ns = iy
+        if {i: Fraction(n, d) for i, n in enumerate(ns) if n} != \
+                {i: c for i, c in cx.items() if c}:
+            return False
+    return True
+
+
 # --------------------------------------------------------------- cert rewrite
 
 _FUNEXT = "  refine Polynomial.funext fun r => ?_"
@@ -511,6 +535,11 @@ def main() -> int:
         if statement_lines(old) != statement_lines(new) and not args.tables:
             print(f"REFUSED {path}: a statement line would change",
                   file=sys.stderr)
+            rc = 1
+            continue
+        if args.tables and not tables_changed_only_defs(old, new):
+            print(f"REFUSED {path}: a statement line other than a `_def` of a "
+                  f"reflected polynomial would change", file=sys.stderr)
             rc = 1
             continue
         if old == new:

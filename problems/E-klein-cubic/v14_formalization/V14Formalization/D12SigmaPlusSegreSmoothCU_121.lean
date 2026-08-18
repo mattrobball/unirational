@@ -7,74 +7,89 @@ public import V14Formalization.D12SigmaPlusSegreEval
 public import V14Formalization.D12SigmaPlusSegreMul
 public import V14Formalization.D12SigmaPlusSegrePartials
 public import V14Formalization.D12SigmaPlusSegreBezoutData
+public import V14Formalization.D12PolyZReflection
+public import V14Formalization.D12SigmaPlusSegreFplusZ
 
 noncomputable section
 open Matrix Polynomial
 namespace V14Formalization.D12SigmaPlusSegreCore
 open D12PolynomialData
+open V14Formalization.D12PolyZReflection
 
-def CU_121_0_pre : Polynomial ℚ := C ((-1924215844792 / 235794999 : ℚ)) + C ((90367575012928 / 78598333 : ℚ)) * X + C ((542152426272304 / 235794999 : ℚ)) * X ^ 2 + C ((7296854726960 / 1948719 : ℚ)) * X ^ 3 + C ((1493086923195880 / 235794999 : ℚ)) * X ^ 4 + C ((1911786355982044 / 235794999 : ℚ)) * X ^ 5 + C ((209530602983348 / 21435909 : ℚ)) * X ^ 6 + C ((825454368906164 / 78598333 : ℚ)) * X ^ 7 + C ((2305313857369252 / 235794999 : ℚ)) * X ^ 8 + C ((2182710608276500 / 235794999 : ℚ)) * X ^ 9 + C ((696387305378552 / 78598333 : ℚ)) * X ^ 10 + C ((2056086698421752 / 235794999 : ℚ)) * X ^ 11 + C ((606019730365624 / 78598333 : ℚ)) * X ^ 12 + C ((546852727334732 / 78598333 : ℚ)) * X ^ 13 + C ((1422394435407092 / 235794999 : ℚ)) * X ^ 14 + C ((924826663019804 / 235794999 : ℚ)) * X ^ 15 + C ((52104260636936 / 21435909 : ℚ)) * X ^ 16 + C ((180096590171512 / 235794999 : ℚ)) * X ^ 17 + C ((-19483173500936 / 78598333 : ℚ)) * X ^ 18
-def CU_121_0_pim : Polynomial ℚ := C ((-257129140724504 / 235794999 : ℚ)) + C ((-514258281449008 / 235794999 : ℚ)) * X + C ((-664431809947544 / 235794999 : ℚ)) * X ^ 2 + C ((-911483777461472 / 235794999 : ℚ)) * X ^ 3 + C ((-305786028288088 / 78598333 : ℚ)) * X ^ 4 + C ((-224441894585324 / 78598333 : ℚ)) * X ^ 5 + C ((-134519408502388 / 78598333 : ℚ)) * X ^ 6 + C ((113349388179580 / 235794999 : ℚ)) * X ^ 7 + C ((35850283491772 / 21435909 : ℚ)) * X ^ 8 + C ((125565309835772 / 78598333 : ℚ)) * X ^ 9 + C ((295662805984624 / 235794999 : ℚ)) * X ^ 10 + C ((433924619846816 / 235794999 : ℚ)) * X ^ 11 + C ((190728811236336 / 78598333 : ℚ)) * X ^ 12 + C ((641326838684852 / 235794999 : ℚ)) * X ^ 13 + C ((290240539098868 / 78598333 : ℚ)) * X ^ 14 + C ((928066553165804 / 235794999 : ℚ)) * X ^ 15 + C ((788139088586984 / 235794999 : ℚ)) * X ^ 16 + C ((642335778920776 / 235794999 : ℚ)) * X ^ 17 + C ((6955548538288 / 7145303 : ℚ)) * X ^ 18
+def CU_121_0_pre : Polynomial ℚ := interpQ 235794999 [-1924215844792, 271102725038784, 542152426272304, 882919421962160, 1493086923195880, 1911786355982044, 2304836632816828, 2476363106718492, 2305313857369252, 2182710608276500, 2089161916135656, 2056086698421752, 1818059191096872, 1640558182004196, 1422394435407092, 924826663019804, 573146867006296, 180096590171512, -58449520502808]
+def CU_121_0_pim : Polynomial ℚ := interpQ 235794999 [-257129140724504, -514258281449008, -664431809947544, -911483777461472, -917358084864264, -673325683755972, -403558225507164, 113349388179580, 394353118409492, 376695929507316, 295662805984624, 433924619846816, 572186433709008, 641326838684852, 870721617296604, 928066553165804, 788139088586984, 642335778920776, 229533101763504]
 theorem CU_121_0_pre_eq :
     CU_0_re_011 * Fplus_dU_re_110 - CU_0_im_011 * Fplus_dU_im_110 = CU_121_0_pre := by
-  refine Polynomial.funext fun r => ?_
   simp only [CU_0_re_011_def, CU_0_im_011_def, Fplus_dU_re_110_def, Fplus_dU_im_110_def, CU_121_0_pre]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  simp (disch := decide) only [interp_zero, interp_one, interp_ofNat,
+    interp_neg, interp_mul, interp_add, interp_sub, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem CU_121_0_pim_eq :
     CU_0_re_011 * Fplus_dU_im_110 + CU_0_im_011 * Fplus_dU_re_110 = CU_121_0_pim := by
-  refine Polynomial.funext fun r => ?_
   simp only [CU_0_re_011_def, CU_0_im_011_def, Fplus_dU_re_110_def, Fplus_dU_im_110_def, CU_121_0_pim]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  simp (disch := decide) only [interp_zero, interp_one, interp_ofNat,
+    interp_neg, interp_mul, interp_add, interp_sub, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem CU_121_0_mul :
     CU_0_c_011 * Fplus_dU_c_110 = ofLadj CU_121_0_pre CU_121_0_pim := by
   rw [CU_0_c_011_def, Fplus_dU_c_110_def, ofLadj_mul, CU_121_0_pre_eq, CU_121_0_pim_eq]
 
-def CU_121_1_pre : Polynomial ℚ := C ((283093585124 / 235794999 : ℚ)) + C ((605713305265040 / 235794999 : ℚ)) * X + C ((382307720777300 / 78598333 : ℚ)) * X ^ 2 + C ((1974827246744116 / 235794999 : ℚ)) * X ^ 3 + C ((3222886606343084 / 235794999 : ℚ)) * X ^ 4 + C ((1386304771122636 / 78598333 : ℚ)) * X ^ 5 + C ((5069570175135232 / 235794999 : ℚ)) * X ^ 6 + C ((527675463939208 / 21435909 : ℚ)) * X ^ 7 + C ((1967193118587588 / 78598333 : ℚ)) * X ^ 8 + C ((2035852827916964 / 78598333 : ℚ)) * X ^ 9 + C ((2088256314872344 / 78598333 : ℚ)) * X ^ 10 + C ((2107731699824760 / 78598333 : ℚ)) * X ^ 11 + C ((5659055639351992 / 235794999 : ℚ)) * X ^ 12 + C ((1653545107139664 / 78598333 : ℚ)) * X ^ 13 + C ((3926752109018648 / 235794999 : ℚ)) * X ^ 14 + C ((829821278868620 / 78598333 : ℚ)) * X ^ 15 + C ((1440893052160372 / 235794999 : ℚ)) * X ^ 16 + C ((176745730131016 / 78598333 : ℚ)) * X ^ 17 + C ((-30693220127448 / 78598333 : ℚ)) * X ^ 18
-def CU_121_1_pim : Polynomial ℚ := C ((-559310789690324 / 235794999 : ℚ)) + C ((-1118621579380648 / 235794999 : ℚ)) * X + C ((-1511276278679108 / 235794999 : ℚ)) * X ^ 2 + C ((-2122467189784156 / 235794999 : ℚ)) * X ^ 3 + C ((-2221266439556420 / 235794999 : ℚ)) * X ^ 4 + C ((-1974843673951516 / 235794999 : ℚ)) * X ^ 5 + C ((-1731944992608128 / 235794999 : ℚ)) * X ^ 6 + C ((-1031603264255936 / 235794999 : ℚ)) * X ^ 7 + C ((-529611181408468 / 235794999 : ℚ)) * X ^ 8 + C ((-15150587512796 / 7145303 : ℚ)) * X ^ 9 + C ((-121253879923512 / 78598333 : ℚ)) * X ^ 10 + C ((395226233921632 / 235794999 : ℚ)) * X ^ 11 + C ((1154214107613800 / 235794999 : ℚ)) * X ^ 12 + C ((51002319850424 / 7145303 : ℚ)) * X ^ 13 + C ((774636419885080 / 78598333 : ℚ)) * X ^ 14 + C ((2336245060820156 / 235794999 : ℚ)) * X ^ 15 + C ((1914844767489892 / 235794999 : ℚ)) * X ^ 16 + C ((487924929177456 / 78598333 : ℚ)) * X ^ 17 + C ((196151843818272 / 78598333 : ℚ)) * X ^ 18
+def CU_121_1_pre : Polynomial ℚ := interpQ 235794999 [283093585124, 605713305265040, 1146923162331900, 1974827246744116, 3222886606343084, 4158914313367908, 5069570175135232, 5804430103331288, 5901579355762764, 6107558483750892, 6264768944617032, 6323195099474280, 5659055639351992, 4960635321418992, 3926752109018648, 2489463836605860, 1440893052160372, 530237190393048, -92079660382344]
+def CU_121_1_pim : Polynomial ℚ := interpQ 235794999 [-559310789690324, -1118621579380648, -1511276278679108, -2122467189784156, -2221266439556420, -1974843673951516, -1731944992608128, -1031603264255936, -529611181408468, -499969387922268, -363761639770536, 395226233921632, 1154214107613800, 1683076555063992, 2323909259655240, 2336245060820156, 1914844767489892, 1463774787532368, 588455531454816]
 theorem CU_121_1_pre_eq :
     CU_1_re_011 * Fplus_dV_re_110 - CU_1_im_011 * Fplus_dV_im_110 = CU_121_1_pre := by
-  refine Polynomial.funext fun r => ?_
   simp only [CU_1_re_011_def, CU_1_im_011_def, Fplus_dV_re_110_def, Fplus_dV_im_110_def, CU_121_1_pre]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  simp (disch := decide) only [interp_zero, interp_one, interp_ofNat,
+    interp_neg, interp_mul, interp_add, interp_sub, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem CU_121_1_pim_eq :
     CU_1_re_011 * Fplus_dV_im_110 + CU_1_im_011 * Fplus_dV_re_110 = CU_121_1_pim := by
-  refine Polynomial.funext fun r => ?_
   simp only [CU_1_re_011_def, CU_1_im_011_def, Fplus_dV_re_110_def, Fplus_dV_im_110_def, CU_121_1_pim]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  simp (disch := decide) only [interp_zero, interp_one, interp_ofNat,
+    interp_neg, interp_mul, interp_add, interp_sub, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem CU_121_1_mul :
     CU_1_c_011 * Fplus_dV_c_110 = ofLadj CU_121_1_pre CU_121_1_pim := by
   rw [CU_1_c_011_def, Fplus_dV_c_110_def, ofLadj_mul, CU_121_1_pre_eq, CU_121_1_pim_eq]
 
-def CU_121_2_pre : Polynomial ℚ := C ((48882100665448 / 235794999 : ℚ)) + C ((660626140859680 / 235794999 : ℚ)) * X + C ((448091447471152 / 78598333 : ℚ)) * X ^ 2 + C ((736128214639712 / 78598333 : ℚ)) * X ^ 3 + C ((3287978719004800 / 235794999 : ℚ)) * X ^ 4 + C ((1302673082667472 / 78598333 : ℚ)) * X ^ 5 + C ((400531096168240 / 21435909 : ℚ)) * X ^ 6 + C ((1560077232567424 / 78598333 : ℚ)) * X ^ 7 + C ((4459114389783076 / 235794999 : ℚ)) * X ^ 8 + C ((132570008928572 / 7145303 : ℚ)) * X ^ 9 + C ((1436825740624980 / 78598333 : ℚ)) * X ^ 10 + C ((4237658658752048 / 235794999 : ℚ)) * X ^ 11 + C ((331804643728660 / 21435909 : ℚ)) * X ^ 12 + C ((1010178650743140 / 78598333 : ℚ)) * X ^ 13 + C ((204611795078540 / 21435909 : ℚ)) * X ^ 14 + C ((416200985203704 / 78598333 : ℚ)) * X ^ 15 + C ((224847398002368 / 78598333 : ℚ)) * X ^ 16 + C ((176719384158880 / 235794999 : ℚ)) * X ^ 17 + C ((-143650023086360 / 235794999 : ℚ)) * X ^ 18
-def CU_121_2_pim : Polynomial ℚ := C ((-148274455192696 / 78598333 : ℚ)) + C ((-296548910385392 / 78598333 : ℚ)) * X + C ((-1055325099283712 / 235794999 : ℚ)) * X ^ 2 + C ((-1242607023538808 / 235794999 : ℚ)) * X ^ 3 + C ((-935700676270640 / 235794999 : ℚ)) * X ^ 4 + C ((-325611602740808 / 235794999 : ℚ)) * X ^ 5 + C ((162692320814632 / 235794999 : ℚ)) * X ^ 6 + C ((879471942114136 / 235794999 : ℚ)) * X ^ 7 + C ((430476117214652 / 78598333 : ℚ)) * X ^ 8 + C ((1279302104120660 / 235794999 : ℚ)) * X ^ 9 + C ((407834022358844 / 78598333 : ℚ)) * X ^ 10 + C ((1586666906804024 / 235794999 : ℚ)) * X ^ 11 + C ((1949831746531516 / 235794999 : ℚ)) * X ^ 12 + C ((2059710077614924 / 235794999 : ℚ)) * X ^ 13 + C ((744955251448908 / 78598333 : ℚ)) * X ^ 14 + C ((1963359779031472 / 235794999 : ℚ)) * X ^ 15 + C ((474971983594200 / 78598333 : ℚ)) * X ^ 16 + C ((1021690413595448 / 235794999 : ℚ)) * X ^ 17 + C ((376556037576904 / 235794999 : ℚ)) * X ^ 18
+def CU_121_2_pre : Polynomial ℚ := interpQ 235794999 [48882100665448, 660626140859680, 1344274342413456, 2208384643919136, 3287978719004800, 3908019248002416, 4405842057850640, 4680231697702272, 4459114389783076, 4374810294642876, 4310477221874940, 4237658658752048, 3649851081015260, 3030535952229420, 2250729745863940, 1248602955611112, 674542194007104, 176719384158880, -143650023086360]
+def CU_121_2_pim : Polynomial ℚ := interpQ 235794999 [-444823365578088, -889646731156176, -1055325099283712, -1242607023538808, -935700676270640, -325611602740808, 162692320814632, 879471942114136, 1291428351643956, 1279302104120660, 1223502067076532, 1586666906804024, 1949831746531516, 2059710077614924, 2234865754346724, 1963359779031472, 1424915950782600, 1021690413595448, 376556037576904]
 theorem CU_121_2_pre_eq :
     CU_2_re_011 * Fplus_dW_re_110 - CU_2_im_011 * Fplus_dW_im_110 = CU_121_2_pre := by
-  refine Polynomial.funext fun r => ?_
   simp only [CU_2_re_011_def, CU_2_im_011_def, Fplus_dW_re_110_def, Fplus_dW_im_110_def, CU_121_2_pre]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  simp (disch := decide) only [interp_zero, interp_one, interp_ofNat,
+    interp_neg, interp_mul, interp_add, interp_sub, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem CU_121_2_pim_eq :
     CU_2_re_011 * Fplus_dW_im_110 + CU_2_im_011 * Fplus_dW_re_110 = CU_121_2_pim := by
-  refine Polynomial.funext fun r => ?_
   simp only [CU_2_re_011_def, CU_2_im_011_def, Fplus_dW_re_110_def, Fplus_dW_im_110_def, CU_121_2_pim]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  simp (disch := decide) only [interp_zero, interp_one, interp_ofNat,
+    interp_neg, interp_mul, interp_add, interp_sub, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem CU_121_2_mul :
     CU_2_c_011 * Fplus_dW_c_110 = ofLadj CU_121_2_pre CU_121_2_pim := by
   rw [CU_2_c_011_def, Fplus_dW_c_110_def, ofLadj_mul, CU_121_2_pre_eq, CU_121_2_pim_eq]
@@ -88,26 +103,30 @@ theorem CU_coeff_121_sum :
   simp only [CU_coeff_121, CU_121_0_mul, CU_121_1_mul, CU_121_2_mul, CU_121_3_mul]
   simpa [add_assoc] using ofLadj_add4 CU_121_0_pre CU_121_0_pim CU_121_1_pre CU_121_1_pim CU_121_2_pre CU_121_2_pim CU_3_re_021 CU_3_im_021
 
-def CU_121_qre : Polynomial ℚ := C ((47467625979548 / 235794999 : ℚ)) + C ((1489974545183956 / 235794999 : ℚ)) * X + C ((45310195630652 / 7145303 : ℚ)) * X ^ 2 + C ((2031853165362928 / 235794999 : ℚ)) * X ^ 3 + C ((88999479850088 / 7145303 : ℚ)) * X ^ 4 + C ((658103780687668 / 78598333 : ℚ)) * X ^ 5 + C ((600509649483444 / 78598333 : ℚ)) * X ^ 6 + C ((1181232368694952 / 235794999 : ℚ)) * X ^ 7 + C ((-294179203971512 / 235794999 : ℚ)) * X ^ 8
-def CU_121_qim : Polynomial ℚ := C ((-1260414527281852 / 235794999 : ℚ)) + C ((-1260414527281852 / 235794999 : ℚ)) * X + C ((-235960394503148 / 78598333 : ℚ)) * X ^ 2 + C ((-348461053311600 / 78598333 : ℚ)) * X ^ 3 + C ((201825238281136 / 235794999 : ℚ)) * X ^ 4 + C ((1099771586157956 / 235794999 : ℚ)) * X ^ 5 + C ((333366275603628 / 78598333 : ℚ)) * X ^ 6 + C ((175750573568488 / 21435909 : ℚ)) * X ^ 7 + C ((1194544670795224 / 235794999 : ℚ)) * X ^ 8
+def CU_121_qre : Polynomial ℚ := interpQ 235794999 [47467625979548, 1489974545183956, 1495236455811516, 2031853165362928, 2936982835052904, 1974311342063004, 1801528948450332, 1181232368694952, -294179203971512]
+def CU_121_qim : Polynomial ℚ := interpQ 235794999 [-1260414527281852, -1260414527281852, -707881183509444, -1045383159934800, 201825238281136, 1099771586157956, 1000098826810884, 1933256309253368, 1194544670795224]
 theorem CU_coeff_121_poly_re :
     CU_121_0_pre + CU_121_1_pre + CU_121_2_pre + CU_3_re_021 = (0 : Polynomial ℚ) + Phi11 * CU_121_qre := by
-  refine Polynomial.funext fun r => ?_
-  rw [Phi11_expand]
+  rw [phi11_interpQ]
   simp only [CU_121_0_pre, CU_121_1_pre, CU_121_2_pre, CU_3_re_021_def, CU_121_qre]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try grind
+  simp (disch := decide) only [interp_zero, interp_one, interp_ofNat,
+    interp_neg, interp_mul, interp_add, interp_sub, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem CU_coeff_121_poly_im :
     CU_121_0_pim + CU_121_1_pim + CU_121_2_pim + CU_3_im_021 = (0 : Polynomial ℚ) + Phi11 * CU_121_qim := by
-  refine Polynomial.funext fun r => ?_
-  rw [Phi11_expand]
+  rw [phi11_interpQ]
   simp only [CU_121_0_pim, CU_121_1_pim, CU_121_2_pim, CU_3_im_021_def, CU_121_qim]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try grind
+  simp (disch := decide) only [interp_zero, interp_one, interp_ofNat,
+    interp_neg, interp_mul, interp_add, interp_sub, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 public theorem CU_coeff_121_eq :
     CU_coeff_121 = (0 : Ki) := by
   rw [CU_coeff_121_sum, CU_coeff_121_poly_re,

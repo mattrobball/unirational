@@ -7,6 +7,8 @@ module
 public import V14Formalization.D12SigmaPlusSegreSmoothAsm
 public import V14Formalization.D12SigmaPlusSegreSmoothPartial
 public import V14Formalization.D12SigmaPlusSegreHomogeneous
+public import V14Formalization.D12PolyZReflection
+public import V14Formalization.D12SigmaPlusSegreFplusZ
 public import Mathlib.Algebra.MvPolynomial.Funext
 public import Mathlib.Algebra.MvPolynomial.PDeriv
 public import Mathlib.Algebra.CharZero.Infinite
@@ -14,6 +16,7 @@ public import Mathlib.Algebra.CharZero.Infinite
 noncomputable section
 
 open MvPolynomial
+open V14Formalization.D12PolyZReflection
 
 namespace V14Formalization.D12SigmaPlusSegreCore
 
@@ -32,10 +35,10 @@ theorem Fplus_dU_c_200_eq :
   rw [Fplus_dU_c_200_def, ← ofLadj_three, ofLadj_smul_rat]
   congr 1
   · refine poly_scale fun r => ?_
-    simp [Fplus_dU_re_200_def, Fplus_re_000]
+    simp [Fplus_dU_re_200_def, Fplus_re_000, interpQ, toPolyZ]
     ring
   · refine poly_scale fun r => ?_
-    simp [Fplus_dU_im_200_def, Fplus_im_000]
+    simp [Fplus_dU_im_200_def, Fplus_im_000, interpQ, toPolyZ]
     ring
 
 theorem Fplus_dU_c_110_eq :
@@ -43,10 +46,10 @@ theorem Fplus_dU_c_110_eq :
   rw [Fplus_dU_c_110_def, ← ofLadj_two, ofLadj_smul_rat]
   congr 1
   · refine poly_scale fun r => ?_
-    simp [Fplus_dU_re_110_def, Fplus_re_001]
+    simp [Fplus_dU_re_110_def, Fplus_re_001, interpQ, toPolyZ]
     ring
   · refine poly_scale fun r => ?_
-    simp [Fplus_dU_im_110_def, Fplus_im_001]
+    simp [Fplus_dU_im_110_def, Fplus_im_001, interpQ, toPolyZ]
     ring
 
 theorem Fplus_dU_c_101_eq :
@@ -54,29 +57,26 @@ theorem Fplus_dU_c_101_eq :
   rw [Fplus_dU_c_101_def, ← ofLadj_two, ofLadj_smul_rat]
   congr 1
   · refine poly_scale fun r => ?_
-    simp [Fplus_dU_re_101_def, Fplus_re_002]
+    simp [Fplus_dU_re_101_def, Fplus_re_002, interpQ, toPolyZ]
     ring
   · refine poly_scale fun r => ?_
-    simp [Fplus_dU_im_101_def, Fplus_im_002]
+    simp [Fplus_dU_im_101_def, Fplus_im_002, interpQ, toPolyZ]
     ring
 
 theorem Fplus_dU_c_020_eq :
     Fplus_dU_c_020 = ofLadj Fplus_re_011 Fplus_im_011 := by
-  rw [Fplus_dU_c_020_def, Fplus_dU_re_020_def, Fplus_dU_im_020_def]
-  unfold Fplus_re_011 Fplus_im_011
-  rfl
+  rw [Fplus_dU_c_020_def, Fplus_dU_re_020_def, Fplus_dU_im_020_def,
+    z_Fplus_re_011, z_Fplus_im_011]
 
 theorem Fplus_dU_c_011_eq :
     Fplus_dU_c_011 = ofLadj Fplus_re_012 Fplus_im_012 := by
-  rw [Fplus_dU_c_011_def, Fplus_dU_re_011_def, Fplus_dU_im_011_def]
-  unfold Fplus_re_012 Fplus_im_012
-  rfl
+  rw [Fplus_dU_c_011_def, Fplus_dU_re_011_def, Fplus_dU_im_011_def,
+    z_Fplus_re_012, z_Fplus_im_012]
 
 theorem Fplus_dU_c_002_eq :
     Fplus_dU_c_002 = ofLadj Fplus_re_022 Fplus_im_022 := by
-  rw [Fplus_dU_c_002_def, Fplus_dU_re_002_def, Fplus_dU_im_002_def]
-  unfold Fplus_re_022 Fplus_im_022
-  rfl
+  rw [Fplus_dU_c_002_def, Fplus_dU_re_002_def, Fplus_dU_im_002_def,
+    z_Fplus_re_022, z_Fplus_im_022]
 
 public theorem eval_pderiv0 (a : Fin 3 → Ki) :
     eval a (pderiv 0 Fplus) =
@@ -139,39 +139,36 @@ public theorem eval_pderiv2 (a : Fin 3 → Ki) :
 
 theorem Fplus_dV_c_200_eq :
     Fplus_dV_c_200 = ofLadj Fplus_re_001 Fplus_im_001 := by
-  rw [Fplus_dV_c_200_def]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_200_def, Fplus_dV_im_200_def,
-    Fplus_re_001, Fplus_im_001]; try ring)
+  rw [Fplus_dV_c_200_def, Fplus_dV_re_200_def, Fplus_dV_im_200_def,
+    z_Fplus_re_001, z_Fplus_im_001]
 
 theorem Fplus_dV_c_110_eq :
     Fplus_dV_c_110 = (2 : Ki) * ofLadj Fplus_re_011 Fplus_im_011 := by
   rw [Fplus_dV_c_110_def, ← ofLadj_two, ofLadj_smul_rat]
   congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_110_def, Fplus_dV_im_110_def,
-    Fplus_re_011, Fplus_im_011]; try ring)
+    Fplus_re_011, Fplus_im_011, interpQ, toPolyZ]; try ring)
 
 theorem Fplus_dV_c_101_eq :
     Fplus_dV_c_101 = ofLadj Fplus_re_012 Fplus_im_012 := by
-  rw [Fplus_dV_c_101_def]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_101_def, Fplus_dV_im_101_def,
-    Fplus_re_012, Fplus_im_012]; try ring)
+  rw [Fplus_dV_c_101_def, Fplus_dV_re_101_def, Fplus_dV_im_101_def,
+    z_Fplus_re_012, z_Fplus_im_012]
 
 theorem Fplus_dV_c_020_eq :
     Fplus_dV_c_020 = (3 : Ki) * ofLadj Fplus_re_111 Fplus_im_111 := by
   rw [Fplus_dV_c_020_def, ← ofLadj_three, ofLadj_smul_rat]
   congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_020_def, Fplus_dV_im_020_def,
-    Fplus_re_111, Fplus_im_111]; try ring)
+    Fplus_re_111, Fplus_im_111, interpQ, toPolyZ]; try ring)
 
 theorem Fplus_dV_c_011_eq :
     Fplus_dV_c_011 = (2 : Ki) * ofLadj Fplus_re_112 Fplus_im_112 := by
   rw [Fplus_dV_c_011_def, ← ofLadj_two, ofLadj_smul_rat]
   congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_011_def, Fplus_dV_im_011_def,
-    Fplus_re_112, Fplus_im_112]; try ring)
+    Fplus_re_112, Fplus_im_112, interpQ, toPolyZ]; try ring)
 
 theorem Fplus_dV_c_002_eq :
     Fplus_dV_c_002 = ofLadj Fplus_re_122 Fplus_im_122 := by
-  rw [Fplus_dV_c_002_def]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_002_def, Fplus_dV_im_002_def,
-    Fplus_re_122, Fplus_im_122]; try ring)
+  rw [Fplus_dV_c_002_def, Fplus_dV_re_002_def, Fplus_dV_im_002_def,
+    z_Fplus_re_122, z_Fplus_im_122]
 
 theorem eval_pderiv1_eq_dV (a : Fin 3 → Ki) :
     eval a (pderiv 1 Fplus) = eval a Fplus_dV := by
@@ -184,39 +181,36 @@ theorem pderiv_one_Fplus : pderiv 1 Fplus = Fplus_dV :=
 
 theorem Fplus_dW_c_200_eq :
     Fplus_dW_c_200 = ofLadj Fplus_re_002 Fplus_im_002 := by
-  rw [Fplus_dW_c_200_def]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_200_def, Fplus_dW_im_200_def,
-    Fplus_re_002, Fplus_im_002]; try ring)
+  rw [Fplus_dW_c_200_def, Fplus_dW_re_200_def, Fplus_dW_im_200_def,
+    z_Fplus_re_002, z_Fplus_im_002]
 
 theorem Fplus_dW_c_110_eq :
     Fplus_dW_c_110 = ofLadj Fplus_re_012 Fplus_im_012 := by
-  rw [Fplus_dW_c_110_def]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_110_def, Fplus_dW_im_110_def,
-    Fplus_re_012, Fplus_im_012]; try ring)
+  rw [Fplus_dW_c_110_def, Fplus_dW_re_110_def, Fplus_dW_im_110_def,
+    z_Fplus_re_012, z_Fplus_im_012]
 
 theorem Fplus_dW_c_101_eq :
     Fplus_dW_c_101 = (2 : Ki) * ofLadj Fplus_re_022 Fplus_im_022 := by
   rw [Fplus_dW_c_101_def, ← ofLadj_two, ofLadj_smul_rat]
   congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_101_def, Fplus_dW_im_101_def,
-    Fplus_re_022, Fplus_im_022]; try ring)
+    Fplus_re_022, Fplus_im_022, interpQ, toPolyZ]; try ring)
 
 theorem Fplus_dW_c_020_eq :
     Fplus_dW_c_020 = ofLadj Fplus_re_112 Fplus_im_112 := by
-  rw [Fplus_dW_c_020_def]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_020_def, Fplus_dW_im_020_def,
-    Fplus_re_112, Fplus_im_112]; try ring)
+  rw [Fplus_dW_c_020_def, Fplus_dW_re_020_def, Fplus_dW_im_020_def,
+    z_Fplus_re_112, z_Fplus_im_112]
 
 theorem Fplus_dW_c_011_eq :
     Fplus_dW_c_011 = (2 : Ki) * ofLadj Fplus_re_122 Fplus_im_122 := by
   rw [Fplus_dW_c_011_def, ← ofLadj_two, ofLadj_smul_rat]
   congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_011_def, Fplus_dW_im_011_def,
-    Fplus_re_122, Fplus_im_122]; try ring)
+    Fplus_re_122, Fplus_im_122, interpQ, toPolyZ]; try ring)
 
 theorem Fplus_dW_c_002_eq :
     Fplus_dW_c_002 = (3 : Ki) * ofLadj Fplus_re_222 Fplus_im_222 := by
   rw [Fplus_dW_c_002_def, ← ofLadj_three, ofLadj_smul_rat]
   congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_002_def, Fplus_dW_im_002_def,
-    Fplus_re_222, Fplus_im_222]; try ring)
+    Fplus_re_222, Fplus_im_222, interpQ, toPolyZ]; try ring)
 
 theorem eval_pderiv2_eq_dW (a : Fin 3 → Ki) :
     eval a (pderiv 2 Fplus) = eval a Fplus_dW := by
