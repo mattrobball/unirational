@@ -11,9 +11,19 @@ public import V14Formalization.SchemeModelAliases
 /-!
 # Public no-map statement (vocabulary only)
 
-Defines the numbered projectivization of a faithful representation.  The
-proof that there is no equivariant rational map lives in `FaithfulHeadline`.
-This module is the trusted vocabulary for the Comparator challenge.
+Defines the numbered projectivization of a faithful representation in a given
+system of plus/minus homogeneous coordinates.  The proof that there is no
+equivariant rational map lives in `FaithfulHeadline`.  This module is the
+trusted vocabulary for the Comparator challenge.
+
+The coordinates are a *parameter*, not a choice: `ambientOf` and
+`ofFaithfulRep` take a `PlusMinusCoords R`, and the published theorems
+quantify over it.  Until 2026-08-18 they instead applied
+`PlusMinusCoords.ofRep`, which extracts one coordinate system from
+`exists_plus_minus_projective_bases` by `Classical.choice`; that made the
+published statements depend on two proofs and pinned them to a single
+presentation of `ℙ(V)`.  `ofRep` survives below only as the witness that the
+coordinate hypothesis can always be discharged.
 -/
 
 noncomputable section
@@ -43,8 +53,9 @@ public theorem not_degenerates
   not_degenerates_of_centerless
     GeometricFanoCarrier.PSL2F11_isCenterless sigma_isInvolution R
 
-/-- Plus/minus homogeneous coordinates used by the normal chart.  Not a
-hypothesis of the public theorem: any faithful `R` supplies some. -/
+/-- Plus/minus homogeneous coordinates used by the normal chart.  This is a
+hypothesis of the public theorems, which are stated for *every* such choice;
+`PlusMinusCoords.ofRep` below shows the hypothesis is never vacuous. -/
 public structure PlusMinusCoords
     {V : Type} [AddCommGroup V] [Module k V]
     (R : FaithfulLinearRep k G V) where
@@ -53,9 +64,11 @@ public structure PlusMinusCoords
   bp : Basis (Fin (p + 1)) k (R.plusEigenspace sigma)
   bm : Basis (Fin (q + 1)) k (R.minusEigenspace sigma)
 
-/-- Choose plus/minus bases from nondegeneracy.  The numbered `Proj` and the
-`(u,T,v)` chart are built from this choice; this is not a basis-free
-identification of `ℙ(V)`. -/
+/-- Plus/minus coordinates always exist: the group is centerless and `σ` is a
+nontrivial involution, so `R` cannot send `σ` to `±id` and both eigenspaces are
+nontrivial.  Nothing in the published statements depends on this choice — they
+quantify over all of `PlusMinusCoords R` — so this definition exists only to
+witness that the coordinate hypothesis can always be discharged. -/
 @[expose] public noncomputable def PlusMinusCoords.ofRep
     {V : Type} [AddCommGroup V] [Module k V]
     (R : FaithfulLinearRep k G V) : PlusMinusCoords R :=
@@ -66,37 +79,30 @@ identification of `ℙ(V)`. -/
     bp := Classical.choice h.choose_spec.choose_spec.1
     bm := Classical.choice h.choose_spec.choose_spec.2 }
 
-/-- The numbered projective action of `R` in the chosen plus/minus
-coordinates. -/
+/-- The numbered projective action of `R` in the plus/minus coordinates `c`. -/
 public abbrev ambientOf
     {V : Type} [AddCommGroup V] [Module k V]
-    (R : FaithfulLinearRep k G V) :
+    (R : FaithfulLinearRep k G V) (c : PlusMinusCoords R) :
     Action (Over (Spec (.of k))) G :=
-  ambientFor R (PlusMinusCoords.ofRep R).p (PlusMinusCoords.ofRep R).q
-    (PlusMinusCoords.ofRep R).bp (PlusMinusCoords.ofRep R).bm
+  ambientFor R c.p c.q c.bp c.bm
 
 namespace ProjectiveGVariety
 
 /-- Projectivization of a faithful linear representation, as a closed
-subscheme of the numbered `Proj` in the chosen plus/minus coordinates. -/
+subscheme of the numbered `Proj` in the plus/minus coordinates `c`. -/
 public abbrev ofFaithfulRep
     {V : Type} [AddCommGroup V] [Module k V]
-    (R : FaithfulLinearRep k G V) : ProjectiveGVariety k G :=
-  ofLinearRep R
-    ((PlusMinusCoords.ofRep R).p + (PlusMinusCoords.ofRep R).q + 1)
-    (plusMinusAmbientBasis R sigma sigma_isInvolution
-      (PlusMinusCoords.ofRep R).p (PlusMinusCoords.ofRep R).q
-      (PlusMinusCoords.ofRep R).bp (PlusMinusCoords.ofRep R).bm)
+    (R : FaithfulLinearRep k G V) (c : PlusMinusCoords R) :
+    ProjectiveGVariety k G :=
+  ofLinearRep R (c.p + c.q + 1)
+    (plusMinusAmbientBasis R sigma sigma_isInvolution c.p c.q c.bp c.bm)
 
 @[expose] public instance ofFaithfulRep_irreducible
     {V : Type} [AddCommGroup V] [Module k V]
-    (R : FaithfulLinearRep k G V) :
-    IrreducibleSpace (ofFaithfulRep R).toScheme :=
-  ofLinearRep_irreducible R
-    ((PlusMinusCoords.ofRep R).p + (PlusMinusCoords.ofRep R).q + 1)
-    (plusMinusAmbientBasis R sigma sigma_isInvolution
-      (PlusMinusCoords.ofRep R).p (PlusMinusCoords.ofRep R).q
-      (PlusMinusCoords.ofRep R).bp (PlusMinusCoords.ofRep R).bm)
+    (R : FaithfulLinearRep k G V) (c : PlusMinusCoords R) :
+    IrreducibleSpace (ofFaithfulRep R c).toScheme :=
+  ofLinearRep_irreducible R (c.p + c.q + 1)
+    (plusMinusAmbientBasis R sigma sigma_isInvolution c.p c.q c.bp c.bm)
 
 end ProjectiveGVariety
 
