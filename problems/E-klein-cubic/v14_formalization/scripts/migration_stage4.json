@@ -1639,10 +1639,11 @@
  "V14Formalization/D12CompoundR.lean": {
   "public": [
    "actualRot_eq_compound_actualU6",
+   "actualRot_mul_B_eq_B_mul_RM",
    "evalMatrixAt_compound2Lex",
-   "evalMatrixK_R_eq_actualRot",
-   "evalMatrixK_R_eq_compound_R6",
-   "evalMatrixK_R_eq_compound_actualU6"
+   "evalMatrixK_compound_R6_eq_actualRot",
+   "evalMatrixK_compound_R6_mul_B_eq_B_mul_RM",
+   "map_actualRot_mul_B_eq_B_mul_RM"
   ],
   "expose": [],
   "expose_all_public_defs": false
@@ -1834,9 +1835,10 @@
  "V14Formalization/D12CompoundF.lean": {
   "public": [
    "actualRefl_eq_compound_actualF6",
-   "evalMatrixAt_compound2Lex",
-   "evalMatrixK_F_eq_actualRefl",
-   "evalMatrixK_F_eq_compound_F6"
+   "actualRefl_mul_B_eq_B_mul_SM",
+   "evalMatrixK_compound_F6_eq_actualRefl",
+   "evalMatrixK_compound_F6_mul_B_eq_B_mul_SM",
+   "map_actualRefl_mul_B_eq_B_mul_SM"
   ],
   "expose": [],
   "expose_all_public_defs": false
@@ -13856,6 +13858,54 @@
  "V14Formalization/D12SigmaPlusSegreVQ_8_9.lean": {
   "public": [
    "VQ_entry_8_9"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Formalization/D12CompoundBridge.lean": {
+  "public": [
+   "C_11_over_22",
+   "C_13_over_22",
+   "C_15_over_22",
+   "C_1_over_11",
+   "C_2_over_11",
+   "C_3_over_11",
+   "C_3_over_22",
+   "C_4_over_11",
+   "C_5_over_11",
+   "C_5_over_22",
+   "C_6_over_11",
+   "C_7_over_11",
+   "C_7_over_22",
+   "C_8_over_11",
+   "C_9_over_22",
+   "C_one_over_22_sq",
+   "of_two",
+   "two_B_mul_row0",
+   "two_B_mul_row1",
+   "two_B_mul_row10",
+   "two_B_mul_row11",
+   "two_B_mul_row12",
+   "two_B_mul_row13",
+   "two_B_mul_row14",
+   "two_B_mul_row2",
+   "two_B_mul_row3",
+   "two_B_mul_row4",
+   "two_B_mul_row5",
+   "two_B_mul_row6",
+   "two_B_mul_row7",
+   "two_B_mul_row8",
+   "two_B_mul_row9",
+   "two_mul_B_col0",
+   "two_mul_B_col1",
+   "two_mul_B_col2",
+   "two_mul_B_col3",
+   "two_mul_B_col4",
+   "two_mul_B_col5",
+   "two_mul_B_col6",
+   "two_mul_B_col7",
+   "two_mul_B_col8",
+   "two_mul_B_col9"
   ],
   "expose": [],
   "expose_all_public_defs": false

@@ -5,8 +5,8 @@ Released under Apache 2.0 license.
 module
 
 public import V14Formalization.D12PolynomialCore
-public import V14Formalization.D12PolynomialRFull
-public import V14Formalization.D12PolynomialFFull
+public import V14Formalization.D12PolynomialRM
+public import V14Formalization.D12PolynomialSM
 public import V14Formalization.WeilRep
 
 /-!
@@ -91,36 +91,6 @@ public theorem evalMatrixK_left_inverse :
     evalMatrixK L_poly * evalMatrixK B_poly = 1 :=
   evalMatrixAt_left_inverse WeilRep.ζ
 
-/-- The certified rotation restriction remains valid after evaluation in any
-commutative `ℚ`-algebra. -/
-public theorem evalMatrixAt_R_mul_B_eq_B_mul_RM
-    {S : Type*} [CommRing S] [Algebra ℚ S] (z : S) :
-    evalMatrixAt z RFull.R_poly * evalMatrixAt z B_poly =
-      evalMatrixAt z B_poly * evalMatrixAt z RM_poly := by
-  rw [← evalMatrixAt_mul, ← evalMatrixAt_mul,
-    RFull.R_mul_B_eq_B_mul_RM]
-
-/-- The rotation restriction identity over the actual cyclotomic field. -/
-public theorem evalMatrixK_R_mul_B_eq_B_mul_RM :
-    evalMatrixK RFull.R_poly * evalMatrixK B_poly =
-      evalMatrixK B_poly * evalMatrixK RM_poly :=
-  evalMatrixAt_R_mul_B_eq_B_mul_RM WeilRep.ζ
-
-/-- The certified reflection restriction remains valid after evaluation in any
-commutative `ℚ`-algebra. -/
-public theorem evalMatrixAt_F_mul_B_eq_B_mul_SM
-    {S : Type*} [CommRing S] [Algebra ℚ S] (z : S) :
-    evalMatrixAt z FFull.F_poly * evalMatrixAt z B_poly =
-      evalMatrixAt z B_poly * evalMatrixAt z SM_poly := by
-  rw [← evalMatrixAt_mul, ← evalMatrixAt_mul,
-    FFull.F_mul_B_eq_B_mul_SM]
-
-/-- The reflection restriction identity over the actual cyclotomic field. -/
-public theorem evalMatrixK_F_mul_B_eq_B_mul_SM :
-    evalMatrixK FFull.F_poly * evalMatrixK B_poly =
-      evalMatrixK B_poly * evalMatrixK SM_poly :=
-  evalMatrixAt_F_mul_B_eq_B_mul_SM WeilRep.ζ
-
 /-- Evaluation at the image of `ζ` agrees with scalar extension of the
 already evaluated polynomial over `WeilRep.K`. -/
 public theorem evalPolyAt_extension_eq_map_evalPolyAt
@@ -142,32 +112,5 @@ public theorem evalMatrixAt_extension_eq_map_evalMatrixK
       (evalMatrixK M).map (algebraMap WeilRep.K Ω) := by
   ext i j
   exact evalPolyAt_extension_eq_map_evalPolyAt Ω (M i j)
-
-/-- The rotation restriction after entrywise base change from `WeilRep.K`. -/
-public theorem map_evalMatrixK_R_mul_B_eq_B_mul_RM
-    (Ω : Type*) [CommRing Ω] [Algebra ℚ Ω] [Algebra WeilRep.K Ω]
-    [IsScalarTower ℚ WeilRep.K Ω] :
-    (evalMatrixK RFull.R_poly).map (algebraMap WeilRep.K Ω) *
-        (evalMatrixK B_poly).map (algebraMap WeilRep.K Ω) =
-      (evalMatrixK B_poly).map (algebraMap WeilRep.K Ω) *
-        (evalMatrixK RM_poly).map (algebraMap WeilRep.K Ω) := by
-  rw [← evalMatrixAt_extension_eq_map_evalMatrixK Ω RFull.R_poly,
-    ← evalMatrixAt_extension_eq_map_evalMatrixK Ω B_poly,
-    ← evalMatrixAt_extension_eq_map_evalMatrixK Ω RM_poly]
-  exact evalMatrixAt_R_mul_B_eq_B_mul_RM _
-
-/-- The reflection restriction after entrywise base change from
-`WeilRep.K`. -/
-public theorem map_evalMatrixK_F_mul_B_eq_B_mul_SM
-    (Ω : Type*) [CommRing Ω] [Algebra ℚ Ω] [Algebra WeilRep.K Ω]
-    [IsScalarTower ℚ WeilRep.K Ω] :
-    (evalMatrixK FFull.F_poly).map (algebraMap WeilRep.K Ω) *
-        (evalMatrixK B_poly).map (algebraMap WeilRep.K Ω) =
-      (evalMatrixK B_poly).map (algebraMap WeilRep.K Ω) *
-        (evalMatrixK SM_poly).map (algebraMap WeilRep.K Ω) := by
-  rw [← evalMatrixAt_extension_eq_map_evalMatrixK Ω FFull.F_poly,
-    ← evalMatrixAt_extension_eq_map_evalMatrixK Ω B_poly,
-    ← evalMatrixAt_extension_eq_map_evalMatrixK Ω SM_poly]
-  exact evalMatrixAt_F_mul_B_eq_B_mul_SM _
 
 end V14Formalization.D12PolynomialEvaluation

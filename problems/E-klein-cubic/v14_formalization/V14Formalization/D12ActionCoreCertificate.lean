@@ -86,12 +86,8 @@ end ActionCore
   SM := evalMatrixK SM_poly
   left_inverse := evalMatrixK_left_inverse
   projector_factor := D12RestrictedProjector.projector_factor
-  rot_restrict := by
-    rw [← D12CompoundR.evalMatrixK_R_eq_actualRot]
-    exact evalMatrixK_R_mul_B_eq_B_mul_RM
-  refl_restrict := by
-    rw [← D12CompoundF.evalMatrixK_F_eq_actualRefl]
-    exact evalMatrixK_F_mul_B_eq_B_mul_SM
+  rot_restrict := D12CompoundR.actualRot_mul_B_eq_B_mul_RM
+  refl_restrict := D12CompoundF.actualRefl_mul_B_eq_B_mul_SM
 
 @[simp] public theorem actionCore_P :
     actionCore.P = V14SchemeModel.projectorMatrix := rfl
