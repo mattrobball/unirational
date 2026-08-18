@@ -11,17 +11,28 @@ from pathlib import Path
 
 from export_d12_piece_vec_lean import (
     DEFAULT_JSON, add_vectors, as_fractions, emit_htarget, emit_mul_sum,
-    emit_scale_thm, emit_vecz_match, lcm_denoms, q_fraction, reduced_mul,
+    emit_cell_scaled, emit_scale_thm, emit_vecz_match, lcm_denoms, q_fraction, reduced_mul,
+    scalar_vec_def_eq,
     scale_ints, scalar_vec_def, vec_fractions, write_if_changed,
 )
 
 
-def emit_matrix(lines: list[str], name: str, data: list, rows: int, cols: int) -> None:
+def emit_matrix(lines: list[str], name: str, data: list, rows: int, cols: int,
+                col_apply: bool = False, published: bool = False) -> None:
+    """`published` emits the equations that let the table drop `@[expose]`:
+    the per-entry projection, the flat value equation each evaluating
+    consumer rewrites with, and the scaled characterisation the split
+    certificates use.  Off for matrices that live inside a certificate
+    module (`C` in the PP Plucker base), which nothing else reduces through
+    and which has no D12VecScaleIntro in scope."""
     for i, row in enumerate(data):
         assert len(row) == cols
         for j, entry in enumerate(row):
             coeffs = entry if entry and isinstance(entry[0], Fraction) else as_fractions(entry)
             lines += scalar_vec_def(f"{name}Cell{i}_{j}", coeffs) + [""]
+            if published:
+                lines += scalar_vec_def_eq(f"{name}Cell{i}_{j}", coeffs) + [""]
+                lines += emit_cell_scaled(f"{name}Cell{i}_{j}", coeffs) + [""]
         lines += [f"def {name}Row{i} (j : Fin {cols}) : Vec :=", "  match j.val with"]
         for j in range(cols):
             lines.append(f"  | {j} => {name}Cell{i}_{j}")
@@ -37,12 +48,27 @@ def emit_matrix(lines: list[str], name: str, data: list, rows: int, cols: int) -
     # the exported context unfold `{name}Vec` and its rows and so pins
     # `@[expose]` on the whole table.  Published as theorems, the consumer
     # rewrites instead of forcing defeq, and the bodies can stay internal.
-    for i in range(rows):
+    for i in (range(rows) if published else []):
         for j in range(cols):
             lines += [
                 f"public theorem {name}Vec_apply_{i}_{j} :",
                 f"    {name}Vec ({i} : Fin {rows}) ({j} : Fin {cols}) = {name}Cell{i}_{j} := by",
                 "  rfl",
+                "",
+            ]
+    if col_apply:
+        # A binder-friendly form of the same equations, one per column.  The
+        # Plucker certificate rewrites `KVec k 0` under a `∑ k : Fin 10`, where
+        # the per-index equations cannot fire: after `Fin.sum_univ_succ` the
+        # index reads `(Fin.succ 2).succ.succ.succ.succ`, which matches no
+        # numeral. Emitted only for the matrices that are consumed under a
+        # binder, since the proof is a `fin_cases` and is not free.
+        for j in range(cols):
+            entries = ", ".join(f"{name}Cell{i}_{j}" for i in range(rows))
+            lines += [
+                f"public theorem {name}Vec_col{j} (i : Fin {rows}) :",
+                f"    {name}Vec i ({j} : Fin {cols}) = ![{entries}] i := by",
+                "  fin_cases i <;> rfl",
                 "",
             ]
 
@@ -52,14 +78,16 @@ def emit_data(payload: dict, sha: str, piece: str) -> str:
     d = p["dim"]
     lines = [
         f"/- {piece} vector data. Auto-generated. -/",
-        "import V14Formalization.D12PieceVecBase", "", "noncomputable section",
+        "import V14Formalization.D12PieceVecBase",
+        "import V14Formalization.D12VecScaleIntro", "", "noncomputable section",
         "open Matrix", f"namespace V14Formalization.D12Piece{piece}Data",
-        "open D12CyclotomicVec D12PieceVecBase", f'def payloadSha256 : String := "{sha}"', "",
+        "open D12CyclotomicVec D12CyclotomicVecZ D12PieceVecBase",
+        f'def payloadSha256 : String := "{sha}"', "",
     ]
-    emit_matrix(lines, "A", p["A20x10"], 20, 10)
-    emit_matrix(lines, "X", p["X10x20"], 10, 20)
-    emit_matrix(lines, "K", p["K10xd"], 10, d)
-    emit_matrix(lines, "Y", p["Ydx10"], d, 10)
+    emit_matrix(lines, "A", p["A20x10"], 20, 10, published=True)
+    emit_matrix(lines, "X", p["X10x20"], 10, 20, published=True)
+    emit_matrix(lines, "K", p["K10xd"], 10, d, col_apply=True, published=True)
+    emit_matrix(lines, "Y", p["Ydx10"], d, 10, published=True)
     lines += [f"end V14Formalization.D12Piece{piece}Data", ""]
     return "\n".join(lines)
 
@@ -242,30 +270,29 @@ def emit_entry(payload: dict, sha: str, piece: str, row: int, col: int) -> str:
         "XZ_scale", "XZ",
         f"(scale : ℚ) • XVec ({row} : Fin 10) k",
         [f"XCell{row}_{k}" for k in range(20)],
-        [f"XVec, XRow{row}"] * 20, x_scaled, xs)
+        [f"XVec_apply_{row}_{k}" for k in range(20)])
     lines += emit_scale_thm(
         "AZ_scale", "AZ",
         f"(scale : ℚ) • AVec k ({col} : Fin 10)",
         [f"ACell{k}_{col}" for k in range(20)],
-        [f"AVec, ARow{k}" for k in range(20)], a_scaled, a_cols)
+        [f"AVec_apply_{k}_{col}" for k in range(20)])
     lines += emit_scale_thm(
         "KZ_scale", "KZ",
         f"(scale : ℚ) • KVec ({row} : Fin 10) k",
         [f"KCell{row}_{k}" for k in range(d)],
-        [f"KVec, KRow{k}" for k in range(d)], k_scaled, ks)
+        [f"KVec_apply_{row}_{k}" for k in range(d)])
     lines += emit_scale_thm(
         "YZ_scale", "YZ",
         f"(scale : ℚ) • YVec k ({col} : Fin 10)",
         [f"YCell{k}_{col}" for k in range(d)],
-        [f"YVec, YRow{k}" for k in range(d)], y_scaled, ys)
+        [f"YVec_apply_{k}_{col}" for k in range(d)])
     lines += [
         "theorem entry_eq :",
         "    (matrixMul XVec AVec + matrixMul KVec YVec)",
         f"        ({row} : Fin 10) ({col} : Fin 10) = {vec_fractions(total)} := by",
-        f"  change (∑ k : Fin 20, mul (XVec ({row} : Fin 10) k)",
-        f"      (AVec k ({col} : Fin 10))) +",
-        f"    (∑ k : Fin {d}, mul (KVec ({row} : Fin 10) k)",
-        f"      (YVec k ({col} : Fin 10))) = _",
+        # No `change`: rewrite with the published entry equations instead of
+        # asking the exported context to reduce the whole goal.
+        "  rw [Matrix.add_apply, matrixMul_apply, matrixMul_apply]",
         "  refine add_sum_mul_eq_of_scaled scale scale_ne_zero",
         f"    (fun k => XVec ({row} : Fin 10) k)",
         f"    (fun k => AVec k ({col} : Fin 10))",
@@ -372,7 +399,9 @@ def emit_plucker_fin1(payload: dict, sha: str, piece: str) -> str:
         "  apply eval_injective",
         "  rw [eval_mul, eval_constVec, eval_smul]", "",
     ]
-    k_names = ", ".join(f"KCell{r}_0" for r in range(10))
+    # Rewrite with the table's published entry equations rather than unfolding
+    # `KVec` / `KRow*` / the cells, so D12Piece{piece}Data needs no `@[expose]`.
+    k_defs = ", ".join(f"KCell{r}_0_def" for r in range(10))
     for i in needed:
         lines += scalar_vec_def(f"BKCoord{i}", bk[i]) + [""]
         b_names = ", ".join(f"BCell{i}_{r}" for r in range(10))
@@ -380,7 +409,7 @@ def emit_plucker_fin1(payload: dict, sha: str, piece: str) -> str:
             f"theorem BKVec_{i} : BKVec ({i} : Fin 15) 0 = BKCoord{i} := by",
             "  funext n", "  fin_cases n <;>",
             f"    norm_num [BKVec, matrixMul, BVec, BRow{i}, {b_names},",
-            f"      KVec, {', '.join(f'KRow{r}' for r in range(10))}, {k_names}, BKCoord{i},",
+            f"      KVec_col0, {k_defs}, BKCoord{i},",
             "      mul_constVec_left, Fin.sum_univ_succ]", "",
         ]
     lines += scalar_vec_def("deltaVec", delta) + [""]
@@ -480,8 +509,10 @@ def emit_pp_plucker_base(payload: dict, sha: str) -> str:
         "    mul (constVec r) v = r • v := by",
         "  apply eval_injective", "  rw [eval_mul, eval_constVec, eval_smul]", "",
     ]
-    k_rows = ", ".join(f"KRow{r}" for r in range(10))
-    k_names = ", ".join(f"KCell{r}_{j}" for r in range(10) for j in range(2))
+    # Same substitution as the Fin 1 Plucker: rewrite with the table's
+    # published column and cell equations rather than unfolding `KVec`.
+    k_cols = ", ".join(f"KVec_col{j}" for j in range(2))
+    k_defs = ", ".join(f"KCell{r}_{j}_def" for r in range(10) for j in range(2))
     for i in needed:
         b_names = ", ".join(f"BCell{i}_{r}" for r in range(10))
         for col in range(2):
@@ -491,7 +522,7 @@ def emit_pp_plucker_base(payload: dict, sha: str) -> str:
                 f"    BKVec ({i} : Fin 15) ({col} : Fin 2) = BKCoord{i}_{col} := by",
                 "  funext n", "  fin_cases n <;>",
                 f"    norm_num [BKVec, matrixMul, BVec, BRow{i}, {b_names},",
-                f"      KVec, {k_rows}, {k_names}, BKCoord{i}_{col},",
+                f"      {k_cols}, {k_defs}, BKCoord{i}_{col},",
                 "      mul_constVec_left, Fin.sum_univ_succ]", "",
             ]
     emit_matrix(lines, "C", c, 3, 3)
@@ -759,7 +790,7 @@ def emit_action_row(piece: str, row: int) -> str:
             # unfolded in the exported context.
             f"  rw [AVec_apply_{row}_{col}, characterStackVec_apply_{row}_{col}]",
             "  funext n", "  fin_cases n <;>",
-            f"    norm_num [ACell{row}_{col}, {prefix}Vec, {prefix}VecRow{block_row},",
+            f"    norm_num [ACell{row}_{col}_def, {prefix}Vec, {prefix}VecRow{block_row},",
             f"      D12PolynomialData.{prefix}{block_row}c{col}, constVec, basis]", "",
         ]
     lines += [

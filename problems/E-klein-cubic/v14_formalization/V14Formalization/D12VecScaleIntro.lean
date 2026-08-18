@@ -50,6 +50,41 @@ public theorem toVec_eq_smul10 (v : VecZ) (s : ℤ) (w : Vec)
   | ⟨9, _⟩ => exact h9
   | ⟨n + 10, h⟩ => exact absurd h (by omega)
 
+/-- One shared lift from an integer identity to the `Vec`-level scaled equality.
+
+The generated `*Z_scale_*` certificates used to pass all ten coordinate
+equations to `toVec_eq_smul10`, and each of those arguments' expected type
+mentions the table cell — `↑scale * XCell9_0 0` — so the cell body had to be
+`@[expose]`d for the argument to typecheck.  16,800 certificates were coupled
+to how the tables are written rather than to a stated fact about them.
+
+Here the coupling is one hypothesis, `hw`, which the table publishes once per
+cell, and the certificate's own content is a single decidable identity between
+integer vectors.  `eqZ` is used rather than `=` because `Vector Int 10`'s
+`DecidableEq` does not reduce in this toolchain (see above). -/
+public theorem toVec_eq_smul_of_scaledZ {u : VecZ} {d : ℤ} {w : Vec}
+    (v : VecZ) (s : ℤ)
+    (hw : toVec u = (d : ℚ) • w)
+    (hd : d ≠ 0)
+    (h : eqZ (smulZ d v) (smulZ s u) = true) :
+    toVec v = (s : ℚ) • w := by
+  have hz : smulZ d v = smulZ s u := eq_of_eqZ h
+  have hq : (d : ℚ) • toVec v = (s : ℚ) • toVec u := by
+    have hc := congrArg toVec hz
+    rwa [toVec_smulZ, toVec_smulZ] at hc
+  rw [hw, smul_comm] at hq
+  exact smul_Vec_injective (Int.cast_ne_zero.mpr hd) hq
+
+/-- Transport a scale certificate along the table's published entry equation.
+
+The aggregated `*Z_scale` lemmas are stated about `XVec i k`, while the
+per-index certificates are stated about the cell.  Before, the step between
+them was `simp [XVec, XRow6]`, which unfolds the table; now it is this, applied
+to the equation the table publishes. -/
+public theorem toVec_smul_congr {v : VecZ} {s : ℚ} {a b : Vec}
+    (h : toVec v = s • b) (hab : a = b) : toVec v = s • a := by
+  rw [hab]; exact h
+
 /-- Case split over `Fin 20`, proved once; replaces per-selector `fin_cases`. -/
 public theorem forall_fin20 {P : Fin 20 → Prop}
     (h0 : P 0) (h1 : P 1) (h2 : P 2) (h3 : P 3) (h4 : P 4)

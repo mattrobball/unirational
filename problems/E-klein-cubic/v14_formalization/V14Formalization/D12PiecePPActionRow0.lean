@@ -14,7 +14,7 @@ theorem entry0 :
   rw [AVec_apply_0_0, characterStackVec_apply_0_0]
   funext n
   fin_cases n <;>
-    norm_num [ACell0_0, RMVec, RMVecRow0,
+    norm_num [ACell0_0_def, RMVec, RMVecRow0,
       D12PolynomialData.RM0c0, constVec, basis]
 
 theorem entry1 :
@@ -24,7 +24,7 @@ theorem entry1 :
   rw [AVec_apply_0_1, characterStackVec_apply_0_1]
   funext n
   fin_cases n <;>
-    norm_num [ACell0_1, RMVec, RMVecRow0,
+    norm_num [ACell0_1_def, RMVec, RMVecRow0,
       D12PolynomialData.RM0c1, constVec, basis]
 
 theorem entry2 :
@@ -34,7 +34,7 @@ theorem entry2 :
   rw [AVec_apply_0_2, characterStackVec_apply_0_2]
   funext n
   fin_cases n <;>
-    norm_num [ACell0_2, RMVec, RMVecRow0,
+    norm_num [ACell0_2_def, RMVec, RMVecRow0,
       D12PolynomialData.RM0c2, constVec, basis]
 
 theorem entry3 :
@@ -44,7 +44,7 @@ theorem entry3 :
   rw [AVec_apply_0_3, characterStackVec_apply_0_3]
   funext n
   fin_cases n <;>
-    norm_num [ACell0_3, RMVec, RMVecRow0,
+    norm_num [ACell0_3_def, RMVec, RMVecRow0,
       D12PolynomialData.RM0c3, constVec, basis]
 
 theorem entry4 :
@@ -54,7 +54,7 @@ theorem entry4 :
   rw [AVec_apply_0_4, characterStackVec_apply_0_4]
   funext n
   fin_cases n <;>
-    norm_num [ACell0_4, RMVec, RMVecRow0,
+    norm_num [ACell0_4_def, RMVec, RMVecRow0,
       D12PolynomialData.RM0c4, constVec, basis]
 
 theorem entry5 :
@@ -64,7 +64,7 @@ theorem entry5 :
   rw [AVec_apply_0_5, characterStackVec_apply_0_5]
   funext n
   fin_cases n <;>
-    norm_num [ACell0_5, RMVec, RMVecRow0,
+    norm_num [ACell0_5_def, RMVec, RMVecRow0,
       D12PolynomialData.RM0c5, constVec, basis]
 
 theorem entry6 :
@@ -74,7 +74,7 @@ theorem entry6 :
   rw [AVec_apply_0_6, characterStackVec_apply_0_6]
   funext n
   fin_cases n <;>
-    norm_num [ACell0_6, RMVec, RMVecRow0,
+    norm_num [ACell0_6_def, RMVec, RMVecRow0,
       D12PolynomialData.RM0c6, constVec, basis]
 
 theorem entry7 :
@@ -84,7 +84,7 @@ theorem entry7 :
   rw [AVec_apply_0_7, characterStackVec_apply_0_7]
   funext n
   fin_cases n <;>
-    norm_num [ACell0_7, RMVec, RMVecRow0,
+    norm_num [ACell0_7_def, RMVec, RMVecRow0,
       D12PolynomialData.RM0c7, constVec, basis]
 
 theorem entry8 :
@@ -94,7 +94,7 @@ theorem entry8 :
   rw [AVec_apply_0_8, characterStackVec_apply_0_8]
   funext n
   fin_cases n <;>
-    norm_num [ACell0_8, RMVec, RMVecRow0,
+    norm_num [ACell0_8_def, RMVec, RMVecRow0,
       D12PolynomialData.RM0c8, constVec, basis]
 
 theorem entry9 :
@@ -104,7 +104,7 @@ theorem entry9 :
   rw [AVec_apply_0_9, characterStackVec_apply_0_9]
   funext n
   fin_cases n <;>
-    norm_num [ACell0_9, RMVec, RMVecRow0,
+    norm_num [ACell0_9_def, RMVec, RMVecRow0,
       D12PolynomialData.RM0c9, constVec, basis]
 
 public theorem row_eq (j : Fin 10) :

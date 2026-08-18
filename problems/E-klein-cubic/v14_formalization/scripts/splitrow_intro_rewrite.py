@@ -20,6 +20,13 @@ output.
 1. `funext i; fin_cases i; (· change …; exact …) x10`
    ->  one application of `D12CyclotomicVecZ.toVec_eq_smul10`.
 
+   RETIRED as of 2026-08-18: the emitter now writes the `*Z_scale_*`
+   certificates as a single application of `toVec_eq_smul_of_scaledZ`, taking
+   the cell characterisation the data module publishes, so there is no
+   `funext`/`fin_cases` block left to fold and this shape matches nothing on
+   freshly generated files.  Kept because it is harmless and makes the pass
+   work on older output.
+
    `fin_cases` inlines a `List.Mem.casesOn` over `List.finRange 10` with
    `Finset.univ` `HEq` motives into *every* coordinate case, ~2,900 of every
    3,000 Expr nodes.  There are 16,800 such blocks across the 40 SplitRow
@@ -28,7 +35,9 @@ output.
    Measured on D12PieceAASplitRow0 (pilot e92f2b91): 1,381,831 -> 150,385
    deduped Expr nodes, 129.9M -> 1.49M raw, olean 24.5 MB -> 3.2 MB.
 
-2. `fin_cases k; (· simp […]; exact …_j) xN`  ->  `forall_fin{N}`.
+2. `fin_cases k; (· rw […]; exact …_j) xN`  ->  `forall_fin{N}`.
+   (`simp […]` is still accepted there, for files predating the switch to
+   rewriting with the table's published entry equations.)
 3. `rw [entry_eq]; funext n; fin_cases n <;> simp […]`
    ->  `entry_eq.trans (matrixOne_diag10 i).symm` / `(matrixOne_off10 i j _)`.
 4. `fin_cases j; (· exact …entry_eq_matrixOne) x10`
@@ -166,7 +175,12 @@ def convert(text, counts):
                 raise Fail(f"{name}: expected `fin_cases k`, got {lines[j]!r}")
             j += 1
             args = []
-            while j < n and lines[j].startswith("  · simp ["):
+            # The aggregate's per-index step used to be `simp [AVec, ARow{k}]`,
+            # which unfolds the table; it is now `rw [AVec_apply_{k}_{col}]`,
+            # which rewrites with the equation the table publishes.  Both are
+            # accepted so this pass stays usable on either shape.
+            while j < n and (lines[j].startswith("  · simp [")
+                             or lines[j].startswith("  · rw [")):
                 mm = re.search(r"exact (\w+)$", lines[j])
                 if not mm:
                     raise Fail(f"{name}: unparsed case {lines[j]!r}")

@@ -63,6 +63,12 @@ where
 @[expose] public def toVec (v : VecZ) : Vec :=
   fun i => (v[i.val] : ℚ)
 
+/-- Integer scaling of a `VecZ`, written out coordinatewise so the kernel
+reduces it (the same reason `mulZ` and `addZ` are written this way). -/
+@[expose] public def smulZ (s : Int) (v : VecZ) : VecZ :=
+  #v[s * v[0], s * v[1], s * v[2], s * v[3], s * v[4],
+    s * v[5], s * v[6], s * v[7], s * v[8], s * v[9]]
+
 /-! ### Kernel-reducible equality test
 
 `VecZ = Vector Int 10`, and `Vector`'s `DecidableEq` instance does **not**
@@ -169,6 +175,15 @@ theorem toVec_mul (a b : VecZ) : toVec (mulZ a b) = mul (toVec a) (toVec b) := b
   funext k
   fin_cases k <;> simp [toVec, mulZ, mul, mulCoeff_toVec]
 
+public theorem toVec_smulZ (s : ℤ) (v : VecZ) :
+    toVec (smulZ s v) = (s : ℚ) • toVec v := by
+  funext i
+  match i with
+  | ⟨0, _⟩ | ⟨1, _⟩ | ⟨2, _⟩ | ⟨3, _⟩ | ⟨4, _⟩
+  | ⟨5, _⟩ | ⟨6, _⟩ | ⟨7, _⟩ | ⟨8, _⟩ | ⟨9, _⟩ =>
+      simp [toVec, smulZ]
+  | ⟨n + 10, h⟩ => exact absurd h (by omega)
+
 theorem toVec_add (x y : VecZ) : toVec (addZ x y) = toVec x + toVec y := by
   funext i
   fin_cases i <;> simp [toVec, addZ, Pi.add_apply]
@@ -260,7 +275,7 @@ macro "discharge_scale" s:term : tactic =>
       | (apply eq_smul_mul_inv; decide; decide)
       | (apply eq_smul_neg_mul_inv; decide; decide))
 
-theorem smul_Vec_injective {s : ℚ} (hs : s ≠ 0) :
+public theorem smul_Vec_injective {s : ℚ} (hs : s ≠ 0) :
     Function.Injective fun v : Vec => s • v := by
   intro a b h
   funext i

@@ -116,28 +116,84 @@ def emit_coord_case(n: int, value: Fraction) -> list[str]:
     ]
 
 
+def scalar_vec_def_eq(name: str, entry: list[Fraction]) -> list[str]:
+    """The cell's value as a flat literal, for consumers that evaluate it.
+
+    `norm_num [ACell0_0, …]` needs the body exposed; `norm_num [ACell0_0_def, …]`
+    does not.  Measured on one cell, module importer, project constants only:
+    `@[expose] public def` 2 constants / 380 Expr nodes; `public def` plus ten
+    point equations 11 / 134; `public def` plus this one equation 2 / 107.
+    """
+    return [
+        f"public theorem {name}_def : {name} = {vec_fractions(entry)} := by",
+        "  funext i",
+        "  fin_cases i <;> rfl",
+    ]
+
+
+def emit_cell_scaled(name: str, entry: list[Fraction]) -> list[str]:
+    """The cell's scaled characterisation: `toVec u = (d : ℚ) • cell`.
+
+    This is the fact the split certificates need, published once by the module
+    that owns the table.  Before, each of the 16,800 generated `*Z_scale_*`
+    theorems passed all ten coordinate equations to `toVec_eq_smul10`, and
+    every one of those arguments had an expected type mentioning the cell
+    (`↑scale * XCell9_0 0`), so the cell body had to be `@[expose]`d.  Paying
+    the ten certificates once per cell instead lets each generated proof become
+    a single application of `toVec_eq_smul_of_scaledZ`, whose only remaining
+    content is a decidable identity between integer vectors.
+    """
+    d = lcm_denoms([entry])
+    u = scale_ints(entry, d)
+    lines = [
+        f"public theorem {name}_scaled :",
+        f"    toVec {vecz_lit(u)} = (({d} : ℤ) : ℚ) • {name} :=",
+        f"  toVec_eq_smul10 {vecz_lit(u)} {d} {name}",
+    ]
+    for n, value in zip(u, entry, strict=True):
+        if value == 0:
+            lines.append(f"    (eq_smul_zero {d})")
+        elif value.denominator == 1:
+            lines.append(f"    (eq_smul_int ({n}) {d} ({value.numerator}) (by decide))")
+        else:
+            lines.append(
+                f"    (eq_smul_div ({n}) {d} ({value.numerator}) "
+                f"({value.denominator}) (by decide) (by decide))")
+    return lines
+
+
 def emit_scale_thm(thm: str, fn: str, rhs: str, cells: list[str],
-                   matrix_simps: list[str], scaled_rows: list[list[int]],
-                   frac_rows: list[list[Fraction]]) -> list[str]:
+                   apply_lemmas: list[str]) -> list[str]:
+    """The `*Z_scale_*` certificates.
+
+    Each is one application of `toVec_eq_smul_of_scaledZ`, taking the cell's
+    published characterisation and a single decidable identity between integer
+    vectors.  Nothing here reaches through the table's body, so the four
+    `D12Piece*Data` modules need no `@[expose]`.
+    """
     lines: list[str] = []
     for index, cell in enumerate(cells):
         lines += [
-            f"theorem {thm}_{index} : toVec ({fn} {index}) = (scale : ℚ) • {cell} := by",
-            "  funext i",
-            "  fin_cases i",
+            f"theorem {thm}_{index} : toVec ({fn} {index}) = (scale : ℚ) • {cell} :=",
+            f"  toVec_eq_smul_of_scaledZ ({fn} {index}) scale {cell}_scaled (by decide)",
+            "    (by decide +kernel)",
+            "",
         ]
-        for n, value in zip(scaled_rows[index], frac_rows[index], strict=True):
-            lines += emit_coord_case(n, value)
-        lines.append("")
     count = len(cells)
+    # The aggregate is emitted in its final form: one `forall_fin{n}`
+    # application, each argument transported from the cell statement to the
+    # matrix statement by the table's published entry equation.  Emitting it
+    # folded (rather than `fin_cases k` + per-case steps) keeps
+    # splitrow_intro_rewrite.py from having to fold a step that now carries
+    # content instead of being defeq bookkeeping.
     lines += [
         f"theorem {thm} (k : Fin {count}) :",
-        f"    toVec ({fn} k) = {rhs} := by",
-        "  fin_cases k",
+        f"    toVec ({fn} k) = {rhs} :=",
+        f"  forall_fin{count} (P := fun k => toVec ({fn} k) = {rhs})",
     ]
-    for index, matrix_simp in enumerate(matrix_simps):
-        lines.append(f"  · simp [{matrix_simp}]; exact {thm}_{index}")
-    lines.append("")
+    for index, apply_lemma in enumerate(apply_lemmas):
+        lines.append(f"    (toVec_smul_congr {thm}_{index} {apply_lemma})")
+    lines += ["    k", ""]
     return lines
 
 
@@ -502,24 +558,31 @@ def emit_pa_data(payload: dict, payload_sha: str) -> str:
     lines = [
         "/- PA vector data. Auto-generated; arithmetic lives in entry shards. -/",
         "import V14Formalization.D12PieceVecBase",
+        "import V14Formalization.D12VecScaleIntro",
         "",
         "noncomputable section",
         "open Matrix",
         "namespace V14Formalization.D12PiecePAData",
-        "open D12CyclotomicVec D12PieceVecBase",
+        "open D12CyclotomicVec D12CyclotomicVecZ D12PieceVecBase",
         f'def payloadSha256 : String := "{payload_sha}"',
         "",
     ]
     for i, row in enumerate(x):
         for j, entry in enumerate(row):
-            lines += scalar_vec_def(f"XCell{i}_{j}", as_fractions(entry)) + [""]
+            frs = as_fractions(entry)
+            lines += scalar_vec_def(f"XCell{i}_{j}", frs) + [""]
+            lines += scalar_vec_def_eq(f"XCell{i}_{j}", frs) + [""]
+            lines += emit_cell_scaled(f"XCell{i}_{j}", frs) + [""]
         lines += [f"def XRow{i} (j : Fin 20) : Vec :=", "  match j.val with"]
         for j in range(20):
             lines.append(f"  | {j} => XCell{i}_{j}")
         lines += ["  | _ => 0", ""]
     for i, row in enumerate(a):
         for j, entry in enumerate(row):
-            lines += scalar_vec_def(f"ACell{i}_{j}", as_fractions(entry)) + [""]
+            frs = as_fractions(entry)
+            lines += scalar_vec_def(f"ACell{i}_{j}", frs) + [""]
+            lines += scalar_vec_def_eq(f"ACell{i}_{j}", frs) + [""]
+            lines += emit_cell_scaled(f"ACell{i}_{j}", frs) + [""]
         lines += [f"def ARow{i} (j : Fin 10) : Vec :=", "  match j.val with"]
         for j in range(10):
             lines.append(f"  | {j} => ACell{i}_{j}")
@@ -605,17 +668,19 @@ def emit_pa_entry(payload: dict, payload_sha: str, row: int, col: int,
         "XZ_scale", "XZ",
         f"(scale : ℚ) • XVec ({row} : Fin 10) k",
         [f"XCell{row}_{k}" for k in range(20)],
-        [f"XVec, XRow{row}"] * 20, x_scaled, xs)
+        [f"XVec_apply_{row}_{k}" for k in range(20)])
     lines += emit_scale_thm(
         "AZ_scale", "AZ",
         f"(scale : ℚ) • AVec k ({col} : Fin 10)",
         [f"ACell{k}_{col}" for k in range(20)],
-        [f"AVec, ARow{k}" for k in range(20)], a_scaled, a_cols)
+        [f"AVec_apply_{k}_{col}" for k in range(20)])
     lines += [
         "theorem entry_eq :",
         f"    (matrixMul XVec AVec) ({row} : Fin 10) ({col} : Fin 10) =",
         f"      {vec_fractions(total)} := by",
-        "  unfold matrixMul",
+        # No `unfold`: rewrite with the published entry equation instead of
+        # asking the exported context to reduce `matrixMul`.
+        "  rw [matrixMul_apply]",
         "  refine sum_mul_eq_of_scaled scale scale_ne_zero",
         f"    (fun k => XVec ({row} : Fin 10) k)",
         f"    (fun k => AVec k ({col} : Fin 10))",
@@ -720,7 +785,7 @@ def emit_pa_action_row(row: int) -> str:
             f"  rw [AVec_apply_{row}_{col}, characterStackVec_apply_{row}_{col}]",
             "  funext n",
             "  fin_cases n <;>",
-            f"    norm_num [ACell{row}_{col}, {prefix}Vec, {prefix}VecRow{block_row},",
+            f"    norm_num [ACell{row}_{col}_def, {prefix}Vec, {prefix}VecRow{block_row},",
             f"      D12PolynomialData.{prefix}{block_row}c{col}, constVec, basis]",
             "",
         ]
