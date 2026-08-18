@@ -17,22 +17,22 @@ def CV_010_0_pre : Polynomial ℚ := C (1)
 def CV_010_0_pim : Polynomial ℚ := (0 : Polynomial ℚ)
 theorem CV_010_0_neg_re : -CV_3_re_010 = CV_010_0_pre := by
   refine Polynomial.funext fun r => ?_
-  simp only [CV_3_re_010, CV_010_0_pre]
+  simp only [CV_3_re_010_def, CV_010_0_pre]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
   try grind
 theorem CV_010_0_neg_im : -CV_3_im_010 = CV_010_0_pim := by
   refine Polynomial.funext fun r => ?_
-  simp only [CV_3_im_010, CV_010_0_pim]
+  simp only [CV_3_im_010_def, CV_010_0_pim]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
   try grind
 theorem CV_010_0_mul : -CV_3_c_010 = ofLadj CV_010_0_pre CV_010_0_pim := by
-  rw [CV_3_c_010, ofLadj_neg, CV_010_0_neg_re, CV_010_0_neg_im]
+  rw [CV_3_c_010_def, ofLadj_neg, CV_010_0_neg_re, CV_010_0_neg_im]
 
-theorem CV_010_1_mul : CV_3_c_000 = ofLadj CV_3_re_000 CV_3_im_000 := rfl
+theorem CV_010_1_mul : CV_3_c_000 = ofLadj CV_3_re_000 CV_3_im_000 := CV_3_c_000_def
 
 @[expose] public def CV_coeff_010 : Ki := (-CV_3_c_010) + CV_3_c_000
 
@@ -47,7 +47,7 @@ theorem CV_coeff_010_poly_re :
     CV_010_0_pre + CV_3_re_000 = (0 : Polynomial ℚ) + Phi11 * CV_010_qre := by
   refine Polynomial.funext fun r => ?_
   rw [Phi11_expand]
-  simp only [CV_010_0_pre, CV_3_re_000, CV_010_qre]
+  simp only [CV_010_0_pre, CV_3_re_000_def, CV_010_qre]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
@@ -56,7 +56,7 @@ theorem CV_coeff_010_poly_im :
     CV_010_0_pim + CV_3_im_000 = (0 : Polynomial ℚ) + Phi11 * CV_010_qim := by
   refine Polynomial.funext fun r => ?_
   rw [Phi11_expand]
-  simp only [CV_010_0_pim, CV_3_im_000, CV_010_qim]
+  simp only [CV_010_0_pim, CV_3_im_000_def, CV_010_qim]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]

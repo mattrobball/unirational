@@ -17,20 +17,20 @@ def CV_000_0_pre : Polynomial ℚ := C (1)
 def CV_000_0_pim : Polynomial ℚ := (0 : Polynomial ℚ)
 theorem CV_000_0_neg_re : -CV_3_re_000 = CV_000_0_pre := by
   refine Polynomial.funext fun r => ?_
-  simp only [CV_3_re_000, CV_000_0_pre]
+  simp only [CV_3_re_000_def, CV_000_0_pre]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
   try grind
 theorem CV_000_0_neg_im : -CV_3_im_000 = CV_000_0_pim := by
   refine Polynomial.funext fun r => ?_
-  simp only [CV_3_im_000, CV_000_0_pim]
+  simp only [CV_3_im_000_def, CV_000_0_pim]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
   try grind
 theorem CV_000_0_mul : -CV_3_c_000 = ofLadj CV_000_0_pre CV_000_0_pim := by
-  rw [CV_3_c_000, ofLadj_neg, CV_000_0_neg_re, CV_000_0_neg_im]
+  rw [CV_3_c_000_def, ofLadj_neg, CV_000_0_neg_re, CV_000_0_neg_im]
 
 @[expose] public def CV_coeff_000 : Ki := (-CV_3_c_000)
 

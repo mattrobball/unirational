@@ -98,7 +98,7 @@ public theorem eval_Fplus_dU (a : Fin 3 → Ki) :
         Fplus_dU_c_101 * a 0 * a 2 +
         Fplus_dU_c_110 * a 0 * a 1 +
           Fplus_dU_c_200 * a 0 ^ 2 := by
-  unfold Fplus_dU
+  rw [Fplus_dU_def]
   simp [eval_add, eval_mul, eval_C, eval_X, eval_pow]
 
 public theorem eval_Fplus_dV (a : Fin 3 → Ki) :
@@ -109,7 +109,7 @@ public theorem eval_Fplus_dV (a : Fin 3 → Ki) :
         Fplus_dV_c_101 * a 0 * a 2 +
         Fplus_dV_c_110 * a 0 * a 1 +
           Fplus_dV_c_200 * a 0 ^ 2 := by
-  unfold Fplus_dV
+  rw [Fplus_dV_def]
   simp [eval_add, eval_mul, eval_C, eval_X, eval_pow]
 
 public theorem eval_Fplus_dW (a : Fin 3 → Ki) :
@@ -120,7 +120,7 @@ public theorem eval_Fplus_dW (a : Fin 3 → Ki) :
         Fplus_dW_c_101 * a 0 * a 2 +
         Fplus_dW_c_110 * a 0 * a 1 +
           Fplus_dW_c_200 * a 0 ^ 2 := by
-  unfold Fplus_dW
+  rw [Fplus_dW_def]
   simp [eval_add, eval_mul, eval_C, eval_X, eval_pow]
 
 theorem eval_CU_0 (a : Fin 3 → Ki) :
@@ -130,7 +130,7 @@ theorem eval_CU_0 (a : Fin 3 → Ki) :
         CU_0_c_010 * a 1 +
         CU_0_c_001 * a 2 +
           CU_0_c_000 * (1 : Ki) := by
-  unfold CU_0
+  rw [CU_0_def]
   simp [eval_add, eval_mul, eval_C, eval_X, eval_pow]
 
 theorem eval_CU_1 (a : Fin 3 → Ki) :
@@ -140,7 +140,7 @@ theorem eval_CU_1 (a : Fin 3 → Ki) :
         CU_1_c_010 * a 1 +
         CU_1_c_001 * a 2 +
           CU_1_c_000 * (1 : Ki) := by
-  unfold CU_1
+  rw [CU_1_def]
   simp [eval_add, eval_mul, eval_C, eval_X, eval_pow]
 
 theorem eval_CU_2 (a : Fin 3 → Ki) :
@@ -150,7 +150,7 @@ theorem eval_CU_2 (a : Fin 3 → Ki) :
         CU_2_c_010 * a 1 +
         CU_2_c_001 * a 2 +
           CU_2_c_000 * (1 : Ki) := by
-  unfold CU_2
+  rw [CU_2_def]
   simp [eval_add, eval_mul, eval_C, eval_X, eval_pow]
 
 theorem eval_CU_3 (a : Fin 3 → Ki) :
@@ -167,7 +167,7 @@ theorem eval_CU_3 (a : Fin 3 → Ki) :
         CU_3_c_002 * a 2 ^ 2 +
         CU_3_c_100 * a 0 +
           CU_3_c_000 * (1 : Ki) := by
-  unfold CU_3
+  rw [CU_3_def]
   simp [eval_add, eval_mul, eval_C, eval_X, eval_pow]
 
 theorem eval_CV_0 (a : Fin 3 → Ki) :
@@ -177,7 +177,7 @@ theorem eval_CV_0 (a : Fin 3 → Ki) :
         CV_0_c_100 * a 0 +
         CV_0_c_001 * a 2 +
           CV_0_c_000 * (1 : Ki) := by
-  unfold CV_0
+  rw [CV_0_def]
   simp [eval_add, eval_mul, eval_C, eval_X, eval_pow]
 
 theorem eval_CV_1 (a : Fin 3 → Ki) :
@@ -187,7 +187,7 @@ theorem eval_CV_1 (a : Fin 3 → Ki) :
         CV_1_c_100 * a 0 +
         CV_1_c_001 * a 2 +
           CV_1_c_000 * (1 : Ki) := by
-  unfold CV_1
+  rw [CV_1_def]
   simp [eval_add, eval_mul, eval_C, eval_X, eval_pow]
 
 theorem eval_CV_2 (a : Fin 3 → Ki) :
@@ -197,7 +197,7 @@ theorem eval_CV_2 (a : Fin 3 → Ki) :
         CV_2_c_100 * a 0 +
         CV_2_c_001 * a 2 +
           CV_2_c_000 * (1 : Ki) := by
-  unfold CV_2
+  rw [CV_2_def]
   simp [eval_add, eval_mul, eval_C, eval_X, eval_pow]
 
 theorem eval_CV_3 (a : Fin 3 → Ki) :
@@ -214,7 +214,7 @@ theorem eval_CV_3 (a : Fin 3 → Ki) :
         CV_3_c_002 * a 2 ^ 2 +
         CV_3_c_010 * a 1 +
           CV_3_c_000 * (1 : Ki) := by
-  unfold CV_3
+  rw [CV_3_def]
   simp [eval_add, eval_mul, eval_C, eval_X, eval_pow]
 
 theorem eval_CW_0 (a : Fin 3 → Ki) :
@@ -224,7 +224,7 @@ theorem eval_CW_0 (a : Fin 3 → Ki) :
         CW_0_c_100 * a 0 +
         CW_0_c_010 * a 1 +
           CW_0_c_000 * (1 : Ki) := by
-  unfold CW_0
+  rw [CW_0_def]
   simp [eval_add, eval_mul, eval_C, eval_X, eval_pow]
 
 theorem eval_CW_1 (a : Fin 3 → Ki) :
@@ -234,7 +234,7 @@ theorem eval_CW_1 (a : Fin 3 → Ki) :
         CW_1_c_100 * a 0 +
         CW_1_c_010 * a 1 +
           CW_1_c_000 * (1 : Ki) := by
-  unfold CW_1
+  rw [CW_1_def]
   simp [eval_add, eval_mul, eval_C, eval_X, eval_pow]
 
 theorem eval_CW_2 (a : Fin 3 → Ki) :
@@ -244,7 +244,7 @@ theorem eval_CW_2 (a : Fin 3 → Ki) :
         CW_2_c_100 * a 0 +
         CW_2_c_010 * a 1 +
           CW_2_c_000 * (1 : Ki) := by
-  unfold CW_2
+  rw [CW_2_def]
   simp [eval_add, eval_mul, eval_C, eval_X, eval_pow]
 
 theorem eval_CW_3 (a : Fin 3 → Ki) :
@@ -261,7 +261,7 @@ theorem eval_CW_3 (a : Fin 3 → Ki) :
         CW_3_c_011 * a 1 * a 2 +
         CW_3_c_001 * a 2 +
           CW_3_c_000 * (1 : Ki) := by
-  unfold CW_3
+  rw [CW_3_def]
   simp [eval_add, eval_mul, eval_C, eval_X, eval_pow]
 
 theorem CU_collect (a : Fin 3 → Ki) :

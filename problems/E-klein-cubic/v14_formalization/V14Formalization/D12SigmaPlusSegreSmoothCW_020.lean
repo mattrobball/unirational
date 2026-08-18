@@ -18,7 +18,7 @@ def CW_020_0_pim : Polynomial ℚ := C ((-29040669877885 / 17279915862 : ℚ)) +
 theorem CW_020_0_pre_eq :
     CW_0_re_000 * Fplus_dU_re_020 - CW_0_im_000 * Fplus_dU_im_020 = CW_020_0_pre := by
   refine Polynomial.funext fun r => ?_
-  simp only [CW_0_re_000, CW_0_im_000, Fplus_dU_re_020, Fplus_dU_im_020, CW_020_0_pre]
+  simp only [CW_0_re_000_def, CW_0_im_000_def, Fplus_dU_re_020_def, Fplus_dU_im_020_def, CW_020_0_pre]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
@@ -26,21 +26,21 @@ theorem CW_020_0_pre_eq :
 theorem CW_020_0_pim_eq :
     CW_0_re_000 * Fplus_dU_im_020 + CW_0_im_000 * Fplus_dU_re_020 = CW_020_0_pim := by
   refine Polynomial.funext fun r => ?_
-  simp only [CW_0_re_000, CW_0_im_000, Fplus_dU_re_020, Fplus_dU_im_020, CW_020_0_pim]
+  simp only [CW_0_re_000_def, CW_0_im_000_def, Fplus_dU_re_020_def, Fplus_dU_im_020_def, CW_020_0_pim]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
   try grind
 theorem CW_020_0_mul :
     CW_0_c_000 * Fplus_dU_c_020 = ofLadj CW_020_0_pre CW_020_0_pim := by
-  rw [CW_0_c_000, Fplus_dU_c_020, ofLadj_mul, CW_020_0_pre_eq, CW_020_0_pim_eq]
+  rw [CW_0_c_000_def, Fplus_dU_c_020_def, ofLadj_mul, CW_020_0_pre_eq, CW_020_0_pim_eq]
 
 def CW_020_1_pre : Polynomial ℚ := C ((-781794324331 / 5759971954 : ℚ)) + C ((-4344976040630 / 2879985977 : ℚ)) * X + C ((-15011371567035 / 5759971954 : ℚ)) * X ^ 2 + C ((-12127211250320 / 2879985977 : ℚ)) * X ^ 3 + C ((-18414668766125 / 2879985977 : ℚ)) * X ^ 4 + C ((-20811985635642 / 2879985977 : ℚ)) * X ^ 5 + C ((-23959355458199 / 2879985977 : ℚ)) * X ^ 6 + C ((-27484838543427 / 2879985977 : ℚ)) * X ^ 7 + C ((-28152686119497 / 2879985977 : ℚ)) * X ^ 8 + C ((-30333038547227 / 2879985977 : ℚ)) * X ^ 9 + C ((-32022481249898 / 2879985977 : ℚ)) * X ^ 10 + C ((-2934029258650 / 261816907 : ℚ)) * X ^ 11 + C ((-27677505209268 / 2879985977 : ℚ)) * X ^ 12 + C ((-45654705527419 / 5759971954 : ℚ)) * X ^ 13 + C ((-16025474869177 / 2879985977 : ℚ)) * X ^ 14 + C ((-15441511877123 / 5759971954 : ℚ)) * X ^ 15 + C ((-8186916434341 / 5759971954 : ℚ)) * X ^ 16 + C ((-1892176789227 / 5759971954 : ℚ)) * X ^ 17 + C ((2698827677481 / 5759971954 : ℚ)) * X ^ 18
 def CW_020_1_pim : Polynomial ℚ := C ((2520161444311 / 2879985977 : ℚ)) + C ((5040322888622 / 2879985977 : ℚ)) * X + C ((5701393774931 / 2879985977 : ℚ)) * X ^ 2 + C ((1369962206319 / 523633814 : ℚ)) * X ^ 3 + C ((5615739135475 / 2879985977 : ℚ)) * X ^ 4 + C ((5154965571691 / 5759971954 : ℚ)) * X ^ 5 + C ((3646557322161 / 5759971954 : ℚ)) * X ^ 6 + C ((-2626386696589 / 5759971954 : ℚ)) * X ^ 7 + C ((-7339476698883 / 5759971954 : ℚ)) * X ^ 8 + C ((-362352203407 / 261816907 : ℚ)) * X ^ 9 + C ((-5430390839373 / 2879985977 : ℚ)) * X ^ 10 + C ((-10090505615386 / 2879985977 : ℚ)) * X ^ 11 + C ((-14750620391399 / 2879985977 : ℚ)) * X ^ 12 + C ((-16856207879604 / 2879985977 : ℚ)) * X ^ 13 + C ((-19005742127463 / 2879985977 : ℚ)) * X ^ 14 + C ((-16175808739542 / 2879985977 : ℚ)) * X ^ 15 + C ((-22535169247137 / 5759971954 : ℚ)) * X ^ 16 + C ((-16547730331015 / 5759971954 : ℚ)) * X ^ 17 + C ((-6534850779577 / 5759971954 : ℚ)) * X ^ 18
 theorem CW_020_1_pre_eq :
     CW_1_re_000 * Fplus_dV_re_020 - CW_1_im_000 * Fplus_dV_im_020 = CW_020_1_pre := by
   refine Polynomial.funext fun r => ?_
-  simp only [CW_1_re_000, CW_1_im_000, Fplus_dV_re_020, Fplus_dV_im_020, CW_020_1_pre]
+  simp only [CW_1_re_000_def, CW_1_im_000_def, Fplus_dV_re_020_def, Fplus_dV_im_020_def, CW_020_1_pre]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
@@ -48,21 +48,21 @@ theorem CW_020_1_pre_eq :
 theorem CW_020_1_pim_eq :
     CW_1_re_000 * Fplus_dV_im_020 + CW_1_im_000 * Fplus_dV_re_020 = CW_020_1_pim := by
   refine Polynomial.funext fun r => ?_
-  simp only [CW_1_re_000, CW_1_im_000, Fplus_dV_re_020, Fplus_dV_im_020, CW_020_1_pim]
+  simp only [CW_1_re_000_def, CW_1_im_000_def, Fplus_dV_re_020_def, Fplus_dV_im_020_def, CW_020_1_pim]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
   try grind
 theorem CW_020_1_mul :
     CW_1_c_000 * Fplus_dV_c_020 = ofLadj CW_020_1_pre CW_020_1_pim := by
-  rw [CW_1_c_000, Fplus_dV_c_020, ofLadj_mul, CW_020_1_pre_eq, CW_020_1_pim_eq]
+  rw [CW_1_c_000_def, Fplus_dV_c_020_def, ofLadj_mul, CW_020_1_pre_eq, CW_020_1_pim_eq]
 
 def CW_020_2_pre : Polynomial ℚ := C ((-832329794506 / 2879985977 : ℚ)) + C ((-30067783631480 / 8639957931 : ℚ)) * X + C ((-19835823857050 / 2879985977 : ℚ)) * X ^ 2 + C ((-98849490733793 / 8639957931 : ℚ)) * X ^ 3 + C ((-146477961261341 / 8639957931 : ℚ)) * X ^ 4 + C ((-31595958311377 / 1570901442 : ℚ)) * X ^ 5 + C ((-197729928431935 / 8639957931 : ℚ)) * X ^ 6 + C ((-422210744929901 / 17279915862 : ℚ)) * X ^ 7 + C ((-133949542212451 / 5759971954 : ℚ)) * X ^ 8 + C ((-397375073360923 / 17279915862 : ℚ)) * X ^ 9 + C ((-196941348516812 / 8639957931 : ℚ)) * X ^ 10 + C ((-64574352249866 / 2879985977 : ℚ)) * X ^ 11 + C ((-55624521628444 / 2879985977 : ℚ)) * X ^ 12 + C ((-278360130218623 / 17279915862 : ℚ)) * X ^ 13 + C ((-18559058651797 / 1570901442 : ℚ)) * X ^ 14 + C ((-113003914275103 / 17279915862 : ℚ)) * X ^ 15 + C ((-10172389331337 / 2879985977 : ℚ)) * X ^ 16 + C ((-4376673516433 / 5759971954 : ℚ)) * X ^ 17 + C ((2708484688686 / 2879985977 : ℚ)) * X ^ 18
 def CW_020_2_pim : Polynomial ℚ := C ((20322480983762 / 8639957931 : ℚ)) + C ((40644961967524 / 8639957931 : ℚ)) * X + C ((48418174331935 / 8639957931 : ℚ)) * X ^ 2 + C ((19288056516510 / 2879985977 : ℚ)) * X ^ 3 + C ((43371866783446 / 8639957931 : ℚ)) * X ^ 4 + C ((5725377806042 / 2879985977 : ℚ)) * X ^ 5 + C ((-5146411673870 / 8639957931 : ℚ)) * X ^ 6 + C ((-78483995376317 / 17279915862 : ℚ)) * X ^ 7 + C ((-58243530431335 / 8639957931 : ℚ)) * X ^ 8 + C ((-57944659152823 / 8639957931 : ℚ)) * X ^ 9 + C ((-10281545368819 / 1570901442 : ℚ)) * X ^ 10 + C ((-74585592157432 / 8639957931 : ℚ)) * X ^ 11 + C ((-185245369572719 / 17279915862 : ℚ)) * X ^ 12 + C ((-98999737526452 / 8639957931 : ℚ)) * X ^ 13 + C ((-36048953821845 / 2879985977 : ℚ)) * X ^ 14 + C ((-63014848381897 / 5759971954 : ℚ)) * X ^ 15 + C ((-70217818516910 / 8639957931 : ℚ)) * X ^ 16 + C ((-16779375191562 / 2879985977 : ℚ)) * X ^ 17 + C ((-1648528988162 / 785450721 : ℚ)) * X ^ 18
 theorem CW_020_2_pre_eq :
     CW_2_re_000 * Fplus_dW_re_020 - CW_2_im_000 * Fplus_dW_im_020 = CW_020_2_pre := by
   refine Polynomial.funext fun r => ?_
-  simp only [CW_2_re_000, CW_2_im_000, Fplus_dW_re_020, Fplus_dW_im_020, CW_020_2_pre]
+  simp only [CW_2_re_000_def, CW_2_im_000_def, Fplus_dW_re_020_def, Fplus_dW_im_020_def, CW_020_2_pre]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
@@ -70,33 +70,33 @@ theorem CW_020_2_pre_eq :
 theorem CW_020_2_pim_eq :
     CW_2_re_000 * Fplus_dW_im_020 + CW_2_im_000 * Fplus_dW_re_020 = CW_020_2_pim := by
   refine Polynomial.funext fun r => ?_
-  simp only [CW_2_re_000, CW_2_im_000, Fplus_dW_re_020, Fplus_dW_im_020, CW_020_2_pim]
+  simp only [CW_2_re_000_def, CW_2_im_000_def, Fplus_dW_re_020_def, Fplus_dW_im_020_def, CW_020_2_pim]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
   try grind
 theorem CW_020_2_mul :
     CW_2_c_000 * Fplus_dW_c_020 = ofLadj CW_020_2_pre CW_020_2_pim := by
-  rw [CW_2_c_000, Fplus_dW_c_020, ofLadj_mul, CW_020_2_pre_eq, CW_020_2_pim_eq]
+  rw [CW_2_c_000_def, Fplus_dW_c_020_def, ofLadj_mul, CW_020_2_pre_eq, CW_020_2_pim_eq]
 
 def CW_020_3_pre : Polynomial ℚ := C ((-2959787040 / 261816907 : ℚ)) + C ((80279430584 / 785450721 : ℚ)) * X ^ 2 + C ((56003545952 / 261816907 : ℚ)) * X ^ 3 + C ((263989517608 / 785450721 : ℚ)) * X ^ 4 + C ((307514171576 / 785450721 : ℚ)) * X ^ 5 + C ((307514171576 / 785450721 : ℚ)) * X ^ 6 + C ((263989517608 / 785450721 : ℚ)) * X ^ 7 + C ((56003545952 / 261816907 : ℚ)) * X ^ 8 + C ((80279430584 / 785450721 : ℚ)) * X ^ 9
 def CW_020_3_pim : Polynomial ℚ := C ((-988043228960 / 8639957931 : ℚ)) + C ((-1976086457920 / 8639957931 : ℚ)) * X + C ((-2704054907608 / 8639957931 : ℚ)) * X ^ 2 + C ((-2754989660264 / 8639957931 : ℚ)) * X ^ 3 + C ((-2480929715992 / 8639957931 : ℚ)) * X ^ 4 + C ((-485134169688 / 2879985977 : ℚ)) * X ^ 5 + C ((-520683948856 / 8639957931 : ℚ)) * X ^ 6 + C ((168281086024 / 2879985977 : ℚ)) * X ^ 7 + C ((778903202344 / 8639957931 : ℚ)) * X ^ 8 + C ((242656149896 / 2879985977 : ℚ)) * X ^ 9
 theorem CW_020_3_neg_re : -CW_3_re_020 = CW_020_3_pre := by
   refine Polynomial.funext fun r => ?_
-  simp only [CW_3_re_020, CW_020_3_pre]
+  simp only [CW_3_re_020_def, CW_020_3_pre]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
   try grind
 theorem CW_020_3_neg_im : -CW_3_im_020 = CW_020_3_pim := by
   refine Polynomial.funext fun r => ?_
-  simp only [CW_3_im_020, CW_020_3_pim]
+  simp only [CW_3_im_020_def, CW_020_3_pim]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
   try grind
 theorem CW_020_3_mul : -CW_3_c_020 = ofLadj CW_020_3_pre CW_020_3_pim := by
-  rw [CW_3_c_020, ofLadj_neg, CW_020_3_neg_re, CW_020_3_neg_im]
+  rw [CW_3_c_020_def, ofLadj_neg, CW_020_3_neg_re, CW_020_3_neg_im]
 
 @[expose] public def CW_coeff_020 : Ki := CW_0_c_000 * Fplus_dU_c_020 + CW_1_c_000 * Fplus_dV_c_020 + CW_2_c_000 * Fplus_dW_c_020 + (-CW_3_c_020)
 

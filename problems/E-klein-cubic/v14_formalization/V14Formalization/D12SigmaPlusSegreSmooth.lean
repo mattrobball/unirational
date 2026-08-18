@@ -29,50 +29,53 @@ private theorem poly_scale {p q : Polynomial ℚ} (h : ∀ r : ℚ, p.eval r = q
 
 theorem Fplus_dU_c_200_eq :
     Fplus_dU_c_200 = (3 : Ki) * ofLadj Fplus_re_000 Fplus_im_000 := by
-  rw [Fplus_dU_c_200, ← ofLadj_three, ofLadj_smul_rat]
+  rw [Fplus_dU_c_200_def, ← ofLadj_three, ofLadj_smul_rat]
   congr 1
   · refine poly_scale fun r => ?_
-    simp [Fplus_dU_re_200, Fplus_re_000]
+    simp [Fplus_dU_re_200_def, Fplus_re_000]
     ring
   · refine poly_scale fun r => ?_
-    simp [Fplus_dU_im_200, Fplus_im_000]
+    simp [Fplus_dU_im_200_def, Fplus_im_000]
     ring
 
 theorem Fplus_dU_c_110_eq :
     Fplus_dU_c_110 = (2 : Ki) * ofLadj Fplus_re_001 Fplus_im_001 := by
-  rw [Fplus_dU_c_110, ← ofLadj_two, ofLadj_smul_rat]
+  rw [Fplus_dU_c_110_def, ← ofLadj_two, ofLadj_smul_rat]
   congr 1
   · refine poly_scale fun r => ?_
-    simp [Fplus_dU_re_110, Fplus_re_001]
+    simp [Fplus_dU_re_110_def, Fplus_re_001]
     ring
   · refine poly_scale fun r => ?_
-    simp [Fplus_dU_im_110, Fplus_im_001]
+    simp [Fplus_dU_im_110_def, Fplus_im_001]
     ring
 
 theorem Fplus_dU_c_101_eq :
     Fplus_dU_c_101 = (2 : Ki) * ofLadj Fplus_re_002 Fplus_im_002 := by
-  rw [Fplus_dU_c_101, ← ofLadj_two, ofLadj_smul_rat]
+  rw [Fplus_dU_c_101_def, ← ofLadj_two, ofLadj_smul_rat]
   congr 1
   · refine poly_scale fun r => ?_
-    simp [Fplus_dU_re_101, Fplus_re_002]
+    simp [Fplus_dU_re_101_def, Fplus_re_002]
     ring
   · refine poly_scale fun r => ?_
-    simp [Fplus_dU_im_101, Fplus_im_002]
+    simp [Fplus_dU_im_101_def, Fplus_im_002]
     ring
 
 theorem Fplus_dU_c_020_eq :
     Fplus_dU_c_020 = ofLadj Fplus_re_011 Fplus_im_011 := by
-  unfold Fplus_dU_c_020 Fplus_dU_re_020 Fplus_dU_im_020 Fplus_re_011 Fplus_im_011
+  rw [Fplus_dU_c_020_def, Fplus_dU_re_020_def, Fplus_dU_im_020_def]
+  unfold Fplus_re_011 Fplus_im_011
   rfl
 
 theorem Fplus_dU_c_011_eq :
     Fplus_dU_c_011 = ofLadj Fplus_re_012 Fplus_im_012 := by
-  unfold Fplus_dU_c_011 Fplus_dU_re_011 Fplus_dU_im_011 Fplus_re_012 Fplus_im_012
+  rw [Fplus_dU_c_011_def, Fplus_dU_re_011_def, Fplus_dU_im_011_def]
+  unfold Fplus_re_012 Fplus_im_012
   rfl
 
 theorem Fplus_dU_c_002_eq :
     Fplus_dU_c_002 = ofLadj Fplus_re_022 Fplus_im_022 := by
-  unfold Fplus_dU_c_002 Fplus_dU_re_002 Fplus_dU_im_002 Fplus_re_022 Fplus_im_022
+  rw [Fplus_dU_c_002_def, Fplus_dU_re_002_def, Fplus_dU_im_002_def]
+  unfold Fplus_re_022 Fplus_im_022
   rfl
 
 public theorem eval_pderiv0 (a : Fin 3 → Ki) :
@@ -136,38 +139,38 @@ public theorem eval_pderiv2 (a : Fin 3 → Ki) :
 
 theorem Fplus_dV_c_200_eq :
     Fplus_dV_c_200 = ofLadj Fplus_re_001 Fplus_im_001 := by
-  rw [Fplus_dV_c_200]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_200, Fplus_dV_im_200,
+  rw [Fplus_dV_c_200_def]
+  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_200_def, Fplus_dV_im_200_def,
     Fplus_re_001, Fplus_im_001]; try ring)
 
 theorem Fplus_dV_c_110_eq :
     Fplus_dV_c_110 = (2 : Ki) * ofLadj Fplus_re_011 Fplus_im_011 := by
-  rw [Fplus_dV_c_110, ← ofLadj_two, ofLadj_smul_rat]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_110, Fplus_dV_im_110,
+  rw [Fplus_dV_c_110_def, ← ofLadj_two, ofLadj_smul_rat]
+  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_110_def, Fplus_dV_im_110_def,
     Fplus_re_011, Fplus_im_011]; try ring)
 
 theorem Fplus_dV_c_101_eq :
     Fplus_dV_c_101 = ofLadj Fplus_re_012 Fplus_im_012 := by
-  rw [Fplus_dV_c_101]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_101, Fplus_dV_im_101,
+  rw [Fplus_dV_c_101_def]
+  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_101_def, Fplus_dV_im_101_def,
     Fplus_re_012, Fplus_im_012]; try ring)
 
 theorem Fplus_dV_c_020_eq :
     Fplus_dV_c_020 = (3 : Ki) * ofLadj Fplus_re_111 Fplus_im_111 := by
-  rw [Fplus_dV_c_020, ← ofLadj_three, ofLadj_smul_rat]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_020, Fplus_dV_im_020,
+  rw [Fplus_dV_c_020_def, ← ofLadj_three, ofLadj_smul_rat]
+  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_020_def, Fplus_dV_im_020_def,
     Fplus_re_111, Fplus_im_111]; try ring)
 
 theorem Fplus_dV_c_011_eq :
     Fplus_dV_c_011 = (2 : Ki) * ofLadj Fplus_re_112 Fplus_im_112 := by
-  rw [Fplus_dV_c_011, ← ofLadj_two, ofLadj_smul_rat]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_011, Fplus_dV_im_011,
+  rw [Fplus_dV_c_011_def, ← ofLadj_two, ofLadj_smul_rat]
+  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_011_def, Fplus_dV_im_011_def,
     Fplus_re_112, Fplus_im_112]; try ring)
 
 theorem Fplus_dV_c_002_eq :
     Fplus_dV_c_002 = ofLadj Fplus_re_122 Fplus_im_122 := by
-  rw [Fplus_dV_c_002]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_002, Fplus_dV_im_002,
+  rw [Fplus_dV_c_002_def]
+  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dV_re_002_def, Fplus_dV_im_002_def,
     Fplus_re_122, Fplus_im_122]; try ring)
 
 theorem eval_pderiv1_eq_dV (a : Fin 3 → Ki) :
@@ -181,38 +184,38 @@ theorem pderiv_one_Fplus : pderiv 1 Fplus = Fplus_dV :=
 
 theorem Fplus_dW_c_200_eq :
     Fplus_dW_c_200 = ofLadj Fplus_re_002 Fplus_im_002 := by
-  rw [Fplus_dW_c_200]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_200, Fplus_dW_im_200,
+  rw [Fplus_dW_c_200_def]
+  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_200_def, Fplus_dW_im_200_def,
     Fplus_re_002, Fplus_im_002]; try ring)
 
 theorem Fplus_dW_c_110_eq :
     Fplus_dW_c_110 = ofLadj Fplus_re_012 Fplus_im_012 := by
-  rw [Fplus_dW_c_110]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_110, Fplus_dW_im_110,
+  rw [Fplus_dW_c_110_def]
+  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_110_def, Fplus_dW_im_110_def,
     Fplus_re_012, Fplus_im_012]; try ring)
 
 theorem Fplus_dW_c_101_eq :
     Fplus_dW_c_101 = (2 : Ki) * ofLadj Fplus_re_022 Fplus_im_022 := by
-  rw [Fplus_dW_c_101, ← ofLadj_two, ofLadj_smul_rat]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_101, Fplus_dW_im_101,
+  rw [Fplus_dW_c_101_def, ← ofLadj_two, ofLadj_smul_rat]
+  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_101_def, Fplus_dW_im_101_def,
     Fplus_re_022, Fplus_im_022]; try ring)
 
 theorem Fplus_dW_c_020_eq :
     Fplus_dW_c_020 = ofLadj Fplus_re_112 Fplus_im_112 := by
-  rw [Fplus_dW_c_020]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_020, Fplus_dW_im_020,
+  rw [Fplus_dW_c_020_def]
+  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_020_def, Fplus_dW_im_020_def,
     Fplus_re_112, Fplus_im_112]; try ring)
 
 theorem Fplus_dW_c_011_eq :
     Fplus_dW_c_011 = (2 : Ki) * ofLadj Fplus_re_122 Fplus_im_122 := by
-  rw [Fplus_dW_c_011, ← ofLadj_two, ofLadj_smul_rat]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_011, Fplus_dW_im_011,
+  rw [Fplus_dW_c_011_def, ← ofLadj_two, ofLadj_smul_rat]
+  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_011_def, Fplus_dW_im_011_def,
     Fplus_re_122, Fplus_im_122]; try ring)
 
 theorem Fplus_dW_c_002_eq :
     Fplus_dW_c_002 = (3 : Ki) * ofLadj Fplus_re_222 Fplus_im_222 := by
-  rw [Fplus_dW_c_002, ← ofLadj_three, ofLadj_smul_rat]
-  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_002, Fplus_dW_im_002,
+  rw [Fplus_dW_c_002_def, ← ofLadj_three, ofLadj_smul_rat]
+  congr 1 <;> (refine poly_scale fun r => ?_; simp [Fplus_dW_re_002_def, Fplus_dW_im_002_def,
     Fplus_re_222, Fplus_im_222]; try ring)
 
 theorem eval_pderiv2_eq_dW (a : Fin 3 → Ki) :
@@ -421,7 +424,7 @@ public theorem Fplus_isSmoothPlaneCubic_map {L : Type*} [Field L] [Infinite L]
       have hsmul :
           eval (fun j => r 0 * a j) (map f Fplus_dU) =
             (r 0) ^ 2 * eval a (map f Fplus_dU) := by
-        simp [Fplus_dU, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
+        simp [Fplus_dU_def, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
           eval_pow]
         ring
       rw [hsa] at hsmul
@@ -433,7 +436,7 @@ public theorem Fplus_isSmoothPlaneCubic_map {L : Type*} [Field L] [Infinite L]
       have hsmul :
           eval (fun j => r 0 * a j) (map f Fplus_dV) =
             (r 0) ^ 2 * eval a (map f Fplus_dV) := by
-        simp [Fplus_dV, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
+        simp [Fplus_dV_def, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
           eval_pow]
         ring
       rw [hsa] at hsmul
@@ -445,7 +448,7 @@ public theorem Fplus_isSmoothPlaneCubic_map {L : Type*} [Field L] [Infinite L]
       have hsmul :
           eval (fun j => r 0 * a j) (map f Fplus_dW) =
             (r 0) ^ 2 * eval a (map f Fplus_dW) := by
-        simp [Fplus_dW, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
+        simp [Fplus_dW_def, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
           eval_pow]
         ring
       rw [hsa] at hsmul
@@ -464,7 +467,7 @@ public theorem Fplus_isSmoothPlaneCubic_map {L : Type*} [Field L] [Infinite L]
       have hsmul :
           eval (fun j => r 1 * a j) (map f Fplus_dU) =
             (r 1) ^ 2 * eval a (map f Fplus_dU) := by
-        simp [Fplus_dU, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
+        simp [Fplus_dU_def, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
           eval_pow]; ring
       rw [hsa] at hsmul
       have this := hnone 0
@@ -475,7 +478,7 @@ public theorem Fplus_isSmoothPlaneCubic_map {L : Type*} [Field L] [Infinite L]
       have hsmul :
           eval (fun j => r 1 * a j) (map f Fplus_dV) =
             (r 1) ^ 2 * eval a (map f Fplus_dV) := by
-        simp [Fplus_dV, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
+        simp [Fplus_dV_def, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
           eval_pow]; ring
       rw [hsa] at hsmul
       have this := hnone 1
@@ -486,7 +489,7 @@ public theorem Fplus_isSmoothPlaneCubic_map {L : Type*} [Field L] [Infinite L]
       have hsmul :
           eval (fun j => r 1 * a j) (map f Fplus_dW) =
             (r 1) ^ 2 * eval a (map f Fplus_dW) := by
-        simp [Fplus_dW, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
+        simp [Fplus_dW_def, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
           eval_pow]; ring
       rw [hsa] at hsmul
       have this := hnone 2
@@ -504,7 +507,7 @@ public theorem Fplus_isSmoothPlaneCubic_map {L : Type*} [Field L] [Infinite L]
       have hsmul :
           eval (fun j => r 2 * a j) (map f Fplus_dU) =
             (r 2) ^ 2 * eval a (map f Fplus_dU) := by
-        simp [Fplus_dU, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
+        simp [Fplus_dU_def, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
           eval_pow]; ring
       rw [hsa] at hsmul
       have this := hnone 0
@@ -515,7 +518,7 @@ public theorem Fplus_isSmoothPlaneCubic_map {L : Type*} [Field L] [Infinite L]
       have hsmul :
           eval (fun j => r 2 * a j) (map f Fplus_dV) =
             (r 2) ^ 2 * eval a (map f Fplus_dV) := by
-        simp [Fplus_dV, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
+        simp [Fplus_dV_def, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
           eval_pow]; ring
       rw [hsa] at hsmul
       have this := hnone 1
@@ -526,7 +529,7 @@ public theorem Fplus_isSmoothPlaneCubic_map {L : Type*} [Field L] [Infinite L]
       have hsmul :
           eval (fun j => r 2 * a j) (map f Fplus_dW) =
             (r 2) ^ 2 * eval a (map f Fplus_dW) := by
-        simp [Fplus_dW, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
+        simp [Fplus_dW_def, map_add, map_mul, eval_add, eval_mul, eval_C, eval_X,
           eval_pow]; ring
       rw [hsa] at hsmul
       have this := hnone 2
