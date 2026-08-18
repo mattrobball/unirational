@@ -1,10 +1,12 @@
 /-
 Axiom audit entrypoint for Theorem 3.1, Corollary 6.1, and Weil core.
 -/
-import V14Formalization.CentralizerObstruction
-import V14Formalization.V14Application
-import V14Formalization.WeilRep
-import V14Formalization.GeometricFanoV14
+module
+
+public import V14Formalization.CentralizerObstruction
+public import V14Formalization.V14Application
+public import V14Formalization.WeilRep
+public import V14Formalization.GeometricFanoV14
 
 #print axioms V14Formalization.centralizerObstruction
 #print axioms V14Formalization.centralizerObstruction_one_rep

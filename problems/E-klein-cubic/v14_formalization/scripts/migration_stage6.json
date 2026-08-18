@@ -1,0 +1,23 @@
+{
+ "V14Challenge.lean": {
+  "public": [
+   "noEquivariantRationalMap_from_ambient",
+   "noEquivariantRationalMap_projectiveGVariety"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "V14Solution.lean": {
+  "public": [
+   "noEquivariantRationalMap_from_ambient",
+   "noEquivariantRationalMap_projectiveGVariety"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false
+ },
+ "AxiomAudit.lean": {
+  "public": [],
+  "expose": [],
+  "expose_all_public_defs": false
+ }
+}

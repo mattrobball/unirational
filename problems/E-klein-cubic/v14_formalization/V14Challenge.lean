@@ -3,7 +3,9 @@ Comparator challenge: independent statement of the public no-map theorem.
 Trusted vocabulary is `HeadlineStatement` only — this file does not import
 the proof module `FaithfulHeadline`.
 -/
-import V14Formalization.HeadlineStatement
+module
+
+public import V14Formalization.HeadlineStatement
 
 noncomputable section
 
@@ -17,7 +19,7 @@ open AlgebraicGeometry Module
 
 /-- There is no equivariant `Scheme.RationalMap` from the numbered
 projectivization of a faithful linear representation to the coordinate V14. -/
-theorem noEquivariantRationalMap_from_ambient
+public theorem noEquivariantRationalMap_from_ambient
     {V : Type} [AddCommGroup V] [Module V14SchemeModel.k V]
     (R : FaithfulLinearRep V14SchemeModel.k V14SchemeModel.G V) :
     ¬ HasEquivariantRationalMap (ambientOf R)
@@ -25,7 +27,7 @@ theorem noEquivariantRationalMap_from_ambient
   sorry
 
 /-- Same statement, packaged as projective `G`-varieties. -/
-theorem noEquivariantRationalMap_projectiveGVariety
+public theorem noEquivariantRationalMap_projectiveGVariety
     {V : Type} [AddCommGroup V] [Module V14SchemeModel.k V]
     (R : FaithfulLinearRep V14SchemeModel.k V14SchemeModel.G V) :
     ¬ ProjectiveGVariety.HasEquivariantRationalMap
