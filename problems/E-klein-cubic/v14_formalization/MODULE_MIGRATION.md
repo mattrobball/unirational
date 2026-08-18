@@ -5,18 +5,25 @@ and the rules that keep it that way; it is no longer a plan. Read
 "Where things stand" first, then the sections that apply to what you are
 changing.
 
-## Where things stand (2026-08-17)
+## Where things stand (2026-08-18)
 
 | | |
 |---|---:|
 | `module` files | 1,376 |
 | legacy files remaining | 34 |
 | Comparator closure converted | 1,052 / 1,052 |
-| declarations | 92,716 |
-| ... `public` | 11,220 (12.1%) |
-| ... `@[expose]` | 7,093 (7.7%) |
-| ... module-private | 81,496 (87.9%) |
+| declarations | 95,376 |
+| ... `public` | 11,350 (11.9%) |
+| ... `@[expose]` | 6,618 (6.9%) |
+| ... module-private | 84,026 (88.1%) |
 | modules publishing at most one declaration | 1,005 of 1,376 |
+
+(Counts are from one parser run over the tree, so before/after figures in this
+document are comparable to each other; they sit a little under a raw
+`grep -c '@\[expose\]'`, which also sees attribute lines that are not
+declaration heads.  At the start of 2026-08-18 the same parser read 11,038
+`public` / 6,930 `@[expose]`; the session moved 312 declarations from
+"exposed def" to "public equation" — see "De-exposing a table" below.)
 
 The 34 legacy files are exactly the ones that have never compiled, on any
 branch: `D12SealProof` (deterministic whnf timeout at `L₀_mul_B₀`), the 24
@@ -31,8 +38,13 @@ What that bought, measured on an importer of `V14Solution`:
 
 | importer | constants | max RSS |
 |---|---:|---:|
-| legacy (`import V14Solution`) | 589,728 | 3.77 GB |
-| module (`public import V14Solution`) | 413,384 | **2.08 GB** |
+| legacy (`import V14Solution`) | 595,159 | 3.48 GB |
+| module (`public import V14Solution`) | 413,384 | **1.89 GB** |
+
+(2026-08-17 figures were 589,728 / 3.77 GB and 413,384 / 2.08 GB; both sides
+dropped ~0.2 GB when the proof terms shrank — see the closure table below. The
+legacy constant count rose by `grind`'s auxiliary lemmas, which a module
+importer does not see.)
 
 A module importer sees 30% fewer constants and 45% less resident memory,
 because 87.9% of this tree's declarations are now genuinely internal. 3,040
@@ -60,6 +72,23 @@ project file it imports is already converted.
   where the *exported* context does defeq: term-mode `rfl`/`:=`-proofs of
   public theorems, bodies of exposed defs, field projections inside public
   signatures. Tactic proofs (`by rfl`, `simp [f]`) work without exposure.
+* **In the DEFINING module, a tactic-mode public theorem needs no exposure
+  at all** — this is what makes de-exposing a table possible, and it was
+  verified in isolation on 4.32.1 (`.probe/`, four four-line files):
+
+  | where | proof | def exposed? | result |
+  |---|---|---|---|
+  | defining module | `:= rfl` | no | **fails**, "this theorem is exported … must be exposed" |
+  | defining module | `:= by rfl` | no | compiles |
+  | defining module | `:= by simp [f]` | no | compiles |
+  | consumer | `:= rfl` | no | fails |
+  | consumer | `:= by rfl` | no | fails |
+  | consumer | `simp [f]` | no | fails, "Expected a definition with an exposed body" |
+  | consumer | `rw [thm]` on a public theorem | no | compiles |
+
+  So a reduction that lives in a consumer forces exposure, and the *same*
+  reduction relocated into the defining module and exported as a theorem
+  does not.
 * Because legacy importers ignore annotations, the legacy build proves
   nothing about them; validation must come from module-side probes
   (below).
@@ -232,7 +261,44 @@ diff contains only the intended annotations (`git diff` must show only
   rewritable proof must match a known shape) and idempotent.
 
 Data files expose what they publish: downstream certificate proofs consume
-the arrays via `rfl`/`decide`, which need bodies at elaboration time.
+the arrays via `rfl`/`decide`, which need bodies at elaboration time — unless
+the module is converted to publish equations instead (see "De-exposing a
+table").
+
+### THREE EMITTERS ARE STALE — DO NOT RE-RUN THEM (2026-08-18)
+
+`scripts/export_sigma_plus_span.py`, `scripts/export_sigma_plus_tinv.py` and
+`scripts/export_sigma_plus_span_identities.py` still emit the proofs their
+outputs had **before** the integer-interpolation rewrite. Running any of them
+over `V14Formalization/` reverts that work — measured, on 2026-08-18: 243, 273
+and 614 tracked files rewritten back to `simp (disch := decide) only [interp_mul,
+…]` / `apply interp_eq` / `· decide` shapes, plus **378 files created that are no
+longer part of the tree at all** (an `MH_*` family, `Apply_minorQ`, …). The
+in-tree sources are the authority for those families; use a post-pass
+(`ring_to_grind_rewrite.py`, `table_interface_rewrite.py`) instead, and if an
+emitter must be changed, first check that it round-trips: emit in place with the
+emitter unchanged and require `git diff` to be empty. `export_sigma_plus_identities.py`
+does round-trip byte-for-byte and is safe.
+
+### The post-emit annotation hook was broken in nine emitters (fixed 2026-08-18)
+
+Every emitter ends with
+
+```python
+if __name__ == "__main__":
+    main()
+    sys.path.insert(0, …)
+    from module_annotation_hook import reapply_module_annotations
+    reapply_module_annotations()
+```
+
+but nine of them never imported `sys`, so the hook raised `NameError` after the
+files were already written and **every regeneration silently dropped `module`,
+`public` and `@[expose]`**. `lake build` would then fail, but only after the
+tree had been rewritten. The line now reads `__import__("sys").path.insert(…)`,
+which cannot depend on the emitter's imports. Verified by regenerating the
+identity modules with the emitter otherwise unchanged: byte-identical to the
+tree, annotations and all.
 
 ## Duplicate `abbrev`s in a shared namespace (the stage-3 blocker)
 
@@ -359,8 +425,14 @@ calibration against the pilot commit).
 | after the SplitRow rewrite | 159,623 | 210.9M | 112.1M |
 | after the Segre bridge rewrite | 159,776 | **177.6M** | **88.8M** |
 | after the module migration completed | 159,781 | 177.6M | 88.8M |
+| after `ring` -> `grind` (2026-08-18) | 162,545 | 139.9M | 66.5M |
+| after de-exposing BezoutData + Partials | 162,794 | **140.0M** | **66.5M** |
 
-The last row is the point of the framing: converting 1,049 further modules
+Publishing 312 defining equations cost 94,222 nodes, +0.07% — the de-exposure
+is very nearly free on the export, which is the reason to prefer it to leaving
+a table exposed.
+
+The migration row is the point of the framing: converting 1,049 further modules
 moved the closure by 700 nodes out of 177.6M. Visibility annotations do not
 change proof terms, so the migration is worth doing for the code, not for the
 export — while an importer of `V14Solution` did go from 3.77 GB to 2.08 GB.
@@ -371,10 +443,11 @@ reconstruction is exact for the part it changed — the four families measured
 and 4.7M after. The Segre step is measured end to end, before and after, on the
 same tree.
 
-At the baseline's ~85 bytes/node that is ~15.1 GB of export against a 15 GB
+At the baseline's ~85 bytes/node, 177.6M was ~15.1 GB of export against a 15 GB
 runner: at the line, without margin, and Comparator holds its own ~12 GB
-concurrently with `lean4export` (see the 2026-08-15 OOM log). **More is
-needed.** What is left, and what to do about it:
+concurrently with `lean4export` (see the 2026-08-15 OOM log). 140.0M is
+~11.9 GB — the first time this proof has had margin. What was left as of
+2026-08-17, and what happened to it:
 
 | family | constants | per-constant nodes | share | shape |
 |---|---:|---:|---:|---|
@@ -388,16 +461,78 @@ needed.** What is left, and what to do about it:
 
 LH, Det, SmoothC* and NH (51.8M, 29%) all prove polynomial identities the
 expensive way — `refine Polynomial.funext fun r => ?_`, a full-width `simp`
-over the `Polynomial.eval_*` lemmas, then `ring`, per identity. HM and VQ do
-NOT: they go through the integer interpolation (`interp_mul`,
-`interp_sub_gen`, `interp_eq` and `decide` on `List Int`), which is why they
-are now cheap. **Porting LH / Det / SmoothC / NH onto the same integer route
-is the next reduction**, and the `interpQ_expand_*` lemmas this session added
-make the first step of it free. The emitters hold the integer data already.
+over the `Polynomial.eval_*` lemmas, then `ring`, per identity. That is the
+table as it stood on 2026-08-17; **it has since been fixed by replacing one
+tactic** — see below. Compound and the two `relation_*` families are genuine
+per-instance rational arithmetic over 1/11 denominators and need the
+`ℤ`-rescaling treatment described in CERTIFICATE_COST_2026-08-16.md, which is
+a larger job, and they are now the top of the table.
 
-Compound and the two `relation_*` families are genuine per-instance rational
-arithmetic over 1/11 denominators and need the `ℤ`-rescaling treatment
-described in CERTIFICATE_COST_2026-08-16.md, which is a larger job.
+### `ring` -> `grind` on the pointwise-eval identities (2026-08-18)
+
+`ring` reflects the goal and inlines its whole normalisation trace into the
+proof term. `grind` closes the same goals through its own commutative-ring
+solver and stores a far smaller certificate. The substitution is one word per
+proof; nothing else changes.
+
+Pilot, `D12SigmaPlusSegreNH_0_0` built standalone before and after:
+
+| | constants | per-module nodes | per-constant nodes | elaboration |
+|---|---:|---:|---:|---:|
+| `try ring` | 126 | 163,531 | 329,763 | 8.05 s |
+| `try grind` | 140 | 38,883 | 121,223 | 8.07 s |
+
+-63.2% per-constant, -76.2% per-module, no measurable time cost. The extra 14
+constants are `grind`'s `_proof_*` auxiliaries; every original theorem is
+present with its original statement.
+
+Rolled out to the 190 closure modules that use the idiom (4,613 tactic lines).
+Per family, closure per-constant nodes:
+
+| family | before | after | |
+|---|---:|---:|---:|
+| LH | 12,150,693 | 4,283,134 | -64.7% |
+| Det | 11,374,397 | 3,399,255 | -70.1% |
+| SmoothCU | 7,447,251 | 2,372,760 | -68.1% |
+| SmoothCV | 7,461,483 | 2,570,086 | -65.6% |
+| SmoothCW | 7,454,015 | 2,556,173 | -65.7% |
+| NH | 5,799,219 | 2,025,214 | -65.1% |
+| PolyZExpand | 1,521,882 | 324,081 | -78.7% |
+| MinorQZ | 1,538,739 | 785,751 | -48.9% |
+| SpanVZ | 825,042 | 419,999 | -49.1% |
+| Qrel | 2,006,057 | 1,506,600 | -24.9% |
+| ApplyHZ | 472,491 | 246,916 | -47.7% |
+| QplusZ | 248,649 | 152,535 | -38.7% |
+| LK / NK / Bplus | unchanged | | `simp` already closed those goals, so neither tactic ever ran |
+
+**Whole closure 177.6M -> 139.9M, -21.2%.** At ~85 bytes/node that is ~15.1 GB
+of export -> ~11.9 GB, i.e. the first version of this proof with actual margin
+under the 15 GB runner.
+
+What `grind` will *not* do here, tested and recorded so nobody repeats it:
+
+* `grind [defs…]` straight at the `Polynomial ℚ` identity — fails
+  (maximum recursion depth, and raising `maxRecDepth` does not help);
+* `grind` after `simp only [defs]` but before the eval-simp — fails;
+* `grind [Polynomial.eval_add, …]` in place of the eval-simp — fails;
+* plain `ring` at the polynomial level without `Polynomial.funext` — fails,
+  since `C 2 * C 3` and `C 6` are unrelated atoms.
+
+Only the last tactic can change: keep `refine Polynomial.funext fun r => ?_`,
+keep the `simp only [defs]`, keep the eval-simp, and swap `try ring` for
+`try grind`. Carried by `scripts/ring_to_grind_rewrite.py` for the frozen
+families, and directly by `scripts/export_sigma_plus_identities.py` for LH/NH.
+
+The 315 UM modules use the same idiom and are deliberately NOT converted: they
+are outside the `V14Solution` import closure entirely, so the rebuild moves the
+export by nothing. `Smooth{U,V,W}Prod` and `SpanV_0_0` are not converted either
+— they have never compiled, so the change would be unverifiable.
+
+**The integer-interpolation port is no longer the next step for these four
+families.** It was the plan on 2026-08-17, on the assumption that only a change
+of route could shrink them; one tactic did two thirds of it at a fraction of the
+cost. The remaining `interpQ` work belongs to Compound and the `relation_*`
+families, which `grind` does not address.
 
 ### The Segre `interpQ` bridge rewrite (done this session)
 
@@ -461,6 +596,19 @@ The tools:
   from build errors. Read its output before applying it: it infers a
   declaration name from the error text and can pick the wrong module.
 * `scripts/check_module_invariants.sh` — the gate. Run it after every change.
+  It is a **zsh** script (`print`, not `echo`); running it under `bash` fails
+  with `print: command not found` on every line.
+* `scripts/table_interface_rewrite.py --table <f> --consumers <f…>` — converts
+  a coefficient table from "exposed bodies" to "published equations" and
+  rewrites its consumers. Refuses to write if any line outside the rewritten
+  tactics changed.
+* `scripts/ring_to_grind_rewrite.py <files…>` — `try ring` -> `try grind` in
+  the frozen pointwise-eval families, with the same statement-preservation
+  check. `--check` reports without writing.
+* `scripts/module_stats.lean` — per-module proof-term size, the cheap
+  counterpart of `closure_stats.lean`:
+  `lake env lean --run scripts/module_stats.lean V14Formalization.<M> …`.
+  Use it to measure one file before paying a closure rebuild.
 
 ## Two failure modes that `lake build` does not catch
 
@@ -511,4 +659,72 @@ whose every entry is consumed by a certificate that must unfold it; the
 surface is wide because the module genuinely is an interface. By contrast the
 generated certificate modules publish one theorem each: `D12PieceAASplitRow0`
 is 1 public of 591 declarations, `D12SigmaMinusReverse1` 1 of 257.
+
+## De-exposing a table (2026-08-18)
+
+### There is no annotation slack left — checked, twice
+
+Re-running `module_stage_tool.py gen-config --narrow-expose` over the ten
+widest data modules reproduces **exactly** what is annotated today (946/946,
+568/568, 486/486, 465/465, 465/465, 432/432, 438 public + 431 exposed, 406/406,
+406/406, 255/255). Nothing in those modules is public or exposed by accident.
+Splitting the 4,860 exposures into what a downstream reduction actually names
+versus what the in-file closure then drags along:
+
+| module | exposed | demanded downstream | in-file cascade |
+|---|---:|---:|---:|
+| `D12SigmaPlusSegreQplus` | 946 | 946 | 0 |
+| `D12SigmaPlusSegreMinorQ` | 568 | 568 | 0 |
+| `D12PiecePPData` | 486 | 302 | 184 |
+| `D12PieceAAData` / `APData` | 465 | 306 | 159 |
+| `D12PiecePAData` | 432 | 300 | 132 |
+| `D12SigmaPlusSegreCore` | 431 | 302 | 129 |
+| `D12SigmaPlusSegreSpanU` | 406 | 292 | 114 |
+| `D12SigmaPlusSegreSpanV` | 406 | 406 | 0 |
+| `D12SigmaPlusSegreBezoutData` | 255 | 210 | 45 |
+
+Every cascade root is itself demanded (`AVec`, `XVec`, `spanU`, `Qplus`,
+`minorQ`), so the cascade cannot be cut without cutting the root. **Exposure
+here is load-bearing; the only way down is to move the reduction.**
+
+### The recipe, and what it costs
+
+`scripts/table_interface_rewrite.py`. The table publishes one equation per
+definition, tactic-proved so it needs no exposure of its own, and drops
+`@[expose]`:
+
+```lean
+public def CU_0_re_002 : Polynomial ℚ := C (…) + C (…) * X ^ 2 + …
+public theorem CU_0_re_002_def :
+    CU_0_re_002 = C (…) + C (…) * X ^ 2 + … := by
+  rfl
+```
+
+Consumers rewrite with the theorem instead of unfolding the definition:
+`simp only [X]` -> `simp only [X_def]`, `rw [X]` -> `rw [X_def]`,
+`unfold X` -> `rw [X_def]`, and `theorem … : X = e := rfl` -> `:= X_def`.
+The pass refuses to write unless every line it did not deliberately rewrite
+survives byte-for-byte. Record the result in the stage config's `no_expose`
+key, or the next emitter run puts `@[expose]` back.
+
+Done for `D12SigmaPlusSegreBezoutData` (255 -> 0 exposed, 80 consumers) and
+`D12SigmaPlusSegrePartials` (57 -> 0, 74 consumers). Tree-wide `@[expose]`
+6,930 -> 6,618; `@[expose]` as a share of public 62.8% -> 58.3%.
+
+### The remaining tables, and why each is still exposed
+
+The blocker is never the table; it is the number and shape of the reductions
+that would have to move. Consumer counts are modules that name the table:
+
+| table | exposed | consumers | why it is still exposed |
+|---|---:|---:|---|
+| `D12SigmaPlusSegreQplus` | 946 | 521 | Qrel (15) + VQ (189) + UM (315) all `simp only` the entries; UM alone is 315 modules and is outside the `V14Solution` closure, so the rebuild buys nothing for the export |
+| `D12SigmaPlusSegreMinorQ` | 568 | ~694 | same, plus HM (189) |
+| `D12SigmaPlusSegreSpanU` / `SpanV` | 406 + 406 | ~330 each | driven by UM (315, outside the closure) and by the 24 `Apply_span{U,V}` shards, which have never compiled |
+| `D12SigmaPlusSegreCore` | 431 | 899 | the most-imported module in the tree; also holds `Ki`, `ofLadj`, `k` — structural definitions where an `_def` equation is meaningless, so the pass would need a name filter |
+| `D12Piece{PP,AA,AP,PA}Data` | 1,848 | 34 each | **bounded, and the next one worth doing** — but the `ActionRow` proofs are `change ACell0_0 = RMVec 0 0 - constVec (-1)`, and `change` needs defeq on both sides of the goal, which no published equation supplies. Those proofs have to be restructured first, not just their tactic arguments rewritten. |
+
+The Piece data modules are the largest bounded prize left (1,848 exposures,
+135 consumers). They need the `change`-shaped proofs converted to
+rewrite-shaped ones before the pass above applies.
 
