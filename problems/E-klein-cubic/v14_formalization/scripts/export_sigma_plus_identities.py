@@ -10,6 +10,7 @@ import argparse
 import hashlib
 import json
 from fractions import Fraction
+from math import lcm
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -109,6 +110,23 @@ def lean_poly(a) -> str:
     return " + ".join(terms) if terms else "(0 : Polynomial ℚ)"
 
 
+def zlist(a):
+    """Common positive denominator and integer numerators, trailing zeros cut."""
+    d = 1
+    for c in a:
+        d = lcm(d, c.denominator)
+    ns = [int(c * d) for c in a]
+    while ns and ns[-1] == 0:
+        ns.pop()
+    return d, ns
+
+
+def lean_interp(a) -> str:
+    """`interpQ d [n...]` -- the integer reflection of `D12PolyZReflection`."""
+    d, ns = zlist(trim(list(a)))
+    return "interpQ " + str(d) + " [" + ", ".join(str(n) for n in ns) + "]"
+
+
 def header_import(extra_imports=None) -> list[str]:
     extras = extra_imports or []
     return [
@@ -117,12 +135,14 @@ def header_import(extra_imports=None) -> list[str]:
         "Stock-limit, kernel-checkable plus Segre entry identities.",
         "-/",
         "import V14Formalization.D12SigmaPlusSegreEval",
+        "import V14Formalization.D12PolyZReflection",
         *extras,
         "",
         "noncomputable section",
         "open Matrix Polynomial",
         "namespace V14Formalization.D12SigmaPlusSegreCore",
         "open D12PolynomialData",
+        "open V14Formalization.D12PolyZReflection",
         "",
     ]
 
@@ -134,8 +154,26 @@ def footer() -> list[str]:
     ]
 
 
-def emit_apply(name: str, rows: int, cols: int) -> list[str]:
+def emit_apply(name: str, rows: int, cols: int, cells=None) -> list[str]:
     lines = header_import()
+    if cells is not None:
+        # Integer reflection of every entry, proved once and rewritten into the
+        # product certificates below, which then fold and `decide`.
+        for i in range(rows):
+            for j in range(cols):
+                re, im = cells[i][j]
+                for part, coeffs in (("re", re), ("im", im)):
+                    lines += [
+                        f"theorem z_{name}_{part}_{i}_{j} :",
+                        f"    {name}_{part}_{i}_{j} = {lean_interp(coeffs)} := by",
+                        "  refine Polynomial.funext fun r => ?_",
+                        f"  simp [{name}_{part}_{i}_{j}, interpQ, toPolyZ,",
+                        "    Polynomial.eval_add, Polynomial.eval_mul,",
+                        "    Polynomial.eval_C, Polynomial.eval_X,",
+                        "    Polynomial.eval_pow]",
+                        "  try grind",
+                        "",
+                    ]
     for i in range(rows):
         for j in range(cols):
             lines += [
@@ -155,6 +193,7 @@ def emit_entry(prefix: str, A: str, B: str, i: int, j: int, kmax: int,
     extra = [
         f"import V14Formalization.D12SigmaPlusSegreApply{A}",
         f"import V14Formalization.D12SigmaPlusSegreApply{B}",
+        f"import V14Formalization.D12SigmaPlusSegreApply{B}Z",
     ]
     lines = header_import(extra)
     rhs = "1" if want_one else "0"
@@ -162,34 +201,46 @@ def emit_entry(prefix: str, A: str, B: str, i: int, j: int, kmax: int,
     if mul_lemma is None:
         mul_lemma = "mul_apply_fin9" if A == "L" else "mul_apply_fin9_N"
     lines += [
-        f"def {prefix}_qre_{i}_{j} : Polynomial ℚ := {lean_poly(q_re)}",
-        f"def {prefix}_qim_{i}_{j} : Polynomial ℚ := {lean_poly(q_im)}",
+        f"def {prefix}_qre_{i}_{j} : Polynomial ℚ := {lean_interp(q_re)}",
+        f"def {prefix}_qim_{i}_{j} : Polynomial ℚ := {lean_interp(q_im)}",
+        "",
+        "private theorem phi11_interp :",
+        "    (Phi11 : Polynomial ℚ) = interpQ 1 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] := by",
+        "  rw [Phi11_expand]",
+        "  refine Polynomial.funext fun r => ?_",
+        "  simp [interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,",
+        "    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]",
+        "  try grind",
         "",
     ]
     for t, (pre, pim) in enumerate(terms):
         lines += [
-            f"def {prefix}_pre_{i}_{j}_{t} : Polynomial ℚ := {lean_poly(pre)}",
-            f"def {prefix}_pim_{i}_{j}_{t} : Polynomial ℚ := {lean_poly(pim)}",
+            f"def {prefix}_pre_{i}_{j}_{t} : Polynomial ℚ := {lean_interp(pre)}",
+            f"def {prefix}_pim_{i}_{j}_{t} : Polynomial ℚ := {lean_interp(pim)}",
             f"theorem {prefix}_pre_eq_{i}_{j}_{t} :",
             f"    {A}_re_{i}_{t} * {B}_re_{t}_{j} - {A}_im_{i}_{t} * {B}_im_{t}_{j} =",
             f"      {prefix}_pre_{i}_{j}_{t} := by",
-            "  refine Polynomial.funext fun r => ?_",
-            f"  simp only [{A}_re_{i}_{t}, {A}_im_{i}_{t}, {B}_re_{t}_{j}, {B}_im_{t}_{j},",
-            f"    {prefix}_pre_{i}_{j}_{t}]",
-            "  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,",
-            "    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,",
-            "    Polynomial.eval_neg, Polynomial.eval_zero]",
-            "  try grind",
+            f"  rw [z_{A}_re_{i}_{t}, z_{B}_re_{t}_{j}, z_{A}_im_{i}_{t},",
+            f"    z_{B}_im_{t}_{j}]",
+            f"  simp only [{prefix}_pre_{i}_{j}_{t}]",
+            "  simp (disch := decide) only [interp_neg, interp_mul, interp_add,",
+            "    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]",
+            "  apply interp_eq",
+            "  · decide",
+            "  · decide",
+            "  · decide",
             f"theorem {prefix}_pim_eq_{i}_{j}_{t} :",
             f"    {A}_re_{i}_{t} * {B}_im_{t}_{j} + {A}_im_{i}_{t} * {B}_re_{t}_{j} =",
             f"      {prefix}_pim_{i}_{j}_{t} := by",
-            "  refine Polynomial.funext fun r => ?_",
-            f"  simp only [{A}_re_{i}_{t}, {A}_im_{i}_{t}, {B}_re_{t}_{j}, {B}_im_{t}_{j},",
-            f"    {prefix}_pim_{i}_{j}_{t}]",
-            "  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,",
-            "    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,",
-            "    Polynomial.eval_neg, Polynomial.eval_zero]",
-            "  try grind",
+            f"  rw [z_{A}_re_{i}_{t}, z_{B}_im_{t}_{j}, z_{A}_im_{i}_{t},",
+            f"    z_{B}_re_{t}_{j}]",
+            f"  simp only [{prefix}_pim_{i}_{j}_{t}]",
+            "  simp (disch := decide) only [interp_neg, interp_mul, interp_add,",
+            "    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]",
+            "  apply interp_eq",
+            "  · decide",
+            "  · decide",
+            "  · decide",
             f"theorem {prefix}_term_{i}_{j}_{t} :",
             f"    {A}_entry_{i}_{t} * {B}_entry_{t}_{j} =",
             f"      ofLadj {prefix}_pre_{i}_{j}_{t} {prefix}_pim_{i}_{j}_{t} := by",
@@ -208,23 +259,27 @@ def emit_entry(prefix: str, A: str, B: str, i: int, j: int, kmax: int,
     lines += [
         f"theorem {prefix}_sum_poly_re_{i}_{j} :",
         f"    {re_named} = ({tgt_re} : Polynomial ℚ) + Phi11 * {prefix}_qre_{i}_{j} := by",
-        "  refine Polynomial.funext fun r => ?_",
-        f"  rw [Phi11_expand]",
+        "  rw [phi11_interp]",
         f"  simp only [{unfold_pre}, {prefix}_qre_{i}_{j}]",
-        "  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,",
-        "    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,",
-        "    Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]",
-        "  try grind",
+        "  simp (disch := decide) only [interp_zero, interp_one, interp_ofNat,",
+        "    interp_neg, interp_mul, interp_add, interp_sub, interp_add_gen,",
+        "    interp_sub_gen, Nat.reduceMul]",
+        "  apply interp_eq",
+        "  · decide",
+        "  · decide",
+        "  · decide",
         "",
         f"theorem {prefix}_sum_poly_im_{i}_{j} :",
         f"    {im_named} = ({tgt_im} : Polynomial ℚ) + Phi11 * {prefix}_qim_{i}_{j} := by",
-        "  refine Polynomial.funext fun r => ?_",
-        f"  rw [Phi11_expand]",
+        "  rw [phi11_interp]",
         f"  simp only [{unfold_pim}, {prefix}_qim_{i}_{j}]",
-        "  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,",
-        "    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,",
-        "    Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]",
-        "  try grind",
+        "  simp (disch := decide) only [interp_zero, interp_one, interp_ofNat,",
+        "    interp_neg, interp_mul, interp_add, interp_sub, interp_add_gen,",
+        "    interp_sub_gen, Nat.reduceMul]",
+        "  apply interp_eq",
+        "  · decide",
+        "  · decide",
+        "  · decide",
         "",
         f"theorem {prefix}_sum_entries_{i}_{j} :",
         f"    {term_sum} =",
@@ -315,9 +370,9 @@ def main():
         (out / "D12SigmaPlusSegreApplyH.lean").write_text(
             "\n".join(emit_apply("H", 9, 6)))
         (out / "D12SigmaPlusSegreApplyL.lean").write_text(
-            "\n".join(emit_apply("L", 6, 9)))
+            "\n".join(emit_apply("L", 6, 9, L)))
         (out / "D12SigmaPlusSegreApplyN.lean").write_text(
-            "\n".join(emit_apply("N", 3, 9)))
+            "\n".join(emit_apply("N", 3, 9, N)))
         print("wrote apply modules")
 
     lh_pairs = []

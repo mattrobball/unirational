@@ -5,11 +5,13 @@ Stock-limit, kernel-checkable plus Segre entry identities.
 module
 
 public import V14Formalization.D12SigmaPlusSegreEval
+public import V14Formalization.D12PolyZReflection
 
 noncomputable section
 open Matrix Polynomial
 namespace V14Formalization.D12SigmaPlusSegreCore
 open D12PolynomialData
+open V14Formalization.D12PolyZReflection
 
 public theorem H_apply_0_0 :
     H (0 : Fin 9) (0 : Fin 6) = H_entry_0_0 := by

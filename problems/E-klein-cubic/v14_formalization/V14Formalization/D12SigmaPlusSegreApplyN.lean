@@ -5,11 +5,499 @@ Stock-limit, kernel-checkable plus Segre entry identities.
 module
 
 public import V14Formalization.D12SigmaPlusSegreEval
+public import V14Formalization.D12PolyZReflection
 
 noncomputable section
 open Matrix Polynomial
 namespace V14Formalization.D12SigmaPlusSegreCore
 open D12PolynomialData
+open V14Formalization.D12PolyZReflection
+
+public theorem z_N_re_0_0 :
+    N_re_0_0 = interpQ 1 [-4, 0, -2, -1, 0, 0, 0, 0, -1, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_0_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_0_0 :
+    N_im_0_0 = interpQ 1 [0, 0, 2, 1, 0, 2, -2, 0, -1, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_0_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_0_1 :
+    N_re_0_1 = interpQ 1 [-11, 0, -3, -14, 2, -12, -12, 2, -14, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_0_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_0_1 :
+    N_im_0_1 = interpQ 1 [-8, -16, -1, -15, -10, -3, -13, -6, -1, -15] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_0_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_0_2 :
+    N_re_0_2 = interpQ 1 [-6, 0, 0, -4, 4, -2, -2, 4, -4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_0_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_0_2 :
+    N_im_0_2 = interpQ 1 [-3, -6, 2, -4, -2, 0, -6, -4, -2, -8] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_0_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_0_3 :
+    N_re_0_3 = interpQ 1 [38, 0, 13, 37, -4, 29, 29, -4, 37, 13] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_0_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_0_3 :
+    N_im_0_3 = interpQ 1 [19, 38, -3, 34, 26, 0, 38, 12, 4, 41] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_0_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_0_4 :
+    N_re_0_4 = interpQ 1 [18, 0, 6, 14, -4, 8, 8, -4, 14, 6] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_0_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_0_4 :
+    N_im_0_4 = interpQ 1 [6, 12, -6, 10, 8, -4, 16, 4, 2, 18] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_0_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_0_5 :
+    N_re_0_5 = interpQ 1 [18, 0, 6, 14, -4, 8, 8, -4, 14, 6] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_0_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_0_5 :
+    N_im_0_5 = interpQ 1 [6, 12, -6, 10, 8, -4, 16, 4, 2, 18] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_0_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_0_6 :
+    N_re_0_6 = interpQ 1 [1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_0_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_0_6 :
+    N_im_0_6 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_0_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_0_7 :
+    N_re_0_7 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_0_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_0_7 :
+    N_im_0_7 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_0_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_0_8 :
+    N_re_0_8 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_0_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_0_8 :
+    N_im_0_8 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_0_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_1_0 :
+    N_re_1_0 = interpQ 1 [1, 0, 0, 2, 1, 2, 2, 1, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_1_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_1_0 :
+    N_im_1_0 = interpQ 1 [1, 2, 1, 3, 1, 1, 1, 1, -1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_1_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_1_1 :
+    N_re_1_1 = interpQ 2 [22, 0, 10, 15, -7, 10, 10, -7, 15, 10] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_1_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_1_1 :
+    N_im_1_1 = interpQ 2 [8, 16, -6, 9, 11, -4, 20, 5, 7, 22] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_1_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_1_2 :
+    N_re_1_2 = interpQ 1 [5, 0, 3, 5, 1, 5, 5, 1, 5, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_1_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_1_2 :
+    N_im_1_2 = interpQ 1 [3, 6, 1, 5, 5, 1, 5, 1, 1, 5] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_1_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_1_3 :
+    N_re_1_3 = interpQ 2 [-58, 0, -20, -47, 13, -32, -32, 13, -47, -20] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_1_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_1_3 :
+    N_im_1_3 = interpQ 2 [-24, -48, 12, -39, -31, 6, -54, -17, -9, -60] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_1_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_1_4 :
+    N_re_1_4 = interpQ 1 [-12, 0, -4, -12, 0, -10, -10, 0, -12, -4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_1_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_1_4 :
+    N_im_1_4 = interpQ 1 [-6, -12, 0, -12, -8, 0, -12, -4, 0, -12] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_1_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_1_5 :
+    N_re_1_5 = interpQ 1 [-13, 0, -4, -12, 0, -10, -10, 0, -12, -4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_1_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_1_5 :
+    N_im_1_5 = interpQ 1 [-6, -12, 0, -12, -8, 0, -12, -4, 0, -12] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_1_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_1_6 :
+    N_re_1_6 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_1_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_1_6 :
+    N_im_1_6 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_1_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_1_7 :
+    N_re_1_7 = interpQ 1 [1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_1_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_1_7 :
+    N_im_1_7 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_1_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_1_8 :
+    N_re_1_8 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_1_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_1_8 :
+    N_im_1_8 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_1_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_2_0 :
+    N_re_2_0 = interpQ 2 [0, 0, 0, 5, -2, 5, 5, -2, 5] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_2_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_2_0 :
+    N_im_2_0 = interpQ 1 [2, 4, 0, 3, 2, 2, 2, 2, 1, 4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_2_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_2_1 :
+    N_re_2_1 = interpQ 2 [49, 0, 15, 37, -2, 24, 24, -2, 37, 15] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_2_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_2_1 :
+    N_im_2_1 = interpQ 2 [13, 26, -9, 25, 20, -14, 40, 6, 1, 35] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_2_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_2_2 :
+    N_re_2_2 = interpQ 1 [11, 0, 4, 10, 1, 7, 7, 1, 10, 4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_2_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_2_2 :
+    N_im_2_2 = interpQ 1 [3, 6, -2, 6, 5, -3, 9, 1, 0, 8] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_2_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_2_3 :
+    N_re_2_3 = interpQ 2 [-113, 0, -35, -99, 18, -70, -70, 18, -99, -35] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_2_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_2_3 :
+    N_im_2_3 = interpQ 2 [-47, -94, 19, -81, -64, 16, -110, -30, -13, -113] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_2_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_2_4 :
+    N_re_2_4 = interpQ 1 [-22, 0, -7, -21, 5, -16, -16, 5, -21, -7] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_2_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_2_4 :
+    N_im_2_4 = interpQ 1 [-12, -24, 2, -20, -16, 0, -24, -8, -4, -26] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_2_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_2_5 :
+    N_re_2_5 = interpQ 1 [-22, 0, -8, -22, 4, -18, -18, 4, -22, -8] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_2_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_2_5 :
+    N_im_2_5 = interpQ 1 [-12, -24, 2, -20, -16, 0, -24, -8, -4, -26] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_2_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_2_6 :
+    N_re_2_6 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_2_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_2_6 :
+    N_im_2_6 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_2_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_2_7 :
+    N_re_2_7 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_2_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_2_7 :
+    N_im_2_7 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_2_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_re_2_8 :
+    N_re_2_8 = interpQ 1 [1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_re_2_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_N_im_2_8 :
+    N_im_2_8 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [N_im_2_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
 
 public theorem N_apply_0_0 :
     N (0 : Fin 3) (0 : Fin 9) = N_entry_0_0 := by

@@ -5,263 +5,310 @@ Stock-limit, kernel-checkable plus Segre entry identities.
 module
 
 public import V14Formalization.D12SigmaPlusSegreEval
+public import V14Formalization.D12PolyZReflection
 public import V14Formalization.D12SigmaPlusSegreApplyL
 public import V14Formalization.D12SigmaPlusSegreApplyH
+public import V14Formalization.D12SigmaPlusSegreApplyHZ
 
 noncomputable section
 open Matrix Polynomial
 namespace V14Formalization.D12SigmaPlusSegreCore
 open D12PolynomialData
+open V14Formalization.D12PolyZReflection
 
-def LH_qre_0_4 : Polynomial ℚ := C ((-31 / 11 : ℚ)) + C ((43 / 11 : ℚ)) * X + C ((-26 / 11 : ℚ)) * X ^ 2 + C ((28 / 11 : ℚ)) * X ^ 3 + C ((-47 / 11 : ℚ)) * X ^ 4 + C ((40 / 11 : ℚ)) * X ^ 5 + C ((-16 / 11 : ℚ)) * X ^ 6 + C ((13 / 11 : ℚ)) * X ^ 7 + C ((-37 / 11 : ℚ)) * X ^ 8
-def LH_qim_0_4 : Polynomial ℚ := C ((-5 / 11 : ℚ)) + C ((-5 / 11 : ℚ)) * X + C ((-4 / 11 : ℚ)) * X ^ 2 + C (-3) * X ^ 3 + C (-1) * X ^ 4 + C ((-7 / 11 : ℚ)) * X ^ 5 + C ((-7 / 11 : ℚ)) * X ^ 6 + C ((19 / 11 : ℚ)) * X ^ 7 + C ((9 / 11 : ℚ)) * X ^ 8
+def LH_qre_0_4 : Polynomial ℚ := interpQ 11 [-31, 43, -26, 28, -47, 40, -16, 13, -37]
+def LH_qim_0_4 : Polynomial ℚ := interpQ 11 [-5, -5, -4, -33, -11, -7, -7, 19, 9]
 
-def LH_pre_0_4_0 : Polynomial ℚ := C ((1 / 11 : ℚ)) * X ^ 2 + C ((4 / 11 : ℚ)) * X ^ 3 + C ((3 / 11 : ℚ)) * X ^ 4 + C ((6 / 11 : ℚ)) * X ^ 6 + C ((5 / 11 : ℚ)) * X ^ 7 + C ((2 / 11 : ℚ)) * X ^ 8 + C ((-7 / 11 : ℚ)) * X ^ 9 + C ((-8 / 11 : ℚ)) * X ^ 13 + C ((-2 / 11 : ℚ)) * X ^ 14 + C ((2 / 11 : ℚ)) * X ^ 16 + C ((-4 / 11 : ℚ)) * X ^ 17 + C ((-2 / 11 : ℚ)) * X ^ 18
-def LH_pim_0_4_0 : Polynomial ℚ := C ((-1 / 11 : ℚ)) * X ^ 2 + C ((-2 / 11 : ℚ)) * X ^ 3 + C ((-2 / 11 : ℚ)) * X ^ 4 + C ((-6 / 11 : ℚ)) * X ^ 5 + C ((2 / 11 : ℚ)) * X ^ 6 + C ((-4 / 11 : ℚ)) * X ^ 7 + C ((-4 / 11 : ℚ)) * X ^ 9 + C ((5 / 11 : ℚ)) * X ^ 10 + C ((-5 / 11 : ℚ)) * X ^ 12 + C ((5 / 11 : ℚ)) * X ^ 13 + C ((2 / 11 : ℚ)) * X ^ 14 + C ((3 / 11 : ℚ)) * X ^ 15 + C ((-2 / 11 : ℚ)) * X ^ 16 + C ((6 / 11 : ℚ)) * X ^ 17 + C ((3 / 11 : ℚ)) * X ^ 18
+private theorem phi11_interp :
+    (Phi11 : Polynomial ℚ) = interpQ 1 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] := by
+  rw [Phi11_expand]
+  refine Polynomial.funext fun r => ?_
+  simp [interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+def LH_pre_0_4_0 : Polynomial ℚ := interpQ 11 [0, 0, 1, 4, 3, 0, 6, 5, 2, -7, 0, 0, 0, -8, -2, 0, 2, -4, -2]
+def LH_pim_0_4_0 : Polynomial ℚ := interpQ 11 [0, 0, -1, -2, -2, -6, 2, -4, 0, -4, 5, 0, -5, 5, 2, 3, -2, 6, 3]
 theorem LH_pre_eq_0_4_0 :
     L_re_0_0 * H_re_0_4 - L_im_0_0 * H_im_0_4 =
       LH_pre_0_4_0 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_0, L_im_0_0, H_re_0_4, H_im_0_4,
-    LH_pre_0_4_0]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_0, z_H_re_0_4, z_L_im_0_0,
+    z_H_im_0_4]
+  simp only [LH_pre_0_4_0]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_pim_eq_0_4_0 :
     L_re_0_0 * H_im_0_4 + L_im_0_0 * H_re_0_4 =
       LH_pim_0_4_0 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_0, L_im_0_0, H_re_0_4, H_im_0_4,
-    LH_pim_0_4_0]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_0, z_H_im_0_4, z_L_im_0_0,
+    z_H_re_0_4]
+  simp only [LH_pim_0_4_0]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_term_0_4_0 :
     L_entry_0_0 * H_entry_0_4 =
       ofLadj LH_pre_0_4_0 LH_pim_0_4_0 := by
   rw [L_entry_0_0, H_entry_0_4, ofLadj_mul,
     LH_pre_eq_0_4_0, LH_pim_eq_0_4_0]
 
-def LH_pre_0_4_1 : Polynomial ℚ := C ((-13 / 11 : ℚ)) + C ((-2 / 11 : ℚ)) * X + C ((-13 / 22 : ℚ)) * X ^ 2 + C ((-17 / 22 : ℚ)) * X ^ 3 + C ((-3 / 2 : ℚ)) * X ^ 4 + C ((-37 / 22 : ℚ)) * X ^ 5 + C ((-10 / 11 : ℚ)) * X ^ 6 + C ((-16 / 11 : ℚ)) * X ^ 7 + C ((3 / 22 : ℚ)) * X ^ 8 + C ((-17 / 22 : ℚ)) * X ^ 9 + C ((17 / 22 : ℚ)) * X ^ 10 + C ((7 / 22 : ℚ)) * X ^ 11 + C ((21 / 22 : ℚ)) * X ^ 12 + C ((-2 / 11 : ℚ)) * X ^ 13 + C ((10 / 11 : ℚ)) * X ^ 14 + C ((5 / 22 : ℚ)) * X ^ 15 + C ((1 / 2 : ℚ)) * X ^ 16 + C ((-3 / 11 : ℚ)) * X ^ 17 + C ((2 / 11 : ℚ)) * X ^ 18
-def LH_pim_0_4_1 : Polynomial ℚ := C ((21 / 22 : ℚ)) * X ^ 2 + C ((1 / 2 : ℚ)) * X ^ 3 + C ((47 / 22 : ℚ)) * X ^ 4 + C ((7 / 11 : ℚ)) * X ^ 5 + C ((49 / 22 : ℚ)) * X ^ 6 + C ((10 / 11 : ℚ)) * X ^ 7 + C ((57 / 22 : ℚ)) * X ^ 8 + C (2) * X ^ 9 + C ((30 / 11 : ℚ)) * X ^ 10 + C ((5 / 2 : ℚ)) * X ^ 11 + C ((25 / 11 : ℚ)) * X ^ 12 + C ((45 / 22 : ℚ)) * X ^ 13 + C ((21 / 11 : ℚ)) * X ^ 14 + C ((31 / 22 : ℚ)) * X ^ 15 + C ((27 / 22 : ℚ)) * X ^ 16 + C ((10 / 11 : ℚ)) * X ^ 17 + C ((6 / 11 : ℚ)) * X ^ 18
+def LH_pre_0_4_1 : Polynomial ℚ := interpQ 22 [-26, -4, -13, -17, -33, -37, -20, -32, 3, -17, 17, 7, 21, -4, 20, 5, 11, -6, 4]
+def LH_pim_0_4_1 : Polynomial ℚ := interpQ 22 [0, 0, 21, 11, 47, 14, 49, 20, 57, 44, 60, 55, 50, 45, 42, 31, 27, 20, 12]
 theorem LH_pre_eq_0_4_1 :
     L_re_0_1 * H_re_1_4 - L_im_0_1 * H_im_1_4 =
       LH_pre_0_4_1 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_1, L_im_0_1, H_re_1_4, H_im_1_4,
-    LH_pre_0_4_1]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_1, z_H_re_1_4, z_L_im_0_1,
+    z_H_im_1_4]
+  simp only [LH_pre_0_4_1]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_pim_eq_0_4_1 :
     L_re_0_1 * H_im_1_4 + L_im_0_1 * H_re_1_4 =
       LH_pim_0_4_1 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_1, L_im_0_1, H_re_1_4, H_im_1_4,
-    LH_pim_0_4_1]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_1, z_H_im_1_4, z_L_im_0_1,
+    z_H_re_1_4]
+  simp only [LH_pim_0_4_1]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_term_0_4_1 :
     L_entry_0_1 * H_entry_1_4 =
       ofLadj LH_pre_0_4_1 LH_pim_0_4_1 := by
   rw [L_entry_0_1, H_entry_1_4, ofLadj_mul,
     LH_pre_eq_0_4_1, LH_pim_eq_0_4_1]
 
-def LH_pre_0_4_2 : Polynomial ℚ := C ((6 / 11 : ℚ)) + C ((1 / 11 : ℚ)) * X ^ 2 + C ((-6 / 11 : ℚ)) * X ^ 3 + C ((-10 / 11 : ℚ)) * X ^ 4 + C ((-6 / 11 : ℚ)) * X ^ 5 + C ((-4 / 11 : ℚ)) * X ^ 6 + C ((-3 / 11 : ℚ)) * X ^ 7 + C ((-4 / 11 : ℚ)) * X ^ 8 + C ((9 / 11 : ℚ)) * X ^ 9 + C ((1 / 11 : ℚ)) * X ^ 10 + C ((4 / 11 : ℚ)) * X ^ 11 + C ((1 / 11 : ℚ)) * X ^ 12 + C ((8 / 11 : ℚ)) * X ^ 13 + C ((2 / 11 : ℚ)) * X ^ 14 + C ((4 / 11 : ℚ)) * X ^ 15 + C ((1 / 11 : ℚ)) * X ^ 16 + C ((-1 / 11 : ℚ)) * X ^ 17 + C ((-3 / 11 : ℚ)) * X ^ 18
-def LH_pim_0_4_2 : Polynomial ℚ := C ((2 / 11 : ℚ)) + C ((4 / 11 : ℚ)) * X + C ((7 / 11 : ℚ)) * X ^ 2 + C ((10 / 11 : ℚ)) * X ^ 3 + C ((-3 / 11 : ℚ)) * X ^ 4 + C ((6 / 11 : ℚ)) * X ^ 5 + C (-1) * X ^ 6 + C ((2 / 11 : ℚ)) * X ^ 7 + C ((-9 / 11 : ℚ)) * X ^ 8 + C ((-2 / 11 : ℚ)) * X ^ 9 + C ((-9 / 11 : ℚ)) * X ^ 10 + C ((-2 / 11 : ℚ)) * X ^ 11 + C ((5 / 11 : ℚ)) * X ^ 12 + C ((-5 / 11 : ℚ)) * X ^ 13 + C ((-1 / 11 : ℚ)) * X ^ 14 + C ((3 / 11 : ℚ)) * X ^ 15 + C ((8 / 11 : ℚ)) * X ^ 16 + C ((-3 / 11 : ℚ)) * X ^ 17 + C ((-2 / 11 : ℚ)) * X ^ 18
+def LH_pre_0_4_2 : Polynomial ℚ := interpQ 11 [6, 0, 1, -6, -10, -6, -4, -3, -4, 9, 1, 4, 1, 8, 2, 4, 1, -1, -3]
+def LH_pim_0_4_2 : Polynomial ℚ := interpQ 11 [2, 4, 7, 10, -3, 6, -11, 2, -9, -2, -9, -2, 5, -5, -1, 3, 8, -3, -2]
 theorem LH_pre_eq_0_4_2 :
     L_re_0_2 * H_re_2_4 - L_im_0_2 * H_im_2_4 =
       LH_pre_0_4_2 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_2, L_im_0_2, H_re_2_4, H_im_2_4,
-    LH_pre_0_4_2]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_2, z_H_re_2_4, z_L_im_0_2,
+    z_H_im_2_4]
+  simp only [LH_pre_0_4_2]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_pim_eq_0_4_2 :
     L_re_0_2 * H_im_2_4 + L_im_0_2 * H_re_2_4 =
       LH_pim_0_4_2 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_2, L_im_0_2, H_re_2_4, H_im_2_4,
-    LH_pim_0_4_2]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_2, z_H_im_2_4, z_L_im_0_2,
+    z_H_re_2_4]
+  simp only [LH_pim_0_4_2]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_term_0_4_2 :
     L_entry_0_2 * H_entry_2_4 =
       ofLadj LH_pre_0_4_2 LH_pim_0_4_2 := by
   rw [L_entry_0_2, H_entry_2_4, ofLadj_mul,
     LH_pre_eq_0_4_2, LH_pim_eq_0_4_2]
 
-def LH_pre_0_4_3 : Polynomial ℚ := C ((-23 / 11 : ℚ)) + C ((-2 / 11 : ℚ)) * X + C ((-51 / 22 : ℚ)) * X ^ 2 + C ((-37 / 22 : ℚ)) * X ^ 3 + C ((-105 / 22 : ℚ)) * X ^ 4 + C ((-83 / 22 : ℚ)) * X ^ 5 + C ((-67 / 11 : ℚ)) * X ^ 6 + C ((-56 / 11 : ℚ)) * X ^ 7 + C ((-137 / 22 : ℚ)) * X ^ 8 + C ((-87 / 22 : ℚ)) * X ^ 9 + C ((-107 / 22 : ℚ)) * X ^ 10 + C ((-43 / 22 : ℚ)) * X ^ 11 + C ((-103 / 22 : ℚ)) * X ^ 12 + C ((-18 / 11 : ℚ)) * X ^ 13 + C ((-50 / 11 : ℚ)) * X ^ 14 + C ((-35 / 22 : ℚ)) * X ^ 15 + C ((-67 / 22 : ℚ)) * X ^ 16 + C ((-8 / 11 : ℚ)) * X ^ 17 + C ((-14 / 11 : ℚ)) * X ^ 18
-def LH_pim_0_4_3 : Polynomial ℚ := C ((2 / 11 : ℚ)) + C ((4 / 11 : ℚ)) * X + C ((-9 / 22 : ℚ)) * X ^ 2 + C ((-25 / 22 : ℚ)) * X ^ 3 + C ((-29 / 22 : ℚ)) * X ^ 4 + C ((-2 / 11 : ℚ)) * X ^ 5 + C ((-41 / 22 : ℚ)) * X ^ 6 + C ((-4 / 11 : ℚ)) * X ^ 7 + C ((-5 / 22 : ℚ)) * X ^ 8 + C ((-5 / 11 : ℚ)) * X ^ 9 + C ((-15 / 11 : ℚ)) * X ^ 10 + C ((-37 / 22 : ℚ)) * X ^ 11 + C (-2) * X ^ 12 + C ((-47 / 22 : ℚ)) * X ^ 13 + C ((-18 / 11 : ℚ)) * X ^ 14 + C ((-25 / 22 : ℚ)) * X ^ 15 + C ((-23 / 22 : ℚ)) * X ^ 16 + C ((1 / 11 : ℚ)) * X ^ 17 + C ((-2 / 11 : ℚ)) * X ^ 18
+def LH_pre_0_4_3 : Polynomial ℚ := interpQ 22 [-46, -4, -51, -37, -105, -83, -134, -112, -137, -87, -107, -43, -103, -36, -100, -35, -67, -16, -28]
+def LH_pim_0_4_3 : Polynomial ℚ := interpQ 22 [4, 8, -9, -25, -29, -4, -41, -8, -5, -10, -30, -37, -44, -47, -36, -25, -23, 2, -4]
 theorem LH_pre_eq_0_4_3 :
     L_re_0_3 * H_re_3_4 - L_im_0_3 * H_im_3_4 =
       LH_pre_0_4_3 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_3, L_im_0_3, H_re_3_4, H_im_3_4,
-    LH_pre_0_4_3]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_3, z_H_re_3_4, z_L_im_0_3,
+    z_H_im_3_4]
+  simp only [LH_pre_0_4_3]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_pim_eq_0_4_3 :
     L_re_0_3 * H_im_3_4 + L_im_0_3 * H_re_3_4 =
       LH_pim_0_4_3 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_3, L_im_0_3, H_re_3_4, H_im_3_4,
-    LH_pim_0_4_3]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_3, z_H_im_3_4, z_L_im_0_3,
+    z_H_re_3_4]
+  simp only [LH_pim_0_4_3]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_term_0_4_3 :
     L_entry_0_3 * H_entry_3_4 =
       ofLadj LH_pre_0_4_3 LH_pim_0_4_3 := by
   rw [L_entry_0_3, H_entry_3_4, ofLadj_mul,
     LH_pre_eq_0_4_3, LH_pim_eq_0_4_3]
 
-def LH_pre_0_4_4 : Polynomial ℚ := C ((2 / 11 : ℚ)) + C ((8 / 11 : ℚ)) * X + C ((16 / 11 : ℚ)) * X ^ 2 + C ((25 / 11 : ℚ)) * X ^ 3 + C ((29 / 11 : ℚ)) * X ^ 4 + C ((43 / 11 : ℚ)) * X ^ 5 + C ((39 / 11 : ℚ)) * X ^ 6 + C ((43 / 11 : ℚ)) * X ^ 7 + C ((19 / 11 : ℚ)) * X ^ 8 + C ((20 / 11 : ℚ)) * X ^ 9 + C ((2 / 11 : ℚ)) * X ^ 10 + C ((14 / 11 : ℚ)) * X ^ 11 + C ((-6 / 11 : ℚ)) * X ^ 12 + C ((4 / 11 : ℚ)) * X ^ 13 + C ((-6 / 11 : ℚ)) * X ^ 14 + C ((6 / 11 : ℚ)) * X ^ 15 + C ((-6 / 11 : ℚ)) * X ^ 16 + C ((-2 / 11 : ℚ)) * X ^ 17 + C ((-8 / 11 : ℚ)) * X ^ 18
-def LH_pim_0_4_4 : Polynomial ℚ := C ((-2 / 11 : ℚ)) + C ((-4 / 11 : ℚ)) * X + C ((-12 / 11 : ℚ)) * X ^ 2 + C ((-15 / 11 : ℚ)) * X ^ 3 + C ((-29 / 11 : ℚ)) * X ^ 4 + C ((-25 / 11 : ℚ)) * X ^ 5 + C ((-36 / 11 : ℚ)) * X ^ 6 + C ((-25 / 11 : ℚ)) * X ^ 7 + C ((-32 / 11 : ℚ)) * X ^ 8 + C (-2) * X ^ 9 + C ((-27 / 11 : ℚ)) * X ^ 10 + C ((-20 / 11 : ℚ)) * X ^ 11 + C ((-13 / 11 : ℚ)) * X ^ 12 + C ((-10 / 11 : ℚ)) * X ^ 13 + C ((3 / 11 : ℚ)) * X ^ 14 + C ((2 / 11 : ℚ)) * X ^ 15 + C (1) * X ^ 16 + C ((6 / 11 : ℚ)) * X ^ 17 + C ((8 / 11 : ℚ)) * X ^ 18
+def LH_pre_0_4_4 : Polynomial ℚ := interpQ 11 [2, 8, 16, 25, 29, 43, 39, 43, 19, 20, 2, 14, -6, 4, -6, 6, -6, -2, -8]
+def LH_pim_0_4_4 : Polynomial ℚ := interpQ 11 [-2, -4, -12, -15, -29, -25, -36, -25, -32, -22, -27, -20, -13, -10, 3, 2, 11, 6, 8]
 theorem LH_pre_eq_0_4_4 :
     L_re_0_4 * H_re_4_4 - L_im_0_4 * H_im_4_4 =
       LH_pre_0_4_4 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_4, L_im_0_4, H_re_4_4, H_im_4_4,
-    LH_pre_0_4_4]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_4, z_H_re_4_4, z_L_im_0_4,
+    z_H_im_4_4]
+  simp only [LH_pre_0_4_4]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_pim_eq_0_4_4 :
     L_re_0_4 * H_im_4_4 + L_im_0_4 * H_re_4_4 =
       LH_pim_0_4_4 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_4, L_im_0_4, H_re_4_4, H_im_4_4,
-    LH_pim_0_4_4]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_4, z_H_im_4_4, z_L_im_0_4,
+    z_H_re_4_4]
+  simp only [LH_pim_0_4_4]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_term_0_4_4 :
     L_entry_0_4 * H_entry_4_4 =
       ofLadj LH_pre_0_4_4 LH_pim_0_4_4 := by
   rw [L_entry_0_4, H_entry_4_4, ofLadj_mul,
     LH_pre_eq_0_4_4, LH_pim_eq_0_4_4]
 
-def LH_pre_0_4_5 : Polynomial ℚ := C ((-3 / 11 : ℚ)) + C ((8 / 11 : ℚ)) * X + C ((18 / 11 : ℚ)) * X ^ 3 + C ((14 / 11 : ℚ)) * X ^ 4 + C ((30 / 11 : ℚ)) * X ^ 5 + C ((27 / 11 : ℚ)) * X ^ 6 + C ((31 / 11 : ℚ)) * X ^ 7 + C ((17 / 11 : ℚ)) * X ^ 8 + C ((-3 / 11 : ℚ)) * X ^ 9 + C ((9 / 11 : ℚ)) * X ^ 10 + C ((-2 / 11 : ℚ)) * X ^ 11 + C ((1 / 11 : ℚ)) * X ^ 12 + C ((-3 / 11 : ℚ)) * X ^ 13 + C ((-1 / 11 : ℚ)) * X ^ 14 + C ((5 / 11 : ℚ)) * X ^ 15 + C ((-9 / 11 : ℚ)) * X ^ 16 + C ((-6 / 11 : ℚ)) * X ^ 17 + C ((-12 / 11 : ℚ)) * X ^ 18
-def LH_pim_0_4_5 : Polynomial ℚ := C ((-7 / 11 : ℚ)) + C ((-14 / 11 : ℚ)) * X + C ((-14 / 11 : ℚ)) * X ^ 2 + C (-3) * X ^ 3 + C (-3) * X ^ 4 + C ((-45 / 11 : ℚ)) * X ^ 5 + C ((-31 / 11 : ℚ)) * X ^ 6 + C ((-32 / 11 : ℚ)) * X ^ 7 + C ((-29 / 11 : ℚ)) * X ^ 8 + C (-3) * X ^ 9 + C ((-28 / 11 : ℚ)) * X ^ 10 + C ((-26 / 11 : ℚ)) * X ^ 11 + C ((-24 / 11 : ℚ)) * X ^ 12 + C ((-19 / 11 : ℚ)) * X ^ 13 + C ((-4 / 11 : ℚ)) * X ^ 14 + C ((3 / 11 : ℚ)) * X ^ 15 + C ((2 / 11 : ℚ)) * X ^ 16 + C ((8 / 11 : ℚ)) * X ^ 17 + C ((-4 / 11 : ℚ)) * X ^ 18
+def LH_pre_0_4_5 : Polynomial ℚ := interpQ 11 [-3, 8, 0, 18, 14, 30, 27, 31, 17, -3, 9, -2, 1, -3, -1, 5, -9, -6, -12]
+def LH_pim_0_4_5 : Polynomial ℚ := interpQ 11 [-7, -14, -14, -33, -33, -45, -31, -32, -29, -33, -28, -26, -24, -19, -4, 3, 2, 8, -4]
 theorem LH_pre_eq_0_4_5 :
     L_re_0_5 * H_re_5_4 - L_im_0_5 * H_im_5_4 =
       LH_pre_0_4_5 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_5, L_im_0_5, H_re_5_4, H_im_5_4,
-    LH_pre_0_4_5]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_5, z_H_re_5_4, z_L_im_0_5,
+    z_H_im_5_4]
+  simp only [LH_pre_0_4_5]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_pim_eq_0_4_5 :
     L_re_0_5 * H_im_5_4 + L_im_0_5 * H_re_5_4 =
       LH_pim_0_4_5 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_5, L_im_0_5, H_re_5_4, H_im_5_4,
-    LH_pim_0_4_5]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_5, z_H_im_5_4, z_L_im_0_5,
+    z_H_re_5_4]
+  simp only [LH_pim_0_4_5]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_term_0_4_5 :
     L_entry_0_5 * H_entry_5_4 =
       ofLadj LH_pre_0_4_5 LH_pim_0_4_5 := by
   rw [L_entry_0_5, H_entry_5_4, ofLadj_mul,
     LH_pre_eq_0_4_5, LH_pim_eq_0_4_5]
 
-def LH_pre_0_4_6 : Polynomial ℚ := (0 : Polynomial ℚ)
-def LH_pim_0_4_6 : Polynomial ℚ := (0 : Polynomial ℚ)
+def LH_pre_0_4_6 : Polynomial ℚ := interpQ 1 []
+def LH_pim_0_4_6 : Polynomial ℚ := interpQ 1 []
 theorem LH_pre_eq_0_4_6 :
     L_re_0_6 * H_re_6_4 - L_im_0_6 * H_im_6_4 =
       LH_pre_0_4_6 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_6, L_im_0_6, H_re_6_4, H_im_6_4,
-    LH_pre_0_4_6]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_6, z_H_re_6_4, z_L_im_0_6,
+    z_H_im_6_4]
+  simp only [LH_pre_0_4_6]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_pim_eq_0_4_6 :
     L_re_0_6 * H_im_6_4 + L_im_0_6 * H_re_6_4 =
       LH_pim_0_4_6 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_6, L_im_0_6, H_re_6_4, H_im_6_4,
-    LH_pim_0_4_6]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_6, z_H_im_6_4, z_L_im_0_6,
+    z_H_re_6_4]
+  simp only [LH_pim_0_4_6]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_term_0_4_6 :
     L_entry_0_6 * H_entry_6_4 =
       ofLadj LH_pre_0_4_6 LH_pim_0_4_6 := by
   rw [L_entry_0_6, H_entry_6_4, ofLadj_mul,
     LH_pre_eq_0_4_6, LH_pim_eq_0_4_6]
 
-def LH_pre_0_4_7 : Polynomial ℚ := (0 : Polynomial ℚ)
-def LH_pim_0_4_7 : Polynomial ℚ := (0 : Polynomial ℚ)
+def LH_pre_0_4_7 : Polynomial ℚ := interpQ 1 []
+def LH_pim_0_4_7 : Polynomial ℚ := interpQ 1 []
 theorem LH_pre_eq_0_4_7 :
     L_re_0_7 * H_re_7_4 - L_im_0_7 * H_im_7_4 =
       LH_pre_0_4_7 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_7, L_im_0_7, H_re_7_4, H_im_7_4,
-    LH_pre_0_4_7]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_7, z_H_re_7_4, z_L_im_0_7,
+    z_H_im_7_4]
+  simp only [LH_pre_0_4_7]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_pim_eq_0_4_7 :
     L_re_0_7 * H_im_7_4 + L_im_0_7 * H_re_7_4 =
       LH_pim_0_4_7 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_7, L_im_0_7, H_re_7_4, H_im_7_4,
-    LH_pim_0_4_7]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_7, z_H_im_7_4, z_L_im_0_7,
+    z_H_re_7_4]
+  simp only [LH_pim_0_4_7]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_term_0_4_7 :
     L_entry_0_7 * H_entry_7_4 =
       ofLadj LH_pre_0_4_7 LH_pim_0_4_7 := by
   rw [L_entry_0_7, H_entry_7_4, ofLadj_mul,
     LH_pre_eq_0_4_7, LH_pim_eq_0_4_7]
 
-def LH_pre_0_4_8 : Polynomial ℚ := (0 : Polynomial ℚ)
-def LH_pim_0_4_8 : Polynomial ℚ := (0 : Polynomial ℚ)
+def LH_pre_0_4_8 : Polynomial ℚ := interpQ 1 []
+def LH_pim_0_4_8 : Polynomial ℚ := interpQ 1 []
 theorem LH_pre_eq_0_4_8 :
     L_re_0_8 * H_re_8_4 - L_im_0_8 * H_im_8_4 =
       LH_pre_0_4_8 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_8, L_im_0_8, H_re_8_4, H_im_8_4,
-    LH_pre_0_4_8]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_8, z_H_re_8_4, z_L_im_0_8,
+    z_H_im_8_4]
+  simp only [LH_pre_0_4_8]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_pim_eq_0_4_8 :
     L_re_0_8 * H_im_8_4 + L_im_0_8 * H_re_8_4 =
       LH_pim_0_4_8 := by
-  refine Polynomial.funext fun r => ?_
-  simp only [L_re_0_8, L_im_0_8, H_re_8_4, H_im_8_4,
-    LH_pim_0_4_8]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero]
-  try grind
+  rw [z_L_re_0_8, z_H_im_8_4, z_L_im_0_8,
+    z_H_re_8_4]
+  simp only [LH_pim_0_4_8]
+  simp (disch := decide) only [interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 theorem LH_term_0_4_8 :
     L_entry_0_8 * H_entry_8_4 =
       ofLadj LH_pre_0_4_8 LH_pim_0_4_8 := by
@@ -270,23 +317,27 @@ theorem LH_term_0_4_8 :
 
 theorem LH_sum_poly_re_0_4 :
     LH_pre_0_4_0 + LH_pre_0_4_1 + LH_pre_0_4_2 + LH_pre_0_4_3 + LH_pre_0_4_4 + LH_pre_0_4_5 + LH_pre_0_4_6 + LH_pre_0_4_7 + LH_pre_0_4_8 = (0 : Polynomial ℚ) + Phi11 * LH_qre_0_4 := by
-  refine Polynomial.funext fun r => ?_
-  rw [Phi11_expand]
+  rw [phi11_interp]
   simp only [LH_pre_0_4_0, LH_pre_0_4_1, LH_pre_0_4_2, LH_pre_0_4_3, LH_pre_0_4_4, LH_pre_0_4_5, LH_pre_0_4_6, LH_pre_0_4_7, LH_pre_0_4_8, LH_qre_0_4]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try grind
+  simp (disch := decide) only [interp_zero, interp_one, interp_ofNat,
+    interp_neg, interp_mul, interp_add, interp_sub, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem LH_sum_poly_im_0_4 :
     LH_pim_0_4_0 + LH_pim_0_4_1 + LH_pim_0_4_2 + LH_pim_0_4_3 + LH_pim_0_4_4 + LH_pim_0_4_5 + LH_pim_0_4_6 + LH_pim_0_4_7 + LH_pim_0_4_8 = (0 : Polynomial ℚ) + Phi11 * LH_qim_0_4 := by
-  refine Polynomial.funext fun r => ?_
-  rw [Phi11_expand]
+  rw [phi11_interp]
   simp only [LH_pim_0_4_0, LH_pim_0_4_1, LH_pim_0_4_2, LH_pim_0_4_3, LH_pim_0_4_4, LH_pim_0_4_5, LH_pim_0_4_6, LH_pim_0_4_7, LH_pim_0_4_8, LH_qim_0_4]
-  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
-    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
-    Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try grind
+  simp (disch := decide) only [interp_zero, interp_one, interp_ofNat,
+    interp_neg, interp_mul, interp_add, interp_sub, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem LH_sum_entries_0_4 :
     L_entry_0_0 * H_entry_0_4 + L_entry_0_1 * H_entry_1_4 + L_entry_0_2 * H_entry_2_4 + L_entry_0_3 * H_entry_3_4 + L_entry_0_4 * H_entry_4_4 + L_entry_0_5 * H_entry_5_4 + L_entry_0_6 * H_entry_6_4 + L_entry_0_7 * H_entry_7_4 + L_entry_0_8 * H_entry_8_4 =

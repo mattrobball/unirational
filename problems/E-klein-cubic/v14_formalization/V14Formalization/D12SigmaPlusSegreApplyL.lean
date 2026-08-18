@@ -5,11 +5,985 @@ Stock-limit, kernel-checkable plus Segre entry identities.
 module
 
 public import V14Formalization.D12SigmaPlusSegreEval
+public import V14Formalization.D12PolyZReflection
 
 noncomputable section
 open Matrix Polynomial
 namespace V14Formalization.D12SigmaPlusSegreCore
 open D12PolynomialData
+open V14Formalization.D12PolyZReflection
+
+public theorem z_L_re_0_0 :
+    L_re_0_0 = interpQ 22 [1, 0, 3, 0, 1, 1, 1, 1, 0, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_0_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_0_0 :
+    L_im_0_0 = interpQ 22 [1, 2, 0, 2, 2, 2, 0, 0, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_0_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_0_1 :
+    L_re_0_1 = interpQ 44 [10, 0, -4, 0, 0, -1, -1, 0, 0, -4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_0_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_0_1 :
+    L_im_0_1 = interpQ 44 [-2, -4, -2, 2, -6, -3, -1, 2, -6, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_0_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_0_2 :
+    L_re_0_2 = interpQ 22 [2, 0, -1, 0, 0, 0, 0, 0, 0, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_0_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_0_2 :
+    L_im_0_2 = interpQ 22 [0, 0, 1, 2, -2, 0, 0, 2, -2, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_0_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_0_3 :
+    L_re_0_3 = interpQ 44 [-18, 0, -6, -2, -2, -3, -3, -2, -2, -6] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_0_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_0_3 :
+    L_im_0_3 = interpQ 44 [-2, -4, 4, -8, 4, -3, -1, -8, 4, -8] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_0_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_0_4 :
+    L_re_0_4 = interpQ 11 [-1, 0, -2, -1, -1, -1, -1, -1, -1, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_0_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_0_4 :
+    L_im_0_4 = interpQ 11 [-1, -2, 0, -2, -2, -2, 0, 0, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_0_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_0_5 :
+    L_re_0_5 = interpQ 11 [-1, 0, -2, -1, -1, -1, -1, -1, -1, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_0_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_0_5 :
+    L_im_0_5 = interpQ 11 [-1, -2, 0, -2, -2, -2, 0, 0, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_0_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_0_6 :
+    L_re_0_6 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_0_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_0_6 :
+    L_im_0_6 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_0_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_0_7 :
+    L_re_0_7 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_0_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_0_7 :
+    L_im_0_7 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_0_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_0_8 :
+    L_re_0_8 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_0_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_0_8 :
+    L_im_0_8 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_0_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_1_0 :
+    L_re_1_0 = interpQ 22 [4, 0, 2, 2, 3, 2, 2, 3, 2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_1_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_1_0 :
+    L_im_1_0 = interpQ 22 [-1, -2, -1, -2, 1, -4, 2, -3, 0, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_1_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_1_1 :
+    L_re_1_1 = interpQ 44 [-5, 0, -9, 5, -22, 1, 1, -22, 5, -9] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_1_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_1_1 :
+    L_im_1_1 = interpQ 44 [17, 34, -1, 29, 18, 15, 19, 16, 5, 35] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_1_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_1_2 :
+    L_re_1_2 = interpQ 22 [4, 0, 1, 4, -1, 5, 5, -1, 4, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_1_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_1_2 :
+    L_im_1_2 = interpQ 22 [4, 8, 1, 4, 3, 3, 5, 5, 4, 7] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_1_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_1_3 :
+    L_re_1_3 = interpQ 44 [-39, 0, -9, -43, 18, -29, -29, 18, -43, -9] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_1_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_1_3 :
+    L_im_1_3 = interpQ 44 [-23, -46, 9, -37, -30, 7, -53, -16, -9, -55] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_1_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_1_4 :
+    L_re_1_4 = interpQ 11 [-7, 0, -3, -6, 0, -4, -4, 0, -6, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_1_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_1_4 :
+    L_im_1_4 = interpQ 11 [-3, -6, -2, -5, -5, 0, -6, -1, -1, -4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_1_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_1_5 :
+    L_re_1_5 = interpQ 11 [-7, 0, -3, -6, 0, -4, -4, 0, -6, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_1_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_1_5 :
+    L_im_1_5 = interpQ 11 [-2, -4, 3, -4, -2, 2, -6, -2, 0, -7] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_1_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_1_6 :
+    L_re_1_6 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_1_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_1_6 :
+    L_im_1_6 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_1_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_1_7 :
+    L_re_1_7 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_1_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_1_7 :
+    L_im_1_7 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_1_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_1_8 :
+    L_re_1_8 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_1_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_1_8 :
+    L_im_1_8 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_1_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_2_0 :
+    L_re_2_0 = interpQ 22 [2, 0, -1, 2, -2, 0, 0, -2, 2, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_2_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_2_0 :
+    L_im_2_0 = interpQ 22 [1, 2, 0, 4, 3, 0, 2, -1, -2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_2_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_2_1 :
+    L_re_2_1 = interpQ 44 [33, 0, 14, 30, -12, 23, 23, -12, 30, 14] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_2_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_2_1 :
+    L_im_2_1 = interpQ 44 [23, 46, -2, 32, 34, 1, 45, 12, 14, 48] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_2_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_2_2 :
+    L_re_2_2 = interpQ 22 [7, 0, 4, 8, -3, 4, 4, -3, 8, 4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_2_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_2_2 :
+    L_im_2_2 = interpQ 22 [3, 6, -4, 6, 7, -2, 8, -1, 0, 10] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_2_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_2_3 :
+    L_re_2_3 = interpQ 44 [-101, 0, -28, -90, 30, -65, -65, 30, -90, -28] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_2_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_2_3 :
+    L_im_2_3 = interpQ 44 [-49, -98, 12, -84, -72, 11, -109, -26, -14, -110] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_2_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_2_4 :
+    L_re_2_4 = interpQ 11 [-12, 0, -2, -10, 3, -7, -7, 3, -10, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_2_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_2_4 :
+    L_im_2_4 = interpQ 11 [-5, -10, 1, -9, -7, 2, -12, -3, -1, -11] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_2_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_2_5 :
+    L_re_2_5 = interpQ 11 [-12, 0, -2, -10, 3, -7, -7, 3, -10, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_2_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_2_5 :
+    L_im_2_5 = interpQ 11 [-5, -10, 1, -9, -7, 2, -12, -3, -1, -11] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_2_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_2_6 :
+    L_re_2_6 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_2_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_2_6 :
+    L_im_2_6 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_2_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_2_7 :
+    L_re_2_7 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_2_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_2_7 :
+    L_im_2_7 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_2_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_2_8 :
+    L_re_2_8 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_2_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_2_8 :
+    L_im_2_8 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_2_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_3_0 :
+    L_re_3_0 = interpQ 22 [-1, 0, -2, 0, -2, -1, -1, -2, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_3_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_3_0 :
+    L_im_3_0 = interpQ 22 [1, 2, 0, 2, 2, 2, 0, 0, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_3_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_3_1 :
+    L_re_3_1 = interpQ 44 [2, 0, 1, -3, 1, 0, 0, 1, -3, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_3_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_3_1 :
+    L_im_3_1 = interpQ 44 [2, 4, 1, 1, 5, -2, 6, -1, 3, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_3_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_3_2 :
+    L_re_3_2 = interpQ 22 [2, 0, 0, -1, 0, 0, 0, 0, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_3_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_3_2 :
+    L_im_3_2 = interpQ 22 [2, 4, 2, 1, 2, 0, 4, 2, 3, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_3_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_3_3 :
+    L_re_3_3 = interpQ 44 [-2, 0, 1, -3, 3, 0, 0, 3, -3, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_3_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_3_3 :
+    L_im_3_3 = interpQ 44 [-2, -4, -1, -5, -7, 6, -10, 3, 1, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_3_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_3_4 :
+    L_re_3_4 = interpQ 11 [0, 0, 0, -1, 1, 0, 0, 1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_3_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_3_4 :
+    L_im_3_4 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_3_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_3_5 :
+    L_re_3_5 = interpQ 11 [0, 0, 0, -1, 1, 0, 0, 1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_3_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_3_5 :
+    L_im_3_5 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_3_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_3_6 :
+    L_re_3_6 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_3_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_3_6 :
+    L_im_3_6 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_3_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_3_7 :
+    L_re_3_7 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_3_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_3_7 :
+    L_im_3_7 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_3_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_3_8 :
+    L_re_3_8 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_3_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_3_8 :
+    L_im_3_8 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_3_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_4_0 :
+    L_re_4_0 = interpQ 11 [-3, 0, -1, -2, 0, -1, -1, 0, -2, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_4_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_4_0 :
+    L_im_4_0 = interpQ 22 [-1, -2, 1, -3, 0, 1, -3, -2, 1, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_4_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_4_1 :
+    L_re_4_1 = interpQ 44 [-62, 0, -24, -54, 11, -45, -45, 11, -54, -24] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_4_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_4_1 :
+    L_im_4_1 = interpQ 44 [-34, -68, 2, -54, -45, -1, -67, -23, -14, -70] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_4_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_4_2 :
+    L_re_4_2 = interpQ 22 [-15, 0, -4, -11, 4, -9, -9, 4, -11, -4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_4_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_4_2 :
+    L_im_4_2 = interpQ 22 [-9, -18, 0, -13, -10, -1, -17, -8, -5, -18] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_4_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_4_3 :
+    L_re_4_3 = interpQ 44 [182, 0, 64, 160, -27, 119, 119, -27, 160, 64] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_4_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_4_3 :
+    L_im_4_3 = interpQ 44 [82, 164, -26, 144, 111, -11, 175, 53, 20, 190] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_4_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_4_4 :
+    L_re_4_4 = interpQ 11 [20, 0, 7, 18, -3, 12, 12, -3, 18, 7] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_4_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_4_4 :
+    L_im_4_4 = interpQ 11 [8, 16, -4, 15, 11, -2, 18, 5, 1, 20] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_4_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_4_5 :
+    L_re_4_5 = interpQ 11 [20, 0, 7, 18, -3, 12, 12, -3, 18, 7] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_4_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_4_5 :
+    L_im_4_5 = interpQ 11 [8, 16, -4, 15, 11, -2, 18, 5, 1, 20] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_4_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_4_6 :
+    L_re_4_6 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_4_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_4_6 :
+    L_im_4_6 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_4_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_4_7 :
+    L_re_4_7 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_4_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_4_7 :
+    L_im_4_7 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_4_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_4_8 :
+    L_re_4_8 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_4_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_4_8 :
+    L_im_4_8 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_4_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_5_0 :
+    L_re_5_0 = interpQ 44 [-4, 0, -1, -3, -4, -1, -1, -4, -3, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_5_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_5_0 :
+    L_im_5_0 = interpQ 44 [2, 4, 3, 0, 4, 3, 1, 0, 4, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_5_0, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_5_1 :
+    L_re_5_1 = interpQ 88 [-4, 0, -15, -9, 6, -13, -13, 6, -9, -15] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_5_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_5_1 :
+    L_im_5_1 = interpQ 88 [-14, -28, -5, -9, -20, -13, -15, -8, -19, -23] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_5_1, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_5_2 :
+    L_re_5_2 = interpQ 44 [0, 0, -4, -3, 1, -5, -5, 1, -3, -4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_5_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_5_2 :
+    L_im_5_2 = interpQ 44 [-2, -4, 2, -1, -3, -3, -1, -1, -3, -6] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_5_2, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_5_3 :
+    L_re_5_3 = interpQ 88 [38, 0, 23, 33, 2, 33, 33, 2, 33, 23] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_5_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_5_3 :
+    L_im_5_3 = interpQ 88 [24, 48, -1, 35, 28, 15, 33, 20, 13, 49] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_5_3, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_5_4 :
+    L_re_5_4 = interpQ 22 [6, 0, 1, 4, 1, 2, 2, 1, 4, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_5_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_5_4 :
+    L_im_5_4 = interpQ 22 [3, 6, 1, 4, 2, -1, 7, 4, 2, 5] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_5_4, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_5_5 :
+    L_re_5_5 = interpQ 22 [6, 0, 1, 4, 1, 2, 2, 1, 4, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_5_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_5_5 :
+    L_im_5_5 = interpQ 22 [-1, -2, -5, 1, -2, -4, 2, 0, -3, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_5_5, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_5_6 :
+    L_re_5_6 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_5_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_5_6 :
+    L_im_5_6 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_5_6, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_5_7 :
+    L_re_5_7 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_5_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_5_7 :
+    L_im_5_7 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_5_7, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_re_5_8 :
+    L_re_5_8 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_re_5_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
+
+public theorem z_L_im_5_8 :
+    L_im_5_8 = interpQ 1 [] := by
+  refine Polynomial.funext fun r => ?_
+  simp [L_im_5_8, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul,
+    Polynomial.eval_C, Polynomial.eval_X,
+    Polynomial.eval_pow]
+  try grind
 
 public theorem L_apply_0_0 :
     L (0 : Fin 6) (0 : Fin 9) = L_entry_0_0 := by

@@ -175,6 +175,9 @@ public theorem interp_pow_two (d : ℕ) (n : List Int) :
 
 /-- Numeral coefficients enter the reflection with denominator one, so a
     certificate that mentions `2 * p` or `4 * p` stays foldable. -/
+public theorem interp_zero : (0 : Polynomial ℚ) = interpQ 1 [] := by
+  simp [interpQ, toPolyZ]
+
 public theorem interp_one : (1 : Polynomial ℚ) = interpQ 1 [1] := by
   simp [interpQ, toPolyZ]
 
