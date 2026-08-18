@@ -5,7 +5,7 @@ and the rules that keep it that way; it is no longer a plan. Read
 "Where things stand" first, then the sections that apply to what you are
 changing.
 
-## Where things stand (2026-08-18)
+## Where things stand (2026-08-19)
 
 | | |
 |---|---:|
@@ -456,6 +456,18 @@ calibration against the pilot commit).
 | after the SplitRow redesign + de-exposing Piece*Data | 166,352 | 143.2M | 67.8M |
 | after converting VQ / HM `change` | 166,991 | 143.5M | 68.1M |
 | after retiring the 15x15 ambient tables | 163,958 | **133.4M** | **65.0M** |
+| deleting the 350 dead files (2026-08-19) | 163,958 | 133.4M | 65.0M |
+| sigma carrier eigen-columns -> integer reflection | 163,815 | 128.6M | 61.8M |
+| sigma minus normal form -> integer reflection | 163,345 | 111.0M | 53.5M |
+| compound restriction -> integer reflection | 163,824 | 98.9M | 47.6M |
+| sigma carrier bridge rows -> integer reflection | 163,824 | 91.9M | 43.4M |
+| ... including the five dense entries | 163,489 | 86.9M | 41.0M |
+| Segre LH / NH -> integer reflection | 163,117 | **82.0M** | **39.2M** |
+
+Net for 2026-08-19: **133.4M -> 82.0M, -38.5%** — see "The integer reflection,
+applied everywhere" below. At ~85 bytes/node the export is ~7.0 GB against the
+15 GB runner, which is the first time this proof has had a factor of two of
+margin rather than a sliver.
 
 Net for 2026-08-18: **177.6M -> 143.5M, -19.2%**, and `@[expose]` 7,093 -> 4,769.
 The last two rows are the exposure work paid for on the export: +3.35M, +2.4%,
@@ -573,6 +585,183 @@ families.** It was the plan on 2026-08-17, on the assumption that only a change
 of route could shrink them; one tactic did two thirds of it at a fraction of the
 cost. The remaining `interpQ` work belongs to Compound and the `relation_*`
 families, which `grind` does not address.
+
+## The integer reflection, applied everywhere (2026-08-19)
+
+**133.4M -> 82.0M per-constant, -38.5%; 65.0M -> 39.2M per-module, -39.6%.**
+At ~85 bytes/node the export goes from ~11.3 GB to ~7.0 GB, against a 15 GB
+runner that has to hold Comparator's own ~12 GB alongside `lean4export`.
+
+### One mechanism
+
+Every family below proved polynomial identities the same expensive way: unfold
+the coefficient tables into `C (a/b) + C (c/d) * X + ...`, then close the goal
+with `ring_nf` + 63 `natN_as_C` rewrites + `module`, or with
+`Polynomial.funext` + a full-width eval `simp` + `grind`. Both tactics inline
+their whole normalisation trace into the proof term, which is why these
+families were 50,000-75,000 `Expr` nodes *per certificate*.
+
+`V14Formalization/D12PolyZReflection.lean` -- written earlier for the Segre
+families -- already had the alternative: a polynomial is carried as
+`interpQ d [n...]`, integer numerators against a positive denominator, and
+
+* `interp_mul` turns a product into an **unevaluated** `convList`,
+* `interp_add` / `interp_sub` (equal denominators) and `interp_add_gen` /
+  `interp_sub_gen` (mixed) fold a sum into one `interpQ`,
+* `interp_eq` reduces the goal to a `List Int` all-zero test that `decide`
+  runs in the kernel.
+
+So the proof term carries the input literals and the fold's structure, and
+nothing else; the arithmetic happens in the kernel where it costs no nodes.
+The work in each family is (i) publish `x = interpQ d [...]` once per table
+entry, (ii) rewrite with those instead of unfolding, (iii) fold and `decide`.
+
+| family | before | after | |
+|---|---:|---:|---:|
+| `D12SigmaMinusReverse` | 18,015,924 | below the floor | |
+| `D12SigmaCarrierBridgeRow` | 13,583,171 | below the floor | |
+| `D12CompoundRRow` | 7,290,836 | below the floor | |
+| `D12CompoundFRow` | 7,227,934 | below the floor | |
+| `D12SigmaPlusSegreLH` | 4,283,134 | below the floor | |
+| `D12SigmaCarrierPlusCol` | 3,023,561 | below the floor | |
+| `D12SigmaCarrierMinusCol` | 2,607,092 | below the floor | |
+| `D12SigmaPlusSegreNH` | 2,025,214 | below the floor | |
+| `D12SigmaMinusReference` | 808,066 | below the floor | |
+| `D12SigmaMinusQuadric` | 580,873 | below the floor | |
+| paid back: `D12CompoundBridge` | 134,239 | 1,432,425 | 272 entry bridges |
+| paid back: `D12SigmaPlusSegreApplyL` | small | 343,135 | 108 entry bridges |
+| paid back: `D12SigmaCarrierS6Explicit` | small | 103,482 | 6 row equations |
+
+Representative single modules, standalone: `D12SigmaCarrierPlusCol0`
+605,078 -> 68,245; `D12SigmaMinusReverse0` 1,792,121 -> 195,498;
+`D12CompoundRRow0` 471,252 -> 42,384; `D12SigmaCarrierBridgeRow0` 786,660 ->
+159,658; `D12SigmaCarrierBridgeRow5` 1,963,815 -> 160,976;
+`D12SigmaPlusSegreLH_0_0` ~119,000 -> 22,386.
+
+### Six things that had to be learned
+
+1. **Publish the reflection per ROW, not per entry, wherever the index is
+   computed.** In the bridge rows the 6x6 indices arrive as `pairLexVec`
+   values, not numerals, so `z_S6_explicit_0_1 : S6_explicit_row0 1 = …` can
+   never fire. `z_S6_explicit_row0 : S6_explicit_row0 = fun j => match j.val
+   with …` reduces exactly the way unfolding the definition does, and does
+   fire. Where the index *is* a numeral (`R6c_0_0`, `of10 RM0c0`) the
+   per-entry form is fine and cheaper.
+2. **`simp` normalises `a - (b + c)` to `-b + -c`,** so the fold needs
+   `interp_neg` or it stops at the first negation.
+3. **List `interp_add` / `interp_sub` before the `_gen` versions.** The
+   denominator-mixing lemmas multiply denominators, and 15 additions of
+   denominator-121 terms would reach 121^15. With the equal-denominator
+   lemmas available the fold stays at 121 or 242.
+4. **`compute_degree` cannot see through the Horner nesting** that `toPolyZ`
+   builds. `natDegree_toPolyZ_lt` / `natDegree_interpQ_lt` prove the sharp
+   bound once by induction; `D12SigmaMinusReference` needs
+   `disc_poly.natDegree < 10` for `AdjoinRoot.mk_ne_zero_of_natDegree_lt`.
+5. **`Polynomial.C_mul` and `map_mul` are simp lemmas in the splitting
+   direction,** so `C (1/2) * C 2` will not combine: `simp only [←
+   Polynomial.C_mul]` followed by anything that runs the default simp set
+   just puts it back. Where a consumer is left holding that residual
+   (`D12SigmaMinusAmbient`), the repo's own `C_eq_smul_one` + `module`
+   finisher is the thing that closes it.
+6. **Numeral coefficients need lemmas of their own**: `interp_zero`,
+   `interp_one`, `interp_ofNat`, `interp_pow_two`, so that `2 * p`, `p ^ 2`
+   and the `0`/`1` right-hand sides stay foldable.
+
+### Emitters
+
+All changes are emitter changes, and each emitter was checked to round-trip
+byte-for-byte first (modulo the annotation hook, which only runs on an
+in-place emit):
+
+* `scripts/export_sigma_carrier_lean.py` -- core tables, eigen columns,
+  bridge rows, the explicit 6x6.
+* `scripts/export_sigma_minus_normal_form_lean.py` -- the whole minus packet.
+* `scripts/export_d12_compound_lean.py` -- the 600 compound certificates and
+  the shared bridge.
+* `scripts/export_sigma_plus_identities.py` -- LH / NH and the L / N entry
+  bridges.
+
+One consumer, `D12SigmaPlusSegreBplus`, belongs to a **stale** emitter
+(`export_sigma_plus_span.py`, which refuses to run). It is handled by
+`scripts/interp_simp_arg_rewrite.py`, a strict idempotent post-pass that adds
+`interpQ, toPolyZ` to the simp lists that name a reflected table and refuses
+to write if a statement line would change -- the remedy MODULE_MIGRATION
+already prescribes for stale families.
+
+`emit_split_bridge_relation` in the carrier emitter is now unreachable
+(`if False and …`, with the reason in a comment): it chunked the quotient into
+five-degree windows so that no tactic saw both the degree-35 raw entry and the
+full quotient, and the reflection makes that unnecessary. It is kept rather
+than deleted because it is the only record of why those five entries were
+special.
+
+### What is left, and what the numbers say about the two proposals it came from
+
+The brief that drove this session proposed two separate levers. Both were
+checked against measurement, and the measurement changed the answer.
+
+**"Halve the field degree on the sigma side" (estimated -13 to -17%).** The
+field claim is TRUE and was verified first, over the whole packet: every one
+of the 1,938 field elements in `Bplus_15x6`, `Bminus_15x4`, `Lplus_6x15`,
+`Lminus_4x15`, `S15x15`, `P15x15`, `Pplus15x15`, `Pminus15x15`, the 30
+restricted Plucker quadrics and the entire minus normal-form packet is fixed
+by `z -> z^-1`, i.e. lies in the degree-5 real subfield `Q(z + z^-1)`. The one
+exception is `R15x15` (205 of its 225 entries are not real), which is not part
+of that packet. Verified independently in Python from
+`results/sigma_normal_form_K.json`.
+
+It is nevertheless **not the lever to pull**, for two measured reasons:
+
+* The estimate assumed the arithmetic stayed on `ring_nf` + `module`, where
+  cost scales with the number of coefficient products. Under the integer
+  reflection the products are unevaluated `convList` terms, so halving the
+  coefficient count halves *literals*, not traces. The whole sigma carrier +
+  sigma minus side is now **4.28M nodes, 5.2% of the closure**; halving its
+  lists could reach ~2M, i.e. about 2%, not 13-17%.
+* It would break the one place that genuinely needs `Q(zeta)`. The bridge
+  rows identify `Srestricted_poly`, built from `compound2Lex S6_poly`, with
+  its reduced representative, and `S6 = g^-1 M_0` with `g` the Gauss sum is
+  *not* real. Moving the reduced side to a degree-5 variable `Y` would need
+  `evalPolyAt z p = evalPolyAt (z + z^10) q` per entry, i.e. a degree-40
+  composition certificate for each of 100 entries. The exterior square squares
+  the Gauss sum out, which is exactly why everything *else* is real -- and
+  exactly why the bridge is not.
+
+**"Replace `split_identity` with `A·K = 0` plus a mod-23 rank certificate"
+(estimated -2 to -3%).** Not attempted; the measured prize today is the four
+`D12Piece*SplitRow` families at **4,351,115 nodes, 5.3% of the closure**. It
+is the only one of the proposals that is a change of *proof architecture*
+rather than of arithmetic, and it needs three layers the tree does not have:
+rank-nullity over `Omega` relating `finrank (ker A.mulVec)` to a right
+inverse, a ring hom `Z[zeta] -> F_23` applied to matrices with
+`RingHom.map_det`, and an 8x8 `Matrix.det` reduced by `decide` over `ZMod 23`
+(`Finset.univ : Finset (Equiv.Perm (Fin 8))` has 40,320 elements, which is
+where that plan is most likely to fail). The cheap-looking substitute -- an
+explicit right inverse instead of a determinant -- is not cheaper: it is
+64-100 entries per piece against `split_identity`'s 100, so it saves nothing.
+Whoever picks this up should cost the `decide` on the `ZMod 23` determinant
+*first*.
+
+### The families still above the reporting floor
+
+| family | per-constant | share | shape |
+|---|---:|---:|---|
+| `D12SigmaPlusSegreVQ` | 4,745,143 | 5.8% | partly reflected already; the `interpQ` bridges exist, the `Qrel`-side sums do not use them |
+| `D12SigmaPlusSegreDet` | 3,399,255 | 4.1% | `Polynomial.funext` + eval `simp` + `grind`; **no emitter in `scripts/`** |
+| `D12PiecePPCoeffProduct` | 3,179,221 | 3.9% | |
+| `D12SigmaPlusSegreSmoothC{U,V,W}` | 7,531,419 | 9.2% | same idiom as Det; **no emitter in `scripts/`** |
+| `D12PiecePPDeterminant` | 2,287,031 | 2.8% | `detTriple*_apply`, ~200k each |
+| `PluckerNaturality` | 2,216,648 | 2.7% | hand-written |
+| `D12SigmaPlusSegreHM` | 2,132,097 | 2.6% | |
+| `D12PiecePPCoeff` | 2,099,863 | 2.6% | |
+| the four `D12Piece*SplitRow` | 4,351,115 | 5.3% | the `split_identity` families above |
+
+Det and SmoothC{U,V,W} are 10.9M between them, 13.3%, and are the same
+pointwise-eval shape that fell by 81% in LH/NH. Their emitters are not in the
+tree, so converting them means a post-pass in the shape of
+`interp_simp_arg_rewrite.py`: parse the `def NAME : Polynomial Q := C (..) + …`
+bodies, emit a bridge module, rewrite the proofs, and refuse to write if a
+statement line changes. That is the largest remaining bounded prize.
 
 ## Deleting the dead files (2026-08-18)
 
