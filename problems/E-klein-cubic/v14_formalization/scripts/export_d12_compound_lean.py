@@ -33,6 +33,7 @@ import hashlib
 import json
 import sys
 from fractions import Fraction
+from math import lcm
 from pathlib import Path
 from typing import Dict, Iterable, List, Sequence, Tuple
 
@@ -133,6 +134,23 @@ def decode(entry: Sequence[Sequence[int]]) -> Poly:
     return trim(Fraction(n, d) for n, d in entry)
 
 
+def zlist(a: Sequence[Fraction]) -> Tuple[int, List[int]]:
+    """Common positive denominator and integer numerators, trailing zeros cut."""
+    d = 1
+    for coeff in a:
+        d = lcm(d, coeff.denominator)
+    ns = [int(coeff * d) for coeff in a]
+    while ns and ns[-1] == 0:
+        ns.pop()
+    return d, ns
+
+
+def lean_interp(a: Sequence[Fraction]) -> str:
+    """`interpQ d [n...]` -- the integer reflection of `D12PolyZReflection`."""
+    d, ns = zlist(list(a))
+    return "interpQ " + str(d) + " [" + ", ".join(str(n) for n in ns) + "]"
+
+
 def integral(values: Sequence[Fraction], factor: int, what: str) -> List[int]:
     out = []
     for x in values:
@@ -181,7 +199,7 @@ module
 # The shared bridge module.
 # --------------------------------------------------------------------------
 
-def emit_bridge(output_dir: Path, source_sha: str) -> Path:
+def emit_bridge(output_dir: Path, source_sha: str, data) -> Path:
     lines: List[str] = []
     append = lines.append
     append(HEADER.format(
@@ -189,6 +207,11 @@ def emit_bridge(output_dir: Path, source_sha: str) -> Path:
         schema=SCHEMA, source_sha=source_sha, extra="").rstrip("\n"))
     append("")
     append("public import V14Formalization.D12PolynomialCore")
+    append("public import V14Formalization.D12U6PolynomialSeal")
+    append("public import V14Formalization.D12F6PolynomialSeal")
+    append("public import V14Formalization.D12PolynomialRM")
+    append("public import V14Formalization.D12PolynomialSM")
+    append("public import V14Formalization.D12PolyZReflection")
     append("public import Mathlib.Tactic.LinearCombination")
     append("")
     append("/-!")
@@ -208,7 +231,8 @@ def emit_bridge(output_dir: Path, source_sha: str) -> Path:
     append("")
     append("namespace V14Formalization.D12CompoundBridge")
     append("")
-    append("open D12PolynomialData")
+    append("open D12PolynomialData D12U6PolynomialData D12F6PolynomialData")
+    append("open V14Formalization.D12PolyZReflection")
     append("")
     append("theorem C_half_two : (2 : Polynomial ℚ) * C (1 / 2 : ℚ) = 1 := by")
     append("  rw [show (2 : Polynomial ℚ) = C 2 by exact (map_natCast C 2).symm, ← map_mul]")
@@ -316,6 +340,47 @@ def emit_bridge(output_dir: Path, source_sha: str) -> Path:
             relation = "C_half_two" if coef > 0 else "C_neg_half_two"
             append(f"  linear_combination (N ({r} : Fin 10) j) * {relation}")
         append("")
+    # Integer reflection of every coefficient table the certificates touch.
+    # `interpQ d [n...]` is proved once per entry here and rewritten in, so the
+    # certificates fold by kernel list arithmetic instead of `norm_num` +
+    # `linear_combination` over `C (1/22)` atoms.
+    append("/-! ### Integer reflection of the sealed tables -/")
+    append("")
+    append("public theorem z_Phi11 :")
+    append("    (Phi11 : Polynomial ℚ) = interpQ 1 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] := by")
+    append("  simp [Phi11, interpQ, toPolyZ, Finset.sum_range_succ]")
+    append("  ring")
+    append("")
+    for mode in ("R", "F"):
+        key6 = f"{mode}6x6"
+        key_restricted = "RM10x10" if mode == "R" else "SM10x10"
+        entry = "R6c" if mode == "R" else "F6c"
+        big = "RM" if mode == "R" else "SM"
+        m6 = [[decode(e) for e in row] for row in data["operators"][key6]]
+        restricted = [[decode(e) for e in row]
+                      for row in data["m"][key_restricted]]
+        for i in range(6):
+            for j in range(6):
+                append(f"public theorem z_{entry}_{i}_{j} :")
+                append(f"    {entry}_{i}_{j} = {lean_interp(m6[i][j])} := by")
+                append("  refine Polynomial.funext fun r => ?_")
+                append(f"  simp [{entry}_{i}_{j}, of10, Fin.sum_univ_succ,")
+                append("    interpQ, toPolyZ, Polynomial.eval_add,")
+                append("    Polynomial.eval_mul, Polynomial.eval_C,")
+                append("    Polynomial.eval_X, Polynomial.eval_pow]")
+                append("  try grind")
+                append("")
+        for r in range(10):
+            for c in range(10):
+                append(f"public theorem z_of10_{big}{r}c{c} :")
+                append(f"    of10 {big}{r}c{c} = {lean_interp(restricted[r][c])} := by")
+                append("  refine Polynomial.funext fun r => ?_")
+                append(f"  simp [{big}{r}c{c}, of10, Fin.sum_univ_succ,")
+                append("    interpQ, toPolyZ, Polynomial.eval_add,")
+                append("    Polynomial.eval_mul, Polynomial.eval_C,")
+                append("    Polynomial.eval_X, Polynomial.eval_pow]")
+                append("  try grind")
+                append("")
     append("end V14Formalization.D12CompoundBridge")
     output = output_dir / "D12CompoundBridge.lean"
     output.write_text("\n".join(lines) + "\n", encoding="utf-8")
@@ -409,6 +474,7 @@ def emit_row(output_dir: Path, source_sha: str, payload_sha: str,
     append(f"namespace V14Formalization.{module_prefix}{row}")
     append("")
     append(f"open D12PolynomialData {small_namespace} D12CompoundBridge")
+    append("open V14Formalization.D12PolyZReflection")
     append("")
     append(f"@[expose] public abbrev QuotCoeff := Fin {quotient_size} → ℤ")
     append("")
@@ -455,18 +521,20 @@ def emit_row(output_dir: Path, source_sha: str, payload_sha: str,
         unfold = sorted({name for k, _ in support
                          for name in minor_names(row, k, small_entry)})
         append(f"def quotient_{column} : Polynomial ℚ :=")
-        append(f"  ofQuotNumerator {int_vector(quotient_numerators, quotient_size)}")
+        append("  " + lean_interp([Fraction(n, 484) for n in quotient_numerators]))
         append(f"private theorem cert_{column} :")
         append(f"    {statement} =")
         append(f"      Phi11 * quotient_{column} := by")
-        append(f"  norm_num [quotient_{column}, ofQuotNumerator,")
-        append("    " + ", ".join(unfold) + ",")
-        append(f"    {target_vec}, of10, Phi11,")
-        append("    Fin.sum_univ_succ, Finset.sum_range_succ]")
-        append(f"  simp only [{c_lemmas}]")
-        append("  norm_num")
-        append(f"  linear_combination ({polynomial_expression(linear_numerators)})"
-               " * C_one_over_22_sq")
+        append("  rw [z_Phi11]")
+        append(f"  simp only [quotient_{column}, z_of10_{target_vec},")
+        append("    " + ", ".join("z_" + name for name in unfold) + "]")
+        append("  simp (disch := decide) only [interp_one, interp_ofNat,")
+        append("    interp_pow_two, interp_neg, interp_mul, interp_add_gen,")
+        append("    interp_sub_gen, Nat.reduceMul]")
+        append("  apply interp_eq")
+        append("  · decide")
+        append("  · decide")
+        append("  · decide")
         append("")
         append(f"private theorem col_{column} :")
         append("    (2 : Polynomial ℚ) *")
@@ -506,7 +574,7 @@ def main() -> None:
     data = json.loads(raw_json)
     source_sha = hashlib.sha256(raw_json).hexdigest()
 
-    print(f"Wrote {emit_bridge(output_dir, source_sha)}")
+    print(f"Wrote {emit_bridge(output_dir, source_sha, data)}")
 
     for mode in modes:
         key6 = f"{mode}6x6"

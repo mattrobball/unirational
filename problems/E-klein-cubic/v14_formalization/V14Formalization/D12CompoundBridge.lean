@@ -8,6 +8,11 @@
 module
 
 public import V14Formalization.D12PolynomialCore
+public import V14Formalization.D12U6PolynomialSeal
+public import V14Formalization.D12F6PolynomialSeal
+public import V14Formalization.D12PolynomialRM
+public import V14Formalization.D12PolynomialSM
+public import V14Formalization.D12PolyZReflection
 public import Mathlib.Tactic.LinearCombination
 
 /-!
@@ -27,7 +32,8 @@ open Matrix Polynomial
 
 namespace V14Formalization.D12CompoundBridge
 
-open D12PolynomialData
+open D12PolynomialData D12U6PolynomialData D12F6PolynomialData
+open V14Formalization.D12PolyZReflection
 
 theorem C_half_two : (2 : Polynomial ℚ) * C (1 / 2 : ℚ) = 1 := by
   rw [show (2 : Polynomial ℚ) = C 2 by exact (map_natCast C 2).symm, ← map_mul]
@@ -382,5 +388,2460 @@ public theorem two_B_mul_row14
     simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Matrix.of_apply]
     all_goals ring
   rw [hB]
+
+/-! ### Integer reflection of the sealed tables -/
+
+public theorem z_Phi11 :
+    (Phi11 : Polynomial ℚ) = interpQ 1 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] := by
+  simp [Phi11, interpQ, toPolyZ, Finset.sum_range_succ]
+  ring
+
+public theorem z_R6c_0_0 :
+    R6c_0_0 = interpQ 11 [-1, -2, 0, -2, -2, -2, 0, 0, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_0_0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_0_1 :
+    R6c_0_1 = interpQ 11 [0, -4, 0, -2, -4, 0, -4, -4, -4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_0_1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_0_2 :
+    R6c_0_2 = interpQ 11 [4, 2, 0, 4, 0, 0, 0, 4, 4, 4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_0_2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_0_3 :
+    R6c_0_3 = interpQ 11 [4, 4, 4, 0, 4, 2, 0, 4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_0_3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_0_4 :
+    R6c_0_4 = interpQ 11 [0, 0, -4, 0, -2, -4, 0, -4, -4, -4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_0_4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_0_5 :
+    R6c_0_5 = interpQ 11 [4, 0, 0, 0, 4, 4, 4, 0, 4, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_0_5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_1_0 :
+    R6c_1_0 = interpQ 11 [0, -2, 0, -1, -2, 0, -2, -2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_1_0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_1_1 :
+    R6c_1_1 = interpQ 11 [-2, -2, -4, 0, -1, -2, -2, -2, -3, -4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_1_1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_1_2 :
+    R6c_1_2 = interpQ 11 [-3, -4, -2, -2, -2, -2, -2, 0, -1, -4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_1_2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_1_3 :
+    R6c_1_3 = interpQ 11 [-2, -2, -1, -3, -2, -2, -4, -4, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_1_3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_1_4 :
+    R6c_1_4 = interpQ 11 [-1, 1, -3, -1, -2, -1, 1, -1, -3, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_1_4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_1_5 :
+    R6c_1_5 = interpQ 11 [-3, -2, -1, -4, -2, -4, -2, -2, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_1_5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_2_0 :
+    R6c_2_0 = interpQ 11 [2, 1, 0, 2, 0, 0, 0, 2, 2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_2_0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_2_1 :
+    R6c_2_1 = interpQ 11 [-3, -4, -2, -2, -2, -2, -2, 0, -1, -4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_2_1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_2_2 :
+    R6c_2_2 = interpQ 11 [1, 3, 1, -1, 1, 2, 1, 3, -1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_2_2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_2_3 :
+    R6c_2_3 = interpQ 11 [2, 2, 4, 2, 4, 1, 2, 3, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_2_3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_2_4 :
+    R6c_2_4 = interpQ 11 [-2, -1, -1, -3, -3, -1, 1, 1, -1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_2_4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_2_5 :
+    R6c_2_5 = interpQ 11 [0, -1, -2, 2, 0, 0, -2, 2, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_2_5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_3_0 :
+    R6c_3_0 = interpQ 11 [2, 2, 2, 0, 2, 1, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_3_0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_3_1 :
+    R6c_3_1 = interpQ 11 [-2, -2, -1, -3, -2, -2, -4, -4, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_3_1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_3_2 :
+    R6c_3_2 = interpQ 11 [2, 2, 4, 2, 4, 1, 2, 3, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_3_2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_3_3 :
+    R6c_3_3 = interpQ 11 [0, 0, 2, 1, -2, 2, -1, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_3_3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_3_4 :
+    R6c_3_4 = interpQ 11 [-1, -2, 2, 0, 0, -2, 2, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_3_4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_3_5 :
+    R6c_3_5 = interpQ 11 [-1, 0, 2, 0, -2, 0, 1, 0, 2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_3_5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_4_0 :
+    R6c_4_0 = interpQ 11 [0, 0, -2, 0, -1, -2, 0, -2, -2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_4_0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_4_1 :
+    R6c_4_1 = interpQ 11 [-1, 1, -3, -1, -2, -1, 1, -1, -3, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_4_1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_4_2 :
+    R6c_4_2 = interpQ 11 [-2, -1, -1, -3, -3, -1, 1, 1, -1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_4_2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_4_3 :
+    R6c_4_3 = interpQ 11 [-1, -2, 2, 0, 0, -2, 2, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_4_3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_4_4 :
+    R6c_4_4 = interpQ 11 [2, 0, 2, 2, 4, 2, 4, 1, 2, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_4_4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_4_5 :
+    R6c_4_5 = interpQ 11 [2, 2, 2, 2, 2, 4, 3, 0, 4, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_4_5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_5_0 :
+    R6c_5_0 = interpQ 11 [2, 0, 0, 0, 2, 2, 2, 0, 2, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_5_0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_5_1 :
+    R6c_5_1 = interpQ 11 [-3, -2, -1, -4, -2, -4, -2, -2, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_5_1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_5_2 :
+    R6c_5_2 = interpQ 11 [0, -1, -2, 2, 0, 0, -2, 2, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_5_2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_5_3 :
+    R6c_5_3 = interpQ 11 [-1, 0, 2, 0, -2, 0, 1, 0, 2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_5_3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_5_4 :
+    R6c_5_4 = interpQ 11 [2, 2, 2, 2, 2, 4, 3, 0, 4, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_5_4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_R6c_5_5 :
+    R6c_5_5 = interpQ 11 [0, 1, -1, 0, 0, -2, -2, 0, 2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [R6c_5_5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM0c0 :
+    of10 RM0c0 = interpQ 11 [-1, -1, 0, 0, -1, 1, 2, 1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM0c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM0c1 :
+    of10 RM0c1 = interpQ 11 [-1, 0, 1, -1, 2, -1, 1, 0, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM0c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM0c2 :
+    of10 RM0c2 = interpQ 11 [1, -1, -1, -1, -1, 1, 0, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM0c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM0c3 :
+    of10 RM0c3 = interpQ 11 [2, 1, 1, 2, 0, 0, 1, 3, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM0c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM0c4 :
+    of10 RM0c4 = interpQ 11 [-1, 2, -1, 0, -1, 0, 1, 1, 0, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM0c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM0c5 :
+    of10 RM0c5 = interpQ 11 [0, 0, 2, 0, 0, -2, -2, 0, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM0c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM0c6 :
+    of10 RM0c6 = interpQ 11 [0, 2, -2, 0, 0, 0, 0, -2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM0c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM0c7 :
+    of10 RM0c7 = interpQ 11 [0, 0, 2, -2, -2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM0c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM0c8 :
+    of10 RM0c8 = interpQ 11 [0, -2, 0, -2, 0, 0, 2, 0, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM0c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM0c9 :
+    of10 RM0c9 = interpQ 11 [0, 0, 2, 0, -2, 0, -2, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM0c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM1c0 :
+    of10 RM1c0 = interpQ 11 [-1, 0, 1, -1, 2, -1, 1, 0, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM1c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM1c1 :
+    of10 RM1c1 = interpQ 11 [0, 1, 3, 1, 0, 0, 2, 1, 1, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM1c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM1c2 :
+    of10 RM1c2 = interpQ 11 [1, 1, 0, -1, 0, -1, 2, -1, 0, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM1c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM1c3 :
+    of10 RM1c3 = interpQ 11 [0, 0, 2, 1, 1, 3, 1, 1, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM1c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM1c4 :
+    of10 RM1c4 = interpQ 11 [-1, -3, -2, -2, -3, -3, -2, -2, -3, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM1c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM1c5 :
+    of10 RM1c5 = interpQ 11 [2, 2, 4, 2, 2, 4, 2, 2, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM1c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM1c6 :
+    of10 RM1c6 = interpQ 11 [0, 2, -2, -2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM1c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM1c7 :
+    of10 RM1c7 = interpQ 11 [-2, -2, -2, -2, 0, -2, -4, -2, -4, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM1c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM1c8 :
+    of10 RM1c8 = interpQ 11 [0, 0, -2, 2, 0, 0, 0, 0, 2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM1c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM1c9 :
+    of10 RM1c9 = interpQ 11 [0, -2, 0, 0, 0, -2, 0, 0, 2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM1c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM2c0 :
+    of10 RM2c0 = interpQ 11 [1, -1, -1, -1, -1, 1, 0, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM2c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM2c1 :
+    of10 RM2c1 = interpQ 11 [1, 1, 0, -1, 0, -1, 2, -1, 0, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM2c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM2c2 :
+    of10 RM2c2 = interpQ 11 [-3, -1, -2, -3, -2, -2, -3, -2, -1, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM2c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM2c3 :
+    of10 RM2c3 = interpQ 11 [-2, -1, -1, -2, -2, -1, -1, -2, 0, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM2c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM2c4 :
+    of10 RM2c4 = interpQ 11 [-2, -2, -1, 1, -1, -2, -2, 0, -1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM2c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM2c5 :
+    of10 RM2c5 = interpQ 11 [0, 0, 0, 0, 0, 0, -2, 2, 2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM2c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM2c6 :
+    of10 RM2c6 = interpQ 11 [2, 2, 2, 0, 2, 2, 4, 4, 2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM2c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM2c7 :
+    of10 RM2c7 = interpQ 11 [-2, 0, -2, -2, -4, -2, -2, -4, -2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM2c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM2c8 :
+    of10 RM2c8 = interpQ 11 [0, -2, 0, 2, 0, 2, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM2c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM2c9 :
+    of10 RM2c9 = interpQ 11 [2, 2, 2, 2, 0, 4, 2, 2, 2, 4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM2c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM3c0 :
+    of10 RM3c0 = interpQ 11 [2, 1, 1, 2, 0, 0, 1, 3, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM3c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM3c1 :
+    of10 RM3c1 = interpQ 11 [0, 0, 2, 1, 1, 3, 1, 1, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM3c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM3c2 :
+    of10 RM3c2 = interpQ 11 [-2, -1, -1, -2, -2, -1, -1, -2, 0, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM3c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM3c3 :
+    of10 RM3c3 = interpQ 11 [-1, 0, 1, 1, 0, -1, 0, -1, 2, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM3c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM3c4 :
+    of10 RM3c4 = interpQ 11 [1, -1, 2, -1, 1, 0, -1, 0, 0, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM3c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM3c5 :
+    of10 RM3c5 = interpQ 11 [2, 2, 2, 0, 4, 2, 2, 2, 2, 4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM3c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM3c6 :
+    of10 RM3c6 = interpQ 11 [2, 0, 2, 4, 2, 2, 2, 2, 4, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM3c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM3c7 :
+    of10 RM3c7 = interpQ 11 [0, -2, 0, 0, 2, 2, 0, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM3c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM3c8 :
+    of10 RM3c8 = interpQ 11 [2, 2, 2, 2, 2, 2, 2, 0, 4, 4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM3c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM3c9 :
+    of10 RM3c9 = interpQ 11 [2, 2, 0, 2, 2, 4, 2, 4, 2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM3c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM4c0 :
+    of10 RM4c0 = interpQ 11 [-1, 2, -1, 0, -1, 0, 1, 1, 0, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM4c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM4c1 :
+    of10 RM4c1 = interpQ 11 [-1, -3, -2, -2, -3, -3, -2, -2, -3, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM4c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM4c2 :
+    of10 RM4c2 = interpQ 11 [-2, -2, -1, 1, -1, -2, -2, 0, -1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM4c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM4c3 :
+    of10 RM4c3 = interpQ 11 [1, -1, 2, -1, 1, 0, -1, 0, 0, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM4c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM4c4 :
+    of10 RM4c4 = interpQ 11 [-2, -2, -2, -2, 0, -1, -1, 1, -1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM4c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM4c5 :
+    of10 RM4c5 = interpQ 11 [0, 0, 0, -2, 0, 2, 0, 2, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM4c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM4c6 :
+    of10 RM4c6 = interpQ 11 [0, -2, 0, 0, 2, 0, 2, 0, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM4c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM4c7 :
+    of10 RM4c7 = interpQ 11 [0, -2, 2, 0, 0, 0, 2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM4c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM4c8 :
+    of10 RM4c8 = interpQ 11 [-2, -2, -4, -4, -2, -2, 0, -2, -2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM4c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM4c9 :
+    of10 RM4c9 = interpQ 11 [0, 0, 0, 0, 2, -2, -2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM4c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM5c0 :
+    of10 RM5c0 = interpQ 22 [0, 0, 3, 0, 0, -3, -3, 0, 0, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM5c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM5c1 :
+    of10 RM5c1 = interpQ 22 [3, 3, 6, 3, 3, 6, 3, 3, 0, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM5c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM5c2 :
+    of10 RM5c2 = interpQ 22 [0, 0, 0, 0, 0, 0, -3, 3, 3, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM5c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM5c3 :
+    of10 RM5c3 = interpQ 22 [3, 3, 3, 0, 6, 3, 3, 3, 3, 6] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM5c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM5c4 :
+    of10 RM5c4 = interpQ 22 [0, 0, 0, -3, 0, 3, 0, 3, 0, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM5c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM5c5 :
+    of10 RM5c5 = interpQ 11 [0, 1, 1, 0, 2, 3, 2, 0, 1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM5c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM5c6 :
+    of10 RM5c6 = interpQ 11 [-1, 1, 1, 0, -2, 0, 1, 1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM5c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM5c7 :
+    of10 RM5c7 = interpQ 11 [-2, -1, -1, -3, -1, -1, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM5c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM5c8 :
+    of10 RM5c8 = interpQ 11 [-1, 0, 0, -1, 0, 1, -1, 2, -1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM5c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM5c9 :
+    of10 RM5c9 = interpQ 11 [3, 2, 3, 2, 1, 1, 2, 3, 2, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM5c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM6c0 :
+    of10 RM6c0 = interpQ 22 [0, 3, -3, 0, 0, 0, 0, -3, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM6c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM6c1 :
+    of10 RM6c1 = interpQ 22 [0, 3, -3, -3, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM6c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM6c2 :
+    of10 RM6c2 = interpQ 22 [3, 3, 3, 0, 3, 3, 6, 6, 3, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM6c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM6c3 :
+    of10 RM6c3 = interpQ 22 [3, 0, 3, 6, 3, 3, 3, 3, 6, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM6c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM6c4 :
+    of10 RM6c4 = interpQ 22 [0, -3, 0, 0, 3, 0, 3, 0, 0, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM6c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM6c5 :
+    of10 RM6c5 = interpQ 11 [-1, 1, 1, 0, -2, 0, 1, 1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM6c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM6c6 :
+    of10 RM6c6 = interpQ 11 [-1, 0, -1, 2, -1, 0, -1, 0, 1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM6c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM6c7 :
+    of10 RM6c7 = interpQ 11 [-1, 1, 2, 1, -1, 0, 0, -1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM6c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM6c8 :
+    of10 RM6c8 = interpQ 11 [0, 0, 0, -2, -1, -1, -3, -1, -1, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM6c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM6c9 :
+    of10 RM6c9 = interpQ 11 [2, 1, 0, 1, 1, 0, 1, 2, 0, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM6c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM7c0 :
+    of10 RM7c0 = interpQ 22 [0, 0, 3, -3, -3, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM7c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM7c1 :
+    of10 RM7c1 = interpQ 22 [-3, -3, -3, -3, 0, -3, -6, -3, -6, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM7c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM7c2 :
+    of10 RM7c2 = interpQ 22 [-3, 0, -3, -3, -6, -3, -3, -6, -3, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM7c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM7c3 :
+    of10 RM7c3 = interpQ 22 [0, -3, 0, 0, 3, 3, 0, 0, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM7c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM7c4 :
+    of10 RM7c4 = interpQ 22 [0, -3, 3, 0, 0, 0, 3, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM7c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM7c5 :
+    of10 RM7c5 = interpQ 11 [-2, -1, -1, -3, -1, -1, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM7c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM7c6 :
+    of10 RM7c6 = interpQ 11 [-1, 1, 2, 1, -1, 0, 0, -1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM7c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM7c7 :
+    of10 RM7c7 = interpQ 11 [-2, 1, -2, 0, -1, -2, -1, -1, -2, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM7c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM7c8 :
+    of10 RM7c8 = interpQ 11 [0, 1, 2, 1, 2, -1, 2, 1, 2, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM7c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM7c9 :
+    of10 RM7c9 = interpQ 11 [0, 2, 1, 1, 2, 0, 0, 1, 3, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM7c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM8c0 :
+    of10 RM8c0 = interpQ 22 [0, -3, 0, -3, 0, 0, 3, 0, 0, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM8c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM8c1 :
+    of10 RM8c1 = interpQ 22 [0, 0, -3, 3, 0, 0, 0, 0, 3, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM8c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM8c2 :
+    of10 RM8c2 = interpQ 22 [0, -3, 0, 3, 0, 3, 0, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM8c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM8c3 :
+    of10 RM8c3 = interpQ 22 [3, 3, 3, 3, 3, 3, 3, 0, 6, 6] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM8c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM8c4 :
+    of10 RM8c4 = interpQ 22 [-3, -3, -6, -6, -3, -3, 0, -3, -3, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM8c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM8c5 :
+    of10 RM8c5 = interpQ 11 [-1, 0, 0, -1, 0, 1, -1, 2, -1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM8c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM8c6 :
+    of10 RM8c6 = interpQ 11 [0, 0, 0, -2, -1, -1, -3, -1, -1, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM8c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM8c7 :
+    of10 RM8c7 = interpQ 11 [0, 1, 2, 1, 2, -1, 2, 1, 2, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM8c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM8c8 :
+    of10 RM8c8 = interpQ 11 [-1, -1, 1, 0, 0, 1, -1, -1, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM8c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM8c9 :
+    of10 RM8c9 = interpQ 11 [-2, -3, -2, 0, -1, -1, 0, 0, -1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM8c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM9c0 :
+    of10 RM9c0 = interpQ 22 [0, 0, 3, 0, -3, 0, -3, 0, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM9c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM9c1 :
+    of10 RM9c1 = interpQ 22 [0, -3, 0, 0, 0, -3, 0, 0, 3, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM9c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM9c2 :
+    of10 RM9c2 = interpQ 22 [3, 3, 3, 3, 0, 6, 3, 3, 3, 6] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM9c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM9c3 :
+    of10 RM9c3 = interpQ 22 [3, 3, 0, 3, 3, 6, 3, 6, 3, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM9c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM9c4 :
+    of10 RM9c4 = interpQ 22 [0, 0, 0, 0, 3, -3, -3, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM9c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM9c5 :
+    of10 RM9c5 = interpQ 11 [3, 2, 3, 2, 1, 1, 2, 3, 2, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM9c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM9c6 :
+    of10 RM9c6 = interpQ 11 [2, 1, 0, 1, 1, 0, 1, 2, 0, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM9c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM9c7 :
+    of10 RM9c7 = interpQ 11 [0, 2, 1, 1, 2, 0, 0, 1, 3, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM9c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM9c8 :
+    of10 RM9c8 = interpQ 11 [-2, -3, -2, 0, -1, -1, 0, 0, -1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM9c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_RM9c9 :
+    of10 RM9c9 = interpQ 11 [0, 2, 1, 1, 3, 1, 1, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [RM9c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_0_0 :
+    F6c_0_0 = interpQ 11 [1, 2, 0, 2, 2, 2, 0, 0, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_0_0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_0_1 :
+    F6c_0_1 = interpQ 11 [-4, 0, 0, 0, -4, -4, -4, 0, -4, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_0_1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_0_2 :
+    F6c_0_2 = interpQ 11 [0, 4, 0, 2, 4, 0, 4, 4, 4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_0_2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_0_3 :
+    F6c_0_3 = interpQ 11 [0, 0, 4, 0, 2, 4, 0, 4, 4, 4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_0_3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_0_4 :
+    F6c_0_4 = interpQ 11 [-4, -2, 0, -4, 0, 0, 0, -4, -4, -4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_0_4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_0_5 :
+    F6c_0_5 = interpQ 11 [-4, -4, -4, 0, -4, -2, 0, -4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_0_5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_1_0 :
+    F6c_1_0 = interpQ 11 [2, 0, 1, 2, 0, 2, 2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_1_0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_1_1 :
+    F6c_1_1 = interpQ 11 [0, 0, 0, -2, -1, 2, -2, 1, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_1_1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_1_2 :
+    F6c_1_2 = interpQ 11 [4, 2, 3, 2, 0, 2, 4, 2, 1, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_1_2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_1_3 :
+    F6c_1_3 = interpQ 11 [-2, -2, -4, -2, -4, -1, -2, -3, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_1_3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_1_4 :
+    F6c_1_4 = interpQ 11 [0, 2, 2, 0, -2, -2, 0, 0, -1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_1_4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_1_5 :
+    F6c_1_5 = interpQ 11 [-4, -2, -2, 0, -4, -3, -2, -2, -2, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_1_5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_2_0 :
+    F6c_2_0 = interpQ 11 [2, 2, 2, 0, 0, 0, 2, 0, 1, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_2_0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_2_1 :
+    F6c_2_1 = interpQ 11 [-2, 2, 0, 1, 0, -2, 0, 2, 0, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_2_1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_2_2 :
+    F6c_2_2 = interpQ 11 [-2, -4, -4, -2, -2, -3, -1, -2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_2_2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_2_3 :
+    F6c_2_3 = interpQ 11 [1, 1, 1, 2, 3, -1, 1, 1, 3, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_2_3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_2_4 :
+    F6c_2_4 = interpQ 11 [3, 1, 3, 1, 1, -1, 1, -1, 2, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_2_4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_2_5 :
+    F6c_2_5 = interpQ 11 [-2, -2, -2, -2, -2, -4, -3, 0, -4, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_2_5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_3_0 :
+    F6c_3_0 = interpQ 11 [0, 0, -2, -2, -2, 0, -2, -1, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_3_0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_3_1 :
+    F6c_3_1 = interpQ 11 [0, -2, 0, -2, 1, 0, -1, 2, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_3_1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_3_2 :
+    F6c_3_2 = interpQ 11 [0, 1, 2, -2, 0, 0, 2, -2, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_3_2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_3_3 :
+    F6c_3_3 = interpQ 11 [2, 4, 2, 1, 2, 0, 4, 2, 3, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_3_3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_3_4 :
+    F6c_3_4 = interpQ 11 [-2, -1, 2, -2, 1, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_3_4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_3_5 :
+    F6c_3_5 = interpQ 11 [0, -2, -4, -4, -2, -2, -3, -1, -2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_3_5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_4_0 :
+    F6c_4_0 = interpQ 11 [1, -1, 1, 1, 1, -1, -1, -1, 1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_4_0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_4_1 :
+    F6c_4_1 = interpQ 11 [2, 2, 1, 3, 2, 2, 4, 4, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_4_1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_4_2 :
+    F6c_4_2 = interpQ 11 [-2, 1, 0, -1, 2, 0, 2, 0, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_4_2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_4_3 :
+    F6c_4_3 = interpQ 11 [1, -1, -1, -1, -1, -1, -3, -2, 1, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_4_3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_4_4 :
+    F6c_4_4 = interpQ 11 [0, 0, 1, 2, -2, 0, 0, 2, -2, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_4_4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_4_5 :
+    F6c_4_5 = interpQ 11 [-2, -1, -2, -4, -2, 0, -2, -3, -2, -4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_4_5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_5_0 :
+    F6c_5_0 = interpQ 11 [0, -2, -2, -2, 0, -2, -1, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_5_0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_5_1 :
+    F6c_5_1 = interpQ 11 [2, -2, -1, 0, 0, 0, 1, 2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_5_1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_5_2 :
+    F6c_5_2 = interpQ 11 [0, -2, -1, 2, -2, 1, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_5_2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_5_3 :
+    F6c_5_3 = interpQ 11 [-2, -2, 0, 0, -1, 1, 0, 0, 2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_5_3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_5_4 :
+    F6c_5_4 = interpQ 11 [1, -1, 3, 1, 2, 1, -1, 1, 3, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_5_4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_F6c_5_5 :
+    F6c_5_5 = interpQ 11 [-1, -2, 1, -1, 1, -1, -1, -3, -1, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [F6c_5_5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM0c0 :
+    of10 SM0c0 = interpQ 11 [3, 0, 2, 1, 0, 1, 1, 0, 1, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM0c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM0c1 :
+    of10 SM0c1 = interpQ 11 [0, 1, -1, -1, 0, 2, 0, -1, -1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM0c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM0c2 :
+    of10 SM0c2 = interpQ 11 [1, 1, 0, -1, 0, -1, 2, -1, 0, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM0c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM0c3 :
+    of10 SM0c3 = interpQ 11 [2, 1, 1, 3, 1, 1, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM0c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM0c4 :
+    of10 SM0c4 = interpQ 11 [0, -1, -1, 0, 0, -1, 1, 2, 1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM0c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM0c5 :
+    of10 SM0c5 = interpQ 11 [2, 0, 0, -2, 0, -2, 0, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM0c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM0c6 :
+    of10 SM0c6 = interpQ 11 [0, 0, 0, 0, 0, 2, -2, -2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM0c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM0c7 :
+    of10 SM0c7 = interpQ 11 [2, 4, 2, 2, 2, 2, 4, 2, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM0c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM0c8 :
+    of10 SM0c8 = interpQ 11 [0, -2, 2, 0, 0, 0, 0, 2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM0c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM0c9 :
+    of10 SM0c9 = interpQ 11 [2, 2, 4, 4, 2, 2, 0, 2, 2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM0c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM1c0 :
+    of10 SM1c0 = interpQ 11 [-1, -1, 0, -2, -2, -1, 1, -1, -2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM1c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM1c1 :
+    of10 SM1c1 = interpQ 11 [2, 0, 0, 1, -1, -1, -1, -1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM1c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM1c2 :
+    of10 SM1c2 = interpQ 11 [2, 3, 2, 0, 1, 1, 0, 0, 1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM1c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM1c3 :
+    of10 SM1c3 = interpQ 11 [1, 0, 1, 2, 2, 1, 0, 1, 0, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM1c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM1c4 :
+    of10 SM1c4 = interpQ 11 [1, -1, 2, -1, 1, 0, -1, 0, 0, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM1c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM1c5 :
+    of10 SM1c5 = interpQ 11 [0, -2, 2, 0, 0, 0, 0, 2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM1c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM1c6 :
+    of10 SM1c6 = interpQ 11 [-2, -2, -2, -2, 0, -2, -4, -2, -4, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM1c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM1c7 :
+    of10 SM1c7 = interpQ 11 [-2, -2, -4, -2, -2, -2, -4, -2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM1c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM1c8 :
+    of10 SM1c8 = interpQ 11 [0, -4, -2, -2, -2, -2, -2, -2, -2, -4] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM1c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM1c9 :
+    of10 SM1c9 = interpQ 11 [2, 2, 4, 2, 4, 2, 2, 0, 2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM1c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM2c0 :
+    of10 SM2c0 = interpQ 11 [0, -1, -2, -1, -2, 1, -2, -1, -2, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM2c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM2c1 :
+    of10 SM2c1 = interpQ 11 [-1, -3, -2, -2, -3, -3, -2, -2, -3, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM2c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM2c2 :
+    of10 SM2c2 = interpQ 11 [2, 0, -1, -1, 1, 0, 0, 1, -1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM2c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM2c3 :
+    of10 SM2c3 = interpQ 11 [-1, -2, -1, -1, -2, -1, 0, -2, 1, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM2c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM2c4 :
+    of10 SM2c4 = interpQ 11 [0, 2, 0, 0, 1, -1, -1, -1, -1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM2c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM2c5 :
+    of10 SM2c5 = interpQ 11 [-2, -4, -2, -2, -2, -2, -4, -2, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM2c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM2c6 :
+    of10 SM2c6 = interpQ 11 [2, 2, 0, 2, 2, 4, 2, 4, 2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM2c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM2c7 :
+    of10 SM2c7 = interpQ 11 [-2, 2, 0, 0, 0, 2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM2c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM2c8 :
+    of10 SM2c8 = interpQ 11 [2, 2, 4, 2, 2, 2, 4, 2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM2c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM2c9 :
+    of10 SM2c9 = interpQ 11 [0, 0, 0, 0, 0, 0, 2, -2, -2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM2c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM3c0 :
+    of10 SM3c0 = interpQ 11 [1, -1, -1, -1, -1, 1, 0, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM3c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM3c1 :
+    of10 SM3c1 = interpQ 11 [1, 0, 3, 0, 1, 0, 1, 2, 2, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM3c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM3c2 :
+    of10 SM3c2 = interpQ 11 [1, 2, 0, 3, 0, 2, 1, 0, 1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM3c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM3c3 :
+    of10 SM3c3 = interpQ 11 [1, 0, -2, -1, -1, -2, -2, -1, -1, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM3c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM3c4 :
+    of10 SM3c4 = interpQ 11 [1, -1, -1, 0, 2, 0, -1, -1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM3c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM3c5 :
+    of10 SM3c5 = interpQ 11 [0, 0, 0, 0, 0, -2, 2, 2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM3c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM3c6 :
+    of10 SM3c6 = interpQ 11 [-2, 0, 0, 2, 2, 0, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM3c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM3c7 :
+    of10 SM3c7 = interpQ 11 [2, 2, 0, 2, 2, 4, 2, 4, 2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM3c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM3c8 :
+    of10 SM3c8 = interpQ 11 [2, 2, 2, 2, 0, 2, 4, 2, 4, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM3c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM3c9 :
+    of10 SM3c9 = interpQ 11 [0, 0, -2, 2, 0, 0, 0, 2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM3c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM4c0 :
+    of10 SM4c0 = interpQ 11 [1, 1, 0, 2, 3, 2, 0, 1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM4c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM4c1 :
+    of10 SM4c1 = interpQ 11 [2, 1, 0, 1, 1, 0, 1, 2, 0, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM4c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM4c2 :
+    of10 SM4c2 = interpQ 11 [-2, -2, -1, -3, -3, -3, -3, -1, -2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM4c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM4c3 :
+    of10 SM4c3 = interpQ 11 [2, 1, 1, 2, 0, 0, 1, 3, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM4c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM4c4 :
+    of10 SM4c4 = interpQ 11 [3, 0, 1, 0, 1, 2, 2, 1, 0, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM4c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM4c5 :
+    of10 SM4c5 = interpQ 11 [-2, -2, -4, -4, -2, -2, 0, -2, -2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM4c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM4c6 :
+    of10 SM4c6 = interpQ 11 [0, 0, -2, 2, 0, 0, 0, 2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM4c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM4c7 :
+    of10 SM4c7 = interpQ 11 [0, 0, 0, 0, 0, 0, 2, -2, -2, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM4c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM4c8 :
+    of10 SM4c8 = interpQ 11 [-2, -2, -4, -2, -4, -2, -2, 0, -2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM4c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM4c9 :
+    of10 SM4c9 = interpQ 11 [-2, 0, -2, 0, 2, 0, 0, 0, 0, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM4c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM5c0 :
+    of10 SM5c0 = interpQ 22 [3, 0, 0, 3, 0, 0, -3, 0, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM5c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM5c1 :
+    of10 SM5c1 = interpQ 22 [3, 3, 3, 0, 6, 3, 3, 3, 3, 6] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM5c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM5c2 :
+    of10 SM5c2 = interpQ 22 [3, 6, 3, 6, 3, 0, 3, 3, 3, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM5c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM5c3 :
+    of10 SM5c3 = interpQ 22 [0, 0, 0, -3, 3, 3, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM5c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM5c4 :
+    of10 SM5c4 = interpQ 22 [0, 3, 0, 0, 0, 3, 0, 0, -3, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM5c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM5c5 :
+    of10 SM5c5 = interpQ 11 [3, 0, 2, 1, 0, 1, 1, 0, 1, 2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM5c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM5c6 :
+    of10 SM5c6 = interpQ 11 [-1, 1, 1, 1, 1, -1, 0, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM5c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM5c7 :
+    of10 SM5c7 = interpQ 11 [0, 1, 2, 1, 2, -1, 2, 1, 2, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM5c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM5c8 :
+    of10 SM5c8 = interpQ 11 [-1, -1, 0, -2, -2, -1, 1, -1, -2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM5c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM5c9 :
+    of10 SM5c9 = interpQ 11 [-1, -1, 0, -2, -3, -2, 0, -1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM5c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM6c0 :
+    of10 SM6c0 = interpQ 22 [0, 0, 0, 3, -3, -3, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM6c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM6c1 :
+    of10 SM6c1 = interpQ 22 [0, 3, 0, -3, 0, -3, 0, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM6c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM6c2 :
+    of10 SM6c2 = interpQ 22 [0, -3, 0, 0, 3, 0, 3, 0, 0, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM6c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM6c3 :
+    of10 SM6c3 = interpQ 22 [-3, 0, 0, 0, -3, 0, 0, 3, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM6c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM6c4 :
+    of10 SM6c4 = interpQ 22 [0, 0, 0, -3, 3, 0, 0, 0, 3, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM6c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM6c5 :
+    of10 SM6c5 = interpQ 11 [-2, -1, -1, -3, -1, -1, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM6c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM6c6 :
+    of10 SM6c6 = interpQ 11 [1, 0, -2, -1, -1, -2, -2, -1, -1, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM6c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM6c7 :
+    of10 SM6c7 = interpQ 11 [-1, -2, -1, -1, -2, -1, 0, -2, 1, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM6c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM6c8 :
+    of10 SM6c8 = interpQ 11 [-1, 0, -1, -2, -2, -1, 0, -1, 0, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM6c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM6c9 :
+    of10 SM6c9 = interpQ 11 [2, 1, 1, 2, 0, 0, 1, 3, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM6c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM7c0 :
+    of10 SM7c0 = interpQ 22 [-3, -6, -3, -6, -3, 0, -3, -3, -3, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM7c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM7c1 :
+    of10 SM7c1 = interpQ 22 [0, 3, 3, 0, 0, -3, 0, 0, 0, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM7c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM7c2 :
+    of10 SM7c2 = interpQ 22 [-6, -3, -3, -3, -3, -6, 0, -3, -3, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM7c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM7c3 :
+    of10 SM7c3 = interpQ 22 [0, -3, 0, 0, 3, 0, 3, 0, 0, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM7c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM7c4 :
+    of10 SM7c4 = interpQ 22 [0, 0, 3, -3, -3, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM7c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM7c5 :
+    of10 SM7c5 = interpQ 11 [-1, -1, 0, 1, 0, 1, -2, 1, 0, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM7c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM7c6 :
+    of10 SM7c6 = interpQ 11 [1, 2, 0, 3, 0, 2, 1, 0, 1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM7c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM7c7 :
+    of10 SM7c7 = interpQ 11 [2, 0, -1, -1, 1, 0, 0, 1, -1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM7c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM7c8 :
+    of10 SM7c8 = interpQ 11 [-2, -3, -2, 0, -1, -1, 0, 0, -1, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM7c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM7c9 :
+    of10 SM7c9 = interpQ 11 [-2, -2, -1, -3, -3, -3, -3, -1, -2, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM7c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM8c0 :
+    of10 SM8c0 = interpQ 22 [3, 3, 3, 0, 6, 3, 3, 3, 3, 6] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM8c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM8c1 :
+    of10 SM8c1 = interpQ 22 [6, 6, 0, 3, 3, 3, 3, 3, 3, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM8c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM8c2 :
+    of10 SM8c2 = interpQ 22 [0, -3, -3, 0, 0, 3, 0, 0, 0, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM8c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM8c3 :
+    of10 SM8c3 = interpQ 22 [0, -3, 0, 3, 0, 3, 0, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM8c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM8c4 :
+    of10 SM8c4 = interpQ 22 [0, 3, 0, 0, 3, 0, 0, -3, 0, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM8c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM8c5 :
+    of10 SM8c5 = interpQ 11 [0, 1, -1, -1, 0, 2, 0, -1, -1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM8c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM8c6 :
+    of10 SM8c6 = interpQ 11 [-1, 0, -3, 0, -1, 0, -1, -2, -2, -1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM8c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM8c7 :
+    of10 SM8c7 = interpQ 11 [1, 3, 2, 2, 3, 3, 2, 2, 3, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM8c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM8c8 :
+    of10 SM8c8 = interpQ 11 [2, 0, 0, 1, -1, -1, -1, -1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM8c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM8c9 :
+    of10 SM8c9 = interpQ 11 [-2, -1, 0, -1, -1, 0, -1, -2, 0, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM8c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM9c0 :
+    of10 SM9c0 = interpQ 22 [0, -3, 0, 0, 0, -3, 0, 0, 3, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM9c0, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM9c1 :
+    of10 SM9c1 = interpQ 22 [0, -3, 0, 0, -3, 0, 0, 3, 0, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM9c1, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM9c2 :
+    of10 SM9c2 = interpQ 22 [0, 0, 3, -3, -3, 3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM9c2, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM9c3 :
+    of10 SM9c3 = interpQ 22 [0, 0, 0, -3, 3, 0, 0, 0, 3, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM9c3, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM9c4 :
+    of10 SM9c4 = interpQ 22 [-3, 0, 3, 0, 0, 0, 0, 3, 0, -3] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM9c4, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM9c5 :
+    of10 SM9c5 = interpQ 11 [0, 1, 1, 0, 0, 1, -1, -2, -1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM9c5, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM9c6 :
+    of10 SM9c6 = interpQ 11 [1, -1, -1, 0, 2, 0, -1, -1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM9c6, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM9c7 :
+    of10 SM9c7 = interpQ 11 [0, 2, 0, 0, 1, -1, -1, -1, -1, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM9c7, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM9c8 :
+    of10 SM9c8 = interpQ 11 [-1, 1, -2, 1, -1, 0, 1, 0, 0, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM9c8, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_of10_SM9c9 :
+    of10 SM9c9 = interpQ 11 [3, 0, 1, 0, 1, 2, 2, 1, 0, 1] := by
+  refine Polynomial.funext fun r => ?_
+  simp [SM9c9, of10, Fin.sum_univ_succ,
+    interpQ, toPolyZ, Polynomial.eval_add,
+    Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
 
 end V14Formalization.D12CompoundBridge

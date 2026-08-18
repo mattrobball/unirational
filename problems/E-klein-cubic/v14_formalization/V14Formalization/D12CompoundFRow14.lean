@@ -23,6 +23,7 @@ open Matrix Polynomial
 namespace V14Formalization.D12CompoundFRow14
 
 open D12PolynomialData D12F6PolynomialData D12CompoundBridge
+open V14Formalization.D12PolyZReflection
 
 @[expose] public abbrev QuotCoeff := Fin 9 → ℤ
 
@@ -170,19 +171,22 @@ private theorem minor_14 :
 /-! ### One bounded certificate per restricted column -/
 
 def quotient_0 : Polynomial ℚ :=
-  ofQuotNumerator ![36, 124, -64, 36, -4, 100, -64, 36, -68]
+  interpQ 121 [9, 31, -16, 9, -1, 25, -16, 9, -17]
 private theorem cert_0 :
     (2 : Polynomial ℚ) * (F6c_4_0 * F6c_5_1 - F6c_4_1 * F6c_5_0)
       - (F6c_4_3 * F6c_5_5 - F6c_4_5 * F6c_5_3)
       - (2 : Polynomial ℚ) * of10 SM9c0 =
       Phi11 * quotient_0 := by
-  norm_num [quotient_0, ofQuotNumerator,
-    F6c_4_0, F6c_4_1, F6c_4_3, F6c_4_5, F6c_5_0, F6c_5_1, F6c_5_3, F6c_5_5,
-    SM9c0, of10, Phi11,
-    Fin.sum_univ_succ, Finset.sum_range_succ]
-  simp only [C_1_over_11, C_2_over_11, C_3_over_11, C_4_over_11, C_5_over_11, C_6_over_11, C_7_over_11, C_8_over_11, C_3_over_22, C_5_over_22, C_7_over_22, C_9_over_22, C_11_over_22, C_13_over_22, C_15_over_22]
-  norm_num
-  linear_combination (6 * X + 6 * X ^ 5 - 6 * X ^ 8 - 6 * X ^ 9) * C_one_over_22_sq
+  rw [z_Phi11]
+  simp only [quotient_0, z_of10_SM9c0,
+    z_F6c_4_0, z_F6c_4_1, z_F6c_4_3, z_F6c_4_5, z_F6c_5_0, z_F6c_5_1, z_F6c_5_3, z_F6c_5_5]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 private theorem col_0 :
     (2 : Polynomial ℚ) *
@@ -194,19 +198,22 @@ private theorem col_0 :
   linear_combination cert_0
 
 def quotient_1 : Polynomial ℚ :=
-  ofQuotNumerator ![8, 44, -72, 4, 40, -72, 48, -88, 0]
+  interpQ 121 [2, 11, -18, 1, 10, -18, 12, -22]
 private theorem cert_1 :
     (2 : Polynomial ℚ) * (F6c_4_0 * F6c_5_2 - F6c_4_2 * F6c_5_0)
       + (F6c_4_1 * F6c_5_5 - F6c_4_5 * F6c_5_1)
       - (2 : Polynomial ℚ) * of10 SM9c1 =
       Phi11 * quotient_1 := by
-  norm_num [quotient_1, ofQuotNumerator,
-    F6c_4_0, F6c_4_1, F6c_4_2, F6c_4_5, F6c_5_0, F6c_5_1, F6c_5_2, F6c_5_5,
-    SM9c1, of10, Phi11,
-    Fin.sum_univ_succ, Finset.sum_range_succ]
-  simp only [C_1_over_11, C_2_over_11, C_3_over_11, C_4_over_11, C_5_over_11, C_6_over_11, C_7_over_11, C_8_over_11, C_3_over_22, C_5_over_22, C_7_over_22, C_9_over_22, C_11_over_22, C_13_over_22, C_15_over_22]
-  norm_num
-  linear_combination (6 * X + 6 * X ^ 4 - 6 * X ^ 7 - 6 * X ^ 9) * C_one_over_22_sq
+  rw [z_Phi11]
+  simp only [quotient_1, z_of10_SM9c1,
+    z_F6c_4_0, z_F6c_4_1, z_F6c_4_2, z_F6c_4_5, z_F6c_5_0, z_F6c_5_1, z_F6c_5_2, z_F6c_5_5]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 private theorem col_1 :
     (2 : Polynomial ℚ) *
@@ -218,19 +225,22 @@ private theorem col_1 :
   linear_combination cert_1
 
 def quotient_2 : Polynomial ℚ :=
-  ofQuotNumerator ![-8, 12, -108, 180, -52, -136, 48, -16, -8]
+  interpQ 121 [-2, 3, -27, 45, -13, -34, 12, -4, -2]
 private theorem cert_2 :
     (2 : Polynomial ℚ) * (F6c_4_0 * F6c_5_3 - F6c_4_3 * F6c_5_0)
       - (F6c_4_2 * F6c_5_4 - F6c_4_4 * F6c_5_2)
       - (2 : Polynomial ℚ) * of10 SM9c2 =
       Phi11 * quotient_2 := by
-  norm_num [quotient_2, ofQuotNumerator,
-    F6c_4_0, F6c_4_2, F6c_4_3, F6c_4_4, F6c_5_0, F6c_5_2, F6c_5_3, F6c_5_4,
-    SM9c2, of10, Phi11,
-    Fin.sum_univ_succ, Finset.sum_range_succ]
-  simp only [C_1_over_11, C_2_over_11, C_3_over_11, C_4_over_11, C_5_over_11, C_6_over_11, C_7_over_11, C_8_over_11, C_3_over_22, C_5_over_22, C_7_over_22, C_9_over_22, C_11_over_22, C_13_over_22, C_15_over_22]
-  norm_num
-  linear_combination (-(6 * X ^ 2) + 6 * X ^ 3 + 6 * X ^ 4 - 6 * X ^ 5) * C_one_over_22_sq
+  rw [z_Phi11]
+  simp only [quotient_2, z_of10_SM9c2,
+    z_F6c_4_0, z_F6c_4_2, z_F6c_4_3, z_F6c_4_4, z_F6c_5_0, z_F6c_5_2, z_F6c_5_3, z_F6c_5_4]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 private theorem col_2 :
     (2 : Polynomial ℚ) *
@@ -242,19 +252,22 @@ private theorem col_2 :
   linear_combination cert_2
 
 def quotient_3 : Polynomial ℚ :=
-  ofQuotNumerator ![-8, 32, 40, 56, -120, 40, -24, -8, -8]
+  interpQ 121 [-2, 8, 10, 14, -30, 10, -6, -2, -2]
 private theorem cert_3 :
     (2 : Polynomial ℚ) * (F6c_4_0 * F6c_5_4 - F6c_4_4 * F6c_5_0)
       - (F6c_4_1 * F6c_5_2 - F6c_4_2 * F6c_5_1)
       - (2 : Polynomial ℚ) * of10 SM9c3 =
       Phi11 * quotient_3 := by
-  norm_num [quotient_3, ofQuotNumerator,
-    F6c_4_0, F6c_4_1, F6c_4_2, F6c_4_4, F6c_5_0, F6c_5_1, F6c_5_2, F6c_5_4,
-    SM9c3, of10, Phi11,
-    Fin.sum_univ_succ, Finset.sum_range_succ]
-  simp only [C_1_over_11, C_2_over_11, C_3_over_11, C_4_over_11, C_5_over_11, C_6_over_11, C_7_over_11, C_8_over_11, C_3_over_22, C_5_over_22, C_7_over_22, C_9_over_22, C_11_over_22, C_13_over_22, C_15_over_22]
-  norm_num
-  linear_combination (6 * X ^ 3 - 6 * X ^ 4 - 6 * X ^ 8 + 6 * X ^ 9) * C_one_over_22_sq
+  rw [z_Phi11]
+  simp only [quotient_3, z_of10_SM9c3,
+    z_F6c_4_0, z_F6c_4_1, z_F6c_4_2, z_F6c_4_4, z_F6c_5_0, z_F6c_5_1, z_F6c_5_2, z_F6c_5_4]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 private theorem col_3 :
     (2 : Polynomial ℚ) *
@@ -266,19 +279,22 @@ private theorem col_3 :
   linear_combination cert_3
 
 def quotient_4 : Polynomial ℚ :=
-  ofQuotNumerator ![128, -176, -96, 40, -16, -100, 88, -108, 20]
+  interpQ 121 [32, -44, -24, 10, -4, -25, 22, -27, 5]
 private theorem cert_4 :
     (2 : Polynomial ℚ) * (F6c_4_0 * F6c_5_5 - F6c_4_5 * F6c_5_0)
       + (F6c_4_3 * F6c_5_4 - F6c_4_4 * F6c_5_3)
       - (2 : Polynomial ℚ) * of10 SM9c4 =
       Phi11 * quotient_4 := by
-  norm_num [quotient_4, ofQuotNumerator,
-    F6c_4_0, F6c_4_3, F6c_4_4, F6c_4_5, F6c_5_0, F6c_5_3, F6c_5_4, F6c_5_5,
-    SM9c4, of10, Phi11,
-    Fin.sum_univ_succ, Finset.sum_range_succ]
-  simp only [C_1_over_11, C_2_over_11, C_3_over_11, C_4_over_11, C_5_over_11, C_6_over_11, C_7_over_11, C_8_over_11, C_3_over_22, C_5_over_22, C_7_over_22, C_9_over_22, C_11_over_22, C_13_over_22, C_15_over_22]
-  norm_num
-  linear_combination (6 * 1 - 6 * X ^ 2 - 6 * X ^ 7 + 6 * X ^ 9) * C_one_over_22_sq
+  rw [z_Phi11]
+  simp only [quotient_4, z_of10_SM9c4,
+    z_F6c_4_0, z_F6c_4_3, z_F6c_4_4, z_F6c_4_5, z_F6c_5_0, z_F6c_5_3, z_F6c_5_4, z_F6c_5_5]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 private theorem col_4 :
     (2 : Polynomial ℚ) *
@@ -290,18 +306,21 @@ private theorem col_4 :
   linear_combination cert_4
 
 def quotient_5 : Polynomial ℚ :=
-  ofQuotNumerator ![-48, -72, -8, 56, -32, -56, 176, -16, 0]
+  interpQ 121 [-12, -18, -2, 14, -8, -14, 44, -4]
 private theorem cert_5 :
     (2 : Polynomial ℚ) * (F6c_4_1 * F6c_5_3 - F6c_4_3 * F6c_5_1)
       - (2 : Polynomial ℚ) * of10 SM9c5 =
       Phi11 * quotient_5 := by
-  norm_num [quotient_5, ofQuotNumerator,
-    F6c_4_1, F6c_4_3, F6c_5_1, F6c_5_3,
-    SM9c5, of10, Phi11,
-    Fin.sum_univ_succ, Finset.sum_range_succ]
-  simp only [C_1_over_11, C_2_over_11, C_3_over_11, C_4_over_11, C_5_over_11, C_6_over_11, C_7_over_11, C_8_over_11, C_3_over_22, C_5_over_22, C_7_over_22, C_9_over_22, C_11_over_22, C_13_over_22, C_15_over_22]
-  norm_num
-  linear_combination (-(4 * X) - 4 * X ^ 2 - 4 * X ^ 5 + 4 * X ^ 6 + 8 * X ^ 7 + 4 * X ^ 8 - 4 * X ^ 9) * C_one_over_22_sq
+  rw [z_Phi11]
+  simp only [quotient_5, z_of10_SM9c5,
+    z_F6c_4_1, z_F6c_4_3, z_F6c_5_1, z_F6c_5_3]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 private theorem col_5 :
     (2 : Polynomial ℚ) *
@@ -313,18 +332,21 @@ private theorem col_5 :
   linear_combination cert_5
 
 def quotient_6 : Polynomial ℚ :=
-  ofQuotNumerator ![-72, 160, 24, -48, -104, 152, 64, 0, 0]
+  interpQ 121 [-18, 40, 6, -12, -26, 38, 16]
 private theorem cert_6 :
     (2 : Polynomial ℚ) * (F6c_4_1 * F6c_5_4 - F6c_4_4 * F6c_5_1)
       - (2 : Polynomial ℚ) * of10 SM9c6 =
       Phi11 * quotient_6 := by
-  norm_num [quotient_6, ofQuotNumerator,
-    F6c_4_1, F6c_4_4, F6c_5_1, F6c_5_4,
-    SM9c6, of10, Phi11,
-    Fin.sum_univ_succ, Finset.sum_range_succ]
-  simp only [C_1_over_11, C_2_over_11, C_3_over_11, C_4_over_11, C_5_over_11, C_6_over_11, C_7_over_11, C_8_over_11, C_3_over_22, C_5_over_22, C_7_over_22, C_9_over_22, C_11_over_22, C_13_over_22, C_15_over_22]
-  norm_num
-  linear_combination (-(4 * 1) + 4 * X + 4 * X ^ 2 - 8 * X ^ 4 + 4 * X ^ 6 + 4 * X ^ 7 - 4 * X ^ 8) * C_one_over_22_sq
+  rw [z_Phi11]
+  simp only [quotient_6, z_of10_SM9c6,
+    z_F6c_4_1, z_F6c_4_4, z_F6c_5_1, z_F6c_5_4]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 private theorem col_6 :
     (2 : Polynomial ℚ) *
@@ -336,18 +358,21 @@ private theorem col_6 :
   linear_combination cert_6
 
 def quotient_7 : Polynomial ℚ :=
-  ofQuotNumerator ![32, -176, 120, 0, -56, 80, 32, 0, -32]
+  interpQ 121 [8, -44, 30, 0, -14, 20, 8, 0, -8]
 private theorem cert_7 :
     (2 : Polynomial ℚ) * (F6c_4_2 * F6c_5_3 - F6c_4_3 * F6c_5_2)
       - (2 : Polynomial ℚ) * of10 SM9c7 =
       Phi11 * quotient_7 := by
-  norm_num [quotient_7, ofQuotNumerator,
-    F6c_4_2, F6c_4_3, F6c_5_2, F6c_5_3,
-    SM9c7, of10, Phi11,
-    Fin.sum_univ_succ, Finset.sum_range_succ]
-  simp only [C_1_over_11, C_2_over_11, C_3_over_11, C_4_over_11, C_5_over_11, C_6_over_11, C_7_over_11, C_8_over_11, C_3_over_22, C_5_over_22, C_7_over_22, C_9_over_22, C_11_over_22, C_13_over_22, C_15_over_22]
-  norm_num
-  linear_combination (-(8 * X) - 4 * X ^ 4 + 4 * X ^ 5 + 4 * X ^ 6 + 4 * X ^ 7 + 4 * X ^ 8 - 4 * X ^ 9) * C_one_over_22_sq
+  rw [z_Phi11]
+  simp only [quotient_7, z_of10_SM9c7,
+    z_F6c_4_2, z_F6c_4_3, z_F6c_5_2, z_F6c_5_3]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 private theorem col_7 :
     (2 : Polynomial ℚ) *
@@ -359,18 +384,21 @@ private theorem col_7 :
   linear_combination cert_7
 
 def quotient_8 : Polynomial ℚ :=
-  ofQuotNumerator ![104, -200, 208, -176, 32, -16, 32, -32, 48]
+  interpQ 121 [26, -50, 52, -44, 8, -4, 8, -8, 12]
 private theorem cert_8 :
     (2 : Polynomial ℚ) * (F6c_4_2 * F6c_5_5 - F6c_4_5 * F6c_5_2)
       - (2 : Polynomial ℚ) * of10 SM9c8 =
       Phi11 * quotient_8 := by
-  norm_num [quotient_8, ofQuotNumerator,
-    F6c_4_2, F6c_4_5, F6c_5_2, F6c_5_5,
-    SM9c8, of10, Phi11,
-    Fin.sum_univ_succ, Finset.sum_range_succ]
-  simp only [C_1_over_11, C_2_over_11, C_3_over_11, C_4_over_11, C_5_over_11, C_6_over_11, C_7_over_11, C_8_over_11, C_3_over_22, C_5_over_22, C_7_over_22, C_9_over_22, C_11_over_22, C_13_over_22, C_15_over_22]
-  norm_num
-  linear_combination (4 * 1 - 4 * X + 8 * X ^ 2 - 4 * X ^ 3 + 4 * X ^ 4 - 4 * X ^ 6 - 4 * X ^ 9) * C_one_over_22_sq
+  rw [z_Phi11]
+  simp only [quotient_8, z_of10_SM9c8,
+    z_F6c_4_2, z_F6c_4_5, z_F6c_5_2, z_F6c_5_5]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 private theorem col_8 :
     (2 : Polynomial ℚ) *
@@ -382,18 +410,21 @@ private theorem col_8 :
   linear_combination cert_8
 
 def quotient_9 : Polynomial ℚ :=
-  ofQuotNumerator ![-248, 240, -32, 64, -48, 16, -72, 112, 56]
+  interpQ 121 [-62, 60, -8, 16, -12, 4, -18, 28, 14]
 private theorem cert_9 :
     (2 : Polynomial ℚ) * (F6c_4_4 * F6c_5_5 - F6c_4_5 * F6c_5_4)
       - (2 : Polynomial ℚ) * of10 SM9c9 =
       Phi11 * quotient_9 := by
-  norm_num [quotient_9, ofQuotNumerator,
-    F6c_4_4, F6c_4_5, F6c_5_4, F6c_5_5,
-    SM9c9, of10, Phi11,
-    Fin.sum_univ_succ, Finset.sum_range_succ]
-  simp only [C_1_over_11, C_2_over_11, C_3_over_11, C_4_over_11, C_5_over_11, C_6_over_11, C_7_over_11, C_8_over_11, C_3_over_22, C_5_over_22, C_7_over_22, C_9_over_22, C_11_over_22, C_13_over_22, C_15_over_22]
-  norm_num
-  linear_combination (-(12 * 1) - 4 * X ^ 2 - 4 * X ^ 4 - 8 * X ^ 5 - 8 * X ^ 6 - 4 * X ^ 7 - 4 * X ^ 9) * C_one_over_22_sq
+  rw [z_Phi11]
+  simp only [quotient_9, z_of10_SM9c9,
+    z_F6c_4_4, z_F6c_4_5, z_F6c_5_4, z_F6c_5_5]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 private theorem col_9 :
     (2 : Polynomial ℚ) *
