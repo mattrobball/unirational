@@ -155,8 +155,8 @@ def emit_product(lines: list[str], name: str, left_name: str, right_name: str,
         lines += [
             f"theorem {name}_apply_{degree} :",
             f"    {name} ({degree} : Fin 10) = {valname} ({degree} : Fin 10) := by",
-            f"  norm_num [{name}, {valname}, {left_name}, {right_name},",
-            "    mul, conv, coeffAt, Fin.sum_univ_succ]", "",
+            f"  norm_num [{name}, {valname}, {left_name}, {right_name}, "
+            f"mul_apply_{degree}]", "",
         ]
     lines += [f"theorem {name}_eq : {name} = {valname} := by", "  funext n", "  fin_cases n"]
     for degree in range(10):
@@ -422,7 +422,7 @@ def emit_plucker_fin1(payload: dict, sha: str, piece: str) -> str:
             f"theorem coefficientVec_apply_{degree} :",
             f"    coefficientVec ({degree} : Fin 10) = deltaVec ({degree} : Fin 10) := by",
             "  norm_num [coefficientVec, deltaVec, BKCoord0, BKCoord9, BKCoord1, BKCoord6,",
-            "    BKCoord2, BKCoord5, mul, conv, coeffAt, Fin.sum_univ_succ]", "",
+            f"    BKCoord2, BKCoord5, mul_apply_{degree}]", "",
         ]
     lines += ["theorem coefficientVec_eq : coefficientVec = deltaVec := by",
               "  funext n", "  fin_cases n"]
@@ -608,7 +608,7 @@ def emit_pp_coefficient(payload: dict, sha: str, row: int, monomial: int) -> str
             ((", ".join(
                 f"D12PiecePPCoeff{row}_{monomial}Product{index}.productValue"
                 for index in range(len(terms)))) if split_products else
-             f"{', '.join(coord_names)}, mul, conv, coeffAt, Fin.sum_univ_succ") + "]", "",
+             f"{', '.join(coord_names)}, mul_apply_{degree}") + "]", "",
         ]
     lines += [f"theorem coefficientVec_eq : coefficientVec = CCell{row}_{monomial} := by",
               "  funext n", "  fin_cases n"]
@@ -660,8 +660,8 @@ def emit_pp_coefficient_product(payload: dict, sha: str, row: int,
         lines += [
             f"theorem productVec_apply_{degree} :",
             f"    productVec ({degree} : Fin 10) = productValue ({degree} : Fin 10) := by",
-            f"  norm_num [productVec, productValue, BKCoord{i}_{ci}, BKCoord{j}_{cj},",
-            "    mul, conv, coeffAt, Fin.sum_univ_succ]", "",
+            f"  norm_num [productVec, productValue, BKCoord{i}_{ci}, BKCoord{j}_{cj}, "
+            f"mul_apply_{degree}]", "",
         ]
     lines += ["theorem productVec_eq : productVec = productValue := by",
               "  funext n", "  fin_cases n"]
