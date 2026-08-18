@@ -101,148 +101,148 @@ private theorem nat39_as_C : (39 : Polynomial ℚ) = C 39 :=
 private theorem nat40_as_C : (40 : Polynomial ℚ) = C 40 :=
   (map_natCast C 40).symm
 
-def quotient_0 : Polynomial ℚ := C ((-35 / 242 : ℚ)) * X ^ 2 + C ((63 / 242 : ℚ)) * X ^ 3 + C ((-12 / 121 : ℚ)) * X ^ 4 + C ((-8 / 121 : ℚ)) * X ^ 6 + C ((12 / 121 : ℚ)) * X ^ 7 + C ((35 / 242 : ℚ)) * X ^ 8 + C ((-5 / 22 : ℚ)) * X ^ 9 + C ((2 / 121 : ℚ)) * X ^ 10 + C ((6 / 121 : ℚ)) * X ^ 11 + C ((8 / 121 : ℚ)) * X ^ 12 + C ((-18 / 121 : ℚ)) * X ^ 13 + C ((4 / 121 : ℚ)) * X ^ 14 + C ((-4 / 121 : ℚ)) * X ^ 15 + C ((10 / 121 : ℚ)) * X ^ 16 + C ((-10 / 121 : ℚ)) * X ^ 17 + C ((6 / 121 : ℚ)) * X ^ 19 + C ((-2 / 121 : ℚ)) * X ^ 20 + C ((-2 / 121 : ℚ)) * X ^ 21 + C ((4 / 121 : ℚ)) * X ^ 23 + C ((-2 / 121 : ℚ)) * X ^ 26 + C ((2 / 121 : ℚ)) * X ^ 27
+def quotient_0 : Polynomial ℚ := interpQ 242 [0, 0, -35, 63, -24, 0, -16, 24, 35, -55, 4, 12, 16, -36, 8, -8, 20, -20, 0, 12, -4, -4, 0, 8, 0, 0, -4, 4]
 
 theorem relation_0 :
     Srestricted_poly (7 : Fin 10) (0 : Fin 10) -
         Srestricted_reduced_poly (7 : Fin 10) (0 : Fin 10) =
       Phi11 * quotient_0 := by
   unfold Srestricted_poly
-  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit]
+  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit,
+    z_Phi11]
   simp only [restrictedAction, Matrix.of_apply,
     Matrix.mul_apply, Matrix.sub_apply, Srestricted_reduced_poly,
     Srestricted_reduced_poly_row7,
     D12GeneratorPolynomialCore.compound2Lex_apply_pairLex,
-    S6_explicit_poly, S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
+    S6_explicit_poly, z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5,
     D12PolynomialData.B_poly, D12GeneratorPolynomialCore.freeRow,
     PluckerNaturality.pairLexVec, quotient_0]
   simp [Fin.sum_univ_succ]
-  simp only [S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row7,
-    interpQ, toPolyZ]
+  simp only [z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5, Srestricted_reduced_poly_row7]
   norm_num
-  simp only [Phi11, Finset.sum_range_succ]
-  ring_nf
-  simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C,
-    nat6_as_C, nat7_as_C, nat8_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc,
-    mul_smul_comm, one_mul, mul_one, smul_smul]
-  module
+  try simp only [z_C_one, z_C_half, z_C_neg_half]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_0 :
     evalMatrixK Srestricted_poly (7 : Fin 10) (0 : Fin 10) =
       evalMatrixK Srestricted_reduced_poly (7 : Fin 10) (0 : Fin 10) := by
   exact eval_eq_of_modPhi WeilRep.ζ D12U6PolynomialSeal.evalPhi11_ζ _ _ _ relation_0
 
-def quotient_1 : Polynomial ℚ := C ((-18 / 121 : ℚ)) * X ^ 4 + C ((59 / 242 : ℚ)) * X ^ 5 + C ((9 / 242 : ℚ)) * X ^ 6 + C ((-59 / 242 : ℚ)) * X ^ 7 + C ((3 / 242 : ℚ)) * X ^ 8 + C ((8 / 121 : ℚ)) * X ^ 9 + C ((12 / 121 : ℚ)) * X ^ 10 + C ((-2 / 121 : ℚ)) * X ^ 11 + C ((-10 / 121 : ℚ)) * X ^ 12 + C ((-2 / 121 : ℚ)) * X ^ 13 + C ((10 / 121 : ℚ)) * X ^ 14 + C ((-4 / 121 : ℚ)) * X ^ 15 + C ((6 / 121 : ℚ)) * X ^ 16 + C ((-4 / 121 : ℚ)) * X ^ 17 + C ((-6 / 121 : ℚ)) * X ^ 18 + C ((4 / 121 : ℚ)) * X ^ 19 + C ((4 / 121 : ℚ)) * X ^ 20 + C ((-4 / 121 : ℚ)) * X ^ 22 + C ((-2 / 121 : ℚ)) * X ^ 23 + C ((2 / 121 : ℚ)) * X ^ 24 + C ((2 / 121 : ℚ)) * X ^ 25 + C ((-2 / 121 : ℚ)) * X ^ 26
+def quotient_1 : Polynomial ℚ := interpQ 242 [0, 0, 0, 0, -36, 59, 9, -59, 3, 16, 24, -4, -20, -4, 20, -8, 12, -8, -12, 8, 8, 0, -8, -4, 4, 4, -4]
 
 theorem relation_1 :
     Srestricted_poly (7 : Fin 10) (1 : Fin 10) -
         Srestricted_reduced_poly (7 : Fin 10) (1 : Fin 10) =
       Phi11 * quotient_1 := by
   unfold Srestricted_poly
-  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit]
+  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit,
+    z_Phi11]
   simp only [restrictedAction, Matrix.of_apply,
     Matrix.mul_apply, Matrix.sub_apply, Srestricted_reduced_poly,
     Srestricted_reduced_poly_row7,
     D12GeneratorPolynomialCore.compound2Lex_apply_pairLex,
-    S6_explicit_poly, S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
+    S6_explicit_poly, z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5,
     D12PolynomialData.B_poly, D12GeneratorPolynomialCore.freeRow,
     PluckerNaturality.pairLexVec, quotient_1]
   simp [Fin.sum_univ_succ]
-  simp only [S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row7,
-    interpQ, toPolyZ]
+  simp only [z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5, Srestricted_reduced_poly_row7]
   norm_num
-  simp only [Phi11, Finset.sum_range_succ]
-  ring_nf
-  simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C,
-    nat6_as_C, nat7_as_C, nat8_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc,
-    mul_smul_comm, one_mul, mul_one, smul_smul]
-  module
+  try simp only [z_C_one, z_C_half, z_C_neg_half]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_1 :
     evalMatrixK Srestricted_poly (7 : Fin 10) (1 : Fin 10) =
       evalMatrixK Srestricted_reduced_poly (7 : Fin 10) (1 : Fin 10) := by
   exact eval_eq_of_modPhi WeilRep.ζ D12U6PolynomialSeal.evalPhi11_ζ _ _ _ relation_1
 
-def quotient_2 : Polynomial ℚ := C ((35 / 242 : ℚ)) * X ^ 2 + C ((-27 / 242 : ℚ)) * X ^ 3 + C ((-18 / 121 : ℚ)) * X ^ 5 + C ((5 / 242 : ℚ)) * X ^ 6 + C ((27 / 242 : ℚ)) * X ^ 7 + C ((2 / 121 : ℚ)) * X ^ 9 + C ((-16 / 121 : ℚ)) * X ^ 10 + C ((6 / 121 : ℚ)) * X ^ 12 + C ((16 / 121 : ℚ)) * X ^ 13 + C ((-8 / 121 : ℚ)) * X ^ 14 + C ((-6 / 121 : ℚ)) * X ^ 16 + C ((4 / 121 : ℚ)) * X ^ 17 + C ((4 / 121 : ℚ)) * X ^ 18 + C ((-2 / 121 : ℚ)) * X ^ 20 + C ((-2 / 121 : ℚ)) * X ^ 21 + C ((2 / 121 : ℚ)) * X ^ 24 + C ((-2 / 121 : ℚ)) * X ^ 25
+def quotient_2 : Polynomial ℚ := interpQ 242 [0, 0, 35, -27, 0, -36, 5, 27, 0, 4, -32, 0, 12, 32, -16, 0, -12, 8, 8, 0, -4, -4, 0, 0, 4, -4]
 
 theorem relation_2 :
     Srestricted_poly (7 : Fin 10) (2 : Fin 10) -
         Srestricted_reduced_poly (7 : Fin 10) (2 : Fin 10) =
       Phi11 * quotient_2 := by
   unfold Srestricted_poly
-  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit]
+  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit,
+    z_Phi11]
   simp only [restrictedAction, Matrix.of_apply,
     Matrix.mul_apply, Matrix.sub_apply, Srestricted_reduced_poly,
     Srestricted_reduced_poly_row7,
     D12GeneratorPolynomialCore.compound2Lex_apply_pairLex,
-    S6_explicit_poly, S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
+    S6_explicit_poly, z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5,
     D12PolynomialData.B_poly, D12GeneratorPolynomialCore.freeRow,
     PluckerNaturality.pairLexVec, quotient_2]
   simp [Fin.sum_univ_succ]
-  simp only [S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row7,
-    interpQ, toPolyZ]
+  simp only [z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5, Srestricted_reduced_poly_row7]
   norm_num
-  simp only [Phi11, Finset.sum_range_succ]
-  ring_nf
-  simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C,
-    nat6_as_C, nat7_as_C, nat8_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc,
-    mul_smul_comm, one_mul, mul_one, smul_smul]
-  module
+  try simp only [z_C_one, z_C_half, z_C_neg_half]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_2 :
     evalMatrixK Srestricted_poly (7 : Fin 10) (2 : Fin 10) =
       evalMatrixK Srestricted_reduced_poly (7 : Fin 10) (2 : Fin 10) := by
   exact eval_eq_of_modPhi WeilRep.ζ D12U6PolynomialSeal.evalPhi11_ζ _ _ _ relation_2
 
-def quotient_3 : Polynomial ℚ := C ((-3 / 22 : ℚ)) + C ((35 / 242 : ℚ)) * X + C ((-27 / 242 : ℚ)) * X ^ 2 + C ((-35 / 242 : ℚ)) * X ^ 3 + C ((27 / 242 : ℚ)) * X ^ 4 + C ((8 / 121 : ℚ)) * X ^ 5 + C ((-8 / 121 : ℚ)) * X ^ 7 + C ((-2 / 11 : ℚ)) * X ^ 8 + C ((16 / 121 : ℚ)) * X ^ 9 + C ((2 / 11 : ℚ)) * X ^ 10 + C ((-16 / 121 : ℚ)) * X ^ 11 + C ((-6 / 121 : ℚ)) * X ^ 12 + C ((-4 / 121 : ℚ)) * X ^ 13 + C ((6 / 121 : ℚ)) * X ^ 14 + C ((10 / 121 : ℚ)) * X ^ 15 + C ((-2 / 121 : ℚ)) * X ^ 16 + C ((-6 / 121 : ℚ)) * X ^ 17 + C ((2 / 121 : ℚ)) * X ^ 18 + C ((-2 / 121 : ℚ)) * X ^ 19 + C ((2 / 121 : ℚ)) * X ^ 20 + C ((2 / 121 : ℚ)) * X ^ 21 + C ((-2 / 121 : ℚ)) * X ^ 22
+def quotient_3 : Polynomial ℚ := interpQ 242 [-33, 35, -27, -35, 27, 16, 0, -16, -44, 32, 44, -32, -12, -8, 12, 20, -4, -12, 4, -4, 4, 4, -4]
 
 theorem relation_3 :
     Srestricted_poly (7 : Fin 10) (3 : Fin 10) -
         Srestricted_reduced_poly (7 : Fin 10) (3 : Fin 10) =
       Phi11 * quotient_3 := by
   unfold Srestricted_poly
-  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit]
+  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit,
+    z_Phi11]
   simp only [restrictedAction, Matrix.of_apply,
     Matrix.mul_apply, Matrix.sub_apply, Srestricted_reduced_poly,
     Srestricted_reduced_poly_row7,
     D12GeneratorPolynomialCore.compound2Lex_apply_pairLex,
-    S6_explicit_poly, S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
+    S6_explicit_poly, z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5,
     D12PolynomialData.B_poly, D12GeneratorPolynomialCore.freeRow,
     PluckerNaturality.pairLexVec, quotient_3]
   simp [Fin.sum_univ_succ]
-  simp only [S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row7,
-    interpQ, toPolyZ]
+  simp only [z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5, Srestricted_reduced_poly_row7]
   norm_num
-  simp only [Phi11, Finset.sum_range_succ]
-  ring_nf
-  simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C,
-    nat6_as_C, nat7_as_C, nat8_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc,
-    mul_smul_comm, one_mul, mul_one, smul_smul]
-  module
+  try simp only [z_C_one, z_C_half, z_C_neg_half]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_3 :
     evalMatrixK Srestricted_poly (7 : Fin 10) (3 : Fin 10) =
@@ -623,185 +623,185 @@ theorem eval_relation_4 :
       evalMatrixK Srestricted_reduced_poly (7 : Fin 10) (4 : Fin 10) := by
   exact eval_eq_of_modPhi WeilRep.ζ D12U6PolynomialSeal.evalPhi11_ζ _ _ _ relation_4
 
-def quotient_5 : Polynomial ℚ := C ((2 / 11 : ℚ)) + C ((-2 / 11 : ℚ)) * X + C ((-1 / 11 : ℚ)) * X ^ 2 + C ((23 / 121 : ℚ)) * X ^ 4 + C ((-8 / 121 : ℚ)) * X ^ 5 + C ((1 / 11 : ℚ)) * X ^ 7 + C ((-15 / 121 : ℚ)) * X ^ 8 + C ((-4 / 121 : ℚ)) * X ^ 9 + C ((8 / 121 : ℚ)) * X ^ 10 + C ((20 / 121 : ℚ)) * X ^ 11 + C ((-20 / 121 : ℚ)) * X ^ 12 + C ((-20 / 121 : ℚ)) * X ^ 13 + C ((-4 / 121 : ℚ)) * X ^ 14 + C ((28 / 121 : ℚ)) * X ^ 15 + C ((-12 / 121 : ℚ)) * X ^ 17 + C ((-4 / 121 : ℚ)) * X ^ 18 + C ((4 / 121 : ℚ)) * X ^ 20 + C ((4 / 121 : ℚ)) * X ^ 22 + C ((-4 / 121 : ℚ)) * X ^ 25 + C ((4 / 121 : ℚ)) * X ^ 26
+def quotient_5 : Polynomial ℚ := interpQ 121 [22, -22, -11, 0, 23, -8, 0, 11, -15, -4, 8, 20, -20, -20, -4, 28, 0, -12, -4, 0, 4, 0, 4, 0, 0, -4, 4]
 
 theorem relation_5 :
     Srestricted_poly (7 : Fin 10) (5 : Fin 10) -
         Srestricted_reduced_poly (7 : Fin 10) (5 : Fin 10) =
       Phi11 * quotient_5 := by
   unfold Srestricted_poly
-  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit]
+  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit,
+    z_Phi11]
   simp only [restrictedAction, Matrix.of_apply,
     Matrix.mul_apply, Matrix.sub_apply, Srestricted_reduced_poly,
     Srestricted_reduced_poly_row7,
     D12GeneratorPolynomialCore.compound2Lex_apply_pairLex,
-    S6_explicit_poly, S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
+    S6_explicit_poly, z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5,
     D12PolynomialData.B_poly, D12GeneratorPolynomialCore.freeRow,
     PluckerNaturality.pairLexVec, quotient_5]
   simp [Fin.sum_univ_succ]
-  simp only [S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row7,
-    interpQ, toPolyZ]
+  simp only [z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5, Srestricted_reduced_poly_row7]
   norm_num
-  simp only [Phi11, Finset.sum_range_succ]
-  ring_nf
-  simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C,
-    nat6_as_C, nat7_as_C, nat8_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc,
-    mul_smul_comm, one_mul, mul_one, smul_smul]
-  module
+  try simp only [z_C_one, z_C_half, z_C_neg_half]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_5 :
     evalMatrixK Srestricted_poly (7 : Fin 10) (5 : Fin 10) =
       evalMatrixK Srestricted_reduced_poly (7 : Fin 10) (5 : Fin 10) := by
   exact eval_eq_of_modPhi WeilRep.ζ D12U6PolynomialSeal.evalPhi11_ζ _ _ _ relation_5
 
-def quotient_6 : Polynomial ℚ := C ((-3 / 11 : ℚ)) + C ((3 / 11 : ℚ)) * X + C ((-1 / 11 : ℚ)) * X ^ 2 + C ((12 / 121 : ℚ)) * X ^ 3 + C ((-8 / 121 : ℚ)) * X ^ 4 + C ((-1 / 11 : ℚ)) * X ^ 5 + C ((-1 / 121 : ℚ)) * X ^ 6 + C ((16 / 121 : ℚ)) * X ^ 7 + C ((1 / 11 : ℚ)) * X ^ 8 + C ((-1 / 11 : ℚ)) * X ^ 9 + C ((-28 / 121 : ℚ)) * X ^ 11 + C ((28 / 121 : ℚ)) * X ^ 12 + C ((-4 / 121 : ℚ)) * X ^ 13 + C ((4 / 121 : ℚ)) * X ^ 14 + C ((-16 / 121 : ℚ)) * X ^ 15 + C ((-4 / 121 : ℚ)) * X ^ 16 + C ((4 / 121 : ℚ)) * X ^ 17 + C ((12 / 121 : ℚ)) * X ^ 18 + C ((-12 / 121 : ℚ)) * X ^ 20 + C ((12 / 121 : ℚ)) * X ^ 23 + C ((-4 / 121 : ℚ)) * X ^ 24 + C ((-4 / 121 : ℚ)) * X ^ 26 + C ((4 / 121 : ℚ)) * X ^ 27
+def quotient_6 : Polynomial ℚ := interpQ 121 [-33, 33, -11, 12, -8, -11, -1, 16, 11, -11, 0, -28, 28, -4, 4, -16, -4, 4, 12, 0, -12, 0, 0, 12, -4, 0, -4, 4]
 
 theorem relation_6 :
     Srestricted_poly (7 : Fin 10) (6 : Fin 10) -
         Srestricted_reduced_poly (7 : Fin 10) (6 : Fin 10) =
       Phi11 * quotient_6 := by
   unfold Srestricted_poly
-  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit]
+  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit,
+    z_Phi11]
   simp only [restrictedAction, Matrix.of_apply,
     Matrix.mul_apply, Matrix.sub_apply, Srestricted_reduced_poly,
     Srestricted_reduced_poly_row7,
     D12GeneratorPolynomialCore.compound2Lex_apply_pairLex,
-    S6_explicit_poly, S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
+    S6_explicit_poly, z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5,
     D12PolynomialData.B_poly, D12GeneratorPolynomialCore.freeRow,
     PluckerNaturality.pairLexVec, quotient_6]
   simp [Fin.sum_univ_succ]
-  simp only [S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row7,
-    interpQ, toPolyZ]
+  simp only [z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5, Srestricted_reduced_poly_row7]
   norm_num
-  simp only [Phi11, Finset.sum_range_succ]
-  ring_nf
-  simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C,
-    nat6_as_C, nat7_as_C, nat8_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc,
-    mul_smul_comm, one_mul, mul_one, smul_smul]
-  module
+  try simp only [z_C_one, z_C_half, z_C_neg_half]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_6 :
     evalMatrixK Srestricted_poly (7 : Fin 10) (6 : Fin 10) =
       evalMatrixK Srestricted_reduced_poly (7 : Fin 10) (6 : Fin 10) := by
   exact eval_eq_of_modPhi WeilRep.ζ D12U6PolynomialSeal.evalPhi11_ζ _ _ _ relation_6
 
-def quotient_7 : Polynomial ℚ := C ((-1 / 11 : ℚ)) + C ((1 / 11 : ℚ)) * X + C ((2 / 11 : ℚ)) * X ^ 2 + C ((-1 / 11 : ℚ)) * X ^ 3 + C ((1 / 11 : ℚ)) * X ^ 5 + C ((1 / 121 : ℚ)) * X ^ 6 + C ((-8 / 121 : ℚ)) * X ^ 7 + C ((12 / 121 : ℚ)) * X ^ 9 + C ((-12 / 121 : ℚ)) * X ^ 10 + C ((-16 / 121 : ℚ)) * X ^ 11 + C ((4 / 121 : ℚ)) * X ^ 12 + C ((24 / 121 : ℚ)) * X ^ 13 + C ((-12 / 121 : ℚ)) * X ^ 14 + C ((-16 / 121 : ℚ)) * X ^ 15 + C ((8 / 121 : ℚ)) * X ^ 17 + C ((4 / 121 : ℚ)) * X ^ 18 + C ((-4 / 121 : ℚ)) * X ^ 19 + C ((4 / 121 : ℚ)) * X ^ 21 + C ((-4 / 121 : ℚ)) * X ^ 23 + C ((4 / 121 : ℚ)) * X ^ 24
+def quotient_7 : Polynomial ℚ := interpQ 121 [-11, 11, 22, -11, 0, 11, 1, -8, 0, 12, -12, -16, 4, 24, -12, -16, 0, 8, 4, -4, 0, 4, 0, -4, 4]
 
 theorem relation_7 :
     Srestricted_poly (7 : Fin 10) (7 : Fin 10) -
         Srestricted_reduced_poly (7 : Fin 10) (7 : Fin 10) =
       Phi11 * quotient_7 := by
   unfold Srestricted_poly
-  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit]
+  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit,
+    z_Phi11]
   simp only [restrictedAction, Matrix.of_apply,
     Matrix.mul_apply, Matrix.sub_apply, Srestricted_reduced_poly,
     Srestricted_reduced_poly_row7,
     D12GeneratorPolynomialCore.compound2Lex_apply_pairLex,
-    S6_explicit_poly, S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
+    S6_explicit_poly, z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5,
     D12PolynomialData.B_poly, D12GeneratorPolynomialCore.freeRow,
     PluckerNaturality.pairLexVec, quotient_7]
   simp [Fin.sum_univ_succ]
-  simp only [S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row7,
-    interpQ, toPolyZ]
+  simp only [z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5, Srestricted_reduced_poly_row7]
   norm_num
-  simp only [Phi11, Finset.sum_range_succ]
-  ring_nf
-  simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C,
-    nat6_as_C, nat7_as_C, nat8_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc,
-    mul_smul_comm, one_mul, mul_one, smul_smul]
-  module
+  try simp only [z_C_one, z_C_half, z_C_neg_half]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_7 :
     evalMatrixK Srestricted_poly (7 : Fin 10) (7 : Fin 10) =
       evalMatrixK Srestricted_reduced_poly (7 : Fin 10) (7 : Fin 10) := by
   exact eval_eq_of_modPhi WeilRep.ζ D12U6PolynomialSeal.evalPhi11_ζ _ _ _ relation_7
 
-def quotient_8 : Polynomial ℚ := C ((2 / 11 : ℚ)) + C ((-2 / 11 : ℚ)) * X + C ((1 / 11 : ℚ)) * X ^ 3 + C ((-2 / 11 : ℚ)) * X ^ 4 + C ((-1 / 121 : ℚ)) * X ^ 6 + C ((-4 / 121 : ℚ)) * X ^ 7 + C ((20 / 121 : ℚ)) * X ^ 8 + C ((-8 / 121 : ℚ)) * X ^ 9 + C ((-8 / 121 : ℚ)) * X ^ 10 + C ((16 / 121 : ℚ)) * X ^ 11 + C ((-8 / 121 : ℚ)) * X ^ 12 + C ((4 / 121 : ℚ)) * X ^ 13 + C ((12 / 121 : ℚ)) * X ^ 14 + C ((-12 / 121 : ℚ)) * X ^ 15 + C ((8 / 121 : ℚ)) * X ^ 17 + C ((-8 / 121 : ℚ)) * X ^ 20 + C ((-4 / 121 : ℚ)) * X ^ 21 + C ((8 / 121 : ℚ)) * X ^ 22 + C ((-4 / 121 : ℚ)) * X ^ 24
+def quotient_8 : Polynomial ℚ := interpQ 121 [22, -22, 0, 11, -22, 0, -1, -4, 20, -8, -8, 16, -8, 4, 12, -12, 0, 8, 0, 0, -8, -4, 8, 0, -4]
 
 theorem relation_8 :
     Srestricted_poly (7 : Fin 10) (8 : Fin 10) -
         Srestricted_reduced_poly (7 : Fin 10) (8 : Fin 10) =
       Phi11 * quotient_8 := by
   unfold Srestricted_poly
-  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit]
+  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit,
+    z_Phi11]
   simp only [restrictedAction, Matrix.of_apply,
     Matrix.mul_apply, Matrix.sub_apply, Srestricted_reduced_poly,
     Srestricted_reduced_poly_row7,
     D12GeneratorPolynomialCore.compound2Lex_apply_pairLex,
-    S6_explicit_poly, S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
+    S6_explicit_poly, z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5,
     D12PolynomialData.B_poly, D12GeneratorPolynomialCore.freeRow,
     PluckerNaturality.pairLexVec, quotient_8]
   simp [Fin.sum_univ_succ]
-  simp only [S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row7,
-    interpQ, toPolyZ]
+  simp only [z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5, Srestricted_reduced_poly_row7]
   norm_num
-  simp only [Phi11, Finset.sum_range_succ]
-  ring_nf
-  simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C,
-    nat6_as_C, nat7_as_C, nat8_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc,
-    mul_smul_comm, one_mul, mul_one, smul_smul]
-  module
+  try simp only [z_C_one, z_C_half, z_C_neg_half]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_8 :
     evalMatrixK Srestricted_poly (7 : Fin 10) (8 : Fin 10) =
       evalMatrixK Srestricted_reduced_poly (7 : Fin 10) (8 : Fin 10) := by
   exact eval_eq_of_modPhi WeilRep.ζ D12U6PolynomialSeal.evalPhi11_ζ _ _ _ relation_8
 
-def quotient_9 : Polynomial ℚ := C ((-3 / 11 : ℚ)) + C ((3 / 11 : ℚ)) * X + C ((-23 / 121 : ℚ)) * X ^ 2 + C ((8 / 121 : ℚ)) * X ^ 3 + C ((1 / 11 : ℚ)) * X ^ 4 + C ((-1 / 11 : ℚ)) * X ^ 5 + C ((-8 / 121 : ℚ)) * X ^ 6 + C ((12 / 121 : ℚ)) * X ^ 7 + C ((-8 / 121 : ℚ)) * X ^ 8 + C ((-7 / 121 : ℚ)) * X ^ 9 + C ((19 / 121 : ℚ)) * X ^ 10 + C ((-24 / 121 : ℚ)) * X ^ 11 + C ((28 / 121 : ℚ)) * X ^ 12 + C ((-8 / 121 : ℚ)) * X ^ 13 + C ((4 / 121 : ℚ)) * X ^ 14 + C ((-4 / 121 : ℚ)) * X ^ 17 + C ((12 / 121 : ℚ)) * X ^ 18 + C ((-4 / 121 : ℚ)) * X ^ 19 + C ((-8 / 121 : ℚ)) * X ^ 20 + C ((8 / 121 : ℚ)) * X ^ 21 + C ((-4 / 121 : ℚ)) * X ^ 22 + C ((4 / 121 : ℚ)) * X ^ 23 + C ((-8 / 121 : ℚ)) * X ^ 24 + C ((4 / 121 : ℚ)) * X ^ 27 + C ((-4 / 121 : ℚ)) * X ^ 28
+def quotient_9 : Polynomial ℚ := interpQ 121 [-33, 33, -23, 8, 11, -11, -8, 12, -8, -7, 19, -24, 28, -8, 4, 0, 0, -4, 12, -4, -8, 8, -4, 4, -8, 0, 0, 4, -4]
 
 theorem relation_9 :
     Srestricted_poly (7 : Fin 10) (9 : Fin 10) -
         Srestricted_reduced_poly (7 : Fin 10) (9 : Fin 10) =
       Phi11 * quotient_9 := by
   unfold Srestricted_poly
-  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit]
+  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit,
+    z_Phi11]
   simp only [restrictedAction, Matrix.of_apply,
     Matrix.mul_apply, Matrix.sub_apply, Srestricted_reduced_poly,
     Srestricted_reduced_poly_row7,
     D12GeneratorPolynomialCore.compound2Lex_apply_pairLex,
-    S6_explicit_poly, S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
+    S6_explicit_poly, z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5,
     D12PolynomialData.B_poly, D12GeneratorPolynomialCore.freeRow,
     PluckerNaturality.pairLexVec, quotient_9]
   simp [Fin.sum_univ_succ]
-  simp only [S6_explicit_row0, S6_explicit_row1,
-    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
-    S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row7,
-    interpQ, toPolyZ]
+  simp only [z_S6_explicit_row0, z_S6_explicit_row1,
+    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,
+    z_S6_explicit_row5, Srestricted_reduced_poly_row7]
   norm_num
-  simp only [Phi11, Finset.sum_range_succ]
-  ring_nf
-  simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C,
-    nat6_as_C, nat7_as_C, nat8_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc,
-    mul_smul_comm, one_mul, mul_one, smul_smul]
-  module
+  try simp only [z_C_one, z_C_half, z_C_neg_half]
+  simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add,
+    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_9 :
     evalMatrixK Srestricted_poly (7 : Fin 10) (9 : Fin 10) =

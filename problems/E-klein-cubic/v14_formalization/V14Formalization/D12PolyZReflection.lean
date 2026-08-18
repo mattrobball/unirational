@@ -123,12 +123,12 @@ public theorem interp_mul (d₁ d₂ : ℕ) (n₁ n₂ : List Int) :
   rw [map_mul]
   ring
 
-theorem interp_add (d : ℕ) (n₁ n₂ : List Int) :
+public theorem interp_add (d : ℕ) (n₁ n₂ : List Int) :
     interpQ d n₁ + interpQ d n₂ = interpQ d (addList n₁ n₂) := by
   simp only [interpQ, toPolyZ_add]
   ring
 
-theorem interp_sub (d : ℕ) (n₁ n₂ : List Int) :
+public theorem interp_sub (d : ℕ) (n₁ n₂ : List Int) :
     interpQ d n₁ - interpQ d n₂ = interpQ d (subList n₁ n₂) := by
   simp only [interpQ, toPolyZ_sub]
   ring

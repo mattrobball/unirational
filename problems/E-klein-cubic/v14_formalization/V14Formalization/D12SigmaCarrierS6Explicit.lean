@@ -9,6 +9,7 @@ noncomputable section
 open Matrix Polynomial
 namespace V14Formalization.D12SigmaCarrierS6Explicit
 open D12GeneratorPolynomialCore
+open V14Formalization.D12PolyZReflection
 
 @[expose] public def S6_explicit_row0 : Fin 6 → Polynomial ℚ := fun j =>
   match j.val with
@@ -572,5 +573,132 @@ public theorem S6_poly_eq_explicit :
   · exact row_3 j
   · exact row_4 j
   · exact row_5 j
+/-! ### Integer reflection of the explicit 6x6 -/
+
+public theorem z_cFourierPoly :
+    D12U6Semantic.cFourierPoly = interpQ 11 [-1, -2, 0, -2, -2, -2, 0, 0, 0, -2] := by
+  refine Polynomial.funext fun r => ?_
+  simp [D12U6Semantic.cFourierPoly, interpQ, toPolyZ,
+    Polynomial.eval_add, Polynomial.eval_mul, Polynomial.eval_C,
+    Polynomial.eval_X, Polynomial.eval_pow]
+  try grind
+
+public theorem z_S6_explicit_row0 :
+    S6_explicit_row0 = fun j => match j.val with
+      | 0 => interpQ 11 [-1, -2, 0, -2, -2, -2, 0, 0, 0, -2]
+      | 1 => interpQ 11 [-2, -4, 0, -4, -4, -4, 0, 0, 0, -4]
+      | 2 => interpQ 11 [-2, -4, 0, -4, -4, -4, 0, 0, 0, -4]
+      | 3 => interpQ 11 [-2, -4, 0, -4, -4, -4, 0, 0, 0, -4]
+      | 4 => interpQ 11 [-2, -4, 0, -4, -4, -4, 0, 0, 0, -4]
+      | 5 => interpQ 11 [-2, -4, 0, -4, -4, -4, 0, 0, 0, -4]
+      | _ => 0 := by
+  funext j
+  fin_cases j <;>
+    (refine Polynomial.funext fun r => ?_) <;>
+    simp [S6_explicit_row0, D12U6Semantic.cFourierPoly, interpQ,
+      toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
+      Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow] <;>
+    try grind
+
+public theorem z_S6_explicit_row1 :
+    S6_explicit_row1 = fun j => match j.val with
+      | 0 => interpQ 11 [-1, -2, 0, -2, -2, -2, 0, 0, 0, -2]
+      | 1 => interpQ 11 [0, -1, -2, 0, -2, -2, -2, 0, 0, 0, -3, -2, 0, -2, -2, -2, 0, 0, 0, -2]
+      | 2 => interpQ 11 [0, 0, -1, -2, 0, -2, -2, -2, 0, -1, -2, -2, -2, -2, -2, 0, 0, 0, -2]
+      | 3 => interpQ 11 [0, 0, 0, -1, -2, 0, -2, -2, -3, -2, 0, -2, -4, -2, 0, 0, 0, -2]
+      | 4 => interpQ 11 [0, 0, 0, 0, -1, -2, 0, -3, -4, -2, -2, -2, -2, -2, 0, 0, -2]
+      | 5 => interpQ 11 [0, 0, 0, 0, 0, -1, -3, -2, -2, -4, -4, -2, 0, 0, -2, -2]
+      | _ => 0 := by
+  funext j
+  fin_cases j <;>
+    (refine Polynomial.funext fun r => ?_) <;>
+    simp [S6_explicit_row1, D12U6Semantic.cFourierPoly, interpQ,
+      toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
+      Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow] <;>
+    try grind
+
+public theorem z_S6_explicit_row2 :
+    S6_explicit_row2 = fun j => match j.val with
+      | 0 => interpQ 11 [-1, -2, 0, -2, -2, -2, 0, 0, 0, -2]
+      | 1 => interpQ 11 [0, 0, -1, -2, 0, -2, -2, -2, 0, -1, -2, -2, -2, -2, -2, 0, 0, 0, -2]
+      | 2 => interpQ 11 [0, 0, 0, 0, -1, -2, 0, -3, -4, -2, -2, -2, -2, -2, 0, 0, -2]
+      | 3 => interpQ 11 [0, 0, 0, 0, 0, -1, -3, -2, -2, -4, -4, -2, 0, 0, -2, -2]
+      | 4 => interpQ 11 [0, 0, 0, -1, -2, 0, -2, -2, -3, -2, 0, -2, -4, -2, 0, 0, 0, -2]
+      | 5 => interpQ 11 [0, -1, -2, 0, -2, -2, -2, 0, 0, 0, -3, -2, 0, -2, -2, -2, 0, 0, 0, -2]
+      | _ => 0 := by
+  funext j
+  fin_cases j <;>
+    (refine Polynomial.funext fun r => ?_) <;>
+    simp [S6_explicit_row2, D12U6Semantic.cFourierPoly, interpQ,
+      toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
+      Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow] <;>
+    try grind
+
+public theorem z_S6_explicit_row3 :
+    S6_explicit_row3 = fun j => match j.val with
+      | 0 => interpQ 11 [-1, -2, 0, -2, -2, -2, 0, 0, 0, -2]
+      | 1 => interpQ 11 [0, 0, 0, -1, -2, 0, -2, -2, -3, -2, 0, -2, -4, -2, 0, 0, 0, -2]
+      | 2 => interpQ 11 [0, 0, 0, 0, 0, -1, -3, -2, -2, -4, -4, -2, 0, 0, -2, -2]
+      | 3 => interpQ 11 [0, 0, -1, -2, 0, -2, -2, -2, 0, -1, -2, -2, -2, -2, -2, 0, 0, 0, -2]
+      | 4 => interpQ 11 [0, -1, -2, 0, -2, -2, -2, 0, 0, 0, -3, -2, 0, -2, -2, -2, 0, 0, 0, -2]
+      | 5 => interpQ 11 [0, 0, 0, 0, -1, -2, 0, -3, -4, -2, -2, -2, -2, -2, 0, 0, -2]
+      | _ => 0 := by
+  funext j
+  fin_cases j <;>
+    (refine Polynomial.funext fun r => ?_) <;>
+    simp [S6_explicit_row3, D12U6Semantic.cFourierPoly, interpQ,
+      toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
+      Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow] <;>
+    try grind
+
+public theorem z_S6_explicit_row4 :
+    S6_explicit_row4 = fun j => match j.val with
+      | 0 => interpQ 11 [-1, -2, 0, -2, -2, -2, 0, 0, 0, -2]
+      | 1 => interpQ 11 [0, 0, 0, 0, -1, -2, 0, -3, -4, -2, -2, -2, -2, -2, 0, 0, -2]
+      | 2 => interpQ 11 [0, 0, 0, -1, -2, 0, -2, -2, -3, -2, 0, -2, -4, -2, 0, 0, 0, -2]
+      | 3 => interpQ 11 [0, -1, -2, 0, -2, -2, -2, 0, 0, 0, -3, -2, 0, -2, -2, -2, 0, 0, 0, -2]
+      | 4 => interpQ 11 [0, 0, 0, 0, 0, -1, -3, -2, -2, -4, -4, -2, 0, 0, -2, -2]
+      | 5 => interpQ 11 [0, 0, -1, -2, 0, -2, -2, -2, 0, -1, -2, -2, -2, -2, -2, 0, 0, 0, -2]
+      | _ => 0 := by
+  funext j
+  fin_cases j <;>
+    (refine Polynomial.funext fun r => ?_) <;>
+    simp [S6_explicit_row4, D12U6Semantic.cFourierPoly, interpQ,
+      toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
+      Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow] <;>
+    try grind
+
+public theorem z_S6_explicit_row5 :
+    S6_explicit_row5 = fun j => match j.val with
+      | 0 => interpQ 11 [-1, -2, 0, -2, -2, -2, 0, 0, 0, -2]
+      | 1 => interpQ 11 [0, 0, 0, 0, 0, -1, -3, -2, -2, -4, -4, -2, 0, 0, -2, -2]
+      | 2 => interpQ 11 [0, -1, -2, 0, -2, -2, -2, 0, 0, 0, -3, -2, 0, -2, -2, -2, 0, 0, 0, -2]
+      | 3 => interpQ 11 [0, 0, 0, 0, -1, -2, 0, -3, -4, -2, -2, -2, -2, -2, 0, 0, -2]
+      | 4 => interpQ 11 [0, 0, -1, -2, 0, -2, -2, -2, 0, -1, -2, -2, -2, -2, -2, 0, 0, 0, -2]
+      | 5 => interpQ 11 [0, 0, 0, -1, -2, 0, -2, -2, -3, -2, 0, -2, -4, -2, 0, 0, 0, -2]
+      | _ => 0 := by
+  funext j
+  fin_cases j <;>
+    (refine Polynomial.funext fun r => ?_) <;>
+    simp [S6_explicit_row5, D12U6Semantic.cFourierPoly, interpQ,
+      toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
+      Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow] <;>
+    try grind
+
+/-! ### The three `B_poly` constants -/
+
+public theorem z_C_one : (C (1 : ℚ) : Polynomial ℚ) = interpQ 1 [1] := by
+  simp [interpQ, toPolyZ]
+
+public theorem z_C_half :
+    (C ((1 / 2 : ℚ)) : Polynomial ℚ) = interpQ 2 [1] := by
+  simp [interpQ, toPolyZ]
+  try norm_num
+
+public theorem z_C_neg_half :
+    (C ((-1 / 2 : ℚ)) : Polynomial ℚ) = interpQ 2 [-1] := by
+  simp [interpQ, toPolyZ]
+  try norm_num
+
 
 end V14Formalization.D12SigmaCarrierS6Explicit

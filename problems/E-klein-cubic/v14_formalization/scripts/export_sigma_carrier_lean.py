@@ -365,6 +365,7 @@ def emit_s6_explicit(out: Path):
         "open Matrix Polynomial",
         "namespace V14Formalization.D12SigmaCarrierS6Explicit",
         "open D12GeneratorPolynomialCore",
+        "open V14Formalization.D12PolyZReflection",
         "",
     ]
     for i in range(6):
@@ -416,6 +417,62 @@ def emit_s6_explicit(out: Path):
               "  apply Matrix.ext", "  intro i j", "  fin_cases i"]
     for i in range(6):
         lines.append(f"  · exact row_{i} j")
+    # Integer reflection of the explicit 6x6, so the bridge-row certificates
+    # fold by kernel list arithmetic instead of `ring_nf` + `module`.  One
+    # equation per ROW, not per entry: `simp only` on a row equation reduces
+    # the `match` the same way unfolding the definition does, which per-index
+    # lemmas cannot (the indices arrive as `pairLexVec` values, not numerals).
+    lines += [
+        "/-! ### Integer reflection of the explicit 6x6 -/",
+        "",
+        "public theorem z_cFourierPoly :",
+        "    D12U6Semantic.cFourierPoly = "
+        + lean_interp([Fraction(-1, 11), Fraction(-2, 11), Fraction(0),
+                       Fraction(-2, 11), Fraction(-2, 11), Fraction(-2, 11),
+                       Fraction(0), Fraction(0), Fraction(0),
+                       Fraction(-2, 11)]) + " := by",
+        "  refine Polynomial.funext fun r => ?_",
+        "  simp [D12U6Semantic.cFourierPoly, interpQ, toPolyZ,",
+        "    Polynomial.eval_add, Polynomial.eval_mul, Polynomial.eval_C,",
+        "    Polynomial.eval_X, Polynomial.eval_pow]",
+        "  try grind",
+        "",
+    ]
+    for i in range(6):
+        lines += [
+            f"public theorem z_S6_explicit_row{i} :",
+            f"    S6_explicit_row{i} = fun j => match j.val with",
+        ]
+        for j in range(6):
+            lines.append(f"      | {j} => {lean_interp(s6_entry(i, j))}")
+        lines += [
+            "      | _ => 0 := by",
+            "  funext j",
+            "  fin_cases j <;>",
+            f"    (refine Polynomial.funext fun r => ?_) <;>",
+            f"    simp [S6_explicit_row{i}, D12U6Semantic.cFourierPoly, interpQ,",
+            "      toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,",
+            "      Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow] <;>",
+            "    try grind",
+            "",
+        ]
+    lines += [
+        "/-! ### The three `B_poly` constants -/",
+        "",
+        "public theorem z_C_one : (C (1 : ℚ) : Polynomial ℚ) = interpQ 1 [1] := by",
+        "  simp [interpQ, toPolyZ]",
+        "",
+        "public theorem z_C_half :",
+        "    (C ((1 / 2 : ℚ)) : Polynomial ℚ) = interpQ 2 [1] := by",
+        "  simp [interpQ, toPolyZ]",
+        "  try norm_num",
+        "",
+        "public theorem z_C_neg_half :",
+        "    (C ((-1 / 2 : ℚ)) : Polynomial ℚ) = interpQ 2 [-1] := by",
+        "  simp [interpQ, toPolyZ]",
+        "  try norm_num",
+        "",
+    ]
     lines += ["", "end V14Formalization.D12SigmaCarrierS6Explicit", ""]
     out.write_text("\n".join(lines))
 
@@ -568,37 +625,37 @@ def emit_bridge_row(row: int, raw_entries, reduced_entries, qs, out: Path):
             ]
             continue
         qn = f"quotient_{j}"
-        lines += [f"def {qn} : Polynomial ℚ := {lean_poly(qs[row][j])}", ""]
+        lines += [f"def {qn} : Polynomial ℚ := {lean_interp(qs[row][j])}", ""]
         lines += [
             f"theorem relation_{j} :",
             f"    Srestricted_poly ({row} : Fin 10) ({j} : Fin 10) -",
             f"        Srestricted_reduced_poly ({row} : Fin 10) ({j} : Fin 10) =",
             f"      Phi11 * {qn} := by",
             "  unfold Srestricted_poly",
-            "  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit]",
+            "  rw [show S6_poly = S6_explicit_poly from S6_poly_eq_explicit,",
+            "    z_Phi11]",
             "  simp only [restrictedAction, Matrix.of_apply,",
             "    Matrix.mul_apply, Matrix.sub_apply, Srestricted_reduced_poly,",
             f"    Srestricted_reduced_poly_row{row},",
             "    D12GeneratorPolynomialCore.compound2Lex_apply_pairLex,",
-            "    S6_explicit_poly, S6_explicit_row0, S6_explicit_row1,",
-            "    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,",
-            "    S6_explicit_row5, D12U6Semantic.cFourierPoly,",
+            "    S6_explicit_poly, z_S6_explicit_row0, z_S6_explicit_row1,",
+            "    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,",
+            "    z_S6_explicit_row5,",
             "    D12PolynomialData.B_poly, D12GeneratorPolynomialCore.freeRow,",
             f"    PluckerNaturality.pairLexVec, {qn}]",
             "  simp [Fin.sum_univ_succ]",
-            "  simp only [S6_explicit_row0, S6_explicit_row1,",
-            "    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,",
-            "    S6_explicit_row5, D12U6Semantic.cFourierPoly,",
-            f"    Srestricted_reduced_poly_row{row},",
-            "    interpQ, toPolyZ]",
+            "  simp only [z_S6_explicit_row0, z_S6_explicit_row1,",
+            "    z_S6_explicit_row2, z_S6_explicit_row3, z_S6_explicit_row4,",
+            f"    z_S6_explicit_row5, Srestricted_reduced_poly_row{row}]",
             "  norm_num",
-            "  simp only [Phi11, Finset.sum_range_succ]",
-            "  ring_nf",
-            "  simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C,",
-            "    nat6_as_C, nat7_as_C, nat8_as_C,",
-            "    C_eq_smul_one, smul_one_sq, smul_mul_assoc,",
-            "    mul_smul_comm, one_mul, mul_one, smul_smul]",
-            "  module",
+            "  try simp only [z_C_one, z_C_half, z_C_neg_half]",
+            "  simp (disch := decide) only [interp_one, interp_ofNat,",
+            "    interp_pow_two, interp_neg, interp_mul, interp_add,",
+            "    interp_sub, interp_add_gen, interp_sub_gen, Nat.reduceMul]",
+            "  apply interp_eq",
+            "  · decide",
+            "  · decide",
+            "  · decide",
         ] + [
             "",
             f"theorem eval_relation_{j} :",
