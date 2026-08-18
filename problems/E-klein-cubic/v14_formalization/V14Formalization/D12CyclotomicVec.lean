@@ -457,4 +457,80 @@ public theorem evalMatrix_one {n : Type*} [DecidableEq n] :
 theorem evalMatrix_eq_of_eq {m n : Type*} {A B : Matrix m n Vec}
     (h : A = B) : evalMatrix A = evalMatrix B := congrArg evalMatrix h
 
+
+/-- Coordinate `k` of a reduced product, written out.  `mul` is three
+ten-term convolutions, and every generated Plucker certificate used to make
+`norm_num` expand all three (`Fin.sum_univ_succ` ten times over `mul`, `conv`,
+`coeffAt`) before it could do any arithmetic -- ~18,000 `Expr` nodes per
+coordinate.  Expanding it once per coordinate here leaves the certificates with
+nothing but the arithmetic. -/
+public theorem mul_apply_0 (a b : Vec) :
+    mul a b 0 = a 0 * b 0 +
+      (a 2 * b 9 + a 3 * b 8 + a 4 * b 7 + a 5 * b 6 + a 6 * b 5 + a 7 * b 4 + a 8 * b 3 + a 9 * b 2) -
+      (a 1 * b 9 + a 2 * b 8 + a 3 * b 7 + a 4 * b 6 + a 5 * b 5 + a 6 * b 4 + a 7 * b 3 + a 8 * b 2 + a 9 * b 1) := by
+  simp [mul, conv, coeffAt, Fin.sum_univ_succ]
+  try ring
+
+public theorem mul_apply_1 (a b : Vec) :
+    mul a b 1 = a 0 * b 1 + a 1 * b 0 +
+      (a 3 * b 9 + a 4 * b 8 + a 5 * b 7 + a 6 * b 6 + a 7 * b 5 + a 8 * b 4 + a 9 * b 3) -
+      (a 1 * b 9 + a 2 * b 8 + a 3 * b 7 + a 4 * b 6 + a 5 * b 5 + a 6 * b 4 + a 7 * b 3 + a 8 * b 2 + a 9 * b 1) := by
+  simp [mul, conv, coeffAt, Fin.sum_univ_succ]
+  try ring
+
+public theorem mul_apply_2 (a b : Vec) :
+    mul a b 2 = a 0 * b 2 + a 1 * b 1 + a 2 * b 0 +
+      (a 4 * b 9 + a 5 * b 8 + a 6 * b 7 + a 7 * b 6 + a 8 * b 5 + a 9 * b 4) -
+      (a 1 * b 9 + a 2 * b 8 + a 3 * b 7 + a 4 * b 6 + a 5 * b 5 + a 6 * b 4 + a 7 * b 3 + a 8 * b 2 + a 9 * b 1) := by
+  simp [mul, conv, coeffAt, Fin.sum_univ_succ]
+  try ring
+
+public theorem mul_apply_3 (a b : Vec) :
+    mul a b 3 = a 0 * b 3 + a 1 * b 2 + a 2 * b 1 + a 3 * b 0 +
+      (a 5 * b 9 + a 6 * b 8 + a 7 * b 7 + a 8 * b 6 + a 9 * b 5) -
+      (a 1 * b 9 + a 2 * b 8 + a 3 * b 7 + a 4 * b 6 + a 5 * b 5 + a 6 * b 4 + a 7 * b 3 + a 8 * b 2 + a 9 * b 1) := by
+  simp [mul, conv, coeffAt, Fin.sum_univ_succ]
+  try ring
+
+public theorem mul_apply_4 (a b : Vec) :
+    mul a b 4 = a 0 * b 4 + a 1 * b 3 + a 2 * b 2 + a 3 * b 1 + a 4 * b 0 +
+      (a 6 * b 9 + a 7 * b 8 + a 8 * b 7 + a 9 * b 6) -
+      (a 1 * b 9 + a 2 * b 8 + a 3 * b 7 + a 4 * b 6 + a 5 * b 5 + a 6 * b 4 + a 7 * b 3 + a 8 * b 2 + a 9 * b 1) := by
+  simp [mul, conv, coeffAt, Fin.sum_univ_succ]
+  try ring
+
+public theorem mul_apply_5 (a b : Vec) :
+    mul a b 5 = a 0 * b 5 + a 1 * b 4 + a 2 * b 3 + a 3 * b 2 + a 4 * b 1 + a 5 * b 0 +
+      (a 7 * b 9 + a 8 * b 8 + a 9 * b 7) -
+      (a 1 * b 9 + a 2 * b 8 + a 3 * b 7 + a 4 * b 6 + a 5 * b 5 + a 6 * b 4 + a 7 * b 3 + a 8 * b 2 + a 9 * b 1) := by
+  simp [mul, conv, coeffAt, Fin.sum_univ_succ]
+  try ring
+
+public theorem mul_apply_6 (a b : Vec) :
+    mul a b 6 = a 0 * b 6 + a 1 * b 5 + a 2 * b 4 + a 3 * b 3 + a 4 * b 2 + a 5 * b 1 + a 6 * b 0 +
+      (a 8 * b 9 + a 9 * b 8) -
+      (a 1 * b 9 + a 2 * b 8 + a 3 * b 7 + a 4 * b 6 + a 5 * b 5 + a 6 * b 4 + a 7 * b 3 + a 8 * b 2 + a 9 * b 1) := by
+  simp [mul, conv, coeffAt, Fin.sum_univ_succ]
+  try ring
+
+public theorem mul_apply_7 (a b : Vec) :
+    mul a b 7 = a 0 * b 7 + a 1 * b 6 + a 2 * b 5 + a 3 * b 4 + a 4 * b 3 + a 5 * b 2 + a 6 * b 1 + a 7 * b 0 +
+      (a 9 * b 9) -
+      (a 1 * b 9 + a 2 * b 8 + a 3 * b 7 + a 4 * b 6 + a 5 * b 5 + a 6 * b 4 + a 7 * b 3 + a 8 * b 2 + a 9 * b 1) := by
+  simp [mul, conv, coeffAt, Fin.sum_univ_succ]
+  try ring
+
+public theorem mul_apply_8 (a b : Vec) :
+    mul a b 8 = a 0 * b 8 + a 1 * b 7 + a 2 * b 6 + a 3 * b 5 + a 4 * b 4 + a 5 * b 3 + a 6 * b 2 + a 7 * b 1 + a 8 * b 0 -
+      (a 1 * b 9 + a 2 * b 8 + a 3 * b 7 + a 4 * b 6 + a 5 * b 5 + a 6 * b 4 + a 7 * b 3 + a 8 * b 2 + a 9 * b 1) := by
+  simp [mul, conv, coeffAt, Fin.sum_univ_succ]
+  try ring
+
+public theorem mul_apply_9 (a b : Vec) :
+    mul a b 9 = a 0 * b 9 + a 1 * b 8 + a 2 * b 7 + a 3 * b 6 + a 4 * b 5 + a 5 * b 4 + a 6 * b 3 + a 7 * b 2 + a 8 * b 1 + a 9 * b 0 -
+      (a 1 * b 9 + a 2 * b 8 + a 3 * b 7 + a 4 * b 6 + a 5 * b 5 + a 6 * b 4 + a 7 * b 3 + a 8 * b 2 + a 9 * b 1) := by
+  simp [mul, conv, coeffAt, Fin.sum_univ_succ]
+  try ring
+
+
 end V14Formalization.D12CyclotomicVec

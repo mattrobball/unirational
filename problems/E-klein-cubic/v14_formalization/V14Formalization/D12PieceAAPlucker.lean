@@ -165,52 +165,52 @@ def coefficientVec : Vec :=
 theorem coefficientVec_apply_0 :
     coefficientVec (0 : Fin 10) = deltaVec (0 : Fin 10) := by
   norm_num [coefficientVec, deltaVec, BKCoord0, BKCoord9, BKCoord1, BKCoord6,
-    BKCoord2, BKCoord5, mul, conv, coeffAt, Fin.sum_univ_succ]
+    BKCoord2, BKCoord5, mul_apply_0]
 
 theorem coefficientVec_apply_1 :
     coefficientVec (1 : Fin 10) = deltaVec (1 : Fin 10) := by
   norm_num [coefficientVec, deltaVec, BKCoord0, BKCoord9, BKCoord1, BKCoord6,
-    BKCoord2, BKCoord5, mul, conv, coeffAt, Fin.sum_univ_succ]
+    BKCoord2, BKCoord5, mul_apply_1]
 
 theorem coefficientVec_apply_2 :
     coefficientVec (2 : Fin 10) = deltaVec (2 : Fin 10) := by
   norm_num [coefficientVec, deltaVec, BKCoord0, BKCoord9, BKCoord1, BKCoord6,
-    BKCoord2, BKCoord5, mul, conv, coeffAt, Fin.sum_univ_succ]
+    BKCoord2, BKCoord5, mul_apply_2]
 
 theorem coefficientVec_apply_3 :
     coefficientVec (3 : Fin 10) = deltaVec (3 : Fin 10) := by
   norm_num [coefficientVec, deltaVec, BKCoord0, BKCoord9, BKCoord1, BKCoord6,
-    BKCoord2, BKCoord5, mul, conv, coeffAt, Fin.sum_univ_succ]
+    BKCoord2, BKCoord5, mul_apply_3]
 
 theorem coefficientVec_apply_4 :
     coefficientVec (4 : Fin 10) = deltaVec (4 : Fin 10) := by
   norm_num [coefficientVec, deltaVec, BKCoord0, BKCoord9, BKCoord1, BKCoord6,
-    BKCoord2, BKCoord5, mul, conv, coeffAt, Fin.sum_univ_succ]
+    BKCoord2, BKCoord5, mul_apply_4]
 
 theorem coefficientVec_apply_5 :
     coefficientVec (5 : Fin 10) = deltaVec (5 : Fin 10) := by
   norm_num [coefficientVec, deltaVec, BKCoord0, BKCoord9, BKCoord1, BKCoord6,
-    BKCoord2, BKCoord5, mul, conv, coeffAt, Fin.sum_univ_succ]
+    BKCoord2, BKCoord5, mul_apply_5]
 
 theorem coefficientVec_apply_6 :
     coefficientVec (6 : Fin 10) = deltaVec (6 : Fin 10) := by
   norm_num [coefficientVec, deltaVec, BKCoord0, BKCoord9, BKCoord1, BKCoord6,
-    BKCoord2, BKCoord5, mul, conv, coeffAt, Fin.sum_univ_succ]
+    BKCoord2, BKCoord5, mul_apply_6]
 
 theorem coefficientVec_apply_7 :
     coefficientVec (7 : Fin 10) = deltaVec (7 : Fin 10) := by
   norm_num [coefficientVec, deltaVec, BKCoord0, BKCoord9, BKCoord1, BKCoord6,
-    BKCoord2, BKCoord5, mul, conv, coeffAt, Fin.sum_univ_succ]
+    BKCoord2, BKCoord5, mul_apply_7]
 
 theorem coefficientVec_apply_8 :
     coefficientVec (8 : Fin 10) = deltaVec (8 : Fin 10) := by
   norm_num [coefficientVec, deltaVec, BKCoord0, BKCoord9, BKCoord1, BKCoord6,
-    BKCoord2, BKCoord5, mul, conv, coeffAt, Fin.sum_univ_succ]
+    BKCoord2, BKCoord5, mul_apply_8]
 
 theorem coefficientVec_apply_9 :
     coefficientVec (9 : Fin 10) = deltaVec (9 : Fin 10) := by
   norm_num [coefficientVec, deltaVec, BKCoord0, BKCoord9, BKCoord1, BKCoord6,
-    BKCoord2, BKCoord5, mul, conv, coeffAt, Fin.sum_univ_succ]
+    BKCoord2, BKCoord5, mul_apply_9]
 
 theorem coefficientVec_eq : coefficientVec = deltaVec := by
   funext n

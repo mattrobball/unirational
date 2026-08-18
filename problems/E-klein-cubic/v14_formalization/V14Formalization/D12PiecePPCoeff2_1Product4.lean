@@ -26,53 +26,43 @@ def productVec : Vec := mul BKCoord4_0 BKCoord12_1
 
 theorem productVec_apply_0 :
     productVec (0 : Fin 10) = productValue (0 : Fin 10) := by
-  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
+  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1, mul_apply_0]
 
 theorem productVec_apply_1 :
     productVec (1 : Fin 10) = productValue (1 : Fin 10) := by
-  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
+  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1, mul_apply_1]
 
 theorem productVec_apply_2 :
     productVec (2 : Fin 10) = productValue (2 : Fin 10) := by
-  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
+  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1, mul_apply_2]
 
 theorem productVec_apply_3 :
     productVec (3 : Fin 10) = productValue (3 : Fin 10) := by
-  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
+  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1, mul_apply_3]
 
 theorem productVec_apply_4 :
     productVec (4 : Fin 10) = productValue (4 : Fin 10) := by
-  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
+  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1, mul_apply_4]
 
 theorem productVec_apply_5 :
     productVec (5 : Fin 10) = productValue (5 : Fin 10) := by
-  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
+  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1, mul_apply_5]
 
 theorem productVec_apply_6 :
     productVec (6 : Fin 10) = productValue (6 : Fin 10) := by
-  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
+  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1, mul_apply_6]
 
 theorem productVec_apply_7 :
     productVec (7 : Fin 10) = productValue (7 : Fin 10) := by
-  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
+  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1, mul_apply_7]
 
 theorem productVec_apply_8 :
     productVec (8 : Fin 10) = productValue (8 : Fin 10) := by
-  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
+  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1, mul_apply_8]
 
 theorem productVec_apply_9 :
     productVec (9 : Fin 10) = productValue (9 : Fin 10) := by
-  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1,
-    mul, conv, coeffAt, Fin.sum_univ_succ]
+  norm_num [productVec, productValue, BKCoord4_0, BKCoord12_1, mul_apply_9]
 
 theorem productVec_eq : productVec = productValue := by
   funext n
