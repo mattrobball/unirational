@@ -46,19 +46,19 @@ public abbrev d12ActualReflMatrix :
     (CentralizerN.reflGen : G) :
       Matrix (Fin 15) (Fin 15) V14SchemeModel.k)
 
-private abbrev actualRotInv :
+public abbrev actualRotInv :
     Matrix (Fin 15) (Fin 15) V14SchemeModel.k :=
   (((lambda2MatrixRepresentation.ρ
     (CentralizerN.rotGen : G))⁻¹ : GL (Fin 15) V14SchemeModel.k) :
       Matrix (Fin 15) (Fin 15) V14SchemeModel.k)
 
-private abbrev actualReflInv :
+public abbrev actualReflInv :
     Matrix (Fin 15) (Fin 15) V14SchemeModel.k :=
   (((lambda2MatrixRepresentation.ρ
     (CentralizerN.reflGen : G))⁻¹ : GL (Fin 15) V14SchemeModel.k) :
       Matrix (Fin 15) (Fin 15) V14SchemeModel.k)
 
-private theorem d12ActualReflMatrix_sq :
+public theorem d12ActualReflMatrix_sq :
     d12ActualReflMatrix * d12ActualReflMatrix = 1 := by
   have hg : (CentralizerN.reflGen : G) * CentralizerN.reflGen = 1 :=
     congrArg Subtype.val CentralizerN.reflGen_mul_self
@@ -71,7 +71,7 @@ private theorem d12ActualReflMatrix_sq :
   rw [hg]
   simp
 
-private theorem d12ActualReflRotReflRot :
+public theorem d12ActualReflRotReflRot :
     d12ActualReflMatrix * d12ActualRotMatrix *
         d12ActualReflMatrix * d12ActualRotMatrix = 1 := by
   have hconj :
