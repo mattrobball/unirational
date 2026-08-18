@@ -34,8 +34,7 @@ def BKCoord0 (i : Fin 10) : ℚ :=
   | _ => 0
 
 theorem BKVec_0 : BKVec (0 : Fin 15) 0 = BKCoord0 := by
-  funext n
-  fin_cases n <;>
+  refine vec_ext ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
     norm_num [BKVec, matrixMul, BVec, BRow0, BCell0_0, BCell0_1, BCell0_2, BCell0_3, BCell0_4, BCell0_5, BCell0_6, BCell0_7, BCell0_8, BCell0_9,
       KVec_col0, KCell0_0_def, KCell1_0_def, KCell2_0_def, KCell3_0_def, KCell4_0_def, KCell5_0_def, KCell6_0_def, KCell7_0_def, KCell8_0_def, KCell9_0_def, BKCoord0,
       mul_constVec_left, Fin.sum_univ_succ]
@@ -55,8 +54,7 @@ def BKCoord9 (i : Fin 10) : ℚ :=
   | _ => 0
 
 theorem BKVec_9 : BKVec (9 : Fin 15) 0 = BKCoord9 := by
-  funext n
-  fin_cases n <;>
+  refine vec_ext ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
     norm_num [BKVec, matrixMul, BVec, BRow9, BCell9_0, BCell9_1, BCell9_2, BCell9_3, BCell9_4, BCell9_5, BCell9_6, BCell9_7, BCell9_8, BCell9_9,
       KVec_col0, KCell0_0_def, KCell1_0_def, KCell2_0_def, KCell3_0_def, KCell4_0_def, KCell5_0_def, KCell6_0_def, KCell7_0_def, KCell8_0_def, KCell9_0_def, BKCoord9,
       mul_constVec_left, Fin.sum_univ_succ]
@@ -76,8 +74,7 @@ def BKCoord1 (i : Fin 10) : ℚ :=
   | _ => 0
 
 theorem BKVec_1 : BKVec (1 : Fin 15) 0 = BKCoord1 := by
-  funext n
-  fin_cases n <;>
+  refine vec_ext ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
     norm_num [BKVec, matrixMul, BVec, BRow1, BCell1_0, BCell1_1, BCell1_2, BCell1_3, BCell1_4, BCell1_5, BCell1_6, BCell1_7, BCell1_8, BCell1_9,
       KVec_col0, KCell0_0_def, KCell1_0_def, KCell2_0_def, KCell3_0_def, KCell4_0_def, KCell5_0_def, KCell6_0_def, KCell7_0_def, KCell8_0_def, KCell9_0_def, BKCoord1,
       mul_constVec_left, Fin.sum_univ_succ]
@@ -97,8 +94,7 @@ def BKCoord6 (i : Fin 10) : ℚ :=
   | _ => 0
 
 theorem BKVec_6 : BKVec (6 : Fin 15) 0 = BKCoord6 := by
-  funext n
-  fin_cases n <;>
+  refine vec_ext ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
     norm_num [BKVec, matrixMul, BVec, BRow6, BCell6_0, BCell6_1, BCell6_2, BCell6_3, BCell6_4, BCell6_5, BCell6_6, BCell6_7, BCell6_8, BCell6_9,
       KVec_col0, KCell0_0_def, KCell1_0_def, KCell2_0_def, KCell3_0_def, KCell4_0_def, KCell5_0_def, KCell6_0_def, KCell7_0_def, KCell8_0_def, KCell9_0_def, BKCoord6,
       mul_constVec_left, Fin.sum_univ_succ]
@@ -118,8 +114,7 @@ def BKCoord2 (i : Fin 10) : ℚ :=
   | _ => 0
 
 theorem BKVec_2 : BKVec (2 : Fin 15) 0 = BKCoord2 := by
-  funext n
-  fin_cases n <;>
+  refine vec_ext ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
     norm_num [BKVec, matrixMul, BVec, BRow2, BCell2_0, BCell2_1, BCell2_2, BCell2_3, BCell2_4, BCell2_5, BCell2_6, BCell2_7, BCell2_8, BCell2_9,
       KVec_col0, KCell0_0_def, KCell1_0_def, KCell2_0_def, KCell3_0_def, KCell4_0_def, KCell5_0_def, KCell6_0_def, KCell7_0_def, KCell8_0_def, KCell9_0_def, BKCoord2,
       mul_constVec_left, Fin.sum_univ_succ]
@@ -139,8 +134,7 @@ def BKCoord5 (i : Fin 10) : ℚ :=
   | _ => 0
 
 theorem BKVec_5 : BKVec (5 : Fin 15) 0 = BKCoord5 := by
-  funext n
-  fin_cases n <;>
+  refine vec_ext ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>
     norm_num [BKVec, matrixMul, BVec, BRow5, BCell5_0, BCell5_1, BCell5_2, BCell5_3, BCell5_4, BCell5_5, BCell5_6, BCell5_7, BCell5_8, BCell5_9,
       KVec_col0, KCell0_0_def, KCell1_0_def, KCell2_0_def, KCell3_0_def, KCell4_0_def, KCell5_0_def, KCell6_0_def, KCell7_0_def, KCell8_0_def, KCell9_0_def, BKCoord5,
       mul_constVec_left, Fin.sum_univ_succ]

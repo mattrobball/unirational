@@ -533,4 +533,18 @@ public theorem mul_apply_9 (a b : Vec) :
   try ring
 
 
+/-- Coordinatewise extensionality, with `fin_cases` paid once.  The generated
+certificates used to write `funext n; fin_cases n <;> norm_num [..]`, and
+`fin_cases` inlines a `List.Mem.casesOn` over `List.finRange 10` into every one
+of the ten coordinate goals. -/
+public theorem vec_ext {a b : Vec}
+    (h0 : a ⟨0, by omega⟩ = b ⟨0, by omega⟩) (h1 : a ⟨1, by omega⟩ = b ⟨1, by omega⟩)
+    (h2 : a ⟨2, by omega⟩ = b ⟨2, by omega⟩) (h3 : a ⟨3, by omega⟩ = b ⟨3, by omega⟩)
+    (h4 : a ⟨4, by omega⟩ = b ⟨4, by omega⟩) (h5 : a ⟨5, by omega⟩ = b ⟨5, by omega⟩)
+    (h6 : a ⟨6, by omega⟩ = b ⟨6, by omega⟩) (h7 : a ⟨7, by omega⟩ = b ⟨7, by omega⟩)
+    (h8 : a ⟨8, by omega⟩ = b ⟨8, by omega⟩) (h9 : a ⟨9, by omega⟩ = b ⟨9, by omega⟩) : a = b := by
+  funext n
+  fin_cases n <;> assumption
+
+
 end V14Formalization.D12CyclotomicVec
