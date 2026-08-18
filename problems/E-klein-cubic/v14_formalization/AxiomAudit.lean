@@ -9,6 +9,7 @@ the historical audit surface.
 module
 
 public import V14Solution
+public import V14Formalization.V14D12FixedPointExclusionComplex
 public import V14Formalization.CentralizerObstruction
 public import V14Formalization.V14Application
 public import V14Formalization.WeilRep
@@ -17,6 +18,11 @@ public import V14Formalization.GeometricFanoV14
 -- The two Comparator theorems.
 #print axioms V14Formalization.Comparator.noEquivariantRationalMap_from_ambient
 #print axioms V14Formalization.Comparator.noEquivariantRationalMap_projectiveGVariety
+
+-- Hypothesis (b) over an arbitrary field, and over the complex numbers.
+#print axioms V14Formalization.D12CertificateK.certificateOver
+#print axioms V14Formalization.SchemeGeometry.no_centralizer_fixed_point_over
+#print axioms V14Formalization.SchemeGeometry.no_centralizer_fixed_point_complex
 
 -- Legacy audit surface.
 #print axioms V14Formalization.centralizerObstruction
