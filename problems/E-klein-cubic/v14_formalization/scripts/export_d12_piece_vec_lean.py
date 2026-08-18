@@ -782,8 +782,8 @@ def emit_pa_action_row(row: int) -> str:
             # module and D12PieceVecBase publish, so neither side has to be
             # unfolded in the exported context.
             f"  rw [AVec_apply_{row}_{col}, characterStackVec_apply_{row}_{col}]",
-            "  funext n",
-            "  fin_cases n <;>",
+
+            "  refine vec_ext ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>",
             f"    norm_num [ACell{row}_{col}_def, {prefix}Vec, {prefix}VecRow{block_row},",
             f"      D12PolynomialData.{prefix}{block_row}c{col}, constVec, basis]",
             "",

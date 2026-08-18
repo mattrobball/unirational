@@ -407,7 +407,7 @@ def emit_plucker_fin1(payload: dict, sha: str, piece: str) -> str:
         b_names = ", ".join(f"BCell{i}_{r}" for r in range(10))
         lines += [
             f"theorem BKVec_{i} : BKVec ({i} : Fin 15) 0 = BKCoord{i} := by",
-            "  funext n", "  fin_cases n <;>",
+            "  refine vec_ext ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>",
             f"    norm_num [BKVec, matrixMul, BVec, BRow{i}, {b_names},",
             f"      KVec_col0, {k_defs}, BKCoord{i},",
             "      mul_constVec_left, Fin.sum_univ_succ]", "",
@@ -520,7 +520,7 @@ def emit_pp_plucker_base(payload: dict, sha: str) -> str:
             lines += [
                 f"theorem BKVec_{i}_{col} :",
                 f"    BKVec ({i} : Fin 15) ({col} : Fin 2) = BKCoord{i}_{col} := by",
-                "  funext n", "  fin_cases n <;>",
+                "  refine vec_ext ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>",
                 f"    norm_num [BKVec, matrixMul, BVec, BRow{i}, {b_names},",
                 f"      {k_cols}, {k_defs}, BKCoord{i}_{col},",
                 "      mul_constVec_left, Fin.sum_univ_succ]", "",
@@ -789,7 +789,7 @@ def emit_action_row(piece: str, row: int) -> str:
             # module and D12PieceVecBase publish, so neither side has to be
             # unfolded in the exported context.
             f"  rw [AVec_apply_{row}_{col}, characterStackVec_apply_{row}_{col}]",
-            "  funext n", "  fin_cases n <;>",
+            "  refine vec_ext ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ ?_ <;>",
             f"    norm_num [ACell{row}_{col}_def, {prefix}Vec, {prefix}VecRow{block_row},",
             f"      D12PolynomialData.{prefix}{block_row}c{col}, constVec, basis]", "",
         ]
