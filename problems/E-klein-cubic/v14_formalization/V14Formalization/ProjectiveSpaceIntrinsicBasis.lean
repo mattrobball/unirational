@@ -184,5 +184,40 @@ public theorem projOfBasisHom_intertwines (b : Basis (Fin (d + 1)) k V)
   rw [hL, hR]
   exact AlgebraicGeometry.Proj.map_congr (bridge_intertwines b f M hM) _ _
 
+/-! ## The matrix of the representation is the matrix of the basis
+
+`ambientMatrixRepresentation` packages `R.ρ g` into `GL` through
+`Matrix.GeneralLinearGroup.toLin' b`.  Mathlib has no `toLin'_symm_apply`, so
+the entry convention is extracted here from `toLin'_apply`. -/
+
+public theorem toLin'_symm_repr (b : Basis (Fin (d + 1)) k V)
+    (u : LinearMap.GeneralLinearGroup k V) (i j : Fin (d + 1)) :
+    (↑((Matrix.GeneralLinearGroup.toLin' b).symm u) :
+        Matrix (Fin (d + 1)) (Fin (d + 1)) k) i j
+      = b.repr (u.toLinearEquiv (b j)) i := by
+  classical
+  have h := Matrix.GeneralLinearGroup.toLin'_apply b
+    ((Matrix.GeneralLinearGroup.toLin' b).symm u) (b j)
+  rw [MulEquiv.apply_symm_apply] at h
+  have hcol : Matrix.mulVec
+      (↑((Matrix.GeneralLinearGroup.toLin' b).symm u) :
+        Matrix (Fin (d + 1)) (Fin (d + 1)) k) ⇑(b.repr (b j))
+      = fun i => (↑((Matrix.GeneralLinearGroup.toLin' b).symm u) :
+        Matrix (Fin (d + 1)) (Fin (d + 1)) k) i j := by
+    funext i
+    simp [Matrix.mulVec, dotProduct, b.repr_self_apply, Finsupp.single_apply,
+      mul_ite, mul_one, mul_zero, Finset.sum_ite_eq]
+  rw [hcol, Fintype.linearCombination_apply] at h
+  rw [h, Basis.repr_sum_self]
+
+/-- The matrix of `ambientMatrixRepresentation` in the basis `b` is the matrix
+of `R.ρ g` in the basis `b`. -/
+public theorem ambientMatrixRepresentation_repr {G : Type u} [Group G]
+    (R : FaithfulLinearRep k G V) (b : Basis (Fin (d + 1)) k V) (g : G) (i j : Fin (d + 1)) :
+    (↑(ambientMatrixRepresentation R d b g) :
+        Matrix (Fin (d + 1)) (Fin (d + 1)) k) i j
+      = b.repr (R.ρ g (b j)) i :=
+  toLin'_symm_repr b (R.ρ.toHomUnits g) i j
+
 end SchemeGeometry
 end V14Formalization
