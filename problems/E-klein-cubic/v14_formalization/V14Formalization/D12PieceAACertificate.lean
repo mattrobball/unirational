@@ -41,7 +41,7 @@ public theorem split_identity : X * A + K * Y = 1 := by
   rw [evalMatrix_AVec_eq_A] at h
   exact h
 
-theorem BK_eq :
+public theorem BK_eq :
     actionCore.B * K = evalMatrix D12PieceAAPlucker.BKVec := by
   change D12PolynomialEvaluation.evalMatrixK D12PolynomialData.B_poly *
       evalMatrix KVec = evalMatrix D12PieceAAPlucker.BKVec
