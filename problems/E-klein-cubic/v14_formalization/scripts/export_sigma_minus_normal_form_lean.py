@@ -383,8 +383,9 @@ def emit_ambient():
         "namespace V14Formalization.D12SigmaMinusAmbient",
         "open D12PolynomialData D12PolynomialEvaluation",
         "open D12SigmaCarrierPolynomial D12SigmaMinusNormalFormData",
+        "open V14Formalization.D12PolyZReflection",
         "",
-    ]
+    ] + scalar_helpers()
     for i in range(15):
         lines += [
             f"private theorem row_{i} (j : Fin 4) :",
@@ -394,9 +395,11 @@ def emit_ambient():
             "      Kminus_poly_row0, Kminus_poly_row1, Kminus_poly_row2,",
             "      Kminus_poly_row3, Kminus_poly_row4, Kminus_poly_row5,",
             "      Kminus_poly_row6, Kminus_poly_row7, Kminus_poly_row8,",
-            f"      Kminus_poly_row9, Bminus_poly, Bminus_poly_row{i}] <;>",
-            "    norm_num <;>",
-            "    ring",
+            f"      Kminus_poly_row9, interpQ, toPolyZ,",
+            f"      Bminus_poly, Bminus_poly_row{i}] <;>",
+            "    (try norm_num) <;>",
+            "    (try ring)",
+        ] + linear_finish() + [
             "",
         ]
     lines += [

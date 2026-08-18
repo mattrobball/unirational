@@ -25,6 +25,7 @@ import argparse
 import hashlib
 import json
 from fractions import Fraction
+from math import lcm
 from pathlib import Path
 from typing import Iterable
 
@@ -195,15 +196,35 @@ def lean_poly(a: list[Fraction]) -> str:
     return " + ".join(terms) if terms else "0"
 
 
+def zlist(a: list[Fraction]) -> tuple[int, list[int]]:
+    """Common positive denominator and integer numerators, trailing zeros cut."""
+    d = 1
+    for coeff in a:
+        d = lcm(d, coeff.denominator)
+    ns = [int(coeff * d) for coeff in a]
+    while ns and ns[-1] == 0:
+        ns.pop()
+    return d, ns
+
+
+def lean_interp(a: list[Fraction]) -> str:
+    """`interpQ d [n...]` -- the integer reflection of `D12PolyZReflection`.
+
+    Certificates over these are decided by kernel list arithmetic instead of
+    `ring_nf` + `module` over rational `C` coefficients, which is what made the
+    sigma families the top of the closure table.
+    """
+    d, ns = zlist(a)
+    return "interpQ " + str(d) + " [" + ", ".join(str(n) for n in ns) + "]"
+
+
 def emit_matrix(name: str, rows, r: int, c: int) -> list[str]:
     lines: list[str] = []
     for i in range(r):
         lines += [f"def {name}_row{i} : Fin {c} → Polynomial ℚ := fun j =>",
                   "  match j.val with"]
         for j in range(c):
-            p = trim(rows[i][j][:])
-            if p:
-                lines.append(f"  | {j} => {lean_poly(p)}")
+            lines.append(f"  | {j} => {lean_interp(trim(rows[i][j][:]))}")
         lines += ["  | _ => 0", ""]
     lines += [f"def {name} : Matrix (Fin {r}) (Fin {c}) (Polynomial ℚ) :=",
               "  Matrix.of fun i =>", "    match i.val with"]
@@ -289,12 +310,19 @@ def emit_core(kp, km, sr_reduced, out: Path):
     lines = header() + [
         "import V14Formalization.D12SigmaCarrier",
         "import V14Formalization.D12U6PolynomialSeal",
+        "import V14Formalization.D12PolyZReflection",
         "",
         "noncomputable section",
         "open Matrix Polynomial",
         "namespace V14Formalization.D12SigmaCarrierPolynomial",
         "open D12PolynomialData D12PolynomialEvaluation",
         "open D12GeneratorPolynomialCore D12GeneratorInvariance",
+        "open V14Formalization.D12PolyZReflection",
+        "",
+        "theorem z_Phi11 :",
+        "    (Phi11 : Polynomial ℚ) = interpQ 1 [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] := by",
+        "  simp [Phi11, interpQ, toPolyZ, Finset.sum_range_succ]",
+        "  ring",
         "",
     ]
     lines += emit_matrix("Kplus_poly", kp, 10, 6) + [""]
@@ -449,7 +477,7 @@ def emit_split_bridge_relation(lines: list[str], row: int, j: int,
         "  norm_num",
     ] + bridge_scalar_finish() + [""]
     coeff_defs = (f"raw_{j}, Srestricted_reduced_poly, "
-                  f"Srestricted_reduced_poly_row{row}, " +
+                  f"Srestricted_reduced_poly_row{row}, interpQ, toPolyZ, " +
                   ", ".join(f"residual_{j}_chunk{k}"
                             for k in range(len(chunks))))
     for n in range(36):
@@ -468,12 +496,8 @@ def emit_split_bridge_relation(lines: list[str], row: int, j: int,
         f"private theorem reduced_{j}_degree_le :",
         f"    (Srestricted_reduced_poly ({row} : Fin 10) ({j} : Fin 10)).natDegree ≤ 35 := by",
         f"  change (Srestricted_reduced_poly_row{row} ({j} : Fin 10)).natDegree ≤ 35",
-        f"  unfold Srestricted_reduced_poly_row{row}",
-        "  calc",
-        "    _ ≤ 9 := by",
-        "      aesop (add safe [Polynomial.natDegree_add_le_of_degree_le,",
-        "        Polynomial.natDegree_C_mul_X_pow_le])",
-        "    _ ≤ 35 := by omega",
+        f"  simp only [Srestricted_reduced_poly_row{row}]",
+        "  exact le_trans (natDegree_interpQ_le _ _) (by decide)",
         "",
         f"private theorem residual_{j}_degree_le : ({rsum}).natDegree ≤ 35 := by",
     ]
@@ -528,6 +552,7 @@ def emit_bridge_row(row: int, raw_entries, reduced_entries, qs, out: Path):
         "open D12PolynomialData D12PolynomialEvaluation",
         "open D12GeneratorPolynomialCore D12SigmaCarrierPolynomial",
         "open D12SigmaCarrierS6Explicit",
+        "open V14Formalization.D12PolyZReflection",
         "",
     ] + module_scalar_helpers()
     for j in range(10):
@@ -564,7 +589,8 @@ def emit_bridge_row(row: int, raw_entries, reduced_entries, qs, out: Path):
             "  simp only [S6_explicit_row0, S6_explicit_row1,",
             "    S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,",
             "    S6_explicit_row5, D12U6Semantic.cFourierPoly,",
-            f"    Srestricted_reduced_poly_row{row}]",
+            f"    Srestricted_reduced_poly_row{row},",
+            "    interpQ, toPolyZ]",
             "  norm_num",
             "  simp only [Phi11, Finset.sum_range_succ]",
             "  ring_nf",
@@ -607,15 +633,17 @@ def emit_shard(sign: str, col: int, kp, km, qs, out: Path):
         f"namespace {ns}",
         "open D12PolynomialData D12PolynomialEvaluation",
         "open D12GeneratorPolynomialCore D12SigmaCarrierPolynomial",
+        "open V14Formalization.D12PolyZReflection",
         "",
-    ] + module_scalar_helpers()
+    ]
     for i in range(10):
         qn = f"quotient_{i}"
-        lines += [f"def {qn} : Polynomial ℚ := {lean_poly(qs[i][col])}", ""]
+        lines += [f"def {qn} : Polynomial ℚ := {lean_interp(qs[i][col])}", ""]
         lines += [
             f"theorem relation_{i} :",
             f"    (Srestricted_reduced_poly * {kname}) ({i} : Fin 10) ({col} : Fin {cols}) {relation_op}",
             f"        {kname} ({i} : Fin 10) ({col} : Fin {cols}) = Phi11 * {qn} := by",
+            "  rw [z_Phi11]",
             "  simp only [Matrix.mul_apply, Matrix.sub_apply, Matrix.add_apply,",
             f"    Srestricted_reduced_poly, {kname}, {qn}]",
             f"  simp [Fin.sum_univ_succ, Srestricted_reduced_poly_row{i},",
@@ -626,9 +654,13 @@ def emit_shard(sign: str, col: int, kp, km, qs, out: Path):
             "    Kminus_poly_row2, Kminus_poly_row3, Kminus_poly_row4,",
             "    Kminus_poly_row5, Kminus_poly_row6, Kminus_poly_row7,",
             "    Kminus_poly_row8, Kminus_poly_row9]",
-            "  (try simp only [Phi11, Finset.sum_range_succ]) <;>",
-            "  ring_nf <;>",
-        ] + module_scalar_simp() + [
+            "  simp (disch := decide) only [interp_mul, interp_add_gen,",
+            "    interp_sub_gen, Nat.reduceMul]",
+            "  apply interp_eq",
+            "  · decide",
+            "  · decide",
+            "  · decide",
+        ] + [
             "",
             f"theorem eval_relation_{i}",
             "    {R : Type*} [CommRing R] [Algebra ℚ R] (z : R)",

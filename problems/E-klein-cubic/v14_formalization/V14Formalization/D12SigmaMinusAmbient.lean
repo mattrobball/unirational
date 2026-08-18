@@ -10,6 +10,143 @@ open Matrix Polynomial
 namespace V14Formalization.D12SigmaMinusAmbient
 open D12PolynomialData D12PolynomialEvaluation
 open D12SigmaCarrierPolynomial D12SigmaMinusNormalFormData
+open V14Formalization.D12PolyZReflection
+
+private theorem C_eq_smul_one (a : ℚ) :
+    C a = a • (1 : Polynomial ℚ) := by
+  rw [Polynomial.smul_eq_C_mul, mul_one]
+
+private theorem smul_one_sq (a : ℚ) :
+    (a • (1 : Polynomial ℚ)) ^ 2 =
+      (a * a) • (1 : Polynomial ℚ) := by
+  rw [pow_two, smul_mul_assoc, one_mul, smul_smul]
+
+private theorem nat2_as_C : (2 : Polynomial ℚ) = C 2 :=
+  (map_natCast C 2).symm
+private theorem nat3_as_C : (3 : Polynomial ℚ) = C 3 :=
+  (map_natCast C 3).symm
+private theorem nat4_as_C : (4 : Polynomial ℚ) = C 4 :=
+  (map_natCast C 4).symm
+private theorem nat5_as_C : (5 : Polynomial ℚ) = C 5 :=
+  (map_natCast C 5).symm
+private theorem nat6_as_C : (6 : Polynomial ℚ) = C 6 :=
+  (map_natCast C 6).symm
+private theorem nat7_as_C : (7 : Polynomial ℚ) = C 7 :=
+  (map_natCast C 7).symm
+private theorem nat8_as_C : (8 : Polynomial ℚ) = C 8 :=
+  (map_natCast C 8).symm
+private theorem nat9_as_C : (9 : Polynomial ℚ) = C 9 :=
+  (map_natCast C 9).symm
+private theorem nat10_as_C : (10 : Polynomial ℚ) = C 10 :=
+  (map_natCast C 10).symm
+private theorem nat11_as_C : (11 : Polynomial ℚ) = C 11 :=
+  (map_natCast C 11).symm
+private theorem nat12_as_C : (12 : Polynomial ℚ) = C 12 :=
+  (map_natCast C 12).symm
+private theorem nat13_as_C : (13 : Polynomial ℚ) = C 13 :=
+  (map_natCast C 13).symm
+private theorem nat14_as_C : (14 : Polynomial ℚ) = C 14 :=
+  (map_natCast C 14).symm
+private theorem nat15_as_C : (15 : Polynomial ℚ) = C 15 :=
+  (map_natCast C 15).symm
+private theorem nat16_as_C : (16 : Polynomial ℚ) = C 16 :=
+  (map_natCast C 16).symm
+private theorem nat17_as_C : (17 : Polynomial ℚ) = C 17 :=
+  (map_natCast C 17).symm
+private theorem nat18_as_C : (18 : Polynomial ℚ) = C 18 :=
+  (map_natCast C 18).symm
+private theorem nat19_as_C : (19 : Polynomial ℚ) = C 19 :=
+  (map_natCast C 19).symm
+private theorem nat20_as_C : (20 : Polynomial ℚ) = C 20 :=
+  (map_natCast C 20).symm
+private theorem nat21_as_C : (21 : Polynomial ℚ) = C 21 :=
+  (map_natCast C 21).symm
+private theorem nat22_as_C : (22 : Polynomial ℚ) = C 22 :=
+  (map_natCast C 22).symm
+private theorem nat23_as_C : (23 : Polynomial ℚ) = C 23 :=
+  (map_natCast C 23).symm
+private theorem nat24_as_C : (24 : Polynomial ℚ) = C 24 :=
+  (map_natCast C 24).symm
+private theorem nat25_as_C : (25 : Polynomial ℚ) = C 25 :=
+  (map_natCast C 25).symm
+private theorem nat26_as_C : (26 : Polynomial ℚ) = C 26 :=
+  (map_natCast C 26).symm
+private theorem nat27_as_C : (27 : Polynomial ℚ) = C 27 :=
+  (map_natCast C 27).symm
+private theorem nat28_as_C : (28 : Polynomial ℚ) = C 28 :=
+  (map_natCast C 28).symm
+private theorem nat29_as_C : (29 : Polynomial ℚ) = C 29 :=
+  (map_natCast C 29).symm
+private theorem nat30_as_C : (30 : Polynomial ℚ) = C 30 :=
+  (map_natCast C 30).symm
+private theorem nat31_as_C : (31 : Polynomial ℚ) = C 31 :=
+  (map_natCast C 31).symm
+private theorem nat32_as_C : (32 : Polynomial ℚ) = C 32 :=
+  (map_natCast C 32).symm
+private theorem nat33_as_C : (33 : Polynomial ℚ) = C 33 :=
+  (map_natCast C 33).symm
+private theorem nat34_as_C : (34 : Polynomial ℚ) = C 34 :=
+  (map_natCast C 34).symm
+private theorem nat35_as_C : (35 : Polynomial ℚ) = C 35 :=
+  (map_natCast C 35).symm
+private theorem nat36_as_C : (36 : Polynomial ℚ) = C 36 :=
+  (map_natCast C 36).symm
+private theorem nat37_as_C : (37 : Polynomial ℚ) = C 37 :=
+  (map_natCast C 37).symm
+private theorem nat38_as_C : (38 : Polynomial ℚ) = C 38 :=
+  (map_natCast C 38).symm
+private theorem nat39_as_C : (39 : Polynomial ℚ) = C 39 :=
+  (map_natCast C 39).symm
+private theorem nat40_as_C : (40 : Polynomial ℚ) = C 40 :=
+  (map_natCast C 40).symm
+private theorem nat41_as_C : (41 : Polynomial ℚ) = C 41 :=
+  (map_natCast C 41).symm
+private theorem nat42_as_C : (42 : Polynomial ℚ) = C 42 :=
+  (map_natCast C 42).symm
+private theorem nat43_as_C : (43 : Polynomial ℚ) = C 43 :=
+  (map_natCast C 43).symm
+private theorem nat44_as_C : (44 : Polynomial ℚ) = C 44 :=
+  (map_natCast C 44).symm
+private theorem nat45_as_C : (45 : Polynomial ℚ) = C 45 :=
+  (map_natCast C 45).symm
+private theorem nat46_as_C : (46 : Polynomial ℚ) = C 46 :=
+  (map_natCast C 46).symm
+private theorem nat47_as_C : (47 : Polynomial ℚ) = C 47 :=
+  (map_natCast C 47).symm
+private theorem nat48_as_C : (48 : Polynomial ℚ) = C 48 :=
+  (map_natCast C 48).symm
+private theorem nat49_as_C : (49 : Polynomial ℚ) = C 49 :=
+  (map_natCast C 49).symm
+private theorem nat50_as_C : (50 : Polynomial ℚ) = C 50 :=
+  (map_natCast C 50).symm
+private theorem nat51_as_C : (51 : Polynomial ℚ) = C 51 :=
+  (map_natCast C 51).symm
+private theorem nat52_as_C : (52 : Polynomial ℚ) = C 52 :=
+  (map_natCast C 52).symm
+private theorem nat53_as_C : (53 : Polynomial ℚ) = C 53 :=
+  (map_natCast C 53).symm
+private theorem nat54_as_C : (54 : Polynomial ℚ) = C 54 :=
+  (map_natCast C 54).symm
+private theorem nat55_as_C : (55 : Polynomial ℚ) = C 55 :=
+  (map_natCast C 55).symm
+private theorem nat56_as_C : (56 : Polynomial ℚ) = C 56 :=
+  (map_natCast C 56).symm
+private theorem nat57_as_C : (57 : Polynomial ℚ) = C 57 :=
+  (map_natCast C 57).symm
+private theorem nat58_as_C : (58 : Polynomial ℚ) = C 58 :=
+  (map_natCast C 58).symm
+private theorem nat59_as_C : (59 : Polynomial ℚ) = C 59 :=
+  (map_natCast C 59).symm
+private theorem nat60_as_C : (60 : Polynomial ℚ) = C 60 :=
+  (map_natCast C 60).symm
+private theorem nat61_as_C : (61 : Polynomial ℚ) = C 61 :=
+  (map_natCast C 61).symm
+private theorem nat62_as_C : (62 : Polynomial ℚ) = C 62 :=
+  (map_natCast C 62).symm
+private theorem nat63_as_C : (63 : Polynomial ℚ) = C 63 :=
+  (map_natCast C 63).symm
+private theorem nat64_as_C : (64 : Polynomial ℚ) = C 64 :=
+  (map_natCast C 64).symm
 
 private theorem row_0 (j : Fin 4) :
     (B_poly * Kminus_poly) (0 : Fin 15) j = Bminus_poly (0 : Fin 15) j := by
@@ -18,9 +155,14 @@ private theorem row_0 (j : Fin 4) :
       Kminus_poly_row0, Kminus_poly_row1, Kminus_poly_row2,
       Kminus_poly_row3, Kminus_poly_row4, Kminus_poly_row5,
       Kminus_poly_row6, Kminus_poly_row7, Kminus_poly_row8,
-      Kminus_poly_row9, Bminus_poly, Bminus_poly_row0] <;>
-    norm_num <;>
-    ring
+      Kminus_poly_row9, interpQ, toPolyZ,
+      Bminus_poly, Bminus_poly_row0] <;>
+    (try norm_num) <;>
+    (try ring)
+  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
+    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
+    one_mul, mul_one, smul_smul])
+  all_goals module
 
 private theorem row_1 (j : Fin 4) :
     (B_poly * Kminus_poly) (1 : Fin 15) j = Bminus_poly (1 : Fin 15) j := by
@@ -29,9 +171,14 @@ private theorem row_1 (j : Fin 4) :
       Kminus_poly_row0, Kminus_poly_row1, Kminus_poly_row2,
       Kminus_poly_row3, Kminus_poly_row4, Kminus_poly_row5,
       Kminus_poly_row6, Kminus_poly_row7, Kminus_poly_row8,
-      Kminus_poly_row9, Bminus_poly, Bminus_poly_row1] <;>
-    norm_num <;>
-    ring
+      Kminus_poly_row9, interpQ, toPolyZ,
+      Bminus_poly, Bminus_poly_row1] <;>
+    (try norm_num) <;>
+    (try ring)
+  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
+    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
+    one_mul, mul_one, smul_smul])
+  all_goals module
 
 private theorem row_2 (j : Fin 4) :
     (B_poly * Kminus_poly) (2 : Fin 15) j = Bminus_poly (2 : Fin 15) j := by
@@ -40,9 +187,14 @@ private theorem row_2 (j : Fin 4) :
       Kminus_poly_row0, Kminus_poly_row1, Kminus_poly_row2,
       Kminus_poly_row3, Kminus_poly_row4, Kminus_poly_row5,
       Kminus_poly_row6, Kminus_poly_row7, Kminus_poly_row8,
-      Kminus_poly_row9, Bminus_poly, Bminus_poly_row2] <;>
-    norm_num <;>
-    ring
+      Kminus_poly_row9, interpQ, toPolyZ,
+      Bminus_poly, Bminus_poly_row2] <;>
+    (try norm_num) <;>
+    (try ring)
+  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
+    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
+    one_mul, mul_one, smul_smul])
+  all_goals module
 
 private theorem row_3 (j : Fin 4) :
     (B_poly * Kminus_poly) (3 : Fin 15) j = Bminus_poly (3 : Fin 15) j := by
@@ -51,9 +203,14 @@ private theorem row_3 (j : Fin 4) :
       Kminus_poly_row0, Kminus_poly_row1, Kminus_poly_row2,
       Kminus_poly_row3, Kminus_poly_row4, Kminus_poly_row5,
       Kminus_poly_row6, Kminus_poly_row7, Kminus_poly_row8,
-      Kminus_poly_row9, Bminus_poly, Bminus_poly_row3] <;>
-    norm_num <;>
-    ring
+      Kminus_poly_row9, interpQ, toPolyZ,
+      Bminus_poly, Bminus_poly_row3] <;>
+    (try norm_num) <;>
+    (try ring)
+  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
+    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
+    one_mul, mul_one, smul_smul])
+  all_goals module
 
 private theorem row_4 (j : Fin 4) :
     (B_poly * Kminus_poly) (4 : Fin 15) j = Bminus_poly (4 : Fin 15) j := by
@@ -62,9 +219,14 @@ private theorem row_4 (j : Fin 4) :
       Kminus_poly_row0, Kminus_poly_row1, Kminus_poly_row2,
       Kminus_poly_row3, Kminus_poly_row4, Kminus_poly_row5,
       Kminus_poly_row6, Kminus_poly_row7, Kminus_poly_row8,
-      Kminus_poly_row9, Bminus_poly, Bminus_poly_row4] <;>
-    norm_num <;>
-    ring
+      Kminus_poly_row9, interpQ, toPolyZ,
+      Bminus_poly, Bminus_poly_row4] <;>
+    (try norm_num) <;>
+    (try ring)
+  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
+    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
+    one_mul, mul_one, smul_smul])
+  all_goals module
 
 private theorem row_5 (j : Fin 4) :
     (B_poly * Kminus_poly) (5 : Fin 15) j = Bminus_poly (5 : Fin 15) j := by
@@ -73,9 +235,14 @@ private theorem row_5 (j : Fin 4) :
       Kminus_poly_row0, Kminus_poly_row1, Kminus_poly_row2,
       Kminus_poly_row3, Kminus_poly_row4, Kminus_poly_row5,
       Kminus_poly_row6, Kminus_poly_row7, Kminus_poly_row8,
-      Kminus_poly_row9, Bminus_poly, Bminus_poly_row5] <;>
-    norm_num <;>
-    ring
+      Kminus_poly_row9, interpQ, toPolyZ,
+      Bminus_poly, Bminus_poly_row5] <;>
+    (try norm_num) <;>
+    (try ring)
+  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
+    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
+    one_mul, mul_one, smul_smul])
+  all_goals module
 
 private theorem row_6 (j : Fin 4) :
     (B_poly * Kminus_poly) (6 : Fin 15) j = Bminus_poly (6 : Fin 15) j := by
@@ -84,9 +251,14 @@ private theorem row_6 (j : Fin 4) :
       Kminus_poly_row0, Kminus_poly_row1, Kminus_poly_row2,
       Kminus_poly_row3, Kminus_poly_row4, Kminus_poly_row5,
       Kminus_poly_row6, Kminus_poly_row7, Kminus_poly_row8,
-      Kminus_poly_row9, Bminus_poly, Bminus_poly_row6] <;>
-    norm_num <;>
-    ring
+      Kminus_poly_row9, interpQ, toPolyZ,
+      Bminus_poly, Bminus_poly_row6] <;>
+    (try norm_num) <;>
+    (try ring)
+  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
+    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
+    one_mul, mul_one, smul_smul])
+  all_goals module
 
 private theorem row_7 (j : Fin 4) :
     (B_poly * Kminus_poly) (7 : Fin 15) j = Bminus_poly (7 : Fin 15) j := by
@@ -95,9 +267,14 @@ private theorem row_7 (j : Fin 4) :
       Kminus_poly_row0, Kminus_poly_row1, Kminus_poly_row2,
       Kminus_poly_row3, Kminus_poly_row4, Kminus_poly_row5,
       Kminus_poly_row6, Kminus_poly_row7, Kminus_poly_row8,
-      Kminus_poly_row9, Bminus_poly, Bminus_poly_row7] <;>
-    norm_num <;>
-    ring
+      Kminus_poly_row9, interpQ, toPolyZ,
+      Bminus_poly, Bminus_poly_row7] <;>
+    (try norm_num) <;>
+    (try ring)
+  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
+    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
+    one_mul, mul_one, smul_smul])
+  all_goals module
 
 private theorem row_8 (j : Fin 4) :
     (B_poly * Kminus_poly) (8 : Fin 15) j = Bminus_poly (8 : Fin 15) j := by
@@ -106,9 +283,14 @@ private theorem row_8 (j : Fin 4) :
       Kminus_poly_row0, Kminus_poly_row1, Kminus_poly_row2,
       Kminus_poly_row3, Kminus_poly_row4, Kminus_poly_row5,
       Kminus_poly_row6, Kminus_poly_row7, Kminus_poly_row8,
-      Kminus_poly_row9, Bminus_poly, Bminus_poly_row8] <;>
-    norm_num <;>
-    ring
+      Kminus_poly_row9, interpQ, toPolyZ,
+      Bminus_poly, Bminus_poly_row8] <;>
+    (try norm_num) <;>
+    (try ring)
+  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
+    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
+    one_mul, mul_one, smul_smul])
+  all_goals module
 
 private theorem row_9 (j : Fin 4) :
     (B_poly * Kminus_poly) (9 : Fin 15) j = Bminus_poly (9 : Fin 15) j := by
@@ -117,9 +299,14 @@ private theorem row_9 (j : Fin 4) :
       Kminus_poly_row0, Kminus_poly_row1, Kminus_poly_row2,
       Kminus_poly_row3, Kminus_poly_row4, Kminus_poly_row5,
       Kminus_poly_row6, Kminus_poly_row7, Kminus_poly_row8,
-      Kminus_poly_row9, Bminus_poly, Bminus_poly_row9] <;>
-    norm_num <;>
-    ring
+      Kminus_poly_row9, interpQ, toPolyZ,
+      Bminus_poly, Bminus_poly_row9] <;>
+    (try norm_num) <;>
+    (try ring)
+  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
+    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
+    one_mul, mul_one, smul_smul])
+  all_goals module
 
 private theorem row_10 (j : Fin 4) :
     (B_poly * Kminus_poly) (10 : Fin 15) j = Bminus_poly (10 : Fin 15) j := by
@@ -128,9 +315,14 @@ private theorem row_10 (j : Fin 4) :
       Kminus_poly_row0, Kminus_poly_row1, Kminus_poly_row2,
       Kminus_poly_row3, Kminus_poly_row4, Kminus_poly_row5,
       Kminus_poly_row6, Kminus_poly_row7, Kminus_poly_row8,
-      Kminus_poly_row9, Bminus_poly, Bminus_poly_row10] <;>
-    norm_num <;>
-    ring
+      Kminus_poly_row9, interpQ, toPolyZ,
+      Bminus_poly, Bminus_poly_row10] <;>
+    (try norm_num) <;>
+    (try ring)
+  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
+    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
+    one_mul, mul_one, smul_smul])
+  all_goals module
 
 private theorem row_11 (j : Fin 4) :
     (B_poly * Kminus_poly) (11 : Fin 15) j = Bminus_poly (11 : Fin 15) j := by
@@ -139,9 +331,14 @@ private theorem row_11 (j : Fin 4) :
       Kminus_poly_row0, Kminus_poly_row1, Kminus_poly_row2,
       Kminus_poly_row3, Kminus_poly_row4, Kminus_poly_row5,
       Kminus_poly_row6, Kminus_poly_row7, Kminus_poly_row8,
-      Kminus_poly_row9, Bminus_poly, Bminus_poly_row11] <;>
-    norm_num <;>
-    ring
+      Kminus_poly_row9, interpQ, toPolyZ,
+      Bminus_poly, Bminus_poly_row11] <;>
+    (try norm_num) <;>
+    (try ring)
+  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
+    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
+    one_mul, mul_one, smul_smul])
+  all_goals module
 
 private theorem row_12 (j : Fin 4) :
     (B_poly * Kminus_poly) (12 : Fin 15) j = Bminus_poly (12 : Fin 15) j := by
@@ -150,9 +347,14 @@ private theorem row_12 (j : Fin 4) :
       Kminus_poly_row0, Kminus_poly_row1, Kminus_poly_row2,
       Kminus_poly_row3, Kminus_poly_row4, Kminus_poly_row5,
       Kminus_poly_row6, Kminus_poly_row7, Kminus_poly_row8,
-      Kminus_poly_row9, Bminus_poly, Bminus_poly_row12] <;>
-    norm_num <;>
-    ring
+      Kminus_poly_row9, interpQ, toPolyZ,
+      Bminus_poly, Bminus_poly_row12] <;>
+    (try norm_num) <;>
+    (try ring)
+  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
+    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
+    one_mul, mul_one, smul_smul])
+  all_goals module
 
 private theorem row_13 (j : Fin 4) :
     (B_poly * Kminus_poly) (13 : Fin 15) j = Bminus_poly (13 : Fin 15) j := by
@@ -161,9 +363,14 @@ private theorem row_13 (j : Fin 4) :
       Kminus_poly_row0, Kminus_poly_row1, Kminus_poly_row2,
       Kminus_poly_row3, Kminus_poly_row4, Kminus_poly_row5,
       Kminus_poly_row6, Kminus_poly_row7, Kminus_poly_row8,
-      Kminus_poly_row9, Bminus_poly, Bminus_poly_row13] <;>
-    norm_num <;>
-    ring
+      Kminus_poly_row9, interpQ, toPolyZ,
+      Bminus_poly, Bminus_poly_row13] <;>
+    (try norm_num) <;>
+    (try ring)
+  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
+    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
+    one_mul, mul_one, smul_smul])
+  all_goals module
 
 private theorem row_14 (j : Fin 4) :
     (B_poly * Kminus_poly) (14 : Fin 15) j = Bminus_poly (14 : Fin 15) j := by
@@ -172,9 +379,14 @@ private theorem row_14 (j : Fin 4) :
       Kminus_poly_row0, Kminus_poly_row1, Kminus_poly_row2,
       Kminus_poly_row3, Kminus_poly_row4, Kminus_poly_row5,
       Kminus_poly_row6, Kminus_poly_row7, Kminus_poly_row8,
-      Kminus_poly_row9, Bminus_poly, Bminus_poly_row14] <;>
-    norm_num <;>
-    ring
+      Kminus_poly_row9, interpQ, toPolyZ,
+      Bminus_poly, Bminus_poly_row14] <;>
+    (try norm_num) <;>
+    (try ring)
+  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
+    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
+    one_mul, mul_one, smul_smul])
+  all_goals module
 
 public theorem B_mul_Kminus_poly : B_poly * Kminus_poly = Bminus_poly := by
   apply Matrix.ext

@@ -10,100 +10,14 @@ open Matrix Polynomial
 namespace V14Formalization.D12SigmaCarrierPlusCol4
 open D12PolynomialData D12PolynomialEvaluation
 open D12GeneratorPolynomialCore D12SigmaCarrierPolynomial
+open V14Formalization.D12PolyZReflection
 
-private theorem C_eq_smul_one (a : ℚ) :
-    C a = a • (1 : Polynomial ℚ) := by
-  rw [Polynomial.smul_eq_C_mul, mul_one]
-
-private theorem smul_one_sq (a : ℚ) :
-    (a • (1 : Polynomial ℚ)) ^ 2 =
-      (a * a) • (1 : Polynomial ℚ) := by
-  rw [pow_two, smul_mul_assoc, one_mul, smul_smul]
-
-private theorem nat2_as_C : (2 : Polynomial ℚ) = C 2 :=
-  (map_natCast C 2).symm
-private theorem nat3_as_C : (3 : Polynomial ℚ) = C 3 :=
-  (map_natCast C 3).symm
-private theorem nat4_as_C : (4 : Polynomial ℚ) = C 4 :=
-  (map_natCast C 4).symm
-private theorem nat5_as_C : (5 : Polynomial ℚ) = C 5 :=
-  (map_natCast C 5).symm
-private theorem nat6_as_C : (6 : Polynomial ℚ) = C 6 :=
-  (map_natCast C 6).symm
-private theorem nat7_as_C : (7 : Polynomial ℚ) = C 7 :=
-  (map_natCast C 7).symm
-private theorem nat8_as_C : (8 : Polynomial ℚ) = C 8 :=
-  (map_natCast C 8).symm
-private theorem nat9_as_C : (9 : Polynomial ℚ) = C 9 :=
-  (map_natCast C 9).symm
-private theorem nat10_as_C : (10 : Polynomial ℚ) = C 10 :=
-  (map_natCast C 10).symm
-private theorem nat11_as_C : (11 : Polynomial ℚ) = C 11 :=
-  (map_natCast C 11).symm
-private theorem nat12_as_C : (12 : Polynomial ℚ) = C 12 :=
-  (map_natCast C 12).symm
-private theorem nat13_as_C : (13 : Polynomial ℚ) = C 13 :=
-  (map_natCast C 13).symm
-private theorem nat14_as_C : (14 : Polynomial ℚ) = C 14 :=
-  (map_natCast C 14).symm
-private theorem nat15_as_C : (15 : Polynomial ℚ) = C 15 :=
-  (map_natCast C 15).symm
-private theorem nat16_as_C : (16 : Polynomial ℚ) = C 16 :=
-  (map_natCast C 16).symm
-private theorem nat17_as_C : (17 : Polynomial ℚ) = C 17 :=
-  (map_natCast C 17).symm
-private theorem nat18_as_C : (18 : Polynomial ℚ) = C 18 :=
-  (map_natCast C 18).symm
-private theorem nat19_as_C : (19 : Polynomial ℚ) = C 19 :=
-  (map_natCast C 19).symm
-private theorem nat20_as_C : (20 : Polynomial ℚ) = C 20 :=
-  (map_natCast C 20).symm
-private theorem nat21_as_C : (21 : Polynomial ℚ) = C 21 :=
-  (map_natCast C 21).symm
-private theorem nat22_as_C : (22 : Polynomial ℚ) = C 22 :=
-  (map_natCast C 22).symm
-private theorem nat23_as_C : (23 : Polynomial ℚ) = C 23 :=
-  (map_natCast C 23).symm
-private theorem nat24_as_C : (24 : Polynomial ℚ) = C 24 :=
-  (map_natCast C 24).symm
-private theorem nat25_as_C : (25 : Polynomial ℚ) = C 25 :=
-  (map_natCast C 25).symm
-private theorem nat26_as_C : (26 : Polynomial ℚ) = C 26 :=
-  (map_natCast C 26).symm
-private theorem nat27_as_C : (27 : Polynomial ℚ) = C 27 :=
-  (map_natCast C 27).symm
-private theorem nat28_as_C : (28 : Polynomial ℚ) = C 28 :=
-  (map_natCast C 28).symm
-private theorem nat29_as_C : (29 : Polynomial ℚ) = C 29 :=
-  (map_natCast C 29).symm
-private theorem nat30_as_C : (30 : Polynomial ℚ) = C 30 :=
-  (map_natCast C 30).symm
-private theorem nat31_as_C : (31 : Polynomial ℚ) = C 31 :=
-  (map_natCast C 31).symm
-private theorem nat32_as_C : (32 : Polynomial ℚ) = C 32 :=
-  (map_natCast C 32).symm
-private theorem nat33_as_C : (33 : Polynomial ℚ) = C 33 :=
-  (map_natCast C 33).symm
-private theorem nat34_as_C : (34 : Polynomial ℚ) = C 34 :=
-  (map_natCast C 34).symm
-private theorem nat35_as_C : (35 : Polynomial ℚ) = C 35 :=
-  (map_natCast C 35).symm
-private theorem nat36_as_C : (36 : Polynomial ℚ) = C 36 :=
-  (map_natCast C 36).symm
-private theorem nat37_as_C : (37 : Polynomial ℚ) = C 37 :=
-  (map_natCast C 37).symm
-private theorem nat38_as_C : (38 : Polynomial ℚ) = C 38 :=
-  (map_natCast C 38).symm
-private theorem nat39_as_C : (39 : Polynomial ℚ) = C 39 :=
-  (map_natCast C 39).symm
-private theorem nat40_as_C : (40 : Polynomial ℚ) = C 40 :=
-  (map_natCast C 40).symm
-
-def quotient_0 : Polynomial ℚ := C ((2 / 11 : ℚ)) + C ((-2 / 11 : ℚ)) * X + C ((-1 / 11 : ℚ)) * X ^ 2 + C ((1 / 11 : ℚ)) * X ^ 3 + C ((-1 / 11 : ℚ)) * X ^ 4 + C ((-1 / 11 : ℚ)) * X ^ 5 + C ((1 / 11 : ℚ)) * X ^ 6 + C ((-1 / 11 : ℚ)) * X ^ 8
+def quotient_0 : Polynomial ℚ := interpQ 11 [2, -2, -1, 1, -1, -1, 1, 0, -1]
 
 theorem relation_0 :
     (Srestricted_reduced_poly * Kplus_poly) (0 : Fin 10) (4 : Fin 6) -
         Kplus_poly (0 : Fin 10) (4 : Fin 6) = Phi11 * quotient_0 := by
+  rw [z_Phi11]
   simp only [Matrix.mul_apply, Matrix.sub_apply, Matrix.add_apply,
     Srestricted_reduced_poly, Kplus_poly, quotient_0]
   simp [Fin.sum_univ_succ, Srestricted_reduced_poly_row0,
@@ -114,12 +28,12 @@ theorem relation_0 :
     Kminus_poly_row2, Kminus_poly_row3, Kminus_poly_row4,
     Kminus_poly_row5, Kminus_poly_row6, Kminus_poly_row7,
     Kminus_poly_row8, Kminus_poly_row9]
-  (try simp only [Phi11, Finset.sum_range_succ]) <;>
-  ring_nf <;>
-  (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul]) <;>
-  module
+  simp (disch := decide) only [interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_0
     {R : Type*} [CommRing R] [Algebra ℚ R] (z : R)
@@ -130,11 +44,12 @@ theorem eval_relation_0
   rw [← evalMatrixAt_mul]
   exact eval_eq_of_modPhi z hPhi _ _ _ relation_0
 
-def quotient_1 : Polynomial ℚ := C ((2 / 11 : ℚ)) + C ((-2 / 11 : ℚ)) * X + C ((-1 / 11 : ℚ)) * X ^ 3 + C ((1 / 11 : ℚ)) * X ^ 5 + C ((-2 / 11 : ℚ)) * X ^ 6
+def quotient_1 : Polynomial ℚ := interpQ 11 [2, -2, 0, -1, 0, 1, -2]
 
 theorem relation_1 :
     (Srestricted_reduced_poly * Kplus_poly) (1 : Fin 10) (4 : Fin 6) -
         Kplus_poly (1 : Fin 10) (4 : Fin 6) = Phi11 * quotient_1 := by
+  rw [z_Phi11]
   simp only [Matrix.mul_apply, Matrix.sub_apply, Matrix.add_apply,
     Srestricted_reduced_poly, Kplus_poly, quotient_1]
   simp [Fin.sum_univ_succ, Srestricted_reduced_poly_row1,
@@ -145,12 +60,12 @@ theorem relation_1 :
     Kminus_poly_row2, Kminus_poly_row3, Kminus_poly_row4,
     Kminus_poly_row5, Kminus_poly_row6, Kminus_poly_row7,
     Kminus_poly_row8, Kminus_poly_row9]
-  (try simp only [Phi11, Finset.sum_range_succ]) <;>
-  ring_nf <;>
-  (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul]) <;>
-  module
+  simp (disch := decide) only [interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_1
     {R : Type*} [CommRing R] [Algebra ℚ R] (z : R)
@@ -161,11 +76,12 @@ theorem eval_relation_1
   rw [← evalMatrixAt_mul]
   exact eval_eq_of_modPhi z hPhi _ _ _ relation_1
 
-def quotient_2 : Polynomial ℚ := C ((2 / 11 : ℚ)) + C ((-2 / 11 : ℚ)) * X + C ((-1 / 11 : ℚ)) * X ^ 2 + C ((1 / 11 : ℚ)) * X ^ 3 + C ((-1 / 11 : ℚ)) * X ^ 4 + C ((-1 / 11 : ℚ)) * X ^ 5 + C ((1 / 11 : ℚ)) * X ^ 6 + C ((-1 / 11 : ℚ)) * X ^ 8
+def quotient_2 : Polynomial ℚ := interpQ 11 [2, -2, -1, 1, -1, -1, 1, 0, -1]
 
 theorem relation_2 :
     (Srestricted_reduced_poly * Kplus_poly) (2 : Fin 10) (4 : Fin 6) -
         Kplus_poly (2 : Fin 10) (4 : Fin 6) = Phi11 * quotient_2 := by
+  rw [z_Phi11]
   simp only [Matrix.mul_apply, Matrix.sub_apply, Matrix.add_apply,
     Srestricted_reduced_poly, Kplus_poly, quotient_2]
   simp [Fin.sum_univ_succ, Srestricted_reduced_poly_row2,
@@ -176,12 +92,12 @@ theorem relation_2 :
     Kminus_poly_row2, Kminus_poly_row3, Kminus_poly_row4,
     Kminus_poly_row5, Kminus_poly_row6, Kminus_poly_row7,
     Kminus_poly_row8, Kminus_poly_row9]
-  (try simp only [Phi11, Finset.sum_range_succ]) <;>
-  ring_nf <;>
-  (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul]) <;>
-  module
+  simp (disch := decide) only [interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_2
     {R : Type*} [CommRing R] [Algebra ℚ R] (z : R)
@@ -192,11 +108,12 @@ theorem eval_relation_2
   rw [← evalMatrixAt_mul]
   exact eval_eq_of_modPhi z hPhi _ _ _ relation_2
 
-def quotient_3 : Polynomial ℚ := C ((2 / 11 : ℚ)) + C ((-2 / 11 : ℚ)) * X + C ((-1 / 11 : ℚ)) * X ^ 3 + C ((1 / 11 : ℚ)) * X ^ 5 + C ((-2 / 11 : ℚ)) * X ^ 6
+def quotient_3 : Polynomial ℚ := interpQ 11 [2, -2, 0, -1, 0, 1, -2]
 
 theorem relation_3 :
     (Srestricted_reduced_poly * Kplus_poly) (3 : Fin 10) (4 : Fin 6) -
         Kplus_poly (3 : Fin 10) (4 : Fin 6) = Phi11 * quotient_3 := by
+  rw [z_Phi11]
   simp only [Matrix.mul_apply, Matrix.sub_apply, Matrix.add_apply,
     Srestricted_reduced_poly, Kplus_poly, quotient_3]
   simp [Fin.sum_univ_succ, Srestricted_reduced_poly_row3,
@@ -207,12 +124,12 @@ theorem relation_3 :
     Kminus_poly_row2, Kminus_poly_row3, Kminus_poly_row4,
     Kminus_poly_row5, Kminus_poly_row6, Kminus_poly_row7,
     Kminus_poly_row8, Kminus_poly_row9]
-  (try simp only [Phi11, Finset.sum_range_succ]) <;>
-  ring_nf <;>
-  (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul]) <;>
-  module
+  simp (disch := decide) only [interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_3
     {R : Type*} [CommRing R] [Algebra ℚ R] (z : R)
@@ -223,11 +140,12 @@ theorem eval_relation_3
   rw [← evalMatrixAt_mul]
   exact eval_eq_of_modPhi z hPhi _ _ _ relation_3
 
-def quotient_4 : Polynomial ℚ := C ((-8 / 11 : ℚ)) + C ((8 / 11 : ℚ)) * X + C ((2 / 11 : ℚ)) * X ^ 2 + C ((2 / 11 : ℚ)) * X ^ 4 + C ((2 / 11 : ℚ)) * X ^ 6 + C ((2 / 11 : ℚ)) * X ^ 8
+def quotient_4 : Polynomial ℚ := interpQ 11 [-8, 8, 2, 0, 2, 0, 2, 0, 2]
 
 theorem relation_4 :
     (Srestricted_reduced_poly * Kplus_poly) (4 : Fin 10) (4 : Fin 6) -
         Kplus_poly (4 : Fin 10) (4 : Fin 6) = Phi11 * quotient_4 := by
+  rw [z_Phi11]
   simp only [Matrix.mul_apply, Matrix.sub_apply, Matrix.add_apply,
     Srestricted_reduced_poly, Kplus_poly, quotient_4]
   simp [Fin.sum_univ_succ, Srestricted_reduced_poly_row4,
@@ -238,12 +156,12 @@ theorem relation_4 :
     Kminus_poly_row2, Kminus_poly_row3, Kminus_poly_row4,
     Kminus_poly_row5, Kminus_poly_row6, Kminus_poly_row7,
     Kminus_poly_row8, Kminus_poly_row9]
-  (try simp only [Phi11, Finset.sum_range_succ]) <;>
-  ring_nf <;>
-  (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul]) <;>
-  module
+  simp (disch := decide) only [interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_4
     {R : Type*} [CommRing R] [Algebra ℚ R] (z : R)
@@ -254,11 +172,12 @@ theorem eval_relation_4
   rw [← evalMatrixAt_mul]
   exact eval_eq_of_modPhi z hPhi _ _ _ relation_4
 
-def quotient_5 : Polynomial ℚ := C ((-3 / 11 : ℚ)) + C ((3 / 11 : ℚ)) * X + C ((1 / 11 : ℚ)) * X ^ 2 + C ((-1 / 22 : ℚ)) * X ^ 3 + C ((1 / 11 : ℚ)) * X ^ 4 + C ((1 / 22 : ℚ)) * X ^ 5 + C ((1 / 11 : ℚ)) * X ^ 8
+def quotient_5 : Polynomial ℚ := interpQ 22 [-6, 6, 2, -1, 2, 1, 0, 0, 2]
 
 theorem relation_5 :
     (Srestricted_reduced_poly * Kplus_poly) (5 : Fin 10) (4 : Fin 6) -
         Kplus_poly (5 : Fin 10) (4 : Fin 6) = Phi11 * quotient_5 := by
+  rw [z_Phi11]
   simp only [Matrix.mul_apply, Matrix.sub_apply, Matrix.add_apply,
     Srestricted_reduced_poly, Kplus_poly, quotient_5]
   simp [Fin.sum_univ_succ, Srestricted_reduced_poly_row5,
@@ -269,12 +188,12 @@ theorem relation_5 :
     Kminus_poly_row2, Kminus_poly_row3, Kminus_poly_row4,
     Kminus_poly_row5, Kminus_poly_row6, Kminus_poly_row7,
     Kminus_poly_row8, Kminus_poly_row9]
-  (try simp only [Phi11, Finset.sum_range_succ]) <;>
-  ring_nf <;>
-  (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul]) <;>
-  module
+  simp (disch := decide) only [interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_5
     {R : Type*} [CommRing R] [Algebra ℚ R] (z : R)
@@ -285,11 +204,12 @@ theorem eval_relation_5
   rw [← evalMatrixAt_mul]
   exact eval_eq_of_modPhi z hPhi _ _ _ relation_5
 
-def quotient_6 : Polynomial ℚ := C ((4 / 11 : ℚ)) + C ((-4 / 11 : ℚ)) * X + C ((-3 / 22 : ℚ)) * X ^ 2 + C ((1 / 11 : ℚ)) * X ^ 3 + C ((-3 / 22 : ℚ)) * X ^ 4 + C ((-1 / 11 : ℚ)) * X ^ 5 + C ((1 / 22 : ℚ)) * X ^ 6 + C ((-3 / 22 : ℚ)) * X ^ 8
+def quotient_6 : Polynomial ℚ := interpQ 22 [8, -8, -3, 2, -3, -2, 1, 0, -3]
 
 theorem relation_6 :
     (Srestricted_reduced_poly * Kplus_poly) (6 : Fin 10) (4 : Fin 6) -
         Kplus_poly (6 : Fin 10) (4 : Fin 6) = Phi11 * quotient_6 := by
+  rw [z_Phi11]
   simp only [Matrix.mul_apply, Matrix.sub_apply, Matrix.add_apply,
     Srestricted_reduced_poly, Kplus_poly, quotient_6]
   simp [Fin.sum_univ_succ, Srestricted_reduced_poly_row6,
@@ -300,12 +220,12 @@ theorem relation_6 :
     Kminus_poly_row2, Kminus_poly_row3, Kminus_poly_row4,
     Kminus_poly_row5, Kminus_poly_row6, Kminus_poly_row7,
     Kminus_poly_row8, Kminus_poly_row9]
-  (try simp only [Phi11, Finset.sum_range_succ]) <;>
-  ring_nf <;>
-  (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul]) <;>
-  module
+  simp (disch := decide) only [interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_6
     {R : Type*} [CommRing R] [Algebra ℚ R] (z : R)
@@ -316,11 +236,12 @@ theorem eval_relation_6
   rw [← evalMatrixAt_mul]
   exact eval_eq_of_modPhi z hPhi _ _ _ relation_6
 
-def quotient_7 : Polynomial ℚ := C ((-3 / 11 : ℚ)) + C ((3 / 11 : ℚ)) * X + C ((1 / 11 : ℚ)) * X ^ 2 + C ((-1 / 22 : ℚ)) * X ^ 3 + C ((1 / 11 : ℚ)) * X ^ 4 + C ((1 / 22 : ℚ)) * X ^ 5 + C ((1 / 11 : ℚ)) * X ^ 8
+def quotient_7 : Polynomial ℚ := interpQ 22 [-6, 6, 2, -1, 2, 1, 0, 0, 2]
 
 theorem relation_7 :
     (Srestricted_reduced_poly * Kplus_poly) (7 : Fin 10) (4 : Fin 6) -
         Kplus_poly (7 : Fin 10) (4 : Fin 6) = Phi11 * quotient_7 := by
+  rw [z_Phi11]
   simp only [Matrix.mul_apply, Matrix.sub_apply, Matrix.add_apply,
     Srestricted_reduced_poly, Kplus_poly, quotient_7]
   simp [Fin.sum_univ_succ, Srestricted_reduced_poly_row7,
@@ -331,12 +252,12 @@ theorem relation_7 :
     Kminus_poly_row2, Kminus_poly_row3, Kminus_poly_row4,
     Kminus_poly_row5, Kminus_poly_row6, Kminus_poly_row7,
     Kminus_poly_row8, Kminus_poly_row9]
-  (try simp only [Phi11, Finset.sum_range_succ]) <;>
-  ring_nf <;>
-  (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul]) <;>
-  module
+  simp (disch := decide) only [interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_7
     {R : Type*} [CommRing R] [Algebra ℚ R] (z : R)
@@ -347,11 +268,12 @@ theorem eval_relation_7
   rw [← evalMatrixAt_mul]
   exact eval_eq_of_modPhi z hPhi _ _ _ relation_7
 
-def quotient_8 : Polynomial ℚ := C ((4 / 11 : ℚ)) + C ((-4 / 11 : ℚ)) * X + C ((-3 / 22 : ℚ)) * X ^ 2 + C ((1 / 11 : ℚ)) * X ^ 3 + C ((-3 / 22 : ℚ)) * X ^ 4 + C ((-1 / 11 : ℚ)) * X ^ 5 + C ((1 / 22 : ℚ)) * X ^ 6 + C ((-3 / 22 : ℚ)) * X ^ 8
+def quotient_8 : Polynomial ℚ := interpQ 22 [8, -8, -3, 2, -3, -2, 1, 0, -3]
 
 theorem relation_8 :
     (Srestricted_reduced_poly * Kplus_poly) (8 : Fin 10) (4 : Fin 6) -
         Kplus_poly (8 : Fin 10) (4 : Fin 6) = Phi11 * quotient_8 := by
+  rw [z_Phi11]
   simp only [Matrix.mul_apply, Matrix.sub_apply, Matrix.add_apply,
     Srestricted_reduced_poly, Kplus_poly, quotient_8]
   simp [Fin.sum_univ_succ, Srestricted_reduced_poly_row8,
@@ -362,12 +284,12 @@ theorem relation_8 :
     Kminus_poly_row2, Kminus_poly_row3, Kminus_poly_row4,
     Kminus_poly_row5, Kminus_poly_row6, Kminus_poly_row7,
     Kminus_poly_row8, Kminus_poly_row9]
-  (try simp only [Phi11, Finset.sum_range_succ]) <;>
-  ring_nf <;>
-  (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul]) <;>
-  module
+  simp (disch := decide) only [interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_8
     {R : Type*} [CommRing R] [Algebra ℚ R] (z : R)
@@ -378,11 +300,12 @@ theorem eval_relation_8
   rw [← evalMatrixAt_mul]
   exact eval_eq_of_modPhi z hPhi _ _ _ relation_8
 
-def quotient_9 : Polynomial ℚ := 0
+def quotient_9 : Polynomial ℚ := interpQ 1 []
 
 theorem relation_9 :
     (Srestricted_reduced_poly * Kplus_poly) (9 : Fin 10) (4 : Fin 6) -
         Kplus_poly (9 : Fin 10) (4 : Fin 6) = Phi11 * quotient_9 := by
+  rw [z_Phi11]
   simp only [Matrix.mul_apply, Matrix.sub_apply, Matrix.add_apply,
     Srestricted_reduced_poly, Kplus_poly, quotient_9]
   simp [Fin.sum_univ_succ, Srestricted_reduced_poly_row9,
@@ -393,12 +316,12 @@ theorem relation_9 :
     Kminus_poly_row2, Kminus_poly_row3, Kminus_poly_row4,
     Kminus_poly_row5, Kminus_poly_row6, Kminus_poly_row7,
     Kminus_poly_row8, Kminus_poly_row9]
-  (try simp only [Phi11, Finset.sum_range_succ]) <;>
-  ring_nf <;>
-  (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul]) <;>
-  module
+  simp (disch := decide) only [interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  apply interp_eq
+  · decide
+  · decide
+  · decide
 
 theorem eval_relation_9
     {R : Type*} [CommRing R] [Algebra ℚ R] (z : R)

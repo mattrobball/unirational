@@ -168,6 +168,25 @@ theorem allZero_toPolyZ (xs : List Int) (h : xs.all (· == 0) = true) :
       rw [toPolyZ, ih h.2, hx]
       simp
 
+/-- Degree bound: the Horner form has degree at most the list length.
+    `compute_degree` cannot see through the nesting, so the bound is proved
+    once here and applied. -/
+public theorem natDegree_toPolyZ_le (l : List Int) :
+    (toPolyZ l).natDegree ≤ l.length := by
+  induction l with
+  | nil => simp [toPolyZ]
+  | cons c cs ih =>
+      refine le_trans (Polynomial.natDegree_add_le _ _) (max_le ?_ ?_)
+      · simp [Polynomial.natDegree_C]
+      · refine le_trans (Polynomial.natDegree_mul_le) ?_
+        simp only [Polynomial.natDegree_X, List.length_cons]
+        omega
+
+public theorem natDegree_interpQ_le (d : ℕ) (l : List Int) :
+    (interpQ d l).natDegree ≤ l.length := by
+  refine le_trans (Polynomial.natDegree_mul_le) ?_
+  simpa [Polynomial.natDegree_C] using natDegree_toPolyZ_le l
+
 /-- Two representations agree when the cross-multiplied difference vanishes
     coefficientwise (trailing zeros allowed on either side). -/
 public theorem interp_eq (d₁ d₂ : ℕ) (h₁ : d₁ ≠ 0) (h₂ : d₂ ≠ 0) (n₁ n₂ : List Int)

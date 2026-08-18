@@ -11,6 +11,7 @@ namespace V14Formalization.D12SigmaCarrierBridgeRow9
 open D12PolynomialData D12PolynomialEvaluation
 open D12GeneratorPolynomialCore D12SigmaCarrierPolynomial
 open D12SigmaCarrierS6Explicit
+open V14Formalization.D12PolyZReflection
 
 private theorem C_eq_smul_one (a : ℚ) :
     C a = a • (1 : Polynomial ℚ) := by
@@ -121,7 +122,8 @@ theorem relation_0 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row9]
+    Srestricted_reduced_poly_row9,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
@@ -157,7 +159,8 @@ theorem relation_1 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row9]
+    Srestricted_reduced_poly_row9,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
@@ -284,182 +287,182 @@ theorem raw_2_eq :
 theorem raw_2_sub_reduced_coeff_0 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 0 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 0 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_1 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 1 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 1 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_2 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 2 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 2 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_3 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 3 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 3 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_4 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 4 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 4 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_5 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 5 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 5 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_6 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 6 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 6 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_7 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 7 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 7 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_8 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 8 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 8 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_9 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 9 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 9 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_10 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 10 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 10 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_11 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 11 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 11 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_12 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 12 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 12 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_13 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 13 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 13 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_14 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 14 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 14 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_15 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 15 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 15 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_16 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 16 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 16 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_17 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 17 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 17 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_18 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 18 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 18 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_19 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 19 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 19 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_20 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 20 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 20 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_21 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 21 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 21 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_22 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 22 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 22 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_23 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 23 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 23 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_24 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 24 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 24 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_25 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 25 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 25 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_26 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 26 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 26 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_27 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 27 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 27 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_28 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 28 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 28 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_29 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 29 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 29 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_30 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 30 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 30 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_31 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 31 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 31 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_32 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 32 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 32 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_33 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 33 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 33 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_34 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 34 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 34 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 theorem raw_2_sub_reduced_coeff_35 :
     (raw_2 - Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).coeff 35 =
       (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).coeff 35 := by
-  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
+  norm_num [raw_2, Srestricted_reduced_poly, Srestricted_reduced_poly_row9, interpQ, toPolyZ, residual_2_chunk0, residual_2_chunk1, residual_2_chunk2, residual_2_chunk3, residual_2_chunk4, residual_2_chunk5]
 
 private theorem raw_2_degree_le : raw_2.natDegree ≤ 35 := by
   unfold raw_2
@@ -468,12 +471,8 @@ private theorem raw_2_degree_le : raw_2.natDegree ≤ 35 := by
 private theorem reduced_2_degree_le :
     (Srestricted_reduced_poly (9 : Fin 10) (2 : Fin 10)).natDegree ≤ 35 := by
   change (Srestricted_reduced_poly_row9 (2 : Fin 10)).natDegree ≤ 35
-  unfold Srestricted_reduced_poly_row9
-  calc
-    _ ≤ 9 := by
-      aesop (add safe [Polynomial.natDegree_add_le_of_degree_le,
-        Polynomial.natDegree_C_mul_X_pow_le])
-    _ ≤ 35 := by omega
+  simp only [Srestricted_reduced_poly_row9]
+  exact le_trans (natDegree_interpQ_le _ _) (by decide)
 
 private theorem residual_2_degree_le : (residual_2_chunk0 + residual_2_chunk1 + residual_2_chunk2 + residual_2_chunk3 + residual_2_chunk4 + residual_2_chunk5).natDegree ≤ 35 := by
   unfold residual_2_chunk0
@@ -571,7 +570,8 @@ theorem relation_3 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row9]
+    Srestricted_reduced_poly_row9,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
@@ -607,7 +607,8 @@ theorem relation_4 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row9]
+    Srestricted_reduced_poly_row9,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
@@ -643,7 +644,8 @@ theorem relation_5 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row9]
+    Srestricted_reduced_poly_row9,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
@@ -679,7 +681,8 @@ theorem relation_6 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row9]
+    Srestricted_reduced_poly_row9,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
@@ -715,7 +718,8 @@ theorem relation_7 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row9]
+    Srestricted_reduced_poly_row9,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
@@ -751,7 +755,8 @@ theorem relation_8 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row9]
+    Srestricted_reduced_poly_row9,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
@@ -787,7 +792,8 @@ theorem relation_9 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row9]
+    Srestricted_reduced_poly_row9,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf

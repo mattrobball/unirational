@@ -43,6 +43,7 @@ namespace V14Formalization.D12SigmaCarrierConcrete
 open D12PolynomialData D12PolynomialEvaluation
 open D12GeneratorPolynomialCore D12GeneratorInvariance
 open D12SigmaCarrier D12SigmaCarrierPolynomial
+open V14Formalization.D12PolyZReflection
 
 public theorem evalMatrixK_Srestricted_reduced_poly :
     evalMatrixK Srestricted_reduced_poly = SrestrictedAction := by
@@ -101,37 +102,43 @@ private theorem plusTopRow0 (j : Fin 6) :
     (selectPlus * evalMatrixK Kplus_poly) 0 j =
       (1 : Matrix (Fin 6) (Fin 6) K) 0 j := by
   fin_cases j <;> norm_num [selectPlus, evalMatrixK, evalMatrixAt, Kplus_poly,
-    Kplus_poly_row0, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply] <;> decide
+    Kplus_poly_row0, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply,
+    interpQ, toPolyZ] <;> decide
 
 private theorem plusTopRow1 (j : Fin 6) :
     (selectPlus * evalMatrixK Kplus_poly) 1 j =
       (1 : Matrix (Fin 6) (Fin 6) K) 1 j := by
   fin_cases j <;> norm_num [selectPlus, evalMatrixK, evalMatrixAt, Kplus_poly,
-    Kplus_poly_row1, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply] <;> decide
+    Kplus_poly_row1, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply,
+    interpQ, toPolyZ] <;> decide
 
 private theorem plusTopRow2 (j : Fin 6) :
     (selectPlus * evalMatrixK Kplus_poly) 2 j =
       (1 : Matrix (Fin 6) (Fin 6) K) 2 j := by
   fin_cases j <;> norm_num [selectPlus, evalMatrixK, evalMatrixAt, Kplus_poly,
-    Kplus_poly_row2, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply] <;> decide
+    Kplus_poly_row2, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply,
+    interpQ, toPolyZ] <;> decide
 
 private theorem plusTopRow3 (j : Fin 6) :
     (selectPlus * evalMatrixK Kplus_poly) 3 j =
       (1 : Matrix (Fin 6) (Fin 6) K) 3 j := by
   fin_cases j <;> norm_num [selectPlus, evalMatrixK, evalMatrixAt, Kplus_poly,
-    Kplus_poly_row3, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply] <;> decide
+    Kplus_poly_row3, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply,
+    interpQ, toPolyZ] <;> decide
 
 private theorem plusTopRow4 (j : Fin 6) :
     (selectPlus * evalMatrixK Kplus_poly) 4 j =
       (1 : Matrix (Fin 6) (Fin 6) K) 4 j := by
   fin_cases j <;> norm_num [selectPlus, evalMatrixK, evalMatrixAt, Kplus_poly,
-    Kplus_poly_row4, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply] <;> decide
+    Kplus_poly_row4, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply,
+    interpQ, toPolyZ] <;> decide
 
 private theorem plusTopRow5 (j : Fin 6) :
     (selectPlus * evalMatrixK Kplus_poly) 5 j =
       (1 : Matrix (Fin 6) (Fin 6) K) 5 j := by
   fin_cases j <;> norm_num [selectPlus, evalMatrixK, evalMatrixAt, Kplus_poly,
-    Kplus_poly_row5, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply] <;> decide
+    Kplus_poly_row5, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply,
+    interpQ, toPolyZ] <;> decide
 
 public theorem plus_top : selectPlus * evalMatrixK Kplus_poly = 1 := by
   apply Matrix.ext
@@ -148,25 +155,29 @@ private theorem minusTopRow0 (j : Fin 4) :
     (selectMinus * evalMatrixK Kminus_poly) 0 j =
       (1 : Matrix (Fin 4) (Fin 4) K) 0 j := by
   fin_cases j <;> norm_num [selectMinus, evalMatrixK, evalMatrixAt, Kminus_poly,
-    Kminus_poly_row0, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply] <;> decide
+    Kminus_poly_row0, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply,
+    interpQ, toPolyZ] <;> decide
 
 private theorem minusTopRow1 (j : Fin 4) :
     (selectMinus * evalMatrixK Kminus_poly) 1 j =
       (1 : Matrix (Fin 4) (Fin 4) K) 1 j := by
   fin_cases j <;> norm_num [selectMinus, evalMatrixK, evalMatrixAt, Kminus_poly,
-    Kminus_poly_row1, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply] <;> decide
+    Kminus_poly_row1, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply,
+    interpQ, toPolyZ] <;> decide
 
 private theorem minusTopRow2 (j : Fin 4) :
     (selectMinus * evalMatrixK Kminus_poly) 2 j =
       (1 : Matrix (Fin 4) (Fin 4) K) 2 j := by
   fin_cases j <;> norm_num [selectMinus, evalMatrixK, evalMatrixAt, Kminus_poly,
-    Kminus_poly_row2, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply] <;> decide
+    Kminus_poly_row2, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply,
+    interpQ, toPolyZ] <;> decide
 
 private theorem minusTopRow3 (j : Fin 4) :
     (selectMinus * evalMatrixK Kminus_poly) 3 j =
       (1 : Matrix (Fin 4) (Fin 4) K) 3 j := by
   fin_cases j <;> norm_num [selectMinus, evalMatrixK, evalMatrixAt, Kminus_poly,
-    Kminus_poly_row3, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply] <;> decide
+    Kminus_poly_row3, Matrix.mul_apply, Fin.sum_univ_succ, Matrix.one_apply,
+    interpQ, toPolyZ] <;> decide
 
 public theorem minus_top : selectMinus * evalMatrixK Kminus_poly = 1 := by
   apply Matrix.ext

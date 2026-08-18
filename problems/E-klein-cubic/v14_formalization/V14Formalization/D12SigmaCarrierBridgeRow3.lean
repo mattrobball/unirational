@@ -11,6 +11,7 @@ namespace V14Formalization.D12SigmaCarrierBridgeRow3
 open D12PolynomialData D12PolynomialEvaluation
 open D12GeneratorPolynomialCore D12SigmaCarrierPolynomial
 open D12SigmaCarrierS6Explicit
+open V14Formalization.D12PolyZReflection
 
 private theorem C_eq_smul_one (a : ℚ) :
     C a = a • (1 : Polynomial ℚ) := by
@@ -121,7 +122,8 @@ theorem relation_0 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row3]
+    Srestricted_reduced_poly_row3,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
@@ -157,7 +159,8 @@ theorem relation_1 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row3]
+    Srestricted_reduced_poly_row3,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
@@ -193,7 +196,8 @@ theorem relation_2 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row3]
+    Srestricted_reduced_poly_row3,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
@@ -229,7 +233,8 @@ theorem relation_3 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row3]
+    Srestricted_reduced_poly_row3,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
@@ -265,7 +270,8 @@ theorem relation_4 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row3]
+    Srestricted_reduced_poly_row3,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
@@ -301,7 +307,8 @@ theorem relation_5 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row3]
+    Srestricted_reduced_poly_row3,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
@@ -337,7 +344,8 @@ theorem relation_6 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row3]
+    Srestricted_reduced_poly_row3,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
@@ -373,7 +381,8 @@ theorem relation_7 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row3]
+    Srestricted_reduced_poly_row3,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
@@ -409,7 +418,8 @@ theorem relation_8 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row3]
+    Srestricted_reduced_poly_row3,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
@@ -445,7 +455,8 @@ theorem relation_9 :
   simp only [S6_explicit_row0, S6_explicit_row1,
     S6_explicit_row2, S6_explicit_row3, S6_explicit_row4,
     S6_explicit_row5, D12U6Semantic.cFourierPoly,
-    Srestricted_reduced_poly_row3]
+    Srestricted_reduced_poly_row3,
+    interpQ, toPolyZ]
   norm_num
   simp only [Phi11, Finset.sum_range_succ]
   ring_nf
