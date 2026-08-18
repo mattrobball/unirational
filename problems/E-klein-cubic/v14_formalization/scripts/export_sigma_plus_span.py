@@ -893,6 +893,15 @@ EMITTERS ARE STALE".  Use a post-pass on the in-tree sources instead.
 
 Re-enable only after demonstrating a byte-identical round-trip, with
 --emitter-is-current.
+
+RETIRED FAMILIES (deleted 2026-08-18, do not re-emit): the 24
+D12SigmaPlusSegreApply_span{U,V}_* shards and their two aggregators, and
+D12SigmaPlusSegreSpanV_0_0.  They unfold spanV/spanV_row0, which never
+existed, so they had never compiled on any branch and were outside the
+V14Solution closure.  The correct lemmas are spanU_apply_* / spanV_apply_*,
+derived from the definitions by scripts/matrix_apply_lemmas.py.
+D12SigmaPlusSegreSpan is retired too: it was a dead duplicate of
+D12SigmaPlusSegreSpanVDir, which is the live prover of spanV_mul_Qplus.
 """
 
 

@@ -20,8 +20,9 @@ changing.
 
 Later on 2026-08-18, retiring the tabulated 15x15 ambient generators (see
 "Retiring the 15x15 ambient tables" below) deleted 32 module files and added
-one, so `module` files are now **1,345**. The declaration counts in the table
-predate that change.
+one, so `module` files went to 1,345; then deleting the 350 dead files (see
+"Deleting the dead files" below) took it to **1,028**, with **one** legacy file
+left. The declaration counts in the table predate both changes.
 
 (Counts are from one parser run over the tree, so before/after figures in this
 document are comparable to each other; they sit a little under a raw
@@ -34,13 +35,15 @@ publishes the facts its consumers used to obtain by unfolding — that is the
 trade, and it is the right way round: a published equation is an interface, an
 exposed body is not.)
 
-The 34 legacy files are exactly the ones that have never compiled, on any
+The 34 legacy files were exactly the ones that have never compiled, on any
 branch: `D12SealProof` (deterministic whnf timeout at `L₀_mul_B₀`), the 24
 `Apply_span{U,V}` shards that reference `spanU_row*` / `spanV_row*` lemmas
 defined nowhere in the tree, the 3 `Smooth{U,V,W}` files whose
 `Ambiguous term C/X` reproduces with pure Mathlib imports, and 6 aggregators
-and shards that import them. None has ever had an olean. A module file may
-not import a non-module file, so they cannot be converted until they compile.
+and shards that import them. None has ever had an olean. 33 of the 34 were
+deleted on 2026-08-18 ("Deleting the dead files"); only `D12SealProof` is
+left. A module file may not import a non-module file, so it cannot be
+converted until it compiles.
 **Every file in this project that compiles is a module file.**
 
 What that bought, measured on an importer of `V14Solution`:
@@ -558,16 +561,63 @@ keep the `simp only [defs]`, keep the eval-simp, and swap `try ring` for
 `try grind`. Carried by `scripts/ring_to_grind_rewrite.py` for the frozen
 families, and directly by `scripts/export_sigma_plus_identities.py` for LH/NH.
 
-The 315 UM modules use the same idiom and are deliberately NOT converted: they
-are outside the `V14Solution` import closure entirely, so the rebuild moves the
-export by nothing. `Smooth{U,V,W}Prod` and `SpanV_0_0` are not converted either
-— they have never compiled, so the change would be unverifiable.
+The 315 UM modules used the same idiom and were deliberately NOT converted:
+they are outside the `V14Solution` import closure entirely, so the rebuild
+moves the export by nothing. `Smooth{U,V,W}Prod` and `SpanV_0_0` were not
+converted either — they have never compiled, so the change would be
+unverifiable. All of them have since been deleted; see "Deleting the dead
+files".
 
 **The integer-interpolation port is no longer the next step for these four
 families.** It was the plan on 2026-08-17, on the assumption that only a change
 of route could shrink them; one tactic did two thirds of it at a fraction of the
 cost. The remaining `interpQ` work belongs to Compound and the `relation_*`
 families, which `grind` does not address.
+
+## Deleting the dead files (2026-08-18)
+
+350 files were outside the `V14Solution` import closure entirely — zero
+closure nodes, so nothing to gain on the export, but real build time and real
+disk. All of them are gone:
+
+| family | files | why it is dead |
+|---|---:|---|
+| `D12SigmaPlusSegreUM_*` | 315 | proved `spanU * minorQ = Qplus`, which has no consumer anywhere |
+| `D12SigmaPlusSegreSpanUDir` | 1 | the aggregator that exists only to `fin_cases` over those 315 |
+| `D12SigmaPlusSegreApply_span{U,V}*` | 26 | 24 shards + 2 aggregators; they `unfold spanV spanV_row0`, and `spanV` is a single two-dimensional `match` with no `spanV_row*` anywhere in the tree, so they have never compiled on any branch |
+| `D12SigmaPlusSegreSpanV_0_0` | 1 | the only other importer of `Apply_spanV`; legacy, never compiled |
+| `D12SigmaPlusSegreSmooth{U,V,W}Prod` | 3 | legacy, `Ambiguous term C/X` |
+| `D12SigmaPlusSegreSmooth{U,V,W}` | 3 | same, and the three `*Prod` files were their only importers |
+| `D12SigmaPlusSegreSpan` | 1 | a dead duplicate of `D12SigmaPlusSegreSpanVDir`, which is the live prover of `spanV_mul_Qplus`; nothing imported it |
+
+The `Apply_span{U,V}` shards were meant to be the `spanU_apply_*` /
+`spanV_apply_*` entry lemmas. Those were derived correctly from the actual
+definitions, in the modules that own the matrices, by
+`scripts/matrix_apply_lemmas.py` — so nothing is lost.
+
+Two emitters had no surviving output and were deleted with their families:
+`scripts/export_sigma_plus_smooth_lean.py` (emitted only `Smooth{U,V,W}`) and
+`scripts/export_sigma_plus_smooth_id.py` (only `Smooth{U,V,W}Prod`). The two
+stale span emitters keep their `exit 2` guard and now list the retired
+families in the guard message, so a future `--emitter-is-current` cannot
+resurrect them by accident. 317 stanzas were pruned from
+`scripts/migration_stage7.json` (deletions only — key order and every
+surviving value are byte-identical).
+
+| | before | after |
+|---|---:|---:|
+| project `.lean` files | 1,379 | 1,029 |
+| legacy (non-`module`) files | 34 | 1 |
+| `.lake/build` | 5.41 GB | 3.96 GB |
+| closure, per-constant | 133,422,326 | 133,422,326 |
+| closure, per-module | 64,982,352 | 64,982,352 |
+
+**-1.45 GB of build artifacts, zero closure change** — which is the point.
+Build time: one `UM_*` module elaborates in 7.07 s wall / 14.2 s CPU, so the
+315 alone were ~37 minutes of wall time on a full glob build, before the two
+aggregators that `fin_cases` over 315 and 504 imports. The checkpoint target
+(`V14Challenge V14Solution AxiomAudit`) never built any of them, so its time
+is unchanged.
 
 ## Retiring the 15x15 ambient tables (2026-08-18)
 
@@ -868,9 +918,9 @@ that would have to move. Consumer counts are modules that name the table:
 
 | table | exposed | consumers | why it is still exposed |
 |---|---:|---:|---|
-| `D12SigmaPlusSegreQplus` | 946 | 521 | Qrel (15) + VQ (189) + UM (315) all `simp only` the entries; UM alone is 315 modules and is outside the `V14Solution` closure, so the rebuild buys nothing for the export |
+| `D12SigmaPlusSegreQplus` | 946 | 521 | Qrel (15) + VQ (189) + UM (315) all `simp only` the entries. The 315 UM modules have since been deleted, so the consumer count is now 206 — revisit. |
 | `D12SigmaPlusSegreMinorQ` | 568 | ~694 | same, plus HM (189) |
-| `D12SigmaPlusSegreSpanU` / `SpanV` | 406 + 406 | ~330 each | driven by UM (315, outside the closure) and by the 24 `Apply_span{U,V}` shards, which have never compiled |
+| `D12SigmaPlusSegreSpanU` / `SpanV` | 406 + 406 | ~330 each | driven by UM (315) and by the 24 `Apply_span{U,V}` shards. **All 339 of those modules have since been deleted**, so `SpanU`'s remaining consumers are few and de-exposing it is now a small job — revisit. |
 | `D12SigmaPlusSegreCore` | 431 | 899 | the most-imported module in the tree; also holds `Ki`, `ofLadj`, `k` — structural definitions where an `_def` equation is meaningless, so the pass would need a name filter |
 | `D12Piece{PP,AA,AP,PA}Data` | 1,848 | 34 each | **bounded, and the next one worth doing** — but the `ActionRow` proofs are `change ACell0_0 = RMVec 0 0 - constVec (-1)`, and `change` needs defeq on both sides of the goal, which no published equation supplies. Those proofs have to be restructured first, not just their tactic arguments rewritten. |
 
@@ -1056,7 +1106,7 @@ ActionRow 800 -> 0, SplitRow 300 -> 0, VQ 189 -> 0, HM 378 -> 189.
 | where | count | why it stands |
 |---|---:|---|
 | `D12SigmaPlusSegreHM`, first of two per module | 189 | It reshapes the *result of a `simp`* into an explicit `bilinearCoeffs (Hrow 0) (Hrow 4) 0 - …` expression. There is no stated equation to rewrite with: the goal simp leaves is only *defeq* to the target, and nothing names its shape. Converting it means pinning down that simp normal form, which is a separate piece of work. The second `change` per module is gone — it is now `rw [minorQ_apply_0_0]`. |
-| `D12SigmaPlusSegreUM` | 315 | outside the `V14Solution` import closure entirely. |
+| ~~`D12SigmaPlusSegreUM`~~ | ~~315~~ | deleted with the family; see "Deleting the dead files". |
 | hand-written, ~60 modules | ~490 | `GeometricVCarrier` 100, `BiprojectiveFunctionFieldProjection` 31, `PSLCard` 29, `ProjectiveEigenvectorReduction` 25, … Authored proofs, not emitter output. |
 
 Deriving the entry equations for VQ turned up the root cause of a

@@ -542,6 +542,12 @@ EMITTERS ARE STALE".  Use a post-pass on the in-tree sources instead.
 
 Re-enable only after demonstrating a byte-identical round-trip, with
 --emitter-is-current.
+
+RETIRED FAMILIES (deleted 2026-08-18, do not re-emit): the 315
+D12SigmaPlusSegreUM_* modules and their aggregator
+D12SigmaPlusSegreSpanUDir.  They proved spanU * minorQ = Qplus, which has
+no consumer anywhere; the whole family sat outside the V14Solution closure
+and cost 895 MB of build artifacts and ~74 CPU-minutes per full build.
 """
 
 
