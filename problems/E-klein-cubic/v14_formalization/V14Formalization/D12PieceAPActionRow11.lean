@@ -11,7 +11,7 @@ theorem entry0 :
     AVec (11 : Fin 20) (0 : Fin 10) =
       characterStackVec RMVec SMVec (-1)
         (1) (11 : Fin 20) (0 : Fin 10) := by
-  change ACell11_0 = SMVec 1 0 - 0
+  rw [AVec_apply_11_0, characterStackVec_apply_11_0]
   funext n
   fin_cases n <;>
     norm_num [ACell11_0, SMVec, SMVecRow1,
@@ -21,7 +21,7 @@ theorem entry1 :
     AVec (11 : Fin 20) (1 : Fin 10) =
       characterStackVec RMVec SMVec (-1)
         (1) (11 : Fin 20) (1 : Fin 10) := by
-  change ACell11_1 = SMVec 1 1 - constVec (1)
+  rw [AVec_apply_11_1, characterStackVec_apply_11_1]
   funext n
   fin_cases n <;>
     norm_num [ACell11_1, SMVec, SMVecRow1,
@@ -31,7 +31,7 @@ theorem entry2 :
     AVec (11 : Fin 20) (2 : Fin 10) =
       characterStackVec RMVec SMVec (-1)
         (1) (11 : Fin 20) (2 : Fin 10) := by
-  change ACell11_2 = SMVec 1 2 - 0
+  rw [AVec_apply_11_2, characterStackVec_apply_11_2]
   funext n
   fin_cases n <;>
     norm_num [ACell11_2, SMVec, SMVecRow1,
@@ -41,7 +41,7 @@ theorem entry3 :
     AVec (11 : Fin 20) (3 : Fin 10) =
       characterStackVec RMVec SMVec (-1)
         (1) (11 : Fin 20) (3 : Fin 10) := by
-  change ACell11_3 = SMVec 1 3 - 0
+  rw [AVec_apply_11_3, characterStackVec_apply_11_3]
   funext n
   fin_cases n <;>
     norm_num [ACell11_3, SMVec, SMVecRow1,
@@ -51,7 +51,7 @@ theorem entry4 :
     AVec (11 : Fin 20) (4 : Fin 10) =
       characterStackVec RMVec SMVec (-1)
         (1) (11 : Fin 20) (4 : Fin 10) := by
-  change ACell11_4 = SMVec 1 4 - 0
+  rw [AVec_apply_11_4, characterStackVec_apply_11_4]
   funext n
   fin_cases n <;>
     norm_num [ACell11_4, SMVec, SMVecRow1,
@@ -61,7 +61,7 @@ theorem entry5 :
     AVec (11 : Fin 20) (5 : Fin 10) =
       characterStackVec RMVec SMVec (-1)
         (1) (11 : Fin 20) (5 : Fin 10) := by
-  change ACell11_5 = SMVec 1 5 - 0
+  rw [AVec_apply_11_5, characterStackVec_apply_11_5]
   funext n
   fin_cases n <;>
     norm_num [ACell11_5, SMVec, SMVecRow1,
@@ -71,7 +71,7 @@ theorem entry6 :
     AVec (11 : Fin 20) (6 : Fin 10) =
       characterStackVec RMVec SMVec (-1)
         (1) (11 : Fin 20) (6 : Fin 10) := by
-  change ACell11_6 = SMVec 1 6 - 0
+  rw [AVec_apply_11_6, characterStackVec_apply_11_6]
   funext n
   fin_cases n <;>
     norm_num [ACell11_6, SMVec, SMVecRow1,
@@ -81,7 +81,7 @@ theorem entry7 :
     AVec (11 : Fin 20) (7 : Fin 10) =
       characterStackVec RMVec SMVec (-1)
         (1) (11 : Fin 20) (7 : Fin 10) := by
-  change ACell11_7 = SMVec 1 7 - 0
+  rw [AVec_apply_11_7, characterStackVec_apply_11_7]
   funext n
   fin_cases n <;>
     norm_num [ACell11_7, SMVec, SMVecRow1,
@@ -91,7 +91,7 @@ theorem entry8 :
     AVec (11 : Fin 20) (8 : Fin 10) =
       characterStackVec RMVec SMVec (-1)
         (1) (11 : Fin 20) (8 : Fin 10) := by
-  change ACell11_8 = SMVec 1 8 - 0
+  rw [AVec_apply_11_8, characterStackVec_apply_11_8]
   funext n
   fin_cases n <;>
     norm_num [ACell11_8, SMVec, SMVecRow1,
@@ -101,7 +101,7 @@ theorem entry9 :
     AVec (11 : Fin 20) (9 : Fin 10) =
       characterStackVec RMVec SMVec (-1)
         (1) (11 : Fin 20) (9 : Fin 10) := by
-  change ACell11_9 = SMVec 1 9 - 0
+  rw [AVec_apply_11_9, characterStackVec_apply_11_9]
   funext n
   fin_cases n <;>
     norm_num [ACell11_9, SMVec, SMVecRow1,

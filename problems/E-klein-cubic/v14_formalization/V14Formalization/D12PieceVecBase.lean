@@ -462,6 +462,1206 @@ public theorem evalMatrix_SMVec :
       (fun b : Fin 10 => SM b j - if b = j then constVec s else 0)
       (i : Fin (10 + 10))
 
+public theorem characterStackVec_apply_0_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (0 : Fin 20) (0 : Fin 10) =
+      RM 0 0 - constVec r := by
+  rfl
+
+public theorem characterStackVec_apply_0_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (0 : Fin 20) (1 : Fin 10) =
+      RM 0 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_0_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (0 : Fin 20) (2 : Fin 10) =
+      RM 0 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_0_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (0 : Fin 20) (3 : Fin 10) =
+      RM 0 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_0_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (0 : Fin 20) (4 : Fin 10) =
+      RM 0 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_0_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (0 : Fin 20) (5 : Fin 10) =
+      RM 0 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_0_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (0 : Fin 20) (6 : Fin 10) =
+      RM 0 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_0_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (0 : Fin 20) (7 : Fin 10) =
+      RM 0 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_0_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (0 : Fin 20) (8 : Fin 10) =
+      RM 0 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_0_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (0 : Fin 20) (9 : Fin 10) =
+      RM 0 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_1_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (1 : Fin 20) (0 : Fin 10) =
+      RM 1 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_1_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (1 : Fin 20) (1 : Fin 10) =
+      RM 1 1 - constVec r := by
+  rfl
+
+public theorem characterStackVec_apply_1_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (1 : Fin 20) (2 : Fin 10) =
+      RM 1 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_1_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (1 : Fin 20) (3 : Fin 10) =
+      RM 1 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_1_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (1 : Fin 20) (4 : Fin 10) =
+      RM 1 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_1_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (1 : Fin 20) (5 : Fin 10) =
+      RM 1 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_1_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (1 : Fin 20) (6 : Fin 10) =
+      RM 1 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_1_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (1 : Fin 20) (7 : Fin 10) =
+      RM 1 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_1_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (1 : Fin 20) (8 : Fin 10) =
+      RM 1 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_1_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (1 : Fin 20) (9 : Fin 10) =
+      RM 1 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_2_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (2 : Fin 20) (0 : Fin 10) =
+      RM 2 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_2_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (2 : Fin 20) (1 : Fin 10) =
+      RM 2 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_2_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (2 : Fin 20) (2 : Fin 10) =
+      RM 2 2 - constVec r := by
+  rfl
+
+public theorem characterStackVec_apply_2_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (2 : Fin 20) (3 : Fin 10) =
+      RM 2 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_2_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (2 : Fin 20) (4 : Fin 10) =
+      RM 2 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_2_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (2 : Fin 20) (5 : Fin 10) =
+      RM 2 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_2_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (2 : Fin 20) (6 : Fin 10) =
+      RM 2 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_2_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (2 : Fin 20) (7 : Fin 10) =
+      RM 2 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_2_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (2 : Fin 20) (8 : Fin 10) =
+      RM 2 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_2_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (2 : Fin 20) (9 : Fin 10) =
+      RM 2 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_3_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (3 : Fin 20) (0 : Fin 10) =
+      RM 3 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_3_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (3 : Fin 20) (1 : Fin 10) =
+      RM 3 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_3_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (3 : Fin 20) (2 : Fin 10) =
+      RM 3 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_3_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (3 : Fin 20) (3 : Fin 10) =
+      RM 3 3 - constVec r := by
+  rfl
+
+public theorem characterStackVec_apply_3_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (3 : Fin 20) (4 : Fin 10) =
+      RM 3 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_3_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (3 : Fin 20) (5 : Fin 10) =
+      RM 3 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_3_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (3 : Fin 20) (6 : Fin 10) =
+      RM 3 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_3_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (3 : Fin 20) (7 : Fin 10) =
+      RM 3 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_3_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (3 : Fin 20) (8 : Fin 10) =
+      RM 3 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_3_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (3 : Fin 20) (9 : Fin 10) =
+      RM 3 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_4_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (4 : Fin 20) (0 : Fin 10) =
+      RM 4 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_4_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (4 : Fin 20) (1 : Fin 10) =
+      RM 4 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_4_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (4 : Fin 20) (2 : Fin 10) =
+      RM 4 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_4_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (4 : Fin 20) (3 : Fin 10) =
+      RM 4 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_4_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (4 : Fin 20) (4 : Fin 10) =
+      RM 4 4 - constVec r := by
+  rfl
+
+public theorem characterStackVec_apply_4_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (4 : Fin 20) (5 : Fin 10) =
+      RM 4 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_4_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (4 : Fin 20) (6 : Fin 10) =
+      RM 4 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_4_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (4 : Fin 20) (7 : Fin 10) =
+      RM 4 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_4_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (4 : Fin 20) (8 : Fin 10) =
+      RM 4 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_4_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (4 : Fin 20) (9 : Fin 10) =
+      RM 4 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_5_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (5 : Fin 20) (0 : Fin 10) =
+      RM 5 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_5_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (5 : Fin 20) (1 : Fin 10) =
+      RM 5 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_5_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (5 : Fin 20) (2 : Fin 10) =
+      RM 5 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_5_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (5 : Fin 20) (3 : Fin 10) =
+      RM 5 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_5_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (5 : Fin 20) (4 : Fin 10) =
+      RM 5 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_5_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (5 : Fin 20) (5 : Fin 10) =
+      RM 5 5 - constVec r := by
+  rfl
+
+public theorem characterStackVec_apply_5_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (5 : Fin 20) (6 : Fin 10) =
+      RM 5 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_5_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (5 : Fin 20) (7 : Fin 10) =
+      RM 5 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_5_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (5 : Fin 20) (8 : Fin 10) =
+      RM 5 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_5_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (5 : Fin 20) (9 : Fin 10) =
+      RM 5 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_6_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (6 : Fin 20) (0 : Fin 10) =
+      RM 6 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_6_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (6 : Fin 20) (1 : Fin 10) =
+      RM 6 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_6_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (6 : Fin 20) (2 : Fin 10) =
+      RM 6 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_6_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (6 : Fin 20) (3 : Fin 10) =
+      RM 6 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_6_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (6 : Fin 20) (4 : Fin 10) =
+      RM 6 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_6_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (6 : Fin 20) (5 : Fin 10) =
+      RM 6 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_6_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (6 : Fin 20) (6 : Fin 10) =
+      RM 6 6 - constVec r := by
+  rfl
+
+public theorem characterStackVec_apply_6_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (6 : Fin 20) (7 : Fin 10) =
+      RM 6 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_6_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (6 : Fin 20) (8 : Fin 10) =
+      RM 6 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_6_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (6 : Fin 20) (9 : Fin 10) =
+      RM 6 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_7_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (7 : Fin 20) (0 : Fin 10) =
+      RM 7 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_7_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (7 : Fin 20) (1 : Fin 10) =
+      RM 7 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_7_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (7 : Fin 20) (2 : Fin 10) =
+      RM 7 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_7_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (7 : Fin 20) (3 : Fin 10) =
+      RM 7 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_7_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (7 : Fin 20) (4 : Fin 10) =
+      RM 7 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_7_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (7 : Fin 20) (5 : Fin 10) =
+      RM 7 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_7_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (7 : Fin 20) (6 : Fin 10) =
+      RM 7 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_7_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (7 : Fin 20) (7 : Fin 10) =
+      RM 7 7 - constVec r := by
+  rfl
+
+public theorem characterStackVec_apply_7_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (7 : Fin 20) (8 : Fin 10) =
+      RM 7 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_7_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (7 : Fin 20) (9 : Fin 10) =
+      RM 7 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_8_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (8 : Fin 20) (0 : Fin 10) =
+      RM 8 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_8_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (8 : Fin 20) (1 : Fin 10) =
+      RM 8 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_8_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (8 : Fin 20) (2 : Fin 10) =
+      RM 8 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_8_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (8 : Fin 20) (3 : Fin 10) =
+      RM 8 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_8_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (8 : Fin 20) (4 : Fin 10) =
+      RM 8 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_8_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (8 : Fin 20) (5 : Fin 10) =
+      RM 8 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_8_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (8 : Fin 20) (6 : Fin 10) =
+      RM 8 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_8_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (8 : Fin 20) (7 : Fin 10) =
+      RM 8 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_8_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (8 : Fin 20) (8 : Fin 10) =
+      RM 8 8 - constVec r := by
+  rfl
+
+public theorem characterStackVec_apply_8_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (8 : Fin 20) (9 : Fin 10) =
+      RM 8 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_9_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (9 : Fin 20) (0 : Fin 10) =
+      RM 9 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_9_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (9 : Fin 20) (1 : Fin 10) =
+      RM 9 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_9_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (9 : Fin 20) (2 : Fin 10) =
+      RM 9 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_9_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (9 : Fin 20) (3 : Fin 10) =
+      RM 9 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_9_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (9 : Fin 20) (4 : Fin 10) =
+      RM 9 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_9_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (9 : Fin 20) (5 : Fin 10) =
+      RM 9 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_9_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (9 : Fin 20) (6 : Fin 10) =
+      RM 9 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_9_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (9 : Fin 20) (7 : Fin 10) =
+      RM 9 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_9_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (9 : Fin 20) (8 : Fin 10) =
+      RM 9 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_9_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (9 : Fin 20) (9 : Fin 10) =
+      RM 9 9 - constVec r := by
+  rfl
+
+public theorem characterStackVec_apply_10_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (10 : Fin 20) (0 : Fin 10) =
+      SM 0 0 - constVec s := by
+  rfl
+
+public theorem characterStackVec_apply_10_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (10 : Fin 20) (1 : Fin 10) =
+      SM 0 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_10_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (10 : Fin 20) (2 : Fin 10) =
+      SM 0 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_10_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (10 : Fin 20) (3 : Fin 10) =
+      SM 0 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_10_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (10 : Fin 20) (4 : Fin 10) =
+      SM 0 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_10_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (10 : Fin 20) (5 : Fin 10) =
+      SM 0 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_10_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (10 : Fin 20) (6 : Fin 10) =
+      SM 0 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_10_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (10 : Fin 20) (7 : Fin 10) =
+      SM 0 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_10_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (10 : Fin 20) (8 : Fin 10) =
+      SM 0 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_10_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (10 : Fin 20) (9 : Fin 10) =
+      SM 0 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_11_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (11 : Fin 20) (0 : Fin 10) =
+      SM 1 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_11_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (11 : Fin 20) (1 : Fin 10) =
+      SM 1 1 - constVec s := by
+  rfl
+
+public theorem characterStackVec_apply_11_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (11 : Fin 20) (2 : Fin 10) =
+      SM 1 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_11_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (11 : Fin 20) (3 : Fin 10) =
+      SM 1 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_11_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (11 : Fin 20) (4 : Fin 10) =
+      SM 1 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_11_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (11 : Fin 20) (5 : Fin 10) =
+      SM 1 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_11_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (11 : Fin 20) (6 : Fin 10) =
+      SM 1 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_11_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (11 : Fin 20) (7 : Fin 10) =
+      SM 1 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_11_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (11 : Fin 20) (8 : Fin 10) =
+      SM 1 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_11_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (11 : Fin 20) (9 : Fin 10) =
+      SM 1 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_12_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (12 : Fin 20) (0 : Fin 10) =
+      SM 2 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_12_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (12 : Fin 20) (1 : Fin 10) =
+      SM 2 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_12_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (12 : Fin 20) (2 : Fin 10) =
+      SM 2 2 - constVec s := by
+  rfl
+
+public theorem characterStackVec_apply_12_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (12 : Fin 20) (3 : Fin 10) =
+      SM 2 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_12_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (12 : Fin 20) (4 : Fin 10) =
+      SM 2 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_12_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (12 : Fin 20) (5 : Fin 10) =
+      SM 2 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_12_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (12 : Fin 20) (6 : Fin 10) =
+      SM 2 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_12_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (12 : Fin 20) (7 : Fin 10) =
+      SM 2 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_12_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (12 : Fin 20) (8 : Fin 10) =
+      SM 2 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_12_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (12 : Fin 20) (9 : Fin 10) =
+      SM 2 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_13_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (13 : Fin 20) (0 : Fin 10) =
+      SM 3 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_13_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (13 : Fin 20) (1 : Fin 10) =
+      SM 3 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_13_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (13 : Fin 20) (2 : Fin 10) =
+      SM 3 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_13_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (13 : Fin 20) (3 : Fin 10) =
+      SM 3 3 - constVec s := by
+  rfl
+
+public theorem characterStackVec_apply_13_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (13 : Fin 20) (4 : Fin 10) =
+      SM 3 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_13_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (13 : Fin 20) (5 : Fin 10) =
+      SM 3 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_13_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (13 : Fin 20) (6 : Fin 10) =
+      SM 3 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_13_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (13 : Fin 20) (7 : Fin 10) =
+      SM 3 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_13_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (13 : Fin 20) (8 : Fin 10) =
+      SM 3 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_13_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (13 : Fin 20) (9 : Fin 10) =
+      SM 3 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_14_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (14 : Fin 20) (0 : Fin 10) =
+      SM 4 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_14_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (14 : Fin 20) (1 : Fin 10) =
+      SM 4 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_14_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (14 : Fin 20) (2 : Fin 10) =
+      SM 4 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_14_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (14 : Fin 20) (3 : Fin 10) =
+      SM 4 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_14_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (14 : Fin 20) (4 : Fin 10) =
+      SM 4 4 - constVec s := by
+  rfl
+
+public theorem characterStackVec_apply_14_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (14 : Fin 20) (5 : Fin 10) =
+      SM 4 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_14_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (14 : Fin 20) (6 : Fin 10) =
+      SM 4 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_14_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (14 : Fin 20) (7 : Fin 10) =
+      SM 4 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_14_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (14 : Fin 20) (8 : Fin 10) =
+      SM 4 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_14_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (14 : Fin 20) (9 : Fin 10) =
+      SM 4 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_15_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (15 : Fin 20) (0 : Fin 10) =
+      SM 5 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_15_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (15 : Fin 20) (1 : Fin 10) =
+      SM 5 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_15_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (15 : Fin 20) (2 : Fin 10) =
+      SM 5 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_15_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (15 : Fin 20) (3 : Fin 10) =
+      SM 5 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_15_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (15 : Fin 20) (4 : Fin 10) =
+      SM 5 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_15_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (15 : Fin 20) (5 : Fin 10) =
+      SM 5 5 - constVec s := by
+  rfl
+
+public theorem characterStackVec_apply_15_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (15 : Fin 20) (6 : Fin 10) =
+      SM 5 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_15_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (15 : Fin 20) (7 : Fin 10) =
+      SM 5 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_15_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (15 : Fin 20) (8 : Fin 10) =
+      SM 5 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_15_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (15 : Fin 20) (9 : Fin 10) =
+      SM 5 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_16_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (16 : Fin 20) (0 : Fin 10) =
+      SM 6 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_16_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (16 : Fin 20) (1 : Fin 10) =
+      SM 6 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_16_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (16 : Fin 20) (2 : Fin 10) =
+      SM 6 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_16_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (16 : Fin 20) (3 : Fin 10) =
+      SM 6 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_16_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (16 : Fin 20) (4 : Fin 10) =
+      SM 6 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_16_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (16 : Fin 20) (5 : Fin 10) =
+      SM 6 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_16_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (16 : Fin 20) (6 : Fin 10) =
+      SM 6 6 - constVec s := by
+  rfl
+
+public theorem characterStackVec_apply_16_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (16 : Fin 20) (7 : Fin 10) =
+      SM 6 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_16_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (16 : Fin 20) (8 : Fin 10) =
+      SM 6 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_16_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (16 : Fin 20) (9 : Fin 10) =
+      SM 6 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_17_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (17 : Fin 20) (0 : Fin 10) =
+      SM 7 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_17_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (17 : Fin 20) (1 : Fin 10) =
+      SM 7 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_17_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (17 : Fin 20) (2 : Fin 10) =
+      SM 7 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_17_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (17 : Fin 20) (3 : Fin 10) =
+      SM 7 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_17_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (17 : Fin 20) (4 : Fin 10) =
+      SM 7 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_17_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (17 : Fin 20) (5 : Fin 10) =
+      SM 7 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_17_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (17 : Fin 20) (6 : Fin 10) =
+      SM 7 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_17_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (17 : Fin 20) (7 : Fin 10) =
+      SM 7 7 - constVec s := by
+  rfl
+
+public theorem characterStackVec_apply_17_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (17 : Fin 20) (8 : Fin 10) =
+      SM 7 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_17_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (17 : Fin 20) (9 : Fin 10) =
+      SM 7 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_18_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (18 : Fin 20) (0 : Fin 10) =
+      SM 8 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_18_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (18 : Fin 20) (1 : Fin 10) =
+      SM 8 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_18_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (18 : Fin 20) (2 : Fin 10) =
+      SM 8 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_18_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (18 : Fin 20) (3 : Fin 10) =
+      SM 8 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_18_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (18 : Fin 20) (4 : Fin 10) =
+      SM 8 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_18_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (18 : Fin 20) (5 : Fin 10) =
+      SM 8 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_18_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (18 : Fin 20) (6 : Fin 10) =
+      SM 8 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_18_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (18 : Fin 20) (7 : Fin 10) =
+      SM 8 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_18_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (18 : Fin 20) (8 : Fin 10) =
+      SM 8 8 - constVec s := by
+  rfl
+
+public theorem characterStackVec_apply_18_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (18 : Fin 20) (9 : Fin 10) =
+      SM 8 9 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_19_0
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (19 : Fin 20) (0 : Fin 10) =
+      SM 9 0 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_19_1
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (19 : Fin 20) (1 : Fin 10) =
+      SM 9 1 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_19_2
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (19 : Fin 20) (2 : Fin 10) =
+      SM 9 2 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_19_3
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (19 : Fin 20) (3 : Fin 10) =
+      SM 9 3 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_19_4
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (19 : Fin 20) (4 : Fin 10) =
+      SM 9 4 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_19_5
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (19 : Fin 20) (5 : Fin 10) =
+      SM 9 5 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_19_6
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (19 : Fin 20) (6 : Fin 10) =
+      SM 9 6 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_19_7
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (19 : Fin 20) (7 : Fin 10) =
+      SM 9 7 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_19_8
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (19 : Fin 20) (8 : Fin 10) =
+      SM 9 8 - 0 := by
+  rfl
+
+public theorem characterStackVec_apply_19_9
+    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
+    characterStackVec RM SM r s (19 : Fin 20) (9 : Fin 10) =
+      SM 9 9 - constVec s := by
+  rfl
+
 public theorem eval_characterStackVec
     (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :
     evalMatrix (characterStackVec RM SM r s) =

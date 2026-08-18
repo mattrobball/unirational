@@ -285,6 +285,31 @@ def emit_base(payload_sha: str) -> str:
         "      (fun b : Fin 10 => SM b j - if b = j then constVec s else 0)",
         "      (i : Fin (10 + 10))",
         "",
+        # Projection equations for `characterStackVec`, one per (i, j).
+        #
+        # The character-stack row certificates used to reach the same
+        # equations with `change ACell{i}_{j} = RMVec i j - …`, which forces
+        # the exported context to unfold BOTH sides -- `AVec` and its rows on
+        # the left, `characterStackVec` and its `Fin.addCases` on the right --
+        # and so pinned `@[expose]` on the coefficient tables.  Publishing the
+        # equation here does the `Fin.addCases` reduction once instead of once
+        # per certificate, and lets the consumer `rw` with it.
+        *[
+            line
+            for i in range(20)
+            for j in range(10)
+            for line in (
+                f"public theorem characterStackVec_apply_{i}_{j}",
+                "    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : \u211a) :",
+                f"    characterStackVec RM SM r s ({i} : Fin 20) ({j} : Fin 10) =",
+                (f"      {'RM' if i < 10 else 'SM'} {i if i < 10 else i - 10} {j}"
+                 + (f" - constVec {'r' if i < 10 else 's'}"
+                    if (i if i < 10 else i - 10) == j else " - 0")
+                 + " := by"),
+                "  rfl",
+                "",
+            )
+        ],
         "theorem eval_characterStackVec",
         "    (RM SM : Matrix (Fin 10) (Fin 10) Vec) (r s : ℚ) :",
         "    evalMatrix (characterStackVec RM SM r s) =",
@@ -509,7 +534,22 @@ def emit_pa_data(payload: dict, payload_sha: str) -> str:
               "  fun i j => match i.val with"]
     for i in range(20):
         lines.append(f"  | {i} => ARow{i} j")
-    lines += ["  | _ => 0", "", "end V14Formalization.D12PiecePAData", ""]
+    lines += ["  | _ => 0", ""]
+    # Projection equations, one per entry.  The certificates that consume this
+    # table used to reach them with `change {name}Cell{i}_{j} = …`, which makes
+    # the exported context unfold `{name}Vec` and its rows and so pins
+    # `@[expose]` on the whole table.  Published as theorems, the consumer
+    # rewrites instead of forcing defeq, and the bodies can stay internal.
+    for name, rows, cols in (("X", 10, 20), ("A", 20, 10)):
+        for i in range(rows):
+            for j in range(cols):
+                lines += [
+                    f"public theorem {name}Vec_apply_{i}_{j} :",
+                    f"    {name}Vec ({i} : Fin {rows}) ({j} : Fin {cols}) = {name}Cell{i}_{j} := by",
+                    "  rfl",
+                    "",
+                ]
+    lines += ["end V14Formalization.D12PiecePAData", ""]
     return "\n".join(lines)
 
 
@@ -674,7 +714,10 @@ def emit_pa_action_row(row: int) -> str:
             f"    AVec ({row} : Fin 20) ({col} : Fin 10) =",
             "      characterStackVec RMVec SMVec 1 (-1)",
             f"        ({row} : Fin 20) ({col} : Fin 10) := by",
-            f"  change ACell{row}_{col} = {prefix}Vec {block_row} {col} - {correction}",
+            # No `change`: rewrite with the projection equations the data
+            # module and D12PieceVecBase publish, so neither side has to be
+            # unfolded in the exported context.
+            f"  rw [AVec_apply_{row}_{col}, characterStackVec_apply_{row}_{col}]",
             "  funext n",
             "  fin_cases n <;>",
             f"    norm_num [ACell{row}_{col}, {prefix}Vec, {prefix}VecRow{block_row},",

@@ -32,6 +32,19 @@ def emit_matrix(lines: list[str], name: str, data: list, rows: int, cols: int) -
     for i in range(rows):
         lines.append(f"  | {i} => {name}Row{i} j")
     lines += ["  | _ => 0", ""]
+    # Projection equations, one per entry.  The certificates that consume this
+    # table used to reach them with `change {name}Cell{i}_{j} = …`, which makes
+    # the exported context unfold `{name}Vec` and its rows and so pins
+    # `@[expose]` on the whole table.  Published as theorems, the consumer
+    # rewrites instead of forcing defeq, and the bodies can stay internal.
+    for i in range(rows):
+        for j in range(cols):
+            lines += [
+                f"public theorem {name}Vec_apply_{i}_{j} :",
+                f"    {name}Vec ({i} : Fin {rows}) ({j} : Fin {cols}) = {name}Cell{i}_{j} := by",
+                "  rfl",
+                "",
+            ]
 
 
 def emit_data(payload: dict, sha: str, piece: str) -> str:
@@ -741,7 +754,10 @@ def emit_action_row(piece: str, row: int) -> str:
             f"    AVec ({row} : Fin 20) ({col} : Fin 10) =",
             f"      characterStackVec RMVec SMVec ({q_fraction(Fraction(rot_sign))})",
             f"        ({q_fraction(Fraction(refl_sign))}) ({row} : Fin 20) ({col} : Fin 10) := by",
-            f"  change ACell{row}_{col} = {prefix}Vec {block_row} {col} - {correction_expr}",
+            # No `change`: rewrite with the projection equations the data
+            # module and D12PieceVecBase publish, so neither side has to be
+            # unfolded in the exported context.
+            f"  rw [AVec_apply_{row}_{col}, characterStackVec_apply_{row}_{col}]",
             "  funext n", "  fin_cases n <;>",
             f"    norm_num [ACell{row}_{col}, {prefix}Vec, {prefix}VecRow{block_row},",
             f"      D12PolynomialData.{prefix}{block_row}c{col}, constVec, basis]", "",
