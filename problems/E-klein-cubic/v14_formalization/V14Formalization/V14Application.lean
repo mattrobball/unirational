@@ -231,7 +231,7 @@ public theorem PSL2F11_isCenterless : IsCenterless PSL2F11 := by
 
 @[expose] public def sigmaLift : SLG := ⟨!![0, -1; 1, 0], by simp [Matrix.det_fin_two_of]⟩
 
-@[expose] public def sigma : PSL2F11 := QuotientGroup.mk sigmaLift
+def sigma : PSL2F11 := QuotientGroup.mk sigmaLift
 
 theorem sigma_isInvolution : IsInvolution sigma := by
   constructor

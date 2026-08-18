@@ -468,9 +468,9 @@ public theorem restrictedAction_eval
   · exact restrictedAction_eval_row_8 z j
   · exact restrictedAction_eval_row_9 z j
 
-@[expose] public def quotient_5 : Polynomial ℚ := 0
+def quotient_5 : Polynomial ℚ := 0
 
-public theorem relation_5 (j : Fin 10) :
+theorem relation_5 (j : Fin 10) :
     (PluckerNaturality.compound2Lex T6_poly * B_poly) 5 j -
       C (-1 / 2 : ℚ) *
         (PluckerNaturality.compound2Lex T6_poly * B_poly) 3 j =
@@ -497,9 +497,9 @@ public theorem eval_relation_5
   exact D12GeneratorPolynomialCore.eval_relation_of_modPhi z hPhi _ _ _
     (-1 / 2 : ℚ) (relation_5 j)
 
-@[expose] public def quotient_8 : Polynomial ℚ := 0
+def quotient_8 : Polynomial ℚ := 0
 
-public theorem relation_8 (j : Fin 10) :
+theorem relation_8 (j : Fin 10) :
     (PluckerNaturality.compound2Lex T6_poly * B_poly) 8 j -
       C (1 / 2 : ℚ) *
         (PluckerNaturality.compound2Lex T6_poly * B_poly) 1 j =

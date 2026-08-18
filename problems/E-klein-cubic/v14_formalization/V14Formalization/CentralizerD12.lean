@@ -113,7 +113,7 @@ public theorem refl_mem (p : CircleM1) :
   | .inl p => ⟨QuotientGroup.mk (mkRot p), rot_mem p⟩
   | .inr p => ⟨QuotientGroup.mk (mkRefl p), refl_mem p⟩
 
-public lemma sq_eq_one_cases (r : F) (hr : r ^ 2 = 1) : r = 1 ∨ r = -1 := by
+lemma sq_eq_one_cases (r : F) (hr : r ^ 2 = 1) : r = 1 ∨ r = -1 := by
   have fac : (r - 1) * (r + 1) = 0 := by
     have t : r ^ 2 - 1 = 0 := by rw [hr, sub_self]
     convert t using 1; ring
@@ -270,7 +270,7 @@ lemma liftsToN_negLift (x : Circle1 ⊕ CircleM1) :
   apply Subtype.ext
   rw [liftsToN_val, liftsToN_val, liftMat_negLift, QuotientGroup.mk_mul, mk_negI, one_mul]
 
-public lemma eq_zero_of_eq_neg (x : F) (h : x = -x) : x = 0 := by
+lemma eq_zero_of_eq_neg (x : F) (h : x = -x) : x = 0 := by
   have : (2 : F) * x = 0 := by
     have hx : x + x = x + (-x) := congrArg (fun t => x + t) h
     have hx0 : x + x = 0 := hx.trans (add_neg_cancel x)

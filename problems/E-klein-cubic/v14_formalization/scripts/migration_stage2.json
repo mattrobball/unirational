@@ -1191,10 +1191,12 @@
    "YCell0_8",
    "YCell0_9",
    "YRow0",
-   "YVec",
-   "payloadSha256"
+   "YVec"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PieceAAPlucker.lean": {
   "expose": [
@@ -2400,10 +2402,12 @@
    "YCell0_8",
    "YCell0_9",
    "YRow0",
-   "YVec",
-   "payloadSha256"
+   "YVec"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PieceAPPlucker.lean": {
   "expose": [
@@ -2855,10 +2859,12 @@
    "BRow8",
    "BRow9",
    "BVec",
-   "evalMatrix_BVec",
-   "payloadSha256"
+   "evalMatrix_BVec"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePAAction.lean": {
   "expose": [],
@@ -3896,10 +3902,12 @@
    "XRow7",
    "XRow8",
    "XRow9",
-   "XVec",
-   "payloadSha256"
+   "XVec"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePASplit.lean": {
   "expose": [],
@@ -4180,10 +4188,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff0_1Product1.lean": {
   "expose": [
@@ -4192,10 +4202,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff0_1Product2.lean": {
   "expose": [
@@ -4204,10 +4216,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff0_1Product3.lean": {
   "expose": [
@@ -4216,10 +4230,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff0_1Product4.lean": {
   "expose": [
@@ -4228,10 +4244,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff0_1Product5.lean": {
   "expose": [
@@ -4240,10 +4258,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff0_2.lean": {
   "expose": [],
@@ -4276,10 +4296,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff1_1Product1.lean": {
   "expose": [
@@ -4288,10 +4310,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff1_1Product2.lean": {
   "expose": [
@@ -4300,10 +4324,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff1_1Product3.lean": {
   "expose": [
@@ -4312,10 +4338,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff1_1Product4.lean": {
   "expose": [
@@ -4324,10 +4352,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff1_1Product5.lean": {
   "expose": [
@@ -4336,10 +4366,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff1_2.lean": {
   "expose": [],
@@ -4372,10 +4404,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff2_1Product1.lean": {
   "expose": [
@@ -4384,10 +4418,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff2_1Product2.lean": {
   "expose": [
@@ -4396,10 +4432,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff2_1Product3.lean": {
   "expose": [
@@ -4408,10 +4446,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff2_1Product4.lean": {
   "expose": [
@@ -4420,10 +4460,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff2_1Product5.lean": {
   "expose": [
@@ -4432,10 +4474,12 @@
   "expose_all_public_defs": false,
   "public": [
    "eval_product",
-   "payloadSha256",
    "productValue"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPCoeff2_2.lean": {
   "expose": [],
@@ -5421,10 +5465,12 @@
    "YCell1_9",
    "YRow0",
    "YRow1",
-   "YVec",
-   "payloadSha256"
+   "YVec"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPDeterminant.lean": {
   "expose": [],
@@ -5558,10 +5604,12 @@
    "CVec",
    "deltaVec",
    "delta_ne_zero",
-   "evalMatrix_BKVec",
-   "payloadSha256"
+   "evalMatrix_BKVec"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "payloadSha256"
+  ]
  },
  "V14Formalization/D12PiecePPSplit.lean": {
   "expose": [],

@@ -50,6 +50,17 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
+# The two theorems Comparator compares. They are declared in BOTH roots — that
+# is the whole point of a challenge/solution pair — so any heuristic keyed on
+# "this name is declared in more than one module" will try to demote them, and
+# NOTHING in the build notices: no module imports a root, so the tree stays
+# green while the published surface silently empties. (Observed 2026-08-17;
+# caught by scripts/check_module_invariants.sh, not by `lake build`.)
+PUBLISHED = {
+    "noEquivariantRationalMap_from_ambient",
+    "noEquivariantRationalMap_projectiveGVariety",
+}
+
 DECL_KWS = r"(?:def|theorem|lemma|abbrev|structure|inductive|class|instance|opaque)"
 # column-0 declaration line, optionally preceded (same line) by attributes,
 # `noncomputable`, and/or a `local`/`scoped` instance scope.
@@ -69,9 +80,20 @@ def decl_name(rest: str) -> str | None:
 
 
 def migrate_text(text: str, cfg: dict) -> str:
+    bad = PUBLISHED & set(cfg.get("no_public", []))
+    if bad:
+        raise SystemExit(
+            f"refusing to demote the published Comparator theorems: {sorted(bad)}"
+        )
     public = set(cfg.get("public", []))
     expose = set(cfg.get("expose", []))
     no_expose = set(cfg.get("no_expose", []))
+    # Names the config KNOWS must not be public. The usage scan matches on a
+    # declaration's last name component, so a name declared in many sibling
+    # modules (`quotient_0` lives in 35 of them) looks used by every importer
+    # that mentions the token, whoever actually declared the one it means.
+    # `no_public` records the demotions a namespace-aware re-resolution found.
+    no_public = set(cfg.get("no_public", [])) - PUBLISHED
     public |= expose
     # From stage 2 on the default posture is Mathlib's: every public def and
     # instance carries @[expose].  Fine-grained exposure (stage 1) proved to
@@ -140,6 +162,20 @@ def migrate_text(text: str, cfg: dict) -> str:
                 out.append(line)
                 in_block_comment += opens - closes
                 continue
+
+        # no_public STRIPS a `public` (and any `@[expose]`) applied by an
+        # earlier run, so demoting a name in the config demotes it in the file.
+        if no_public:
+            npm = re.match(r"^(?P<attrs>(?:@\[[^\]\n]*\]\s*)*)(?P<nc>noncomputable\s+)?public\s+(?P<tail>.*)$", line)
+            if npm:
+                tm = DECL_RE.match(npm.group("tail"))
+                nname = decl_name(tm.group("rest")) if tm else None
+                if nname is not None and nname in no_public:
+                    attrs = re.sub(r"@\[expose\]\s*", "", npm.group("attrs"))
+                    line = attrs + (npm.group("nc") or "") + npm.group("tail")
+                    out.append(line)
+                    in_block_comment += opens - closes
+                    continue
 
         # no_expose must also STRIP an @[expose] applied by an earlier run
         # (the applier otherwise only adds annotations).

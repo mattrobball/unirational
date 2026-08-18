@@ -38,14 +38,14 @@ private theorem C_one_over_11_sq :
   congr 1
   ring_nf
 
-public abbrev QuotCoeff := Fin 9 → ℤ
-@[expose] public def ofQuotNumerator (v : QuotCoeff) : Polynomial ℚ :=
+@[expose] public abbrev QuotCoeff := Fin 9 → ℤ
+def ofQuotNumerator (v : QuotCoeff) : Polynomial ℚ :=
   ∑ i : Fin 9, (v i : Polynomial ℚ) *
     (C (1 / 11 : ℚ) * C (1 / 11 : ℚ)) * X ^ i.val
 
 def compoundEntry_0 : Polynomial ℚ :=
   F6c_1_0 * F6c_5_1 - F6c_1_1 * F6c_5_0
-@[expose] public def quotient_0 : Polynomial ℚ :=
+def quotient_0 : Polynomial ℚ :=
   ofQuotNumerator ![15, -8, -7, 13, 0, -6, 4, 0, 0]
 theorem cert_0 :
     compoundEntry_0 - D12PolynomialData.FRow8.F_poly 8 0 =
@@ -61,7 +61,7 @@ theorem cert_0 :
 
 def compoundEntry_1 : Polynomial ℚ :=
   F6c_1_0 * F6c_5_2 - F6c_1_2 * F6c_5_0
-@[expose] public def quotient_1 : Polynomial ℚ :=
+def quotient_1 : Polynomial ℚ :=
   ofQuotNumerator ![0, 4, 6, -1, 7, 4, -2, 4, 0]
 theorem cert_1 :
     compoundEntry_1 - D12PolynomialData.FRow8.F_poly 8 1 =
@@ -77,7 +77,7 @@ theorem cert_1 :
 
 def compoundEntry_2 : Polynomial ℚ :=
   F6c_1_0 * F6c_5_3 - F6c_1_3 * F6c_5_0
-@[expose] public def quotient_2 : Polynomial ℚ :=
+def quotient_2 : Polynomial ℚ :=
   ofQuotNumerator ![-15, 7, -13, -1, 0, -4, 8, -4, 0]
 theorem cert_2 :
     compoundEntry_2 - D12PolynomialData.FRow8.F_poly 8 2 =
@@ -93,7 +93,7 @@ theorem cert_2 :
 
 def compoundEntry_3 : Polynomial ℚ :=
   F6c_1_0 * F6c_5_4 - F6c_1_4 * F6c_5_0
-@[expose] public def quotient_3 : Polynomial ℚ :=
+def quotient_3 : Polynomial ℚ :=
   ofQuotNumerator ![2, 7, 2, -11, 2, 9, -2, 2, 0]
 theorem cert_3 :
     compoundEntry_3 - D12PolynomialData.FRow8.F_poly 8 3 =
@@ -109,7 +109,7 @@ theorem cert_3 :
 
 def compoundEntry_4 : Polynomial ℚ :=
   F6c_1_0 * F6c_5_5 - F6c_1_5 * F6c_5_0
-@[expose] public def quotient_4 : Polynomial ℚ :=
+def quotient_4 : Polynomial ℚ :=
   ofQuotNumerator ![-13, 12, -10, 0, -9, -3, -8, -2, 0]
 theorem cert_4 :
     compoundEntry_4 - D12PolynomialData.FRow8.F_poly 8 4 =
@@ -125,7 +125,7 @@ theorem cert_4 :
 
 def compoundEntry_5 : Polynomial ℚ :=
   F6c_1_1 * F6c_5_2 - F6c_1_2 * F6c_5_1
-@[expose] public def quotient_5 : Polynomial ℚ :=
+def quotient_5 : Polynomial ℚ :=
   ofQuotNumerator ![3, 23, -13, -9, 7, 2, -6, 4, 0]
 theorem cert_5 :
     compoundEntry_5 - D12PolynomialData.FRow8.F_poly 8 5 =
@@ -141,7 +141,7 @@ theorem cert_5 :
 
 def compoundEntry_6 : Polynomial ℚ :=
   F6c_1_1 * F6c_5_3 - F6c_1_3 * F6c_5_1
-@[expose] public def quotient_6 : Polynomial ℚ :=
+def quotient_6 : Polynomial ℚ :=
   ofQuotNumerator ![4, 7, -20, 7, 8, -16, 10, 0, 0]
 theorem cert_6 :
     compoundEntry_6 - D12PolynomialData.FRow8.F_poly 8 6 =
@@ -157,7 +157,7 @@ theorem cert_6 :
 
 def compoundEntry_7 : Polynomial ℚ :=
   F6c_1_1 * F6c_5_4 - F6c_1_4 * F6c_5_1
-@[expose] public def quotient_7 : Polynomial ℚ :=
+def quotient_7 : Polynomial ℚ :=
   ofQuotNumerator ![11, -4, 4, 4, -8, 1, -1, 4, 0]
 theorem cert_7 :
     compoundEntry_7 - D12PolynomialData.FRow8.F_poly 8 7 =
@@ -173,7 +173,7 @@ theorem cert_7 :
 
 def compoundEntry_8 : Polynomial ℚ :=
   F6c_1_1 * F6c_5_5 - F6c_1_5 * F6c_5_1
-@[expose] public def quotient_8 : Polynomial ℚ :=
+def quotient_8 : Polynomial ℚ :=
   ofQuotNumerator ![-14, 10, 0, 11, -7, 7, 1, -8, 0]
 theorem cert_8 :
     compoundEntry_8 - D12PolynomialData.FRow8.F_poly 8 8 =
@@ -189,7 +189,7 @@ theorem cert_8 :
 
 def compoundEntry_9 : Polynomial ℚ :=
   F6c_1_2 * F6c_5_3 - F6c_1_3 * F6c_5_2
-@[expose] public def quotient_9 : Polynomial ℚ :=
+def quotient_9 : Polynomial ℚ :=
   ofQuotNumerator ![3, -8, 11, -11, 0, 10, 0, 2, 4]
 theorem cert_9 :
     compoundEntry_9 - D12PolynomialData.FRow8.F_poly 8 9 =

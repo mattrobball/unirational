@@ -958,7 +958,7 @@ private theorem phaseCompoundValue_2_14 :
     module
 
 
-@[expose] public def quotient_0 : Polynomial ℚ := C (-1 : ℚ) + C (1 : ℚ) * X ^ 1 + C (1 / 2 : ℚ) * X ^ 3 + C (-1 / 2 : ℚ) * X ^ 5 + C (-1 / 2 : ℚ) * X ^ 9 + C (1 / 2 : ℚ) * X ^ 10
+def quotient_0 : Polynomial ℚ := C (-1 : ℚ) + C (1 : ℚ) * X ^ 1 + C (1 / 2 : ℚ) * X ^ 3 + C (-1 / 2 : ℚ) * X ^ 5 + C (-1 / 2 : ℚ) * X ^ 9 + C (1 / 2 : ℚ) * X ^ 10
 
 theorem phase_relation_0 :
     (PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 10 0 -
@@ -987,7 +987,7 @@ theorem generator_relation_0 :
     quotient_0 (-1 / 2 : ℚ) 10 2 0
     D12GeneratorPolynomialCore.compound_S6_mul_B_factor phase_relation_0
 
-public theorem eval_relation_0
+theorem eval_relation_0
     {R : Type*} [CommRing R] [Algebra ℚ R]
     (z : R) (hPhi : D12PolynomialEvaluation.evalPolyAt z Phi11 = 0) :
     D12PolynomialEvaluation.evalPolyAt z
@@ -998,7 +998,7 @@ public theorem eval_relation_0
   exact D12GeneratorPolynomialCore.eval_relation_of_modPhi z hPhi _ _ _ (-1 / 2 : ℚ)
     generator_relation_0
 
-@[expose] public def quotient_1 : Polynomial ℚ := C (-1 : ℚ) + C (1 : ℚ) * X ^ 1 + C (1 / 2 : ℚ) * X ^ 3 + C (-1 / 2 : ℚ) * X ^ 4 + C (1 / 2 : ℚ) * X ^ 6 + C (-1 : ℚ) * X ^ 7 + C (1 / 2 : ℚ) * X ^ 8
+def quotient_1 : Polynomial ℚ := C (-1 : ℚ) + C (1 : ℚ) * X ^ 1 + C (1 / 2 : ℚ) * X ^ 3 + C (-1 / 2 : ℚ) * X ^ 4 + C (1 / 2 : ℚ) * X ^ 6 + C (-1 : ℚ) * X ^ 7 + C (1 / 2 : ℚ) * X ^ 8
 
 theorem phase_relation_1 :
     (PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 10 1 -
@@ -1027,7 +1027,7 @@ theorem generator_relation_1 :
     quotient_1 (-1 / 2 : ℚ) 10 2 1
     D12GeneratorPolynomialCore.compound_S6_mul_B_factor phase_relation_1
 
-public theorem eval_relation_1
+theorem eval_relation_1
     {R : Type*} [CommRing R] [Algebra ℚ R]
     (z : R) (hPhi : D12PolynomialEvaluation.evalPolyAt z Phi11 = 0) :
     D12PolynomialEvaluation.evalPolyAt z
@@ -1038,7 +1038,7 @@ public theorem eval_relation_1
   exact D12GeneratorPolynomialCore.eval_relation_of_modPhi z hPhi _ _ _ (-1 / 2 : ℚ)
     generator_relation_1
 
-@[expose] public def quotient_2 : Polynomial ℚ := C (-1 : ℚ) + C (3 / 2 : ℚ) * X ^ 1 + C (-1 / 2 : ℚ) * X ^ 3 + C (-1 / 2 : ℚ) * X ^ 5 + C (1 / 2 : ℚ) * X ^ 6
+def quotient_2 : Polynomial ℚ := C (-1 : ℚ) + C (3 / 2 : ℚ) * X ^ 1 + C (-1 / 2 : ℚ) * X ^ 3 + C (-1 / 2 : ℚ) * X ^ 5 + C (1 / 2 : ℚ) * X ^ 6
 
 theorem phase_relation_2 :
     (PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 10 2 -
@@ -1067,7 +1067,7 @@ theorem generator_relation_2 :
     quotient_2 (-1 / 2 : ℚ) 10 2 2
     D12GeneratorPolynomialCore.compound_S6_mul_B_factor phase_relation_2
 
-public theorem eval_relation_2
+theorem eval_relation_2
     {R : Type*} [CommRing R] [Algebra ℚ R]
     (z : R) (hPhi : D12PolynomialEvaluation.evalPolyAt z Phi11 = 0) :
     D12PolynomialEvaluation.evalPolyAt z
@@ -1078,7 +1078,7 @@ public theorem eval_relation_2
   exact D12GeneratorPolynomialCore.eval_relation_of_modPhi z hPhi _ _ _ (-1 / 2 : ℚ)
     generator_relation_2
 
-@[expose] public def quotient_3 : Polynomial ℚ := C (-1 : ℚ) + C (3 / 2 : ℚ) * X ^ 1 + C (-1 / 2 : ℚ) * X ^ 2 + C (-1 / 2 : ℚ) * X ^ 3 + C (1 / 2 : ℚ) * X ^ 4 + C (1 / 2 : ℚ) * X ^ 6 + C (-1 / 2 : ℚ) * X ^ 7
+def quotient_3 : Polynomial ℚ := C (-1 : ℚ) + C (3 / 2 : ℚ) * X ^ 1 + C (-1 / 2 : ℚ) * X ^ 2 + C (-1 / 2 : ℚ) * X ^ 3 + C (1 / 2 : ℚ) * X ^ 4 + C (1 / 2 : ℚ) * X ^ 6 + C (-1 / 2 : ℚ) * X ^ 7
 
 theorem phase_relation_3 :
     (PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 10 3 -
@@ -1107,7 +1107,7 @@ theorem generator_relation_3 :
     quotient_3 (-1 / 2 : ℚ) 10 2 3
     D12GeneratorPolynomialCore.compound_S6_mul_B_factor phase_relation_3
 
-public theorem eval_relation_3
+theorem eval_relation_3
     {R : Type*} [CommRing R] [Algebra ℚ R]
     (z : R) (hPhi : D12PolynomialEvaluation.evalPolyAt z Phi11 = 0) :
     D12PolynomialEvaluation.evalPolyAt z
@@ -1118,7 +1118,7 @@ public theorem eval_relation_3
   exact D12GeneratorPolynomialCore.eval_relation_of_modPhi z hPhi _ _ _ (-1 / 2 : ℚ)
     generator_relation_3
 
-@[expose] public def quotient_4 : Polynomial ℚ := C (-1 : ℚ) + C (1 / 2 : ℚ) * X ^ 1 + C (1 : ℚ) * X ^ 2 + C (-1 / 2 : ℚ) * X ^ 3 + C (1 / 2 : ℚ) * X ^ 7 + C (-1 / 2 : ℚ) * X ^ 8
+def quotient_4 : Polynomial ℚ := C (-1 : ℚ) + C (1 / 2 : ℚ) * X ^ 1 + C (1 : ℚ) * X ^ 2 + C (-1 / 2 : ℚ) * X ^ 3 + C (1 / 2 : ℚ) * X ^ 7 + C (-1 / 2 : ℚ) * X ^ 8
 
 theorem phase_relation_4 :
     (PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 10 4 -
@@ -1147,7 +1147,7 @@ theorem generator_relation_4 :
     quotient_4 (-1 / 2 : ℚ) 10 2 4
     D12GeneratorPolynomialCore.compound_S6_mul_B_factor phase_relation_4
 
-public theorem eval_relation_4
+theorem eval_relation_4
     {R : Type*} [CommRing R] [Algebra ℚ R]
     (z : R) (hPhi : D12PolynomialEvaluation.evalPolyAt z Phi11 = 0) :
     D12PolynomialEvaluation.evalPolyAt z
@@ -1158,7 +1158,7 @@ public theorem eval_relation_4
   exact D12GeneratorPolynomialCore.eval_relation_of_modPhi z hPhi _ _ _ (-1 / 2 : ℚ)
     generator_relation_4
 
-@[expose] public def quotient_5 : Polynomial ℚ := C (1 : ℚ) * X ^ 2 + C (-1 : ℚ) * X ^ 3 + C (-1 : ℚ) * X ^ 8 + C (1 : ℚ) * X ^ 9
+def quotient_5 : Polynomial ℚ := C (1 : ℚ) * X ^ 2 + C (-1 : ℚ) * X ^ 3 + C (-1 : ℚ) * X ^ 8 + C (1 : ℚ) * X ^ 9
 
 theorem phase_relation_5 :
     (PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 10 5 -
@@ -1198,7 +1198,7 @@ public theorem eval_relation_5
   exact D12GeneratorPolynomialCore.eval_relation_of_modPhi z hPhi _ _ _ (-1 / 2 : ℚ)
     generator_relation_5
 
-@[expose] public def quotient_6 : Polynomial ℚ := C (1 : ℚ) * X ^ 1 + C (-1 : ℚ) * X ^ 2 + C (-1 : ℚ) * X ^ 3 + C (1 : ℚ) * X ^ 4
+def quotient_6 : Polynomial ℚ := C (1 : ℚ) * X ^ 1 + C (-1 : ℚ) * X ^ 2 + C (-1 : ℚ) * X ^ 3 + C (1 : ℚ) * X ^ 4
 
 theorem phase_relation_6 :
     (PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 10 6 -
@@ -1227,7 +1227,7 @@ theorem generator_relation_6 :
     quotient_6 (-1 / 2 : ℚ) 10 2 6
     D12GeneratorPolynomialCore.compound_S6_mul_B_factor phase_relation_6
 
-public theorem eval_relation_6
+theorem eval_relation_6
     {R : Type*} [CommRing R] [Algebra ℚ R]
     (z : R) (hPhi : D12PolynomialEvaluation.evalPolyAt z Phi11 = 0) :
     D12PolynomialEvaluation.evalPolyAt z
@@ -1238,7 +1238,7 @@ public theorem eval_relation_6
   exact D12GeneratorPolynomialCore.eval_relation_of_modPhi z hPhi _ _ _ (-1 / 2 : ℚ)
     generator_relation_6
 
-@[expose] public def quotient_7 : Polynomial ℚ := C (1 : ℚ) * X ^ 2 + C (-1 : ℚ) * X ^ 3 + C (-1 : ℚ) * X ^ 6 + C (1 : ℚ) * X ^ 7
+def quotient_7 : Polynomial ℚ := C (1 : ℚ) * X ^ 2 + C (-1 : ℚ) * X ^ 3 + C (-1 : ℚ) * X ^ 6 + C (1 : ℚ) * X ^ 7
 
 theorem phase_relation_7 :
     (PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 10 7 -
@@ -1267,7 +1267,7 @@ theorem generator_relation_7 :
     quotient_7 (-1 / 2 : ℚ) 10 2 7
     D12GeneratorPolynomialCore.compound_S6_mul_B_factor phase_relation_7
 
-public theorem eval_relation_7
+theorem eval_relation_7
     {R : Type*} [CommRing R] [Algebra ℚ R]
     (z : R) (hPhi : D12PolynomialEvaluation.evalPolyAt z Phi11 = 0) :
     D12PolynomialEvaluation.evalPolyAt z
@@ -1278,7 +1278,7 @@ public theorem eval_relation_7
   exact D12GeneratorPolynomialCore.eval_relation_of_modPhi z hPhi _ _ _ (-1 / 2 : ℚ)
     generator_relation_7
 
-@[expose] public def quotient_8 : Polynomial ℚ := C (-1 : ℚ) * X ^ 5 + C (1 : ℚ) * X ^ 6 + C (1 : ℚ) * X ^ 7 + C (-1 : ℚ) * X ^ 8
+def quotient_8 : Polynomial ℚ := C (-1 : ℚ) * X ^ 5 + C (1 : ℚ) * X ^ 6 + C (1 : ℚ) * X ^ 7 + C (-1 : ℚ) * X ^ 8
 
 theorem phase_relation_8 :
     (PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 10 8 -
@@ -1318,7 +1318,7 @@ public theorem eval_relation_8
   exact D12GeneratorPolynomialCore.eval_relation_of_modPhi z hPhi _ _ _ (-1 / 2 : ℚ)
     generator_relation_8
 
-@[expose] public def quotient_9 : Polynomial ℚ := C (-1 : ℚ) * X ^ 1 + C (1 : ℚ) * X ^ 2 + C (1 : ℚ) * X ^ 4 + C (-2 : ℚ) * X ^ 6 + C (1 : ℚ) * X ^ 7
+def quotient_9 : Polynomial ℚ := C (-1 : ℚ) * X ^ 1 + C (1 : ℚ) * X ^ 2 + C (1 : ℚ) * X ^ 4 + C (-2 : ℚ) * X ^ 6 + C (1 : ℚ) * X ^ 7
 
 theorem phase_relation_9 :
     (PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 10 9 -
@@ -1347,7 +1347,7 @@ theorem generator_relation_9 :
     quotient_9 (-1 / 2 : ℚ) 10 2 9
     D12GeneratorPolynomialCore.compound_S6_mul_B_factor phase_relation_9
 
-public theorem eval_relation_9
+theorem eval_relation_9
     {R : Type*} [CommRing R] [Algebra ℚ R]
     (z : R) (hPhi : D12PolynomialEvaluation.evalPolyAt z Phi11 = 0) :
     D12PolynomialEvaluation.evalPolyAt z

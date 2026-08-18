@@ -15,7 +15,7 @@ open Polynomial Matrix
 namespace V14Formalization.D12U6PolynomialData
 open D12PolynomialData D12PolynomialEvaluation D12U6Semantic
 
-public abbrev QuotCoeff := Fin 24 → ℚ
+@[expose] public abbrev QuotCoeff := Fin 24 → ℚ
 @[expose] public def ofQuot (c : QuotCoeff) : Polynomial ℚ :=
   ∑ i : Fin 24, C (c i) * X ^ i.val
 

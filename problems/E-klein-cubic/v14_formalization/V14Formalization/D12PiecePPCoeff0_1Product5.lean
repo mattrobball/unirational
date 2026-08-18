@@ -6,7 +6,7 @@ public import V14Formalization.D12PiecePPPluckerBase
 noncomputable section
 namespace V14Formalization.D12PiecePPCoeff0_1Product5
 open D12CyclotomicVec D12PiecePPPluckerBase
-@[expose] public def payloadSha256 : String := "76c6196f29afe1a8398af99502447f48ebeed4bcb3805fc5dbec693940bc04b0"
+def payloadSha256 : String := "76c6196f29afe1a8398af99502447f48ebeed4bcb3805fc5dbec693940bc04b0"
 
 def productVec : Vec := mul BKCoord3_1 BKCoord5_0
 

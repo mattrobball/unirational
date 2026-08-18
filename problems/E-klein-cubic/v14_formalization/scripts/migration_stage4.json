@@ -2,23 +2,13 @@
  "V14Formalization/D12CompoundRRow0.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_10",
-   "quotient_12",
-   "quotient_13",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -33,29 +23,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundRRow1.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_10",
-   "quotient_12",
-   "quotient_13",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -70,29 +49,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundRRow10.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_10",
-   "quotient_12",
-   "quotient_13",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -107,29 +75,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundRRow11.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_10",
-   "quotient_12",
-   "quotient_13",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -144,29 +101,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundRRow12.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_10",
-   "quotient_12",
-   "quotient_13",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -181,29 +127,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundRRow13.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_10",
-   "quotient_12",
-   "quotient_13",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -218,29 +153,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundRRow14.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_10",
-   "quotient_12",
-   "quotient_13",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -255,29 +179,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundRRow2.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_10",
-   "quotient_12",
-   "quotient_13",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -292,29 +205,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundRRow3.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_10",
-   "quotient_12",
-   "quotient_13",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -329,29 +231,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundRRow4.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_10",
-   "quotient_12",
-   "quotient_13",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -366,29 +257,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundRRow5.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_10",
-   "quotient_12",
-   "quotient_13",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -403,29 +283,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundRRow6.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_10",
-   "quotient_12",
-   "quotient_13",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -440,29 +309,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundRRow7.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_10",
-   "quotient_12",
-   "quotient_13",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -477,29 +335,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundRRow8.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_10",
-   "quotient_12",
-   "quotient_13",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -514,29 +361,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundRRow9.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_10",
-   "quotient_12",
-   "quotient_13",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -551,8 +387,7 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12F6PolynomialSeal.lean": {
   "public": [
@@ -1459,20 +1294,13 @@
  "V14Formalization/D12CompoundFRow0.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -1484,26 +1312,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundFRow1.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -1515,26 +1335,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundFRow10.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -1546,26 +1358,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundFRow11.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -1577,26 +1381,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundFRow12.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -1608,26 +1404,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundFRow13.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -1639,26 +1427,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundFRow14.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -1670,26 +1450,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundFRow2.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -1701,26 +1473,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundFRow3.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -1732,26 +1496,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundFRow4.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -1763,26 +1519,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundFRow5.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -1794,26 +1542,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundFRow6.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -1825,26 +1565,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundFRow7.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -1856,26 +1588,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundFRow8.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -1887,26 +1611,18 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundFRow9.lean": {
   "public": [
    "QuotCoeff",
-   "ofQuotNumerator",
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "row_cert"
   ],
   "expose": [
+   "QuotCoeff"
+  ],
+  "expose_all_public_defs": false,
+  "no_public": [
    "ofQuotNumerator",
    "quotient_0",
    "quotient_1",
@@ -1918,8 +1634,7 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12CompoundR.lean": {
   "public": [
@@ -2227,15 +1942,19 @@
  "V14Formalization/D12GeneratorSPhaseRow10.lean": {
   "public": [
    "eval_relation",
+   "eval_relation_5",
+   "eval_relation_8"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false,
+  "no_public": [
    "eval_relation_0",
    "eval_relation_1",
    "eval_relation_2",
    "eval_relation_3",
    "eval_relation_4",
-   "eval_relation_5",
    "eval_relation_6",
    "eval_relation_7",
-   "eval_relation_8",
    "eval_relation_9",
    "quotient_0",
    "quotient_1",
@@ -2247,33 +1966,24 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose": [
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12GeneratorSPhaseRow12.lean": {
   "public": [
    "eval_relation",
+   "eval_relation_5",
+   "eval_relation_8"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false,
+  "no_public": [
    "eval_relation_0",
    "eval_relation_1",
    "eval_relation_2",
    "eval_relation_3",
    "eval_relation_4",
-   "eval_relation_5",
    "eval_relation_6",
    "eval_relation_7",
-   "eval_relation_8",
    "eval_relation_9",
    "quotient_0",
    "quotient_1",
@@ -2285,44 +1995,13 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose": [
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12GeneratorSPhaseRow13.lean": {
   "public": [
    "eval_relation",
-   "eval_relation_0",
-   "eval_relation_1",
-   "eval_relation_2",
-   "eval_relation_3",
-   "eval_relation_4",
    "eval_relation_5",
-   "eval_relation_6",
-   "eval_relation_7",
    "eval_relation_8",
-   "eval_relation_9",
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9",
    "source_phase_product_0_0",
    "source_phase_product_0_1",
    "source_phase_product_0_2",
@@ -2334,7 +2013,17 @@
    "source_phase_product_0_8",
    "source_phase_product_0_9"
   ],
-  "expose": [
+  "expose": [],
+  "expose_all_public_defs": false,
+  "no_public": [
+   "eval_relation_0",
+   "eval_relation_1",
+   "eval_relation_2",
+   "eval_relation_3",
+   "eval_relation_4",
+   "eval_relation_6",
+   "eval_relation_7",
+   "eval_relation_9",
    "quotient_0",
    "quotient_1",
    "quotient_2",
@@ -2345,21 +2034,24 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12GeneratorSPhaseRow5.lean": {
   "public": [
    "eval_relation",
+   "eval_relation_5",
+   "eval_relation_8"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false,
+  "no_public": [
    "eval_relation_0",
    "eval_relation_1",
    "eval_relation_2",
    "eval_relation_3",
    "eval_relation_4",
-   "eval_relation_5",
    "eval_relation_6",
    "eval_relation_7",
-   "eval_relation_8",
    "eval_relation_9",
    "quotient_0",
    "quotient_1",
@@ -2371,33 +2063,24 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose": [
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12GeneratorSPhaseRow8.lean": {
   "public": [
    "eval_relation",
+   "eval_relation_5",
+   "eval_relation_8"
+  ],
+  "expose": [],
+  "expose_all_public_defs": false,
+  "no_public": [
    "eval_relation_0",
    "eval_relation_1",
    "eval_relation_2",
    "eval_relation_3",
    "eval_relation_4",
-   "eval_relation_5",
    "eval_relation_6",
    "eval_relation_7",
-   "eval_relation_8",
    "eval_relation_9",
    "quotient_0",
    "quotient_1",
@@ -2409,20 +2092,7 @@
    "quotient_7",
    "quotient_8",
    "quotient_9"
-  ],
-  "expose": [
-   "quotient_0",
-   "quotient_1",
-   "quotient_2",
-   "quotient_3",
-   "quotient_4",
-   "quotient_5",
-   "quotient_6",
-   "quotient_7",
-   "quotient_8",
-   "quotient_9"
-  ],
-  "expose_all_public_defs": false
+  ]
  },
  "V14Formalization/D12GeneratorT2Relations.lean": {
   "public": [
@@ -2432,18 +2102,18 @@
    "eval_relation_13",
    "eval_relation_5",
    "eval_relation_8",
-   "quotient_5",
-   "quotient_8",
-   "relation_5",
-   "relation_8",
    "restrictedAction_eval"
   ],
   "expose": [
-   "eigenExponent",
-   "quotient_5",
-   "quotient_8"
+   "eigenExponent"
   ],
-  "expose_all_public_defs": false
+  "expose_all_public_defs": false,
+  "no_public": [
+   "quotient_5",
+   "quotient_8",
+   "relation_5",
+   "relation_8"
+  ]
  },
  "V14Formalization/D12SigmaPlusSegreApplyH.lean": {
   "public": [
@@ -3086,7 +2756,8 @@
    "K_re_8_1",
    "K_re_8_2"
   ],
-  "expose_all_public_defs": false
+  "expose_all_public_defs": false,
+  "no_public": []
  },
  "V14Formalization/D12SigmaPlusSegreMinorQ.lean": {
   "public": [

@@ -10,7 +10,7 @@ open Matrix
 namespace V14Formalization.D12PiecePPPluckerBase
 open D12Certificate D12CyclotomicVec D12PieceAmbientVec D12PiecePPData
 open D12PolynomialData D12PolynomialEvaluation
-@[expose] public def payloadSha256 : String := "76c6196f29afe1a8398af99502447f48ebeed4bcb3805fc5dbec693940bc04b0"
+def payloadSha256 : String := "76c6196f29afe1a8398af99502447f48ebeed4bcb3805fc5dbec693940bc04b0"
 
 @[expose] public def BKVec : Matrix (Fin 15) (Fin 2) Vec := matrixMul BVec KVec
 

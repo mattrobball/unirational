@@ -172,7 +172,9 @@
    "F6c_5_2",
    "F6c_5_3",
    "F6c_5_4",
-   "F6c_5_5"
+   "F6c_5_5",
+   "QuotCoeff",
+   "ofQuot"
   ],
   "expose_all_public_defs": false,
   "public": [
@@ -288,7 +290,8 @@
    "quotient_5_4",
    "quotient_5_5"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": []
  },
  "V14Formalization/D12F6Semantic.lean": {
   "expose": [
@@ -452,6 +455,7 @@
  },
  "V14Formalization/D12U6PolynomialData.lean": {
   "expose": [
+   "QuotCoeff",
    "R6_poly",
    "R6c_0_0",
    "R6c_0_1",
@@ -488,7 +492,8 @@
    "R6c_5_2",
    "R6c_5_3",
    "R6c_5_4",
-   "R6c_5_5"
+   "R6c_5_5",
+   "ofQuot"
   ],
   "expose_all_public_defs": false,
   "public": [
@@ -604,7 +609,8 @@
    "quotient_5_4",
    "quotient_5_5"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": []
  },
  "V14Formalization/D12U6PolynomialSeal.lean": {
   "expose": [],
@@ -1757,10 +1763,12 @@
    "V14_not_GUnirational",
    "V14_not_weakly_versal",
    "k",
-   "sigma",
    "sigmaLift"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "sigma"
+  ]
  },
  "V14Formalization/V14D12FixedPointExclusion.lean": {
   "expose": [],

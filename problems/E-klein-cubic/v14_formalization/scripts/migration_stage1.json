@@ -45,7 +45,6 @@
    "dihedralToNHom",
    "dihedralToNHom_injective",
    "dihedralToN_mul",
-   "eq_zero_of_eq_neg",
    "liftsToN",
    "mkRefl",
    "mkRefl_conj_mkRot",
@@ -70,10 +69,13 @@
    "rotGen_pow_six",
    "rotPt",
    "rot_mem",
-   "sigma",
-   "sq_eq_one_cases"
+   "sigma"
   ],
-  "no_expose": []
+  "no_expose": [],
+  "no_public": [
+   "eq_zero_of_eq_neg",
+   "sq_eq_one_cases"
+  ]
  },
  "V14Formalization/D12PolyZReflection.lean": {
   "expose": [
