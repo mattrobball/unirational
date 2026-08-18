@@ -60,7 +60,9 @@ to how the tables are written rather than to a stated fact about them.
 
 Here the coupling is one hypothesis, `hw`, which the table publishes once per
 cell, and the certificate's own content is a single decidable identity between
-integer vectors.  `eqZ` is used rather than `=` because `Vector Int 10`'s
+integer vectors, which the generated certificates discharge with `rfl`:
+`smulZ` and `eqZ` are coordinatewise and both sides evaluate.  `eqZ` is
+used rather than `=` because `Vector Int 10`'s
 `DecidableEq` does not reduce in this toolchain (see above). -/
 public theorem toVec_eq_smul_of_scaledZ {u : VecZ} {d : ℤ} {w : Vec}
     (v : VecZ) (s : ℤ)

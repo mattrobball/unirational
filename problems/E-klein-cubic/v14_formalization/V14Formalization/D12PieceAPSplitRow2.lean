@@ -83,84 +83,64 @@ theorem scale_ne_zero : scale ≠ 0 := by
   decide
 
 theorem XZ_scale_0 : toVec (XZ 0) = (scale : ℚ) • XCell2_0 :=
-  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide) rfl
 
 theorem XZ_scale_1 : toVec (XZ 1) = (scale : ℚ) • XCell2_1 :=
-  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide) rfl
 
 theorem XZ_scale_2 : toVec (XZ 2) = (scale : ℚ) • XCell2_2 :=
-  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide) rfl
 
 theorem XZ_scale_3 : toVec (XZ 3) = (scale : ℚ) • XCell2_3 :=
-  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide) rfl
 
 theorem XZ_scale_4 : toVec (XZ 4) = (scale : ℚ) • XCell2_4 :=
-  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide) rfl
 
 theorem XZ_scale_5 : toVec (XZ 5) = (scale : ℚ) • XCell2_5 :=
-  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide) rfl
 
 theorem XZ_scale_6 : toVec (XZ 6) = (scale : ℚ) • XCell2_6 :=
-  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide) rfl
 
 theorem XZ_scale_7 : toVec (XZ 7) = (scale : ℚ) • XCell2_7 :=
-  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide) rfl
 
 theorem XZ_scale_8 : toVec (XZ 8) = (scale : ℚ) • XCell2_8 :=
-  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide) rfl
 
 theorem XZ_scale_9 : toVec (XZ 9) = (scale : ℚ) • XCell2_9 :=
-  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide) rfl
 
 theorem XZ_scale_10 : toVec (XZ 10) = (scale : ℚ) • XCell2_10 :=
-  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide) rfl
 
 theorem XZ_scale_11 : toVec (XZ 11) = (scale : ℚ) • XCell2_11 :=
-  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide) rfl
 
 theorem XZ_scale_12 : toVec (XZ 12) = (scale : ℚ) • XCell2_12 :=
-  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide) rfl
 
 theorem XZ_scale_13 : toVec (XZ 13) = (scale : ℚ) • XCell2_13 :=
-  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide) rfl
 
 theorem XZ_scale_14 : toVec (XZ 14) = (scale : ℚ) • XCell2_14 :=
-  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide) rfl
 
 theorem XZ_scale_15 : toVec (XZ 15) = (scale : ℚ) • XCell2_15 :=
-  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide) rfl
 
 theorem XZ_scale_16 : toVec (XZ 16) = (scale : ℚ) • XCell2_16 :=
-  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide) rfl
 
 theorem XZ_scale_17 : toVec (XZ 17) = (scale : ℚ) • XCell2_17 :=
-  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide) rfl
 
 theorem XZ_scale_18 : toVec (XZ 18) = (scale : ℚ) • XCell2_18 :=
-  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide) rfl
 
 theorem XZ_scale_19 : toVec (XZ 19) = (scale : ℚ) • XCell2_19 :=
-  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide) rfl
 
 theorem XZ_scale (k : Fin 20) :
     toVec (XZ k) = (scale : ℚ) • XVec (2 : Fin 10) k :=
@@ -188,84 +168,64 @@ theorem XZ_scale (k : Fin 20) :
     k
 
 theorem AZ_scale_0 : toVec (AZ 0) = (scale : ℚ) • ACell0_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_0_scaled (by decide) rfl
 
 theorem AZ_scale_1 : toVec (AZ 1) = (scale : ℚ) • ACell1_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_0_scaled (by decide) rfl
 
 theorem AZ_scale_2 : toVec (AZ 2) = (scale : ℚ) • ACell2_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_0_scaled (by decide) rfl
 
 theorem AZ_scale_3 : toVec (AZ 3) = (scale : ℚ) • ACell3_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_0_scaled (by decide) rfl
 
 theorem AZ_scale_4 : toVec (AZ 4) = (scale : ℚ) • ACell4_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_0_scaled (by decide) rfl
 
 theorem AZ_scale_5 : toVec (AZ 5) = (scale : ℚ) • ACell5_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_0_scaled (by decide) rfl
 
 theorem AZ_scale_6 : toVec (AZ 6) = (scale : ℚ) • ACell6_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_0_scaled (by decide) rfl
 
 theorem AZ_scale_7 : toVec (AZ 7) = (scale : ℚ) • ACell7_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_0_scaled (by decide) rfl
 
 theorem AZ_scale_8 : toVec (AZ 8) = (scale : ℚ) • ACell8_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_0_scaled (by decide) rfl
 
 theorem AZ_scale_9 : toVec (AZ 9) = (scale : ℚ) • ACell9_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_0_scaled (by decide) rfl
 
 theorem AZ_scale_10 : toVec (AZ 10) = (scale : ℚ) • ACell10_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_0_scaled (by decide) rfl
 
 theorem AZ_scale_11 : toVec (AZ 11) = (scale : ℚ) • ACell11_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_0_scaled (by decide) rfl
 
 theorem AZ_scale_12 : toVec (AZ 12) = (scale : ℚ) • ACell12_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_0_scaled (by decide) rfl
 
 theorem AZ_scale_13 : toVec (AZ 13) = (scale : ℚ) • ACell13_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_0_scaled (by decide) rfl
 
 theorem AZ_scale_14 : toVec (AZ 14) = (scale : ℚ) • ACell14_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_0_scaled (by decide) rfl
 
 theorem AZ_scale_15 : toVec (AZ 15) = (scale : ℚ) • ACell15_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_0_scaled (by decide) rfl
 
 theorem AZ_scale_16 : toVec (AZ 16) = (scale : ℚ) • ACell16_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_0_scaled (by decide) rfl
 
 theorem AZ_scale_17 : toVec (AZ 17) = (scale : ℚ) • ACell17_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_0_scaled (by decide) rfl
 
 theorem AZ_scale_18 : toVec (AZ 18) = (scale : ℚ) • ACell18_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_0_scaled (by decide) rfl
 
 theorem AZ_scale_19 : toVec (AZ 19) = (scale : ℚ) • ACell19_0 :=
-  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_0_scaled (by decide) rfl
 
 theorem AZ_scale (k : Fin 20) :
     toVec (AZ k) = (scale : ℚ) • AVec k (0 : Fin 10) :=
@@ -293,8 +253,7 @@ theorem AZ_scale (k : Fin 20) :
     k
 
 theorem KZ_scale_0 : toVec (KZ 0) = (scale : ℚ) • KCell2_0 :=
-  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide) rfl
 
 theorem KZ_scale (k : Fin 1) :
     toVec (KZ k) = (scale : ℚ) • KVec (2 : Fin 10) k :=
@@ -303,8 +262,7 @@ theorem KZ_scale (k : Fin 1) :
     k
 
 theorem YZ_scale_0 : toVec (YZ 0) = (scale : ℚ) • YCell0_0 :=
-  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_0_scaled (by decide) rfl
 
 theorem YZ_scale (k : Fin 1) :
     toVec (YZ k) = (scale : ℚ) • YVec k (0 : Fin 10) :=
@@ -408,84 +366,64 @@ theorem scale_ne_zero : scale ≠ 0 := by
   decide
 
 theorem XZ_scale_0 : toVec (XZ 0) = (scale : ℚ) • XCell2_0 :=
-  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide) rfl
 
 theorem XZ_scale_1 : toVec (XZ 1) = (scale : ℚ) • XCell2_1 :=
-  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide) rfl
 
 theorem XZ_scale_2 : toVec (XZ 2) = (scale : ℚ) • XCell2_2 :=
-  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide) rfl
 
 theorem XZ_scale_3 : toVec (XZ 3) = (scale : ℚ) • XCell2_3 :=
-  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide) rfl
 
 theorem XZ_scale_4 : toVec (XZ 4) = (scale : ℚ) • XCell2_4 :=
-  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide) rfl
 
 theorem XZ_scale_5 : toVec (XZ 5) = (scale : ℚ) • XCell2_5 :=
-  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide) rfl
 
 theorem XZ_scale_6 : toVec (XZ 6) = (scale : ℚ) • XCell2_6 :=
-  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide) rfl
 
 theorem XZ_scale_7 : toVec (XZ 7) = (scale : ℚ) • XCell2_7 :=
-  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide) rfl
 
 theorem XZ_scale_8 : toVec (XZ 8) = (scale : ℚ) • XCell2_8 :=
-  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide) rfl
 
 theorem XZ_scale_9 : toVec (XZ 9) = (scale : ℚ) • XCell2_9 :=
-  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide) rfl
 
 theorem XZ_scale_10 : toVec (XZ 10) = (scale : ℚ) • XCell2_10 :=
-  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide) rfl
 
 theorem XZ_scale_11 : toVec (XZ 11) = (scale : ℚ) • XCell2_11 :=
-  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide) rfl
 
 theorem XZ_scale_12 : toVec (XZ 12) = (scale : ℚ) • XCell2_12 :=
-  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide) rfl
 
 theorem XZ_scale_13 : toVec (XZ 13) = (scale : ℚ) • XCell2_13 :=
-  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide) rfl
 
 theorem XZ_scale_14 : toVec (XZ 14) = (scale : ℚ) • XCell2_14 :=
-  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide) rfl
 
 theorem XZ_scale_15 : toVec (XZ 15) = (scale : ℚ) • XCell2_15 :=
-  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide) rfl
 
 theorem XZ_scale_16 : toVec (XZ 16) = (scale : ℚ) • XCell2_16 :=
-  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide) rfl
 
 theorem XZ_scale_17 : toVec (XZ 17) = (scale : ℚ) • XCell2_17 :=
-  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide) rfl
 
 theorem XZ_scale_18 : toVec (XZ 18) = (scale : ℚ) • XCell2_18 :=
-  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide) rfl
 
 theorem XZ_scale_19 : toVec (XZ 19) = (scale : ℚ) • XCell2_19 :=
-  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide) rfl
 
 theorem XZ_scale (k : Fin 20) :
     toVec (XZ k) = (scale : ℚ) • XVec (2 : Fin 10) k :=
@@ -513,84 +451,64 @@ theorem XZ_scale (k : Fin 20) :
     k
 
 theorem AZ_scale_0 : toVec (AZ 0) = (scale : ℚ) • ACell0_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_1_scaled (by decide) rfl
 
 theorem AZ_scale_1 : toVec (AZ 1) = (scale : ℚ) • ACell1_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_1_scaled (by decide) rfl
 
 theorem AZ_scale_2 : toVec (AZ 2) = (scale : ℚ) • ACell2_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_1_scaled (by decide) rfl
 
 theorem AZ_scale_3 : toVec (AZ 3) = (scale : ℚ) • ACell3_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_1_scaled (by decide) rfl
 
 theorem AZ_scale_4 : toVec (AZ 4) = (scale : ℚ) • ACell4_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_1_scaled (by decide) rfl
 
 theorem AZ_scale_5 : toVec (AZ 5) = (scale : ℚ) • ACell5_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_1_scaled (by decide) rfl
 
 theorem AZ_scale_6 : toVec (AZ 6) = (scale : ℚ) • ACell6_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_1_scaled (by decide) rfl
 
 theorem AZ_scale_7 : toVec (AZ 7) = (scale : ℚ) • ACell7_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_1_scaled (by decide) rfl
 
 theorem AZ_scale_8 : toVec (AZ 8) = (scale : ℚ) • ACell8_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_1_scaled (by decide) rfl
 
 theorem AZ_scale_9 : toVec (AZ 9) = (scale : ℚ) • ACell9_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_1_scaled (by decide) rfl
 
 theorem AZ_scale_10 : toVec (AZ 10) = (scale : ℚ) • ACell10_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_1_scaled (by decide) rfl
 
 theorem AZ_scale_11 : toVec (AZ 11) = (scale : ℚ) • ACell11_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_1_scaled (by decide) rfl
 
 theorem AZ_scale_12 : toVec (AZ 12) = (scale : ℚ) • ACell12_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_1_scaled (by decide) rfl
 
 theorem AZ_scale_13 : toVec (AZ 13) = (scale : ℚ) • ACell13_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_1_scaled (by decide) rfl
 
 theorem AZ_scale_14 : toVec (AZ 14) = (scale : ℚ) • ACell14_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_1_scaled (by decide) rfl
 
 theorem AZ_scale_15 : toVec (AZ 15) = (scale : ℚ) • ACell15_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_1_scaled (by decide) rfl
 
 theorem AZ_scale_16 : toVec (AZ 16) = (scale : ℚ) • ACell16_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_1_scaled (by decide) rfl
 
 theorem AZ_scale_17 : toVec (AZ 17) = (scale : ℚ) • ACell17_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_1_scaled (by decide) rfl
 
 theorem AZ_scale_18 : toVec (AZ 18) = (scale : ℚ) • ACell18_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_1_scaled (by decide) rfl
 
 theorem AZ_scale_19 : toVec (AZ 19) = (scale : ℚ) • ACell19_1 :=
-  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_1_scaled (by decide) rfl
 
 theorem AZ_scale (k : Fin 20) :
     toVec (AZ k) = (scale : ℚ) • AVec k (1 : Fin 10) :=
@@ -618,8 +536,7 @@ theorem AZ_scale (k : Fin 20) :
     k
 
 theorem KZ_scale_0 : toVec (KZ 0) = (scale : ℚ) • KCell2_0 :=
-  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide) rfl
 
 theorem KZ_scale (k : Fin 1) :
     toVec (KZ k) = (scale : ℚ) • KVec (2 : Fin 10) k :=
@@ -628,8 +545,7 @@ theorem KZ_scale (k : Fin 1) :
     k
 
 theorem YZ_scale_0 : toVec (YZ 0) = (scale : ℚ) • YCell0_1 :=
-  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_1_scaled (by decide) rfl
 
 theorem YZ_scale (k : Fin 1) :
     toVec (YZ k) = (scale : ℚ) • YVec k (1 : Fin 10) :=
@@ -733,84 +649,64 @@ theorem scale_ne_zero : scale ≠ 0 := by
   decide
 
 theorem XZ_scale_0 : toVec (XZ 0) = (scale : ℚ) • XCell2_0 :=
-  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide) rfl
 
 theorem XZ_scale_1 : toVec (XZ 1) = (scale : ℚ) • XCell2_1 :=
-  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide) rfl
 
 theorem XZ_scale_2 : toVec (XZ 2) = (scale : ℚ) • XCell2_2 :=
-  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide) rfl
 
 theorem XZ_scale_3 : toVec (XZ 3) = (scale : ℚ) • XCell2_3 :=
-  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide) rfl
 
 theorem XZ_scale_4 : toVec (XZ 4) = (scale : ℚ) • XCell2_4 :=
-  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide) rfl
 
 theorem XZ_scale_5 : toVec (XZ 5) = (scale : ℚ) • XCell2_5 :=
-  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide) rfl
 
 theorem XZ_scale_6 : toVec (XZ 6) = (scale : ℚ) • XCell2_6 :=
-  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide) rfl
 
 theorem XZ_scale_7 : toVec (XZ 7) = (scale : ℚ) • XCell2_7 :=
-  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide) rfl
 
 theorem XZ_scale_8 : toVec (XZ 8) = (scale : ℚ) • XCell2_8 :=
-  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide) rfl
 
 theorem XZ_scale_9 : toVec (XZ 9) = (scale : ℚ) • XCell2_9 :=
-  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide) rfl
 
 theorem XZ_scale_10 : toVec (XZ 10) = (scale : ℚ) • XCell2_10 :=
-  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide) rfl
 
 theorem XZ_scale_11 : toVec (XZ 11) = (scale : ℚ) • XCell2_11 :=
-  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide) rfl
 
 theorem XZ_scale_12 : toVec (XZ 12) = (scale : ℚ) • XCell2_12 :=
-  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide) rfl
 
 theorem XZ_scale_13 : toVec (XZ 13) = (scale : ℚ) • XCell2_13 :=
-  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide) rfl
 
 theorem XZ_scale_14 : toVec (XZ 14) = (scale : ℚ) • XCell2_14 :=
-  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide) rfl
 
 theorem XZ_scale_15 : toVec (XZ 15) = (scale : ℚ) • XCell2_15 :=
-  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide) rfl
 
 theorem XZ_scale_16 : toVec (XZ 16) = (scale : ℚ) • XCell2_16 :=
-  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide) rfl
 
 theorem XZ_scale_17 : toVec (XZ 17) = (scale : ℚ) • XCell2_17 :=
-  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide) rfl
 
 theorem XZ_scale_18 : toVec (XZ 18) = (scale : ℚ) • XCell2_18 :=
-  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide) rfl
 
 theorem XZ_scale_19 : toVec (XZ 19) = (scale : ℚ) • XCell2_19 :=
-  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide) rfl
 
 theorem XZ_scale (k : Fin 20) :
     toVec (XZ k) = (scale : ℚ) • XVec (2 : Fin 10) k :=
@@ -838,84 +734,64 @@ theorem XZ_scale (k : Fin 20) :
     k
 
 theorem AZ_scale_0 : toVec (AZ 0) = (scale : ℚ) • ACell0_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_2_scaled (by decide) rfl
 
 theorem AZ_scale_1 : toVec (AZ 1) = (scale : ℚ) • ACell1_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_2_scaled (by decide) rfl
 
 theorem AZ_scale_2 : toVec (AZ 2) = (scale : ℚ) • ACell2_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_2_scaled (by decide) rfl
 
 theorem AZ_scale_3 : toVec (AZ 3) = (scale : ℚ) • ACell3_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_2_scaled (by decide) rfl
 
 theorem AZ_scale_4 : toVec (AZ 4) = (scale : ℚ) • ACell4_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_2_scaled (by decide) rfl
 
 theorem AZ_scale_5 : toVec (AZ 5) = (scale : ℚ) • ACell5_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_2_scaled (by decide) rfl
 
 theorem AZ_scale_6 : toVec (AZ 6) = (scale : ℚ) • ACell6_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_2_scaled (by decide) rfl
 
 theorem AZ_scale_7 : toVec (AZ 7) = (scale : ℚ) • ACell7_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_2_scaled (by decide) rfl
 
 theorem AZ_scale_8 : toVec (AZ 8) = (scale : ℚ) • ACell8_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_2_scaled (by decide) rfl
 
 theorem AZ_scale_9 : toVec (AZ 9) = (scale : ℚ) • ACell9_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_2_scaled (by decide) rfl
 
 theorem AZ_scale_10 : toVec (AZ 10) = (scale : ℚ) • ACell10_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_2_scaled (by decide) rfl
 
 theorem AZ_scale_11 : toVec (AZ 11) = (scale : ℚ) • ACell11_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_2_scaled (by decide) rfl
 
 theorem AZ_scale_12 : toVec (AZ 12) = (scale : ℚ) • ACell12_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_2_scaled (by decide) rfl
 
 theorem AZ_scale_13 : toVec (AZ 13) = (scale : ℚ) • ACell13_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_2_scaled (by decide) rfl
 
 theorem AZ_scale_14 : toVec (AZ 14) = (scale : ℚ) • ACell14_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_2_scaled (by decide) rfl
 
 theorem AZ_scale_15 : toVec (AZ 15) = (scale : ℚ) • ACell15_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_2_scaled (by decide) rfl
 
 theorem AZ_scale_16 : toVec (AZ 16) = (scale : ℚ) • ACell16_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_2_scaled (by decide) rfl
 
 theorem AZ_scale_17 : toVec (AZ 17) = (scale : ℚ) • ACell17_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_2_scaled (by decide) rfl
 
 theorem AZ_scale_18 : toVec (AZ 18) = (scale : ℚ) • ACell18_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_2_scaled (by decide) rfl
 
 theorem AZ_scale_19 : toVec (AZ 19) = (scale : ℚ) • ACell19_2 :=
-  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_2_scaled (by decide) rfl
 
 theorem AZ_scale (k : Fin 20) :
     toVec (AZ k) = (scale : ℚ) • AVec k (2 : Fin 10) :=
@@ -943,8 +819,7 @@ theorem AZ_scale (k : Fin 20) :
     k
 
 theorem KZ_scale_0 : toVec (KZ 0) = (scale : ℚ) • KCell2_0 :=
-  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide) rfl
 
 theorem KZ_scale (k : Fin 1) :
     toVec (KZ k) = (scale : ℚ) • KVec (2 : Fin 10) k :=
@@ -953,8 +828,7 @@ theorem KZ_scale (k : Fin 1) :
     k
 
 theorem YZ_scale_0 : toVec (YZ 0) = (scale : ℚ) • YCell0_2 :=
-  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_2_scaled (by decide) rfl
 
 theorem YZ_scale (k : Fin 1) :
     toVec (YZ k) = (scale : ℚ) • YVec k (2 : Fin 10) :=
@@ -1058,84 +932,64 @@ theorem scale_ne_zero : scale ≠ 0 := by
   decide
 
 theorem XZ_scale_0 : toVec (XZ 0) = (scale : ℚ) • XCell2_0 :=
-  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide) rfl
 
 theorem XZ_scale_1 : toVec (XZ 1) = (scale : ℚ) • XCell2_1 :=
-  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide) rfl
 
 theorem XZ_scale_2 : toVec (XZ 2) = (scale : ℚ) • XCell2_2 :=
-  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide) rfl
 
 theorem XZ_scale_3 : toVec (XZ 3) = (scale : ℚ) • XCell2_3 :=
-  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide) rfl
 
 theorem XZ_scale_4 : toVec (XZ 4) = (scale : ℚ) • XCell2_4 :=
-  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide) rfl
 
 theorem XZ_scale_5 : toVec (XZ 5) = (scale : ℚ) • XCell2_5 :=
-  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide) rfl
 
 theorem XZ_scale_6 : toVec (XZ 6) = (scale : ℚ) • XCell2_6 :=
-  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide) rfl
 
 theorem XZ_scale_7 : toVec (XZ 7) = (scale : ℚ) • XCell2_7 :=
-  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide) rfl
 
 theorem XZ_scale_8 : toVec (XZ 8) = (scale : ℚ) • XCell2_8 :=
-  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide) rfl
 
 theorem XZ_scale_9 : toVec (XZ 9) = (scale : ℚ) • XCell2_9 :=
-  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide) rfl
 
 theorem XZ_scale_10 : toVec (XZ 10) = (scale : ℚ) • XCell2_10 :=
-  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide) rfl
 
 theorem XZ_scale_11 : toVec (XZ 11) = (scale : ℚ) • XCell2_11 :=
-  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide) rfl
 
 theorem XZ_scale_12 : toVec (XZ 12) = (scale : ℚ) • XCell2_12 :=
-  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide) rfl
 
 theorem XZ_scale_13 : toVec (XZ 13) = (scale : ℚ) • XCell2_13 :=
-  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide) rfl
 
 theorem XZ_scale_14 : toVec (XZ 14) = (scale : ℚ) • XCell2_14 :=
-  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide) rfl
 
 theorem XZ_scale_15 : toVec (XZ 15) = (scale : ℚ) • XCell2_15 :=
-  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide) rfl
 
 theorem XZ_scale_16 : toVec (XZ 16) = (scale : ℚ) • XCell2_16 :=
-  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide) rfl
 
 theorem XZ_scale_17 : toVec (XZ 17) = (scale : ℚ) • XCell2_17 :=
-  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide) rfl
 
 theorem XZ_scale_18 : toVec (XZ 18) = (scale : ℚ) • XCell2_18 :=
-  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide) rfl
 
 theorem XZ_scale_19 : toVec (XZ 19) = (scale : ℚ) • XCell2_19 :=
-  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide) rfl
 
 theorem XZ_scale (k : Fin 20) :
     toVec (XZ k) = (scale : ℚ) • XVec (2 : Fin 10) k :=
@@ -1163,84 +1017,64 @@ theorem XZ_scale (k : Fin 20) :
     k
 
 theorem AZ_scale_0 : toVec (AZ 0) = (scale : ℚ) • ACell0_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_3_scaled (by decide) rfl
 
 theorem AZ_scale_1 : toVec (AZ 1) = (scale : ℚ) • ACell1_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_3_scaled (by decide) rfl
 
 theorem AZ_scale_2 : toVec (AZ 2) = (scale : ℚ) • ACell2_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_3_scaled (by decide) rfl
 
 theorem AZ_scale_3 : toVec (AZ 3) = (scale : ℚ) • ACell3_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_3_scaled (by decide) rfl
 
 theorem AZ_scale_4 : toVec (AZ 4) = (scale : ℚ) • ACell4_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_3_scaled (by decide) rfl
 
 theorem AZ_scale_5 : toVec (AZ 5) = (scale : ℚ) • ACell5_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_3_scaled (by decide) rfl
 
 theorem AZ_scale_6 : toVec (AZ 6) = (scale : ℚ) • ACell6_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_3_scaled (by decide) rfl
 
 theorem AZ_scale_7 : toVec (AZ 7) = (scale : ℚ) • ACell7_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_3_scaled (by decide) rfl
 
 theorem AZ_scale_8 : toVec (AZ 8) = (scale : ℚ) • ACell8_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_3_scaled (by decide) rfl
 
 theorem AZ_scale_9 : toVec (AZ 9) = (scale : ℚ) • ACell9_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_3_scaled (by decide) rfl
 
 theorem AZ_scale_10 : toVec (AZ 10) = (scale : ℚ) • ACell10_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_3_scaled (by decide) rfl
 
 theorem AZ_scale_11 : toVec (AZ 11) = (scale : ℚ) • ACell11_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_3_scaled (by decide) rfl
 
 theorem AZ_scale_12 : toVec (AZ 12) = (scale : ℚ) • ACell12_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_3_scaled (by decide) rfl
 
 theorem AZ_scale_13 : toVec (AZ 13) = (scale : ℚ) • ACell13_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_3_scaled (by decide) rfl
 
 theorem AZ_scale_14 : toVec (AZ 14) = (scale : ℚ) • ACell14_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_3_scaled (by decide) rfl
 
 theorem AZ_scale_15 : toVec (AZ 15) = (scale : ℚ) • ACell15_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_3_scaled (by decide) rfl
 
 theorem AZ_scale_16 : toVec (AZ 16) = (scale : ℚ) • ACell16_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_3_scaled (by decide) rfl
 
 theorem AZ_scale_17 : toVec (AZ 17) = (scale : ℚ) • ACell17_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_3_scaled (by decide) rfl
 
 theorem AZ_scale_18 : toVec (AZ 18) = (scale : ℚ) • ACell18_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_3_scaled (by decide) rfl
 
 theorem AZ_scale_19 : toVec (AZ 19) = (scale : ℚ) • ACell19_3 :=
-  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_3_scaled (by decide) rfl
 
 theorem AZ_scale (k : Fin 20) :
     toVec (AZ k) = (scale : ℚ) • AVec k (3 : Fin 10) :=
@@ -1268,8 +1102,7 @@ theorem AZ_scale (k : Fin 20) :
     k
 
 theorem KZ_scale_0 : toVec (KZ 0) = (scale : ℚ) • KCell2_0 :=
-  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide) rfl
 
 theorem KZ_scale (k : Fin 1) :
     toVec (KZ k) = (scale : ℚ) • KVec (2 : Fin 10) k :=
@@ -1278,8 +1111,7 @@ theorem KZ_scale (k : Fin 1) :
     k
 
 theorem YZ_scale_0 : toVec (YZ 0) = (scale : ℚ) • YCell0_3 :=
-  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_3_scaled (by decide) rfl
 
 theorem YZ_scale (k : Fin 1) :
     toVec (YZ k) = (scale : ℚ) • YVec k (3 : Fin 10) :=
@@ -1383,84 +1215,64 @@ theorem scale_ne_zero : scale ≠ 0 := by
   decide
 
 theorem XZ_scale_0 : toVec (XZ 0) = (scale : ℚ) • XCell2_0 :=
-  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide) rfl
 
 theorem XZ_scale_1 : toVec (XZ 1) = (scale : ℚ) • XCell2_1 :=
-  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide) rfl
 
 theorem XZ_scale_2 : toVec (XZ 2) = (scale : ℚ) • XCell2_2 :=
-  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide) rfl
 
 theorem XZ_scale_3 : toVec (XZ 3) = (scale : ℚ) • XCell2_3 :=
-  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide) rfl
 
 theorem XZ_scale_4 : toVec (XZ 4) = (scale : ℚ) • XCell2_4 :=
-  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide) rfl
 
 theorem XZ_scale_5 : toVec (XZ 5) = (scale : ℚ) • XCell2_5 :=
-  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide) rfl
 
 theorem XZ_scale_6 : toVec (XZ 6) = (scale : ℚ) • XCell2_6 :=
-  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide) rfl
 
 theorem XZ_scale_7 : toVec (XZ 7) = (scale : ℚ) • XCell2_7 :=
-  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide) rfl
 
 theorem XZ_scale_8 : toVec (XZ 8) = (scale : ℚ) • XCell2_8 :=
-  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide) rfl
 
 theorem XZ_scale_9 : toVec (XZ 9) = (scale : ℚ) • XCell2_9 :=
-  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide) rfl
 
 theorem XZ_scale_10 : toVec (XZ 10) = (scale : ℚ) • XCell2_10 :=
-  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide) rfl
 
 theorem XZ_scale_11 : toVec (XZ 11) = (scale : ℚ) • XCell2_11 :=
-  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide) rfl
 
 theorem XZ_scale_12 : toVec (XZ 12) = (scale : ℚ) • XCell2_12 :=
-  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide) rfl
 
 theorem XZ_scale_13 : toVec (XZ 13) = (scale : ℚ) • XCell2_13 :=
-  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide) rfl
 
 theorem XZ_scale_14 : toVec (XZ 14) = (scale : ℚ) • XCell2_14 :=
-  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide) rfl
 
 theorem XZ_scale_15 : toVec (XZ 15) = (scale : ℚ) • XCell2_15 :=
-  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide) rfl
 
 theorem XZ_scale_16 : toVec (XZ 16) = (scale : ℚ) • XCell2_16 :=
-  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide) rfl
 
 theorem XZ_scale_17 : toVec (XZ 17) = (scale : ℚ) • XCell2_17 :=
-  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide) rfl
 
 theorem XZ_scale_18 : toVec (XZ 18) = (scale : ℚ) • XCell2_18 :=
-  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide) rfl
 
 theorem XZ_scale_19 : toVec (XZ 19) = (scale : ℚ) • XCell2_19 :=
-  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide) rfl
 
 theorem XZ_scale (k : Fin 20) :
     toVec (XZ k) = (scale : ℚ) • XVec (2 : Fin 10) k :=
@@ -1488,84 +1300,64 @@ theorem XZ_scale (k : Fin 20) :
     k
 
 theorem AZ_scale_0 : toVec (AZ 0) = (scale : ℚ) • ACell0_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_4_scaled (by decide) rfl
 
 theorem AZ_scale_1 : toVec (AZ 1) = (scale : ℚ) • ACell1_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_4_scaled (by decide) rfl
 
 theorem AZ_scale_2 : toVec (AZ 2) = (scale : ℚ) • ACell2_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_4_scaled (by decide) rfl
 
 theorem AZ_scale_3 : toVec (AZ 3) = (scale : ℚ) • ACell3_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_4_scaled (by decide) rfl
 
 theorem AZ_scale_4 : toVec (AZ 4) = (scale : ℚ) • ACell4_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_4_scaled (by decide) rfl
 
 theorem AZ_scale_5 : toVec (AZ 5) = (scale : ℚ) • ACell5_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_4_scaled (by decide) rfl
 
 theorem AZ_scale_6 : toVec (AZ 6) = (scale : ℚ) • ACell6_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_4_scaled (by decide) rfl
 
 theorem AZ_scale_7 : toVec (AZ 7) = (scale : ℚ) • ACell7_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_4_scaled (by decide) rfl
 
 theorem AZ_scale_8 : toVec (AZ 8) = (scale : ℚ) • ACell8_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_4_scaled (by decide) rfl
 
 theorem AZ_scale_9 : toVec (AZ 9) = (scale : ℚ) • ACell9_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_4_scaled (by decide) rfl
 
 theorem AZ_scale_10 : toVec (AZ 10) = (scale : ℚ) • ACell10_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_4_scaled (by decide) rfl
 
 theorem AZ_scale_11 : toVec (AZ 11) = (scale : ℚ) • ACell11_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_4_scaled (by decide) rfl
 
 theorem AZ_scale_12 : toVec (AZ 12) = (scale : ℚ) • ACell12_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_4_scaled (by decide) rfl
 
 theorem AZ_scale_13 : toVec (AZ 13) = (scale : ℚ) • ACell13_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_4_scaled (by decide) rfl
 
 theorem AZ_scale_14 : toVec (AZ 14) = (scale : ℚ) • ACell14_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_4_scaled (by decide) rfl
 
 theorem AZ_scale_15 : toVec (AZ 15) = (scale : ℚ) • ACell15_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_4_scaled (by decide) rfl
 
 theorem AZ_scale_16 : toVec (AZ 16) = (scale : ℚ) • ACell16_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_4_scaled (by decide) rfl
 
 theorem AZ_scale_17 : toVec (AZ 17) = (scale : ℚ) • ACell17_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_4_scaled (by decide) rfl
 
 theorem AZ_scale_18 : toVec (AZ 18) = (scale : ℚ) • ACell18_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_4_scaled (by decide) rfl
 
 theorem AZ_scale_19 : toVec (AZ 19) = (scale : ℚ) • ACell19_4 :=
-  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_4_scaled (by decide) rfl
 
 theorem AZ_scale (k : Fin 20) :
     toVec (AZ k) = (scale : ℚ) • AVec k (4 : Fin 10) :=
@@ -1593,8 +1385,7 @@ theorem AZ_scale (k : Fin 20) :
     k
 
 theorem KZ_scale_0 : toVec (KZ 0) = (scale : ℚ) • KCell2_0 :=
-  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide) rfl
 
 theorem KZ_scale (k : Fin 1) :
     toVec (KZ k) = (scale : ℚ) • KVec (2 : Fin 10) k :=
@@ -1603,8 +1394,7 @@ theorem KZ_scale (k : Fin 1) :
     k
 
 theorem YZ_scale_0 : toVec (YZ 0) = (scale : ℚ) • YCell0_4 :=
-  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_4_scaled (by decide) rfl
 
 theorem YZ_scale (k : Fin 1) :
     toVec (YZ k) = (scale : ℚ) • YVec k (4 : Fin 10) :=
@@ -1708,84 +1498,64 @@ theorem scale_ne_zero : scale ≠ 0 := by
   decide
 
 theorem XZ_scale_0 : toVec (XZ 0) = (scale : ℚ) • XCell2_0 :=
-  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide) rfl
 
 theorem XZ_scale_1 : toVec (XZ 1) = (scale : ℚ) • XCell2_1 :=
-  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide) rfl
 
 theorem XZ_scale_2 : toVec (XZ 2) = (scale : ℚ) • XCell2_2 :=
-  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide) rfl
 
 theorem XZ_scale_3 : toVec (XZ 3) = (scale : ℚ) • XCell2_3 :=
-  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide) rfl
 
 theorem XZ_scale_4 : toVec (XZ 4) = (scale : ℚ) • XCell2_4 :=
-  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide) rfl
 
 theorem XZ_scale_5 : toVec (XZ 5) = (scale : ℚ) • XCell2_5 :=
-  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide) rfl
 
 theorem XZ_scale_6 : toVec (XZ 6) = (scale : ℚ) • XCell2_6 :=
-  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide) rfl
 
 theorem XZ_scale_7 : toVec (XZ 7) = (scale : ℚ) • XCell2_7 :=
-  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide) rfl
 
 theorem XZ_scale_8 : toVec (XZ 8) = (scale : ℚ) • XCell2_8 :=
-  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide) rfl
 
 theorem XZ_scale_9 : toVec (XZ 9) = (scale : ℚ) • XCell2_9 :=
-  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide) rfl
 
 theorem XZ_scale_10 : toVec (XZ 10) = (scale : ℚ) • XCell2_10 :=
-  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide) rfl
 
 theorem XZ_scale_11 : toVec (XZ 11) = (scale : ℚ) • XCell2_11 :=
-  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide) rfl
 
 theorem XZ_scale_12 : toVec (XZ 12) = (scale : ℚ) • XCell2_12 :=
-  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide) rfl
 
 theorem XZ_scale_13 : toVec (XZ 13) = (scale : ℚ) • XCell2_13 :=
-  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide) rfl
 
 theorem XZ_scale_14 : toVec (XZ 14) = (scale : ℚ) • XCell2_14 :=
-  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide) rfl
 
 theorem XZ_scale_15 : toVec (XZ 15) = (scale : ℚ) • XCell2_15 :=
-  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide) rfl
 
 theorem XZ_scale_16 : toVec (XZ 16) = (scale : ℚ) • XCell2_16 :=
-  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide) rfl
 
 theorem XZ_scale_17 : toVec (XZ 17) = (scale : ℚ) • XCell2_17 :=
-  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide) rfl
 
 theorem XZ_scale_18 : toVec (XZ 18) = (scale : ℚ) • XCell2_18 :=
-  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide) rfl
 
 theorem XZ_scale_19 : toVec (XZ 19) = (scale : ℚ) • XCell2_19 :=
-  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide) rfl
 
 theorem XZ_scale (k : Fin 20) :
     toVec (XZ k) = (scale : ℚ) • XVec (2 : Fin 10) k :=
@@ -1813,84 +1583,64 @@ theorem XZ_scale (k : Fin 20) :
     k
 
 theorem AZ_scale_0 : toVec (AZ 0) = (scale : ℚ) • ACell0_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_5_scaled (by decide) rfl
 
 theorem AZ_scale_1 : toVec (AZ 1) = (scale : ℚ) • ACell1_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_5_scaled (by decide) rfl
 
 theorem AZ_scale_2 : toVec (AZ 2) = (scale : ℚ) • ACell2_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_5_scaled (by decide) rfl
 
 theorem AZ_scale_3 : toVec (AZ 3) = (scale : ℚ) • ACell3_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_5_scaled (by decide) rfl
 
 theorem AZ_scale_4 : toVec (AZ 4) = (scale : ℚ) • ACell4_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_5_scaled (by decide) rfl
 
 theorem AZ_scale_5 : toVec (AZ 5) = (scale : ℚ) • ACell5_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_5_scaled (by decide) rfl
 
 theorem AZ_scale_6 : toVec (AZ 6) = (scale : ℚ) • ACell6_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_5_scaled (by decide) rfl
 
 theorem AZ_scale_7 : toVec (AZ 7) = (scale : ℚ) • ACell7_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_5_scaled (by decide) rfl
 
 theorem AZ_scale_8 : toVec (AZ 8) = (scale : ℚ) • ACell8_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_5_scaled (by decide) rfl
 
 theorem AZ_scale_9 : toVec (AZ 9) = (scale : ℚ) • ACell9_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_5_scaled (by decide) rfl
 
 theorem AZ_scale_10 : toVec (AZ 10) = (scale : ℚ) • ACell10_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_5_scaled (by decide) rfl
 
 theorem AZ_scale_11 : toVec (AZ 11) = (scale : ℚ) • ACell11_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_5_scaled (by decide) rfl
 
 theorem AZ_scale_12 : toVec (AZ 12) = (scale : ℚ) • ACell12_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_5_scaled (by decide) rfl
 
 theorem AZ_scale_13 : toVec (AZ 13) = (scale : ℚ) • ACell13_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_5_scaled (by decide) rfl
 
 theorem AZ_scale_14 : toVec (AZ 14) = (scale : ℚ) • ACell14_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_5_scaled (by decide) rfl
 
 theorem AZ_scale_15 : toVec (AZ 15) = (scale : ℚ) • ACell15_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_5_scaled (by decide) rfl
 
 theorem AZ_scale_16 : toVec (AZ 16) = (scale : ℚ) • ACell16_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_5_scaled (by decide) rfl
 
 theorem AZ_scale_17 : toVec (AZ 17) = (scale : ℚ) • ACell17_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_5_scaled (by decide) rfl
 
 theorem AZ_scale_18 : toVec (AZ 18) = (scale : ℚ) • ACell18_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_5_scaled (by decide) rfl
 
 theorem AZ_scale_19 : toVec (AZ 19) = (scale : ℚ) • ACell19_5 :=
-  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_5_scaled (by decide) rfl
 
 theorem AZ_scale (k : Fin 20) :
     toVec (AZ k) = (scale : ℚ) • AVec k (5 : Fin 10) :=
@@ -1918,8 +1668,7 @@ theorem AZ_scale (k : Fin 20) :
     k
 
 theorem KZ_scale_0 : toVec (KZ 0) = (scale : ℚ) • KCell2_0 :=
-  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide) rfl
 
 theorem KZ_scale (k : Fin 1) :
     toVec (KZ k) = (scale : ℚ) • KVec (2 : Fin 10) k :=
@@ -1928,8 +1677,7 @@ theorem KZ_scale (k : Fin 1) :
     k
 
 theorem YZ_scale_0 : toVec (YZ 0) = (scale : ℚ) • YCell0_5 :=
-  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_5_scaled (by decide) rfl
 
 theorem YZ_scale (k : Fin 1) :
     toVec (YZ k) = (scale : ℚ) • YVec k (5 : Fin 10) :=
@@ -2033,84 +1781,64 @@ theorem scale_ne_zero : scale ≠ 0 := by
   decide
 
 theorem XZ_scale_0 : toVec (XZ 0) = (scale : ℚ) • XCell2_0 :=
-  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide) rfl
 
 theorem XZ_scale_1 : toVec (XZ 1) = (scale : ℚ) • XCell2_1 :=
-  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide) rfl
 
 theorem XZ_scale_2 : toVec (XZ 2) = (scale : ℚ) • XCell2_2 :=
-  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide) rfl
 
 theorem XZ_scale_3 : toVec (XZ 3) = (scale : ℚ) • XCell2_3 :=
-  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide) rfl
 
 theorem XZ_scale_4 : toVec (XZ 4) = (scale : ℚ) • XCell2_4 :=
-  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide) rfl
 
 theorem XZ_scale_5 : toVec (XZ 5) = (scale : ℚ) • XCell2_5 :=
-  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide) rfl
 
 theorem XZ_scale_6 : toVec (XZ 6) = (scale : ℚ) • XCell2_6 :=
-  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide) rfl
 
 theorem XZ_scale_7 : toVec (XZ 7) = (scale : ℚ) • XCell2_7 :=
-  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide) rfl
 
 theorem XZ_scale_8 : toVec (XZ 8) = (scale : ℚ) • XCell2_8 :=
-  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide) rfl
 
 theorem XZ_scale_9 : toVec (XZ 9) = (scale : ℚ) • XCell2_9 :=
-  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide) rfl
 
 theorem XZ_scale_10 : toVec (XZ 10) = (scale : ℚ) • XCell2_10 :=
-  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide) rfl
 
 theorem XZ_scale_11 : toVec (XZ 11) = (scale : ℚ) • XCell2_11 :=
-  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide) rfl
 
 theorem XZ_scale_12 : toVec (XZ 12) = (scale : ℚ) • XCell2_12 :=
-  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide) rfl
 
 theorem XZ_scale_13 : toVec (XZ 13) = (scale : ℚ) • XCell2_13 :=
-  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide) rfl
 
 theorem XZ_scale_14 : toVec (XZ 14) = (scale : ℚ) • XCell2_14 :=
-  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide) rfl
 
 theorem XZ_scale_15 : toVec (XZ 15) = (scale : ℚ) • XCell2_15 :=
-  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide) rfl
 
 theorem XZ_scale_16 : toVec (XZ 16) = (scale : ℚ) • XCell2_16 :=
-  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide) rfl
 
 theorem XZ_scale_17 : toVec (XZ 17) = (scale : ℚ) • XCell2_17 :=
-  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide) rfl
 
 theorem XZ_scale_18 : toVec (XZ 18) = (scale : ℚ) • XCell2_18 :=
-  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide) rfl
 
 theorem XZ_scale_19 : toVec (XZ 19) = (scale : ℚ) • XCell2_19 :=
-  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide) rfl
 
 theorem XZ_scale (k : Fin 20) :
     toVec (XZ k) = (scale : ℚ) • XVec (2 : Fin 10) k :=
@@ -2138,84 +1866,64 @@ theorem XZ_scale (k : Fin 20) :
     k
 
 theorem AZ_scale_0 : toVec (AZ 0) = (scale : ℚ) • ACell0_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_6_scaled (by decide) rfl
 
 theorem AZ_scale_1 : toVec (AZ 1) = (scale : ℚ) • ACell1_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_6_scaled (by decide) rfl
 
 theorem AZ_scale_2 : toVec (AZ 2) = (scale : ℚ) • ACell2_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_6_scaled (by decide) rfl
 
 theorem AZ_scale_3 : toVec (AZ 3) = (scale : ℚ) • ACell3_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_6_scaled (by decide) rfl
 
 theorem AZ_scale_4 : toVec (AZ 4) = (scale : ℚ) • ACell4_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_6_scaled (by decide) rfl
 
 theorem AZ_scale_5 : toVec (AZ 5) = (scale : ℚ) • ACell5_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_6_scaled (by decide) rfl
 
 theorem AZ_scale_6 : toVec (AZ 6) = (scale : ℚ) • ACell6_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_6_scaled (by decide) rfl
 
 theorem AZ_scale_7 : toVec (AZ 7) = (scale : ℚ) • ACell7_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_6_scaled (by decide) rfl
 
 theorem AZ_scale_8 : toVec (AZ 8) = (scale : ℚ) • ACell8_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_6_scaled (by decide) rfl
 
 theorem AZ_scale_9 : toVec (AZ 9) = (scale : ℚ) • ACell9_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_6_scaled (by decide) rfl
 
 theorem AZ_scale_10 : toVec (AZ 10) = (scale : ℚ) • ACell10_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_6_scaled (by decide) rfl
 
 theorem AZ_scale_11 : toVec (AZ 11) = (scale : ℚ) • ACell11_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_6_scaled (by decide) rfl
 
 theorem AZ_scale_12 : toVec (AZ 12) = (scale : ℚ) • ACell12_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_6_scaled (by decide) rfl
 
 theorem AZ_scale_13 : toVec (AZ 13) = (scale : ℚ) • ACell13_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_6_scaled (by decide) rfl
 
 theorem AZ_scale_14 : toVec (AZ 14) = (scale : ℚ) • ACell14_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_6_scaled (by decide) rfl
 
 theorem AZ_scale_15 : toVec (AZ 15) = (scale : ℚ) • ACell15_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_6_scaled (by decide) rfl
 
 theorem AZ_scale_16 : toVec (AZ 16) = (scale : ℚ) • ACell16_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_6_scaled (by decide) rfl
 
 theorem AZ_scale_17 : toVec (AZ 17) = (scale : ℚ) • ACell17_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_6_scaled (by decide) rfl
 
 theorem AZ_scale_18 : toVec (AZ 18) = (scale : ℚ) • ACell18_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_6_scaled (by decide) rfl
 
 theorem AZ_scale_19 : toVec (AZ 19) = (scale : ℚ) • ACell19_6 :=
-  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_6_scaled (by decide) rfl
 
 theorem AZ_scale (k : Fin 20) :
     toVec (AZ k) = (scale : ℚ) • AVec k (6 : Fin 10) :=
@@ -2243,8 +1951,7 @@ theorem AZ_scale (k : Fin 20) :
     k
 
 theorem KZ_scale_0 : toVec (KZ 0) = (scale : ℚ) • KCell2_0 :=
-  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide) rfl
 
 theorem KZ_scale (k : Fin 1) :
     toVec (KZ k) = (scale : ℚ) • KVec (2 : Fin 10) k :=
@@ -2253,8 +1960,7 @@ theorem KZ_scale (k : Fin 1) :
     k
 
 theorem YZ_scale_0 : toVec (YZ 0) = (scale : ℚ) • YCell0_6 :=
-  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_6_scaled (by decide) rfl
 
 theorem YZ_scale (k : Fin 1) :
     toVec (YZ k) = (scale : ℚ) • YVec k (6 : Fin 10) :=
@@ -2358,84 +2064,64 @@ theorem scale_ne_zero : scale ≠ 0 := by
   decide
 
 theorem XZ_scale_0 : toVec (XZ 0) = (scale : ℚ) • XCell2_0 :=
-  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide) rfl
 
 theorem XZ_scale_1 : toVec (XZ 1) = (scale : ℚ) • XCell2_1 :=
-  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide) rfl
 
 theorem XZ_scale_2 : toVec (XZ 2) = (scale : ℚ) • XCell2_2 :=
-  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide) rfl
 
 theorem XZ_scale_3 : toVec (XZ 3) = (scale : ℚ) • XCell2_3 :=
-  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide) rfl
 
 theorem XZ_scale_4 : toVec (XZ 4) = (scale : ℚ) • XCell2_4 :=
-  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide) rfl
 
 theorem XZ_scale_5 : toVec (XZ 5) = (scale : ℚ) • XCell2_5 :=
-  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide) rfl
 
 theorem XZ_scale_6 : toVec (XZ 6) = (scale : ℚ) • XCell2_6 :=
-  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide) rfl
 
 theorem XZ_scale_7 : toVec (XZ 7) = (scale : ℚ) • XCell2_7 :=
-  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide) rfl
 
 theorem XZ_scale_8 : toVec (XZ 8) = (scale : ℚ) • XCell2_8 :=
-  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide) rfl
 
 theorem XZ_scale_9 : toVec (XZ 9) = (scale : ℚ) • XCell2_9 :=
-  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide) rfl
 
 theorem XZ_scale_10 : toVec (XZ 10) = (scale : ℚ) • XCell2_10 :=
-  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide) rfl
 
 theorem XZ_scale_11 : toVec (XZ 11) = (scale : ℚ) • XCell2_11 :=
-  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide) rfl
 
 theorem XZ_scale_12 : toVec (XZ 12) = (scale : ℚ) • XCell2_12 :=
-  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide) rfl
 
 theorem XZ_scale_13 : toVec (XZ 13) = (scale : ℚ) • XCell2_13 :=
-  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide) rfl
 
 theorem XZ_scale_14 : toVec (XZ 14) = (scale : ℚ) • XCell2_14 :=
-  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide) rfl
 
 theorem XZ_scale_15 : toVec (XZ 15) = (scale : ℚ) • XCell2_15 :=
-  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide) rfl
 
 theorem XZ_scale_16 : toVec (XZ 16) = (scale : ℚ) • XCell2_16 :=
-  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide) rfl
 
 theorem XZ_scale_17 : toVec (XZ 17) = (scale : ℚ) • XCell2_17 :=
-  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide) rfl
 
 theorem XZ_scale_18 : toVec (XZ 18) = (scale : ℚ) • XCell2_18 :=
-  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide) rfl
 
 theorem XZ_scale_19 : toVec (XZ 19) = (scale : ℚ) • XCell2_19 :=
-  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide) rfl
 
 theorem XZ_scale (k : Fin 20) :
     toVec (XZ k) = (scale : ℚ) • XVec (2 : Fin 10) k :=
@@ -2463,84 +2149,64 @@ theorem XZ_scale (k : Fin 20) :
     k
 
 theorem AZ_scale_0 : toVec (AZ 0) = (scale : ℚ) • ACell0_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_7_scaled (by decide) rfl
 
 theorem AZ_scale_1 : toVec (AZ 1) = (scale : ℚ) • ACell1_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_7_scaled (by decide) rfl
 
 theorem AZ_scale_2 : toVec (AZ 2) = (scale : ℚ) • ACell2_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_7_scaled (by decide) rfl
 
 theorem AZ_scale_3 : toVec (AZ 3) = (scale : ℚ) • ACell3_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_7_scaled (by decide) rfl
 
 theorem AZ_scale_4 : toVec (AZ 4) = (scale : ℚ) • ACell4_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_7_scaled (by decide) rfl
 
 theorem AZ_scale_5 : toVec (AZ 5) = (scale : ℚ) • ACell5_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_7_scaled (by decide) rfl
 
 theorem AZ_scale_6 : toVec (AZ 6) = (scale : ℚ) • ACell6_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_7_scaled (by decide) rfl
 
 theorem AZ_scale_7 : toVec (AZ 7) = (scale : ℚ) • ACell7_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_7_scaled (by decide) rfl
 
 theorem AZ_scale_8 : toVec (AZ 8) = (scale : ℚ) • ACell8_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_7_scaled (by decide) rfl
 
 theorem AZ_scale_9 : toVec (AZ 9) = (scale : ℚ) • ACell9_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_7_scaled (by decide) rfl
 
 theorem AZ_scale_10 : toVec (AZ 10) = (scale : ℚ) • ACell10_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_7_scaled (by decide) rfl
 
 theorem AZ_scale_11 : toVec (AZ 11) = (scale : ℚ) • ACell11_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_7_scaled (by decide) rfl
 
 theorem AZ_scale_12 : toVec (AZ 12) = (scale : ℚ) • ACell12_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_7_scaled (by decide) rfl
 
 theorem AZ_scale_13 : toVec (AZ 13) = (scale : ℚ) • ACell13_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_7_scaled (by decide) rfl
 
 theorem AZ_scale_14 : toVec (AZ 14) = (scale : ℚ) • ACell14_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_7_scaled (by decide) rfl
 
 theorem AZ_scale_15 : toVec (AZ 15) = (scale : ℚ) • ACell15_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_7_scaled (by decide) rfl
 
 theorem AZ_scale_16 : toVec (AZ 16) = (scale : ℚ) • ACell16_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_7_scaled (by decide) rfl
 
 theorem AZ_scale_17 : toVec (AZ 17) = (scale : ℚ) • ACell17_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_7_scaled (by decide) rfl
 
 theorem AZ_scale_18 : toVec (AZ 18) = (scale : ℚ) • ACell18_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_7_scaled (by decide) rfl
 
 theorem AZ_scale_19 : toVec (AZ 19) = (scale : ℚ) • ACell19_7 :=
-  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_7_scaled (by decide) rfl
 
 theorem AZ_scale (k : Fin 20) :
     toVec (AZ k) = (scale : ℚ) • AVec k (7 : Fin 10) :=
@@ -2568,8 +2234,7 @@ theorem AZ_scale (k : Fin 20) :
     k
 
 theorem KZ_scale_0 : toVec (KZ 0) = (scale : ℚ) • KCell2_0 :=
-  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide) rfl
 
 theorem KZ_scale (k : Fin 1) :
     toVec (KZ k) = (scale : ℚ) • KVec (2 : Fin 10) k :=
@@ -2578,8 +2243,7 @@ theorem KZ_scale (k : Fin 1) :
     k
 
 theorem YZ_scale_0 : toVec (YZ 0) = (scale : ℚ) • YCell0_7 :=
-  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_7_scaled (by decide) rfl
 
 theorem YZ_scale (k : Fin 1) :
     toVec (YZ k) = (scale : ℚ) • YVec k (7 : Fin 10) :=
@@ -2683,84 +2347,64 @@ theorem scale_ne_zero : scale ≠ 0 := by
   decide
 
 theorem XZ_scale_0 : toVec (XZ 0) = (scale : ℚ) • XCell2_0 :=
-  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide) rfl
 
 theorem XZ_scale_1 : toVec (XZ 1) = (scale : ℚ) • XCell2_1 :=
-  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide) rfl
 
 theorem XZ_scale_2 : toVec (XZ 2) = (scale : ℚ) • XCell2_2 :=
-  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide) rfl
 
 theorem XZ_scale_3 : toVec (XZ 3) = (scale : ℚ) • XCell2_3 :=
-  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide) rfl
 
 theorem XZ_scale_4 : toVec (XZ 4) = (scale : ℚ) • XCell2_4 :=
-  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide) rfl
 
 theorem XZ_scale_5 : toVec (XZ 5) = (scale : ℚ) • XCell2_5 :=
-  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide) rfl
 
 theorem XZ_scale_6 : toVec (XZ 6) = (scale : ℚ) • XCell2_6 :=
-  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide) rfl
 
 theorem XZ_scale_7 : toVec (XZ 7) = (scale : ℚ) • XCell2_7 :=
-  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide) rfl
 
 theorem XZ_scale_8 : toVec (XZ 8) = (scale : ℚ) • XCell2_8 :=
-  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide) rfl
 
 theorem XZ_scale_9 : toVec (XZ 9) = (scale : ℚ) • XCell2_9 :=
-  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide) rfl
 
 theorem XZ_scale_10 : toVec (XZ 10) = (scale : ℚ) • XCell2_10 :=
-  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide) rfl
 
 theorem XZ_scale_11 : toVec (XZ 11) = (scale : ℚ) • XCell2_11 :=
-  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide) rfl
 
 theorem XZ_scale_12 : toVec (XZ 12) = (scale : ℚ) • XCell2_12 :=
-  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide) rfl
 
 theorem XZ_scale_13 : toVec (XZ 13) = (scale : ℚ) • XCell2_13 :=
-  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide) rfl
 
 theorem XZ_scale_14 : toVec (XZ 14) = (scale : ℚ) • XCell2_14 :=
-  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide) rfl
 
 theorem XZ_scale_15 : toVec (XZ 15) = (scale : ℚ) • XCell2_15 :=
-  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide) rfl
 
 theorem XZ_scale_16 : toVec (XZ 16) = (scale : ℚ) • XCell2_16 :=
-  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide) rfl
 
 theorem XZ_scale_17 : toVec (XZ 17) = (scale : ℚ) • XCell2_17 :=
-  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide) rfl
 
 theorem XZ_scale_18 : toVec (XZ 18) = (scale : ℚ) • XCell2_18 :=
-  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide) rfl
 
 theorem XZ_scale_19 : toVec (XZ 19) = (scale : ℚ) • XCell2_19 :=
-  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide) rfl
 
 theorem XZ_scale (k : Fin 20) :
     toVec (XZ k) = (scale : ℚ) • XVec (2 : Fin 10) k :=
@@ -2788,84 +2432,64 @@ theorem XZ_scale (k : Fin 20) :
     k
 
 theorem AZ_scale_0 : toVec (AZ 0) = (scale : ℚ) • ACell0_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_8_scaled (by decide) rfl
 
 theorem AZ_scale_1 : toVec (AZ 1) = (scale : ℚ) • ACell1_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_8_scaled (by decide) rfl
 
 theorem AZ_scale_2 : toVec (AZ 2) = (scale : ℚ) • ACell2_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_8_scaled (by decide) rfl
 
 theorem AZ_scale_3 : toVec (AZ 3) = (scale : ℚ) • ACell3_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_8_scaled (by decide) rfl
 
 theorem AZ_scale_4 : toVec (AZ 4) = (scale : ℚ) • ACell4_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_8_scaled (by decide) rfl
 
 theorem AZ_scale_5 : toVec (AZ 5) = (scale : ℚ) • ACell5_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_8_scaled (by decide) rfl
 
 theorem AZ_scale_6 : toVec (AZ 6) = (scale : ℚ) • ACell6_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_8_scaled (by decide) rfl
 
 theorem AZ_scale_7 : toVec (AZ 7) = (scale : ℚ) • ACell7_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_8_scaled (by decide) rfl
 
 theorem AZ_scale_8 : toVec (AZ 8) = (scale : ℚ) • ACell8_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_8_scaled (by decide) rfl
 
 theorem AZ_scale_9 : toVec (AZ 9) = (scale : ℚ) • ACell9_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_8_scaled (by decide) rfl
 
 theorem AZ_scale_10 : toVec (AZ 10) = (scale : ℚ) • ACell10_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_8_scaled (by decide) rfl
 
 theorem AZ_scale_11 : toVec (AZ 11) = (scale : ℚ) • ACell11_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_8_scaled (by decide) rfl
 
 theorem AZ_scale_12 : toVec (AZ 12) = (scale : ℚ) • ACell12_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_8_scaled (by decide) rfl
 
 theorem AZ_scale_13 : toVec (AZ 13) = (scale : ℚ) • ACell13_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_8_scaled (by decide) rfl
 
 theorem AZ_scale_14 : toVec (AZ 14) = (scale : ℚ) • ACell14_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_8_scaled (by decide) rfl
 
 theorem AZ_scale_15 : toVec (AZ 15) = (scale : ℚ) • ACell15_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_8_scaled (by decide) rfl
 
 theorem AZ_scale_16 : toVec (AZ 16) = (scale : ℚ) • ACell16_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_8_scaled (by decide) rfl
 
 theorem AZ_scale_17 : toVec (AZ 17) = (scale : ℚ) • ACell17_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_8_scaled (by decide) rfl
 
 theorem AZ_scale_18 : toVec (AZ 18) = (scale : ℚ) • ACell18_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_8_scaled (by decide) rfl
 
 theorem AZ_scale_19 : toVec (AZ 19) = (scale : ℚ) • ACell19_8 :=
-  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_8_scaled (by decide) rfl
 
 theorem AZ_scale (k : Fin 20) :
     toVec (AZ k) = (scale : ℚ) • AVec k (8 : Fin 10) :=
@@ -2893,8 +2517,7 @@ theorem AZ_scale (k : Fin 20) :
     k
 
 theorem KZ_scale_0 : toVec (KZ 0) = (scale : ℚ) • KCell2_0 :=
-  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide) rfl
 
 theorem KZ_scale (k : Fin 1) :
     toVec (KZ k) = (scale : ℚ) • KVec (2 : Fin 10) k :=
@@ -2903,8 +2526,7 @@ theorem KZ_scale (k : Fin 1) :
     k
 
 theorem YZ_scale_0 : toVec (YZ 0) = (scale : ℚ) • YCell0_8 :=
-  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_8_scaled (by decide) rfl
 
 theorem YZ_scale (k : Fin 1) :
     toVec (YZ k) = (scale : ℚ) • YVec k (8 : Fin 10) :=
@@ -3008,84 +2630,64 @@ theorem scale_ne_zero : scale ≠ 0 := by
   decide
 
 theorem XZ_scale_0 : toVec (XZ 0) = (scale : ℚ) • XCell2_0 :=
-  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell2_0_scaled (by decide) rfl
 
 theorem XZ_scale_1 : toVec (XZ 1) = (scale : ℚ) • XCell2_1 :=
-  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 1) scale XCell2_1_scaled (by decide) rfl
 
 theorem XZ_scale_2 : toVec (XZ 2) = (scale : ℚ) • XCell2_2 :=
-  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 2) scale XCell2_2_scaled (by decide) rfl
 
 theorem XZ_scale_3 : toVec (XZ 3) = (scale : ℚ) • XCell2_3 :=
-  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 3) scale XCell2_3_scaled (by decide) rfl
 
 theorem XZ_scale_4 : toVec (XZ 4) = (scale : ℚ) • XCell2_4 :=
-  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 4) scale XCell2_4_scaled (by decide) rfl
 
 theorem XZ_scale_5 : toVec (XZ 5) = (scale : ℚ) • XCell2_5 :=
-  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 5) scale XCell2_5_scaled (by decide) rfl
 
 theorem XZ_scale_6 : toVec (XZ 6) = (scale : ℚ) • XCell2_6 :=
-  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 6) scale XCell2_6_scaled (by decide) rfl
 
 theorem XZ_scale_7 : toVec (XZ 7) = (scale : ℚ) • XCell2_7 :=
-  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 7) scale XCell2_7_scaled (by decide) rfl
 
 theorem XZ_scale_8 : toVec (XZ 8) = (scale : ℚ) • XCell2_8 :=
-  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 8) scale XCell2_8_scaled (by decide) rfl
 
 theorem XZ_scale_9 : toVec (XZ 9) = (scale : ℚ) • XCell2_9 :=
-  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 9) scale XCell2_9_scaled (by decide) rfl
 
 theorem XZ_scale_10 : toVec (XZ 10) = (scale : ℚ) • XCell2_10 :=
-  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 10) scale XCell2_10_scaled (by decide) rfl
 
 theorem XZ_scale_11 : toVec (XZ 11) = (scale : ℚ) • XCell2_11 :=
-  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 11) scale XCell2_11_scaled (by decide) rfl
 
 theorem XZ_scale_12 : toVec (XZ 12) = (scale : ℚ) • XCell2_12 :=
-  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 12) scale XCell2_12_scaled (by decide) rfl
 
 theorem XZ_scale_13 : toVec (XZ 13) = (scale : ℚ) • XCell2_13 :=
-  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 13) scale XCell2_13_scaled (by decide) rfl
 
 theorem XZ_scale_14 : toVec (XZ 14) = (scale : ℚ) • XCell2_14 :=
-  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 14) scale XCell2_14_scaled (by decide) rfl
 
 theorem XZ_scale_15 : toVec (XZ 15) = (scale : ℚ) • XCell2_15 :=
-  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 15) scale XCell2_15_scaled (by decide) rfl
 
 theorem XZ_scale_16 : toVec (XZ 16) = (scale : ℚ) • XCell2_16 :=
-  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 16) scale XCell2_16_scaled (by decide) rfl
 
 theorem XZ_scale_17 : toVec (XZ 17) = (scale : ℚ) • XCell2_17 :=
-  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 17) scale XCell2_17_scaled (by decide) rfl
 
 theorem XZ_scale_18 : toVec (XZ 18) = (scale : ℚ) • XCell2_18 :=
-  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 18) scale XCell2_18_scaled (by decide) rfl
 
 theorem XZ_scale_19 : toVec (XZ 19) = (scale : ℚ) • XCell2_19 :=
-  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (XZ 19) scale XCell2_19_scaled (by decide) rfl
 
 theorem XZ_scale (k : Fin 20) :
     toVec (XZ k) = (scale : ℚ) • XVec (2 : Fin 10) k :=
@@ -3113,84 +2715,64 @@ theorem XZ_scale (k : Fin 20) :
     k
 
 theorem AZ_scale_0 : toVec (AZ 0) = (scale : ℚ) • ACell0_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 0) scale ACell0_9_scaled (by decide) rfl
 
 theorem AZ_scale_1 : toVec (AZ 1) = (scale : ℚ) • ACell1_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 1) scale ACell1_9_scaled (by decide) rfl
 
 theorem AZ_scale_2 : toVec (AZ 2) = (scale : ℚ) • ACell2_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 2) scale ACell2_9_scaled (by decide) rfl
 
 theorem AZ_scale_3 : toVec (AZ 3) = (scale : ℚ) • ACell3_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 3) scale ACell3_9_scaled (by decide) rfl
 
 theorem AZ_scale_4 : toVec (AZ 4) = (scale : ℚ) • ACell4_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 4) scale ACell4_9_scaled (by decide) rfl
 
 theorem AZ_scale_5 : toVec (AZ 5) = (scale : ℚ) • ACell5_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 5) scale ACell5_9_scaled (by decide) rfl
 
 theorem AZ_scale_6 : toVec (AZ 6) = (scale : ℚ) • ACell6_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 6) scale ACell6_9_scaled (by decide) rfl
 
 theorem AZ_scale_7 : toVec (AZ 7) = (scale : ℚ) • ACell7_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 7) scale ACell7_9_scaled (by decide) rfl
 
 theorem AZ_scale_8 : toVec (AZ 8) = (scale : ℚ) • ACell8_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 8) scale ACell8_9_scaled (by decide) rfl
 
 theorem AZ_scale_9 : toVec (AZ 9) = (scale : ℚ) • ACell9_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 9) scale ACell9_9_scaled (by decide) rfl
 
 theorem AZ_scale_10 : toVec (AZ 10) = (scale : ℚ) • ACell10_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 10) scale ACell10_9_scaled (by decide) rfl
 
 theorem AZ_scale_11 : toVec (AZ 11) = (scale : ℚ) • ACell11_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 11) scale ACell11_9_scaled (by decide) rfl
 
 theorem AZ_scale_12 : toVec (AZ 12) = (scale : ℚ) • ACell12_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 12) scale ACell12_9_scaled (by decide) rfl
 
 theorem AZ_scale_13 : toVec (AZ 13) = (scale : ℚ) • ACell13_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 13) scale ACell13_9_scaled (by decide) rfl
 
 theorem AZ_scale_14 : toVec (AZ 14) = (scale : ℚ) • ACell14_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 14) scale ACell14_9_scaled (by decide) rfl
 
 theorem AZ_scale_15 : toVec (AZ 15) = (scale : ℚ) • ACell15_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 15) scale ACell15_9_scaled (by decide) rfl
 
 theorem AZ_scale_16 : toVec (AZ 16) = (scale : ℚ) • ACell16_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 16) scale ACell16_9_scaled (by decide) rfl
 
 theorem AZ_scale_17 : toVec (AZ 17) = (scale : ℚ) • ACell17_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 17) scale ACell17_9_scaled (by decide) rfl
 
 theorem AZ_scale_18 : toVec (AZ 18) = (scale : ℚ) • ACell18_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 18) scale ACell18_9_scaled (by decide) rfl
 
 theorem AZ_scale_19 : toVec (AZ 19) = (scale : ℚ) • ACell19_9 :=
-  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (AZ 19) scale ACell19_9_scaled (by decide) rfl
 
 theorem AZ_scale (k : Fin 20) :
     toVec (AZ k) = (scale : ℚ) • AVec k (9 : Fin 10) :=
@@ -3218,8 +2800,7 @@ theorem AZ_scale (k : Fin 20) :
     k
 
 theorem KZ_scale_0 : toVec (KZ 0) = (scale : ℚ) • KCell2_0 :=
-  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (KZ 0) scale KCell2_0_scaled (by decide) rfl
 
 theorem KZ_scale (k : Fin 1) :
     toVec (KZ k) = (scale : ℚ) • KVec (2 : Fin 10) k :=
@@ -3228,8 +2809,7 @@ theorem KZ_scale (k : Fin 1) :
     k
 
 theorem YZ_scale_0 : toVec (YZ 0) = (scale : ℚ) • YCell0_9 :=
-  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_9_scaled (by decide)
-    (by decide +kernel)
+  toVec_eq_smul_of_scaledZ (YZ 0) scale YCell0_9_scaled (by decide) rfl
 
 theorem YZ_scale (k : Fin 1) :
     toVec (YZ k) = (scale : ℚ) • YVec k (9 : Fin 10) :=

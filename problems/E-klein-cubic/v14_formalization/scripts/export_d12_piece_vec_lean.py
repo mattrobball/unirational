@@ -175,8 +175,7 @@ def emit_scale_thm(thm: str, fn: str, rhs: str, cells: list[str],
     for index, cell in enumerate(cells):
         lines += [
             f"theorem {thm}_{index} : toVec ({fn} {index}) = (scale : ℚ) • {cell} :=",
-            f"  toVec_eq_smul_of_scaledZ ({fn} {index}) scale {cell}_scaled (by decide)",
-            "    (by decide +kernel)",
+            f"  toVec_eq_smul_of_scaledZ ({fn} {index}) scale {cell}_scaled (by decide) rfl",
             "",
         ]
     count = len(cells)
