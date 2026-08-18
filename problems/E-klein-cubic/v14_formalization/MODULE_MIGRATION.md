@@ -12,22 +12,22 @@ changing.
 | `module` files | 1,376 |
 | legacy files remaining | 34 |
 | Comparator closure converted | 1,052 / 1,052 |
-| declarations | 97,257 |
-| ... `public` | 13,231 (13.6%) |
-| ... `@[expose]` | 6,618 (6.8%) |
-| ... module-private | 84,026 (86.4%) |
+| declarations | 101,084 |
+| ... `public` | 17,059 (16.9%) |
+| ... `@[expose]` | 4,769 (4.7%) |
+| ... module-private | 84,025 (83.1%) |
 | modules publishing at most one declaration | 1,005 of 1,376 |
 
 (Counts are from one parser run over the tree, so before/after figures in this
 document are comparable to each other; they sit a little under a raw
 `grep -c '@\[expose\]'`, which also sees attribute lines that are not
 declaration heads.  At the start of 2026-08-18 the same parser read 11,038
-`public` / 6,930 `@[expose]`; the session moved 312 declarations from
-"exposed def" to "public equation" — see "De-exposing a table" below — and then
-added 1,881 published projection equations when the generated certificates
-stopped using `change`, which is why `public` rose while `@[expose]` did not
-move. See "`change` in generated proofs" for what that bought and what it did
-not.)
+`public` / 6,930 `@[expose]`.  The session moved every coefficient table it
+touched from "exposed def" to "published equation": BezoutData and Partials
+(312), then the four Piece*Data (1,848).  `public` rose because each table now
+publishes the facts its consumers used to obtain by unfolding — that is the
+trade, and it is the right way round: a published equation is an interface, an
+exposed body is not.)
 
 The 34 legacy files are exactly the ones that have never compiled, on any
 branch: `D12SealProof` (deterministic whnf timeout at `L₀_mul_B₀`), the 24
@@ -42,8 +42,8 @@ What that bought, measured on an importer of `V14Solution`:
 
 | importer | constants | max RSS |
 |---|---:|---:|
-| legacy (`import V14Solution`) | 597,052 | 3.48 GB |
-| module (`public import V14Solution`) | 415,275 | **1.89 GB** |
+| legacy (`import V14Solution`) | 598,978 | 3.50 GB |
+| module (`public import V14Solution`) | 417,189 | **1.88 GB** |
 
 (2026-08-17 figures were 589,728 / 3.77 GB and 413,384 / 2.08 GB; both sides
 dropped ~0.2 GB when the proof terms shrank — see the closure table below. The
@@ -269,11 +269,24 @@ the arrays via `rfl`/`decide`, which need bodies at elaboration time — unless
 the module is converted to publish equations instead (see "De-exposing a
 table").
 
-### THREE EMITTERS ARE STALE — DO NOT RE-RUN THEM (2026-08-18)
+### FOUR EMITTERS ARE STALE — THREE REFUSE TO RUN (2026-08-18)
 
 `scripts/export_sigma_plus_span.py`, `scripts/export_sigma_plus_tinv.py` and
-`scripts/export_sigma_plus_span_identities.py` still emit the proofs their
-outputs had **before** the integer-interpolation rewrite. Running any of them
+`scripts/export_sigma_plus_span_identities.py` now **exit 2** with an
+explanation rather than corrupting the tree; `--emitter-is-current` re-enables
+one, for whoever re-derives it and can first show a byte-identical round-trip.
+A fourth, `scripts/export_sigma_plus_minor_h.py` (the HM family), is stale in
+the same way and is not yet guarded: its output predates
+`transform_vqhm_reflection.py` and `interpq_expand_rewrite.py`, so it emits the
+pre-`interpQ` proofs and none of the `z_*` bridges. Re-deriving these means
+wiring their post-passes into the emitter, not rewriting the emitter: the
+pipeline is emitter + `transform_vqhm_reflection.py` +
+`interpq_expand_rewrite.py` + `ring_to_grind_rewrite.py` + the annotation hook,
+and only the first stage is in `main()`. The passes are not parameterised on an
+input directory, which is the work.
+
+They still emit the proofs their outputs had **before** the
+integer-interpolation rewrite. Running any of them
 over `V14Formalization/` reverts that work — measured, on 2026-08-18: 243, 273
 and 614 tracked files rewritten back to `simp (disch := decide) only [interp_mul,
 …]` / `apply interp_eq` / `· decide` shapes, plus **378 files created that are no
@@ -431,7 +444,15 @@ calibration against the pilot commit).
 | after the module migration completed | 159,781 | 177.6M | 88.8M |
 | after `ring` -> `grind` (2026-08-18) | 162,545 | 139.9M | 66.5M |
 | after de-exposing BezoutData + Partials | 162,794 | 140.0M | 66.5M |
-| after removing 1,100 `change`s | 163,796 | **140.2M** | **66.6M** |
+| after removing 1,100 `change`s | 163,796 | 140.2M | 66.6M |
+| after the SplitRow redesign + de-exposing Piece*Data | 166,352 | 143.2M | 67.8M |
+| after converting VQ / HM `change` | 166,991 | **143.5M** | **68.1M** |
+
+Net for 2026-08-18: **177.6M -> 143.5M, -19.2%**, and `@[expose]` 7,093 -> 4,769.
+The last two rows are the exposure work paid for on the export: +3.35M, +2.4%,
+in exchange for 1,848 exposures and certificates that no longer reach through a
+table's body.  At ~85 bytes/node the export is ~12.2 GB against the 15 GB
+runner.
 
 Publishing 312 defining equations cost 94,222 nodes, +0.07% — the de-exposure
 is very nearly free on the export, which is the reason to prefer it to leaving
@@ -774,7 +795,88 @@ case. `change` was innocent.
 So removing `change` is worth doing for the interface it unpins, not for the
 export. Where it unpins nothing, leave it.
 
-### Why the Piece*Data de-exposure still fails, after the `change` removal
+### The Piece*Data de-exposure: done (2026-08-18)
+
+All four tables are now 0% `@[expose]` — 1,848 exposures removed, tree-wide
+6,618 -> 4,769, and `@[expose]` falls from 50.0% to 28.0% of public.
+
+The blocker was not `change`.  It was that each of the 16,800
+`{X,A,K,Y}Z_scale_*` certificates passed its ten coordinate equations to
+`toVec_eq_smul10` as *term-mode arguments*, and every argument's expected type
+mentions the cell:
+
+```
+eq_smul_div (-15) scale (-15) 44 …  :  ↑(-15) = ↑scale * (↑(-15) / ↑44)
+expected                            :  ↑(XZ 0)[0] = ↑scale * XCell9_0 0
+```
+
+so each one only typechecked if the cell body reduced.  No partial exposure
+helps — the 16,800 cover every cell of every table.
+
+The fix is a different characterisation.  The table publishes, once per cell,
+the fact the certificates actually need:
+
+```lean
+public theorem XCell0_0_scaled :
+    toVec #v[-73, -117, …] = ((66 : ℤ) : ℚ) • XCell0_0 :=
+  toVec_eq_smul10 #v[-73, -117, …] 66 XCell0_0 (eq_smul_div …) …
+```
+
+and each certificate collapses to one application of a shared lemma whose only
+remaining content is an integer identity that `rfl` discharges:
+
+```lean
+theorem XZ_scale_0 : toVec (XZ 0) = (scale : ℚ) • XCell0_0 :=
+  toVec_eq_smul_of_scaledZ (XZ 0) scale XCell0_0_scaled (by decide) rfl
+```
+
+`toVec_eq_smul_of_scaledZ` (D12VecScaleIntro) does the `d ≠ 0` cancellation
+once; `smulZ` / `toVec_smulZ` (D12CyclotomicVecZ) are new.  The ten
+`eq_smul_div` certificates are paid 1,848 times instead of 168,000.  The
+aggregate `*Z_scale` lemmas, which are stated about `XVec i k` rather than the
+cell, are carried across by `toVec_smul_congr` applied to the table's published
+entry equation, replacing a `simp [XVec, XRow6]`.
+
+Two things the tables also publish, for the other consumers:
+
+* `{A,X,K,Y}Vec_apply_{i}_{j}` — the entry equations, used by the ActionRow
+  certificates and the `*Z_scale` aggregates;
+* `…Cell{i}_{j}_def : … = ![…]` — the flat value, which the evaluating
+  consumers (`norm_num [ACell0_0_def, …]`) rewrite with.  Measured on one cell,
+  module importer, project constants only: exposed def 2 constants / 380 Expr
+  nodes; def + ten point equations 11 / 134; def + one flat equation 2 / **107**.
+* `KVec_col{j}` — a binder-friendly form, because the Plucker certificate
+  rewrites `KVec k 0` under a `∑ k : Fin 10` where per-index equations cannot
+  fire: after `Fin.sum_univ_succ` the index reads
+  `(Fin.succ 2).succ.succ.succ.succ`, which matches no numeral.  (`Fin.sum_univ_ten`
+  does not exist in this Mathlib.)
+
+Generated source drops 104,090 lines.  Two things that did NOT work, recorded so
+they are not retried:
+
+* naming the integer numerator vector in the data module, to keep the `#v[…]`
+  literal out of 16,800 proof terms: **`decide +kernel` cannot unfold a `public`
+  def that is not `@[expose]`d**, so it trades 1,848 table exposures for 1,848
+  exposed integer vectors.  The literal stays.
+* `decide +kernel` for the integer identity at all: `rfl` is both smaller and
+  sufficient, since `eqZ` and `smulZ` are coordinatewise and evaluate.  Measured
+  on D12PieceAASplitRow0: 151,665 -> 111,493 per-constant nodes.
+
+### What it cost on the export
+
+| | constants | per-constant nodes |
+|---|---:|---:|
+| before the redesign | 163,796 | 140,165,930 |
+| redesign, `decide +kernel` | 183,152 | 145,029,498 |
+| redesign, `rfl` | 166,352 | **143,200,858** |
+
+**+3.03M, +2.2%.**  The certificates got smaller and the tables got bigger: the
+`_scaled`, `_def` and `_apply` equations are new constants in the closure, and
+the four data modules go from below the reporting floor to ~2.6M between them.
+De-exposure is not free on the export; it is worth it for the interface, and
+~12.2 GB still leaves margin under the 15 GB runner.
+
+### The old obstruction, for the record
 
 Attempted and reverted, with the errors recorded. With `@[expose]` stripped
 from all four tables the ActionRow certificates are fine — that was the point
@@ -824,17 +926,30 @@ equation lemmas. The one-flat-equation encoding is the one to use.
 
 ### The `change` residue, and why each part of it stands
 
-1,373 occurrences remain (down from 2,173 by this count). None is left in a
-family where removing it unpins an exposure.
+**995 occurrences remain**, down from 2,173 at the start of 2026-08-18:
+ActionRow 800 -> 0, SplitRow 300 -> 0, VQ 189 -> 0, HM 378 -> 189.
 
 | where | count | why it stands |
 |---|---:|---|
-| `D12SigmaPlusSegreHM` | 378 | generated, and its emitter is one of the three stale ones, so it needs a post-pass. Two shapes per module: one reshapes the *result of a `simp`* into an explicit `bilinearCoeffs` expression — there is no equation to rewrite with, the goal is only defeq to the target — and one is `change ofLadj minorQ_re_0_0 minorQ_im_0_0 = minorQ 0 0`, which would need a `minorQ_apply_{i}_{j}` family that does not exist. |
-| `D12SigmaPlusSegreVQ` | 189 | one per module, naming 31 entries at once. Converting it needs `spanV_apply_*` and `minorQ_apply_*`; `spanV_apply_*` exists only in `Apply_spanV_*`, which is one of the 24 shards that have never compiled. And it would unpin nothing: Qplus, minorQ and spanV are `simp only`-unfolded by Qrel (15 modules) and UM (315) regardless. |
-| `D12SigmaPlusSegreUM` | 315 | outside the `V14Solution` closure entirely. |
-| hand-written, ~60 modules | ~400 | `GeometricVCarrier` 100, `BiprojectiveFunctionFieldProjection` 31, `PSLCard` 29, `ProjectiveEigenvectorReduction` 25, … These are authored proofs, not emitter output, and the brief was about emitters. |
+| `D12SigmaPlusSegreHM`, first of two per module | 189 | It reshapes the *result of a `simp`* into an explicit `bilinearCoeffs (Hrow 0) (Hrow 4) 0 - …` expression. There is no stated equation to rewrite with: the goal simp leaves is only *defeq* to the target, and nothing names its shape. Converting it means pinning down that simp normal form, which is a separate piece of work. The second `change` per module is gone — it is now `rw [minorQ_apply_0_0]`. |
+| `D12SigmaPlusSegreUM` | 315 | outside the `V14Solution` import closure entirely. |
+| hand-written, ~60 modules | ~490 | `GeometricVCarrier` 100, `BiprojectiveFunctionFieldProjection` 31, `PSLCard` 29, `ProjectiveEigenvectorReduction` 25, … Authored proofs, not emitter output. |
 
-The measured rule to apply to any of them: converting `change` to `rw` costs
-about 120 Expr nodes per occurrence, so it is worth doing exactly when it lets
-a table drop `@[expose]`, and not otherwise.
+Deriving the entry equations for VQ turned up the root cause of a
+long-standing defect: `D12SigmaPlusSegreApply_span{U,V}_*` — 24 of the 34 files
+that have never compiled on any branch — say `unfold spanV spanV_row0`, while
+`spanV` is a single two-dimensional `match` with no `spanV_row*` anywhere in
+the tree. They were meant to be the `spanV_apply_{i}_{j}` lemmas. Derived from
+the actual definition, in the module that owns the matrix, they are `rfl`
+(`scripts/matrix_apply_lemmas.py`); `spanU_apply_*` and `minorQ_apply_*` are
+added on the same footing. `Qplus_apply_*` already existed and is live — the
+Qrel modules use it — so the VQ modules import it rather than publishing a
+second copy, which collides at import time.
+
+The measured rule for the rest: converting `change` to `rw` costs about 120
+Expr nodes per occurrence. It is worth doing where it lets a table drop
+`@[expose]` — which is what it did for the four Piece*Data — and it is worth
+doing for the code, because a proof that depends on how a definition is written
+rather than on a stated fact about it is what couples every certificate to a
+table's body. It is not a size lever: that was measured and is settled.
 
