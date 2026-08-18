@@ -31,6 +31,8 @@ namespace V14Formalization.D12SigmaMinusConcrete
 open D12PolynomialData D12PolynomialEvaluation
 open D12SigmaCarrier D12SigmaCarrierPolynomial D12SigmaCarrierConcrete
 open D12SigmaMinusNormalForm D12SigmaMinusNormalFormData
+open D12SigmaCarrierPolynomial
+open V14Formalization.D12PolyZReflection
 
 public theorem evalMatrixK_Bminus_poly :
     evalMatrixK Bminus_poly = D12SigmaCarrierConcrete.core.Bminus := by

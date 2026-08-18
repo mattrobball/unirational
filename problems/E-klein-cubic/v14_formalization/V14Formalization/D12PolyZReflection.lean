@@ -168,6 +168,32 @@ theorem allZero_toPolyZ (xs : List Int) (h : xs.all (· == 0) = true) :
       rw [toPolyZ, ih h.2, hx]
       simp
 
+/-- Squares fold like any other product. -/
+public theorem interp_pow_two (d : ℕ) (n : List Int) :
+    interpQ d n ^ 2 = interpQ (d * d) (convList n n) := by
+  rw [pow_two, interp_mul]
+
+/-- Numeral coefficients enter the reflection with denominator one, so a
+    certificate that mentions `2 * p` or `4 * p` stays foldable. -/
+public theorem interp_one : (1 : Polynomial ℚ) = interpQ 1 [1] := by
+  simp [interpQ, toPolyZ]
+
+public theorem interp_ofNat (n : ℕ) [n.AtLeastTwo] :
+    (OfNat.ofNat n : Polynomial ℚ) = interpQ 1 [(OfNat.ofNat n : Int)] := by
+  simp only [interpQ, toPolyZ, Nat.cast_one, inv_one, map_one, one_mul,
+    zero_mul, mul_zero, add_zero]
+  push_cast
+  exact (map_ofNat (Polynomial.C (R := ℚ)) n).symm
+
+/-- Negation stays inside the reflection.  `simp` normalises `a - (b + c)` to
+    `-b + -c + …`, so the folding simp set needs this to reach `interp_add_gen`. -/
+public theorem interp_neg (d : ℕ) (n : List Int) :
+    -interpQ d n = interpQ d (smulList (-1 : Int) n) := by
+  rw [interpQ, interpQ, toPolyZ_smulList]
+  push_cast
+  simp only [map_neg, map_one]
+  ring
+
 /-- Degree bound: the Horner form has degree at most the list length.
     `compute_degree` cannot see through the nesting, so the bound is proved
     once here and applied. -/
@@ -186,6 +212,26 @@ public theorem natDegree_interpQ_le (d : ℕ) (l : List Int) :
     (interpQ d l).natDegree ≤ l.length := by
   refine le_trans (Polynomial.natDegree_mul_le) ?_
   simpa [Polynomial.natDegree_C] using natDegree_toPolyZ_le l
+
+/-- The sharp bound: index `i` of the list is the coefficient of `X ^ i`. -/
+public theorem natDegree_toPolyZ_lt (l : List Int) :
+    (toPolyZ l).natDegree ≤ l.length - 1 := by
+  induction l with
+  | nil => simp [toPolyZ]
+  | cons c cs ih =>
+      cases cs with
+      | nil => simp [toPolyZ, Polynomial.natDegree_C]
+      | cons e es =>
+          refine le_trans (Polynomial.natDegree_add_le _ _) (max_le ?_ ?_)
+          · simp [Polynomial.natDegree_C]
+          · refine le_trans (Polynomial.natDegree_mul_le) ?_
+            simp only [Polynomial.natDegree_X, List.length_cons] at ih ⊢
+            omega
+
+public theorem natDegree_interpQ_lt (d : ℕ) (l : List Int) :
+    (interpQ d l).natDegree ≤ l.length - 1 := by
+  refine le_trans (Polynomial.natDegree_mul_le) ?_
+  simpa [Polynomial.natDegree_C] using natDegree_toPolyZ_lt l
 
 /-- Two representations agree when the cross-multiplied difference vanishes
     coefficientwise (trailing zeros allowed on either side). -/

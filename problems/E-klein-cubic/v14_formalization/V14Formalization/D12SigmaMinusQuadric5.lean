@@ -10,6 +10,8 @@ open Matrix Polynomial
 namespace V14Formalization.D12SigmaMinusQuadric5
 open D12PolynomialData D12PolynomialEvaluation
 open D12SigmaMinusNormalForm D12SigmaMinusNormalFormData
+open D12SigmaCarrierPolynomial
+open V14Formalization.D12PolyZReflection
 
 private theorem C_eq_smul_one (a : ℚ) :
     C a = a • (1 : Polynomial ℚ) := by
@@ -147,7 +149,7 @@ private theorem nat63_as_C : (63 : Polynomial ℚ) = C 63 :=
 private theorem nat64_as_C : (64 : Polynomial ℚ) = C 64 :=
   (map_natCast C 64).symm
 
-def quotient_0 : Polynomial ℚ := 0
+def quotient_0 : Polynomial ℚ := interpQ 1 []
 
 theorem relation_0 :
     restrictedPluckerCoeffs Bminus_poly (5 : Fin 15) (0 : Fin 10) -
@@ -156,12 +158,12 @@ theorem relation_0 :
     Pi.sub_apply, Pi.add_apply,
     Bminus_poly, Qcoeff_poly, quotient_0]
   norm_num [SchemeGeometry.pluckerRelation]
-  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5,
-    Phi11, Finset.sum_range_succ]
-  all_goals norm_num
-  all_goals simp only [C_eq_smul_one, smul_mul_assoc,
-    one_mul, mul_one, smul_smul]
-  all_goals module
+  all_goals (try rw [z_Phi11])
+  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5]
+  all_goals (try simp (disch := decide) only [interp_neg,
+    interp_mul, interp_add_gen, interp_sub_gen, Nat.reduceMul])
+  all_goals (try apply interp_eq)
+  all_goals (try decide)
 
 theorem eval_relation_0
     {S : Type*} [CommRing S] [Algebra ℚ S] (z : S)
@@ -172,7 +174,7 @@ theorem eval_relation_0
   simp only [map_sub, map_mul, hPhi, zero_mul, sub_eq_zero] at h
   exact h
 
-def quotient_1 : Polynomial ℚ := 0
+def quotient_1 : Polynomial ℚ := interpQ 1 []
 
 theorem relation_1 :
     restrictedPluckerCoeffs Bminus_poly (5 : Fin 15) (1 : Fin 10) -
@@ -181,12 +183,12 @@ theorem relation_1 :
     Pi.sub_apply, Pi.add_apply,
     Bminus_poly, Qcoeff_poly, quotient_1]
   norm_num [SchemeGeometry.pluckerRelation]
-  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5,
-    Phi11, Finset.sum_range_succ]
-  all_goals norm_num
-  all_goals simp only [C_eq_smul_one, smul_mul_assoc,
-    one_mul, mul_one, smul_smul]
-  all_goals module
+  all_goals (try rw [z_Phi11])
+  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5]
+  all_goals (try simp (disch := decide) only [interp_neg,
+    interp_mul, interp_add_gen, interp_sub_gen, Nat.reduceMul])
+  all_goals (try apply interp_eq)
+  all_goals (try decide)
 
 theorem eval_relation_1
     {S : Type*} [CommRing S] [Algebra ℚ S] (z : S)
@@ -197,7 +199,7 @@ theorem eval_relation_1
   simp only [map_sub, map_mul, hPhi, zero_mul, sub_eq_zero] at h
   exact h
 
-def quotient_2 : Polynomial ℚ := 0
+def quotient_2 : Polynomial ℚ := interpQ 1 []
 
 theorem relation_2 :
     restrictedPluckerCoeffs Bminus_poly (5 : Fin 15) (2 : Fin 10) -
@@ -206,12 +208,12 @@ theorem relation_2 :
     Pi.sub_apply, Pi.add_apply,
     Bminus_poly, Qcoeff_poly, quotient_2]
   norm_num [SchemeGeometry.pluckerRelation]
-  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5,
-    Phi11, Finset.sum_range_succ]
-  all_goals norm_num
-  all_goals simp only [C_eq_smul_one, smul_mul_assoc,
-    one_mul, mul_one, smul_smul]
-  all_goals module
+  all_goals (try rw [z_Phi11])
+  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5]
+  all_goals (try simp (disch := decide) only [interp_neg,
+    interp_mul, interp_add_gen, interp_sub_gen, Nat.reduceMul])
+  all_goals (try apply interp_eq)
+  all_goals (try decide)
 
 theorem eval_relation_2
     {S : Type*} [CommRing S] [Algebra ℚ S] (z : S)
@@ -222,7 +224,7 @@ theorem eval_relation_2
   simp only [map_sub, map_mul, hPhi, zero_mul, sub_eq_zero] at h
   exact h
 
-def quotient_3 : Polynomial ℚ := 0
+def quotient_3 : Polynomial ℚ := interpQ 1 []
 
 theorem relation_3 :
     restrictedPluckerCoeffs Bminus_poly (5 : Fin 15) (3 : Fin 10) -
@@ -231,12 +233,12 @@ theorem relation_3 :
     Pi.sub_apply, Pi.add_apply,
     Bminus_poly, Qcoeff_poly, quotient_3]
   norm_num [SchemeGeometry.pluckerRelation]
-  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5,
-    Phi11, Finset.sum_range_succ]
-  all_goals norm_num
-  all_goals simp only [C_eq_smul_one, smul_mul_assoc,
-    one_mul, mul_one, smul_smul]
-  all_goals module
+  all_goals (try rw [z_Phi11])
+  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5]
+  all_goals (try simp (disch := decide) only [interp_neg,
+    interp_mul, interp_add_gen, interp_sub_gen, Nat.reduceMul])
+  all_goals (try apply interp_eq)
+  all_goals (try decide)
 
 theorem eval_relation_3
     {S : Type*} [CommRing S] [Algebra ℚ S] (z : S)
@@ -247,7 +249,7 @@ theorem eval_relation_3
   simp only [map_sub, map_mul, hPhi, zero_mul, sub_eq_zero] at h
   exact h
 
-def quotient_4 : Polynomial ℚ := 0
+def quotient_4 : Polynomial ℚ := interpQ 1 []
 
 theorem relation_4 :
     restrictedPluckerCoeffs Bminus_poly (5 : Fin 15) (4 : Fin 10) -
@@ -256,12 +258,12 @@ theorem relation_4 :
     Pi.sub_apply, Pi.add_apply,
     Bminus_poly, Qcoeff_poly, quotient_4]
   norm_num [SchemeGeometry.pluckerRelation]
-  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5,
-    Phi11, Finset.sum_range_succ]
-  all_goals norm_num
-  all_goals simp only [C_eq_smul_one, smul_mul_assoc,
-    one_mul, mul_one, smul_smul]
-  all_goals module
+  all_goals (try rw [z_Phi11])
+  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5]
+  all_goals (try simp (disch := decide) only [interp_neg,
+    interp_mul, interp_add_gen, interp_sub_gen, Nat.reduceMul])
+  all_goals (try apply interp_eq)
+  all_goals (try decide)
 
 theorem eval_relation_4
     {S : Type*} [CommRing S] [Algebra ℚ S] (z : S)
@@ -272,7 +274,7 @@ theorem eval_relation_4
   simp only [map_sub, map_mul, hPhi, zero_mul, sub_eq_zero] at h
   exact h
 
-def quotient_5 : Polynomial ℚ := 0
+def quotient_5 : Polynomial ℚ := interpQ 1 []
 
 theorem relation_5 :
     restrictedPluckerCoeffs Bminus_poly (5 : Fin 15) (5 : Fin 10) -
@@ -281,12 +283,12 @@ theorem relation_5 :
     Pi.sub_apply, Pi.add_apply,
     Bminus_poly, Qcoeff_poly, quotient_5]
   norm_num [SchemeGeometry.pluckerRelation]
-  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5,
-    Phi11, Finset.sum_range_succ]
-  all_goals norm_num
-  all_goals simp only [C_eq_smul_one, smul_mul_assoc,
-    one_mul, mul_one, smul_smul]
-  all_goals module
+  all_goals (try rw [z_Phi11])
+  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5]
+  all_goals (try simp (disch := decide) only [interp_neg,
+    interp_mul, interp_add_gen, interp_sub_gen, Nat.reduceMul])
+  all_goals (try apply interp_eq)
+  all_goals (try decide)
 
 theorem eval_relation_5
     {S : Type*} [CommRing S] [Algebra ℚ S] (z : S)
@@ -297,7 +299,7 @@ theorem eval_relation_5
   simp only [map_sub, map_mul, hPhi, zero_mul, sub_eq_zero] at h
   exact h
 
-def quotient_6 : Polynomial ℚ := 0
+def quotient_6 : Polynomial ℚ := interpQ 1 []
 
 theorem relation_6 :
     restrictedPluckerCoeffs Bminus_poly (5 : Fin 15) (6 : Fin 10) -
@@ -306,12 +308,12 @@ theorem relation_6 :
     Pi.sub_apply, Pi.add_apply,
     Bminus_poly, Qcoeff_poly, quotient_6]
   norm_num [SchemeGeometry.pluckerRelation]
-  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5,
-    Phi11, Finset.sum_range_succ]
-  all_goals norm_num
-  all_goals simp only [C_eq_smul_one, smul_mul_assoc,
-    one_mul, mul_one, smul_smul]
-  all_goals module
+  all_goals (try rw [z_Phi11])
+  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5]
+  all_goals (try simp (disch := decide) only [interp_neg,
+    interp_mul, interp_add_gen, interp_sub_gen, Nat.reduceMul])
+  all_goals (try apply interp_eq)
+  all_goals (try decide)
 
 theorem eval_relation_6
     {S : Type*} [CommRing S] [Algebra ℚ S] (z : S)
@@ -322,7 +324,7 @@ theorem eval_relation_6
   simp only [map_sub, map_mul, hPhi, zero_mul, sub_eq_zero] at h
   exact h
 
-def quotient_7 : Polynomial ℚ := 0
+def quotient_7 : Polynomial ℚ := interpQ 1 []
 
 theorem relation_7 :
     restrictedPluckerCoeffs Bminus_poly (5 : Fin 15) (7 : Fin 10) -
@@ -331,12 +333,12 @@ theorem relation_7 :
     Pi.sub_apply, Pi.add_apply,
     Bminus_poly, Qcoeff_poly, quotient_7]
   norm_num [SchemeGeometry.pluckerRelation]
-  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5,
-    Phi11, Finset.sum_range_succ]
-  all_goals norm_num
-  all_goals simp only [C_eq_smul_one, smul_mul_assoc,
-    one_mul, mul_one, smul_smul]
-  all_goals module
+  all_goals (try rw [z_Phi11])
+  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5]
+  all_goals (try simp (disch := decide) only [interp_neg,
+    interp_mul, interp_add_gen, interp_sub_gen, Nat.reduceMul])
+  all_goals (try apply interp_eq)
+  all_goals (try decide)
 
 theorem eval_relation_7
     {S : Type*} [CommRing S] [Algebra ℚ S] (z : S)
@@ -347,7 +349,7 @@ theorem eval_relation_7
   simp only [map_sub, map_mul, hPhi, zero_mul, sub_eq_zero] at h
   exact h
 
-def quotient_8 : Polynomial ℚ := 0
+def quotient_8 : Polynomial ℚ := interpQ 1 []
 
 theorem relation_8 :
     restrictedPluckerCoeffs Bminus_poly (5 : Fin 15) (8 : Fin 10) -
@@ -356,12 +358,12 @@ theorem relation_8 :
     Pi.sub_apply, Pi.add_apply,
     Bminus_poly, Qcoeff_poly, quotient_8]
   norm_num [SchemeGeometry.pluckerRelation]
-  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5,
-    Phi11, Finset.sum_range_succ]
-  all_goals norm_num
-  all_goals simp only [C_eq_smul_one, smul_mul_assoc,
-    one_mul, mul_one, smul_smul]
-  all_goals module
+  all_goals (try rw [z_Phi11])
+  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5]
+  all_goals (try simp (disch := decide) only [interp_neg,
+    interp_mul, interp_add_gen, interp_sub_gen, Nat.reduceMul])
+  all_goals (try apply interp_eq)
+  all_goals (try decide)
 
 theorem eval_relation_8
     {S : Type*} [CommRing S] [Algebra ℚ S] (z : S)
@@ -372,7 +374,7 @@ theorem eval_relation_8
   simp only [map_sub, map_mul, hPhi, zero_mul, sub_eq_zero] at h
   exact h
 
-def quotient_9 : Polynomial ℚ := 0
+def quotient_9 : Polynomial ℚ := interpQ 1 []
 
 theorem relation_9 :
     restrictedPluckerCoeffs Bminus_poly (5 : Fin 15) (9 : Fin 10) -
@@ -381,12 +383,12 @@ theorem relation_9 :
     Pi.sub_apply, Pi.add_apply,
     Bminus_poly, Qcoeff_poly, quotient_9]
   norm_num [SchemeGeometry.pluckerRelation]
-  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5,
-    Phi11, Finset.sum_range_succ]
-  all_goals norm_num
-  all_goals simp only [C_eq_smul_one, smul_mul_assoc,
-    one_mul, mul_one, smul_smul]
-  all_goals module
+  all_goals (try rw [z_Phi11])
+  all_goals simp [Bminus_poly_row0, Bminus_poly_row3, Bminus_poly_row4, Bminus_poly_row7, Bminus_poly_row8, Bminus_poly_row14, Qcoeff_poly_row5]
+  all_goals (try simp (disch := decide) only [interp_neg,
+    interp_mul, interp_add_gen, interp_sub_gen, Nat.reduceMul])
+  all_goals (try apply interp_eq)
+  all_goals (try decide)
 
 theorem eval_relation_9
     {S : Type*} [CommRing S] [Algebra ℚ S] (z : S)

@@ -10,6 +10,8 @@ open Matrix Polynomial
 namespace V14Formalization.D12SigmaMinusReference
 open D12PolynomialData D12PolynomialEvaluation
 open D12SigmaMinusNormalForm D12SigmaMinusNormalFormData
+open D12SigmaCarrierPolynomial
+open V14Formalization.D12PolyZReflection
 
 private theorem C_eq_smul_one (a : ℚ) :
     C a = a • (1 : Polynomial ℚ) := by
@@ -147,194 +149,194 @@ private theorem nat63_as_C : (63 : Polynomial ℚ) = C 63 :=
 private theorem nat64_as_C : (64 : Polynomial ℚ) = C 64 :=
   (map_natCast C 64).symm
 
-def pullback_A_raw : Polynomial ℚ := C ((1 / 2 : ℚ)) * X ^ 2 + C ((-1 / 2 : ℚ)) * X ^ 4 + C ((1 / 2 : ℚ)) * X ^ 5 + C ((-1 / 2 : ℚ)) * X ^ 6 + C ((-7 / 2 : ℚ)) * X ^ 7 + C ((-11 / 2 : ℚ)) * X ^ 8 + C ((-17 / 2 : ℚ)) * X ^ 9 + C (-14) * X ^ 10 + C (-18) * X ^ 11 + C ((-43 / 2 : ℚ)) * X ^ 12 + C (-26) * X ^ 13 + C (-28) * X ^ 14 + C (-30) * X ^ 15 + C ((-63 / 2 : ℚ)) * X ^ 16 + C ((-61 / 2 : ℚ)) * X ^ 17 + C ((-55 / 2 : ℚ)) * X ^ 18 + C ((-49 / 2 : ℚ)) * X ^ 19 + C (-21) * X ^ 20 + C (-15) * X ^ 21 + C (-11) * X ^ 22 + C ((-15 / 2 : ℚ)) * X ^ 23 + C (-4) * X ^ 24 + C (-2) * X ^ 25 + C ((-1 / 2 : ℚ)) * X ^ 26
+def pullback_A_raw : Polynomial ℚ := interpQ 2 [0, 0, 1, 0, -1, 1, -1, -7, -11, -17, -28, -36, -43, -52, -56, -60, -63, -61, -55, -49, -42, -30, -22, -15, -8, -4, -1]
 def pullback_A_quotientTerm : Fin 14 → Polynomial ℚ := fun i =>
   match i.val with
-  | 0 => C (1) * X ^ 2
-  | 1 => C ((1 / 2 : ℚ)) * X ^ 4
-  | 2 => C (1) * X ^ 5
-  | 3 => C (-1) * X ^ 6
-  | 4 => C (-3) * X ^ 7
-  | 5 => C (-3) * X ^ 8
-  | 6 => C ((-7 / 2 : ℚ)) * X ^ 9
-  | 7 => C (-6) * X ^ 10
-  | 8 => C (-4) * X ^ 11
-  | 9 => C ((-7 / 2 : ℚ)) * X ^ 12
-  | 10 => C ((-7 / 2 : ℚ)) * X ^ 13
-  | 11 => C (-2) * X ^ 14
-  | 12 => C ((-3 / 2 : ℚ)) * X ^ 15
-  | 13 => C ((-1 / 2 : ℚ)) * X ^ 16
+  | 0 => interpQ 1 [0, 0, 1]
+  | 1 => interpQ 2 [0, 0, 0, 0, 1]
+  | 2 => interpQ 1 [0, 0, 0, 0, 0, 1]
+  | 3 => interpQ 1 [0, 0, 0, 0, 0, 0, -1]
+  | 4 => interpQ 1 [0, 0, 0, 0, 0, 0, 0, -3]
+  | 5 => interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, -3]
+  | 6 => interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, -7]
+  | 7 => interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -6]
+  | 8 => interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -4]
+  | 9 => interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -7]
+  | 10 => interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -7]
+  | 11 => interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2]
+  | 12 => interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3]
+  | 13 => interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1]
   | _ => 0
 def pullback_A_quotient : Polynomial ℚ :=
   ∑ i : Fin 14, pullback_A_quotientTerm i
 
-def pullback_A_product_0 : Polynomial ℚ := C (1) * X ^ 2 + C (1) * X ^ 3 + C (1) * X ^ 4 + C (1) * X ^ 5 + C (1) * X ^ 6 + C (1) * X ^ 7 + C (1) * X ^ 8 + C (1) * X ^ 9 + C (1) * X ^ 10 + C (1) * X ^ 11 + C (1) * X ^ 12
+def pullback_A_product_0 : Polynomial ℚ := interpQ 1 [0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 theorem pullback_A_product_eq_0 :
     Phi11 * pullback_A_quotientTerm (0 : Fin 14) =
       pullback_A_product_0 := by
+  rw [z_Phi11]
   simp [pullback_A_quotientTerm, pullback_A_product_0]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_A_product_1 : Polynomial ℚ := C ((1 / 2 : ℚ)) * X ^ 4 + C ((1 / 2 : ℚ)) * X ^ 5 + C ((1 / 2 : ℚ)) * X ^ 6 + C ((1 / 2 : ℚ)) * X ^ 7 + C ((1 / 2 : ℚ)) * X ^ 8 + C ((1 / 2 : ℚ)) * X ^ 9 + C ((1 / 2 : ℚ)) * X ^ 10 + C ((1 / 2 : ℚ)) * X ^ 11 + C ((1 / 2 : ℚ)) * X ^ 12 + C ((1 / 2 : ℚ)) * X ^ 13 + C ((1 / 2 : ℚ)) * X ^ 14
+def pullback_A_product_1 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 theorem pullback_A_product_eq_1 :
     Phi11 * pullback_A_quotientTerm (1 : Fin 14) =
       pullback_A_product_1 := by
+  rw [z_Phi11]
   simp [pullback_A_quotientTerm, pullback_A_product_1]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_A_product_2 : Polynomial ℚ := C (1) * X ^ 5 + C (1) * X ^ 6 + C (1) * X ^ 7 + C (1) * X ^ 8 + C (1) * X ^ 9 + C (1) * X ^ 10 + C (1) * X ^ 11 + C (1) * X ^ 12 + C (1) * X ^ 13 + C (1) * X ^ 14 + C (1) * X ^ 15
+def pullback_A_product_2 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 theorem pullback_A_product_eq_2 :
     Phi11 * pullback_A_quotientTerm (2 : Fin 14) =
       pullback_A_product_2 := by
+  rw [z_Phi11]
   simp [pullback_A_quotientTerm, pullback_A_product_2]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_A_product_3 : Polynomial ℚ := C (-1) * X ^ 6 + C (-1) * X ^ 7 + C (-1) * X ^ 8 + C (-1) * X ^ 9 + C (-1) * X ^ 10 + C (-1) * X ^ 11 + C (-1) * X ^ 12 + C (-1) * X ^ 13 + C (-1) * X ^ 14 + C (-1) * X ^ 15 + C (-1) * X ^ 16
+def pullback_A_product_3 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
 theorem pullback_A_product_eq_3 :
     Phi11 * pullback_A_quotientTerm (3 : Fin 14) =
       pullback_A_product_3 := by
+  rw [z_Phi11]
   simp [pullback_A_quotientTerm, pullback_A_product_3]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_A_product_4 : Polynomial ℚ := C (-3) * X ^ 7 + C (-3) * X ^ 8 + C (-3) * X ^ 9 + C (-3) * X ^ 10 + C (-3) * X ^ 11 + C (-3) * X ^ 12 + C (-3) * X ^ 13 + C (-3) * X ^ 14 + C (-3) * X ^ 15 + C (-3) * X ^ 16 + C (-3) * X ^ 17
+def pullback_A_product_4 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 0, 0, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
 theorem pullback_A_product_eq_4 :
     Phi11 * pullback_A_quotientTerm (4 : Fin 14) =
       pullback_A_product_4 := by
+  rw [z_Phi11]
   simp [pullback_A_quotientTerm, pullback_A_product_4]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_A_product_5 : Polynomial ℚ := C (-3) * X ^ 8 + C (-3) * X ^ 9 + C (-3) * X ^ 10 + C (-3) * X ^ 11 + C (-3) * X ^ 12 + C (-3) * X ^ 13 + C (-3) * X ^ 14 + C (-3) * X ^ 15 + C (-3) * X ^ 16 + C (-3) * X ^ 17 + C (-3) * X ^ 18
+def pullback_A_product_5 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
 theorem pullback_A_product_eq_5 :
     Phi11 * pullback_A_quotientTerm (5 : Fin 14) =
       pullback_A_product_5 := by
+  rw [z_Phi11]
   simp [pullback_A_quotientTerm, pullback_A_product_5]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_A_product_6 : Polynomial ℚ := C ((-7 / 2 : ℚ)) * X ^ 9 + C ((-7 / 2 : ℚ)) * X ^ 10 + C ((-7 / 2 : ℚ)) * X ^ 11 + C ((-7 / 2 : ℚ)) * X ^ 12 + C ((-7 / 2 : ℚ)) * X ^ 13 + C ((-7 / 2 : ℚ)) * X ^ 14 + C ((-7 / 2 : ℚ)) * X ^ 15 + C ((-7 / 2 : ℚ)) * X ^ 16 + C ((-7 / 2 : ℚ)) * X ^ 17 + C ((-7 / 2 : ℚ)) * X ^ 18 + C ((-7 / 2 : ℚ)) * X ^ 19
+def pullback_A_product_6 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, -7, -7, -7, -7, -7, -7, -7, -7, -7, -7, -7]
 theorem pullback_A_product_eq_6 :
     Phi11 * pullback_A_quotientTerm (6 : Fin 14) =
       pullback_A_product_6 := by
+  rw [z_Phi11]
   simp [pullback_A_quotientTerm, pullback_A_product_6]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_A_product_7 : Polynomial ℚ := C (-6) * X ^ 10 + C (-6) * X ^ 11 + C (-6) * X ^ 12 + C (-6) * X ^ 13 + C (-6) * X ^ 14 + C (-6) * X ^ 15 + C (-6) * X ^ 16 + C (-6) * X ^ 17 + C (-6) * X ^ 18 + C (-6) * X ^ 19 + C (-6) * X ^ 20
+def pullback_A_product_7 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -6, -6, -6, -6, -6, -6, -6, -6, -6, -6, -6]
 theorem pullback_A_product_eq_7 :
     Phi11 * pullback_A_quotientTerm (7 : Fin 14) =
       pullback_A_product_7 := by
+  rw [z_Phi11]
   simp [pullback_A_quotientTerm, pullback_A_product_7]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_A_product_8 : Polynomial ℚ := C (-4) * X ^ 11 + C (-4) * X ^ 12 + C (-4) * X ^ 13 + C (-4) * X ^ 14 + C (-4) * X ^ 15 + C (-4) * X ^ 16 + C (-4) * X ^ 17 + C (-4) * X ^ 18 + C (-4) * X ^ 19 + C (-4) * X ^ 20 + C (-4) * X ^ 21
+def pullback_A_product_8 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4]
 theorem pullback_A_product_eq_8 :
     Phi11 * pullback_A_quotientTerm (8 : Fin 14) =
       pullback_A_product_8 := by
+  rw [z_Phi11]
   simp [pullback_A_quotientTerm, pullback_A_product_8]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_A_product_9 : Polynomial ℚ := C ((-7 / 2 : ℚ)) * X ^ 12 + C ((-7 / 2 : ℚ)) * X ^ 13 + C ((-7 / 2 : ℚ)) * X ^ 14 + C ((-7 / 2 : ℚ)) * X ^ 15 + C ((-7 / 2 : ℚ)) * X ^ 16 + C ((-7 / 2 : ℚ)) * X ^ 17 + C ((-7 / 2 : ℚ)) * X ^ 18 + C ((-7 / 2 : ℚ)) * X ^ 19 + C ((-7 / 2 : ℚ)) * X ^ 20 + C ((-7 / 2 : ℚ)) * X ^ 21 + C ((-7 / 2 : ℚ)) * X ^ 22
+def pullback_A_product_9 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -7, -7, -7, -7, -7, -7, -7, -7, -7, -7, -7]
 theorem pullback_A_product_eq_9 :
     Phi11 * pullback_A_quotientTerm (9 : Fin 14) =
       pullback_A_product_9 := by
+  rw [z_Phi11]
   simp [pullback_A_quotientTerm, pullback_A_product_9]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_A_product_10 : Polynomial ℚ := C ((-7 / 2 : ℚ)) * X ^ 13 + C ((-7 / 2 : ℚ)) * X ^ 14 + C ((-7 / 2 : ℚ)) * X ^ 15 + C ((-7 / 2 : ℚ)) * X ^ 16 + C ((-7 / 2 : ℚ)) * X ^ 17 + C ((-7 / 2 : ℚ)) * X ^ 18 + C ((-7 / 2 : ℚ)) * X ^ 19 + C ((-7 / 2 : ℚ)) * X ^ 20 + C ((-7 / 2 : ℚ)) * X ^ 21 + C ((-7 / 2 : ℚ)) * X ^ 22 + C ((-7 / 2 : ℚ)) * X ^ 23
+def pullback_A_product_10 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -7, -7, -7, -7, -7, -7, -7, -7, -7, -7, -7]
 theorem pullback_A_product_eq_10 :
     Phi11 * pullback_A_quotientTerm (10 : Fin 14) =
       pullback_A_product_10 := by
+  rw [z_Phi11]
   simp [pullback_A_quotientTerm, pullback_A_product_10]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_A_product_11 : Polynomial ℚ := C (-2) * X ^ 14 + C (-2) * X ^ 15 + C (-2) * X ^ 16 + C (-2) * X ^ 17 + C (-2) * X ^ 18 + C (-2) * X ^ 19 + C (-2) * X ^ 20 + C (-2) * X ^ 21 + C (-2) * X ^ 22 + C (-2) * X ^ 23 + C (-2) * X ^ 24
+def pullback_A_product_11 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2]
 theorem pullback_A_product_eq_11 :
     Phi11 * pullback_A_quotientTerm (11 : Fin 14) =
       pullback_A_product_11 := by
+  rw [z_Phi11]
   simp [pullback_A_quotientTerm, pullback_A_product_11]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_A_product_12 : Polynomial ℚ := C ((-3 / 2 : ℚ)) * X ^ 15 + C ((-3 / 2 : ℚ)) * X ^ 16 + C ((-3 / 2 : ℚ)) * X ^ 17 + C ((-3 / 2 : ℚ)) * X ^ 18 + C ((-3 / 2 : ℚ)) * X ^ 19 + C ((-3 / 2 : ℚ)) * X ^ 20 + C ((-3 / 2 : ℚ)) * X ^ 21 + C ((-3 / 2 : ℚ)) * X ^ 22 + C ((-3 / 2 : ℚ)) * X ^ 23 + C ((-3 / 2 : ℚ)) * X ^ 24 + C ((-3 / 2 : ℚ)) * X ^ 25
+def pullback_A_product_12 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
 theorem pullback_A_product_eq_12 :
     Phi11 * pullback_A_quotientTerm (12 : Fin 14) =
       pullback_A_product_12 := by
+  rw [z_Phi11]
   simp [pullback_A_quotientTerm, pullback_A_product_12]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_A_product_13 : Polynomial ℚ := C ((-1 / 2 : ℚ)) * X ^ 16 + C ((-1 / 2 : ℚ)) * X ^ 17 + C ((-1 / 2 : ℚ)) * X ^ 18 + C ((-1 / 2 : ℚ)) * X ^ 19 + C ((-1 / 2 : ℚ)) * X ^ 20 + C ((-1 / 2 : ℚ)) * X ^ 21 + C ((-1 / 2 : ℚ)) * X ^ 22 + C ((-1 / 2 : ℚ)) * X ^ 23 + C ((-1 / 2 : ℚ)) * X ^ 24 + C ((-1 / 2 : ℚ)) * X ^ 25 + C ((-1 / 2 : ℚ)) * X ^ 26
+def pullback_A_product_13 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
 theorem pullback_A_product_eq_13 :
     Phi11 * pullback_A_quotientTerm (13 : Fin 14) =
       pullback_A_product_13 := by
+  rw [z_Phi11]
   simp [pullback_A_quotientTerm, pullback_A_product_13]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
 theorem pullback_A_relation :
     pullback_A_raw - A_poly =
@@ -381,10 +383,11 @@ theorem pullback_A_relation :
     pullback_A_product_0, pullback_A_product_1, pullback_A_product_2, pullback_A_product_3, pullback_A_product_4,
     pullback_A_product_5, pullback_A_product_6, pullback_A_product_7, pullback_A_product_8, pullback_A_product_9,
     pullback_A_product_10, pullback_A_product_11, pullback_A_product_12, pullback_A_product_13]
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
 
 theorem eval_pullback_A
@@ -396,233 +399,233 @@ theorem eval_pullback_A
   simp only [map_sub, map_mul, hPhi, zero_mul, sub_eq_zero] at h
   exact h
 
-def pullback_B_raw : Polynomial ℚ := C ((-1 / 2 : ℚ)) + C ((-3 / 2 : ℚ)) * X ^ 2 + C ((1 / 2 : ℚ)) * X ^ 3 + C (5) * X ^ 4 + C ((9 / 2 : ℚ)) * X ^ 5 + C (8) * X ^ 6 + C ((37 / 2 : ℚ)) * X ^ 7 + C ((37 / 2 : ℚ)) * X ^ 8 + C ((45 / 2 : ℚ)) * X ^ 9 + C ((69 / 2 : ℚ)) * X ^ 10 + C (35) * X ^ 11 + C (42) * X ^ 12 + C (50) * X ^ 13 + C (48) * X ^ 14 + C ((95 / 2 : ℚ)) * X ^ 15 + C (49) * X ^ 16 + C ((91 / 2 : ℚ)) * X ^ 17 + C (35) * X ^ 18 + C (34) * X ^ 19 + C (32) * X ^ 20 + C (20) * X ^ 21 + C (17) * X ^ 22 + C ((25 / 2 : ℚ)) * X ^ 23 + C (6) * X ^ 24 + C (4) * X ^ 25 + C (1) * X ^ 26
+def pullback_B_raw : Polynomial ℚ := interpQ 2 [-1, 0, -3, 1, 10, 9, 16, 37, 37, 45, 69, 70, 84, 100, 96, 95, 98, 91, 70, 68, 64, 40, 34, 25, 12, 8, 2]
 def pullback_B_quotientTerm : Fin 17 → Polynomial ℚ := fun i =>
   match i.val with
-  | 0 => C ((5 / 2 : ℚ))
-  | 1 => C ((-5 / 2 : ℚ)) * X
-  | 2 => C ((-3 / 2 : ℚ)) * X ^ 2
-  | 3 => C (4) * X ^ 3
-  | 4 => C ((7 / 2 : ℚ)) * X ^ 4
-  | 5 => C ((-1 / 2 : ℚ)) * X ^ 5
-  | 6 => C ((7 / 2 : ℚ)) * X ^ 6
-  | 7 => C ((21 / 2 : ℚ)) * X ^ 7
-  | 8 => C (1) * X ^ 8
-  | 9 => C (2) * X ^ 9
-  | 10 => C (12) * X ^ 10
-  | 11 => C (3) * X ^ 11
-  | 12 => C ((9 / 2 : ℚ)) * X ^ 12
-  | 13 => C ((13 / 2 : ℚ)) * X ^ 13
-  | 14 => C (2) * X ^ 14
-  | 15 => C (3) * X ^ 15
-  | 16 => C (1) * X ^ 16
+  | 0 => interpQ 2 [5]
+  | 1 => interpQ 2 [0, -5]
+  | 2 => interpQ 2 [0, 0, -3]
+  | 3 => interpQ 1 [0, 0, 0, 4]
+  | 4 => interpQ 2 [0, 0, 0, 0, 7]
+  | 5 => interpQ 2 [0, 0, 0, 0, 0, -1]
+  | 6 => interpQ 2 [0, 0, 0, 0, 0, 0, 7]
+  | 7 => interpQ 2 [0, 0, 0, 0, 0, 0, 0, 21]
+  | 8 => interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 1]
+  | 9 => interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 2]
+  | 10 => interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12]
+  | 11 => interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3]
+  | 12 => interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9]
+  | 13 => interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13]
+  | 14 => interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2]
+  | 15 => interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3]
+  | 16 => interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
   | _ => 0
 def pullback_B_quotient : Polynomial ℚ :=
   ∑ i : Fin 17, pullback_B_quotientTerm i
 
-def pullback_B_product_0 : Polynomial ℚ := C ((5 / 2 : ℚ)) + C ((5 / 2 : ℚ)) * X + C ((5 / 2 : ℚ)) * X ^ 2 + C ((5 / 2 : ℚ)) * X ^ 3 + C ((5 / 2 : ℚ)) * X ^ 4 + C ((5 / 2 : ℚ)) * X ^ 5 + C ((5 / 2 : ℚ)) * X ^ 6 + C ((5 / 2 : ℚ)) * X ^ 7 + C ((5 / 2 : ℚ)) * X ^ 8 + C ((5 / 2 : ℚ)) * X ^ 9 + C ((5 / 2 : ℚ)) * X ^ 10
+def pullback_B_product_0 : Polynomial ℚ := interpQ 2 [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5]
 theorem pullback_B_product_eq_0 :
     Phi11 * pullback_B_quotientTerm (0 : Fin 17) =
       pullback_B_product_0 := by
+  rw [z_Phi11]
   simp [pullback_B_quotientTerm, pullback_B_product_0]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_B_product_1 : Polynomial ℚ := C ((-5 / 2 : ℚ)) * X + C ((-5 / 2 : ℚ)) * X ^ 2 + C ((-5 / 2 : ℚ)) * X ^ 3 + C ((-5 / 2 : ℚ)) * X ^ 4 + C ((-5 / 2 : ℚ)) * X ^ 5 + C ((-5 / 2 : ℚ)) * X ^ 6 + C ((-5 / 2 : ℚ)) * X ^ 7 + C ((-5 / 2 : ℚ)) * X ^ 8 + C ((-5 / 2 : ℚ)) * X ^ 9 + C ((-5 / 2 : ℚ)) * X ^ 10 + C ((-5 / 2 : ℚ)) * X ^ 11
+def pullback_B_product_1 : Polynomial ℚ := interpQ 2 [0, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5]
 theorem pullback_B_product_eq_1 :
     Phi11 * pullback_B_quotientTerm (1 : Fin 17) =
       pullback_B_product_1 := by
+  rw [z_Phi11]
   simp [pullback_B_quotientTerm, pullback_B_product_1]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_B_product_2 : Polynomial ℚ := C ((-3 / 2 : ℚ)) * X ^ 2 + C ((-3 / 2 : ℚ)) * X ^ 3 + C ((-3 / 2 : ℚ)) * X ^ 4 + C ((-3 / 2 : ℚ)) * X ^ 5 + C ((-3 / 2 : ℚ)) * X ^ 6 + C ((-3 / 2 : ℚ)) * X ^ 7 + C ((-3 / 2 : ℚ)) * X ^ 8 + C ((-3 / 2 : ℚ)) * X ^ 9 + C ((-3 / 2 : ℚ)) * X ^ 10 + C ((-3 / 2 : ℚ)) * X ^ 11 + C ((-3 / 2 : ℚ)) * X ^ 12
+def pullback_B_product_2 : Polynomial ℚ := interpQ 2 [0, 0, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
 theorem pullback_B_product_eq_2 :
     Phi11 * pullback_B_quotientTerm (2 : Fin 17) =
       pullback_B_product_2 := by
+  rw [z_Phi11]
   simp [pullback_B_quotientTerm, pullback_B_product_2]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_B_product_3 : Polynomial ℚ := C (4) * X ^ 3 + C (4) * X ^ 4 + C (4) * X ^ 5 + C (4) * X ^ 6 + C (4) * X ^ 7 + C (4) * X ^ 8 + C (4) * X ^ 9 + C (4) * X ^ 10 + C (4) * X ^ 11 + C (4) * X ^ 12 + C (4) * X ^ 13
+def pullback_B_product_3 : Polynomial ℚ := interpQ 1 [0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
 theorem pullback_B_product_eq_3 :
     Phi11 * pullback_B_quotientTerm (3 : Fin 17) =
       pullback_B_product_3 := by
+  rw [z_Phi11]
   simp [pullback_B_quotientTerm, pullback_B_product_3]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_B_product_4 : Polynomial ℚ := C ((7 / 2 : ℚ)) * X ^ 4 + C ((7 / 2 : ℚ)) * X ^ 5 + C ((7 / 2 : ℚ)) * X ^ 6 + C ((7 / 2 : ℚ)) * X ^ 7 + C ((7 / 2 : ℚ)) * X ^ 8 + C ((7 / 2 : ℚ)) * X ^ 9 + C ((7 / 2 : ℚ)) * X ^ 10 + C ((7 / 2 : ℚ)) * X ^ 11 + C ((7 / 2 : ℚ)) * X ^ 12 + C ((7 / 2 : ℚ)) * X ^ 13 + C ((7 / 2 : ℚ)) * X ^ 14
+def pullback_B_product_4 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7]
 theorem pullback_B_product_eq_4 :
     Phi11 * pullback_B_quotientTerm (4 : Fin 17) =
       pullback_B_product_4 := by
+  rw [z_Phi11]
   simp [pullback_B_quotientTerm, pullback_B_product_4]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_B_product_5 : Polynomial ℚ := C ((-1 / 2 : ℚ)) * X ^ 5 + C ((-1 / 2 : ℚ)) * X ^ 6 + C ((-1 / 2 : ℚ)) * X ^ 7 + C ((-1 / 2 : ℚ)) * X ^ 8 + C ((-1 / 2 : ℚ)) * X ^ 9 + C ((-1 / 2 : ℚ)) * X ^ 10 + C ((-1 / 2 : ℚ)) * X ^ 11 + C ((-1 / 2 : ℚ)) * X ^ 12 + C ((-1 / 2 : ℚ)) * X ^ 13 + C ((-1 / 2 : ℚ)) * X ^ 14 + C ((-1 / 2 : ℚ)) * X ^ 15
+def pullback_B_product_5 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
 theorem pullback_B_product_eq_5 :
     Phi11 * pullback_B_quotientTerm (5 : Fin 17) =
       pullback_B_product_5 := by
+  rw [z_Phi11]
   simp [pullback_B_quotientTerm, pullback_B_product_5]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_B_product_6 : Polynomial ℚ := C ((7 / 2 : ℚ)) * X ^ 6 + C ((7 / 2 : ℚ)) * X ^ 7 + C ((7 / 2 : ℚ)) * X ^ 8 + C ((7 / 2 : ℚ)) * X ^ 9 + C ((7 / 2 : ℚ)) * X ^ 10 + C ((7 / 2 : ℚ)) * X ^ 11 + C ((7 / 2 : ℚ)) * X ^ 12 + C ((7 / 2 : ℚ)) * X ^ 13 + C ((7 / 2 : ℚ)) * X ^ 14 + C ((7 / 2 : ℚ)) * X ^ 15 + C ((7 / 2 : ℚ)) * X ^ 16
+def pullback_B_product_6 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7]
 theorem pullback_B_product_eq_6 :
     Phi11 * pullback_B_quotientTerm (6 : Fin 17) =
       pullback_B_product_6 := by
+  rw [z_Phi11]
   simp [pullback_B_quotientTerm, pullback_B_product_6]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_B_product_7 : Polynomial ℚ := C ((21 / 2 : ℚ)) * X ^ 7 + C ((21 / 2 : ℚ)) * X ^ 8 + C ((21 / 2 : ℚ)) * X ^ 9 + C ((21 / 2 : ℚ)) * X ^ 10 + C ((21 / 2 : ℚ)) * X ^ 11 + C ((21 / 2 : ℚ)) * X ^ 12 + C ((21 / 2 : ℚ)) * X ^ 13 + C ((21 / 2 : ℚ)) * X ^ 14 + C ((21 / 2 : ℚ)) * X ^ 15 + C ((21 / 2 : ℚ)) * X ^ 16 + C ((21 / 2 : ℚ)) * X ^ 17
+def pullback_B_product_7 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 0, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21, 21]
 theorem pullback_B_product_eq_7 :
     Phi11 * pullback_B_quotientTerm (7 : Fin 17) =
       pullback_B_product_7 := by
+  rw [z_Phi11]
   simp [pullback_B_quotientTerm, pullback_B_product_7]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_B_product_8 : Polynomial ℚ := C (1) * X ^ 8 + C (1) * X ^ 9 + C (1) * X ^ 10 + C (1) * X ^ 11 + C (1) * X ^ 12 + C (1) * X ^ 13 + C (1) * X ^ 14 + C (1) * X ^ 15 + C (1) * X ^ 16 + C (1) * X ^ 17 + C (1) * X ^ 18
+def pullback_B_product_8 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 theorem pullback_B_product_eq_8 :
     Phi11 * pullback_B_quotientTerm (8 : Fin 17) =
       pullback_B_product_8 := by
+  rw [z_Phi11]
   simp [pullback_B_quotientTerm, pullback_B_product_8]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_B_product_9 : Polynomial ℚ := C (2) * X ^ 9 + C (2) * X ^ 10 + C (2) * X ^ 11 + C (2) * X ^ 12 + C (2) * X ^ 13 + C (2) * X ^ 14 + C (2) * X ^ 15 + C (2) * X ^ 16 + C (2) * X ^ 17 + C (2) * X ^ 18 + C (2) * X ^ 19
+def pullback_B_product_9 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 theorem pullback_B_product_eq_9 :
     Phi11 * pullback_B_quotientTerm (9 : Fin 17) =
       pullback_B_product_9 := by
+  rw [z_Phi11]
   simp [pullback_B_quotientTerm, pullback_B_product_9]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_B_product_10 : Polynomial ℚ := C (12) * X ^ 10 + C (12) * X ^ 11 + C (12) * X ^ 12 + C (12) * X ^ 13 + C (12) * X ^ 14 + C (12) * X ^ 15 + C (12) * X ^ 16 + C (12) * X ^ 17 + C (12) * X ^ 18 + C (12) * X ^ 19 + C (12) * X ^ 20
+def pullback_B_product_10 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12]
 theorem pullback_B_product_eq_10 :
     Phi11 * pullback_B_quotientTerm (10 : Fin 17) =
       pullback_B_product_10 := by
+  rw [z_Phi11]
   simp [pullback_B_quotientTerm, pullback_B_product_10]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_B_product_11 : Polynomial ℚ := C (3) * X ^ 11 + C (3) * X ^ 12 + C (3) * X ^ 13 + C (3) * X ^ 14 + C (3) * X ^ 15 + C (3) * X ^ 16 + C (3) * X ^ 17 + C (3) * X ^ 18 + C (3) * X ^ 19 + C (3) * X ^ 20 + C (3) * X ^ 21
+def pullback_B_product_11 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
 theorem pullback_B_product_eq_11 :
     Phi11 * pullback_B_quotientTerm (11 : Fin 17) =
       pullback_B_product_11 := by
+  rw [z_Phi11]
   simp [pullback_B_quotientTerm, pullback_B_product_11]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_B_product_12 : Polynomial ℚ := C ((9 / 2 : ℚ)) * X ^ 12 + C ((9 / 2 : ℚ)) * X ^ 13 + C ((9 / 2 : ℚ)) * X ^ 14 + C ((9 / 2 : ℚ)) * X ^ 15 + C ((9 / 2 : ℚ)) * X ^ 16 + C ((9 / 2 : ℚ)) * X ^ 17 + C ((9 / 2 : ℚ)) * X ^ 18 + C ((9 / 2 : ℚ)) * X ^ 19 + C ((9 / 2 : ℚ)) * X ^ 20 + C ((9 / 2 : ℚ)) * X ^ 21 + C ((9 / 2 : ℚ)) * X ^ 22
+def pullback_B_product_12 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
 theorem pullback_B_product_eq_12 :
     Phi11 * pullback_B_quotientTerm (12 : Fin 17) =
       pullback_B_product_12 := by
+  rw [z_Phi11]
   simp [pullback_B_quotientTerm, pullback_B_product_12]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_B_product_13 : Polynomial ℚ := C ((13 / 2 : ℚ)) * X ^ 13 + C ((13 / 2 : ℚ)) * X ^ 14 + C ((13 / 2 : ℚ)) * X ^ 15 + C ((13 / 2 : ℚ)) * X ^ 16 + C ((13 / 2 : ℚ)) * X ^ 17 + C ((13 / 2 : ℚ)) * X ^ 18 + C ((13 / 2 : ℚ)) * X ^ 19 + C ((13 / 2 : ℚ)) * X ^ 20 + C ((13 / 2 : ℚ)) * X ^ 21 + C ((13 / 2 : ℚ)) * X ^ 22 + C ((13 / 2 : ℚ)) * X ^ 23
+def pullback_B_product_13 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13]
 theorem pullback_B_product_eq_13 :
     Phi11 * pullback_B_quotientTerm (13 : Fin 17) =
       pullback_B_product_13 := by
+  rw [z_Phi11]
   simp [pullback_B_quotientTerm, pullback_B_product_13]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_B_product_14 : Polynomial ℚ := C (2) * X ^ 14 + C (2) * X ^ 15 + C (2) * X ^ 16 + C (2) * X ^ 17 + C (2) * X ^ 18 + C (2) * X ^ 19 + C (2) * X ^ 20 + C (2) * X ^ 21 + C (2) * X ^ 22 + C (2) * X ^ 23 + C (2) * X ^ 24
+def pullback_B_product_14 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 theorem pullback_B_product_eq_14 :
     Phi11 * pullback_B_quotientTerm (14 : Fin 17) =
       pullback_B_product_14 := by
+  rw [z_Phi11]
   simp [pullback_B_quotientTerm, pullback_B_product_14]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_B_product_15 : Polynomial ℚ := C (3) * X ^ 15 + C (3) * X ^ 16 + C (3) * X ^ 17 + C (3) * X ^ 18 + C (3) * X ^ 19 + C (3) * X ^ 20 + C (3) * X ^ 21 + C (3) * X ^ 22 + C (3) * X ^ 23 + C (3) * X ^ 24 + C (3) * X ^ 25
+def pullback_B_product_15 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
 theorem pullback_B_product_eq_15 :
     Phi11 * pullback_B_quotientTerm (15 : Fin 17) =
       pullback_B_product_15 := by
+  rw [z_Phi11]
   simp [pullback_B_quotientTerm, pullback_B_product_15]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_B_product_16 : Polynomial ℚ := C (1) * X ^ 16 + C (1) * X ^ 17 + C (1) * X ^ 18 + C (1) * X ^ 19 + C (1) * X ^ 20 + C (1) * X ^ 21 + C (1) * X ^ 22 + C (1) * X ^ 23 + C (1) * X ^ 24 + C (1) * X ^ 25 + C (1) * X ^ 26
+def pullback_B_product_16 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 theorem pullback_B_product_eq_16 :
     Phi11 * pullback_B_quotientTerm (16 : Fin 17) =
       pullback_B_product_16 := by
+  rw [z_Phi11]
   simp [pullback_B_quotientTerm, pullback_B_product_16]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
 theorem pullback_B_relation :
     pullback_B_raw - BB_poly =
@@ -676,10 +679,11 @@ theorem pullback_B_relation :
     pullback_B_product_5, pullback_B_product_6, pullback_B_product_7, pullback_B_product_8, pullback_B_product_9,
     pullback_B_product_10, pullback_B_product_11, pullback_B_product_12, pullback_B_product_13, pullback_B_product_14,
     pullback_B_product_15, pullback_B_product_16]
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
 
 theorem eval_pullback_B
@@ -691,233 +695,233 @@ theorem eval_pullback_B
   simp only [map_sub, map_mul, hPhi, zero_mul, sub_eq_zero] at h
   exact h
 
-def pullback_C_raw : Polynomial ℚ := C (-1) * X ^ 2 + C ((-13 / 2 : ℚ)) * X ^ 4 + C ((-9 / 2 : ℚ)) * X ^ 5 + C (-4) * X ^ 6 + C (-16) * X ^ 7 + C ((-19 / 2 : ℚ)) * X ^ 8 + C ((-25 / 2 : ℚ)) * X ^ 9 + C (-21) * X ^ 10 + C ((-29 / 2 : ℚ)) * X ^ 11 + C ((-41 / 2 : ℚ)) * X ^ 12 + C (-23) * X ^ 13 + C (-20) * X ^ 14 + C ((-35 / 2 : ℚ)) * X ^ 15 + C ((-39 / 2 : ℚ)) * X ^ 16 + C (-20) * X ^ 17 + C ((-17 / 2 : ℚ)) * X ^ 18 + C ((-25 / 2 : ℚ)) * X ^ 19 + C (-13) * X ^ 20 + C ((-9 / 2 : ℚ)) * X ^ 21 + C ((-13 / 2 : ℚ)) * X ^ 22 + C (-5) * X ^ 23 + C ((-3 / 2 : ℚ)) * X ^ 24 + C (-2) * X ^ 25 + C ((-1 / 2 : ℚ)) * X ^ 26
+def pullback_C_raw : Polynomial ℚ := interpQ 2 [0, 0, -2, 0, -13, -9, -8, -32, -19, -25, -42, -29, -41, -46, -40, -35, -39, -40, -17, -25, -26, -9, -13, -10, -3, -4, -1]
 def pullback_C_quotientTerm : Fin 17 → Polynomial ℚ := fun i =>
   match i.val with
-  | 0 => C ((-9 / 2 : ℚ))
-  | 1 => C ((9 / 2 : ℚ)) * X
-  | 2 => C (-1) * X ^ 2
-  | 3 => C ((-5 / 2 : ℚ)) * X ^ 3
-  | 4 => C (-4) * X ^ 4
-  | 5 => C ((3 / 2 : ℚ)) * X ^ 5
-  | 6 => C ((1 / 2 : ℚ)) * X ^ 6
-  | 7 => C ((-23 / 2 : ℚ)) * X ^ 7
-  | 8 => C (4) * X ^ 8
-  | 9 => C ((1 / 2 : ℚ)) * X ^ 9
-  | 10 => C ((-17 / 2 : ℚ)) * X ^ 10
-  | 11 => C (2) * X ^ 11
-  | 12 => C ((-3 / 2 : ℚ)) * X ^ 12
-  | 13 => C ((-7 / 2 : ℚ)) * X ^ 13
-  | 14 => C ((1 / 2 : ℚ)) * X ^ 14
-  | 15 => C ((-3 / 2 : ℚ)) * X ^ 15
-  | 16 => C ((-1 / 2 : ℚ)) * X ^ 16
+  | 0 => interpQ 2 [-9]
+  | 1 => interpQ 2 [0, 9]
+  | 2 => interpQ 1 [0, 0, -1]
+  | 3 => interpQ 2 [0, 0, 0, -5]
+  | 4 => interpQ 1 [0, 0, 0, 0, -4]
+  | 5 => interpQ 2 [0, 0, 0, 0, 0, 3]
+  | 6 => interpQ 2 [0, 0, 0, 0, 0, 0, 1]
+  | 7 => interpQ 2 [0, 0, 0, 0, 0, 0, 0, -23]
+  | 8 => interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 4]
+  | 9 => interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+  | 10 => interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -17]
+  | 11 => interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2]
+  | 12 => interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3]
+  | 13 => interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -7]
+  | 14 => interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+  | 15 => interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3]
+  | 16 => interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1]
   | _ => 0
 def pullback_C_quotient : Polynomial ℚ :=
   ∑ i : Fin 17, pullback_C_quotientTerm i
 
-def pullback_C_product_0 : Polynomial ℚ := C ((-9 / 2 : ℚ)) + C ((-9 / 2 : ℚ)) * X + C ((-9 / 2 : ℚ)) * X ^ 2 + C ((-9 / 2 : ℚ)) * X ^ 3 + C ((-9 / 2 : ℚ)) * X ^ 4 + C ((-9 / 2 : ℚ)) * X ^ 5 + C ((-9 / 2 : ℚ)) * X ^ 6 + C ((-9 / 2 : ℚ)) * X ^ 7 + C ((-9 / 2 : ℚ)) * X ^ 8 + C ((-9 / 2 : ℚ)) * X ^ 9 + C ((-9 / 2 : ℚ)) * X ^ 10
+def pullback_C_product_0 : Polynomial ℚ := interpQ 2 [-9, -9, -9, -9, -9, -9, -9, -9, -9, -9, -9]
 theorem pullback_C_product_eq_0 :
     Phi11 * pullback_C_quotientTerm (0 : Fin 17) =
       pullback_C_product_0 := by
+  rw [z_Phi11]
   simp [pullback_C_quotientTerm, pullback_C_product_0]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_C_product_1 : Polynomial ℚ := C ((9 / 2 : ℚ)) * X + C ((9 / 2 : ℚ)) * X ^ 2 + C ((9 / 2 : ℚ)) * X ^ 3 + C ((9 / 2 : ℚ)) * X ^ 4 + C ((9 / 2 : ℚ)) * X ^ 5 + C ((9 / 2 : ℚ)) * X ^ 6 + C ((9 / 2 : ℚ)) * X ^ 7 + C ((9 / 2 : ℚ)) * X ^ 8 + C ((9 / 2 : ℚ)) * X ^ 9 + C ((9 / 2 : ℚ)) * X ^ 10 + C ((9 / 2 : ℚ)) * X ^ 11
+def pullback_C_product_1 : Polynomial ℚ := interpQ 2 [0, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9]
 theorem pullback_C_product_eq_1 :
     Phi11 * pullback_C_quotientTerm (1 : Fin 17) =
       pullback_C_product_1 := by
+  rw [z_Phi11]
   simp [pullback_C_quotientTerm, pullback_C_product_1]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_C_product_2 : Polynomial ℚ := C (-1) * X ^ 2 + C (-1) * X ^ 3 + C (-1) * X ^ 4 + C (-1) * X ^ 5 + C (-1) * X ^ 6 + C (-1) * X ^ 7 + C (-1) * X ^ 8 + C (-1) * X ^ 9 + C (-1) * X ^ 10 + C (-1) * X ^ 11 + C (-1) * X ^ 12
+def pullback_C_product_2 : Polynomial ℚ := interpQ 1 [0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
 theorem pullback_C_product_eq_2 :
     Phi11 * pullback_C_quotientTerm (2 : Fin 17) =
       pullback_C_product_2 := by
+  rw [z_Phi11]
   simp [pullback_C_quotientTerm, pullback_C_product_2]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_C_product_3 : Polynomial ℚ := C ((-5 / 2 : ℚ)) * X ^ 3 + C ((-5 / 2 : ℚ)) * X ^ 4 + C ((-5 / 2 : ℚ)) * X ^ 5 + C ((-5 / 2 : ℚ)) * X ^ 6 + C ((-5 / 2 : ℚ)) * X ^ 7 + C ((-5 / 2 : ℚ)) * X ^ 8 + C ((-5 / 2 : ℚ)) * X ^ 9 + C ((-5 / 2 : ℚ)) * X ^ 10 + C ((-5 / 2 : ℚ)) * X ^ 11 + C ((-5 / 2 : ℚ)) * X ^ 12 + C ((-5 / 2 : ℚ)) * X ^ 13
+def pullback_C_product_3 : Polynomial ℚ := interpQ 2 [0, 0, 0, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5, -5]
 theorem pullback_C_product_eq_3 :
     Phi11 * pullback_C_quotientTerm (3 : Fin 17) =
       pullback_C_product_3 := by
+  rw [z_Phi11]
   simp [pullback_C_quotientTerm, pullback_C_product_3]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_C_product_4 : Polynomial ℚ := C (-4) * X ^ 4 + C (-4) * X ^ 5 + C (-4) * X ^ 6 + C (-4) * X ^ 7 + C (-4) * X ^ 8 + C (-4) * X ^ 9 + C (-4) * X ^ 10 + C (-4) * X ^ 11 + C (-4) * X ^ 12 + C (-4) * X ^ 13 + C (-4) * X ^ 14
+def pullback_C_product_4 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4, -4]
 theorem pullback_C_product_eq_4 :
     Phi11 * pullback_C_quotientTerm (4 : Fin 17) =
       pullback_C_product_4 := by
+  rw [z_Phi11]
   simp [pullback_C_quotientTerm, pullback_C_product_4]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_C_product_5 : Polynomial ℚ := C ((3 / 2 : ℚ)) * X ^ 5 + C ((3 / 2 : ℚ)) * X ^ 6 + C ((3 / 2 : ℚ)) * X ^ 7 + C ((3 / 2 : ℚ)) * X ^ 8 + C ((3 / 2 : ℚ)) * X ^ 9 + C ((3 / 2 : ℚ)) * X ^ 10 + C ((3 / 2 : ℚ)) * X ^ 11 + C ((3 / 2 : ℚ)) * X ^ 12 + C ((3 / 2 : ℚ)) * X ^ 13 + C ((3 / 2 : ℚ)) * X ^ 14 + C ((3 / 2 : ℚ)) * X ^ 15
+def pullback_C_product_5 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
 theorem pullback_C_product_eq_5 :
     Phi11 * pullback_C_quotientTerm (5 : Fin 17) =
       pullback_C_product_5 := by
+  rw [z_Phi11]
   simp [pullback_C_quotientTerm, pullback_C_product_5]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_C_product_6 : Polynomial ℚ := C ((1 / 2 : ℚ)) * X ^ 6 + C ((1 / 2 : ℚ)) * X ^ 7 + C ((1 / 2 : ℚ)) * X ^ 8 + C ((1 / 2 : ℚ)) * X ^ 9 + C ((1 / 2 : ℚ)) * X ^ 10 + C ((1 / 2 : ℚ)) * X ^ 11 + C ((1 / 2 : ℚ)) * X ^ 12 + C ((1 / 2 : ℚ)) * X ^ 13 + C ((1 / 2 : ℚ)) * X ^ 14 + C ((1 / 2 : ℚ)) * X ^ 15 + C ((1 / 2 : ℚ)) * X ^ 16
+def pullback_C_product_6 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 theorem pullback_C_product_eq_6 :
     Phi11 * pullback_C_quotientTerm (6 : Fin 17) =
       pullback_C_product_6 := by
+  rw [z_Phi11]
   simp [pullback_C_quotientTerm, pullback_C_product_6]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_C_product_7 : Polynomial ℚ := C ((-23 / 2 : ℚ)) * X ^ 7 + C ((-23 / 2 : ℚ)) * X ^ 8 + C ((-23 / 2 : ℚ)) * X ^ 9 + C ((-23 / 2 : ℚ)) * X ^ 10 + C ((-23 / 2 : ℚ)) * X ^ 11 + C ((-23 / 2 : ℚ)) * X ^ 12 + C ((-23 / 2 : ℚ)) * X ^ 13 + C ((-23 / 2 : ℚ)) * X ^ 14 + C ((-23 / 2 : ℚ)) * X ^ 15 + C ((-23 / 2 : ℚ)) * X ^ 16 + C ((-23 / 2 : ℚ)) * X ^ 17
+def pullback_C_product_7 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 0, -23, -23, -23, -23, -23, -23, -23, -23, -23, -23, -23]
 theorem pullback_C_product_eq_7 :
     Phi11 * pullback_C_quotientTerm (7 : Fin 17) =
       pullback_C_product_7 := by
+  rw [z_Phi11]
   simp [pullback_C_quotientTerm, pullback_C_product_7]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_C_product_8 : Polynomial ℚ := C (4) * X ^ 8 + C (4) * X ^ 9 + C (4) * X ^ 10 + C (4) * X ^ 11 + C (4) * X ^ 12 + C (4) * X ^ 13 + C (4) * X ^ 14 + C (4) * X ^ 15 + C (4) * X ^ 16 + C (4) * X ^ 17 + C (4) * X ^ 18
+def pullback_C_product_8 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
 theorem pullback_C_product_eq_8 :
     Phi11 * pullback_C_quotientTerm (8 : Fin 17) =
       pullback_C_product_8 := by
+  rw [z_Phi11]
   simp [pullback_C_quotientTerm, pullback_C_product_8]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_C_product_9 : Polynomial ℚ := C ((1 / 2 : ℚ)) * X ^ 9 + C ((1 / 2 : ℚ)) * X ^ 10 + C ((1 / 2 : ℚ)) * X ^ 11 + C ((1 / 2 : ℚ)) * X ^ 12 + C ((1 / 2 : ℚ)) * X ^ 13 + C ((1 / 2 : ℚ)) * X ^ 14 + C ((1 / 2 : ℚ)) * X ^ 15 + C ((1 / 2 : ℚ)) * X ^ 16 + C ((1 / 2 : ℚ)) * X ^ 17 + C ((1 / 2 : ℚ)) * X ^ 18 + C ((1 / 2 : ℚ)) * X ^ 19
+def pullback_C_product_9 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 theorem pullback_C_product_eq_9 :
     Phi11 * pullback_C_quotientTerm (9 : Fin 17) =
       pullback_C_product_9 := by
+  rw [z_Phi11]
   simp [pullback_C_quotientTerm, pullback_C_product_9]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_C_product_10 : Polynomial ℚ := C ((-17 / 2 : ℚ)) * X ^ 10 + C ((-17 / 2 : ℚ)) * X ^ 11 + C ((-17 / 2 : ℚ)) * X ^ 12 + C ((-17 / 2 : ℚ)) * X ^ 13 + C ((-17 / 2 : ℚ)) * X ^ 14 + C ((-17 / 2 : ℚ)) * X ^ 15 + C ((-17 / 2 : ℚ)) * X ^ 16 + C ((-17 / 2 : ℚ)) * X ^ 17 + C ((-17 / 2 : ℚ)) * X ^ 18 + C ((-17 / 2 : ℚ)) * X ^ 19 + C ((-17 / 2 : ℚ)) * X ^ 20
+def pullback_C_product_10 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -17, -17, -17, -17, -17, -17, -17, -17, -17, -17, -17]
 theorem pullback_C_product_eq_10 :
     Phi11 * pullback_C_quotientTerm (10 : Fin 17) =
       pullback_C_product_10 := by
+  rw [z_Phi11]
   simp [pullback_C_quotientTerm, pullback_C_product_10]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_C_product_11 : Polynomial ℚ := C (2) * X ^ 11 + C (2) * X ^ 12 + C (2) * X ^ 13 + C (2) * X ^ 14 + C (2) * X ^ 15 + C (2) * X ^ 16 + C (2) * X ^ 17 + C (2) * X ^ 18 + C (2) * X ^ 19 + C (2) * X ^ 20 + C (2) * X ^ 21
+def pullback_C_product_11 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 theorem pullback_C_product_eq_11 :
     Phi11 * pullback_C_quotientTerm (11 : Fin 17) =
       pullback_C_product_11 := by
+  rw [z_Phi11]
   simp [pullback_C_quotientTerm, pullback_C_product_11]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_C_product_12 : Polynomial ℚ := C ((-3 / 2 : ℚ)) * X ^ 12 + C ((-3 / 2 : ℚ)) * X ^ 13 + C ((-3 / 2 : ℚ)) * X ^ 14 + C ((-3 / 2 : ℚ)) * X ^ 15 + C ((-3 / 2 : ℚ)) * X ^ 16 + C ((-3 / 2 : ℚ)) * X ^ 17 + C ((-3 / 2 : ℚ)) * X ^ 18 + C ((-3 / 2 : ℚ)) * X ^ 19 + C ((-3 / 2 : ℚ)) * X ^ 20 + C ((-3 / 2 : ℚ)) * X ^ 21 + C ((-3 / 2 : ℚ)) * X ^ 22
+def pullback_C_product_12 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
 theorem pullback_C_product_eq_12 :
     Phi11 * pullback_C_quotientTerm (12 : Fin 17) =
       pullback_C_product_12 := by
+  rw [z_Phi11]
   simp [pullback_C_quotientTerm, pullback_C_product_12]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_C_product_13 : Polynomial ℚ := C ((-7 / 2 : ℚ)) * X ^ 13 + C ((-7 / 2 : ℚ)) * X ^ 14 + C ((-7 / 2 : ℚ)) * X ^ 15 + C ((-7 / 2 : ℚ)) * X ^ 16 + C ((-7 / 2 : ℚ)) * X ^ 17 + C ((-7 / 2 : ℚ)) * X ^ 18 + C ((-7 / 2 : ℚ)) * X ^ 19 + C ((-7 / 2 : ℚ)) * X ^ 20 + C ((-7 / 2 : ℚ)) * X ^ 21 + C ((-7 / 2 : ℚ)) * X ^ 22 + C ((-7 / 2 : ℚ)) * X ^ 23
+def pullback_C_product_13 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -7, -7, -7, -7, -7, -7, -7, -7, -7, -7, -7]
 theorem pullback_C_product_eq_13 :
     Phi11 * pullback_C_quotientTerm (13 : Fin 17) =
       pullback_C_product_13 := by
+  rw [z_Phi11]
   simp [pullback_C_quotientTerm, pullback_C_product_13]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_C_product_14 : Polynomial ℚ := C ((1 / 2 : ℚ)) * X ^ 14 + C ((1 / 2 : ℚ)) * X ^ 15 + C ((1 / 2 : ℚ)) * X ^ 16 + C ((1 / 2 : ℚ)) * X ^ 17 + C ((1 / 2 : ℚ)) * X ^ 18 + C ((1 / 2 : ℚ)) * X ^ 19 + C ((1 / 2 : ℚ)) * X ^ 20 + C ((1 / 2 : ℚ)) * X ^ 21 + C ((1 / 2 : ℚ)) * X ^ 22 + C ((1 / 2 : ℚ)) * X ^ 23 + C ((1 / 2 : ℚ)) * X ^ 24
+def pullback_C_product_14 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
 theorem pullback_C_product_eq_14 :
     Phi11 * pullback_C_quotientTerm (14 : Fin 17) =
       pullback_C_product_14 := by
+  rw [z_Phi11]
   simp [pullback_C_quotientTerm, pullback_C_product_14]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_C_product_15 : Polynomial ℚ := C ((-3 / 2 : ℚ)) * X ^ 15 + C ((-3 / 2 : ℚ)) * X ^ 16 + C ((-3 / 2 : ℚ)) * X ^ 17 + C ((-3 / 2 : ℚ)) * X ^ 18 + C ((-3 / 2 : ℚ)) * X ^ 19 + C ((-3 / 2 : ℚ)) * X ^ 20 + C ((-3 / 2 : ℚ)) * X ^ 21 + C ((-3 / 2 : ℚ)) * X ^ 22 + C ((-3 / 2 : ℚ)) * X ^ 23 + C ((-3 / 2 : ℚ)) * X ^ 24 + C ((-3 / 2 : ℚ)) * X ^ 25
+def pullback_C_product_15 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3, -3]
 theorem pullback_C_product_eq_15 :
     Phi11 * pullback_C_quotientTerm (15 : Fin 17) =
       pullback_C_product_15 := by
+  rw [z_Phi11]
   simp [pullback_C_quotientTerm, pullback_C_product_15]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def pullback_C_product_16 : Polynomial ℚ := C ((-1 / 2 : ℚ)) * X ^ 16 + C ((-1 / 2 : ℚ)) * X ^ 17 + C ((-1 / 2 : ℚ)) * X ^ 18 + C ((-1 / 2 : ℚ)) * X ^ 19 + C ((-1 / 2 : ℚ)) * X ^ 20 + C ((-1 / 2 : ℚ)) * X ^ 21 + C ((-1 / 2 : ℚ)) * X ^ 22 + C ((-1 / 2 : ℚ)) * X ^ 23 + C ((-1 / 2 : ℚ)) * X ^ 24 + C ((-1 / 2 : ℚ)) * X ^ 25 + C ((-1 / 2 : ℚ)) * X ^ 26
+def pullback_C_product_16 : Polynomial ℚ := interpQ 2 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1]
 theorem pullback_C_product_eq_16 :
     Phi11 * pullback_C_quotientTerm (16 : Fin 17) =
       pullback_C_product_16 := by
+  rw [z_Phi11]
   simp [pullback_C_quotientTerm, pullback_C_product_16]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
 theorem pullback_C_relation :
     pullback_C_raw - C_poly =
@@ -971,10 +975,11 @@ theorem pullback_C_relation :
     pullback_C_product_5, pullback_C_product_6, pullback_C_product_7, pullback_C_product_8, pullback_C_product_9,
     pullback_C_product_10, pullback_C_product_11, pullback_C_product_12, pullback_C_product_13, pullback_C_product_14,
     pullback_C_product_15, pullback_C_product_16]
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
 
 theorem eval_pullback_C
@@ -986,116 +991,116 @@ theorem eval_pullback_C
   simp only [map_sub, map_mul, hPhi, zero_mul, sub_eq_zero] at h
   exact h
 
-def disc_raw : Polynomial ℚ := C (9) + C (9) * X ^ 2 + C (30) * X ^ 3 + C (42) * X ^ 4 + C (49) * X ^ 5 + C (62) * X ^ 6 + C (81) * X ^ 7 + C (80) * X ^ 8 + C (71) * X ^ 9 + C (78) * X ^ 10 + C (80) * X ^ 11 + C (78) * X ^ 12 + C (62) * X ^ 13 + C (50) * X ^ 14 + C (39) * X ^ 15 + C (20) * X ^ 16 + C (7) * X ^ 17
+def disc_raw : Polynomial ℚ := interpQ 1 [9, 0, 9, 30, 42, 49, 62, 81, 80, 71, 78, 80, 78, 62, 50, 39, 20, 7]
 def disc_quotientTerm : Fin 8 → Polynomial ℚ := fun i =>
   match i.val with
-  | 0 => C (-2)
-  | 1 => C (2) * X
-  | 2 => C (16) * X ^ 2
-  | 3 => C (12) * X ^ 3
-  | 4 => C (11) * X ^ 4
-  | 5 => C (19) * X ^ 5
-  | 6 => C (13) * X ^ 6
-  | 7 => C (7) * X ^ 7
+  | 0 => interpQ 1 [-2]
+  | 1 => interpQ 1 [0, 2]
+  | 2 => interpQ 1 [0, 0, 16]
+  | 3 => interpQ 1 [0, 0, 0, 12]
+  | 4 => interpQ 1 [0, 0, 0, 0, 11]
+  | 5 => interpQ 1 [0, 0, 0, 0, 0, 19]
+  | 6 => interpQ 1 [0, 0, 0, 0, 0, 0, 13]
+  | 7 => interpQ 1 [0, 0, 0, 0, 0, 0, 0, 7]
   | _ => 0
 def disc_quotient : Polynomial ℚ :=
   ∑ i : Fin 8, disc_quotientTerm i
 
-def disc_product_0 : Polynomial ℚ := C (-2) + C (-2) * X + C (-2) * X ^ 2 + C (-2) * X ^ 3 + C (-2) * X ^ 4 + C (-2) * X ^ 5 + C (-2) * X ^ 6 + C (-2) * X ^ 7 + C (-2) * X ^ 8 + C (-2) * X ^ 9 + C (-2) * X ^ 10
+def disc_product_0 : Polynomial ℚ := interpQ 1 [-2, -2, -2, -2, -2, -2, -2, -2, -2, -2, -2]
 theorem disc_product_eq_0 :
     Phi11 * disc_quotientTerm (0 : Fin 8) =
       disc_product_0 := by
+  rw [z_Phi11]
   simp [disc_quotientTerm, disc_product_0]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def disc_product_1 : Polynomial ℚ := C (2) * X + C (2) * X ^ 2 + C (2) * X ^ 3 + C (2) * X ^ 4 + C (2) * X ^ 5 + C (2) * X ^ 6 + C (2) * X ^ 7 + C (2) * X ^ 8 + C (2) * X ^ 9 + C (2) * X ^ 10 + C (2) * X ^ 11
+def disc_product_1 : Polynomial ℚ := interpQ 1 [0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]
 theorem disc_product_eq_1 :
     Phi11 * disc_quotientTerm (1 : Fin 8) =
       disc_product_1 := by
+  rw [z_Phi11]
   simp [disc_quotientTerm, disc_product_1]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def disc_product_2 : Polynomial ℚ := C (16) * X ^ 2 + C (16) * X ^ 3 + C (16) * X ^ 4 + C (16) * X ^ 5 + C (16) * X ^ 6 + C (16) * X ^ 7 + C (16) * X ^ 8 + C (16) * X ^ 9 + C (16) * X ^ 10 + C (16) * X ^ 11 + C (16) * X ^ 12
+def disc_product_2 : Polynomial ℚ := interpQ 1 [0, 0, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16]
 theorem disc_product_eq_2 :
     Phi11 * disc_quotientTerm (2 : Fin 8) =
       disc_product_2 := by
+  rw [z_Phi11]
   simp [disc_quotientTerm, disc_product_2]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def disc_product_3 : Polynomial ℚ := C (12) * X ^ 3 + C (12) * X ^ 4 + C (12) * X ^ 5 + C (12) * X ^ 6 + C (12) * X ^ 7 + C (12) * X ^ 8 + C (12) * X ^ 9 + C (12) * X ^ 10 + C (12) * X ^ 11 + C (12) * X ^ 12 + C (12) * X ^ 13
+def disc_product_3 : Polynomial ℚ := interpQ 1 [0, 0, 0, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12]
 theorem disc_product_eq_3 :
     Phi11 * disc_quotientTerm (3 : Fin 8) =
       disc_product_3 := by
+  rw [z_Phi11]
   simp [disc_quotientTerm, disc_product_3]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def disc_product_4 : Polynomial ℚ := C (11) * X ^ 4 + C (11) * X ^ 5 + C (11) * X ^ 6 + C (11) * X ^ 7 + C (11) * X ^ 8 + C (11) * X ^ 9 + C (11) * X ^ 10 + C (11) * X ^ 11 + C (11) * X ^ 12 + C (11) * X ^ 13 + C (11) * X ^ 14
+def disc_product_4 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11, 11]
 theorem disc_product_eq_4 :
     Phi11 * disc_quotientTerm (4 : Fin 8) =
       disc_product_4 := by
+  rw [z_Phi11]
   simp [disc_quotientTerm, disc_product_4]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def disc_product_5 : Polynomial ℚ := C (19) * X ^ 5 + C (19) * X ^ 6 + C (19) * X ^ 7 + C (19) * X ^ 8 + C (19) * X ^ 9 + C (19) * X ^ 10 + C (19) * X ^ 11 + C (19) * X ^ 12 + C (19) * X ^ 13 + C (19) * X ^ 14 + C (19) * X ^ 15
+def disc_product_5 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19, 19]
 theorem disc_product_eq_5 :
     Phi11 * disc_quotientTerm (5 : Fin 8) =
       disc_product_5 := by
+  rw [z_Phi11]
   simp [disc_quotientTerm, disc_product_5]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def disc_product_6 : Polynomial ℚ := C (13) * X ^ 6 + C (13) * X ^ 7 + C (13) * X ^ 8 + C (13) * X ^ 9 + C (13) * X ^ 10 + C (13) * X ^ 11 + C (13) * X ^ 12 + C (13) * X ^ 13 + C (13) * X ^ 14 + C (13) * X ^ 15 + C (13) * X ^ 16
+def disc_product_6 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 0, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13]
 theorem disc_product_eq_6 :
     Phi11 * disc_quotientTerm (6 : Fin 8) =
       disc_product_6 := by
+  rw [z_Phi11]
   simp [disc_quotientTerm, disc_product_6]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
-def disc_product_7 : Polynomial ℚ := C (7) * X ^ 7 + C (7) * X ^ 8 + C (7) * X ^ 9 + C (7) * X ^ 10 + C (7) * X ^ 11 + C (7) * X ^ 12 + C (7) * X ^ 13 + C (7) * X ^ 14 + C (7) * X ^ 15 + C (7) * X ^ 16 + C (7) * X ^ 17
+def disc_product_7 : Polynomial ℚ := interpQ 1 [0, 0, 0, 0, 0, 0, 0, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7]
 theorem disc_product_eq_7 :
     Phi11 * disc_quotientTerm (7 : Fin 8) =
       disc_product_7 := by
+  rw [z_Phi11]
   simp [disc_quotientTerm, disc_product_7]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
 theorem disc_relation :
     disc_raw - disc_poly =
@@ -1129,46 +1134,44 @@ theorem disc_relation :
   simp [disc_raw, disc_poly,
     disc_product_0, disc_product_1, disc_product_2, disc_product_3, disc_product_4,
     disc_product_5, disc_product_6, disc_product_7]
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
 theorem pullback_A_raw_eq :
     pullback_A_raw =
       linePullbackA (Qcoeff_poly 0) a_poly c_poly := by
   simp [pullback_A_raw, linePullbackA, Qcoeff_poly, Qcoeff_poly_row0,
     a_poly, c_poly]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
 theorem pullback_B_raw_eq :
     pullback_B_raw =
       linePullbackB (Qcoeff_poly 0) a_poly b_poly c_poly d_poly := by
   simp [pullback_B_raw, linePullbackB, Qcoeff_poly, Qcoeff_poly_row0,
     a_poly, b_poly, c_poly, d_poly]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
 theorem pullback_C_raw_eq :
     pullback_C_raw =
       linePullbackC (Qcoeff_poly 0) b_poly d_poly := by
   simp [pullback_C_raw, linePullbackC, Qcoeff_poly, Qcoeff_poly_row0,
     b_poly, d_poly]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
 public theorem pullback
     {S : Type*} [CommRing S] [Algebra ℚ S] (z : S)
@@ -1190,12 +1193,11 @@ public theorem pullback
 
 theorem disc_raw_eq : disc_raw = BB_poly ^ 2 - 4 * A_poly * C_poly := by
   simp [disc_raw, A_poly, BB_poly, C_poly]
-  all_goals (try simp only [Phi11, Finset.sum_range_succ])
-  all_goals (try ring_nf)
-  all_goals (try simp only [nat2_as_C, nat3_as_C, nat4_as_C, nat5_as_C, nat6_as_C, nat7_as_C, nat8_as_C, nat9_as_C, nat10_as_C, nat11_as_C, nat12_as_C, nat13_as_C, nat14_as_C, nat15_as_C, nat16_as_C, nat17_as_C, nat18_as_C, nat19_as_C, nat20_as_C, nat21_as_C, nat22_as_C, nat23_as_C, nat24_as_C, nat25_as_C, nat26_as_C, nat27_as_C, nat28_as_C, nat29_as_C, nat30_as_C, nat31_as_C, nat32_as_C, nat33_as_C, nat34_as_C, nat35_as_C, nat36_as_C, nat37_as_C, nat38_as_C, nat39_as_C, nat40_as_C, nat41_as_C, nat42_as_C, nat43_as_C, nat44_as_C, nat45_as_C, nat46_as_C, nat47_as_C, nat48_as_C, nat49_as_C, nat50_as_C, nat51_as_C, nat52_as_C, nat53_as_C, nat54_as_C, nat55_as_C, nat56_as_C, nat57_as_C, nat58_as_C, nat59_as_C, nat60_as_C, nat61_as_C, nat62_as_C, nat63_as_C, nat64_as_C,
-    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,
-    one_mul, mul_one, smul_smul])
-  all_goals module
+  all_goals simp (disch := decide) only [interp_one, interp_ofNat,
+    interp_pow_two, interp_neg, interp_mul, interp_add_gen,
+    interp_sub_gen, Nat.reduceMul]
+  all_goals apply interp_eq
+  all_goals decide
 
 public theorem eval_disc
     {S : Type*} [CommRing S] [Algebra ℚ S] (z : S)
@@ -1215,24 +1217,12 @@ public theorem eval_disc_K_ne_zero : evalPolyAt WeilRep.ζ disc_poly ≠ 0 := by
   have hne : disc_poly ≠ 0 := by
     intro h
     have hc := congrArg (fun p : Polynomial ℚ => p.coeff 0) h
-    norm_num [disc_poly, coeff_one] at hc
+    norm_num [disc_poly, interpQ, toPolyZ, coeff_one] at hc
   have hdeg : disc_poly.natDegree < WeilRep.Φ11.natDegree := by
     rw [WeilRep.Φ11_natDegree]
-    have hle : disc_poly.natDegree ≤ 9 :=
-        natDegree_le_iff_coeff_eq_zero.mpr (by
-      intro n hn
-      have h0 : n ≠ 0 := by omega
-      have h1 : n ≠ 1 := by omega
-      have h2 : n ≠ 2 := by omega
-      have h3 : n ≠ 3 := by omega
-      have h4 : n ≠ 4 := by omega
-      have h5 : n ≠ 5 := by omega
-      have h6 : n ≠ 6 := by omega
-      have h7 : n ≠ 7 := by omega
-      have h8 : n ≠ 8 := by omega
-      have h9 : n ≠ 9 := by omega
-      simp [disc_poly, h0, h1, h2, h3, h4, h5, h6, h7, h8, h9,
-        coeff_C, coeff_X])
+    have hle : disc_poly.natDegree ≤ 9 := by
+      simp only [disc_poly]
+      exact le_trans (natDegree_interpQ_lt _ _) (by decide)
     omega
   apply AdjoinRoot.mk_ne_zero_of_natDegree_lt WeilRep.Φ11_monic
     hne hdeg

@@ -15,6 +15,7 @@ import argparse
 import hashlib
 import json
 from fractions import Fraction
+from math import lcm
 from pathlib import Path
 from typing import Iterable
 
@@ -166,14 +167,34 @@ def lean_poly(a: list[Fraction]) -> str:
     return " + ".join(terms) if terms else "0"
 
 
+def zlist(a: list[Fraction]) -> tuple[int, list[int]]:
+    """Common positive denominator and integer numerators, trailing zeros cut."""
+    d = 1
+    for coeff in a:
+        d = lcm(d, coeff.denominator)
+    ns = [int(coeff * d) for coeff in a]
+    while ns and ns[-1] == 0:
+        ns.pop()
+    return d, ns
+
+
+def lean_interp(a: list[Fraction]) -> str:
+    """`interpQ d [n...]` -- the integer reflection of `D12PolyZReflection`.
+
+    Certificates over these are decided by kernel list arithmetic instead of
+    `ring_nf` + `module` over rational `C` coefficients.
+    """
+    d, ns = zlist(trim(a[:]))
+    return "interpQ " + str(d) + " [" + ", ".join(str(n) for n in ns) + "]"
+
+
 def emit_matrix(name, rows, r, c):
     lines = []
     for i in range(r):
         lines += [f"def {name}_row{i} : Fin {c} → Polynomial ℚ := fun j =>",
                   "  match j.val with"]
         for j in range(c):
-            if trim(rows[i][j][:]):
-                lines.append(f"  | {j} => {lean_poly(rows[i][j])}")
+            lines.append(f"  | {j} => {lean_interp(rows[i][j])}")
         lines += ["  | _ => 0", ""]
     lines += [f"def {name} : Matrix (Fin {r}) (Fin {c}) (Polynomial ℚ) :=",
               "  Matrix.of fun i =>", "    match i.val with"]
@@ -189,8 +210,7 @@ def emit_family(name, rows, r, c):
         lines += [f"def {name}_row{i} : Fin {c} → Polynomial ℚ := fun j =>",
                   "  match j.val with"]
         for j in range(c):
-            if trim(rows[i][j][:]):
-                lines.append(f"  | {j} => {lean_poly(rows[i][j])}")
+            lines.append(f"  | {j} => {lean_interp(rows[i][j])}")
         lines += ["  | _ => 0", ""]
     lines += [f"def {name} : Fin {r} → Fin {c} → Polynomial ℚ := fun i =>",
               "  match i.val with"]
@@ -235,6 +255,24 @@ def scalar_finish():
         "    C_eq_smul_one, smul_one_sq, smul_mul_assoc, mul_smul_comm,",
         "    one_mul, mul_one, smul_smul])",
         "  all_goals module",
+    ]
+
+
+def interp_finish():
+    """Close an interpQ identity by kernel list arithmetic.
+
+    `interp_mul` / `interp_add_gen` / `interp_sub_gen` fold the whole
+    expression into one `interpQ D L` with `L` an unevaluated `convList` /
+    `addList` term, so the proof term carries the input literals and nothing
+    else; `interp_eq` then reduces the goal to a `List Int` all-zero test that
+    `decide` runs in the kernel.
+    """
+    return [
+        "  all_goals simp (disch := decide) only [interp_one, interp_ofNat,",
+        "    interp_pow_two, interp_neg, interp_mul, interp_add_gen,",
+        "    interp_sub_gen, Nat.reduceMul]",
+        "  all_goals apply interp_eq",
+        "  all_goals decide",
     ]
 
 
@@ -332,19 +370,20 @@ def emit_data(Bminus, Q, scalars, reverse, form, disc):
         "namespace V14Formalization.D12SigmaMinusNormalFormData",
         "open D12PolynomialData D12PolynomialEvaluation",
         "open D12SigmaCarrierPolynomial D12SigmaMinusNormalForm",
+        "open V14Formalization.D12PolyZReflection",
         "",
     ]
     lines += emit_matrix("Bminus_poly", Bminus, 15, 4)
     lines += emit_family("Qcoeff_poly", Q, 8, 10)
     lines += [
-        f"def a_poly : Polynomial ℚ := {lean_poly(a)}",
-        f"def b_poly : Polynomial ℚ := {lean_poly(b)}",
-        f"def c_poly : Polynomial ℚ := {lean_poly(c)}",
-        f"def d_poly : Polynomial ℚ := {lean_poly(d)}",
-        f"def A_poly : Polynomial ℚ := {lean_poly(A)}",
-        f"def BB_poly : Polynomial ℚ := {lean_poly(BB)}",
-        f"def C_poly : Polynomial ℚ := {lean_poly(Cc)}",
-        f"def disc_poly : Polynomial ℚ := {lean_poly(disc)}",
+        f"def a_poly : Polynomial ℚ := {lean_interp(a)}",
+        f"def b_poly : Polynomial ℚ := {lean_interp(b)}",
+        f"def c_poly : Polynomial ℚ := {lean_interp(c)}",
+        f"def d_poly : Polynomial ℚ := {lean_interp(d)}",
+        f"def A_poly : Polynomial ℚ := {lean_interp(A)}",
+        f"def BB_poly : Polynomial ℚ := {lean_interp(BB)}",
+        f"def C_poly : Polynomial ℚ := {lean_interp(Cc)}",
+        f"def disc_poly : Polynomial ℚ := {lean_interp(disc)}",
         "",
     ]
     lines += emit_family("reverseCoeff_poly", reverse, 8, 8)
@@ -426,12 +465,14 @@ def emit_quadric(q, raw_Q, Q):
         f"namespace {ns}",
         "open D12PolynomialData D12PolynomialEvaluation",
         "open D12SigmaMinusNormalForm D12SigmaMinusNormalFormData",
+        "open D12SigmaCarrierPolynomial",
+        "open V14Formalization.D12PolyZReflection",
         "",
     ] + scalar_helpers()
     for m in range(10):
         quotient = div_exact(sub(raw_Q[q][m], Q[q][m]), PHI)
         lines += [
-            f"def quotient_{m} : Polynomial ℚ := {lean_poly(quotient)}",
+            f"def quotient_{m} : Polynomial ℚ := {lean_interp(quotient)}",
             "",
             f"theorem relation_{m} :",
             f"    restrictedPluckerCoeffs Bminus_poly ({q} : Fin 15) ({m} : Fin 10) -",
@@ -440,12 +481,12 @@ def emit_quadric(q, raw_Q, Q):
             "    Pi.sub_apply, Pi.add_apply,",
             f"    Bminus_poly, Qcoeff_poly, quotient_{m}]",
             "  norm_num [SchemeGeometry.pluckerRelation]",
-            f"  all_goals simp [{row_defs}, Qcoeff_poly_row{q},",
-            "    Phi11, Finset.sum_range_succ]",
-            "  all_goals norm_num",
-            "  all_goals simp only [C_eq_smul_one, smul_mul_assoc,",
-            "    one_mul, mul_one, smul_smul]",
-            "  all_goals module",
+            "  all_goals (try rw [z_Phi11])",
+            f"  all_goals simp [{row_defs}, Qcoeff_poly_row{q}]",
+            "  all_goals (try simp (disch := decide) only [interp_neg,",
+            "    interp_mul, interp_add_gen, interp_sub_gen, Nat.reduceMul])",
+            "  all_goals (try apply interp_eq)",
+            "  all_goals (try decide)",
         ] + [
             "",
             f"theorem eval_relation_{m}",
@@ -501,6 +542,8 @@ def emit_reverse(idx, Q, scalars, reverse):
         f"namespace {ns}",
         "open D12PolynomialData D12PolynomialEvaluation",
         "open D12SigmaMinusNormalForm D12SigmaMinusNormalFormData",
+        "open D12SigmaCarrierPolynomial",
+        "open V14Formalization.D12PolyZReflection",
         "",
     ] + scalar_helpers()
     lines += [
@@ -508,8 +551,7 @@ def emit_reverse(idx, Q, scalars, reverse):
         "  match m.val with",
     ]
     for m in range(10):
-        if target[m]:
-            lines.append(f"  | {m} => {lean_poly(target[m])}")
+        lines.append(f"  | {m} => {lean_interp(target[m])}")
     lines += ["  | _ => 0", ""]
     for m in range(10):
         products = []
@@ -517,7 +559,7 @@ def emit_reverse(idx, Q, scalars, reverse):
             product = mul(reverse[idx][q], Q[q][m])
             products.append(product)
             lines += [
-                f"def product_{m}_{q} : Polynomial ℚ := {lean_poly(product)}",
+                f"def product_{m}_{q} : Polynomial ℚ := {lean_interp(product)}",
                 "",
                 f"theorem product_eq_{m}_{q} :",
                 f"    reverseCoeff_poly ({idx} : Fin 8) ({q} : Fin 8) *",
@@ -525,10 +567,10 @@ def emit_reverse(idx, Q, scalars, reverse):
                 "  simp [reverseCoeff_poly,",
                 f"    reverseCoeff_poly_row{idx}, Qcoeff_poly,",
                 f"    Qcoeff_poly_row{q}, product_{m}_{q}]",
-            ] + scalar_finish() + [""]
+            ] + interp_finish() + [""]
         quotient = div_exact(sub(target[m], rhs[m]), PHI)
         lines += [
-            f"def quotient_{m} : Polynomial ℚ := {lean_poly(quotient)}",
+            f"def quotient_{m} : Polynomial ℚ := {lean_interp(quotient)}",
             "",
             f"theorem relation_{m} :",
             f"    targetCoeff_poly ({m} : Fin 10) -",
@@ -558,13 +600,12 @@ def emit_reverse(idx, Q, scalars, reverse):
             f"    · exact product_eq_{m}_5",
             f"    · exact product_eq_{m}_6",
             f"    · exact product_eq_{m}_7",
-            "  rw [hsum]",
-            "  simp only [Fin.sum_univ_succ]",
-            f"  all_goals simp [targetCoeff_poly, quotient_{m},",
+            "  rw [hsum, z_Phi11]",
+            "  simp only [Fin.sum_univ_succ, Fin.sum_univ_zero, add_zero]",
+            f"  simp [targetCoeff_poly, quotient_{m},",
             f"    product_{m}_0, product_{m}_1, product_{m}_2, product_{m}_3,",
-            f"    product_{m}_4, product_{m}_5, product_{m}_6, product_{m}_7,",
-            "    Phi11, Finset.sum_range_succ]",
-        ] + scalar_finish() + [
+            f"    product_{m}_4, product_{m}_5, product_{m}_6, product_{m}_7]",
+        ] + interp_finish() + [
             "",
             f"theorem eval_relation_{m}",
             "    {S : Type*} [CommRing S] [Algebra ℚ S] (z : S)",
@@ -602,7 +643,7 @@ def emit_reverse(idx, Q, scalars, reverse):
         "    funext m",
         "    fin_cases m <;>",
         "      simp [targetCoeff_poly, bilinearCoeffs, evalA, evalB, evalC, evalD,",
-        "        a_poly, b_poly, c_poly, d_poly, evalPolyAt]",
+        "        a_poly, b_poly, c_poly, d_poly, evalPolyAt, interpQ, toPolyZ]",
         "  have hlhs : y " + str(j) + " * " + lname + " y =",
         "      quadValue (fun m : Fin 10 => evalPolyAt z (targetCoeff_poly m)) y := by",
         "    rw [htarget, quadValue_bilinearCoeffs]",
@@ -634,18 +675,20 @@ def emit_reference(Q, scalars, form, pull, disc, raw_disc):
         "namespace V14Formalization.D12SigmaMinusReference",
         "open D12PolynomialData D12PolynomialEvaluation",
         "open D12SigmaMinusNormalForm D12SigmaMinusNormalFormData",
+        "open D12SigmaCarrierPolynomial",
+        "open V14Formalization.D12PolyZReflection",
         "",
     ] + scalar_helpers()
 
     def emit_mod_relation(prefix, raw_poly, stored_name, quotient):
         terms = [(degree, coeff) for degree, coeff in enumerate(quotient) if coeff]
         out = [
-            f"def {prefix}_raw : Polynomial ℚ := {lean_poly(raw_poly)}",
+            f"def {prefix}_raw : Polynomial ℚ := {lean_interp(raw_poly)}",
             f"def {prefix}_quotientTerm : Fin {len(terms)} → Polynomial ℚ := fun i =>",
             "  match i.val with",
         ]
         for i, (degree, coeff) in enumerate(terms):
-            out.append(f"  | {i} => {lean_poly(monomial(degree, coeff))}")
+            out.append(f"  | {i} => {lean_interp(monomial(degree, coeff))}")
         out += [
             "  | _ => 0",
             f"def {prefix}_quotient : Polynomial ℚ :=",
@@ -657,12 +700,13 @@ def emit_reference(Q, scalars, form, pull, disc, raw_disc):
             product = mul(PHI, monomial(degree, coeff))
             products.append(product)
             out += [
-                f"def {prefix}_product_{i} : Polynomial ℚ := {lean_poly(product)}",
+                f"def {prefix}_product_{i} : Polynomial ℚ := {lean_interp(product)}",
                 f"theorem {prefix}_product_eq_{i} :",
                 f"    Phi11 * {prefix}_quotientTerm ({i} : Fin {len(terms)}) =",
                 f"      {prefix}_product_{i} := by",
+                "  rw [z_Phi11]",
                 f"  simp [{prefix}_quotientTerm, {prefix}_product_{i}]",
-            ] + scalar_finish() + [""]
+            ] + interp_finish() + [""]
         out += [
             f"theorem {prefix}_relation :",
             f"    {prefix}_raw - {stored_name} =",
@@ -691,7 +735,7 @@ def emit_reference(Q, scalars, form, pull, disc, raw_disc):
             suffix = "," if i + 5 < len(products) else "]"
             out.append("    " + ", ".join(
                 f"{prefix}_product_{j}" for j in range(i, min(i + 5, len(products)))) + suffix)
-        out += linear_finish() + [""]
+        out += interp_finish() + [""]
         return out
 
     names = ["A", "B", "C"]
@@ -719,21 +763,21 @@ def emit_reference(Q, scalars, form, pull, disc, raw_disc):
         "      linePullbackA (Qcoeff_poly 0) a_poly c_poly := by",
         "  simp [pullback_A_raw, linePullbackA, Qcoeff_poly, Qcoeff_poly_row0,",
         "    a_poly, c_poly]",
-    ] + scalar_finish() + [
+    ] + interp_finish() + [
         "",
         "theorem pullback_B_raw_eq :",
         "    pullback_B_raw =",
         "      linePullbackB (Qcoeff_poly 0) a_poly b_poly c_poly d_poly := by",
         "  simp [pullback_B_raw, linePullbackB, Qcoeff_poly, Qcoeff_poly_row0,",
         "    a_poly, b_poly, c_poly, d_poly]",
-    ] + scalar_finish() + [
+    ] + interp_finish() + [
         "",
         "theorem pullback_C_raw_eq :",
         "    pullback_C_raw =",
         "      linePullbackC (Qcoeff_poly 0) b_poly d_poly := by",
         "  simp [pullback_C_raw, linePullbackC, Qcoeff_poly, Qcoeff_poly_row0,",
         "    b_poly, d_poly]",
-    ] + scalar_finish() + [
+    ] + interp_finish() + [
         "",
         "theorem pullback",
         "    {S : Type*} [CommRing S] [Algebra ℚ S] (z : S)",
@@ -755,7 +799,7 @@ def emit_reference(Q, scalars, form, pull, disc, raw_disc):
         "",
         "theorem disc_raw_eq : disc_raw = BB_poly ^ 2 - 4 * A_poly * C_poly := by",
         "  simp [disc_raw, A_poly, BB_poly, C_poly]",
-    ] + scalar_finish() + [
+    ] + interp_finish() + [
         "",
         "theorem eval_disc",
         "    {S : Type*} [CommRing S] [Algebra ℚ S] (z : S)",
@@ -775,24 +819,12 @@ def emit_reference(Q, scalars, form, pull, disc, raw_disc):
         "  have hne : disc_poly ≠ 0 := by",
         "    intro h",
         "    have hc := congrArg (fun p : Polynomial ℚ => p.coeff 0) h",
-        "    norm_num [disc_poly, coeff_one] at hc",
+        "    norm_num [disc_poly, interpQ, toPolyZ, coeff_one] at hc",
         "  have hdeg : disc_poly.natDegree < WeilRep.Φ11.natDegree := by",
         "    rw [WeilRep.Φ11_natDegree]",
-        "    have hle : disc_poly.natDegree ≤ 9 :=",
-        "        natDegree_le_iff_coeff_eq_zero.mpr (by",
-        "      intro n hn",
-        "      have h0 : n ≠ 0 := by omega",
-        "      have h1 : n ≠ 1 := by omega",
-        "      have h2 : n ≠ 2 := by omega",
-        "      have h3 : n ≠ 3 := by omega",
-        "      have h4 : n ≠ 4 := by omega",
-        "      have h5 : n ≠ 5 := by omega",
-        "      have h6 : n ≠ 6 := by omega",
-        "      have h7 : n ≠ 7 := by omega",
-        "      have h8 : n ≠ 8 := by omega",
-        "      have h9 : n ≠ 9 := by omega",
-        "      simp [disc_poly, h0, h1, h2, h3, h4, h5, h6, h7, h8, h9,",
-        "        coeff_C, coeff_X])",
+        "    have hle : disc_poly.natDegree ≤ 9 := by",
+        "      simp only [disc_poly]",
+        "      exact le_trans (natDegree_interpQ_lt _ _) (by decide)",
         "    omega",
         "  apply AdjoinRoot.mk_ne_zero_of_natDegree_lt WeilRep.Φ11_monic",
         "    hne hdeg",
@@ -828,6 +860,8 @@ def emit_concrete():
         "open D12PolynomialData D12PolynomialEvaluation",
         "open D12SigmaCarrier D12SigmaCarrierPolynomial D12SigmaCarrierConcrete",
         "open D12SigmaMinusNormalForm D12SigmaMinusNormalFormData",
+        "open D12SigmaCarrierPolynomial",
+        "open V14Formalization.D12PolyZReflection",
         "",
         "theorem evalMatrixK_Bminus_poly :",
         "    evalMatrixK Bminus_poly = D12SigmaCarrierConcrete.core.Bminus := by",
