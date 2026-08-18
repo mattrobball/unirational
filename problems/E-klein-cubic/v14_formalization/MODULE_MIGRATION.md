@@ -463,11 +463,19 @@ calibration against the pilot commit).
 | sigma carrier bridge rows -> integer reflection | 163,824 | 91.9M | 43.4M |
 | ... including the five dense entries | 163,489 | 86.9M | 41.0M |
 | Segre LH / NH -> integer reflection | 163,117 | **82.0M** | **39.2M** |
+| Segre Det + SmoothC{U,V,W} -> integer reflection | 162,035 | 72.3M | 34.6M |
+| Plucker certificates -> `mul_apply_k` | 162,018 | 65.7M | 31.4M |
+| Vec certificates -> `vec_ext` | 162,039 | 63.8M | 30.7M |
+| PluckerNaturality -> `fin15_cases` | 162,055 | **62.8M** | **30.5M** |
 
 Net for 2026-08-19: **133.4M -> 82.0M, -38.5%** — see "The integer reflection,
 applied everywhere" below. At ~85 bytes/node the export is ~7.0 GB against the
 15 GB runner, which is the first time this proof has had a factor of two of
 margin rather than a sliver.
+
+Net for 2026-08-20: **82.0M -> 62.8M, -23.5%** per-constant; 39.2M -> 30.5M,
+-22.2% per-module. See "Finishing the reflection, and the two `fin_cases`
+lemmas" below. At ~85 bytes/node the export is ~5.3 GB.
 
 Net for 2026-08-18: **177.6M -> 143.5M, -19.2%**, and `@[expose]` 7,093 -> 4,769.
 The last two rows are the exposure work paid for on the export: +3.35M, +2.4%,
@@ -763,6 +771,182 @@ tree, so converting them means a post-pass in the shape of
 bodies, emit a bridge module, rewrite the proofs, and refuse to write if a
 statement line changes. That is the largest remaining bounded prize.
 
+**That was done on 2026-08-20, along with three other families — see below.**
+
+## Finishing the reflection, and the two `fin_cases` lemmas (2026-08-20)
+
+**82.0M -> 62.8M per-constant, -23.5%; 39.2M -> 30.5M per-module, -22.2%.**
+At ~85 bytes/node the export goes from ~7.0 GB to ~5.3 GB.
+
+Four steps, each measured, built and committed on its own.
+
+| family | before | after | |
+|---|---:|---:|---:|
+| `D12SigmaPlusSegreDet` | 3,399,255 | 401,588 | |
+| `D12SigmaPlusSegreSmoothC{U,V,W}` | 7,531,419 | 774,950 | |
+| `D12PiecePPCoeffProduct` | 3,179,221 | 535,915 | |
+| `D12PiecePPDeterminant` | 2,287,031 | 443,904 | |
+| `D12PiecePPCoeff` | 2,099,863 | 415,919 | |
+| `PluckerNaturality` | 2,216,648 | 1,200,054 | |
+| the four `D12Piece*ActionRow` | 5,493,931 | 3,599,707 | |
+| `D12PieceA{A,P}Plucker` | 972,400 | 378,000 | |
+| `D12PiecePPPluckerBase` | 552,485 | 502,121 | |
+| paid back: `D12CyclotomicVec` | 37,157 | 223,322 | `mul_apply_k`, `vec_ext` |
+| paid back: `D12SigmaPlusSegreFplusZ` | — | 58,590 | 20 `Fplus` bridges + `phi11_interpQ` |
+| paid back: `D12SigmaPlusSegreSmooth` | 168,515 | 178,310 | |
+| and `D12SigmaPlusSegreBezoutData` fell | 81,504 | 35,504 | the `interpQ` table is smaller than the `C (..)` one |
+
+### 1. Det and SmoothC{U,V,W}: the integer reflection (10.9M -> 1.2M)
+
+`scripts/segre_interp_rewrite.py`, the post-pass the section above asked for.
+It parses every `def NAME : Polynomial ℚ := C (..) + ..` body to exact
+`Fraction`s, **re-renders it and aborts unless the re-render is byte-identical**
+to the text it is replacing, and refuses to write if a theorem statement line
+would move. Three modes: `--certs` (the certificate families), `--tables` (a
+coefficient table), `--emit-fplus-bridge`.
+
+Three things this needed that the earlier reflection work did not:
+
+* **One denominator per file, not per definition.** The file-local `def`s are
+  emitted over the lcm of all of them, so the sums fold with `interp_add`
+  rather than `interp_add_gen` and the denominators stay put. (Lesson 3 of the
+  2026-08-19 list, applied at file granularity.)
+* **Reflect the table, do not bridge it.** `SmoothC` consumes
+  `D12SigmaPlusSegreBezoutData` (162 polynomials) and
+  `D12SigmaPlusSegrePartials` (36). Publishing 198 `z_*` bridges would have
+  cost more than the certificates save, because those entries carry 15-digit
+  rational coefficients. Converting the tables themselves — the `def` bodies
+  *and* the `_def` equations they publish, which stay `rfl` — costs nothing and
+  the table got **smaller**. Only `Fplus_{re,im}_*` (20 entries in
+  `D12SigmaPlusSegreCore`, which has other consumers) got a bridge module.
+* **The import scan misses transitive consumers.** `D12SigmaPlusSegreSmooth`
+  never imports `Partials` or `BezoutData` by name — it reaches them through
+  `SmoothAsm` — so a `grep -l` over import lines said the tables had 79
+  consumers when they had 80, and the checkpoint build was the thing that found
+  it. Its nine unscaled identities are now a plain `rw` chain: both sides
+  reduce to the *same* `interpQ` literal, so `rw` closes them. The twelve
+  scaled ones (`Fplus_dU_c_200 = 3 * ofLadj ..`) keep their route with
+  `interpQ, toPolyZ` added to the simp list — `C 3 * interpQ d n` has no
+  folding lemma, and writing one would have to match `C (3 : ℚ)` against
+  `C ((3 : ℤ) : ℚ)`.
+
+### 2. `mul_apply_k`: expand the convolution once, not 380 times (7.6M -> 1.4M)
+
+Every `*_apply_k` certificate in the Plucker chain proved one coordinate of a
+product of cyclotomic vectors with
+
+```lean
+norm_num [<defs>, mul, conv, coeffAt, Fin.sum_univ_succ]
+```
+
+`mul a b k = conv a b k + conv a b (k+11) - conv a b 10` and each `conv` is a
+ten-term `Finset.sum`, so every one of ~380 certificates made `norm_num` expand
+all three before it could do any arithmetic — ~18,000 `Expr` nodes each.
+`D12CyclotomicVec.mul_apply_{0..9}` writes the expansion out once per
+coordinate:
+
+```lean
+mul a b k = (∑_{i≤k} a i * b (k-i)) + (∑_{i≥k+2} a i * b (k+11-i))
+              - (∑_{i≥1} a i * b (10-i))
+```
+
+Carried by `scripts/mul_apply_rewrite.py` (tactic-argument lines only; the
+coordinate index in the theorem name must match the one in its statement).
+
+**`rfl` does not work here, and neither does `decide`.** The obvious move —
+these are closed rational computations, so let the kernel do them — fails:
+`Vec = Fin 10 → ℚ`, and `Rat` arithmetic reduces through `Nat.gcd`, which is
+well-founded recursion. Tried on all 130 `D12PiecePPDeterminant` certificates:
+every one reports "the left-hand side `detPair0 0` is not definitionally equal
+to the right-hand side". This is why the SplitRow redesign moved to `VecZ`
+(`Int`, kernel-computable) and why these families cannot follow it without the
+same rescaling redesign.
+
+### 3. `vec_ext`: pay `fin_cases` once (838 occurrences)
+
+838 generated certificates opened with `funext n; fin_cases n <;> ..`, and
+`fin_cases` inlines a `List.Mem.casesOn` over `List.finRange 10` into every one
+of the ten coordinate goals — the bloat identified on 2026-08-18 and never
+acted on. `D12CyclotomicVec.vec_ext` pays it once.
+`scripts/vec_ext_rewrite.py` applies it. `D12PieceAAActionRow0` 68,046 ->
+47,321, and the four ActionRow families fall 34%.
+
+**State the hypotheses in `Fin.mk` form.** `vec_ext` with `(h0 : a 0 = b 0)`
+compiles, and then every certificate fails: `norm_num` cannot evaluate
+`![10/11, ..] (2 : Fin 10)` with a *numeral* index in this Mathlib, only
+`![..] ⟨2, _⟩`, which is the form `fin_cases` produced. Verified in isolation.
+
+### 4. `fin15_cases` for `PluckerNaturality` (2.22M -> 1.20M)
+
+`restrict4_det_t (s : Fin 15)` was the most expensive theorem shape left in the
+tree at ~107,000 nodes each: `fin_cases s` over `Fin 15` inlines a
+`List.Mem.casesOn` over `List.finRange 15` into all fifteen cases, and only
+then does each case expand a 4x4 determinant. A `private fin15_cases` pays it
+once, -45% on the file.
+
+**`refine fin15_cases ?_ .. ?_ s` does not elaborate** — the motive is not
+abstracted and every use reports `?m.54 s` against the real goal.
+`induction s using fin15_cases <;> ..` does. Same `Fin.mk` rule as `vec_ext`.
+
+### Emitters
+
+All four emit sites were brought in line and **checked by emitting to a scratch
+directory and diffing against the tree**, modulo the annotations the hook adds:
+
+* `scripts/export_d12_nonzero_piece_vec_lean.py` — `mul_apply_k` at four sites,
+  `refine vec_ext` at three. `D12PiecePPDeterminant`, `D12PiecePPCoeff0_0`,
+  `D12PiecePPCoeff0_1Product0`, `D12PieceAAPlucker`, `D12PiecePPPluckerBase`
+  and `D12PieceAAActionRow{0,13}` are byte-identical after the change.
+  `D12PiecePPCoeff0_0` was **not** identical before it: the emitter has always
+  put that `norm_num` on one line and the tree wrapped it. It now agrees.
+* `scripts/export_d12_piece_vec_lean.py` — `refine vec_ext`; checked on
+  `D12PiecePAActionRow{0,17}`.
+* Det and SmoothC still have no emitter; `segre_interp_rewrite.py` is the
+  authority, and it is idempotent.
+
+### What did NOT pay, measured
+
+* **Widening the `interp_*` fold list in VQ/HM.** Those 378 modules fold with
+  `simp (disch := decide) only [interp_mul, interp_add_gen, interp_sub_gen,
+  Nat.reduceMul]` — no `interp_add`/`interp_sub`, so every sum goes through the
+  denominator-mixing lemmas and carries `smulList 1` wrappers even though every
+  denominator is 1. Adding the equal-denominator lemmas moved
+  `D12SigmaPlusSegreVQ_4_8` from 23,042 to 22,953, **-0.4%**. The wrappers are
+  shared subterms; they cost nothing after dedup. Do not repeat this.
+* **`rfl` / `decide` on the rational vector products** — see step 2 above.
+
+### Where it stands now, and what is left
+
+The table is flat. The largest family is `D12SigmaPlusSegreVQ` at 7.6%, and
+that is 22,059 constants at **215 nodes each** — it is big because there are
+many small certificates, not because any one of them is expensive, and no
+shared lemma addresses it. For comparison the families that were worth
+attacking ran 2,000-12,000 nodes per constant.
+
+| family | per-constant | share | nodes/constant | shape |
+|---|---:|---:|---:|---|
+| `D12SigmaPlusSegreVQ` | 4,745,143 | 7.6% | 215 | already reflected; nothing concentrated |
+| `D12SigmaPlusSegreHM` | 2,132,097 | 3.4% | 339 | already reflected |
+| `D12GeneratorSPhaseRow` | 1,650,804 | 2.6% | 2,116 | **the last family still on `ring_nf` + `C_eq_smul_one` + `module`** |
+| `D12SigmaPlusSegreQrel` | 1,506,600 | 2.4% | 674 | |
+| `D12SigmaCarrierBridgeRow` | 1,438,962 | 2.3% | 2,284 | |
+| `D12CompoundBridge` | 1,372,057 | 2.2% | 2,330 | shared, paid once |
+| `D12SigmaMinusReverse` | 1,345,040 | 2.1% | 524 | |
+| the four `D12Piece*SplitRow` | 4,351,115 | 6.9% | 144 | |
+| the four `D12Piece*ActionRow` | 3,599,707 | 5.7% | 2,142 | |
+| `D12{F6,U6}PolynomialData` | 1,943,349 | 3.1% | 6,478 | |
+
+The one family that is still on the *old* arithmetic route is
+`D12GeneratorSPhaseRow` — `phase_relation_k` is `ring_nf`, then 63
+`C_eq_smul_one`-style rewrites, then `module`, which is exactly what the
+reflection replaced everywhere else. Converting it is the same job
+`D12CompoundBridge` was, with one extra obstacle: the relations carry a scalar
+`C (-1/2 : ℚ) * (..)`, and there is no folding lemma for `C (a/b) * interpQ d n`
+— writing one means matching the literal `C (-1/2 : ℚ)` against
+`C ((a : ℤ) / (b : ℕ) : ℚ)`, which `rw` will not do syntactically. The
+`D12CompoundBridge` trick (state everything for twice the difference so the
+halves land in one shared collapse lemma) is the precedent to follow.
+
 ## Deleting the dead files (2026-08-18)
 
 350 files were outside the `V14Solution` import closure entirely — zero
@@ -994,10 +1178,26 @@ The tools:
 * `scripts/ring_to_grind_rewrite.py <files…>` — `try ring` -> `try grind` in
   the frozen pointwise-eval families, with the same statement-preservation
   check. `--check` reports without writing.
+* `scripts/segre_interp_rewrite.py [--check] {--certs|--tables} <files…>` —
+  the integer reflection for `Det` / `SmoothC{U,V,W}` and for the coefficient
+  tables they consume; `--emit-fplus-bridge <path>` writes the shared
+  `Fplus` / `Phi11` bridge module. Every polynomial body is parsed to exact
+  `Fraction`s and re-rendered, and the pass aborts unless the re-render is
+  byte-identical to what it replaces.
+* `scripts/mul_apply_rewrite.py [--check] <files…>` — points the Plucker
+  `*_apply_k` certificates at `D12CyclotomicVec.mul_apply_k` instead of making
+  each of them expand `mul`/`conv`/`coeffAt`.
+* `scripts/vec_ext_rewrite.py [--check] <files…>` — `funext n; fin_cases n <;>`
+  -> `refine vec_ext ?_ .. ?_ <;>`.
 * `scripts/module_stats.lean` — per-module proof-term size, the cheap
   counterpart of `closure_stats.lean`:
   `lake env lean --run scripts/module_stats.lean V14Formalization.<M> …`.
   Use it to measure one file before paying a closure rebuild.
+* `scripts/const_stats.lean` — per-*constant* sizes for a chosen list of
+  modules (edit `wanted`). This is what tells you whether a family is one
+  expensive theorem shape (worth a shared lemma) or many cheap ones (not).
+  Every win in this campaign was found by looking at nodes-per-constant, not
+  at the family total.
 
 ## Two failure modes that `lake build` does not catch
 
