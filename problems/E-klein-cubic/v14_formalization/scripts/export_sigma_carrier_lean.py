@@ -613,7 +613,13 @@ def emit_bridge_row(row: int, raw_entries, reduced_entries, qs, out: Path):
         "",
     ] + module_scalar_helpers()
     for j in range(10):
-        if (row, j) in {(5, 3), (6, 0), (7, 4), (8, 1), (9, 2)}:
+        # The five dense entries used to need `emit_split_bridge_relation`
+        # (a per-window chunking of the quotient) because no single tactic
+        # could hold both the degree-35 raw entry and the full quotient.  The
+        # integer reflection folds symbolically and leaves the arithmetic to
+        # `decide`, so they take the ordinary route now; the split emitter is
+        # kept for the record.
+        if False and (row, j) in {(5, 3), (6, 0), (7, 4), (8, 1), (9, 2)}:
             emit_split_bridge_relation(lines, row, j, raw_entries[row][j],
                                        reduced_entries[row][j], qs[row][j])
             lines += [
