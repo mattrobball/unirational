@@ -1,7 +1,7 @@
 /-
 Axiom audit entrypoint.
 
-The first block is the one that matters: the two theorems Comparator checks,
+The first block is the one that matters: the three theorems Comparator checks,
 named exactly as `comparator.json` lists them.  The rest are the legacy
 Theorem 3.1 / Corollary 6.1 / Weil-core declarations, kept because they are
 the historical audit surface.
@@ -15,7 +15,8 @@ public import V14Formalization.V14Application
 public import V14Formalization.WeilRep
 public import V14Formalization.GeometricFanoV14
 
--- The two Comparator theorems.
+-- The three Comparator theorems.
+#print axioms V14Formalization.Comparator.noEquivariantRationalMap_ambientFree
 #print axioms V14Formalization.Comparator.noEquivariantRationalMap_from_ambient
 #print axioms V14Formalization.Comparator.noEquivariantRationalMap_projectiveGVariety
 

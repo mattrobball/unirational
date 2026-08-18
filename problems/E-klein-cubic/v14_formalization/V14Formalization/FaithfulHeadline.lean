@@ -8,6 +8,7 @@ public import V14Formalization.FaithfulHeadlineReduction
 public import V14Formalization.V14FixedRationalConstancy
 public import V14Formalization.HeadlineStatement
 public import V14Formalization.SchemeModelAliases
+public import V14Formalization.ProjectiveSpaceIntrinsicCompare
 
 /-!
 # Unconditional faithful no-map theorem
@@ -60,15 +61,51 @@ public theorem noEquivariantRationalMap_projectiveGVariety_of_plusMinusBases
         ProjectiveGVariety.v14 :=
   noEquivariantRationalMap_from_ambient_of_plusMinusBases R p q bp bm
 
+/-- **The coordinate-free statement.**  There is no equivariant rational map
+from `ℙ(V) = Proj (Sym (V*))`, the projectivization of a faithful linear
+representation, to the coordinate V14.
+
+No basis of `V` and no system of homogeneous coordinates appears anywhere in
+this statement: the `G`-action on `ℙ(V)` arrives purely by functoriality.  The
+σ-eigenspace decomposition, which the proof still needs, is chosen inside the
+proof and is invisible from outside.
+
+This is strictly stronger than the coordinatized statements below, which are
+recovered from it by transporting along `ambientFreeIso`. -/
+public theorem noEquivariantRationalMap_ambientFree
+    {V : Type} [AddCommGroup V] [Module k V]
+    [FiniteDimensional k V] [Nontrivial V]
+    (R : FaithfulLinearRep k G V) :
+    ¬ HasEquivariantRationalMap (ambientFree R)
+      V14SchemeModel.actionOver := by
+  intro h
+  let c : PlusMinusCoords R := PlusMinusCoords.ofRep R
+  exact noEquivariantRationalMap_from_ambient_of_plusMinusBases R c.p c.q c.bp c.bm
+    (hasEquivariantRationalMap_of_iso
+      (ambientFreeIso R
+        (plusMinusAmbientBasis R sigma sigma_isInvolution c.p c.q c.bp c.bm)).symm h)
+
 /-- There is no equivariant rational map from the projectivization of a
 faithful linear representation to the coordinate V14, in *any* system of
-plus/minus homogeneous coordinates. -/
+plus/minus homogeneous coordinates.
+
+A corollary of the coordinate-free statement above: a choice of plus/minus
+coordinates is exactly a basis of `V`, and `ambientFreeIso` says the two
+presentations of `ℙ(V)` are isomorphic as `G`-schemes over `Spec k`. -/
 public theorem noEquivariantRationalMap_from_ambient
     {V : Type} [AddCommGroup V] [Module k V]
     (R : FaithfulLinearRep k G V) (c : PlusMinusCoords R) :
     ¬ HasEquivariantRationalMap (ambientOf R c)
-      V14SchemeModel.actionOver :=
-  noEquivariantRationalMap_from_ambient_of_plusMinusBases R c.p c.q c.bp c.bm
+      V14SchemeModel.actionOver := by
+  intro h
+  haveI : FiniteDimensional k V := R.finiteDimensional
+  haveI : Nontrivial V :=
+    ⟨⟨plusMinusAmbientBasis R sigma sigma_isInvolution c.p c.q c.bp c.bm 0, 0,
+      (plusMinusAmbientBasis R sigma sigma_isInvolution c.p c.q c.bp c.bm).ne_zero 0⟩⟩
+  exact noEquivariantRationalMap_ambientFree R
+    (hasEquivariantRationalMap_of_iso
+      (ambientFreeIso R
+        (plusMinusAmbientBasis R sigma sigma_isInvolution c.p c.q c.bp c.bm)) h)
 
 /-- Same statement, packaged as projective `G`-varieties: closed subschemes
 of Mathlib `Proj` with a `G`-action over `Spec k`. -/

@@ -22,7 +22,8 @@ import Lean
 open Lean
 
 def auditedNames : List Name :=
-  [`V14Formalization.Comparator.noEquivariantRationalMap_from_ambient,
+  [`V14Formalization.Comparator.noEquivariantRationalMap_ambientFree,
+   `V14Formalization.Comparator.noEquivariantRationalMap_from_ambient,
    `V14Formalization.Comparator.noEquivariantRationalMap_projectiveGVariety]
 
 unsafe def main : IO UInt32 := do

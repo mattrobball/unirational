@@ -7,6 +7,7 @@ module
 public import V14Formalization.ProjectiveGVariety
 public import V14Formalization.CentralizerObstruction
 public import V14Formalization.SchemeModelAliases
+public import V14Formalization.ProjectiveSpaceIntrinsicIrreducible
 
 /-!
 # Public no-map statement (vocabulary only)

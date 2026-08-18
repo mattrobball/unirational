@@ -11,7 +11,7 @@
 #      it sits on, and the edges it sat on were the hottest modules in the
 #      export closure. Comment text mentioning the phrase is fine; this
 #      matches the import syntax only (start of line).
-#   2. `#print axioms` on the two published theorems — must be exactly
+#   2. `#print axioms` on the three published theorems — must be exactly
 #      propext, Classical.choice, Quot.sound.
 #   3. the statement-identity check (scripts/check_statement_identity.lean):
 #      the challenge and solution environments must give both theorems
@@ -44,6 +44,7 @@ print "== 2. axioms =="
 tmp=$(mktemp -t axcheck).lean
 cat > "$tmp" <<'EOF'
 import V14Solution
+#print axioms V14Formalization.Comparator.noEquivariantRationalMap_ambientFree
 #print axioms V14Formalization.Comparator.noEquivariantRationalMap_from_ambient
 #print axioms V14Formalization.Comparator.noEquivariantRationalMap_projectiveGVariety
 EOF
@@ -51,11 +52,11 @@ ax=$(lake env lean "$tmp" 2>&1)
 rm -f "$tmp"
 print "$ax"
 n_ok=$(print "$ax" | tr -d ' \n' | grep -o 'dependsonaxioms:\[propext,Classical.choice,Quot.sound\]' | wc -l | tr -d ' ')
-if [[ "$n_ok" != "2" ]]; then
-  print "FAIL: axiom set is not exactly [propext, Classical.choice, Quot.sound] for both theorems"
+if [[ "$n_ok" != "3" ]]; then
+  print "FAIL: axiom set is not exactly [propext, Classical.choice, Quot.sound] for all three theorems"
   fail=1
 else
-  print "OK: both theorems depend on exactly the three permitted axioms"
+  print "OK: all three theorems depend on exactly the three permitted axioms"
 fi
 
 print "== 3. statement identity (Comparator surrogate) =="

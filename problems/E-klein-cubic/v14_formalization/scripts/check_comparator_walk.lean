@@ -48,7 +48,8 @@ deriving instance BEq for Lean.InductiveVal
 deriving instance BEq for Lean.ConstantInfo
 
 def auditedNames : List Name :=
-  [`V14Formalization.Comparator.noEquivariantRationalMap_from_ambient,
+  [`V14Formalization.Comparator.noEquivariantRationalMap_ambientFree,
+   `V14Formalization.Comparator.noEquivariantRationalMap_from_ambient,
    `V14Formalization.Comparator.noEquivariantRationalMap_projectiveGVariety]
 
 /-- Mirror of `Comparator.runForUsedConsts` (Comparator/Util.lean). -/

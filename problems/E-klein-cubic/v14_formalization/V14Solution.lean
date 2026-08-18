@@ -15,6 +15,21 @@ namespace V14Formalization.Comparator
 open V14Formalization.SchemeGeometry
 open AlgebraicGeometry Module
 
+/-- **Coordinate-free form.**  There is no equivariant `Scheme.RationalMap`
+from `ℙ(V) = Proj (Sym (V*))`, the projectivization of a faithful linear
+representation, to the coordinate V14.
+
+No basis of `V` and no system of homogeneous coordinates appears anywhere in
+this statement; the `G`-action on `ℙ(V)` arrives by functoriality alone.  The
+two coordinatized theorems below are corollaries of this one. -/
+public theorem noEquivariantRationalMap_ambientFree
+    {V : Type} [AddCommGroup V] [Module V14SchemeModel.k V]
+    [FiniteDimensional V14SchemeModel.k V] [Nontrivial V]
+    (R : FaithfulLinearRep V14SchemeModel.k V14SchemeModel.G V) :
+    ¬ HasEquivariantRationalMap (ambientFree R)
+      V14SchemeModel.actionOver :=
+  SchemeGeometry.noEquivariantRationalMap_ambientFree R
+
 public theorem noEquivariantRationalMap_from_ambient
     {V : Type} [AddCommGroup V] [Module V14SchemeModel.k V]
     (R : FaithfulLinearRep V14SchemeModel.k V14SchemeModel.G V)
