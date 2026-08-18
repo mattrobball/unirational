@@ -1,0 +1,216 @@
+diff --git a/Stan/EmitBoundary.lean b/Stan/EmitBoundary.lean
+index 985d174..9d23a98 100644
+--- a/Stan/EmitBoundary.lean
++++ b/Stan/EmitBoundary.lean
+@@ -93,11 +93,9 @@ def resolveSource (modName : Name) : IO (Option System.FilePath) := do
+ 
+     Mirrors `EmitStandalone.computeTFBNames`, differing only in testing
+     membership against an array of roots rather than one prefix. -/
+-def computeBoundaryNames (env : Environment) (roots : Array Name) (targetName : Name)
++def computeBoundaryNames (env : Environment) (roots : Array Name) (targets : Array Name)
+     (excludePrefixes : Array Name := #[])
+     (importedEnv? : Option Environment := none) : Except String (Std.HashSet Name) := do
+-  let some ci := env.find? targetName
+-    | .error s!"Target declaration '{targetName}' not found in environment"
+   let keep (resolved : Name) (isPriv : Bool) : Bool :=
+     match env.getModuleIdxFor? resolved with
+     | some idx =>
+@@ -110,30 +108,33 @@ def computeBoundaryNames (env : Environment) (roots : Array Name) (targetName :
+     match importedEnv? with
+     | some impEnv => impEnv.contains resolved
+     | none => false
+-  let rawDeps := collectDeps env targetName ci (proofIrrelevant := true) (roots := roots)
+   let mut result : Std.HashSet Name := {}
+-  result := result.insert targetName
+   -- Parents that entered the set only by promotion, so were never walked.
+   let mut promoted : Array Name := #[]
+-  for dep in rawDeps.toArray do
+-    -- Private declarations keep their INTERNAL name: `classifyNonUser` calls
+-    -- anything `_`-prefixed internal, right for compiler artifacts and wrong
+-    -- for `private abbrev k`, a real declaration the emitted source names.
+-    -- Dropping it leaves `k` unbound, autoImplicit invents a variable, and
+-    -- the failure surfaces as `Semiring k` rather than a missing identifier.
+-    let isPriv := isPrivateName dep
+-    let resolved := if isPriv then dep else resolveToUser env dep
+-    if skipImported resolved then continue
+-    if keep resolved isPriv then
+-      result := result.insert resolved
+-      -- `resolveToUser` promotes an auxiliary to its parent, so a declaration
+-      -- can be emitted that the walk never visited: only
+-      -- `instFintypeCircle1._proof_1` is reached, it resolves to
+-      -- `instFintypeCircle1`, and the instance is emitted while `Circle1`,
+-      -- which its type names, was never collected. Promotion adds a
+-      -- declaration to the output, so its dependencies have to come too.
+-      if resolved != dep && !rawDeps.contains resolved then
+-        promoted := promoted.push resolved
++  for targetName in targets do
++   let some ci := env.find? targetName
++     | .error s!"Target declaration '{targetName}' not found in environment"
++   let rawDeps := collectDeps env targetName ci (proofIrrelevant := true) (roots := roots)
++   result := result.insert targetName
++   for dep in rawDeps.toArray do
++     -- Private declarations keep their INTERNAL name: `classifyNonUser` calls
++     -- anything `_`-prefixed internal, right for compiler artifacts and wrong
++     -- for `private abbrev k`, a real declaration the emitted source names.
++     -- Dropping it leaves `k` unbound, autoImplicit invents a variable, and
++     -- the failure surfaces as `Semiring k` rather than a missing identifier.
++     let isPriv := isPrivateName dep
++     let resolved := if isPriv then dep else resolveToUser env dep
++     if skipImported resolved then continue
++     if keep resolved isPriv then
++       result := result.insert resolved
++       -- `resolveToUser` promotes an auxiliary to its parent, so a declaration
++       -- can be emitted that the walk never visited: only
++       -- `instFintypeCircle1._proof_1` is reached, it resolves to
++       -- `instFintypeCircle1`, and the instance is emitted while `Circle1`,
++       -- which its type names, was never collected. Promotion adds a
++       -- declaration to the output, so its dependencies have to come too.
++       if resolved != dep && !rawDeps.contains resolved then
++         promoted := promoted.push resolved
+   -- One extra walk per promoted parent -- a handful, not per closure member.
+   for p in promoted do
+     if let some pci := env.find? p then
+@@ -143,8 +144,9 @@ def computeBoundaryNames (env : Environment) (roots : Array Name) (targetName :
+         if !skipImported resolved && keep resolved isPriv then
+           result := result.insert resolved
+   if let some impEnv := importedEnv? then
+-    if impEnv.contains targetName then
+-      result := result.erase targetName
++    for targetName in targets do
++      if impEnv.contains targetName then
++        result := result.erase targetName
+   return result
+ 
+ /-- Emit a standalone file whose trust boundary is `roots`.
+@@ -152,19 +154,21 @@ def computeBoundaryNames (env : Environment) (roots : Array Name) (targetName :
+     Declarations under any root are inlined with proofs replaced by `sorry`;
+     everything else is imported. Name every in-house package as a root and the
+     result imports only genuinely external code. -/
+-def emitBoundary (env : Environment) (roots : Array Name) (targetName : Name)
++def emitBoundary (env : Environment) (roots : Array Name) (targets : Array Name)
+     (outputPath : System.FilePath)
+     (excludePrefixes : Array Name := #[]) : IO Unit := do
+   if roots.isEmpty then
+     throw (IO.userError "emitBoundary: at least one --root is required")
++  if targets.isEmpty then
++    throw (IO.userError "emitBoundary: at least one target is required")
+ 
+-  let targetModName := match env.getModuleIdxFor? targetName with
++  let targetModNames := targets.map fun t => match env.getModuleIdxFor? t with
+     | some idx => env.header.moduleNames[idx.toNat]!
+     | none => roots[0]!
+-  IO.eprintln s!"Target module: {targetModName}"
++  IO.eprintln s!"Target modules: {targetModNames}"
+   IO.eprintln s!"Boundary roots: {roots}"
+ 
+-  let names ← match computeBoundaryNames env roots targetName excludePrefixes with
++  let names ← match computeBoundaryNames env roots targets excludePrefixes with
+     | .ok names => pure names
+     | .error msg => throw (IO.userError msg)
+   IO.eprintln s!"Inside boundary: {names.size} declarations"
+@@ -225,13 +229,17 @@ def emitBoundary (env : Environment) (roots : Array Name) (targetName : Name)
+   -- Non-Mathlib externals still have to be named, and for those the source
+   -- is every in-boundary module in the environment, not just the ones that
+   -- contributed declarations, for the same completeness reason.
+-  let mut output := "import Mathlib\n"
++  -- The downstream project is on the module system, so the emitted file has to
++  -- be too: it reproduces `public`/`@[expose] public section` from the source,
++  -- and those are syntax errors in a legacy file.
++  let mut output := "module\n\npublic import Mathlib\n"
+   let mut emitted : Std.HashSet Name := {}
+   let mut importSources : Array Name := #[]
+   for modName in env.header.moduleNames do
+     if inBoundary roots modName then
+       importSources := importSources.push modName
+-  importSources := importSources.push targetModName
++  for m in targetModNames do
++    importSources := importSources.push m
+   for modName in importSources do
+     match env.getModuleIdx? modName with
+     | some idx =>
+@@ -242,7 +250,7 @@ def emitBoundary (env : Environment) (roots : Array Name) (targetName : Name)
+             && !((`ProblemExtraction).isPrefixOf imp)
+             && !emitted.contains imp then
+           emitted := emitted.insert imp
+-          output := output ++ s!"import {imp}\n"
++          output := output ++ s!"public import {imp}\n"
+     | none => pure ()
+   output := output ++ "\n"
+ 
+@@ -256,7 +264,8 @@ def emitBoundary (env : Environment) (roots : Array Name) (targetName : Name)
+             universeNames := universeNames.push w
+ 
+   output := output ++ "/-! # Trusted base\n\n"
+-  output := output ++ s!"Target: `{targetName}`\n\n"
++  for t in targets do
++    output := output ++ s!"Target: `{t}`\n\n"
+   output := output ++ s!"Boundary: {", ".intercalate (roots.toList.map toString)}\n\n"
+   output := output ++ s!"{names.size} declarations from {orderedModules.size} modules, \
+     inlined in dependency order with every proof replaced by `sorry`. Imports above \
+diff --git a/StanBoundary.lean b/StanBoundary.lean
+index e5eb80d..76eb448 100644
+--- a/StanBoundary.lean
++++ b/StanBoundary.lean
+@@ -4,7 +4,7 @@ set of package roots rather than a single prefix.
+ 
+ Usage (from the downstream project directory):
+   lake exe stan_boundary --root <Pkg> [--root <Pkg> ...]
+-    [--exclude <Prefix> ...] [--env <Module>] <targetDecl> <outputPath>
++    [--exclude <Prefix> ...] [--env <Module>] <targetDecl> [<targetDecl> ...] <outputPath>
+ 
+ Declarations under any `--root` are inlined with proofs replaced by `sorry`.
+ Everything else is imported and trusted as given. Name every in-house package
+@@ -35,7 +35,7 @@ structure Args where
+   roots : Array Name := #[]
+   excludes : Array Name := #[]
+   env? : Option Name := none
+-  target : Option Name := none
++  targets : Array Name := #[]
+   output : Option System.FilePath := none
+ 
+ partial def parseArgs : List String → Args → Except String Args
+@@ -54,13 +54,15 @@ partial def parseArgs : List String → Args → Except String Args
+       if v.startsWith "--" then
+         if rest.isEmpty then .error s!"flag '{v}' given without a value"
+         else .error s!"unknown flag '{v}'"
+-      else if acc.target.isNone then parseArgs rest { acc with target := some v.toName }
+-      else if acc.output.isNone then parseArgs rest { acc with output := some v }
+-      else .error s!"unexpected extra argument '{v}'"
++      -- Every positional but the last is a target; the last is the output
++      -- path. Multiple targets emit the union of their statement closures,
++      -- which is what a project publishing several theorems needs.
++      else if rest.isEmpty then parseArgs rest { acc with output := some v }
++      else parseArgs rest { acc with targets := acc.targets.push v.toName }
+ 
+ def usage : String :=
+   "Usage: lake exe stan_boundary --root <Pkg> [--root <Pkg> ...] \
+-   [--exclude <Prefix> ...] [--env <Module>] <targetDecl> <outputPath>"
++   [--exclude <Prefix> ...] [--env <Module>] <targetDecl> [<targetDecl> ...] <outputPath>"
+ 
+ unsafe def main (args : List String) : IO UInt32 := do
+   match parseArgs args {} with
+@@ -73,18 +75,18 @@ unsafe def main (args : List String) : IO UInt32 := do
+       IO.eprintln "error: at least one --root is required"
+       IO.eprintln usage
+       return 1
+-    let some target := a.target
+-      | IO.eprintln "error: no target declaration given"
+-        IO.eprintln usage
+-        return 1
++    if a.targets.isEmpty then
++      IO.eprintln "error: no target declaration given"
++      IO.eprintln usage
++      return 1
+     let some output := a.output
+       | IO.eprintln "error: no output path given"
+         IO.eprintln usage
+         return 1
+     let envRoot := match a.env? with
+       | some m => m
+-      | none => (a.roots.find? (·.isPrefixOf target)).getD a.roots[0]!
++      | none => (a.roots.find? (·.isPrefixOf a.targets[0]!)).getD a.roots[0]!
+     IO.eprintln s!"Loading environment from: {envRoot}"
+     let env ← loadProjectEnv envRoot
+-    emitBoundary env a.roots target output a.excludes
++    emitBoundary env a.roots a.targets output a.excludes
+     return 0
