@@ -853,13 +853,24 @@ noncomputable def squareLexCoord (x : Fin 15 → R) (t : Fin 15) : R :=
   ((b6 (R := R)).exteriorPower 4).repr (sourceSquare x)
     (V14Formalization.PluckerNaturality.fourEnumeration t)
 
+private theorem fin15_cases {P : Fin 15 → Prop}
+    (h0 : P ⟨0, by omega⟩) (h1 : P ⟨1, by omega⟩)
+    (h2 : P ⟨2, by omega⟩) (h3 : P ⟨3, by omega⟩)
+    (h4 : P ⟨4, by omega⟩) (h5 : P ⟨5, by omega⟩)
+    (h6 : P ⟨6, by omega⟩) (h7 : P ⟨7, by omega⟩)
+    (h8 : P ⟨8, by omega⟩) (h9 : P ⟨9, by omega⟩)
+    (h10 : P ⟨10, by omega⟩) (h11 : P ⟨11, by omega⟩)
+    (h12 : P ⟨12, by omega⟩) (h13 : P ⟨13, by omega⟩)
+    (h14 : P ⟨14, by omega⟩) (s : Fin 15) : P s := by
+  fin_cases s <;> assumption
+
 theorem restrict4_det_0 (s : Fin 15) :
     ((LinearMap.toMatrix (b6 (R := R)) (b4 (R := R))
       (restrict4 (R := R) 0)).submatrix
         (powersetCard.ofFinEmbEquiv.symm top4)
         (V14Formalization.PluckerNaturality.fourEmb s)).det =
       if s = 0 then 1 else 0 := by
-  fin_cases s <;>
+  induction s using fin15_cases <;>
     simp [LinearMap.toMatrix_apply, restrict4, top4Emb_eq,
       fourEmb_eq_fourLexEmb, fourLexEmb, fourLexVec, b6, b4,
       Matrix.det_succ_row_zero, Matrix.det_fin_three, Fin.sum_univ_succ]
@@ -870,7 +881,7 @@ theorem restrict4_det_1 (s : Fin 15) :
         (powersetCard.ofFinEmbEquiv.symm top4)
         (V14Formalization.PluckerNaturality.fourEmb s)).det =
       if s = 1 then 1 else 0 := by
-  fin_cases s <;>
+  induction s using fin15_cases <;>
     simp [LinearMap.toMatrix_apply, restrict4, top4Emb_eq,
       fourEmb_eq_fourLexEmb, fourLexEmb, fourLexVec, b6, b4,
       Matrix.det_succ_row_zero, Fin.sum_univ_succ]
@@ -881,7 +892,7 @@ theorem restrict4_det_2 (s : Fin 15) :
         (powersetCard.ofFinEmbEquiv.symm top4)
         (V14Formalization.PluckerNaturality.fourEmb s)).det =
       if s = 2 then 1 else 0 := by
-  fin_cases s <;>
+  induction s using fin15_cases <;>
     simp [LinearMap.toMatrix_apply, restrict4, top4Emb_eq,
       fourEmb_eq_fourLexEmb, fourLexEmb, fourLexVec, b6, b4,
       Matrix.det_succ_row_zero, Fin.sum_univ_succ]
@@ -892,7 +903,7 @@ theorem restrict4_det_3 (s : Fin 15) :
         (powersetCard.ofFinEmbEquiv.symm top4)
         (V14Formalization.PluckerNaturality.fourEmb s)).det =
       if s = 3 then 1 else 0 := by
-  fin_cases s <;>
+  induction s using fin15_cases <;>
     simp [LinearMap.toMatrix_apply, restrict4, top4Emb_eq,
       fourEmb_eq_fourLexEmb, fourLexEmb, fourLexVec, b6, b4,
       Matrix.det_succ_row_zero, Fin.sum_univ_succ]
@@ -903,7 +914,7 @@ theorem restrict4_det_4 (s : Fin 15) :
         (powersetCard.ofFinEmbEquiv.symm top4)
         (V14Formalization.PluckerNaturality.fourEmb s)).det =
       if s = 4 then 1 else 0 := by
-  fin_cases s <;>
+  induction s using fin15_cases <;>
     simp [LinearMap.toMatrix_apply, restrict4, top4Emb_eq,
       fourEmb_eq_fourLexEmb, fourLexEmb, fourLexVec, b6, b4,
       Matrix.det_succ_row_zero, Fin.sum_univ_succ]
@@ -914,7 +925,7 @@ theorem restrict4_det_5 (s : Fin 15) :
         (powersetCard.ofFinEmbEquiv.symm top4)
         (V14Formalization.PluckerNaturality.fourEmb s)).det =
       if s = 5 then 1 else 0 := by
-  fin_cases s <;>
+  induction s using fin15_cases <;>
     simp [LinearMap.toMatrix_apply, restrict4, top4Emb_eq,
       fourEmb_eq_fourLexEmb, fourLexEmb, fourLexVec, b6, b4,
       Matrix.det_succ_row_zero, Fin.sum_univ_succ]
@@ -925,7 +936,7 @@ theorem restrict4_det_6 (s : Fin 15) :
         (powersetCard.ofFinEmbEquiv.symm top4)
         (V14Formalization.PluckerNaturality.fourEmb s)).det =
       if s = 6 then 1 else 0 := by
-  fin_cases s <;>
+  induction s using fin15_cases <;>
     simp [LinearMap.toMatrix_apply, restrict4, top4Emb_eq,
       fourEmb_eq_fourLexEmb, fourLexEmb, fourLexVec, b6, b4,
       Matrix.det_succ_row_zero, Fin.sum_univ_succ]
@@ -936,7 +947,7 @@ theorem restrict4_det_7 (s : Fin 15) :
         (powersetCard.ofFinEmbEquiv.symm top4)
         (V14Formalization.PluckerNaturality.fourEmb s)).det =
       if s = 7 then 1 else 0 := by
-  fin_cases s <;>
+  induction s using fin15_cases <;>
     simp [LinearMap.toMatrix_apply, restrict4, top4Emb_eq,
       fourEmb_eq_fourLexEmb, fourLexEmb, fourLexVec, b6, b4,
       Matrix.det_succ_row_zero, Fin.sum_univ_succ]
@@ -947,7 +958,7 @@ theorem restrict4_det_8 (s : Fin 15) :
         (powersetCard.ofFinEmbEquiv.symm top4)
         (V14Formalization.PluckerNaturality.fourEmb s)).det =
       if s = 8 then 1 else 0 := by
-  fin_cases s <;>
+  induction s using fin15_cases <;>
     simp [LinearMap.toMatrix_apply, restrict4, top4Emb_eq,
       fourEmb_eq_fourLexEmb, fourLexEmb, fourLexVec, b6, b4,
       Matrix.det_succ_row_zero, Fin.sum_univ_succ]
@@ -958,7 +969,7 @@ theorem restrict4_det_9 (s : Fin 15) :
         (powersetCard.ofFinEmbEquiv.symm top4)
         (V14Formalization.PluckerNaturality.fourEmb s)).det =
       if s = 9 then 1 else 0 := by
-  fin_cases s <;>
+  induction s using fin15_cases <;>
     simp [LinearMap.toMatrix_apply, restrict4, top4Emb_eq,
       fourEmb_eq_fourLexEmb, fourLexEmb, fourLexVec, b6, b4,
       Matrix.det_succ_row_zero, Fin.sum_univ_succ]
@@ -969,7 +980,7 @@ theorem restrict4_det_10 (s : Fin 15) :
         (powersetCard.ofFinEmbEquiv.symm top4)
         (V14Formalization.PluckerNaturality.fourEmb s)).det =
       if s = 10 then 1 else 0 := by
-  fin_cases s <;>
+  induction s using fin15_cases <;>
     simp [LinearMap.toMatrix_apply, restrict4, top4Emb_eq,
       fourEmb_eq_fourLexEmb, fourLexEmb, fourLexVec, b6, b4,
       Matrix.det_succ_row_zero, Fin.sum_univ_succ]
@@ -980,7 +991,7 @@ theorem restrict4_det_11 (s : Fin 15) :
         (powersetCard.ofFinEmbEquiv.symm top4)
         (V14Formalization.PluckerNaturality.fourEmb s)).det =
       if s = 11 then 1 else 0 := by
-  fin_cases s <;>
+  induction s using fin15_cases <;>
     simp [LinearMap.toMatrix_apply, restrict4, top4Emb_eq,
       fourEmb_eq_fourLexEmb, fourLexEmb, fourLexVec, b6, b4,
       Matrix.det_succ_row_zero, Fin.sum_univ_succ]
@@ -991,7 +1002,7 @@ theorem restrict4_det_12 (s : Fin 15) :
         (powersetCard.ofFinEmbEquiv.symm top4)
         (V14Formalization.PluckerNaturality.fourEmb s)).det =
       if s = 12 then 1 else 0 := by
-  fin_cases s <;>
+  induction s using fin15_cases <;>
     simp [LinearMap.toMatrix_apply, restrict4, top4Emb_eq,
       fourEmb_eq_fourLexEmb, fourLexEmb, fourLexVec, b6, b4,
       Matrix.det_succ_row_zero, Fin.sum_univ_succ]
@@ -1002,7 +1013,7 @@ theorem restrict4_det_13 (s : Fin 15) :
         (powersetCard.ofFinEmbEquiv.symm top4)
         (V14Formalization.PluckerNaturality.fourEmb s)).det =
       if s = 13 then 1 else 0 := by
-  fin_cases s <;>
+  induction s using fin15_cases <;>
     simp [LinearMap.toMatrix_apply, restrict4, top4Emb_eq,
       fourEmb_eq_fourLexEmb, fourLexEmb, fourLexVec, b6, b4,
       Matrix.det_succ_row_zero, Fin.sum_univ_succ]
@@ -1013,7 +1024,7 @@ theorem restrict4_det_14 (s : Fin 15) :
         (powersetCard.ofFinEmbEquiv.symm top4)
         (V14Formalization.PluckerNaturality.fourEmb s)).det =
       if s = 14 then 1 else 0 := by
-  fin_cases s <;>
+  induction s using fin15_cases <;>
     simp [LinearMap.toMatrix_apply, restrict4, top4Emb_eq,
       fourEmb_eq_fourLexEmb, fourLexEmb, fourLexVec, b6, b4,
       Matrix.det_succ_row_zero, Fin.sum_univ_succ]
