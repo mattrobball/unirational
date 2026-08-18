@@ -5,3 +5,5 @@
 .wtest
 .wtest2
 .comparator-*
+.probe/
+.push-clone/

@@ -179,7 +179,7 @@ def emit_entry(prefix: str, A: str, B: str, i: int, j: int, kmax: int,
             "  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,",
             "    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,",
             "    Polynomial.eval_neg, Polynomial.eval_zero]",
-            "  try ring",
+            "  try grind",
             f"theorem {prefix}_pim_eq_{i}_{j}_{t} :",
             f"    {A}_re_{i}_{t} * {B}_im_{t}_{j} + {A}_im_{i}_{t} * {B}_re_{t}_{j} =",
             f"      {prefix}_pim_{i}_{j}_{t} := by",
@@ -189,7 +189,7 @@ def emit_entry(prefix: str, A: str, B: str, i: int, j: int, kmax: int,
             "  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,",
             "    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,",
             "    Polynomial.eval_neg, Polynomial.eval_zero]",
-            "  try ring",
+            "  try grind",
             f"theorem {prefix}_term_{i}_{j}_{t} :",
             f"    {A}_entry_{i}_{t} * {B}_entry_{t}_{j} =",
             f"      ofLadj {prefix}_pre_{i}_{j}_{t} {prefix}_pim_{i}_{j}_{t} := by",
@@ -214,7 +214,7 @@ def emit_entry(prefix: str, A: str, B: str, i: int, j: int, kmax: int,
         "  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,",
         "    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,",
         "    Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]",
-        "  try ring",
+        "  try grind",
         "",
         f"theorem {prefix}_sum_poly_im_{i}_{j} :",
         f"    {im_named} = ({tgt_im} : Polynomial ℚ) + Phi11 * {prefix}_qim_{i}_{j} := by",
@@ -224,7 +224,7 @@ def emit_entry(prefix: str, A: str, B: str, i: int, j: int, kmax: int,
         "  simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,",
         "    Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,",
         "    Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]",
-        "  try ring",
+        "  try grind",
         "",
         f"theorem {prefix}_sum_entries_{i}_{j} :",
         f"    {term_sum} =",
@@ -377,6 +377,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-    sys.path.insert(0, __import__("os").path.dirname(__import__("os").path.abspath(__file__)))
+    __import__("sys").path.insert(0, __import__("os").path.dirname(__import__("os").path.abspath(__file__)))
     from module_annotation_hook import reapply_module_annotations
     reapply_module_annotations()

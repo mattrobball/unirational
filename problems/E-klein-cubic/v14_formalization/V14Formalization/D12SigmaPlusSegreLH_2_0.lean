@@ -27,7 +27,7 @@ theorem LH_pre_eq_2_0_0 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_pim_eq_2_0_0 :
     L_re_2_0 * H_im_0_0 + L_im_2_0 * H_re_0_0 =
       LH_pim_2_0_0 := by
@@ -37,7 +37,7 @@ theorem LH_pim_eq_2_0_0 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_term_2_0_0 :
     L_entry_2_0 * H_entry_0_0 =
       ofLadj LH_pre_2_0_0 LH_pim_2_0_0 := by
@@ -55,7 +55,7 @@ theorem LH_pre_eq_2_0_1 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_pim_eq_2_0_1 :
     L_re_2_1 * H_im_1_0 + L_im_2_1 * H_re_1_0 =
       LH_pim_2_0_1 := by
@@ -65,7 +65,7 @@ theorem LH_pim_eq_2_0_1 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_term_2_0_1 :
     L_entry_2_1 * H_entry_1_0 =
       ofLadj LH_pre_2_0_1 LH_pim_2_0_1 := by
@@ -83,7 +83,7 @@ theorem LH_pre_eq_2_0_2 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_pim_eq_2_0_2 :
     L_re_2_2 * H_im_2_0 + L_im_2_2 * H_re_2_0 =
       LH_pim_2_0_2 := by
@@ -93,7 +93,7 @@ theorem LH_pim_eq_2_0_2 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_term_2_0_2 :
     L_entry_2_2 * H_entry_2_0 =
       ofLadj LH_pre_2_0_2 LH_pim_2_0_2 := by
@@ -111,7 +111,7 @@ theorem LH_pre_eq_2_0_3 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_pim_eq_2_0_3 :
     L_re_2_3 * H_im_3_0 + L_im_2_3 * H_re_3_0 =
       LH_pim_2_0_3 := by
@@ -121,7 +121,7 @@ theorem LH_pim_eq_2_0_3 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_term_2_0_3 :
     L_entry_2_3 * H_entry_3_0 =
       ofLadj LH_pre_2_0_3 LH_pim_2_0_3 := by
@@ -139,7 +139,7 @@ theorem LH_pre_eq_2_0_4 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_pim_eq_2_0_4 :
     L_re_2_4 * H_im_4_0 + L_im_2_4 * H_re_4_0 =
       LH_pim_2_0_4 := by
@@ -149,7 +149,7 @@ theorem LH_pim_eq_2_0_4 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_term_2_0_4 :
     L_entry_2_4 * H_entry_4_0 =
       ofLadj LH_pre_2_0_4 LH_pim_2_0_4 := by
@@ -167,7 +167,7 @@ theorem LH_pre_eq_2_0_5 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_pim_eq_2_0_5 :
     L_re_2_5 * H_im_5_0 + L_im_2_5 * H_re_5_0 =
       LH_pim_2_0_5 := by
@@ -177,7 +177,7 @@ theorem LH_pim_eq_2_0_5 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_term_2_0_5 :
     L_entry_2_5 * H_entry_5_0 =
       ofLadj LH_pre_2_0_5 LH_pim_2_0_5 := by
@@ -195,7 +195,7 @@ theorem LH_pre_eq_2_0_6 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_pim_eq_2_0_6 :
     L_re_2_6 * H_im_6_0 + L_im_2_6 * H_re_6_0 =
       LH_pim_2_0_6 := by
@@ -205,7 +205,7 @@ theorem LH_pim_eq_2_0_6 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_term_2_0_6 :
     L_entry_2_6 * H_entry_6_0 =
       ofLadj LH_pre_2_0_6 LH_pim_2_0_6 := by
@@ -223,7 +223,7 @@ theorem LH_pre_eq_2_0_7 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_pim_eq_2_0_7 :
     L_re_2_7 * H_im_7_0 + L_im_2_7 * H_re_7_0 =
       LH_pim_2_0_7 := by
@@ -233,7 +233,7 @@ theorem LH_pim_eq_2_0_7 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_term_2_0_7 :
     L_entry_2_7 * H_entry_7_0 =
       ofLadj LH_pre_2_0_7 LH_pim_2_0_7 := by
@@ -251,7 +251,7 @@ theorem LH_pre_eq_2_0_8 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_pim_eq_2_0_8 :
     L_re_2_8 * H_im_8_0 + L_im_2_8 * H_re_8_0 =
       LH_pim_2_0_8 := by
@@ -261,7 +261,7 @@ theorem LH_pim_eq_2_0_8 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LH_term_2_0_8 :
     L_entry_2_8 * H_entry_8_0 =
       ofLadj LH_pre_2_0_8 LH_pim_2_0_8 := by
@@ -276,7 +276,7 @@ theorem LH_sum_poly_re_2_0 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem LH_sum_poly_im_2_0 :
     LH_pim_2_0_0 + LH_pim_2_0_1 + LH_pim_2_0_2 + LH_pim_2_0_3 + LH_pim_2_0_4 + LH_pim_2_0_5 + LH_pim_2_0_6 + LH_pim_2_0_7 + LH_pim_2_0_8 = (0 : Polynomial ℚ) + Phi11 * LH_qim_2_0 := by
@@ -286,7 +286,7 @@ theorem LH_sum_poly_im_2_0 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem LH_sum_entries_2_0 :
     L_entry_2_0 * H_entry_0_0 + L_entry_2_1 * H_entry_1_0 + L_entry_2_2 * H_entry_2_0 + L_entry_2_3 * H_entry_3_0 + L_entry_2_4 * H_entry_4_0 + L_entry_2_5 * H_entry_5_0 + L_entry_2_6 * H_entry_6_0 + L_entry_2_7 * H_entry_7_0 + L_entry_2_8 * H_entry_8_0 =
