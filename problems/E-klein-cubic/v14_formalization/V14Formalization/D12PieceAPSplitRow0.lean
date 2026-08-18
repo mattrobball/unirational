@@ -651,10 +651,7 @@ theorem YZ_scale (k : Fin 1) :
 theorem entry_eq :
     (matrixMul XVec AVec + matrixMul KVec YVec)
         (0 : Fin 10) (0 : Fin 10) = ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  change (∑ k : Fin 20, mul (XVec (0 : Fin 10) k)
-      (AVec k (0 : Fin 10))) +
-    (∑ k : Fin 1, mul (KVec (0 : Fin 10) k)
-      (YVec k (0 : Fin 10))) = _
+  rw [Matrix.add_apply, matrixMul_apply, matrixMul_apply]
   refine add_sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (0 : Fin 10) k)
     (fun k => AVec k (0 : Fin 10))
@@ -1315,10 +1312,7 @@ theorem YZ_scale (k : Fin 1) :
 theorem entry_eq :
     (matrixMul XVec AVec + matrixMul KVec YVec)
         (0 : Fin 10) (1 : Fin 10) = ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  change (∑ k : Fin 20, mul (XVec (0 : Fin 10) k)
-      (AVec k (1 : Fin 10))) +
-    (∑ k : Fin 1, mul (KVec (0 : Fin 10) k)
-      (YVec k (1 : Fin 10))) = _
+  rw [Matrix.add_apply, matrixMul_apply, matrixMul_apply]
   refine add_sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (0 : Fin 10) k)
     (fun k => AVec k (1 : Fin 10))
@@ -1979,10 +1973,7 @@ theorem YZ_scale (k : Fin 1) :
 theorem entry_eq :
     (matrixMul XVec AVec + matrixMul KVec YVec)
         (0 : Fin 10) (2 : Fin 10) = ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  change (∑ k : Fin 20, mul (XVec (0 : Fin 10) k)
-      (AVec k (2 : Fin 10))) +
-    (∑ k : Fin 1, mul (KVec (0 : Fin 10) k)
-      (YVec k (2 : Fin 10))) = _
+  rw [Matrix.add_apply, matrixMul_apply, matrixMul_apply]
   refine add_sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (0 : Fin 10) k)
     (fun k => AVec k (2 : Fin 10))
@@ -2643,10 +2634,7 @@ theorem YZ_scale (k : Fin 1) :
 theorem entry_eq :
     (matrixMul XVec AVec + matrixMul KVec YVec)
         (0 : Fin 10) (3 : Fin 10) = ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  change (∑ k : Fin 20, mul (XVec (0 : Fin 10) k)
-      (AVec k (3 : Fin 10))) +
-    (∑ k : Fin 1, mul (KVec (0 : Fin 10) k)
-      (YVec k (3 : Fin 10))) = _
+  rw [Matrix.add_apply, matrixMul_apply, matrixMul_apply]
   refine add_sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (0 : Fin 10) k)
     (fun k => AVec k (3 : Fin 10))
@@ -3307,10 +3295,7 @@ theorem YZ_scale (k : Fin 1) :
 theorem entry_eq :
     (matrixMul XVec AVec + matrixMul KVec YVec)
         (0 : Fin 10) (4 : Fin 10) = ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  change (∑ k : Fin 20, mul (XVec (0 : Fin 10) k)
-      (AVec k (4 : Fin 10))) +
-    (∑ k : Fin 1, mul (KVec (0 : Fin 10) k)
-      (YVec k (4 : Fin 10))) = _
+  rw [Matrix.add_apply, matrixMul_apply, matrixMul_apply]
   refine add_sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (0 : Fin 10) k)
     (fun k => AVec k (4 : Fin 10))
@@ -3971,10 +3956,7 @@ theorem YZ_scale (k : Fin 1) :
 theorem entry_eq :
     (matrixMul XVec AVec + matrixMul KVec YVec)
         (0 : Fin 10) (5 : Fin 10) = ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  change (∑ k : Fin 20, mul (XVec (0 : Fin 10) k)
-      (AVec k (5 : Fin 10))) +
-    (∑ k : Fin 1, mul (KVec (0 : Fin 10) k)
-      (YVec k (5 : Fin 10))) = _
+  rw [Matrix.add_apply, matrixMul_apply, matrixMul_apply]
   refine add_sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (0 : Fin 10) k)
     (fun k => AVec k (5 : Fin 10))
@@ -4635,10 +4617,7 @@ theorem YZ_scale (k : Fin 1) :
 theorem entry_eq :
     (matrixMul XVec AVec + matrixMul KVec YVec)
         (0 : Fin 10) (6 : Fin 10) = ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  change (∑ k : Fin 20, mul (XVec (0 : Fin 10) k)
-      (AVec k (6 : Fin 10))) +
-    (∑ k : Fin 1, mul (KVec (0 : Fin 10) k)
-      (YVec k (6 : Fin 10))) = _
+  rw [Matrix.add_apply, matrixMul_apply, matrixMul_apply]
   refine add_sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (0 : Fin 10) k)
     (fun k => AVec k (6 : Fin 10))
@@ -5299,10 +5278,7 @@ theorem YZ_scale (k : Fin 1) :
 theorem entry_eq :
     (matrixMul XVec AVec + matrixMul KVec YVec)
         (0 : Fin 10) (7 : Fin 10) = ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  change (∑ k : Fin 20, mul (XVec (0 : Fin 10) k)
-      (AVec k (7 : Fin 10))) +
-    (∑ k : Fin 1, mul (KVec (0 : Fin 10) k)
-      (YVec k (7 : Fin 10))) = _
+  rw [Matrix.add_apply, matrixMul_apply, matrixMul_apply]
   refine add_sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (0 : Fin 10) k)
     (fun k => AVec k (7 : Fin 10))
@@ -5963,10 +5939,7 @@ theorem YZ_scale (k : Fin 1) :
 theorem entry_eq :
     (matrixMul XVec AVec + matrixMul KVec YVec)
         (0 : Fin 10) (8 : Fin 10) = ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  change (∑ k : Fin 20, mul (XVec (0 : Fin 10) k)
-      (AVec k (8 : Fin 10))) +
-    (∑ k : Fin 1, mul (KVec (0 : Fin 10) k)
-      (YVec k (8 : Fin 10))) = _
+  rw [Matrix.add_apply, matrixMul_apply, matrixMul_apply]
   refine add_sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (0 : Fin 10) k)
     (fun k => AVec k (8 : Fin 10))
@@ -6627,10 +6600,7 @@ theorem YZ_scale (k : Fin 1) :
 theorem entry_eq :
     (matrixMul XVec AVec + matrixMul KVec YVec)
         (0 : Fin 10) (9 : Fin 10) = ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  change (∑ k : Fin 20, mul (XVec (0 : Fin 10) k)
-      (AVec k (9 : Fin 10))) +
-    (∑ k : Fin 1, mul (KVec (0 : Fin 10) k)
-      (YVec k (9 : Fin 10))) = _
+  rw [Matrix.add_apply, matrixMul_apply, matrixMul_apply]
   refine add_sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (0 : Fin 10) k)
     (fun k => AVec k (9 : Fin 10))

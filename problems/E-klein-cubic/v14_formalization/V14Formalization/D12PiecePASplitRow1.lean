@@ -603,7 +603,7 @@ theorem AZ_scale (k : Fin 20) :
 theorem entry_eq :
     (matrixMul XVec AVec) (1 : Fin 10) (0 : Fin 10) =
       ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  unfold matrixMul
+  rw [matrixMul_apply]
   refine sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (1 : Fin 10) k)
     (fun k => AVec k (0 : Fin 10))
@@ -1213,7 +1213,7 @@ theorem AZ_scale (k : Fin 20) :
 theorem entry_eq :
     (matrixMul XVec AVec) (1 : Fin 10) (1 : Fin 10) =
       ![1, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  unfold matrixMul
+  rw [matrixMul_apply]
   refine sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (1 : Fin 10) k)
     (fun k => AVec k (1 : Fin 10))
@@ -1823,7 +1823,7 @@ theorem AZ_scale (k : Fin 20) :
 theorem entry_eq :
     (matrixMul XVec AVec) (1 : Fin 10) (2 : Fin 10) =
       ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  unfold matrixMul
+  rw [matrixMul_apply]
   refine sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (1 : Fin 10) k)
     (fun k => AVec k (2 : Fin 10))
@@ -2433,7 +2433,7 @@ theorem AZ_scale (k : Fin 20) :
 theorem entry_eq :
     (matrixMul XVec AVec) (1 : Fin 10) (3 : Fin 10) =
       ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  unfold matrixMul
+  rw [matrixMul_apply]
   refine sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (1 : Fin 10) k)
     (fun k => AVec k (3 : Fin 10))
@@ -3043,7 +3043,7 @@ theorem AZ_scale (k : Fin 20) :
 theorem entry_eq :
     (matrixMul XVec AVec) (1 : Fin 10) (4 : Fin 10) =
       ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  unfold matrixMul
+  rw [matrixMul_apply]
   refine sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (1 : Fin 10) k)
     (fun k => AVec k (4 : Fin 10))
@@ -3653,7 +3653,7 @@ theorem AZ_scale (k : Fin 20) :
 theorem entry_eq :
     (matrixMul XVec AVec) (1 : Fin 10) (5 : Fin 10) =
       ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  unfold matrixMul
+  rw [matrixMul_apply]
   refine sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (1 : Fin 10) k)
     (fun k => AVec k (5 : Fin 10))
@@ -4263,7 +4263,7 @@ theorem AZ_scale (k : Fin 20) :
 theorem entry_eq :
     (matrixMul XVec AVec) (1 : Fin 10) (6 : Fin 10) =
       ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  unfold matrixMul
+  rw [matrixMul_apply]
   refine sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (1 : Fin 10) k)
     (fun k => AVec k (6 : Fin 10))
@@ -4873,7 +4873,7 @@ theorem AZ_scale (k : Fin 20) :
 theorem entry_eq :
     (matrixMul XVec AVec) (1 : Fin 10) (7 : Fin 10) =
       ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  unfold matrixMul
+  rw [matrixMul_apply]
   refine sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (1 : Fin 10) k)
     (fun k => AVec k (7 : Fin 10))
@@ -5483,7 +5483,7 @@ theorem AZ_scale (k : Fin 20) :
 theorem entry_eq :
     (matrixMul XVec AVec) (1 : Fin 10) (8 : Fin 10) =
       ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  unfold matrixMul
+  rw [matrixMul_apply]
   refine sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (1 : Fin 10) k)
     (fun k => AVec k (8 : Fin 10))
@@ -6093,7 +6093,7 @@ theorem AZ_scale (k : Fin 20) :
 theorem entry_eq :
     (matrixMul XVec AVec) (1 : Fin 10) (9 : Fin 10) =
       ![0, 0, 0, 0, 0, 0, 0, 0, 0, 0] := by
-  unfold matrixMul
+  rw [matrixMul_apply]
   refine sum_mul_eq_of_scaled scale scale_ne_zero
     (fun k => XVec (1 : Fin 10) k)
     (fun k => AVec k (9 : Fin 10))

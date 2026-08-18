@@ -416,6 +416,17 @@ public theorem eval_injective : Function.Injective eval := by
     (A : Matrix m n Vec) (B : Matrix n p Vec) : Matrix m p Vec :=
   fun i j => ∑ k : n, mul (A i k) (B k j)
 
+/-- The entry equation for `matrixMul`, published so that the split
+certificates can `rw` with it instead of saying
+`change (∑ k, mul (XVec i k) (AVec k j)) + … = _`.  A `change` forces the
+exported context to reduce the whole goal, which is both a wider exposure
+requirement than the certificate needs and the same reduction repeated once
+per certificate. -/
+public theorem matrixMul_apply {m n p : Type*} [Fintype n]
+    (A : Matrix m n Vec) (B : Matrix n p Vec) (i : m) (j : p) :
+    matrixMul A B i j = ∑ k : n, mul (A i k) (B k j) := by
+  rfl
+
 @[expose] public def evalMatrix {m n : Type*} (A : Matrix m n Vec) :
     Matrix m n WeilRep.K := fun i j => eval (A i j)
 
