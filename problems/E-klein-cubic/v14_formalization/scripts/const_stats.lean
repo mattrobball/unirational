@@ -16,7 +16,7 @@ def roots : Array Name :=
 
 def wanted : Array Name :=
   #[`V14Formalization.D12CompoundRRow0,
-    `V14Formalization.D12PolynomialRRow0,
+    `V14Formalization.D12CompoundBridge,
     `V14Formalization.D12U6PolynomialData]
 
 run_meta do

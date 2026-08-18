@@ -18,6 +18,11 @@ changing.
 | ... module-private | 84,025 (83.1%) |
 | modules publishing at most one declaration | 1,005 of 1,376 |
 
+Later on 2026-08-18, retiring the tabulated 15x15 ambient generators (see
+"Retiring the 15x15 ambient tables" below) deleted 32 module files and added
+one, so `module` files are now **1,345**. The declaration counts in the table
+predate that change.
+
 (Counts are from one parser run over the tree, so before/after figures in this
 document are comparable to each other; they sit a little under a raw
 `grep -c '@\[expose\]'`, which also sees attribute lines that are not
@@ -446,7 +451,8 @@ calibration against the pilot commit).
 | after de-exposing BezoutData + Partials | 162,794 | 140.0M | 66.5M |
 | after removing 1,100 `change`s | 163,796 | 140.2M | 66.6M |
 | after the SplitRow redesign + de-exposing Piece*Data | 166,352 | 143.2M | 67.8M |
-| after converting VQ / HM `change` | 166,991 | **143.5M** | **68.1M** |
+| after converting VQ / HM `change` | 166,991 | 143.5M | 68.1M |
+| after retiring the 15x15 ambient tables | 163,958 | **133.4M** | **65.0M** |
 
 Net for 2026-08-18: **177.6M -> 143.5M, -19.2%**, and `@[expose]` 7,093 -> 4,769.
 The last two rows are the exposure work paid for on the export: +3.35M, +2.4%,
@@ -481,7 +487,7 @@ concurrently with `lean4export` (see the 2026-08-15 OOM log). 140.0M is
 | SigmaCarrierBridgeRow | 1,010 | 13.5M | 7.6% | `relation_*`, 55-95k each |
 | SigmaPlusSegreLH | 1,926 | 12.2M | 6.8% | pointwise-eval `simp` + `ring` |
 | SigmaPlusSegreDet | 1,021 | 11.4M | 6.4% | pointwise-eval `simp` + `ring` |
-| Compound{R,F}Row | 2,010 | 19.6M | 11.1% | `norm_num` + `linear_combination` |
+| Compound{R,F}Row | 2,010 | 19.6M | 11.1% | `norm_num` + `linear_combination` — now 14.5M, see below |
 | SigmaPlusSegreSmoothC{U,V,W} | 2,175 | 22.4M | 12.6% | pointwise-eval `simp` + `ring` |
 | SigmaPlusSegreNH | 936 | 5.8M | 3.3% | pointwise-eval `simp` + `ring` |
 
@@ -492,7 +498,10 @@ table as it stood on 2026-08-17; **it has since been fixed by replacing one
 tactic** — see below. Compound and the two `relation_*` families are genuine
 per-instance rational arithmetic over 1/11 denominators and need the
 `ℤ`-rescaling treatment described in CERTIFICATE_COST_2026-08-16.md, which is
-a larger job, and they are now the top of the table.
+a larger job, and they were then the top of the table. Compound has since been
+cut by 26% a different way — by deleting the data it was reconciling, not by
+making its arithmetic cheaper. The two `relation_*` families still stand and
+are now the top of the table.
 
 ### `ring` -> `grind` on the pointwise-eval identities (2026-08-18)
 
@@ -559,6 +568,121 @@ families.** It was the plan on 2026-08-17, on the assumption that only a change
 of route could shrink them; one tactic did two thirds of it at a fraction of the
 cost. The remaining `interpQ` work belongs to Compound and the `relation_*`
 families, which `grind` does not address.
+
+## Retiring the 15x15 ambient tables (2026-08-18)
+
+### What the 450 certificates were actually proving
+
+The tree used to tabulate the ambient 15x15 rotation and reflection
+(`D12Polynomial{R,F}Row0..14`) *and* the 6x6 Weil generators
+(`D12{U6,F6}PolynomialData`), and then prove 225 entrywise identities per
+generator, in `D12Compound{R,F}Row0..14`, reconciling the two:
+
+```
+compound2(R6)[i,j] - R15[i,j] = Phi11 * q[i,j]
+```
+
+It is tempting to read that as a copy being checked against its own
+derivation, with the certificates a tautology waiting to be deleted. It is
+not. `compound2(R6)` has degree up to 18; `R15` has degree at most 9. They are
+congruent modulo `Phi11`, not equal — **all 225 quotients are nonzero, for
+both generators**. `R15` is the canonical reduced representative of
+`compound2(R6)` in `Q[X]/(Phi11)`, and that reduction is exactly what made the
+*exact* `Q[X]` identity
+
+```
+R15 * B = B * RM
+```
+
+true. Substituting `compound2(R6)` into it breaks it: the two differ by
+`Phi11 * Q` with `Q` nonzero, and `B` has full column rank, so `Q * B` is
+nonzero too. Anyone planning to make the reconciliations `rfl` should stop
+here — they cannot be, and the emitter now says so in its docstring.
+
+### What replaced them
+
+The reconciliation is not what the proof needs. Its single consumer,
+`D12ActionCoreCertificate.actionCore`, needs one fact over `K`:
+
+```
+rho(rotGen) * B = B * RM
+```
+
+and the identification of `rho(g)` with a compound matrix is already
+structural, for every `g`, in
+`PluckerNaturality.lambda2MatrixRepresentation_eq_compound2Lex`. So the
+ambient generator is no longer stored at all: it *is*
+`compound2Lex R6_poly`, and the generated modules certify only the
+restriction,
+
+```
+2 * ((compound2Lex R6_poly * B_poly) i j - (B_poly * RM_poly) i j)
+  = Phi11 * quotient_j
+```
+
+`B` has ten columns, so that is 150 entries per generator instead of 225 —
+which is where a third of the saving comes from. The rest comes from deleting
+the 15x15 tables and the exact `R*B = B*RM` layer they supported.
+
+| | before | after |
+|---|---:|---:|
+| `D12CompoundRRow` | 9,864,823 | 7,290,836 |
+| `D12CompoundFRow` | 9,772,123 | 7,227,934 |
+| `D12PolynomialRRow` | 2,534,279 | deleted |
+| `D12PolynomialFRow` | 2,536,847 | deleted |
+| `D12PolynomialRFull` / `FFull` | 36,439 | deleted |
+| `D12CompoundBridge` (new) | — | 134,239 |
+| **closure, per-constant** | **143,515,204** | **133,422,326** |
+
+**-10,092,878, -7.03%**, and 32 module files deleted against one added. At
+~85 bytes/node the export goes from ~12.2 GB to ~11.3 GB.
+
+### `D12CompoundBridge`: the parts that were paid 30 times
+
+Three things moved out of the generated modules into one shared module:
+
+* the `C (n/d) = n' * C (1/22)` normalisation lemmas, which every certificate
+  needs and each of the 30 modules used to declare privately for itself;
+* `two_mul_B_col{0..9}` and `two_B_mul_row{0..14}`, generic in the matrix
+  being multiplied: the sparse-`B` collapse done once per column and once per
+  row rather than once per certificate;
+* `of_two`.
+
+The doubling is the reason the certificates stay clean. `B_poly` has entries
+`+-1/2`, and `C (1/2)` is an atom `ring` knows nothing about, so a certificate
+that meets one has to carry a second relation through `linear_combination`.
+Stating everything for *twice* the difference pushes every half into the two
+collapse lemmas — where it is discharged once — and leaves the 300 per-entry
+certificates with integer scalars only. `of_two` divides back by 2 at the end.
+
+The common denominator matters too, and cost one build to discover: the 6x6
+tables are over 11 but `RM`/`SM` also carry `3/22` entries, so `C (1/11)` and
+`C (3/22)` are unrelated atoms and `ring` fails on a residual that is visibly
+zero. Everything normalises to `C (1/22)`.
+
+### Emitters
+
+`scripts/export_d12_compound_lean.py` was rewritten and now emits the bridge
+as well as the 30 row modules. `scripts/export_d12_poly_lean.py` keeps
+`D12PolynomialCore` / `RM` / `SM` and a trimmed `D12PolynomialData`; its
+15x15 emit code is retained but unreachable, together with the
+exact-arithmetic residual checks (`R*B-B*RM=0`, `F*B-B*SM=0`) that validated
+the retired layer — those still run on every invocation, as an independent
+audit of `results/d12_lean_K.json`. Both emitters round-trip byte-for-byte
+after this change, checked the way the section above prescribes.
+
+One stale line is left deliberately: `D12PolynomialCore.lean`'s header still
+says "Action rows live in D12PolynomialRRow*.lean shards". That file is the
+frozen-bytes case — its emitter re-annotates it only after checking
+`sha256 == recorded pristine hash` — so correcting the comment would mean
+re-recording the hash for a comment. It is not worth it.
+
+`scripts/const_stats.lean` is new: the per-*constant* counterpart of
+`closure_stats.lean` / `module_stats.lean`, which is what tells you whether a
+family's cost is in its tables or in one expensive theorem shape. Here it said
+`cert_*` was 97.7% of `D12CompoundRRow0` and the 15x15 table was 0.6% of
+`D12PolynomialRRow0` — so the table was never the prize, the certificate count
+was.
 
 ### The Segre `interpQ` bridge rewrite (done this session)
 
