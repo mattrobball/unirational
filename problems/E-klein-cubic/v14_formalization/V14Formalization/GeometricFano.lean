@@ -9,10 +9,12 @@ instantiate Cor 6.1 on this carrier (see FAITHFULNESS_CHECK.md).
 Linear-projective IsRCC (Definitions) is compatible with the writeup fixed-locus
 shape (genus-1 curve + 2 points contain no full linear ℙ^{≥1}).
 -/
-import V14Formalization.GeometricV14
-import V14Formalization.Definitions
-import Mathlib.LinearAlgebra.Dimension.Finrank
-import Mathlib.LinearAlgebra.Projectivization.Basic
+module
+
+public import V14Formalization.GeometricV14
+public import V14Formalization.Definitions
+public import Mathlib.LinearAlgebra.Dimension.Finrank
+public import Mathlib.LinearAlgebra.Projectivization.Basic
 
 open scoped LinearAlgebra.Projectivization
 

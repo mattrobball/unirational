@@ -13,21 +13,23 @@ OPEN model match for pure-M_K:
   needs free S-module Plücker coords of residual type + identification with seal.
   External char-0: residual tDiff ≠ 0 over K (coord0 = 66+132ζ−22ζ²+… nonzero).
 -/
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Data.Fintype.BigOperators
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Tactic.NormNum
-import Mathlib.Tactic.Ring
-import Mathlib.Data.Fin.VecNotation
-import Mathlib.LinearAlgebra.Dual.Lemmas
-import Mathlib.RingTheory.Polynomial.Cyclotomic.Basic
-import Mathlib.RingTheory.AdjoinRoot
-import Mathlib.Algebra.Field.ZMod
-import Mathlib.Algebra.Ring.GeomSum
-import Mathlib.Data.Nat.Prime.Defs
-import V14Formalization.GeometricV14Carrier
-import V14Formalization.Ord11CharacterSum
-import V14Formalization.PSLCard
+module
+
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.Data.Fintype.BigOperators
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Tactic.NormNum
+public import Mathlib.Tactic.Ring
+public import Mathlib.Data.Fin.VecNotation
+public import Mathlib.LinearAlgebra.Dual.Lemmas
+public import Mathlib.RingTheory.Polynomial.Cyclotomic.Basic
+public import Mathlib.RingTheory.AdjoinRoot
+public import Mathlib.Algebra.Field.ZMod
+public import Mathlib.Algebra.Ring.GeomSum
+public import Mathlib.Data.Nat.Prime.Defs
+public import V14Formalization.GeometricV14Carrier
+public import V14Formalization.Ord11CharacterSum
+public import V14Formalization.PSLCard
 
 noncomputable section
 
@@ -41,7 +43,7 @@ open GeometricV14Carrier
 abbrev F23 := ZMod 23
 abbrev V15 := Fin 15 → F23
 
-instance : Fact (Nat.Prime 23) := ⟨by decide⟩
+public instance : Fact (Nat.Prime 23) := ⟨by decide⟩
 
 /-! ## F₂₃ residual pure-M certificate -/
 
@@ -364,7 +366,7 @@ unconditional geometric theorem.
 /-- The exact missing comparison between the Lean residual vector and the
 sealed free cyclotomic model.  This is a proposition, not an axiom: downstream
 results must accept a proof of it explicitly. -/
-def HasResidualFreeModelMatch : Prop :=
+public def HasResidualFreeModelMatch : Prop :=
   ∀ {u : U},
     u ≠ 0 →
     Rlin (Rlin u) + u = 0 →
@@ -408,7 +410,7 @@ theorem residual_plucker_projectorM_ne_of_model_match
   fun h => not_pureM_residual_of_model_match hmodel hu0 hR2 hSstab h
 
 /-- Conditional residual Plücker exclusion from `Msub`. -/
-theorem residual_plucker_not_mem_Msub_of_model_match
+public theorem residual_plucker_not_mem_Msub_of_model_match
     (hmodel : HasResidualFreeModelMatch) {u : U}
     (hu0 : u ≠ 0)
     (hR2 : Rlin (Rlin u) + u = 0)

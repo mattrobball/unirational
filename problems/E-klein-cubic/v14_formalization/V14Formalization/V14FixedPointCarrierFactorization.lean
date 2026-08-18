@@ -2,9 +2,11 @@
 Copyright (c) 2026 V14Formalization contributors.
 Released under Apache 2.0 license.
 -/
-import V14Formalization.ProjectiveEigenvectorReduction
-import V14Formalization.V14FixedPointEquations
-import V14Formalization.V14ProjectorEigenspaceFactorization
+module
+
+public import V14Formalization.ProjectiveEigenvectorReduction
+public import V14Formalization.V14FixedPointEquations
+public import V14Formalization.V14ProjectorEigenspaceFactorization
 
 /-!
 # Carrier factorization of field-valued V14 fixed points
@@ -32,7 +34,7 @@ through either the supplied plus carrier or the supplied minus carrier.
 The matrices `Bplus, Lplus, Bminus, Lminus` are the finite certificate
 interface.  Everything before their two factorization identities is proved
 from the actual V14 scheme action. -/
-theorem exists_normalizedCoordinates_v14FixedBy_plus_or_minus_carrier
+public theorem exists_normalizedCoordinates_v14FixedBy_plus_or_minus_carrier
     (L : Type) [Field L] [Algebra V14SchemeModel.k L] [NeZero (2 : L)]
     (p : v14FieldPointOver L ⟶
       FixedBy V14SchemeModel.actionOver GeometricV14Carrier.sigma)
