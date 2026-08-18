@@ -208,7 +208,7 @@ public theorem HM_entry_6_5 :
     minorQ 6 5
   rw [HM_6_5_bilin, HM_6_5_sum, HM_6_5_red, HM_6_5_redim,
     ofLadj_add_Phi11]
-  change ofLadj minorQ_re_6_5 minorQ_im_6_5 = minorQ 6 5
+  rw [minorQ_apply_6_5]
   rfl
 
 end V14Formalization.D12SigmaPlusSegreCore

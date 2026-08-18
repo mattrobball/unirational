@@ -361,7 +361,7 @@ theorem VQ_eval_7_8 :
 public theorem VQ_entry_7_8 : (spanV * Qplus) 7 8 = minorQ 7 8 := by
   rw [Matrix.mul_apply]
   rw [sum_fin15]
-  change spanV_entry_7_0 * Qplus_entry_0_8 + spanV_entry_7_1 * Qplus_entry_1_8 + spanV_entry_7_2 * Qplus_entry_2_8 + spanV_entry_7_3 * Qplus_entry_3_8 + spanV_entry_7_4 * Qplus_entry_4_8 + spanV_entry_7_5 * Qplus_entry_5_8 + spanV_entry_7_6 * Qplus_entry_6_8 + spanV_entry_7_7 * Qplus_entry_7_8 + spanV_entry_7_8 * Qplus_entry_8_8 + spanV_entry_7_9 * Qplus_entry_9_8 + spanV_entry_7_10 * Qplus_entry_10_8 + spanV_entry_7_11 * Qplus_entry_11_8 + spanV_entry_7_12 * Qplus_entry_12_8 + spanV_entry_7_13 * Qplus_entry_13_8 + spanV_entry_7_14 * Qplus_entry_14_8 = minorQ_entry_7_8
+  rw [spanV_apply_7_0, Qplus_apply_0_8, spanV_apply_7_1, Qplus_apply_1_8, spanV_apply_7_2, Qplus_apply_2_8, spanV_apply_7_3, Qplus_apply_3_8, spanV_apply_7_4, Qplus_apply_4_8, spanV_apply_7_5, Qplus_apply_5_8, spanV_apply_7_6, Qplus_apply_6_8, spanV_apply_7_7, Qplus_apply_7_8, spanV_apply_7_8, Qplus_apply_8_8, spanV_apply_7_9, Qplus_apply_9_8, spanV_apply_7_10, Qplus_apply_10_8, spanV_apply_7_11, Qplus_apply_11_8, spanV_apply_7_12, Qplus_apply_12_8, spanV_apply_7_13, Qplus_apply_13_8, spanV_apply_7_14, Qplus_apply_14_8, minorQ_apply_7_8]
   exact (VQ_sum_entries_7_8).trans VQ_eval_7_8
 
 end V14Formalization.D12SigmaPlusSegreCore

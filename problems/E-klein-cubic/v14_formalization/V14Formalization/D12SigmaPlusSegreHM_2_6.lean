@@ -138,7 +138,7 @@ public theorem HM_entry_2_6 :
       bilinearCoeffs (Hrow 2) (Hrow 4) 6 =
     minorQ 2 6
   rw [h, HM_2_6_sub, HM_2_6_red, HM_2_6_redim, ofLadj_add_Phi11]
-  change ofLadj minorQ_re_2_6 minorQ_im_2_6 = minorQ 2 6
+  rw [minorQ_apply_2_6]
   rfl
 
 end V14Formalization.D12SigmaPlusSegreCore
