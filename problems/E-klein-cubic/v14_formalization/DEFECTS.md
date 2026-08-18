@@ -454,6 +454,38 @@ product on top in the same file.
 
 ---
 
+### D14. The base field narrows the published theorem, in two ways
+
+Added 2026-08-18. See `FIELD_CRITERIA_2026-08-18.md` for the full accounting.
+
+`noEquivariantRationalMap_from_ambient` fixes `k = V14SchemeModel.k = ℚ(ζ₁₁)` and
+quantifies over `FaithfulLinearRep k G V`. That is weaker than the intended
+statement in two independent ways:
+
+1. A rational map over `ℂ` does not descend to `ℚ(ζ₁₁)`, so "no `ℚ(ζ₁₁)`-map" does
+   not exclude a `ℂ`-map. The formalization proves the weaker direction.
+2. `PSL(2,11)`'s two 12-dimensional irreducibles have character field `ℚ(√5)`, and
+   `ℚ(√5) ⊄ ℚ(ζ₁₁)` (the only quadratic subfield there is `ℚ(√−11)`). They are
+   faithful, and they are outside the theorem's scope.
+
+**Partly addressed 2026-08-18.** Hypothesis (b), `V₁₄^{D₁₂} = ∅`, is now proved
+over *every* field receiving a ring map from `ℚ(ζ₁₁)`
+(`V14D12FixedPointExclusionOverField.no_centralizer_fixed_point_over`), and over
+`ℂ` (`…Complex.no_centralizer_fixed_point_complex`). The four-piece matrix
+certificate was shown to be base-change stable
+(`D12CertificateBaseChange.lean`): the only field-dependent inputs are three
+explicit scalars whose norms are `11⁶`, `11⁴`, `11⁴` after clearing the single
+denominator 2. So the emptiness is ideal-theoretic, not point-counting, and no
+large bad prime hides in it.
+
+**Still open**: hypothesis (a) over a general field, and hence the headline
+itself. `FIELD_CRITERIA_2026-08-18.md` lists the five remaining pieces. The
+blocker is that the plane-cubic descent (`EllipticPolynomialConstancy`) runs on
+`Polynomial.eq_C_of_derivative_eq_zero` and Mason–Stothers, so as formalized it
+needs `CharZero`, not merely `char ≠ 2, 3`.
+
+---
+
 ## Suggested order of work
 
 1. **D3** (build coverage) — five minutes, and it is what allowed D2 to persist.
