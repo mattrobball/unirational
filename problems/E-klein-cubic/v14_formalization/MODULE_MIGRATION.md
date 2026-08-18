@@ -1,8 +1,44 @@
-# Module-system migration (Lean 4.32.1)
+# The module system in this project (Lean 4.32.1)
 
-Stage 1 (this document's origin) converted the 13 bottom-of-DAG files and
-established the recipe, tooling, and measurements below. Stages 2-5 follow
-the same recipe with the same tools.
+**The migration is finished.** This document describes the state of the tree
+and the rules that keep it that way; it is no longer a plan. Read
+"Where things stand" first, then the sections that apply to what you are
+changing.
+
+## Where things stand (2026-08-17)
+
+| | |
+|---|---:|
+| `module` files | 1,376 |
+| legacy files remaining | 34 |
+| Comparator closure converted | 1,052 / 1,052 |
+| declarations | 92,716 |
+| ... `public` | 11,220 (12.1%) |
+| ... `@[expose]` | 7,093 (7.7%) |
+| ... module-private | 81,496 (87.9%) |
+| modules publishing at most one declaration | 1,005 of 1,376 |
+
+The 34 legacy files are exactly the ones that have never compiled, on any
+branch: `D12SealProof` (deterministic whnf timeout at `L₀_mul_B₀`), the 24
+`Apply_span{U,V}` shards that reference `spanU_row*` / `spanV_row*` lemmas
+defined nowhere in the tree, the 3 `Smooth{U,V,W}` files whose
+`Ambiguous term C/X` reproduces with pure Mathlib imports, and 6 aggregators
+and shards that import them. None has ever had an olean. A module file may
+not import a non-module file, so they cannot be converted until they compile.
+**Every file in this project that compiles is a module file.**
+
+What that bought, measured on an importer of `V14Solution`:
+
+| importer | constants | max RSS |
+|---|---:|---:|
+| legacy (`import V14Solution`) | 589,728 | 3.77 GB |
+| module (`public import V14Solution`) | 413,384 | **2.08 GB** |
+
+A module importer sees 30% fewer constants and 45% less resident memory,
+because 87.9% of this tree's declarations are now genuinely internal. 3,040
+of them were written `private` by their authors, which under the legacy
+elaborator only mangled the name while still loading the body into every
+consumer.
 
 ## The one hard rule: strictly bottom-up
 
@@ -41,29 +77,27 @@ idempotently. Later stages add their own config files and reuse the tool.
    `@[simp]`/`@[norm_num]` declaration (they act through resolution and
    simp sets, so text scans cannot prove them unused) — the tool does this
    automatically.
-3. **Expose every public def and instance** (`expose_all_public_defs` in
-   the config; the generator also records the explicit set). Stage 1
-   tried fine-grained exposure (only downstream-unfold hits); it shipped
-   green and then broke stage 2 three separate times, one ~25-minute
-   rebuild per discovery, because reduction-based proofs surface missing
-   bodies only when a *consumer* converts:
-   - `simp [WeilRep.Φ11]` in a module consumer needs the exposed body
-     (equation lemmas of non-exposed imports don't exist);
-   - `rfl`/`change` defeq through `ζ`, `eval`, `constVec`,
-     `characterStack` got stuck;
-   - `decide` must reduce *every* def and `Decidable` instance it
-     touches (`instDecidableEqVector` etc.).
-   The static sweep that would compute the exact needed set is
-   approximated soundly from above by exposing the whole public surface —
-   Mathlib's own posture for defs files (`@[expose] public section`) —
-   plus the in-file body closure the generator computes (an exposed body
-   may only reference public names, so body-referenced private defs are
-   pulled in transitively). This is the REQUIRED pre-build posture from
-   stage 2 on, and was applied retroactively to the stage-1 leaves.
+3. **Expose only what has to unfold** (`--narrow-expose`; the blanket
+   `expose_all_public_defs` posture is retired and no config sets it).
+   `@[expose]` is needed only where the *exported* context does defeq. The
+   generator derives that from three things, and all three were learned from
+   builds that failed without them:
+   - a name in a `simp` / `dsimp` / `norm_num` / `decide` unfold list, or
+     under `unfold f` — `simp [WeilRep.Φ11]` in a module consumer needs the
+     body, since equation lemmas of non-exposed imports do not exist;
+   - a name in a `change e` / `show e`, and — separately — every name in the
+     STATEMENT of any declaration whose proof runs `change` / `show` / `rfl` /
+     `decide`, because the tactic forces defeq against its own goal and the
+     goal's head need not appear in the tactic text
+     (`D12GeneratorSRow0Nonzero` `change`s a goal stated with
+     `SrestrictedAction`, which the tactic never mentions);
+   - the in-file closure: an exposed def's body may only reference public
+     names, and a public `:= rfl` theorem's statement must reduce, so both
+     pull their references in transitively.
    Public `abbrev`s are exposed automatically; do not annotate them.
-   The savings that matter (dropping private declarations and all proof
-   bodies from the importer surface) are unaffected; narrowing exposure
-   is a post-migration optimization, not a per-stage one.
+   Anything the scan proposes and the build refuses goes in `no_expose` with
+   the reason (`LinearNormalProjectiveChart`'s two AlgEquiv defs fail
+   instance synthesis when exposed).
 4. Everything else stays unannotated = module-private. Old-style `private`
    compiles unchanged as module-private (PSLCard's 237 `private` decls
    needed zero edits).
@@ -324,6 +358,12 @@ calibration against the pilot commit).
 | before this session (reconstructed) | ~160k | ~260.4M | — |
 | after the SplitRow rewrite | 159,623 | 210.9M | 112.1M |
 | after the Segre bridge rewrite | 159,776 | **177.6M** | **88.8M** |
+| after the module migration completed | 159,781 | 177.6M | 88.8M |
+
+The last row is the point of the framing: converting 1,049 further modules
+moved the closure by 700 nodes out of 177.6M. Visibility annotations do not
+change proof terms, so the migration is worth doing for the code, not for the
+export — while an importer of `V14Solution` did go from 3.77 GB to 2.08 GB.
 
 Net for the session: **-31.8%** on the metric the baseline used. The SplitRow
 reconstruction is exact for the part it changed — the four families measured
@@ -386,30 +426,89 @@ side is sparse and not definitionally the dense sum; 153 patterns cover all
   * shared lemma module: 1.52M nodes, paid once
 
 
-## Stage order
+## How it was done (for anyone converting more files)
 
-Convert a file only when all its project imports are converted. After
-stage 1 (the 13 leaves: Basic, BiprojectiveIntegral, CentralizerD12,
-D12PolyZReflection, D12PolynomialCore*, D12SealData*, 
-EllipticPolynomialConstancy, MultiProjectiveZeroLocus, PSLCard,
-ProjNaturality, SchemeBaseChangeAction, SchemeEquivariant, WeilRep;
-\* = via emitter):
+Convert a file only when all its project imports are converted; the waves
+below are just a topological order of that constraint.
 
-2. **Piece Split chain**: D12Piece{PP,PA,AP,AA}Split* families + their
-   shared parents (D12PolynomialSM, D12PolynomialFRow*/RRow*, Data) —
-   emitter-driven; one annotation pass per emitter, same pattern as
-   export_d12_lean.py.
-3. **SigmaMinus / SigmaCarrier / GeneratorSPhase / Compound** families —
-   emitter-driven.
-4. **SigmaPlusSegre stack** (incl. the *Z reflection shards over
-   D12PolyZReflection) — emitter-driven.
-5. **Hand-written core** (GeometricV14Carrier, SchemeFixedLocus,
-   FaithfulHeadline, ... up the DAG), then the **roots last**:
-   HeadlineStatement, V14Challenge, V14Solution, V14Formalization,
-   AxiomAudit. Only when the roots become `module` files do downstream
-   consumers (Comparator) see any benefit through them; until then the
-   roots' legacy imports deliberately erase the annotations.
+1. 13 leaves, by hand (Basic, BiprojectiveIntegral, CentralizerD12,
+   D12PolyZReflection, D12PolynomialCore, D12SealData,
+   EllipticPolynomialConstancy, MultiProjectiveZeroLocus, PSLCard,
+   ProjNaturality, SchemeBaseChangeAction, SchemeEquivariant, WeilRep).
+2. The Piece Split chain (207 files).
+3. SigmaMinus / SigmaCarrier / GeneratorSPhase / Compound (85 files).
+4. The generated bulk, levels 0-6 of the remaining DAG (658 files), then the
+   core chain, levels 7-22 (85 files).
+5. The roots: V14Challenge, V14Solution, AxiomAudit.
+6. The 322 modules outside the Comparator closure.
 
-Stage-1 execution note for planning: the 11 hand-written conversions took
-~6 compile-fix iterations total across 4 files (the other 7 were clean on
-the first build); nothing required a proof or statement change.
+Waves 4-6 were done with one build each, not one build per file: run
+`module_stage_tool.py gen-config --narrow-expose` over the whole wave, apply
+with `module_migrate.py`, build once, and fix what the build actually
+complains about. Wave 4's 658 files needed exactly one static fix before the
+build went green.
+
+The tools:
+
+* `scripts/module_stage_tool.py gen-config [--narrow-expose] <files.txt> <cfg>`
+  — computes `public` from downstream usage and `expose` from observed defeq
+  contexts. **Always pass `--narrow-expose`.** Without it the config falls
+  back to the old posture of exposing every public def.
+* `scripts/module_migrate.py <cfg>` — applies a config, idempotently. Keys:
+  `public`, `expose`, `no_expose` (strip an exposure), `no_public` (strip a
+  publication), `import_all` (allow-list; must stay empty).
+* `scripts/module_stage_tool.py fix <cfgs...> <lake-log>` — grows a config
+  from build errors. Read its output before applying it: it infers a
+  declaration name from the error text and can pick the wrong module.
+* `scripts/check_module_invariants.sh` — the gate. Run it after every change.
+
+## Two failure modes that `lake build` does not catch
+
+Both have happened here. Both are why the gate script exists.
+
+1. **The published theorems can silently disappear.** They are declared in
+   BOTH roots — that is what a challenge/solution pair is — so any heuristic
+   keyed on "this name is declared in more than one module" will try to demote
+   them, and no module imports a root, so the build stays green while the
+   published surface empties. `module_migrate.py` now hard-refuses to demote
+   `noEquivariantRationalMap_from_ambient` and
+   `noEquivariantRationalMap_projectiveGVariety`.
+2. **`import all` can come back through the emitters.** The applier INSERTS
+   from the config's `import_all` key, and every emitter re-runs the applier
+   via `reapply_module_annotations()`. A stale key meant regenerating any
+   generated family would silently restore all 82 lines. The key is empty and
+   the applier now strips any `import all` not listed in it.
+
+Related, and the reason to re-run the collision sweep before each wave: a
+name declared `public` in two modules cannot be imported into one
+environment (`environment already contains 'Foo.G'`), and a legacy `private`
+declaration of that name downstream fails with `a non-private declaration has
+already been declared`. Module-private names do not collide — verified.
+
+## `public` means "a cross-module consumer needs this"
+
+The usage scan matches a declaration's LAST NAME COMPONENT, which is wrong
+whenever sibling modules declare the same name in different namespaces:
+`quotient_0` lives in 35 modules, so every importer that mentions the token
+looked like a consumer of all 35. That published 500 declarations nobody
+outside their module can even name — `D12CompoundRRow0` published all 16 of
+its declarations when `D12CompoundR` consumes exactly one.
+
+Those are demoted, recorded as `no_public`. If you regenerate a config, re-run
+the namespace-aware check: a name declared in more than one module counts as
+used by importer `I` only if `I` mentions it qualified, or if exactly one
+module in `I`'s import closure declares it. Two things must override the
+demotion, and both were found the hard way:
+
+* the in-file closure — an exposed def's body may only reference public
+  names, so `XRow0` stays public for `XVec` even though no importer names it;
+* whatever the build then rejects (3 names, in one round).
+
+The widest public surfaces left are the pure data modules —
+`D12SigmaPlusSegreQplus` (946 of 946), `D12SigmaPlusSegreMinorQ` (568 of
+568), the four `D12Piece*Data` (~486 of 487). These are coefficient tables
+whose every entry is consumed by a certificate that must unfold it; the
+surface is wide because the module genuinely is an interface. By contrast the
+generated certificate modules publish one theorem each: `D12PieceAASplitRow0`
+is 1 public of 591 declarations, `D12SigmaMinusReverse1` 1 of 257.
+
