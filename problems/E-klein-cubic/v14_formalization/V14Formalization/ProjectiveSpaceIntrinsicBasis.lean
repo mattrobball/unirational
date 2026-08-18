@@ -115,5 +115,74 @@ basis of `V`. -/
   hom_inv_id := projOfBasis_inv_hom b
   inv_hom_id := projOfBasis_hom_inv b
 
+/-! ## The intertwining
+
+The bridge carries the intrinsic action of a linear endomorphism into the
+matrix substitution action, provided the matrix is the one of the endomorphism
+in the basis `b`.  This is the identity that makes the two actions the same
+action. -/
+
+/-- The graded intertwining identity.  Both sides are algebra maps out of
+`Sym (V*)`, so it is enough to check them on `ι` of a dual basis vector, where
+one side is a row of `M` and the other is the corresponding linear form. -/
+public theorem bridge_intertwines (b : Basis (Fin (d + 1)) k V) (f : V →ₗ[k] V)
+    (M : Matrix (Fin (d + 1)) (Fin (d + 1)) k)
+    (hM : ∀ i j, M i j = b.repr (f (b j)) i) :
+    (bridgeOfBasis b).toGradedRingHom.comp (dualGradedMap f).toGradedRingHom
+      = (linearSubstGradedRingHom d M).comp (bridgeOfBasis b).toGradedRingHom := by
+  haveI : FiniteDimensional k V := Module.Finite.of_basis b
+  have key :
+      (equivMvPolynomial b.dualBasis).toAlgHom.comp
+          (SymmetricAlgebra.map (Module.Dual.transpose (R := k) f))
+        = (MvPolynomial.aeval (linearSubst d M)).comp
+          (equivMvPolynomial b.dualBasis).toAlgHom := by
+    apply SymmetricAlgebra.algHom_ext
+    apply Basis.ext b.dualBasis
+    intro i
+    show (equivMvPolynomial b.dualBasis)
+        (SymmetricAlgebra.map (Module.Dual.transpose (R := k) f)
+          (SymmetricAlgebra.ι k (Dual k V) (b.dualBasis i)))
+      = MvPolynomial.aeval (linearSubst d M)
+          ((equivMvPolynomial b.dualBasis) (SymmetricAlgebra.ι k (Dual k V) (b.dualBasis i)))
+    rw [SymmetricAlgebra.map_ι, equivMvPolynomial_ι_apply]
+    rw [show (equivMvPolynomial b.dualBasis)
+          (SymmetricAlgebra.ι k (Dual k V) (Module.Dual.transpose (R := k) f (b.dualBasis i)))
+        = Basis.constr b.dualBasis k (MvPolynomial.X : Fin (d + 1) → MvPolynomial (Fin (d + 1)) k)
+            (Module.Dual.transpose (R := k) f (b.dualBasis i)) from
+        congr($(equivMvPolynomial_comp_ι b.dualBasis) _)]
+    rw [Basis.constr_apply_fintype, MvPolynomial.aeval_X, linearSubst]
+    refine Finset.sum_congr rfl fun j _ => ?_
+    rw [MvPolynomial.smul_eq_C_mul]
+    congr 1
+    rw [hM i j]
+    simp [Basis.equivFun_apply, Module.Dual.transpose_apply, Basis.dualBasis_apply]
+  apply GradedRingHom.ext
+  intro x
+  exact congr($key x)
+
+/-- The intertwining at the level of `Proj`: the basis map carries the matrix
+substitution automorphism of `ProjectiveSpace d k` to the intrinsic
+automorphism of `ℙ(V)`. -/
+public theorem projOfBasisHom_intertwines (b : Basis (Fin (d + 1)) k V)
+    (f finv : V →ₗ[k] V) (hf : finv ∘ₗ f = LinearMap.id)
+    (M N : Matrix (Fin (d + 1)) (Fin (d + 1)) k) (hMN : N * M = 1)
+    (hM : ∀ i j, M i j = b.repr (f (b j)) i) :
+    projOfBasisHom b ≫ projMapDual f finv hf
+      = mapLinearSubst d M N hMN ≫ projOfBasisHom b := by
+  have hL : projOfBasisHom b ≫ projMapDual f finv hf
+      = AlgebraicGeometry.Proj.map
+          ((bridgeOfBasis b).toGradedRingHom.comp (dualGradedMap f).toGradedRingHom)
+          (HomogeneousIdeal.irrelevant_le_map_comp
+            (irrelevant_le_dualGradedMap f finv hf) (irrelevant_le_bridgeOfBasis b)) :=
+    (AlgebraicGeometry.Proj.map_comp _ _ _ _).symm
+  have hR : mapLinearSubst d M N hMN ≫ projOfBasisHom b
+      = AlgebraicGeometry.Proj.map
+          ((linearSubstGradedRingHom d M).comp (bridgeOfBasis b).toGradedRingHom)
+          (HomogeneousIdeal.irrelevant_le_map_comp
+            (irrelevant_le_bridgeOfBasis b) (irrelevant_le_map_linearSubst d M N hMN)) :=
+    (AlgebraicGeometry.Proj.map_comp _ _ _ _).symm
+  rw [hL, hR]
+  exact AlgebraicGeometry.Proj.map_congr (bridge_intertwines b f M hM) _ _
+
 end SchemeGeometry
 end V14Formalization
