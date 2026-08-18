@@ -52,7 +52,49 @@ def emit_k_core(K) -> list[str]:
     return lines
 
 
+# ---------------------------------------------------------------------------
+# STALE EMITTER GUARD (2026-08-18)
+#
+# This emitter still produces the proofs its outputs had BEFORE the
+# integer-interpolation (`interpQ`) rewrite and before `ring` -> `grind`.
+# Running it over V14Formalization/ reverts both, and additionally writes
+# hundreds of files that are no longer part of the tree.  Measured on
+# 2026-08-18: 273 tracked files rewritten backwards, plus 378 files
+# created across the three stale emitters that the build does not use.
+#
+# The in-tree sources are the authority for these families.  To change their
+# proofs, use a statement-preserving post-pass instead:
+#     scripts/ring_to_grind_rewrite.py
+#     scripts/table_interface_rewrite.py
+#     scripts/change_to_rewrite.py
+#
+# If you have re-derived this emitter so that it round-trips, prove it: emit
+# into a scratch directory, diff against V14Formalization/, and only then pass
+# --emitter-is-current to re-enable it.
+# ---------------------------------------------------------------------------
+_STALE_MESSAGE = """
+export_sigma_plus_tinv.py is STALE and refuses to run.
+
+Its output would revert the interpQ rewrite and the grind rewrite, and would
+add files the tree no longer contains.  See MODULE_MIGRATION.md, "THREE
+EMITTERS ARE STALE".  Use a post-pass on the in-tree sources instead.
+
+Re-enable only after demonstrating a byte-identical round-trip, with
+--emitter-is-current.
+"""
+
+
+def _refuse_if_stale() -> None:
+    import sys as _sys
+    if "--emitter-is-current" in _sys.argv:
+        _sys.argv.remove("--emitter-is-current")
+        return
+    _sys.stderr.write(_STALE_MESSAGE.format(name="export_sigma_plus_tinv.py"))
+    raise SystemExit(2)
+
+
 def main():
+    _refuse_if_stale()
     parser = argparse.ArgumentParser()
     parser.add_argument("--out-dir", type=Path, required=True)
     parser.add_argument("--only", type=str, default="")
