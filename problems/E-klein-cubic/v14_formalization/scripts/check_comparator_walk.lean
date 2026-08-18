@@ -16,17 +16,22 @@ of what Comparator compares. `Comparator/Compare.lean` continues:
     `theorem_names` does NOT exempt a constant here, and `definitionHoleMatches`
     demands a `.defnInfo`, so a theorem cannot be parked there either.
 
-That matters for this project because its statement vocabulary is proof-carrying:
-`SchemeGeometry.ambientOf` unfolds to `PlusMinusCoords.ofRep`, whose body is
-
-    let h := exists_plus_minus_projective_bases R sigma sigma_isInvolution
-      (not_degenerates R)
-
-so the walk reaches those theorems. Any challenge that states the theorem but
-leaves the supporting lemmas open — a `sorry` skeleton of the kind
-`mattrobball/lean-stan` emits — matches on statements and then fails here, with
+That matters for this project because its statement vocabulary is proof-carrying.
+`ambientFor`'s body passes `sigma_isInvolution` to `plusMinusAmbientBasis`;
+`ProjectiveGVariety.v14` carries a closed immersion as a structure field; a
+`MatrixRepresentation` is a monoid hom, so building the `Action` needs
+`projectiveActionHom_one`/`_mul`. The walk reaches all of them. Any challenge that
+states the theorem but leaves the supporting lemmas open — a `sorry` skeleton of the
+kind `mattrobball/lean-stan` emits — matches on statements and then fails here, with
 `sorryAx` on the challenge side against a real proof on the solution side. See
 DEFECTS.md D15.
+
+(Until 2026-08-18 the clearest example was the coordinate choice: `ambientOf` took no
+coordinates and unfolded to `PlusMinusCoords.ofRep`, dragging
+`exists_plus_minus_projective_bases` and `not_degenerates` into the walk. The
+published theorems now take a `PlusMinusCoords` parameter, which removed those two
+and 30 further constants — 55,029 -> 54,997 — without rescuing a skeleton challenge:
+38 mismatches became 36.)
 
 Run:  lake env lean --run scripts/check_comparator_walk.lean
 Exit: 0 iff both named statements match AND the walk finds no mismatch.

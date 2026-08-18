@@ -499,26 +499,39 @@ walks every constant reachable from its type and requires the challenge's and th
 solution's full `ConstantInfo` — **values included** — to be equal;
 `Comparator.runForUsedConsts` follows `info.value?`, so definition bodies are walked
 and every theorem they name is compared as a proof term. This statement's vocabulary
-is proof-carrying: `SchemeGeometry.ambientOf` unfolds to `PlusMinusCoords.ofRep`,
-whose body reads
+is proof-carrying. In a skeleton those proofs are `sorryAx`; in the solution they are
+real. Mismatch, reject. Listing them in `theorem_names` does not rescue it — inside
+`Compare.loop` only `definition_names` gets type-only treatment, and
+`definitionHoleMatches` demands a `.defnInfo`, which a theorem is not.
+
+**Updated 2026-08-18.** The clearest instance used to be the coordinate choice:
+`SchemeGeometry.ambientOf` unfolded to `PlusMinusCoords.ofRep`, whose body reads
 
 ```lean
 let h := exists_plus_minus_projective_bases R sigma sigma_isInvolution (not_degenerates R)
 ```
 
-so the walk reaches `not_degenerates` and `exists_plus_minus_projective_bases`. In a
-skeleton those are `sorryAx`; in the solution they are proofs. Mismatch, reject.
-Listing them in `theorem_names` does not rescue it — inside `Compare.loop` only
-`definition_names` gets type-only treatment, and `definitionHoleMatches` demands a
-`.defnInfo`, which a theorem is not.
+so the walk reached `not_degenerates` and `exists_plus_minus_projective_bases`. That
+one is now fixed at the source — the published theorems take the coordinates as a
+parameter, so `ofRep` is no longer reachable (see MODULE_MIGRATION.md, "THE PUBLISHED
+STATEMENTS CHANGED"). **It did not rescue the skeleton**: 38 mismatches became 36. The
+rest are structural rather than incidental — `sigma_isInvolution` (passed to
+`plusMinusAmbientBasis` inside `ambientFor`), `projectiveActionHom_one`/`_mul`/`_isOver`
+(a `MatrixRepresentation` is a monoid hom), `projectiveZeroLocusFamilyι_isClosedImmersion`
+and `invariantIdeal` (`ProjectiveGVariety.v14` is a closed subscheme, and the immersion
+is a proof field), plus the Weil-representation homomorphism laws and seven
+`Fact`/`CharZero` instances. A skeleton challenge needs vocabulary with no proof
+fields at all, which this statement does not have and arguably should not.
 
 Measured on this machine with the emitted file swapped in as `V14Challenge.lean`
 (Mathlib cached, `LEAN_NUM_THREADS=8`):
 
 | challenge | statements | reachable-constant walk | `lake build V14Challenge` |
 |---|---|---|---|
-| hand-written (HEAD) | match | 55029 constants, 0 mismatches | 3406 jobs, 230 s |
+| hand-written, before the restatement | match | 55029 constants, 0 mismatches | 3406 jobs, 230 s |
 | stan skeleton, 193 decls / 24 modules / 1886 lines | match | 34702 constants, **38 mismatches** | 8656 jobs, 8 s |
+| hand-written (HEAD, coordinates parameterized) | match | 54997 constants, 0 mismatches | 3406 jobs |
+| stan skeleton, 189 decls / 24 modules / 1863 lines | match | 34695 constants, **36 mismatches** | 8656 jobs, 9 s |
 
 Note that `scripts/check_module_invariants.sh` step 3 **passes** on the skeleton:
 `Expr.eqv` and `levelParams` agree on both published theorems and the axiom set is
@@ -532,7 +545,10 @@ aware (its final line filter drops any line starting with `@[expose]`, which in 
 tree decapitates the declaration written on that same line, and it emits neither the
 `module` header nor `public import`; 101 elaboration errors), and both entry points
 take a single target, while the two published theorems have incomparable closures
-(174 and 188 declarations, union 193), so one run cannot cover both.
+(174 and 188 declarations, union 193; 189 after the 2026-08-18 restatement), so one
+run cannot cover both. A local multi-target patch exists
+(`/tmp/claude-502/lean-stan-module-system-and-multitarget.patch`) and is what the
+two-target figures above were measured with; it is not upstream.
 
 ## Suggested order of work
 

@@ -5,6 +5,129 @@ and the rules that keep it that way; it is no longer a plan. Read
 "Where things stand" first, then the sections that apply to what you are
 changing.
 
+## THE PUBLISHED STATEMENTS CHANGED (2026-08-18) — read this first
+
+This is the **first deliberate change to the two theorems named in
+`comparator.json`**. Their names are unchanged. Their statements are not.
+
+Before:
+
+```lean
+theorem noEquivariantRationalMap_from_ambient (R : FaithfulLinearRep k G V) :
+    ¬ HasEquivariantRationalMap (ambientOf R) V14SchemeModel.actionOver
+```
+
+After:
+
+```lean
+theorem noEquivariantRationalMap_from_ambient (R : FaithfulLinearRep k G V)
+    (c : PlusMinusCoords R) :
+    ¬ HasEquivariantRationalMap (ambientOf R c) V14SchemeModel.actionOver
+```
+
+and correspondingly `ProjectiveGVariety.ofFaithfulRep R` became
+`ofFaithfulRep R c` in `noEquivariantRationalMap_projectiveGVariety`. Both
+roots (`V14Challenge.lean`, `V14Solution.lean`) carry the change identically,
+as does the shipped `SchemeGeometry` pair in `FaithfulHeadline.lean`.
+
+### It is a strengthening
+
+`ambientOf R` expanded to `ambientFor R (PlusMinusCoords.ofRep R).p …`, and
+`PlusMinusCoords.ofRep` extracts one system of plus/minus coordinates from
+`exists_plus_minus_projective_bases` by `Classical.choice`. Three things
+followed, and all three are now gone:
+
+1. the theorems were about **one chosen presentation** of `ℙ(V)`, which the
+   docstring admitted ("this is not a basis-free identification of `ℙ(V)`");
+2. their *meaning* depended on two proofs — `not_degenerates` and
+   `exists_plus_minus_projective_bases` — so a reader had to trust those
+   before knowing what was claimed;
+3. the trusted base carried both proofs.
+
+The new statements quantify over every coordinate system. The old ones are the
+new ones applied to `PlusMinusCoords.ofRep R`, so nothing was lost.
+`PlusMinusCoords.ofRep` survives in `HeadlineStatement.lean`, demoted to the
+witness that the coordinate hypothesis is never vacuous — worth keeping,
+because a hypothesis nobody can supply would make a theorem vacuously true.
+
+**Nothing was reproved.** `FaithfulHeadline.noEquivariantRationalMap_from_ambient_of_plusMinusBases`
+already had the general result, and the published theorem's entire proof was
+applying it to `ofRep`; the specialization bought nothing. The published
+theorem is now that lemma with its four coordinate arguments bundled as a
+`PlusMinusCoords`. Its projective-variety sibling,
+`noEquivariantRationalMap_projectiveGVariety_of_plusMinusBases`, did **not**
+exist and was added the same way — by abstracting the coordinates out of the
+existing one-line proof, not by proving anything new.
+
+### What it bought, measured
+
+| | before | after |
+|---|---:|---:|
+| step-4 reachable-constant walk | 55,029 constants, 0 mismatches | **54,997**, 0 mismatches |
+| lean-stan trusted base | 193 decls / 24 modules / 1,886 lines | **189 / 24 / 1,863** |
+| `sorry`s in the emitted trusted base | 40 | **38** |
+| axioms, both theorems | propext, Classical.choice, Quot.sound | unchanged |
+
+`Classical.choice` is still reachable. It comes from Mathlib, not from
+`ofRep`, so removing the choice did not remove the axiom; it was not forced
+either way.
+
+### The walk barely moved, and that is the finding
+
+−32 constants out of 55,029 is not the "much smaller" reachable set the change
+was expected to produce. The reason is the denominator: the walk follows
+**definition bodies**, Mathlib's included, so the overwhelming majority of
+those 55k constants are Mathlib's own closure under `Proj`, `Scheme` and
+friends, which no change to this statement touches. What left is exactly the
+choice machinery and nothing else — 26 project declarations and 6 Mathlib
+lemmas:
+
+`PlusMinusCoords.ofRep` and its four `_proof_*`, `exists_plus_minus_projective_bases`,
+`not_degenerates`, `not_degenerates_of_centerless`,
+`noDegenerates_of_centerless_involution`, `GeometricFanoCarrier.PSL2F11_isCenterless`,
+`IsCenterless`, `NoFaithfulRepDegenerates`, `DegeneratesToPlusMinusId`,
+`FaithfulLinearRep.{act_inv, both_eigenspaces_nontrivial, faithful, finiteDimensional}`,
+`mem_center_iff`, and eight private supports in `CentralizerObstruction`,
+`Definitions` and `GeometricFanoCarrier`.
+
+Judge this change by *which* declarations left and by the trusted base, not by
+the ratio. The reachable-constant count is a regression detector, not a size
+metric.
+
+### The trusted base is NOT proof-free
+
+Removing the choice removed two proofs from it. **36 remain** (38 `sorry`s in
+the emitted skeleton, minus the two published targets). They are not
+accidental: the statement's vocabulary is built from bundled structures whose
+fields are proofs, and the largest of them are
+
+* `sigma_isInvolution` — `ambientFor`'s body passes it to
+  `plusMinusAmbientBasis`, so any statement mentioning the plus/minus basis
+  reaches it;
+* `projectiveActionHom_one` / `_mul` / `_isOver` — a `MatrixRepresentation`
+  is a monoid hom, so building the `Action` needs them;
+* `projectiveZeroLocusFamilyι_isClosedImmersion` / `_isOver` and
+  `V14SchemeModel.invariantIdeal` — `ProjectiveGVariety.v14` is a *closed
+  subscheme*, and the closed immersion is a proof field of the structure;
+* `weilU_one` / `weilU_mul`, `weilLambda2_one` / `_mul`,
+  `pslLambda2Hom_injective`, `evalEven_injective`, `isCompl_plus_minus`, and
+  seven `Fact`/`CharZero`/`Irreducible` instances.
+
+Making the trusted base proof-free would mean restating the theorem over
+vocabulary that carries no proof fields — a different and much larger job than
+this one, and it is not obviously desirable: `v14` genuinely *is* a closed
+subscheme, and saying so requires the immersion.
+
+### A stan skeleton challenge is still not viable (DEFECTS.md D15 stands)
+
+Retested with the emitted 189-declaration skeleton swapped in as
+`V14Challenge.lean`: statements match, step 3 passes, and the step-4 walk
+reports **36 mismatches** (was 38). The two that cleared are precisely
+`not_degenerates` and `exists_plus_minus_projective_bases`. The remaining 36
+are the proof-carrying vocabulary listed above, which a `sorry` skeleton
+turns into `sorryAx` against the solution's real proofs. Workflows were not
+rewired.
+
 ## Where things stand (2026-08-19)
 
 | | |
