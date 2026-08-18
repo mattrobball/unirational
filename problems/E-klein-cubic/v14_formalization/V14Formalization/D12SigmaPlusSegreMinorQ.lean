@@ -959,4 +959,764 @@ namespace V14Formalization.D12SigmaPlusSegreCore
     | 8, 20 => minorQ_entry_8_20
     | _, _ => minorQ_entry_0_0
 
+
+-- Entry equations for `minorQ`, published so that consumers state the
+-- fact they need instead of `change`-ing the goal into the entry form.
+-- Tactic-mode proofs in the defining module need no `@[expose]`.
+public theorem minorQ_apply_0_0 :
+    minorQ (0 : Fin 9) (0 : Fin 21) = minorQ_entry_0_0 := by
+  rfl
+
+public theorem minorQ_apply_0_1 :
+    minorQ (0 : Fin 9) (1 : Fin 21) = minorQ_entry_0_1 := by
+  rfl
+
+public theorem minorQ_apply_0_2 :
+    minorQ (0 : Fin 9) (2 : Fin 21) = minorQ_entry_0_2 := by
+  rfl
+
+public theorem minorQ_apply_0_3 :
+    minorQ (0 : Fin 9) (3 : Fin 21) = minorQ_entry_0_3 := by
+  rfl
+
+public theorem minorQ_apply_0_4 :
+    minorQ (0 : Fin 9) (4 : Fin 21) = minorQ_entry_0_4 := by
+  rfl
+
+public theorem minorQ_apply_0_5 :
+    minorQ (0 : Fin 9) (5 : Fin 21) = minorQ_entry_0_5 := by
+  rfl
+
+public theorem minorQ_apply_0_6 :
+    minorQ (0 : Fin 9) (6 : Fin 21) = minorQ_entry_0_6 := by
+  rfl
+
+public theorem minorQ_apply_0_7 :
+    minorQ (0 : Fin 9) (7 : Fin 21) = minorQ_entry_0_7 := by
+  rfl
+
+public theorem minorQ_apply_0_8 :
+    minorQ (0 : Fin 9) (8 : Fin 21) = minorQ_entry_0_8 := by
+  rfl
+
+public theorem minorQ_apply_0_9 :
+    minorQ (0 : Fin 9) (9 : Fin 21) = minorQ_entry_0_9 := by
+  rfl
+
+public theorem minorQ_apply_0_10 :
+    minorQ (0 : Fin 9) (10 : Fin 21) = minorQ_entry_0_10 := by
+  rfl
+
+public theorem minorQ_apply_0_11 :
+    minorQ (0 : Fin 9) (11 : Fin 21) = minorQ_entry_0_11 := by
+  rfl
+
+public theorem minorQ_apply_0_12 :
+    minorQ (0 : Fin 9) (12 : Fin 21) = minorQ_entry_0_12 := by
+  rfl
+
+public theorem minorQ_apply_0_13 :
+    minorQ (0 : Fin 9) (13 : Fin 21) = minorQ_entry_0_13 := by
+  rfl
+
+public theorem minorQ_apply_0_14 :
+    minorQ (0 : Fin 9) (14 : Fin 21) = minorQ_entry_0_14 := by
+  rfl
+
+public theorem minorQ_apply_0_15 :
+    minorQ (0 : Fin 9) (15 : Fin 21) = minorQ_entry_0_15 := by
+  rfl
+
+public theorem minorQ_apply_0_16 :
+    minorQ (0 : Fin 9) (16 : Fin 21) = minorQ_entry_0_16 := by
+  rfl
+
+public theorem minorQ_apply_0_17 :
+    minorQ (0 : Fin 9) (17 : Fin 21) = minorQ_entry_0_17 := by
+  rfl
+
+public theorem minorQ_apply_0_18 :
+    minorQ (0 : Fin 9) (18 : Fin 21) = minorQ_entry_0_18 := by
+  rfl
+
+public theorem minorQ_apply_0_19 :
+    minorQ (0 : Fin 9) (19 : Fin 21) = minorQ_entry_0_19 := by
+  rfl
+
+public theorem minorQ_apply_0_20 :
+    minorQ (0 : Fin 9) (20 : Fin 21) = minorQ_entry_0_20 := by
+  rfl
+
+public theorem minorQ_apply_1_0 :
+    minorQ (1 : Fin 9) (0 : Fin 21) = minorQ_entry_1_0 := by
+  rfl
+
+public theorem minorQ_apply_1_1 :
+    minorQ (1 : Fin 9) (1 : Fin 21) = minorQ_entry_1_1 := by
+  rfl
+
+public theorem minorQ_apply_1_2 :
+    minorQ (1 : Fin 9) (2 : Fin 21) = minorQ_entry_1_2 := by
+  rfl
+
+public theorem minorQ_apply_1_3 :
+    minorQ (1 : Fin 9) (3 : Fin 21) = minorQ_entry_1_3 := by
+  rfl
+
+public theorem minorQ_apply_1_4 :
+    minorQ (1 : Fin 9) (4 : Fin 21) = minorQ_entry_1_4 := by
+  rfl
+
+public theorem minorQ_apply_1_5 :
+    minorQ (1 : Fin 9) (5 : Fin 21) = minorQ_entry_1_5 := by
+  rfl
+
+public theorem minorQ_apply_1_6 :
+    minorQ (1 : Fin 9) (6 : Fin 21) = minorQ_entry_1_6 := by
+  rfl
+
+public theorem minorQ_apply_1_7 :
+    minorQ (1 : Fin 9) (7 : Fin 21) = minorQ_entry_1_7 := by
+  rfl
+
+public theorem minorQ_apply_1_8 :
+    minorQ (1 : Fin 9) (8 : Fin 21) = minorQ_entry_1_8 := by
+  rfl
+
+public theorem minorQ_apply_1_9 :
+    minorQ (1 : Fin 9) (9 : Fin 21) = minorQ_entry_1_9 := by
+  rfl
+
+public theorem minorQ_apply_1_10 :
+    minorQ (1 : Fin 9) (10 : Fin 21) = minorQ_entry_1_10 := by
+  rfl
+
+public theorem minorQ_apply_1_11 :
+    minorQ (1 : Fin 9) (11 : Fin 21) = minorQ_entry_1_11 := by
+  rfl
+
+public theorem minorQ_apply_1_12 :
+    minorQ (1 : Fin 9) (12 : Fin 21) = minorQ_entry_1_12 := by
+  rfl
+
+public theorem minorQ_apply_1_13 :
+    minorQ (1 : Fin 9) (13 : Fin 21) = minorQ_entry_1_13 := by
+  rfl
+
+public theorem minorQ_apply_1_14 :
+    minorQ (1 : Fin 9) (14 : Fin 21) = minorQ_entry_1_14 := by
+  rfl
+
+public theorem minorQ_apply_1_15 :
+    minorQ (1 : Fin 9) (15 : Fin 21) = minorQ_entry_1_15 := by
+  rfl
+
+public theorem minorQ_apply_1_16 :
+    minorQ (1 : Fin 9) (16 : Fin 21) = minorQ_entry_1_16 := by
+  rfl
+
+public theorem minorQ_apply_1_17 :
+    minorQ (1 : Fin 9) (17 : Fin 21) = minorQ_entry_1_17 := by
+  rfl
+
+public theorem minorQ_apply_1_18 :
+    minorQ (1 : Fin 9) (18 : Fin 21) = minorQ_entry_1_18 := by
+  rfl
+
+public theorem minorQ_apply_1_19 :
+    minorQ (1 : Fin 9) (19 : Fin 21) = minorQ_entry_1_19 := by
+  rfl
+
+public theorem minorQ_apply_1_20 :
+    minorQ (1 : Fin 9) (20 : Fin 21) = minorQ_entry_1_20 := by
+  rfl
+
+public theorem minorQ_apply_2_0 :
+    minorQ (2 : Fin 9) (0 : Fin 21) = minorQ_entry_2_0 := by
+  rfl
+
+public theorem minorQ_apply_2_1 :
+    minorQ (2 : Fin 9) (1 : Fin 21) = minorQ_entry_2_1 := by
+  rfl
+
+public theorem minorQ_apply_2_2 :
+    minorQ (2 : Fin 9) (2 : Fin 21) = minorQ_entry_2_2 := by
+  rfl
+
+public theorem minorQ_apply_2_3 :
+    minorQ (2 : Fin 9) (3 : Fin 21) = minorQ_entry_2_3 := by
+  rfl
+
+public theorem minorQ_apply_2_4 :
+    minorQ (2 : Fin 9) (4 : Fin 21) = minorQ_entry_2_4 := by
+  rfl
+
+public theorem minorQ_apply_2_5 :
+    minorQ (2 : Fin 9) (5 : Fin 21) = minorQ_entry_2_5 := by
+  rfl
+
+public theorem minorQ_apply_2_6 :
+    minorQ (2 : Fin 9) (6 : Fin 21) = minorQ_entry_2_6 := by
+  rfl
+
+public theorem minorQ_apply_2_7 :
+    minorQ (2 : Fin 9) (7 : Fin 21) = minorQ_entry_2_7 := by
+  rfl
+
+public theorem minorQ_apply_2_8 :
+    minorQ (2 : Fin 9) (8 : Fin 21) = minorQ_entry_2_8 := by
+  rfl
+
+public theorem minorQ_apply_2_9 :
+    minorQ (2 : Fin 9) (9 : Fin 21) = minorQ_entry_2_9 := by
+  rfl
+
+public theorem minorQ_apply_2_10 :
+    minorQ (2 : Fin 9) (10 : Fin 21) = minorQ_entry_2_10 := by
+  rfl
+
+public theorem minorQ_apply_2_11 :
+    minorQ (2 : Fin 9) (11 : Fin 21) = minorQ_entry_2_11 := by
+  rfl
+
+public theorem minorQ_apply_2_12 :
+    minorQ (2 : Fin 9) (12 : Fin 21) = minorQ_entry_2_12 := by
+  rfl
+
+public theorem minorQ_apply_2_13 :
+    minorQ (2 : Fin 9) (13 : Fin 21) = minorQ_entry_2_13 := by
+  rfl
+
+public theorem minorQ_apply_2_14 :
+    minorQ (2 : Fin 9) (14 : Fin 21) = minorQ_entry_2_14 := by
+  rfl
+
+public theorem minorQ_apply_2_15 :
+    minorQ (2 : Fin 9) (15 : Fin 21) = minorQ_entry_2_15 := by
+  rfl
+
+public theorem minorQ_apply_2_16 :
+    minorQ (2 : Fin 9) (16 : Fin 21) = minorQ_entry_2_16 := by
+  rfl
+
+public theorem minorQ_apply_2_17 :
+    minorQ (2 : Fin 9) (17 : Fin 21) = minorQ_entry_2_17 := by
+  rfl
+
+public theorem minorQ_apply_2_18 :
+    minorQ (2 : Fin 9) (18 : Fin 21) = minorQ_entry_2_18 := by
+  rfl
+
+public theorem minorQ_apply_2_19 :
+    minorQ (2 : Fin 9) (19 : Fin 21) = minorQ_entry_2_19 := by
+  rfl
+
+public theorem minorQ_apply_2_20 :
+    minorQ (2 : Fin 9) (20 : Fin 21) = minorQ_entry_2_20 := by
+  rfl
+
+public theorem minorQ_apply_3_0 :
+    minorQ (3 : Fin 9) (0 : Fin 21) = minorQ_entry_3_0 := by
+  rfl
+
+public theorem minorQ_apply_3_1 :
+    minorQ (3 : Fin 9) (1 : Fin 21) = minorQ_entry_3_1 := by
+  rfl
+
+public theorem minorQ_apply_3_2 :
+    minorQ (3 : Fin 9) (2 : Fin 21) = minorQ_entry_3_2 := by
+  rfl
+
+public theorem minorQ_apply_3_3 :
+    minorQ (3 : Fin 9) (3 : Fin 21) = minorQ_entry_3_3 := by
+  rfl
+
+public theorem minorQ_apply_3_4 :
+    minorQ (3 : Fin 9) (4 : Fin 21) = minorQ_entry_3_4 := by
+  rfl
+
+public theorem minorQ_apply_3_5 :
+    minorQ (3 : Fin 9) (5 : Fin 21) = minorQ_entry_3_5 := by
+  rfl
+
+public theorem minorQ_apply_3_6 :
+    minorQ (3 : Fin 9) (6 : Fin 21) = minorQ_entry_3_6 := by
+  rfl
+
+public theorem minorQ_apply_3_7 :
+    minorQ (3 : Fin 9) (7 : Fin 21) = minorQ_entry_3_7 := by
+  rfl
+
+public theorem minorQ_apply_3_8 :
+    minorQ (3 : Fin 9) (8 : Fin 21) = minorQ_entry_3_8 := by
+  rfl
+
+public theorem minorQ_apply_3_9 :
+    minorQ (3 : Fin 9) (9 : Fin 21) = minorQ_entry_3_9 := by
+  rfl
+
+public theorem minorQ_apply_3_10 :
+    minorQ (3 : Fin 9) (10 : Fin 21) = minorQ_entry_3_10 := by
+  rfl
+
+public theorem minorQ_apply_3_11 :
+    minorQ (3 : Fin 9) (11 : Fin 21) = minorQ_entry_3_11 := by
+  rfl
+
+public theorem minorQ_apply_3_12 :
+    minorQ (3 : Fin 9) (12 : Fin 21) = minorQ_entry_3_12 := by
+  rfl
+
+public theorem minorQ_apply_3_13 :
+    minorQ (3 : Fin 9) (13 : Fin 21) = minorQ_entry_3_13 := by
+  rfl
+
+public theorem minorQ_apply_3_14 :
+    minorQ (3 : Fin 9) (14 : Fin 21) = minorQ_entry_3_14 := by
+  rfl
+
+public theorem minorQ_apply_3_15 :
+    minorQ (3 : Fin 9) (15 : Fin 21) = minorQ_entry_3_15 := by
+  rfl
+
+public theorem minorQ_apply_3_16 :
+    minorQ (3 : Fin 9) (16 : Fin 21) = minorQ_entry_3_16 := by
+  rfl
+
+public theorem minorQ_apply_3_17 :
+    minorQ (3 : Fin 9) (17 : Fin 21) = minorQ_entry_3_17 := by
+  rfl
+
+public theorem minorQ_apply_3_18 :
+    minorQ (3 : Fin 9) (18 : Fin 21) = minorQ_entry_3_18 := by
+  rfl
+
+public theorem minorQ_apply_3_19 :
+    minorQ (3 : Fin 9) (19 : Fin 21) = minorQ_entry_3_19 := by
+  rfl
+
+public theorem minorQ_apply_3_20 :
+    minorQ (3 : Fin 9) (20 : Fin 21) = minorQ_entry_3_20 := by
+  rfl
+
+public theorem minorQ_apply_4_0 :
+    minorQ (4 : Fin 9) (0 : Fin 21) = minorQ_entry_4_0 := by
+  rfl
+
+public theorem minorQ_apply_4_1 :
+    minorQ (4 : Fin 9) (1 : Fin 21) = minorQ_entry_4_1 := by
+  rfl
+
+public theorem minorQ_apply_4_2 :
+    minorQ (4 : Fin 9) (2 : Fin 21) = minorQ_entry_4_2 := by
+  rfl
+
+public theorem minorQ_apply_4_3 :
+    minorQ (4 : Fin 9) (3 : Fin 21) = minorQ_entry_4_3 := by
+  rfl
+
+public theorem minorQ_apply_4_4 :
+    minorQ (4 : Fin 9) (4 : Fin 21) = minorQ_entry_4_4 := by
+  rfl
+
+public theorem minorQ_apply_4_5 :
+    minorQ (4 : Fin 9) (5 : Fin 21) = minorQ_entry_4_5 := by
+  rfl
+
+public theorem minorQ_apply_4_6 :
+    minorQ (4 : Fin 9) (6 : Fin 21) = minorQ_entry_4_6 := by
+  rfl
+
+public theorem minorQ_apply_4_7 :
+    minorQ (4 : Fin 9) (7 : Fin 21) = minorQ_entry_4_7 := by
+  rfl
+
+public theorem minorQ_apply_4_8 :
+    minorQ (4 : Fin 9) (8 : Fin 21) = minorQ_entry_4_8 := by
+  rfl
+
+public theorem minorQ_apply_4_9 :
+    minorQ (4 : Fin 9) (9 : Fin 21) = minorQ_entry_4_9 := by
+  rfl
+
+public theorem minorQ_apply_4_10 :
+    minorQ (4 : Fin 9) (10 : Fin 21) = minorQ_entry_4_10 := by
+  rfl
+
+public theorem minorQ_apply_4_11 :
+    minorQ (4 : Fin 9) (11 : Fin 21) = minorQ_entry_4_11 := by
+  rfl
+
+public theorem minorQ_apply_4_12 :
+    minorQ (4 : Fin 9) (12 : Fin 21) = minorQ_entry_4_12 := by
+  rfl
+
+public theorem minorQ_apply_4_13 :
+    minorQ (4 : Fin 9) (13 : Fin 21) = minorQ_entry_4_13 := by
+  rfl
+
+public theorem minorQ_apply_4_14 :
+    minorQ (4 : Fin 9) (14 : Fin 21) = minorQ_entry_4_14 := by
+  rfl
+
+public theorem minorQ_apply_4_15 :
+    minorQ (4 : Fin 9) (15 : Fin 21) = minorQ_entry_4_15 := by
+  rfl
+
+public theorem minorQ_apply_4_16 :
+    minorQ (4 : Fin 9) (16 : Fin 21) = minorQ_entry_4_16 := by
+  rfl
+
+public theorem minorQ_apply_4_17 :
+    minorQ (4 : Fin 9) (17 : Fin 21) = minorQ_entry_4_17 := by
+  rfl
+
+public theorem minorQ_apply_4_18 :
+    minorQ (4 : Fin 9) (18 : Fin 21) = minorQ_entry_4_18 := by
+  rfl
+
+public theorem minorQ_apply_4_19 :
+    minorQ (4 : Fin 9) (19 : Fin 21) = minorQ_entry_4_19 := by
+  rfl
+
+public theorem minorQ_apply_4_20 :
+    minorQ (4 : Fin 9) (20 : Fin 21) = minorQ_entry_4_20 := by
+  rfl
+
+public theorem minorQ_apply_5_0 :
+    minorQ (5 : Fin 9) (0 : Fin 21) = minorQ_entry_5_0 := by
+  rfl
+
+public theorem minorQ_apply_5_1 :
+    minorQ (5 : Fin 9) (1 : Fin 21) = minorQ_entry_5_1 := by
+  rfl
+
+public theorem minorQ_apply_5_2 :
+    minorQ (5 : Fin 9) (2 : Fin 21) = minorQ_entry_5_2 := by
+  rfl
+
+public theorem minorQ_apply_5_3 :
+    minorQ (5 : Fin 9) (3 : Fin 21) = minorQ_entry_5_3 := by
+  rfl
+
+public theorem minorQ_apply_5_4 :
+    minorQ (5 : Fin 9) (4 : Fin 21) = minorQ_entry_5_4 := by
+  rfl
+
+public theorem minorQ_apply_5_5 :
+    minorQ (5 : Fin 9) (5 : Fin 21) = minorQ_entry_5_5 := by
+  rfl
+
+public theorem minorQ_apply_5_6 :
+    minorQ (5 : Fin 9) (6 : Fin 21) = minorQ_entry_5_6 := by
+  rfl
+
+public theorem minorQ_apply_5_7 :
+    minorQ (5 : Fin 9) (7 : Fin 21) = minorQ_entry_5_7 := by
+  rfl
+
+public theorem minorQ_apply_5_8 :
+    minorQ (5 : Fin 9) (8 : Fin 21) = minorQ_entry_5_8 := by
+  rfl
+
+public theorem minorQ_apply_5_9 :
+    minorQ (5 : Fin 9) (9 : Fin 21) = minorQ_entry_5_9 := by
+  rfl
+
+public theorem minorQ_apply_5_10 :
+    minorQ (5 : Fin 9) (10 : Fin 21) = minorQ_entry_5_10 := by
+  rfl
+
+public theorem minorQ_apply_5_11 :
+    minorQ (5 : Fin 9) (11 : Fin 21) = minorQ_entry_5_11 := by
+  rfl
+
+public theorem minorQ_apply_5_12 :
+    minorQ (5 : Fin 9) (12 : Fin 21) = minorQ_entry_5_12 := by
+  rfl
+
+public theorem minorQ_apply_5_13 :
+    minorQ (5 : Fin 9) (13 : Fin 21) = minorQ_entry_5_13 := by
+  rfl
+
+public theorem minorQ_apply_5_14 :
+    minorQ (5 : Fin 9) (14 : Fin 21) = minorQ_entry_5_14 := by
+  rfl
+
+public theorem minorQ_apply_5_15 :
+    minorQ (5 : Fin 9) (15 : Fin 21) = minorQ_entry_5_15 := by
+  rfl
+
+public theorem minorQ_apply_5_16 :
+    minorQ (5 : Fin 9) (16 : Fin 21) = minorQ_entry_5_16 := by
+  rfl
+
+public theorem minorQ_apply_5_17 :
+    minorQ (5 : Fin 9) (17 : Fin 21) = minorQ_entry_5_17 := by
+  rfl
+
+public theorem minorQ_apply_5_18 :
+    minorQ (5 : Fin 9) (18 : Fin 21) = minorQ_entry_5_18 := by
+  rfl
+
+public theorem minorQ_apply_5_19 :
+    minorQ (5 : Fin 9) (19 : Fin 21) = minorQ_entry_5_19 := by
+  rfl
+
+public theorem minorQ_apply_5_20 :
+    minorQ (5 : Fin 9) (20 : Fin 21) = minorQ_entry_5_20 := by
+  rfl
+
+public theorem minorQ_apply_6_0 :
+    minorQ (6 : Fin 9) (0 : Fin 21) = minorQ_entry_6_0 := by
+  rfl
+
+public theorem minorQ_apply_6_1 :
+    minorQ (6 : Fin 9) (1 : Fin 21) = minorQ_entry_6_1 := by
+  rfl
+
+public theorem minorQ_apply_6_2 :
+    minorQ (6 : Fin 9) (2 : Fin 21) = minorQ_entry_6_2 := by
+  rfl
+
+public theorem minorQ_apply_6_3 :
+    minorQ (6 : Fin 9) (3 : Fin 21) = minorQ_entry_6_3 := by
+  rfl
+
+public theorem minorQ_apply_6_4 :
+    minorQ (6 : Fin 9) (4 : Fin 21) = minorQ_entry_6_4 := by
+  rfl
+
+public theorem minorQ_apply_6_5 :
+    minorQ (6 : Fin 9) (5 : Fin 21) = minorQ_entry_6_5 := by
+  rfl
+
+public theorem minorQ_apply_6_6 :
+    minorQ (6 : Fin 9) (6 : Fin 21) = minorQ_entry_6_6 := by
+  rfl
+
+public theorem minorQ_apply_6_7 :
+    minorQ (6 : Fin 9) (7 : Fin 21) = minorQ_entry_6_7 := by
+  rfl
+
+public theorem minorQ_apply_6_8 :
+    minorQ (6 : Fin 9) (8 : Fin 21) = minorQ_entry_6_8 := by
+  rfl
+
+public theorem minorQ_apply_6_9 :
+    minorQ (6 : Fin 9) (9 : Fin 21) = minorQ_entry_6_9 := by
+  rfl
+
+public theorem minorQ_apply_6_10 :
+    minorQ (6 : Fin 9) (10 : Fin 21) = minorQ_entry_6_10 := by
+  rfl
+
+public theorem minorQ_apply_6_11 :
+    minorQ (6 : Fin 9) (11 : Fin 21) = minorQ_entry_6_11 := by
+  rfl
+
+public theorem minorQ_apply_6_12 :
+    minorQ (6 : Fin 9) (12 : Fin 21) = minorQ_entry_6_12 := by
+  rfl
+
+public theorem minorQ_apply_6_13 :
+    minorQ (6 : Fin 9) (13 : Fin 21) = minorQ_entry_6_13 := by
+  rfl
+
+public theorem minorQ_apply_6_14 :
+    minorQ (6 : Fin 9) (14 : Fin 21) = minorQ_entry_6_14 := by
+  rfl
+
+public theorem minorQ_apply_6_15 :
+    minorQ (6 : Fin 9) (15 : Fin 21) = minorQ_entry_6_15 := by
+  rfl
+
+public theorem minorQ_apply_6_16 :
+    minorQ (6 : Fin 9) (16 : Fin 21) = minorQ_entry_6_16 := by
+  rfl
+
+public theorem minorQ_apply_6_17 :
+    minorQ (6 : Fin 9) (17 : Fin 21) = minorQ_entry_6_17 := by
+  rfl
+
+public theorem minorQ_apply_6_18 :
+    minorQ (6 : Fin 9) (18 : Fin 21) = minorQ_entry_6_18 := by
+  rfl
+
+public theorem minorQ_apply_6_19 :
+    minorQ (6 : Fin 9) (19 : Fin 21) = minorQ_entry_6_19 := by
+  rfl
+
+public theorem minorQ_apply_6_20 :
+    minorQ (6 : Fin 9) (20 : Fin 21) = minorQ_entry_6_20 := by
+  rfl
+
+public theorem minorQ_apply_7_0 :
+    minorQ (7 : Fin 9) (0 : Fin 21) = minorQ_entry_7_0 := by
+  rfl
+
+public theorem minorQ_apply_7_1 :
+    minorQ (7 : Fin 9) (1 : Fin 21) = minorQ_entry_7_1 := by
+  rfl
+
+public theorem minorQ_apply_7_2 :
+    minorQ (7 : Fin 9) (2 : Fin 21) = minorQ_entry_7_2 := by
+  rfl
+
+public theorem minorQ_apply_7_3 :
+    minorQ (7 : Fin 9) (3 : Fin 21) = minorQ_entry_7_3 := by
+  rfl
+
+public theorem minorQ_apply_7_4 :
+    minorQ (7 : Fin 9) (4 : Fin 21) = minorQ_entry_7_4 := by
+  rfl
+
+public theorem minorQ_apply_7_5 :
+    minorQ (7 : Fin 9) (5 : Fin 21) = minorQ_entry_7_5 := by
+  rfl
+
+public theorem minorQ_apply_7_6 :
+    minorQ (7 : Fin 9) (6 : Fin 21) = minorQ_entry_7_6 := by
+  rfl
+
+public theorem minorQ_apply_7_7 :
+    minorQ (7 : Fin 9) (7 : Fin 21) = minorQ_entry_7_7 := by
+  rfl
+
+public theorem minorQ_apply_7_8 :
+    minorQ (7 : Fin 9) (8 : Fin 21) = minorQ_entry_7_8 := by
+  rfl
+
+public theorem minorQ_apply_7_9 :
+    minorQ (7 : Fin 9) (9 : Fin 21) = minorQ_entry_7_9 := by
+  rfl
+
+public theorem minorQ_apply_7_10 :
+    minorQ (7 : Fin 9) (10 : Fin 21) = minorQ_entry_7_10 := by
+  rfl
+
+public theorem minorQ_apply_7_11 :
+    minorQ (7 : Fin 9) (11 : Fin 21) = minorQ_entry_7_11 := by
+  rfl
+
+public theorem minorQ_apply_7_12 :
+    minorQ (7 : Fin 9) (12 : Fin 21) = minorQ_entry_7_12 := by
+  rfl
+
+public theorem minorQ_apply_7_13 :
+    minorQ (7 : Fin 9) (13 : Fin 21) = minorQ_entry_7_13 := by
+  rfl
+
+public theorem minorQ_apply_7_14 :
+    minorQ (7 : Fin 9) (14 : Fin 21) = minorQ_entry_7_14 := by
+  rfl
+
+public theorem minorQ_apply_7_15 :
+    minorQ (7 : Fin 9) (15 : Fin 21) = minorQ_entry_7_15 := by
+  rfl
+
+public theorem minorQ_apply_7_16 :
+    minorQ (7 : Fin 9) (16 : Fin 21) = minorQ_entry_7_16 := by
+  rfl
+
+public theorem minorQ_apply_7_17 :
+    minorQ (7 : Fin 9) (17 : Fin 21) = minorQ_entry_7_17 := by
+  rfl
+
+public theorem minorQ_apply_7_18 :
+    minorQ (7 : Fin 9) (18 : Fin 21) = minorQ_entry_7_18 := by
+  rfl
+
+public theorem minorQ_apply_7_19 :
+    minorQ (7 : Fin 9) (19 : Fin 21) = minorQ_entry_7_19 := by
+  rfl
+
+public theorem minorQ_apply_7_20 :
+    minorQ (7 : Fin 9) (20 : Fin 21) = minorQ_entry_7_20 := by
+  rfl
+
+public theorem minorQ_apply_8_0 :
+    minorQ (8 : Fin 9) (0 : Fin 21) = minorQ_entry_8_0 := by
+  rfl
+
+public theorem minorQ_apply_8_1 :
+    minorQ (8 : Fin 9) (1 : Fin 21) = minorQ_entry_8_1 := by
+  rfl
+
+public theorem minorQ_apply_8_2 :
+    minorQ (8 : Fin 9) (2 : Fin 21) = minorQ_entry_8_2 := by
+  rfl
+
+public theorem minorQ_apply_8_3 :
+    minorQ (8 : Fin 9) (3 : Fin 21) = minorQ_entry_8_3 := by
+  rfl
+
+public theorem minorQ_apply_8_4 :
+    minorQ (8 : Fin 9) (4 : Fin 21) = minorQ_entry_8_4 := by
+  rfl
+
+public theorem minorQ_apply_8_5 :
+    minorQ (8 : Fin 9) (5 : Fin 21) = minorQ_entry_8_5 := by
+  rfl
+
+public theorem minorQ_apply_8_6 :
+    minorQ (8 : Fin 9) (6 : Fin 21) = minorQ_entry_8_6 := by
+  rfl
+
+public theorem minorQ_apply_8_7 :
+    minorQ (8 : Fin 9) (7 : Fin 21) = minorQ_entry_8_7 := by
+  rfl
+
+public theorem minorQ_apply_8_8 :
+    minorQ (8 : Fin 9) (8 : Fin 21) = minorQ_entry_8_8 := by
+  rfl
+
+public theorem minorQ_apply_8_9 :
+    minorQ (8 : Fin 9) (9 : Fin 21) = minorQ_entry_8_9 := by
+  rfl
+
+public theorem minorQ_apply_8_10 :
+    minorQ (8 : Fin 9) (10 : Fin 21) = minorQ_entry_8_10 := by
+  rfl
+
+public theorem minorQ_apply_8_11 :
+    minorQ (8 : Fin 9) (11 : Fin 21) = minorQ_entry_8_11 := by
+  rfl
+
+public theorem minorQ_apply_8_12 :
+    minorQ (8 : Fin 9) (12 : Fin 21) = minorQ_entry_8_12 := by
+  rfl
+
+public theorem minorQ_apply_8_13 :
+    minorQ (8 : Fin 9) (13 : Fin 21) = minorQ_entry_8_13 := by
+  rfl
+
+public theorem minorQ_apply_8_14 :
+    minorQ (8 : Fin 9) (14 : Fin 21) = minorQ_entry_8_14 := by
+  rfl
+
+public theorem minorQ_apply_8_15 :
+    minorQ (8 : Fin 9) (15 : Fin 21) = minorQ_entry_8_15 := by
+  rfl
+
+public theorem minorQ_apply_8_16 :
+    minorQ (8 : Fin 9) (16 : Fin 21) = minorQ_entry_8_16 := by
+  rfl
+
+public theorem minorQ_apply_8_17 :
+    minorQ (8 : Fin 9) (17 : Fin 21) = minorQ_entry_8_17 := by
+  rfl
+
+public theorem minorQ_apply_8_18 :
+    minorQ (8 : Fin 9) (18 : Fin 21) = minorQ_entry_8_18 := by
+  rfl
+
+public theorem minorQ_apply_8_19 :
+    minorQ (8 : Fin 9) (19 : Fin 21) = minorQ_entry_8_19 := by
+  rfl
+
+public theorem minorQ_apply_8_20 :
+    minorQ (8 : Fin 9) (20 : Fin 21) = minorQ_entry_8_20 := by
+  rfl
+
 end V14Formalization.D12SigmaPlusSegreCore

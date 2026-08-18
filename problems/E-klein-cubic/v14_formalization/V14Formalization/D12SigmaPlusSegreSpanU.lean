@@ -689,4 +689,548 @@ namespace V14Formalization.D12SigmaPlusSegreCore
     | 14, 8 => spanU_entry_14_8
     | _, _ => spanU_entry_0_0
 
+
+-- Entry equations for `spanU`, published so that consumers state the
+-- fact they need instead of `change`-ing the goal into the entry form.
+-- Tactic-mode proofs in the defining module need no `@[expose]`.
+public theorem spanU_apply_0_0 :
+    spanU (0 : Fin 15) (0 : Fin 9) = spanU_entry_0_0 := by
+  rfl
+
+public theorem spanU_apply_0_1 :
+    spanU (0 : Fin 15) (1 : Fin 9) = spanU_entry_0_1 := by
+  rfl
+
+public theorem spanU_apply_0_2 :
+    spanU (0 : Fin 15) (2 : Fin 9) = spanU_entry_0_2 := by
+  rfl
+
+public theorem spanU_apply_0_3 :
+    spanU (0 : Fin 15) (3 : Fin 9) = spanU_entry_0_3 := by
+  rfl
+
+public theorem spanU_apply_0_4 :
+    spanU (0 : Fin 15) (4 : Fin 9) = spanU_entry_0_4 := by
+  rfl
+
+public theorem spanU_apply_0_5 :
+    spanU (0 : Fin 15) (5 : Fin 9) = spanU_entry_0_5 := by
+  rfl
+
+public theorem spanU_apply_0_6 :
+    spanU (0 : Fin 15) (6 : Fin 9) = spanU_entry_0_6 := by
+  rfl
+
+public theorem spanU_apply_0_7 :
+    spanU (0 : Fin 15) (7 : Fin 9) = spanU_entry_0_7 := by
+  rfl
+
+public theorem spanU_apply_0_8 :
+    spanU (0 : Fin 15) (8 : Fin 9) = spanU_entry_0_8 := by
+  rfl
+
+public theorem spanU_apply_1_0 :
+    spanU (1 : Fin 15) (0 : Fin 9) = spanU_entry_1_0 := by
+  rfl
+
+public theorem spanU_apply_1_1 :
+    spanU (1 : Fin 15) (1 : Fin 9) = spanU_entry_1_1 := by
+  rfl
+
+public theorem spanU_apply_1_2 :
+    spanU (1 : Fin 15) (2 : Fin 9) = spanU_entry_1_2 := by
+  rfl
+
+public theorem spanU_apply_1_3 :
+    spanU (1 : Fin 15) (3 : Fin 9) = spanU_entry_1_3 := by
+  rfl
+
+public theorem spanU_apply_1_4 :
+    spanU (1 : Fin 15) (4 : Fin 9) = spanU_entry_1_4 := by
+  rfl
+
+public theorem spanU_apply_1_5 :
+    spanU (1 : Fin 15) (5 : Fin 9) = spanU_entry_1_5 := by
+  rfl
+
+public theorem spanU_apply_1_6 :
+    spanU (1 : Fin 15) (6 : Fin 9) = spanU_entry_1_6 := by
+  rfl
+
+public theorem spanU_apply_1_7 :
+    spanU (1 : Fin 15) (7 : Fin 9) = spanU_entry_1_7 := by
+  rfl
+
+public theorem spanU_apply_1_8 :
+    spanU (1 : Fin 15) (8 : Fin 9) = spanU_entry_1_8 := by
+  rfl
+
+public theorem spanU_apply_2_0 :
+    spanU (2 : Fin 15) (0 : Fin 9) = spanU_entry_2_0 := by
+  rfl
+
+public theorem spanU_apply_2_1 :
+    spanU (2 : Fin 15) (1 : Fin 9) = spanU_entry_2_1 := by
+  rfl
+
+public theorem spanU_apply_2_2 :
+    spanU (2 : Fin 15) (2 : Fin 9) = spanU_entry_2_2 := by
+  rfl
+
+public theorem spanU_apply_2_3 :
+    spanU (2 : Fin 15) (3 : Fin 9) = spanU_entry_2_3 := by
+  rfl
+
+public theorem spanU_apply_2_4 :
+    spanU (2 : Fin 15) (4 : Fin 9) = spanU_entry_2_4 := by
+  rfl
+
+public theorem spanU_apply_2_5 :
+    spanU (2 : Fin 15) (5 : Fin 9) = spanU_entry_2_5 := by
+  rfl
+
+public theorem spanU_apply_2_6 :
+    spanU (2 : Fin 15) (6 : Fin 9) = spanU_entry_2_6 := by
+  rfl
+
+public theorem spanU_apply_2_7 :
+    spanU (2 : Fin 15) (7 : Fin 9) = spanU_entry_2_7 := by
+  rfl
+
+public theorem spanU_apply_2_8 :
+    spanU (2 : Fin 15) (8 : Fin 9) = spanU_entry_2_8 := by
+  rfl
+
+public theorem spanU_apply_3_0 :
+    spanU (3 : Fin 15) (0 : Fin 9) = spanU_entry_3_0 := by
+  rfl
+
+public theorem spanU_apply_3_1 :
+    spanU (3 : Fin 15) (1 : Fin 9) = spanU_entry_3_1 := by
+  rfl
+
+public theorem spanU_apply_3_2 :
+    spanU (3 : Fin 15) (2 : Fin 9) = spanU_entry_3_2 := by
+  rfl
+
+public theorem spanU_apply_3_3 :
+    spanU (3 : Fin 15) (3 : Fin 9) = spanU_entry_3_3 := by
+  rfl
+
+public theorem spanU_apply_3_4 :
+    spanU (3 : Fin 15) (4 : Fin 9) = spanU_entry_3_4 := by
+  rfl
+
+public theorem spanU_apply_3_5 :
+    spanU (3 : Fin 15) (5 : Fin 9) = spanU_entry_3_5 := by
+  rfl
+
+public theorem spanU_apply_3_6 :
+    spanU (3 : Fin 15) (6 : Fin 9) = spanU_entry_3_6 := by
+  rfl
+
+public theorem spanU_apply_3_7 :
+    spanU (3 : Fin 15) (7 : Fin 9) = spanU_entry_3_7 := by
+  rfl
+
+public theorem spanU_apply_3_8 :
+    spanU (3 : Fin 15) (8 : Fin 9) = spanU_entry_3_8 := by
+  rfl
+
+public theorem spanU_apply_4_0 :
+    spanU (4 : Fin 15) (0 : Fin 9) = spanU_entry_4_0 := by
+  rfl
+
+public theorem spanU_apply_4_1 :
+    spanU (4 : Fin 15) (1 : Fin 9) = spanU_entry_4_1 := by
+  rfl
+
+public theorem spanU_apply_4_2 :
+    spanU (4 : Fin 15) (2 : Fin 9) = spanU_entry_4_2 := by
+  rfl
+
+public theorem spanU_apply_4_3 :
+    spanU (4 : Fin 15) (3 : Fin 9) = spanU_entry_4_3 := by
+  rfl
+
+public theorem spanU_apply_4_4 :
+    spanU (4 : Fin 15) (4 : Fin 9) = spanU_entry_4_4 := by
+  rfl
+
+public theorem spanU_apply_4_5 :
+    spanU (4 : Fin 15) (5 : Fin 9) = spanU_entry_4_5 := by
+  rfl
+
+public theorem spanU_apply_4_6 :
+    spanU (4 : Fin 15) (6 : Fin 9) = spanU_entry_4_6 := by
+  rfl
+
+public theorem spanU_apply_4_7 :
+    spanU (4 : Fin 15) (7 : Fin 9) = spanU_entry_4_7 := by
+  rfl
+
+public theorem spanU_apply_4_8 :
+    spanU (4 : Fin 15) (8 : Fin 9) = spanU_entry_4_8 := by
+  rfl
+
+public theorem spanU_apply_5_0 :
+    spanU (5 : Fin 15) (0 : Fin 9) = spanU_entry_5_0 := by
+  rfl
+
+public theorem spanU_apply_5_1 :
+    spanU (5 : Fin 15) (1 : Fin 9) = spanU_entry_5_1 := by
+  rfl
+
+public theorem spanU_apply_5_2 :
+    spanU (5 : Fin 15) (2 : Fin 9) = spanU_entry_5_2 := by
+  rfl
+
+public theorem spanU_apply_5_3 :
+    spanU (5 : Fin 15) (3 : Fin 9) = spanU_entry_5_3 := by
+  rfl
+
+public theorem spanU_apply_5_4 :
+    spanU (5 : Fin 15) (4 : Fin 9) = spanU_entry_5_4 := by
+  rfl
+
+public theorem spanU_apply_5_5 :
+    spanU (5 : Fin 15) (5 : Fin 9) = spanU_entry_5_5 := by
+  rfl
+
+public theorem spanU_apply_5_6 :
+    spanU (5 : Fin 15) (6 : Fin 9) = spanU_entry_5_6 := by
+  rfl
+
+public theorem spanU_apply_5_7 :
+    spanU (5 : Fin 15) (7 : Fin 9) = spanU_entry_5_7 := by
+  rfl
+
+public theorem spanU_apply_5_8 :
+    spanU (5 : Fin 15) (8 : Fin 9) = spanU_entry_5_8 := by
+  rfl
+
+public theorem spanU_apply_6_0 :
+    spanU (6 : Fin 15) (0 : Fin 9) = spanU_entry_6_0 := by
+  rfl
+
+public theorem spanU_apply_6_1 :
+    spanU (6 : Fin 15) (1 : Fin 9) = spanU_entry_6_1 := by
+  rfl
+
+public theorem spanU_apply_6_2 :
+    spanU (6 : Fin 15) (2 : Fin 9) = spanU_entry_6_2 := by
+  rfl
+
+public theorem spanU_apply_6_3 :
+    spanU (6 : Fin 15) (3 : Fin 9) = spanU_entry_6_3 := by
+  rfl
+
+public theorem spanU_apply_6_4 :
+    spanU (6 : Fin 15) (4 : Fin 9) = spanU_entry_6_4 := by
+  rfl
+
+public theorem spanU_apply_6_5 :
+    spanU (6 : Fin 15) (5 : Fin 9) = spanU_entry_6_5 := by
+  rfl
+
+public theorem spanU_apply_6_6 :
+    spanU (6 : Fin 15) (6 : Fin 9) = spanU_entry_6_6 := by
+  rfl
+
+public theorem spanU_apply_6_7 :
+    spanU (6 : Fin 15) (7 : Fin 9) = spanU_entry_6_7 := by
+  rfl
+
+public theorem spanU_apply_6_8 :
+    spanU (6 : Fin 15) (8 : Fin 9) = spanU_entry_6_8 := by
+  rfl
+
+public theorem spanU_apply_7_0 :
+    spanU (7 : Fin 15) (0 : Fin 9) = spanU_entry_7_0 := by
+  rfl
+
+public theorem spanU_apply_7_1 :
+    spanU (7 : Fin 15) (1 : Fin 9) = spanU_entry_7_1 := by
+  rfl
+
+public theorem spanU_apply_7_2 :
+    spanU (7 : Fin 15) (2 : Fin 9) = spanU_entry_7_2 := by
+  rfl
+
+public theorem spanU_apply_7_3 :
+    spanU (7 : Fin 15) (3 : Fin 9) = spanU_entry_7_3 := by
+  rfl
+
+public theorem spanU_apply_7_4 :
+    spanU (7 : Fin 15) (4 : Fin 9) = spanU_entry_7_4 := by
+  rfl
+
+public theorem spanU_apply_7_5 :
+    spanU (7 : Fin 15) (5 : Fin 9) = spanU_entry_7_5 := by
+  rfl
+
+public theorem spanU_apply_7_6 :
+    spanU (7 : Fin 15) (6 : Fin 9) = spanU_entry_7_6 := by
+  rfl
+
+public theorem spanU_apply_7_7 :
+    spanU (7 : Fin 15) (7 : Fin 9) = spanU_entry_7_7 := by
+  rfl
+
+public theorem spanU_apply_7_8 :
+    spanU (7 : Fin 15) (8 : Fin 9) = spanU_entry_7_8 := by
+  rfl
+
+public theorem spanU_apply_8_0 :
+    spanU (8 : Fin 15) (0 : Fin 9) = spanU_entry_8_0 := by
+  rfl
+
+public theorem spanU_apply_8_1 :
+    spanU (8 : Fin 15) (1 : Fin 9) = spanU_entry_8_1 := by
+  rfl
+
+public theorem spanU_apply_8_2 :
+    spanU (8 : Fin 15) (2 : Fin 9) = spanU_entry_8_2 := by
+  rfl
+
+public theorem spanU_apply_8_3 :
+    spanU (8 : Fin 15) (3 : Fin 9) = spanU_entry_8_3 := by
+  rfl
+
+public theorem spanU_apply_8_4 :
+    spanU (8 : Fin 15) (4 : Fin 9) = spanU_entry_8_4 := by
+  rfl
+
+public theorem spanU_apply_8_5 :
+    spanU (8 : Fin 15) (5 : Fin 9) = spanU_entry_8_5 := by
+  rfl
+
+public theorem spanU_apply_8_6 :
+    spanU (8 : Fin 15) (6 : Fin 9) = spanU_entry_8_6 := by
+  rfl
+
+public theorem spanU_apply_8_7 :
+    spanU (8 : Fin 15) (7 : Fin 9) = spanU_entry_8_7 := by
+  rfl
+
+public theorem spanU_apply_8_8 :
+    spanU (8 : Fin 15) (8 : Fin 9) = spanU_entry_8_8 := by
+  rfl
+
+public theorem spanU_apply_9_0 :
+    spanU (9 : Fin 15) (0 : Fin 9) = spanU_entry_9_0 := by
+  rfl
+
+public theorem spanU_apply_9_1 :
+    spanU (9 : Fin 15) (1 : Fin 9) = spanU_entry_9_1 := by
+  rfl
+
+public theorem spanU_apply_9_2 :
+    spanU (9 : Fin 15) (2 : Fin 9) = spanU_entry_9_2 := by
+  rfl
+
+public theorem spanU_apply_9_3 :
+    spanU (9 : Fin 15) (3 : Fin 9) = spanU_entry_9_3 := by
+  rfl
+
+public theorem spanU_apply_9_4 :
+    spanU (9 : Fin 15) (4 : Fin 9) = spanU_entry_9_4 := by
+  rfl
+
+public theorem spanU_apply_9_5 :
+    spanU (9 : Fin 15) (5 : Fin 9) = spanU_entry_9_5 := by
+  rfl
+
+public theorem spanU_apply_9_6 :
+    spanU (9 : Fin 15) (6 : Fin 9) = spanU_entry_9_6 := by
+  rfl
+
+public theorem spanU_apply_9_7 :
+    spanU (9 : Fin 15) (7 : Fin 9) = spanU_entry_9_7 := by
+  rfl
+
+public theorem spanU_apply_9_8 :
+    spanU (9 : Fin 15) (8 : Fin 9) = spanU_entry_9_8 := by
+  rfl
+
+public theorem spanU_apply_10_0 :
+    spanU (10 : Fin 15) (0 : Fin 9) = spanU_entry_10_0 := by
+  rfl
+
+public theorem spanU_apply_10_1 :
+    spanU (10 : Fin 15) (1 : Fin 9) = spanU_entry_10_1 := by
+  rfl
+
+public theorem spanU_apply_10_2 :
+    spanU (10 : Fin 15) (2 : Fin 9) = spanU_entry_10_2 := by
+  rfl
+
+public theorem spanU_apply_10_3 :
+    spanU (10 : Fin 15) (3 : Fin 9) = spanU_entry_10_3 := by
+  rfl
+
+public theorem spanU_apply_10_4 :
+    spanU (10 : Fin 15) (4 : Fin 9) = spanU_entry_10_4 := by
+  rfl
+
+public theorem spanU_apply_10_5 :
+    spanU (10 : Fin 15) (5 : Fin 9) = spanU_entry_10_5 := by
+  rfl
+
+public theorem spanU_apply_10_6 :
+    spanU (10 : Fin 15) (6 : Fin 9) = spanU_entry_10_6 := by
+  rfl
+
+public theorem spanU_apply_10_7 :
+    spanU (10 : Fin 15) (7 : Fin 9) = spanU_entry_10_7 := by
+  rfl
+
+public theorem spanU_apply_10_8 :
+    spanU (10 : Fin 15) (8 : Fin 9) = spanU_entry_10_8 := by
+  rfl
+
+public theorem spanU_apply_11_0 :
+    spanU (11 : Fin 15) (0 : Fin 9) = spanU_entry_11_0 := by
+  rfl
+
+public theorem spanU_apply_11_1 :
+    spanU (11 : Fin 15) (1 : Fin 9) = spanU_entry_11_1 := by
+  rfl
+
+public theorem spanU_apply_11_2 :
+    spanU (11 : Fin 15) (2 : Fin 9) = spanU_entry_11_2 := by
+  rfl
+
+public theorem spanU_apply_11_3 :
+    spanU (11 : Fin 15) (3 : Fin 9) = spanU_entry_11_3 := by
+  rfl
+
+public theorem spanU_apply_11_4 :
+    spanU (11 : Fin 15) (4 : Fin 9) = spanU_entry_11_4 := by
+  rfl
+
+public theorem spanU_apply_11_5 :
+    spanU (11 : Fin 15) (5 : Fin 9) = spanU_entry_11_5 := by
+  rfl
+
+public theorem spanU_apply_11_6 :
+    spanU (11 : Fin 15) (6 : Fin 9) = spanU_entry_11_6 := by
+  rfl
+
+public theorem spanU_apply_11_7 :
+    spanU (11 : Fin 15) (7 : Fin 9) = spanU_entry_11_7 := by
+  rfl
+
+public theorem spanU_apply_11_8 :
+    spanU (11 : Fin 15) (8 : Fin 9) = spanU_entry_11_8 := by
+  rfl
+
+public theorem spanU_apply_12_0 :
+    spanU (12 : Fin 15) (0 : Fin 9) = spanU_entry_12_0 := by
+  rfl
+
+public theorem spanU_apply_12_1 :
+    spanU (12 : Fin 15) (1 : Fin 9) = spanU_entry_12_1 := by
+  rfl
+
+public theorem spanU_apply_12_2 :
+    spanU (12 : Fin 15) (2 : Fin 9) = spanU_entry_12_2 := by
+  rfl
+
+public theorem spanU_apply_12_3 :
+    spanU (12 : Fin 15) (3 : Fin 9) = spanU_entry_12_3 := by
+  rfl
+
+public theorem spanU_apply_12_4 :
+    spanU (12 : Fin 15) (4 : Fin 9) = spanU_entry_12_4 := by
+  rfl
+
+public theorem spanU_apply_12_5 :
+    spanU (12 : Fin 15) (5 : Fin 9) = spanU_entry_12_5 := by
+  rfl
+
+public theorem spanU_apply_12_6 :
+    spanU (12 : Fin 15) (6 : Fin 9) = spanU_entry_12_6 := by
+  rfl
+
+public theorem spanU_apply_12_7 :
+    spanU (12 : Fin 15) (7 : Fin 9) = spanU_entry_12_7 := by
+  rfl
+
+public theorem spanU_apply_12_8 :
+    spanU (12 : Fin 15) (8 : Fin 9) = spanU_entry_12_8 := by
+  rfl
+
+public theorem spanU_apply_13_0 :
+    spanU (13 : Fin 15) (0 : Fin 9) = spanU_entry_13_0 := by
+  rfl
+
+public theorem spanU_apply_13_1 :
+    spanU (13 : Fin 15) (1 : Fin 9) = spanU_entry_13_1 := by
+  rfl
+
+public theorem spanU_apply_13_2 :
+    spanU (13 : Fin 15) (2 : Fin 9) = spanU_entry_13_2 := by
+  rfl
+
+public theorem spanU_apply_13_3 :
+    spanU (13 : Fin 15) (3 : Fin 9) = spanU_entry_13_3 := by
+  rfl
+
+public theorem spanU_apply_13_4 :
+    spanU (13 : Fin 15) (4 : Fin 9) = spanU_entry_13_4 := by
+  rfl
+
+public theorem spanU_apply_13_5 :
+    spanU (13 : Fin 15) (5 : Fin 9) = spanU_entry_13_5 := by
+  rfl
+
+public theorem spanU_apply_13_6 :
+    spanU (13 : Fin 15) (6 : Fin 9) = spanU_entry_13_6 := by
+  rfl
+
+public theorem spanU_apply_13_7 :
+    spanU (13 : Fin 15) (7 : Fin 9) = spanU_entry_13_7 := by
+  rfl
+
+public theorem spanU_apply_13_8 :
+    spanU (13 : Fin 15) (8 : Fin 9) = spanU_entry_13_8 := by
+  rfl
+
+public theorem spanU_apply_14_0 :
+    spanU (14 : Fin 15) (0 : Fin 9) = spanU_entry_14_0 := by
+  rfl
+
+public theorem spanU_apply_14_1 :
+    spanU (14 : Fin 15) (1 : Fin 9) = spanU_entry_14_1 := by
+  rfl
+
+public theorem spanU_apply_14_2 :
+    spanU (14 : Fin 15) (2 : Fin 9) = spanU_entry_14_2 := by
+  rfl
+
+public theorem spanU_apply_14_3 :
+    spanU (14 : Fin 15) (3 : Fin 9) = spanU_entry_14_3 := by
+  rfl
+
+public theorem spanU_apply_14_4 :
+    spanU (14 : Fin 15) (4 : Fin 9) = spanU_entry_14_4 := by
+  rfl
+
+public theorem spanU_apply_14_5 :
+    spanU (14 : Fin 15) (5 : Fin 9) = spanU_entry_14_5 := by
+  rfl
+
+public theorem spanU_apply_14_6 :
+    spanU (14 : Fin 15) (6 : Fin 9) = spanU_entry_14_6 := by
+  rfl
+
+public theorem spanU_apply_14_7 :
+    spanU (14 : Fin 15) (7 : Fin 9) = spanU_entry_14_7 := by
+  rfl
+
+public theorem spanU_apply_14_8 :
+    spanU (14 : Fin 15) (8 : Fin 9) = spanU_entry_14_8 := by
+  rfl
+
 end V14Formalization.D12SigmaPlusSegreCore

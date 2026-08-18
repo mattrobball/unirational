@@ -7,6 +7,7 @@ module
 public import V14Formalization.D12SigmaPlusSegreEval
 public import V14Formalization.D12PolyZReflectionBridges
 public import V14Formalization.D12SigmaPlusSegreSpanCore
+public import V14Formalization.D12SigmaPlusSegreApply_Qplus
 public import V14Formalization.D12PolyZExpand
 
 noncomputable section
