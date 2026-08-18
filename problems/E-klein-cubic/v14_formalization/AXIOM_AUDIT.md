@@ -6,8 +6,14 @@ Zero project `axiom` / `sorry` / `admit` / `sorryAx` / seal `opaque` on the Thm 
 
 ## `#print axioms` (AxiomAudit.lean)
 
+The first two rows are the theorems `comparator.json` names; they are the only
+two declarations Comparator checks, and until 2026-08-18 `AxiomAudit.lean` did
+not mention them.
+
 | Theorem | Axioms |
 |---------|--------|
+| `Comparator.noEquivariantRationalMap_from_ambient` | `propext`, `Classical.choice`, `Quot.sound` |
+| `Comparator.noEquivariantRationalMap_projectiveGVariety` | `propext`, `Classical.choice`, `Quot.sound` |
 | `centralizerObstruction` | `propext`, `Classical.choice`, `Quot.sound` |
 | `centralizerObstruction_one_rep` | `propext`, `Classical.choice`, `Quot.sound` |
 | `noDegenerates_of_centerless_involution` | `propext`, `Classical.choice`, `Quot.sound` |

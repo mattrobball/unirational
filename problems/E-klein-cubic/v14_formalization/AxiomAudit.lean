@@ -1,13 +1,24 @@
 /-
-Axiom audit entrypoint for Theorem 3.1, Corollary 6.1, and Weil core.
+Axiom audit entrypoint.
+
+The first block is the one that matters: the two theorems Comparator checks,
+named exactly as `comparator.json` lists them.  The rest are the legacy
+Theorem 3.1 / Corollary 6.1 / Weil-core declarations, kept because they are
+the historical audit surface.
 -/
 module
 
+public import V14Solution
 public import V14Formalization.CentralizerObstruction
 public import V14Formalization.V14Application
 public import V14Formalization.WeilRep
 public import V14Formalization.GeometricFanoV14
 
+-- The two Comparator theorems.
+#print axioms V14Formalization.Comparator.noEquivariantRationalMap_from_ambient
+#print axioms V14Formalization.Comparator.noEquivariantRationalMap_projectiveGVariety
+
+-- Legacy audit surface.
 #print axioms V14Formalization.centralizerObstruction
 #print axioms V14Formalization.centralizerObstruction_one_rep
 #print axioms V14Formalization.noDegenerates_of_centerless_involution
