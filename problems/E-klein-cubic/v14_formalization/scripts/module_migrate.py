@@ -28,7 +28,12 @@ file (including a namespace prefix if the decl is written with one).
 `expose` implies `public`. Running twice is a no-op (--check verifies).
 
 `import_all` inserts `import all <M>` lines right after the `module`
-keyword. Needed when a proof kernel-reduces through core/Mathlib bodies
+keyword, and any `import all` NOT listed there is stripped.  The tree's
+required count is zero (MODULE_MIGRATION.md); the key exists only so the
+applier has an explicit allow-list rather than an implicit one.  It used to
+carry the 82 Vector/Array lines that the `eqZ` characterisation replaced,
+and left behind a landmine: re-running the applier — which every emitter
+does via reapply_module_annotations() — put all 82 back. Needed when a proof kernel-reduces through core/Mathlib bodies
 that the exporting module does not `@[expose]` (Lean 4.32.1 core gap:
 `instDecidableEqVector.decEq` / `Array.instDecidableEqImpl` have public
 signatures but unexposed bodies, so `decide` on `Vector Int n` equality
@@ -104,6 +109,16 @@ def migrate_text(text: str, cfg: dict) -> str:
             out.append("module")
             out.append("")
             inserted_module = True
+
+        # `import all` is BANNED in this tree (MODULE_MIGRATION.md): it
+        # reinstates full-environment loading on whatever edge it sits on.
+        # The applier strips any that is not explicitly listed in the config,
+        # so a stale `import_all` key or a hand edit cannot bring them back
+        # through the emitters' reapply_module_annotations() hook.
+        ia = re.match(r"^import all\s+(\S+)\s*$", line)
+        if ia and ia.group(1) not in set(cfg.get("import_all", [])):
+            in_block_comment += opens - closes
+            continue
 
         if re.match(r"^import\s(?!all\b)", line):
             out.append("public " + line)

@@ -11,7 +11,7 @@
    "matrixOne",
    "mul"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "Vec",
    "basis",
@@ -35,26 +35,16 @@
    "mul",
    "mul_smul_left",
    "mul_smul_right"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12CyclotomicVecZ.lean": {
   "expose": [
-   "addZ",
-   "coeffAtZ",
-   "convTerm",
-   "convZ",
-   "mulCoeff",
-   "mulZ",
    "scaleSqE0",
-   "sumFin",
    "toVec",
    "zeroZ"
   ],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "VecZ",
    "addZ",
@@ -63,6 +53,8 @@
    "constVec_one_eq",
    "convTerm",
    "convZ",
+   "eqZ",
+   "eq_of_eqZ",
    "eq_smul_div",
    "eq_smul_int",
    "eq_smul_zero",
@@ -76,14 +68,15 @@
    "toVec_zeroZ_smul",
    "vec_zero_eq",
    "zeroZ"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12MatrixCertificate.lean": {
   "expose": [
    "pluckerValue",
    "squareMonomials"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "Certificate",
    "PieceCertificate",
@@ -93,154 +86,176 @@
    "plucker_empty_fin1_of_coeff",
    "plucker_empty_fin2_of_coeff",
    "squareMonomials"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAAction.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "action_matrix"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow0.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow1.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow10.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow11.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow12.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow13.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow14.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow15.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow16.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow17.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow18.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow19.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow2.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow3.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow4.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow5.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow6.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow7.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow8.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAActionRow9.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAData.lean": {
   "expose": [
@@ -708,10 +723,9 @@
    "YCell0_8",
    "YCell0_9",
    "YRow0",
-   "YVec",
-   "payloadSha256"
+   "YVec"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "ACell0_0",
    "ACell0_1",
@@ -1179,285 +1193,278 @@
    "YRow0",
    "YVec",
    "payloadSha256"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAAPlucker.lean": {
   "expose": [
-   "BKVec",
-   "deltaVec"
+   "BKVec"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "BKVec",
    "deltaVec",
    "delta_ne_zero",
    "evalMatrix_BKVec",
    "plucker_coefficient"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAASplit.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "split_identity"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAASplitRow0.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAASplitRow1.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAASplitRow2.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAASplitRow3.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAASplitRow4.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAASplitRow5.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAASplitRow6.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAASplitRow7.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAASplitRow8.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAASplitRow9.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPAction.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "action_matrix"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow0.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow1.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow10.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow11.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow12.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow13.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow14.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow15.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow16.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow17.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow18.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow19.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow2.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow3.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow4.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow5.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow6.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow7.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow8.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPActionRow9.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPData.lean": {
   "expose": [
@@ -1925,10 +1932,9 @@
    "YCell0_8",
    "YCell0_9",
    "YRow0",
-   "YVec",
-   "payloadSha256"
+   "YVec"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "ACell0_0",
    "ACell0_1",
@@ -2396,148 +2402,121 @@
    "YRow0",
    "YVec",
    "payloadSha256"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPPlucker.lean": {
   "expose": [
-   "BKVec",
-   "deltaVec"
+   "BKVec"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "BKVec",
    "deltaVec",
    "delta_ne_zero",
    "evalMatrix_BKVec",
    "plucker_coefficient"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPSplit.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "split_identity"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPSplitRow0.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPSplitRow1.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPSplitRow2.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPSplitRow3.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPSplitRow4.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPSplitRow5.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPSplitRow6.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPSplitRow7.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPSplitRow8.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAPSplitRow9.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAction.lean": {
   "expose": [
    "characterStack"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "characterStack",
    "characterStack_mulVec_eq_zero_iff"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceAmbientVec.lean": {
   "expose": [
@@ -2706,10 +2685,9 @@
    "BRow7",
    "BRow8",
    "BRow9",
-   "BVec",
-   "payloadSha256"
+   "BVec"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "BCell0_0",
    "BCell0_1",
@@ -2879,154 +2857,176 @@
    "BVec",
    "evalMatrix_BVec",
    "payloadSha256"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAAction.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "action_matrix"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow0.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow1.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow10.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow11.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow12.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow13.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow14.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow15.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow16.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow17.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow18.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow19.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow2.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow3.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow4.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow5.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow6.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow7.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow8.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAActionRow9.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePAData.lean": {
   "expose": [
@@ -3461,10 +3461,9 @@
    "XRow7",
    "XRow8",
    "XRow9",
-   "XVec",
-   "payloadSha256"
+   "XVec"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "ACell0_0",
    "ACell0_1",
@@ -3899,550 +3898,552 @@
    "XRow9",
    "XVec",
    "payloadSha256"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePASplit.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "split_identity"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePASplitRow0.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePASplitRow1.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePASplitRow2.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePASplitRow3.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePASplitRow4.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePASplitRow5.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePASplitRow6.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePASplitRow7.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePASplitRow8.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePASplitRow9.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPAction.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "action_matrix"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow0.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow1.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow10.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow11.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow12.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow13.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow14.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow15.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow16.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow17.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow18.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow19.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow2.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow3.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow4.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow5.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow6.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow7.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow8.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPActionRow9.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff0_0.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_coefficient"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff0_1.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_coefficient"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff0_1Product0.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff0_1Product1.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff0_1Product2.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff0_1Product3.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff0_1Product4.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff0_1Product5.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff0_2.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_coefficient"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff1_0.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_coefficient"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff1_1.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_coefficient"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff1_1Product0.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff1_1Product1.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff1_1Product2.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff1_1Product3.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff1_1Product4.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff1_1Product5.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff1_2.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_coefficient"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff2_0.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_coefficient"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff2_1.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_coefficient"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff2_1Product0.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff2_1Product1.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff2_1Product2.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff2_1Product3.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff2_1Product4.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff2_1Product5.lean": {
   "expose": [
-   "payloadSha256",
    "productValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_product",
    "payloadSha256",
    "productValue"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPCoeff2_2.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_coefficient"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPData.lean": {
   "expose": [
@@ -4931,10 +4932,9 @@
    "YCell1_9",
    "YRow0",
    "YRow1",
-   "YVec",
-   "payloadSha256"
+   "YVec"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "ACell0_0",
    "ACell0_1",
@@ -5423,23 +5423,26 @@
    "YRow1",
    "YVec",
    "payloadSha256"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPDeterminant.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "det_ne_zero"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPPlucker.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "C",
    "coefficient_identity",
    "det_ne_zero"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPPluckerBase.lean": {
   "expose": [
@@ -5483,10 +5486,9 @@
    "CRow1",
    "CRow2",
    "CVec",
-   "deltaVec",
-   "payloadSha256"
+   "deltaVec"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "BKCoord0_0",
    "BKCoord0_1",
@@ -5558,124 +5560,96 @@
    "delta_ne_zero",
    "evalMatrix_BKVec",
    "payloadSha256"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPSplit.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "split_identity"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPSplitRow0.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPSplitRow1.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPSplitRow2.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPSplitRow3.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPSplitRow4.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPSplitRow5.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPSplitRow6.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPSplitRow7.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPSplitRow8.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PiecePPSplitRow9.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "import_all": [
-   "Init.Data.Vector.Basic",
-   "Init.Data.Array.DecidableEq"
-  ],
+  "expose_all_public_defs": false,
   "public": [
    "row_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PieceVecBase.lean": {
   "expose": [
@@ -5703,7 +5677,7 @@
    "SMVecRow9",
    "characterStackVec"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "RMVec",
    "RMVecRow0",
@@ -5731,19 +5705,21 @@
    "evalMatrix_RMVec",
    "evalMatrix_SMVec",
    "eval_characterStackVec"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialData.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "public": []
+  "expose_all_public_defs": false,
+  "public": [],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialEvaluation.lean": {
   "expose": [
    "evalMatrixAt",
    "evalPolyAt"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "evalK",
    "evalMatrixAt",
@@ -5761,17 +5737,19 @@
    "evalPolyAt_extension_eq_map_evalPolyAt",
    "map_evalMatrixK_F_mul_B_eq_B_mul_SM",
    "map_evalMatrixK_R_mul_B_eq_B_mul_RM"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialFFull.lean": {
   "expose": [
    "F_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F_mul_B_eq_B_mul_SM",
    "F_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialFRow0.lean": {
   "expose": [
@@ -5792,7 +5770,7 @@
    "F0c9",
    "F_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F0c0",
    "F0c1",
@@ -5811,7 +5789,8 @@
    "F0c9",
    "F_mul_B_eq_B_mul_SM_row0",
    "F_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialFRow1.lean": {
   "expose": [
@@ -5832,7 +5811,7 @@
    "F1c9",
    "F_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F1c0",
    "F1c1",
@@ -5851,7 +5830,8 @@
    "F1c9",
    "F_mul_B_eq_B_mul_SM_row1",
    "F_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialFRow10.lean": {
   "expose": [
@@ -5872,7 +5852,7 @@
    "F10c9",
    "F_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F10c0",
    "F10c1",
@@ -5891,7 +5871,8 @@
    "F10c9",
    "F_mul_B_eq_B_mul_SM_row10",
    "F_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialFRow11.lean": {
   "expose": [
@@ -5912,7 +5893,7 @@
    "F11c9",
    "F_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F11c0",
    "F11c1",
@@ -5931,7 +5912,8 @@
    "F11c9",
    "F_mul_B_eq_B_mul_SM_row11",
    "F_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialFRow12.lean": {
   "expose": [
@@ -5952,7 +5934,7 @@
    "F12c9",
    "F_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F12c0",
    "F12c1",
@@ -5971,7 +5953,8 @@
    "F12c9",
    "F_mul_B_eq_B_mul_SM_row12",
    "F_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialFRow13.lean": {
   "expose": [
@@ -5992,7 +5975,7 @@
    "F13c9",
    "F_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F13c0",
    "F13c1",
@@ -6011,7 +5994,8 @@
    "F13c9",
    "F_mul_B_eq_B_mul_SM_row13",
    "F_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialFRow14.lean": {
   "expose": [
@@ -6032,7 +6016,7 @@
    "F14c9",
    "F_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F14c0",
    "F14c1",
@@ -6051,7 +6035,8 @@
    "F14c9",
    "F_mul_B_eq_B_mul_SM_row14",
    "F_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialFRow2.lean": {
   "expose": [
@@ -6072,7 +6057,7 @@
    "F2c9",
    "F_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F2c0",
    "F2c1",
@@ -6091,7 +6076,8 @@
    "F2c9",
    "F_mul_B_eq_B_mul_SM_row2",
    "F_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialFRow3.lean": {
   "expose": [
@@ -6112,7 +6098,7 @@
    "F3c9",
    "F_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F3c0",
    "F3c1",
@@ -6131,7 +6117,8 @@
    "F3c9",
    "F_mul_B_eq_B_mul_SM_row3",
    "F_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialFRow4.lean": {
   "expose": [
@@ -6152,7 +6139,7 @@
    "F4c9",
    "F_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F4c0",
    "F4c1",
@@ -6171,7 +6158,8 @@
    "F4c9",
    "F_mul_B_eq_B_mul_SM_row4",
    "F_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialFRow5.lean": {
   "expose": [
@@ -6192,7 +6180,7 @@
    "F5c9",
    "F_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F5c0",
    "F5c1",
@@ -6211,7 +6199,8 @@
    "F5c9",
    "F_mul_B_eq_B_mul_SM_row5",
    "F_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialFRow6.lean": {
   "expose": [
@@ -6232,7 +6221,7 @@
    "F6c9",
    "F_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F6c0",
    "F6c1",
@@ -6251,7 +6240,8 @@
    "F6c9",
    "F_mul_B_eq_B_mul_SM_row6",
    "F_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialFRow7.lean": {
   "expose": [
@@ -6272,7 +6262,7 @@
    "F7c9",
    "F_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F7c0",
    "F7c1",
@@ -6291,7 +6281,8 @@
    "F7c9",
    "F_mul_B_eq_B_mul_SM_row7",
    "F_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialFRow8.lean": {
   "expose": [
@@ -6312,7 +6303,7 @@
    "F8c9",
    "F_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F8c0",
    "F8c1",
@@ -6331,7 +6322,8 @@
    "F8c9",
    "F_mul_B_eq_B_mul_SM_row8",
    "F_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialFRow9.lean": {
   "expose": [
@@ -6352,7 +6344,7 @@
    "F9c9",
    "F_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F9c0",
    "F9c1",
@@ -6371,17 +6363,19 @@
    "F9c9",
    "F_mul_B_eq_B_mul_SM_row9",
    "F_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialRFull.lean": {
   "expose": [
    "R_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "R_mul_B_eq_B_mul_RM",
    "R_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialRM.lean": {
   "expose": [
@@ -6497,7 +6491,7 @@
    "RMrow8",
    "RMrow9"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "RM0c0",
    "RM0c1",
@@ -6720,7 +6714,8 @@
    "RMrow9_7",
    "RMrow9_8",
    "RMrow9_9"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialRRow0.lean": {
   "expose": [
@@ -6741,7 +6736,7 @@
    "R0c9",
    "R_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "R0c0",
    "R0c1",
@@ -6760,7 +6755,8 @@
    "R0c9",
    "R_mul_B_eq_B_mul_RM_row0",
    "R_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialRRow1.lean": {
   "expose": [
@@ -6781,7 +6777,7 @@
    "R1c9",
    "R_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "R1c0",
    "R1c1",
@@ -6800,7 +6796,8 @@
    "R1c9",
    "R_mul_B_eq_B_mul_RM_row1",
    "R_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialRRow10.lean": {
   "expose": [
@@ -6821,7 +6818,7 @@
    "R10c9",
    "R_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "R10c0",
    "R10c1",
@@ -6840,7 +6837,8 @@
    "R10c9",
    "R_mul_B_eq_B_mul_RM_row10",
    "R_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialRRow11.lean": {
   "expose": [
@@ -6861,7 +6859,7 @@
    "R11c9",
    "R_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "R11c0",
    "R11c1",
@@ -6880,7 +6878,8 @@
    "R11c9",
    "R_mul_B_eq_B_mul_RM_row11",
    "R_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialRRow12.lean": {
   "expose": [
@@ -6901,7 +6900,7 @@
    "R12c9",
    "R_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "R12c0",
    "R12c1",
@@ -6920,7 +6919,8 @@
    "R12c9",
    "R_mul_B_eq_B_mul_RM_row12",
    "R_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialRRow13.lean": {
   "expose": [
@@ -6941,7 +6941,7 @@
    "R13c9",
    "R_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "R13c0",
    "R13c1",
@@ -6960,7 +6960,8 @@
    "R13c9",
    "R_mul_B_eq_B_mul_RM_row13",
    "R_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialRRow14.lean": {
   "expose": [
@@ -6981,7 +6982,7 @@
    "R14c9",
    "R_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "R14c0",
    "R14c1",
@@ -7000,7 +7001,8 @@
    "R14c9",
    "R_mul_B_eq_B_mul_RM_row14",
    "R_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialRRow2.lean": {
   "expose": [
@@ -7021,7 +7023,7 @@
    "R2c9",
    "R_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "R2c0",
    "R2c1",
@@ -7040,7 +7042,8 @@
    "R2c9",
    "R_mul_B_eq_B_mul_RM_row2",
    "R_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialRRow3.lean": {
   "expose": [
@@ -7061,7 +7064,7 @@
    "R3c9",
    "R_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "R3c0",
    "R3c1",
@@ -7080,7 +7083,8 @@
    "R3c9",
    "R_mul_B_eq_B_mul_RM_row3",
    "R_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialRRow4.lean": {
   "expose": [
@@ -7101,7 +7105,7 @@
    "R4c9",
    "R_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "R4c0",
    "R4c1",
@@ -7120,7 +7124,8 @@
    "R4c9",
    "R_mul_B_eq_B_mul_RM_row4",
    "R_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialRRow5.lean": {
   "expose": [
@@ -7141,7 +7146,7 @@
    "R5c9",
    "R_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "R5c0",
    "R5c1",
@@ -7160,7 +7165,8 @@
    "R5c9",
    "R_mul_B_eq_B_mul_RM_row5",
    "R_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialRRow6.lean": {
   "expose": [
@@ -7181,7 +7187,7 @@
    "R6c9",
    "R_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "R6c0",
    "R6c1",
@@ -7200,7 +7206,8 @@
    "R6c9",
    "R_mul_B_eq_B_mul_RM_row6",
    "R_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialRRow7.lean": {
   "expose": [
@@ -7221,7 +7228,7 @@
    "R7c9",
    "R_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "R7c0",
    "R7c1",
@@ -7240,7 +7247,8 @@
    "R7c9",
    "R_mul_B_eq_B_mul_RM_row7",
    "R_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialRRow8.lean": {
   "expose": [
@@ -7261,7 +7269,7 @@
    "R8c9",
    "R_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "R8c0",
    "R8c1",
@@ -7280,7 +7288,8 @@
    "R8c9",
    "R_mul_B_eq_B_mul_RM_row8",
    "R_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialRRow9.lean": {
   "expose": [
@@ -7301,7 +7310,7 @@
    "R9c9",
    "R_poly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "R9c0",
    "R9c1",
@@ -7320,7 +7329,8 @@
    "R9c9",
    "R_mul_B_eq_B_mul_RM_row9",
    "R_poly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolynomialSM.lean": {
   "expose": [
@@ -7436,7 +7446,7 @@
    "SMrow8",
    "SMrow9"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "SM0c0",
    "SM0c1",
@@ -7659,7 +7669,8 @@
    "SMrow9_7",
    "SMrow9_8",
    "SMrow9_9"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/GrassmannianLinearSection.lean": {
   "expose": [
@@ -7668,7 +7679,7 @@
    "pluckerRelation",
    "projectorLinearCut"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "PluckerRelation",
    "eval_pluckerQuadric",
@@ -7683,6 +7694,7 @@
    "projectorLinearCut_isHomogeneous",
    "projectorLinearCuts_vanish_iff",
    "span_aeval_projectorLinearCut_le"
-  ]
+  ],
+  "no_expose": []
  }
 }

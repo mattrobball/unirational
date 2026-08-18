@@ -1,23 +1,25 @@
 {
  "V14Formalization/Basic.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
-  "public": []
+  "expose_all_public_defs": false,
+  "public": [],
+  "no_expose": []
  },
  "V14Formalization/BiprojectiveIntegral.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "BiprojectiveSpace.isIntegral",
    "BiprojectiveSpace.standardChartIntegral",
    "BiprojectiveSpace.standardChartRanges_pairwise"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/CentralizerD12.lean": {
   "expose": [
-   "Circle1",
-   "CircleM1",
    "Smat",
+   "dihedralToN",
+   "dihedralToNHom",
    "liftsToN",
    "mkRefl",
    "mkRot",
@@ -28,7 +30,7 @@
    "rotPt",
    "sigma"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "Circle1",
    "CircleM1",
@@ -44,6 +46,7 @@
    "dihedralToNHom_injective",
    "dihedralToN_mul",
    "eq_zero_of_eq_neg",
+   "liftsToN",
    "mkRefl",
    "mkRefl_conj_mkRot",
    "mkRefl_pow_two",
@@ -69,33 +72,37 @@
    "rot_mem",
    "sigma",
    "sq_eq_one_cases"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12PolyZReflection.lean": {
   "expose": [
-   "addList",
-   "convList",
    "interpQ",
-   "smulList",
-   "subList",
    "toPolyZ"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
+   "addList",
+   "convList",
    "interpQ",
    "interpQ_nil",
    "interp_add_gen",
    "interp_eq",
    "interp_mul",
    "interp_sub_gen",
+   "smulList",
+   "subList",
    "toPolyZ"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/EllipticPolynomialConstancy.lean": {
   "expose": [
-   "mvFractionSuccRingEquiv"
+   "mvFractionSuccRingEquiv",
+   "mvRatFuncBack",
+   "mvSuccToRatFunc"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "MvFrac",
    "mvFractionSuccRingEquiv",
@@ -124,11 +131,14 @@
    "short_weierstrass_point_baseChange_mvfrac_surjective",
    "short_weierstrass_point_baseChange_of_fin4_algEquiv_surjective",
    "short_weierstrass_point_baseChange_ratfunc_surjective"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/MultiProjectiveZeroLocus.lean": {
-  "expose": [],
-  "expose_all_public_defs": true,
+  "expose": [
+   "projectiveZeroLocusFamilyToSpec"
+  ],
+  "expose_all_public_defs": false,
   "public": [
    "ker_projectiveZeroLocusFamilyι",
    "projectiveZeroLocusFamily",
@@ -137,17 +147,20 @@
    "projectiveZeroLocusFamilyι",
    "projectiveZeroLocusFamilyι_isClosedImmersion",
    "projectiveZeroLocusFamilyι_isOver"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/PSLCard.lean": {
   "expose": [
    "Smat",
    "Tmat",
    "chi10Int",
+   "lift",
    "negI",
+   "pslOrd",
    "slCardOrder"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F",
    "PSL2F11",
@@ -175,29 +188,33 @@
    "slCardOrder_three",
    "slCardOrder_two",
    "sum_comp_mk"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/ProjNaturality.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "mapLinearSubst_toSpec",
    "map_toSpecZero"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/SchemeBaseChangeAction.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "baseChangeAction"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/SchemeEquivariant.lean": {
   "expose": [
    "HasEquivariantRationalMap",
-   "actionPrecomp"
+   "actionPrecomp",
+   "res"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "EquivariantRationalMap",
    "HasEquivariantRationalMap",
@@ -205,11 +222,11 @@
    "actionPrecomp",
    "actionPrecomp_eq_self_of_rho_eq_id",
    "res"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/WeilRep.lean": {
   "expose": [
-   "EvenSub",
    "S6",
    "S_even",
    "Sfull",
@@ -218,13 +235,16 @@
    "T_even_b",
    "Tfull_b",
    "Tmat",
+   "cFourier",
    "gauss",
    "twoInv",
    "Φ11",
    "ζ",
+   "χ₂",
+   "χ₂ℤ",
    "ψ"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "Fun",
    "K",
@@ -274,6 +294,7 @@
    "ψ_apply",
    "ψ_primitive",
    "ψ_zero"
-  ]
+  ],
+  "no_expose": []
  }
 }

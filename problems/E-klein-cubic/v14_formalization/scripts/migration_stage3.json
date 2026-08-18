@@ -8,7 +8,7 @@
    "plusFirstRowForm",
    "plusGenericVector"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "blockNormalMultiplier",
    "blockNormalMultiplier_sigma",
@@ -22,29 +22,32 @@
    "plusGenericVector",
    "pointwiseSemidirectSourceEquiv_eq_actionFunctionFieldMap_of_residual_C_X_T",
    "pointwiseSemidirectSourceEquiv_eq_actionFunctionFieldMap_of_residual_generators"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/BinaryQuadraticDescent.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "binaryQuadratic_projective_descends_mvfrac"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/BiprojectiveActionFunctionField.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "biprojective_fst_functionFieldMap_base",
    "biprojective_snd_functionFieldMap_base",
    "diagonalPullbackAction_functionFieldMap_fst",
    "diagonalPullbackAction_functionFieldMap_snd",
    "functionFieldMap_comp_functionFieldBaseRingHom"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/BiprojectiveFunctionFieldProjection.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "GammaIsoTop_inv_eq_appLE",
    "biprojectiveGeneralFunctionFieldEquiv_X_inl",
@@ -52,11 +55,12 @@
    "biprojectiveGeneralFunctionFieldEquiv_algebraMap",
    "biprojective_standardChart_fst_appTop",
    "biprojective_standardChart_snd_appTop"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/CentralizerObstruction.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "centralizerObstruction",
    "centralizerObstruction_one_rep",
@@ -64,7 +68,8 @@
    "notWeaklyVersal_of_centralizerObstruction",
    "not_GUnirational_of_centralizerObstruction",
    "not_degenerates_of_centerless"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/CorrectedBirationalField.lean": {
   "expose": [
@@ -75,7 +80,7 @@
    "orderedNormalToAmbientFieldEquiv",
    "orderedPlusIndex"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "ambientPolynomialToOrderedFieldHom",
    "ambientPolynomialToOrderedFieldHom_injective",
@@ -94,28 +99,30 @@
    "orderedNormalToAmbientFieldEquiv_X_tail",
    "orderedPlusIndex",
    "orderedTailShear"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/CorrectedOrderedConstructor.lean": {
   "expose": [
    "orderedPlusMinusEquivariantNormalDataOfNormalMultiplier",
    "orderedPlusMinusEquivariantNormalDataOfPointwiseSemidirect"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "correctedOrderedPlusMinusExceptionalAction",
    "correctedOrderedPlusMinusSourceAction",
    "orderedPlusMinusEquivariantNormalDataOfNormalMultiplier",
    "orderedPlusMinusEquivariantNormalDataOfPointwiseSemidirect",
    "orderedPlusMinusEquivariantNormalDataOfPointwiseSemidirect_sigma"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/CorrectedOrderedProjectiveChart.lean": {
   "expose": [
    "correctedOrderedLinearNormalFunctionFieldEquiv",
    "orderedCoordinateToProjectiveFunctionFieldEquiv"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "correctedOrderedLinearNormalFunctionFieldEquiv",
    "correctedOrderedLinearNormalFunctionFieldEquiv_C_plus",
@@ -124,7 +131,8 @@
    "correctedOrderedLinearNormalFunctionFieldEquiv_base",
    "correctedOrderedLinearNormal_generic_toBase",
    "orderedCoordinateToProjectiveFunctionFieldEquiv"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12F6PolynomialData.lean": {
   "expose": [
@@ -164,46 +172,9 @@
    "F6c_5_2",
    "F6c_5_3",
    "F6c_5_4",
-   "F6c_5_5",
-   "ofQuot",
-   "quotient_0_0",
-   "quotient_0_1",
-   "quotient_0_2",
-   "quotient_0_3",
-   "quotient_0_4",
-   "quotient_0_5",
-   "quotient_1_0",
-   "quotient_1_1",
-   "quotient_1_2",
-   "quotient_1_3",
-   "quotient_1_4",
-   "quotient_1_5",
-   "quotient_2_0",
-   "quotient_2_1",
-   "quotient_2_2",
-   "quotient_2_3",
-   "quotient_2_4",
-   "quotient_2_5",
-   "quotient_3_0",
-   "quotient_3_1",
-   "quotient_3_2",
-   "quotient_3_3",
-   "quotient_3_4",
-   "quotient_3_5",
-   "quotient_4_0",
-   "quotient_4_1",
-   "quotient_4_2",
-   "quotient_4_3",
-   "quotient_4_4",
-   "quotient_4_5",
-   "quotient_5_0",
-   "quotient_5_1",
-   "quotient_5_2",
-   "quotient_5_3",
-   "quotient_5_4",
-   "quotient_5_5"
+   "F6c_5_5"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F6_poly",
    "F6c_0_0",
@@ -316,15 +287,15 @@
    "quotient_5_3",
    "quotient_5_4",
    "quotient_5_5"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12F6Semantic.lean": {
   "expose": [
    "T2",
-   "directEntryPoly",
-   "directValue"
+   "directEntryPoly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "SLG",
    "T2",
@@ -336,11 +307,12 @@
    "eval_directEntryPoly",
    "toMatrix_Teven2_eq_T6",
    "weilUHom_T2"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12ProjectorReduction.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "all_mul_eq_of_two_generators",
    "idempotent_eq_one_of_trace_eq_card",
@@ -351,7 +323,8 @@
    "projector_invariant_of_all_representation",
    "projector_invariant_of_standard_generators",
    "projector_invariant_of_standard_generators_pow_two"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12SigmaMinusNormalForm.lean": {
   "expose": [
@@ -367,7 +340,7 @@
    "quadValue",
    "restrictedPluckerCoeffs"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "bilinearCoeffs",
    "binaryQuadratic",
@@ -385,7 +358,8 @@
    "quadValue_restrictedPluckerCoeffs",
    "restrictedPluckerCoeffs",
    "restrictedPluckerCoeffs_map"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12SigmaPlusQuadric6.lean": {
   "expose": [
@@ -399,7 +373,7 @@
    "reshapeMinor",
    "restrictedPluckerCoeffs"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "bilinearCoeffs",
    "bilinearCoeffs_map",
@@ -462,17 +436,19 @@
    "reshapeMinor",
    "restrictedPluckerCoeffs",
    "restrictedPluckerCoeffs_map"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12U6Fourier.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "sum_indicator_one",
    "sum_indicator_two",
    "toMatrix_Seven_eq_S6",
    "uBasisCore_apply"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12U6PolynomialData.lean": {
   "expose": [
@@ -512,46 +488,9 @@
    "R6c_5_2",
    "R6c_5_3",
    "R6c_5_4",
-   "R6c_5_5",
-   "ofQuot",
-   "quotient_0_0",
-   "quotient_0_1",
-   "quotient_0_2",
-   "quotient_0_3",
-   "quotient_0_4",
-   "quotient_0_5",
-   "quotient_1_0",
-   "quotient_1_1",
-   "quotient_1_2",
-   "quotient_1_3",
-   "quotient_1_4",
-   "quotient_1_5",
-   "quotient_2_0",
-   "quotient_2_1",
-   "quotient_2_2",
-   "quotient_2_3",
-   "quotient_2_4",
-   "quotient_2_5",
-   "quotient_3_0",
-   "quotient_3_1",
-   "quotient_3_2",
-   "quotient_3_3",
-   "quotient_3_4",
-   "quotient_3_5",
-   "quotient_4_0",
-   "quotient_4_1",
-   "quotient_4_2",
-   "quotient_4_3",
-   "quotient_4_4",
-   "quotient_4_5",
-   "quotient_5_0",
-   "quotient_5_1",
-   "quotient_5_2",
-   "quotient_5_3",
-   "quotient_5_4",
-   "quotient_5_5"
+   "R6c_5_5"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "QuotCoeff",
    "R6_poly",
@@ -664,17 +603,19 @@
    "quotient_5_3",
    "quotient_5_4",
    "quotient_5_5"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12U6PolynomialSeal.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "Phi11_eq_WeilRep",
    "evalMatrixK_R6_eq_actualU6",
    "evalPhi11_ζ",
    "eval_R6_entry"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12U6Semantic.lean": {
   "expose": [
@@ -683,7 +624,7 @@
    "directValue",
    "phasePoly"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "PolyQ",
    "actualU6",
@@ -695,31 +636,27 @@
    "eval_directEntryPoly",
    "eval_phasePoly",
    "phasePoly"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/D12U6Support.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "extendEven_single_apply"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/Definitions.lean": {
   "expose": [
    "DegeneratesToPlusMinusId",
    "GEquivariantMorphism.imageSet",
-   "HasDominantGEquivariantRationalMap",
-   "HasGEquivariantRationalMap",
    "HypothesisA",
    "HypothesisB",
    "IsCenterless",
-   "IsGUnirational",
    "IsInvolution",
    "IsLinearRCC",
    "IsRCC",
-   "NoFaithfulRepDegenerates",
-   "NotWeaklyVersal",
-   "ReceivesFromRep",
    "act",
    "centralizer",
    "fixedBy",
@@ -730,7 +667,7 @@
    "projectiveSMul",
    "projectivizationVariety"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "DegeneratesToPlusMinusId",
    "FaithfulLinearRep",
@@ -781,33 +718,29 @@
    "projectiveSMul_mul",
    "projectiveSMul_one",
    "projectivizationVariety"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/Foundations.lean": {
-  "expose": [
-   "ofPlusStratum"
-  ],
-  "expose_all_public_defs": true,
+  "expose": [],
+  "expose_all_public_defs": false,
   "public": [
    "TrackedStratum",
    "morphism_from_tracked_forces_N_fixed",
    "ofPlusStratum"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/GenericCharts.lean": {
   "expose": [
-   "biprojectiveGeneralBaseToFunctionField",
    "biprojectiveGeneralFunctionFieldAlgEquiv",
-   "biprojectiveGeneralFunctionFieldAlgebra",
    "biprojectiveGeneralFunctionFieldEquiv",
    "biprojectiveGeneralGammaEquivMvPolynomial",
-   "projectiveGeneralBaseToFunctionField",
    "projectiveGeneralFunctionFieldAlgEquiv",
-   "projectiveGeneralFunctionFieldAlgebra",
    "projectiveGeneralFunctionFieldEquiv",
    "projectiveGeneralGammaEquivMvPolynomial"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "no_expose": [],
   "public": [
    "biprojectiveGeneralBaseToFunctionField",
@@ -833,14 +766,10 @@
  },
  "V14Formalization/GeometricCarrier.lean": {
   "expose": [
-   "V14Variety",
-   "cosetAmbientAct",
-   "cosetEmbed",
-   "diracCoset",
    "t",
    "tMat"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "C11",
    "CosetMod",
@@ -862,7 +791,8 @@
    "t",
    "tMat",
    "tMat_pow"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/GeometricFanoCarrier.lean": {
   "expose": [
@@ -876,7 +806,7 @@
    "weilLambda2",
    "weilLambda2Hom"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F",
    "Lambda2U",
@@ -910,45 +840,42 @@
    "weilLambda2_mul",
    "weilLambda2_one",
    "ψ_half_ne_one"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/GeometricFanoV14.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "S_sq",
    "WeilU",
    "k"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/GeometricV14.lean": {
   "expose": [
-   "Gr2",
    "includeM"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "Ext2",
    "Gr2",
    "M10",
    "U",
    "includeM"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/GeometricV14Carrier.lean": {
   "expose": [
-   "Msub",
    "ambientAct",
    "chi10'",
-   "chiCrossTerm",
    "chiLambda2",
-   "chiSumOp",
-   "iRoot",
    "projectorM",
-   "residualKer",
    "sigma"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F",
    "Ipoly",
@@ -1023,13 +950,12 @@
    "sum_chi_chiLambda2_order_two",
    "support_eq_residualKer_of_R_character",
    "trace_exterior_newton"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/HeadlineStatement.lean": {
-  "expose": [
-   "PlusMinusCoords.ofRep"
-  ],
-  "expose_all_public_defs": true,
+  "expose": [],
+  "expose_all_public_defs": false,
   "public": [
    "G",
    "PlusMinusCoords",
@@ -1039,7 +965,8 @@
    "k",
    "not_degenerates",
    "ofFaithfulRep"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/InvariantSubschemeAction.lean": {
   "expose": [
@@ -1047,7 +974,7 @@
    "actionOver",
    "hom"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "IsInvariantIdeal",
    "action",
@@ -1057,14 +984,16 @@
    "hom_one",
    "hom_subschemeι",
    "of_comap_le"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/KernelLineDescent.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "kernelLine_descends_of_rank_eq_two"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/Lambda2Coordinates.lean": {
   "expose": [
@@ -1076,7 +1005,7 @@
    "pluckerPairEquiv",
    "uBasisCore"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "G",
    "Lambda2U",
@@ -1091,17 +1020,14 @@
    "pairEnumeration_bijective",
    "pluckerPairEquiv",
    "uBasisCore"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/LinearNormalActionReduction.lean": {
   "expose": [
-   "conjugateRingAction",
-   "orderedPlusMinusEquivariantNormalData",
-   "projectiveFiveChartValuationAction",
-   "xAdicRestrictAction",
-   "xAdicRestrictEquiv"
+   "conjugateRingAction"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "actionPrecomp_overStructureMap",
    "biprojectiveTwoTwoChartModelAction",
@@ -1121,17 +1047,15 @@
    "xAdicRestrictAction_residue_ring_of_constants",
    "xAdicRestrictEquiv",
    "xAdicSubring"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/LinearNormalEquivariant.lean": {
   "expose": [
    "linearChartGenericHom",
-   "linearChartResidueHom",
-   "linearNormalDataOfChart",
-   "linearNormalEquivariantDataOfChart",
-   "linearNormalEquivariantDataOfChart_of_actionFunctionFieldMap"
+   "linearChartResidueHom"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "linearChartGenericHom",
    "linearChartResidueHom",
@@ -1140,7 +1064,8 @@
    "linearNormalEquivariantDataOfChart_of_actionFunctionFieldMap",
    "spec_base_natural_of_ring",
    "spec_fraction_natural_of_ring"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/LinearNormalOrderedPresentation.lean": {
   "expose": [
@@ -1151,7 +1076,7 @@
    "orderedResidualPlusIndex",
    "residualCoordinateInField"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "linearNormalToOrderedCoordinateFieldEquiv",
    "linearNormalToOrderedCoordinateFieldEquiv_C_plus",
@@ -1172,25 +1097,20 @@
    "orderedResidualPlusIndex",
    "orderedResidualTowerField",
    "residualCoordinateInField"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/LinearNormalProjectiveChart.lean": {
   "expose": [
-   "biprojectiveTwoTwoFunctionFieldEquiv",
-   "biprojectiveTwoTwoGammaEquivMvPolynomial",
    "functionFieldBaseRingHom",
-   "linearNormalEquivariantDataOfProjectiveBiprojectiveCharts",
    "linearNormalFractionEquivMvPolynomialFive",
    "projectiveFiveFunctionFieldEquiv",
    "projectiveFiveGammaEquivMvPolynomial",
    "projectiveFiveLinearNormalFunctionFieldEquiv"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "no_expose": [
-   "biprojectiveTwoTwoBaseToFunctionField",
-   "biprojectiveTwoTwoFunctionFieldAlgEquiv",
    "linearNormalFractionAlgEquivMvPolynomialFive",
-   "projectiveFiveBaseToFunctionField",
    "projectiveFiveFunctionFieldAlgEquiv"
   ],
   "public": [
@@ -1242,7 +1162,7 @@
    "residueFieldEquiv",
    "xAdicResidue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "LinearExceptionalFunctionField",
    "LinearNormalAlgebraic.K",
@@ -1279,13 +1199,14 @@
    "xAdicResidue",
    "xAdicResidue_const",
    "xAdicResidue_ker"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/MvFracConstantField.lean": {
   "expose": [
    "mvFracBaseChange"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "mvFracBaseChange",
    "mvFracBaseChange_algebraMap_base",
@@ -1294,37 +1215,38 @@
    "mvFrac_eq_constant_of_map_eq_constant",
    "mvFrac_isAlgebraic_iff_constant",
    "ratFunc_isAlgebraic_iff_constant"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/Ord11CharacterSum.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "finrank_Msub_eq_ten"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/PSLGenerators.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F",
    "G",
    "SLG",
    "closure_mk_Smat_Tmat",
    "closure_mk_Smat_Tmat_pow_two"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/PluckerNaturality.lean": {
   "expose": [
    "compound2Lex",
-   "four",
-   "omega",
    "pairEmb",
    "pairLexEmb",
    "pairLexVec",
    "pluckerValue"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "E2_6",
    "E4_6",
@@ -1349,34 +1271,27 @@
    "pluckerValue",
    "span_aeval_pluckerQuadric_compound_le",
    "weilLambda2_toMatrix_eq_compound2Lex"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/PlusMinusBlockMatrix.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "ambientMatrixRepresentation_centralizer_block",
    "plusMinusAmbientBasis_toMatrix",
    "plusMinusLinearEquiv_conjugates_centralizer",
    "plusMinusMappedBasis_toMatrix"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/PointwiseSemidirect.lean": {
   "expose": [
-   "actionFunctionFieldEquiv",
-   "conjugateRingEquiv",
-   "linearEquivariantNormalDataOfPointwiseSemidirect",
    "linearNormalCoefficientEmbedding",
-   "linearNormalEquivariantDataOfChartPointwise",
    "linearNormalParameterElement",
-   "linearNormalScaledParameterElement",
-   "pointwiseSemidirectExceptionalEquiv",
-   "pointwiseSemidirectSourceEquiv",
-   "pointwiseSemidirectValuationEquiv",
-   "residualEquivOfAction",
-   "semidirectElementOfExceptionalAction"
+   "linearNormalScaledParameterElement"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "actionFunctionFieldEquiv",
    "actionFunctionFieldMap_fixes_base",
@@ -1399,14 +1314,15 @@
    "residualEquivOfAction_base",
    "semidirectElementOfExceptionalAction",
    "semidirectElementOfExceptionalAction_exceptional_field_map"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/ProjectiveAwayNaturality.lean": {
   "expose": [
    "awayMap_X_s",
    "awayMap_s_X"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "awayMap_X_s",
    "awayMap_X_s_mk",
@@ -1420,22 +1336,21 @@
    "projectiveZeroLocusFamilyIdeal_comap_mapLinearSubst_aeval",
    "projectiveZeroLocusIdeal_comap_awayι",
    "projectiveZeroLocusIdeal_comap_mapLinearSubst"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/ProjectiveAwayPullback.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "awayMap_linearSubst_normalizedCoordinate",
    "mapLinearSubst_appLE_awayToSection"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/ProjectiveDiagonalAction.lean": {
-  "expose": [
-   "diagonalChartHom",
-   "diagonalUnscaleAway"
-  ],
-  "expose_all_public_defs": true,
+  "expose": [],
+  "expose_all_public_defs": false,
   "public": [
    "diagonalChartHom",
    "diagonalChartHom_normalizedCoordinate_eq_neg_of_eq_neg",
@@ -1443,11 +1358,12 @@
    "diagonalUnscaleAway",
    "linearSubst_diagonal",
    "standardChartι_comp_mapLinearSubst_diagonal"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/ProjectiveEigenvectorReduction.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "eval_map_linearSubst_eq_mappedMatrix_mulVec",
    "exists_eigenScalar_of_mapLinearSubst_fixed",
@@ -1456,40 +1372,40 @@
    "pointOfNormalizedCoordinatesAlgebra_comp_mapLinearSubst",
    "standardChartEvalAlgebra_isLocalizationElem_linearSubst",
    "standardChartEvalAlgebra_linearSubstRatio"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/ProjectiveFamilyFieldPoint.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "aeval_eq_zero_of_projectiveZeroLocusIdeal_le_normalizedPoint_ker",
    "eval_map_eq_zero_of_projectiveZeroLocusFamily_point",
    "standardChartAlgebraPoint_appTop_hypersurfaceChartΓIso",
    "standardChartEvalAlgebra_hypersurfaceChartEquation"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/ProjectiveFamilyFieldPointLift.lean": {
-  "expose": [
-   "pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily"
-  ],
-  "expose_all_public_defs": true,
+  "expose": [],
+  "expose_all_public_defs": false,
   "public": [
    "pointOfNormalizedCoordinates_fixed_of_mulVec_eq_smul",
    "pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily",
    "pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily_toSpec",
    "pointOfNormalizedCoordinates_lifts_projectiveZeroLocusFamily_ι",
    "projectiveZeroLocusFamilyIdeal_le_pointOfNormalizedCoordinatesAlgebra_ker"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/ProjectiveFamilyNaturality.lean": {
   "expose": [
    "awayChartΓIso",
    "awayEquation",
    "awayEquationSection",
-   "awayHypersurfaceIdealSheaf",
-   "missing_projectiveZeroLocusIdeal_comap_awayι"
+   "awayHypersurfaceIdealSheaf"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "Away_map_awayEquation",
    "awayChartΓIso",
@@ -1513,30 +1429,30 @@
    "projectiveZeroLocusFamilyIdeal_comap_mapLinearSubst_aeval_of_single",
    "projectiveZeroLocusIdeal_comap_linearAwayι_comp_mapLinearSubst_of_chart",
    "projectiveZeroLocusIdeal_comap_mapLinearSubst_of_away_restriction"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/ProjectiveFunctionFieldAwayAction.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "mapLinearSubst_functionFieldMap_projectiveGeneral_standardChart"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/ProjectiveFunctionFieldChartReduction.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "mapLinearSubst_functionFieldMap_projectiveGeneral_algebraMap"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/ProjectiveGVariety.lean": {
   "expose": [
-   "HasEquivariantRationalMap",
-   "ofLinearRep",
-   "ofMatrixRepresentation",
-   "v14"
+   "ofMatrixRepresentation"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "HasEquivariantRationalMap",
    "ProjectiveGVariety",
@@ -1546,45 +1462,45 @@
    "ofMatrixRepresentation_irreducible",
    "toScheme",
    "v14"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/ProjectiveGammaAwayTransport.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "projectiveGeneralGammaEquivMvPolynomial_symm_eq_awayToSection"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/ProjectiveGeneralFunctionField.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "projectiveGeneralFunctionFieldEquiv_algebraMap"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/ProjectiveGermRatio.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "awayToSection_germ_linear_ratio_mul",
    "awayToSection_germ_standard_linear_ratio_isUnit"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/ProjectiveStandardChartAction.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "mapLinearSubst_appLE_projectiveGeneralGamma_symm"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/SchemeEquivariantSpecialization.lean": {
-  "expose": [
-   "specialize",
-   "specializeToCentralizerFixedBy",
-   "specializeToCentralizerFixedByOfPrecomp",
-   "specializeToCentralizerFixedBy_of_functionField"
-  ],
-  "expose_all_public_defs": true,
+  "expose": [],
+  "expose_all_public_defs": false,
   "public": [
    "EquivariantNormalValuationData",
    "noEquivariantRationalMap_of_noFixedSpecialization",
@@ -1594,7 +1510,8 @@
    "specializeToCentralizerFixedBy",
    "specializeToCentralizerFixedByOfPrecomp",
    "specializeToCentralizerFixedBy_of_functionField"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/SchemeFixedLocus.lean": {
   "expose": [
@@ -1603,7 +1520,7 @@
    "fixedByLift",
    "sigmaInCentralizer"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "FixedBy",
    "FixedByPair",
@@ -1620,43 +1537,45 @@
    "fixedByι",
    "fixedByι_comp_action",
    "sigmaInCentralizer"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/SchemeFixedProjectiveCoordinates.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "diagonalProjectiveHom",
    "exists_normalizedCoordinates_support_of_diagonal_sign_fixed",
    "exists_normalizedCoordinates_support_of_projectiveActionHom_fixed"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/SchemeFixedRationalMap.lean": {
-  "expose": [
-   "rationalMapToFixedBy"
-  ],
-  "expose_all_public_defs": true,
+  "expose": [],
+  "expose_all_public_defs": false,
   "public": [
    "fromFunctionField_compHom",
    "rationalMapToFixedBy",
    "rationalMapToFixedBy_comp_ι"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/SchemeFunctionFieldNaturality.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "Hom.functionFieldMap_comp",
    "Hom.functionFieldMap_congr",
    "Hom.functionFieldMap_germToFunctionField"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/SchemeFunctionFieldPrecomp.lean": {
   "expose": [
    "Hom.functionFieldMap",
    "actionFunctionFieldMap"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "Hom.functionFieldMap",
    "Hom.map_genericPoint_of_isDominant",
@@ -1665,7 +1584,8 @@
    "Spec_map_functionFieldMap_fromSpecStalk",
    "actionFunctionFieldMap",
    "actionPrecomp_fromFunctionField_generic"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/SchemeNormalSpecialization.lean": {
   "expose": [
@@ -1675,7 +1595,7 @@
    "specialize",
    "square"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "NormalValuationData",
    "generic_to_properLift",
@@ -1688,15 +1608,15 @@
    "specialize",
    "specialize_fromFunctionField",
    "square"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/SchemeProjectiveAction.lean": {
   "expose": [
    "projectiveAction",
-   "projectiveActionHom",
-   "projectiveActionOver"
+   "projectiveActionHom"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "FaithfulMatrixRepresentation",
    "MatrixRepresentation",
@@ -1705,13 +1625,14 @@
    "projectiveActionHom_mul",
    "projectiveActionHom_one",
    "projectiveActionOver"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/SchemeRationalConstancy.lean": {
   "expose": [
    "RationalMapIsConstantOver"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "RationalMapIsConstantOver",
    "actionPrecomp_constant",
@@ -1721,11 +1642,12 @@
    "noEquivariantRationalMap_of_constant_section",
    "rationalMapIsConstantOver_fixedBy_of_comp_descends",
    "rationalMapIsConstantOver_of_fromFunctionField_descends"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/SemidirectChartIntegration.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "chartSemidirectGroup",
    "semidirectBiprojectiveTwoTwoFunctionFieldAction",
@@ -1734,21 +1656,24 @@
    "semidirectChartResidueAction",
    "semidirectProjectiveFiveFunctionFieldAction",
    "semidirectProjectiveFive_chartModel"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/SmoothPlaneCubicMvFracDescent.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "smoothPlaneCubic_projective_descends_mvfrac"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/StandardChartAwayTransport.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "standardChartGammaIsoTop_hom_GammaSpecIso_inv"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/UniversalNormalDivisor.lean": {
   "expose": [
@@ -1760,7 +1685,6 @@
    "minusCentralizerMatrixRepresentation",
    "minusCentralizerRepresentation",
    "minusProjectiveActionOver",
-   "normalDivisorActionOver",
    "plusCentralizerMatrixRepresentation",
    "plusCentralizerRepresentation",
    "plusMinusAmbientBasis",
@@ -1769,7 +1693,7 @@
    "plusProjectiveActionOver",
    "sigmaCentralizer"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "CentralizerMinus",
    "CentralizerPlus",
@@ -1802,11 +1726,12 @@
    "plusMinusLinearEquiv_centralizer",
    "plusProjectiveActionOver",
    "sigmaCentralizer"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/UniversalSigmaDiagonal.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "ambientMatrixRepresentation_centralizer_block_general",
    "ambientMatrixRepresentation_sigma_diagonal",
@@ -1815,14 +1740,12 @@
    "plusMinusAmbientBasis_toMatrix_general",
    "plusMinusMappedBasis_toMatrix_general",
    "plusMinusSigmaSign"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/V14Application.lean": {
-  "expose": [
-   "sigma",
-   "sigmaLift"
-  ],
-  "expose_all_public_defs": true,
+  "expose": [],
+  "expose_all_public_defs": false,
   "public": [
    "F",
    "PSL2F11",
@@ -1836,45 +1759,47 @@
    "k",
    "sigma",
    "sigmaLift"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/V14D12FixedPointExclusion.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "G",
    "d12ActualReflMatrix",
    "d12ActualRotMatrix",
    "noEquivariantRationalMap_of_d12_certificate",
    "no_centralizer_fixed_section_of_certificate"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/V14FieldPointReconstruction.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "exists_normalizedResidueCoordinates_for_fieldPoint",
    "fieldPoint_eq_pointOfMappedNormalizedResidueCoordinates",
    "normalizedCoordinates_eq_of_pointOfNormalizedCoordinatesAlgebra_eq"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/V14FixedByAmbientPoint.lean": {
   "expose": [
    "ambientPointOfV14FixedBy"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "ambientPointOfV14FixedBy",
    "ambientPointOfV14FixedBy_isOver_and_fixed",
    "v14FieldPointOver",
    "v14FixedBy_schemePoint_ambient_isOver_and_fixed"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/V14FixedPointDescent.lean": {
-  "expose": [
-   "v14SchemePointOfNormalizedCoordinates"
-  ],
-  "expose_all_public_defs": true,
+  "expose": [],
+  "expose_all_public_defs": false,
   "public": [
    "k",
    "v14Equations_of_projector_and_plucker",
@@ -1882,20 +1807,22 @@
    "v14SchemePointOfNormalizedCoordinates_sigma_fixed",
    "v14SchemePointOfNormalizedCoordinates_toSpec",
    "v14SchemePointOfNormalizedCoordinates_ι"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/V14FixedPointEquations.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "exists_normalizedCoordinates_equations_of_v14FixedBy",
    "exists_normalizedCoordinates_v14FixedBy_projector_fixed",
    "map_projectorLinearCut"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/V14FixedPointSegreBridge.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "bilinearCoefficientMatrix",
    "det_bilinearCoefficientMatrix_eq_zero",
@@ -1903,14 +1830,12 @@
    "exists_pureTensor_of_twoByTwoMinors_eq_zero",
    "mem_plus_or_minus_projectiveStratum_of_fixed",
    "minusProjectiveStratum"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/V14ProjectorEigenspaceFactorization.lean": {
-  "expose": [
-   "minusProjector",
-   "plusProjector"
-  ],
-  "expose_all_public_defs": true,
+  "expose": [],
+  "expose_all_public_defs": false,
   "public": [
    "eigenvalue_eq_one_or_neg_one_of_involution",
    "eq_mulVec_mulVec_of_projector_fixed",
@@ -1920,29 +1845,29 @@
    "minusProjector_mulVec_eq_self",
    "plusProjector",
    "plusProjector_mulVec_eq_self"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/V14SchemeBaseChange.lean": {
   "expose": [
    "actionOverBaseChange"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "actionOverBaseChange",
    "actionOverBaseChange_carrier",
    "actionOverBaseChange_isProper",
    "actionOver_isProper"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/V14SchemeModel.lean": {
   "expose": [
    "action",
    "actionOver",
-   "action_of_plucker",
-   "equationDegree",
    "projectorMatrix"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "G",
    "Lambda2U",
@@ -1968,11 +1893,12 @@
    "v14Ideal_naturality",
    "v14Scheme",
    "v14Schemeι"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/WeierstrassSchemeDescent.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "AffineScheme",
    "AffineToBase",
@@ -1987,13 +1913,14 @@
    "projectivization_weierstrass_descends_of_pointBaseChange_surjective",
    "ringHomOfPoint",
    "specMap_comp_pointOfNormalizedCoordinates"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/WeilHom.lean": {
   "expose": [
    "weilUHom"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F",
    "SLG",
@@ -2002,13 +1929,14 @@
    "weilFun_of_big",
    "weilUHom",
    "weilU_mul"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/WeilMul.lean": {
   "expose": [
    "Rfull"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "Dfull_congr",
    "Dfull_conj_Nfull",
@@ -2030,7 +1958,8 @@
    "χ₂_inv",
    "χ₂_sq_one",
    "χ₂_two"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/WeilRepSL2.lean": {
   "expose": [
@@ -2048,7 +1977,7 @@
    "weilFun",
    "weilU"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "Dfull",
    "Dfull_preserves_even",
@@ -2076,15 +2005,17 @@
    "weilU_negI",
    "weilU_one",
    "χ₂_one"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/WeilWN.lean": {
   "expose": [],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "F",
    "Wfull_Nfull_Wfull"
-  ]
+  ],
+  "no_expose": []
  },
  "V14Formalization/XAdicSemidirectAction.lean": {
   "expose": [
@@ -2092,11 +2023,9 @@
    "xAdicPolynomialEquiv",
    "xAdicRatFuncEquiv",
    "xAdicSemidirectPolynomialAction",
-   "xAdicSemidirectRatFuncAction",
-   "xAdicSemidirectValuationAction",
-   "xAdicSemidirectValuationEquiv"
+   "xAdicSemidirectRatFuncAction"
   ],
-  "expose_all_public_defs": true,
+  "expose_all_public_defs": false,
   "public": [
    "ringAutUnitsAction",
    "xAdicPolynomialEquiv",
@@ -2113,6 +2042,7 @@
    "xAdicSemidirect_base_ring",
    "xAdicSemidirect_fraction_ring",
    "xAdicSemidirect_residue_ring"
-  ]
+  ],
+  "no_expose": []
  }
 }
