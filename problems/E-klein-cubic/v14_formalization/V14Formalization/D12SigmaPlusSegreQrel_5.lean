@@ -26,7 +26,7 @@ theorem Qexpand_5_0 :
       Bplus_poly_0_0 * Bplus_poly_14_0 - Bplus_poly_3_0 * Bplus_poly_8_0 + Bplus_poly_4_0 * Bplus_poly_7_0 := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_0, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_0 :
     Bplus_poly_0_0 * Bplus_poly_14_0 - Bplus_poly_3_0 * Bplus_poly_8_0 + Bplus_poly_4_0 * Bplus_poly_7_0 = Qraw_5_0 := by
@@ -35,7 +35,7 @@ theorem Qraw_eq_5_0 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_0 :
     Qraw_5_0 = Qplus_re_5_0 + Phi11 * Qquot_5_0 := by
@@ -45,7 +45,7 @@ theorem Qrel_5_0 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_0 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (0 : Fin 21) =
@@ -63,7 +63,7 @@ theorem Qexpand_5_1 :
       (Bplus_poly_0_0 * Bplus_poly_14_1 + Bplus_poly_0_1 * Bplus_poly_14_0) - (Bplus_poly_3_0 * Bplus_poly_8_1 + Bplus_poly_3_1 * Bplus_poly_8_0) + (Bplus_poly_4_0 * Bplus_poly_7_1 + Bplus_poly_4_1 * Bplus_poly_7_0) := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_1, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_1 :
     (Bplus_poly_0_0 * Bplus_poly_14_1 + Bplus_poly_0_1 * Bplus_poly_14_0) - (Bplus_poly_3_0 * Bplus_poly_8_1 + Bplus_poly_3_1 * Bplus_poly_8_0) + (Bplus_poly_4_0 * Bplus_poly_7_1 + Bplus_poly_4_1 * Bplus_poly_7_0) = Qraw_5_1 := by
@@ -72,7 +72,7 @@ theorem Qraw_eq_5_1 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_1 :
     Qraw_5_1 = Qplus_re_5_1 + Phi11 * Qquot_5_1 := by
@@ -82,7 +82,7 @@ theorem Qrel_5_1 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_1 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (1 : Fin 21) =
@@ -100,7 +100,7 @@ theorem Qexpand_5_2 :
       (Bplus_poly_0_0 * Bplus_poly_14_2 + Bplus_poly_0_2 * Bplus_poly_14_0) - (Bplus_poly_3_0 * Bplus_poly_8_2 + Bplus_poly_3_2 * Bplus_poly_8_0) + (Bplus_poly_4_0 * Bplus_poly_7_2 + Bplus_poly_4_2 * Bplus_poly_7_0) := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_2, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_2 :
     (Bplus_poly_0_0 * Bplus_poly_14_2 + Bplus_poly_0_2 * Bplus_poly_14_0) - (Bplus_poly_3_0 * Bplus_poly_8_2 + Bplus_poly_3_2 * Bplus_poly_8_0) + (Bplus_poly_4_0 * Bplus_poly_7_2 + Bplus_poly_4_2 * Bplus_poly_7_0) = Qraw_5_2 := by
@@ -109,7 +109,7 @@ theorem Qraw_eq_5_2 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_2 :
     Qraw_5_2 = Qplus_re_5_2 + Phi11 * Qquot_5_2 := by
@@ -119,7 +119,7 @@ theorem Qrel_5_2 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_2 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (2 : Fin 21) =
@@ -137,7 +137,7 @@ theorem Qexpand_5_3 :
       (Bplus_poly_0_0 * Bplus_poly_14_3 + Bplus_poly_0_3 * Bplus_poly_14_0) - (Bplus_poly_3_0 * Bplus_poly_8_3 + Bplus_poly_3_3 * Bplus_poly_8_0) + (Bplus_poly_4_0 * Bplus_poly_7_3 + Bplus_poly_4_3 * Bplus_poly_7_0) := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_3, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_3 :
     (Bplus_poly_0_0 * Bplus_poly_14_3 + Bplus_poly_0_3 * Bplus_poly_14_0) - (Bplus_poly_3_0 * Bplus_poly_8_3 + Bplus_poly_3_3 * Bplus_poly_8_0) + (Bplus_poly_4_0 * Bplus_poly_7_3 + Bplus_poly_4_3 * Bplus_poly_7_0) = Qraw_5_3 := by
@@ -146,7 +146,7 @@ theorem Qraw_eq_5_3 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_3 :
     Qraw_5_3 = Qplus_re_5_3 + Phi11 * Qquot_5_3 := by
@@ -156,7 +156,7 @@ theorem Qrel_5_3 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_3 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (3 : Fin 21) =
@@ -174,7 +174,7 @@ theorem Qexpand_5_4 :
       (Bplus_poly_0_0 * Bplus_poly_14_4 + Bplus_poly_0_4 * Bplus_poly_14_0) - (Bplus_poly_3_0 * Bplus_poly_8_4 + Bplus_poly_3_4 * Bplus_poly_8_0) + (Bplus_poly_4_0 * Bplus_poly_7_4 + Bplus_poly_4_4 * Bplus_poly_7_0) := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_4, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_4 :
     (Bplus_poly_0_0 * Bplus_poly_14_4 + Bplus_poly_0_4 * Bplus_poly_14_0) - (Bplus_poly_3_0 * Bplus_poly_8_4 + Bplus_poly_3_4 * Bplus_poly_8_0) + (Bplus_poly_4_0 * Bplus_poly_7_4 + Bplus_poly_4_4 * Bplus_poly_7_0) = Qraw_5_4 := by
@@ -183,7 +183,7 @@ theorem Qraw_eq_5_4 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_4 :
     Qraw_5_4 = Qplus_re_5_4 + Phi11 * Qquot_5_4 := by
@@ -193,7 +193,7 @@ theorem Qrel_5_4 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_4 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (4 : Fin 21) =
@@ -211,7 +211,7 @@ theorem Qexpand_5_5 :
       (Bplus_poly_0_0 * Bplus_poly_14_5 + Bplus_poly_0_5 * Bplus_poly_14_0) - (Bplus_poly_3_0 * Bplus_poly_8_5 + Bplus_poly_3_5 * Bplus_poly_8_0) + (Bplus_poly_4_0 * Bplus_poly_7_5 + Bplus_poly_4_5 * Bplus_poly_7_0) := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_5, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_5 :
     (Bplus_poly_0_0 * Bplus_poly_14_5 + Bplus_poly_0_5 * Bplus_poly_14_0) - (Bplus_poly_3_0 * Bplus_poly_8_5 + Bplus_poly_3_5 * Bplus_poly_8_0) + (Bplus_poly_4_0 * Bplus_poly_7_5 + Bplus_poly_4_5 * Bplus_poly_7_0) = Qraw_5_5 := by
@@ -220,7 +220,7 @@ theorem Qraw_eq_5_5 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_5 :
     Qraw_5_5 = Qplus_re_5_5 + Phi11 * Qquot_5_5 := by
@@ -230,7 +230,7 @@ theorem Qrel_5_5 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_5 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (5 : Fin 21) =
@@ -248,7 +248,7 @@ theorem Qexpand_5_6 :
       Bplus_poly_0_1 * Bplus_poly_14_1 - Bplus_poly_3_1 * Bplus_poly_8_1 + Bplus_poly_4_1 * Bplus_poly_7_1 := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_6, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_6 :
     Bplus_poly_0_1 * Bplus_poly_14_1 - Bplus_poly_3_1 * Bplus_poly_8_1 + Bplus_poly_4_1 * Bplus_poly_7_1 = Qraw_5_6 := by
@@ -257,7 +257,7 @@ theorem Qraw_eq_5_6 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_6 :
     Qraw_5_6 = Qplus_re_5_6 + Phi11 * Qquot_5_6 := by
@@ -267,7 +267,7 @@ theorem Qrel_5_6 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_6 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (6 : Fin 21) =
@@ -285,7 +285,7 @@ theorem Qexpand_5_7 :
       (Bplus_poly_0_1 * Bplus_poly_14_2 + Bplus_poly_0_2 * Bplus_poly_14_1) - (Bplus_poly_3_1 * Bplus_poly_8_2 + Bplus_poly_3_2 * Bplus_poly_8_1) + (Bplus_poly_4_1 * Bplus_poly_7_2 + Bplus_poly_4_2 * Bplus_poly_7_1) := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_7, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_7 :
     (Bplus_poly_0_1 * Bplus_poly_14_2 + Bplus_poly_0_2 * Bplus_poly_14_1) - (Bplus_poly_3_1 * Bplus_poly_8_2 + Bplus_poly_3_2 * Bplus_poly_8_1) + (Bplus_poly_4_1 * Bplus_poly_7_2 + Bplus_poly_4_2 * Bplus_poly_7_1) = Qraw_5_7 := by
@@ -294,7 +294,7 @@ theorem Qraw_eq_5_7 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_7 :
     Qraw_5_7 = Qplus_re_5_7 + Phi11 * Qquot_5_7 := by
@@ -304,7 +304,7 @@ theorem Qrel_5_7 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_7 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (7 : Fin 21) =
@@ -322,7 +322,7 @@ theorem Qexpand_5_8 :
       (Bplus_poly_0_1 * Bplus_poly_14_3 + Bplus_poly_0_3 * Bplus_poly_14_1) - (Bplus_poly_3_1 * Bplus_poly_8_3 + Bplus_poly_3_3 * Bplus_poly_8_1) + (Bplus_poly_4_1 * Bplus_poly_7_3 + Bplus_poly_4_3 * Bplus_poly_7_1) := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_8, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_8 :
     (Bplus_poly_0_1 * Bplus_poly_14_3 + Bplus_poly_0_3 * Bplus_poly_14_1) - (Bplus_poly_3_1 * Bplus_poly_8_3 + Bplus_poly_3_3 * Bplus_poly_8_1) + (Bplus_poly_4_1 * Bplus_poly_7_3 + Bplus_poly_4_3 * Bplus_poly_7_1) = Qraw_5_8 := by
@@ -331,7 +331,7 @@ theorem Qraw_eq_5_8 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_8 :
     Qraw_5_8 = Qplus_re_5_8 + Phi11 * Qquot_5_8 := by
@@ -341,7 +341,7 @@ theorem Qrel_5_8 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_8 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (8 : Fin 21) =
@@ -359,7 +359,7 @@ theorem Qexpand_5_9 :
       (Bplus_poly_0_1 * Bplus_poly_14_4 + Bplus_poly_0_4 * Bplus_poly_14_1) - (Bplus_poly_3_1 * Bplus_poly_8_4 + Bplus_poly_3_4 * Bplus_poly_8_1) + (Bplus_poly_4_1 * Bplus_poly_7_4 + Bplus_poly_4_4 * Bplus_poly_7_1) := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_9, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_9 :
     (Bplus_poly_0_1 * Bplus_poly_14_4 + Bplus_poly_0_4 * Bplus_poly_14_1) - (Bplus_poly_3_1 * Bplus_poly_8_4 + Bplus_poly_3_4 * Bplus_poly_8_1) + (Bplus_poly_4_1 * Bplus_poly_7_4 + Bplus_poly_4_4 * Bplus_poly_7_1) = Qraw_5_9 := by
@@ -368,7 +368,7 @@ theorem Qraw_eq_5_9 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_9 :
     Qraw_5_9 = Qplus_re_5_9 + Phi11 * Qquot_5_9 := by
@@ -378,7 +378,7 @@ theorem Qrel_5_9 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_9 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (9 : Fin 21) =
@@ -396,7 +396,7 @@ theorem Qexpand_5_10 :
       (Bplus_poly_0_1 * Bplus_poly_14_5 + Bplus_poly_0_5 * Bplus_poly_14_1) - (Bplus_poly_3_1 * Bplus_poly_8_5 + Bplus_poly_3_5 * Bplus_poly_8_1) + (Bplus_poly_4_1 * Bplus_poly_7_5 + Bplus_poly_4_5 * Bplus_poly_7_1) := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_10, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_10 :
     (Bplus_poly_0_1 * Bplus_poly_14_5 + Bplus_poly_0_5 * Bplus_poly_14_1) - (Bplus_poly_3_1 * Bplus_poly_8_5 + Bplus_poly_3_5 * Bplus_poly_8_1) + (Bplus_poly_4_1 * Bplus_poly_7_5 + Bplus_poly_4_5 * Bplus_poly_7_1) = Qraw_5_10 := by
@@ -405,7 +405,7 @@ theorem Qraw_eq_5_10 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_10 :
     Qraw_5_10 = Qplus_re_5_10 + Phi11 * Qquot_5_10 := by
@@ -415,7 +415,7 @@ theorem Qrel_5_10 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_10 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (10 : Fin 21) =
@@ -433,7 +433,7 @@ theorem Qexpand_5_11 :
       Bplus_poly_0_2 * Bplus_poly_14_2 - Bplus_poly_3_2 * Bplus_poly_8_2 + Bplus_poly_4_2 * Bplus_poly_7_2 := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_11, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_11 :
     Bplus_poly_0_2 * Bplus_poly_14_2 - Bplus_poly_3_2 * Bplus_poly_8_2 + Bplus_poly_4_2 * Bplus_poly_7_2 = Qraw_5_11 := by
@@ -442,7 +442,7 @@ theorem Qraw_eq_5_11 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_11 :
     Qraw_5_11 = Qplus_re_5_11 + Phi11 * Qquot_5_11 := by
@@ -452,7 +452,7 @@ theorem Qrel_5_11 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_11 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (11 : Fin 21) =
@@ -470,7 +470,7 @@ theorem Qexpand_5_12 :
       (Bplus_poly_0_2 * Bplus_poly_14_3 + Bplus_poly_0_3 * Bplus_poly_14_2) - (Bplus_poly_3_2 * Bplus_poly_8_3 + Bplus_poly_3_3 * Bplus_poly_8_2) + (Bplus_poly_4_2 * Bplus_poly_7_3 + Bplus_poly_4_3 * Bplus_poly_7_2) := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_12, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_12 :
     (Bplus_poly_0_2 * Bplus_poly_14_3 + Bplus_poly_0_3 * Bplus_poly_14_2) - (Bplus_poly_3_2 * Bplus_poly_8_3 + Bplus_poly_3_3 * Bplus_poly_8_2) + (Bplus_poly_4_2 * Bplus_poly_7_3 + Bplus_poly_4_3 * Bplus_poly_7_2) = Qraw_5_12 := by
@@ -479,7 +479,7 @@ theorem Qraw_eq_5_12 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_12 :
     Qraw_5_12 = Qplus_re_5_12 + Phi11 * Qquot_5_12 := by
@@ -489,7 +489,7 @@ theorem Qrel_5_12 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_12 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (12 : Fin 21) =
@@ -507,7 +507,7 @@ theorem Qexpand_5_13 :
       (Bplus_poly_0_2 * Bplus_poly_14_4 + Bplus_poly_0_4 * Bplus_poly_14_2) - (Bplus_poly_3_2 * Bplus_poly_8_4 + Bplus_poly_3_4 * Bplus_poly_8_2) + (Bplus_poly_4_2 * Bplus_poly_7_4 + Bplus_poly_4_4 * Bplus_poly_7_2) := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_13, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_13 :
     (Bplus_poly_0_2 * Bplus_poly_14_4 + Bplus_poly_0_4 * Bplus_poly_14_2) - (Bplus_poly_3_2 * Bplus_poly_8_4 + Bplus_poly_3_4 * Bplus_poly_8_2) + (Bplus_poly_4_2 * Bplus_poly_7_4 + Bplus_poly_4_4 * Bplus_poly_7_2) = Qraw_5_13 := by
@@ -516,7 +516,7 @@ theorem Qraw_eq_5_13 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_13 :
     Qraw_5_13 = Qplus_re_5_13 + Phi11 * Qquot_5_13 := by
@@ -526,7 +526,7 @@ theorem Qrel_5_13 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_13 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (13 : Fin 21) =
@@ -544,7 +544,7 @@ theorem Qexpand_5_14 :
       (Bplus_poly_0_2 * Bplus_poly_14_5 + Bplus_poly_0_5 * Bplus_poly_14_2) - (Bplus_poly_3_2 * Bplus_poly_8_5 + Bplus_poly_3_5 * Bplus_poly_8_2) + (Bplus_poly_4_2 * Bplus_poly_7_5 + Bplus_poly_4_5 * Bplus_poly_7_2) := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_14, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_14 :
     (Bplus_poly_0_2 * Bplus_poly_14_5 + Bplus_poly_0_5 * Bplus_poly_14_2) - (Bplus_poly_3_2 * Bplus_poly_8_5 + Bplus_poly_3_5 * Bplus_poly_8_2) + (Bplus_poly_4_2 * Bplus_poly_7_5 + Bplus_poly_4_5 * Bplus_poly_7_2) = Qraw_5_14 := by
@@ -553,7 +553,7 @@ theorem Qraw_eq_5_14 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_14 :
     Qraw_5_14 = Qplus_re_5_14 + Phi11 * Qquot_5_14 := by
@@ -563,7 +563,7 @@ theorem Qrel_5_14 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_14 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (14 : Fin 21) =
@@ -581,7 +581,7 @@ theorem Qexpand_5_15 :
       Bplus_poly_0_3 * Bplus_poly_14_3 - Bplus_poly_3_3 * Bplus_poly_8_3 + Bplus_poly_4_3 * Bplus_poly_7_3 := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_15, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_15 :
     Bplus_poly_0_3 * Bplus_poly_14_3 - Bplus_poly_3_3 * Bplus_poly_8_3 + Bplus_poly_4_3 * Bplus_poly_7_3 = Qraw_5_15 := by
@@ -590,7 +590,7 @@ theorem Qraw_eq_5_15 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_15 :
     Qraw_5_15 = Qplus_re_5_15 + Phi11 * Qquot_5_15 := by
@@ -600,7 +600,7 @@ theorem Qrel_5_15 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_15 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (15 : Fin 21) =
@@ -618,7 +618,7 @@ theorem Qexpand_5_16 :
       (Bplus_poly_0_3 * Bplus_poly_14_4 + Bplus_poly_0_4 * Bplus_poly_14_3) - (Bplus_poly_3_3 * Bplus_poly_8_4 + Bplus_poly_3_4 * Bplus_poly_8_3) + (Bplus_poly_4_3 * Bplus_poly_7_4 + Bplus_poly_4_4 * Bplus_poly_7_3) := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_16, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_16 :
     (Bplus_poly_0_3 * Bplus_poly_14_4 + Bplus_poly_0_4 * Bplus_poly_14_3) - (Bplus_poly_3_3 * Bplus_poly_8_4 + Bplus_poly_3_4 * Bplus_poly_8_3) + (Bplus_poly_4_3 * Bplus_poly_7_4 + Bplus_poly_4_4 * Bplus_poly_7_3) = Qraw_5_16 := by
@@ -627,7 +627,7 @@ theorem Qraw_eq_5_16 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_16 :
     Qraw_5_16 = Qplus_re_5_16 + Phi11 * Qquot_5_16 := by
@@ -637,7 +637,7 @@ theorem Qrel_5_16 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_16 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (16 : Fin 21) =
@@ -655,7 +655,7 @@ theorem Qexpand_5_17 :
       (Bplus_poly_0_3 * Bplus_poly_14_5 + Bplus_poly_0_5 * Bplus_poly_14_3) - (Bplus_poly_3_3 * Bplus_poly_8_5 + Bplus_poly_3_5 * Bplus_poly_8_3) + (Bplus_poly_4_3 * Bplus_poly_7_5 + Bplus_poly_4_5 * Bplus_poly_7_3) := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_17, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_17 :
     (Bplus_poly_0_3 * Bplus_poly_14_5 + Bplus_poly_0_5 * Bplus_poly_14_3) - (Bplus_poly_3_3 * Bplus_poly_8_5 + Bplus_poly_3_5 * Bplus_poly_8_3) + (Bplus_poly_4_3 * Bplus_poly_7_5 + Bplus_poly_4_5 * Bplus_poly_7_3) = Qraw_5_17 := by
@@ -664,7 +664,7 @@ theorem Qraw_eq_5_17 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_17 :
     Qraw_5_17 = Qplus_re_5_17 + Phi11 * Qquot_5_17 := by
@@ -674,7 +674,7 @@ theorem Qrel_5_17 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_17 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (17 : Fin 21) =
@@ -692,7 +692,7 @@ theorem Qexpand_5_18 :
       Bplus_poly_0_4 * Bplus_poly_14_4 - Bplus_poly_3_4 * Bplus_poly_8_4 + Bplus_poly_4_4 * Bplus_poly_7_4 := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_18, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_18 :
     Bplus_poly_0_4 * Bplus_poly_14_4 - Bplus_poly_3_4 * Bplus_poly_8_4 + Bplus_poly_4_4 * Bplus_poly_7_4 = Qraw_5_18 := by
@@ -701,7 +701,7 @@ theorem Qraw_eq_5_18 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_18 :
     Qraw_5_18 = Qplus_re_5_18 + Phi11 * Qquot_5_18 := by
@@ -711,7 +711,7 @@ theorem Qrel_5_18 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_18 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (18 : Fin 21) =
@@ -729,7 +729,7 @@ theorem Qexpand_5_19 :
       (Bplus_poly_0_4 * Bplus_poly_14_5 + Bplus_poly_0_5 * Bplus_poly_14_4) - (Bplus_poly_3_4 * Bplus_poly_8_5 + Bplus_poly_3_5 * Bplus_poly_8_4) + (Bplus_poly_4_4 * Bplus_poly_7_5 + Bplus_poly_4_5 * Bplus_poly_7_4) := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_19, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_19 :
     (Bplus_poly_0_4 * Bplus_poly_14_5 + Bplus_poly_0_5 * Bplus_poly_14_4) - (Bplus_poly_3_4 * Bplus_poly_8_5 + Bplus_poly_3_5 * Bplus_poly_8_4) + (Bplus_poly_4_4 * Bplus_poly_7_5 + Bplus_poly_4_5 * Bplus_poly_7_4) = Qraw_5_19 := by
@@ -738,7 +738,7 @@ theorem Qraw_eq_5_19 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_19 :
     Qraw_5_19 = Qplus_re_5_19 + Phi11 * Qquot_5_19 := by
@@ -748,7 +748,7 @@ theorem Qrel_5_19 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_19 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (19 : Fin 21) =
@@ -766,7 +766,7 @@ theorem Qexpand_5_20 :
       Bplus_poly_0_5 * Bplus_poly_14_5 - Bplus_poly_3_5 * Bplus_poly_8_5 + Bplus_poly_4_5 * Bplus_poly_7_5 := by
   simp [restrictedPluckerCoeffs, bilinearCoeffs,
     monomPair_20, pluckerRelation_5, Bplus_poly, Bplus_poly_row0, Bplus_poly_row14, Bplus_poly_row3, Bplus_poly_row8, Bplus_poly_row4, Bplus_poly_row7]
-  try ring
+  try grind
 
 theorem Qraw_eq_5_20 :
     Bplus_poly_0_5 * Bplus_poly_14_5 - Bplus_poly_3_5 * Bplus_poly_8_5 + Bplus_poly_4_5 * Bplus_poly_7_5 = Qraw_5_20 := by
@@ -775,7 +775,7 @@ theorem Qraw_eq_5_20 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qrel_5_20 :
     Qraw_5_20 = Qplus_re_5_20 + Phi11 * Qquot_5_20 := by
@@ -785,7 +785,7 @@ theorem Qrel_5_20 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem Qplus_eq_restricted_5_20 :
     restrictedPluckerCoeffs BplusKi (5 : Fin 15) (20 : Fin 21) =

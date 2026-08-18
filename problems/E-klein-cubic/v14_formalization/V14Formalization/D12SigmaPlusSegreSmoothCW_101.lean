@@ -22,7 +22,7 @@ theorem CW_101_0_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CW_101_0_pim_eq :
     CW_0_re_000 * Fplus_dU_im_101 + CW_0_im_000 * Fplus_dU_re_101 = CW_101_0_pim := by
   refine Polynomial.funext fun r => ?_
@@ -30,7 +30,7 @@ theorem CW_101_0_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CW_101_0_mul :
     CW_0_c_000 * Fplus_dU_c_101 = ofLadj CW_101_0_pre CW_101_0_pim := by
   rw [CW_0_c_000, Fplus_dU_c_101, ofLadj_mul, CW_101_0_pre_eq, CW_101_0_pim_eq]
@@ -44,7 +44,7 @@ theorem CW_101_1_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CW_101_1_pim_eq :
     CW_1_re_000 * Fplus_dV_im_101 + CW_1_im_000 * Fplus_dV_re_101 = CW_101_1_pim := by
   refine Polynomial.funext fun r => ?_
@@ -52,7 +52,7 @@ theorem CW_101_1_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CW_101_1_mul :
     CW_1_c_000 * Fplus_dV_c_101 = ofLadj CW_101_1_pre CW_101_1_pim := by
   rw [CW_1_c_000, Fplus_dV_c_101, ofLadj_mul, CW_101_1_pre_eq, CW_101_1_pim_eq]
@@ -66,7 +66,7 @@ theorem CW_101_2_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CW_101_2_pim_eq :
     CW_2_re_000 * Fplus_dW_im_101 + CW_2_im_000 * Fplus_dW_re_101 = CW_101_2_pim := by
   refine Polynomial.funext fun r => ?_
@@ -74,7 +74,7 @@ theorem CW_101_2_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CW_101_2_mul :
     CW_2_c_000 * Fplus_dW_c_101 = ofLadj CW_101_2_pre CW_101_2_pim := by
   rw [CW_2_c_000, Fplus_dW_c_101, ofLadj_mul, CW_101_2_pre_eq, CW_101_2_pim_eq]
@@ -87,14 +87,14 @@ theorem CW_101_3_neg_re : -CW_3_re_101 = CW_101_3_pre := by
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CW_101_3_neg_im : -CW_3_im_101 = CW_101_3_pim := by
   refine Polynomial.funext fun r => ?_
   simp only [CW_3_im_101, CW_101_3_pim]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CW_101_3_mul : -CW_3_c_101 = ofLadj CW_101_3_pre CW_101_3_pim := by
   rw [CW_3_c_101, ofLadj_neg, CW_101_3_neg_re, CW_101_3_neg_im]
 
@@ -115,7 +115,7 @@ theorem CW_coeff_101_poly_re :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 theorem CW_coeff_101_poly_im :
     CW_101_0_pim + CW_101_1_pim + CW_101_2_pim + CW_101_3_pim = (0 : Polynomial ℚ) + Phi11 * CW_101_qim := by
   refine Polynomial.funext fun r => ?_
@@ -124,7 +124,7 @@ theorem CW_coeff_101_poly_im :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 public theorem CW_coeff_101_eq :
     CW_coeff_101 = (0 : Ki) := by
   rw [CW_coeff_101_sum, CW_coeff_101_poly_re,

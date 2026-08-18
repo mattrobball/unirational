@@ -23,7 +23,7 @@ theorem DC111_0_ab_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_0_ab_pim_eq :
     N_re_0_3 * N_im_1_4 + N_im_0_3 * N_re_1_4 =
@@ -33,7 +33,7 @@ theorem DC111_0_ab_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_0_ab_mul :
     N_entry_0_3 * N_entry_1_4 =
@@ -49,7 +49,7 @@ theorem DC111_0_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_0_pim_eq :
     DC111_0_ab_pre * N_im_2_5 + DC111_0_ab_pim * N_re_2_5 =
@@ -59,7 +59,7 @@ theorem DC111_0_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_0_mul :
     N_entry_0_3 * N_entry_1_4 * N_entry_2_5 =
@@ -78,7 +78,7 @@ theorem DC111_1_ab_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_1_ab_pim_eq :
     N_re_0_4 * N_im_1_5 + N_im_0_4 * N_re_1_5 =
@@ -88,7 +88,7 @@ theorem DC111_1_ab_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_1_ab_mul :
     N_entry_0_4 * N_entry_1_5 =
@@ -104,7 +104,7 @@ theorem DC111_1_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_1_pim_eq :
     DC111_1_ab_pre * N_im_2_3 + DC111_1_ab_pim * N_re_2_3 =
@@ -114,7 +114,7 @@ theorem DC111_1_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_1_mul :
     N_entry_0_4 * N_entry_1_5 * N_entry_2_3 =
@@ -133,7 +133,7 @@ theorem DC111_2_ab_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_2_ab_pim_eq :
     N_re_0_5 * N_im_1_3 + N_im_0_5 * N_re_1_3 =
@@ -143,7 +143,7 @@ theorem DC111_2_ab_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_2_ab_mul :
     N_entry_0_5 * N_entry_1_3 =
@@ -159,7 +159,7 @@ theorem DC111_2_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_2_pim_eq :
     DC111_2_ab_pre * N_im_2_4 + DC111_2_ab_pim * N_re_2_4 =
@@ -169,7 +169,7 @@ theorem DC111_2_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_2_mul :
     N_entry_0_5 * N_entry_1_3 * N_entry_2_4 =
@@ -188,7 +188,7 @@ theorem DC111_3_ab_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_3_ab_pim_eq :
     N_re_0_3 * N_im_1_5 + N_im_0_3 * N_re_1_5 =
@@ -198,7 +198,7 @@ theorem DC111_3_ab_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_3_ab_mul :
     N_entry_0_3 * N_entry_1_5 =
@@ -214,7 +214,7 @@ theorem DC111_3_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_3_pim_eq :
     DC111_3_ab_pre * N_im_2_4 + DC111_3_ab_pim * N_re_2_4 =
@@ -224,7 +224,7 @@ theorem DC111_3_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_3_mul :
     N_entry_0_3 * N_entry_1_5 * N_entry_2_4 =
@@ -239,14 +239,14 @@ theorem DC111_3_spre_eq : -DC111_3_pre = DC111_3_spre := by
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem DC111_3_spim_eq : -DC111_3_pim = DC111_3_spim := by
   refine Polynomial.funext fun r => ?_
   simp only [DC111_3_pim, DC111_3_spim]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem DC111_3_smul :
     -(N_entry_0_3 * N_entry_1_5 * N_entry_2_4) =
       ofLadj DC111_3_spre DC111_3_spim := by
@@ -264,7 +264,7 @@ theorem DC111_4_ab_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_4_ab_pim_eq :
     N_re_0_4 * N_im_1_3 + N_im_0_4 * N_re_1_3 =
@@ -274,7 +274,7 @@ theorem DC111_4_ab_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_4_ab_mul :
     N_entry_0_4 * N_entry_1_3 =
@@ -290,7 +290,7 @@ theorem DC111_4_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_4_pim_eq :
     DC111_4_ab_pre * N_im_2_5 + DC111_4_ab_pim * N_re_2_5 =
@@ -300,7 +300,7 @@ theorem DC111_4_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_4_mul :
     N_entry_0_4 * N_entry_1_3 * N_entry_2_5 =
@@ -315,14 +315,14 @@ theorem DC111_4_spre_eq : -DC111_4_pre = DC111_4_spre := by
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem DC111_4_spim_eq : -DC111_4_pim = DC111_4_spim := by
   refine Polynomial.funext fun r => ?_
   simp only [DC111_4_pim, DC111_4_spim]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem DC111_4_smul :
     -(N_entry_0_4 * N_entry_1_3 * N_entry_2_5) =
       ofLadj DC111_4_spre DC111_4_spim := by
@@ -340,7 +340,7 @@ theorem DC111_5_ab_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_5_ab_pim_eq :
     N_re_0_5 * N_im_1_4 + N_im_0_5 * N_re_1_4 =
@@ -350,7 +350,7 @@ theorem DC111_5_ab_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_5_ab_mul :
     N_entry_0_5 * N_entry_1_4 =
@@ -366,7 +366,7 @@ theorem DC111_5_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_5_pim_eq :
     DC111_5_ab_pre * N_im_2_3 + DC111_5_ab_pim * N_re_2_3 =
@@ -376,7 +376,7 @@ theorem DC111_5_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 
 theorem DC111_5_mul :
     N_entry_0_5 * N_entry_1_4 * N_entry_2_3 =
@@ -391,14 +391,14 @@ theorem DC111_5_spre_eq : -DC111_5_pre = DC111_5_spre := by
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem DC111_5_spim_eq : -DC111_5_pim = DC111_5_spim := by
   refine Polynomial.funext fun r => ?_
   simp only [DC111_5_pim, DC111_5_spim]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem DC111_5_smul :
     -(N_entry_0_5 * N_entry_1_4 * N_entry_2_3) =
       ofLadj DC111_5_spre DC111_5_spim := by
@@ -423,7 +423,7 @@ theorem detCoeff_111_sum_poly_re :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem detCoeff_111_sum_poly_im :
     DC111_0_pim + DC111_1_pim + DC111_2_pim + DC111_3_spim + DC111_4_spim + DC111_5_spim = Fplus_im_111 + Phi11 * DC111_qim := by
@@ -433,7 +433,7 @@ theorem detCoeff_111_sum_poly_im :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 public theorem detCoeff_111_eq :
     detCoeff_111 = ofLadj Fplus_re_111 Fplus_im_111 := by

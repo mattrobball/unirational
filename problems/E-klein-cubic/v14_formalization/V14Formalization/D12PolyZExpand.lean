@@ -36,7 +36,7 @@ public theorem interpQ_expand_10_19 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a9 : ℚ)) * X ^ 9 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_10_20 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -44,14 +44,14 @@ public theorem interpQ_expand_10_20 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) 
       C ((a7 : ℚ)) * X ^ 7 + C ((a8 : ℚ)) * X ^ 8 + C ((a9 : ℚ)) * X ^ 9 =
       interpQ 1 [a0, 0, a2, a3, a4, a5, a6, a7, a8, a9] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_10_21 (a0 : ℤ) (a2 : ℤ) (a5 : ℤ) (a6 : ℤ) (a9 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a5 : ℚ)) * X ^ 5 +
       C ((a6 : ℚ)) * X ^ 6 + C ((a9 : ℚ)) * X ^ 9 =
       interpQ 1 [a0, 0, a2, 0, 0, a5, a6, 0, 0, a9] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_10_22 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -59,7 +59,7 @@ public theorem interpQ_expand_10_22 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) 
       C ((a8 : ℚ)) * X ^ 8 + C ((a9 : ℚ)) * X ^ 9 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_16_23 (a0 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) :
     C ((a0 : ℚ)) + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -70,7 +70,7 @@ public theorem interpQ_expand_16_23 (a0 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) 
       C ((a15 : ℚ)) * X ^ 15 =
       interpQ 1 [a0, 0, 0, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_16_24 (a0 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a15 : ℤ) :
     C ((a0 : ℚ)) + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -80,7 +80,7 @@ public theorem interpQ_expand_16_24 (a0 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) 
       C ((a13 : ℚ)) * X ^ 13 + C ((a15 : ℚ)) * X ^ 15 =
       interpQ 1 [a0, 0, 0, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, 0, a15] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_16_25 (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) :
     C ((a5 : ℚ)) * X ^ 5 + C ((a6 : ℚ)) * X ^ 6 + C ((a7 : ℚ)) * X ^ 7 +
@@ -90,7 +90,7 @@ public theorem interpQ_expand_16_25 (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) 
       C ((a15 : ℚ)) * X ^ 15 =
       interpQ 1 [0, 0, 0, 0, 0, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_16_26 (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a14 : ℤ) (a15 : ℤ) :
     C ((a5 : ℚ)) * X ^ 5 + C ((a6 : ℚ)) * X ^ 6 + C ((a7 : ℚ)) * X ^ 7 +
@@ -99,7 +99,7 @@ public theorem interpQ_expand_16_26 (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) 
       C ((a15 : ℚ)) * X ^ 15 =
       interpQ 1 [0, 0, 0, 0, 0, a5, a6, a7, a8, 0, a10, a11, a12, 0, a14, a15] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_16_27 (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) :
     C ((a7 : ℚ)) * X ^ 7 + C ((a8 : ℚ)) * X ^ 8 + C ((a9 : ℚ)) * X ^ 9 +
@@ -108,7 +108,7 @@ public theorem interpQ_expand_16_27 (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ)
       C ((a14 : ℚ)) * X ^ 14 + C ((a15 : ℚ)) * X ^ 15 =
       interpQ 1 [0, 0, 0, 0, 0, 0, 0, a7, a8, a9, a10, a11, a12, a13, a14, a15] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_17_28 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -120,7 +120,7 @@ public theorem interpQ_expand_17_28 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_17_29 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -131,7 +131,7 @@ public theorem interpQ_expand_17_29 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a15 : ℚ)) * X ^ 15 + C ((a16 : ℚ)) * X ^ 16 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, 0, a14, a15, a16] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_17_30 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -141,7 +141,7 @@ public theorem interpQ_expand_17_30 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, 0, 0, 0, 0, a14, a15, a16] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_17_31 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -153,7 +153,7 @@ public theorem interpQ_expand_17_31 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 =
       interpQ 1 [a0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_17_32 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a8 : ℤ) (a9 : ℤ) (a11 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -163,7 +163,7 @@ public theorem interpQ_expand_17_32 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) 
       C ((a15 : ℚ)) * X ^ 15 + C ((a16 : ℚ)) * X ^ 16 =
       interpQ 1 [a0, 0, a2, a3, a4, a5, a6, 0, a8, a9, 0, a11, 0, a13, a14, a15, a16] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_17_33 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -174,7 +174,7 @@ public theorem interpQ_expand_17_33 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a5 : ℤ) 
       C ((a15 : ℚ)) * X ^ 15 + C ((a16 : ℚ)) * X ^ 16 =
       interpQ 1 [a0, 0, a2, a3, 0, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_17_34 (a0 : ℤ) (a2 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a13 : ℤ) (a16 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a4 : ℚ)) * X ^ 4 +
@@ -183,7 +183,7 @@ public theorem interpQ_expand_17_34 (a0 : ℤ) (a2 : ℤ) (a4 : ℤ) (a5 : ℤ) 
       C ((a13 : ℚ)) * X ^ 13 + C ((a16 : ℚ)) * X ^ 16 =
       interpQ 1 [a0, 0, a2, 0, a4, a5, a6, a7, 0, a9, a10, 0, a12, a13, 0, 0, a16] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_17_35 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -194,7 +194,7 @@ public theorem interpQ_expand_17_35 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) 
       C ((a15 : ℚ)) * X ^ 15 + C ((a16 : ℚ)) * X ^ 16 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_17_36 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -205,7 +205,7 @@ public theorem interpQ_expand_17_36 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a6 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 =
       interpQ 1 [0, 0, a2, a3, a4, 0, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_17_37 (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) :
     C ((a6 : ℚ)) * X ^ 6 + C ((a7 : ℚ)) * X ^ 7 + C ((a8 : ℚ)) * X ^ 8 +
@@ -215,7 +215,7 @@ public theorem interpQ_expand_17_37 (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 =
       interpQ 1 [0, 0, 0, 0, 0, 0, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_38 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -227,7 +227,7 @@ public theorem interpQ_expand_18_38 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 + C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_39 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -239,7 +239,7 @@ public theorem interpQ_expand_18_39 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, 0, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_40 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -251,7 +251,7 @@ public theorem interpQ_expand_18_40 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, 0, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_41 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -262,7 +262,7 @@ public theorem interpQ_expand_18_41 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, 0, 0, 0, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_42 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -273,7 +273,7 @@ public theorem interpQ_expand_18_42 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, 0, 0, 0, 0, a11, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_43 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -285,7 +285,7 @@ public theorem interpQ_expand_18_43 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 + C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, 0, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_44 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -297,7 +297,7 @@ public theorem interpQ_expand_18_44 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a4 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 + C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [a0, a1, a2, 0, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_45 (a0 : ℤ) (a1 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a4 : ℚ)) * X ^ 4 +
@@ -309,7 +309,7 @@ public theorem interpQ_expand_18_45 (a0 : ℤ) (a1 : ℤ) (a4 : ℤ) (a5 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [a0, a1, 0, 0, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_46 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -321,7 +321,7 @@ public theorem interpQ_expand_18_46 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 + C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [a0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_47 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a17 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -332,7 +332,7 @@ public theorem interpQ_expand_18_47 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) 
       C ((a15 : ℚ)) * X ^ 15 + C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [a0, 0, a2, a3, a4, a5, 0, a7, a8, a9, a10, a11, a12, a13, a14, a15, 0, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_48 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -344,7 +344,7 @@ public theorem interpQ_expand_18_48 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [a0, 0, a2, a3, a4, 0, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_49 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a17 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -354,7 +354,7 @@ public theorem interpQ_expand_18_49 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a5 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [a0, 0, a2, a3, 0, a5, a6, 0, a8, a9, a10, 0, a12, a13, a14, 0, 0, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_50 (a0 : ℤ) (a2 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a4 : ℚ)) * X ^ 4 +
@@ -366,7 +366,7 @@ public theorem interpQ_expand_18_50 (a0 : ℤ) (a2 : ℤ) (a4 : ℤ) (a5 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [a0, 0, a2, 0, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_51 (a0 : ℤ) (a2 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a11 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a17 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a4 : ℚ)) * X ^ 4 +
@@ -376,7 +376,7 @@ public theorem interpQ_expand_18_51 (a0 : ℤ) (a2 : ℤ) (a4 : ℤ) (a5 : ℤ) 
       C ((a15 : ℚ)) * X ^ 15 + C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [a0, 0, a2, 0, a4, a5, a6, a7, a8, a9, 0, a11, 0, a13, a14, a15, 0, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_52 (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -388,7 +388,7 @@ public theorem interpQ_expand_18_52 (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 + C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_53 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -400,7 +400,7 @@ public theorem interpQ_expand_18_53 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_54 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 + C ((a5 : ℚ)) * X ^ 5 +
@@ -411,7 +411,7 @@ public theorem interpQ_expand_18_54 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 + C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_55 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a17 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 + C ((a5 : ℚ)) * X ^ 5 +
@@ -422,7 +422,7 @@ public theorem interpQ_expand_18_55 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, 0, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_56 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 + C ((a5 : ℚ)) * X ^ 5 +
@@ -433,7 +433,7 @@ public theorem interpQ_expand_18_56 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, 0, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_57 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a15 : ℤ) (a17 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 + C ((a5 : ℚ)) * X ^ 5 +
@@ -443,7 +443,7 @@ public theorem interpQ_expand_18_57 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) 
       C ((a15 : ℚ)) * X ^ 15 + C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, 0, a15, 0, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_58 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 + C ((a5 : ℚ)) * X ^ 5 +
@@ -454,7 +454,7 @@ public theorem interpQ_expand_18_58 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, a3, a4, a5, a6, a7, a8, a9, a10, 0, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_59 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a11 : ℤ) (a13 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 + C ((a5 : ℚ)) * X ^ 5 +
@@ -464,7 +464,7 @@ public theorem interpQ_expand_18_59 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, a3, a4, a5, a6, a7, a8, a9, 0, a11, 0, a13, 0, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_60 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 + C ((a5 : ℚ)) * X ^ 5 +
@@ -475,7 +475,7 @@ public theorem interpQ_expand_18_60 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 + C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, a3, a4, a5, a6, a7, 0, a9, a10, a11, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_61 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a17 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 + C ((a5 : ℚ)) * X ^ 5 +
@@ -485,7 +485,7 @@ public theorem interpQ_expand_18_61 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) 
       C ((a14 : ℚ)) * X ^ 14 + C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, a3, a4, a5, a6, a7, 0, a9, a10, a11, a12, a13, a14, 0, 0, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_62 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a7 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 + C ((a5 : ℚ)) * X ^ 5 +
@@ -495,7 +495,7 @@ public theorem interpQ_expand_18_62 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a7 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 + C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, a3, a4, a5, 0, a7, 0, a9, a10, a11, a12, a13, a14, 0, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_63 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a7 : ℤ) (a9 : ℤ) (a11 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 + C ((a5 : ℚ)) * X ^ 5 +
@@ -505,7 +505,7 @@ public theorem interpQ_expand_18_63 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a7 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, a3, a4, a5, 0, a7, 0, a9, 0, a11, 0, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_64 (a3 : ℤ) (a4 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 + C ((a6 : ℚ)) * X ^ 6 +
@@ -516,7 +516,7 @@ public theorem interpQ_expand_18_64 (a3 : ℤ) (a4 : ℤ) (a6 : ℤ) (a7 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 + C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, a3, a4, 0, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_65 (a3 : ℤ) (a4 : ℤ) (a6 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 + C ((a6 : ℚ)) * X ^ 6 +
@@ -526,7 +526,7 @@ public theorem interpQ_expand_18_65 (a3 : ℤ) (a4 : ℤ) (a6 : ℤ) (a8 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 + C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, a3, a4, 0, a6, 0, a8, a9, a10, a11, a12, a13, 0, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_66 (a3 : ℤ) (a4 : ℤ) (a6 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 + C ((a6 : ℚ)) * X ^ 6 +
@@ -536,7 +536,7 @@ public theorem interpQ_expand_18_66 (a3 : ℤ) (a4 : ℤ) (a6 : ℤ) (a9 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 + C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, a3, a4, 0, a6, 0, 0, a9, a10, a11, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_67 (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a5 : ℚ)) * X ^ 5 + C ((a6 : ℚ)) * X ^ 6 +
@@ -547,7 +547,7 @@ public theorem interpQ_expand_18_67 (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 + C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, a3, 0, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_68 (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a5 : ℚ)) * X ^ 5 + C ((a6 : ℚ)) * X ^ 6 +
@@ -558,7 +558,7 @@ public theorem interpQ_expand_18_68 (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, a3, 0, a5, a6, a7, a8, a9, a10, 0, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_69 (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a5 : ℚ)) * X ^ 5 + C ((a6 : ℚ)) * X ^ 6 +
@@ -568,7 +568,7 @@ public theorem interpQ_expand_18_69 (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, a3, 0, a5, a6, a7, a8, a9, 0, 0, 0, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_70 (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a5 : ℚ)) * X ^ 5 + C ((a6 : ℚ)) * X ^ 6 + C ((a7 : ℚ)) * X ^ 7 +
@@ -579,7 +579,7 @@ public theorem interpQ_expand_18_70 (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, 0, 0, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_71 (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) :
     C ((a5 : ℚ)) * X ^ 5 + C ((a6 : ℚ)) * X ^ 6 + C ((a7 : ℚ)) * X ^ 7 +
@@ -589,7 +589,7 @@ public theorem interpQ_expand_18_71 (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a9 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, 0, 0, a5, a6, a7, 0, a9, a10, a11, a12, a13, 0, a15, a16, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_18_72 (a5 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a17 : ℤ) :
     C ((a5 : ℚ)) * X ^ 5 + C ((a7 : ℚ)) * X ^ 7 + C ((a8 : ℚ)) * X ^ 8 +
@@ -598,7 +598,7 @@ public theorem interpQ_expand_18_72 (a5 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) 
       C ((a15 : ℚ)) * X ^ 15 + C ((a17 : ℚ)) * X ^ 17 =
       interpQ 1 [0, 0, 0, 0, 0, a5, 0, a7, a8, a9, a10, 0, a12, a13, a14, a15, 0, a17] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_100 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -610,7 +610,7 @@ public theorem interpQ_expand_19_100 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, 0, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_101 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a15 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -622,7 +622,7 @@ public theorem interpQ_expand_19_101 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, 0, a15, 0, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_102 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -634,7 +634,7 @@ public theorem interpQ_expand_19_102 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, 0, a2, a3, a4, a5, a6, 0, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_103 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -645,7 +645,7 @@ public theorem interpQ_expand_19_103 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, 0, a2, a3, a4, 0, 0, 0, 0, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_104 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -657,7 +657,7 @@ public theorem interpQ_expand_19_104 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a5 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, 0, a2, a3, 0, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_105 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -669,7 +669,7 @@ public theorem interpQ_expand_19_105 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a5 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, 0, a2, a3, 0, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, 0, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_106 (a0 : ℤ) (a2 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a11 : ℤ) (a14 : ℤ) (a15 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a4 : ℚ)) * X ^ 4 +
@@ -679,7 +679,7 @@ public theorem interpQ_expand_19_106 (a0 : ℤ) (a2 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, 0, a2, 0, a4, a5, a6, a7, a8, a9, 0, a11, 0, 0, a14, a15, 0, 0, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_107 (a0 : ℤ) (a2 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a5 : ℚ)) * X ^ 5 +
@@ -690,7 +690,7 @@ public theorem interpQ_expand_19_107 (a0 : ℤ) (a2 : ℤ) (a5 : ℤ) (a6 : ℤ)
       C ((a16 : ℚ)) * X ^ 16 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, 0, a2, 0, 0, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, 0, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_108 (a0 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -702,7 +702,7 @@ public theorem interpQ_expand_19_108 (a0 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, 0, 0, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_109 (a0 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -714,7 +714,7 @@ public theorem interpQ_expand_19_109 (a0 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, 0, 0, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, 0, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_110 (a0 : ℤ) (a3 : ℤ) (a4 : ℤ) (a7 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -725,7 +725,7 @@ public theorem interpQ_expand_19_110 (a0 : ℤ) (a3 : ℤ) (a4 : ℤ) (a7 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, 0, 0, a3, a4, 0, 0, a7, 0, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_111 (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -738,7 +738,7 @@ public theorem interpQ_expand_19_111 (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_112 (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a18 : ℤ) :
     C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -750,7 +750,7 @@ public theorem interpQ_expand_19_112 (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ)
       C ((a16 : ℚ)) * X ^ 16 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, 0, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_113 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -762,7 +762,7 @@ public theorem interpQ_expand_19_113 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_114 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -774,7 +774,7 @@ public theorem interpQ_expand_19_114 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, 0, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_115 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -786,7 +786,7 @@ public theorem interpQ_expand_19_115 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, 0, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_116 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -798,7 +798,7 @@ public theorem interpQ_expand_19_116 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, 0, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_117 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a16 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -809,7 +809,7 @@ public theorem interpQ_expand_19_117 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a16 : ℚ)) * X ^ 16 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, 0, a16, 0, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_118 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -821,7 +821,7 @@ public theorem interpQ_expand_19_118 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, 0, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_119 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a15 : ℤ) (a16 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -832,7 +832,7 @@ public theorem interpQ_expand_19_119 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a16 : ℚ)) * X ^ 16 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, 0, a15, a16, 0, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_120 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -844,7 +844,7 @@ public theorem interpQ_expand_19_120 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, 0, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_121 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -856,7 +856,7 @@ public theorem interpQ_expand_19_121 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, 0, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_122 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -867,7 +867,7 @@ public theorem interpQ_expand_19_122 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a16 : ℚ)) * X ^ 16 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, 0, a12, a13, a14, a15, a16, 0, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_123 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -878,7 +878,7 @@ public theorem interpQ_expand_19_123 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, 0, a12, a13, a14, 0, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_124 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a13 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -889,7 +889,7 @@ public theorem interpQ_expand_19_124 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, 0, a12, a13, 0, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_125 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -900,7 +900,7 @@ public theorem interpQ_expand_19_125 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, 0, a12, 0, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_126 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -911,7 +911,7 @@ public theorem interpQ_expand_19_126 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, 0, a12, 0, a14, a15, a16, 0, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_127 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a11 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -922,7 +922,7 @@ public theorem interpQ_expand_19_127 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, 0, a11, 0, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_128 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -933,7 +933,7 @@ public theorem interpQ_expand_19_128 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, a9, 0, 0, 0, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_129 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -945,7 +945,7 @@ public theorem interpQ_expand_19_129 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8, 0, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_130 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -957,7 +957,7 @@ public theorem interpQ_expand_19_130 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, 0, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_131 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -969,7 +969,7 @@ public theorem interpQ_expand_19_131 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, 0, 0, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_132 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -980,7 +980,7 @@ public theorem interpQ_expand_19_132 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, 0, a8, a9, a10, a11, a12, a13, 0, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_133 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a8 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -992,7 +992,7 @@ public theorem interpQ_expand_19_133 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, 0, a8, 0, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_134 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -1003,7 +1003,7 @@ public theorem interpQ_expand_19_134 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, a5, 0, 0, a8, a9, a10, a11, a12, a13, a14, a15, 0, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_135 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -1015,7 +1015,7 @@ public theorem interpQ_expand_19_135 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a6 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, 0, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_136 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -1026,7 +1026,7 @@ public theorem interpQ_expand_19_136 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a6 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, 0, a6, a7, a8, a9, 0, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_137 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a6 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -1037,7 +1037,7 @@ public theorem interpQ_expand_19_137 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a6 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, 0, a6, 0, a8, a9, a10, 0, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_138 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -1049,7 +1049,7 @@ public theorem interpQ_expand_19_138 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a7 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, 0, 0, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_139 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a7 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a14 : ℤ) (a15 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -1058,7 +1058,7 @@ public theorem interpQ_expand_19_139 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a7 : ℤ)
       C ((a15 : ℚ)) * X ^ 15 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, a4, 0, 0, a7, 0, a9, a10, 0, a12, 0, a14, a15, 0, 0, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_140 (a2 : ℤ) (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a5 : ℚ)) * X ^ 5 +
@@ -1070,7 +1070,7 @@ public theorem interpQ_expand_19_140 (a2 : ℤ) (a3 : ℤ) (a5 : ℤ) (a6 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, 0, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_141 (a2 : ℤ) (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a5 : ℚ)) * X ^ 5 +
@@ -1081,7 +1081,7 @@ public theorem interpQ_expand_19_141 (a2 : ℤ) (a3 : ℤ) (a5 : ℤ) (a6 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, 0, a5, a6, a7, a8, a9, a10, 0, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_142 (a2 : ℤ) (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a13 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a5 : ℚ)) * X ^ 5 +
@@ -1092,7 +1092,7 @@ public theorem interpQ_expand_19_142 (a2 : ℤ) (a3 : ℤ) (a5 : ℤ) (a6 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, 0, a5, a6, a7, a8, a9, a10, 0, a12, a13, 0, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_143 (a2 : ℤ) (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a5 : ℚ)) * X ^ 5 +
@@ -1104,7 +1104,7 @@ public theorem interpQ_expand_19_143 (a2 : ℤ) (a3 : ℤ) (a5 : ℤ) (a6 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, 0, a5, a6, 0, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_144 (a2 : ℤ) (a3 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a18 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a6 : ℚ)) * X ^ 6 +
@@ -1115,7 +1115,7 @@ public theorem interpQ_expand_19_144 (a2 : ℤ) (a3 : ℤ) (a6 : ℤ) (a7 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, a2, a3, 0, 0, a6, a7, a8, a9, a10, 0, a12, a13, a14, a15, a16, 0, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_145 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 + C ((a5 : ℚ)) * X ^ 5 +
@@ -1127,7 +1127,7 @@ public theorem interpQ_expand_19_145 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, 0, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_146 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 + C ((a5 : ℚ)) * X ^ 5 +
@@ -1137,7 +1137,7 @@ public theorem interpQ_expand_19_146 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, 0, a3, a4, a5, a6, a7, a8, 0, 0, 0, 0, 0, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_147 (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a4 : ℚ)) * X ^ 4 + C ((a5 : ℚ)) * X ^ 5 + C ((a6 : ℚ)) * X ^ 6 +
@@ -1149,7 +1149,7 @@ public theorem interpQ_expand_19_147 (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, 0, 0, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_148 (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a4 : ℚ)) * X ^ 4 + C ((a5 : ℚ)) * X ^ 5 + C ((a6 : ℚ)) * X ^ 6 +
@@ -1160,7 +1160,7 @@ public theorem interpQ_expand_19_148 (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, 0, 0, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, 0, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_149 (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a4 : ℚ)) * X ^ 4 + C ((a5 : ℚ)) * X ^ 5 + C ((a6 : ℚ)) * X ^ 6 +
@@ -1171,7 +1171,7 @@ public theorem interpQ_expand_19_149 (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, 0, 0, a4, a5, a6, a7, a8, a9, a10, 0, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_150 (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a10 : ℤ) (a12 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a4 : ℚ)) * X ^ 4 + C ((a5 : ℚ)) * X ^ 5 + C ((a6 : ℚ)) * X ^ 6 +
@@ -1181,7 +1181,7 @@ public theorem interpQ_expand_19_150 (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, 0, 0, a4, a5, a6, a7, a8, 0, a10, 0, a12, 0, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_151 (a4 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a18 : ℤ) :
     C ((a4 : ℚ)) * X ^ 4 + C ((a6 : ℚ)) * X ^ 6 + C ((a7 : ℚ)) * X ^ 7 +
@@ -1192,7 +1192,7 @@ public theorem interpQ_expand_19_151 (a4 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ)
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, 0, 0, a4, 0, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, 0, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_152 (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a5 : ℚ)) * X ^ 5 + C ((a6 : ℚ)) * X ^ 6 + C ((a7 : ℚ)) * X ^ 7 +
@@ -1203,7 +1203,7 @@ public theorem interpQ_expand_19_152 (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ)
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [0, 0, 0, 0, 0, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_73 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1216,7 +1216,7 @@ public theorem interpQ_expand_19_73 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_74 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1228,7 +1228,7 @@ public theorem interpQ_expand_19_74 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, 0, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_75 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1240,7 +1240,7 @@ public theorem interpQ_expand_19_75 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, 0, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_76 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1252,7 +1252,7 @@ public theorem interpQ_expand_19_76 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, 0, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_77 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a16 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1264,7 +1264,7 @@ public theorem interpQ_expand_19_77 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, 0, a16, 0, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_78 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1276,7 +1276,7 @@ public theorem interpQ_expand_19_78 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, 0, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_79 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1288,7 +1288,7 @@ public theorem interpQ_expand_19_79 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, 0, 0, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_80 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1300,7 +1300,7 @@ public theorem interpQ_expand_19_80 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, 0, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_81 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a14 : ℤ) (a15 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1312,7 +1312,7 @@ public theorem interpQ_expand_19_81 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, 0, a14, a15, 0, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_82 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a14 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1324,7 +1324,7 @@ public theorem interpQ_expand_19_82 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, 0, a14, 0, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_83 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1336,7 +1336,7 @@ public theorem interpQ_expand_19_83 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, 0, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_84 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1348,7 +1348,7 @@ public theorem interpQ_expand_19_84 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, 0, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_85 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1360,7 +1360,7 @@ public theorem interpQ_expand_19_85 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, a10, 0, a12, a13, a14, a15, 0, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_86 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1372,7 +1372,7 @@ public theorem interpQ_expand_19_86 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, 0, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_87 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a11 : ℤ) (a12 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1384,7 +1384,7 @@ public theorem interpQ_expand_19_87 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, a9, 0, a11, a12, 0, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_88 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1397,7 +1397,7 @@ public theorem interpQ_expand_19_88 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8, 0, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_89 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1410,7 +1410,7 @@ public theorem interpQ_expand_19_89 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, 0, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_90 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1423,7 +1423,7 @@ public theorem interpQ_expand_19_90 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, 0, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_91 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1436,7 +1436,7 @@ public theorem interpQ_expand_19_91 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, a4, 0, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_92 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1449,7 +1449,7 @@ public theorem interpQ_expand_19_92 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, 0, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_93 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1461,7 +1461,7 @@ public theorem interpQ_expand_19_93 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, a3, 0, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, 0, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_94 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1474,7 +1474,7 @@ public theorem interpQ_expand_19_94 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a4 : ℤ) 
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, 0, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_95 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1486,7 +1486,7 @@ public theorem interpQ_expand_19_95 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a4 : ℤ) 
       C ((a16 : ℚ)) * X ^ 16 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, 0, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, 0, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_96 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1498,7 +1498,7 @@ public theorem interpQ_expand_19_96 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a5 : ℤ) 
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, a2, 0, 0, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, 0, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_97 (a0 : ℤ) (a1 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a3 : ℚ)) * X ^ 3 +
@@ -1511,7 +1511,7 @@ public theorem interpQ_expand_19_97 (a0 : ℤ) (a1 : ℤ) (a3 : ℤ) (a4 : ℤ) 
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, 0, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_98 (a0 : ℤ) (a1 : ℤ) (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a3 : ℚ)) * X ^ 3 +
@@ -1523,7 +1523,7 @@ public theorem interpQ_expand_19_98 (a0 : ℤ) (a1 : ℤ) (a3 : ℤ) (a5 : ℤ) 
       C ((a17 : ℚ)) * X ^ 17 + C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, a1, 0, a3, 0, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_19_99 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) (a9 : ℤ) (a10 : ℤ) (a11 : ℤ) (a12 : ℤ) (a13 : ℤ) (a14 : ℤ) (a15 : ℤ) (a16 : ℤ) (a17 : ℤ) (a18 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -1536,7 +1536,7 @@ public theorem interpQ_expand_19_99 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) 
       C ((a18 : ℚ)) * X ^ 18 =
       interpQ 1 [a0, 0, a2, a3, a4, a5, a6, a7, a8, a9, a10, a11, a12, a13, a14, a15, a16, a17, a18] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_7_0 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1544,20 +1544,20 @@ public theorem interpQ_expand_7_0 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a
       C ((a6 : ℚ)) * X ^ 6 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_7_1 (a0 : ℤ) (a1 : ℤ) (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a3 : ℚ)) * X ^ 3 +
       C ((a5 : ℚ)) * X ^ 5 + C ((a6 : ℚ)) * X ^ 6 =
       interpQ 1 [a0, a1, 0, a3, 0, a5, a6] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_7_2 (a3 : ℤ) (a4 : ℤ) (a6 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 + C ((a6 : ℚ)) * X ^ 6 =
       interpQ 1 [0, 0, 0, a3, a4, 0, a6] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_8_3 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1565,7 +1565,7 @@ public theorem interpQ_expand_8_3 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a
       C ((a6 : ℚ)) * X ^ 6 + C ((a7 : ℚ)) * X ^ 7 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_8_4 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a7 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1573,7 +1573,7 @@ public theorem interpQ_expand_8_4 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a
       C ((a7 : ℚ)) * X ^ 7 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, 0, a7] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_8_5 (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) :
     C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -1581,14 +1581,14 @@ public theorem interpQ_expand_8_5 (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a
       C ((a7 : ℚ)) * X ^ 7 =
       interpQ 1 [0, a1, a2, a3, a4, a5, a6, a7] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_8_6 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
       C ((a5 : ℚ)) * X ^ 5 + C ((a6 : ℚ)) * X ^ 6 + C ((a7 : ℚ)) * X ^ 7 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_9_10 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1596,7 +1596,7 @@ public theorem interpQ_expand_9_10 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (
       C ((a7 : ℚ)) * X ^ 7 + C ((a8 : ℚ)) * X ^ 8 =
       interpQ 1 [a0, a1, a2, a3, a4, 0, a6, a7, a8] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_9_11 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1604,7 +1604,7 @@ public theorem interpQ_expand_9_11 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (
       C ((a7 : ℚ)) * X ^ 7 + C ((a8 : ℚ)) * X ^ 8 =
       interpQ 1 [a0, a1, a2, a3, 0, a5, a6, a7, a8] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_9_12 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1612,7 +1612,7 @@ public theorem interpQ_expand_9_12 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a4 : ℤ) (
       C ((a7 : ℚ)) * X ^ 7 + C ((a8 : ℚ)) * X ^ 8 =
       interpQ 1 [a0, a1, a2, 0, a4, a5, a6, a7, a8] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_9_13 (a0 : ℤ) (a1 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a3 : ℚ)) * X ^ 3 +
@@ -1620,7 +1620,7 @@ public theorem interpQ_expand_9_13 (a0 : ℤ) (a1 : ℤ) (a3 : ℤ) (a4 : ℤ) (
       C ((a7 : ℚ)) * X ^ 7 + C ((a8 : ℚ)) * X ^ 8 =
       interpQ 1 [a0, a1, 0, a3, a4, a5, a6, a7, a8] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_9_14 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) :
     C ((a0 : ℚ)) + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -1628,7 +1628,7 @@ public theorem interpQ_expand_9_14 (a0 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (
       C ((a7 : ℚ)) * X ^ 7 + C ((a8 : ℚ)) * X ^ 8 =
       interpQ 1 [a0, 0, a2, a3, a4, a5, a6, a7, a8] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_9_15 (a0 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) :
     C ((a0 : ℚ)) + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -1636,7 +1636,7 @@ public theorem interpQ_expand_9_15 (a0 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (
       C ((a8 : ℚ)) * X ^ 8 =
       interpQ 1 [a0, 0, 0, a3, a4, a5, a6, a7, a8] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_9_16 (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) :
     C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 +
@@ -1644,7 +1644,7 @@ public theorem interpQ_expand_9_16 (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (
       C ((a7 : ℚ)) * X ^ 7 + C ((a8 : ℚ)) * X ^ 8 =
       interpQ 1 [0, a1, a2, a3, a4, a5, a6, a7, a8] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_9_17 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) :
     C ((a2 : ℚ)) * X ^ 2 + C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 +
@@ -1652,14 +1652,14 @@ public theorem interpQ_expand_9_17 (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (
       C ((a8 : ℚ)) * X ^ 8 =
       interpQ 1 [0, 0, a2, a3, a4, a5, a6, a7, a8] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_9_18 (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a8 : ℤ) :
     C ((a3 : ℚ)) * X ^ 3 + C ((a4 : ℚ)) * X ^ 4 + C ((a5 : ℚ)) * X ^ 5 +
       C ((a6 : ℚ)) * X ^ 6 + C ((a8 : ℚ)) * X ^ 8 =
       interpQ 1 [0, 0, 0, a3, a4, a5, a6, 0, a8] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_9_7 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a7 : ℤ) (a8 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1667,7 +1667,7 @@ public theorem interpQ_expand_9_7 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a
       C ((a6 : ℚ)) * X ^ 6 + C ((a7 : ℚ)) * X ^ 7 + C ((a8 : ℚ)) * X ^ 8 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, a7, a8] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_9_8 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a6 : ℤ) (a8 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1675,7 +1675,7 @@ public theorem interpQ_expand_9_8 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a
       C ((a6 : ℚ)) * X ^ 6 + C ((a8 : ℚ)) * X ^ 8 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, a6, 0, a8] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 public theorem interpQ_expand_9_9 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a4 : ℤ) (a5 : ℤ) (a7 : ℤ) (a8 : ℤ) :
     C ((a0 : ℚ)) + C ((a1 : ℚ)) * X + C ((a2 : ℚ)) * X ^ 2 +
@@ -1683,6 +1683,6 @@ public theorem interpQ_expand_9_9 (a0 : ℤ) (a1 : ℤ) (a2 : ℤ) (a3 : ℤ) (a
       C ((a7 : ℚ)) * X ^ 7 + C ((a8 : ℚ)) * X ^ 8 =
       interpQ 1 [a0, a1, a2, a3, a4, a5, 0, a7, a8] := by
   simp [interpQ, toPolyZ]
-  try ring
+  try grind
 
 end V14Formalization.D12PolyZReflection

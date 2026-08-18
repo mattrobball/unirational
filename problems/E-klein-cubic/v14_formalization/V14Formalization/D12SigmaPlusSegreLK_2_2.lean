@@ -27,7 +27,7 @@ theorem LK_pre_eq_2_2_0 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_pim_eq_2_2_0 :
     L_re_2_0 * K_im_0_2 + L_im_2_0 * K_re_0_2 =
       LK_pim_2_2_0 := by
@@ -37,7 +37,7 @@ theorem LK_pim_eq_2_2_0 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_term_2_2_0 :
     L_entry_2_0 * K_entry_0_2 =
       ofLadj LK_pre_2_2_0 LK_pim_2_2_0 := by
@@ -55,7 +55,7 @@ theorem LK_pre_eq_2_2_1 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_pim_eq_2_2_1 :
     L_re_2_1 * K_im_1_2 + L_im_2_1 * K_re_1_2 =
       LK_pim_2_2_1 := by
@@ -65,7 +65,7 @@ theorem LK_pim_eq_2_2_1 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_term_2_2_1 :
     L_entry_2_1 * K_entry_1_2 =
       ofLadj LK_pre_2_2_1 LK_pim_2_2_1 := by
@@ -83,7 +83,7 @@ theorem LK_pre_eq_2_2_2 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_pim_eq_2_2_2 :
     L_re_2_2 * K_im_2_2 + L_im_2_2 * K_re_2_2 =
       LK_pim_2_2_2 := by
@@ -93,7 +93,7 @@ theorem LK_pim_eq_2_2_2 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_term_2_2_2 :
     L_entry_2_2 * K_entry_2_2 =
       ofLadj LK_pre_2_2_2 LK_pim_2_2_2 := by
@@ -111,7 +111,7 @@ theorem LK_pre_eq_2_2_3 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_pim_eq_2_2_3 :
     L_re_2_3 * K_im_3_2 + L_im_2_3 * K_re_3_2 =
       LK_pim_2_2_3 := by
@@ -121,7 +121,7 @@ theorem LK_pim_eq_2_2_3 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_term_2_2_3 :
     L_entry_2_3 * K_entry_3_2 =
       ofLadj LK_pre_2_2_3 LK_pim_2_2_3 := by
@@ -139,7 +139,7 @@ theorem LK_pre_eq_2_2_4 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_pim_eq_2_2_4 :
     L_re_2_4 * K_im_4_2 + L_im_2_4 * K_re_4_2 =
       LK_pim_2_2_4 := by
@@ -149,7 +149,7 @@ theorem LK_pim_eq_2_2_4 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_term_2_2_4 :
     L_entry_2_4 * K_entry_4_2 =
       ofLadj LK_pre_2_2_4 LK_pim_2_2_4 := by
@@ -167,7 +167,7 @@ theorem LK_pre_eq_2_2_5 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_pim_eq_2_2_5 :
     L_re_2_5 * K_im_5_2 + L_im_2_5 * K_re_5_2 =
       LK_pim_2_2_5 := by
@@ -177,7 +177,7 @@ theorem LK_pim_eq_2_2_5 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_term_2_2_5 :
     L_entry_2_5 * K_entry_5_2 =
       ofLadj LK_pre_2_2_5 LK_pim_2_2_5 := by
@@ -195,7 +195,7 @@ theorem LK_pre_eq_2_2_6 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_pim_eq_2_2_6 :
     L_re_2_6 * K_im_6_2 + L_im_2_6 * K_re_6_2 =
       LK_pim_2_2_6 := by
@@ -205,7 +205,7 @@ theorem LK_pim_eq_2_2_6 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_term_2_2_6 :
     L_entry_2_6 * K_entry_6_2 =
       ofLadj LK_pre_2_2_6 LK_pim_2_2_6 := by
@@ -223,7 +223,7 @@ theorem LK_pre_eq_2_2_7 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_pim_eq_2_2_7 :
     L_re_2_7 * K_im_7_2 + L_im_2_7 * K_re_7_2 =
       LK_pim_2_2_7 := by
@@ -233,7 +233,7 @@ theorem LK_pim_eq_2_2_7 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_term_2_2_7 :
     L_entry_2_7 * K_entry_7_2 =
       ofLadj LK_pre_2_2_7 LK_pim_2_2_7 := by
@@ -251,7 +251,7 @@ theorem LK_pre_eq_2_2_8 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_pim_eq_2_2_8 :
     L_re_2_8 * K_im_8_2 + L_im_2_8 * K_re_8_2 =
       LK_pim_2_2_8 := by
@@ -261,7 +261,7 @@ theorem LK_pim_eq_2_2_8 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem LK_term_2_2_8 :
     L_entry_2_8 * K_entry_8_2 =
       ofLadj LK_pre_2_2_8 LK_pim_2_2_8 := by
@@ -276,7 +276,7 @@ theorem LK_sum_poly_re_2_2 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem LK_sum_poly_im_2_2 :
     LK_pim_2_2_0 + LK_pim_2_2_1 + LK_pim_2_2_2 + LK_pim_2_2_3 + LK_pim_2_2_4 + LK_pim_2_2_5 + LK_pim_2_2_6 + LK_pim_2_2_7 + LK_pim_2_2_8 = (0 : Polynomial ℚ) + Phi11 * LK_qim_2_2 := by
@@ -286,7 +286,7 @@ theorem LK_sum_poly_im_2_2 :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem LK_sum_entries_2_2 :
     L_entry_2_0 * K_entry_0_2 + L_entry_2_1 * K_entry_1_2 + L_entry_2_2 * K_entry_2_2 + L_entry_2_3 * K_entry_3_2 + L_entry_2_4 * K_entry_4_2 + L_entry_2_5 * K_entry_5_2 + L_entry_2_6 * K_entry_6_2 + L_entry_2_7 * K_entry_7_2 + L_entry_2_8 * K_entry_8_2 =

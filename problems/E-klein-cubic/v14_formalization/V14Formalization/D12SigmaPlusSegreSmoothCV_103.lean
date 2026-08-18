@@ -22,7 +22,7 @@ theorem CV_103_0_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CV_103_0_pim_eq :
     CV_0_re_101 * Fplus_dU_im_002 + CV_0_im_101 * Fplus_dU_re_002 = CV_103_0_pim := by
   refine Polynomial.funext fun r => ?_
@@ -30,7 +30,7 @@ theorem CV_103_0_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CV_103_0_mul :
     CV_0_c_101 * Fplus_dU_c_002 = ofLadj CV_103_0_pre CV_103_0_pim := by
   rw [CV_0_c_101, Fplus_dU_c_002, ofLadj_mul, CV_103_0_pre_eq, CV_103_0_pim_eq]
@@ -44,7 +44,7 @@ theorem CV_103_1_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CV_103_1_pim_eq :
     CV_0_re_002 * Fplus_dU_im_101 + CV_0_im_002 * Fplus_dU_re_101 = CV_103_1_pim := by
   refine Polynomial.funext fun r => ?_
@@ -52,7 +52,7 @@ theorem CV_103_1_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CV_103_1_mul :
     CV_0_c_002 * Fplus_dU_c_101 = ofLadj CV_103_1_pre CV_103_1_pim := by
   rw [CV_0_c_002, Fplus_dU_c_101, ofLadj_mul, CV_103_1_pre_eq, CV_103_1_pim_eq]
@@ -66,7 +66,7 @@ theorem CV_103_2_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CV_103_2_pim_eq :
     CV_1_re_101 * Fplus_dV_im_002 + CV_1_im_101 * Fplus_dV_re_002 = CV_103_2_pim := by
   refine Polynomial.funext fun r => ?_
@@ -74,7 +74,7 @@ theorem CV_103_2_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CV_103_2_mul :
     CV_1_c_101 * Fplus_dV_c_002 = ofLadj CV_103_2_pre CV_103_2_pim := by
   rw [CV_1_c_101, Fplus_dV_c_002, ofLadj_mul, CV_103_2_pre_eq, CV_103_2_pim_eq]
@@ -88,7 +88,7 @@ theorem CV_103_3_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CV_103_3_pim_eq :
     CV_1_re_002 * Fplus_dV_im_101 + CV_1_im_002 * Fplus_dV_re_101 = CV_103_3_pim := by
   refine Polynomial.funext fun r => ?_
@@ -96,7 +96,7 @@ theorem CV_103_3_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CV_103_3_mul :
     CV_1_c_002 * Fplus_dV_c_101 = ofLadj CV_103_3_pre CV_103_3_pim := by
   rw [CV_1_c_002, Fplus_dV_c_101, ofLadj_mul, CV_103_3_pre_eq, CV_103_3_pim_eq]
@@ -110,7 +110,7 @@ theorem CV_103_4_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CV_103_4_pim_eq :
     CV_2_re_101 * Fplus_dW_im_002 + CV_2_im_101 * Fplus_dW_re_002 = CV_103_4_pim := by
   refine Polynomial.funext fun r => ?_
@@ -118,7 +118,7 @@ theorem CV_103_4_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CV_103_4_mul :
     CV_2_c_101 * Fplus_dW_c_002 = ofLadj CV_103_4_pre CV_103_4_pim := by
   rw [CV_2_c_101, Fplus_dW_c_002, ofLadj_mul, CV_103_4_pre_eq, CV_103_4_pim_eq]
@@ -132,7 +132,7 @@ theorem CV_103_5_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CV_103_5_pim_eq :
     CV_2_re_002 * Fplus_dW_im_101 + CV_2_im_002 * Fplus_dW_re_101 = CV_103_5_pim := by
   refine Polynomial.funext fun r => ?_
@@ -140,7 +140,7 @@ theorem CV_103_5_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CV_103_5_mul :
     CV_2_c_002 * Fplus_dW_c_101 = ofLadj CV_103_5_pre CV_103_5_pim := by
   rw [CV_2_c_002, Fplus_dW_c_101, ofLadj_mul, CV_103_5_pre_eq, CV_103_5_pim_eq]
@@ -162,7 +162,7 @@ theorem CV_coeff_103_poly_re :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 theorem CV_coeff_103_poly_im :
     CV_103_0_pim + CV_103_1_pim + CV_103_2_pim + CV_103_3_pim + CV_103_4_pim + CV_103_5_pim = (0 : Polynomial ℚ) + Phi11 * CV_103_qim := by
   refine Polynomial.funext fun r => ?_
@@ -171,7 +171,7 @@ theorem CV_coeff_103_poly_im :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 public theorem CV_coeff_103_eq :
     CV_coeff_103 = (0 : Ki) := by
   rw [CV_coeff_103_sum, CV_coeff_103_poly_re,

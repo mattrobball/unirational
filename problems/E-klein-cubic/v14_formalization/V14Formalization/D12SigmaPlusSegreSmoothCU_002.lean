@@ -22,7 +22,7 @@ theorem CU_002_0_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CU_002_0_pim_eq :
     CU_0_re_000 * Fplus_dU_im_002 + CU_0_im_000 * Fplus_dU_re_002 = CU_002_0_pim := by
   refine Polynomial.funext fun r => ?_
@@ -30,7 +30,7 @@ theorem CU_002_0_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CU_002_0_mul :
     CU_0_c_000 * Fplus_dU_c_002 = ofLadj CU_002_0_pre CU_002_0_pim := by
   rw [CU_0_c_000, Fplus_dU_c_002, ofLadj_mul, CU_002_0_pre_eq, CU_002_0_pim_eq]
@@ -44,7 +44,7 @@ theorem CU_002_1_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CU_002_1_pim_eq :
     CU_1_re_000 * Fplus_dV_im_002 + CU_1_im_000 * Fplus_dV_re_002 = CU_002_1_pim := by
   refine Polynomial.funext fun r => ?_
@@ -52,7 +52,7 @@ theorem CU_002_1_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CU_002_1_mul :
     CU_1_c_000 * Fplus_dV_c_002 = ofLadj CU_002_1_pre CU_002_1_pim := by
   rw [CU_1_c_000, Fplus_dV_c_002, ofLadj_mul, CU_002_1_pre_eq, CU_002_1_pim_eq]
@@ -66,7 +66,7 @@ theorem CU_002_2_pre_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CU_002_2_pim_eq :
     CU_2_re_000 * Fplus_dW_im_002 + CU_2_im_000 * Fplus_dW_re_002 = CU_002_2_pim := by
   refine Polynomial.funext fun r => ?_
@@ -74,7 +74,7 @@ theorem CU_002_2_pim_eq :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CU_002_2_mul :
     CU_2_c_000 * Fplus_dW_c_002 = ofLadj CU_002_2_pre CU_002_2_pim := by
   rw [CU_2_c_000, Fplus_dW_c_002, ofLadj_mul, CU_002_2_pre_eq, CU_002_2_pim_eq]
@@ -87,14 +87,14 @@ theorem CU_002_3_neg_re : -CU_3_re_002 = CU_002_3_pre := by
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CU_002_3_neg_im : -CU_3_im_002 = CU_002_3_pim := by
   refine Polynomial.funext fun r => ?_
   simp only [CU_3_im_002, CU_002_3_pim]
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero]
-  try ring
+  try grind
 theorem CU_002_3_mul : -CU_3_c_002 = ofLadj CU_002_3_pre CU_002_3_pim := by
   rw [CU_3_c_002, ofLadj_neg, CU_002_3_neg_re, CU_002_3_neg_im]
 
@@ -115,7 +115,7 @@ theorem CU_coeff_002_poly_re :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 theorem CU_coeff_002_poly_im :
     CU_002_0_pim + CU_002_1_pim + CU_002_2_pim + CU_002_3_pim = (0 : Polynomial ℚ) + Phi11 * CU_002_qim := by
   refine Polynomial.funext fun r => ?_
@@ -124,7 +124,7 @@ theorem CU_coeff_002_poly_im :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 public theorem CU_coeff_002_eq :
     CU_coeff_002 = (0 : Ki) := by
   rw [CU_coeff_002_sum, CU_coeff_002_poly_re,

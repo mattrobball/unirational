@@ -17,6 +17,6 @@ public theorem z_Phi11 : (Phi11 : Polynomial ℚ) = interpQ 1 [1, 1, 1, 1, 1, 1,
   refine Polynomial.funext fun r => ?_
   simp [interpQ, toPolyZ, Polynomial.eval_add, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow]
-  try ring
+  try grind
 
 end V14Formalization.D12SigmaPlusSegreCore

@@ -20,630 +20,630 @@ theorem B_mul_Kplus_poly_0_0 :
       Bplus_poly_0_0 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_0_0]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_0_1 :
     (B_poly * Kplus_poly) (0 : Fin 15) (1 : Fin 6) =
       Bplus_poly_0_1 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_0_1]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_0_2 :
     (B_poly * Kplus_poly) (0 : Fin 15) (2 : Fin 6) =
       Bplus_poly_0_2 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_0_2]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_0_3 :
     (B_poly * Kplus_poly) (0 : Fin 15) (3 : Fin 6) =
       Bplus_poly_0_3 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_0_3]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_0_4 :
     (B_poly * Kplus_poly) (0 : Fin 15) (4 : Fin 6) =
       Bplus_poly_0_4 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_0_4]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_0_5 :
     (B_poly * Kplus_poly) (0 : Fin 15) (5 : Fin 6) =
       Bplus_poly_0_5 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_0_5]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_1_0 :
     (B_poly * Kplus_poly) (1 : Fin 15) (0 : Fin 6) =
       Bplus_poly_1_0 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_1_0]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_1_1 :
     (B_poly * Kplus_poly) (1 : Fin 15) (1 : Fin 6) =
       Bplus_poly_1_1 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_1_1]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_1_2 :
     (B_poly * Kplus_poly) (1 : Fin 15) (2 : Fin 6) =
       Bplus_poly_1_2 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_1_2]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_1_3 :
     (B_poly * Kplus_poly) (1 : Fin 15) (3 : Fin 6) =
       Bplus_poly_1_3 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_1_3]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_1_4 :
     (B_poly * Kplus_poly) (1 : Fin 15) (4 : Fin 6) =
       Bplus_poly_1_4 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_1_4]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_1_5 :
     (B_poly * Kplus_poly) (1 : Fin 15) (5 : Fin 6) =
       Bplus_poly_1_5 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_1_5]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_2_0 :
     (B_poly * Kplus_poly) (2 : Fin 15) (0 : Fin 6) =
       Bplus_poly_2_0 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_2_0]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_2_1 :
     (B_poly * Kplus_poly) (2 : Fin 15) (1 : Fin 6) =
       Bplus_poly_2_1 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_2_1]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_2_2 :
     (B_poly * Kplus_poly) (2 : Fin 15) (2 : Fin 6) =
       Bplus_poly_2_2 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_2_2]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_2_3 :
     (B_poly * Kplus_poly) (2 : Fin 15) (3 : Fin 6) =
       Bplus_poly_2_3 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_2_3]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_2_4 :
     (B_poly * Kplus_poly) (2 : Fin 15) (4 : Fin 6) =
       Bplus_poly_2_4 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_2_4]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_2_5 :
     (B_poly * Kplus_poly) (2 : Fin 15) (5 : Fin 6) =
       Bplus_poly_2_5 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_2_5]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_3_0 :
     (B_poly * Kplus_poly) (3 : Fin 15) (0 : Fin 6) =
       Bplus_poly_3_0 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_3_0]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_3_1 :
     (B_poly * Kplus_poly) (3 : Fin 15) (1 : Fin 6) =
       Bplus_poly_3_1 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_3_1]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_3_2 :
     (B_poly * Kplus_poly) (3 : Fin 15) (2 : Fin 6) =
       Bplus_poly_3_2 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_3_2]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_3_3 :
     (B_poly * Kplus_poly) (3 : Fin 15) (3 : Fin 6) =
       Bplus_poly_3_3 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_3_3]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_3_4 :
     (B_poly * Kplus_poly) (3 : Fin 15) (4 : Fin 6) =
       Bplus_poly_3_4 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_3_4]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_3_5 :
     (B_poly * Kplus_poly) (3 : Fin 15) (5 : Fin 6) =
       Bplus_poly_3_5 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_3_5]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_4_0 :
     (B_poly * Kplus_poly) (4 : Fin 15) (0 : Fin 6) =
       Bplus_poly_4_0 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_4_0]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_4_1 :
     (B_poly * Kplus_poly) (4 : Fin 15) (1 : Fin 6) =
       Bplus_poly_4_1 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_4_1]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_4_2 :
     (B_poly * Kplus_poly) (4 : Fin 15) (2 : Fin 6) =
       Bplus_poly_4_2 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_4_2]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_4_3 :
     (B_poly * Kplus_poly) (4 : Fin 15) (3 : Fin 6) =
       Bplus_poly_4_3 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_4_3]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_4_4 :
     (B_poly * Kplus_poly) (4 : Fin 15) (4 : Fin 6) =
       Bplus_poly_4_4 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_4_4]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_4_5 :
     (B_poly * Kplus_poly) (4 : Fin 15) (5 : Fin 6) =
       Bplus_poly_4_5 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_4_5]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_5_0 :
     (B_poly * Kplus_poly) (5 : Fin 15) (0 : Fin 6) =
       Bplus_poly_5_0 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_5_0]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_5_1 :
     (B_poly * Kplus_poly) (5 : Fin 15) (1 : Fin 6) =
       Bplus_poly_5_1 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_5_1]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_5_2 :
     (B_poly * Kplus_poly) (5 : Fin 15) (2 : Fin 6) =
       Bplus_poly_5_2 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_5_2]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_5_3 :
     (B_poly * Kplus_poly) (5 : Fin 15) (3 : Fin 6) =
       Bplus_poly_5_3 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_5_3]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_5_4 :
     (B_poly * Kplus_poly) (5 : Fin 15) (4 : Fin 6) =
       Bplus_poly_5_4 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_5_4]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_5_5 :
     (B_poly * Kplus_poly) (5 : Fin 15) (5 : Fin 6) =
       Bplus_poly_5_5 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_5_5]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_6_0 :
     (B_poly * Kplus_poly) (6 : Fin 15) (0 : Fin 6) =
       Bplus_poly_6_0 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_6_0]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_6_1 :
     (B_poly * Kplus_poly) (6 : Fin 15) (1 : Fin 6) =
       Bplus_poly_6_1 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_6_1]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_6_2 :
     (B_poly * Kplus_poly) (6 : Fin 15) (2 : Fin 6) =
       Bplus_poly_6_2 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_6_2]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_6_3 :
     (B_poly * Kplus_poly) (6 : Fin 15) (3 : Fin 6) =
       Bplus_poly_6_3 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_6_3]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_6_4 :
     (B_poly * Kplus_poly) (6 : Fin 15) (4 : Fin 6) =
       Bplus_poly_6_4 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_6_4]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_6_5 :
     (B_poly * Kplus_poly) (6 : Fin 15) (5 : Fin 6) =
       Bplus_poly_6_5 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_6_5]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_7_0 :
     (B_poly * Kplus_poly) (7 : Fin 15) (0 : Fin 6) =
       Bplus_poly_7_0 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_7_0]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_7_1 :
     (B_poly * Kplus_poly) (7 : Fin 15) (1 : Fin 6) =
       Bplus_poly_7_1 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_7_1]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_7_2 :
     (B_poly * Kplus_poly) (7 : Fin 15) (2 : Fin 6) =
       Bplus_poly_7_2 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_7_2]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_7_3 :
     (B_poly * Kplus_poly) (7 : Fin 15) (3 : Fin 6) =
       Bplus_poly_7_3 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_7_3]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_7_4 :
     (B_poly * Kplus_poly) (7 : Fin 15) (4 : Fin 6) =
       Bplus_poly_7_4 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_7_4]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_7_5 :
     (B_poly * Kplus_poly) (7 : Fin 15) (5 : Fin 6) =
       Bplus_poly_7_5 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_7_5]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_8_0 :
     (B_poly * Kplus_poly) (8 : Fin 15) (0 : Fin 6) =
       Bplus_poly_8_0 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_8_0]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_8_1 :
     (B_poly * Kplus_poly) (8 : Fin 15) (1 : Fin 6) =
       Bplus_poly_8_1 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_8_1]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_8_2 :
     (B_poly * Kplus_poly) (8 : Fin 15) (2 : Fin 6) =
       Bplus_poly_8_2 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_8_2]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_8_3 :
     (B_poly * Kplus_poly) (8 : Fin 15) (3 : Fin 6) =
       Bplus_poly_8_3 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_8_3]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_8_4 :
     (B_poly * Kplus_poly) (8 : Fin 15) (4 : Fin 6) =
       Bplus_poly_8_4 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_8_4]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_8_5 :
     (B_poly * Kplus_poly) (8 : Fin 15) (5 : Fin 6) =
       Bplus_poly_8_5 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_8_5]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_9_0 :
     (B_poly * Kplus_poly) (9 : Fin 15) (0 : Fin 6) =
       Bplus_poly_9_0 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_9_0]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_9_1 :
     (B_poly * Kplus_poly) (9 : Fin 15) (1 : Fin 6) =
       Bplus_poly_9_1 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_9_1]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_9_2 :
     (B_poly * Kplus_poly) (9 : Fin 15) (2 : Fin 6) =
       Bplus_poly_9_2 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_9_2]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_9_3 :
     (B_poly * Kplus_poly) (9 : Fin 15) (3 : Fin 6) =
       Bplus_poly_9_3 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_9_3]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_9_4 :
     (B_poly * Kplus_poly) (9 : Fin 15) (4 : Fin 6) =
       Bplus_poly_9_4 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_9_4]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_9_5 :
     (B_poly * Kplus_poly) (9 : Fin 15) (5 : Fin 6) =
       Bplus_poly_9_5 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_9_5]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_10_0 :
     (B_poly * Kplus_poly) (10 : Fin 15) (0 : Fin 6) =
       Bplus_poly_10_0 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_10_0]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_10_1 :
     (B_poly * Kplus_poly) (10 : Fin 15) (1 : Fin 6) =
       Bplus_poly_10_1 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_10_1]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_10_2 :
     (B_poly * Kplus_poly) (10 : Fin 15) (2 : Fin 6) =
       Bplus_poly_10_2 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_10_2]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_10_3 :
     (B_poly * Kplus_poly) (10 : Fin 15) (3 : Fin 6) =
       Bplus_poly_10_3 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_10_3]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_10_4 :
     (B_poly * Kplus_poly) (10 : Fin 15) (4 : Fin 6) =
       Bplus_poly_10_4 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_10_4]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_10_5 :
     (B_poly * Kplus_poly) (10 : Fin 15) (5 : Fin 6) =
       Bplus_poly_10_5 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_10_5]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_11_0 :
     (B_poly * Kplus_poly) (11 : Fin 15) (0 : Fin 6) =
       Bplus_poly_11_0 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_11_0]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_11_1 :
     (B_poly * Kplus_poly) (11 : Fin 15) (1 : Fin 6) =
       Bplus_poly_11_1 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_11_1]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_11_2 :
     (B_poly * Kplus_poly) (11 : Fin 15) (2 : Fin 6) =
       Bplus_poly_11_2 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_11_2]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_11_3 :
     (B_poly * Kplus_poly) (11 : Fin 15) (3 : Fin 6) =
       Bplus_poly_11_3 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_11_3]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_11_4 :
     (B_poly * Kplus_poly) (11 : Fin 15) (4 : Fin 6) =
       Bplus_poly_11_4 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_11_4]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_11_5 :
     (B_poly * Kplus_poly) (11 : Fin 15) (5 : Fin 6) =
       Bplus_poly_11_5 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_11_5]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_12_0 :
     (B_poly * Kplus_poly) (12 : Fin 15) (0 : Fin 6) =
       Bplus_poly_12_0 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_12_0]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_12_1 :
     (B_poly * Kplus_poly) (12 : Fin 15) (1 : Fin 6) =
       Bplus_poly_12_1 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_12_1]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_12_2 :
     (B_poly * Kplus_poly) (12 : Fin 15) (2 : Fin 6) =
       Bplus_poly_12_2 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_12_2]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_12_3 :
     (B_poly * Kplus_poly) (12 : Fin 15) (3 : Fin 6) =
       Bplus_poly_12_3 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_12_3]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_12_4 :
     (B_poly * Kplus_poly) (12 : Fin 15) (4 : Fin 6) =
       Bplus_poly_12_4 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_12_4]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_12_5 :
     (B_poly * Kplus_poly) (12 : Fin 15) (5 : Fin 6) =
       Bplus_poly_12_5 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_12_5]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_13_0 :
     (B_poly * Kplus_poly) (13 : Fin 15) (0 : Fin 6) =
       Bplus_poly_13_0 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_13_0]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_13_1 :
     (B_poly * Kplus_poly) (13 : Fin 15) (1 : Fin 6) =
       Bplus_poly_13_1 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_13_1]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_13_2 :
     (B_poly * Kplus_poly) (13 : Fin 15) (2 : Fin 6) =
       Bplus_poly_13_2 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_13_2]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_13_3 :
     (B_poly * Kplus_poly) (13 : Fin 15) (3 : Fin 6) =
       Bplus_poly_13_3 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_13_3]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_13_4 :
     (B_poly * Kplus_poly) (13 : Fin 15) (4 : Fin 6) =
       Bplus_poly_13_4 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_13_4]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_13_5 :
     (B_poly * Kplus_poly) (13 : Fin 15) (5 : Fin 6) =
       Bplus_poly_13_5 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_13_5]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_14_0 :
     (B_poly * Kplus_poly) (14 : Fin 15) (0 : Fin 6) =
       Bplus_poly_14_0 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_14_0]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_14_1 :
     (B_poly * Kplus_poly) (14 : Fin 15) (1 : Fin 6) =
       Bplus_poly_14_1 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_14_1]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_14_2 :
     (B_poly * Kplus_poly) (14 : Fin 15) (2 : Fin 6) =
       Bplus_poly_14_2 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_14_2]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_14_3 :
     (B_poly * Kplus_poly) (14 : Fin 15) (3 : Fin 6) =
       Bplus_poly_14_3 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_14_3]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_14_4 :
     (B_poly * Kplus_poly) (14 : Fin 15) (4 : Fin 6) =
       Bplus_poly_14_4 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_14_4]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_poly_14_5 :
     (B_poly * Kplus_poly) (14 : Fin 15) (5 : Fin 6) =
       Bplus_poly_14_5 := by
   simp [Matrix.mul_apply, Fin.sum_univ_succ, B_poly, Kplus_poly,
     Kplus_poly_row0, Kplus_poly_row1, Kplus_poly_row2, Kplus_poly_row3, Kplus_poly_row4, Kplus_poly_row5, Kplus_poly_row6, Kplus_poly_row7, Kplus_poly_row8, Kplus_poly_row9, Bplus_poly_14_5]
-  try ring
+  try grind
 
 theorem B_mul_Kplus_row0 (j : Fin 6) :
     (B_poly * Kplus_poly) (⟨0, by decide⟩ : Fin 15) j =

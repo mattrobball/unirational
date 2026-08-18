@@ -39,7 +39,7 @@ theorem detCoeff_022_sum_poly_re :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem detCoeff_022_sum_poly_im :
     N_im_0_0 + N_im_1_1 + N_im_2_2 = Fplus_im_022 + Phi11 * DC022_qim := by
@@ -49,7 +49,7 @@ theorem detCoeff_022_sum_poly_im :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 public theorem detCoeff_022_eq :
     detCoeff_022 = ofLadj Fplus_re_022 Fplus_im_022 := by

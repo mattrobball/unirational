@@ -39,7 +39,7 @@ theorem detCoeff_122_sum_poly_re :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 theorem detCoeff_122_sum_poly_im :
     N_im_0_3 + N_im_1_4 + N_im_2_5 = Fplus_im_122 + Phi11 * DC122_qim := by
@@ -49,7 +49,7 @@ theorem detCoeff_122_sum_poly_im :
   simp [Polynomial.eval_add, Polynomial.eval_sub, Polynomial.eval_mul,
     Polynomial.eval_C, Polynomial.eval_X, Polynomial.eval_pow,
     Polynomial.eval_neg, Polynomial.eval_zero, Polynomial.eval_one]
-  try ring
+  try grind
 
 public theorem detCoeff_122_eq :
     detCoeff_122 = ofLadj Fplus_re_122 Fplus_im_122 := by
