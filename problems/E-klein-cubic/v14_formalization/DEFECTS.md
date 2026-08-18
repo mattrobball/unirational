@@ -486,6 +486,54 @@ needs `CharZero`, not merely `char ≠ 2, 3`.
 
 ---
 
+### D15. A `sorry`-skeleton challenge cannot pass Comparator on this statement
+
+Evaluated `mattrobball/lean-stan` v0.2.2 (`cbab4e2985121ab3174d6a3b0fc5ba78dcd047af`)
+as a replacement for the hand-written `V14Challenge.lean`: emit the statement's whole
+trusted base into one Mathlib-only file with proofs replaced by `sorry`, and make that
+the challenge. The build economics are excellent and both published statements match.
+Comparator still rejects it, for a reason that is nothing to do with the emitter.
+
+`Comparator/Compare.lean` compares each named theorem by `ConstantVal` alone, then
+walks every constant reachable from its type and requires the challenge's and the
+solution's full `ConstantInfo` — **values included** — to be equal;
+`Comparator.runForUsedConsts` follows `info.value?`, so definition bodies are walked
+and every theorem they name is compared as a proof term. This statement's vocabulary
+is proof-carrying: `SchemeGeometry.ambientOf` unfolds to `PlusMinusCoords.ofRep`,
+whose body reads
+
+```lean
+let h := exists_plus_minus_projective_bases R sigma sigma_isInvolution (not_degenerates R)
+```
+
+so the walk reaches `not_degenerates` and `exists_plus_minus_projective_bases`. In a
+skeleton those are `sorryAx`; in the solution they are proofs. Mismatch, reject.
+Listing them in `theorem_names` does not rescue it — inside `Compare.loop` only
+`definition_names` gets type-only treatment, and `definitionHoleMatches` demands a
+`.defnInfo`, which a theorem is not.
+
+Measured on this machine with the emitted file swapped in as `V14Challenge.lean`
+(Mathlib cached, `LEAN_NUM_THREADS=8`):
+
+| challenge | statements | reachable-constant walk | `lake build V14Challenge` |
+|---|---|---|---|
+| hand-written (HEAD) | match | 55029 constants, 0 mismatches | 3406 jobs, 230 s |
+| stan skeleton, 193 decls / 24 modules / 1886 lines | match | 34702 constants, **38 mismatches** | 8656 jobs, 8 s |
+
+Note that `scripts/check_module_invariants.sh` step 3 **passes** on the skeleton:
+`Expr.eqv` and `levelParams` agree on both published theorems and the axiom set is
+clean. Step 3 only models Comparator's statement match. Step 4
+(`scripts/check_comparator_walk.lean`) was added for exactly this gap; it reports
+`38 mismatches` on the skeleton and `0` at HEAD.
+
+Two separate limitations of the emitter were also found and are worth reporting
+upstream, but they are secondary to the above: `stan_boundary` is not module-system
+aware (its final line filter drops any line starting with `@[expose]`, which in this
+tree decapitates the declaration written on that same line, and it emits neither the
+`module` header nor `public import`; 101 elaboration errors), and both entry points
+take a single target, while the two published theorems have incomparable closures
+(174 and 188 declarations, union 193), so one run cannot cover both.
+
 ## Suggested order of work
 
 1. **D3** (build coverage) — five minutes, and it is what allowed D2 to persist.

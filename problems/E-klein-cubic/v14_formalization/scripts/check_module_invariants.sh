@@ -19,8 +19,12 @@
 #      phase does. This is the check that catches the 7680055a class of bug,
 #      where two per-module `private abbrev`s made the statements defeq but not
 #      syntactically equal.
+#   4. the reachable-constant walk (scripts/check_comparator_walk.lean):
+#      Comparator does not stop at the two statements. It walks every constant
+#      those statements reach and compares full `ConstantInfo`, VALUES included.
+#      Step 3 passes on challenges this step rejects — see DEFECTS.md D15.
 #
-# Exit 0 iff all three pass.
+# Exit 0 iff all four pass.
 set -u
 cd "$(dirname "$0")/.."
 fail=0
@@ -59,6 +63,15 @@ if lake env lean --run scripts/check_statement_identity.lean; then
   print "OK"
 else
   print "FAIL: challenge and solution statements are not structurally identical"
+  fail=1
+fi
+
+print "== 4. reachable-constant walk (Comparator surrogate, phase 2) =="
+if lake env lean --run scripts/check_comparator_walk.lean; then
+  print "OK"
+else
+  print "FAIL: a constant reachable from the published statements differs between"
+  print "      challenge and solution (see DEFECTS.md D15)"
   fail=1
 fi
 
