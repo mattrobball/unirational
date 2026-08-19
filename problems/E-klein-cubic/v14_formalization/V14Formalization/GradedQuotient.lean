@@ -178,3 +178,109 @@ public theorem irrelevant_le_map_mkGraded :
 
 end GradedQuotient
 end V14Formalization
+
+namespace V14Formalization
+namespace GradedQuotient
+
+open HomogeneousIdeal
+
+variable {ι R A B : Type*} [DecidableEq ι] [AddMonoid ι] [CommRing R]
+  [CommRing A] [Algebra R A] [CommRing B] [Algebra R B]
+variable {𝒜 : ι → Submodule R A} [GradedAlgebra 𝒜] {ℬ : ι → Submodule R B} [GradedAlgebra ℬ]
+variable (I : HomogeneousIdeal 𝒜) (J : HomogeneousIdeal ℬ)
+
+/-- A graded ring hom carrying `I` into `J` descends to the quotients. -/
+@[expose] public def mapQuot (f : 𝒜 →+*ᵍ ℬ) (hf : I.map f ≤ J) :
+    grading 𝒜 I →+*ᵍ grading ℬ J where
+  __ := Ideal.Quotient.lift I.toIdeal
+    ((Ideal.Quotient.mk J.toIdeal).comp (f : A →+* B)) (by
+      intro a ha
+      simp only [RingHom.coe_comp, Function.comp_apply, Ideal.Quotient.eq_zero_iff_mem]
+      exact hf (Ideal.mem_map_of_mem _ ha))
+  map_mem := by
+    rintro i x hx
+    obtain ⟨a, ha, rfl⟩ := (mem_grading 𝒜 I).1 hx
+    exact mk_mem_grading ℬ J (f.map_mem ha)
+
+@[simp] public theorem mapQuot_mk (f : 𝒜 →+*ᵍ ℬ) (hf : I.map f ≤ J) (a : A) :
+    mapQuot I J f hf (Ideal.Quotient.mk I.toIdeal a) = Ideal.Quotient.mk J.toIdeal (f a) :=
+  rfl
+
+public theorem mapQuot_id (hf : I.map (.id 𝒜) ≤ I) :
+    mapQuot I I (.id 𝒜) hf = .id (grading 𝒜 I) := by
+  refine GradedRingHom.ext fun x => ?_
+  obtain ⟨a, rfl⟩ := Ideal.Quotient.mk_surjective x
+  rfl
+
+variable {C : Type*} [CommRing C] [Algebra R C] {𝒞 : ι → Submodule R C} [GradedAlgebra 𝒞]
+
+public theorem mapQuot_comp (K : HomogeneousIdeal 𝒞) (f : 𝒜 →+*ᵍ ℬ) (g : ℬ →+*ᵍ 𝒞)
+    (hf : I.map f ≤ J) (hg : J.map g ≤ K) (hgf : I.map (g.comp f) ≤ K) :
+    mapQuot I K (g.comp f) hgf = (mapQuot J K g hg).comp (mapQuot I J f hf) := by
+  refine GradedRingHom.ext fun x => ?_
+  obtain ⟨a, rfl⟩ := Ideal.Quotient.mk_surjective x
+  rfl
+
+end GradedQuotient
+end V14Formalization
+
+namespace V14Formalization
+namespace GradedQuotient
+
+open HomogeneousIdeal
+
+variable {R A B : Type*} [CommRing R] [CommRing A] [Algebra R A] [CommRing B] [Algebra R B]
+variable {𝒜 : ℕ → Submodule R A} [GradedAlgebra 𝒜] {ℬ : ℕ → Submodule R B} [GradedAlgebra ℬ]
+variable (I : HomogeneousIdeal 𝒜) (J : HomogeneousIdeal ℬ)
+
+private theorem map_mk_irrelevant_le :
+    Ideal.map (mkGraded 𝒜 I : A →+* A ⧸ I.toIdeal) (HomogeneousIdeal.irrelevant 𝒜).toIdeal ≤
+      (HomogeneousIdeal.irrelevant (grading 𝒜 I)).toIdeal := by
+  rw [Ideal.map_le_iff_le_comap]
+  intro a ha
+  have hd := GradedRingHom.map_directSumDecompose (𝒜 := 𝒜) (ℬ := grading 𝒜 I)
+    (mkGraded 𝒜 I) (x := a) (i := 0)
+  have h0 : (DirectSum.decompose 𝒜 a 0 : A) = 0 := ha
+  rw [Ideal.mem_comap, HomogeneousIdeal.mem_iff, HomogeneousIdeal.mem_irrelevant_iff,
+    GradedRing.proj_apply]
+  have hgoal : ((DirectSum.decompose (grading 𝒜 I) ((mkGraded 𝒜 I) a) 0 :
+      grading 𝒜 I 0) : A ⧸ I.toIdeal) = 0 := by
+    rw [← hd, h0, map_zero]
+  exact hgoal
+
+private theorem mkGraded_comp (f : 𝒜 →+*ᵍ ℬ) (hI : I.map f ≤ J) :
+    ((mkGraded ℬ J : B →+* B ⧸ J.toIdeal).comp (f : A →+* B)) =
+      ((mapQuot I J f hI : (A ⧸ I.toIdeal) →+* B ⧸ J.toIdeal).comp
+        (mkGraded 𝒜 I : A →+* A ⧸ I.toIdeal)) :=
+  RingHom.ext fun _ => rfl
+
+/-- The `AlgebraicGeometry.Proj.map` side condition is inherited by the quotients. -/
+public theorem irrelevant_le_map_mapQuot (f : 𝒜 →+*ᵍ ℬ) (hI : I.map f ≤ J)
+    (hf : HomogeneousIdeal.irrelevant ℬ ≤ (HomogeneousIdeal.irrelevant 𝒜).map f) :
+    HomogeneousIdeal.irrelevant (grading ℬ J) ≤
+      (HomogeneousIdeal.irrelevant (grading 𝒜 I)).map (mapQuot I J f hI) := by
+  have step1 : (HomogeneousIdeal.irrelevant (grading ℬ J)).toIdeal ≤
+      Ideal.map (mkGraded ℬ J : B →+* B ⧸ J.toIdeal)
+        (HomogeneousIdeal.irrelevant ℬ).toIdeal :=
+    irrelevant_le_map_mkGraded ℬ J
+  have step2 : Ideal.map (mkGraded ℬ J : B →+* B ⧸ J.toIdeal)
+        (HomogeneousIdeal.irrelevant ℬ).toIdeal ≤
+      Ideal.map (mkGraded ℬ J : B →+* B ⧸ J.toIdeal)
+        (Ideal.map (f : A →+* B) (HomogeneousIdeal.irrelevant 𝒜).toIdeal) :=
+    Ideal.map_mono hf
+  have step3 : Ideal.map (mkGraded ℬ J : B →+* B ⧸ J.toIdeal)
+        (Ideal.map (f : A →+* B) (HomogeneousIdeal.irrelevant 𝒜).toIdeal) =
+      Ideal.map (mapQuot I J f hI : (A ⧸ I.toIdeal) →+* B ⧸ J.toIdeal)
+        (Ideal.map (mkGraded 𝒜 I : A →+* A ⧸ I.toIdeal)
+          (HomogeneousIdeal.irrelevant 𝒜).toIdeal) := by
+    rw [Ideal.map_map, Ideal.map_map, mkGraded_comp I J f hI]
+  have step4 : Ideal.map (mapQuot I J f hI : (A ⧸ I.toIdeal) →+* B ⧸ J.toIdeal)
+        (Ideal.map (mkGraded 𝒜 I : A →+* A ⧸ I.toIdeal)
+          (HomogeneousIdeal.irrelevant 𝒜).toIdeal) ≤
+      Ideal.map (mapQuot I J f hI : (A ⧸ I.toIdeal) →+* B ⧸ J.toIdeal)
+        (HomogeneousIdeal.irrelevant (grading 𝒜 I)).toIdeal :=
+    Ideal.map_mono (map_mk_irrelevant_le I)
+  exact step1.trans (step2.trans (step3.le.trans step4))
+
+end GradedQuotient
+end V14Formalization
