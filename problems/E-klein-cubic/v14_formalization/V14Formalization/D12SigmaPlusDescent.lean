@@ -453,4 +453,155 @@ public theorem plusCarrier_commonPluckerZero_descends_mvfrac_over
 
 end OverField
 
+/-! ## The plus branch over a base field that need not contain `i`
+
+`Ki` really is scaffolding.  For a base field `E` of characteristic zero over
+`k = ℚ(ζ₁₁)`, run the packet over `AlgebraicClosure E` — which receives `Ki`,
+because `Ki/k` is algebraic — and bring the ratios back down with
+`mvFrac_eq_constant_of_baseChange_eq_constant`.  This is exactly the route the
+`k`-level `plusCarrier_commonPluckerZero_descends_mvfrac` already takes through
+`Ki`; only the two fields change. -/
+
+section BaseField
+
+variable (E : Type*) [Field E] [CharZero E] [Algebra k E]
+
+/-- `Ki` lands in any algebraically closed field over `k`. -/
+public noncomputable def kiLift : Ki →+* AlgebraicClosure E :=
+  (IsAlgClosed.lift (R := k) (S := Ki) (M := AlgebraicClosure E) : Ki →ₐ[k] _).toRingHom
+
+theorem kiLift_algebraMap (x : k) :
+    kiLift E (algebraMap k Ki x) =
+      algebraMap E (AlgebraicClosure E) (algebraMap k E x) := by
+  have h := (IsAlgClosed.lift (R := k) (S := Ki)
+    (M := AlgebraicClosure E)).commutes x
+  rw [show kiLift E (algebraMap k Ki x) =
+      IsAlgClosed.lift (R := k) (S := Ki) (M := AlgebraicClosure E)
+        (algebraMap k Ki x) from rfl, h]
+  exact IsScalarTower.algebraMap_apply k E (AlgebraicClosure E) x
+
+/-- The plus-carrier descent over an arbitrary characteristic-zero field over
+`ℚ(ζ₁₁)`.  No square root of `-1` is asked of `E`. -/
+public theorem plusCarrier_commonPluckerZero_descends_mvfrac_base
+    (n : ℕ) (u : Fin 6 → MvFrac E n) (hu : u ≠ 0)
+    (hQ : ∀ q : Fin 15,
+      D12Certificate.pluckerValue
+        ((((D12SigmaCarrierConcrete.core.Bplus).map (algebraMap k E)).map
+          (algebraMap E (MvFrac E n))).mulVec u) q = 0) :
+    ∃ (u0 : Fin 6 → E) (_hu0 : u0 ≠ 0) (c : MvFrac E n),
+      c ≠ 0 ∧ u = c • fun i => algebraMap E (MvFrac E n) (u0 i) := by
+  classical
+  let ι :=
+    mvFracBaseChange (algebraMap E (AlgebraicClosure E))
+      (FaithfulSMul.algebraMap_injective E (AlgebraicClosure E)) n
+  let uL : Fin 6 → MvFrac (AlgebraicClosure E) n := fun i => ι (u i)
+  have huL : uL ≠ 0 := by
+    intro h0
+    apply hu
+    funext i
+    exact (map_eq_zero_iff ι (mvFracBaseChange_injective _ _ n)).1
+      (congrFun h0 i)
+  have hBKi :
+      BplusKi.map (kiLift E) =
+        ((D12SigmaCarrierConcrete.core.Bplus).map (algebraMap k E)).map
+          (algebraMap E (AlgebraicClosure E)) := by
+    unfold BplusKi
+    rw [Matrix.map_map, Matrix.map_map]
+    congr 1
+    funext x
+    exact kiLift_algebraMap E x
+  have hQL : ∀ q : Fin 15,
+      D12Certificate.pluckerValue
+        (((BplusKi.map (kiLift E)).map
+          (algebraMap (AlgebraicClosure E)
+            (MvFrac (AlgebraicClosure E) n))).mulVec uL) q = 0 := by
+    intro q
+    have hcomp :
+        (algebraMap (AlgebraicClosure E)
+              (MvFrac (AlgebraicClosure E) n)).comp
+            (algebraMap E (AlgebraicClosure E)) =
+          ι.comp (algebraMap E (MvFrac E n)) :=
+      RingHom.ext fun a =>
+        (mvFracBaseChange_algebraMap_base (algebraMap E (AlgebraicClosure E))
+            (FaithfulSMul.algebraMap_injective E (AlgebraicClosure E)) n a).symm
+    have hB :
+        (BplusKi.map (kiLift E)).map
+            (algebraMap (AlgebraicClosure E)
+              (MvFrac (AlgebraicClosure E) n)) =
+          ((D12SigmaCarrierConcrete.core.Bplus).map (algebraMap k E)).map
+            ((algebraMap (AlgebraicClosure E)
+                (MvFrac (AlgebraicClosure E) n)).comp
+              (algebraMap E (AlgebraicClosure E))) := by
+      rw [hBKi, Matrix.map_map, RingHom.coe_comp]
+    have hx :
+        ((BplusKi.map (kiLift E)).map
+            (algebraMap (AlgebraicClosure E)
+              (MvFrac (AlgebraicClosure E) n))).mulVec uL =
+          fun i => ι ((((D12SigmaCarrierConcrete.core.Bplus).map
+            (algebraMap k E)).map (algebraMap E (MvFrac E n))).mulVec u i) := by
+      rw [hB, hcomp]
+      exact mulVec_comp_map ι (algebraMap E (MvFrac E n))
+        ((D12SigmaCarrierConcrete.core.Bplus).map (algebraMap k E)) u
+    rw [hx, pluckerValue_map, hQ, map_zero]
+  obtain ⟨u0L, _hu0L, cL, hcL, hscale⟩ :=
+    plusCarrier_commonPluckerZero_descends_mvfrac_over (kiLift E) n uL huL hQL
+  obtain ⟨j, hj⟩ : ∃ j, u j ≠ 0 := by
+    by_contra h
+    push Not at h
+    exact hu (funext h)
+  have hιj : ι (u j) ≠ 0 :=
+    (map_ne_zero_iff ι (mvFracBaseChange_injective _ _ n)).2 hj
+  have hscalei : ∀ i,
+      ι (u i) =
+        cL * algebraMap (AlgebraicClosure E)
+          (MvFrac (AlgebraicClosure E) n) (u0L i) := by
+    intro i
+    simpa [uL, Pi.smul_apply, smul_eq_mul] using congrFun hscale i
+  have hu0Lj : u0L j ≠ 0 := by
+    intro h0
+    have := hscalei j
+    rw [h0, map_zero, mul_zero] at this
+    exact hιj this
+  have hratio : ∀ i, ∃ r : E, u i / u j = algebraMap E (MvFrac E n) r := by
+    intro i
+    have hιratio :
+        ι (u i / u j) =
+          algebraMap (AlgebraicClosure E) (MvFrac (AlgebraicClosure E) n)
+            (u0L i / u0L j) := by
+      calc
+        ι (u i / u j) = ι (u i) / ι (u j) := map_div₀ _ _ _
+        _ = (cL * algebraMap (AlgebraicClosure E)
+                (MvFrac (AlgebraicClosure E) n) (u0L i)) /
+              (cL * algebraMap (AlgebraicClosure E)
+                (MvFrac (AlgebraicClosure E) n) (u0L j)) := by
+              rw [hscalei i, hscalei j]
+        _ = algebraMap (AlgebraicClosure E)
+                (MvFrac (AlgebraicClosure E) n) (u0L i) /
+              algebraMap (AlgebraicClosure E)
+                (MvFrac (AlgebraicClosure E) n) (u0L j) :=
+              mul_div_mul_left _ _ hcL
+        _ = algebraMap (AlgebraicClosure E)
+                (MvFrac (AlgebraicClosure E) n) (u0L i / u0L j) :=
+              (map_div₀ _ _ _).symm
+    exact mvFrac_eq_constant_of_baseChange_eq_constant n
+      (u i / u j) (u0L i / u0L j) hιratio
+  let u0 : Fin 6 → E := fun i => Classical.choose (hratio i)
+  have hu0i : ∀ i, u i = algebraMap E (MvFrac E n) (u0 i) * u j := by
+    intro i
+    have hi := Classical.choose_spec (hratio i)
+    calc
+      u i = (u i / u j) * u j := (div_mul_cancel₀ (u i) hj).symm
+      _ = algebraMap E (MvFrac E n) (u0 i) * u j := by rw [hi]
+  have hu0 : u0 ≠ 0 := by
+    intro h0
+    have hj0 : u0 j = 0 := congrFun h0 j
+    have := hu0i j
+    rw [hj0, map_zero, zero_mul] at this
+    exact hj this
+  refine ⟨u0, hu0, u j, hj, ?_⟩
+  funext i
+  rw [Pi.smul_apply, smul_eq_mul, hu0i i, mul_comm]
+
+end BaseField
+
 end V14Formalization.D12SigmaPlusDescent
