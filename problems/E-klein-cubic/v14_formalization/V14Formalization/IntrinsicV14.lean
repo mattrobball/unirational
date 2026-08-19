@@ -55,6 +55,35 @@ public theorem coe_wedgePairing (x y : ↥(⋀[k]^2 U)) :
       (x : ExteriorAlgebra k U) * (y : ExteriorAlgebra k U) :=
   rfl
 
+omit [FiniteDimensional k U] [Module.Free k U] in
+/-- `exteriorPower.map` is the restriction of `ExteriorAlgebra.map`.  Mathlib
+defines the two independently, so the identification has to be made by hand. -/
+public theorem coe_exteriorPower_map {V : Type u} [AddCommGroup V] [Module k V]
+    (n : ℕ) (f : U →ₗ[k] V) (z : ⋀[k]^n U) :
+    ((exteriorPower.map n f z : ⋀[k]^n V) : ExteriorAlgebra k V) =
+      ExteriorAlgebra.map f (z : ExteriorAlgebra k U) := by
+  have hz : z ∈ (⊤ : Submodule k (⋀[k]^n U)) := trivial
+  rw [← exteriorPower.ιMulti_span] at hz
+  induction hz using Submodule.span_induction with
+  | mem x hx =>
+    obtain ⟨a, rfl⟩ := hx
+    rw [exteriorPower.map_apply_ιMulti]
+    simp only [exteriorPower.ιMulti_apply_coe, ExteriorAlgebra.ιMulti_apply]
+    rw [map_list_prod, List.map_ofFn]
+    simp [Function.comp_def]
+  | zero => simp
+  | add x y _ _ hx hy => simp [hx, hy]
+  | smul a x _ hx => simp [hx]
+
+omit [FiniteDimensional k U] [Module.Free k U] in
+/-- The wedge pairing is natural in `U`: it intertwines `⋀²f` with `⋀⁴f`. -/
+public theorem wedgePairing_equivariant (f : U →ₗ[k] U) (x y : ↥(⋀[k]^2 U)) :
+    wedgePairing k U (exteriorPower.map 2 f x) (exteriorPower.map 2 f y) =
+      exteriorPower.map 4 f (wedgePairing k U x y) := by
+  apply Subtype.ext
+  rw [coe_wedgePairing, coe_exteriorPower_map, coe_exteriorPower_map, coe_exteriorPower_map,
+    coe_wedgePairing, map_mul]
+
 variable {M : Type u} [AddCommGroup M] [Module k M] [FiniteDimensional k M]
   (incl : M →ₗ[k] ↥(⋀[k]^2 U))
 
@@ -71,6 +100,17 @@ public theorem wedgeOn_apply (x y : M) :
 @[expose] public def pluckerIdeal :
     HomogeneousIdeal (SymmetricAlgebra.grade k (Dual k M)) :=
   IntrinsicQuadrics.quadricIdeal (wedgeOn k U incl)
+
+omit [FiniteDimensional k U] [Module.Free k U] in
+/-- **The Plücker ideal is stable** under any endomorphism `α` of `M` covered
+by an endomorphism `f` of `U`.  With `α = ρ(g)` and `f` the Weil
+representation, this is the `G`-stability that gives `V₁₄` its action. -/
+public theorem pluckerIdeal_map_le (α : M →ₗ[k] M) (f : U →ₗ[k] U)
+    (hcov : ∀ x, incl (α x) = exteriorPower.map 2 f (incl x)) :
+    (pluckerIdeal k U incl).map
+        (SymmetricAlgebra.gradedMap (α.dualMap)).toGradedRingHom ≤ pluckerIdeal k U incl :=
+  IntrinsicQuadrics.quadricIdeal_map_le _ α (exteriorPower.map 4 f) (fun x y => by
+    rw [wedgeOn_apply, wedgeOn_apply, hcov, hcov, wedgePairing_equivariant])
 
 /-- The homogeneous coordinate ring of `V₁₄`, graded. -/
 @[expose] public def coordinateRing :
