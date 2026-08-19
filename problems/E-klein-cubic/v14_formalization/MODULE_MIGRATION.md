@@ -261,6 +261,92 @@ true for uninteresting reasons. Certifying only the abstract theorem would
 certify a 51-declaration statement that says nothing about V14. See the
 comparator note below.
 
+## The intrinsic target: what was actually missing (2026-08-19)
+
+Two claims went into this, and both were wrong in the direction that makes the
+job smaller.
+
+**Claim: Mathlib cannot cut a closed subscheme out of `Proj`.** Mostly false.
+The pin has full functoriality of `Proj` —
+`AlgebraicGeometry.Proj.map (f : 𝒜 →+*ᵍ ℬ) (hf : ℬ₊ ≤ 𝒜₊.map f) : Proj ℬ ⟶ Proj 𝒜`
+with `map_id` and `map_comp`, in `ProjectiveSpectrum/Functor.lean` (Kenny Lau,
+merged 2026-03, so it predates the pin). It also has closed subschemes cut by a
+quasi-coherent ideal sheaf on *any* scheme:
+`Scheme.IdealSheafData.subscheme`, `.subschemeι`, and the `IsClosedImmersion`
+instance. Problem B's `ProjectiveHypersurfaceScheme` is a consumer of that, not
+a replacement for it; its descent engine (`IdealSheafDescent`, 142 lines) is
+already ambient-agnostic, and only the "homogeneous polynomial to a section on
+a chart" interface is `MvPolynomial`-specific.
+
+What is genuinely absent, in the pin **and on master**, is the graded structure
+on `A ⧸ I` for a homogeneous ideal. That is the whole gap. Upstream it is the
+stalled PR chain #27307 → #40749 → #36501, open since 2025-07 and untouched
+since 2026-07-14.
+
+It is 90 lines. `GradedQuotient.grading` takes the images of the graded pieces;
+the `GradedAlgebra` instance comes from `DirectSum.coeAddMonoidHom` being
+bijective — surjective because `mk` is and every element decomposes, injective
+because a homogeneous ideal contains the homogeneous components of its
+elements. `irrelevant_le_map_mkGraded` discharges `Proj.map`'s side condition.
+
+**Claim: the degree-2 generators need a new ~150–250 line map.** False. 20
+lines. The quadrics of a bilinear `w : M →ₗ M →ₗ N` are
+
+    N* --(lift w)ᵀ--> (M ⊗ M)* --dualDistribEquiv⁻¹--> M* ⊗ M* --mul--> Sym(M*)
+
+three canonical maps. `TensorProduct.dualDistribEquiv` is basis-free in its
+statement and wants only `Module.Finite`/`Module.Free`. The wedge itself is a
+Mathlib one-liner, `DirectSum.gMulLHom` on the graded pieces of the exterior
+algebra — which is exactly what `PluckerNaturality.wedgeMul6` already is, only
+stated over `Fin 6 → R` instead of over `U`.
+
+### What was built
+
+| module | lines | what |
+|---|---:|---|
+| `GradedQuotient` | 286 | the missing instance, `mkGraded`, `mapQuot` + functor laws, both irrelevant-ideal side conditions |
+| `IntrinsicQuadrics` | 164 | `quadrics`, degree-two, `quadrics_naturality`, `quadricIdeal_map_le` |
+| `IntrinsicV14` | 135 | `wedgePairing`, `pluckerIdeal`, `scheme`, `toAmbient`, `pluckerIdeal_map_le` |
+
+`IntrinsicV14.scheme` is `Proj (Sym (M*) ⧸ I)` and `toAmbient` is its map to
+`ℙ(M)`. No basis, no matrix, no Plücker coordinate appears in either.
+
+`coe_exteriorPower_map` was needed on the way: Mathlib defines
+`exteriorPower.map` (via `alternatingMapLinearEquiv`) and `ExteriorAlgebra.map`
+(an `AlgHom`) independently and never identifies them. Span induction over the
+`ιMulti` generators does it in ten lines, and `wedgePairing_equivariant` is
+then `map_mul`.
+
+`M` is taken as a module with a map `incl : M →ₗ ⋀²U`, not as a `Submodule`.
+Ascribing `Dual k ↥Msub` writes `Submodule.addCommMonoid` where the general
+lemma wrote `AddCommGroup.toAddCommMonoid`; the two are defeq and unification
+does not find it, which showed up as a `whnf` timeout rather than a type error.
+
+### Measured
+
+| closure | decls | modules |
+|---|---:|---:|
+| `IntrinsicV14.scheme` | **18** | **4** |
+| `V14SchemeModel.actionOver` (what it would replace) | 150 | 18 |
+| published `noEquivariantRationalMap_ambientFree` | 180 | 25 |
+
+### What is left
+
+* The action packaging — `Action (Over (Spec F)) G` from `mapQuot` +
+  `Proj.map_id`/`map_comp`, mirroring `ProjectiveSpaceIntrinsic{,Action}` (294
+  lines there). Every input exists; `pluckerIdeal_map_le` is the stability it
+  needs.
+* The comparison morphism `V₁₄_intrinsic ⟶ V₁₄_coord`. This is the real
+  remaining cost, and it is not small. The two live in different ambients —
+  intrinsic in `ℙ(M) = ℙ⁹`, coordinate in `ProjectiveSpace 14 k` — so the map
+  is `Proj.map` along `MvPolynomial (Fin 15) k → Sym (M*) ⧸ I`, `Xᵢ ↦` the
+  restriction of the `i`-th Λ²U coordinate. Its side condition holds because
+  those restrictions span `M*`. Factoring it through the closed subscheme then
+  needs `v14Ideal ≤ h.ker` as `IdealSheafData`, which is chart-level work on
+  ℙ¹⁴: the 15 linear cuts vanish because `P` is the identity on `M`, and the 15
+  quadrics vanish by `squareLexCoord_eq_two_pluckerValue`. Nothing about it is
+  research, but it is days, not hours.
+
 ## Where things stand (2026-08-19)
 
 | | |
