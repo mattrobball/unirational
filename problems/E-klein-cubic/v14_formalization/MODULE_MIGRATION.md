@@ -496,6 +496,141 @@ of them were written `private` by their authors, which under the legacy
 elaborator only mangled the name while still loading the body into every
 consumer.
 
+## `M` is the unique 10-dimensional subrepresentation (2026-08-19)
+
+`V14 = Gr(2,U) ∩ P(M)` reads like a choice of linear section. It is not: `M`
+is the only 10-dimensional `PSL(2,11)`-stable subspace of the 15-dimensional
+`Λ²U`. Two new modules carry that.
+
+**`V14Formalization/CommutantRankTwo.lean`** — abstract, imports only Mathlib.
+If `End_G(V)` is 2-dimensional and holds an idempotent `p` other than `0` and
+`1`, then `1, p` is a basis of it, the only idempotents are `0, 1, p, 1-p`,
+and — Maschke making every stable subspace the range of an idempotent
+intertwiner — the only `G`-stable subspaces of `V` are `0`, `range p`,
+`ker p`, `V`. Their dimensions are the four traces, so a stable subspace is
+pinned by its dimension once those four are distinct.
+
+**`V14Formalization/MsubUnique.lean`** — the instance. `finrank Λ²U = 15`,
+`tr π = 10`, and `0, 10, 5, 15` are distinct, so
+
+```lean
+eq_Msub_of_sum_chiLambda2_norm
+    (hsum : (∑ g : PSL2F11, chiLambda2 g * chiLambda2 g⁻¹) = (1320 : k))
+    (N : Submodule k Lambda2U)
+    (hN : ∀ g ⦃v⦄, v ∈ N → ambientAct g v ∈ N)
+    (hdim : Module.finrank k N = 10) :
+    N = Msub
+```
+
+### What Mathlib turned out to have
+
+More than the design assumed, and it is worth writing down so nobody rebuilds
+it. All of `Mathlib/RepresentationTheory/`:
+
+* `Subrepresentation.lean` — a bundled `Subrepresentation ρ` with a full
+  lattice, and order-isos to `Submodule k[G] ρ.asModule`.
+* `Semisimple.lean` — `IsSemisimpleRepresentation`, and
+  `Maschke.lean:183` gives it as an **instance** for `[Finite G]`,
+  `[NeZero (Nat.card G : k)]`. No hand-rolled averaging is needed.
+* `Irreducible.lean` — `IsIrreducible ρ := IsSimpleOrder (Subrepresentation ρ)`,
+  with the bridge to `IsSimpleModule k[G] ρ.asModule`.
+* `Character.lean:115` — `card_inv_mul_sum_char_mul_char_eq_finrank`:
+  `(Nat.card G : k)⁻¹ * ∑ g, σ.character g * ρ.character g⁻¹
+   = finrank k (IntertwiningMap ρ σ)`.
+  **No `IsAlgClosed` hypothesis.** This is the commutant dimension, and it is
+  the whole reason the route below needs no Schur's lemma.
+* `FinGroupCharZero.lean:121` — `FDRep.simple_iff_char_is_norm_one`, the
+  converse of orthogonality, for `[CharZero k]`. Not used here, but it is the
+  thing one would expect to be missing and it is not.
+* `RingTheory/SimpleModule/Isotypic.lean` — isotypic components exist
+  (`isotypicComponent`, `sSupIndep_isotypicComponents`,
+  `le_isotypicComponent_iff`). Not needed for the rank-two route.
+
+One genuine gap: `Representation.IntertwiningMap ρ ρ` carries `Semiring` and
+`AddCommGroup` but **no `Ring`** instance.
+`CommutantRankTwo.instRingIntertwiningMap` assembles the two. That is a
+one-line Mathlib PR if anyone wants it.
+
+### The `whnf` wall, again
+
+`projectorM` stays opaque throughout: only `projectorM_equivariant`,
+`projectorM_sq_apply` and its trace are used. Three places still tripped the
+660-term sum, and the fixes are the same shape each time — **never let
+`exact`/`rfl` do the unification across an alias**:
+
+* `projectorM ∘ₗ ambientRep g = ambientRep g ∘ₗ projectorM`: `LinearMap.ext`
+  then `rw [LinearMap.comp_apply, LinearMap.comp_apply, ambientRep_apply]`
+  *before* `exact projectorM_equivariant g v`. Without the `ambientRep_apply`
+  rewrite the goal and the lemma differ only in `ambientRep g` versus
+  `ambientAct g`, which is `rfl` — and closing it by `rfl` costs more than
+  200k heartbeats.
+* `projM.toLinearMap = projectorM := rfl` needs `projM` built from an explicit
+  constructor with the equivariance proof already discharged as a *named*
+  theorem. With the proof inline in a `where` block the projection does not
+  reduce inside the budget.
+* Idempotence: prove `projectorM * projectorM = projectorM` in
+  `Module.End k Lambda2U` first (instant), then transport with
+  `IntertwiningMap.ext`. Doing it inside `IntertwiningMap` — `coe_mul`,
+  `Module.End.mul_apply`, `projM_toLinearMap`, then `exact` — reaches the same
+  goal and then needs 400k+ heartbeats to finish it.
+
+### What is not proved: one character sum
+
+`∑_g χ_Λ²(g) χ_Λ²(g⁻¹) = 1320 = 2·660` is carried as a hypothesis, in the same
+shape as `finrank_Msub_eq_ten_of_sum_chi_chiLambda2` carries
+`∑ χ₁₀'·χ_Λ² = 660`. Class by class, with `χ_Λ² = χ₅ + χ₁₀'`:
+
+| class | size | `χ_Λ²` | `χ(g)χ(g⁻¹)` | contribution | in tree? |
+|---|---:|---|---:|---:|---|
+| 1A | 1 | 15 | 225 | 225 | yes |
+| 2A | 55 | 3 | 9 | 495 | yes |
+| 3A | 110 | 0 | 0 | 0 | yes |
+| 5A, 5B | 132+132 | 0 | 0 | 0 | **no** |
+| 6A | 110 | 0 | 0 | 0 | yes |
+| 11A, 11B | 60+60 | `(-3 ± √-11)/2` | 5 | 600 | **partly** |
+|  |  |  |  | **1320** |  |
+
+Two things are missing, and neither is representation theory.
+
+1. **`χ_Λ²` on order-5 elements.** Never computed, because `χ₁₀'` vanishes
+   there and the existing sum never needed it. Route: `Dfull a` (the diagonal
+   Weil action, `WeilRepSL2.lean:51`) restricted to `U` is a scaled permutation
+   of the six `evalEven` coordinates, with exactly one fixed coordinate, so
+   `tr_U = χ₂(a)·1 = 1` for `a` of order 5; same for `a²`; Newton
+   (`trace_exterior_newton`) gives `½(1-1) = 0`. The conjugacy half is already
+   done — `PSLCard.isConj_el5_or_pow_of_order_five`, class sizes 132+132.
+   Needs `D_even`, `weilU_Dmat`, an explicit `SL₂` witness conjugating `el5`
+   to `Dmat 9`, and a permutation analogue of `trace_diagMul`. ~200-350 lines.
+2. **The order-11 sum, quadratic.** `chiLambda2_tGen_pow_eq` already gives
+   `χ_Λ²(t^n) = (-3 - χ₂(n)·γ)/2` with `γ² = -11`. Since `χ₂(-1) = -1`
+   (`WeilRep.lean:137`), the product `χ(g)χ(g⁻¹) = (9 - χ₂(n)²γ²)/4 = 5` is
+   **constant** on order-11 elements — much easier than the linear sum, which
+   needed `∑χ₂ = 0`. What is missing is a *pointwise* conjugacy statement
+   (every order-11 `g` is conjugate to some `tGen^n`); the tree has it only at
+   the level of sums, inside `sum_chiLambda2_sylow11NonId`. ~150-250 lines.
+
+Both live in `Ord11CharacterSum` / `GeometricV14Carrier`, where 28 of 29
+theorems are module-private, so the continuation also needs visibility work in
+two large files.
+
+### Effect on the trusted base
+
+`noEquivariantRationalMap_intrinsicV14` is 139 declarations / 18 modules. The
+character projector accounts for **four** of them —
+`GeometricV14Carrier.chi10'`, `.projectorM`, `.Msub`, and
+`IntrinsicHeadline.ambientAct_mem` — plus `inclM`, `repM`, `coversM`,
+`intrinsicV14`, which a universally-quantified restatement would replace
+rather than delete. About 60 of the 139 are the Weil representation and most
+of the rest is `Proj`/`SymmetricAlgebra`.
+
+So uniqueness does **not** shrink the trusted base: at best 139 → ~132.
+`chi10'` also cannot leave the *construction* — a definite description needs
+an existence witness, and the only witness is `Msub = range projectorM`. What
+uniqueness buys is that the headline can be stated for *every* 10-dimensional
+`G`-stable `N ⊆ Λ²U`, naming no projector and no character table, with
+`N = Msub` recovered inside the proof. That is a statement-quality change, not
+a size change.
+
 ## The one hard rule: strictly bottom-up
 
 A `module` file cannot import a non-`module` file (hard error,

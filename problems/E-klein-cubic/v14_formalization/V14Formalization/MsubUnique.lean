@@ -25,6 +25,13 @@ here; it is carried as a hypothesis, exactly as
 `GeometricV14Carrier.finrank_Msub_eq_ten_of_sum_chi_chiLambda2` carries
 `∑ χ₁₀'·χ_{Λ²U} = 660`.
 
+Class by class the sum is `225 + 495 + 0 + 0 + 0 + 600 = 1320`, and the tree
+already has every value except two: `χ_{Λ²U}` on order-5 elements (never
+needed, because `χ₁₀'` vanishes there) and a pointwise conjugacy statement for
+order-11 elements, on which `χ(g)χ(g⁻¹) = (9 - χ₂(n)²γ²)/4 = 5` is constant.
+See `MODULE_MIGRATION.md`, "`M` is the unique 10-dimensional
+subrepresentation", for the table and the two routes.
+
 Everything below treats `projectorM` as opaque: only its equivariance, its
 idempotence and its trace are used.  No equation ever forces the 660-term sum
 to unfold.
