@@ -8,6 +8,7 @@ public import V14Formalization.D12SigmaPlusSegrePoint
 public import V14Formalization.D12SigmaPlusSegreSection
 public import V14Formalization.D12SigmaPlusSegreGeom
 public import V14Formalization.D12SigmaPlusSegreRankTwo
+public import V14Formalization.D12SigmaPlusSegreRankTwoMap
 public import V14Formalization.D12SigmaPlusSegreFplusMap
 public import V14Formalization.D12SigmaPlusSegreSmooth
 public import V14Formalization.SmoothPlaneCubicMvFracDescent
@@ -326,5 +327,130 @@ public theorem plusCarrier_ambient_descends_mvfrac
     funext i
     simp [x0, Matrix.mulVec, dotProduct, map_sum, map_mul]
   rw [hx, hudesc, Matrix.mulVec_smul, hmap]
+
+/-! ## The plus branch over an arbitrary field receiving `Ki`
+
+Everything above is stated over `Ki = ℚ(ζ₁₁, i)`.  With the three formerly
+`Ki`-only lemmas generalized, the whole plus branch runs over any field `F`
+that receives a ring map from `Ki` and has characteristic zero; `Ki` itself is
+the `RingHom.id Ki` case.
+
+`F` has to contain a square root of `-1` because the plus carrier is the tensor
+product of the two `±i`-eigenspaces of the order-four Weil operator, and those
+eigenspaces do not exist otherwise.  That is not a constraint on the base field
+of the headline: exactly as `k = ℚ(ζ₁₁)` reaches this packet by extending to
+`Ki` and descending ratios afterwards, a general base field reaches it by
+extending to `F(i)` and descending. -/
+
+section OverField
+
+variable {F : Type*} [Field F] [CharZero F]
+
+public instance : Infinite (AlgebraicClosure F) :=
+  CharZero.infinite (M := AlgebraicClosure F)
+
+theorem Fplus_map_smooth_algClosure (φ : Ki →+* F) :
+    Standard.IsSmoothPlaneCubic
+      (map (algebraMap F (AlgebraicClosure F)) (map φ Fplus)) := by
+  rw [MvPolynomial.map_map]
+  exact Fplus_isSmoothPlaneCubic_map ((algebraMap F (AlgebraicClosure F)).comp φ)
+
+/-- The plus-carrier descent over an arbitrary characteristic-zero field
+receiving `Ki`.  Same statement as
+`plusCarrier_commonPluckerZero_descends_mvfrac_Ki`, with `Ki` replaced by `F`
+and the plus-carrier matrix base-changed along `φ`. -/
+public theorem plusCarrier_commonPluckerZero_descends_mvfrac_over
+    (φ : Ki →+* F) (n : ℕ) (u : Fin 6 → MvFrac F n) (hu : u ≠ 0)
+    (hQ : ∀ q : Fin 15,
+      D12Certificate.pluckerValue
+        (((BplusKi.map φ).map (algebraMap F (MvFrac F n))).mulVec u) q = 0) :
+    ∃ (u0 : Fin 6 → F) (_hu0 : u0 ≠ 0) (c : MvFrac F n),
+      c ≠ 0 ∧ u = c • fun i => algebraMap F (MvFrac F n) (u0 i) := by
+  classical
+  haveI : Infinite F := CharZero.infinite (M := F)
+  set alg : F →+* MvFrac F n := algebraMap F (MvFrac F n) with halg
+  set ψ : Ki →+* MvFrac F n := alg.comp φ with hψ
+  have halginj : Function.Injective alg := alg.injective
+  have hBmap : (BplusKi.map φ).map alg = BplusKi.map ψ := by
+    ext i j
+    simp [Matrix.map_apply, hψ]
+  obtain ⟨a, b, ha, hb, hsegr, hker, hdet0⟩ :=
+    plusCarrier_commonPluckerZero_to_determinantalCubic ψ u hu
+      (by intro q; rw [← hBmap]; exact hQ q)
+  have hGmap : map alg (map φ Fplus) = map ψ Fplus := by
+    rw [MvPolynomial.map_map]
+  have hzero : eval a (map alg (map φ Fplus)) = 0 := by
+    rw [hGmap, eval_map_Fplus_eq_det, hdet0]
+  obtain ⟨a0, ha0, ca, hca, haesc⟩ :=
+    smoothPlaneCubic_projective_descends_mvfrac n (map φ Fplus)
+      (Fplus_map_smooth_algClosure φ) a ha hzero
+  have hA : bilinearNOn ψ a = ca • (bilinearNOn φ a0).map alg := by
+    have hae : a = ca • fun i => alg (a0 i) := haesc
+    rw [hae, bilinearNOn_smul, hψ, bilinearNOn_comp_of_base]
+  have hker0 : ((bilinearNOn φ a0).map alg).mulVec b = 0 := by
+    have hk := hker
+    rw [hA] at hk
+    have : ca • ((bilinearNOn φ a0).map alg).mulVec b = 0 := by
+      simpa [Matrix.smul_mulVec] using hk
+    exact (smul_eq_zero.mp this).resolve_left hca
+  have hF0 : eval a0 (map φ Fplus) = 0 := by
+    have hmap0 :
+        eval (fun i => alg (a0 i)) (map ψ Fplus) = alg (eval a0 (map φ Fplus)) := by
+      rw [eval_map_Fplus, eval_map_Fplus]
+      simp [hψ, map_add, map_mul, map_pow]
+    have hhom : eval a (map ψ Fplus) =
+        ca ^ 3 * eval (fun i => alg (a0 i)) (map ψ Fplus) := by
+      rw [haesc, eval_map_Fplus, eval_map_Fplus]
+      simp [Pi.smul_apply, smul_eq_mul]
+      ring
+    have hca3 : ca ^ 3 ≠ 0 := pow_ne_zero 3 hca
+    have hz := hzero
+    rw [hGmap, hhom, hmap0] at hz
+    have : alg (eval a0 (map φ Fplus)) = 0 := (mul_eq_zero.mp hz).resolve_left hca3
+    exact (map_eq_zero_iff alg halginj).1 this
+  have hrank : (bilinearNOn φ a0).rank = 2 :=
+    smooth_detCubic_rank_eq_two_map φ a0 ha0 hF0
+  obtain ⟨b0, cb, hb0, hcb, hbesc⟩ :=
+    kernelLine_descends_of_rank_eq_two (bilinearNOn φ a0) hrank b hb hker0
+  have hb0ker : (bilinearNOn φ a0).mulVec b0 = 0 := by
+    have hk : ((bilinearNOn φ a0).map alg).mulVec (fun i => alg (b0 i)) = 0 := by
+      have hk' := hker0
+      rw [hbesc] at hk'
+      simpa [Matrix.mulVec_smul, smul_eq_zero, hcb] using hk'
+    have hmap :
+        ((bilinearNOn φ a0).map alg).mulVec (fun i => alg (b0 i)) =
+          fun i => alg ((bilinearNOn φ a0).mulVec b0 i) := by
+      funext i
+      simp [Matrix.mulVec, Matrix.map_apply, dotProduct, map_sum, map_mul]
+    rw [hmap] at hk
+    ext i
+    exact (map_eq_zero_iff alg halginj).1 (congrFun hk i)
+  let u0 : Fin 6 → F := ((D12SigmaPlusSegreCore.L).map φ).mulVec (segrVecOn a0 b0)
+  have hu0 : u0 ≠ 0 := by
+    intro h0
+    have hN0 : (N.map φ).mulVec (segrVecOn a0 b0) = 0 := by
+      rw [N_map_mulVec_segrVec]
+      exact hb0ker
+    have hHL : (H.map φ).mulVec u0 = segrVecOn a0 b0 :=
+      (eq_H_mulVec_L_of_N_mulVec_map φ _ hN0).symm
+    have : segrVecOn a0 b0 = 0 := by
+      simpa [h0] using hHL.symm
+    exact segrVecOn_ne_zero ha0 hb0 this
+  refine ⟨u0, hu0, ca * cb, mul_ne_zero hca hcb, ?_⟩
+  have hsegr' :
+      segrVecOn a b = (ca * cb) • fun p => alg (segrVecOn a0 b0 p) := by
+    have ha' : a = ca • fun i => alg (a0 i) := haesc
+    have hb' : b = cb • fun i => alg (b0 i) := hbesc
+    rw [ha', hb', segrVecOn_smul, segrVecOn_map_of_ringHom]
+  have hLmap :
+      ((D12SigmaPlusSegreCore.L).map ψ).mulVec
+          (fun p => alg (segrVecOn a0 b0 p)) =
+        fun i => alg (u0 i) := by
+    have hcm := mulVec_comp_map alg φ (D12SigmaPlusSegreCore.L) (segrVecOn a0 b0)
+    simpa [u0, hψ, Function.comp_def] using hcm
+  have hrec := plus_reconstruct_map ψ u a b hsegr
+  rw [hrec, hsegr', Matrix.mulVec_smul, hLmap]
+
+end OverField
 
 end V14Formalization.D12SigmaPlusDescent

@@ -123,6 +123,23 @@ theorem eval_map_Fplus_path2 (a : Fin 3 → F) (t : F) :
 
 /-! ### The determinantal side -/
 
+/-- `bilinearNOn` along a composite `ψ ∘ φ` at a vector pulled back from `F`
+is the `ψ`-image of `bilinearNOn φ`.  This is `bilinearNOn_map_of_base` with
+the base `Ki` replaced by an arbitrary intermediate field. -/
+public theorem bilinearNOn_comp_of_base {F' : Type*} [Field F']
+    (ψ : F →+* F') (a0 : Fin 3 → F) :
+    bilinearNOn (ψ.comp φ) (fun i => ψ (a0 i)) = (bilinearNOn φ a0).map ψ := by
+  ext r j
+  simp [bilinearNOn, map_sum, map_mul, Matrix.map_apply]
+
+/-- `segrVecOn` commutes with any ring map, not only with maps out of `Ki`. -/
+public theorem segrVecOn_map_of_ringHom {F' : Type*} [Field F']
+    (ψ : F →+* F') (a b : Fin 3 → F) :
+    segrVecOn (fun i => ψ (a i)) (fun i => ψ (b i)) =
+      fun p => ψ (segrVecOn a b p) := by
+  funext p
+  simp [segrVecOn, map_mul]
+
 public theorem bilinearNOn_add (a b : Fin 3 → F) :
     bilinearNOn φ (a + b) = bilinearNOn φ a + bilinearNOn φ b := by
   ext r j
