@@ -1150,6 +1150,26 @@ theorem squareLexCoord_eq_lex4_repr (x : Fin 15 → R) (t : Fin 15) :
   simp [squareLexCoord, lex4Basis, Basis.repr_reindex,
     Finsupp.mapDomain_equiv_apply]
 
+/-- **The Plücker quadrics are the `Λ⁴` coordinates of `ω ∧ ω`, up to a factor
+of two.**  Coordinate-free restatement of `squareLexCoord_eq_two_pluckerValue`:
+no `sourceBivector` and no `squareLexCoord` appear, only the two lex bases and
+the graded multiplication of the exterior algebra. -/
+public theorem lex4_repr_gMul_self (u : E2_6 (R := R)) (t : Fin 15) :
+    (lex4Basis (R := R)).repr
+        (DirectSum.gMulLHom R (fun m ↦ ⋀[R]^m (Fin 6 → R)) u u) t =
+      2 * MvPolynomial.eval ((lex2Basis (R := R)).equivFun u)
+        (V14Formalization.SchemeGeometry.pluckerQuadric R t) := by
+  have h1 : sourceBivector ((lex2Basis (R := R)).equivFun u) = u := by
+    show (lex2Basis (R := R)).equivFun.symm ((lex2Basis (R := R)).equivFun u) = u
+    exact (lex2Basis (R := R)).equivFun.symm_apply_apply u
+  have h2 := squareLexCoord_eq_two_pluckerValue (R := R)
+    ((lex2Basis (R := R)).equivFun u) t
+  rw [squareLexCoord_eq_lex4_repr, pluckerValue_eq_eval] at h2
+  rw [show (DirectSum.gMulLHom R (fun m ↦ ⋀[R]^m (Fin 6 → R)) u u : E4_6 (R := R))
+      = sourceSquare ((lex2Basis (R := R)).equivFun u) by
+    rw [sourceSquare, h1]; rfl]
+  exact h2
+
 theorem coe_exteriorPower_map_6_6
     (n : ℕ) (f : (Fin 6 → R) →ₗ[R] (Fin 6 → R))
     (u : ⋀[R]^n (Fin 6 → R)) :
