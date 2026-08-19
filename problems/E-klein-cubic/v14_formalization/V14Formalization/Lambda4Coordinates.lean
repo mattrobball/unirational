@@ -25,6 +25,8 @@ Everything is `exteriorPower.map` of the coordinate isomorphism `c.equivFun`
 carrying one lex basis to the other, plus `IntrinsicV14.wedgePairing_map`.
 -/
 
+set_option linter.unusedSectionVars false
+
 noncomputable section
 
 open Module exteriorPower
