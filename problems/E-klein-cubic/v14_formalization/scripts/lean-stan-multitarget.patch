@@ -1,5 +1,5 @@
 diff --git a/Stan/EmitBoundary.lean b/Stan/EmitBoundary.lean
-index 985d174..9d23a98 100644
+index 985d174..7aba30e 100644
 --- a/Stan/EmitBoundary.lean
 +++ b/Stan/EmitBoundary.lean
 @@ -93,11 +93,9 @@ def resolveSource (modName : Name) : IO (Option System.FilePath) := do
@@ -147,6 +147,30 @@ index 985d174..9d23a98 100644
    output := output ++ s!"Boundary: {", ".intercalate (roots.toList.map toString)}\n\n"
    output := output ++ s!"{names.size} declarations from {orderedModules.size} modules, \
      inlined in dependency order with every proof replaced by `sorry`. Imports above \
+@@ -328,11 +337,20 @@ def emitBoundary (env : Environment) (roots : Array Name) (targetName : Name)
+       | .skip => pure ()
+     output := output ++ "\n"
+ 
+-  -- These attributes would require importing Informal, which the emitted file
+-  -- does not do.
++  -- `@[informal ...]` would require importing Informal, which the emitted file
++  -- does not do.  `@[expose]` must NOT be dropped: in module-system sources the
++  -- attribute shares a line with the declaration it annotates, so filtering the
++  -- line deletes the signature and the emitted file no longer parses.
++  -- Also drop `#`-commands (`#print axioms`, `#guard_kernel_checked`, ...).
++  -- They are audit canaries in the source that name constants the emitted file
++  -- does not contain.  A markdown heading inside a docstring always has a space
++  -- after the `#`, a Lean command never does, so that discriminates them.
+   let filtered := output.splitOn "\n" |>.filter fun line =>
+     let t := line.trimAsciiStart.toString
+-    !(t.startsWith "@[informal " || t.startsWith "@[expose]")
++    -- A markdown heading is `# ` or `##`; a Lean command has a letter straight
++    -- after the `#`.
++    let isCmd := t.startsWith "#" && !(t.startsWith "# ") && !(t.startsWith "##")
++    !(t.startsWith "@[informal " || isCmd)
+   output := ("\n".intercalate filtered).trimAsciiEnd.toString ++ "\n"
+ 
+   IO.FS.writeFile outputPath output
 diff --git a/StanBoundary.lean b/StanBoundary.lean
 index e5eb80d..76eb448 100644
 --- a/StanBoundary.lean
@@ -214,3 +238,10 @@ index e5eb80d..76eb448 100644
 -    emitBoundary env a.roots target output a.excludes
 +    emitBoundary env a.roots a.targets output a.excludes
      return 0
+diff --git a/lean-toolchain b/lean-toolchain
+index 025e595..2b61957 100644
+--- a/lean-toolchain
++++ b/lean-toolchain
+@@ -1 +1 @@
+-leanprover/lean4:v4.33.0
++leanprover/lean4:v4.32.1
