@@ -6,13 +6,9 @@ public import Mathlib
 
 Target: `V14Formalization.Comparator.noEquivariantRationalMap_ambientFree`
 
-Target: `V14Formalization.Comparator.noEquivariantRationalMap_from_ambient`
-
-Target: `V14Formalization.Comparator.noEquivariantRationalMap_projectiveGVariety`
-
 Boundary: V14Formalization, BConicBundleMultisections
 
-212 declarations from 29 modules, inlined in dependency order with every proof replaced by `sorry`. Imports above are outside the boundary and are trusted as given.
+169 declarations from 25 modules, inlined in dependency order with every proof replaced by `sorry`. Imports above are outside the boundary and are trusted as given.
 -/
 
 universe u v w
@@ -162,34 +158,12 @@ noncomputable section
 open scoped LinearAlgebra.Projectivization MatrixGroups
 namespace V14Formalization
 
-@[expose] public def IsInvolution {G : Type u} [Monoid G] (σ : G) : Prop :=
-  σ ^ 2 = 1 ∧ σ ≠ 1
-
 public structure FaithfulLinearRep (k : Type u) [Field k] (G : Type u) [Monoid G]
     (V : Type u) [AddCommGroup V] [Module k V] where
   ρ : Representation k G V
   finiteDimensional : FiniteDimensional k V
   faithful : Function.Injective ρ
 
-namespace FaithfulLinearRep
-variable {k : Type u} [Field k] {G : Type u} [Group G]
-  {V : Type u} [AddCommGroup V] [Module k V]
-
-@[expose] public def act (R : FaithfulLinearRep k G V) (g : G) : V →ₗ[k] V := R.ρ g
-
-@[expose] public def plusEigenspace (R : FaithfulLinearRep k G V) (σ : G) : Submodule k V :=
-  Module.End.eigenspace (R.act σ) (1 : k)
-
-@[expose] public def minusEigenspace (R : FaithfulLinearRep k G V) (σ : G) : Submodule k V :=
-  Module.End.eigenspace (R.act σ) (-1 : k)
-
-/-- In characteristic zero, an involution splits every honest linear
-representation as its `+1` and `-1` eigenspaces. -/
-public theorem isCompl_plus_minus (R : FaithfulLinearRep k G V) {σ : G}
-    [CharZero k] (hσ : IsInvolution σ) :
-    IsCompl (R.plusEigenspace σ) (R.minusEigenspace σ)  := sorry
-
-end FaithfulLinearRep
 end V14Formalization
 
 
@@ -307,88 +281,6 @@ public theorem projectiveActionHom_mul {n : ℕ}
     (R : MatrixRepresentation (k := k) (G := G) n) (g : G) :
     (projectiveActionHom R g).IsOver (Spec (.of k))  := sorry
 
-/-- Scheme-level projective space with its matrix action, genuinely packaged
-as a scheme over `Spec k`. -/
-@[expose] public def projectiveActionOver (n : ℕ)
-    (R : MatrixRepresentation (k := k) (G := G) n) :
-    Action (Over (Spec (.of k))) G := by
-  letI : (projectiveAction n R).V.Over (Spec (.of k)) := by
-    change (ProjectiveSpace n k).Over (Spec (.of k))
-    infer_instance
-  exact actionOverOfIsOver (projectiveAction n R) fun g ↦ by
-    change (projectiveActionHom R g).IsOver (Spec (.of k))
-    infer_instance
-
-end SchemeGeometry
-end V14Formalization
-
-
--- ═══ UniversalNormalDivisor ═══
-
-noncomputable section
-open CategoryTheory CategoryTheory.Limits
-open scoped AlgebraicGeometry
-namespace V14Formalization
-namespace SchemeGeometry
-open AlgebraicGeometry BConicBundleMultisections Module
-attribute [local instance] MvPolynomial.gradedAlgebra
-variable {k : Type u} [Field k] {G : Type u} [Group G]
-  {V : Type u} [AddCommGroup V] [Module k V]
-
-/-- Matrix coordinates for the full representation in a chosen basis. -/
-@[expose] public def ambientMatrixRepresentation
-    (R : FaithfulLinearRep k G V) (d : ℕ)
-    (b : Basis (Fin (d + 1)) k V) :
-    MatrixRepresentation (k := k) (G := G) d :=
-  (Matrix.GeneralLinearGroup.toLin' b).symm.toMonoidHom.comp
-    R.ρ.toHomUnits
-
-/-- The source projective space with its honest full-group scheme action. -/
-@[expose] public def ambientProjectiveActionOver
-    (R : FaithfulLinearRep k G V) (d : ℕ)
-    (b : Basis (Fin (d + 1)) k V) :
-    Action (Over (Spec (.of k))) G :=
-  projectiveActionOver d (ambientMatrixRepresentation R d b)
-
-/-- The source projective scheme is integral. -/
-@[expose] public instance ambientProjectiveActionOver_isIntegral
-    (R : FaithfulLinearRep k G V) (d : ℕ)
-    (b : Basis (Fin (d + 1)) k V) :
-    IsIntegral (ambientProjectiveActionOver R d b).V.left  := sorry
-
-/-- The ambient representation splits equivariantly into its two eigenspaces. -/
-@[expose] public def plusMinusLinearEquiv [CharZero k]
-    (R : FaithfulLinearRep k G V) (sigma : G) (hσ : IsInvolution sigma) :
-    V ≃ₗ[k] (R.plusEigenspace sigma × R.minusEigenspace sigma) :=
-  ((R.plusEigenspace sigma).prodEquivOfIsCompl
-    (R.minusEigenspace sigma) (R.isCompl_plus_minus hσ)).symm
-
-/-- The block-order identification used for plus coordinates followed by
-minus coordinates. -/
-@[expose] public def finSumFinEquiv (m n : ℕ) : Fin m ⊕ Fin n ≃ Fin (m + n) where
-  toFun := Sum.elim (Fin.castAdd n) (Fin.natAdd m)
-  invFun := Fin.addCases Sum.inl Sum.inr
-  left_inv x := sorry
-  right_inv i := sorry
-
-/-- The concrete block order has ambient projective dimension `p + q + 1`. -/
-@[expose] public def plusMinusFinEquiv (p q : ℕ) :
-    Fin (p + 1) ⊕ Fin (q + 1) ≃ Fin ((p + q + 1) + 1) :=
-  (finSumFinEquiv (p + 1) (q + 1)).trans
-    (Equiv.cast (congrArg Fin (by omega)))
-
-/-- The ambient basis formed by concatenating the plus and minus bases and
-transporting across the eigenspace decomposition.  These are the homogeneous
-coordinates used by the normal valuation chart. -/
-@[expose] public def plusMinusAmbientBasis [CharZero k]
-    (R : FaithfulLinearRep k G V) (sigma : G) (hσ : IsInvolution sigma)
-    (p q : ℕ)
-    (bp : Basis (Fin (p + 1)) k (R.plusEigenspace sigma))
-    (bm : Basis (Fin (q + 1)) k (R.minusEigenspace sigma)) :
-    Basis (Fin ((p + q + 1) + 1)) k V :=
-  ((bp.prod bm).map (plusMinusLinearEquiv R sigma hσ).symm).reindex
-    (plusMinusFinEquiv p q)
-
 end SchemeGeometry
 end V14Formalization
 
@@ -468,36 +360,6 @@ equations.  Its zero locus is their scheme-theoretic intersection. -/
     (F : ι → MvPolynomial (Fin (n + 1)) R) :
     (ProjectiveSpace n R).IdealSheafData :=
   ⨆ i, ProjectiveSpace.projectiveZeroLocusIdeal n R (F i)
-
-/-- The closed projective subscheme cut out by a family of equations. -/
-public abbrev projectiveZeroLocusFamily
-    (F : ι → MvPolynomial (Fin (n + 1)) R) : Scheme.{u} :=
-  (projectiveZeroLocusFamilyIdeal n R F).subscheme
-
-/-- The canonical closed immersion of a family zero locus. -/
-public abbrev projectiveZeroLocusFamilyι
-    (F : ι → MvPolynomial (Fin (n + 1)) R) :
-    projectiveZeroLocusFamily n R F ⟶ ProjectiveSpace n R :=
-  (projectiveZeroLocusFamilyIdeal n R F).subschemeι
-
-@[expose] public instance projectiveZeroLocusFamilyι_isClosedImmersion
-    (F : ι → MvPolynomial (Fin (n + 1)) R) :
-    IsClosedImmersion (projectiveZeroLocusFamilyι n R F)  := sorry
-
-/-- The structure morphism inherited from projective space. -/
-@[expose] public def projectiveZeroLocusFamilyToSpec
-    (F : ι → MvPolynomial (Fin (n + 1)) R) :
-    projectiveZeroLocusFamily n R F ⟶ Spec (.of R) :=
-  projectiveZeroLocusFamilyι n R F ≫ ProjectiveSpace.toSpec n R
-
-@[expose] public instance projectiveZeroLocusFamily_canonicallyOver
-    (F : ι → MvPolynomial (Fin (n + 1)) R) :
-    (projectiveZeroLocusFamily n R F).CanonicallyOver (Spec (.of R)) where
-  hom := projectiveZeroLocusFamilyToSpec n R F
-
-@[expose] public instance projectiveZeroLocusFamilyι_isOver
-    (F : ι → MvPolynomial (Fin (n + 1)) R) :
-    (projectiveZeroLocusFamilyι n R F).IsOver (Spec (.of R))  := sorry
 
 end SchemeGeometry
 end V14Formalization
@@ -630,18 +492,6 @@ variable (R : Type u) [CommRing R]
   | Sum.inl q => pluckerQuadric R q
   | Sum.inr i => projectorLinearCut R P i
 
-/-- The actual scheme-theoretic intersection `Gr(2,6) ∩ P(im P)`
-for a supplied coordinate projector `P`. -/
-public abbrev grassmannianLinearSection
-    (P : Matrix (Fin 15) (Fin 15) R) : Scheme :=
-  projectiveZeroLocusFamily 14 R (grassmannianLinearSectionEquations R P)
-
-/-- Its canonical closed immersion into coordinate `P¹⁴`. -/
-public abbrev grassmannianLinearSectionι
-    (P : Matrix (Fin 15) (Fin 15) R) :
-    grassmannianLinearSection R P ⟶ ProjectiveSpace 14 R :=
-  projectiveZeroLocusFamilyι 14 R (grassmannianLinearSectionEquations R P)
-
 end SchemeGeometry
 end V14Formalization
 
@@ -664,8 +514,6 @@ namespace WeilRep
 public abbrev K := AdjoinRoot Φ11
 
 @[expose] public instance : Field K := inferInstance
-
-@[expose] public instance : CharZero K  := sorry
 
 @[expose] public def ζ : K := AdjoinRoot.root Φ11
 
@@ -717,11 +565,6 @@ the Bruhat big-cell formula matches the Fourier–unipotent identity W N(t) W. -
   toFun f := fun x => ψ (b * x ^ 2 * twoInv) * f x
   map_add' := sorry
   map_smul' := sorry
-
-/-- The matrix S = [[0,-1],[1,0]] in SL₂(F₁₁). -/
-@[expose] public def Smat : SpecialLinearGroup (Fin 2) (ZMod 11) :=
-  ⟨!![0, -1; 1, 0], by
-    simp [Matrix.det_fin_two_of]⟩
 
 end WeilRep
 end V14Formalization
@@ -945,10 +788,6 @@ public abbrev Lambda2U := GeometricFanoCarrier.Lambda2U
 
 @[expose] public def ambientAct (g : PSL2F11) : Lambda2U →ₗ[k] Lambda2U := pslLambda2Hom g
 
-@[expose] public def sigma : PSL2F11 := QuotientGroup.mk WeilRep.Smat
-
-public theorem sigma_isInvolution : IsInvolution sigma  := sorry
-
 open ExteriorAlgebra
 open ExteriorAlgebra
 
@@ -1060,15 +899,6 @@ public abbrev G := GeometricV14Carrier.PSL2F11
 @[expose] public noncomputable def projectorMatrix : Matrix (Fin 15) (Fin 15) k :=
   LinearMap.toMatrix lambda2Basis lambda2Basis projectorM
 
-/-- The scheme-theoretic intersection `Gr(2,6) ∩ P(M)` in the actual
-representation coordinates. -/
-public abbrev v14Scheme : AlgebraicGeometry.Scheme :=
-  grassmannianLinearSection k projectorMatrix
-
-/-- The canonical closed immersion of the coordinate V14 into `P¹⁴`. -/
-public abbrev v14Schemeι : v14Scheme ⟶ ProjectiveSpace 14 k :=
-  grassmannianLinearSectionι k projectorMatrix
-
 /-- The genuine projective action before restriction to the V14 subscheme. -/
 public abbrev ambientSchemeAction : Action AlgebraicGeometry.Scheme G :=
   projectiveAction 14 lambda2MatrixRepresentation.ρ
@@ -1096,96 +926,6 @@ maps and proper specialization. -/
     infer_instance
 
 end V14SchemeModel
-end V14Formalization
-
-
--- ═══ SchemeModelAliases ═══
-
-namespace V14Formalization.SchemeGeometry
-
-/-- The V14 base field, as used throughout the scheme-geometry namespace. -/
-public abbrev k := V14SchemeModel.k
-
-/-- The acting group `PSL₂(𝔽₁₁)`, as used throughout the scheme-geometry
-namespace. -/
-public abbrev G := V14SchemeModel.G
-
-end V14Formalization.SchemeGeometry
-
-
--- ═══ ProjectiveGVariety ═══
-
-noncomputable section
-open CategoryTheory
-open scoped AlgebraicGeometry
-namespace V14Formalization
-namespace SchemeGeometry
-open AlgebraicGeometry BConicBundleMultisections Module
-
-/-- A closed subscheme of `ℙⁿ` with a `G`-action over `Spec k`. -/
-public structure ProjectiveGVariety
-    (k : Type u) [Field k] (G : Type v) [Group G] where
-  /-- Geometric dimension of the ambient projective space. -/
-  n : ℕ
-  /-- `G`-action on a scheme over `Spec k`. -/
-  action : Action (Over (Spec (.of k))) G
-  /-- Closed immersion into Mathlib `Proj` of the standard graded polynomial ring. -/
-  ι : action.V.left ⟶ ProjectiveSpace n k
-  [closed : IsClosedImmersion ι]
-  [ι_over : ι.IsOver (Spec (.of k))]
-
-attribute [instance] ProjectiveGVariety.closed
-attribute [instance] ProjectiveGVariety.ι_over
-namespace ProjectiveGVariety
-variable {k : Type u} [Field k] {G : Type v} [Group G]
-
-/-- The underlying Mathlib scheme. -/
-public abbrev toScheme (X : ProjectiveGVariety k G) : Scheme :=
-  X.action.V.left
-
-/-- Full projective space `ℙⁿ` with the action induced by a matrix representation. -/
-@[expose] public def ofMatrixRepresentation (n : ℕ)
-    (R : MatrixRepresentation (k := k) (G := G) n) :
-    ProjectiveGVariety k G := by
-  refine
-    { n := n
-      action := projectiveActionOver n R
-      ι := eqToHom ?hleft
-      closed := ?hcl
-      ι_over := ?hover }
-  · change (projectiveAction n R).V = ProjectiveSpace n k
-    rfl
-  · infer_instance
-  · refine ⟨?_⟩
-    -- `eqToHom rfl ≫ toSpec` is the structure map of `ℙⁿ`.
-    rfl
-
-/-- Projectivization of a faithful linear representation, as a projective
-`G`-scheme.  Homogeneous coordinates come from the chosen basis. -/
-@[expose] public def ofLinearRep {G : Type u} [Group G] {V : Type u}
-    [AddCommGroup V] [Module k V]
-    (R : FaithfulLinearRep k G V) (d : ℕ) (b : Basis (Fin (d + 1)) k V) :
-    ProjectiveGVariety k G :=
-  ofMatrixRepresentation d (ambientMatrixRepresentation R d b)
-
-/-- The coordinate V14, as a closed subscheme of `ℙ¹⁴` with its genuine
-`PSL₂(𝔽₁₁)` action. -/
-@[expose] public def v14 : ProjectiveGVariety V14SchemeModel.k V14SchemeModel.G where
-  n := 14
-  action := V14SchemeModel.actionOver
-  ι := V14SchemeModel.v14Schemeι
-  closed := sorry
-  ι_over :=
-    sorry
-
-/-- Existence of a `G`-equivariant Mathlib rational map of the underlying
-schemes over `Spec k`. -/
-@[expose] public def HasEquivariantRationalMap (X Y : ProjectiveGVariety k G)
-    [IrreducibleSpace X.toScheme] : Prop :=
-  SchemeGeometry.HasEquivariantRationalMap X.action Y.action
-
-end ProjectiveGVariety
-end SchemeGeometry
 end V14Formalization
 
 
@@ -1396,60 +1136,6 @@ end SchemeGeometry
 end V14Formalization
 
 
--- ═══ HeadlineStatement ═══
-
-noncomputable section
-open CategoryTheory
-open scoped AlgebraicGeometry
-namespace V14Formalization.SchemeGeometry
-open AlgebraicGeometry GeometricV14Carrier Module
-
-public abbrev ambientFor
-    {V : Type} [AddCommGroup V] [Module k V]
-    (R : FaithfulLinearRep k G V) (p q : ℕ)
-    (bp : Basis (Fin (p + 1)) k (R.plusEigenspace sigma))
-    (bm : Basis (Fin (q + 1)) k (R.minusEigenspace sigma)) :=
-  ambientProjectiveActionOver R (p + q + 1)
-    (plusMinusAmbientBasis R sigma sigma_isInvolution p q bp bm)
-
-/-- Plus/minus homogeneous coordinates used by the normal chart.  This is a
-hypothesis of the public theorems, which are stated for *every* such choice;
-`PlusMinusCoords.ofRep` below shows the hypothesis is never vacuous. -/
-public structure PlusMinusCoords
-    {V : Type} [AddCommGroup V] [Module k V]
-    (R : FaithfulLinearRep k G V) where
-  p : ℕ
-  q : ℕ
-  bp : Basis (Fin (p + 1)) k (R.plusEigenspace sigma)
-  bm : Basis (Fin (q + 1)) k (R.minusEigenspace sigma)
-
-/-- The numbered projective action of `R` in the plus/minus coordinates `c`. -/
-public abbrev ambientOf
-    {V : Type} [AddCommGroup V] [Module k V]
-    (R : FaithfulLinearRep k G V) (c : PlusMinusCoords R) :
-    Action (Over (Spec (.of k))) G :=
-  ambientFor R c.p c.q c.bp c.bm
-
-namespace ProjectiveGVariety
-
-/-- Projectivization of a faithful linear representation, as a closed
-subscheme of the numbered `Proj` in the plus/minus coordinates `c`. -/
-public abbrev ofFaithfulRep
-    {V : Type} [AddCommGroup V] [Module k V]
-    (R : FaithfulLinearRep k G V) (c : PlusMinusCoords R) :
-    ProjectiveGVariety k G :=
-  ofLinearRep R (c.p + c.q + 1)
-    (plusMinusAmbientBasis R sigma sigma_isInvolution c.p c.q c.bp c.bm)
-
-@[expose] public instance ofFaithfulRep_irreducible
-    {V : Type} [AddCommGroup V] [Module k V]
-    (R : FaithfulLinearRep k G V) (c : PlusMinusCoords R) :
-    IrreducibleSpace (ofFaithfulRep R c).toScheme  := sorry
-
-end ProjectiveGVariety
-end V14Formalization.SchemeGeometry
-
-
 -- ═══ V14Solution ═══
 
 noncomputable section
@@ -1472,20 +1158,5 @@ public theorem noEquivariantRationalMap_ambientFree
     (R : FaithfulLinearRep V14SchemeModel.k V14SchemeModel.G V) :
     ¬ HasEquivariantRationalMap (ambientFree R)
       V14SchemeModel.actionOver  := sorry
-
-public theorem noEquivariantRationalMap_from_ambient
-    {V : Type} [AddCommGroup V] [Module V14SchemeModel.k V]
-    (R : FaithfulLinearRep V14SchemeModel.k V14SchemeModel.G V)
-    (c : PlusMinusCoords R) :
-    ¬ HasEquivariantRationalMap (ambientOf R c)
-      V14SchemeModel.actionOver  := sorry
-
-public theorem noEquivariantRationalMap_projectiveGVariety
-    {V : Type} [AddCommGroup V] [Module V14SchemeModel.k V]
-    (R : FaithfulLinearRep V14SchemeModel.k V14SchemeModel.G V)
-    (c : PlusMinusCoords R) :
-    ¬ ProjectiveGVariety.HasEquivariantRationalMap
-        (ProjectiveGVariety.ofFaithfulRep R c)
-        ProjectiveGVariety.v14  := sorry
 
 end V14Formalization.Comparator
