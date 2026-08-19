@@ -251,23 +251,87 @@ imaginary parts, so as matrices they live over `Ki`; what generalizes is their
 image under an arbitrary `φ : Ki →+* F`. The one new hypothesis anywhere is
 `Infinite F`, which characteristic zero supplies.
 
-**Not implemented**: the general-field headline itself. What blocks it is
-hypothesis (a) over `F`, i.e. an `F`-version of
-`rationalMapIsConstantOver_v14FixedBy`. Concretely the remaining work is:
+Added 2026-08-19, second pass:
 
-1. ~~`plusCarrier_commonPluckerZero_descends_mvfrac` over `F`~~ — **done**
-   (2026-08-19), see above.
-2. `minusCarrier_commonPluckerZero_descends_mvfrac` over `F` —
-   `common_plucker_zero_parametric` and `binaryQuadratic_projective_descends_mvfrac`
-   are both already field-generic; this is mostly rewriting.
-3. `V14FixedFieldPointDescent.lean` over `F` (the `k`-point becomes an `F`-point).
-4. `rationalMapIsConstantOver_v14FixedBy` over `F`.
-5. Base-change plumbing: `FixedBy (actionOverBaseChange F) σ` versus
-   `FixedBy actionOver σ`, and a relativized `RationalMapIsConstantOver` whose
-   constant point lives over `Spec F` rather than `Spec k`.
+* `V14Formalization/BaseFieldCriteria.lean` — the criteria in intrinsic form and
+  the proof that they are exactly `[Algebra k F]`:
+  `charZero_of_algebra`, `isPrimitiveRoot_zetaOf`, and `algebraOfPrimitiveRoot`
+  (char 0 + a primitive 11th root gives the algebra structure, by
+  `AdjoinRoot.lift` against `map_cyclotomic`).
+* `V14Formalization/D12SigmaMinusDescent.lean` —
+  `minusCarrier_commonPluckerZero_descends_mvfrac_overBase` and
+  `minusCarrier_ambient_descends_mvfrac_overBase`. Item 2 below, closed.
+* `V14Formalization/SchemeBaseChangeFixed.lean` — `pullback.fst` intertwines
+  `baseChangeAction t A` with `A`, and hence
+  `exists_centralizer_fixed_point_of_baseChange`: a centralizer-fixed
+  `T`-section of the fixed locus of the base change is a centralizer-fixed
+  `T`-point of `FixedBy A σ` over `t`. This is the half of item 5 that lets
+  hypothesis (b) be used against the base-changed target.
+* `V14Formalization/V14D12CertificateExclusionOverField.lean` —
+  `no_centralizer_fixed_section_baseChange F` and
+  `noEquivariantRationalMap_of_normal_specialization_over F`: the terminal
+  reduction over `F`, target `V14SchemeModel.actionOverBaseChange F`.
+* `V14Formalization/FaithfulHeadlineOverField.lean` — `HypothesisAOver F`,
+  `noEquivariantRationalMap_from_ambient_of_constancy_over`, and
+
+  ```
+  noEquivariantRationalMap_ambientFree_over_of_constancy
+      (F : Type) [Field F] [Algebra V14SchemeModel.k F]
+      {V : Type} [AddCommGroup V] [Module F V]
+      [FiniteDimensional F V] [Nontrivial V]
+      (R : FaithfulLinearRep F V14SchemeModel.G V)
+      (ha : HypothesisAOver F) :
+      ¬ HasEquivariantRationalMap (ambientFree R)
+        (V14SchemeModel.actionOverBaseChange F)
+  ```
+
+  the general-field headline, conditional on hypothesis (a) over `F` and on
+  nothing else. Note the statement carries no characteristic hypothesis:
+  `CharZero F` follows from `[Algebra k F]` and is discharged inside.
+
+Everything above uses only `propext`, `Classical.choice`, `Quot.sound`.
+
+**Not implemented**: hypothesis (a) over `F`, i.e. `HypothesisAOver F`. That is
+now the *only* thing between the tree and an unconditional general-field
+headline. Concretely what is left:
+
+1. ~~`plusCarrier_commonPluckerZero_descends_mvfrac` over `F`~~ — **done**.
+2. ~~`minusCarrier_commonPluckerZero_descends_mvfrac` over `F`~~ — **done**.
+3. `V14FixedFieldPointDescent.lean` over `F` (the `k`-point becomes an
+   `F`-point). This is the big one: ~460 lines, plus `v14SchemePointOfNormalizedCoordinates`
+   and `exists_normalizedCoordinates_v14FixedBy_concrete_plus_or_minus_carrier`,
+   which are relative in the extension field `L` but pinned in the base.
+   The two descent inputs it needs are now available over `F`, so the work is
+   rebasing the point-construction, not new mathematics.
+4. `rationalMapIsConstantOver_v14FixedBy` over `F` — i.e. `HypothesisAOver F`
+   itself, which is (3) plus the second half of (5).
+5. ~~`FixedBy (actionOverBaseChange F) σ` versus `FixedBy actionOver σ`~~ — the
+   direction hypothesis (b) needs is **done** (`SchemeBaseChangeFixed`). The
+   opposite direction is still needed for (4): the constant point produced by
+   (3) is an `F`-point of `V14` over `Spec k`, and `RationalMapIsConstantOver`
+   at base `F` wants a `Spec F`-point of the *base change*. That is
+   `pullback.lift` against `𝟙 (Spec F)`, followed by `fixedByLift`.
 
 Note for (5): a rational map `ℙ(W) ⇢ V14_F` over `Spec F` is the same thing as a
 rational map `ℙ(W) ⇢ V14` over `Spec k` for `ℙ(W)` regarded as a `k`-scheme
 (universal property of the fibre product), so the *statement* need not mention
 the base change; only the constancy step does, because the point it produces is
 an `F`-point and `RationalMapIsConstantOver` as written demands a `k`-point.
+
+## What the generalization does not reach
+
+Two limits, both honest and both recorded in the docstrings:
+
+* **Characteristic zero is a limit of the technique, not of the theorem.**  The
+  plus branch of hypothesis (a) descends through
+  `EllipticPolynomialConstancy`, which uses
+  `Polynomial.eq_C_of_derivative_eq_zero` (false in char `p`) and
+  Mason–Stothers. "A genus-1 curve admits no non-constant map from a rational
+  variety" is true in every characteristic. Weakening to `char ≠ 2, 3` plus
+  explicit bad primes is a genuine project: it needs the emitted `D12Piece*Data`
+  matrices re-based on `ℤ[ζ₁₁, 1/132]`, which has not been done.
+* **The primitive 11th root is a source-side constraint, not a target-side
+  one.**  The V14 target is defined over `ℚ`: `B`, `L` and `P` have zero
+  coefficient on `ζ¹…ζ⁹`. The `ζ` content is in the group-action matrices
+  `RM`/`SM`. So `ζ₁₁ ∈ F` is needed because the *model of the representation*
+  is built out of a root, not because the variety is.
