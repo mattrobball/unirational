@@ -24,6 +24,11 @@
 #      those statements reach and compares full `ConstantInfo`, VALUES included.
 #      Step 3 passes on challenges this step rejects — see DEFECTS.md D15.
 #
+# Since 2026-08-19 `comparator.json` names ONE target, the coordinate-free
+# theorem. Steps 2-4 still cover all three published theorems: the other two
+# stay in the tree, stay proved, and stay identical on both sides, so checking
+# them is strictly stronger than what Comparator will run.
+#
 # Exit 0 iff all four pass.
 set -u
 cd "$(dirname "$0")/.."

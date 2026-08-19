@@ -2,6 +2,14 @@
 Comparator challenge: independent statement of the public no-map theorem.
 Trusted vocabulary is `HeadlineStatement` only — this file does not import
 the proof module `FaithfulHeadline`.
+
+`comparator.json` names ONE target, `noEquivariantRationalMap_ambientFree`.
+The two coordinatized theorems below are stated and proved here, and the
+local gate scripts still check them, but they are not separately certified:
+listing them as targets pulls `PlusMinusCoords`, `ambientOf`, `ofFaithfulRep`
+and `plusMinusAmbientBasis` into the trusted base — 229 project declarations
+against 180 — which re-imports exactly the coordinate machinery the
+coordinate-free statement exists to eliminate.
 -/
 module
 

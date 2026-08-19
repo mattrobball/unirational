@@ -47,10 +47,18 @@ deriving instance BEq for Lean.QuotVal
 deriving instance BEq for Lean.InductiveVal
 deriving instance BEq for Lean.ConstantInfo
 
-def auditedNames : List Name :=
-  [`V14Formalization.Comparator.noEquivariantRationalMap_ambientFree,
-   `V14Formalization.Comparator.noEquivariantRationalMap_from_ambient,
+/-- The names `comparator.json` lists. -/
+def comparatorTargets : List Name :=
+  [`V14Formalization.Comparator.noEquivariantRationalMap_ambientFree]
+
+/-- Corollaries that are no longer Comparator targets but are still published.
+Walking them too makes this gate strictly stronger than Comparator; the
+reduction they buy is in the trusted base, not in this check. -/
+def localCanaries : List Name :=
+  [`V14Formalization.Comparator.noEquivariantRationalMap_from_ambient,
    `V14Formalization.Comparator.noEquivariantRationalMap_projectiveGVariety]
+
+def auditedNames : List Name := comparatorTargets ++ localCanaries
 
 /-- Mirror of `Comparator.runForUsedConsts` (Comparator/Util.lean). -/
 def usedConsts (info : ConstantInfo) : Array Name := Id.run do
@@ -103,7 +111,21 @@ unsafe def main : IO UInt32 := do
       if c != s then mismatches := mismatches.push t
       else worklist := worklist ++ usedConsts s
     | _, _ => missing := missing.push t
-  IO.println s!"[walk] visited {checked.size} constants"
+  -- Report how much of the walk Comparator itself pays for, i.e. the closure of
+  -- `comparatorTargets` alone. The canaries above are checked in addition.
+  let mut tVisited : Std.HashSet Name := {}
+  let mut tWork : Array Name := #[]
+  for n in comparatorTargets do
+    if let some ci := envS.find? n then tWork := tWork ++ ci.type.getUsedConstants
+  while !tWork.isEmpty do
+    let t := tWork.back!
+    tWork := tWork.pop
+    if tVisited.contains t then continue
+    tVisited := tVisited.insert t
+    if let some s := envS.find? t then tWork := tWork ++ usedConsts s
+  IO.println s!"[walk] visited {checked.size} constants \
+    ({tVisited.size} from the {comparatorTargets.length} Comparator target(s), \
+    the rest from the {localCanaries.length} local canaries)"
   IO.println s!"[walk] challenge/solution mismatches: {mismatches.size}"
   for n in mismatches.toList.take 20 do
     let sorried := match envC.find? n with

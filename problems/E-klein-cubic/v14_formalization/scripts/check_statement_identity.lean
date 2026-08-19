@@ -21,10 +21,19 @@ import Lean
 
 open Lean
 
-def auditedNames : List Name :=
-  [`V14Formalization.Comparator.noEquivariantRationalMap_ambientFree,
-   `V14Formalization.Comparator.noEquivariantRationalMap_from_ambient,
+/-- The names `comparator.json` lists. -/
+def comparatorTargets : List Name :=
+  [`V14Formalization.Comparator.noEquivariantRationalMap_ambientFree]
+
+/-- Corollaries that are no longer Comparator targets (they would drag the
+coordinate machinery into the trusted base) but are still published and still
+kept identical on both sides. Checking them here is strictly stronger than what
+Comparator does. -/
+def localCanaries : List Name :=
+  [`V14Formalization.Comparator.noEquivariantRationalMap_from_ambient,
    `V14Formalization.Comparator.noEquivariantRationalMap_projectiveGVariety]
+
+def auditedNames : List Name := comparatorTargets ++ localCanaries
 
 unsafe def main : IO UInt32 := do
   initSearchPath (← findSysroot)
