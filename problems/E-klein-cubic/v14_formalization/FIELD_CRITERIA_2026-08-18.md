@@ -198,7 +198,7 @@ with the following accounting:
 | blow-up chart, exceptional divisor | nothing | proved, polymorphic |
 | properness + valuative criterion | nothing | proved, polymorphic |
 | (a) minus branch | `char ≠ 2`, an explicit discriminant `≠ 0` | proved over `k`; polymorphic pieces available |
-| (a) plus branch | **`char = 0`** (Mason–Stothers / `eq_C_of_derivative_eq_zero`), plus `char ≠ 2,3` from the Weierstrass form | proved over `k`; the cubic-descent lemma is already polymorphic in the field |
+| (a) plus branch | **`char = 0`** (Mason–Stothers / `eq_C_of_derivative_eq_zero`), plus `char ≠ 2,3` from the Weierstrass form | **proved over every field over `ℚ(ζ₁₁)`** (2026-08-19) |
 | (b) `V14^{D₁₂} = ∅` | nothing beyond `2, 11` invertible (and `3` if one re-bases the emitted matrices on `ℤ[ζ₁₁,1/132]`) | **proved over every field over `ℚ(ζ₁₁)`** |
 
 Algebraic closure is **not** needed anywhere as a hypothesis on the base field.
@@ -232,17 +232,31 @@ Implemented on `v14/module-system` (2026-08-18):
 All four use only `propext`, `Classical.choice`, `Quot.sound`, and are audited by
 `AxiomAudit.lean`.
 
+Added 2026-08-19 (`v14/module-system`), closing item 1 below:
+
+* `V14Formalization/D12SigmaPlusSegreRankTwoMap.lean` —
+  `smooth_detCubic_rank_eq_two_map`, plus the mapped Taylor expansion
+  (`eval_map_pderiv0/1/2`, `eval_map_Fplus_path0/1/2`) it runs on.
+* `D12SigmaPlusSegreSection.lean` — `eq_H_mulVec_L_of_N_mulVec_map`.
+* `D12SigmaPlusSegrePoint.lean` — `N_map_mulVec_segrVec` published (the general
+  form already existed, module-private and unused).
+* `D12SigmaPlusDescent.lean` —
+  `plusCarrier_commonPluckerZero_descends_mvfrac_over` (any `F` receiving `Ki`)
+  and `plusCarrier_commonPluckerZero_descends_mvfrac_base` (any field `E` with
+  `[Algebra k E]`, i.e. exactly the criteria; `i` is supplied by
+  `AlgebraicClosure E` and descended out of).
+
+None of the three needed `i` in the base field. `H`, `L`, `N` do have nonzero
+imaginary parts, so as matrices they live over `Ki`; what generalizes is their
+image under an arbitrary `φ : Ki →+* F`. The one new hypothesis anywhere is
+`Infinite F`, which characteristic zero supplies.
+
 **Not implemented**: the general-field headline itself. What blocks it is
 hypothesis (a) over `F`, i.e. an `F`-version of
 `rationalMapIsConstantOver_v14FixedBy`. Concretely the remaining work is:
 
-1. `plusCarrier_commonPluckerZero_descends_mvfrac` over `F` — most of the Segre
-   packet (`plusCarrier_commonPluckerZero_to_determinantalCubic`,
-   `eval_map_Fplus_eq_det`, `bilinearNOn_*`, `segrVecOn_*`, `L_map_mulVec_map`,
-   `Fplus_isSmoothPlaneCubic_map`) is already stated for an arbitrary ring map
-   `Ki →+* F`, and `smoothPlaneCubic_projective_descends_mvfrac` is already
-   polymorphic. What is still `Ki`-only: `smooth_detCubic_rank_eq_two`,
-   `N_mulVec_segrVec`, `eq_H_mulVec_L_of_N_mulVec`.
+1. ~~`plusCarrier_commonPluckerZero_descends_mvfrac` over `F`~~ — **done**
+   (2026-08-19), see above.
 2. `minusCarrier_commonPluckerZero_descends_mvfrac` over `F` —
    `common_plucker_zero_parametric` and `binaryQuadratic_projective_descends_mvfrac`
    are both already field-generic; this is mostly rewriting.
