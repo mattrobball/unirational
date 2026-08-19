@@ -45,6 +45,8 @@ public import V14Formalization.BlockSemidirectConstructor
 public import V14Formalization.BlockSourceFieldMap
 public import V14Formalization.BlockNormalSigma
 public import V14Formalization.FaithfulHeadlineReduction
+public import V14Formalization.AbstractTargetHeadline
+public import V14Formalization.V14TargetInterface
 public import V14Formalization.FaithfulHeadline
 public import V14Formalization.HeadlineStatement
 public import V14Formalization.ProjectiveGVariety

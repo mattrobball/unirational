@@ -39,6 +39,15 @@ public import V14Formalization.GeometricFanoV14
 #print axioms V14Formalization.D12SigmaPlusDescent.plusCarrier_commonPluckerZero_descends_mvfrac_base
 #print axioms V14Formalization.D12SigmaMinusDescent.minusCarrier_ambient_descends_mvfrac_overBase
 
+-- The abstract-target statement and the three things it asks of a target.
+-- `noEquivariantRationalMap_ambientFree` is the first of these instantiated at
+-- the coordinate V14 by the three below, so these carry the whole argument.
+#print axioms V14Formalization.SchemeGeometry.noEquivariantRationalMap_ambientFree_of_target
+#print axioms V14Formalization.SchemeGeometry.noEquivariantRationalMap_from_ambient_of_target
+#print axioms V14Formalization.SchemeGeometry.v14_isProper
+#print axioms V14Formalization.SchemeGeometry.v14_targetHypothesisA
+#print axioms V14Formalization.SchemeGeometry.v14_targetHypothesisB
+
 -- Legacy audit surface.
 #print axioms V14Formalization.centralizerObstruction
 #print axioms V14Formalization.centralizerObstruction_one_rep

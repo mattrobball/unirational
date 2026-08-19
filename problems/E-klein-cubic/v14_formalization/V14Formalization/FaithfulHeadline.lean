@@ -4,6 +4,8 @@ Released under Apache 2.0 license.
 -/
 module
 
+public import V14Formalization.AbstractTargetHeadline
+public import V14Formalization.V14TargetInterface
 public import V14Formalization.FaithfulHeadlineReduction
 public import V14Formalization.V14FixedRationalConstancy
 public import V14Formalization.HeadlineStatement
@@ -33,7 +35,11 @@ open AlgebraicGeometry GeometricV14Carrier Module
 
 /-- The theorem in unbundled plus/minus coordinates.  The public theorem below
 is this one with the four coordinate arguments bundled as a
-`PlusMinusCoords`. -/
+`PlusMinusCoords`.
+
+This is `AbstractTargetHeadline.noEquivariantRationalMap_from_ambient_of_target`
+at `F = k`, `σ = sigma` and `Y = V14SchemeModel.actionOver`, with the three
+interface items supplied by `V14TargetInterface`. -/
 public theorem noEquivariantRationalMap_from_ambient_of_plusMinusBases
     {V : Type} [AddCommGroup V] [Module k V]
     (R : FaithfulLinearRep k G V)
@@ -42,9 +48,10 @@ public theorem noEquivariantRationalMap_from_ambient_of_plusMinusBases
     (bm : Basis (Fin (q + 1)) k (R.minusEigenspace sigma)) :
     ¬ HasEquivariantRationalMap (ambientFor R p q bp bm)
       V14SchemeModel.actionOver := by
-  apply noEquivariantRationalMap_from_ambient_of_constancy R p q bp bm
-  intro z hz
-  exact rationalMapIsConstantOver_v14FixedBy p q z hz
+  haveI := v14_isProper
+  exact noEquivariantRationalMap_from_ambient_of_target V14SchemeModel.k
+    V14SchemeModel.actionOver sigma sigma_isInvolution
+    v14_targetHypothesisA v14_targetHypothesisB R p q bp bm
 
 /-- The same statement for the projective `G`-variety packaging, in unbundled
 plus/minus coordinates: closed subschemes of Mathlib `Proj` with a `G`-action
@@ -71,19 +78,27 @@ this statement: the `G`-action on `ℙ(V)` arrives purely by functoriality.  The
 proof and is invisible from outside.
 
 This is strictly stronger than the coordinatized statements below, which are
-recovered from it by transporting along `ambientFreeIso`. -/
+recovered from it by transporting along `ambientFreeIso`.
+
+**This statement is a specialization, not a theorem of its own.**  It is
+`AbstractTargetHeadline.noEquivariantRationalMap_ambientFree_of_target` — which
+knows nothing about V14, and holds over any characteristic-zero field for any
+centerless group and any proper target satisfying hypotheses (a) and (b) — at
+`F = k`, `G = PSL(2,11)`, `σ = sigma`, `Y = V14SchemeModel.actionOver`.  The
+three things the argument asks of the target are supplied by
+`V14TargetInterface`: `v14_isProper`, `v14_targetHypothesisA` (the constancy
+argument) and `v14_targetHypothesisB` (the D₁₂ matrix certificate). -/
 public theorem noEquivariantRationalMap_ambientFree
     {V : Type} [AddCommGroup V] [Module k V]
     [FiniteDimensional k V] [Nontrivial V]
     (R : FaithfulLinearRep k G V) :
     ¬ HasEquivariantRationalMap (ambientFree R)
       V14SchemeModel.actionOver := by
-  intro h
-  let c : PlusMinusCoords R := PlusMinusCoords.ofRep R
-  exact noEquivariantRationalMap_from_ambient_of_plusMinusBases R c.p c.q c.bp c.bm
-    (hasEquivariantRationalMap_of_iso
-      (ambientFreeIso R
-        (plusMinusAmbientBasis R sigma sigma_isInvolution c.p c.q c.bp c.bm)).symm h)
+  haveI := v14_isProper
+  exact noEquivariantRationalMap_ambientFree_of_target V14SchemeModel.k
+    V14SchemeModel.actionOver sigma sigma_isInvolution
+    GeometricFanoCarrier.PSL2F11_isCenterless
+    v14_targetHypothesisA v14_targetHypothesisB R
 
 /-- There is no equivariant rational map from the projectivization of a
 faithful linear representation to the coordinate V14, in *any* system of

@@ -207,6 +207,60 @@ each, and the `module` / `public import` header. Apply it to lean-stan and add
 a `path` require for `stan` to regenerate; that half works. The head-dropping
 is the open piece.
 
+## Abstracting the target (2026-08-19)
+
+The 180-declaration trusted base of `noEquivariantRationalMap_ambientFree` is
+mostly the *target*: `V14SchemeModel.actionOver` alone reaches 150 of them, and
+they are the Weil representation, `Λ²U`, `projectorMatrix`,
+`grassmannianLinearSection` and the cyclotomic carrier. The source half —
+`ambientFree R` with `FaithfulLinearRep`, `HasEquivariantRationalMap`, `k` and
+`G` — reaches 39.
+
+The proof does not use the target's construction. It uses three things, and
+`SchemeRationalConstancy.noEquivariantRationalMap_of_constant_fixedSpecialization_section`
+already had exactly that shape; what was missing was a headline stated against
+it. `AbstractTargetHeadline` supplies one:
+
+    noEquivariantRationalMap_ambientFree_of_target
+      (F : Type u) [Field F] [CharZero F] {G : Type u} [Group G]
+      (Y : Action (Over (Spec (.of F))) G) [IsProper Y.V.hom]
+      (σ : G) (hσ : IsInvolution σ) (hG : IsCenterless G)
+      (ha : TargetHypothesisA F Y σ) (hb : TargetHypothesisB F Y σ)
+      {V : Type u} [AddCommGroup V] [Module F V]
+      [FiniteDimensional F V] [Nontrivial V]
+      (R : FaithfulLinearRep F G V) :
+      ¬ HasEquivariantRationalMap (ambientFree R) Y
+
+`V14TargetInterface` supplies the three items for the coordinate V14
+(`v14_isProper`, `v14_targetHypothesisA` = `rationalMapIsConstantOver_v14FixedBy`,
+`v14_targetHypothesisB` = the checked D₁₂ certificate), and
+`FaithfulHeadline.noEquivariantRationalMap_ambientFree` is now that
+instantiation. Its statement is byte-identical to before; step 3 and step 4 of
+`check_module_invariants.sh` still report 55,069 constants from the Comparator
+target with zero mismatches.
+
+| | published | abstract |
+|---|---:|---:|
+| lean-stan trusted base | 180 decls / 25 modules | **51 / 11** |
+| Comparator walk | 55,069 | 34,479 |
+| V14 apparatus in the closure | 82 | **0** |
+
+The abstract closure contains no `WeilRep`, no `GeometricV14Carrier`, no
+`GeometricFanoCarrier`, no `Lambda2Coordinates`, no `GrassmannianLinearSection`
+and no `V14SchemeModel` — the base field is a variable, so the cyclotomic
+carrier goes too. `[Algebra k F]` is deliberately absent: with the target a
+parameter, the primitive 11th root of unity is a requirement of the *model*,
+not of the argument, and `[CharZero F]` (needed for `1/2`, to split the
+`σ`-eigenspaces) is all that is left. `BaseFieldCriteria` therefore has nothing
+to do here.
+
+Note what this does *not* buy on its own. The abstract statement is
+conditional, and hypotheses (a) and (b) have trivial models — the empty scheme
+over `Spec F` is proper, satisfies both vacuously, and makes the conclusion
+true for uninteresting reasons. Certifying only the abstract theorem would
+certify a 51-declaration statement that says nothing about V14. See the
+comparator note below.
+
 ## Where things stand (2026-08-19)
 
 | | |

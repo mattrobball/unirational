@@ -30,6 +30,7 @@ public import V14Formalization.BlockSemidirectConstructor
 public import V14Formalization.BlockSourceFieldMap
 public import V14Formalization.BlockNormalSigma
 public import V14Formalization.FaithfulHeadlineReduction
+public import V14Formalization.V14TargetInterface
 public import V14Formalization.HeadlineStatement
 public import V14Formalization.CorrectedSourceFunctionFieldRatio
 public import V14Formalization.V14SchemeModel
@@ -471,5 +472,13 @@ namespace V14Formalization
 #guard_kernel_checked SchemeGeometry.noEquivariantRationalMap_from_ambient_of_plusMinusBases
 #guard_kernel_checked SchemeGeometry.noEquivariantRationalMap_from_ambient
 #guard_kernel_checked SchemeGeometry.noEquivariantRationalMap_projectiveGVariety
+
+-- The abstract-target theorem and the three interface items that instantiate
+-- it at the coordinate V14.
+#guard_kernel_checked SchemeGeometry.noEquivariantRationalMap_from_ambient_of_target
+#guard_kernel_checked SchemeGeometry.noEquivariantRationalMap_ambientFree_of_target
+#guard_kernel_checked SchemeGeometry.v14_isProper
+#guard_kernel_checked SchemeGeometry.v14_targetHypothesisA
+#guard_kernel_checked SchemeGeometry.v14_targetHypothesisB
 
 end V14Formalization
