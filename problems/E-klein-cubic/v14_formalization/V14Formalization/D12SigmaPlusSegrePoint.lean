@@ -168,7 +168,11 @@ theorem plucker_eq_Qplus_value (φ : Ki →+* F) (u : Fin 6 → F) (q : Fin 15) 
     exact Qplus_eq_restricted q m
   rw [← quadValue_restrictedPluckerCoeffs (BplusKi.map φ) q u, hres, hQ]
 
-theorem N_map_mulVec_segrVec (φ : Ki →+* F) (a b : Fin 3 → F) :
+/-- The three bilinear equations cut out by `N` on a Segre tensor, over any
+field receiving `Ki`.  The `Ki`-only `N_mulVec_segrVec` is the
+`RingHom.id Ki` case (`segrVecOn` and `segrVec` are the same function, and
+`bilinearNOn (RingHom.id Ki) = bilinearN` by `bilinearNOn_id`). -/
+public theorem N_map_mulVec_segrVec (φ : Ki →+* F) (a b : Fin 3 → F) :
     (N.map φ).mulVec (segrVecOn a b) = (bilinearNOn φ a).mulVec b := by
   funext r
   simp [Matrix.mulVec, bilinearNOn, segrVecOn, dotProduct, Fin.sum_univ_succ,
@@ -259,7 +263,7 @@ public theorem plusCarrier_commonPluckerZero_to_determinantalCubic
       (mem_nonZeroDivisors_iff_ne_zero.mpr hj)
   exact ⟨a, b, ha, hb, hsegr, hker, hdet0⟩
 
-theorem bilinearNOn_id (a : Fin 3 → Ki) :
+public theorem bilinearNOn_id (a : Fin 3 → Ki) :
     bilinearNOn (RingHom.id Ki) a = bilinearN a := by
   ext r j
   simp [bilinearNOn, bilinearN]

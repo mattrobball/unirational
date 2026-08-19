@@ -73,7 +73,7 @@ public theorem eval_Fplus_add_smul (a d : Fin 3 → Ki) (t : Ki) :
       det (bilinearN a + t • bilinearN d) := by
   rw [eval_Fplus_eq_det, bilinearN_add, bilinearN_smul]
 
-theorem rank_le_two_of_det_eq_zero
+public theorem rank_le_two_of_det_eq_zero
     (A : Matrix (Fin 3) (Fin 3) K) (hdet : A.det = 0) :
     A.rank ≤ 2 := by
   obtain ⟨v, hv, hkv⟩ := (exists_mulVec_eq_zero_iff (M := A)).mpr hdet
