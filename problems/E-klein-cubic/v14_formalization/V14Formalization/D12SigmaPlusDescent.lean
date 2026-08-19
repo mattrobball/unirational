@@ -16,6 +16,7 @@ public import V14Formalization.KernelLineDescent
 public import V14Formalization.MvFracConstantField
 public import V14Formalization.D12SigmaCarrierConcrete
 public import V14Formalization.V14SchemeModel
+public import V14Formalization.BaseFieldCriteria
 public import Mathlib.FieldTheory.IsAlgClosed.AlgebraicClosure
 
 /-!
@@ -464,7 +465,13 @@ because `Ki/k` is algebraic — and bring the ratios back down with
 
 section BaseField
 
-variable (E : Type*) [Field E] [CharZero E] [Algebra k E]
+variable (E : Type*) [Field E] [Algebra k E]
+
+/-- Characteristic zero is not an extra hypothesis on `E`: `BaseField`
+records that it follows from `E` being a field over `ℚ(ζ₁₁)`.  Kept as a
+theorem rather than an instance, so importing this module does not widen
+global instance search. -/
+public theorem charZero_base : CharZero E := BaseField.charZero_of_algebra E
 
 /-- `Ki` lands in any algebraically closed field over `k`. -/
 public noncomputable def kiLift : Ki →+* AlgebraicClosure E :=
@@ -491,6 +498,7 @@ public theorem plusCarrier_commonPluckerZero_descends_mvfrac_base
     ∃ (u0 : Fin 6 → E) (_hu0 : u0 ≠ 0) (c : MvFrac E n),
       c ≠ 0 ∧ u = c • fun i => algebraMap E (MvFrac E n) (u0 i) := by
   classical
+  haveI : CharZero E := charZero_base E
   let ι :=
     mvFracBaseChange (algebraMap E (AlgebraicClosure E))
       (FaithfulSMul.algebraMap_injective E (AlgebraicClosure E)) n
