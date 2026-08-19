@@ -153,5 +153,70 @@ public theorem hasEquivariantRationalMap_of_iso
     HasEquivariantRationalMap X Y :=
   h.elim fun f => ⟨EquivariantRationalMap.ofIso e f⟩
 
+/-! ## Pushing forward along an equivariant morphism
+
+`EquivariantRationalMap.ofIso` transports along an isomorphism of the *source*.
+This transports along an arbitrary equivariant morphism of the *target*, which
+is what turns a hypothetical equivariant rational map to one `G`-scheme into
+one to another.  No dominance is needed, because `compHom` does not move the
+domain.
+-/
+
+section Push
+
+variable {X' Y' Z' W' : Scheme.{u}}
+
+public theorem partialMap_compHom_compHom (f : X'.PartialMap Y') (u : Y' ⟶ Z') (v : Z' ⟶ W') :
+    (f.compHom u).compHom v = f.compHom (u ≫ v) := by
+  ext1
+  · rfl
+  · simp [Scheme.PartialMap.compHom, Category.assoc]
+
+public theorem rationalMap_compHom_compHom (f : X' ⤏ Y') (u : Y' ⟶ Z') (v : Z' ⟶ W') :
+    (f.compHom u).compHom v = f.compHom (u ≫ v) := by
+  obtain ⟨p, rfl⟩ := f.exists_rep
+  rw [← Scheme.RationalMap.compHom_toRationalMap, ← Scheme.RationalMap.compHom_toRationalMap,
+    ← Scheme.RationalMap.compHom_toRationalMap, partialMap_compHom_compHom]
+
+end Push
+
+variable {Z : Action (Over S) G}
+
+/-- Push an equivariant rational map forward along an equivariant morphism of
+targets. -/
+@[expose] public noncomputable def EquivariantRationalMap.pushHom
+    [IrreducibleSpace X.V.left] (f : EquivariantRationalMap X Y)
+    (c : Y.V.left ⟶ Z.V.left) (hcOver : c.IsOver S)
+    (hc : ∀ g : G, (Y.ρ g).left ≫ c = c ≫ (Z.ρ g).left) :
+    EquivariantRationalMap X Z where
+  map := f.map.compHom c
+  isOver := by
+    letI := f.isOver
+    letI := hcOver
+    infer_instance
+  equivariant := fun g => by
+    letI : IsIso (X.ρ g).left := by
+      change IsIso ((Over.forget S).mapIso (X.ρAut g)).hom
+      infer_instance
+    letI : IsDominant (X.ρ g).left := inferInstance
+    letI : (((X.ρ g).left).toRationalMap).IsDominant := inferInstance
+    calc actionPrecomp X g (f.map.compHom c)
+        = (X.ρ g).left.toRationalMap.comp (f.map.compHom c) := rfl
+      _ = ((X.ρ g).left.toRationalMap.comp f.map).compHom c := rationalMap_comp_compHom _ _ _
+      _ = (actionPrecomp X g f.map).compHom c := rfl
+      _ = (f.map.compHom (Y.ρ g).left).compHom c := by rw [f.equivariant g]
+      _ = f.map.compHom ((Y.ρ g).left ≫ c) := rationalMap_compHom_compHom _ _ _
+      _ = f.map.compHom (c ≫ (Z.ρ g).left) := by rw [hc g]
+      _ = (f.map.compHom c).compHom (Z.ρ g).left := (rationalMap_compHom_compHom _ _ _).symm
+
+/-- Existence of an equivariant rational map is inherited along an equivariant
+morphism of targets. -/
+public theorem hasEquivariantRationalMap_of_hom
+    [IrreducibleSpace X.V.left]
+    (c : Y.V.left ⟶ Z.V.left) (hcOver : c.IsOver S)
+    (hc : ∀ g : G, (Y.ρ g).left ≫ c = c ≫ (Z.ρ g).left)
+    (h : HasEquivariantRationalMap X Y) : HasEquivariantRationalMap X Z :=
+  h.elim fun f => ⟨EquivariantRationalMap.pushHom f c hcOver hc⟩
+
 end SchemeGeometry
 end V14Formalization
