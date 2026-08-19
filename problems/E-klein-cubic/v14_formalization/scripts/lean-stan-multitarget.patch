@@ -1,5 +1,5 @@
 diff --git a/Stan/EmitBoundary.lean b/Stan/EmitBoundary.lean
-index 985d174..7aba30e 100644
+index 985d174..90ad033 100644
 --- a/Stan/EmitBoundary.lean
 +++ b/Stan/EmitBoundary.lean
 @@ -93,11 +93,9 @@ def resolveSource (modName : Name) : IO (Option System.FilePath) := do
@@ -147,7 +147,31 @@ index 985d174..7aba30e 100644
    output := output ++ s!"Boundary: {", ".intercalate (roots.toList.map toString)}\n\n"
    output := output ++ s!"{names.size} declarations from {orderedModules.size} modules, \
      inlined in dependency order with every proof replaced by `sorry`. Imports above \
-@@ -328,11 +337,20 @@ def emitBoundary (env : Environment) (roots : Array Name) (targetName : Name)
+@@ -282,6 +291,23 @@ def emitBoundary (env : Environment) (roots : Array Name) (targetName : Name)
+       | .context =>
+         if e.kind == ``Parser.Command.universe then continue
+         if e.kind == ``Parser.Command.set_option then continue
++        -- Free-floating section prose (`/-! ... -/`) is dropped; declaration
++        -- docstrings (`/-- ... -/`) are kept.
++        --
++        -- The two are not the same kind of text. A `/--` docstring is part of
++        -- the declaration command, travels with the declaration it documents,
++        -- and describes something the reader can see. A `/-!` module docstring
++        -- is a separate command describing the *source file's* chapter layout,
++        -- and that layout does not survive here: the emitted file is a
++        -- dependency-ordered union of fragments of forty modules. What is left
++        -- is prose about declarations the closure excluded
++        -- (`IsV14MPoint`, `actPM`, `SmoothProjectiveGVariety`), about source
++        -- files (`PLAN.md`, `LinearCoordinateChange.lean`), and about the
++        -- migration history of the project -- plus to-do notes naming the next
++        -- proof targets. In a document whose whole claim is "this is the
++        -- statement surface you must trust", such references are worse than
++        -- absent: they read as if the file contained more than it does.
++        if e.kind == ``Parser.Command.moduleDoc then continue
+         -- `open N` where N is inside the boundary but contributed no
+         -- declaration names a namespace that does not exist in the emitted
+         -- file, which Lean rejects outright. External opens are always kept:
+@@ -328,11 +354,20 @@ def emitBoundary (env : Environment) (roots : Array Name) (targetName : Name)
        | .skip => pure ()
      output := output ++ "\n"
  
@@ -171,6 +195,303 @@ index 985d174..7aba30e 100644
    output := ("\n".intercalate filtered).trimAsciiEnd.toString ++ "\n"
  
    IO.FS.writeFile outputPath output
+diff --git a/Stan/EmitStandalone.lean b/Stan/EmitStandalone.lean
+index ade2504..a5bfba8 100644
+--- a/Stan/EmitStandalone.lean
++++ b/Stan/EmitStandalone.lean
+@@ -7,6 +7,7 @@ module
+ 
+ public meta import Stan.Deps
+ public meta import Stan.Classify
++public meta import Stan.Cli
+ public meta import Lean
+ 
+ /-!
+@@ -118,9 +119,37 @@ structure CommandEntry where
+   cls : CmdClass
+   src : String               -- source text (with sorry injection if applicable)
+   kind : SyntaxNodeKind      -- the Syntax kind from the InfoTree
++  /-- Every in-closure constant this command declares, sorted, or `#[]` for a
++      non-declaration command.
++
++      One command can declare several constants -- `structure Foo` introduces
++      `Foo`, `Foo.mk` and a projection per field -- so a single name is not
++      enough to say what a `.tfbDecl` entry put in the file. A consumer that
++      has to name what the emitter changed (the Comparator config, which must
++      list every constant whose body was dropped) needs all of them. -/
++  declNames : Array Name := #[]
+   deriving Inhabited
+ 
+-def findDeclVal? (root : Syntax) : Option (String.Pos.Raw × String.Pos.Raw) := Id.run do
++def hasSorryableKind (root : Syntax) : Bool := Id.run do
++  let mut worklist : Array Syntax := #[root]
++  while !worklist.isEmpty do
++    let stx := worklist.back!
++    worklist := worklist.pop
++    let k := stx.getKind
++    if k == ``Parser.Command.theorem then
++      return true
++    for arg in stx.getArgs do
++      worklist := worklist.push arg
++  return false
++
++/-- The `declVal` node of a declaration command: `:= e`, the `| pat => e`
++    alternatives, or the `where`-style field list.
++
++    Elision never leaves this node. A signature has to be reproduced verbatim:
++    `plusMinusAmbientBasis R sigma (hσ : IsInvolution sigma) ...` binds a proof,
++    but that binder is part of the declaration's *type*, and dropping it would
++    change the statement the file exists to show. Only values get elided. -/
++def findDeclValNode? (root : Syntax) : Option Syntax := Id.run do
+   let mut worklist : Array Syntax := #[root]
+   while !worklist.isEmpty do
+     let stx := worklist.back!
+@@ -129,24 +158,152 @@ def findDeclVal? (root : Syntax) : Option (String.Pos.Raw × String.Pos.Raw) :=
+     if k == ``Parser.Command.declValSimple ||
+        k == ``Parser.Command.declValEqns ||
+        k == ``Parser.Command.whereStructInst then
+-      match stx.getPos?, stx.getTailPos? with
+-      | some s, some e => return some (s, e)
+-      | _, _ => pure ()
++      return some stx
+     for arg in stx.getArgs do
+       worklist := worklist.push arg
+   return none
+ 
+-def hasSorryableKind (root : Syntax) : Bool := Id.run do
+-  let mut worklist : Array Syntax := #[root]
++/-- Source range of a declaration's value node. -/
++def findDeclVal? (root : Syntax) : Option (String.Pos.Raw × String.Pos.Raw) := do
++  let stx ← findDeclValNode? root
++  let s ← stx.getPos?
++  let e ← stx.getTailPos?
++  return (s, e)
++
++/-- The structure instance that *is* the declaration's value, when there is one.
++
++    Two shapes qualify, and only these two, because for both the instance's
++    type is the declaration's own type -- which is what makes the fields
++    identifiable from the environment:
++    * `def f : S := { a := .., b := .. }`
++    * `def f : S where a := ..; b := ..`
++
++    A structure instance anywhere else is skipped. `letI : T := { .. }` inside a
++    tactic block is an instance of `T`, not of `S`, and nothing in the
++    environment says what `T` is; guessing the structure from the field names
++    that happen to appear would be exactly the text matching this is meant to
++    avoid. Skipping costs a proof left in the file, which is safe; guessing
++    wrong costs a data field, which is not. -/
++def declValStructInst? (declVal : Syntax) : Option Syntax :=
++  if declVal.getKind == ``Parser.Command.whereStructInst then
++    some declVal
++  else if declVal.getKind == ``Parser.Command.declValSimple then
++    declVal.getArgs.find? (·.getKind == ``Parser.Term.structInst)
++  else
++    none
++
++/-- The fields written directly in `si`, not those of any instance nested
++    inside a field's value. The walk stops at each `structInstField`, so a
++    nested `{ .. }` -- reachable only through a field value -- is never
++    entered. -/
++def directStructInstFields (si : Syntax) : Array Syntax := Id.run do
++  let mut out : Array Syntax := #[]
++  let mut worklist : Array Syntax := si.getArgs
+   while !worklist.isEmpty do
+     let stx := worklist.back!
+     worklist := worklist.pop
+     let k := stx.getKind
+-    if k == ``Parser.Command.theorem then
+-      return true
+-    for arg in stx.getArgs do
+-      worklist := worklist.push arg
+-  return false
++    if k == ``Parser.Term.structInstField then
++      out := out.push stx
++    else if k == ``Parser.Term.structInst then
++      pure ()
++    else
++      worklist := worklist ++ stx.getArgs
++  return out
++
++/-- A field's name and the source range of the term after its `:=`.
++
++    Only the term is returned, never the whole field: the left-hand side and
++    any binders stay, so `map_mem {i} {a} ha := by ...` becomes
++    `map_mem {i} {a} ha := sorry` and still parses. Fields written with `match`
++    alternatives, and dotted paths like `a.b := ..`, are skipped -- neither
++    can be rewritten to `:= sorry` by replacing one range. -/
++def structInstFieldValue? (f : Syntax) : Option (Name × (String.Pos.Raw × String.Pos.Raw)) := do
++  let lval := f.getArg 0
++  guard (lval.getKind == ``Parser.Term.structInstLVal)
++  let head := lval.getArg 0
++  guard head.isIdent
++  guard ((lval.getArg 1).getNumArgs == 0)
++  let body := f.getArg 1
++  guard (body.getNumArgs == 3)
++  let fieldDecl := body.getArg 2
++  guard (fieldDecl.getKind == ``Parser.Term.structInstFieldDef)
++  let term := fieldDecl.getArgs.back!
++  let r ← term.getRange?
++  return (head.getId, (r.start, r.stop))
++
++/-- The structure a declaration's value instantiates, and which of its fields
++    hold a proof rather than data.
++
++    This is the elision rule, and it is a question about types, so it is put to
++    the environment rather than to the source. A declaration *kind* cannot
++    separate data from proof, because Lean mixes the two inside one
++    declaration: a `MonoidHom` bundles `toFun` (data) with `map_one'` (proof),
++    both fields of the same `def`. Neither can the syntax: `by` opens a proof in
++    `map_one' := by ...` and builds a scheme in
++    `projectiveActionOver ... := by ...`.
++
++    What separates them is the type of the field. So take the declaration's
++    result type past its binders, make a variable of that type, project each
++    field out of it, and ask whether the projection is a proof. Flattened fields
++    are included, so a field inherited from a parent structure -- `map_add'`
++    reaches `LinearMap` from `AddHom` -- is classified too.
++
++    Types are left alone by construction. `IsClosedImmersion ι` as a field's
++    *type* is a `Prop`, so its own type is `Prop` and `isProof` is false for it;
++    only inhabitants of `Prop`s come back. -/
++def propFieldsOfDeclType (env : Environment) (declName : Name)
++    : IO (Name × Std.HashSet Name) := do
++  let empty : Name × Std.HashSet Name := (.anonymous, {})
++  let some ci := env.find? declName | return empty
++  try
++    Cli.runCoreM env <| MetaM.run' do
++      -- `Reducing` so that a result type written through an abbreviation still
++      -- reaches the structure underneath it.
++      Meta.forallTelescopeReducing ci.type fun _ body => do
++        let body ← Meta.whnfR body
++        let some structName := body.getAppFn.constName? | return empty
++        unless isStructure env structName do return empty
++        let s ← Meta.mkFreshExprMVar body
++        let mut out : Std.HashSet Name := {}
++        for f in getStructureFieldsFlattened env structName do
++          let isPf ← try Meta.isProof (← Meta.mkProjection s f) catch _ => pure false
++          if isPf then out := out.insert f
++        return (structName, out)
++  catch _ => return empty
++
++/-- Source ranges of the Prop-valued fields of `declName`'s structure instance.
++
++    Empty unless the declaration's value is a structure instance of the
++    declaration's own type -- see `declValStructInst?`. -/
++def structInstProofRanges (env : Environment) (declName : Name) (cmd : Syntax)
++    : IO (Array (String.Pos.Raw × String.Pos.Raw)) := do
++  let some declVal := findDeclValNode? cmd | return #[]
++  let some si := declValStructInst? declVal | return #[]
++  let fields := directStructInstFields si
++  if fields.isEmpty then return #[]
++  let (structName, propFields) ← propFieldsOfDeclType env declName
++  if propFields.isEmpty then return #[]
++  let mut out : Array (String.Pos.Raw × String.Pos.Raw) := #[]
++  for f in fields do
++    if let some (name, r) := structInstFieldValue? f then
++      if propFields.contains name then
++        out := out.push r
++  if (← IO.getEnv "STAN_DEBUG").isSome && !out.isEmpty then
++    IO.eprintln s!"    [elide] {declName} : {structName} -- {out.size}/{fields.size} fields"
++  return out.qsort fun a b => a.1.byteIdx < b.1.byteIdx
++
++/-- `source` between `cmdStart` and `cmdEnd`, with each range in `ranges`
++    (sorted, disjoint) replaced by `sorry`. -/
++def spliceElisions (source : String) (cmdStart cmdEnd : String.Pos.Raw)
++    (ranges : Array (String.Pos.Raw × String.Pos.Raw)) : String := Id.run do
++  let mut out := ""
++  let mut cursor := cmdStart
++  for (s, e) in ranges do
++    if s.byteIdx < cursor.byteIdx || e.byteIdx > cmdEnd.byteIdx then continue
++    out := out ++ (Substring.Raw.mk source cursor s).toString ++ "sorry"
++    cursor := e
++  return out ++ (Substring.Raw.mk source cursor cmdEnd).toString
+ 
+ def isContextCmd (stx : Syntax) : Bool :=
+   let k := stx.getKind
+@@ -168,8 +325,9 @@ def findDeclRanges? (env : Environment) (name : Name) : Option DeclarationRanges
+   declRangeExt.find? (level := .exported) env name <|>
+     declRangeExt.find? (level := .server) env name
+ 
+-/-- Process one source file: re-elaborate against project env, classify each command,
+-    extract source with sorry injection. Returns structured entries. -/
++/-- Process one source file: re-parse it against the project env, classify each
++    command, and extract its source with `sorry` spliced in where a proof was.
++    Returns structured entries. -/
+ def processFile (source : String) (projectEnv : Environment)
+     (tfbRangeMap : Std.HashMap String.Pos.Raw Name)
+     (declPositions : Array String.Pos.Raw)
+@@ -177,6 +335,11 @@ def processFile (source : String) (projectEnv : Environment)
+   let inputCtx := Parser.mkInputContext source filePath
+   let (_, parserState, messages) ← Parser.parseHeader inputCtx
+   let cmdState := { Command.mkState projectEnv messages {} with infoState.enabled := true }
++  -- `processCommands` is used for its *parse*, not its elaboration: every
++  -- command in the file re-declares a constant `projectEnv` already holds, so
++  -- `checkNotAlreadyDeclared` aborts each one at its declaration identifier and
++  -- no body is ever elaborated. What survives is the command `Syntax` with
++  -- original source positions, which is all the emitter needs.
+   let finalState ← IO.processCommands inputCtx parserState cmdState
+   let trees := finalState.commandState.infoState.trees.toArray
+   let mut entries : Array CommandEntry := #[]
+@@ -196,25 +359,51 @@ def processFile (source : String) (projectEnv : Environment)
+     let topKind := stx.getKind
+     -- Skip header
+     if topKind == ``Parser.Module.header then continue
+-    -- Match to TFB by byte position
+-    let mut declaredTFBName : Option Name := none
++    -- Match to TFB by byte position. Collect *every* match, not the first:
++    -- `structure Foo` declares `Foo`, `Foo.mk` and one projection per field,
++    -- all of which land in this command's span and all of which the emitted
++    -- file therefore contains. Sorted, so the result does not depend on
++    -- `Std.HashMap` iteration order.
++    let mut matchedNames : Array Name := #[]
+     for (pos, name) in tfbRangeMap do
+       if pos >= cmdStart && pos < cmdEnd then
+-        declaredTFBName := some name
+-        break
++        matchedNames := matchedNames.push name
++    let declaredTFBNames := matchedNames.qsort (·.toString < ·.toString)
++    -- A theorem in the span settles the classification, whichever order the
++    -- names arrived in.
++    let declaredTFBName : Option Name :=
++      (declaredTFBNames.find? fun n => match projectEnv.find? n with
++        | some (.thmInfo _) => true
++        | _ => false) <|> declaredTFBNames[0]?
+     match declaredTFBName with
+     | some tfbName =>
+       let isThmInEnv := match projectEnv.find? tfbName with
+         | some (.thmInfo _) => true
+         | _ => false
+       if hasSorryableKind stx || isThmInEnv then
++        -- A theorem is a proof outright, so its whole value goes.
+         if let some (valStart, _) := findDeclVal? stx then
+           let beforeVal := (Substring.Raw.mk source cmdStart valStart).toString
+-          entries := entries.push { cls := .tfbDecl true, src := beforeVal ++ " := sorry", kind := topKind }
++          entries := entries.push { cls := .tfbDecl true, src := beforeVal ++ " := sorry",
++                                    kind := topKind, declNames := declaredTFBNames }
+         else
+-          entries := entries.push { cls := .tfbDecl true, src := cmdSrc, kind := topKind }
++          entries := entries.push { cls := .tfbDecl true, src := cmdSrc,
++                                    kind := topKind, declNames := declaredTFBNames }
+       else
+-        entries := entries.push { cls := .tfbDecl false, src := cmdSrc, kind := topKind }
++        -- Everything else is a mixture, and the kind says nothing about the
++        -- mixture: a `def` of a `MonoidHom` supplies `toFun` (data) and
++        -- `map_one'` (proof) as fields of one structure instance. Ask the
++        -- environment which of those fields are Prop-valued and elide exactly
++        -- those.
++        let ranges ← declaredTFBNames.foldlM (init := #[]) fun acc n =>
++          if acc.isEmpty then structInstProofRanges projectEnv n stx else pure acc
++        if ranges.isEmpty then
++          entries := entries.push { cls := .tfbDecl false, src := cmdSrc,
++                                    kind := topKind, declNames := declaredTFBNames }
++        else
++          let elided := spliceElisions source cmdStart cmdEnd ranges
++          entries := entries.push { cls := .tfbDecl true, src := elided,
++                                    kind := topKind, declNames := declaredTFBNames }
+     | none =>
+       -- Denylist, not allowlist: drop non-TFB declarations, keep everything else.
+       -- "Is this a declaration?" is answered by the environment, not by syntax
 diff --git a/StanBoundary.lean b/StanBoundary.lean
 index e5eb80d..76eb448 100644
 --- a/StanBoundary.lean

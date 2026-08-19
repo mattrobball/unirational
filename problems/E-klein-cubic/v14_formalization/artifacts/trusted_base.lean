@@ -19,17 +19,6 @@ universe u v w
 
 -- ═══ ProjectiveSpace ═══
 
-/-!
-# Projective spaces and their fiber products
-
-This file defines scheme-level projective `n`-space over a commutative ring using Mathlib's
-projective spectrum.  Its homogeneous coordinates are indexed by `Fin (n + 1)`, so `n` is the
-geometric dimension.  It also defines `ℙᵐ ×_S ℙⁿ` as a categorical pullback over the base scheme.
-
-The definitions retain their natural generality over arbitrary dimensions and an arbitrary
-commutative base ring.  The `(2, 2)` specialization is introduced separately for the final
-bidegree `(2, 3)` threefold theorem.
--/
 @[expose] public section
 open CategoryTheory Limits
 open scoped AlgebraicGeometry
@@ -71,11 +60,8 @@ instance standardChartRingAlgebra (n : ℕ) (R : Type u) [CommRing R]
     (i : Fin (n + 1)) : Algebra R (StandardChartRing n R i) where
   smul := (inferInstance : SMul R (StandardChartRing n R i)).smul
   algebraMap := standardChartRingHom n R i
-  commutes' _ _ := mul_comm _ _
-  smul_def' r x := by
-    apply HomogeneousLocalization.val_injective
-    rw [HomogeneousLocalization.val_smul, HomogeneousLocalization.val_mul, Algebra.smul_def]
-    rfl
+  commutes' _ _ := sorry
+  smul_def' r x := sorry
 
 /-- The standard open immersion `Spec (R[X₀, …, Xₙ]_(Xᵢ))₀ ⟶ ℙⁿ_R`. -/
 def standardChartι (n : ℕ) (R : Type u) [CommRing R] (i : Fin (n + 1)) :
@@ -90,13 +76,6 @@ end BConicBundleMultisections
 
 -- ═══ SchemeEquivariant ═══
 
-/-!
-# Equivariant rational maps of schemes
-
-The objects are genuine group actions in the category of schemes over a base.
-The rational map is Mathlib's `Scheme.RationalMap`; neither totality nor
-linearity of the map is assumed.
--/
 noncomputable section
 open CategoryTheory
 open scoped AlgebraicGeometry
@@ -104,7 +83,6 @@ namespace V14Formalization
 namespace SchemeGeometry
 open AlgebraicGeometry
 open TopologicalSpace
-/-! ## Pulling arbitrary rational maps back along dominant morphisms -/
 
 /-- Package an absolute scheme action over `S` after proving that every action
 morphism preserves the structure map. -/
@@ -157,17 +135,6 @@ end V14Formalization
 
 -- ═══ BiprojectiveChart ═══
 
-/-!
-# Equations on standard biprojective charts
-
-This file evaluates Cox-coordinate polynomials on the standard affine charts of
-`ProjectiveSpace m R ×[Spec R] ProjectiveSpace n R`.  On the chart indexed by `(i, j)`, the
-homogeneous coordinates are normalized by `Xᵢ = 1` and `Yⱼ = 1` inside the two degree-zero
-homogeneous localizations.  Here `i : Fin (m + 1)` and `j : Fin (n + 1)`.
-
-The definitions are made over an arbitrary commutative ring.  Bihomogeneity is used later to
-prove that the resulting principal ideals agree on chart overlaps.
--/
 @[expose] public section
 open scoped TensorProduct
 namespace BConicBundleMultisections
@@ -194,12 +161,9 @@ end BConicBundleMultisections
 noncomputable section
 open scoped LinearAlgebra.Projectivization MatrixGroups
 namespace V14Formalization
-/-! ## Group primitives -/
 
 @[expose] public def IsInvolution {G : Type u} [Monoid G] (σ : G) : Prop :=
   σ ^ 2 = 1 ∧ σ ≠ 1
-
-/-! ## Faithful linear representations -/
 
 public structure FaithfulLinearRep (k : Type u) [Field k] (G : Type u) [Monoid G]
     (V : Type u) [AddCommGroup V] [Module k V] where
@@ -226,49 +190,11 @@ public theorem isCompl_plus_minus (R : FaithfulLinearRep k G V) {σ : G}
     IsCompl (R.plusEigenspace σ) (R.minusEigenspace σ)  := sorry
 
 end FaithfulLinearRep
-/-! ## Smooth projective G-varieties (linear-algebra point model)
-
-This is the **point-set** model used by the older RCC writeup: an abstract
-type of points, a linear-algebra embedding into `ℙ k V`, and a set-theoretic
-`G`-action.  It does **not** carry a Mathlib `AlgebraicGeometry.Scheme`
-structure.  Morphisms are total functions induced by injective linear maps,
-not `Scheme.RationalMap`.
-
-The scheme-theoretic object is `SchemeGeometry.ProjectiveGVariety` in
-`ProjectiveGVariety.lean`: a closed subscheme of `Proj` with a `G`-action
-over `Spec k`.
--/
-/-! ## Linear-projective RCC and hypotheses
-
-`IsRCC` means the set is a full linear projective subspace in the ambient
-embedding of `Y` (image of `ℙ(W)` under a linear injection into ambient).
-This matches writeup rational-chain / rational-curve content for the
-centralizer obstruction without set-theoretic collapse on genus-1 loci:
-a degree-≥2 curve contains no linear `ℙ¹`.
--/
-/-! ## Linear-projective G-equivariant morphisms -/
-/-! ## Projectivization of FaithfulLinearRep -/
-/-! ## Weak versality -/
 end V14Formalization
 
 
 -- ═══ LinearSubstitution ═══
 
-/-!
-# Linear substitution of the variables of a polynomial
-
-A matrix `M` acts on `MvPolynomial (Fin (n+1)) R` by substituting the linear form
-`∑ l, M j l · X l` for each variable `X j`.  On values this is precomposition with `x ↦ M *ᵥ x`.
-
-This is the polynomial half of `LinearCoordinateChange.lean`, split off so that results needing only
-substitution do not depend on `Proj` and the graded machinery.  `LinearCoordinateChange` builds on
-this to produce the induced automorphism of `ℙⁿ`.
-
-The application is the multisection line: the source proof chooses `L` and only normalises it to
-`{W = 0}` afterwards, and carrying a plane cubic into that frame is a substitution of exactly this
-kind.  See `PlaneCubicResidualEquivariance` for why it suffices to transport the cubic rather than
-the ambient scheme.
--/
 @[expose] public section
 namespace BConicBundleMultisections
 noncomputable section
@@ -285,30 +211,12 @@ def linearSubst (n : ℕ) (M : Matrix (Fin (n + 1)) (Fin (n + 1)) R) :
 theorem isHomogeneous_linearSubst (n : ℕ) (M : Matrix (Fin (n + 1)) (Fin (n + 1)) R)
     (j : Fin (n + 1)) : (linearSubst n M j).IsHomogeneous 1  := sorry
 
-/-! ### Restriction to a line commutes with substitution -/
 end
 end BConicBundleMultisections
 
 
 -- ═══ LinearCoordinateChange ═══
 
-/-!
-# Linear changes of homogeneous coordinates
-
-Foundation for work package WP-5 of `PLAN.md`.  The source proof **chooses** the multisection line
-`L` outside an explicit bad locus and only afterwards normalises coordinates so that
-`L = {W = 0}` (§5); this development hardcodes the normalisation.  Recovering the choice means
-being able to move `L` into coordinate position, i.e. acting on `ℙ²_y` by `PGL₃`.
-
-This module supplies the first half: a linear substitution `X j ↦ ∑ l, M j l · X l` as a **graded**
-ring homomorphism of the homogeneous coordinate ring, and the `Proj.map` hypothesis it needs.  The
-construction mirrors `ProjectiveSpaceCoeffMap.lean`, which does the same for a coefficient ring
-homomorphism; only the ring map changes.
-
-Substitution by linear forms preserves homogeneity by `MvPolynomial.IsHomogeneous.aeval` with
-`n = 1`, and an invertible matrix hits the irrelevant ideal because each `X i` is the image of the
-linear form built from the inverse matrix.
--/
 @[expose] public section
 namespace BConicBundleMultisections
 noncomputable section
@@ -326,9 +234,7 @@ def linearSubstGradedRingHom (n : ℕ) (M : Matrix (Fin (n + 1)) (Fin (n + 1)) k
   toRingHom :=
     (aeval (linearSubst n M) :
       MvPolynomial (Fin (n + 1)) k →ₐ[k] MvPolynomial (Fin (n + 1)) k).toRingHom
-  map_mem {i} {a} ha := by
-    have h := (ha : a.IsHomogeneous i).aeval (linearSubst n M) (isHomogeneous_linearSubst n M)
-    simpa using h
+  map_mem {i} {a} ha := sorry
 
 /-- An invertible linear substitution satisfies the hypothesis `Proj.map` requires: the irrelevant
 ideal is contained in the image of the irrelevant ideal. -/
@@ -349,13 +255,6 @@ end BConicBundleMultisections
 
 -- ═══ SchemeProjectiveAction ═══
 
-/-!
-# Projective scheme actions from matrix representations
-
-This file uses Problem B's existing `Proj.map` construction for invertible
-linear substitutions.  It packages those automorphisms as a genuine
-categorical action on scheme-level projective space.
--/
 noncomputable section
 open CategoryTheory
 open scoped AlgebraicGeometry
@@ -426,20 +325,6 @@ end V14Formalization
 
 -- ═══ UniversalNormalDivisor ═══
 
-/-!
-# The universal normal divisor with its centralizer action
-
-For an involution `sigma` in an honest linear representation, its centralizer
-preserves both eigenspaces.  After choosing bases, their projectivizations
-carry genuine scheme actions and their fiber product is the exceptional
-normal divisor
-
-`P(V₊) × P(V₋)`.
-
-This file constructs that action.  It deliberately makes no claim that a
-chosen affine valuation chart, or the whole projective carrier, is already
-fixed pointwise by `sigma`; those are separate compatibility statements.
--/
 noncomputable section
 open CategoryTheory CategoryTheory.Limits
 open scoped AlgebraicGeometry
@@ -483,13 +368,8 @@ minus coordinates. -/
 @[expose] public def finSumFinEquiv (m n : ℕ) : Fin m ⊕ Fin n ≃ Fin (m + n) where
   toFun := Sum.elim (Fin.castAdd n) (Fin.natAdd m)
   invFun := Fin.addCases Sum.inl Sum.inr
-  left_inv x := by cases x <;> simp
-  right_inv i := by
-    refine Fin.addCases ?_ ?_ i
-    · intro j
-      simp
-    · intro j
-      simp
+  left_inv x := sorry
+  right_inv i := sorry
 
 /-- The concrete block order has ambient projective dimension `p + q + 1`. -/
 @[expose] public def plusMinusFinEquiv (p q : ℕ) :
@@ -515,14 +395,6 @@ end V14Formalization
 
 -- ═══ ProjectiveHypersurfaceScheme ═══
 
-/-!
-# Scheme-theoretic projective hypersurfaces
-
-This file constructs the closed subscheme of `ProjectiveSpace n R` cut out by one homogeneous
-polynomial.  The construction descends the principal equations on the standard affine charts.
-It also records the affine quotient presentation of every chart and the pullback square relating
-each chart to the global closed subscheme.
--/
 @[expose] public section
 open CategoryTheory Limits
 open scoped AlgebraicGeometry
@@ -573,7 +445,6 @@ def projectiveZeroLocusIdeal
   ⨅ i : Fin (n + 1),
     (hypersurfaceChartIdealSheaf n R i H).map (standardChartι n R i)
 
-/-! ## Explicit affine quotient presentation -/
 end ProjectiveSpace
 end
 end BConicBundleMultisections
@@ -582,15 +453,6 @@ end
 
 -- ═══ MultiProjectiveZeroLocus ═══
 
-/-!
-# Projective zero loci of finite families of equations
-
-Problem B constructs the ideal sheaf and closed subscheme cut out by one
-homogeneous polynomial.  The complete lattice of ideal sheaves gives the
-scheme-theoretic intersection of any family by taking the supremum of those
-principal ideal sheaves.  This is the construction used below for the
-Plücker equations together with the linear equations defining `P(M)`.
--/
 noncomputable section
 open CategoryTheory
 open scoped AlgebraicGeometry
@@ -643,9 +505,6 @@ end V14Formalization
 
 -- ═══ InvariantSubschemeAction ═══
 
-/-!
-# Restricting scheme actions to invariant closed subschemes
--/
 noncomputable section
 open CategoryTheory
 open scoped AlgebraicGeometry
@@ -713,15 +572,6 @@ end V14Formalization
 
 -- ═══ GrassmannianLinearSection ═══
 
-/-!
-# The coordinate scheme `Gr(2,6) ∩ P(im P)`
-
-The fifteen homogeneous coordinates use the lexicographic order
-`01,02,03,04,05,12,13,14,15,23,24,25,34,35,45`.  The fifteen
-quadrics below are the Plücker relations in the matching lexicographic
-order on four-subsets.  A `15 × 15` projector supplies the linear
-equations `(P - I)x = 0`.
--/
 noncomputable section
 open scoped BigOperators
 open AlgebraicGeometry BConicBundleMultisections
@@ -807,8 +657,6 @@ namespace WeilRep
 
 @[expose] public instance : NeZero (11 : ℕ)  := sorry
 
-/-! ## K = ℚ(ζ₁₁) -/
-
 @[expose] public def Φ11 : ℚ[X] := cyclotomic 11 ℚ
 
 @[expose] public instance : Fact (Irreducible Φ11)  := sorry
@@ -825,8 +673,6 @@ public theorem ζ_pow_eleven : ζ ^ (11 : ℕ) = 1  := sorry
 
 @[expose] public def ψ : AddChar (ZMod 11) K := zmodChar 11 ζ_pow_eleven
 
-/-! ## Gauss sum G² = −11 -/
-
 @[expose] public def χ₂ℤ : MulChar (ZMod 11) ℤ := quadraticChar (ZMod 11)
 
 @[expose] public def χ₂ : MulChar (ZMod 11) K := χ₂ℤ.ringHomComp (algebraMap ℤ K)
@@ -834,8 +680,6 @@ public theorem ζ_pow_eleven : ζ ^ (11 : ℕ) = 1  := sorry
 @[expose] public def gauss : K := ∑ x : ZMod 11, ψ (x ^ 2)
 
 @[expose] public def cFourier : K := gauss⁻¹
-
-/-! ## Schrödinger representation on Fun = F₁₁ → K -/
 
 public abbrev Fun := ZMod 11 → K
 
@@ -846,42 +690,23 @@ public abbrev Fun := ZMod 11 → K
 /-- Full Fourier transform. -/
 @[expose] public def Sfull : Fun →ₗ[K] Fun where
   toFun f := fun x => cFourier * ∑ y : ZMod 11, ψ (x * y) * f y
-  map_add' f g := by
-    funext x
-    simp only [Pi.add_apply]
-    rw [← mul_add, ← Finset.sum_add_distrib]
-    congr 1
-    exact Finset.sum_congr rfl fun y _ => by ring
-  map_smul' r f := by
-    funext x
-    simp only [Pi.smul_apply, smul_eq_mul, RingHom.id_apply]
-    -- c * Σ ψ*(r*f) = c * r * Σ ψ*f
-    have h : (∑ y : ZMod 11, ψ (x * y) * (r * f y)) =
-        r * ∑ y : ZMod 11, ψ (x * y) * f y := by
-      rw [Finset.mul_sum]
-      exact Finset.sum_congr rfl fun y _ => by ring
-    rw [h, mul_left_comm]
-
-/-! ## Even subspace U and S² = −id -/
+  map_add' f g := sorry
+  map_smul' r f := sorry
 
 /-- Even functions f(−x) = f(x). -/
 @[expose] public def EvenSub : Submodule K Fun where
   carrier := {f | ∀ x, f (-x) = f x}
-  add_mem' := fun {f g} hf hg x => by simp [hf x, hg x]
-  zero_mem' := fun x => rfl
-  smul_mem' := fun r {f} hf x => by simp [hf x]
+  add_mem' := sorry
+  zero_mem' := sorry
+  smul_mem' := sorry
 
 public abbrev U := EvenSub
 
 @[expose] public instance : Module K U := inferInstance
 
-/-! ## Coordinate model K⁶ and seal matrices -/
-
 public abbrev Ucoord := Fin 6 → K
 
 @[expose] public instance : Module K Ucoord := inferInstance
-
-/-! ## Unipotent family T_b and standard generators -/
 
 /-- Half-quadratic phase: ψ(b · x² / 2). Standard Weil normalization so that
 the Bruhat big-cell formula matches the Fourier–unipotent identity W N(t) W. -/
@@ -890,12 +715,8 @@ the Bruhat big-cell formula matches the Fourier–unipotent identity W N(t) W. -
 /-- Multiplication by ψ(b · x² / 2) on Fun; preserves even functions. -/
 @[expose] public def Tfull_b (b : ZMod 11) : Fun →ₗ[K] Fun where
   toFun f := fun x => ψ (b * x ^ 2 * twoInv) * f x
-  map_add' := by
-    intro f g; funext x
-    simp only [Pi.add_apply]; ring
-  map_smul' := by
-    intro r f; funext x
-    simp only [Pi.smul_apply, smul_eq_mul, RingHom.id_apply]; ring
+  map_add' := sorry
+  map_smul' := sorry
 
 /-- The matrix S = [[0,-1],[1,0]] in SL₂(F₁₁). -/
 @[expose] public def Smat : SpecialLinearGroup (Fin 2) (ZMod 11) :=
@@ -920,8 +741,6 @@ public abbrev SLG := SpecialLinearGroup (Fin 2) F
 
 @[expose] public instance : Fact (Nat.Prime 11)  := sorry
 
-/-! ## Entries -/
-
 @[expose] public def ea (g : SLG) : F := (g : Matrix (Fin 2) (Fin 2) F) 0 0
 
 @[expose] public def eb (g : SLG) : F := (g : Matrix (Fin 2) (Fin 2) F) 0 1
@@ -932,23 +751,15 @@ public abbrev SLG := SpecialLinearGroup (Fin 2) F
 
 public theorem ea_ne_zero_of_ec_zero (g : SLG) (hc : ec g = 0) : ea g ≠ 0  := sorry
 
-/-! ## Diagonal action -/
-
 /-- ρ(diag(t)): f(x) ↦ χ₂(t) · f(t · x).  (Right scaling so D∘N(t)=N(t s²)∘D.) -/
 @[expose] public def Dfull (t : F) (_ht : t ≠ 0) : Fun →ₗ[K] Fun where
   toFun f := fun x => χ₂ t * f (t * x)
-  map_add' := by
-    intro f g; funext x; simp [Pi.add_apply]; ring
-  map_smul' := by
-    intro r f; funext x; simp [Pi.smul_apply, smul_eq_mul]; ring
-
-/-! ## Unipotent / Fourier -/
+  map_add' := sorry
+  map_smul' := sorry
 
 @[expose] public def Nfull (t : F) : Fun →ₗ[K] Fun := Tfull_b t
 
 @[expose] public def Wfull : Fun →ₗ[K] Fun := Sfull
-
-/-! ## Bruhat assembly -/
 
 @[expose] public def borelFun (g : SLG) (hc : ec g = 0) : Fun →ₗ[K] Fun :=
   Nfull (eb g * ea g) ∘ₗ Dfull (ea g) (ea_ne_zero_of_ec_zero g hc)
@@ -974,19 +785,8 @@ public theorem weilFun_preserves_even (g : SLG) {f : Fun}
 /-- Weil action on the even module U. -/
 @[expose] public def weilU (g : SLG) : U →ₗ[K] U where
   toFun f := ⟨weilFun g f.1, fun x => weilFun_preserves_even g (fun z => f.2 z) x⟩
-  map_add' := by
-    intro f₁ f₂
-    apply Subtype.ext
-    exact (weilFun g).map_add f₁.1 f₂.1
-  map_smul' := by
-    intro r f
-    apply Subtype.ext
-    exact (weilFun g).map_smul r f.1
-
-/-! ## Generators -/
-/-! ## ρ(−I) = −id on even U -/
-/-! ## Invertibility of unipotents -/
-/-! ## MonoidHom: map_one -/
+  map_add' := sorry
+  map_smul' := sorry
 
 public theorem weilU_one : weilU (1 : SLG) = LinearMap.id  := sorry
 
@@ -1007,30 +807,13 @@ public abbrev F := ZMod 11
 
 public abbrev SLG := SpecialLinearGroup (Fin 2) F
 
-/-! ## Borel × Big -/
-/-! ## N–D commutation -/
-/-! ## Big × Borel -/
-/-! ## D(−1) = −R; on even functions R = id so D(−1) = −id -/
-/-! ## W N W re-export -/
-/-! ## Positive kernels of two big cells → N W N W D N -/
-/-! ## Bruhat parameters for big × big product -/
-/-! ## After WNW when s ≠ 0 -/
-/-! ## Parameter match for Big×Big → big cell of gh -/
-/-! ## R commutes with N, W, D -/
-/-! ## Big×Big: Pos∘Pos = (−R) ∘ Pos(gh) when product is big -/
-/-! ## Even restriction: R = id, so Pos∘Pos = −Pos(gh) on even vectors -/
-/-! ## Big×Big multiplicativity on even U (product still big) -/
-/-! ## Big×Big when product is Borel (s = 0): W² = −R -/
-/-! ## s = 0 parameter identities (algebraic) -/
-/-! ## Assemble monoidhom on even U -/
-
 public theorem weilU_mul (g h : SLG) : weilU (g * h) = weilU g ∘ₗ weilU h  := sorry
 
 /-- The even Weil representation as a monoid homomorphism SL₂(F₁₁) → End(U). -/
 @[expose] public def weilUHom : SLG →* (U →ₗ[K] U) where
   toFun := weilU
-  map_one' := weilU_one
-  map_mul' := weilU_mul
+  map_one' := sorry
+  map_mul' := sorry
 
 end WeilHom
 end V14Formalization
@@ -1058,13 +841,11 @@ public abbrev U := WeilRep.U
 
 @[expose] public instance : Group PSL2F11 := inferInstance
 
-/-! ## finrank U = 6 via evalEven / extendEven -/
-
 /-- Evaluation of even functions at coordinates 0..5. -/
 @[expose] public def evalEven : U →ₗ[k] (Fin 6 → k) where
   toFun f j := f.1 (j.val : ZMod 11)
-  map_add' _ _ := funext fun _ => rfl
-  map_smul' _ _ := funext fun _ => rfl
+  map_add' _ _ := sorry
+  map_smul' _ _ := sorry
 
 /-- Pointwise even extension of a 6-tuple (before packaging as an element of `U`). -/
 @[expose] public def extendEvenFun (v : Fin 6 → k) : ZMod 11 → k := fun x =>
@@ -1080,34 +861,18 @@ public theorem extendEvenFun_even (v : Fin 6 → k) (x : ZMod 11) :
 /-- Even extension of a 6-tuple of values. -/
 @[expose] public def extendEven : (Fin 6 → k) →ₗ[k] U where
   toFun v := ⟨extendEvenFun v, extendEvenFun_even v⟩
-  map_add' := by
-    intro v w
-    apply Subtype.ext
-    funext x
-    change extendEvenFun (v + w) x = extendEvenFun v x + extendEvenFun w x
-    simp only [extendEvenFun, Pi.add_apply]
-    split_ifs <;> rfl
-  map_smul' := by
-    intro r v
-    apply Subtype.ext
-    funext x
-    change extendEvenFun (r • v) x = (r • extendEvenFun v) x
-    simp only [extendEvenFun, Pi.smul_apply, smul_eq_mul]
-    split_ifs <;> rfl
+  map_add' := sorry
+  map_smul' := sorry
 
 public theorem evalEven_extendEven : evalEven ∘ₗ extendEven = LinearMap.id  := sorry
 
 public theorem evalEven_injective : Function.Injective evalEven  := sorry
-
-/-! ## Λ²U -/
 
 public abbrev Lambda2U : Type := ↥(⋀[k]^2 U)
 
 @[expose] public instance : AddCommGroup Lambda2U := inferInstance
 
 @[expose] public instance : Module k Lambda2U := inferInstance
-
-/-! ## SL₂ / PSL action on Λ²U -/
 
 @[expose] public def weilLambda2 (g : SLG) : Lambda2U →ₗ[k] Lambda2U :=
   exteriorPower.map 2 (WeilHom.weilUHom g)
@@ -1119,8 +884,8 @@ public theorem weilLambda2_mul (g h : SLG) :
 
 @[expose] public def weilLambda2Hom : SLG →* (Lambda2U →ₗ[k] Lambda2U) where
   toFun := weilLambda2
-  map_one' := weilLambda2_one
-  map_mul' := weilLambda2_mul
+  map_one' := sorry
+  map_mul' := sorry
 
 public theorem weilLambda2Hom_ker_center :
     Subgroup.center SLG ≤ weilLambda2Hom.ker  := sorry
@@ -1128,12 +893,8 @@ public theorem weilLambda2Hom_ker_center :
 @[expose] public def pslLambda2Hom : PSL2F11 →* (Lambda2U →ₗ[k] Lambda2U) :=
   QuotientGroup.lift (N := Subgroup.center SLG) weilLambda2Hom weilLambda2Hom_ker_center
 
-/-! ## Nontriviality of Λ²(T) -/
-
 public theorem pslLambda2Hom_injective : Function.Injective pslLambda2Hom  := sorry
 
-/-! ## Centerlessness of PSL(2, F₁₁) via simplicity + nonabelian -/
-/-! ## Projectivization variety on Λ²U (ambient of the Plücker model) -/
 end GeometricFanoCarrier
 end V14Formalization
 
@@ -1160,7 +921,6 @@ public abbrev PSL2F11 := PSL(2, F)
 
 @[expose] public instance : Fintype PSL2F11 := QuotientGroup.fintype _
 
-/-! ## N ≃ DihedralGroup 6 -/
 end CentralizerN
 end V14Formalization
 
@@ -1183,62 +943,14 @@ public abbrev PSL2F11 := GeometricFanoCarrier.PSL2F11
 
 public abbrev Lambda2U := GeometricFanoCarrier.Lambda2U
 
-/-! ## Decomposable points -/
-
 @[expose] public def ambientAct (g : PSL2F11) : Lambda2U →ₗ[k] Lambda2U := pslLambda2Hom g
-
-/-! ## b2, pure wedge, Tmat moves -/
 
 @[expose] public def sigma : PSL2F11 := QuotientGroup.mk WeilRep.Smat
 
 public theorem sigma_isInvolution : IsInvolution sigma  := sorry
 
-/-! ## Cyclotomic nonsquares -/
-/-! ## √3 ∉ K = ℚ(ζ₁₁)
-
-Unique quadratic subfield of ℚ(ζ₁₁) is ℚ(√−11) (Gauss sum).  If √3 ∈ K then
-ℚ(√3)=ℚ(√−11), so √−11 = a + b√3 over ℚ, and (a+b√3)² = −11 forces 2ab = 0
-and a²+3b² = −11, impossible over ℚ.  Used for residual-plane classification:
-N-fixed planes of Φ₁₂ type would require tr(R|_P)² = 3. -/
-/-! ## Algebraic bridges for hyp (a)(b)
-
-Green classical lemmas used by the geometric fixed-locus arguments.
-Full HypothesisA/B proofs (pencil classification + N-stable plane) are the
-remaining gap before rewiring Cor 6.1 off the coset carrier.
--/
-/-! ## J-restriction and odd-dimensional √−1 obstruction -/
-/-! ## Exterior product of pure wedges (Plücker quadric) -/
 open ExteriorAlgebra
-/-! ## Pure-wedge products and nonzero independent exterior products -/
 open ExteriorAlgebra
-/-! ## Hypothesis A: polar → plane-meet → J-stable axis → √−1 -/
-/-! ## Hypothesis B infrastructure
-
-### Mathematical status (char-0 / modular audit)
-
-The operator `R = Weil(mkRot rotPt)` satisfies `R⁶ = -id` and `R³ = J` on `U`.
-Numerically and exactly over `K = ℚ(ζ₁₁)`:
-
-* `rank(R² + id) = 4`, so `dim ker(R² + id) = 2`
-* that kernel plane is stable under the full dihedral `N = C_G(σ)`
-* its Plücker pure wedge is therefore an **N-fixed point of pure Gr(2,U)**
-
-Hence `HypothesisB` is **false** for the pure-Grassmannian carrier
-`IsDecomposable` (operational `Y = Gr(2,U)`). The writeup seals hyp (b) only
-after the M-cut `Y = Gr(2,U) ∩ ℙ(M)` with `M = 10'` isotypic of `Λ²U`
-(writeup Input 3: character pieces of `M|_N` have dims `(2,1,1,0)` and meet
-no decomposable). The residual pure-Gr fixed point has a nonzero `W₅`
-component, so lies off `M`.
-
-The lemmas below record the true R-engine. Full `V14_hypothesisB` requires the
-M-cut carrier (isotypic projector for `χ₁₀'`, integer-valued on element orders).
--/
-/-! ### Character of the writeup 10′ isotypic (integer-valued on orders)
-
-PSL₂(𝔽₁₁) character table: `χ₁₀'` takes values
-`1A↦10, 2A↦2, 3A↦1, 5A/5B↦0, 6A↦-1, 11A/11B↦-1`.
-All are determined by element order (no need to split 5A/5B or 11A/11B).
-Modular check: `⟨χ_{Λ²U}, χ₁₀'⟩ = 1` and `⟨χ_{Λ²U}, χ₁₀⟩ = 0`. -/
 
 /-- Character values of the irreducible `10'` of `PSL₂(𝔽₁₁)`, determined by element order.
     Table: `1A↦10, 2A↦2, 3A↦1, 5A/5B↦0, 6A↦-1, 11A/11B↦-1`. -/
@@ -1258,168 +970,14 @@ Modular check: `⟨χ_{Λ²U}, χ₁₀'⟩ = 1` and `⟨χ_{Λ²U}, χ₁₀⟩
   (10 * (660 : k)⁻¹) •
     ∑ g : PSL2F11, chi10' g • (ambientAct g : Module.End k Lambda2U)
 
-/-! ## Writeup V₁₄ = Gr(2,U) ∩ ℙ(M) packaging (M-cut points)
-
-`IsV14MPoint` = decomposable + Plücker rep ∈ `Msub`.
-G acts via `actPM` (preservation: `IsV14MPoint_actPM`).
-Full `SmoothProjectiveGVariety` instance and hyp (b) require:
-* an explicit M-point for faithfulness of the set action (or a simplicity+nontrivial argument),
-* residual N-fixed pure-Gr plane ∉ `Msub`.
-Both are recorded below as the next proof targets; equivariance of `projectorM` is sealed. -/
-/-! ## Residual plane `ker(R² + id)`
-
-N-fixed decomposable planes over K are residual type (R²=-id on support):
-the Φ₁₂ branch forces `tr(R|_P)² = 3`, impossible in K=ℚ(ζ₁₁) (unique
-quadratic subfield ℚ(√−11)).  Residual Plücker is the unique N-fixed pure-Gr
-point; writeup hyp (b) requires it to miss M=10′.
-
-Scaffolded here: `residualKer` and R-stability.  `not_isSquare_three` is proved
-above (classical).  Remaining for hyp B: N-fixed ⇒ R²=-id on support, residual
-Plücker ∉ Msub, V14MVariety faithfulness, rewire Application. -/
-/-! ### No 6th roots of −1 in K -/
-/-! ### Monic quadratic divisors of X⁶+1; residual planes -/
-/-! ### Residual plane classification
-
-Any R-stable 2-plane has minpoly dividing X⁶+1 of degree ≤2. Degree 1 would
-force a 6th root of −1 (impossible). Degree 2 is X²+1 by
-`monic_quad_dvd_X6_eq_X2_add_one`, so R² = −id on the plane (= residualKer).
-
-`Module.End k ↥P` has a known AddCommMonoid diamond that blocks Ring/Algebra,
-so we conjugate via a Fin-2 basis to `Module.End k (Fin 2 → k)`. -/
-/-! ### N-fixed pure planes are residual -/
-/-! ### Reflection Weil operator
-
-`S = Weil(mkRefl)`, `S² = -id` on `U`. Full residual-Plücker sign/character
-packaging uses `S R = -R S` on residualKer (from SL conjugacy) — in progress.
--/
-/-! ## Residual Plücker vector N-fixation and projector coefficient lemmas -/
-/-! ## Card of G; residual Plücker ∉ Fix(π) -/
-/-! ## Residual N-stabilizer, dual sum, residual ∉ Mfix -/
-/-! ## Residual pure ≠ 0 and N-partial projector (4/11 weight) -/
-/-! ## Cross-term algebra: N-fixed `πω = ω` ⇔ `cross = 42 · ω` -/
-/-! ## Non-parallel cross: dual with `φ(ω)=1`, `φ(cross)=0` -/
-/-! ## Exterior pure-M gate and residual ∉ Mfix bridges -/
 open ExteriorAlgebra
-/-! ### Character norm of χ₁₀': ∑_g χ(g)² = 660
-
-From `PSLCard.chi10Int_sum_sq_psl` (SL native count + 2-to-1 quotient sum). -/
-/-! ### Pure-M infrastructure: χ-sum operator acts as 66 on pure-M vectors -/
-/-! ### Character convolution over `k` and projector idempotence `π² = π` -/
-/-! ### Pure-M rank/dim infrastructure
-
-From `π = (10/660)·T` and `T² = 66 T` we get `T = 66·π`.  Pure-M vectors
-lie in `Msub`, and their full G-orbit is in `Msub` (G-invariant).  Hence under
-pure-M the cyclic G-span of residual sits in a G-submodule of `Msub`.  Writeup
-Input 3 / modular audit: `rank(π)=10` and residual G-span has dim 15, so pure-M
-is impossible; sealed here: the inclusion `G-span ⊆ Msub` under pure-M. -/
-/-! ### Rank of `π`: `finrank Msub = tr(π)` via projector trace
-
-`π` is idempotent (`projectorM_sq_apply`), so `IsProj` applies and
-`LinearMap.IsProj.trace` gives `tr(π) = finrank(range π)`. -/
-/-! ### Conjugacy of involutions
-
-Class size of `σ` is `|G|/|C_G(σ)| = 660/12 = 55`, equal to the number of
-order-2 elements, so every involution is conjugate to `σ`. -/
 open ConjAct ConjClasses
-/-! ### Character of `M = range(π)` and rank of the isotypic projector
-
-Trace expansion: `tr(π) = (10/660) ∑ χ χ_Λ²` and `∑ χ χ_Λ² = 66 · finrank Msub`.
-Open gate: evaluate `∑ χ χ_Λ² = 660` to get `finrank Msub = 10`. -/
-/-! ### L = k[J] module structure and tr(J) = 0
-
-`Jlin² = -id` and `¬IsSquare(-1)` ⇒ `X²+1` irreducible. Adjoin root `i` and equip
-`U` with the `L`-module structure via `i • u = Jlin u`. Power-basis smulTower shows
-the matrix of `Jlin` is block-diagonal of `[[0,-1],[1,0]]` blocks, so `tr(Jlin)=0`.
--/
-/-! ### χ_Λ²(σ) = 3 via Newton exterior identity
-
-`tr(Λ² f) = (tr f)²/2 - tr(f²)/2`. For `f = Jlin`: `tr J = 0`, `tr(J²) = -6`
-⇒ `χ_Λ²(σ) = 3`. Conjugacy of involutions lifts this to every order-2 element.
--/
-/-! ### Residual decomposition of `Rlin` and χ_Λ² on cyclic orders
-
-`R⁶ + id = 0` factors as `(R²+id)(R⁴−R²+id)=0` with coprime factors, so
-`U = residualKer ⊕ Wker`.  Irreducibility of `X⁴−X²+1` forces
-`finrank residualKer = 2` and `finrank Wker = 4`, whence `tr(R)=tr(R²)=0`
-and Newton gives `χ_Λ²=0` on orders 3 and 6.
--/
-/-! ### Primary component dimensions: residualKer dim 2, Wker dim 4 -/
-/-! ### Uniqueness of the residual plane
-
-Any R-stable 2-plane equals `residualKer` (inclusion from residual character of
-R-stable planes + equal finrank).  Consequently the residual pure wedge is the
-**unique** N-fixed pure/decomposable bivector up to scale: an N-fixed pure Gr
-point has R-stable support (N-fixed pure residual), hence support = residualKer.
-
-Writeup Input 3 / hyp (b): this unique N-fixed pure-Gr point must miss `M = 10'`.
-That is pure-M exclusion (`residual Plücker ∉ Mfix = Msub`). -/
-/-! ### Pure-M exclusion gate (writeup Input 3)
-
-For N-fixed residual pure wedge `ω = u ∧ Ru`:
-* `πω = ω` ⇔ `cross = 42 · ω` (pure-M)
-* `πω = 0` ⇔ `cross = -24 · ω` (pure W₅; already excluded from `Mfix` by
-  `not_mem_Mfix_of_cross_parallel_ne_forty_two`)
-* non-parallel cross ⇒ `πω ≠ ω` (dual sum 24)
-
-So residual ∉ `Mfix` reduces to pure-M exclusion: `cross ≠ 42 · ω`.
-Equivalently (since residual is the unique N-fixed pure bivector): `M^N` contains
-no rank-2 Plücker vector — the writeup’s sealed `(2,1,1,0)` piece computation
-(“rank 6 or 4, never 2 on the trivial pencil”).
-
-Modular audit (FIX_IX_SEAL / F₂₃): residual is **mixed** (`Tω ∦ ω`, rank(M+ω)=11),
-so pure-M is false.  Lean seal still needs either that modular certificate
-lifted to `K = ℚ(ζ₁₁)`, or an independent pure-math non-parallel argument. -/
-/-! ### Trace of Rlin on residualKer / Wker / U
-
-Sealed: `tr(R|_res)=0` (2×2 Cayley–Hamilton + no √−1),
-`tr(R|_W)=0` (companion of cyclic basis), `tr(R)=0` via isCompl.
--/
-/-! ### Wker: companion matrix of cyclic basis has zero diagonal -/
-/-! ### Global tr(R) = 0 via residual ⊕ Wker -/
-/-! ### tr(R²)=0 and χ_Λ²(rotGen)=0 via Newton
-
-Sealed: tr(R²|_res)=−2, tr(R²|_W)=2 ⇒ tr(R²)=0;
-`ambientAct rotGen = map 2 Rlin`, Newton ⇒ χ_Λ²(rotGen)=0.
--/
-/-! ### tr(R⁴)=0 and χ_Λ²(rotGen²)=0 (order 3)
-
-Newton on R²: tr(R²)=tr(R⁴)=0 ⇒ χ_Λ²(rotGen²)=0.
--/
-/-! ### Order-6 conjugacy: χ_Λ² = 0 on all order-6 elements
-
-|C_G(rotGen)|=6 ⇒ class size 110 = #order-6 ⇒ all conjugate to rotGen.
--/
-/-! ## Order-3 conjugacy: χ_Λ² = 0 on all order-3 elements -/
-/-! ### Basic facts -/
-/-! ### C({r2}) ≤ N(⟨r2⟩) -/
-/-! ### ⟨r²⟩ is Sylow 3; n₃ = 55; |N_G(⟨r²⟩)| = 12 -/
-/-! ### |C_G(r²)| = 6 -/
-/-! ### Class size 110, conjugacy, χ_Λ² = 0 -/
-/-! ### Residual pure-M exclusion (unconditional)
-
-Sealed: ∑χ²=660, χ-convolution, `π²=π`, `MFix=Msub`, pure-M ⇒ residual ∈ Msub
-and G-orbit ⊂ Msub, `IsProj Msub π`, `tr(π)=finrank Msub`,
-`tr(π)=(10/660)∑ χ χ_Λ²`, `∑ χ χ_Λ² = 66 d`.
-Sealed: `χ_Λ²(σ)=3` (Newton), order-2 contrib `330`, id contrib `150`,
-order-5 contrib `0` (χ=0); id+ord2 = `480`.
-Sealed: order-6 and order-3 conjugacy ⇒ χ_Λ²=0, class sums 0.
-**Closed:** order-11 weighted 180 via `Ord11CharacterSum`
-(`sum_chi_chiLambda2_eq_sixsixty`, `finrank_Msub_eq_ten`).
-Bridges: `residual_plucker_projectorM_ne_of_cross_ne_forty_two`. -/
 end GeometricV14Carrier
 end V14Formalization
 
 
 -- ═══ Lambda2Coordinates ═══
 
-/-!
-# Exact Plücker coordinates for the exterior-square representation
-
-This file fixes the coordinate order used by the finite D12 certificate:
-`01,02,03,04,05,12,13,14,15,23,24,25,34,35,45`.  It then packages the
-actual exterior-square representation of `PSL₂(F₁₁)` as a faithful matrix
-representation in that basis.
--/
 noncomputable section
 open Set Matrix exteriorPower Module
 namespace V14Formalization
@@ -1476,11 +1034,7 @@ lexicographic Plücker basis. -/
   ρ := (Matrix.GeneralLinearGroup.toLin' lambda2Basis).symm.toMonoidHom.comp
     GeometricFanoCarrier.pslLambda2Hom.toHomUnits
   faithful :=
-    (Matrix.GeneralLinearGroup.toLin' lambda2Basis).symm.injective.comp
-      (MonoidHom.ker_eq_bot_iff _ |>.mp (by
-        rw [MonoidHom.ker_toHomUnits]
-        exact (MonoidHom.ker_eq_bot_iff _).mpr
-          GeometricFanoCarrier.pslLambda2Hom_injective))
+    sorry
 
 end Lambda2Coordinates
 end V14Formalization
@@ -1488,17 +1042,6 @@ end V14Formalization
 
 -- ═══ V14SchemeModel ═══
 
-/-!
-# The coordinate scheme model of V14
-
-This file connects the representation-theoretic projector onto the `10′`
-summand of `Λ²U` to the lexicographic Plücker coordinates used by the scheme
-model and by the finite D12 certificates.
-
-The resulting matrix is proved idempotent and equivariant for the actual
-`PSL₂(F₁₁)` representation.  Its fifteen linear equations vanish exactly on
-vectors in the representation-theoretic summand `M`.
--/
 noncomputable section
 open Set Matrix exteriorPower Module
 open CategoryTheory
@@ -1558,24 +1101,6 @@ end V14Formalization
 
 -- ═══ SchemeModelAliases ═══
 
-/-!
-# Shared `SchemeGeometry` aliases for the V14 scheme model
-
-Eight modules each declared their own `abbrev k := V14SchemeModel.k` and
-`abbrev G := V14SchemeModel.G` inside `V14Formalization.SchemeGeometry`.
-Under the legacy elaborator the eight coexisted only because `private`
-mangles a declaration's name per module.  In the module system that trick is
-unavailable: a `public` signature may not mention a private declaration, so
-the migration has to publish these aliases — and two *public* declarations of
-one name cannot be imported into the same environment
-(`environment already contains 'V14Formalization.SchemeGeometry.G'`).
-
-They are therefore declared exactly once, here.  Both are reducible
-abbreviations of the same constants the eight modules already used, so no
-statement changes meaning; the published Comparator statements do not mention
-these names at all (they spell `V14SchemeModel.k` / `V14SchemeModel.G` in
-full, per commit 7680055a, and must keep doing so).
--/
 namespace V14Formalization.SchemeGeometry
 
 /-- The V14 base field, as used throughout the scheme-geometry namespace. -/
@@ -1590,19 +1115,6 @@ end V14Formalization.SchemeGeometry
 
 -- ═══ ProjectiveGVariety ═══
 
-/-!
-# Projective G-varieties as Mathlib schemes
-
-A projective `G`-variety here is a closed subscheme of scheme-level
-projective space `Proj k[X₀,…,Xₙ]`, equipped with a `G`-action in the
-category of schemes over `Spec k`.  The underlying object is Mathlib's
-`AlgebraicGeometry.Scheme`.  Equivariant maps are Mathlib
-`Scheme.RationalMap`s.
-
-This replaces the linear-algebra point model `SmoothProjectiveGVariety`,
-whose `X` is a bare type and whose maps are total functions induced by
-injective linear maps.
--/
 noncomputable section
 open CategoryTheory
 open scoped AlgebraicGeometry
@@ -1662,13 +1174,9 @@ public abbrev toScheme (X : ProjectiveGVariety k G) : Scheme :=
   n := 14
   action := V14SchemeModel.actionOver
   ι := V14SchemeModel.v14Schemeι
-  closed := by
-    dsimp [V14SchemeModel.v14Schemeι, grassmannianLinearSectionι]
-    exact projectiveZeroLocusFamilyι_isClosedImmersion 14 V14SchemeModel.k
-      (grassmannianLinearSectionEquations V14SchemeModel.k
-        V14SchemeModel.projectorMatrix)
+  closed := sorry
   ι_over :=
-    projectiveZeroLocusFamilyι_isOver 14 V14SchemeModel.k _
+    sorry
 
 /-- Existence of a `G`-equivariant Mathlib rational map of the underlying
 schemes over `Spec k`. -/
@@ -1683,28 +1191,6 @@ end V14Formalization
 
 -- ═══ SymmetricAlgebraGraded ═══
 
-/-!
-# The grading on `SymmetricAlgebra R M`
-
-Many of these results are copied with minimal modification from the tensor
-algebra.  The main result is `SymmetricAlgebra.gradedAlgebra`, which says that
-the symmetric algebra is an `ℕ`-graded algebra.
-
-## Implementation notes
-
-Unlike `ExteriorAlgebra.gradedAlgebra`, which is stated in terms of the
-exterior powers `⋀[R]^i M`, there is no symmetric power of a module to grade
-`SymmetricAlgebra R M` by; so the graded pieces are taken to be the powers of
-the range of `SymmetricAlgebra.ι`, exactly as in `TensorAlgebra.gradedAlgebra`.
-Mathlib's `SymmetricPower` is ungraded and unconnected to `SymmetricAlgebra`,
-so the exterior-algebra shape was unavailable.
-
-The only real difference from the tensor and exterior cases is that
-`SymmetricAlgebra.lift` requires its codomain to be commutative.  This is not
-an obstacle: `SetLike.gcommSemiring` gives `⨁ i, ↥(LinearMap.range (ι R M) ^ i)`
-a `CommSemiring` structure, because the graded pieces are submodules of the
-commutative ring `SymmetricAlgebra R M`.
--/
 @[expose] public section
 namespace SymmetricAlgebra
 variable {R M : Type*} [CommSemiring R] [AddCommMonoid M] [Module R M]
@@ -1761,25 +1247,6 @@ end SymmetricAlgebra
 
 -- ═══ SymmetricAlgebraFunctor ═══
 
-/-!
-# Functoriality of `SymmetricAlgebra`, and the bridge to `MvPolynomial`
-
-`ExteriorAlgebra.map` exists in Mathlib; the symmetric analogue does not.  This
-module supplies it (`SymmetricAlgebra.map`), shows it respects the grading of
-`SymmetricAlgebraGraded` (`SymmetricAlgebra.gradedMap`), and proves the functor
-laws.
-
-The second half is **the bridge**: `SymmetricAlgebra.equivMvPolynomial b`, the
-basis isomorphism already in Mathlib, is upgraded to an isomorphism of *graded*
-algebras onto `MvPolynomial.homogeneousSubmodule`.  This is what connects the
-coordinate-free `Proj (Sym (Module.Dual k V))` to the `ProjectiveSpace n k` on
-which every existing V14 proof lives.
-
-The bridge is short because Mathlib already proves
-`MvPolynomial.homogeneousSubmodule_one_pow`, so only the degree-1 statement has
-any content: `equivMvPolynomial b` carries `LinearMap.range (ι R M)` onto the
-span of the variables.
--/
 noncomputable section
 @[expose] public section
 open Module
@@ -1788,7 +1255,6 @@ namespace SymmetricAlgebra
 variable {κ R M N L : Type*} [CommSemiring R]
   [AddCommMonoid M] [Module R M] [AddCommMonoid N] [Module R N]
   [AddCommMonoid L] [Module R L]
-/-! ## Functoriality -/
 
 /-- Functoriality of the symmetric algebra: a linear map `M →ₗ[R] N` induces an
 algebra map `SymmetricAlgebra R M →ₐ[R] SymmetricAlgebra R N`.  This is the
@@ -1801,45 +1267,19 @@ lemma map_mem_grade (f : M →ₗ[R] N) {i : ℕ} {x : SymmetricAlgebra R M}
 
 /-- The symmetric algebra of a linear map, as a morphism of graded algebras. -/
 def gradedMap (f : M →ₗ[R] N) : grade R M →ₐᵍ[R] grade R N :=
-  { map f with map_mem := map_mem_grade f }
+  { map f with map_mem := sorry }
 
 end SymmetricAlgebra
-/-! ## A general criterion for `Proj.map`'s side condition -/
-/-! ## The bridge -/
 
 
 -- ═══ ProjectiveSpaceIntrinsic ═══
 
-/-!
-# Coordinate-free projective space
-
-`projectiveSpaceOfModule k V` is `Proj` of the symmetric algebra on the dual of
-`V`, graded by `SymmetricAlgebraGraded`.  No basis of `V` appears anywhere in
-its definition.
-
-The module supplies what is needed to make it an object of
-`Over (Spec k)` carrying a `G`-action for any linear representation of `G` on
-`V`:
-
-* `projMapDual`, the morphism induced by a linear endomorphism of `V`, with
-  `Proj.map`'s irrelevant-ideal side condition discharged from a right inverse;
-* the functor laws `projMapDual_id` and `projMapDual_comp`, which are what an
-  honest `CategoryTheory.Action` needs;
-* `projMapDual_toSpec`, saying the induced morphism commutes with the structure
-  morphism to `Spec k`, which is what landing in `Over (Spec k)` needs.
-
-The construction deliberately mirrors `SchemeProjectiveAction`, which does the
-same thing for `ProjectiveSpace n k` and a matrix representation; only the
-graded algebra underneath differs.
--/
 noncomputable section
 open CategoryTheory
 open scoped AlgebraicGeometry HomogeneousIdeal
-/-! ## A congruence lemma for `Proj.map` -/
 namespace V14Formalization
 namespace SchemeGeometry
 open AlgebraicGeometry Module SymmetricAlgebra
-/-! ## The scheme -/
 variable {k : Type u} [Field k] {V : Type u} [AddCommGroup V] [Module k V]
 
 /-- Coordinate-free projective space: `Proj` of the symmetric algebra on the
@@ -1859,8 +1299,6 @@ public instance projectiveSpaceOfModule_over :
     (projectiveSpaceOfModule k V).CanonicallyOver (Spec (.of k)) where
   hom := projectiveSpaceOfModule.toSpec k V
 
-/-! ## Functoriality -/
-
 /-- The graded algebra endomorphism of `Sym (V*)` induced by a linear
 endomorphism of `V`, by transposing and applying `Sym`. -/
 @[expose] public def dualGradedMap (f : V →ₗ[k] V) :
@@ -1878,11 +1316,6 @@ public theorem irrelevant_le_dualGradedMap (f g : V →ₗ[k] V) (h : g ∘ₗ f
     projectiveSpaceOfModule k V ⟶ projectiveSpaceOfModule k V :=
   Proj.map (dualGradedMap f).toGradedRingHom (irrelevant_le_dualGradedMap f g h)
 
-/-! ## The functor laws at the level of `Proj`
-
-These are what a genuine `CategoryTheory.Action` needs. -/
-/-! ## Compatibility with the structure morphism to `Spec k` -/
-
 @[expose] public instance projMapDual_isOver (f g : V →ₗ[k] V) (h : g ∘ₗ f = LinearMap.id) :
     (projMapDual f g h).IsOver (Spec (.of k))  := sorry
 
@@ -1892,18 +1325,6 @@ end V14Formalization
 
 -- ═══ ProjectiveSpaceIntrinsicAction ═══
 
-/-!
-# The `G`-action on coordinate-free projective space
-
-A linear representation of `G` on `V` makes `ℙ(V) = Proj (Sym (V*))` into an
-object of `Action (Over (Spec k)) G`, entirely by functoriality: `G` acts on
-`V`, hence on `V*` by transpose, hence on `Sym (V*)` gradedly, hence on its
-`Proj` contravariantly — twice contravariant, so covariantly overall.
-
-This mirrors `SchemeProjectiveAction.projectiveActionOver`, which does the same
-for `ProjectiveSpace n k` and a *matrix* representation.  The point of this
-module is that no basis of `V` is chosen anywhere.
--/
 noncomputable section
 open CategoryTheory
 open scoped AlgebraicGeometry
@@ -1958,17 +1379,6 @@ end V14Formalization
 
 -- ═══ ProjectiveSpaceIntrinsicIrreducible ═══
 
-/-!
-# `ℙ(V)` is irreducible and integral
-
-`Proj` of a graded domain with nonzero irrelevant ideal is integral, and
-`Sym (V*)` is a domain because `V*` is free over the field `k`.  The irrelevant
-ideal is nonzero as soon as `V*` is, which a basis witnesses.
-
-This is what `HasEquivariantRationalMap` requires of its source, so it is kept
-in its own module: the published coordinate-free statement needs these
-instances, and nothing else from the bridge.
--/
 noncomputable section
 open CategoryTheory
 open scoped AlgebraicGeometry HomogeneousIdeal
@@ -1977,15 +1387,6 @@ namespace SchemeGeometry
 open AlgebraicGeometry Module SymmetricAlgebra
 variable {k : Type u} [Field k] {G : Type u} [Group G]
   {V : Type u} [AddCommGroup V] [Module k V] {d : ℕ}
-/-! ## `ℙ(V)` is irreducible and integral
-
-`Proj` of a graded domain with nonzero irrelevant ideal is integral, and
-`Sym (V*)` is a domain because `V*` is free over the field `k`.  The irrelevant
-ideal is nonzero as soon as `V*` is, which a basis witnesses. -/
-/-! ## The same, for the carriers of the action objects
-
-Instance search does not unfold `Action`/`Over` projections, so the instances
-above have to be restated at the carrier of `ambientFree`. -/
 
 @[expose] public instance ambientFree_irreducibleSpace
     [FiniteDimensional k V] [Nontrivial V] (R : FaithfulLinearRep k G V) :
@@ -1997,23 +1398,6 @@ end V14Formalization
 
 -- ═══ HeadlineStatement ═══
 
-/-!
-# Public no-map statement (vocabulary only)
-
-Defines the numbered projectivization of a faithful representation in a given
-system of plus/minus homogeneous coordinates.  The proof that there is no
-equivariant rational map lives in `FaithfulHeadline`.  This module is the
-trusted vocabulary for the Comparator challenge.
-
-The coordinates are a *parameter*, not a choice: `ambientOf` and
-`ofFaithfulRep` take a `PlusMinusCoords R`, and the published theorems
-quantify over it.  Until 2026-08-18 they instead applied
-`PlusMinusCoords.ofRep`, which extracts one coordinate system from
-`exists_plus_minus_projective_bases` by `Classical.choice`; that made the
-published statements depend on two proofs and pinned them to a single
-presentation of `ℙ(V)`.  `ofRep` survives below only as the witness that the
-coordinate hypothesis can always be discharged.
--/
 noncomputable section
 open CategoryTheory
 open scoped AlgebraicGeometry
