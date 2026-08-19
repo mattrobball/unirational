@@ -180,6 +180,37 @@ public theorem irrelevant_le_gradedCompare :
     IntrinsicV14.scheme k U incl ⟶ ProjectiveSpace 14 k :=
   Proj.map (gradedCompare incl c) (irrelevant_le_gradedCompare incl c retr hretr)
 
+/-! ## Over `Spec k` -/
+
+include hretr in
+private theorem gradedCompare_zero_comp_algebraMap :
+    (gradedCompare incl c).gradedZeroRingHom.comp
+        (algebraMap k (MvPolynomial.homogeneousSubmodule (Fin 15) k 0)) =
+      algebraMap k (IntrinsicV14.coordinateRing k U incl 0) := by
+  apply RingHom.ext
+  intro r
+  apply Subtype.ext
+  show Ideal.Quotient.mk _
+      (symCompare incl c (algebraMap k (MvPolynomial (Fin 15) k) r)) = _
+  rw [AlgHom.commutes]
+  rfl
+
+include hretr in
+/-- The morphism to `ℙ¹⁴` is a morphism over `Spec k`. -/
+public theorem toAmbient14_toSpec :
+    toAmbient14 incl c retr hretr ≫ ProjectiveSpace.toSpec 14 k =
+      IntrinsicV14.toSpec k U incl := by
+  unfold toAmbient14 ProjectiveSpace.toSpec IntrinsicV14.toSpec IntrinsicV14.scheme
+  rw [← Category.assoc, AlgebraicGeometry.Proj.map_toSpecZero]
+  rw [Category.assoc, ← Spec.map_comp]
+  have hz :
+      CommRingCat.ofHom (algebraMap k (MvPolynomial.homogeneousSubmodule (Fin 15) k 0)) ≫
+        CommRingCat.ofHom (gradedCompare incl c).gradedZeroRingHom =
+      CommRingCat.ofHom (algebraMap k (IntrinsicV14.coordinateRing k U incl 0)) := by
+    simpa using congrArg CommRingCat.ofHom
+      (gradedCompare_zero_comp_algebraMap incl c retr hretr)
+  rw [hz]
+
 /-! ## It lands in the coordinate `V₁₄` -/
 
 include hretr in
@@ -220,6 +251,95 @@ public theorem compare_ι [Infinite k] (h2 : (2 : k) ≠ 0)
     compare incl c P retr hretr h2 hP ≫ grassmannianLinearSectionι k P
       = toAmbient14 incl c retr hretr :=
   liftToZeroLocusFamily_ι _ _ _ _ _ _
+
+include hretr in
+/-- The comparison is a morphism over `Spec k`. -/
+public theorem compare_toSpec [Infinite k] (h2 : (2 : k) ≠ 0)
+    (hP : ∀ x : M, P.mulVec ((Lambda4Coordinates.lex2 c).equivFun (incl x)) =
+      (Lambda4Coordinates.lex2 c).equivFun (incl x)) :
+    compare incl c P retr hretr h2 hP ≫
+        projectiveZeroLocusFamilyToSpec 14 k (grassmannianLinearSectionEquations k P) =
+      IntrinsicV14.toSpec k U incl := by
+  rw [projectiveZeroLocusFamilyToSpec, ← Category.assoc, compare_ι, toAmbient14_toSpec]
+
+/-! ## Equivariance
+
+The comparison intertwines the intrinsic action with the coordinate one.  Both
+sides are `Proj.map`s, so the whole content is one identity of graded ring maps,
+checked on the fifteen variables, where it says exactly that `A` is the matrix
+of `⋀²f` in the lex basis.
+-/
+
+variable (α : M →ₗ[k] M) (hα : IntrinsicV14.Covers k U incl α)
+  (A : Matrix (Fin 15) (Fin 15) k)
+
+/-- The intertwining identity at the level of graded rings. -/
+public theorem gradedCompare_intertwines
+    (hA : ∀ (x : M) (j : Fin 15),
+      (Lambda4Coordinates.lex2 c).equivFun (incl (α x)) j =
+        ∑ l : Fin 15, A j l * (Lambda4Coordinates.lex2 c).equivFun (incl x) l) :
+    (IntrinsicV14.quotMap k U incl α hα).comp (gradedCompare incl c) =
+      (gradedCompare incl c).comp (linearSubstGradedRingHom 14 A) := by
+  have hdual : ∀ j : Fin 15,
+      α.dualMap (incl.dualMap ((Lambda4Coordinates.lex2 c).dualBasis j)) =
+        ∑ l : Fin 15, A j l • incl.dualMap ((Lambda4Coordinates.lex2 c).dualBasis l) := by
+    intro j
+    refine LinearMap.ext fun x => ?_
+    show (Lambda4Coordinates.lex2 c).dualBasis j (incl (α x)) = _
+    rw [Basis.dualBasis_apply]
+    simp only [LinearMap.coe_sum, Finset.sum_apply, LinearMap.smul_apply,
+      LinearMap.dualMap_apply, Basis.dualBasis_apply, smul_eq_mul]
+    simpa [Basis.equivFun_apply] using hA x j
+  have halg : ((Ideal.Quotient.mkₐ k (pluckerIdeal k U incl).toIdeal).comp
+        ((SymmetricAlgebra.map α.dualMap).comp (symCompare incl c))) =
+      ((Ideal.Quotient.mkₐ k (pluckerIdeal k U incl).toIdeal).comp
+        ((symCompare incl c).comp
+          (MvPolynomial.aeval (linearSubst 14 A) :
+            MvPolynomial (Fin 15) k →ₐ[k] MvPolynomial (Fin 15) k))) := by
+    apply MvPolynomial.algHom_ext
+    intro j
+    show Ideal.Quotient.mk _ (SymmetricAlgebra.map α.dualMap
+        (symCompare incl c (MvPolynomial.X j))) =
+      Ideal.Quotient.mk _ (symCompare incl c
+        (MvPolynomial.aeval (linearSubst 14 A) (MvPolynomial.X j)))
+    congr 1
+    rw [symCompare_X, SymmetricAlgebra.map_ι, hdual j, MvPolynomial.aeval_X, linearSubst,
+      map_sum (SymmetricAlgebra.ι k (Dual k M)), map_sum (symCompare incl c)]
+    refine Finset.sum_congr rfl fun l _ => ?_
+    rw [map_smul, map_mul, symCompare_X,
+      show symCompare incl c (MvPolynomial.C (A j l)) =
+          algebraMap k (SymmetricAlgebra k (Dual k M)) (A j l) by
+        rw [← MvPolynomial.algebraMap_eq]; exact AlgHom.commutes _ _,
+      Algebra.smul_def]
+  refine GradedRingHom.ext fun p => ?_
+  exact congr($halg p)
+
+variable (β : M →ₗ[k] M) (N : Matrix (Fin 15) (Fin 15) k)
+
+include hretr in
+/-- The intertwining identity at the level of schemes. -/
+public theorem schemeMap_comp_toAmbient14
+    (hinvα : β ∘ₗ α = LinearMap.id) (hAN : N * A = 1)
+    (hA : ∀ (x : M) (j : Fin 15),
+      (Lambda4Coordinates.lex2 c).equivFun (incl (α x)) j =
+        ∑ l : Fin 15, A j l * (Lambda4Coordinates.lex2 c).equivFun (incl x) l) :
+    IntrinsicV14.schemeMap k U incl α β hα hinvα ≫ toAmbient14 incl c retr hretr =
+      toAmbient14 incl c retr hretr ≫ mapLinearSubst 14 A N hAN := by
+  have hL : IntrinsicV14.schemeMap k U incl α β hα hinvα ≫ toAmbient14 incl c retr hretr =
+      Proj.map ((IntrinsicV14.quotMap k U incl α hα).comp (gradedCompare incl c))
+        (HomogeneousIdeal.irrelevant_le_map_comp
+          (irrelevant_le_gradedCompare incl c retr hretr)
+          (IntrinsicV14.irrelevant_le_quotMap k U incl α β hα hinvα)) :=
+    (Proj.map_comp _ _ _ _).symm
+  have hR : toAmbient14 incl c retr hretr ≫ mapLinearSubst 14 A N hAN =
+      Proj.map ((gradedCompare incl c).comp (linearSubstGradedRingHom 14 A))
+        (HomogeneousIdeal.irrelevant_le_map_comp
+          (irrelevant_le_map_linearSubst 14 A N hAN)
+          (irrelevant_le_gradedCompare incl c retr hretr)) :=
+    (Proj.map_comp _ _ _ _).symm
+  rw [hL, hR]
+  exact AlgebraicGeometry.Proj.map_congr
+    (gradedCompare_intertwines incl c α hα A hA) _ _
 
 end IntrinsicV14Compare
 end V14Formalization
