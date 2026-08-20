@@ -4,14 +4,63 @@ public import Mathlib
 
 /-! # Trusted base
 
-Target: `V14Formalization.IntrinsicHeadline.noEquivariantRationalMap_intrinsicV14`
+Target: `V14Formalization.IntrinsicV14Field.noEquivariantRationalMap_ofPrimitiveRoot`
 
 Boundary: V14Formalization, BConicBundleMultisections
 
-145 declarations from 18 modules, inlined in dependency order with every proof replaced by `sorry`. Imports above are outside the boundary and are trusted as given.
+157 declarations from 24 modules, inlined in dependency order with every proof replaced by `sorry`. Imports above are outside the boundary and are trusted as given.
 -/
 
 universe u v w
+
+-- ═══ ProjectiveSpace ═══
+
+@[expose] public section
+open CategoryTheory Limits
+open scoped AlgebraicGeometry
+namespace BConicBundleMultisections
+noncomputable section
+open AlgebraicGeometry
+attribute [local instance] MvPolynomial.gradedAlgebra
+
+/-- Scheme-level projective `n`-space over a commutative ring `R`. -/
+abbrev ProjectiveSpace (n : ℕ) (R : Type u) [CommRing R] : Scheme.{u} :=
+  Proj (MvPolynomial.homogeneousSubmodule (Fin (n + 1)) R)
+
+namespace ProjectiveSpace
+
+/-- The structure morphism from projective `n`-space over `R` to `Spec R`. -/
+def toSpec (n : ℕ) (R : Type u) [CommRing R] : ProjectiveSpace n R ⟶ Spec (.of R) :=
+  Proj.toSpecZero (MvPolynomial.homogeneousSubmodule (Fin (n + 1)) R) ≫
+    Spec.map (CommRingCat.ofHom
+      (algebraMap R (MvPolynomial.homogeneousSubmodule (Fin (n + 1)) R 0)))
+
+end ProjectiveSpace
+
+/-- The scheme `ℙᵐ_R ×_{Spec R} ℙⁿ_R`. -/
+abbrev BiprojectiveSpace (m n : ℕ) (R : Type u) [CommRing R] : Scheme.{u} :=
+  pullback (ProjectiveSpace.toSpec m R) (ProjectiveSpace.toSpec n R)
+
+namespace BiprojectiveSpace
+
+/-- The first projection from `ℙᵐ_R ×_{Spec R} ℙⁿ_R`. -/
+abbrev fst (m n : ℕ) (R : Type u) [CommRing R] :
+    BiprojectiveSpace m n R ⟶ ProjectiveSpace m R :=
+  pullback.fst (ProjectiveSpace.toSpec m R) (ProjectiveSpace.toSpec n R)
+
+/-- The structure morphism from `ℙᵐ_R ×_{Spec R} ℙⁿ_R` to `Spec R`. -/
+def toSpec (m n : ℕ) (R : Type u) [CommRing R] :
+    BiprojectiveSpace m n R ⟶ Spec (.of R) :=
+  fst m n R ≫ ProjectiveSpace.toSpec m R
+
+instance (m n : ℕ) (R : Type u) [CommRing R] :
+    (BiprojectiveSpace m n R).CanonicallyOver (Spec (.of R)) where
+  hom := toSpec m n R
+
+end BiprojectiveSpace
+end
+end BConicBundleMultisections
+
 
 -- ═══ SchemeEquivariant ═══
 
@@ -67,6 +116,78 @@ public structure EquivariantRationalMap {S : Scheme.{u}} {G : Type v} [Group G]
 @[expose] public def HasEquivariantRationalMap {S : Scheme.{u}} {G : Type v} [Group G]
     (X Y : Action (Over S) G) [IrreducibleSpace X.V.left] : Prop :=
   Nonempty (EquivariantRationalMap X Y)
+
+end SchemeGeometry
+end V14Formalization
+
+
+-- ═══ SchemeFixedLocus ═══
+
+noncomputable section
+open CategoryTheory CategoryTheory.Limits
+open scoped AlgebraicGeometry
+namespace V14Formalization
+namespace SchemeGeometry
+open AlgebraicGeometry
+variable {S : Scheme.{u}} {G : Type v} [Group G]
+
+/-- The scheme-theoretic fixed locus of `g`, formed in schemes over `S`. -/
+public abbrev FixedBy (X : Action (Over S) G) (g : G) : Over S :=
+  equalizer (𝟙 X.V) (X.ρ g)
+
+/-- The canonical inclusion of the fixed locus into the original scheme. -/
+public abbrev fixedByι (X : Action (Over S) G) (g : G) : FixedBy X g ⟶ X.V :=
+  equalizer.ι (𝟙 X.V) (X.ρ g)
+
+@[reassoc]
+public theorem fixedByι_comp_action (X : Action (Over S) G) (g : G) :
+    fixedByι X g ≫ X.ρ g = fixedByι X g  := sorry
+
+/-- A map whose image is fixed by `g` factors through the fixed subscheme. -/
+@[expose] public noncomputable def fixedByLift {Z : Over S} (X : Action (Over S) G) (g : G)
+    (p : Z ⟶ X.V) (hp : p ≫ X.ρ g = p) : Z ⟶ FixedBy X g :=
+  equalizer.lift p (by simpa only [Category.comp_id] using hp.symm)
+
+/-- An element centralizing `sigma` restricts to an automorphism of the
+scheme-theoretic `sigma`-fixed locus. -/
+@[expose] public noncomputable def fixedByCentralizerHom (X : Action (Over S) G) (sigma : G)
+    (n : Subgroup.centralizer ({sigma} : Set G)) :
+    FixedBy X sigma ⟶ FixedBy X sigma :=
+  fixedByLift X sigma (fixedByι X sigma ≫ X.ρ n.1) (by
+    have hn : n.1 * sigma = sigma * n.1 :=
+      (Subgroup.mem_centralizer_iff.mp n.2 sigma (by simp)).symm
+    have hsigma_n := X.ρ.map_mul sigma n.1
+    change X.ρ (sigma * n.1) = X.ρ n.1 ≫ X.ρ sigma at hsigma_n
+    have hn_sigma := X.ρ.map_mul n.1 sigma
+    change X.ρ (n.1 * sigma) = X.ρ sigma ≫ X.ρ n.1 at hn_sigma
+    calc
+      (fixedByι X sigma ≫ X.ρ n.1) ≫ X.ρ sigma =
+          fixedByι X sigma ≫ (X.ρ n.1 ≫ X.ρ sigma) := Category.assoc _ _ _
+      _ = fixedByι X sigma ≫ X.ρ (sigma * n.1) := by rw [hsigma_n]
+      _ = fixedByι X sigma ≫ X.ρ (n.1 * sigma) := by rw [hn]
+      _ = fixedByι X sigma ≫ (X.ρ sigma ≫ X.ρ n.1) := by rw [hn_sigma]
+      _ = (fixedByι X sigma ≫ X.ρ sigma) ≫ X.ρ n.1 :=
+        (Category.assoc _ _ _).symm
+      _ = fixedByι X sigma ≫ X.ρ n.1 := by rw [fixedByι_comp_action])
+
+@[simp]
+public theorem fixedByCentralizerHom_one (X : Action (Over S) G) (sigma : G) :
+    fixedByCentralizerHom X sigma 1 = 𝟙 _  := sorry
+
+public theorem fixedByCentralizerHom_mul (X : Action (Over S) G) (sigma : G)
+    (n m : Subgroup.centralizer ({sigma} : Set G)) :
+    fixedByCentralizerHom X sigma (n * m) =
+      fixedByCentralizerHom X sigma m ≫ fixedByCentralizerHom X sigma n  := sorry
+
+/-- The centralizer of `sigma` acts canonically on the scheme-theoretic
+`sigma`-fixed locus. -/
+@[expose] public noncomputable def fixedByCentralizerAction (X : Action (Over S) G) (sigma : G) :
+    Action (Over S) (Subgroup.centralizer ({sigma} : Set G)) where
+  V := FixedBy X sigma
+  ρ :=
+    { toFun := fixedByCentralizerHom X sigma
+      map_one' := fixedByCentralizerHom_one X sigma
+      map_mul' := fixedByCentralizerHom_mul X sigma }
 
 end SchemeGeometry
 end V14Formalization
@@ -294,6 +415,77 @@ end SchemeGeometry
 end V14Formalization
 
 
+-- ═══ SchemeRationalConstancy ═══
+
+noncomputable section
+open CategoryTheory
+open scoped AlgebraicGeometry
+namespace V14Formalization
+namespace SchemeGeometry
+open AlgebraicGeometry
+variable {S : Scheme.{u}} {N : Type u} [Group N]
+variable {k : Type u} [Field k]
+
+/-- A rational map between schemes over the base is induced by a base-field
+point of the target.  The definition is deliberately independent of any
+group actions carried by the two schemes. -/
+@[expose] public def RationalMapIsConstantOver
+    {E Z : Over (Spec (.of k))}
+    (q : Scheme.RationalMap E.left Z.left) : Prop :=
+  ∃ y : Spec (.of k) ⟶ Z.left,
+    q = (E.hom ≫ y).toRationalMap
+
+variable {E Z : Over (Spec (.of k))}
+  [IsIntegral E.left]
+variable {E Z : Action (Over (Spec (.of k))) N}
+  [IsIntegral E.V.left]
+end SchemeGeometry
+end V14Formalization
+
+
+-- ═══ AbstractTargetHeadline ═══
+
+noncomputable section
+open CategoryTheory
+open scoped AlgebraicGeometry
+namespace V14Formalization.SchemeGeometry
+open AlgebraicGeometry BConicBundleMultisections Module
+variable (F : Type u) [Field F] {G : Type u} [Group G]
+
+/-- **Hypothesis (a) for a target.**  Every rational map over `Spec F` from a
+biprojective space to the scheme-theoretic `σ`-fixed locus of `Y` is constant.
+
+Geometrically: the positive-dimensional part of `Y^σ` contains no rational
+curve, so the exceptional divisor of the blow-up along `ℙ(V₊)` cannot map to it
+non-constantly.  The biprojective space is the exceptional divisor of that
+blow-up, in the chart the normal valuation uses; `p` and `q` are the projective
+dimensions of the two `σ`-eigenspaces, which are not known in advance, hence
+the quantifier over both. -/
+@[expose] public def TargetHypothesisA
+    (Y : Action (Over (Spec (.of F))) G) (σ : G) : Prop :=
+  ∀ (p q : ℕ) (z : Scheme.RationalMap (BiprojectiveSpace p q F)
+      (fixedByCentralizerAction Y σ).V.left),
+    z.IsOver (Spec (.of F)) →
+      RationalMapIsConstantOver
+        (E := Over.mk (BiprojectiveSpace.toSpec p q F))
+        (Z := (fixedByCentralizerAction Y σ).V) z
+
+/-- **Hypothesis (b) for a target.**  `Y^σ` has no `F`-section fixed by the
+whole centralizer `N = C_G(σ)`; that is, `Y^N(F) = ∅`.
+
+Sections rather than arbitrary morphisms `Spec F ⟶ Y^σ` suffice, because the
+constant value produced by hypothesis (a) is automatically a section of the
+structure morphism (`noEquivariantRationalMap_of_constant_section`). -/
+@[expose] public def TargetHypothesisB
+    (Y : Action (Over (Spec (.of F))) G) (σ : G) : Prop :=
+  ¬ ∃ y : Spec (.of F) ⟶ (fixedByCentralizerAction Y σ).V.left,
+      y ≫ (fixedByCentralizerAction Y σ).V.hom = 𝟙 _ ∧
+        ∀ n : Subgroup.centralizer ({σ} : Set G),
+          y ≫ ((fixedByCentralizerAction Y σ).ρ n).left = y
+
+end V14Formalization.SchemeGeometry
+
+
 -- ═══ WeilRep ═══
 
 open Polynomial AddChar MulChar Matrix BigOperators
@@ -317,25 +509,6 @@ public class IsCycl11 (E : Type u) [Field E] where
   zeta : E
   /-- It is a primitive 11th root of unity. -/
   isPrimitiveRoot_zeta : IsPrimitiveRoot zeta 11
-
-@[expose] public def Φ11 : ℚ[X] := cyclotomic 11 ℚ
-
-@[expose] public instance : Fact (Irreducible Φ11)  := sorry
-
-public abbrev K := AdjoinRoot Φ11
-
-@[expose] public instance : Field K := inferInstance
-
-@[expose] public instance : CharZero K  := sorry
-
-/-- The image of `X` in `ℚ[X]/(Φ₁₁)`: a primitive 11th root of unity. -/
-@[expose] public def rootK : K := AdjoinRoot.root Φ11
-
-public theorem orderOf_rootK : orderOf rootK = 11  := sorry
-
-/-- `K = ℚ(ζ₁₁)` is a field with a primitive 11th root of unity, so everything
-below applies to it.  This is the only place `AdjoinRoot Φ₁₁` is used. -/
-@[expose] public instance : IsCycl11 K := ⟨rootK, IsPrimitiveRoot.iff_orderOf.2 orderOf_rootK⟩
 
 variable {E : Type u} [Field E] [CharZero E] [IsCycl11 E]
 
@@ -391,6 +564,11 @@ the Bruhat big-cell formula matches the Fourier–unipotent identity W N(t) W. -
   toFun f := fun x => ψ (b * x ^ 2 * twoInv) * f x
   map_add' := sorry
   map_smul' := sorry
+
+/-- The matrix S = [[0,-1],[1,0]] in SL₂(F₁₁). -/
+@[expose] public def Smat : SpecialLinearGroup (Fin 2) (ZMod 11) :=
+  ⟨!![0, -1; 1, 0], by
+    simp [Matrix.det_fin_two_of]⟩
 
 end WeilRep
 end V14Formalization
@@ -500,44 +678,11 @@ noncomputable section
 namespace V14Formalization
 namespace GeometricFanoCarrier
 
-public abbrev k := WeilRep.K
-
 public abbrev F := ZMod 11
-
-public abbrev SLG := SpecialLinearGroup (Fin 2) F
 
 public abbrev PSL2F11 : Type := PSL(2, F)
 
-public abbrev U := WeilRep.U k
-
 @[expose] public instance : Group PSL2F11 := inferInstance
-
-public abbrev Lambda2U : Type := ↥(⋀[k]^2 U)
-
-@[expose] public instance : AddCommGroup Lambda2U := inferInstance
-
-@[expose] public instance : Module k Lambda2U := inferInstance
-
-@[expose] public instance : FiniteDimensional k Lambda2U  := sorry
-
-@[expose] public def weilLambda2 (g : SLG) : Lambda2U →ₗ[k] Lambda2U :=
-  exteriorPower.map 2 (WeilHom.weilUHom g)
-
-public theorem weilLambda2_one : weilLambda2 1 = LinearMap.id  := sorry
-
-public theorem weilLambda2_mul (g h : SLG) :
-    weilLambda2 (g * h) = weilLambda2 g ∘ₗ weilLambda2 h  := sorry
-
-@[expose] public def weilLambda2Hom : SLG →* (Lambda2U →ₗ[k] Lambda2U) where
-  toFun := weilLambda2
-  map_one' := sorry
-  map_mul' := sorry
-
-public theorem weilLambda2Hom_ker_center :
-    Subgroup.center SLG ≤ weilLambda2Hom.ker  := sorry
-
-@[expose] public def pslLambda2Hom : PSL2F11 →* (Lambda2U →ₗ[k] Lambda2U) :=
-  QuotientGroup.lift (N := Subgroup.center SLG) weilLambda2Hom weilLambda2Hom_ker_center
 
 end GeometricFanoCarrier
 end V14Formalization
@@ -581,22 +726,81 @@ namespace V14Formalization
 namespace GeometricV14Carrier
 open GeometricFanoCarrier
 
-public abbrev k := GeometricFanoCarrier.k
-
 public abbrev PSL2F11 := GeometricFanoCarrier.PSL2F11
 
-public abbrev U := GeometricFanoCarrier.U
-
-public abbrev Lambda2U := GeometricFanoCarrier.Lambda2U
-
-@[expose] public def ambientAct (g : PSL2F11) : Lambda2U →ₗ[k] Lambda2U := pslLambda2Hom g
+@[expose] public def sigma : PSL2F11 := QuotientGroup.mk WeilRep.Smat
 
 open ExteriorAlgebra
 open ExteriorAlgebra
+open ExteriorAlgebra
+open ConjAct ConjClasses
+end GeometricV14Carrier
+end V14Formalization
 
-/-- Character values of the irreducible `10'` of `PSL₂(𝔽₁₁)`, determined by element order.
-    Table: `1A↦10, 2A↦2, 3A↦1, 5A/5B↦0, 6A↦-1, 11A/11B↦-1`. -/
-@[expose] public noncomputable def chi10' (g : PSL2F11) : k :=
+
+-- ═══ WeilLambda2 ═══
+
+open scoped BigOperators LinearAlgebra.Projectivization MatrixGroups
+open Matrix Matrix.SpecialLinearGroup exteriorPower Module
+noncomputable section
+namespace V14Formalization
+namespace WeilLambda2
+open V14Formalization.WeilRep (IsCycl11)
+
+/-- The finite field the group is defined over. -/
+public abbrev F := ZMod 11
+
+/-- `SL₂(𝔽₁₁)`. -/
+public abbrev SLG := SpecialLinearGroup (Fin 2) F
+
+/-- `PSL₂(𝔽₁₁)`. -/
+public abbrev PSL2F11 : Type := PSL(2, F)
+
+@[expose] public instance : Group PSL2F11 := inferInstance
+
+variable (E : Type) [Field E] [CharZero E] [IsCycl11 E]
+
+/-- The exterior square of the even Weil module. -/
+public abbrev Lambda2U : Type := ↥(⋀[E]^2 (WeilRep.U E))
+
+@[expose] public instance : AddCommGroup (Lambda2U E) := inferInstance
+
+@[expose] public instance : Module E (Lambda2U E) := inferInstance
+
+@[expose] public instance : FiniteDimensional E (Lambda2U E)  := sorry
+
+/-- `⋀²` of the even Weil representation of `SL₂(𝔽₁₁)`. -/
+@[expose] public def weilLambda2 (g : SLG) : Lambda2U E →ₗ[E] Lambda2U E :=
+  exteriorPower.map 2 (WeilHom.weilUHom g)
+
+public theorem weilLambda2_one : weilLambda2 E 1 = LinearMap.id  := sorry
+
+public theorem weilLambda2_mul (g h : SLG) :
+    weilLambda2 E (g * h) = weilLambda2 E g ∘ₗ weilLambda2 E h  := sorry
+
+/-- `⋀²` of the Weil representation, as a monoid homomorphism. -/
+@[expose] public def weilLambda2Hom : SLG →* (Lambda2U E →ₗ[E] Lambda2U E) where
+  toFun := weilLambda2 E
+  map_one' := sorry
+  map_mul' := sorry
+
+public theorem weilLambda2Hom_ker_center :
+    Subgroup.center SLG ≤ (weilLambda2Hom E).ker  := sorry
+
+/-- **The `PSL₂(𝔽₁₁)`-action on `⋀²U`.**  The centre of `SL₂` acts by `±id` on
+`U`, hence trivially on `⋀²U`, so the action descends. -/
+@[expose] public def pslLambda2Hom : PSL2F11 →* (Lambda2U E →ₗ[E] Lambda2U E) :=
+  QuotientGroup.lift (N := Subgroup.center SLG) (weilLambda2Hom E)
+    (weilLambda2Hom_ker_center E)
+
+/-- The ambient action of `PSL₂(𝔽₁₁)` on `⋀²U`. -/
+@[expose] public def ambientAct (g : PSL2F11) : Lambda2U E →ₗ[E] Lambda2U E :=
+  pslLambda2Hom E g
+
+/-- Character values of the irreducible `10′` of `PSL₂(𝔽₁₁)`, determined by
+element order: `1A↦10, 2A↦2, 3A↦1, 5A/5B↦0, 6A↦-1, 11A/11B↦-1`.  All six values
+are rational integers, so this definition is the same over every field. -/
+@[expose] public noncomputable def chi10' (g : PSL2F11) : E :=
   let n := orderOf g
   if n = 1 then 10
   else if n = 2 then 2
@@ -606,19 +810,21 @@ open ExteriorAlgebra
   else if n = 11 then -1
   else 0
 
-/-- Isotypic projector onto the 10′ summand `M ⊂ Λ²U`.
-    `π = (10/|G|) ∑_g χ₁₀'(g) · ambientAct g`, with `|G| = 660`. -/
-@[expose] public noncomputable def projectorM : Module.End k Lambda2U :=
-  (10 * (660 : k)⁻¹) •
-    ∑ g : PSL2F11, chi10' g • (ambientAct g : Module.End k Lambda2U)
+/-- The isotypic projector onto the `10′` summand of `⋀²U`:
+`π = (10/|G|) ∑_g χ₁₀'(g) · ρ(g)`, with `|G| = 660`. -/
+@[expose] public noncomputable def projectorM : Module.End E (Lambda2U E) :=
+  (10 * (660 : E)⁻¹) •
+    ∑ g : PSL2F11, chi10' E g • (ambientAct E g : Module.End E (Lambda2U E))
 
-/-- The writeup ambient summand `M = 10'`. -/
-@[expose] public noncomputable def Msub : Submodule k Lambda2U :=
-  LinearMap.range projectorM
+/-- **The `10′` summand `M ⊆ ⋀²U`.** -/
+@[expose] public noncomputable def Msub : Submodule E (Lambda2U E) :=
+  LinearMap.range (projectorM E)
 
-open ExteriorAlgebra
-open ConjAct ConjClasses
-end GeometricV14Carrier
+/-- `M` is stable under the ambient action. -/
+public theorem ambientAct_mem (g : PSL2F11) {v : Lambda2U E} (hv : v ∈ Msub E) :
+    ambientAct E g v ∈ Msub E  := sorry
+
+end WeilLambda2
 end V14Formalization
 
 
@@ -885,50 +1091,110 @@ end IntrinsicV14
 end V14Formalization
 
 
--- ═══ IntrinsicV14Headline ═══
+-- ═══ IntrinsicV14Field ═══
 
 noncomputable section
 open CategoryTheory
 open scoped AlgebraicGeometry
 namespace V14Formalization
-namespace IntrinsicHeadline
-open AlgebraicGeometry Module GeometricV14Carrier
+namespace IntrinsicV14Field
+open AlgebraicGeometry Module
+open V14Formalization.WeilLambda2
+open V14Formalization.WeilRep (IsCycl11)
+variable (F : Type) [Field F] [CharZero F] [IsCycl11 F]
 
 /-- The inclusion of the `10′` summand `M ⊆ ⋀²U`. -/
-@[expose] public def inclM : ↥Msub →ₗ[k] Lambda2U := Msub.subtype
-
-public theorem ambientAct_mem (g : PSL2F11) {v : Lambda2U} (hv : v ∈ Msub) :
-    ambientAct g v ∈ Msub  := sorry
+@[expose] public def inclM : ↥(Msub F) →ₗ[F] Lambda2U F := (Msub F).subtype
 
 /-- The `PSL(2,11)`-representation on the `10′` summand. -/
-@[expose] public def repM : Representation k PSL2F11 ↥Msub where
-  toFun g := LinearMap.restrict (ambientAct g) fun v hv => ambientAct_mem g hv
+@[expose] public def repM : Representation F PSL2F11 ↥(Msub F) where
+  toFun g := LinearMap.restrict (ambientAct F g) fun v hv => ambientAct_mem F g hv
   map_one' := sorry
   map_mul' := sorry
 
 /-- Every element of `PSL(2,11)` acts on `M` through the exterior square of an
 endomorphism of `U`: lift it to `SL(2,11)`, where the Weil representation
-lives. -/
-public theorem coversM (g : PSL2F11) : IntrinsicV14.Covers k U inclM (repM g)  := sorry
+lives.  The lift is not unique — the two lifts differ by `−I` — which is why
+`Covers` is existential. -/
+public theorem coversM (g : PSL2F11) :
+    IntrinsicV14.Covers F (WeilRep.U F) (inclM F) (repM F g)  := sorry
 
-/-- **The intrinsic `V₁₄` of the Weil representation, with its
-`PSL(2,11)`-action, over `Spec k`.**  `Proj (Sym (M*) ⧸ I)` with `I` generated
-by the `⋀⁴`-components of `ω ↦ ω ∧ ω`; no basis and no Plücker coordinate
-enters its definition. -/
-@[expose] public def intrinsicV14 : Action (Over (Spec (.of k))) PSL2F11 :=
-  IntrinsicV14.actionOver k U inclM repM coversM
+/-- **The intrinsic `V₁₄` of the even Weil representation, over `Spec F`.**
 
-/-- **There is no `PSL(2,11)`-equivariant rational map from `ℙ(V)` to the
-intrinsic `V₁₄`.**
+`Proj (Sym (M*) ⧸ I)` with `I` generated by the `⋀⁴`-components of
+`ω ↦ ω ∧ ω`, carrying its `PSL(2,11)`-action by functoriality of `Proj`.  No
+basis of `U`, no basis of `M`, no matrix and no Plücker coordinate enters the
+definition, and no field other than `F`. -/
+@[expose] public def intrinsicV14 : Action (Over (Spec (.of F))) PSL2F11 :=
+  IntrinsicV14.actionOver F (WeilRep.U F) (inclM F) (repM F) (coversM F)
 
-`V` is any faithful linear representation, `ℙ(V) = Proj (Sym (V*))` carries its
-action by functoriality, and the target is `Proj (Sym (M*) ⧸ I)` for the
-Plücker ideal `I` of the wedge pairing on the `10′` summand `M ⊆ ⋀²U`.  Nothing
-in the statement mentions a basis, a matrix, or a coordinate. -/
-public theorem noEquivariantRationalMap_intrinsicV14
-    {V : Type} [AddCommGroup V] [Module k V] [FiniteDimensional k V] [Nontrivial V]
-    (R : FaithfulLinearRep k PSL2F11 V) :
-    ¬ SchemeGeometry.HasEquivariantRationalMap (SchemeGeometry.ambientFree R) intrinsicV14  := sorry
+end IntrinsicV14Field
+namespace IntrinsicV14Field
+open AlgebraicGeometry
+open V14Formalization.WeilRep (IsCycl11)
 
-end IntrinsicHeadline
+/-- The intrinsic `V₁₄` attached to a characteristic-zero field and a chosen
+primitive 11th root of unity in it.
+
+This is the reader-facing form of the target: the hypothesis is a property of
+`F` and an element of `F`, with no reference to `AdjoinRoot Φ₁₁` or to any
+other carrier of this development.  `BaseFieldCriteria.algebraOfPrimitiveRoot`
+and `BaseFieldCriteria.isPrimitiveRoot_zetaOf` say this hypothesis and
+`[Algebra ℚ(ζ₁₁) F]` are the same data. -/
+@[expose] public def ofPrimitiveRoot {F : Type} [Field F] [CharZero F] {ζ : F}
+    (hζ : IsPrimitiveRoot ζ 11) : Action (Over (Spec (.of F))) WeilLambda2.PSL2F11 :=
+  letI : IsCycl11 F := ⟨ζ, hζ⟩
+  intrinsicV14 F
+
+end IntrinsicV14Field
+end V14Formalization
+
+
+-- ═══ IntrinsicV14FieldHeadline ═══
+
+noncomputable section
+open CategoryTheory
+open scoped AlgebraicGeometry
+namespace V14Formalization
+namespace IntrinsicV14Field
+open AlgebraicGeometry Module
+open V14Formalization.WeilLambda2
+open V14Formalization.WeilRep (IsCycl11)
+open V14Formalization.SchemeGeometry
+variable (F : Type) [Field F] [CharZero F] [IsCycl11 F]
+
+/-- **Hypothesis (a) for the intrinsic `V₁₄` over `F`.**  Every rational map
+over `Spec F` from a biprojective space to the `σ`-fixed locus of `V₁₄_F` is
+constant: the positive-dimensional part of `V₁₄_F^σ` carries no rational
+curve. -/
+@[expose] public def HypothesisA : Prop :=
+  TargetHypothesisA F (intrinsicV14 F) GeometricV14Carrier.sigma
+
+/-- **Hypothesis (b) for the intrinsic `V₁₄` over `F`.**  `V₁₄_F^σ` has no
+`F`-point fixed by the whole centralizer `D₁₂ = C_G(σ)`. -/
+@[expose] public def HypothesisB : Prop :=
+  TargetHypothesisB F (intrinsicV14 F) GeometricV14Carrier.sigma
+
+end IntrinsicV14Field
+namespace IntrinsicV14Field
+open AlgebraicGeometry
+open V14Formalization.SchemeGeometry
+open V14Formalization.WeilRep (IsCycl11)
+
+/-- **The same theorem with the field condition spelled out as an element and a
+property**, which is the form a reader checks.
+
+`hζ` is the entire hypothesis on `F` beyond characteristic zero: an element of
+`F` that is a primitive 11th root of unity.  `BaseFieldCriteria` shows this is
+interchangeable with `[Algebra ℚ(ζ₁₁) F]`, and the statement uses this side. -/
+public theorem noEquivariantRationalMap_ofPrimitiveRoot
+    {F : Type} [Field F] [CharZero F] {ζ : F} (hζ : IsPrimitiveRoot ζ 11)
+    (hproper : IsProper (ofPrimitiveRoot hζ).V.hom)
+    (ha : letI : IsCycl11 F := ⟨ζ, hζ⟩; HypothesisA F)
+    (hb : letI : IsCycl11 F := ⟨ζ, hζ⟩; HypothesisB F)
+    {V : Type} [AddCommGroup V] [Module F V] [FiniteDimensional F V] [Nontrivial V]
+    (R : FaithfulLinearRep F WeilLambda2.PSL2F11 V) :
+    ¬ HasEquivariantRationalMap (ambientFree R) (ofPrimitiveRoot hζ)  := sorry
+
+end IntrinsicV14Field
 end V14Formalization

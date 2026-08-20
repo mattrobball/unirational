@@ -437,6 +437,83 @@ follows from *injectivity* of `incl`, because `Sym` of a surjection is
 surjective in each degree, and injectivity of `Msub.subtype` is a
 `Function.Injective` statement with no linear-map equation in it.
 
+## The base field became a hypothesis (2026-08-20)
+
+`IntrinsicHeadline.noEquivariantRationalMap_intrinsicV14` was stated over
+`V14SchemeModel.k`, which is five abbreviations away from `AdjoinRoot Φ₁₁` —
+this project's carrier, not a condition a reader can check. It now has a
+sibling stated over any field of characteristic zero carrying a primitive 11th
+root of unity, with the target built over that field.
+
+### The mechanism
+
+`WeilRep.IsCycl11 E` is a class carrying a chosen primitive 11th root. The five
+Weil modules take `{E} [Field E] [CharZero E] [IsCycl11 E]` with the field
+**implicit**, which is why the ripple was small: an expression that mentions the
+field anywhere determines it, and only expressions that mention it nowhere had
+to be annotated. `WeilRep.Fun`, `EvenSub`, `U`, `Ucoord` take the field
+explicitly (nothing else could determine it), so `WeilRep.U` became
+`WeilRep.U k` at its handful of call sites.
+
+`WeilRep.K` is unchanged and is an `IsCycl11` instance, so `V14SchemeModel.k`,
+`GeometricFanoCarrier.k` and every existing caller still mean exactly what they
+meant, and the three published statements are byte-identical.
+
+### The trap: which `Fintype PSL2F11` gets baked in
+
+`WeilLambda2.projectorM` is a sum over the group, so it bakes in whatever
+`Fintype PSL2F11` instance is in scope where it is *elaborated*. The first
+version of `WeilLambda2.lean` did not import `CentralizerD12`, so it got a
+different (defeq but not syntactically equal) instance from the one
+`GeometricV14Carrier.projectorM` uses. Consequence:
+
+    WeilLambda2.projectorM WeilRep.K = GeometricV14Carrier.projectorM
+
+is true by `rfl`, but checking it forced Lean to evaluate two different
+`Finset.univ : Finset PSL2F11`, i.e. to enumerate 660 cosets of a quotient
+group — it did not finish at `maxHeartbeats 4000000`. Everything upstream of
+the sum (`Lambda2U`, `weilLambda2`, `pslLambda2Hom`, `ambientAct`, `chi10'`)
+compared instantly; only `projectorM` and `Msub` blew up, which is what
+localised it.
+
+Adding `public import V14Formalization.CentralizerD12` to `WeilLambda2.lean`
+fixed it: all seven equalities then check under `maxHeartbeats 400000`, and
+`intrinsicV14_K` — the whole `Action (Over (Spec ·)) G` — checks in about 30
+seconds at `maxRecDepth 20000` / `maxHeartbeats 1000000`.
+
+**Rule for next time**: when a new module re-derives a definition that sums or
+quantifies over a finite type, check that it elaborates with the *same*
+`Fintype` instance as the module it is meant to agree with. A defeq that walks
+a quotient's decidability is unbounded, and the symptom (a `whnf` timeout on a
+`rfl` that is true) does not point at the instance.
+
+### One `synthInstance` budget was raised
+
+`GeometricV14Carrier.R_stable_plane_residual` needs
+`set_option synthInstance.maxHeartbeats 40000`. It is a pure search-cost
+regression: `WeilRep.Fun` now carries instance arguments, so the
+`ZeroHomClass` search inside its final `ext; simp` spends the default 20000
+budget unfolding them. The proof is unchanged.
+
+### Measurements
+
+| target | before | after |
+|---|---|---|
+| `Comparator.noEquivariantRationalMap_ambientFree` | 169 decls / 25 modules | **174 / 25** |
+| `IntrinsicHeadline.noEquivariantRationalMap_intrinsicV14` | 140 / 18 | **145 / 18** |
+| `SchemeGeometry.noEquivariantRationalMap_ambientFree_of_target` | 47 / 11 | **47 / 11** |
+| `IntrinsicV14Field.noEquivariantRationalMap_ofPrimitiveRoot` | — | **157 / 24** |
+
+The `+5` on the first two is the `IsCycl11` class, its two projections, its
+`K`-instance and `WeilRep.rootK`. The abstract target does not move, because
+its statement never reaches the Weil layer. All four artifacts in `artifacts/`
+were regenerated with `stan_boundary` and elaborate with zero errors;
+`artifacts/trusted_base_intrinsic_field.lean` is new.
+
+Regenerating needs a temporary `[[require]] name = "stan" path = "…/lean-stan"`
+in `lakefile.toml` plus `lake update stan`; revert both afterwards, and restore
+`lake-manifest.json` from a copy — `lake update` rewrites it.
+
 ## Where things stand (2026-08-19)
 
 | | |
