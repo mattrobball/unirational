@@ -2231,3 +2231,109 @@ doing for the code, because a proof that depends on how a definition is written
 rather than on a stated fact about it is what couples every certificate to a
 table's body. It is not a size lever: that was measured and is settled.
 
+
+
+## The general-field intrinsic theorem became unconditional (2026-08-20)
+
+`IntrinsicV14Field.noEquivariantRationalMap_ofPrimitiveRoot` used to take three
+hypotheses on its target — properness, `HypothesisA F`, `HypothesisB F` — which
+are the three things the certificate corpus exists to prove. A conditional over
+all fields is **weaker**, not stronger, than the unconditional theorem at
+`k = ℚ(ζ₁₁)` it was meant to generalize. It now takes none of them:
+
+```lean
+theorem noEquivariantRationalMap_ofPrimitiveRoot
+    {F : Type} [Field F] [CharZero F] {ζ : F} (hζ : IsPrimitiveRoot ζ 11)
+    {V : Type} [AddCommGroup V] [Module F V] [FiniteDimensional F V] [Nontrivial V]
+    (R : FaithfulLinearRep F WeilLambda2.PSL2F11 V) :
+    ¬ HasEquivariantRationalMap (ambientFree R) (ofPrimitiveRoot hζ)
+```
+
+with `noEquivariantRationalMap_intrinsicV14` the same statement for
+`intrinsicV14 F` under `[IsCycl11 F]`. `noEquivariantRationalMap_intrinsicV14_of_target`
+survives, marked `NOT THE THEOREM`: it is the record of what
+`AbstractTargetHeadline` shows the argument uses about a target.
+
+Two new pieces, and one already-named gap closed.
+
+### The identification is about the *model*, not about `Proj`
+
+`FIELD_CRITERIA_2026-08-18.md` framed the blocker as "`Proj` of the `F`-form is
+the base change of `Proj` of the `k`-form, which is not in Mathlib and is not in
+this tree". That theorem is true and was not needed. `Scheme.RationalMap.compHom`
+takes a morphism in one direction, and a morphism **into** a fibre product is a
+pair — so `pullback.lift` is the whole of the scheme-theoretic step.
+
+What was actually missing sits one level down, in `WeilRep`/`WeilLambda2`:
+nothing recorded that the model is carried across by a field map matching the
+two chosen primitive 11th roots. `V14Formalization/WeilModelBaseChange.lean`
+does it. `bcFun φ f = φ ∘ f` on `𝔽₁₁ → A` intertwines the three operators the
+Bruhat formula is assembled from (`Tfull_b` via `ψ(a) = ζ^a`; `Dfull` via
+`χ₂ ∈ ℤ`; `Sfull` via `cFourier = gauss⁻¹`), hence `weilFun`, `weilU`, and —
+through `PluckerNaturality`'s compound-matrix identity plus `RingHom.map_det` —
+the `15 × 15` matrices and the character projector. The payoff is
+
+```lean
+theorem projectorMatrix_map_mulVec_Msub (x : ↥(WeilLambda2.Msub F)) :
+    (V14SchemeModel.projectorMatrix.map (algebraMap k F)).mulVec (coords x) = coords x
+```
+
+— the `ℚ(ζ₁₁)`-defined projector matrix, read over `F`, fixes the Plücker
+coordinates of `M_F`. That is `IntrinsicV14Compare.compare`'s side condition for
+the `k`-form of the linear cuts.
+
+Three things made this cheap that were not obvious in advance:
+
+* `PluckerNaturality` already proves the exterior-square step in the only form
+  that generalizes (`toMatrix_exteriorPower_eq_compound2Powerset`, a statement
+  about an arbitrary basis of an arbitrary module). Two of its steps are
+  module-private there, so they are restated rather than re-exported.
+* `BConicBundleMultisections.coeffGradedRingHom` / `irrelevant_le_map_coeff`
+  already existed: coefficient extension is a graded ring map with the
+  `Proj.map` side condition discharged.
+* **Idempotence of the projector over `F` is never proved.** `P.map φ` is
+  idempotent because `P` is, over `ℚ(ζ₁₁)`, and `Matrix.map_mul` does the rest.
+  Every fact about the `F`-model that the comparison needs is imported this way.
+
+### Hypothesis (a) over `F`
+
+`V14FixedFieldPointDescentOverField.lean` + `V14FixedRationalConstancyOverField.lean`
+prove `SchemeGeometry.hypothesisAOver F` for every field over `ℚ(ζ₁₁)`, closing
+items 3/4/5 of `FIELD_CRITERIA`'s open list. The two carrier descents and
+`ProjectiveFamilyFieldPointLift` were already stated over an arbitrary
+`[Algebra k L]`; what is new is the point construction over `F`, the lift of
+that point into the base change, and the base field as a parameter of the
+constancy wrapper.
+
+### One elaboration lesson worth keeping
+
+`V14SchemeModel.actionOver` is built by a tactic block, so `actionOver.V.left`
+does not unfold at `instances` transparency. Any goal that pairs it with
+`v14Scheme` is ill-typed for `rw` and `simp` ("simp made no progress", with a
+note about `instances` transparency), and `calc` reports it as
+`failed to synthesize Trans Eq Eq ?m`. The fix is to pay for the identification
+once, in a `def` with the carrier types written out
+(`IntrinsicV14BaseChange.compareBCOver`), and phrase everything downstream
+against that. The same applies to `(A.ρ g).left`, where `End A.V` has to unfold
+to `A.V ⟶ A.V`.
+
+### Measurements
+
+| target | before | after |
+|---|---|---|
+| `Comparator.noEquivariantRationalMap_ambientFree` | 174 decls / 25 modules | 174 / 25 (unchanged) |
+| `IntrinsicHeadline.noEquivariantRationalMap_intrinsicV14` | 145 / 18 | 145 / 18 (unchanged) |
+| `SchemeGeometry.noEquivariantRationalMap_ambientFree_of_target` | 47 / 11 | 47 / 11 (unchanged) |
+| `IntrinsicV14Field.noEquivariantRationalMap_ofPrimitiveRoot` | 157 / 24 | **135 / 19** |
+
+The trusted base of the general-field theorem **shrank by 22 declarations and
+five modules while the theorem got stronger**: `IsProper`, `TargetHypothesisA`,
+`TargetHypothesisB` and everything they reached left the *statement*, and the
+trusted base is the statement's closure. `artifacts/trusted_base_intrinsic_field.lean`
+was regenerated and elaborates with zero errors; the other three artifacts are
+untouched because their statements are.
+
+Gates: `lake build V14Challenge V14Solution AxiomAudit` clean;
+`scripts/check_module_invariants.sh` PASS, with the reachable-constant walk at
+55,264 constants, 0 mismatches, 0 one-sided. `#print axioms` on the new theorem
+and on every new intermediate is exactly `[propext, Classical.choice, Quot.sound]`.

@@ -427,3 +427,85 @@ character values themselves are field-independent facts about the
 representation, and over any `F` receiving `ℚ(ζ₁₁)` they follow from the `K`
 values because trace commutes with base change; what does not generalize is the
 *proof technique*, not the statement. That transport has not been written.
+
+
+## Both remaining gaps are closed (2026-08-20)
+
+The two items this note left open — hypothesis (a) over `F`, and the
+identification of the `F`-form of the model with the base change of the
+`k`-form — are proved. The general-field intrinsic theorem is unconditional:
+
+```lean
+theorem IntrinsicV14Field.noEquivariantRationalMap_ofPrimitiveRoot
+    {F : Type} [Field F] [CharZero F] {ζ : F} (hζ : IsPrimitiveRoot ζ 11)
+    {V : Type} [AddCommGroup V] [Module F V] [FiniteDimensional F V] [Nontrivial V]
+    (R : FaithfulLinearRep F WeilLambda2.PSL2F11 V) :
+    ¬ HasEquivariantRationalMap (ambientFree R) (ofPrimitiveRoot hζ)
+```
+
+No properness hypothesis, no `HypothesisA`, no `HypothesisB`, and no
+`[Algebra k F]`.
+
+### Hypothesis (a) over `F`
+
+`V14Formalization/V14FixedFieldPointDescentOverField.lean` and
+`V14Formalization/V14FixedRationalConstancyOverField.lean` prove
+
+```lean
+theorem SchemeGeometry.hypothesisAOver (F : Type) [Field F] [Algebra k F] :
+    HypothesisAOver F
+```
+
+which is item 3/4/5 of the list above. It is the rebasing the note predicted:
+the two carrier descents were already field-generic
+(`plusCarrier_commonPluckerZero_descends_mvfrac_base`,
+`minusCarrier_commonPluckerZero_descends_mvfrac_overBase`), and
+`ProjectiveFamilyFieldPointLift` was already stated over an arbitrary
+`[Algebra k L]`, so what was new is the point construction over `F`, the
+`Spec F`-point of the base change (`pullback.lift` against `𝟙`), and the
+base-field parameter in the constancy wrapper.
+
+### The identification
+
+`V14Formalization/WeilModelBaseChange.lean`. The note framed the missing step
+as "`Proj` of the `F`-form is the base change of `Proj` of the `k`-form". That
+is true but not what is needed, and it is not what was proved. What is needed
+is a **morphism in one direction**, and a morphism into a fibre product is a
+pair — so no base-change theorem for `Proj` enters at all.
+
+The actual content is one level down, in the *model*: for any field
+homomorphism `φ : A → B` carrying one chosen primitive 11th root to the other,
+`bcFun φ f = φ ∘ f` on `𝔽₁₁ → A` intertwines the three operators the Bruhat
+formula is assembled from —
+
+* `Tfull_b`, because `ψ(a) = ζ^a`;
+* `Dfull`, because `χ₂` takes values in `ℤ` and ring maps fix integers;
+* `Sfull`, because `cFourier = gauss⁻¹` with `gauss = ∑ ψ(x²) ≠ 0`.
+
+Hence `weilFun`, `weilU` and — through `PluckerNaturality`'s compound-matrix
+identity plus `RingHom.map_det` — the `15 × 15` exterior-square matrices and
+the character projector all base-change entrywise. The payoff is
+
+```lean
+theorem WeilModelBaseChange.projectorMatrix_map_mulVec_Msub :
+    (V14SchemeModel.projectorMatrix.map (algebraMap k F)).mulVec (coords x) = coords x
+```
+
+for `x ∈ M_F`: the `ℚ(ζ₁₁)`-defined projector matrix, read over `F`, fixes the
+Plücker coordinates of the `10′` summand built over `F`. That is exactly
+`IntrinsicV14Compare.compare`'s side condition, for the `k`-form of the linear
+cuts, so `Proj.map` along coefficient extension lands in the `ℚ(ζ₁₁)` equations
+(`V14Formalization/IntrinsicV14BaseChangeCompare.lean`) and `pullback.lift`
+reaches `V14SchemeModel.actionOverBaseChange F`. The morphism is equivariant
+and lies over `Spec F`.
+
+Idempotence of the projector over `F` is never proved: `P.map φ` is idempotent
+because `P` is, over `ℚ(ζ₁₁)`.
+
+### What did not change
+
+The characteristic-zero limit is untouched — it is still the plus branch's
+descent engine (`eq_C_of_derivative_eq_zero`, Mason–Stothers), and still a
+limit of the technique rather than of the theorem. The primitive 11th root is
+still a source-side constraint. The `K`-specific order-3 and order-6 character
+values are still `K`-specific and still not needed for this target.
