@@ -22,13 +22,13 @@ representation, to the coordinate V14.
 No basis of `V` and no system of homogeneous coordinates appears anywhere in
 this statement; the `G`-action on `ℙ(V)` arrives by functoriality alone.  The
 two coordinatized theorems below are corollaries of this one. -/
-public theorem noEquivariantRationalMap_ambientFree
+public theorem noEquivariantRationalMap_projectiveSpaceOfRep
     {V : Type} [AddCommGroup V] [Module V14SchemeModel.k V]
     [FiniteDimensional V14SchemeModel.k V] [Nontrivial V]
     (R : FaithfulLinearRep V14SchemeModel.k V14SchemeModel.G V) :
-    ¬ HasEquivariantRationalMap (ambientFree R)
+    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R)
       V14SchemeModel.actionOver :=
-  SchemeGeometry.noEquivariantRationalMap_ambientFree R
+  SchemeGeometry.noEquivariantRationalMap_projectiveSpaceOfRep R
 
 public theorem noEquivariantRationalMap_from_ambient
     {V : Type} [AddCommGroup V] [Module V14SchemeModel.k V]

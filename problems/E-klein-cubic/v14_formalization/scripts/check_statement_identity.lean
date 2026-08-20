@@ -23,7 +23,7 @@ open Lean
 
 /-- The names `comparator.json` lists. -/
 def comparatorTargets : List Name :=
-  [`V14Formalization.Comparator.noEquivariantRationalMap_ambientFree]
+  [`V14Formalization.Comparator.noEquivariantRationalMap_projectiveSpaceOfRep]
 
 /-- Corollaries that are no longer Comparator targets (they would drag the
 coordinate machinery into the trusted base) but are still published and still

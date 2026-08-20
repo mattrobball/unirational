@@ -145,10 +145,10 @@ hypotheses (a) and (b) for some involution `σ`.
 No basis of `V` and no system of homogeneous coordinates appears: the
 `σ`-eigenspace decomposition is chosen inside the proof.
 
-`noEquivariantRationalMap_ambientFree` is this theorem at `F = ℚ(ζ₁₁)`,
+`noEquivariantRationalMap_projectiveSpaceOfRep` is this theorem at `F = ℚ(ζ₁₁)`,
 `G = PSL(2,11)`, `σ` the distinguished involution and `Y` the coordinate V14;
 see `V14TargetInterface`. -/
-public theorem noEquivariantRationalMap_ambientFree_of_target
+public theorem noEquivariantRationalMap_projectiveSpaceOfRep_of_target
     [CharZero F]
     (Y : Action (Over (Spec (.of F))) G) [IsProper Y.V.hom]
     (σ : G) (hσ : IsInvolution σ) (hG : IsCenterless G)
@@ -156,7 +156,7 @@ public theorem noEquivariantRationalMap_ambientFree_of_target
     {V : Type u} [AddCommGroup V] [Module F V]
     [FiniteDimensional F V] [Nontrivial V]
     (R : FaithfulLinearRep F G V) :
-    ¬ HasEquivariantRationalMap (ambientFree R) Y := by
+    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R) Y := by
   intro h
   obtain ⟨p, q, hbp, hbm⟩ :=
     exists_plus_minus_projective_bases R σ hσ
@@ -165,6 +165,6 @@ public theorem noEquivariantRationalMap_ambientFree_of_target
   let bm := Classical.choice hbm
   exact noEquivariantRationalMap_from_ambient_of_target F Y σ hσ ha hb R p q bp bm
     (hasEquivariantRationalMap_of_iso
-      (ambientFreeIso R (plusMinusAmbientBasis R σ hσ p q bp bm)).symm h)
+      (projectiveSpaceOfRepIso R (plusMinusAmbientBasis R σ hσ p q bp bm)).symm h)
 
 end V14Formalization.SchemeGeometry

@@ -3,7 +3,7 @@ Comparator challenge: independent statement of the public no-map theorem.
 Trusted vocabulary is `HeadlineStatement` only — this file does not import
 the proof module `FaithfulHeadline`.
 
-`comparator.json` names ONE target, `noEquivariantRationalMap_ambientFree`.
+`comparator.json` names ONE target, `noEquivariantRationalMap_projectiveSpaceOfRep`.
 The two coordinatized theorems below are stated and proved here, and the
 local gate scripts still check them, but they are not separately certified:
 listing them as targets pulls `PlusMinusCoords`, `ambientOf`, `ofFaithfulRep`
@@ -32,11 +32,11 @@ representation, to the coordinate V14.
 No basis of `V` and no system of homogeneous coordinates appears anywhere in
 this statement; the `G`-action on `ℙ(V)` arrives by functoriality alone.  The
 two coordinatized theorems below are corollaries of this one. -/
-public theorem noEquivariantRationalMap_ambientFree
+public theorem noEquivariantRationalMap_projectiveSpaceOfRep
     {V : Type} [AddCommGroup V] [Module V14SchemeModel.k V]
     [FiniteDimensional V14SchemeModel.k V] [Nontrivial V]
     (R : FaithfulLinearRep V14SchemeModel.k V14SchemeModel.G V) :
-    ¬ HasEquivariantRationalMap (ambientFree R)
+    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R)
       V14SchemeModel.actionOver := by
   sorry
 

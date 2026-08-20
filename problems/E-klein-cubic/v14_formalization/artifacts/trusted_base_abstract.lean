@@ -4,7 +4,7 @@ public import Mathlib
 
 /-! # Trusted base
 
-Target: `V14Formalization.SchemeGeometry.noEquivariantRationalMap_ambientFree_of_target`
+Target: `V14Formalization.SchemeGeometry.noEquivariantRationalMap_projectiveSpaceOfRep_of_target`
 
 Boundary: V14Formalization, BConicBundleMultisections
 
@@ -12,6 +12,27 @@ Boundary: V14Formalization, BConicBundleMultisections
 -/
 
 universe u v w
+
+-- ═══ Definitions ═══
+
+noncomputable section
+open scoped LinearAlgebra.Projectivization MatrixGroups
+namespace V14Formalization
+
+@[expose] public def IsInvolution {G : Type u} [Monoid G] (σ : G) : Prop :=
+  σ ^ 2 = 1 ∧ σ ≠ 1
+
+@[expose] public def IsCenterless (G : Type u) [Group G] : Prop :=
+  Subgroup.center G = ⊥
+
+public structure FaithfulLinearRep (k : Type u) [Field k] (G : Type u) [Monoid G]
+    (V : Type u) [AddCommGroup V] [Module k V] where
+  ρ : Representation k G V
+  finiteDimensional : FiniteDimensional k V
+  faithful : Function.Injective ρ
+
+end V14Formalization
+
 
 -- ═══ ProjectiveSpace ═══
 
@@ -193,24 +214,31 @@ end SchemeGeometry
 end V14Formalization
 
 
--- ═══ Definitions ═══
+-- ═══ SchemeRationalConstancy ═══
 
 noncomputable section
-open scoped LinearAlgebra.Projectivization MatrixGroups
+open CategoryTheory
+open scoped AlgebraicGeometry
 namespace V14Formalization
+namespace SchemeGeometry
+open AlgebraicGeometry
+variable {S : Scheme.{u}} {N : Type u} [Group N]
+variable {k : Type u} [Field k]
 
-@[expose] public def IsInvolution {G : Type u} [Monoid G] (σ : G) : Prop :=
-  σ ^ 2 = 1 ∧ σ ≠ 1
+/-- A rational map between schemes over the base is induced by a base-field
+point of the target.  The definition is deliberately independent of any
+group actions carried by the two schemes. -/
+@[expose] public def RationalMapIsConstantOver
+    {E Z : Over (Spec (.of k))}
+    (q : Scheme.RationalMap E.left Z.left) : Prop :=
+  ∃ y : Spec (.of k) ⟶ Z.left,
+    q = (E.hom ≫ y).toRationalMap
 
-@[expose] public def IsCenterless (G : Type u) [Group G] : Prop :=
-  Subgroup.center G = ⊥
-
-public structure FaithfulLinearRep (k : Type u) [Field k] (G : Type u) [Monoid G]
-    (V : Type u) [AddCommGroup V] [Module k V] where
-  ρ : Representation k G V
-  finiteDimensional : FiniteDimensional k V
-  faithful : Function.Injective ρ
-
+variable {E Z : Over (Spec (.of k))}
+  [IsIntegral E.left]
+variable {E Z : Action (Over (Spec (.of k))) N}
+  [IsIntegral E.V.left]
+end SchemeGeometry
 end V14Formalization
 
 
@@ -392,9 +420,11 @@ coordinate-free replacement for `ambientProjectiveActionOver`. -/
     change (projRepHom ρ g).IsOver (Spec (.of k))
     exact projMapDual_isOver _ _ _
 
-/-- The coordinate-free ambient projective space of a faithful representation,
-with its action.  Compare `ambientProjectiveActionOver`, which needs a basis. -/
-@[expose] public def ambientFree (R : FaithfulLinearRep k G V) :
+/-- `ℙ(V) = Proj (Sym (Module.Dual k V))` for a faithful representation `R`,
+carrying the `G`-action it inherits by functoriality.  No basis and no system
+of homogeneous coordinates enters; compare `ambientProjectiveActionOver`,
+which needs both. -/
+@[expose] public def projectiveSpaceOfRep (R : FaithfulLinearRep k G V) :
     Action (Over (Spec (.of k))) G :=
   projectiveActionOverOfRep R.ρ
 
@@ -413,38 +443,10 @@ open AlgebraicGeometry Module SymmetricAlgebra
 variable {k : Type u} [Field k] {G : Type u} [Group G]
   {V : Type u} [AddCommGroup V] [Module k V] {d : ℕ}
 
-@[expose] public instance ambientFree_irreducibleSpace
+@[expose] public instance projectiveSpaceOfRep_irreducibleSpace
     [FiniteDimensional k V] [Nontrivial V] (R : FaithfulLinearRep k G V) :
-    IrreducibleSpace (ambientFree R).V.left  := sorry
+    IrreducibleSpace (projectiveSpaceOfRep R).V.left  := sorry
 
-end SchemeGeometry
-end V14Formalization
-
-
--- ═══ SchemeRationalConstancy ═══
-
-noncomputable section
-open CategoryTheory
-open scoped AlgebraicGeometry
-namespace V14Formalization
-namespace SchemeGeometry
-open AlgebraicGeometry
-variable {S : Scheme.{u}} {N : Type u} [Group N]
-variable {k : Type u} [Field k]
-
-/-- A rational map between schemes over the base is induced by a base-field
-point of the target.  The definition is deliberately independent of any
-group actions carried by the two schemes. -/
-@[expose] public def RationalMapIsConstantOver
-    {E Z : Over (Spec (.of k))}
-    (q : Scheme.RationalMap E.left Z.left) : Prop :=
-  ∃ y : Spec (.of k) ⟶ Z.left,
-    q = (E.hom ≫ y).toRationalMap
-
-variable {E Z : Over (Spec (.of k))}
-  [IsIntegral E.left]
-variable {E Z : Action (Over (Spec (.of k))) N}
-  [IsIntegral E.V.left]
 end SchemeGeometry
 end V14Formalization
 
@@ -499,10 +501,10 @@ hypotheses (a) and (b) for some involution `σ`.
 No basis of `V` and no system of homogeneous coordinates appears: the
 `σ`-eigenspace decomposition is chosen inside the proof.
 
-`noEquivariantRationalMap_ambientFree` is this theorem at `F = ℚ(ζ₁₁)`,
+`noEquivariantRationalMap_projectiveSpaceOfRep` is this theorem at `F = ℚ(ζ₁₁)`,
 `G = PSL(2,11)`, `σ` the distinguished involution and `Y` the coordinate V14;
 see `V14TargetInterface`. -/
-public theorem noEquivariantRationalMap_ambientFree_of_target
+public theorem noEquivariantRationalMap_projectiveSpaceOfRep_of_target
     [CharZero F]
     (Y : Action (Over (Spec (.of F))) G) [IsProper Y.V.hom]
     (σ : G) (hσ : IsInvolution σ) (hG : IsCenterless G)
@@ -510,6 +512,6 @@ public theorem noEquivariantRationalMap_ambientFree_of_target
     {V : Type u} [AddCommGroup V] [Module F V]
     [FiniteDimensional F V] [Nontrivial V]
     (R : FaithfulLinearRep F G V) :
-    ¬ HasEquivariantRationalMap (ambientFree R) Y  := sorry
+    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R) Y  := sorry
 
 end V14Formalization.SchemeGeometry

@@ -4,7 +4,7 @@ public import Mathlib
 
 /-! # Trusted base
 
-Target: `V14Formalization.Comparator.noEquivariantRationalMap_ambientFree`
+Target: `V14Formalization.Comparator.noEquivariantRationalMap_projectiveSpaceOfRep`
 
 Boundary: V14Formalization, BConicBundleMultisections
 
@@ -610,9 +610,11 @@ coordinate-free replacement for `ambientProjectiveActionOver`. -/
     change (projRepHom ρ g).IsOver (Spec (.of k))
     exact projMapDual_isOver _ _ _
 
-/-- The coordinate-free ambient projective space of a faithful representation,
-with its action.  Compare `ambientProjectiveActionOver`, which needs a basis. -/
-@[expose] public def ambientFree (R : FaithfulLinearRep k G V) :
+/-- `ℙ(V) = Proj (Sym (Module.Dual k V))` for a faithful representation `R`,
+carrying the `G`-action it inherits by functoriality.  No basis and no system
+of homogeneous coordinates enters; compare `ambientProjectiveActionOver`,
+which needs both. -/
+@[expose] public def projectiveSpaceOfRep (R : FaithfulLinearRep k G V) :
     Action (Over (Spec (.of k))) G :=
   projectiveActionOverOfRep R.ρ
 
@@ -631,9 +633,9 @@ open AlgebraicGeometry Module SymmetricAlgebra
 variable {k : Type u} [Field k] {G : Type u} [Group G]
   {V : Type u} [AddCommGroup V] [Module k V] {d : ℕ}
 
-@[expose] public instance ambientFree_irreducibleSpace
+@[expose] public instance projectiveSpaceOfRep_irreducibleSpace
     [FiniteDimensional k V] [Nontrivial V] (R : FaithfulLinearRep k G V) :
-    IrreducibleSpace (ambientFree R).V.left  := sorry
+    IrreducibleSpace (projectiveSpaceOfRep R).V.left  := sorry
 
 end SchemeGeometry
 end V14Formalization
@@ -721,7 +723,7 @@ its coefficient field: the additive character `ψ`, the Gauss sum and the
 Fourier operator are built out of `zeta` and nothing else.  It is a
 data-carrying class on purpose — the representation depends on *which* root is
 chosen, and two choices give genuinely different (though isomorphic) models. -/
-public class IsCycl11 (E : Type u) [Field E] where
+public class HasCycl11 (E : Type u) [Field E] where
   /-- The chosen root. -/
   zeta : E
   /-- It is a primitive 11th root of unity. -/
@@ -744,12 +746,12 @@ public theorem orderOf_rootK : orderOf rootK = 11  := sorry
 
 /-- `K = ℚ(ζ₁₁)` is a field with a primitive 11th root of unity, so everything
 below applies to it.  This is the only place `AdjoinRoot Φ₁₁` is used. -/
-@[expose] public instance : IsCycl11 K := ⟨rootK, IsPrimitiveRoot.iff_orderOf.2 orderOf_rootK⟩
+@[expose] public instance : HasCycl11 K := ⟨rootK, IsPrimitiveRoot.iff_orderOf.2 orderOf_rootK⟩
 
-variable {E : Type u} [Field E] [CharZero E] [IsCycl11 E]
+variable {E : Type u} [Field E] [CharZero E] [HasCycl11 E]
 
 /-- The chosen primitive 11th root of unity of the base field. -/
-@[expose] public def ζ : E := IsCycl11.zeta
+@[expose] public def ζ : E := HasCycl11.zeta
 
 omit [CharZero E] in
 public theorem ζ_pow_eleven : (ζ : E) ^ (11 : ℕ) = 1  := sorry
@@ -758,7 +760,7 @@ public theorem ζ_pow_eleven : (ζ : E) ^ (11 : ℕ) = 1  := sorry
 
 @[expose] public def χ₂ℤ : MulChar (ZMod 11) ℤ := quadraticChar (ZMod 11)
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 @[expose] public def χ₂ : MulChar (ZMod 11) E := χ₂ℤ.ringHomComp (algebraMap ℤ E)
 
 @[expose] public def gauss : E := ∑ x : ZMod 11, ψ (x ^ 2)
@@ -767,10 +769,10 @@ omit [CharZero E] [IsCycl11 E] in
 
 public abbrev Fun (L : Type u) [Field L] : Type u := ZMod 11 → L
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 @[expose] public instance : AddCommGroup (Fun E) := inferInstance
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 @[expose] public instance : Module E (Fun E) := inferInstance
 
 /-- Full Fourier transform. -/
@@ -788,12 +790,12 @@ omit [CharZero E] [IsCycl11 E] in
 
 public protected abbrev U (L : Type u) [Field L] : Submodule L (Fun L) := EvenSub L
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 @[expose] public instance : Module E (WeilRep.U E) := inferInstance
 
 public abbrev Ucoord (L : Type u) [Field L] : Type u := Fin 6 → L
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 @[expose] public instance : Module E (Ucoord E) := inferInstance
 
 /-- Half-quadratic phase: ψ(b · x² / 2). Standard Weil normalization so that
@@ -817,7 +819,7 @@ open V14Formalization.WeilRep
 noncomputable section
 namespace V14Formalization
 namespace WeilRepSL2
-variable {E : Type u} [Field E] [CharZero E] [IsCycl11 E]
+variable {E : Type u} [Field E] [CharZero E] [HasCycl11 E]
 
 public abbrev F := ZMod 11
 
@@ -888,7 +890,7 @@ open V14Formalization.WeilRepSL2
 noncomputable section
 namespace V14Formalization
 namespace WeilHom
-variable {E : Type u} [Field E] [CharZero E] [IsCycl11 E]
+variable {E : Type u} [Field E] [CharZero E] [HasCycl11 E]
 
 public abbrev F := ZMod 11
 
@@ -1189,11 +1191,11 @@ representation, to the coordinate V14.
 No basis of `V` and no system of homogeneous coordinates appears anywhere in
 this statement; the `G`-action on `ℙ(V)` arrives by functoriality alone.  The
 two coordinatized theorems below are corollaries of this one. -/
-public theorem noEquivariantRationalMap_ambientFree
+public theorem noEquivariantRationalMap_projectiveSpaceOfRep
     {V : Type} [AddCommGroup V] [Module V14SchemeModel.k V]
     [FiniteDimensional V14SchemeModel.k V] [Nontrivial V]
     (R : FaithfulLinearRep V14SchemeModel.k V14SchemeModel.G V) :
-    ¬ HasEquivariantRationalMap (ambientFree R)
+    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R)
       V14SchemeModel.actionOver  := sorry
 
 end V14Formalization.Comparator

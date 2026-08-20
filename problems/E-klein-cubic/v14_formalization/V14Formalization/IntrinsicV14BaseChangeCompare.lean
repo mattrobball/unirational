@@ -14,7 +14,7 @@ public import V14Formalization.V14SchemeBaseChange
 
 `IntrinsicV14Compare.compare` is field-generic, so over `F` it produces a
 morphism to the coordinate `V₁₄` *built over `F`*.  The general-field headline
-`FaithfulHeadlineOverField.noEquivariantRationalMap_ambientFree_over_of_constancy`
+`FaithfulHeadlineOverField.noEquivariantRationalMap_projectiveSpaceOfRep_over_of_constancy`
 targets `V14SchemeModel.actionOverBaseChange F`, the base change of the
 coordinate model built over `ℚ(ζ₁₁)`.  This file closes that gap.
 

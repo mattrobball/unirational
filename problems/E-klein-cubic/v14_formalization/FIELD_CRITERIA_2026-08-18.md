@@ -275,13 +275,13 @@ Added 2026-08-19, second pass:
   `noEquivariantRationalMap_from_ambient_of_constancy_over`, and
 
   ```
-  noEquivariantRationalMap_ambientFree_over_of_constancy
+  noEquivariantRationalMap_projectiveSpaceOfRep_over_of_constancy
       (F : Type) [Field F] [Algebra V14SchemeModel.k F]
       {V : Type} [AddCommGroup V] [Module F V]
       [FiniteDimensional F V] [Nontrivial V]
       (R : FaithfulLinearRep F V14SchemeModel.G V)
       (ha : HypothesisAOver F) :
-      ¬ HasEquivariantRationalMap (ambientFree R)
+      ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R)
         (V14SchemeModel.actionOverBaseChange F)
   ```
 
@@ -398,7 +398,7 @@ One thing, and it is not the model: **the comparison morphism over `F`**.
 `IntrinsicV14Compare.compare` is already field-generic, so over `F` it produces
 a morphism from the intrinsic `V₁₄` to the *coordinate* `V₁₄` **built over
 `F`**. The general-field coordinate headline
-(`noEquivariantRationalMap_ambientFree_over_of_constancy`) targets
+(`noEquivariantRationalMap_projectiveSpaceOfRep_over_of_constancy`) targets
 `V14SchemeModel.actionOverBaseChange F`, the **base change of the coordinate
 model built over `k`**. Those are two different schemes until someone proves
 
@@ -440,7 +440,7 @@ theorem IntrinsicV14Field.noEquivariantRationalMap_ofPrimitiveRoot
     {F : Type} [Field F] [CharZero F] {ζ : F} (hζ : IsPrimitiveRoot ζ 11)
     {V : Type} [AddCommGroup V] [Module F V] [FiniteDimensional F V] [Nontrivial V]
     (R : FaithfulLinearRep F WeilLambda2.PSL2F11 V) :
-    ¬ HasEquivariantRationalMap (ambientFree R) (ofPrimitiveRoot hζ)
+    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R) (ofPrimitiveRoot hζ)
 ```
 
 No properness hypothesis, no `HypothesisA`, no `HypothesisB`, and no

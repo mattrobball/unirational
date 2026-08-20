@@ -19,7 +19,7 @@ public import V14Formalization.GeometricFanoV14
 public import V14Formalization.IntrinsicV14FieldHeadline
 
 -- The three Comparator theorems.
-#print axioms V14Formalization.Comparator.noEquivariantRationalMap_ambientFree
+#print axioms V14Formalization.Comparator.noEquivariantRationalMap_projectiveSpaceOfRep
 #print axioms V14Formalization.Comparator.noEquivariantRationalMap_from_ambient
 #print axioms V14Formalization.Comparator.noEquivariantRationalMap_projectiveGVariety
 
@@ -35,15 +35,15 @@ public import V14Formalization.IntrinsicV14FieldHeadline
 #print axioms V14Formalization.BaseField.isPrimitiveRoot_zetaOf
 #print axioms V14Formalization.SchemeGeometry.exists_centralizer_fixed_point_of_baseChange
 #print axioms V14Formalization.SchemeGeometry.noEquivariantRationalMap_of_normal_specialization_over
-#print axioms V14Formalization.SchemeGeometry.noEquivariantRationalMap_ambientFree_over_of_constancy
+#print axioms V14Formalization.SchemeGeometry.noEquivariantRationalMap_projectiveSpaceOfRep_over_of_constancy
 #print axioms V14Formalization.D12SigmaPlusSegreCore.smooth_detCubic_rank_eq_two_map
 #print axioms V14Formalization.D12SigmaPlusDescent.plusCarrier_commonPluckerZero_descends_mvfrac_base
 #print axioms V14Formalization.D12SigmaMinusDescent.minusCarrier_ambient_descends_mvfrac_overBase
 
 -- The abstract-target statement and the three things it asks of a target.
--- `noEquivariantRationalMap_ambientFree` is the first of these instantiated at
+-- `noEquivariantRationalMap_projectiveSpaceOfRep` is the first of these instantiated at
 -- the coordinate V14 by the three below, so these carry the whole argument.
-#print axioms V14Formalization.SchemeGeometry.noEquivariantRationalMap_ambientFree_of_target
+#print axioms V14Formalization.SchemeGeometry.noEquivariantRationalMap_projectiveSpaceOfRep_of_target
 #print axioms V14Formalization.SchemeGeometry.noEquivariantRationalMap_from_ambient_of_target
 #print axioms V14Formalization.SchemeGeometry.v14_isProper
 #print axioms V14Formalization.SchemeGeometry.v14_targetHypothesisA
@@ -69,7 +69,7 @@ public import V14Formalization.IntrinsicV14FieldHeadline
 #print axioms V14Formalization.IntrinsicV14Field.noEquivariantRationalMap_intrinsicV14
 #print axioms V14Formalization.IntrinsicV14Field.noEquivariantRationalMap_ofPrimitiveRoot
 #print axioms V14Formalization.SchemeGeometry.hypothesisAOver
-#print axioms V14Formalization.SchemeGeometry.noEquivariantRationalMap_ambientFree_over_of_constancy
+#print axioms V14Formalization.SchemeGeometry.noEquivariantRationalMap_projectiveSpaceOfRep_over_of_constancy
 #print axioms V14Formalization.WeilModelBaseChange.projectorMatrix_map_mulVec_Msub
 #print axioms V14Formalization.IntrinsicV14BaseChange.compareBCPullback
 

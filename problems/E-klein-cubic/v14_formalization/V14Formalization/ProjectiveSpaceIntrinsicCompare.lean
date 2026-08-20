@@ -12,7 +12,7 @@ public import V14Formalization.SchemeEquivariantTransport
 
 The basis isomorphism of `ProjectiveSpaceIntrinsicBasis` is upgraded here to an
 isomorphism in `Action (Over (Spec k)) G` between the coordinate-free
-`ambientFree R` and the coordinatized `ambientProjectiveActionOver R d b`.
+`projectiveSpaceOfRep R` and the coordinatized `ambientProjectiveActionOver R d b`.
 
 Two things have to be checked: that the basis isomorphism commutes with the
 structure morphisms to `Spec k`, and that it intertwines the two actions.  The
@@ -89,9 +89,9 @@ public theorem projOfBasisInv_intertwines (R : FaithfulLinearRep k G V)
 
 /-- The coordinate-free ambient `G`-scheme and the coordinatized one are
 isomorphic, over `Spec k` and equivariantly. -/
-@[expose] public def ambientFreeIso (R : FaithfulLinearRep k G V)
+@[expose] public def projectiveSpaceOfRepIso (R : FaithfulLinearRep k G V)
     (b : Basis (Fin (d + 1)) k V) :
-    ambientFree R ≅ ambientProjectiveActionOver R d b :=
+    projectiveSpaceOfRep R ≅ ambientProjectiveActionOver R d b :=
   Action.mkIso (Over.isoMk (projIsoOfBasis b) (projOfBasisInv_toSpec b)) (fun g => by
     apply Over.OverMorphism.ext
     exact projOfBasisInv_intertwines R b g)

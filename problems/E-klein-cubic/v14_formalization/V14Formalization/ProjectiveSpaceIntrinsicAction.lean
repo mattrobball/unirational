@@ -94,14 +94,16 @@ coordinate-free replacement for `ambientProjectiveActionOver`. -/
     change (projRepHom ρ g).IsOver (Spec (.of k))
     exact projMapDual_isOver _ _ _
 
-/-- The coordinate-free ambient projective space of a faithful representation,
-with its action.  Compare `ambientProjectiveActionOver`, which needs a basis. -/
-@[expose] public def ambientFree (R : FaithfulLinearRep k G V) :
+/-- `ℙ(V) = Proj (Sym (Module.Dual k V))` for a faithful representation `R`,
+carrying the `G`-action it inherits by functoriality.  No basis and no system
+of homogeneous coordinates enters; compare `ambientProjectiveActionOver`,
+which needs both. -/
+@[expose] public def projectiveSpaceOfRep (R : FaithfulLinearRep k G V) :
     Action (Over (Spec (.of k))) G :=
   projectiveActionOverOfRep R.ρ
 
-@[simp] public theorem ambientFree_carrier (R : FaithfulLinearRep k G V) :
-    (ambientFree R).V.left = projectiveSpaceOfModule k V := rfl
+@[simp] public theorem projectiveSpaceOfRep_carrier (R : FaithfulLinearRep k G V) :
+    (projectiveSpaceOfRep R).V.left = projectiveSpaceOfModule k V := rfl
 
 end SchemeGeometry
 end V14Formalization

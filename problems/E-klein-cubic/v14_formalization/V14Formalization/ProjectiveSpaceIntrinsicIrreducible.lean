@@ -92,7 +92,7 @@ public instance projectiveSpaceOfModule_isIntegral
 /-! ## The same, for the carriers of the action objects
 
 Instance search does not unfold `Action`/`Over` projections, so the instances
-above have to be restated at the carrier of `ambientFree`. -/
+above have to be restated at the carrier of `projectiveSpaceOfRep`. -/
 
 @[expose] public instance projectiveActionOverOfRep_irreducibleSpace
     [FiniteDimensional k V] [Nontrivial V] (rho : Representation k G V) :
@@ -106,15 +106,15 @@ above have to be restated at the carrier of `ambientFree`. -/
   change IsIntegral (projectiveSpaceOfModule k V)
   infer_instance
 
-@[expose] public instance ambientFree_irreducibleSpace
+@[expose] public instance projectiveSpaceOfRep_irreducibleSpace
     [FiniteDimensional k V] [Nontrivial V] (R : FaithfulLinearRep k G V) :
-    IrreducibleSpace (ambientFree R).V.left := by
+    IrreducibleSpace (projectiveSpaceOfRep R).V.left := by
   change IrreducibleSpace (projectiveSpaceOfModule k V)
   infer_instance
 
-@[expose] public instance ambientFree_isIntegral
+@[expose] public instance projectiveSpaceOfRep_isIntegral
     [FiniteDimensional k V] [Nontrivial V] (R : FaithfulLinearRep k G V) :
-    IsIntegral (ambientFree R).V.left := by
+    IsIntegral (projectiveSpaceOfRep R).V.left := by
   change IsIntegral (projectiveSpaceOfModule k V)
   infer_instance
 

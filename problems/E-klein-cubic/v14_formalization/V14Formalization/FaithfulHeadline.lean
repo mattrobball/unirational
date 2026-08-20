@@ -78,24 +78,24 @@ this statement: the `G`-action on `ℙ(V)` arrives purely by functoriality.  The
 proof and is invisible from outside.
 
 This is strictly stronger than the coordinatized statements below, which are
-recovered from it by transporting along `ambientFreeIso`.
+recovered from it by transporting along `projectiveSpaceOfRepIso`.
 
 **This statement is a specialization, not a theorem of its own.**  It is
-`AbstractTargetHeadline.noEquivariantRationalMap_ambientFree_of_target` — which
+`AbstractTargetHeadline.noEquivariantRationalMap_projectiveSpaceOfRep_of_target` — which
 knows nothing about V14, and holds over any characteristic-zero field for any
 centerless group and any proper target satisfying hypotheses (a) and (b) — at
 `F = k`, `G = PSL(2,11)`, `σ = sigma`, `Y = V14SchemeModel.actionOver`.  The
 three things the argument asks of the target are supplied by
 `V14TargetInterface`: `v14_isProper`, `v14_targetHypothesisA` (the constancy
 argument) and `v14_targetHypothesisB` (the D₁₂ matrix certificate). -/
-public theorem noEquivariantRationalMap_ambientFree
+public theorem noEquivariantRationalMap_projectiveSpaceOfRep
     {V : Type} [AddCommGroup V] [Module k V]
     [FiniteDimensional k V] [Nontrivial V]
     (R : FaithfulLinearRep k G V) :
-    ¬ HasEquivariantRationalMap (ambientFree R)
+    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R)
       V14SchemeModel.actionOver := by
   haveI := v14_isProper
-  exact noEquivariantRationalMap_ambientFree_of_target V14SchemeModel.k
+  exact noEquivariantRationalMap_projectiveSpaceOfRep_of_target V14SchemeModel.k
     V14SchemeModel.actionOver sigma sigma_isInvolution
     GeometricFanoCarrier.PSL2F11_isCenterless
     v14_targetHypothesisA v14_targetHypothesisB R
@@ -105,7 +105,7 @@ faithful linear representation to the coordinate V14, in *any* system of
 plus/minus homogeneous coordinates.
 
 A corollary of the coordinate-free statement above: a choice of plus/minus
-coordinates is exactly a basis of `V`, and `ambientFreeIso` says the two
+coordinates is exactly a basis of `V`, and `projectiveSpaceOfRepIso` says the two
 presentations of `ℙ(V)` are isomorphic as `G`-schemes over `Spec k`. -/
 public theorem noEquivariantRationalMap_from_ambient
     {V : Type} [AddCommGroup V] [Module k V]
@@ -117,9 +117,9 @@ public theorem noEquivariantRationalMap_from_ambient
   haveI : Nontrivial V :=
     ⟨⟨plusMinusAmbientBasis R sigma sigma_isInvolution c.p c.q c.bp c.bm 0, 0,
       (plusMinusAmbientBasis R sigma sigma_isInvolution c.p c.q c.bp c.bm).ne_zero 0⟩⟩
-  exact noEquivariantRationalMap_ambientFree R
+  exact noEquivariantRationalMap_projectiveSpaceOfRep R
     (hasEquivariantRationalMap_of_iso
-      (ambientFreeIso R
+      (projectiveSpaceOfRepIso R
         (plusMinusAmbientBasis R sigma sigma_isInvolution c.p c.q c.bp c.bm)) h)
 
 /-- Same statement, packaged as projective `G`-varieties: closed subschemes

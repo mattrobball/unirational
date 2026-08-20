@@ -32,7 +32,7 @@ open Lean
 def projectRoots : Array Name := #[`V14Formalization, `BConicBundleMultisections]
 
 def defaultTargets : List Name :=
-  [`V14Formalization.Comparator.noEquivariantRationalMap_ambientFree]
+  [`V14Formalization.Comparator.noEquivariantRationalMap_projectiveSpaceOfRep]
 
 /-- `Stan.isLiftedProof`. -/
 def isLiftedProof : Name → Bool

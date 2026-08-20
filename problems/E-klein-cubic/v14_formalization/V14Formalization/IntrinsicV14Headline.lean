@@ -22,7 +22,7 @@ Plücker coordinate occurs in it.  They occur in the *proof*: the comparison
 morphism of `IntrinsicV14Compare` is equivariant, so a hypothetical equivariant
 rational map to the intrinsic `V₁₄` composes with it to give one to the
 coordinate `V₁₄`, contradicting
-`SchemeGeometry.noEquivariantRationalMap_ambientFree`.  The certificate corpus
+`SchemeGeometry.noEquivariantRationalMap_projectiveSpaceOfRep`.  The certificate corpus
 is therefore still load-bearing, and none of it is restated.
 -/
 
@@ -206,9 +206,9 @@ in the statement mentions a basis, a matrix, or a coordinate. -/
 public theorem noEquivariantRationalMap_intrinsicV14
     {V : Type} [AddCommGroup V] [Module k V] [FiniteDimensional k V] [Nontrivial V]
     (R : FaithfulLinearRep k PSL2F11 V) :
-    ¬ SchemeGeometry.HasEquivariantRationalMap (SchemeGeometry.ambientFree R) intrinsicV14 := by
+    ¬ SchemeGeometry.HasEquivariantRationalMap (SchemeGeometry.projectiveSpaceOfRep R) intrinsicV14 := by
   intro h
-  exact SchemeGeometry.noEquivariantRationalMap_ambientFree R
+  exact SchemeGeometry.noEquivariantRationalMap_projectiveSpaceOfRep R
     (SchemeGeometry.hasEquivariantRationalMap_of_hom compareMor compareMor_isOver
       compareMor_equivariant h)
 

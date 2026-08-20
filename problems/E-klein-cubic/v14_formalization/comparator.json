@@ -2,7 +2,7 @@
   "challenge_module": "V14Challenge",
   "solution_module": "V14Solution",
   "theorem_names": [
-    "V14Formalization.Comparator.noEquivariantRationalMap_ambientFree"
+    "V14Formalization.Comparator.noEquivariantRationalMap_projectiveSpaceOfRep"
   ],
   "permitted_axioms": [
     "propext",

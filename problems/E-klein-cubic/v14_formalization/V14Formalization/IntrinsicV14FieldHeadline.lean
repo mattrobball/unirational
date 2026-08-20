@@ -38,7 +38,7 @@ The proof is the same three lines as the `ℚ(ζ₁₁)` one: post-compose along
 morphism into a target for which the theorem is already proved, and cite it.
 The morphism is `IntrinsicV14BaseChange.compareBCPullback`, into
 `V14SchemeModel.actionOverBaseChange F`; the theorem it cites is
-`SchemeGeometry.noEquivariantRationalMap_ambientFree_over_of_constancy`, whose
+`SchemeGeometry.noEquivariantRationalMap_projectiveSpaceOfRep_over_of_constancy`, whose
 one remaining hypothesis — constancy on the `σ`-fixed locus over `F` — is
 discharged by `SchemeGeometry.hypothesisAOver`.
 
@@ -105,7 +105,7 @@ with the target written in the form that takes the field as a parameter. -/
 public theorem noEquivariantRationalMap_intrinsicV14_cycl
     {V : Type} [AddCommGroup V] [Module WeilRep.K V] [FiniteDimensional WeilRep.K V]
     [Nontrivial V] (R : FaithfulLinearRep WeilRep.K PSL2F11 V) :
-    ¬ HasEquivariantRationalMap (ambientFree R) (intrinsicV14 WeilRep.K) := by
+    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R) (intrinsicV14 WeilRep.K) := by
   rw [intrinsicV14_K]
   exact IntrinsicHeadline.noEquivariantRationalMap_intrinsicV14 R
 
@@ -138,8 +138,8 @@ public theorem noEquivariantRationalMap_intrinsicV14_of_target
     (ha : HypothesisA F) (hb : HypothesisB F)
     {V : Type} [AddCommGroup V] [Module F V] [FiniteDimensional F V] [Nontrivial V]
     (R : FaithfulLinearRep F PSL2F11 V) :
-    ¬ HasEquivariantRationalMap (ambientFree R) (intrinsicV14 F) :=
-  noEquivariantRationalMap_ambientFree_of_target F (intrinsicV14 F)
+    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R) (intrinsicV14 F) :=
+  noEquivariantRationalMap_projectiveSpaceOfRep_of_target F (intrinsicV14 F)
     GeometricV14Carrier.sigma GeometricV14Carrier.sigma_isInvolution
     GeometricFanoCarrier.PSL2F11_isCenterless ha hb R
 
@@ -160,14 +160,14 @@ coordinate `V₁₄`, and cites the general-field coordinate theorem there. -/
 public theorem noEquivariantRationalMap_intrinsicV14
     {V : Type} [AddCommGroup V] [Module F V] [FiniteDimensional F V] [Nontrivial V]
     (R : FaithfulLinearRep F PSL2F11 V) :
-    ¬ HasEquivariantRationalMap (ambientFree R) (intrinsicV14 F) := by
+    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R) (intrinsicV14 F) := by
   letI : Algebra V14SchemeModel.k F :=
     BaseField.algebraOfPrimitiveRoot (WeilRep.isPrimitiveRoot_ζ (E := F))
   have hzF : algebraMap V14SchemeModel.k F (WeilRep.ζ : V14SchemeModel.k) =
       (WeilRep.ζ : F) :=
     BaseField.algebraMap_algebraOfPrimitiveRoot _
   intro h
-  exact noEquivariantRationalMap_ambientFree_over_of_constancy F R (hypothesisAOver F)
+  exact noEquivariantRationalMap_projectiveSpaceOfRep_over_of_constancy F R (hypothesisAOver F)
     (hasEquivariantRationalMap_of_hom
       (IntrinsicV14BaseChange.compareBCPullback F hzF)
       (IntrinsicV14BaseChange.compareBCPullback_isOver F hzF)
@@ -193,7 +193,7 @@ public theorem noEquivariantRationalMap_ofPrimitiveRoot
     {F : Type} [Field F] [CharZero F] {ζ : F} (hζ : IsPrimitiveRoot ζ 11)
     {V : Type} [AddCommGroup V] [Module F V] [FiniteDimensional F V] [Nontrivial V]
     (R : FaithfulLinearRep F WeilLambda2.PSL2F11 V) :
-    ¬ HasEquivariantRationalMap (ambientFree R) (ofPrimitiveRoot hζ) :=
+    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R) (ofPrimitiveRoot hζ) :=
   letI : HasCycl11 F := ⟨ζ, hζ⟩
   noEquivariantRationalMap_intrinsicV14 F R
 

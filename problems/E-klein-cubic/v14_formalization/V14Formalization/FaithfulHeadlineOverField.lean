@@ -140,16 +140,16 @@ No basis of `V` and no system of homogeneous coordinates appears: the
 not appear either — it follows from `[Algebra k F]`.
 
 This is the general-field replacement for
-`noEquivariantRationalMap_ambientFree`, which quantifies only over
+`noEquivariantRationalMap_projectiveSpaceOfRep`, which quantifies only over
 `ℚ(ζ₁₁)`-representations and therefore misses, for instance, the two
 12-dimensional irreducibles of `PSL(2,11)` with character field `ℚ(√5)`. -/
-public theorem noEquivariantRationalMap_ambientFree_over_of_constancy
+public theorem noEquivariantRationalMap_projectiveSpaceOfRep_over_of_constancy
     (F : Type) [Field F] [Algebra V14SchemeModel.k F]
     {V : Type} [AddCommGroup V] [Module F V]
     [FiniteDimensional F V] [Nontrivial V]
     (R : FaithfulLinearRep F V14SchemeModel.G V)
     (ha : HypothesisAOver F) :
-    ¬ HasEquivariantRationalMap (ambientFree R)
+    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R)
       (V14SchemeModel.actionOverBaseChange F) := by
   haveI : CharZero F := BaseField.charZero_of_algebra F
   intro h
@@ -161,7 +161,7 @@ public theorem noEquivariantRationalMap_ambientFree_over_of_constancy
   let bm := Classical.choice hbm
   exact noEquivariantRationalMap_from_ambient_of_constancy_over F R p q bp bm ha
     (hasEquivariantRationalMap_of_iso
-      (ambientFreeIso R
+      (projectiveSpaceOfRepIso R
         (plusMinusAmbientBasis R sigma sigma_isInvolution p q bp bm)).symm h)
 
 end V14Formalization.SchemeGeometry

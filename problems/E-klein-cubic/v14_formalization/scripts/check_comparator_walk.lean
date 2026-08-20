@@ -49,7 +49,7 @@ deriving instance BEq for Lean.ConstantInfo
 
 /-- The names `comparator.json` lists. -/
 def comparatorTargets : List Name :=
-  [`V14Formalization.Comparator.noEquivariantRationalMap_ambientFree]
+  [`V14Formalization.Comparator.noEquivariantRationalMap_projectiveSpaceOfRep]
 
 /-- Corollaries that are no longer Comparator targets but are still published.
 Walking them too makes this gate strictly stronger than Comparator; the

@@ -49,7 +49,7 @@ print "== 2. axioms =="
 tmp=$(mktemp -t axcheck).lean
 cat > "$tmp" <<'EOF'
 import V14Solution
-#print axioms V14Formalization.Comparator.noEquivariantRationalMap_ambientFree
+#print axioms V14Formalization.Comparator.noEquivariantRationalMap_projectiveSpaceOfRep
 #print axioms V14Formalization.Comparator.noEquivariantRationalMap_from_ambient
 #print axioms V14Formalization.Comparator.noEquivariantRationalMap_projectiveGVariety
 EOF

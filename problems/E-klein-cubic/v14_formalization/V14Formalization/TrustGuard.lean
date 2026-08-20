@@ -476,7 +476,7 @@ namespace V14Formalization
 -- The abstract-target theorem and the three interface items that instantiate
 -- it at the coordinate V14.
 #guard_kernel_checked SchemeGeometry.noEquivariantRationalMap_from_ambient_of_target
-#guard_kernel_checked SchemeGeometry.noEquivariantRationalMap_ambientFree_of_target
+#guard_kernel_checked SchemeGeometry.noEquivariantRationalMap_projectiveSpaceOfRep_of_target
 #guard_kernel_checked SchemeGeometry.v14_isProper
 #guard_kernel_checked SchemeGeometry.v14_targetHypothesisA
 #guard_kernel_checked SchemeGeometry.v14_targetHypothesisB
