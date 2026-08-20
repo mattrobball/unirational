@@ -14,33 +14,53 @@ This is exactly the hazard of commit 7680055a: `private abbrev k` in
 each root exported as two different mangled constants, definitionally
 but not syntactically equal.  Structural Expr equality catches that.
 
-Run:  lake env lean --run scripts/check_statement_identity.lean
-Exit: 0 iff both theorems match.
+Run:  scripts/check_module_invariants.sh (which passes --targets and --canaries
+      and the two module names, all parsed from comparator.json).
+Exit: 0 iff every audited theorem matches.
 -/
 import Lean
 
 open Lean
 
-/-- The names `comparator.json` lists. -/
-def comparatorTargets : List Name :=
-  [`V14Formalization.Comparator.noEquivariantRationalMap_projectiveSpaceOfRep]
+/-- The audited names and the two module names come from the caller
+(`scripts/check_module_invariants.sh`), which parses `comparator.json`. Nothing
+in this file hardcodes a theorem name. -/
+structure Config where
+  challenge : Name := `V14Challenge
+  solution  : Name := `V14Solution
+  targets   : List Name := []
+  canaries  : List Name := []
 
-/-- Corollaries that are no longer Comparator targets (they would drag the
-coordinate machinery into the trusted base) but are still published and still
-kept identical on both sides. Checking them here is strictly stronger than what
-Comparator does. -/
-def localCanaries : List Name :=
-  [`V14Formalization.Comparator.noEquivariantRationalMap_from_ambient,
-   `V14Formalization.Comparator.noEquivariantRationalMap_projectiveGVariety]
+def splitNames (s : String) : List Name :=
+  (s.splitOn ",").filterMap fun t =>
+    -- names never contain spaces; this avoids the deprecated `String.trim`
+    let t := t.replace " " ""
+    if t.isEmpty then none else some t.toName
 
-def auditedNames : List Name := comparatorTargets ++ localCanaries
+def parseArgs (args : List String) : Except String Config :=
+  go args {}
+where
+  go : List String → Config → Except String Config
+    | [], c => .ok c
+    | "--challenge" :: v :: rest, c => go rest { c with challenge := v.toName }
+    | "--solution"  :: v :: rest, c => go rest { c with solution  := v.toName }
+    | "--targets"   :: v :: rest, c => go rest { c with targets   := splitNames v }
+    | "--canaries"  :: v :: rest, c => go rest { c with canaries  := splitNames v }
+    | a :: _, _ => .error s!"unrecognised argument: {a}"
 
-unsafe def main : IO UInt32 := do
+unsafe def main (args : List String) : IO UInt32 := do
+  let cfg ← match parseArgs args with
+    | .ok c => pure c
+    | .error e => do IO.eprintln e; return 2
+  let auditedNames := cfg.targets ++ cfg.canaries
+  if auditedNames.isEmpty then
+    IO.eprintln "no theorem names given (--targets and --canaries)"
+    return 2
   initSearchPath (← findSysroot)
   let loadEnv (mod : Name) : IO Environment := do
     importModules #[{module := mod}] {} (leakEnv := true)
-  let envC ← loadEnv `V14Challenge
-  let envS ← loadEnv `V14Solution
+  let envC ← loadEnv cfg.challenge
+  let envS ← loadEnv cfg.solution
   let mut ok := true
   for n in auditedNames do
     match envC.find? n, envS.find? n with

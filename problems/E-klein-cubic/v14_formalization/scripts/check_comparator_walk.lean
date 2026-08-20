@@ -33,8 +33,9 @@ published theorems now take a `PlusMinusCoords` parameter, which removed those t
 and 30 further constants — 55,029 -> 54,997 — without rescuing a skeleton challenge:
 38 mismatches became 36.)
 
-Run:  lake env lean --run scripts/check_comparator_walk.lean
-Exit: 0 iff both named statements match AND the walk finds no mismatch.
+Run:  scripts/check_module_invariants.sh (which passes --targets and --canaries
+      and the two module names, all parsed from comparator.json).
+Exit: 0 iff every audited statement matches AND the walk finds no mismatch.
 -/
 import Lean
 
@@ -47,18 +48,31 @@ deriving instance BEq for Lean.QuotVal
 deriving instance BEq for Lean.InductiveVal
 deriving instance BEq for Lean.ConstantInfo
 
-/-- The names `comparator.json` lists. -/
-def comparatorTargets : List Name :=
-  [`V14Formalization.Comparator.noEquivariantRationalMap_projectiveSpaceOfRep]
+/-- The audited names and the two module names come from the caller
+(`scripts/check_module_invariants.sh`), which parses `comparator.json`. Nothing
+in this file hardcodes a theorem name. -/
+structure Config where
+  challenge : Name := `V14Challenge
+  solution  : Name := `V14Solution
+  targets   : List Name := []
+  canaries  : List Name := []
 
-/-- Corollaries that are no longer Comparator targets but are still published.
-Walking them too makes this gate strictly stronger than Comparator; the
-reduction they buy is in the trusted base, not in this check. -/
-def localCanaries : List Name :=
-  [`V14Formalization.Comparator.noEquivariantRationalMap_from_ambient,
-   `V14Formalization.Comparator.noEquivariantRationalMap_projectiveGVariety]
+def splitNames (s : String) : List Name :=
+  (s.splitOn ",").filterMap fun t =>
+    -- names never contain spaces; this avoids the deprecated `String.trim`
+    let t := t.replace " " ""
+    if t.isEmpty then none else some t.toName
 
-def auditedNames : List Name := comparatorTargets ++ localCanaries
+def parseArgs (args : List String) : Except String Config :=
+  go args {}
+where
+  go : List String → Config → Except String Config
+    | [], c => .ok c
+    | "--challenge" :: v :: rest, c => go rest { c with challenge := v.toName }
+    | "--solution"  :: v :: rest, c => go rest { c with solution  := v.toName }
+    | "--targets"   :: v :: rest, c => go rest { c with targets   := splitNames v }
+    | "--canaries"  :: v :: rest, c => go rest { c with canaries  := splitNames v }
+    | a :: _, _ => .error s!"unrecognised argument: {a}"
 
 /-- Mirror of `Comparator.runForUsedConsts` (Comparator/Util.lean). -/
 def usedConsts (info : ConstantInfo) : Array Name := Id.run do
@@ -75,12 +89,21 @@ def usedConsts (info : ConstantInfo) : Array Name := Id.run do
   | _ => pure ()
   return a
 
-unsafe def main : IO UInt32 := do
+unsafe def main (args : List String) : IO UInt32 := do
+  let cfg ← match parseArgs args with
+    | .ok c => pure c
+    | .error e => do IO.eprintln e; return 2
+  let comparatorTargets := cfg.targets
+  let localCanaries := cfg.canaries
+  let auditedNames := comparatorTargets ++ localCanaries
+  if auditedNames.isEmpty then
+    IO.eprintln "no theorem names given (--targets and --canaries)"
+    return 2
   initSearchPath (← findSysroot)
   let loadEnv (mod : Name) : IO Environment :=
     importModules #[{module := mod}] {} (leakEnv := true)
-  let envC ← loadEnv `V14Challenge
-  let envS ← loadEnv `V14Solution
+  let envC ← loadEnv cfg.challenge
+  let envS ← loadEnv cfg.solution
   let mut ok := true
   let mut worklist : Array Name := #[]
   -- Phase 1: named theorems, ConstantVal only. Their VALUES are deliberately not
