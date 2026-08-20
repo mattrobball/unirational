@@ -5,6 +5,7 @@ Released under Apache 2.0 license.
 module
 
 public import V14Formalization.V14D12CertificateExclusionOverField
+public import V14Formalization.AbstractTargetHeadline
 public import V14Formalization.BaseFieldCriteria
 public import V14Formalization.BlockNormalSigma
 public import V14Formalization.CentralizerObstruction
@@ -94,7 +95,11 @@ one remaining gap in the general-field headline explicit and citable. -/
 
 /-- The coordinatized no-map theorem over `F`, granted hypothesis (a) over `F`.
 This is `noEquivariantRationalMap_from_ambient_of_constancy` with `Spec k`
-replaced by `Spec F` and the coordinate V14 by its base change. -/
+replaced by `Spec F` and the coordinate V14 by its base change.
+
+The argument is `AbstractTargetHeadline`'s: the base-changed V14 is proper
+(`actionOverBaseChange_isProper`), hypothesis (a) is the hypothesis, and
+hypothesis (b) is `no_centralizer_fixed_section_baseChange`. -/
 public theorem noEquivariantRationalMap_from_ambient_of_constancy_over
     (F : Type) [Field F] [CharZero F] [Algebra V14SchemeModel.k F]
     {V : Type} [AddCommGroup V] [Module F V]
@@ -103,20 +108,10 @@ public theorem noEquivariantRationalMap_from_ambient_of_constancy_over
     (bm : Basis (Fin (q + 1)) F (R.minusEigenspace sigma))
     (ha : HypothesisAOver F) :
     ¬ HasEquivariantRationalMap (ambientForOver F R p q bp bm)
-      (V14SchemeModel.actionOverBaseChange F) := by
-  let X := ambientForOver F R p q bp bm
-  let D := orderedPlusMinusEquivariantNormalDataOfCorrectedChartActual
-    R sigma sigma_isInvolution p q bp bm
-  apply noEquivariantRationalMap_of_normal_specialization_over F X D
-  · change D.exceptionalFunctionFieldAction (sigmaInCentralizer sigma) = 𝟙 _
-    have hs := orderedPlusMinusEquivariantNormalDataOfCorrectedChartActual_sigma
-      R sigma sigma_isInvolution p q bp bm
-    have helem : sigmaInCentralizer sigma = sigmaCentralizer sigma :=
-      Subtype.ext rfl
-    rw [helem]
-    exact hs
-  · intro z hz
-    exact ha p q z hz
+      (V14SchemeModel.actionOverBaseChange F) :=
+  noEquivariantRationalMap_from_ambient_of_target F
+    (V14SchemeModel.actionOverBaseChange F) sigma sigma_isInvolution
+    ha (no_centralizer_fixed_section_baseChange F) R p q bp bm
 
 /-- **The coordinate-free no-map theorem over an arbitrary base field, granted
 hypothesis (a).**
@@ -143,16 +138,9 @@ public theorem noEquivariantRationalMap_projectiveSpaceOfRep_over_of_constancy
     ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R)
       (V14SchemeModel.actionOverBaseChange F) := by
   haveI : CharZero F := BaseField.charZero_of_algebra F
-  intro h
-  obtain ⟨p, q, hbp, hbm⟩ :=
-    exists_plus_minus_projective_bases R sigma sigma_isInvolution
-      (not_degenerates_of_centerless
-        GeometricFanoCarrier.PSL2F11_isCenterless sigma_isInvolution R)
-  let bp := Classical.choice hbp
-  let bm := Classical.choice hbm
-  exact noEquivariantRationalMap_from_ambient_of_constancy_over F R p q bp bm ha
-    (hasEquivariantRationalMap_of_iso
-      (projectiveSpaceOfRepIso R
-        (plusMinusAmbientBasis R sigma sigma_isInvolution p q bp bm)).symm h)
+  exact noEquivariantRationalMap_projectiveSpaceOfRep_of_target F
+    (V14SchemeModel.actionOverBaseChange F) sigma sigma_isInvolution
+    GeometricFanoCarrier.PSL2F11_isCenterless
+    ha (no_centralizer_fixed_section_baseChange F) R
 
 end V14Formalization.SchemeGeometry
