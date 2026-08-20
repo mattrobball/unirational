@@ -1326,5 +1326,169 @@ public theorem chiLambda2_eq_zero_of_order_five {g : PSL2F11} (hg : orderOf g = 
 
 end OrderFive
 
+/-! ### The norm sum, class by class
+
+| class | size | `χ_Λ²` | `χ(g)χ(g⁻¹)` | contribution |
+|---|---:|---|---:|---:|
+| 1A | 1 | 15 | 225 | 225 |
+| 2A | 55 | 3 | 9 | 495 |
+| 3A | 110 | 0 | 0 | 0 |
+| 5A, 5B | 132+132 | 0 | 0 | 0 |
+| 6A | 110 | 0 | 0 | 0 |
+| 11A, 11B | 60+60 | `(-3 ± √-11)/2` | 5 | 600 |
+|  |  |  |  | **1320** |
+-/
+
+/-- The summand of the character norm, named so that the partition below can be
+rewritten without leaving beta-redexes behind. -/
+private noncomputable def chiNorm (g : PSL2F11) : k := chiLambda2 g * chiLambda2 g⁻¹
+
+private theorem sum_over_order_fiber_gen (f : PSL2F11 → k) (n : ℕ) :
+    (∑ g ∈ Finset.univ.filter (fun g : PSL2F11 => orderOf g = n), f g) =
+      ∑ g : {g : PSL2F11 // orderOf g = n}, f g.1 := by
+  classical
+  exact sum_filter_eq_subtype (fun g : PSL2F11 ↦ orderOf g = n) f
+
+private theorem sum_order_one_fiber_gen (f : PSL2F11 → k) :
+    (∑ g : {g : PSL2F11 // orderOf g = 1}, f g.1) = f 1 := by
+  classical
+  have huniq : ∀ g : {g : PSL2F11 // orderOf g = 1}, g = ⟨1, orderOf_one⟩ := fun g =>
+    Subtype.ext (orderOf_eq_one_iff.mp g.2)
+  haveI : Unique {g : PSL2F11 // orderOf g = 1} :=
+    ⟨⟨⟨1, orderOf_one⟩⟩, fun g => huniq g⟩
+  rw [Fintype.sum_unique]
+  change f (default : {g : PSL2F11 // orderOf g = 1}).1 = f 1
+  have hdef : (default : {g : PSL2F11 // orderOf g = 1}) = ⟨1, orderOf_one⟩ :=
+    Unique.default_eq _
+  rw [hdef]
+
+/-- Partition of a group sum by element order, for an arbitrary summand.  The
+weighted sum `sum_chi_chiLambda2_by_orders` is the same statement specialised to
+`χ₁₀'·χ_Λ²`; it is kept as it was. -/
+private theorem sum_by_orders (f : PSL2F11 → k) :
+    (∑ g : PSL2F11, f g) =
+      f 1 +
+      (∑ g : {g : PSL2F11 // orderOf g = 2}, f g.1) +
+      (∑ g : {g : PSL2F11 // orderOf g = 3}, f g.1) +
+      (∑ g : {g : PSL2F11 // orderOf g = 5}, f g.1) +
+      (∑ g : {g : PSL2F11 // orderOf g = 6}, f g.1) +
+      (∑ g : {g : PSL2F11 // orderOf g = 11}, f g.1) := by
+  classical
+  set t : Finset ℕ := {1, 2, 3, 5, 6, 11}
+  have hsup : ∀ g ∈ (Finset.univ : Finset PSL2F11), orderOf g ∈ t := by
+    intro g _
+    rcases orderOf_eq_spectrum g with h | h | h | h | h | h <;>
+      (simp only [t, Finset.mem_insert, Finset.mem_singleton]; omega)
+  have hfib :
+      (∑ n ∈ t, ∑ g ∈ Finset.univ.filter (fun g : PSL2F11 => orderOf g = n), f g) =
+        ∑ g : PSL2F11, f g :=
+    Finset.sum_fiberwise_of_maps_to hsup f
+  calc (∑ g : PSL2F11, f g)
+      = ∑ n ∈ t, ∑ g ∈ Finset.univ.filter (fun g : PSL2F11 => orderOf g = n), f g :=
+        hfib.symm
+    _ = ∑ n ∈ t, ∑ g : {g : PSL2F11 // orderOf g = n}, f g.1 :=
+        Finset.sum_congr rfl fun n _ => sum_over_order_fiber_gen f n
+    _ = (∑ g : {g : PSL2F11 // orderOf g = 1}, f g.1) +
+          (∑ g : {g : PSL2F11 // orderOf g = 2}, f g.1) +
+          (∑ g : {g : PSL2F11 // orderOf g = 3}, f g.1) +
+          (∑ g : {g : PSL2F11 // orderOf g = 5}, f g.1) +
+          (∑ g : {g : PSL2F11 // orderOf g = 6}, f g.1) +
+          (∑ g : {g : PSL2F11 // orderOf g = 11}, f g.1) := by
+        simp only [t]
+        have h1 : (1 : ℕ) ∉ ({2, 3, 5, 6, 11} : Finset ℕ) := by decide
+        have h2 : (2 : ℕ) ∉ ({3, 5, 6, 11} : Finset ℕ) := by decide
+        have h3 : (3 : ℕ) ∉ ({5, 6, 11} : Finset ℕ) := by decide
+        have h5 : (5 : ℕ) ∉ ({6, 11} : Finset ℕ) := by decide
+        have h6 : (6 : ℕ) ∉ ({11} : Finset ℕ) := by decide
+        rw [Finset.sum_insert h1, Finset.sum_insert h2, Finset.sum_insert h3,
+          Finset.sum_insert h5, Finset.sum_insert h6, Finset.sum_singleton]
+        ring
+    _ = f 1 +
+          (∑ g : {g : PSL2F11 // orderOf g = 2}, f g.1) +
+          (∑ g : {g : PSL2F11 // orderOf g = 3}, f g.1) +
+          (∑ g : {g : PSL2F11 // orderOf g = 5}, f g.1) +
+          (∑ g : {g : PSL2F11 // orderOf g = 6}, f g.1) +
+          (∑ g : {g : PSL2F11 // orderOf g = 11}, f g.1) := by
+        rw [sum_order_one_fiber_gen]
+
+private theorem chiNorm_one : chiNorm (1 : PSL2F11) = (225 : k) := by
+  show chiLambda2 (1 : PSL2F11) * chiLambda2 (1 : PSL2F11)⁻¹ = (225 : k)
+  rw [inv_one, chiLambda2_one]
+  norm_num
+
+private theorem sum_chiNorm_order_two :
+    (∑ g : {g : PSL2F11 // orderOf g = 2}, chiNorm g.1) = (495 : k) := by
+  classical
+  have hcard : Fintype.card {g : PSL2F11 // orderOf g = 2} = 55 :=
+    PSLCard.card_psl_order_two
+  have hval : ∀ g : {g : PSL2F11 // orderOf g = 2}, chiNorm g.1 = (9 : k) := by
+    intro g
+    have ho : orderOf g.1 = 2 := g.2
+    have hoi : orderOf g.1⁻¹ = 2 := by rw [orderOf_inv]; exact ho
+    show chiLambda2 g.1 * chiLambda2 g.1⁻¹ = (9 : k)
+    rw [chiLambda2_eq_three_of_order_two ho, chiLambda2_eq_three_of_order_two hoi]
+    norm_num
+  calc (∑ g : {g : PSL2F11 // orderOf g = 2}, chiNorm g.1)
+      = ∑ _g : {g : PSL2F11 // orderOf g = 2}, (9 : k) :=
+        Finset.sum_congr rfl fun g _ => hval g
+    _ = (Fintype.card {g : PSL2F11 // orderOf g = 2} : k) * 9 := by
+        rw [Finset.sum_const, nsmul_eq_mul]; rfl
+    _ = (55 : k) * 9 := by rw [hcard]; norm_num
+    _ = 495 := by norm_num
+
+private theorem sum_chiNorm_order_three :
+    (∑ g : {g : PSL2F11 // orderOf g = 3}, chiNorm g.1) = (0 : k) := by
+  classical
+  refine Finset.sum_eq_zero fun g _ => ?_
+  show chiLambda2 g.1 * chiLambda2 g.1⁻¹ = 0
+  rw [chiLambda2_eq_zero_of_order_three g.2, zero_mul]
+
+private theorem sum_chiNorm_order_five :
+    (∑ g : {g : PSL2F11 // orderOf g = 5}, chiNorm g.1) = (0 : k) := by
+  classical
+  refine Finset.sum_eq_zero fun g _ => ?_
+  show chiLambda2 g.1 * chiLambda2 g.1⁻¹ = 0
+  rw [chiLambda2_eq_zero_of_order_five g.2, zero_mul]
+
+private theorem sum_chiNorm_order_six :
+    (∑ g : {g : PSL2F11 // orderOf g = 6}, chiNorm g.1) = (0 : k) := by
+  classical
+  refine Finset.sum_eq_zero fun g _ => ?_
+  show chiLambda2 g.1 * chiLambda2 g.1⁻¹ = 0
+  rw [chiLambda2_eq_zero_of_order_six g.2, zero_mul]
+
+private theorem sum_chiNorm_order_eleven :
+    (∑ g : {g : PSL2F11 // orderOf g = 11}, chiNorm g.1) = (600 : k) := by
+  classical
+  have hcard : Fintype.card {g : PSL2F11 // orderOf g = 11} = 120 :=
+    PSLCard.card_psl_order_eleven
+  have hval : ∀ g : {g : PSL2F11 // orderOf g = 11}, chiNorm g.1 = (5 : k) :=
+    fun g => chiLambda2_mul_inv_of_order_eleven g.2
+  calc (∑ g : {g : PSL2F11 // orderOf g = 11}, chiNorm g.1)
+      = ∑ _g : {g : PSL2F11 // orderOf g = 11}, (5 : k) :=
+        Finset.sum_congr rfl fun g _ => hval g
+    _ = (Fintype.card {g : PSL2F11 // orderOf g = 11} : k) * 5 := by
+        rw [Finset.sum_const, nsmul_eq_mul]; rfl
+    _ = (120 : k) * 5 := by rw [hcard]; norm_num
+    _ = 600 := by norm_num
+
+/-- **The norm of the ambient character: `∑_g χ_Λ²(g) χ_Λ²(g⁻¹) = 1320 = 2·660`.**
+
+Equivalently, `⟨χ_Λ², χ_Λ²⟩ = 2`: the commutant of `Λ²U` is two-dimensional, so
+`Λ²U` is the sum of exactly two non-isomorphic irreducible summands.  This is
+the arithmetic input of `MsubUnique.eq_Msub`. -/
+public theorem sum_chiLambda2_norm_eq_thirteen_twenty :
+    (∑ g : PSL2F11, chiLambda2 g * chiLambda2 g⁻¹) = (1320 : k) := by
+  have hfun : (∑ g : PSL2F11, chiLambda2 g * chiLambda2 g⁻¹) =
+      ∑ g : PSL2F11, chiNorm g := rfl
+  rw [hfun, sum_by_orders chiNorm, chiNorm_one, sum_chiNorm_order_two,
+    sum_chiNorm_order_three, sum_chiNorm_order_five, sum_chiNorm_order_six,
+    sum_chiNorm_order_eleven]
+  norm_num
+
+#print axioms chiLambda2_eq_zero_of_order_five
+#print axioms chiLambda2_mul_inv_of_order_eleven
+#print axioms sum_chiLambda2_norm_eq_thirteen_twenty
+
 end Ord11CharacterSum
 end V14Formalization

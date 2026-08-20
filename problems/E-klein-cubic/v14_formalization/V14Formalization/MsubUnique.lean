@@ -20,17 +20,14 @@ representation.  Its one arithmetic input is the norm of the ambient character,
   `∑_{g ∈ PSL(2,11)} χ_{Λ²U}(g) · χ_{Λ²U}(g⁻¹) = 1320 = 2·660`,
 
 which says the commutant of `Λ²U` is two-dimensional, i.e. that `Λ²U` splits
-into exactly two non-isomorphic irreducible summands.  That sum is *not* proved
-here; it is carried as a hypothesis, exactly as
-`GeometricV14Carrier.finrank_Msub_eq_ten_of_sum_chi_chiLambda2` carries
-`∑ χ₁₀'·χ_{Λ²U} = 660`.
+into exactly two non-isomorphic irreducible summands.  That sum is proved, in
+`Ord11CharacterSum.sum_chiLambda2_norm_eq_thirteen_twenty`; class by class it
+is `225 + 495 + 0 + 0 + 0 + 600`.
 
-Class by class the sum is `225 + 495 + 0 + 0 + 0 + 600 = 1320`, and the tree
-already has every value except two: `χ_{Λ²U}` on order-5 elements (never
-needed, because `χ₁₀'` vanishes there) and a pointwise conjugacy statement for
-order-11 elements, on which `χ(g)χ(g⁻¹) = (9 - χ₂(n)²γ²)/4 = 5` is constant.
-See `MODULE_MIGRATION.md`, "`M` is the unique 10-dimensional
-subrepresentation", for the table and the two routes.
+Each result therefore comes in two forms.  The `_of_sum_...` form takes the
+sum as a hypothesis and is what the argument actually uses; `eq_Msub` and
+`finrank_intertwiningMap` are the same statements with the hypothesis
+discharged.
 
 Everything below treats `projectorM` as opaque: only its equivariance, its
 idempotence and its trace are used.  No equation ever forces the 660-term sum
@@ -167,9 +164,35 @@ public theorem eq_Msub_of_sum_chiLambda2_norm
     ⟨N, fun g v hv => by rw [ambientRep_apply]; exact hN g hv⟩
     (by show ((Module.finrank k N : ℕ) : k) = _; rw [hdim, trace_projM]; norm_num)
 
+/-! ## Unconditional forms
+
+The character norm is proved in `Ord11CharacterSum`, so both results above hold
+outright.  The conditional forms are kept: they are what the proofs use, and
+they record exactly which arithmetic fact the uniqueness rests on. -/
+
+/-- **The commutant of `Λ²U` is two-dimensional.** -/
+public theorem finrank_intertwiningMap :
+    Module.finrank k (ambientRep.IntertwiningMap ambientRep) = 2 :=
+  finrank_intertwiningMap_of_sum
+    Ord11CharacterSum.sum_chiLambda2_norm_eq_thirteen_twenty
+
+/-- **`M` is the unique ten-dimensional `PSL(2,11)`-stable subspace of `Λ²U`.**
+
+Unconditional.  So `ℙ(M) ⊂ ℙ(Λ²U) = ℙ¹⁴` is not *a* codimension-5 subspace that
+happens to work; it is *the* `G`-invariant one, and `V₁₄ = Gr(2,U) ∩ ℙ(M)` is
+determined by `U` alone. -/
+public theorem eq_Msub (N : Submodule k Lambda2U)
+    (hN : ∀ (g : PSL2F11) ⦃v : Lambda2U⦄, v ∈ N → ambientAct g v ∈ N)
+    (hdim : Module.finrank k N = 10) :
+    N = Msub :=
+  eq_Msub_of_sum_chiLambda2_norm
+    Ord11CharacterSum.sum_chiLambda2_norm_eq_thirteen_twenty N hN hdim
+
 #print axioms eq_Msub_of_sum_chiLambda2_norm
 #print axioms finrank_intertwiningMap_of_sum
 #print axioms projM_isIdem
+#print axioms finrank_intertwiningMap
+#print axioms eq_Msub
 
 end MsubUnique
 end V14Formalization
