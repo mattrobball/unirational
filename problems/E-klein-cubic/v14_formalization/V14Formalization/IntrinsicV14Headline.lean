@@ -212,9 +212,5 @@ public theorem noEquivariantRationalMap_intrinsicV14
     (SchemeGeometry.hasEquivariantRationalMap_of_hom compareMor compareMor_isOver
       compareMor_equivariant h)
 
-#print axioms noEquivariantRationalMap_intrinsicV14
-#print axioms intrinsicV14
-#print axioms compareMor
-
 end IntrinsicHeadline
 end V14Formalization

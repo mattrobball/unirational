@@ -28,8 +28,7 @@ position, and in particular the theorem is not stated with `[Algebra k F]`.
 
 ## The theorem is unconditional (2026-08-20)
 
-`noEquivariantRationalMap_ofPrimitiveRoot` and
-`noEquivariantRationalMap_intrinsicV14` take no hypothesis on the target.  Their
+`noEquivariantRationalMap_intrinsicV14` takes no hypothesis on the target.  Its
 hypotheses are exactly: `F` is a field, of characteristic zero, carrying a
 primitive 11th root of unity, and `V` is a faithful finite-dimensional
 `F`-representation.  Nothing else.
@@ -57,22 +56,15 @@ Two things had to be built to get there, and both are now in the tree:
 * hypothesis (a) over `F` (`SchemeGeometry.hypothesisAOver`), the last gap named
   by `FIELD_CRITERIA_2026-08-18.md`.
 
-`noEquivariantRationalMap_intrinsicV14_cycl` is the same statement at
-`F = ℚ(ζ₁₁)`, where `intrinsicV14_K` shows the target *is* the published one.
+At `F = ℚ(ζ₁₁)` the theorem is the published one: `intrinsicV14_K` shows the
+target *is* `IntrinsicHeadline.intrinsicV14`.
 
-`noEquivariantRationalMap_intrinsicV14_of_target` is **not** the theorem: it is
-the record of what `AbstractTargetHeadline` shows the argument uses about its
-target, and it carries three hypotheses.  It is kept for that purpose and is
-strictly weaker than the theorems above; do not cite it as the result.
+The record of what the abstract argument consumes about its target is
+`AbstractTargetHeadline.noEquivariantRationalMap_projectiveSpaceOfRep_of_target`;
+it carries three hypotheses and is strictly weaker than the theorem here.
 -/
 
 set_option linter.unusedSectionVars false
--- `intrinsicV14_K` is `rfl`, but the two sides reach it through different
--- namespaces and the defeq check walks the whole `ExteriorAlgebra` instance
--- chain; it costs about half a minute at these budgets.  Nothing else in the
--- file needs them.
-set_option maxRecDepth 20000
-set_option maxHeartbeats 1000000
 
 noncomputable section
 
@@ -89,59 +81,25 @@ open V14Formalization.SchemeGeometry
 
 /-! ## The distinguished field is one of the fields covered -/
 
+set_option maxRecDepth 20000 in
+set_option maxHeartbeats 1000000 in
 /-- **The field-parameterized target at `ℚ(ζ₁₁)` is the published target.**
 
 Both sides are `IntrinsicV14.actionOver` applied to the same field, the same
 even Weil module, the same `10′` summand and the same representation; the two
 routes to them differ only in which namespace the intermediate names live in,
-and in `Prop`-valued arguments. -/
+and in `Prop`-valued arguments.
+
+This is `rfl`, but the two sides reach it through different namespaces and the
+defeq check walks the whole `ExteriorAlgebra` instance chain; it costs about
+half a minute at these budgets.  It is the only declaration in the file that
+needs them. -/
 public theorem intrinsicV14_K :
     intrinsicV14 WeilRep.K = IntrinsicHeadline.intrinsicV14 := rfl
-
-/-- **The published theorem, restated against the field-parameterized target.**
-
-Unconditional.  This is `IntrinsicHeadline.noEquivariantRationalMap_intrinsicV14`
-with the target written in the form that takes the field as a parameter. -/
-public theorem noEquivariantRationalMap_intrinsicV14_cycl
-    {V : Type} [AddCommGroup V] [Module WeilRep.K V] [FiniteDimensional WeilRep.K V]
-    [Nontrivial V] (R : FaithfulLinearRep WeilRep.K PSL2F11 V) :
-    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R) (intrinsicV14 WeilRep.K) := by
-  rw [intrinsicV14_K]
-  exact IntrinsicHeadline.noEquivariantRationalMap_intrinsicV14 R
 
 /-! ## The general field -/
 
 variable (F : Type) [Field F] [CharZero F] [HasCycl11 F]
-
-/-- **Hypothesis (a) for the intrinsic `V₁₄` over `F`.**  Every rational map
-over `Spec F` from a biprojective space to the `σ`-fixed locus of `V₁₄_F` is
-constant: the positive-dimensional part of `V₁₄_F^σ` carries no rational
-curve. -/
-@[expose] public def HypothesisA : Prop :=
-  TargetHypothesisA F (intrinsicV14 F) GeometricV14Carrier.sigma
-
-/-- **Hypothesis (b) for the intrinsic `V₁₄` over `F`.**  `V₁₄_F^σ` has no
-`F`-point fixed by the whole centralizer `D₁₂ = C_G(σ)`. -/
-@[expose] public def HypothesisB : Prop :=
-  TargetHypothesisB F (intrinsicV14 F) GeometricV14Carrier.sigma
-
-/-- **What the abstract argument consumes about its target.**
-
-`NOT THE THEOREM.`  This is `AbstractTargetHeadline`'s reduction instantiated at
-the intrinsic `V₁₄` over `F`: it says that properness together with hypotheses
-(a) and (b) *for that target* suffice.  All three hypotheses are things the
-certificate corpus exists to prove, so a statement carrying them is weaker, not
-stronger, than `noEquivariantRationalMap_intrinsicV14` below, which carries
-none of them.  It is kept only as the record of what the argument uses. -/
-public theorem noEquivariantRationalMap_intrinsicV14_of_target
-    [IsProper (intrinsicV14 F).V.hom]
-    (ha : HypothesisA F) (hb : HypothesisB F)
-    {V : Type} [AddCommGroup V] [Module F V] [FiniteDimensional F V] [Nontrivial V]
-    (R : FaithfulLinearRep F PSL2F11 V) :
-    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R) (intrinsicV14 F) :=
-  noEquivariantRationalMap_projectiveSpaceOfRep_of_target F (intrinsicV14 F)
-    GeometricV14Carrier.sigma GeometricV14Carrier.sigma_isInvolution
-    GeometricFanoCarrier.PSL2F11_isCenterless ha hb R
 
 /-- **No `PSL(2,11)`-equivariant rational map from `ℙ(V)` to the intrinsic
 `V₁₄`, over any field of characteristic zero carrying a primitive 11th root of
@@ -172,33 +130,6 @@ public theorem noEquivariantRationalMap_intrinsicV14
       (IntrinsicV14BaseChange.compareBCPullback F hzF)
       (IntrinsicV14BaseChange.compareBCPullback_isOver F hzF)
       (IntrinsicV14BaseChange.compareBCPullback_equivariant F hzF) h)
-
-end IntrinsicV14Field
-
-namespace IntrinsicV14Field
-
-open AlgebraicGeometry
-open V14Formalization.SchemeGeometry
-open V14Formalization.WeilRep (HasCycl11)
-
-/-- **The same theorem with the field condition spelled out as an element and a
-property**, which is the form a reader checks.  Unconditional.
-
-`hζ` is the entire hypothesis on `F` beyond characteristic zero: an element of
-`F` that is a primitive 11th root of unity.  `BaseFieldCriteria` shows this is
-interchangeable with `[Algebra ℚ(ζ₁₁) F]`, and the statement uses this side.
-There is no hypothesis on the target: no properness, no constancy on the fixed
-locus, no emptiness of the `D₁₂`-fixed points. -/
-public theorem noEquivariantRationalMap_ofPrimitiveRoot
-    {F : Type} [Field F] [CharZero F] {ζ : F} (hζ : IsPrimitiveRoot ζ 11)
-    {V : Type} [AddCommGroup V] [Module F V] [FiniteDimensional F V] [Nontrivial V]
-    (R : FaithfulLinearRep F WeilLambda2.PSL2F11 V) :
-    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R) (ofPrimitiveRoot hζ) :=
-  letI : HasCycl11 F := ⟨ζ, hζ⟩
-  noEquivariantRationalMap_intrinsicV14 F R
-
-#print axioms noEquivariantRationalMap_intrinsicV14
-#print axioms noEquivariantRationalMap_ofPrimitiveRoot
 
 end IntrinsicV14Field
 end V14Formalization

@@ -79,12 +79,6 @@ end Glue
 
 variable {S : Scheme.{u}} {G : Type v} [Group G]
 
-/-- `actionPrecomp` is composition with the action morphism, as a rational map. -/
-public theorem actionPrecomp_eq (X : Action (Over S) G) [IrreducibleSpace X.V.left]
-    {Y : Scheme.{u}} (g : G) (f : X.V.left ⤏ Y)
-    [((X.ρ g).left.toRationalMap).IsDominant] :
-    actionPrecomp X g f = (X.ρ g).left.toRationalMap.comp f := rfl
-
 variable {X X' Y : Action (Over S) G}
 
 /-- Transport an equivariant rational map along an isomorphism of actions. -/

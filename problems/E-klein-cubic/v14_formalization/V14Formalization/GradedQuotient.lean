@@ -142,9 +142,6 @@ public instance gradedAlgebraQuotient : GradedAlgebra (grading 𝒜 I) where
   __ := Ideal.Quotient.mk I.toIdeal
   map_mem := fun {_ _} hx => mk_mem_grading 𝒜 I hx
 
-public theorem mkGraded_surjective : Function.Surjective (mkGraded 𝒜 I) :=
-  Ideal.Quotient.mk_surjective
-
 end GradedQuotient
 end V14Formalization
 
@@ -201,25 +198,6 @@ variable (I : HomogeneousIdeal 𝒜) (J : HomogeneousIdeal ℬ)
     rintro i x hx
     obtain ⟨a, ha, rfl⟩ := (mem_grading 𝒜 I).1 hx
     exact mk_mem_grading ℬ J (f.map_mem ha)
-
-@[simp] public theorem mapQuot_mk (f : 𝒜 →+*ᵍ ℬ) (hf : I.map f ≤ J) (a : A) :
-    mapQuot I J f hf (Ideal.Quotient.mk I.toIdeal a) = Ideal.Quotient.mk J.toIdeal (f a) :=
-  rfl
-
-public theorem mapQuot_id (hf : I.map (.id 𝒜) ≤ I) :
-    mapQuot I I (.id 𝒜) hf = .id (grading 𝒜 I) := by
-  refine GradedRingHom.ext fun x => ?_
-  obtain ⟨a, rfl⟩ := Ideal.Quotient.mk_surjective x
-  rfl
-
-variable {C : Type*} [CommRing C] [Algebra R C] {𝒞 : ι → Submodule R C} [GradedAlgebra 𝒞]
-
-public theorem mapQuot_comp (K : HomogeneousIdeal 𝒞) (f : 𝒜 →+*ᵍ ℬ) (g : ℬ →+*ᵍ 𝒞)
-    (hf : I.map f ≤ J) (hg : J.map g ≤ K) (hgf : I.map (g.comp f) ≤ K) :
-    mapQuot I K (g.comp f) hgf = (mapQuot J K g hg).comp (mapQuot I J f hf) := by
-  refine GradedRingHom.ext fun x => ?_
-  obtain ⟨a, rfl⟩ := Ideal.Quotient.mk_surjective x
-  rfl
 
 end GradedQuotient
 end V14Formalization

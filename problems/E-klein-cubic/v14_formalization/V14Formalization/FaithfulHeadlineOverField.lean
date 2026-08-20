@@ -76,15 +76,6 @@ public abbrev ambientForOver
   ambientProjectiveActionOver R (p + q + 1)
     (plusMinusAmbientBasis R sigma sigma_isInvolution p q bp bm)
 
-/-- The exceptional divisor of the blow-up along `ℙ(V₊)`, over an arbitrary
-base field.  `exceptionalFor` is the `k`-instance. -/
-public abbrev exceptionalForOver
-    {V : Type} [AddCommGroup V] [Module F V]
-    (R : FaithfulLinearRep F V14SchemeModel.G V) (p q : ℕ)
-    (bp : Basis (Fin (p + 1)) F (R.plusEigenspace sigma))
-    (bm : Basis (Fin (q + 1)) F (R.minusEigenspace sigma)) :=
-  normalDivisorActionOver R sigma p q bp bm
-
 end Coordinates
 
 /-- **Hypothesis (a) over `F`.**  Every rational map over `Spec F` from a

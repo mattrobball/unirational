@@ -146,8 +146,6 @@ public theorem bcFun_weilFun (g : WeilLambda2.SLG) (f : WeilRep.Fun A) :
     show φ (f.1 (-x)) = φ (f.1 x)
     rw [f.2 x]⟩
 
-public theorem bcU_coe (f : WeilRep.U A) : (bcU φ f : WeilRep.Fun B) = bcFun φ f.1 := rfl
-
 include hz in
 public theorem bcU_weilU (g : WeilLambda2.SLG) (f : WeilRep.U A) :
     bcU φ (WeilRepSL2.weilU g f) = WeilRepSL2.weilU g (bcU φ f) := by

@@ -134,59 +134,12 @@ public theorem quadrics_naturality (w : M →ₗ[k] M →ₗ[k] N) (α : M →�
   refine LinearMap.ext fun z => ?_
   exact congrArg φ (hlift z)
 
-/-! ## Naturality in the module, and evaluation
+/-! ## Evaluation
 
 `quadrics_naturality` moves `w` along an endomorphism of `M`.  The comparison
-with a coordinate model needs the version that moves along a map `M →ₗ L` into
-a *larger* space, restricting `w` to `M`; and it needs to know what a quadric
-evaluates to at a point of `M`.  Both are proved here.
+with a coordinate model also needs to know what a quadric evaluates to at a
+point of `M`, which is proved here.
 -/
-
-section Restrict
-
-variable {L : Type*} [AddCommGroup L] [Module k L] [FiniteDimensional k L]
-
-omit [FiniteDimensional k M] [FiniteDimensional k L] in
-private theorem symMul2_comp (α : M →ₗ[k] L) (t : Dual k L ⊗[k] Dual k L) :
-    SymmetricAlgebra.map (α.dualMap) (symMul2 k L t) =
-      symMul2 k M (TensorProduct.map α.dualMap α.dualMap t) := by
-  induction t using TensorProduct.induction_on with
-  | zero => simp
-  | tmul f g => simp [symMul2_tmul]
-  | add x y hx hy => simp [hx, hy]
-
-omit [FiniteDimensional k M] [FiniteDimensional k L] in
-private theorem dualDistrib_comp (α : M →ₗ[k] L) (t : Dual k L ⊗[k] Dual k L) :
-    TensorProduct.dualDistrib k M M (TensorProduct.map α.dualMap α.dualMap t) =
-      (TensorProduct.map α α).dualMap (TensorProduct.dualDistrib k L L t) := by
-  induction t using TensorProduct.induction_on with
-  | zero => simp
-  | tmul f g => exact TensorProduct.ext' fun m n => by simp
-  | add x y hx hy => simp [hx, hy]
-
-/-- **Naturality of `quadrics` in the module.**  Restricting the bilinear map
-along `α : M →ₗ L` restricts its quadrics along `Sym (αᵀ)`.  With `α` the
-inclusion of a subspace this is what says that the quadrics of `V₁₄ ⊆ ℙ(M)`
-are the restrictions of the Plücker quadrics on `ℙ(⋀²U)`. -/
-public theorem quadrics_comp (w : L →ₗ[k] L →ₗ[k] N) (α : M →ₗ[k] L) (φ : Dual k N) :
-    SymmetricAlgebra.map (α.dualMap) (quadrics w φ) = quadrics (w.compl₁₂ α α) φ := by
-  set t : Dual k L ⊗[k] Dual k L :=
-    (TensorProduct.dualDistribEquiv k L L).symm ((TensorProduct.lift w).dualMap φ) with ht
-  have hlhs : quadrics w φ = symMul2 k L t := rfl
-  rw [hlhs, symMul2_comp]
-  show _ = symMul2 k M ((TensorProduct.dualDistribEquiv k M M).symm
-    ((TensorProduct.lift (w.compl₁₂ α α)).dualMap φ))
-  congr 1
-  apply (TensorProduct.dualDistribEquiv k M M).injective
-  rw [LinearEquiv.apply_symm_apply, dualDistribEquiv_apply, dualDistrib_comp,
-    ← dualDistribEquiv_apply, ht, LinearEquiv.apply_symm_apply]
-  refine LinearMap.ext fun z => ?_
-  induction z using TensorProduct.induction_on with
-  | zero => simp
-  | tmul x y => rfl
-  | add u v hu hv => simp only [map_add, hu, hv]
-
-end Restrict
 
 /-! ### Evaluation at a point -/
 

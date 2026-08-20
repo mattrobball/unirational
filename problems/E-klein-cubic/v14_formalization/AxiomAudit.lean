@@ -50,24 +50,27 @@ public import V14Formalization.IntrinsicV14FieldHeadline
 #print axioms V14Formalization.SchemeGeometry.v14_targetHypothesisB
 
 -- The intrinsic V14 with the base field as a stated condition rather than this
--- project's carrier. `intrinsicV14` and `ofPrimitiveRoot` are the target built
--- over any characteristic-zero field carrying a primitive 11th root of unity;
--- `intrinsicV14_K` identifies it at ℚ(ζ₁₁) with the published target, so
--- `noEquivariantRationalMap_intrinsicV14_cycl` is unconditional. Since
--- 2026-08-20 so is the general-field form,
--- `noEquivariantRationalMap_intrinsicV14` / `..._ofPrimitiveRoot`: it assumes
--- nothing about the target. `..._of_target` is the *record* of what
--- `AbstractTargetHeadline` shows the argument uses, and is strictly weaker.
+-- project's carrier. `intrinsicV14` is the target built over any
+-- characteristic-zero field carrying a primitive 11th root of unity;
+-- `intrinsicV14_K` identifies it at ℚ(ζ₁₁) with the published target. Since
+-- 2026-08-20 `noEquivariantRationalMap_intrinsicV14` is unconditional over
+-- every such field: it assumes nothing about the target. The *record* of what
+-- `AbstractTargetHeadline` shows the argument uses is
+-- `noEquivariantRationalMap_projectiveSpaceOfRep_of_target` above, and is
+-- strictly weaker.
 #print axioms V14Formalization.WeilRep.HasCycl11
 #print axioms V14Formalization.WeilLambda2.pslLambda2Hom
 #print axioms V14Formalization.WeilLambda2.projectorM_equivariant
+-- The k-instance of the intrinsic target and the comparison morphism into
+-- the coordinate V14.  These used to be `#print axioms`ed inside
+-- `IntrinsicV14Headline.lean`; a library module is the wrong place for a
+-- full closure walk, so they live here.
+#print axioms V14Formalization.IntrinsicHeadline.intrinsicV14
+#print axioms V14Formalization.IntrinsicHeadline.compareMor
+#print axioms V14Formalization.IntrinsicHeadline.noEquivariantRationalMap_intrinsicV14
 #print axioms V14Formalization.IntrinsicV14Field.intrinsicV14
-#print axioms V14Formalization.IntrinsicV14Field.ofPrimitiveRoot
 #print axioms V14Formalization.IntrinsicV14Field.intrinsicV14_K
-#print axioms V14Formalization.IntrinsicV14Field.noEquivariantRationalMap_intrinsicV14_cycl
-#print axioms V14Formalization.IntrinsicV14Field.noEquivariantRationalMap_intrinsicV14_of_target
 #print axioms V14Formalization.IntrinsicV14Field.noEquivariantRationalMap_intrinsicV14
-#print axioms V14Formalization.IntrinsicV14Field.noEquivariantRationalMap_ofPrimitiveRoot
 #print axioms V14Formalization.SchemeGeometry.hypothesisAOver
 #print axioms V14Formalization.SchemeGeometry.noEquivariantRationalMap_projectiveSpaceOfRep_over_of_constancy
 #print axioms V14Formalization.WeilModelBaseChange.projectorMatrix_map_mulVec_Msub

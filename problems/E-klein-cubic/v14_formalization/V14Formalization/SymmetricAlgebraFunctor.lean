@@ -77,9 +77,6 @@ lemma map_comp (f : N →ₗ[R] L) (g : M →ₗ[R] N) :
 def gradedMap (f : M →ₗ[R] N) : grade R M →ₐᵍ[R] grade R N :=
   { map f with map_mem := map_mem_grade f }
 
-@[simp] lemma gradedMap_apply (f : M →ₗ[R] N) (x : SymmetricAlgebra R M) :
-    gradedMap f x = map f x := rfl
-
 /-- Functor law: `gradedMap` of the identity is the identity. -/
 @[simp] lemma gradedMap_id :
     gradedMap (LinearMap.id : M →ₗ[R] M) = GradedAlgHom.id R (grade R M) :=
@@ -172,6 +169,8 @@ def gradedEquivMvPolynomialSymm :
     MvPolynomial.homogeneousSubmodule κ R →ₐᵍ[R] grade R M :=
   { (equivMvPolynomial b).symm.toAlgHom with map_mem := mem_grade_equivMvPolynomial_symm b }
 
+-- Both are reached by `simp` in the two round-trip lemmas below; they are not
+-- referenced by name anywhere, and deleting them breaks those proofs.
 @[simp] lemma gradedEquivMvPolynomial_apply (x : SymmetricAlgebra R M) :
     gradedEquivMvPolynomial b x = equivMvPolynomial b x := rfl
 

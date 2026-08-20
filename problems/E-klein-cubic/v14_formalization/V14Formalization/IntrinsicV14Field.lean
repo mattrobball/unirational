@@ -28,8 +28,9 @@ which `BaseFieldCriteria` proves is exactly the same data as a ring map
 `ℚ(ζ₁₁) → F`, in both directions.  The hypothesis is stated on the intrinsic
 side; `AdjoinRoot Φ₁₁` does not occur.
 
-`ofPrimitiveRoot` is the reader-facing entry point: it takes `hζ` and produces
-the target directly.
+`intrinsicV14 F` is the reader-facing entry point: given `[HasCycl11 F]` — an
+element of `F` together with a proof that it is a primitive 11th root of unity
+— it produces the target directly.
 -/
 
 noncomputable section
@@ -98,26 +99,6 @@ basis of `U`, no basis of `M`, no matrix and no Plücker coordinate enters the
 definition, and no field other than `F`. -/
 @[expose] public def intrinsicV14 : Action (Over (Spec (.of F))) PSL2F11 :=
   IntrinsicV14.actionOver F (WeilRep.U F) (inclM F) (repM F) (coversM F)
-
-end IntrinsicV14Field
-
-namespace IntrinsicV14Field
-
-open AlgebraicGeometry
-open V14Formalization.WeilRep (HasCycl11)
-
-/-- The intrinsic `V₁₄` attached to a characteristic-zero field and a chosen
-primitive 11th root of unity in it.
-
-This is the reader-facing form of the target: the hypothesis is a property of
-`F` and an element of `F`, with no reference to `AdjoinRoot Φ₁₁` or to any
-other carrier of this development.  `BaseFieldCriteria.algebraOfPrimitiveRoot`
-and `BaseFieldCriteria.isPrimitiveRoot_zetaOf` say this hypothesis and
-`[Algebra ℚ(ζ₁₁) F]` are the same data. -/
-@[expose] public def ofPrimitiveRoot {F : Type} [Field F] [CharZero F] {ζ : F}
-    (hζ : IsPrimitiveRoot ζ 11) : Action (Over (Spec (.of F))) WeilLambda2.PSL2F11 :=
-  letI : HasCycl11 F := ⟨ζ, hζ⟩
-  intrinsicV14 F
 
 end IntrinsicV14Field
 end V14Formalization

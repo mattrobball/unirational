@@ -372,30 +372,6 @@ three nonvanishing conditions are automatic. -/
     ((map_ne_zero_iff φ hφ).2 hap)
     ((map_ne_zero_iff φ hφ).2 haa)
 
-@[simp] public theorem Certificate.mapRingHom_P (C : Certificate (Ω := Ω)) (φ : Ω →+* Ω')
-    (hApp hApa hAap hAaa hpp hap haa) :
-    (C.mapRingHom φ hApp hApa hAap hAaa hpp hap haa).P = C.P.map φ := rfl
-
-@[simp] public theorem Certificate.mapRingHom_R (C : Certificate (Ω := Ω)) (φ : Ω →+* Ω')
-    (hApp hApa hAap hAaa hpp hap haa) :
-    (C.mapRingHom φ hApp hApa hAap hAaa hpp hap haa).R = C.R.map φ := rfl
-
-@[simp] public theorem Certificate.mapRingHom_F (C : Certificate (Ω := Ω)) (φ : Ω →+* Ω')
-    (hApp hApa hAap hAaa hpp hap haa) :
-    (C.mapRingHom φ hApp hApa hAap hAaa hpp hap haa).F = C.F.map φ := rfl
-
-@[simp] public theorem Certificate.mapOfInjective_P (C : Certificate (Ω := Ω)) (φ : Ω →+* Ω')
-    (hφ hApp hApa hAap hAaa hpp hap haa) :
-    (C.mapOfInjective φ hφ hApp hApa hAap hAaa hpp hap haa).P = C.P.map φ := rfl
-
-@[simp] public theorem Certificate.mapOfInjective_R (C : Certificate (Ω := Ω)) (φ : Ω →+* Ω')
-    (hφ hApp hApa hAap hAaa hpp hap haa) :
-    (C.mapOfInjective φ hφ hApp hApa hAap hAaa hpp hap haa).R = C.R.map φ := rfl
-
-@[simp] public theorem Certificate.mapOfInjective_F (C : Certificate (Ω := Ω)) (φ : Ω →+* Ω')
-    (hφ hApp hApa hAap hAaa hpp hap haa) :
-    (C.mapOfInjective φ hφ hApp hApa hAap hAaa hpp hap haa).F = C.F.map φ := rfl
-
 end CertificateMap
 
 end D12Certificate
