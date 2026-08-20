@@ -82,17 +82,17 @@ theorem sum_ψ_sq_mul (a : ZMod 11) :
         simp [Finset.sum_boole]
       rw [this, card_sq_eq]
     simp_rw [hcnt, add_mul, one_mul, Finset.sum_add_distrib, sum_ψ_eq_zero, add_zero]
-    have hχinv : χ₂ a⁻¹ = χ₂ a := by
-      have h1 : χ₂ a⁻¹ = χ₂⁻¹ a := (MulChar.inv_apply' χ₂ a).symm
-      have h2 : χ₂⁻¹ = χ₂ := χ₂_isQuadratic.inv
+    have hχinv : (χ₂ (E := k)) a⁻¹ = χ₂ a := by
+      have h1 : (χ₂ (E := k)) a⁻¹ = χ₂⁻¹ a := (MulChar.inv_apply' χ₂ a).symm
+      have h2 : χ₂⁻¹ = (χ₂ (E := k)) := χ₂_isQuadratic.inv
       rwa [h2] at h1
-    have hmul (y : ZMod 11) : χ₂ (a⁻¹ * y) = χ₂ a⁻¹ * χ₂ y :=
+    have hmul (y : ZMod 11) : (χ₂ (E := k)) (a⁻¹ * y) = χ₂ a⁻¹ * χ₂ y :=
       map_mul χ₂ a⁻¹ y
-    have hpull : (∑ y : ZMod 11, χ₂ (a⁻¹ * y) * ψ y) =
+    have hpull : (∑ y : ZMod 11, (χ₂ (E := k)) (a⁻¹ * y) * ψ y) =
         χ₂ a⁻¹ * ∑ y : ZMod 11, χ₂ y * ψ y := by
       simp_rw [hmul, mul_assoc]
       exact (Finset.mul_sum _ _ _).symm
-    have hgs : (∑ y : ZMod 11, χ₂ y * ψ y) = gauss := by
+    have hgs : (∑ y : ZMod 11, (χ₂ (E := k)) y * ψ y) = gauss := by
       rw [gauss_eq_gaussSum]; rfl
     rw [hpull, hχinv, hgs]
     simp only [ha, ↓reduceIte]
@@ -138,7 +138,7 @@ private theorem sum_fin11 (f : Fin 11 → k) :
   abel
 
 private theorem sum_ψ_sq_full_paired (a : ZMod 11) :
-    (∑ x : ZMod 11, ψ (a * x ^ 2)) =
+    (∑ x : ZMod 11, (ψ (E := k)) (a * x ^ 2)) =
       1 + 2 * (ψ (a * (1 : ZMod 11) ^ 2) + ψ (a * (2 : ZMod 11) ^ 2) +
         ψ (a * (3 : ZMod 11) ^ 2) + ψ (a * (4 : ZMod 11) ^ 2) +
         ψ (a * (5 : ZMod 11) ^ 2)) := by
@@ -146,7 +146,7 @@ private theorem sum_ψ_sq_full_paired (a : ZMod 11) :
   -- Expand univ as explicit Finset of ZMod elements
   have huniv : (univ : Finset (ZMod 11)) =
       {(0 : ZMod 11), 1, 2, 3, 4, 5, 6, 7, 8, 9, 10} := by decide
-  rw [show (∑ x : ZMod 11, ψ (a * x ^ 2)) = ∑ x ∈ univ, ψ (a * x ^ 2) from rfl, huniv]
+  rw [show (∑ x : ZMod 11, (ψ (E := k)) (a * x ^ 2)) = ∑ x ∈ univ, ψ (a * x ^ 2) from rfl, huniv]
   -- Insert-chain
   rw [sum_insert (by decide : (0 : ZMod 11) ∉
         ({1, 2, 3, 4, 5, 6, 7, 8, 9, 10} : Finset (ZMod 11)))]
@@ -175,13 +175,13 @@ private theorem sum_ψ_sq_full_paired (a : ZMod 11) :
   have p9 : ((9 : ZMod 11) ^ 2) = ((2 : ZMod 11) ^ 2) := by decide
   have p10 : ((10 : ZMod 11) ^ 2) = ((1 : ZMod 11) ^ 2) := by decide
   simp only [p6, p7, p8, p9, p10]
-  have hz : ψ (a * (0 : ZMod 11) ^ 2) = 1 := by
+  have hz : (ψ (E := k)) (a * (0 : ZMod 11) ^ 2) = 1 := by
     simp [zero_pow (by decide : (2 : ℕ) ≠ 0), ψ_zero]
   rw [hz]
   ring
 
 private theorem sum_ψ_sq_half_explicit (a : ZMod 11) :
-    (∑ j : Fin 6, ψ (a * (j.val : ZMod 11) ^ 2)) =
+    (∑ j : Fin 6, (ψ (E := k)) (a * (j.val : ZMod 11) ^ 2)) =
       1 + ψ (a * (1 : ZMod 11) ^ 2) + ψ (a * (2 : ZMod 11) ^ 2) +
         ψ (a * (3 : ZMod 11) ^ 2) + ψ (a * (4 : ZMod 11) ^ 2) +
         ψ (a * (5 : ZMod 11) ^ 2) := by
@@ -203,7 +203,7 @@ theorem sum_ψ_sq_mul_half (a : ZMod 11) :
       (1 + ∑ x : ZMod 11, ψ (a * x ^ 2)) * (2 : k)⁻¹ := by
   have hF := sum_ψ_sq_full_paired a
   have hH := sum_ψ_sq_half_explicit a
-  set S := ψ (a * (1 : ZMod 11) ^ 2) + ψ (a * (2 : ZMod 11) ^ 2) +
+  set S := (ψ (E := k)) (a * (1 : ZMod 11) ^ 2) + ψ (a * (2 : ZMod 11) ^ 2) +
     ψ (a * (3 : ZMod 11) ^ 2) + ψ (a * (4 : ZMod 11) ^ 2) +
     ψ (a * (5 : ZMod 11) ^ 2)
   have hF' : (∑ x : ZMod 11, ψ (a * x ^ 2)) = 1 + 2 * S := hF
@@ -321,8 +321,8 @@ noncomputable def tGen : PSL2F11 := QuotientGroup.mk WeilRep.Tmat
 
 /-- `weilU (Tmat^n) = T_even_b n`. -/
 theorem weilU_Tmat_pow (n : ℕ) :
-    WeilHom.weilUHom (WeilRep.Tmat ^ n) = T_even_b (n : ZMod 11) := by
-  have hT : WeilHom.weilUHom WeilRep.Tmat = T_even_b 1 := WeilRepSL2.weilU_Tmat
+    WeilHom.weilUHom (WeilRep.Tmat ^ n) = T_even_b (E := k) (n : ZMod 11) := by
+  have hT : WeilHom.weilUHom WeilRep.Tmat = T_even_b (E := k) 1 := WeilRepSL2.weilU_Tmat
   rw [map_pow, hT]
   induction n with
   | zero =>
@@ -348,7 +348,7 @@ theorem ambientAct_tGen_pow (n : ℕ) :
     _ = exteriorPower.map 2 (T_even_b (n : ZMod 11)) := by rw [weilU_Tmat_pow]
 
 theorem T_even_b_comp_self (b : ZMod 11) :
-    T_even_b b ∘ₗ T_even_b b = T_even_b (2 * b) := by
+    T_even_b (E := k) b ∘ₗ T_even_b b = T_even_b (2 * b) := by
   rw [← T_even_b_add]
   congr 1
   ring
@@ -366,7 +366,7 @@ theorem chiLambda2_tGen_pow (n : ℕ) :
     trace_exterior_newton (V := GeometricV14Carrier.U) (T_even_b (n : ZMod 11))
   rw [h, T_even_b_comp_self]
 
-theorem χ₂_twoInv : χ₂ twoInv = -1 := by
+theorem χ₂_twoInv : (χ₂ (E := k)) twoInv = -1 := by
   have : twoInv = (2 : ZMod 11)⁻¹ := rfl
   rw [this, χ₂_inv (by decide : (2 : ZMod 11) ≠ 0), WeilMul.χ₂_two]
 
@@ -380,9 +380,9 @@ theorem chiLambda2_tGen_pow_eq (n : ℕ) (hn : (n : ZMod 11) ≠ 0) :
   have h2ne : (2 : ZMod 11) ≠ 0 := by decide
   have h2n : (2 : ZMod 11) * n ≠ 0 := mul_ne_zero h2ne hn
   have htr2 := T_even_b_trace_ne ((2 : ZMod 11) * n) h2n
-  have hχ1 : χ₂ ((n : ZMod 11) * twoInv) = -χ₂ (n : ZMod 11) := by
+  have hχ1 : (χ₂ (E := k)) ((n : ZMod 11) * twoInv) = -χ₂ (n : ZMod 11) := by
     rw [map_mul χ₂, χ₂_twoInv]; ring
-  have hχ2' : χ₂ ((2 : ZMod 11) * n * twoInv) = χ₂ (n : ZMod 11) := by
+  have hχ2' : (χ₂ (E := k)) ((2 : ZMod 11) * n * twoInv) = χ₂ (n : ZMod 11) := by
     have heq : (2 : ZMod 11) * n * twoInv = n := by
       calc (2 : ZMod 11) * n * twoInv
           = n * (2 * twoInv) := by ring
@@ -393,7 +393,7 @@ theorem chiLambda2_tGen_pow_eq (n : ℕ) (hn : (n : ZMod 11) ≠ 0) :
   set χg : k := χ₂ (n : ZMod 11) * gauss with hχg
   have hχgsq : χg ^ 2 = (-11 : k) := by
     rw [hχg, mul_pow, pow_two]
-    have hχsq : χ₂ (n : ZMod 11) * χ₂ (n : ZMod 11) = 1 := χ₂_sq_one hn
+    have hχsq : (χ₂ (E := k)) (n : ZMod 11) * χ₂ (n : ZMod 11) = 1 := χ₂_sq_one hn
     rw [hχsq, one_mul, gauss_sq]
   have hform :
       (2 : k)⁻¹ *
@@ -410,14 +410,14 @@ theorem chiLambda2_tGen_pow_eq (n : ℕ) (hn : (n : ZMod 11) ≠ 0) :
 
 /-- ∑_{b=1}^{10} χ₂(b) = 0. -/
 theorem sum_χ₂_Icc_one_ten :
-    (∑ b ∈ Finset.Icc (1 : ℕ) 10, χ₂ (b : ZMod 11)) = 0 := by
+    (∑ b ∈ Finset.Icc (1 : ℕ) 10, (χ₂ (E := k)) (b : ZMod 11)) = 0 := by
   classical
-  have hfull : (∑ x : ZMod 11, χ₂ x) = 0 :=
+  have hfull : (∑ x : ZMod 11, (χ₂ (E := k)) x) = 0 :=
     MulChar.sum_eq_zero_of_ne_one χ₂_ne_one
-  have h0 : χ₂ (0 : ZMod 11) = 0 :=
+  have h0 : (χ₂ (E := k)) (0 : ZMod 11) = 0 :=
     MulChar.map_nonunit χ₂ (by decide : ¬IsUnit (0 : ZMod 11))
   have hsum :
-      (∑ b ∈ Finset.Icc (1 : ℕ) 10, χ₂ (b : ZMod 11)) =
+      (∑ b ∈ Finset.Icc (1 : ℕ) 10, (χ₂ (E := k)) (b : ZMod 11)) =
         ∑ x ∈ (Finset.univ : Finset (ZMod 11)).erase 0, χ₂ x := by
     refine Finset.sum_bij (fun (b : ℕ) (_ : b ∈ Finset.Icc (1 : ℕ) 10) => (b : ZMod 11))
       ?mem ?inj ?surj ?eq
@@ -1075,7 +1075,7 @@ private theorem isConj_inv_of_isConj {a b : PSL2F11} (h : IsConj a b) :
   refine isConj_iff.mpr ⟨c, ?_⟩
   rw [← hc, mul_inv_rev, mul_inv_rev, inv_inv, mul_assoc]
 
-private theorem χ₂_neg (n : ZMod 11) : χ₂ (-n) = -χ₂ n := by
+private theorem χ₂_neg (n : ZMod 11) : (χ₂ (E := k)) (-n) = -χ₂ n := by
   have h : (-n) = (-1 : ZMod 11) * n := by ring
   rw [h, map_mul, χ₂_neg_one]
   ring
@@ -1274,7 +1274,7 @@ private theorem chiLambda2_mk_sl (A : WeilRepSL2.SLG) :
     dsimp only [ambientAct]
     rw [GeometricFanoCarrier.pslLambda2_mk A]
     rfl
-  have hmul : WeilHom.weilUHom A ∘ₗ WeilHom.weilUHom A =
+  have hmul : (WeilHom.weilUHom (E := k)) A ∘ₗ WeilHom.weilUHom A =
       WeilHom.weilUHom (A * A) := by
     rw [map_mul]; rfl
   rw [h1, trace_exterior_newton, hmul]

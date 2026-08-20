@@ -99,7 +99,7 @@ private theorem Phi11_eq_geom :
   simpa [WeilRep.Φ11] using cyclotomic_prime (R := ℚ) 11
 
 private theorem zeta_pow_ten :
-    WeilRep.ζ ^ (10 : ℕ) = -∑ i ∈ Finset.range 10, WeilRep.ζ ^ i := by
+    (WeilRep.ζ : WeilRep.K) ^ (10 : ℕ) = -∑ i ∈ Finset.range 10, WeilRep.ζ ^ i := by
   have h := WeilRep.aeval_ζ_Φ11
   rw [Phi11_eq_geom] at h
   simp only [map_sum, map_pow, aeval_X] at h
@@ -130,7 +130,7 @@ theorem eval_basisMul (i j : Fin 10) :
   · have hge : 11 ≤ n := by omega
     rw [eval_basis]
     calc
-      WeilRep.ζ ^ (n - 11) =
+      (WeilRep.ζ : WeilRep.K) ^ (n - 11) =
           1 * WeilRep.ζ ^ (n - 11) := (one_mul _).symm
       _ = WeilRep.ζ ^ 11 * WeilRep.ζ ^ (n - 11) := by
         rw [WeilRep.ζ_pow_eleven]

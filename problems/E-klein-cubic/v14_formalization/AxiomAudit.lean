@@ -16,6 +16,7 @@ public import V14Formalization.CentralizerObstruction
 public import V14Formalization.V14Application
 public import V14Formalization.WeilRep
 public import V14Formalization.GeometricFanoV14
+public import V14Formalization.IntrinsicV14FieldHeadline
 
 -- The three Comparator theorems.
 #print axioms V14Formalization.Comparator.noEquivariantRationalMap_ambientFree
@@ -47,6 +48,23 @@ public import V14Formalization.GeometricFanoV14
 #print axioms V14Formalization.SchemeGeometry.v14_isProper
 #print axioms V14Formalization.SchemeGeometry.v14_targetHypothesisA
 #print axioms V14Formalization.SchemeGeometry.v14_targetHypothesisB
+
+-- The intrinsic V14 with the base field as a stated condition rather than this
+-- project's carrier. `intrinsicV14` and `ofPrimitiveRoot` are the target built
+-- over any characteristic-zero field carrying a primitive 11th root of unity;
+-- `intrinsicV14_K` identifies it at ℚ(ζ₁₁) with the published target, so
+-- `noEquivariantRationalMap_intrinsicV14_cycl` is unconditional. The
+-- general-field form carries the three target hypotheses of
+-- `AbstractTargetHeadline` and nothing else.
+#print axioms V14Formalization.WeilRep.IsCycl11
+#print axioms V14Formalization.WeilLambda2.pslLambda2Hom
+#print axioms V14Formalization.WeilLambda2.projectorM_equivariant
+#print axioms V14Formalization.IntrinsicV14Field.intrinsicV14
+#print axioms V14Formalization.IntrinsicV14Field.ofPrimitiveRoot
+#print axioms V14Formalization.IntrinsicV14Field.intrinsicV14_K
+#print axioms V14Formalization.IntrinsicV14Field.noEquivariantRationalMap_intrinsicV14_cycl
+#print axioms V14Formalization.IntrinsicV14Field.noEquivariantRationalMap_intrinsicV14_of_target
+#print axioms V14Formalization.IntrinsicV14Field.noEquivariantRationalMap_ofPrimitiveRoot
 
 -- Legacy audit surface.
 #print axioms V14Formalization.centralizerObstruction

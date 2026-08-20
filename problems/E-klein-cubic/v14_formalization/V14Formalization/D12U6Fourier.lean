@@ -81,9 +81,9 @@ public theorem toMatrix_Seven_eq_S6 :
   · subst j
     simp only [Fin.val_zero, Nat.cast_zero, neg_zero, if_pos]
     have hsum : (∑ x : ZMod 11,
-        if x = 0 then WeilRep.ψ ((i.val : ZMod 11) * x)
-        else if x = 0 then WeilRep.ψ ((i.val : ZMod 11) * x) else 0) =
-          WeilRep.ψ ((i.val : ZMod 11) * 0) := by
+        if x = 0 then (WeilRep.ψ (E := k)) ((i.val : ZMod 11) * x)
+        else if x = 0 then (WeilRep.ψ (E := k)) ((i.val : ZMod 11) * x) else 0) =
+          (WeilRep.ψ (E := k)) ((i.val : ZMod 11) * 0) := by
       calc
         (∑ x : ZMod 11,
           if x = 0 then WeilRep.ψ ((i.val : ZMod 11) * x)

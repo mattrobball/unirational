@@ -13,44 +13,52 @@ open V14Formalization.WeilRepSL2
 
 noncomputable section
 
+universe u
+
 namespace V14Formalization
 namespace WeilMul
+
+variable {E : Type u} [Field E] [CharZero E] [IsCycl11 E]
 
 public abbrev F := ZMod 11
 public abbrev SLG := SpecialLinearGroup (Fin 2) F
 
 /-! ## Operator identities -/
 
+omit [CharZero E] in
 public theorem Dfull_conj_Nfull (s t : F) (hs : s ≠ 0) :
-    Dfull s hs ∘ₗ Nfull t = Nfull (s * s * t) ∘ₗ Dfull s hs := by
+    (Dfull s hs : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Nfull t = Nfull (s * s * t) ∘ₗ Dfull s hs := by
   apply LinearMap.ext
   intro f
   funext x
   dsimp [Dfull, Nfull, Tfull_b]
   -- ψ(t (s x)² / 2) = ψ(s² t x² / 2)
-  have hψ : ψ (t * (s * x) ^ 2 * twoInv) = ψ (s * s * t * x ^ 2 * twoInv) := by
+  have hψ : (ψ : AddChar (ZMod 11) E) (t * (s * x) ^ 2 * twoInv) = ψ (s * s * t * x ^ 2 * twoInv) := by
     congr 1; ring
   rw [hψ]
   ring
 
+omit [CharZero E] [IsCycl11 E] in
 public theorem Dfull_mul (s t : F) (hs : s ≠ 0) (ht : t ≠ 0) :
-    Dfull (s * t) (mul_ne_zero hs ht) = Dfull s hs ∘ₗ Dfull t ht := by
+    (Dfull (s * t) (mul_ne_zero hs ht) : (Fun E) →ₗ[E] (Fun E)) = Dfull s hs ∘ₗ Dfull t ht := by
   apply LinearMap.ext
   intro f
   funext x
   dsimp [Dfull]
-  have hχ : χ₂ (s * t) = χ₂ s * χ₂ t := map_mul χ₂ s t
+  have hχ : (χ₂ : MulChar (ZMod 11) E) (s * t) = χ₂ s * χ₂ t := map_mul χ₂ s t
   rw [hχ]
   have hx : (s * t) * x = t * (s * x) := by ring
   rw [hx]
   ring
 
+omit [CharZero E] [IsCycl11 E] in
 theorem Dfull_proof_irrel (t : F) (h1 h2 : t ≠ 0) :
-    Dfull t h1 = Dfull t h2 := rfl
+    (Dfull t h1 : (Fun E) →ₗ[E] (Fun E)) = Dfull t h2 := rfl
 
+omit [CharZero E] [IsCycl11 E] in
 /-- Congruence for Dfull under equality of the scaling parameter. -/
 public theorem Dfull_congr {t s : F} (h : t = s) (ht : t ≠ 0) (hs : s ≠ 0) :
-    Dfull t ht = Dfull s hs := by
+    (Dfull t ht : (Fun E) →ₗ[E] (Fun E)) = Dfull s hs := by
   subst h
   exact Dfull_proof_irrel t _ _
 
@@ -102,12 +110,13 @@ theorem borel_N_param {g h : SLG} (_hg : ec g = 0) (hh : ec h = 0) :
 
 /-! ## Borel operator composition -/
 
+omit [CharZero E] in
 theorem borel_comp_expand {ag ah bg bh : F} (hag : ag ≠ 0) (hah : ah ≠ 0) :
-    Nfull (bg * ag) ∘ₗ Dfull ag hag ∘ₗ Nfull (bh * ah) ∘ₗ Dfull ah hah =
+    (Nfull (bg * ag) : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Dfull ag hag ∘ₗ Nfull (bh * ah) ∘ₗ Dfull ah hah =
       Nfull (bg * ag + ag * ag * (bh * ah)) ∘ₗ
         Dfull (ag * ah) (mul_ne_zero hag hah) := by
   have hconj :
-      Dfull ag hag ∘ₗ Nfull (bh * ah) =
+      (Dfull ag hag : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Nfull (bh * ah) =
         Nfull (ag * ag * (bh * ah)) ∘ₗ Dfull ag hag :=
     Dfull_conj_Nfull ag (bh * ah) hag
   calc Nfull (bg * ag) ∘ₗ Dfull ag hag ∘ₗ Nfull (bh * ah) ∘ₗ Dfull ah hah
@@ -126,14 +135,15 @@ theorem borel_comp_expand {ag ah bg bh : F} (hag : ag ≠ 0) (hah : ah ≠ 0) :
 /-! ## Borel × Borel map_mul -/
 
 private def borelProductNormal (g h : SLG) (hg : ec g = 0) (hh : ec h = 0) :
-    Fun →ₗ[K] Fun :=
+    (Fun E) →ₗ[E] (Fun E) :=
   Nfull (eb g * ea g + ea g * ea g * (eb h * ea h)) ∘ₗ
     Dfull (ea g * ea h)
       (mul_ne_zero (ea_ne_zero_of_ec_zero g hg) (ea_ne_zero_of_ec_zero h hh))
 
+omit [CharZero E] in
 private theorem borelFun_mul_eq_normal {g h : SLG}
     (hg : ec g = 0) (hh : ec h = 0) :
-    borelFun (g * h) (ec_mul_borel hg hh) = borelProductNormal g h hg hh := by
+    (borelFun (g * h) (ec_mul_borel hg hh) : (Fun E) →ₗ[E] (Fun E)) = borelProductNormal g h hg hh := by
   let hgh := ec_mul_borel hg hh
   let hag := ea_ne_zero_of_ec_zero g hg
   let hah := ea_ne_zero_of_ec_zero h hh
@@ -142,16 +152,17 @@ private theorem borelFun_mul_eq_normal {g h : SLG}
     borelProductNormal g h hg hh
   have hparam := borel_N_param hg hh
   have hea := ea_mul_borel (g := g) hh
-  have hN : Nfull (eb (g * h) * ea (g * h)) =
+  have hN : (Nfull (eb (g * h) * ea (g * h)) : (Fun E) →ₗ[E] (Fun E)) =
       Nfull (eb g * ea g + ea g * ea g * (eb h * ea h)) := by rw [hparam]
-  have hD : Dfull (ea (g * h)) hagh =
+  have hD : (Dfull (ea (g * h)) hagh : (Fun E) →ₗ[E] (Fun E)) =
       Dfull (ea g * ea h) (mul_ne_zero hag hah) :=
     Dfull_congr hea hagh (mul_ne_zero hag hah)
   rw [hN, hD]
   rfl
 
+omit [CharZero E] in
 private theorem borelFun_comp_apply_eq_normal {g h : SLG}
-    (hg : ec g = 0) (hh : ec h = 0) (f : Fun) :
+    (hg : ec g = 0) (hh : ec h = 0) (f : (Fun E)) :
     (borelFun g hg ∘ₗ borelFun h hh) f = borelProductNormal g h hg hh f := by
   let hag := ea_ne_zero_of_ec_zero g hg
   let hah := ea_ne_zero_of_ec_zero h hh
@@ -161,11 +172,11 @@ private theorem borelFun_comp_apply_eq_normal {g h : SLG}
   change Nfull bg (Dfull (ea g) hag (Nfull bh (Dfull (ea h) hah f))) =
     Nfull (bg + middle)
       (Dfull (ea g * ea h) (mul_ne_zero hag hah) f)
-  have hconj := congrArg (fun L : Fun →ₗ[K] Fun => L (Dfull (ea h) hah f))
+  have hconj := congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L (Dfull (ea h) hah f))
     (Dfull_conj_Nfull (ea g) bh hag)
-  have hadd := congrArg (fun L : Fun →ₗ[K] Fun =>
+  have hadd := congrArg (fun L : (Fun E) →ₗ[E] (Fun E) =>
       L (Dfull (ea g) hag (Dfull (ea h) hah f))) (Nfull_add bg middle)
-  have hmul := congrArg (fun L : Fun →ₗ[K] Fun => L f)
+  have hmul := congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L f)
     (Dfull_mul (ea g) (ea h) hag hah)
   calc
     Nfull bg (Dfull (ea g) hag (Nfull bh (Dfull (ea h) hah f))) =
@@ -177,72 +188,77 @@ private theorem borelFun_comp_apply_eq_normal {g h : SLG}
         (Dfull (ea g * ea h) (mul_ne_zero hag hah) f) := by
       exact congrArg (Nfull (bg + middle)) hmul.symm
 
+omit [CharZero E] in
 theorem weilFun_mul_borel {g h : SLG} (hg : ec g = 0) (hh : ec h = 0) :
-    weilFun (g * h) = weilFun g ∘ₗ weilFun h := by
+    (weilFun (g * h) : (Fun E) →ₗ[E] (Fun E)) = weilFun g ∘ₗ weilFun h := by
   let hgh := ec_mul_borel hg hh
   apply LinearMap.ext
   intro f
-  have hgh' : weilFun (g * h) = borelFun (g * h) hgh := by
+  have hgh' : (weilFun (g * h) : (Fun E) →ₗ[E] (Fun E)) = borelFun (g * h) hgh := by
     dsimp [weilFun]
     rw [dif_pos hgh]
-  have hg' : weilFun g = borelFun g hg := by
+  have hg' : (weilFun g : (Fun E) →ₗ[E] (Fun E)) = borelFun g hg := by
     dsimp [weilFun]
     rw [dif_pos hg]
-  have hh' : weilFun h = borelFun h hh := by
+  have hh' : (weilFun h : (Fun E) →ₗ[E] (Fun E)) = borelFun h hh := by
     dsimp [weilFun]
     rw [dif_pos hh]
   calc
     weilFun (g * h) f = borelFun (g * h) hgh f := congrArg (fun L => L f) hgh'
     _ = borelProductNormal g h hg hh f :=
-      congrArg (fun L : Fun →ₗ[K] Fun => L f) (borelFun_mul_eq_normal hg hh)
+      congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L f) (borelFun_mul_eq_normal hg hh)
     _ = (borelFun g hg ∘ₗ borelFun h hh) f :=
       (borelFun_comp_apply_eq_normal hg hh f).symm
     _ = (weilFun g ∘ₗ weilFun h) f := by rw [hg', hh']
 
+omit [CharZero E] in
 public theorem weilU_mul_borel {g h : SLG} (hg : ec g = 0) (hh : ec h = 0) :
-    weilU (g * h) = weilU g ∘ₗ weilU h := by
+    (weilU (g * h) : (WeilRep.U E) →ₗ[E] (WeilRep.U E)) = weilU g ∘ₗ weilU h := by
   apply LinearMap.ext
   intro f
   apply Subtype.ext
-  have h := congr_arg (fun L : Fun →ₗ[K] Fun => L f.1) (weilFun_mul_borel hg hh)
+  have h := congr_arg (fun L : (Fun E) →ₗ[E] (Fun E) => L f.1) (weilFun_mul_borel hg hh)
   simpa [LinearMap.comp_apply, weilU] using h
 
 /-! ## Quadratic character: χ(s⁻¹) = χ(s) for s ≠ 0 -/
 
-public theorem χ₂_sq_one {s : F} (hs : s ≠ 0) : χ₂ s * χ₂ s = 1 := by
+omit [CharZero E] [IsCycl11 E] in
+public theorem χ₂_sq_one {s : F} (hs : s ≠ 0) : (χ₂ : MulChar (ZMod 11) E) s * χ₂ s = 1 := by
   have hℤ : (quadraticChar (ZMod 11) s) ^ 2 = 1 :=
     quadraticChar_sq_one (F := ZMod 11) hs
   have hℤ' : χ₂ℤ s * χ₂ℤ s = 1 := by
     simpa [χ₂ℤ, pow_two] using hℤ
   calc χ₂ s * χ₂ s
-      = (algebraMap ℤ K) (χ₂ℤ s) * (algebraMap ℤ K) (χ₂ℤ s) := rfl
-    _ = (algebraMap ℤ K) (χ₂ℤ s * χ₂ℤ s) := (map_mul _ _ _).symm
-    _ = (algebraMap ℤ K) 1 := by rw [hℤ']
+      = (algebraMap ℤ E) (χ₂ℤ s) * (algebraMap ℤ E) (χ₂ℤ s) := rfl
+    _ = (algebraMap ℤ E) (χ₂ℤ s * χ₂ℤ s) := (map_mul _ _ _).symm
+    _ = (algebraMap ℤ E) 1 := by rw [hℤ']
     _ = 1 := map_one _
 
-public theorem χ₂_inv {s : F} (hs : s ≠ 0) : χ₂ s⁻¹ = χ₂ s := by
-  have h1 : χ₂ s * χ₂ s⁻¹ = 1 := by
+omit [CharZero E] [IsCycl11 E] in
+public theorem χ₂_inv {s : F} (hs : s ≠ 0) : (χ₂ : MulChar (ZMod 11) E) s⁻¹ = χ₂ s := by
+  have h1 : (χ₂ : MulChar (ZMod 11) E) s * χ₂ s⁻¹ = 1 := by
     rw [← map_mul, mul_inv_cancel₀ hs, χ₂_one]
-  have hsq := χ₂_sq_one hs
-  have heq : χ₂ s * χ₂ s = χ₂ s * χ₂ s⁻¹ := by rw [hsq, h1]
-  have hne : χ₂ s ≠ 0 := by
+  have hsq := χ₂_sq_one (E := E) hs
+  have heq : (χ₂ : MulChar (ZMod 11) E) s * χ₂ s = χ₂ s * χ₂ s⁻¹ := by rw [hsq, h1]
+  have hne : (χ₂ : MulChar (ZMod 11) E) s ≠ 0 := by
     intro hz
-    have : (0 : K) = 1 := by
-      calc (0 : K) = χ₂ s * χ₂ s := by rw [hz, zero_mul]
+    have : (0 : E) = 1 := by
+      calc (0 : E) = χ₂ s * χ₂ s := by rw [hz, zero_mul]
         _ = 1 := hsq
     exact zero_ne_one this
   exact (mul_left_cancel₀ hne heq).symm
 
 /-! ## Fourier–diagonal: D(s) ∘ W = W ∘ D(s⁻¹) -/
 
+omit [CharZero E] in
 public theorem Dfull_conj_Wfull (s : F) (hs : s ≠ 0) :
-    Dfull s hs ∘ₗ Wfull = Wfull ∘ₗ Dfull s⁻¹ (inv_ne_zero hs) := by
+    (Dfull s hs : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Wfull = Wfull ∘ₗ Dfull s⁻¹ (inv_ne_zero hs) := by
   apply LinearMap.ext
   intro f
   funext x
   dsimp [Dfull, Wfull, Sfull]
   classical
-  have hχ := χ₂_inv hs
+  have hχ := χ₂_inv (E := E) hs
   have hbij : Function.Bijective (fun z : ZMod 11 => s * z) := by
     refine ⟨mul_right_injective₀ hs, fun w => ⟨s⁻¹ * w, ?_⟩⟩
     calc s * (s⁻¹ * w) = (s * s⁻¹) * w := by ring
@@ -284,24 +300,26 @@ public theorem Dfull_conj_Wfull (s : F) (hs : s ≠ 0) :
 
 /-! ## Reflection R f (x) = f(-x); W² = -R -/
 
-@[expose] public def Rfull : Fun →ₗ[K] Fun where
+@[expose] public def Rfull : (Fun E) →ₗ[E] (Fun E) where
   toFun f := fun x => f (-x)
   map_add' := by intro f g; funext x; rfl
   map_smul' := by intro r f; funext x; rfl
 
-public theorem Rfull_sq : Rfull ∘ₗ Rfull = LinearMap.id := by
+omit [CharZero E] [IsCycl11 E] in
+public theorem Rfull_sq : (Rfull : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Rfull = LinearMap.id := by
   ext f x
   dsimp [Rfull]
   rw [neg_neg]
 
-public theorem Wfull_sq_R : Wfull ∘ₗ Wfull = -Rfull := by
+public theorem Wfull_sq_R : (Wfull : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Wfull = -Rfull := by
   apply LinearMap.ext
   intro f
   funext x
   dsimp [Wfull, Rfull]
   simpa [LinearMap.comp_apply, LinearMap.neg_apply] using Sfull_sq_apply f x
 
-public theorem Rfull_Nfull (t : F) : Rfull ∘ₗ Nfull t = Nfull t ∘ₗ Rfull := by
+omit [CharZero E] in
+public theorem Rfull_Nfull (t : F) : (Rfull : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Nfull t = Nfull t ∘ₗ Rfull := by
   apply LinearMap.ext
   intro f
   funext x
@@ -310,8 +328,9 @@ public theorem Rfull_Nfull (t : F) : Rfull ∘ₗ Nfull t = Nfull t ∘ₗ Rfull
   have : (-x) ^ 2 = x ^ 2 := by ring
   rw [this]
 
+omit [CharZero E] [IsCycl11 E] in
 theorem Rfull_Dfull (s : F) (hs : s ≠ 0) :
-    Rfull ∘ₗ Dfull s hs = Dfull s hs ∘ₗ Rfull := by
+    (Rfull : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Dfull s hs = Dfull s hs ∘ₗ Rfull := by
   apply LinearMap.ext
   intro f
   funext x
@@ -357,15 +376,17 @@ public theorem ec_big_borel_ne {g h : SLG} (hg : ec g ≠ 0) (hh : ec h = 0) :
 
 /-! ## Quadratic character values used by Fourier conjugation -/
 
-public theorem χ₂_two : χ₂ (2 : F) = -1 := by
+omit [CharZero E] [IsCycl11 E] in
+public theorem χ₂_two : (χ₂ : MulChar (ZMod 11) E) (2 : F) = -1 := by
   have hℤ : χ₂ℤ (2 : ZMod 11) = -1 := by
     change quadraticChar (ZMod 11) 2 = -1
     exact quadraticChar_neg_one_iff_not_isSquare.mpr
       (by decide : ¬ IsSquare (2 : ZMod 11))
-  change (algebraMap ℤ K) (χ₂ℤ 2) = -1
+  change (algebraMap ℤ E) (χ₂ℤ 2) = -1
   rw [hℤ, map_neg, map_one]
 
-theorem χ₂_neg_two : χ₂ (-2 : F) = 1 := by
+omit [CharZero E] [IsCycl11 E] in
+theorem χ₂_neg_two : (χ₂ : MulChar (ZMod 11) E) (-2 : F) = 1 := by
   have : (-2 : F) = (-1) * (2 : F) := by ring
   rw [this, map_mul, χ₂_neg_one, χ₂_two]
   ring

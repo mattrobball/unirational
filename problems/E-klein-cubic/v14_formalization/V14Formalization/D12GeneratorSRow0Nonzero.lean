@@ -62,10 +62,10 @@ theorem reducedValue_0_natDegree_lt :
   omega
 
 theorem eval_phaseValue_0_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ phaseValue_0 ≠ 0 := by
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K) phaseValue_0 ≠ 0 := by
   rw [phaseValue_reduction_0, map_add, map_mul,
     D12U6PolynomialSeal.evalPhi11_ζ, mul_zero, add_zero]
-  change aeval WeilRep.ζ reducedValue_0 ≠ 0
+  change aeval (WeilRep.ζ : WeilRep.K) reducedValue_0 ≠ 0
   intro hzero
   apply AdjoinRoot.mk_ne_zero_of_natDegree_lt WeilRep.Φ11_monic
     reducedValue_0_ne_zero reducedValue_0_natDegree_lt
@@ -73,7 +73,7 @@ theorem eval_phaseValue_0_ne_zero :
   exact hzero
 
 theorem eval_source_phase_product_0_0_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K)
       ((PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 0 0) ≠ 0 := by
   rw [phaseValue_eq_0]
   exact eval_phaseValue_0_ne_zero
@@ -123,10 +123,10 @@ theorem reducedValue_1_natDegree_lt :
   omega
 
 theorem eval_phaseValue_1_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ phaseValue_1 ≠ 0 := by
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K) phaseValue_1 ≠ 0 := by
   rw [phaseValue_reduction_1, map_add, map_mul,
     D12U6PolynomialSeal.evalPhi11_ζ, mul_zero, add_zero]
-  change aeval WeilRep.ζ reducedValue_1 ≠ 0
+  change aeval (WeilRep.ζ : WeilRep.K) reducedValue_1 ≠ 0
   intro hzero
   apply AdjoinRoot.mk_ne_zero_of_natDegree_lt WeilRep.Φ11_monic
     reducedValue_1_ne_zero reducedValue_1_natDegree_lt
@@ -134,7 +134,7 @@ theorem eval_phaseValue_1_ne_zero :
   exact hzero
 
 theorem eval_source_phase_product_0_1_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K)
       ((PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 0 1) ≠ 0 := by
   rw [phaseValue_eq_1]
   exact eval_phaseValue_1_ne_zero
@@ -184,10 +184,10 @@ theorem reducedValue_2_natDegree_lt :
   omega
 
 theorem eval_phaseValue_2_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ phaseValue_2 ≠ 0 := by
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K) phaseValue_2 ≠ 0 := by
   rw [phaseValue_reduction_2, map_add, map_mul,
     D12U6PolynomialSeal.evalPhi11_ζ, mul_zero, add_zero]
-  change aeval WeilRep.ζ reducedValue_2 ≠ 0
+  change aeval (WeilRep.ζ : WeilRep.K) reducedValue_2 ≠ 0
   intro hzero
   apply AdjoinRoot.mk_ne_zero_of_natDegree_lt WeilRep.Φ11_monic
     reducedValue_2_ne_zero reducedValue_2_natDegree_lt
@@ -195,7 +195,7 @@ theorem eval_phaseValue_2_ne_zero :
   exact hzero
 
 theorem eval_source_phase_product_0_2_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K)
       ((PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 0 2) ≠ 0 := by
   rw [phaseValue_eq_2]
   exact eval_phaseValue_2_ne_zero
@@ -245,10 +245,10 @@ theorem reducedValue_3_natDegree_lt :
   omega
 
 theorem eval_phaseValue_3_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ phaseValue_3 ≠ 0 := by
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K) phaseValue_3 ≠ 0 := by
   rw [phaseValue_reduction_3, map_add, map_mul,
     D12U6PolynomialSeal.evalPhi11_ζ, mul_zero, add_zero]
-  change aeval WeilRep.ζ reducedValue_3 ≠ 0
+  change aeval (WeilRep.ζ : WeilRep.K) reducedValue_3 ≠ 0
   intro hzero
   apply AdjoinRoot.mk_ne_zero_of_natDegree_lt WeilRep.Φ11_monic
     reducedValue_3_ne_zero reducedValue_3_natDegree_lt
@@ -256,7 +256,7 @@ theorem eval_phaseValue_3_ne_zero :
   exact hzero
 
 theorem eval_source_phase_product_0_3_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K)
       ((PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 0 3) ≠ 0 := by
   rw [phaseValue_eq_3]
   exact eval_phaseValue_3_ne_zero
@@ -306,10 +306,10 @@ theorem reducedValue_4_natDegree_lt :
   omega
 
 theorem eval_phaseValue_4_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ phaseValue_4 ≠ 0 := by
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K) phaseValue_4 ≠ 0 := by
   rw [phaseValue_reduction_4, map_add, map_mul,
     D12U6PolynomialSeal.evalPhi11_ζ, mul_zero, add_zero]
-  change aeval WeilRep.ζ reducedValue_4 ≠ 0
+  change aeval (WeilRep.ζ : WeilRep.K) reducedValue_4 ≠ 0
   intro hzero
   apply AdjoinRoot.mk_ne_zero_of_natDegree_lt WeilRep.Φ11_monic
     reducedValue_4_ne_zero reducedValue_4_natDegree_lt
@@ -317,7 +317,7 @@ theorem eval_phaseValue_4_ne_zero :
   exact hzero
 
 theorem eval_source_phase_product_0_4_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K)
       ((PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 0 4) ≠ 0 := by
   rw [phaseValue_eq_4]
   exact eval_phaseValue_4_ne_zero
@@ -367,10 +367,10 @@ theorem reducedValue_5_natDegree_lt :
   omega
 
 theorem eval_phaseValue_5_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ phaseValue_5 ≠ 0 := by
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K) phaseValue_5 ≠ 0 := by
   rw [phaseValue_reduction_5, map_add, map_mul,
     D12U6PolynomialSeal.evalPhi11_ζ, mul_zero, add_zero]
-  change aeval WeilRep.ζ reducedValue_5 ≠ 0
+  change aeval (WeilRep.ζ : WeilRep.K) reducedValue_5 ≠ 0
   intro hzero
   apply AdjoinRoot.mk_ne_zero_of_natDegree_lt WeilRep.Φ11_monic
     reducedValue_5_ne_zero reducedValue_5_natDegree_lt
@@ -378,7 +378,7 @@ theorem eval_phaseValue_5_ne_zero :
   exact hzero
 
 theorem eval_source_phase_product_0_5_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K)
       ((PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 0 5) ≠ 0 := by
   rw [phaseValue_eq_5]
   exact eval_phaseValue_5_ne_zero
@@ -428,10 +428,10 @@ theorem reducedValue_6_natDegree_lt :
   omega
 
 theorem eval_phaseValue_6_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ phaseValue_6 ≠ 0 := by
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K) phaseValue_6 ≠ 0 := by
   rw [phaseValue_reduction_6, map_add, map_mul,
     D12U6PolynomialSeal.evalPhi11_ζ, mul_zero, add_zero]
-  change aeval WeilRep.ζ reducedValue_6 ≠ 0
+  change aeval (WeilRep.ζ : WeilRep.K) reducedValue_6 ≠ 0
   intro hzero
   apply AdjoinRoot.mk_ne_zero_of_natDegree_lt WeilRep.Φ11_monic
     reducedValue_6_ne_zero reducedValue_6_natDegree_lt
@@ -439,7 +439,7 @@ theorem eval_phaseValue_6_ne_zero :
   exact hzero
 
 theorem eval_source_phase_product_0_6_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K)
       ((PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 0 6) ≠ 0 := by
   rw [phaseValue_eq_6]
   exact eval_phaseValue_6_ne_zero
@@ -489,10 +489,10 @@ theorem reducedValue_7_natDegree_lt :
   omega
 
 theorem eval_phaseValue_7_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ phaseValue_7 ≠ 0 := by
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K) phaseValue_7 ≠ 0 := by
   rw [phaseValue_reduction_7, map_add, map_mul,
     D12U6PolynomialSeal.evalPhi11_ζ, mul_zero, add_zero]
-  change aeval WeilRep.ζ reducedValue_7 ≠ 0
+  change aeval (WeilRep.ζ : WeilRep.K) reducedValue_7 ≠ 0
   intro hzero
   apply AdjoinRoot.mk_ne_zero_of_natDegree_lt WeilRep.Φ11_monic
     reducedValue_7_ne_zero reducedValue_7_natDegree_lt
@@ -500,7 +500,7 @@ theorem eval_phaseValue_7_ne_zero :
   exact hzero
 
 theorem eval_source_phase_product_0_7_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K)
       ((PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 0 7) ≠ 0 := by
   rw [phaseValue_eq_7]
   exact eval_phaseValue_7_ne_zero
@@ -550,10 +550,10 @@ theorem reducedValue_8_natDegree_lt :
   omega
 
 theorem eval_phaseValue_8_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ phaseValue_8 ≠ 0 := by
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K) phaseValue_8 ≠ 0 := by
   rw [phaseValue_reduction_8, map_add, map_mul,
     D12U6PolynomialSeal.evalPhi11_ζ, mul_zero, add_zero]
-  change aeval WeilRep.ζ reducedValue_8 ≠ 0
+  change aeval (WeilRep.ζ : WeilRep.K) reducedValue_8 ≠ 0
   intro hzero
   apply AdjoinRoot.mk_ne_zero_of_natDegree_lt WeilRep.Φ11_monic
     reducedValue_8_ne_zero reducedValue_8_natDegree_lt
@@ -561,7 +561,7 @@ theorem eval_phaseValue_8_ne_zero :
   exact hzero
 
 theorem eval_source_phase_product_0_8_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K)
       ((PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 0 8) ≠ 0 := by
   rw [phaseValue_eq_8]
   exact eval_phaseValue_8_ne_zero
@@ -611,10 +611,10 @@ theorem reducedValue_9_natDegree_lt :
   omega
 
 theorem eval_phaseValue_9_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ phaseValue_9 ≠ 0 := by
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K) phaseValue_9 ≠ 0 := by
   rw [phaseValue_reduction_9, map_add, map_mul,
     D12U6PolynomialSeal.evalPhi11_ζ, mul_zero, add_zero]
-  change aeval WeilRep.ζ reducedValue_9 ≠ 0
+  change aeval (WeilRep.ζ : WeilRep.K) reducedValue_9 ≠ 0
   intro hzero
   apply AdjoinRoot.mk_ne_zero_of_natDegree_lt WeilRep.Φ11_monic
     reducedValue_9_ne_zero reducedValue_9_natDegree_lt
@@ -622,14 +622,14 @@ theorem eval_phaseValue_9_ne_zero :
   exact hzero
 
 theorem eval_source_phase_product_0_9_ne_zero :
-    D12PolynomialEvaluation.evalPolyAt WeilRep.ζ
+    D12PolynomialEvaluation.evalPolyAt (WeilRep.ζ : WeilRep.K)
       ((PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 0 9) ≠ 0 := by
   rw [phaseValue_eq_9]
   exact eval_phaseValue_9_ne_zero
 
 
 theorem eval_source_phase_product_row0_ne_zero (j : Fin 10) :
-    evalPolyAt WeilRep.ζ
+    evalPolyAt (WeilRep.ζ : WeilRep.K)
       ((PluckerNaturality.compound2Lex S6Phase_poly * B_poly) 0 j) ≠ 0 :=
   match j with
   | ⟨0, _⟩ => eval_source_phase_product_0_0_ne_zero
@@ -643,16 +643,16 @@ theorem eval_source_phase_product_row0_ne_zero (j : Fin 10) :
   | ⟨8, _⟩ => eval_source_phase_product_0_8_ne_zero
   | ⟨9, _⟩ => eval_source_phase_product_0_9_ne_zero
 
-theorem cFourier_ne_zero : WeilRep.cFourier ≠ 0 := by
+theorem cFourier_ne_zero : (WeilRep.cFourier : WeilRep.K) ≠ 0 := by
   intro hzero
-  have h := WeilRep.cFourier_sq_mul_eleven
+  have h := WeilRep.cFourier_sq_mul_eleven (E := WeilRep.K)
   rw [hzero, zero_pow (by decide), zero_mul] at h
   have hneg : (-1 : WeilRep.K) ≠ 0 := by norm_num
   exact hneg h.symm
 
 public theorem SrestrictedAction_row0_ne_zero (j : Fin 10) :
     SrestrictedAction 0 j ≠ 0 := by
-  change evalPolyAt WeilRep.ζ
+  change evalPolyAt (WeilRep.ζ : WeilRep.K)
       ((PluckerNaturality.compound2Lex S6_poly * B_poly) 0 j) ≠ 0
   rw [congrArg (fun M : Matrix (Fin 15) (Fin 10) (Polynomial ℚ) => M 0 j)
     compound_S6_mul_B_factor]

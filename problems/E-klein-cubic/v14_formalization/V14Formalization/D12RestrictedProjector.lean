@@ -18,14 +18,14 @@ def eigenResidue : Fin 10 → ZMod 11 := fun i => eigenExponent i
 theorem eigenResidue_injective : Function.Injective eigenResidue := by
   decide
 
-theorem psi_injective : Function.Injective WeilRep.ψ := by
+theorem psi_injective : Function.Injective (WeilRep.ψ (E := WeilRep.K)) := by
   rw [AddChar.injective_iff]
   intro a ha
   exact (AddChar.IsPrimitive.zmod_char_eq_one_iff
     11 WeilRep.ψ_primitive a).mp ha
 
 theorem pow_eigen_eq_psi (i : Fin 10) :
-    WeilRep.ζ ^ eigenExponent i = WeilRep.ψ (eigenResidue i) := by
+    (WeilRep.ζ : WeilRep.K) ^ eigenExponent i = WeilRep.ψ (eigenResidue i) := by
   rw [WeilRep.ψ_apply]
   change WeilRep.ζ ^ eigenExponent i =
     WeilRep.ζ ^ (eigenExponent i % 11)
@@ -33,7 +33,7 @@ theorem pow_eigen_eq_psi (i : Fin 10) :
 
 public theorem eigenPower_injective :
     Function.Injective (fun i : Fin 10 =>
-      WeilRep.ζ ^ eigenExponent i) := by
+      (WeilRep.ζ : WeilRep.K) ^ eigenExponent i) := by
   intro i j hij
   apply eigenResidue_injective
   apply psi_injective

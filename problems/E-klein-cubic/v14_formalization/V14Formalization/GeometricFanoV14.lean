@@ -24,7 +24,7 @@ namespace GeometricFanoV14
 /-! ## Ambient: even Weil module U over K = ℚ(ζ₁₁) -/
 
 public abbrev k := WeilRep.K
-public abbrev WeilU := WeilRep.U
+public abbrev WeilU := WeilRep.U k
 
 public theorem S_sq :
     WeilRep.S_even ∘ₗ WeilRep.S_even = (-LinearMap.id : WeilU →ₗ[k] WeilU) :=

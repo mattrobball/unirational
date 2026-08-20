@@ -17,14 +17,19 @@ open V14Formalization.WeilWN
 
 noncomputable section
 
+universe u
+
 namespace V14Formalization
 namespace WeilHom
+
+variable {E : Type u} [Field E] [CharZero E] [IsCycl11 E]
 
 public abbrev F := ZMod 11
 public abbrev SLG := SpecialLinearGroup (Fin 2) F
 
+omit [CharZero E] in
 public theorem weilFun_of_big {g : SLG} (hg : ec g ≠ 0) :
-    weilFun g = - bigCellPos g hg := by
+    (weilFun g : (Fun E) →ₗ[E] (Fun E)) = - bigCellPos g hg := by
   dsimp [weilFun, bigCellFun]
   rw [dif_neg hg]
 
@@ -50,25 +55,26 @@ theorem ec_mul_general (g h : SLG) :
 
 /-! ## Borel × Big -/
 
+omit [CharZero E] in
 theorem weilFun_mul_borel_big {g h : SLG} (hg : ec g = 0) (hh : ec h ≠ 0) :
-    weilFun (g * h) = weilFun g ∘ₗ weilFun h := by
+    (weilFun (g * h) : (Fun E) →ₗ[E] (Fun E)) = weilFun g ∘ₗ weilFun h := by
   have hgh_ne := ec_borel_big_ne hg hh
   have hag := ea_ne_zero_of_ec_zero g hg
   have hed_g : ed g = (ea g)⁻¹ := ed_of_borel hg
   have hec_gh : ec (g * h) = (ea g)⁻¹ * ec h := by
     rw [ec_mul_borel_big hg, hed_g]
-  have hform_g : weilFun g = Nfull (eb g * ea g) ∘ₗ Dfull (ea g) hag := by
+  have hform_g : (weilFun g : (Fun E) →ₗ[E] (Fun E)) = Nfull (eb g * ea g) ∘ₗ Dfull (ea g) hag := by
     dsimp [weilFun]; rw [dif_pos hg]; rfl
   rw [hform_g, weilFun_of_big hh, weilFun_of_big hgh_ne]
   -- −Pos(gh) = borel_g ∘ (−Pos h)  ⇔  Pos(gh) = borel_g ∘ Pos h
   have hpos :
-      bigCellPos (g * h) hgh_ne =
+      (bigCellPos (g * h) hgh_ne : (Fun E) →ₗ[E] (Fun E)) =
         Nfull (eb g * ea g) ∘ₗ Dfull (ea g) hag ∘ₗ bigCellPos h hh := by
     dsimp [bigCellPos]
-    have hconjN := Dfull_conj_Nfull (ea g) (ea h * (ec h)⁻¹) hag
-    have hconjW := Dfull_conj_Wfull (ea g) hag
+    have hconjN := Dfull_conj_Nfull (E := E) (ea g) (ea h * (ec h)⁻¹) hag
+    have hconjW := Dfull_conj_Wfull (E := E) (ea g) hag
     have hrhs :
-        Nfull (eb g * ea g) ∘ₗ Dfull (ea g) hag ∘ₗ Nfull (ea h * (ec h)⁻¹) ∘ₗ
+        (Nfull (eb g * ea g) : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Dfull (ea g) hag ∘ₗ Nfull (ea h * (ec h)⁻¹) ∘ₗ
             Wfull ∘ₗ Dfull (ec h) hh ∘ₗ Nfull ((ec h)⁻¹ * ed h) =
           Nfull (eb g * ea g + ea g * ea g * (ea h * (ec h)⁻¹)) ∘ₗ Wfull ∘ₗ
             Dfull ((ea g)⁻¹ * ec h) (mul_ne_zero (inv_ne_zero hag) hh) ∘ₗ
@@ -123,12 +129,12 @@ theorem weilFun_mul_borel_big {g h : SLG} (hg : ec g = 0) (hh : ec h ≠ 0) :
           = (ec h)⁻¹ * (ea g * (ea g)⁻¹) * ed h := by ring
         _ = (ec h)⁻¹ * 1 * ed h := by rw [this]
         _ = (ec h)⁻¹ * ed h := by ring
-    have hN' : Nfull (ea (g * h) * (ec (g * h))⁻¹) =
+    have hN' : (Nfull (ea (g * h) * (ec (g * h))⁻¹) : (Fun E) →ₗ[E] (Fun E)) =
         Nfull (eb g * ea g + ea g * ea g * (ea h * (ec h)⁻¹)) := by rw [hNparam]
-    have hD' : Dfull (ec (g * h)) hgh_ne =
+    have hD' : (Dfull (ec (g * h)) hgh_ne : (Fun E) →ₗ[E] (Fun E)) =
         Dfull ((ea g)⁻¹ * ec h) (mul_ne_zero (inv_ne_zero hag) hh) :=
       Dfull_congr hec_gh hgh_ne (mul_ne_zero (inv_ne_zero hag) hh)
-    have hN2' : Nfull ((ec (g * h))⁻¹ * ed (g * h)) =
+    have hN2' : (Nfull ((ec (g * h))⁻¹ * ed (g * h)) : (Fun E) →ₗ[E] (Fun E)) =
         Nfull ((ec h)⁻¹ * ed h) := by rw [hNparam2]
     rw [hN', hD', hN2']
     exact hrhs.symm
@@ -138,16 +144,17 @@ theorem weilFun_mul_borel_big {g h : SLG} (hg : ec g = 0) (hh : ec h ≠ 0) :
 
 /-! ## N–D commutation -/
 
+omit [CharZero E] in
 theorem Nfull_Dfull (t s : F) (hs : s ≠ 0) :
-    Nfull t ∘ₗ Dfull s hs =
+    (Nfull t : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Dfull s hs =
       Dfull s hs ∘ₗ Nfull (s⁻¹ * s⁻¹ * t) := by
-  have h := Dfull_conj_Nfull s (s⁻¹ * s⁻¹ * t) hs
+  have h := Dfull_conj_Nfull (E := E) s (s⁻¹ * s⁻¹ * t) hs
   have hs2 : s * s * (s⁻¹ * s⁻¹ * t) = t := by
     have : s * s⁻¹ = 1 := mul_inv_cancel₀ hs
     calc s * s * (s⁻¹ * s⁻¹ * t) = (s * s⁻¹) * (s * s⁻¹) * t := by ring
       _ = (1 : F) * 1 * t := by rw [this]
       _ = t := by ring
-  have h' : Dfull s hs ∘ₗ Nfull (s⁻¹ * s⁻¹ * t) =
+  have h' : (Dfull s hs : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Nfull (s⁻¹ * s⁻¹ * t) =
       Nfull t ∘ₗ Dfull s hs := by
     simpa [hs2] using h
   exact h'.symm
@@ -222,29 +229,31 @@ private theorem big_borel_N2_param {g h : SLG} (hg : ec g ≠ 0) (hh : ec h = 0)
   exact hL.trans hs'.symm
 
 private def bigBorelNormal (g h : SLG) (hg : ec g ≠ 0) (hh : ec h = 0) :
-    Fun →ₗ[K] Fun :=
+    (Fun E) →ₗ[E] (Fun E) :=
   let hah := ea_ne_zero_of_ec_zero h hh
   Nfull (ea g * (ec g)⁻¹) ∘ₗ Wfull ∘ₗ
     Dfull (ec g * ea h) (mul_ne_zero hg hah) ∘ₗ
     Nfull ((ec g * ea h)⁻¹ * (ec g * ea h)⁻¹ *
       (ec g * ec g * ((ec g)⁻¹ * ed g + eb h * ea h)))
 
+omit [CharZero E] in
 private theorem bigCellPos_mul_eq_bigBorelNormal {g h : SLG}
     (hg : ec g ≠ 0) (hh : ec h = 0) :
-    bigCellPos (g * h) (ec_big_borel_ne hg hh) = bigBorelNormal g h hg hh := by
+    (bigCellPos (g * h) (ec_big_borel_ne hg hh) : (Fun E) →ₗ[E] (Fun E)) = bigBorelNormal g h hg hh := by
   let hah := ea_ne_zero_of_ec_zero h hh
   let hgh := ec_big_borel_ne hg hh
   change Nfull (ea (g * h) * (ec (g * h))⁻¹) ∘ₗ Wfull ∘ₗ
       Dfull (ec (g * h)) hgh ∘ₗ Nfull ((ec (g * h))⁻¹ * ed (g * h)) =
     bigBorelNormal g h hg hh
-  have hN1 := congrArg Nfull (big_borel_N1_param hg hh)
-  have hD := Dfull_congr (ec_mul_big_borel hh) hgh (mul_ne_zero hg hah)
-  have hN2 := congrArg Nfull (big_borel_N2_param hg hh)
+  have hN1 := congrArg (Nfull (E := E)) (big_borel_N1_param hg hh)
+  have hD := Dfull_congr (E := E) (ec_mul_big_borel hh) hgh (mul_ne_zero hg hah)
+  have hN2 := congrArg (Nfull (E := E)) (big_borel_N2_param hg hh)
   rw [hN1, hD, hN2]
   rfl
 
+omit [CharZero E] in
 private theorem bigBorel_comp_apply_eq_normal {g h : SLG}
-    (hg : ec g ≠ 0) (hh : ec h = 0) (f : Fun) :
+    (hg : ec g ≠ 0) (hh : ec h = 0) (f : (Fun E)) :
     (bigCellPos g hg ∘ₗ Nfull (eb h * ea h) ∘ₗ
       Dfull (ea h) (ea_ne_zero_of_ec_zero h hh)) f = bigBorelNormal g h hg hh f := by
   let hah := ea_ne_zero_of_ec_zero h hh
@@ -252,13 +261,13 @@ private theorem bigBorel_comp_apply_eq_normal {g h : SLG}
   let t := ec g * ec g * n
   let s := ec g * ea h
   let u := s⁻¹ * s⁻¹ * t
-  have hNadd := congrArg (fun L : Fun →ₗ[K] Fun => L (Dfull (ea h) hah f))
+  have hNadd := congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L (Dfull (ea h) hah f))
     (Nfull_add ((ec g)⁻¹ * ed g) (eb h * ea h))
-  have hconj := congrArg (fun L : Fun →ₗ[K] Fun => L (Dfull (ea h) hah f))
+  have hconj := congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L (Dfull (ea h) hah f))
     (Dfull_conj_Nfull (ec g) n hg)
-  have hDmul := congrArg (fun L : Fun →ₗ[K] Fun => L f)
+  have hDmul := congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L f)
     (Dfull_mul (ec g) (ea h) hg hah)
-  have hND := congrArg (fun L : Fun →ₗ[K] Fun => L f)
+  have hND := congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L f)
     (Nfull_Dfull t s (mul_ne_zero hg hah))
   change Nfull (ea g * (ec g)⁻¹)
       (Wfull (Dfull (ec g) hg
@@ -280,28 +289,30 @@ private theorem bigBorel_comp_apply_eq_normal {g h : SLG}
     _ = Dfull s (mul_ne_zero hg hah) (Nfull u f) := by
       simpa [t, s, u, LinearMap.comp_apply] using hND
 
+omit [CharZero E] in
 public theorem weilFun_mul_big_borel {g h : SLG} (hg : ec g ≠ 0) (hh : ec h = 0) :
-    weilFun (g * h) = weilFun g ∘ₗ weilFun h := by
+    (weilFun (g * h) : (Fun E) →ₗ[E] (Fun E)) = weilFun g ∘ₗ weilFun h := by
   apply LinearMap.ext
   intro f
   have hgh := ec_big_borel_ne hg hh
   have hah := ea_ne_zero_of_ec_zero h hh
-  have hL := congrArg (fun L : Fun →ₗ[K] Fun => L f)
+  have hL := congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L f)
     (bigCellPos_mul_eq_bigBorelNormal hg hh)
   have hR := bigBorel_comp_apply_eq_normal hg hh f
   rw [weilFun_of_big hgh, weilFun_of_big hg]
-  have hform : weilFun h = Nfull (eb h * ea h) ∘ₗ Dfull (ea h) hah := by
+  have hform : (weilFun h : (Fun E) →ₗ[E] (Fun E)) = Nfull (eb h * ea h) ∘ₗ Dfull (ea h) hah := by
     dsimp [weilFun]
     rw [dif_pos hh]
     rfl
   rw [hform]
   simpa only [LinearMap.comp_apply, LinearMap.neg_apply] using
-    congrArg (fun z : Fun => -z) (hL.trans hR.symm)
+    congrArg (fun z : (Fun E) => -z) (hL.trans hR.symm)
 
 /-! ## D(−1) = −R; on even functions R = id so D(−1) = −id -/
 
+omit [CharZero E] [IsCycl11 E] in
 theorem Dfull_neg_one :
-    Dfull (-1 : F) (by decide : (-1 : F) ≠ 0) = -Rfull := by
+    (Dfull (-1 : F) (by decide : (-1 : F) ≠ 0) : (Fun E) →ₗ[E] (Fun E)) = -Rfull := by
   apply LinearMap.ext; intro f; funext x
   dsimp [Dfull, Rfull]
   rw [χ₂_neg_one]
@@ -309,24 +320,27 @@ theorem Dfull_neg_one :
   rw [this]
   ring
 
+omit [CharZero E] [IsCycl11 E] in
 theorem Dfull_neg (t : F) (ht : t ≠ 0) :
-    Dfull (-t) (neg_ne_zero.mpr ht) =
+    (Dfull (-t) (neg_ne_zero.mpr ht) : (Fun E) →ₗ[E] (Fun E)) =
       Dfull (-1 : F) (by decide) ∘ₗ Dfull t ht := by
   have h : (-t : F) = (-1) * t := by ring
   exact (Dfull_congr h (neg_ne_zero.mpr ht)
     (mul_ne_zero (by decide : (-1 : F) ≠ 0) ht)).trans
     (Dfull_mul (-1) t (by decide) ht)
 
+omit [CharZero E] [IsCycl11 E] in
 /-- On even functions, R acts as the identity. -/
-theorem Rfull_even {f : Fun} (hf : ∀ x, f (-x) = f x) (x : ZMod 11) :
+theorem Rfull_even {f : (Fun E)} (hf : ∀ x, f (-x) = f x) (x : ZMod 11) :
     Rfull f x = f x := by
   dsimp [Rfull]; exact hf x
 
+omit [CharZero E] [IsCycl11 E] in
 /-- On even functions, D(−t) = − D(t). -/
-theorem Dfull_neg_even (t : F) (ht : t ≠ 0) {f : Fun}
+theorem Dfull_neg_even (t : F) (ht : t ≠ 0) {f : (Fun E)}
     (hf : ∀ x, f (-x) = f x) (x : ZMod 11) :
     Dfull (-t) (neg_ne_zero.mpr ht) f x = - Dfull t ht f x := by
-  have hD := Dfull_neg t ht
+  have hD := Dfull_neg (E := E) t ht
   have hR : Rfull (Dfull t ht f) x = Dfull t ht f x := by
     apply Rfull_even
     intro y; exact Dfull_preserves_even t ht hf y
@@ -341,14 +355,15 @@ theorem Dfull_neg_even (t : F) (ht : t ≠ 0) {f : Fun}
 /-! ## W N W re-export -/
 
 theorem W_N_W (t : F) (ht : t ≠ 0) :
-    Wfull ∘ₗ Nfull t ∘ₗ Wfull =
+    (Wfull : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Nfull t ∘ₗ Wfull =
       Nfull (-t⁻¹) ∘ₗ Wfull ∘ₗ Dfull (-t) (neg_ne_zero.mpr ht) ∘ₗ Nfull (-t⁻¹) :=
   Wfull_Nfull_Wfull t ht
 
 /-! ## Positive kernels of two big cells → N W N W D N -/
 
+omit [CharZero E] in
 theorem big_big_pos_reduce {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0) :
-    bigCellPos g hg ∘ₗ bigCellPos h hh =
+    (bigCellPos g hg : (Fun E) →ₗ[E] (Fun E)) ∘ₗ bigCellPos h hh =
       Nfull (ea g * (ec g)⁻¹) ∘ₗ Wfull ∘ₗ
         Nfull (ec g * ec g * ((ec g)⁻¹ * ed g + ea h * (ec h)⁻¹)) ∘ₗ Wfull ∘ₗ
         Dfull ((ec g)⁻¹ * ec h) (mul_ne_zero (inv_ne_zero hg) hh) ∘ₗ
@@ -363,21 +378,21 @@ theorem big_big_pos_reduce {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0) :
       Nfull (cg⁻¹ * dg) (Nfull (ah * ch⁻¹)
         (Wfull (Dfull ch hh (Nfull (ch⁻¹ * dh) φ)))) =
         Nfull t (Wfull (Dfull ch hh (Nfull (ch⁻¹ * dh) φ))) := by
-    have heq : Nfull (cg⁻¹ * dg) ∘ₗ Nfull (ah * ch⁻¹) = Nfull t := by
+    have heq : (Nfull (cg⁻¹ * dg) : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Nfull (ah * ch⁻¹) = Nfull t := by
       change _ = Nfull (cg⁻¹ * dg + ah * ch⁻¹)
       exact (Nfull_add _ _).symm
     exact LinearMap.ext_iff.mp heq _
   have hDconj :
       Dfull cg hg (Nfull t (Wfull (Dfull ch hh (Nfull (ch⁻¹ * dh) φ)))) =
         Nfull s (Dfull cg hg (Wfull (Dfull ch hh (Nfull (ch⁻¹ * dh) φ)))) := by
-    have heq := Dfull_conj_Nfull cg t hg
+    have heq := Dfull_conj_Nfull (E := E) cg t hg
     simpa [s, LinearMap.comp_apply] using
       LinearMap.ext_iff.mp heq (Wfull (Dfull ch hh (Nfull (ch⁻¹ * dh) φ)))
   have hDW :
       Dfull cg hg (Wfull (Dfull ch hh (Nfull (ch⁻¹ * dh) φ))) =
         Wfull (Dfull cg⁻¹ (inv_ne_zero hg)
           (Dfull ch hh (Nfull (ch⁻¹ * dh) φ))) := by
-    have heq := Dfull_conj_Wfull cg hg
+    have heq := Dfull_conj_Wfull (E := E) cg hg
     simpa [LinearMap.comp_apply] using
       LinearMap.ext_iff.mp heq (Dfull ch hh (Nfull (ch⁻¹ * dh) φ))
   have hDmul :
@@ -394,14 +409,15 @@ theorem big_big_pos_reduce {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0) :
         (Nfull (ch⁻¹ * dh) φ)))))
   rw [hNadd, hDconj, hDW, hDmul]
 
+omit [CharZero E] in
 theorem big_big_op_reduce {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0) :
-    weilFun g ∘ₗ weilFun h =
+    (weilFun g : (Fun E) →ₗ[E] (Fun E)) ∘ₗ weilFun h =
       Nfull (ea g * (ec g)⁻¹) ∘ₗ Wfull ∘ₗ
         Nfull (ec g * ec g * ((ec g)⁻¹ * ed g + ea h * (ec h)⁻¹)) ∘ₗ Wfull ∘ₗ
         Dfull ((ec g)⁻¹ * ec h) (mul_ne_zero (inv_ne_zero hg) hh) ∘ₗ
         Nfull ((ec h)⁻¹ * ed h) := by
   rw [weilFun_of_big hg, weilFun_of_big hh]
-  have h : (- bigCellPos g hg) ∘ₗ (- bigCellPos h hh) =
+  have h : ((- bigCellPos g hg : (Fun E) →ₗ[E] (Fun E))) ∘ₗ (- bigCellPos h hh) =
       bigCellPos g hg ∘ₗ bigCellPos h hh := by
     apply LinearMap.ext; intro φ
     change - bigCellPos g hg (- bigCellPos h hh φ) =
@@ -455,17 +471,17 @@ theorem bigBigS_eq_zero_of_ec_zero {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 
 
 theorem big_big_after_WNW {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
     (hs : bigBigS g h ≠ 0) :
-    bigCellPos g hg ∘ₗ bigCellPos h hh =
+    (bigCellPos g hg : (Fun E) →ₗ[E] (Fun E)) ∘ₗ bigCellPos h hh =
       Nfull (ea g * (ec g)⁻¹ + (-(bigBigS g h)⁻¹)) ∘ₗ Wfull ∘ₗ
         Dfull (-bigBigS g h) (neg_ne_zero.mpr hs) ∘ₗ
         Nfull (-(bigBigS g h)⁻¹) ∘ₗ
         Dfull ((ec g)⁻¹ * ec h) (mul_ne_zero (inv_ne_zero hg) hh) ∘ₗ
         Nfull ((ec h)⁻¹ * ed h) := by
-  have hred := big_big_pos_reduce (g := g) (h := h) hg hh
+  have hred := big_big_pos_reduce (E := E) (g := g) (h := h) hg hh
   -- rewrite s-parameter as bigBigS
   have hsdef : ec g * ec g * ((ec g)⁻¹ * ed g + ea h * (ec h)⁻¹) = bigBigS g h := rfl
   rw [hsdef] at hred
-  have hWNW := W_N_W (bigBigS g h) hs
+  have hWNW := W_N_W (E := E) (bigBigS g h) hs
   -- Prove the identity pointwise to avoid association issues
   apply LinearMap.ext; intro φ
   have hredφ := LinearMap.ext_iff.mp hred φ
@@ -666,7 +682,8 @@ theorem big_big_N2_param {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
 
 /-! ## R commutes with N, W, D -/
 
-theorem Wfull_Rfull : Wfull ∘ₗ Rfull = Rfull ∘ₗ Wfull := by
+omit [CharZero E] in
+theorem Wfull_Rfull : (Wfull : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Rfull = Rfull ∘ₗ Wfull := by
   apply LinearMap.ext; intro f; funext x
   dsimp [Wfull, Rfull, Sfull]
   classical
@@ -692,11 +709,13 @@ theorem Wfull_Rfull : Wfull ∘ₗ Rfull = Rfull ∘ₗ Wfull := by
   -- Goal after dsimp: ∑ ψ(x y) f(-y) = ∑ ψ((-x) y) f y
   exact (h1.trans h2).symm
 
-theorem Rfull_Wfull : Rfull ∘ₗ Wfull = Wfull ∘ₗ Rfull := Wfull_Rfull.symm
+omit [CharZero E] in
+theorem Rfull_Wfull : (Rfull : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Wfull = Wfull ∘ₗ Rfull := Wfull_Rfull.symm
 
+omit [CharZero E] in
 /-- N W (−R) = (−R) N W as operators (R centralizes the Bruhat generators). -/
 theorem N_W_negR (α : F) :
-    Nfull α ∘ₗ Wfull ∘ₗ (-Rfull) = (-Rfull) ∘ₗ Nfull α ∘ₗ Wfull := by
+    (Nfull α : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Wfull ∘ₗ (-Rfull) = (-Rfull) ∘ₗ Nfull α ∘ₗ Wfull := by
   apply LinearMap.ext; intro f
   -- LHS: N (W (-R f)) = N (- (W (R f))) = - N (W (R f))
   -- RHS: - R (N (W f))
@@ -706,22 +725,22 @@ theorem N_W_negR (α : F) :
   apply congrArg (fun t => -t)
   -- N (W (R f)) = R (N (W f))
   have hWR : Wfull (Rfull f) = Rfull (Wfull f) := by
-    simpa [LinearMap.comp_apply] using congrArg (fun L : Fun →ₗ[K] Fun => L f) Wfull_Rfull
+    simpa [LinearMap.comp_apply] using congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L f) Wfull_Rfull
   rw [hWR]
   -- N (R (W f)) = R (N (W f))
   simpa [LinearMap.comp_apply] using
-    (congrArg (fun L : Fun →ₗ[K] Fun => L (Wfull f)) (Rfull_Nfull α)).symm
+    (congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L (Wfull f)) (Rfull_Nfull α)).symm
 
 /-! ## Big×Big: Pos∘Pos = (−R) ∘ Pos(gh) when product is big -/
 
 public theorem big_big_pos_eq_negR_pos {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
     (hgh : ec (g * h) ≠ 0) :
-    bigCellPos g hg ∘ₗ bigCellPos h hh =
+    (bigCellPos g hg : (Fun E) →ₗ[E] (Fun E)) ∘ₗ bigCellPos h hh =
       (-Rfull) ∘ₗ bigCellPos (g * h) hgh := by
   have hs : bigBigS g h ≠ 0 := bigBigS_ne_of_ec_ne hg hh hgh
   have hβne : (ec g)⁻¹ * ec h ≠ 0 := mul_ne_zero (inv_ne_zero hg) hh
-  have hform := big_big_after_WNW hg hh hs
-  have hND := Nfull_Dfull (-(bigBigS g h)⁻¹) ((ec g)⁻¹ * ec h) hβne
+  have hform := big_big_after_WNW (E := E) hg hh hs
+  have hND := Nfull_Dfull (E := E) (-(bigBigS g h)⁻¹) ((ec g)⁻¹ * ec h) hβne
   have hsβ : bigBigS g h * ((ec g)⁻¹ * ec h) = ec (g * h) :=
     bigBigS_mul_beta_ec hg hh
   have hDneg_mul : (-bigBigS g h) * ((ec g)⁻¹ * ec h) = -ec (g * h) := by
@@ -729,24 +748,24 @@ public theorem big_big_pos_eq_negR_pos {g h : SLG} (hg : ec g ≠ 0) (hh : ec h 
         = -(bigBigS g h * ((ec g)⁻¹ * ec h)) := by ring
       _ = -ec (g * h) := by rw [hsβ]
   have hDmul :
-      Dfull (-bigBigS g h) (neg_ne_zero.mpr hs) ∘ₗ
+      (Dfull (-bigBigS g h) (neg_ne_zero.mpr hs) : (Fun E) →ₗ[E] (Fun E)) ∘ₗ
           Dfull ((ec g)⁻¹ * ec h) hβne =
         Dfull (-ec (g * h)) (neg_ne_zero.mpr hgh) := by
-    have h := Dfull_mul (-bigBigS g h) ((ec g)⁻¹ * ec h)
+    have h := Dfull_mul (E := E) (-bigBigS g h) ((ec g)⁻¹ * ec h)
       (neg_ne_zero.mpr hs) hβne
     exact h.symm.trans (Dfull_congr hDneg_mul
       (mul_ne_zero (neg_ne_zero.mpr hs) hβne) (neg_ne_zero.mpr hgh))
   have hN1 := big_big_N1_param hg hh hgh
   have hN2 := big_big_N2_param hg hh hgh
   have hDneg_ec :
-      Dfull (-ec (g * h)) (neg_ne_zero.mpr hgh) =
+      (Dfull (-ec (g * h)) (neg_ne_zero.mpr hgh) : (Fun E) →ₗ[E] (Fun E)) =
         (-Rfull) ∘ₗ Dfull (ec (g * h)) hgh := by
     rw [Dfull_neg (ec (g * h)) hgh, Dfull_neg_one]
   -- Chain of rewrites
   rw [hform]
   -- Apply N-D commute inside
   have hmid :
-      Nfull (ea g * (ec g)⁻¹ + (-(bigBigS g h)⁻¹)) ∘ₗ Wfull ∘ₗ
+      (Nfull (ea g * (ec g)⁻¹ + (-(bigBigS g h)⁻¹)) : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Wfull ∘ₗ
           Dfull (-bigBigS g h) (neg_ne_zero.mpr hs) ∘ₗ
           Nfull (-(bigBigS g h)⁻¹) ∘ₗ
           Dfull ((ec g)⁻¹ * ec h) hβne ∘ₗ
@@ -782,7 +801,7 @@ public theorem big_big_pos_eq_negR_pos {g h : SLG} (hg : ec g ≠ 0) (hh : ec h 
   rw [hmid]
   -- D mul
   have hmid2 :
-      Nfull (ea g * (ec g)⁻¹ + (-(bigBigS g h)⁻¹)) ∘ₗ Wfull ∘ₗ
+      (Nfull (ea g * (ec g)⁻¹ + (-(bigBigS g h)⁻¹)) : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Wfull ∘ₗ
           Dfull (-bigBigS g h) (neg_ne_zero.mpr hs) ∘ₗ
           Dfull ((ec g)⁻¹ * ec h) hβne ∘ₗ
           Nfull (((ec g)⁻¹ * ec h)⁻¹ * ((ec g)⁻¹ * ec h)⁻¹ *
@@ -800,18 +819,18 @@ public theorem big_big_pos_eq_negR_pos {g h : SLG} (hg : ec g ≠ 0) (hh : ec h 
       Nfull (ea g * (ec g)⁻¹ + (-(bigBigS g h)⁻¹)) (Wfull t)) hdm
   rw [hmid2]
   -- Param match
-  have hN1' : Nfull (ea g * (ec g)⁻¹ + (-(bigBigS g h)⁻¹)) =
+  have hN1' : (Nfull (ea g * (ec g)⁻¹ + (-(bigBigS g h)⁻¹)) : (Fun E) →ₗ[E] (Fun E)) =
       Nfull (ea (g * h) * (ec (g * h))⁻¹) := by rw [hN1]
   have hN2' :
-      Nfull (((ec g)⁻¹ * ec h)⁻¹ * ((ec g)⁻¹ * ec h)⁻¹ *
-          (-(bigBigS g h)⁻¹) + (ec h)⁻¹ * ed h) =
+      (Nfull (((ec g)⁻¹ * ec h)⁻¹ * ((ec g)⁻¹ * ec h)⁻¹ *
+          (-(bigBigS g h)⁻¹) + (ec h)⁻¹ * ed h) : (Fun E) →ₗ[E] (Fun E)) =
         Nfull ((ec (g * h))⁻¹ * ed (g * h)) := by
-    simpa using congrArg Nfull hN2
+    simpa using congrArg (Nfull (E := E)) hN2
   rw [hN1', hN2', hDneg_ec]
   -- N W (-R) D N = (-R) N W D N
   dsimp [bigCellPos]
   -- Goal: N ∘ W ∘ (-R) ∘ D ∘ N = (-R) ∘ N ∘ W ∘ D ∘ N
-  have hcomm := N_W_negR (ea (g * h) * (ec (g * h))⁻¹)
+  have hcomm := N_W_negR (E := E) (ea (g * h) * (ec (g * h))⁻¹)
   -- hcomm: N W (-R) = (-R) N W
   apply LinearMap.ext; intro φ
   have hc := LinearMap.ext_iff.mp hcomm
@@ -822,10 +841,10 @@ public theorem big_big_pos_eq_negR_pos {g h : SLG} (hg : ec g ≠ 0) (hh : ec h 
 /-! ## Even restriction: R = id, so Pos∘Pos = −Pos(gh) on even vectors -/
 
 theorem big_big_pos_even {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
-    (hgh : ec (g * h) ≠ 0) {f : Fun} (hf : ∀ x, f (-x) = f x) :
+    (hgh : ec (g * h) ≠ 0) {f : (Fun E)} (hf : ∀ x, f (-x) = f x) :
     bigCellPos g hg (bigCellPos h hh f) =
       - bigCellPos (g * h) hgh f := by
-  have hop := congrArg (fun L : Fun →ₗ[K] Fun => L f)
+  have hop := congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L f)
     (big_big_pos_eq_negR_pos hg hh hgh)
   -- hop: Posg (Posh f) = (-R) (Pos gh f)
   change bigCellPos g hg (bigCellPos h hh f) =
@@ -864,7 +883,7 @@ theorem big_big_pos_even {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
 
 theorem weilU_mul_big_big_ne {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
     (hgh : ec (g * h) ≠ 0) :
-    weilU (g * h) = weilU g ∘ₗ weilU h := by
+    (weilU (g * h) : (WeilRep.U E) →ₗ[E] (WeilRep.U E)) = weilU g ∘ₗ weilU h := by
   apply LinearMap.ext; intro f
   apply Subtype.ext
   -- underlying: weilFun(gh) f.1 = weilFun g (weilFun h f.1)
@@ -890,7 +909,7 @@ theorem big_big_s_zero_ec {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
   exact this.symm
 
 theorem Wfull_Nfull_zero_Wfull :
-    Wfull ∘ₗ Nfull (0 : F) ∘ₗ Wfull = -Rfull := by
+    (Wfull : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Nfull (0 : F) ∘ₗ Wfull = -Rfull := by
   rw [Nfull_zero]
   simp only [LinearMap.comp_id, LinearMap.id_comp, Wfull_sq_R]
 
@@ -1084,7 +1103,7 @@ theorem big_big_borel_N_param {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
   rw [hea, heb, hLHS, hLexp, ← hRexp, ← hRHS]
 
 /- theorem big_big_pos_borel_even {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
-    (hgh : ec (g * h) = 0) {f : Fun} (hf : ∀ x, f (-x) = f x) :
+    (hgh : ec (g * h) = 0) {f : (Fun E)} (hf : ∀ x, f (-x) = f x) :
     bigCellPos g hg (bigCellPos h hh f) = borelFun (g * h) hgh f := by
   have hs : bigBigS g h = 0 := bigBigS_eq_zero_of_ec_zero hg hh hgh
   have hag := ea_ne_zero_of_ec_zero (g * h) hgh
@@ -1093,7 +1112,7 @@ theorem big_big_borel_N_param {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
   have hsdef :
       ec g * ec g * ((ec g)⁻¹ * ed g + ea h * (ec h)⁻¹) = bigBigS g h := rfl
   -- Pos∘Pos f = N(α) W N(s) W D(β) N(δ) f with s=0
-  have hop := congrArg (fun L : Fun →ₗ[K] Fun => L f) hred
+  have hop := congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L f) hred
   -- Rewrite s ↦ 0 ↦ id inside the operator product
   have hop' :
       bigCellPos g hg (bigCellPos h hh f) =
@@ -1116,7 +1135,7 @@ theorem big_big_borel_N_param {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
       (-Rfull) (Dfull ((ec g)⁻¹ * ec h) hβne
         (Nfull ((ec h)⁻¹ * ed h) f)) := by
     simpa [LinearMap.comp_apply] using
-      congrArg (fun L : Fun →ₗ[K] Fun =>
+      congrArg (fun L : (Fun E) →ₗ[E] (Fun E) =>
         L (Dfull ((ec g)⁻¹ * ec h) hβne (Nfull ((ec h)⁻¹ * ed h) f)))
         Wfull_sq_R
   rw [hWW]
@@ -1134,7 +1153,7 @@ theorem big_big_borel_N_param {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
   rw [hDneg]
   -- Now: N(α) ((-R) ((-R) (D(ea) (N δ f)))) = N(α) (R² (D N f)) = N(α) (D N f)
   -- since R² = id, and (-R)(-R) = R² = id
-  have hRR : ∀ ψ : Fun, (-Rfull) ((-Rfull) ψ) = ψ := by
+  have hRR : ∀ ψ : (Fun E), (-Rfull) ((-Rfull) ψ) = ψ := by
     intro ψ
     have hR2 : Rfull (Rfull ψ) = ψ := by
       simpa [LinearMap.comp_apply] using LinearMap.ext_iff.mp Rfull_sq ψ
@@ -1189,16 +1208,17 @@ theorem big_big_borel_N_param {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
   -- borelFun = N(eb*ea) ∘ D(ea)
   rfl -/
 
+omit [CharZero E] in
 private theorem big_big_pos_borel_reduce_zero_op {g h : SLG}
     (hg : ec g ≠ 0) (hh : ec h ≠ 0) (hgh : ec (g * h) = 0) :
-    bigCellPos g hg ∘ₗ bigCellPos h hh =
+    (bigCellPos g hg : (Fun E) →ₗ[E] (Fun E)) ∘ₗ bigCellPos h hh =
       Nfull (ea g * (ec g)⁻¹) ∘ₗ Wfull ∘ₗ Wfull ∘ₗ
         Dfull ((ec g)⁻¹ * ec h) (mul_ne_zero (inv_ne_zero hg) hh) ∘ₗ
         Nfull ((ec h)⁻¹ * ed h) := by
   rw [big_big_pos_reduce hg hh]
   have hs : bigBigS g h = 0 := bigBigS_eq_zero_of_ec_zero hg hh hgh
   have hs0 :
-      Nfull (ec g * ec g * ((ec g)⁻¹ * ed g + ea h * (ec h)⁻¹)) =
+      (Nfull (ec g * ec g * ((ec g)⁻¹ * ed g + ea h * (ec h)⁻¹)) : (Fun E) →ₗ[E] (Fun E)) =
         LinearMap.id := by
     change Nfull (bigBigS g h) = LinearMap.id
     rw [hs, Nfull_zero]
@@ -1207,25 +1227,27 @@ private theorem big_big_pos_borel_reduce_zero_op {g h : SLG}
   intro f
   rfl
 
+omit [CharZero E] in
 private theorem big_big_pos_borel_reduce_zero {g h : SLG}
-    (hg : ec g ≠ 0) (hh : ec h ≠ 0) (hgh : ec (g * h) = 0) (f : Fun) :
+    (hg : ec g ≠ 0) (hh : ec h ≠ 0) (hgh : ec (g * h) = 0) (f : (Fun E)) :
     bigCellPos g hg (bigCellPos h hh f) =
       Nfull (ea g * (ec g)⁻¹)
         (Wfull (Wfull (Dfull ((ec g)⁻¹ * ec h)
           (mul_ne_zero (inv_ne_zero hg) hh) (Nfull ((ec h)⁻¹ * ed h) f)))) := by
   simpa only [LinearMap.comp_apply] using
-    congrArg (fun L : Fun →ₗ[K] Fun => L f)
+    congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L f)
       (big_big_pos_borel_reduce_zero_op hg hh hgh)
 
-private theorem Wfull_twice_eq_negR (f : Fun) :
+private theorem Wfull_twice_eq_negR (f : (Fun E)) :
     Wfull (Wfull f) = (-Rfull) f := by
   simpa [LinearMap.comp_apply] using
-    congrArg (fun L : Fun →ₗ[K] Fun => L f) Wfull_sq_R
+    congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L f) Wfull_sq_R
 
-private theorem negR_twice (f : Fun) : (-Rfull) ((-Rfull) f) = f := by
+omit [CharZero E] [IsCycl11 E] in
+private theorem negR_twice (f : (Fun E)) : (-Rfull) ((-Rfull) f) = f := by
   have hR2 : Rfull (Rfull f) = f := by
     simpa [LinearMap.comp_apply] using
-      congrArg (fun L : Fun →ₗ[K] Fun => L f) Rfull_sq
+      congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L f) Rfull_sq
   calc
     (-Rfull) ((-Rfull) f) = -Rfull (-Rfull f) := rfl
     _ = -(-Rfull (Rfull f)) := by rw [map_neg Rfull]
@@ -1233,7 +1255,7 @@ private theorem negR_twice (f : Fun) : (-Rfull) ((-Rfull) f) = f := by
     _ = f := hR2
 
 private theorem big_big_pos_borel_to_double_negR {g h : SLG}
-    (hg : ec g ≠ 0) (hh : ec h ≠ 0) (hgh : ec (g * h) = 0) (f : Fun) :
+    (hg : ec g ≠ 0) (hh : ec h ≠ 0) (hgh : ec (g * h) = 0) (f : (Fun E)) :
     bigCellPos g hg (bigCellPos h hh f) =
       Nfull (ea g * (ec g)⁻¹)
         ((-Rfull) ((-Rfull)
@@ -1245,18 +1267,19 @@ private theorem big_big_pos_borel_to_double_negR {g h : SLG}
   rw [Wfull_twice_eq_negR]
   have hβ : (ec g)⁻¹ * ec h = -ea (g * h) := big_big_beta_eq_neg_ea hg hh hgh
   have hDβ :
-      Dfull ((ec g)⁻¹ * ec h) hβne = Dfull (-ea (g * h)) (neg_ne_zero.mpr hag) :=
+      (Dfull ((ec g)⁻¹ * ec h) hβne : (Fun E) →ₗ[E] (Fun E)) = Dfull (-ea (g * h)) (neg_ne_zero.mpr hag) :=
     Dfull_congr hβ hβne (neg_ne_zero.mpr hag)
   rw [hDβ]
   have hDneg :
-      Dfull (-ea (g * h)) (neg_ne_zero.mpr hag) =
+      (Dfull (-ea (g * h)) (neg_ne_zero.mpr hag) : (Fun E) →ₗ[E] (Fun E)) =
         (-Rfull) ∘ₗ Dfull (ea (g * h)) hag := by
     rw [Dfull_neg (ea (g * h)) hag, Dfull_neg_one]
   rw [hDneg]
   rfl
 
+omit [CharZero E] in
 private theorem big_big_borel_DN_eq {g h : SLG}
-    (hg : ec g ≠ 0) (hh : ec h ≠ 0) (hgh : ec (g * h) = 0) (f : Fun) :
+    (hg : ec g ≠ 0) (hh : ec h ≠ 0) (hgh : ec (g * h) = 0) (f : (Fun E)) :
     Nfull (ea g * (ec g)⁻¹)
         (Dfull (ea (g * h)) (ea_ne_zero_of_ec_zero (g * h) hgh)
           (Nfull ((ec h)⁻¹ * ed h) f)) =
@@ -1265,10 +1288,10 @@ private theorem big_big_borel_DN_eq {g h : SLG}
   let α := ea g * (ec g)⁻¹
   let δ := (ec h)⁻¹ * ed h
   let γ := ea (g * h) * ea (g * h) * δ
-  have hconj := congrArg (fun L : Fun →ₗ[K] Fun => L f)
+  have hconj := congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L f)
     (Dfull_conj_Nfull (ea (g * h)) δ hag)
   have hNadd := congrArg
-    (fun L : Fun →ₗ[K] Fun => L (Dfull (ea (g * h)) hag f))
+    (fun L : (Fun E) →ₗ[E] (Fun E) => L (Dfull (ea (g * h)) hag f))
     (Nfull_add α γ)
   change Nfull α (Dfull (ea (g * h)) hag (Nfull δ f)) = borelFun (g * h) hgh f
   calc
@@ -1282,7 +1305,7 @@ private theorem big_big_borel_DN_eq {g h : SLG}
     _ = borelFun (g * h) hgh f := rfl
 
 theorem big_big_pos_borel_even {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
-    (hgh : ec (g * h) = 0) {f : Fun} (_hf : ∀ x, f (-x) = f x) :
+    (hgh : ec (g * h) = 0) {f : (Fun E)} (_hf : ∀ x, f (-x) = f x) :
     bigCellPos g hg (bigCellPos h hh f) = borelFun (g * h) hgh f := by
   calc
     bigCellPos g hg (bigCellPos h hh f) =
@@ -1299,12 +1322,12 @@ theorem big_big_pos_borel_even {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
 
 theorem weilU_mul_big_big_zero {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
     (hgh : ec (g * h) = 0) :
-    weilU (g * h) = weilU g ∘ₗ weilU h := by
+    (weilU (g * h) : (WeilRep.U E) →ₗ[E] (WeilRep.U E)) = weilU g ∘ₗ weilU h := by
   apply LinearMap.ext; intro f
   apply Subtype.ext
   change weilFun (g * h) f.1 = weilFun g (weilFun h f.1)
   have hf : ∀ x, f.1 (-x) = f.1 x := fun x => f.2 x
-  have hL : weilFun (g * h) = borelFun (g * h) hgh := by
+  have hL : (weilFun (g * h) : (Fun E) →ₗ[E] (Fun E)) = borelFun (g * h) hgh := by
     dsimp [weilFun]; rw [dif_pos hgh]
   have hR : weilFun g (weilFun h f.1) =
       bigCellPos g hg (bigCellPos h hh f.1) := by
@@ -1314,29 +1337,31 @@ theorem weilU_mul_big_big_zero {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0)
 
 /-! ## Assemble monoidhom on even U -/
 
+omit [CharZero E] in
 theorem weilU_mul_borel_big {g h : SLG} (hg : ec g = 0) (hh : ec h ≠ 0) :
-    weilU (g * h) = weilU g ∘ₗ weilU h := by
+    (weilU (g * h) : (WeilRep.U E) →ₗ[E] (WeilRep.U E)) = weilU g ∘ₗ weilU h := by
   apply LinearMap.ext; intro f
   apply Subtype.ext
-  have h := congrArg (fun L : Fun →ₗ[K] Fun => L f.1)
+  have h := congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L f.1)
     (weilFun_mul_borel_big hg hh)
   simpa [LinearMap.comp_apply, weilU] using h
 
+omit [CharZero E] in
 theorem weilU_mul_big_borel {g h : SLG} (hg : ec g ≠ 0) (hh : ec h = 0) :
-    weilU (g * h) = weilU g ∘ₗ weilU h := by
+    (weilU (g * h) : (WeilRep.U E) →ₗ[E] (WeilRep.U E)) = weilU g ∘ₗ weilU h := by
   apply LinearMap.ext; intro f
   apply Subtype.ext
-  have h := congrArg (fun L : Fun →ₗ[K] Fun => L f.1)
+  have h := congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L f.1)
     (weilFun_mul_big_borel hg hh)
   simpa [LinearMap.comp_apply, weilU] using h
 
 theorem weilU_mul_big_big {g h : SLG} (hg : ec g ≠ 0) (hh : ec h ≠ 0) :
-    weilU (g * h) = weilU g ∘ₗ weilU h := by
+    (weilU (g * h) : (WeilRep.U E) →ₗ[E] (WeilRep.U E)) = weilU g ∘ₗ weilU h := by
   by_cases hgh : ec (g * h) = 0
   · exact weilU_mul_big_big_zero hg hh hgh
   · exact weilU_mul_big_big_ne hg hh hgh
 
-public theorem weilU_mul (g h : SLG) : weilU (g * h) = weilU g ∘ₗ weilU h := by
+public theorem weilU_mul (g h : SLG) : (weilU (g * h) : (WeilRep.U E) →ₗ[E] (WeilRep.U E)) = weilU g ∘ₗ weilU h := by
   by_cases hg : ec g = 0
   · by_cases hh : ec h = 0
     · exact weilU_mul_borel hg hh
@@ -1346,7 +1371,7 @@ public theorem weilU_mul (g h : SLG) : weilU (g * h) = weilU g ∘ₗ weilU h :=
     · exact weilU_mul_big_big hg hh
 
 /-- The even Weil representation as a monoid homomorphism SL₂(F₁₁) → End(U). -/
-@[expose] public def weilUHom : SLG →* (WeilRep.U →ₗ[K] WeilRep.U) where
+@[expose] public def weilUHom : SLG →* ((WeilRep.U E) →ₗ[E] (WeilRep.U E)) where
   toFun := weilU
   map_one' := weilU_one
   map_mul' := weilU_mul

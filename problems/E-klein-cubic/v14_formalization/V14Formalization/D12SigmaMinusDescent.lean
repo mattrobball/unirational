@@ -103,7 +103,7 @@ public theorem minusCarrier_commonPluckerZero_descends_mvfrac
   haveI : CharZero k := inferInstance
   have hparam :=
     common_plucker_zero_parametric (S := MvFrac k n) hv hQ
-  have hdisc : evalBinaryB WeilRep.ζ ^ 2 -
+  have hdisc : evalBinaryB (WeilRep.ζ : k) ^ 2 -
       4 * evalBinaryA WeilRep.ζ * evalBinaryC WeilRep.ζ ≠ 0 := by
     have := hparam.2.2
     rw [evalBinaryA_map, evalBinaryB_map, evalBinaryC_map] at this

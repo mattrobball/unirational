@@ -31,8 +31,8 @@ public theorem Phi11_eq_WeilRep :
     (cyclotomic_prime (R := ℚ) 11)
 
 public theorem evalPhi11_ζ :
-    evalPolyAt WeilRep.ζ D12PolynomialData.Phi11 = 0 := by
-  change aeval WeilRep.ζ D12PolynomialData.Phi11 = 0
+    evalPolyAt (WeilRep.ζ : WeilRep.K) D12PolynomialData.Phi11 = 0 := by
+  change aeval (WeilRep.ζ : WeilRep.K) D12PolynomialData.Phi11 = 0
   rw [Phi11_eq_WeilRep]
   exact WeilRep.aeval_ζ_Φ11
 
@@ -116,9 +116,9 @@ private theorem direct_sub_F6 (i j : Fin 6) :
 theorem eval_F6_entry (i j : Fin 6) :
     evalPolyAt WeilRep.ζ (F6_poly i j) = actualF6 i j := by
   obtain ⟨q, hq⟩ := direct_sub_F6 i j
-  have hq' := congrArg (evalPolyAt WeilRep.ζ) hq
+  have hq' := congrArg (evalPolyAt (WeilRep.ζ : WeilRep.K)) hq
   have hz :
-      evalPolyAt WeilRep.ζ (directEntryPoly i j) -
+      evalPolyAt (WeilRep.ζ : WeilRep.K) (directEntryPoly i j) -
         evalPolyAt WeilRep.ζ (F6_poly i j) = 0 := by
     simpa [map_sub, map_mul, evalPhi11_ζ] using hq'
   calc

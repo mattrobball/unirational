@@ -153,12 +153,12 @@ public theorem actPM_preserves_decomposable (g : PSL2F11) {p : ℙ k Lambda2U}
   set u' := WeilHom.weilUHom gLift u
   set v' := WeilHom.weilUHom gLift v
   have hU_left :
-      WeilHom.weilUHom gLift⁻¹ ∘ₗ WeilHom.weilUHom gLift = LinearMap.id := by
-    have h : WeilRepSL2.weilU gLift⁻¹ ∘ₗ WeilRepSL2.weilU gLift = LinearMap.id := by
+      WeilHom.weilUHom (E := k) gLift⁻¹ ∘ₗ WeilHom.weilUHom gLift = LinearMap.id := by
+    have h : WeilRepSL2.weilU (E := k) gLift⁻¹ ∘ₗ WeilRepSL2.weilU gLift = LinearMap.id := by
       rw [← WeilHom.weilU_mul, inv_mul_cancel]
       exact WeilRepSL2.weilU_one
     exact h
-  have hinjU : Function.Injective (WeilHom.weilUHom gLift) := by
+  have hinjU : Function.Injective (WeilHom.weilUHom (E := k) gLift) := by
     intro x y hxy
     have hx : WeilHom.weilUHom gLift⁻¹ (WeilHom.weilUHom gLift x) = x := by
       have := LinearMap.congr_fun hU_left x
@@ -362,7 +362,7 @@ private theorem b2_support {x : ZMod 11} (hx : b2.1 x ≠ 0) :
     · simp [hv] at hx
 
 theorem T_b2 : WeilRep.T_even_b 1 b2 =
-    WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) • b2 := by
+    (WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) : k) • b2 := by
   -- Same shape as GeometricFanoCarrier.T_b1
   apply Subtype.ext; funext x
   change WeilRep.ψ (1 * x ^ 2 * WeilRep.twoInv) * b2.1 x =
@@ -380,11 +380,11 @@ theorem T_b2 : WeilRep.T_even_b 1 b2 =
 
 /-- If (b0 + ψ(1/2) b1) ∧ b2 is parallel to (b0 + b1) ∧ b2 then ψ(1/2) = 1. -/
 theorem plane_ratio_forces_ψ_half (μ : k)
-    (hμ : pureWedge (b0 + WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • b1) b2 =
+    (hμ : pureWedge (b0 + (WeilRep.ψ ((1 : F) * (2 : F)⁻¹) : k) • b1) b2 =
       μ • pureWedge (b0 + b1) b2) : False := by
   -- Work after evalEven in Λ²(Fin 6 → k) with basis vectors B i
   let B := Pi.basisFun k (Fin 6)
-  let ψh : k := WeilRep.ψ ((1 : F) * (2 : F)⁻¹)
+  let ψh : k := (WeilRep.ψ ((1 : F) * (2 : F)⁻¹) : k)
   have hmapL :
       exteriorPower.map (R := k) (n := 2) evalEven
         (pureWedge (b0 + ψh • b1) b2) =
@@ -568,53 +568,53 @@ theorem Tmat_moves_plane :
         μ • pureWedge (b0 + b1) b2 := by
   rintro ⟨μ, hμ⟩
   have hT0 : WeilRep.T_even_b 1 (b0 + b1) =
-      b0 + WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • b1 := by
+      b0 + (WeilRep.ψ ((1 : F) * (2 : F)⁻¹) : k) • b1 := by
     rw [map_add, T_b0, T_b1]
   have hμ' :
-      pureWedge (b0 + WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • b1)
-        (WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) • b2) =
+      pureWedge (b0 + (WeilRep.ψ ((1 : F) * (2 : F)⁻¹) : k) • b1)
+        ((WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) : k) • b2) =
         μ • pureWedge (b0 + b1) b2 := by
     rwa [hT0, T_b2] at hμ
-  have hψ2ne : WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) ≠ 0 := by
+  have hψ2ne : (WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) : k) ≠ 0 := by
     intro h0
-    have : WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) *
+    have : (WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) : k) *
         WeilRep.ψ (-((2 : F) ^ 2 * (2 : F)⁻¹)) = 1 := by
       rw [← WeilRep.ψ_add]; simp
     rw [h0, zero_mul] at this
     exact absurd this (by norm_num)
   -- Factor ψ2 from second slot: ιMulti ![v, c•b2] = c • ιMulti ![v, b2]
   have hpull :
-      pureWedge (b0 + WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • b1)
-        (WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) • b2) =
-      WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) •
-        pureWedge (b0 + WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • b1) b2 := by
+      pureWedge (b0 + (WeilRep.ψ ((1 : F) * (2 : F)⁻¹) : k) • b1)
+        ((WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) : k) • b2) =
+      (WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) : k) •
+        pureWedge (b0 + (WeilRep.ψ ((1 : F) * (2 : F)⁻¹) : k) • b1) b2 := by
     dsimp [pureWedge]
     have hh :=
       (exteriorPower.ιMulti (R := k) (n := 2) (M := U)).map_update_smul
-        ![b0 + WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • b1, b2] (1 : Fin 2)
-        (WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹)) b2
+        ![b0 + (WeilRep.ψ ((1 : F) * (2 : F)⁻¹) : k) • b1, b2] (1 : Fin 2)
+        ((WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) : k)) b2
     have hup :
         Function.update
-          ![b0 + WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • b1, b2] 1 b2 =
-          ![b0 + WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • b1, b2] := by
+          ![b0 + (WeilRep.ψ ((1 : F) * (2 : F)⁻¹) : k) • b1, b2] 1 b2 =
+          ![b0 + (WeilRep.ψ ((1 : F) * (2 : F)⁻¹) : k) • b1, b2] := by
       funext i; fin_cases i <;> simp
     have hup' :
         Function.update
-          ![b0 + WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • b1, b2] 1
-          (WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) • b2) =
-          ![b0 + WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • b1,
-            WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) • b2] := by
+          ![b0 + (WeilRep.ψ ((1 : F) * (2 : F)⁻¹) : k) • b1, b2] 1
+          ((WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) : k) • b2) =
+          ![b0 + (WeilRep.ψ ((1 : F) * (2 : F)⁻¹) : k) • b1,
+            (WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) : k) • b2] := by
       funext i; fin_cases i <;> simp
     rw [hup, hup'] at hh
     exact hh
-  have hpar : pureWedge (b0 + WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • b1) b2 =
-      (μ * (WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹))⁻¹) • pureWedge (b0 + b1) b2 := by
+  have hpar : pureWedge (b0 + (WeilRep.ψ ((1 : F) * (2 : F)⁻¹) : k) • b1) b2 =
+      (μ * ((WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) : k))⁻¹) • pureWedge (b0 + b1) b2 := by
     -- ψ2 • mid = μ • right, so mid = (ψ2⁻¹ * μ) • right = (μ * ψ2⁻¹) • right
-    have h' : WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) •
-        pureWedge (b0 + WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • b1) b2 =
+    have h' : (WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) : k) •
+        pureWedge (b0 + (WeilRep.ψ ((1 : F) * (2 : F)⁻¹) : k) • b1) b2 =
         μ • pureWedge (b0 + b1) b2 := by
       rw [← hpull, hμ']
-    apply_fun (fun z => (WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹))⁻¹ • z) at h'
+    apply_fun (fun z => ((WeilRep.ψ ((2 : F) ^ 2 * (2 : F)⁻¹) : k))⁻¹ • z) at h'
     simp only [smul_smul, inv_mul_cancel₀ hψ2ne, one_smul] at h'
     -- h' : mid = (ψ2⁻¹ * μ) • right
     simpa [mul_comm] using h'
@@ -631,7 +631,7 @@ theorem Tmat_moves_movedPoint :
   dsimp [movedPoint, actV14, actPM] at hcoe
   rw [Projectivization.map_mk, Projectivization.mk_eq_mk_iff] at hcoe
   obtain ⟨μ, hμ⟩ := hcoe
-  have hU : WeilHom.weilUHom WeilRep.Tmat = WeilRep.T_even_b 1 := WeilRepSL2.weilU_Tmat
+  have hU : WeilHom.weilUHom (E := k) WeilRep.Tmat = WeilRep.T_even_b 1 := WeilRepSL2.weilU_Tmat
   have hL :
       ambientAct (QuotientGroup.mk WeilRep.Tmat) (pureWedge (b0 + b1) b2) =
         pureWedge (WeilRep.T_even_b 1 (b0 + b1)) (WeilRep.T_even_b 1 b2) := by
@@ -725,7 +725,7 @@ theorem finrank_K : Module.finrank ℚ k = 10 := by
     _ = WeilRep.Φ11.natDegree := AdjoinRoot.powerBasis_dim WeilRep.Φ11_irreducible.ne_zero
     _ = 10 := WeilRep.Φ11_natDegree
 
-theorem isPrimitiveRoot_ζ : IsPrimitiveRoot WeilRep.ζ 11 :=
+theorem isPrimitiveRoot_ζ : IsPrimitiveRoot (WeilRep.ζ : k) 11 :=
   (IsPrimitiveRoot.iff_orderOf).2 WeilRep.orderOf_ζ
 
 theorem not_isSquare_neg_one : ¬ IsSquare (-1 : k) := by
@@ -859,7 +859,7 @@ theorem minpoly_gauss : minpoly ℚ (WeilRep.gauss : k) = X ^ 2 + C (11 : ℚ) :
     _ = -11 + 11 := by norm_cast; simp
     _ = 0 := by norm_num
 
-theorem finrank_adjoin_gauss : Module.finrank ℚ (ℚ⟮WeilRep.gauss⟯) = 2 := by
+theorem finrank_adjoin_gauss : Module.finrank ℚ (ℚ⟮(WeilRep.gauss : k)⟯) = 2 := by
   have hx : IsIntegral ℚ (WeilRep.gauss : k) := IsIntegral.of_finite ℚ WeilRep.gauss
   rw [adjoin.finrank hx, minpoly_gauss, natDegree_X_pow_add_C]
 
@@ -1054,7 +1054,7 @@ theorem weilU_S_sq :
     fin_cases i <;> fin_cases j <;>
       simp [WeilRep.Smat, WeilRepSL2.negI, pow_two,
         Matrix.mul_apply, Fin.sum_univ_two, Matrix.neg_apply]
-  have hmul' : WeilRepSL2.weilU (WeilRep.Smat * WeilRep.Smat) =
+  have hmul' : WeilRepSL2.weilU (E := k) (WeilRep.Smat * WeilRep.Smat) =
       WeilRepSL2.weilU WeilRep.Smat ∘ₗ WeilRepSL2.weilU WeilRep.Smat :=
     WeilHom.weilU_mul _ _
   change WeilRepSL2.weilU WeilRep.Smat ∘ₗ WeilRepSL2.weilU WeilRep.Smat = -LinearMap.id
@@ -2808,6 +2808,11 @@ theorem conjEnd_zero_iff {R M N : Type*} [Semiring R]
     exact e.injective (by simpa using this)
   · intro h; simp [h]; ext; simp
 
+-- The raised `synthInstance` budget is a search-cost artefact of the base field
+-- having become a parameter: `WeilRep.Fun` now carries instance arguments, and
+-- the `ZeroHomClass` search inside the final `ext; simp` spends its default
+-- budget unfolding them.  Nothing about the proof changed.
+set_option synthInstance.maxHeartbeats 40000 in
 /-- An R-stable 2-plane is residual: R²x + x = 0 for all x ∈ P. -/
 theorem R_stable_plane_residual
     (P : Submodule k U)

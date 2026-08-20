@@ -119,6 +119,7 @@ theorem compound2Lex_neg {R : Type*} [CommRing R]
   ext i j
   simp [PluckerNaturality.compound2Lex, Matrix.det_fin_two]
 
+set_option synthInstance.maxHeartbeats 40000 in
 theorem actualS_eq_compound_S6 :
     (Lambda2Coordinates.lambda2MatrixRepresentation.ρ
         (QuotientGroup.mk PSLCard.Smat) :

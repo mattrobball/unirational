@@ -1211,8 +1211,8 @@ public theorem eval_disc
   simp only [map_sub, map_mul, map_pow, map_ofNat, evalBinaryA,
     evalBinaryB, evalBinaryC]
 
-public theorem eval_disc_K_ne_zero : evalPolyAt WeilRep.ζ disc_poly ≠ 0 := by
-  change Polynomial.aeval WeilRep.ζ disc_poly ≠ 0
+public theorem eval_disc_K_ne_zero : evalPolyAt (WeilRep.ζ : WeilRep.K) disc_poly ≠ 0 := by
+  change Polynomial.aeval (WeilRep.ζ : WeilRep.K) disc_poly ≠ 0
   intro hzero
   have hne : disc_poly ≠ 0 := by
     intro h

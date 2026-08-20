@@ -15,8 +15,12 @@ open V14Formalization.WeilMul
 
 noncomputable section
 
+universe u
+
 namespace V14Formalization
 namespace WeilWN
+
+variable {E : Type u} [Field E] [CharZero E] [IsCycl11 E]
 
 public abbrev F := ZMod 11
 
@@ -26,15 +30,15 @@ private lemma four_ne : (4 : F) ≠ 0 := by decide
 /-! ## Σ ψ(a x²) = χ₂(a) · gauss -/
 
 theorem sum_ψ_scaled_sq (a : F) (ha : a ≠ 0) :
-    (∑ x : ZMod 11, ψ (a * x ^ 2)) = χ₂ a * gauss := by
+    (∑ x : ZMod 11, (ψ : AddChar (ZMod 11) E) (a * x ^ 2)) = χ₂ a * gauss := by
   classical
   -- Group by square class: Σ_x ψ(a x²) = Σ_b (1+χ₂ b) ψ(a b)
   have hsum :
-      (∑ x : ZMod 11, ψ (a * x ^ 2)) =
+      (∑ x : ZMod 11, (ψ : AddChar (ZMod 11) E) (a * x ^ 2)) =
         ∑ b : ZMod 11, (χ₂ b + 1) * ψ (a * b) := by
     have hx : ∀ x,
         ψ (a * x ^ 2) =
-          ∑ b : ZMod 11, (if x ^ 2 = b then (1 : K) else 0) * ψ (a * b) := by
+          ∑ b : ZMod 11, (if x ^ 2 = b then (1 : E) else 0) * ψ (a * b) := by
       intro x
       rw [Finset.sum_eq_single (x ^ 2)]
       · simp
@@ -43,23 +47,23 @@ theorem sum_ψ_scaled_sq (a : F) (ha : a ≠ 0) :
     rw [Finset.sum_congr rfl fun x _ => hx x, Finset.sum_comm]
     refine Finset.sum_congr rfl fun b _ => ?_
     have hcnt :
-        (∑ x : ZMod 11, if x ^ 2 = b then (1 : K) else 0) =
-          ((Finset.univ.filter (fun x : ZMod 11 => x ^ 2 = b)).card : K) := by
+        (∑ x : ZMod 11, if x ^ 2 = b then (1 : E) else 0) =
+          ((Finset.univ.filter (fun x : ZMod 11 => x ^ 2 = b)).card : E) := by
       simp [Finset.sum_boole]
-    calc (∑ x : ZMod 11, (if x ^ 2 = b then (1 : K) else 0) * ψ (a * b))
-        = (∑ x : ZMod 11, if x ^ 2 = b then (1 : K) else 0) * ψ (a * b) := by
+    calc (∑ x : ZMod 11, (if x ^ 2 = b then (1 : E) else 0) * ψ (a * b))
+        = (∑ x : ZMod 11, if x ^ 2 = b then (1 : E) else 0) * ψ (a * b) := by
           simp_rw [mul_comm _ (ψ (a * b))]; exact (Finset.mul_sum _ _ _).symm
-      _ = ((Finset.univ.filter (fun x : ZMod 11 => x ^ 2 = b)).card : K) * ψ (a * b) := by
+      _ = ((Finset.univ.filter (fun x : ZMod 11 => x ^ 2 = b)).card : E) * ψ (a * b) := by
           rw [hcnt]
       _ = (χ₂ b + 1) * ψ (a * b) := by rw [card_sq_eq]
   rw [hsum]
   have hsplit :
-      (∑ b : ZMod 11, (χ₂ b + 1) * ψ (a * b)) =
+      (∑ b : ZMod 11, ((χ₂ : MulChar (ZMod 11) E) b + 1) * ψ (a * b)) =
         (∑ b : ZMod 11, χ₂ b * ψ (a * b)) + ∑ b : ZMod 11, ψ (a * b) := by
     simp_rw [add_mul, one_mul, Finset.sum_add_distrib]
   rw [hsplit]
-  have hzero : (∑ b : ZMod 11, ψ (a * b)) = 0 := by
-    have h := sum_ψ_mul a
+  have hzero : (∑ b : ZMod 11, (ψ : AddChar (ZMod 11) E) (a * b)) = 0 := by
+    have h := sum_ψ_mul (E := E) a
     rw [if_neg ha] at h
     refine Eq.trans ?_ h
     exact Finset.sum_congr rfl fun b _ => by rw [mul_comm]
@@ -71,7 +75,7 @@ theorem sum_ψ_scaled_sq (a : F) (ha : a ≠ 0) :
         _ = (1 : F) * b := by rw [inv_mul_cancel₀ ha]
         _ = b := one_mul b⟩⟩
   have hreindex :
-      (∑ b : ZMod 11, χ₂ b * ψ (a * b)) =
+      (∑ b : ZMod 11, (χ₂ : MulChar (ZMod 11) E) b * ψ (a * b)) =
         ∑ c : ZMod 11, χ₂ (a⁻¹ * c) * ψ c := by
     refine (Fintype.sum_bijective (fun c => a⁻¹ * c) hbij
       (fun c => χ₂ (a⁻¹ * c) * ψ (a * (a⁻¹ * c)))
@@ -88,20 +92,20 @@ theorem sum_ψ_scaled_sq (a : F) (ha : a ≠ 0) :
             _ = c := one_mul c
         rw [this])
   have hfactor :
-      (∑ c : ZMod 11, χ₂ (a⁻¹ * c) * ψ c) =
+      (∑ c : ZMod 11, (χ₂ : MulChar (ZMod 11) E) (a⁻¹ * c) * ψ c) =
         χ₂ a⁻¹ * ∑ c : ZMod 11, χ₂ c * ψ c := by
     simp_rw [map_mul χ₂]
     rw [Finset.mul_sum]
     exact Finset.sum_congr rfl fun c _ => by ring
   rw [hreindex, hfactor, χ₂_inv ha]
   change χ₂ a * ∑ c : ZMod 11, χ₂ c * ψ c = χ₂ a * gauss
-  have : (∑ c : ZMod 11, χ₂ c * ψ c) = gaussSum χ₂ ψ := rfl
+  have : (∑ c : ZMod 11, (χ₂ : MulChar (ZMod 11) E) c * ψ c) = gaussSum χ₂ ψ := rfl
   rw [this, ← gauss_eq_gaussSum]
 
 /-! ## Complete the square for additive character sums -/
 
 theorem sum_ψ_quadratic (t b : F) (ht : t ≠ 0) :
-    (∑ y : ZMod 11, ψ (t * y ^ 2 + b * y)) =
+    (∑ y : ZMod 11, (ψ : AddChar (ZMod 11) E) (t * y ^ 2 + b * y)) =
       χ₂ t * gauss * ψ (-((4 : F) * t)⁻¹ * b ^ 2) := by
   classical
   have h2t : (2 : F) * t ≠ 0 := mul_ne_zero two_ne ht
@@ -127,7 +131,7 @@ theorem sum_ψ_quadratic (t b : F) (ht : t ≠ 0) :
       _ = t * (y + ((2 : F) * t)⁻¹ * b) ^ 2 - ((4 : F) * t)⁻¹ * b ^ 2 := by
           rw [hexp]
   have hψ : ∀ y,
-      ψ (t * y ^ 2 + b * y) =
+      (ψ : AddChar (ZMod 11) E) (t * y ^ 2 + b * y) =
         ψ (-((4 : F) * t)⁻¹ * b ^ 2) *
           ψ (t * (y + ((2 : F) * t)⁻¹ * b) ^ 2) := by
     intro y
@@ -141,7 +145,7 @@ theorem sum_ψ_quadratic (t b : F) (ht : t ≠ 0) :
     ⟨fun _ _ h => add_right_cancel h,
       fun u => ⟨u - ((2 : F) * t)⁻¹ * b, by ring⟩⟩
   have hre :
-      (∑ y : ZMod 11, ψ (t * (y + ((2 : F) * t)⁻¹ * b) ^ 2)) =
+      (∑ y : ZMod 11, (ψ : AddChar (ZMod 11) E) (t * (y + ((2 : F) * t)⁻¹ * b) ^ 2)) =
         ∑ u : ZMod 11, ψ (t * u ^ 2) :=
     Fintype.sum_bijective _ hbij _ _ fun _ => rfl
   rw [hre, sum_ψ_scaled_sq t ht]
@@ -152,7 +156,7 @@ theorem sum_ψ_quadratic (t b : F) (ht : t ≠ 0) :
 /-- Character sum for the half-quadratic phase: Σ ψ((t/2) y² + b y). -/
 theorem sum_ψ_quadratic_half (t b : F) (ht : t ≠ 0) :
     (∑ y : ZMod 11, ψ (t * y ^ 2 * twoInv + b * y)) =
-      χ₂ t * (-1 : K) * gauss * ψ (- t⁻¹ * b ^ 2 * twoInv) := by
+      χ₂ t * (-1 : E) * gauss * ψ (- t⁻¹ * b ^ 2 * twoInv) := by
   classical
   have h2t : (2 : F) * t ≠ 0 := mul_ne_zero two_ne ht
   -- (t/2) y² + b y = (t/2)(y + b/t)² - b²/(2t)
@@ -184,7 +188,7 @@ theorem sum_ψ_quadratic_half (t b : F) (ht : t ≠ 0) :
       _ = t * (y + t⁻¹ * b) ^ 2 * twoInv - t⁻¹ * b ^ 2 * twoInv := by
           rw [hexp]; ring
   have hψ : ∀ y,
-      ψ (t * y ^ 2 * twoInv + b * y) =
+      (ψ : AddChar (ZMod 11) E) (t * y ^ 2 * twoInv + b * y) =
         ψ (- t⁻¹ * b ^ 2 * twoInv) *
           ψ (t * (y + t⁻¹ * b) ^ 2 * twoInv) := by
     intro y
@@ -198,22 +202,22 @@ theorem sum_ψ_quadratic_half (t b : F) (ht : t ≠ 0) :
     ⟨fun _ _ h => add_right_cancel h,
       fun u => ⟨u - t⁻¹ * b, by ring⟩⟩
   have hre :
-      (∑ y : ZMod 11, ψ (t * (y + t⁻¹ * b) ^ 2 * twoInv)) =
+      (∑ y : ZMod 11, (ψ : AddChar (ZMod 11) E) (t * (y + t⁻¹ * b) ^ 2 * twoInv)) =
         ∑ u : ZMod 11, ψ (t * u ^ 2 * twoInv) :=
     Fintype.sum_bijective _ hbij _ _ fun _ => rfl
   rw [hre]
   -- Σ ψ((t/2) u²) = χ₂(t/2) * gauss = χ₂(t) χ₂(2⁻¹) gauss = -χ₂(t) gauss
-  have hscaled : (∑ u : ZMod 11, ψ (t * u ^ 2 * twoInv)) =
+  have hscaled : (∑ u : ZMod 11, (ψ : AddChar (ZMod 11) E) (t * u ^ 2 * twoInv)) =
       χ₂ (t * twoInv) * gauss := by
     -- ψ((t*twoInv) u²) form of sum_ψ_scaled_sq
     have hne : t * twoInv ≠ 0 := mul_ne_zero ht (inv_ne_zero two_ne)
-    convert sum_ψ_scaled_sq (t * twoInv) hne using 1
+    convert sum_ψ_scaled_sq (E := E) (t * twoInv) hne using 1
     refine Finset.sum_congr rfl fun u _ => ?_
     congr 1; ring
-  have hχ : χ₂ (t * twoInv) = - χ₂ t := by
+  have hχ : (χ₂ : MulChar (ZMod 11) E) (t * twoInv) = - χ₂ t := by
     rw [map_mul]
-    have h2 : χ₂ twoInv = (-1 : K) := by
-      have : χ₂ twoInv = χ₂ (2 : F) := by
+    have h2 : χ₂ twoInv = (-1 : E) := by
+      have : (χ₂ : MulChar (ZMod 11) E) twoInv = χ₂ (2 : F) := by
         change χ₂ ((2 : F)⁻¹) = χ₂ (2 : F)
         exact χ₂_inv two_ne
       rw [this, χ₂_two]
@@ -231,7 +235,7 @@ theorem sum_ψ_quadratic_half (t b : F) (ht : t ≠ 0) :
     Set s = 2t (so t = s/2): W N_new(s) W = N_new(-1/s) W D(-s) N_new(-1/s). ✓ -/
 
 public theorem Wfull_Nfull_Wfull (t : F) (ht : t ≠ 0) :
-    Wfull ∘ₗ Nfull t ∘ₗ Wfull =
+    (Wfull : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Nfull t ∘ₗ Wfull =
       Nfull (-t⁻¹) ∘ₗ Wfull ∘ₗ Dfull (-t) (neg_ne_zero.mpr ht) ∘ₗ
         Nfull (-t⁻¹) := by
   -- Reduce to the double-angle form via s = t/2? 
@@ -242,7 +246,7 @@ public theorem Wfull_Nfull_Wfull (t : F) (ht : t ≠ 0) :
   -- Left side double Fourier:
   have hL :
       (Wfull ∘ₗ Nfull t ∘ₗ Wfull) f x =
-        cFourier ^ 2 * χ₂ t * (-1 : K) * gauss *
+        cFourier ^ 2 * χ₂ t * (-1 : E) * gauss *
           ψ (-t⁻¹ * x ^ 2 * twoInv) *
           ∑ z : ZMod 11, ψ (-t⁻¹ * z ^ 2 * twoInv) *
             ψ (-t⁻¹ * x * z) * f z := by
@@ -257,7 +261,7 @@ public theorem Wfull_Nfull_Wfull (t : F) (ht : t ≠ 0) :
       dsimp [Wfull, Nfull, Tfull_b, Sfull]
       congr 1
       refine Finset.sum_congr rfl fun y _ => ?_
-      have hp : ψ (x * y) * ψ (t * y ^ 2 * twoInv) =
+      have hp : (ψ : AddChar (ZMod 11) E) (x * y) * ψ (t * y ^ 2 * twoInv) =
           ψ (x * y + t * y ^ 2 * twoInv) := (ψ_add _ _).symm
       calc ψ (x * y) * (ψ (t * y ^ 2 * twoInv) * Wfull f y)
           = (ψ (x * y) * ψ (t * y ^ 2 * twoInv)) * Wfull f y := by ring
@@ -296,7 +300,7 @@ public theorem Wfull_Nfull_Wfull (t : F) (ht : t ≠ 0) :
         refine Finset.sum_congr rfl fun y _ => ?_
         have harg : x * y + t * y ^ 2 * twoInv + y * z =
             t * y ^ 2 * twoInv + (x + z) * y := by ring
-        have hp : ψ (x * y + t * y ^ 2 * twoInv) * ψ (y * z) =
+        have hp : (ψ : AddChar (ZMod 11) E) (x * y + t * y ^ 2 * twoInv) * ψ (y * z) =
             ψ (t * y ^ 2 * twoInv + (x + z) * y) := by rw [← ψ_add, harg]
         calc ψ (x * y + t * y ^ 2 * twoInv) * (ψ (y * z) * f z)
             = (ψ (x * y + t * y ^ 2 * twoInv) * ψ (y * z)) * f z := by ring
@@ -312,20 +316,20 @@ public theorem Wfull_Nfull_Wfull (t : F) (ht : t ≠ 0) :
             rw [hswap]; ring
     rw [h2]
     have hin : ∀ z, ∑ y, ψ (t * y ^ 2 * twoInv + (x + z) * y) =
-        χ₂ t * (-1 : K) * gauss * ψ (-t⁻¹ * (x + z) ^ 2 * twoInv) :=
+        χ₂ t * (-1 : E) * gauss * ψ (-t⁻¹ * (x + z) ^ 2 * twoInv) :=
       fun z => sum_ψ_quadratic_half t (x + z) ht
     simp_rw [hin]
     have hpull :
-        (∑ z, f z * (χ₂ t * (-1 : K) * gauss *
+        (∑ z, f z * (χ₂ t * (-1 : E) * gauss *
           ψ (-t⁻¹ * (x + z) ^ 2 * twoInv))) =
-          χ₂ t * (-1 : K) * gauss *
+          χ₂ t * (-1 : E) * gauss *
             ∑ z, f z * ψ (-t⁻¹ * (x + z) ^ 2 * twoInv) := by
       rw [Finset.mul_sum]
       exact Finset.sum_congr rfl fun z _ => by ring
     rw [hpull]
     -- Expand phases
     have hphase : ∀ z,
-        ψ (-t⁻¹ * (x + z) ^ 2 * twoInv) =
+        (ψ : AddChar (ZMod 11) E) (-t⁻¹ * (x + z) ^ 2 * twoInv) =
           ψ (-t⁻¹ * x ^ 2 * twoInv) * ψ (-t⁻¹ * z ^ 2 * twoInv) *
             ψ (-t⁻¹ * x * z) := by
       intro z
@@ -427,14 +431,14 @@ public theorem Wfull_Nfull_Wfull (t : F) (ht : t ≠ 0) :
       _ = ψ (-t⁻¹ * x ^ 2 * twoInv) * cFourier * χ₂ (-t) *
             ∑ z, ψ (-t⁻¹ * x * z) * ψ (-t⁻¹ * z ^ 2 * twoInv) * f z := by ring
   -- Scalar match
-  have hχβ : χ₂ (-t) = -χ₂ t := by
+  have hχβ : (χ₂ : MulChar (ZMod 11) E) (-t) = -χ₂ t := by
     rw [show (-t : F) = (-1) * t by ring, map_mul, χ₂_neg_one]
     ring
-  have hscal : cFourier ^ 2 * χ₂ t * (-1 : K) * gauss =
+  have hscal : cFourier ^ 2 * χ₂ t * (-1 : E) * gauss =
       cFourier * χ₂ (-t) := by
-    have hc : cFourier * gauss = 1 := inv_mul_cancel₀ gauss_ne_zero
+    have hc : (cFourier : E) * gauss = 1 := inv_mul_cancel₀ gauss_ne_zero
     rw [hχβ]
-    calc cFourier ^ 2 * χ₂ t * (-1) * gauss
+    calc (cFourier : E) ^ 2 * χ₂ t * (-1) * gauss
         = cFourier * (cFourier * gauss) * (χ₂ t * (-1)) := by ring
       _ = cFourier * 1 * (χ₂ t * (-1)) := by rw [hc]
       _ = cFourier * (-χ₂ t) := by ring
@@ -443,14 +447,14 @@ public theorem Wfull_Nfull_Wfull (t : F) (ht : t ≠ 0) :
         ∑ z, ψ (-t⁻¹ * x * z) * ψ (-t⁻¹ * z ^ 2 * twoInv) * f z :=
     Finset.sum_congr rfl fun z _ => by ring
   calc (Wfull ∘ₗ Nfull t ∘ₗ Wfull) f x
-      = cFourier ^ 2 * χ₂ t * (-1 : K) * gauss *
+      = cFourier ^ 2 * χ₂ t * (-1 : E) * gauss *
           ψ (-t⁻¹ * x ^ 2 * twoInv) *
           ∑ z, ψ (-t⁻¹ * z ^ 2 * twoInv) * ψ (-t⁻¹ * x * z) * f z := hL
-    _ = cFourier ^ 2 * χ₂ t * (-1 : K) * gauss *
+    _ = cFourier ^ 2 * χ₂ t * (-1 : E) * gauss *
           ψ (-t⁻¹ * x ^ 2 * twoInv) *
           ∑ z, ψ (-t⁻¹ * x * z) * ψ (-t⁻¹ * z ^ 2 * twoInv) * f z := by
         rw [hsum_ord]
-    _ = (cFourier ^ 2 * χ₂ t * (-1 : K) * gauss) *
+    _ = (cFourier ^ 2 * χ₂ t * (-1 : E) * gauss) *
           ψ (-t⁻¹ * x ^ 2 * twoInv) *
           ∑ z, ψ (-t⁻¹ * x * z) * ψ (-t⁻¹ * z ^ 2 * twoInv) * f z := by ring
     _ = (cFourier * χ₂ (-t)) *

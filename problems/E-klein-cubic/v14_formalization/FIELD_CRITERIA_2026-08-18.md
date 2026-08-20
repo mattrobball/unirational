@@ -335,3 +335,95 @@ Two limits, both honest and both recorded in the docstrings:
   coefficient on `ζ¹…ζ⁹`. The `ζ` content is in the group-action matrices
   `RM`/`SM`. So `ζ₁₁ ∈ F` is needed because the *model of the representation*
   is built out of a root, not because the variety is.
+
+## The model itself is now over an arbitrary field (2026-08-20)
+
+Everything above was about the *argument*. This section is about the *model*:
+`WeilRep`, `Λ²U`, the character projector and the intrinsic `V₁₄` were written
+over `K = AdjoinRoot Φ₁₁`, so the intrinsic headline's base field was this
+project's carrier rather than a condition. That is fixed.
+
+### The survey, first
+
+`K` is used for a property of `K` — as opposed to being merely the field the
+development happened to be written over — in exactly **one place**:
+`WeilRep.lean:46-91`, which constructs the root and proves it primitive
+(`Φ11`, `AdjoinRoot`, `minpoly`, `natDegree = 10`). Beyond that:
+
+| file | lines | `AdjoinRoot`/`minpoly`/`Φ11`/`PowerBasis` hits |
+|---|---:|---:|
+| `WeilRep.lean` | 543 | 19, all in lines 46-91 |
+| `WeilRepSL2.lean` | 300 | 0 |
+| `WeilMul.lean` | 374 | 0 |
+| `WeilWN.lean` | 466 | 0 |
+| `WeilHom.lean` | 1360 | 0 |
+
+Characteristic zero is used in three places and three only: `χ₂_ne_one`
+(injectivity of `algebraMap ℤ E`, via `FaithfulSMul ℤ E`), and the two
+`norm_num` goals `(-11 : E) ≠ 0` and `(11 : E) ≠ 0` in `gauss_ne_zero` and
+`cFourier_sq_mul_eleven`. Every Mathlib lemma the Weil chain invokes —
+`gaussSum_sq`, `zmodChar`, `sum_mulShift`, `AddChar.sum_eq_zero_of_ne_one`,
+`quadraticChar_*`, `MulChar.ringHomComp_ne_one_iff` — asks at most
+`CommRing + IsDomain` of the coefficient field.
+
+`GeometricFanoCarrier`'s ambient block (lines 41-296) and
+`GeometricV14Carrier`'s projector block (`ambientAct`, `chi10'`, `projectorM`,
+`Msub`, `projectorM_equivariant`, ~135 lines) contain no field-specific step at
+all: `finrank U = 6` is a sandwich between two injections whose proofs are
+`ZMod 11` index combinatorics, `weilLambda2Hom_ker_center` reduces to
+`(-1)² = 1`, and `projectorM_equivariant` is conjugation reindexing.
+
+### What was done
+
+* `WeilRep.IsCycl11 E` — a class carrying a chosen primitive 11th root of
+  unity. `WeilRep.K` is an instance of it and is otherwise untouched, so
+  `V14SchemeModel.k` and every existing caller still mean exactly what they
+  meant.
+* `WeilRep`, `WeilRepSL2`, `WeilMul`, `WeilWN`, `WeilHom` now carry
+  `{E} [Field E] [CharZero E] [IsCycl11 E]`. The field is implicit, so call
+  sites are unchanged except where nothing in the expression determines it.
+* `WeilLambda2.lean` — `Lambda2U`, `pslLambda2Hom`, `ambientAct`, `chi10'`,
+  `projectorM`, `Msub` and `projectorM_equivariant` over any such `E`.
+* `IntrinsicV14Field.lean` — `intrinsicV14 F` and `ofPrimitiveRoot hζ`, the
+  intrinsic `V₁₄` over `F`.
+* `IntrinsicV14FieldHeadline.lean` — `intrinsicV14_K` (the new target at
+  `ℚ(ζ₁₁)` *is* the published one, by `rfl`), the unconditional theorem there,
+  and the general-field theorem with `AbstractTargetHeadline`'s three target
+  hypotheses.
+
+### What still blocks an unconditional general-field intrinsic theorem
+
+One thing, and it is not the model: **the comparison morphism over `F`**.
+
+`IntrinsicV14Compare.compare` is already field-generic, so over `F` it produces
+a morphism from the intrinsic `V₁₄` to the *coordinate* `V₁₄` **built over
+`F`**. The general-field coordinate headline
+(`noEquivariantRationalMap_ambientFree_over_of_constancy`) targets
+`V14SchemeModel.actionOverBaseChange F`, the **base change of the coordinate
+model built over `k`**. Those are two different schemes until someone proves
+
+> `Proj` of the `F`-form of the coordinate ring is the base change along
+> `Spec F → Spec k` of `Proj` of the `k`-form,
+
+which is not in Mathlib and is not in this tree. Everything else is in place:
+hypothesis (b) over `F` is proved, hypothesis (a) over `F` is the already-named
+gap `HypothesisAOver F`, and properness of the intrinsic `Proj` would follow
+from Mathlib's `IsProper (Proj.toSpecZero 𝒜)` once `𝒜 0 = F` is checked for the
+quotient by the Plücker ideal.
+
+### One thing that is genuinely `K`-specific, and why it does not bite
+
+`GeometricV14Carrier`'s order-3 and order-6 ambient character values
+(`chiLambda2_eq_zero_of_order_three/six`, near lines 6929 and 7387) are proved
+by "`K = ℚ(ζ₁₁)` has degree 10 over `ℚ`, hence contains no primitive 4th or
+12th root of unity and no `√3`" (lines 815-817, 1100, 2400-2429). Those
+statements are **false** for a general `F ⊇ ℚ(ζ₁₁)` — take `F = ℚ(ζ₁₁, i, √3)`
+— so those proofs do not generalize as written.
+
+They are not needed for the intrinsic target: `intrinsicV14` reaches only
+`chi10'`, `projectorM`, `Msub` and `ambientAct`. They are needed for
+`Ord11CharacterSum` and hence `MsubUnique.eq_Msub`, the uniqueness of `M`. The
+character values themselves are field-independent facts about the
+representation, and over any `F` receiving `ℚ(ζ₁₁)` they follow from the `K`
+values because trace commutes with base change; what does not generalize is the
+*proof technique*, not the statement. That transport has not been written.

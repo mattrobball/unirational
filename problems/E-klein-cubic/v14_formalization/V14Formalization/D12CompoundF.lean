@@ -74,9 +74,9 @@ public theorem evalMatrixK_compound_F6_mul_B_eq_B_mul_SM :
   apply Matrix.ext
   intro i j
   obtain ⟨q, hq⟩ := restrict_sub_row i j
-  have hq' := congrArg (evalPolyAt WeilRep.ζ) hq
+  have hq' := congrArg (evalPolyAt (WeilRep.ζ : WeilRep.K)) hq
   have hz :
-      evalPolyAt WeilRep.ζ
+      evalPolyAt (WeilRep.ζ : WeilRep.K)
           (((PluckerNaturality.compound2Lex F6_poly) * B_poly) i j) -
         evalPolyAt WeilRep.ζ ((B_poly * SM_poly) i j) = 0 := by
     simpa [map_sub, map_mul, D12U6PolynomialSeal.evalPhi11_ζ] using hq'

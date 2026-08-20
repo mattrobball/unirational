@@ -49,7 +49,7 @@ theorem S2p_eq_negI_mul_Smat :
   fin_cases i <;> fin_cases j <;> decide
 
 public theorem weilUHom_T2 :
-    WeilHom.weilUHom T2 = WeilRep.T_even_b 2 := by
+    WeilHom.weilUHom (E := k) T2 = WeilRep.T_even_b 2 := by
   rw [T2, map_pow]
   change WeilRepSL2.weilU WeilRep.Tmat ^ 2 = WeilRep.T_even_b 2
   rw [WeilRepSL2.weilU_Tmat, pow_two, Module.End.mul_eq_comp,
@@ -57,7 +57,7 @@ public theorem weilUHom_T2 :
   norm_num
 
 theorem weilUHom_S2p :
-    WeilHom.weilUHom S2p = WeilRep.S_even := by
+    WeilHom.weilUHom (E := k) S2p = WeilRep.S_even := by
   rw [S2p_eq_negI_mul_Smat, map_mul]
   change WeilRepSL2.weilU WeilRepSL2.negI ∘ₗ
       WeilRepSL2.weilU WeilRep.Smat = WeilRep.S_even
@@ -92,7 +92,7 @@ public theorem actualF6_eq_wordMatrix :
   rw [← reflWord_eq_mkRefl]
   unfold reflWord
   have hlin :
-      WeilHom.weilUHom (T2 ^ 4 * S2p * T2 ^ 7 * S2p) =
+      WeilHom.weilUHom (E := k) (T2 ^ 4 * S2p * T2 ^ 7 * S2p) =
         (WeilHom.weilUHom T2) ^ 4 * WeilHom.weilUHom S2p *
           (WeilHom.weilUHom T2) ^ 7 * WeilHom.weilUHom S2p := by
     simp only [map_mul, map_pow]
@@ -111,8 +111,8 @@ public theorem actualF6_eq_wordMatrix :
         (WeilRep.ψ (4 * (i.val : ZMod 11) * (j.val : ZMod 11)) +
           WeilRep.ψ (-(4 * (i.val : ZMod 11) * (j.val : ZMod 11)))))
 
-private theorem chi2_three : WeilRep.χ₂ (3 : ZMod 11) = 1 := by
-  have h := WeilRep.card_sq_eq (3 : ZMod 11)
+private theorem chi2_three : (WeilRep.χ₂ (E := k)) (3 : ZMod 11) = 1 := by
+  have h := WeilRep.card_sq_eq (E := k) (3 : ZMod 11)
   have hcard : ((Finset.univ.filter
       (fun x : ZMod 11 => x ^ 2 = 3)).card : WeilRep.K) = 2 := by
     rw [show Finset.univ.filter (fun x : ZMod 11 => x ^ 2 = 3) =
@@ -121,7 +121,7 @@ private theorem chi2_three : WeilRep.χ₂ (3 : ZMod 11) = 1 := by
     norm_num
   rw [hcard] at h
   calc
-    WeilRep.χ₂ (3 : ZMod 11) = WeilRep.χ₂ (3 : ZMod 11) + 1 - 1 := by ring
+    (WeilRep.χ₂ (E := k)) (3 : ZMod 11) = WeilRep.χ₂ (3 : ZMod 11) + 1 - 1 := by ring
     _ = 2 - 1 := by rw [← h]
     _ = 1 := by ring
 
@@ -215,18 +215,18 @@ public theorem actualF6_apply_eq_directValue (i j : Fin 6) :
   · subst j
     simp only [Fin.val_zero, Nat.cast_zero, mul_zero, neg_zero]
     have hsum : (∑ x : ZMod 11,
-        if x = 0 then WeilRep.ψ ((i.val : ZMod 11) * x) *
+        if x = 0 then (WeilRep.ψ (E := k)) ((i.val : ZMod 11) * x) *
           WeilRep.ψ (7 * (3 * x) ^ 2 * WeilRep.twoInv)
         else if x = 0 then WeilRep.ψ ((i.val : ZMod 11) * x) *
           WeilRep.ψ (7 * (3 * x) ^ 2 * WeilRep.twoInv) else 0) = 1 := by
       calc
         _ = (∑ x : ZMod 11,
-            if x = 0 then WeilRep.ψ ((i.val : ZMod 11) * x) *
+            if x = 0 then (WeilRep.ψ (E := k)) ((i.val : ZMod 11) * x) *
               WeilRep.ψ (7 * (3 * x) ^ 2 * WeilRep.twoInv) else 0) := by
           apply Finset.sum_congr rfl
           intro x _
           by_cases hx : x = 0 <;> simp [hx]
-        _ = WeilRep.ψ ((i.val : ZMod 11) * 0) *
+        _ = (WeilRep.ψ (E := k)) ((i.val : ZMod 11) * 0) *
               WeilRep.ψ (7 * (3 * 0) ^ 2 * WeilRep.twoInv) := by
           rw [sum_indicator_one]
         _ = 1 := by simp

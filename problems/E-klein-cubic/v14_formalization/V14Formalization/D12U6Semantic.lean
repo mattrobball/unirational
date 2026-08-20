@@ -37,8 +37,8 @@ public abbrev actualU6 : Matrix (Fin 6) (Fin 6) WeilRep.K :=
         (WeilRep.ψ (2 * (i.val : ZMod 11) * (j.val : ZMod 11)) +
           WeilRep.ψ (-(2 * (i.val : ZMod 11) * (j.val : ZMod 11)))))
 
-private theorem chi2_six : WeilRep.χ₂ (6 : ZMod 11) = -1 := by
-  have h := WeilRep.card_sq_eq (6 : ZMod 11)
+private theorem chi2_six : (WeilRep.χ₂ (E := k)) (6 : ZMod 11) = -1 := by
+  have h := WeilRep.card_sq_eq (E := k) (6 : ZMod 11)
   have hcard : ((Finset.univ.filter
       (fun x : ZMod 11 => x ^ 2 = 6)).card : WeilRep.K) = 0 := by
     norm_num
@@ -129,18 +129,18 @@ public theorem actualU6_apply_eq_directValue (i j : Fin 6) :
   · subst j
     simp only [Fin.val_zero, Nat.cast_zero, mul_zero, neg_zero, if_pos]
     have hsum : (∑ x : ZMod 11,
-        if x = 0 then WeilRep.ψ ((i.val : ZMod 11) * x) *
+        if x = 0 then (WeilRep.ψ (E := k)) ((i.val : ZMod 11) * x) *
           WeilRep.ψ (6 * (6 * x) ^ 2 * WeilRep.twoInv)
         else if x = 0 then WeilRep.ψ ((i.val : ZMod 11) * x) *
           WeilRep.ψ (6 * (6 * x) ^ 2 * WeilRep.twoInv) else 0) = 1 := by
       calc
         _ = (∑ x : ZMod 11,
-            if x = 0 then WeilRep.ψ ((i.val : ZMod 11) * x) *
+            if x = 0 then (WeilRep.ψ (E := k)) ((i.val : ZMod 11) * x) *
               WeilRep.ψ (6 * (6 * x) ^ 2 * WeilRep.twoInv) else 0) := by
           apply Finset.sum_congr rfl
           intro x _
           by_cases hx : x = 0 <;> simp [hx]
-        _ = WeilRep.ψ ((i.val : ZMod 11) * 0) *
+        _ = (WeilRep.ψ (E := k)) ((i.val : ZMod 11) * 0) *
               WeilRep.ψ (6 * (6 * 0) ^ 2 * WeilRep.twoInv) := by
           rw [sum_indicator_one]
         _ = 1 := by simp
@@ -209,7 +209,7 @@ the eleventh cyclotomic polynomial. -/
           phasePoly (-(2 * (i.val : ZMod 11) * (j.val : ZMod 11)))))
 
 theorem cFourier_eq_neg_gauss_div_eleven :
-    WeilRep.cFourier = -WeilRep.gauss / 11 := by
+    (WeilRep.cFourier : k) = -WeilRep.gauss / 11 := by
   rw [WeilRep.cFourier, eq_div_iff (by norm_num : (11 : WeilRep.K) ≠ 0)]
   apply (mul_left_cancel₀ (a := WeilRep.gauss) WeilRep.gauss_ne_zero)
   rw [← mul_assoc, mul_inv_cancel₀ WeilRep.gauss_ne_zero, one_mul]
@@ -220,7 +220,7 @@ theorem cFourier_eq_neg_gauss_div_eleven :
     _ = WeilRep.gauss * -WeilRep.gauss := by ring
 
 theorem gauss_explicit :
-    WeilRep.gauss = 1 + 2 * (WeilRep.ζ + WeilRep.ζ ^ 3 + WeilRep.ζ ^ 4 +
+    (WeilRep.gauss : k) = 1 + 2 * (WeilRep.ζ + WeilRep.ζ ^ 3 + WeilRep.ζ ^ 4 +
       WeilRep.ζ ^ 5 + WeilRep.ζ ^ 9) := by
   classical
   unfold WeilRep.gauss
@@ -246,13 +246,13 @@ theorem gauss_explicit :
   ring
 
 public theorem eval_cFourierPoly :
-    evalPolyAt WeilRep.ζ cFourierPoly = WeilRep.cFourier := by
+    evalPolyAt (WeilRep.ζ : k) cFourierPoly = WeilRep.cFourier := by
   rw [cFourier_eq_neg_gauss_div_eleven, gauss_explicit]
   simp [cFourierPoly, evalPolyAt]
   ring
 
 public theorem eval_phasePoly (a : ZMod 11) :
-    evalPolyAt WeilRep.ζ (phasePoly a) = WeilRep.ψ a := by
+    evalPolyAt (WeilRep.ζ : k) (phasePoly a) = WeilRep.ψ a := by
   simp [phasePoly, evalPolyAt, WeilRep.ψ_apply]
 
 public theorem eval_directEntryPoly (i j : Fin 6) :

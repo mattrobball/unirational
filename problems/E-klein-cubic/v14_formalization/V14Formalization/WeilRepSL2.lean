@@ -1,5 +1,5 @@
 /-
-Weil representation pieces for SL₂(F₁₁) on Fun and even U.
+Weil representation pieces for SL₂(F₁₁) on (Fun E) and even U.
 
 * Diagonal Dfull, unipotent Nfull, Fourier Wfull
 * Bruhat assembly weilFun / weilU
@@ -17,8 +17,12 @@ open V14Formalization.WeilRep
 
 noncomputable section
 
+universe u
+
 namespace V14Formalization
 namespace WeilRepSL2
+
+variable {E : Type u} [Field E] [CharZero E] [IsCycl11 E]
 
 public abbrev F := ZMod 11
 public abbrev SLG := SpecialLinearGroup (Fin 2) F
@@ -48,28 +52,31 @@ public theorem ea_ne_zero_of_ec_zero (g : SLG) (hc : ec g = 0) : ea g ≠ 0 := b
 /-! ## Diagonal action -/
 
 /-- ρ(diag(t)): f(x) ↦ χ₂(t) · f(t · x).  (Right scaling so D∘N(t)=N(t s²)∘D.) -/
-@[expose] public def Dfull (t : F) (_ht : t ≠ 0) : Fun →ₗ[K] Fun where
+@[expose] public def Dfull (t : F) (_ht : t ≠ 0) : (Fun E) →ₗ[E] (Fun E) where
   toFun f := fun x => χ₂ t * f (t * x)
   map_add' := by
     intro f g; funext x; simp [Pi.add_apply]; ring
   map_smul' := by
     intro r f; funext x; simp [Pi.smul_apply, smul_eq_mul]; ring
 
-public theorem Dfull_preserves_even (t : F) (ht : t ≠ 0) {f : Fun}
+omit [CharZero E] [IsCycl11 E] in
+public theorem Dfull_preserves_even (t : F) (ht : t ≠ 0) {f : (Fun E)}
     (hf : ∀ x, f (-x) = f x) (x : ZMod 11) :
     Dfull t ht f (-x) = Dfull t ht f x := by
   dsimp [Dfull]
   have hneg : t * (-x) = -(t * x) := by ring
   rw [hneg, hf (t * x)]
 
-public theorem χ₂_one : χ₂ (1 : F) = 1 := by
-  change (algebraMap ℤ K) (χ₂ℤ 1) = 1
+omit [CharZero E] [IsCycl11 E] in
+public theorem χ₂_one : (χ₂ : MulChar (ZMod 11) E) (1 : F) = 1 := by
+  change (algebraMap ℤ E) (χ₂ℤ 1) = 1
   have : χ₂ℤ 1 = 1 := by
     change quadraticChar (ZMod 11) 1 = 1
     exact map_one (quadraticChar (ZMod 11))
   rw [this, map_one]
 
-theorem Dfull_one : Dfull (1 : F) one_ne_zero = LinearMap.id := by
+omit [CharZero E] [IsCycl11 E] in
+theorem Dfull_one : (Dfull (1 : F) one_ne_zero : (Fun E) →ₗ[E] (Fun E)) = LinearMap.id := by
   apply LinearMap.ext
   intro f
   funext x
@@ -78,10 +85,11 @@ theorem Dfull_one : Dfull (1 : F) one_ne_zero = LinearMap.id := by
 
 /-! ## Unipotent / Fourier -/
 
-@[expose] public def Nfull (t : F) : Fun →ₗ[K] Fun := Tfull_b t
-@[expose] public def Wfull : Fun →ₗ[K] Fun := Sfull
+@[expose] public def Nfull (t : F) : (Fun E) →ₗ[E] (Fun E) := Tfull_b t
+@[expose] public def Wfull : (Fun E) →ₗ[E] (Fun E) := Sfull
 
-public theorem Nfull_zero : Nfull 0 = LinearMap.id := by
+omit [CharZero E] in
+public theorem Nfull_zero : (Nfull 0 : (Fun E) →ₗ[E] (Fun E)) = LinearMap.id := by
   apply LinearMap.ext
   intro f
   funext x
@@ -90,36 +98,38 @@ public theorem Nfull_zero : Nfull 0 = LinearMap.id := by
   have h0 : (0 : ZMod 11) * x ^ 2 * twoInv = 0 := by ring
   rw [h0, ψ_zero, one_mul]
 
-public theorem Nfull_add (s t : F) : Nfull (s + t) = Nfull s ∘ₗ Nfull t := by
+omit [CharZero E] in
+public theorem Nfull_add (s t : F) : (Nfull (s + t) : (Fun E) →ₗ[E] (Fun E)) = Nfull s ∘ₗ Nfull t := by
   apply LinearMap.ext
   intro f
   funext x
   dsimp [Nfull, Tfull_b]
-  have hψ : ψ ((s + t) * x ^ 2 * twoInv) =
+  have hψ : (ψ : AddChar (ZMod 11) E) ((s + t) * x ^ 2 * twoInv) =
       ψ (s * x ^ 2 * twoInv) * ψ (t * x ^ 2 * twoInv) := by
     rw [← ψ_add]; congr 1; ring
   rw [hψ]; ring
 
 /-! ## Bruhat assembly -/
 
-@[expose] public def borelFun (g : SLG) (hc : ec g = 0) : Fun →ₗ[K] Fun :=
+@[expose] public def borelFun (g : SLG) (hc : ec g = 0) : (Fun E) →ₗ[E] (Fun E) :=
   Nfull (eb g * ea g) ∘ₗ Dfull (ea g) (ea_ne_zero_of_ec_zero g hc)
 
 /-- Positive NWDN kernel of a big-cell Bruhat factor. -/
-@[expose] public def bigCellPos (g : SLG) (hc : ec g ≠ 0) : Fun →ₗ[K] Fun :=
+@[expose] public def bigCellPos (g : SLG) (hc : ec g ≠ 0) : (Fun E) →ₗ[E] (Fun E) :=
   Nfull (ea g * (ec g)⁻¹) ∘ₗ Wfull ∘ₗ Dfull (ec g) hc ∘ₗ
     Nfull ((ec g)⁻¹ * ed g)
 
 /-- Big-cell factor with the metaplectic sign so that the even Weil
 representation of SL₂ is a true monoid homomorphism (D(−ec) = −D(ec)
 on even functions forces this overall minus). -/
-@[expose] public def bigCellFun (g : SLG) (hc : ec g ≠ 0) : Fun →ₗ[K] Fun :=
+@[expose] public def bigCellFun (g : SLG) (hc : ec g ≠ 0) : (Fun E) →ₗ[E] (Fun E) :=
   - bigCellPos g hc
 
-@[expose] public def weilFun (g : SLG) : Fun →ₗ[K] Fun :=
+@[expose] public def weilFun (g : SLG) : (Fun E) →ₗ[E] (Fun E) :=
   if hc : ec g = 0 then borelFun g hc else bigCellFun g hc
 
-public theorem weilFun_preserves_even (g : SLG) {f : Fun}
+omit [CharZero E] in
+public theorem weilFun_preserves_even (g : SLG) {f : (Fun E)}
     (hf : ∀ x, f (-x) = f x) (x : ZMod 11) :
     weilFun g f (-x) = weilFun g f x := by
   dsimp [weilFun]
@@ -157,7 +167,7 @@ public theorem weilFun_preserves_even (g : SLG) {f : Fun}
     rw [hPos]
 
 /-- Weil action on the even module U. -/
-@[expose] public def weilU (g : SLG) : WeilRep.U →ₗ[K] WeilRep.U where
+@[expose] public def weilU (g : SLG) : (WeilRep.U E) →ₗ[E] (WeilRep.U E) where
   toFun f := ⟨weilFun g f.1, fun x => weilFun_preserves_even g (fun z => f.2 z) x⟩
   map_add' := by
     intro f₁ f₂
@@ -170,7 +180,8 @@ public theorem weilFun_preserves_even (g : SLG) {f : Fun}
 
 /-! ## Generators -/
 
-theorem weilFun_Tmat : weilFun Tmat = Nfull 1 := by
+omit [CharZero E] in
+theorem weilFun_Tmat : (weilFun Tmat : (Fun E) →ₗ[E] (Fun E)) = Nfull 1 := by
   have hc : ec Tmat = 0 := by simp [ec, Tmat]
   have ha : ea Tmat = 1 := by simp [ea, Tmat]
   have hb : eb Tmat = 1 := by simp [eb, Tmat]
@@ -180,9 +191,10 @@ theorem weilFun_Tmat : weilFun Tmat = Nfull 1 := by
   simp only [ha, hb, one_mul]
   rw [Dfull_one, LinearMap.comp_id]
 
-/-- With the big-cell metaplectic sign, ρ(S) = −W on Fun (and −S_even on U).
+omit [CharZero E] in
+/-- With the big-cell metaplectic sign, ρ(S) = −W on (Fun E) (and −S_even on U).
 Still S² ↦ (−W)² = W² = −R ≡ −id on even U, matching S² = −I. -/
-theorem weilFun_Smat : weilFun Smat = -Wfull := by
+theorem weilFun_Smat : (weilFun Smat : (Fun E) →ₗ[E] (Fun E)) = -Wfull := by
   have hc : ec Smat ≠ 0 := by simp [ec, Smat]
   have ha0 : ea Smat = 0 := by simp [ea, Smat]
   have hd0 : ed Smat = 0 := by simp [ed, Smat]
@@ -209,7 +221,8 @@ theorem ea_negI : ea negI = -1 := by
 theorem eb_negI : eb negI = 0 := by
   simp [eb, negI, Matrix.neg_apply]
 
-public theorem weilU_negI : weilU negI = -LinearMap.id := by
+omit [CharZero E] in
+public theorem weilU_negI : (weilU negI : (WeilRep.U E) →ₗ[E] (WeilRep.U E)) = -LinearMap.id := by
   apply LinearMap.ext
   intro f
   apply Subtype.ext
@@ -218,7 +231,7 @@ public theorem weilU_negI : weilU negI = -LinearMap.id := by
   dsimp [weilFun]
   rw [dif_pos ec_negI]
   -- borelFun = Nfull 0 ∘ Dfull (-1) = Dfull (-1)
-  have hborel : borelFun negI ec_negI = Dfull (-1) (by decide : (-1 : F) ≠ 0) := by
+  have hborel : (borelFun negI ec_negI : (Fun E) →ₗ[E] (Fun E)) = Dfull (-1) (by decide : (-1 : F) ≠ 0) := by
     dsimp [borelFun]
     simp only [ea_negI, eb_negI, zero_mul, Nfull_zero, LinearMap.id_comp]
   rw [hborel]
@@ -230,18 +243,21 @@ public theorem weilU_negI : weilU negI = -LinearMap.id := by
 
 /-! ## Invertibility of unipotents -/
 
-theorem Nfull_leftInv (t : F) : Nfull (-t) ∘ₗ Nfull t = LinearMap.id := by
+omit [CharZero E] in
+theorem Nfull_leftInv (t : F) : (Nfull (-t) : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Nfull t = LinearMap.id := by
   rw [← Nfull_add, neg_add_cancel, Nfull_zero]
 
-theorem Nfull_rightInv (t : F) : Nfull t ∘ₗ Nfull (-t) = LinearMap.id := by
+omit [CharZero E] in
+theorem Nfull_rightInv (t : F) : (Nfull t : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Nfull (-t) = LinearMap.id := by
   rw [← Nfull_add, add_neg_cancel, Nfull_zero]
 
 /-- On the even module, S² = −id (re-export). -/
-theorem S_even_sq' : S_even ∘ₗ S_even = (-LinearMap.id : WeilRep.U →ₗ[K] WeilRep.U) :=
+theorem S_even_sq' : S_even ∘ₗ S_even = (-LinearMap.id : (WeilRep.U E) →ₗ[E] (WeilRep.U E)) :=
   S_even_sq
 
+omit [CharZero E] in
 /-- Weil operator for Tmat on even U is T_even_b 1. -/
-public theorem weilU_Tmat : weilU Tmat = T_even_b 1 := by
+public theorem weilU_Tmat : (weilU Tmat : (WeilRep.U E) →ₗ[E] (WeilRep.U E)) = T_even_b 1 := by
   apply LinearMap.ext
   intro f
   apply Subtype.ext
@@ -250,8 +266,9 @@ public theorem weilU_Tmat : weilU Tmat = T_even_b 1 := by
   rw [weilFun_Tmat]
   dsimp [Nfull, Tfull_b, T_even_b]
 
+omit [CharZero E] in
 /-- Weil operator for Smat on even U is −S_even (metaplectic big-cell sign). -/
-public theorem weilU_Smat : weilU Smat = -S_even := by
+public theorem weilU_Smat : (weilU Smat : (WeilRep.U E) →ₗ[E] (WeilRep.U E)) = -S_even := by
   apply LinearMap.ext
   intro f
   apply Subtype.ext
@@ -266,7 +283,8 @@ theorem ea_one : ea (1 : SLG) = 1 := by simp [ea]
 theorem eb_one : eb (1 : SLG) = 0 := by simp [eb]
 theorem ec_one : ec (1 : SLG) = 0 := by simp [ec]
 
-theorem weilFun_one : weilFun (1 : SLG) = LinearMap.id := by
+omit [CharZero E] in
+theorem weilFun_one : (weilFun (1 : SLG) : (Fun E) →ₗ[E] (Fun E)) = LinearMap.id := by
   have hc : ec (1 : SLG) = 0 := ec_one
   dsimp [weilFun]
   rw [dif_pos hc]
@@ -274,7 +292,8 @@ theorem weilFun_one : weilFun (1 : SLG) = LinearMap.id := by
   simp only [ea_one, eb_one, zero_mul]
   rw [Nfull_zero, Dfull_one, LinearMap.id_comp]
 
-public theorem weilU_one : weilU (1 : SLG) = LinearMap.id := by
+omit [CharZero E] in
+public theorem weilU_one : (weilU (1 : SLG) : (WeilRep.U E) →ₗ[E] (WeilRep.U E)) = LinearMap.id := by
   apply LinearMap.ext
   intro f
   apply Subtype.ext
@@ -282,8 +301,9 @@ public theorem weilU_one : weilU (1 : SLG) = LinearMap.id := by
   rw [weilFun_one]
   rfl
 
+omit [CharZero E] [IsCycl11 E] in
 /-- On subspaces (and projective space), `L` and `-L` induce the same action. -/
-theorem submodule_map_neg {W : Submodule K WeilRep.U} (L : WeilRep.U →ₗ[K] WeilRep.U) :
+theorem submodule_map_neg {W : Submodule E (WeilRep.U E)} (L : (WeilRep.U E) →ₗ[E] (WeilRep.U E)) :
     Submodule.map (-L) W = Submodule.map L W := by
   ext x
   constructor

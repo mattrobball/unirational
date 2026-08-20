@@ -42,7 +42,7 @@ public abbrev k := WeilRep.K
 public abbrev F := ZMod 11
 public abbrev SLG := SpecialLinearGroup (Fin 2) F
 public abbrev PSL2F11 : Type := PSL(2, F)
-public abbrev U := WeilRep.U
+public abbrev U := WeilRep.U k
 
 @[expose] public instance : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
 @[expose] public instance : Group PSL2F11 := inferInstance
@@ -405,10 +405,10 @@ theorem pure_b01_ne : pureWedge b0 b1 ≠ 0 := by
   exact std_wedge_ne_zero hstd
 
 public theorem ψ_half_ne_one :
-    WeilRep.ψ ((1 : F) * (2 : F)⁻¹) ≠ 1 := by
+    (WeilRep.ψ (E := k)) ((1 : F) * (2 : F)⁻¹) ≠ 1 := by
   intro h
   have hz : (1 : F) * (2 : F)⁻¹ = 0 :=
-    (AddChar.IsPrimitive.zmod_char_eq_one_iff 11 WeilRep.ψ_primitive _).mp h
+    (AddChar.IsPrimitive.zmod_char_eq_one_iff 11 (WeilRep.ψ_primitive (E := k)) _).mp h
   exact (mul_ne_zero (by decide : (1 : F) ≠ 0)
     (inv_ne_zero (by decide : (2 : F) ≠ 0))) hz
 
@@ -472,7 +472,7 @@ public theorem T_b0 : WeilRep.T_even_b 1 b0 = b0 := by
     simp [hx0, WeilRep.twoInv, WeilRep.ψ_zero]
 
 public theorem T_b1 : WeilRep.T_even_b 1 b1 =
-    WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • b1 := by
+    (WeilRep.ψ (E := k)) ((1 : F) * (2 : F)⁻¹) • b1 := by
   apply Subtype.ext; funext x
   change WeilRep.ψ (1 * x ^ 2 * WeilRep.twoInv) * b1.1 x =
     WeilRep.ψ ((1 : F) * (2 : F)⁻¹) * b1.1 x
@@ -487,7 +487,8 @@ public theorem T_b1 : WeilRep.T_even_b 1 b1 =
 
 theorem weilLambda2_Tmat_ne_id : weilLambda2 WeilRep.Tmat ≠ LinearMap.id := by
   intro h
-  have hU : WeilHom.weilUHom WeilRep.Tmat = WeilRep.T_even_b 1 := WeilRepSL2.weilU_Tmat
+  have hU : WeilHom.weilUHom WeilRep.Tmat = (WeilRep.T_even_b 1 : U →ₗ[k] U) :=
+    WeilRepSL2.weilU_Tmat
   have hmap : exteriorPower.map (R := k) (n := 2) (WeilRep.T_even_b 1) =
       (LinearMap.id : Lambda2U →ₗ[k] Lambda2U) := by
     simpa [weilLambda2, hU] using h
@@ -506,26 +507,26 @@ theorem weilLambda2_Tmat_ne_id : weilLambda2 WeilRep.Tmat ≠ LinearMap.id := by
     exact happly
   rw [T_b0, T_b1] at hwedge
   have hsc :
-      pureWedge b0 (WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • b1) =
-        WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • pureWedge b0 b1 := by
+      pureWedge b0 ((WeilRep.ψ (E := k)) ((1 : F) * (2 : F)⁻¹) • b1) =
+        (WeilRep.ψ (E := k)) ((1 : F) * (2 : F)⁻¹) • pureWedge b0 b1 := by
     dsimp [pureWedge]
     -- ιMulti ![b0, λ•b1] = λ • ιMulti ![b0,b1] via map_update_smul at index 1
     have hh :=
       (exteriorPower.ιMulti (R := k) (n := 2) (M := U)).map_update_smul
-        ![b0, b1] (1 : Fin 2) (WeilRep.ψ ((1 : F) * (2 : F)⁻¹)) b1
+        ![b0, b1] (1 : Fin 2) ((WeilRep.ψ (E := k)) ((1 : F) * (2 : F)⁻¹)) b1
     -- hh : ιMulti (update ![b0,b1] 1 (λ•b1)) = λ • ιMulti (update ![b0,b1] 1 b1)
     have hup : Function.update ![b0, b1] 1 b1 = ![b0, b1] := by
       funext i; fin_cases i <;> simp
     have hup' :
-        Function.update ![b0, b1] 1 (WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • b1) =
-          ![b0, WeilRep.ψ ((1 : F) * (2 : F)⁻¹) • b1] := by
+        Function.update ![b0, b1] 1 ((WeilRep.ψ (E := k)) ((1 : F) * (2 : F)⁻¹) • b1) =
+          ![b0, (WeilRep.ψ (E := k)) ((1 : F) * (2 : F)⁻¹) • b1] := by
       funext i; fin_cases i <;> simp
     rw [hup, hup'] at hh
     exact hh
   rw [hsc] at hwedge
-  have hψ : WeilRep.ψ ((1 : F) * (2 : F)⁻¹) = 1 := by
+  have hψ : (WeilRep.ψ (E := k)) ((1 : F) * (2 : F)⁻¹) = 1 := by
     have hne := pure_b01_ne
-    have : (WeilRep.ψ ((1 : F) * (2 : F)⁻¹) - 1) • pureWedge b0 b1 = 0 := by
+    have : ((WeilRep.ψ (E := k)) ((1 : F) * (2 : F)⁻¹) - 1) • pureWedge b0 b1 = 0 := by
       rw [sub_smul, hwedge, one_smul, sub_self]
     exact sub_eq_zero.mp ((smul_eq_zero.mp this).resolve_right hne)
   exact ψ_half_ne_one hψ
