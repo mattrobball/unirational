@@ -140,7 +140,7 @@ def emit_lemmas(hits):
             f"    {wrap(terms, '      ')} =\n"
             f"      interpQ 1 [{lst}] := by\n"
             f"  simp [interpQ, toPolyZ]\n"
-            f"  try ring\n"
+            f"  try grind\n"
         )
     header = f'''/-
 Copyright (c) 2026 V14Formalization contributors.
@@ -195,10 +195,10 @@ def statements(text):
     return out
 
 
-def rewrite(paths, names):
+def rewrite(hits, names):
     total, touched, skipped = 0, 0, 0
     byfile = {}
-    for p, i, name, lhs, coeffs, sup in scan(paths):
+    for p, i, name, lhs, coeffs, sup in hits:
         byfile.setdefault(p, []).append((i, name, lhs, coeffs, sup))
     for p, items in sorted(byfile.items()):
         src = open(p).read()
@@ -271,7 +271,7 @@ def main(argv):
         print(f"bridges found: {len(hits)}; patterns emitted: {len(names)}")
         return
     names = pattern_names(hits)
-    total, touched, skipped = rewrite(paths, names)
+    total, touched, skipped = rewrite(hits, names)
     print(f"rewritten: {total}; files touched: {touched}; unexpected proof shapes skipped: {skipped}")
 
 

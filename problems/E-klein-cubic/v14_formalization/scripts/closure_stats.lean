@@ -3,7 +3,7 @@ Closure measurement for the Comparator export.
 
     lake env lean scripts/closure_stats.lean
 
-Reports, for the transitive proof-term closure of the two published theorems:
+Reports, for the transitive proof-term closure of the published theorem:
 
   * the number of constants in the closure;
   * DAG-deduplicated `Expr` nodes, per defining module, aggregated by family.
@@ -29,9 +29,11 @@ import V14Solution
 
 open Lean
 
+/-- The Comparator target, exactly as `comparator.json` names it.  Keep this in
+sync with `scripts/closure_project_decls.lean`'s `defaultTargets`; measuring a
+different root measures a different closure. -/
 def roots : Array Name :=
-  #[`V14Formalization.Comparator.noEquivariantRationalMap_from_ambient,
-    `V14Formalization.Comparator.noEquivariantRationalMap_projectiveGVariety]
+  #[`V14Formalization.Comparator.noEquivariantRationalMap_projectiveSpaceOfRep]
 
 /-- Strip trailing digits and `_`-separated index groups so that
 `D12PieceAASplitRow7` and `D12PieceAASplitEntry7_9` fold into one family. -/
@@ -41,7 +43,7 @@ def familyOf (m : Name) : String :=
 
 run_meta do
   let env ← getEnv
-  -- 1. constant closure of the two root theorems (types and proof terms)
+  -- 1. constant closure of the root theorem (types and proof terms)
   let mut visited : Std.HashSet Name := {}
   let mut stack : Array Name := roots
   while h : stack.size > 0 do

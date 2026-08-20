@@ -99,7 +99,6 @@ def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true")
     ap.add_argument("files", nargs="+", type=Path)
-    ap.parse_args()
     args = ap.parse_args()
     rc = 0
     for path in args.files:

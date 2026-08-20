@@ -513,8 +513,12 @@ public theorem z_{m.group(2)} :
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--check", action="store_true")
-    ap.add_argument("--tables", action="store_true")
-    ap.add_argument("--certs", action="store_true")
+    # The two passes are alternatives: `--tables` rewrites the polynomial
+    # tables, `--certs` (the default) rewrites the certificates.  They were
+    # silently non-exclusive, so `--certs --tables` ran the table pass.
+    mode = ap.add_mutually_exclusive_group()
+    mode.add_argument("--tables", action="store_true")
+    mode.add_argument("--certs", action="store_true")
     ap.add_argument("--emit-fplus-bridge", type=Path)
     ap.add_argument("files", nargs="*", type=Path)
     args = ap.parse_args()

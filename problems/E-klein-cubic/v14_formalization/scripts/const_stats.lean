@@ -3,16 +3,17 @@ Per-constant Expr-node counter (scratch measurement tool).
 
     lake env lean scripts/const_stats.lean
 
-Walks the closure of the two published theorems and prints, for a chosen set
-of defining modules, every closure constant with its deduped Expr-node count.
+Walks the closure of the published theorem and prints, for a chosen set of
+defining modules, every closure constant with its deduped Expr-node count.
 -/
 import V14Solution
 
 open Lean
 
+/-- The Comparator target, exactly as `comparator.json` names it.  Keep this in
+sync with `scripts/closure_project_decls.lean`'s `defaultTargets`. -/
 def roots : Array Name :=
-  #[`V14Formalization.Comparator.noEquivariantRationalMap_from_ambient,
-    `V14Formalization.Comparator.noEquivariantRationalMap_projectiveGVariety]
+  #[`V14Formalization.Comparator.noEquivariantRationalMap_projectiveSpaceOfRep]
 
 def wanted : Array Name :=
   #[`V14Formalization.D12CompoundRRow0,
