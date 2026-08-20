@@ -260,6 +260,7 @@ public theorem projectorMatrix_eq_character_sum :
             (Lambda2Coordinates.lambda2MatrixRepresentation.ρ g :
               Matrix (Fin 15) (Fin 15) V14SchemeModel.k) := by
   unfold V14SchemeModel.projectorMatrix GeometricV14Carrier.projectorM
+    WeilLambda2.projectorM
   simp only [map_smul, map_sum]
   rfl
 

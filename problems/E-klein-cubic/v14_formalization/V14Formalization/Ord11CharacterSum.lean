@@ -936,7 +936,7 @@ theorem sum_chi_chiLambda2_order_eleven :
       chi10' g.1 * chiLambda2 g.1 = -(chiLambda2 g.1) := by
     intro g
     have ho : orderOf g.1 = 11 := g.2
-    have hc : chi10' g.1 = (-1 : k) := by simp [chi10', ho]
+    have hc : chi10' g.1 = (-1 : k) := by simp [chi10', WeilLambda2.chi10', ho]
     rw [hc]; ring
   rw [Finset.sum_congr rfl fun g _ => hval g, Finset.sum_neg_distrib,
     sum_chiLambda2_order_eleven]

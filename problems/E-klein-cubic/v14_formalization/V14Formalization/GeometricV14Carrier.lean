@@ -115,13 +115,12 @@ theorem b01_independent : LinearIndependent k ![b0, b1] := by
 
 @[expose] public def ambientAct (g : PSL2F11) : Lambda2U →ₗ[k] Lambda2U := pslLambda2Hom g
 
-theorem ambientAct_one : ambientAct 1 = LinearMap.id := by
-  change pslLambda2Hom 1 = LinearMap.id
-  rw [map_one, Module.End.one_eq_id]
+theorem ambientAct_one : ambientAct 1 = LinearMap.id :=
+  WeilLambda2.ambientAct_one k
 
 theorem ambientAct_mul (g h : PSL2F11) :
-    ambientAct (g * h) = ambientAct g ∘ₗ ambientAct h := by
-  ext x; simp [ambientAct, map_mul, LinearMap.comp_apply]
+    ambientAct (g * h) = ambientAct g ∘ₗ ambientAct h :=
+  WeilLambda2.ambientAct_mul k g h
 
 public theorem ambientAct_injective (g : PSL2F11) : Function.Injective (ambientAct g) := by
   intro a b hab
@@ -2135,126 +2134,46 @@ Modular check: `⟨χ_{Λ²U}, χ₁₀'⟩ = 1` and `⟨χ_{Λ²U}, χ₁₀⟩
 /-- Character values of the irreducible `10'` of `PSL₂(𝔽₁₁)`, determined by element order.
     Table: `1A↦10, 2A↦2, 3A↦1, 5A/5B↦0, 6A↦-1, 11A/11B↦-1`. -/
 @[expose] public noncomputable def chi10' (g : PSL2F11) : k :=
-  let n := orderOf g
-  if n = 1 then 10
-  else if n = 2 then 2
-  else if n = 3 then 1
-  else if n = 5 then 0
-  else if n = 6 then -1
-  else if n = 11 then -1
-  else 0
+  WeilLambda2.chi10' k g
 
 theorem chi10'_one : chi10' (1 : PSL2F11) = 10 := by
-  simp [chi10', orderOf_one]
-
-theorem chi10'_eq_of_orderOf_eq {g h : PSL2F11} (ho : orderOf g = orderOf h) :
-    chi10' g = chi10' h := by
-  simp [chi10', ho]
+  simp [chi10', WeilLambda2.chi10', orderOf_one]
 
 theorem orderOf_conj (g h : PSL2F11) : orderOf (h * g * h⁻¹) = orderOf g :=
-  (SemiconjBy.orderOf_eq (a := h) (x := g) (y := h * g * h⁻¹)
-    (by simp [SemiconjBy, mul_assoc])).symm
-
-/-- `χ₁₀'` is a class function (depends only on conjugacy via order). -/
-theorem chi10'_conj (g h : PSL2F11) : chi10' (h * g * h⁻¹) = chi10' g :=
-  chi10'_eq_of_orderOf_eq (orderOf_conj g h)
+  WeilLambda2.orderOf_conj g h
 
 /-- Isotypic projector onto the 10′ summand `M ⊂ Λ²U`.
     `π = (10/|G|) ∑_g χ₁₀'(g) · ambientAct g`, with `|G| = 660`. -/
 @[expose] public noncomputable def projectorM : Module.End k Lambda2U :=
-  (10 * (660 : k)⁻¹) •
-    ∑ g : PSL2F11, chi10' g • (ambientAct g : Module.End k Lambda2U)
+  WeilLambda2.projectorM k
 
 /-- The writeup ambient summand `M = 10'`. -/
 @[expose] public noncomputable def Msub : Submodule k Lambda2U :=
-  LinearMap.range projectorM
+  WeilLambda2.Msub k
 
 theorem projectorM_apply (v : Lambda2U) :
     projectorM v =
-      (10 * (660 : k)⁻¹) • (∑ g : PSL2F11, chi10' g • ambientAct g v) := by
-  dsimp [projectorM]
-  simp only [LinearMap.smul_apply, LinearMap.sum_apply]
-
-/-- Conjugation reindexing equivalence on `PSL`. -/
-def conjEquiv (h : PSL2F11) : PSL2F11 ≃ PSL2F11 where
-  toFun g := h⁻¹ * g * h
-  invFun t := h * t * h⁻¹
-  left_inv g := by
-    change h * (h⁻¹ * g * h) * h⁻¹ = g
-    calc h * (h⁻¹ * g * h) * h⁻¹
-        = (h * h⁻¹) * g * (h * h⁻¹) := by simp [mul_assoc]
-      _ = g := by simp
-  right_inv t := by
-    change h⁻¹ * (h * t * h⁻¹) * h = t
-    calc h⁻¹ * (h * t * h⁻¹) * h
-        = (h⁻¹ * h) * t * (h⁻¹ * h) := by simp [mul_assoc]
-      _ = t := by simp
+      (10 * (660 : k)⁻¹) • (∑ g : PSL2F11, chi10' g • ambientAct g v) :=
+  WeilLambda2.projectorM_apply k v
 
 /-- Character-sum form of the projector is G-equivariant. -/
 theorem sum_chi_ambient_equivariant (h : PSL2F11) (v : Lambda2U) :
     (∑ g : PSL2F11, chi10' g • ambientAct g (ambientAct h v)) =
-      ambientAct h (∑ g : PSL2F11, chi10' g • ambientAct g v) := by
-  -- First rewrite each term: ρ(g)ρ(h) = ρ(h)ρ(h⁻¹gh)
-  have hlink :
-      (∑ g : PSL2F11, chi10' g • ambientAct g (ambientAct h v)) =
-        ∑ g : PSL2F11, chi10' g • ambientAct h (ambientAct (h⁻¹ * g * h) v) := by
-    refine Finset.sum_congr rfl fun g _ => ?_
-    have hgh : g * h = h * (h⁻¹ * g * h) := by
-      calc g * h = (h * h⁻¹) * g * h := by simp
-        _ = h * (h⁻¹ * g * h) := by simp [mul_assoc]
-    calc chi10' g • ambientAct g (ambientAct h v)
-        = chi10' g • ambientAct (g * h) v := by
-          rw [← LinearMap.comp_apply, ← ambientAct_mul]
-      _ = chi10' g • ambientAct (h * (h⁻¹ * g * h)) v := by rw [hgh]
-      _ = chi10' g • ambientAct h (ambientAct (h⁻¹ * g * h) v) := by
-          rw [ambientAct_mul, LinearMap.comp_apply]
-  rw [hlink]
-  -- Replace χ(g) by χ(h⁻¹gh)
-  have hχsum :
-      (∑ g : PSL2F11, chi10' g • ambientAct h (ambientAct (h⁻¹ * g * h) v)) =
-        ∑ g : PSL2F11,
-          chi10' (h⁻¹ * g * h) • ambientAct h (ambientAct (h⁻¹ * g * h) v) := by
-    refine Finset.sum_congr rfl fun g _ => ?_
-    have hχ : chi10' g = chi10' (h⁻¹ * g * h) := by
-      have hraw : chi10' g = chi10' (h⁻¹ * g * (h⁻¹)⁻¹) := (chi10'_conj g h⁻¹).symm
-      rwa [inv_inv] at hraw
-    rw [hχ]
-  rw [hχsum]
-  -- Pull ambientAct h out of the sum
-  have hpull :
-      (∑ g : PSL2F11,
-          chi10' (h⁻¹ * g * h) • ambientAct h (ambientAct (h⁻¹ * g * h) v)) =
-        ∑ g : PSL2F11,
-          ambientAct h (chi10' (h⁻¹ * g * h) • ambientAct (h⁻¹ * g * h) v) := by
-    refine Finset.sum_congr rfl fun g _ => ?_
-    rw [LinearMap.map_smul]
-  rw [hpull]
-  have hmap :
-      (∑ g : PSL2F11,
-          ambientAct h (chi10' (h⁻¹ * g * h) • ambientAct (h⁻¹ * g * h) v)) =
-        ambientAct h
-          (∑ g : PSL2F11, chi10' (h⁻¹ * g * h) • ambientAct (h⁻¹ * g * h) v) :=
-    (map_sum (ambientAct h)
-      (fun g => chi10' (h⁻¹ * g * h) • ambientAct (h⁻¹ * g * h) v) _).symm
-  rw [hmap]
-  -- Reindex g ↦ h⁻¹gh via conjEquiv
-  apply congrArg
-  exact Fintype.sum_equiv (conjEquiv h)
-    (fun g => chi10' (h⁻¹ * g * h) • ambientAct (h⁻¹ * g * h) v)
-    (fun t => chi10' t • ambientAct t v)
-    (fun g => rfl)
+      ambientAct h (∑ g : PSL2F11, chi10' g • ambientAct g v) :=
+  WeilLambda2.sum_chi_ambient_equivariant k h v
 
-/-- The character projector intertwines the ambient G-action. -/
+/-- The character projector intertwines the ambient G-action.  The content is
+`WeilLambda2.sum_chi_ambient_equivariant`; this only re-glues it through
+`projectorM_apply` at `E = k`. -/
 public theorem projectorM_equivariant (h : PSL2F11) (v : Lambda2U) :
     projectorM (ambientAct h v) = ambientAct h (projectorM v) := by
   rw [projectorM_apply, projectorM_apply, map_smul, sum_chi_ambient_equivariant]
 
-/-- `M` is G-invariant. -/
+/-- `M` is G-invariant.  Same fact as `WeilLambda2.ambientAct_mem`, under the
+name this file uses. -/
 theorem Msub_smul_mem (h : PSL2F11) {v : Lambda2U} (hv : v ∈ Msub) :
-    ambientAct h v ∈ Msub := by
-  obtain ⟨w, rfl⟩ := LinearMap.mem_range.mp hv
-  rw [← projectorM_equivariant]
-  exact LinearMap.mem_range_self _ _
+    ambientAct h v ∈ Msub :=
+  WeilLambda2.ambientAct_mem k h hv
 
 /-- Writeup V₁₄ point: decomposable with Plücker representative in `M`. -/
 @[expose] public def IsV14MPoint (p : ℙ k Lambda2U) : Prop :=
@@ -3038,13 +2957,13 @@ theorem chi10'_N_sign_inner_zero :
     simpa using this
   have hrefl := orderOf_reflGen_psl
   have c1 : chi10' (1 : PSL2F11) = 10 := chi10'_one
-  have cσ : chi10' sigma = 2 := by simp [chi10', orderOf_sigma_eq_two]
-  have cr : chi10' (CentralizerN.rotGen : PSL2F11) = -1 := by simp [chi10', hord6]
-  have cr2 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 2) = 1 := by simp [chi10', hr2]
-  have cr4 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 4) = 1 := by simp [chi10', hr4]
-  have cr5 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 5) = -1 := by simp [chi10', hr5]
+  have cσ : chi10' sigma = 2 := by simp [chi10', WeilLambda2.chi10', orderOf_sigma_eq_two]
+  have cr : chi10' (CentralizerN.rotGen : PSL2F11) = -1 := by simp [chi10', WeilLambda2.chi10', hord6]
+  have cr2 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 2) = 1 := by simp [chi10', WeilLambda2.chi10', hr2]
+  have cr4 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 4) = 1 := by simp [chi10', WeilLambda2.chi10', hr4]
+  have cr5 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 5) = -1 := by simp [chi10', WeilLambda2.chi10', hr5]
   have crefl : chi10' (CentralizerN.reflGen : PSL2F11) = 2 := by
-    simp only [chi10', hrefl]
+    simp only [chi10', WeilLambda2.chi10', hrefl]
     norm_num
   rw [c1, cσ, cr, cr2, cr4, cr5, crefl]
   norm_num
@@ -3522,13 +3441,13 @@ theorem chi10'_N_trivial_inner_two :
     simpa using this
   have hrefl := orderOf_reflGen_psl
   have c1 : chi10' (1 : PSL2F11) = 10 := chi10'_one
-  have cσ : chi10' sigma = 2 := by simp [chi10', orderOf_sigma_eq_two]
-  have cr : chi10' (CentralizerN.rotGen : PSL2F11) = -1 := by simp [chi10', hord6]
-  have cr2 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 2) = 1 := by simp [chi10', hr2]
-  have cr4 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 4) = 1 := by simp [chi10', hr4]
-  have cr5 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 5) = -1 := by simp [chi10', hr5]
+  have cσ : chi10' sigma = 2 := by simp [chi10', WeilLambda2.chi10', orderOf_sigma_eq_two]
+  have cr : chi10' (CentralizerN.rotGen : PSL2F11) = -1 := by simp [chi10', WeilLambda2.chi10', hord6]
+  have cr2 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 2) = 1 := by simp [chi10', WeilLambda2.chi10', hr2]
+  have cr4 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 4) = 1 := by simp [chi10', WeilLambda2.chi10', hr4]
+  have cr5 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 5) = -1 := by simp [chi10', WeilLambda2.chi10', hr5]
   have crefl : chi10' (CentralizerN.reflGen : PSL2F11) = 2 := by
-    simp only [chi10', hrefl]
+    simp only [chi10', WeilLambda2.chi10', hrefl]
     norm_num
   rw [c1, cσ, cr, cr2, cr4, cr5, crefl]
   norm_num
@@ -3947,15 +3866,15 @@ theorem chi10'_sum_centralizer :
   have c0 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 0) = 10 := by
     simp [pow_zero, chi10'_one]
   have c1 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 1) = -1 := by
-    simp [pow_one, chi10', hord6]
+    simp [pow_one, chi10', WeilLambda2.chi10', hord6]
   have c2 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 2) = 1 := by
-    simp [chi10', hr2]
+    simp [chi10', WeilLambda2.chi10', hr2]
   have c3 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 3) = 2 := by
-    simp [chi10', hr3]
+    simp [chi10', WeilLambda2.chi10', hr3]
   have c4 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 4) = 1 := by
-    simp [chi10', hr4]
+    simp [chi10', WeilLambda2.chi10', hr4]
   have c5 : chi10' ((CentralizerN.rotGen : PSL2F11) ^ 5) = -1 := by
-    simp [chi10', hr5]
+    simp [chi10', WeilLambda2.chi10', hr5]
   have sum_rot :
       (∑ i : ZMod 6, chi10' ((CentralizerN.rotGen : PSL2F11) ^ i.val)) =
         (12 : k) := by
@@ -3997,7 +3916,7 @@ theorem chi10'_sum_centralizer :
     have hchi (i : ZMod 6) :
         chi10' ((CentralizerN.reflGen : PSL2F11) *
           (CentralizerN.rotGen : PSL2F11) ^ i.val) = (2 : k) := by
-      simp only [chi10', orderOf_refl_rot_pow i]; norm_num
+      simp only [chi10', WeilLambda2.chi10', orderOf_refl_rot_pow i]; norm_num
     simp only [hchi, Finset.sum_const, nsmul_eq_mul, Finset.card_univ, ZMod.card]
     norm_num
   rw [sum_rot, sum_refl]
@@ -4480,7 +4399,7 @@ From `PSLCard.chi10Int_sum_sq_psl` (SL native count + 2-to-1 quotient sum). -/
 
 public theorem chi10'_eq_chi10Int (g : PSL2F11) :
     chi10' g = (PSLCard.chi10Int (orderOf g) : k) := by
-  unfold chi10' PSLCard.chi10Int
+  unfold chi10' WeilLambda2.chi10' PSLCard.chi10Int
   by_cases h1 : orderOf g = 1
   · simp [h1]
   by_cases h2 : orderOf g = 2
@@ -4790,7 +4709,7 @@ maxRecDepth on exterior-power modules). -/
 theorem projectorM_isProj : IsProj Msub projectorM where
   map_mem := fun v => by
     -- πv ∈ range π = Msub
-    simpa [Msub] using LinearMap.mem_range_self projectorM v
+    exact LinearMap.mem_range_self projectorM v
   map_id := fun v hv => by
     -- v ∈ Msub = Mfix ⇒ πv = v
     have hv' : v ∈ Mfix := by rwa [← Mfix_eq_Msub] at hv
@@ -5488,7 +5407,7 @@ public theorem sum_chi_chiLambda2_order_two :
       chi10' g.1 * chiLambda2 g.1 = (6 : k) := by
     intro g
     have ho : orderOf g.1 = 2 := g.2
-    have hc : chi10' g.1 = 2 := by simp [chi10', ho]
+    have hc : chi10' g.1 = 2 := by simp [chi10', WeilLambda2.chi10', ho]
     have hΛ : chiLambda2 g.1 = 3 := chiLambda2_eq_three_of_order_two ho
     rw [hc, hΛ]; norm_num
   calc (∑ g : {g : PSL2F11 // orderOf g = 2}, chi10' g.1 * chiLambda2 g.1)
@@ -5511,7 +5430,7 @@ public theorem sum_chi_chiLambda2_order_five :
   classical
   refine Finset.sum_eq_zero fun g _ => ?_
   have ho : orderOf g.1 = 5 := g.2
-  have hc : chi10' g.1 = 0 := by simp [chi10', ho]
+  have hc : chi10' g.1 = 0 := by simp [chi10', WeilLambda2.chi10', ho]
   rw [hc, zero_mul]
 
 /-- Identity + order-2 contributions sum to `480`. -/
@@ -6928,7 +6847,7 @@ public theorem sum_chi_chiLambda2_order_six :
   classical
   refine Finset.sum_eq_zero fun g _ => ?_
   have ho : orderOf g.1 = 6 := g.2
-  have hc : chi10' g.1 = (-1 : k) := by simp [chi10', ho]
+  have hc : chi10' g.1 = (-1 : k) := by simp [chi10', WeilLambda2.chi10', ho]
   have hΛ : chiLambda2 g.1 = 0 := chiLambda2_eq_zero_of_order_six ho
   rw [hc, hΛ, mul_zero]
 
@@ -7386,7 +7305,7 @@ public theorem sum_chi_chiLambda2_order_three :
   classical
   refine Finset.sum_eq_zero fun g _ => ?_
   have ho : orderOf g.1 = 3 := g.2
-  have hc : chi10' g.1 = (1 : k) := by simp [chi10', ho]
+  have hc : chi10' g.1 = (1 : k) := by simp [chi10', WeilLambda2.chi10', ho]
   have hΛ : chiLambda2 g.1 = 0 := chiLambda2_eq_zero_of_order_three ho
   rw [hc, hΛ, mul_zero]
 
