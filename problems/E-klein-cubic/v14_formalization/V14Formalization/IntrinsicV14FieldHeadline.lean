@@ -81,19 +81,14 @@ open V14Formalization.SchemeGeometry
 
 /-! ## The distinguished field is one of the fields covered -/
 
-set_option maxRecDepth 20000 in
-set_option maxHeartbeats 1000000 in
 /-- **The field-parameterized target at `ℚ(ζ₁₁)` is the published target.**
 
-Both sides are `IntrinsicV14.actionOver` applied to the same field, the same
-even Weil module, the same `10′` summand and the same representation; the two
-routes to them differ only in which namespace the intermediate names live in,
-and in `Prop`-valued arguments.
-
-This is `rfl`, but the two sides reach it through different namespaces and the
-defeq check walks the whole `ExteriorAlgebra` instance chain; it costs about
-half a minute at these budgets.  It is the only declaration in the file that
-needs them. -/
+`IntrinsicHeadline.intrinsicV14` is defined as `intrinsicV14 k`, so both sides
+are the same constant applied to the same field and this is a one-step `rfl`.
+(Before the headline collapsed onto `IntrinsicV14Field`, the two sides were
+parallel constructions and this defeq walked the whole `ExteriorAlgebra`
+instance chain, needing `maxRecDepth 20000` and a half-minute heartbeat
+budget.) -/
 public theorem intrinsicV14_K :
     intrinsicV14 WeilRep.K = IntrinsicHeadline.intrinsicV14 := rfl
 

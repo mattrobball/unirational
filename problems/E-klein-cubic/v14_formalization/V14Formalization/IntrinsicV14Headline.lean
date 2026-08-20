@@ -5,6 +5,7 @@ Released under Apache 2.0 license.
 module
 
 public import V14Formalization.IntrinsicV14Compare
+public import V14Formalization.IntrinsicV14Field
 public import V14Formalization.FaithfulHeadline
 
 /-!
@@ -39,67 +40,40 @@ namespace IntrinsicHeadline
 
 open AlgebraicGeometry Module GeometricV14Carrier
 
-/-! ## The data -/
+/-! ## The data, instantiated from `IntrinsicV14Field` at `F = k`
+
+Everything from `inclM` through `intrinsicV14` is the general construction of
+`IntrinsicV14Field` applied at the concrete cyclotomic field `k`; the proofs
+live only there. -/
 
 /-- The inclusion of the `10′` summand `M ⊆ ⋀²U`. -/
-@[expose] public def inclM : ↥Msub →ₗ[k] Lambda2U := Msub.subtype
+@[expose] public def inclM : ↥Msub →ₗ[k] Lambda2U := IntrinsicV14Field.inclM k
 
-/-- `incl` is injective, so restriction of linear forms to `M` is surjective.
-This is what discharges `Proj.map`'s side condition; a *retraction* would do as
-well, but every equation between linear maps into `↥Msub` unfolds the
-character projector, a sum over all 660 elements of the group. -/
 public theorem inclM_dualMap_surjective : Function.Surjective (inclM.dualMap) :=
-  LinearMap.dualMap_surjective_of_injective
-    (f := inclM) (Submodule.injective_subtype Msub)
+  IntrinsicV14Field.inclM_dualMap_surjective k
 
 /-! ## The action -/
 
-public theorem ambientAct_mem (g : PSL2F11) {v : Lambda2U} (hv : v ∈ Msub) :
-    ambientAct g v ∈ Msub := by
-  obtain ⟨w, rfl⟩ := hv
-  exact ⟨ambientAct g w, projectorM_equivariant g w⟩
-
 /-- The `PSL(2,11)`-representation on the `10′` summand. -/
-@[expose] public def repM : Representation k PSL2F11 ↥Msub where
-  toFun g := LinearMap.restrict (ambientAct g) fun v hv => ambientAct_mem g hv
-  map_one' := by
-    refine LinearMap.ext fun x => ?_
-    apply Subtype.ext
-    show (GeometricFanoCarrier.pslLambda2Hom 1) (x : Lambda2U) = _
-    rw [map_one]
-    rfl
-  map_mul' := by
-    intro a b
-    refine LinearMap.ext fun x => ?_
-    apply Subtype.ext
-    show (GeometricFanoCarrier.pslLambda2Hom (a * b)) (x : Lambda2U) =
-      ((LinearMap.restrict (ambientAct a) (fun v hv => ambientAct_mem a hv))
-        ((LinearMap.restrict (ambientAct b) (fun v hv => ambientAct_mem b hv)) x) :
-        Lambda2U)
-    rw [map_mul]
-    rfl
+@[expose] public def repM : Representation k PSL2F11 ↥Msub :=
+  IntrinsicV14Field.repM k
 
 public theorem inclM_repM (g : PSL2F11) (x : ↥Msub) :
-    inclM (repM g x) = ambientAct g (inclM x) := rfl
+    inclM (repM g x) = ambientAct g (inclM x) :=
+  IntrinsicV14Field.inclM_repM k g x
 
 /-- Every element of `PSL(2,11)` acts on `M` through the exterior square of an
 endomorphism of `U`: lift it to `SL(2,11)`, where the Weil representation
 lives. -/
-public theorem coversM (g : PSL2F11) : IntrinsicV14.Covers k U inclM (repM g) := by
-  obtain ⟨t, rfl⟩ :=
-    QuotientGroup.mk_surjective (s := Subgroup.center GeometricFanoCarrier.SLG) g
-  refine ⟨WeilHom.weilUHom t, fun x => ?_⟩
-  rw [inclM_repM]
-  show GeometricFanoCarrier.pslLambda2Hom (QuotientGroup.mk t) (inclM x) = _
-  rw [GeometricFanoCarrier.pslLambda2_mk]
-  rfl
+public theorem coversM (g : PSL2F11) : IntrinsicV14.Covers k U inclM (repM g) :=
+  IntrinsicV14Field.coversM k g
 
 /-- **The intrinsic `V₁₄` of the Weil representation, with its
 `PSL(2,11)`-action, over `Spec k`.**  `Proj (Sym (M*) ⧸ I)` with `I` generated
 by the `⋀⁴`-components of `ω ↦ ω ∧ ω`; no basis and no Plücker coordinate
 enters its definition. -/
 @[expose] public def intrinsicV14 : Action (Over (Spec (.of k))) PSL2F11 :=
-  IntrinsicV14.actionOver k U inclM repM coversM
+  IntrinsicV14Field.intrinsicV14 k
 
 /-! ## The comparison, at the actual data -/
 

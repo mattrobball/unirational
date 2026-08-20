@@ -50,6 +50,10 @@ variable (F : Type) [Field F] [CharZero F] [HasCycl11 F]
 /-- The inclusion of the `10′` summand `M ⊆ ⋀²U`. -/
 @[expose] public def inclM : ↥(Msub F) →ₗ[F] Lambda2U F := (Msub F).subtype
 
+/-- `incl` is injective, so restriction of linear forms to `M` is surjective.
+This is what discharges `Proj.map`'s side condition; a *retraction* would do as
+well, but every equation between linear maps into `↥Msub` unfolds the
+character projector, a sum over all 660 elements of the group. -/
 public theorem inclM_dualMap_surjective : Function.Surjective ((inclM F).dualMap) :=
   LinearMap.dualMap_surjective_of_injective
     (f := inclM F) (Submodule.injective_subtype (Msub F))
