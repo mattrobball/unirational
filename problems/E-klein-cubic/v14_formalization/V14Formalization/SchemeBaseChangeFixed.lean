@@ -41,7 +41,6 @@ universe u v
 variable {G : Type v} [Group G] {S T : AlgebraicGeometry.Scheme.{u}}
 
 /-- The first projection out of the base change intertwines the two actions. -/
-@[reassoc]
 public theorem baseChangeAction_ρ_left_fst (t : T ⟶ S) (A : Action (Over S) G) (g : G) :
     ((baseChangeAction t A).ρ g).left ≫ pullback.fst A.V.hom t =
       pullback.fst A.V.hom t ≫ (A.ρ g).left :=

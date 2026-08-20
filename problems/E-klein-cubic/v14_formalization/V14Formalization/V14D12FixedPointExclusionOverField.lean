@@ -60,27 +60,13 @@ public theorem no_centralizer_fixed_point_over
   have hzfixed (n : Subgroup.centralizer ({sigma} : Set G)) :
       z ≫ (V14SchemeModel.actionOver.ρ n.1).left = z := by
     dsimp only [z]
-    calc
-      (y ≫ (fixedByι V14SchemeModel.actionOver sigma).left) ≫
-          (V14SchemeModel.actionOver.ρ n.1).left =
-          y ≫ ((fixedByι V14SchemeModel.actionOver sigma).left ≫
-            (V14SchemeModel.actionOver.ρ n.1).left) := Category.assoc _ _ _
-      _ = y ≫ (fixedByCentralizerHom
-            V14SchemeModel.actionOver sigma n).left ≫
-              (fixedByι V14SchemeModel.actionOver sigma).left := by
-        have hn := congrArg Over.Hom.left
-          (fixedByCentralizerHom_ι V14SchemeModel.actionOver sigma n)
-        change (fixedByCentralizerHom V14SchemeModel.actionOver sigma n).left ≫
-            (fixedByι V14SchemeModel.actionOver sigma).left =
-          (fixedByι V14SchemeModel.actionOver sigma).left ≫
-            (V14SchemeModel.actionOver.ρ n.1).left at hn
-        rw [← hn]
-      _ = (y ≫ (fixedByCentralizerHom
-            V14SchemeModel.actionOver sigma n).left) ≫
-              (fixedByι V14SchemeModel.actionOver sigma).left :=
-        (Category.assoc _ _ _).symm
-      _ = y ≫ (fixedByι V14SchemeModel.actionOver sigma).left := by
-        rw [hyfixed n]
+    have hn := congrArg Over.Hom.left
+      (fixedByCentralizerHom_ι V14SchemeModel.actionOver sigma n)
+    change (fixedByCentralizerHom V14SchemeModel.actionOver sigma n).left ≫
+        (fixedByι V14SchemeModel.actionOver sigma).left =
+      (fixedByι V14SchemeModel.actionOver sigma).left ≫
+        (V14SchemeModel.actionOver.ρ n.1).left at hn
+    rw [Category.assoc, ← hn, ← Category.assoc, hyfixed n]
   have hambR : ambientPointOfV14FixedBy L p ≫
         projectiveActionHom lambda2MatrixRepresentation.ρ
           (CentralizerN.rotGen : G) =
