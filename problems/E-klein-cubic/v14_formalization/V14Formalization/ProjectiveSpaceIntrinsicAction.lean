@@ -44,8 +44,8 @@ public theorem projMapDual_congr {f f' g g' : V →ₗ[k] V} (hf : f = f')
   subst hf; rfl
 
 public theorem rep_inv_comp (ρ : Representation k G V) (g : G) :
-    ρ g⁻¹ ∘ₗ ρ g = LinearMap.id := by
-  rw [← Module.End.mul_eq_comp, ← map_mul, inv_mul_cancel, map_one, Module.End.one_eq_id]
+    ρ g⁻¹ ∘ₗ ρ g = LinearMap.id :=
+  LinearMap.ext (ρ.inv_self_apply g)
 
 public theorem rep_mul_comp (ρ : Representation k G V) (a b : G) :
     ρ (a * b) = ρ a ∘ₗ ρ b := by
@@ -101,9 +101,6 @@ which needs both. -/
 @[expose] public def projectiveSpaceOfRep (R : FaithfulLinearRep k G V) :
     Action (Over (Spec (.of k))) G :=
   projectiveActionOverOfRep R.ρ
-
-@[simp] public theorem projectiveSpaceOfRep_carrier (R : FaithfulLinearRep k G V) :
-    (projectiveSpaceOfRep R).V.left = projectiveSpaceOfModule k V := rfl
 
 end SchemeGeometry
 end V14Formalization

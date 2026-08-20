@@ -2150,27 +2150,9 @@ theorem chi10'_eq_of_orderOf_eq {g h : PSL2F11} (ho : orderOf g = orderOf h) :
     chi10' g = chi10' h := by
   simp [chi10', ho]
 
-theorem orderOf_conj (g h : PSL2F11) : orderOf (h * g * h⁻¹) = orderOf g := by
-  have hpow : ∀ n : ℕ, (h * g * h⁻¹) ^ n = h * (g ^ n) * h⁻¹ := by
-    intro n
-    induction n with
-    | zero => simp
-    | succ n ih =>
-      rw [pow_succ, pow_succ, ih]
-      simp [mul_assoc]
-  apply Eq.symm
-  rw [orderOf_eq_orderOf_iff]
-  intro n
-  constructor
-  · intro hg
-    rw [hpow, hg]
-    simp
-  · intro hconj
-    -- h * g^n * h⁻¹ = 1 ⇒ g^n = 1
-    have h1 : h * (g ^ n) * h⁻¹ = 1 := by rwa [← hpow]
-    calc g ^ n = h⁻¹ * (h * (g ^ n) * h⁻¹) * h := by simp [mul_assoc]
-      _ = h⁻¹ * 1 * h := by rw [h1]
-      _ = 1 := by simp
+theorem orderOf_conj (g h : PSL2F11) : orderOf (h * g * h⁻¹) = orderOf g :=
+  (SemiconjBy.orderOf_eq (a := h) (x := g) (y := h * g * h⁻¹)
+    (by simp [SemiconjBy, mul_assoc])).symm
 
 /-- `χ₁₀'` is a class function (depends only on conjugacy via order). -/
 theorem chi10'_conj (g h : PSL2F11) : chi10' (h * g * h⁻¹) = chi10' g :=

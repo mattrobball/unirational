@@ -44,8 +44,8 @@ open AlgebraicGeometry Module SymmetricAlgebra
 
 /-- A representation sends `g⁻¹` to a left inverse of the image of `g`. -/
 public theorem repInvComp {R N H : Type*} [CommSemiring R] [AddCommMonoid N] [Module R N]
-    [Group H] (ρ : Representation R H N) (g : H) : ρ g⁻¹ ∘ₗ ρ g = LinearMap.id := by
-  rw [← Module.End.mul_eq_comp, ← map_mul, inv_mul_cancel, map_one, Module.End.one_eq_id]
+    [Group H] (ρ : Representation R H N) (g : H) : ρ g⁻¹ ∘ₗ ρ g = LinearMap.id :=
+  LinearMap.ext (ρ.inv_self_apply g)
 
 
 variable (k U : Type u) [Field k] [AddCommGroup U] [Module k U] [FiniteDimensional k U]

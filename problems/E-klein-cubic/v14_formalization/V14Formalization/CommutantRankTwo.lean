@@ -52,10 +52,6 @@ section Algebra
 
 variable {k A : Type*} [Field k] [Ring A] [Algebra k A] [Nontrivial A] {p : A}
 
-private theorem smul_mul_smul' (u v : k) (x y : A) :
-    (u • x) * (v • y) = (u * v) • (x * y) := by
-  rw [smul_mul_assoc, mul_smul_comm, smul_smul]
-
 /-- A nontrivial idempotent of a `k`-algebra is not a scalar. -/
 public theorem ne_algebraMap_of_isIdem (hp : IsIdempotentElem p) (hp0 : p ≠ 0)
     (hp1 : p ≠ 1) (c : k) : p ≠ algebraMap k A c := by
@@ -116,7 +112,7 @@ public theorem isIdem_cases (hdim : finrank k A = 2)
   have hsq : (a • (1 : A) + b • p) * (a • (1 : A) + b • p)
       = (a * a) • (1 : A) + (a * b + b * a + b * b) • p := by
     have hpp : p * p = p := hp
-    simp only [add_mul, mul_add, smul_mul_smul', mul_one, one_mul, hpp, add_smul]
+    simp only [add_mul, mul_add, smul_mul_smul_comm, mul_one, one_mul, hpp, add_smul]
     abel
   have he' : (a • (1 : A) + b • p) * (a • (1 : A) + b • p) = a • (1 : A) + b • p := he
   rw [hsq] at he'

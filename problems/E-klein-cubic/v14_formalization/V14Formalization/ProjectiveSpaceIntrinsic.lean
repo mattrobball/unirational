@@ -93,15 +93,12 @@ endomorphism of `V`, by transposing and applying `Sym`. -/
     grade k (Dual k V) →ₐᵍ[k] grade k (Dual k V) :=
   gradedMap (Module.Dual.transpose (R := k) f)
 
-/-- Transposition is contravariant. -/
-public theorem transpose_comp (f g : V →ₗ[k] V) :
-    Module.Dual.transpose (R := k) (f ∘ₗ g)
-      = (Module.Dual.transpose (R := k) g) ∘ₗ (Module.Dual.transpose (R := k) f) :=
-  rfl
-
+/-- Transposition of the identity.  `Module.Dual.transpose_comp` is Mathlib's
+contravariance lemma and is used directly below; there is no `transpose_id`
+there, so this names `LinearMap.dualMap_id` in transpose form. -/
 public theorem transpose_id :
     Module.Dual.transpose (R := k) (LinearMap.id : V →ₗ[k] V) = LinearMap.id :=
-  rfl
+  (LinearMap.dualMap_def _).symm.trans LinearMap.dualMap_id
 
 @[simp] public theorem dualGradedMap_id :
     dualGradedMap (LinearMap.id : V →ₗ[k] V) = GradedAlgHom.id k (grade k (Dual k V)) := by
@@ -109,7 +106,7 @@ public theorem transpose_id :
 
 public theorem dualGradedMap_comp (f g : V →ₗ[k] V) :
     (dualGradedMap g).comp (dualGradedMap f) = dualGradedMap (f ∘ₗ g) := by
-  rw [dualGradedMap, dualGradedMap, dualGradedMap, transpose_comp, gradedMap_comp]
+  rw [dualGradedMap, dualGradedMap, dualGradedMap, Module.Dual.transpose_comp, gradedMap_comp]
 
 /-- The side condition of `Proj.map`, discharged whenever the endomorphism has
 a two-sided partner making the composite the identity. -/
