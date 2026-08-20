@@ -574,44 +574,61 @@ one-line Mathlib PR if anyone wants it.
   `Module.End.mul_apply`, `projM_toLinearMap`, then `exact` — reaches the same
   goal and then needs 400k+ heartbeats to finish it.
 
-### What is not proved: one character sum
+### The character sum, proved (2026-08-20)
 
-`∑_g χ_Λ²(g) χ_Λ²(g⁻¹) = 1320 = 2·660` is carried as a hypothesis, in the same
-shape as `finrank_Msub_eq_ten_of_sum_chi_chiLambda2` carries
-`∑ χ₁₀'·χ_Λ² = 660`. Class by class, with `χ_Λ² = χ₅ + χ₁₀'`:
+`∑_g χ_Λ²(g) χ_Λ²(g⁻¹) = 1320 = 2·660` is now
+`Ord11CharacterSum.sum_chiLambda2_norm_eq_thirteen_twenty`, so
+`MsubUnique.eq_Msub` and `MsubUnique.finrank_intertwiningMap` are
+unconditional. Class by class, with `χ_Λ² = χ₅ + χ₁₀'`:
 
-| class | size | `χ_Λ²` | `χ(g)χ(g⁻¹)` | contribution | in tree? |
-|---|---:|---|---:|---:|---|
-| 1A | 1 | 15 | 225 | 225 | yes |
-| 2A | 55 | 3 | 9 | 495 | yes |
-| 3A | 110 | 0 | 0 | 0 | yes |
-| 5A, 5B | 132+132 | 0 | 0 | 0 | **no** |
-| 6A | 110 | 0 | 0 | 0 | yes |
-| 11A, 11B | 60+60 | `(-3 ± √-11)/2` | 5 | 600 | **partly** |
-|  |  |  |  | **1320** |  |
+| class | size | `χ_Λ²` | `χ(g)χ(g⁻¹)` | contribution |
+|---|---:|---|---:|---:|
+| 1A | 1 | 15 | 225 | 225 |
+| 2A | 55 | 3 | 9 | 495 |
+| 3A | 110 | 0 | 0 | 0 |
+| 5A, 5B | 132+132 | 0 | 0 | 0 |
+| 6A | 110 | 0 | 0 | 0 |
+| 11A, 11B | 60+60 | `(-3 ± √-11)/2` | 5 | 600 |
+|  |  |  |  | **1320** |
 
-Two things are missing, and neither is representation theory.
+The companion sum `∑ χ₁₀'·χ_Λ² = 660` and its consequence
+`Ord11CharacterSum.finrank_Msub_eq_ten` were **already** proved and
+unconditional; only the quadratic one was open. Anyone sizing this job from
+the previous version of this section would have double-counted it.
 
-1. **`χ_Λ²` on order-5 elements.** Never computed, because `χ₁₀'` vanishes
-   there and the existing sum never needed it. Route: `Dfull a` (the diagonal
-   Weil action, `WeilRepSL2.lean:51`) restricted to `U` is a scaled permutation
-   of the six `evalEven` coordinates, with exactly one fixed coordinate, so
-   `tr_U = χ₂(a)·1 = 1` for `a` of order 5; same for `a²`; Newton
-   (`trace_exterior_newton`) gives `½(1-1) = 0`. The conjugacy half is already
-   done — `PSLCard.isConj_el5_or_pow_of_order_five`, class sizes 132+132.
-   Needs `D_even`, `weilU_Dmat`, an explicit `SL₂` witness conjugating `el5`
-   to `Dmat 9`, and a permutation analogue of `trace_diagMul`. ~200-350 lines.
-2. **The order-11 sum, quadratic.** `chiLambda2_tGen_pow_eq` already gives
-   `χ_Λ²(t^n) = (-3 - χ₂(n)·γ)/2` with `γ² = -11`. Since `χ₂(-1) = -1`
-   (`WeilRep.lean:137`), the product `χ(g)χ(g⁻¹) = (9 - χ₂(n)²γ²)/4 = 5` is
-   **constant** on order-11 elements — much easier than the linear sum, which
-   needed `∑χ₂ = 0`. What is missing is a *pointwise* conjugacy statement
-   (every order-11 `g` is conjugate to some `tGen^n`); the tree has it only at
-   the level of sums, inside `sum_chiLambda2_sylow11NonId`. ~150-250 lines.
+Two values had to be computed, and neither was representation theory.
 
-Both live in `Ord11CharacterSum` / `GeometricV14Carrier`, where 28 of 29
-theorems are module-private, so the continuation also needs visibility work in
-two large files.
+1. **`χ_Λ²` on order-5 elements is 0.** Never computed before, because `χ₁₀'`
+   vanishes there and the weighted sum never needed it. `el5 = [[0,-1],[1,3]]`
+   has eigenvalues 9 and 5, so `cm5 = [[3,5],[10,6]]` conjugates it into the
+   split torus (checked by `decide` as `cm5·el5 = diag(9,5)·cm5`, no matrix
+   inverse in the statement). A diagonal `SL₂` element has `ec = 0`, so its
+   Bruhat factor is `Nfull 0 ∘ Dfull a = Dfull a`, and on `U` that is
+   `f ↦ χ₂(a)·f(a·−)` — `χ₂(a)` times a permutation of the six `evalEven`
+   coordinates, the sign absorbed by evenness. For `a = 9, 4, 5` the
+   permutation fixes only the coordinate `0`, so each trace is `χ₂(a) = 1`,
+   and `trace_exterior_newton` gives `½(1−1) = 0` on both order-5 classes.
+   No `D_even` and no `weilU_Dmat` were needed: `weilU_apply_of_diag` states
+   the action pointwise on `Fun` and never names an operator.
+2. **The order-11 product is the constant 5.** `chiLambda2_tGen_pow_eq` gives
+   `χ_Λ²(t^n) = (-3 - χ₂(n)·γ)/2` with `γ² = -11`, and `χ₂(-1) = -1`
+   (`WeilRep.lean:137`) makes the two factors conjugate, so
+   `χ(g)χ(g⁻¹) = (9 + 11)/4 = 5`. The pointwise conjugacy this needs was
+   **already in the tree** — `PSLCard.isConj_Tmat_or_pow_of_order_eleven`,
+   sitting next to the order-5 one that the previous survey did cite. The
+   Sylow machinery in `sum_chiLambda2_sylow11NonId` was not touched and not
+   needed; the order-11 fibre is `120 · 5` directly.
+
+Cost: about 330 lines in `Ord11CharacterSum`, 30 in `MsubUnique`, and seven
+visibility annotations — `PSLCard.el5` (`@[expose] public`, matching `Tmat`
+and `Smat`), the two `PSLCard` `isConj_…` lemmas, and the four `χ_Λ²` class
+values in `GeometricV14Carrier`. Nothing else was published; the diagonal
+representatives, the scaled-permutation trace and the by-order partition are
+all module-private.
+
+The reachable-constant walk is unchanged at 55,247 with 0 mismatches: none of
+this is in the published closure, which is the point — it is a statement-quality
+result about `Msub`, not a change to the headline.
 
 ### Effect on the trusted base
 
