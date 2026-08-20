@@ -111,13 +111,10 @@ public theorem projectiveActionHom_mul {n : ℕ}
 as a scheme over `Spec k`. -/
 @[expose] public def projectiveActionOver (n : ℕ)
     (R : MatrixRepresentation (k := k) (G := G) n) :
-    Action (Over (Spec (.of k))) G := by
-  letI : (projectiveAction n R).V.Over (Spec (.of k)) := by
-    change (ProjectiveSpace n k).Over (Spec (.of k))
-    infer_instance
-  exact actionOverOfIsOver (projectiveAction n R) fun g ↦ by
-    change (projectiveActionHom R g).IsOver (Spec (.of k))
-    infer_instance
+    Action (Over (Spec (.of k))) G :=
+  actionOverOfHoms (ProjectiveSpace n k) (projectiveActionHom R)
+    (projectiveActionHom_one R) (projectiveActionHom_mul R)
+    (fun _ ↦ inferInstance)
 
 end SchemeGeometry
 end V14Formalization

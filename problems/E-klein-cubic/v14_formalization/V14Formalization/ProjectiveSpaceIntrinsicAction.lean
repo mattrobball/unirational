@@ -75,24 +75,12 @@ public theorem projRepHom_mul (ρ : Representation k G V) (a b : G) :
   exact projMapDual_comp (ρ a) (ρ a⁻¹) (ρ b) (ρ b⁻¹)
     (rep_inv_comp ρ a) (rep_inv_comp ρ b) hinv
 
-/-- `ℙ(V)` with its `G`-action, in `Scheme`. -/
-@[expose] public def projectiveActionOfRep (ρ : Representation k G V) : Action Scheme G where
-  V := projectiveSpaceOfModule k V
-  ρ :=
-    { toFun := projRepHom ρ
-      map_one' := projRepHom_one ρ
-      map_mul' := projRepHom_mul ρ }
-
 /-- `ℙ(V)` with its `G`-action, as a scheme over `Spec k`.  This is the
 coordinate-free replacement for `ambientProjectiveActionOver`. -/
 @[expose] public def projectiveActionOverOfRep (ρ : Representation k G V) :
-    Action (Over (Spec (.of k))) G := by
-  letI : (projectiveActionOfRep ρ).V.Over (Spec (.of k)) := by
-    change (projectiveSpaceOfModule k V).Over (Spec (.of k))
-    infer_instance
-  exact actionOverOfIsOver (projectiveActionOfRep ρ) fun g ↦ by
-    change (projRepHom ρ g).IsOver (Spec (.of k))
-    exact projMapDual_isOver _ _ _
+    Action (Over (Spec (.of k))) G :=
+  actionOverOfHoms (projectiveSpaceOfModule k V) (projRepHom ρ)
+    (projRepHom_one ρ) (projRepHom_mul ρ) (fun _ ↦ projMapDual_isOver _ _ _)
 
 /-- `ℙ(V) = Proj (Sym (Module.Dual k V))` for a faithful representation `R`,
 carrying the `G`-action it inherits by functoriality.  No basis and no system

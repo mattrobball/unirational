@@ -274,27 +274,14 @@ public theorem repHom_mul (ρ : Representation k G M)
     (hcov a) (hcov b) ((hcov a).comp k U incl (hcov b))
     (repInvComp ρ a) (repInvComp ρ b) hinv
 
-/-- **`V₁₄` with its `G`-action**, in `Scheme`. -/
-@[expose] public def action (ρ : Representation k G M)
-    (hcov : ∀ g : G, Covers k U incl (ρ g)) :
-    Action Scheme.{u} G where
-  V := scheme k U incl
-  ρ :=
-    { toFun := repHom k U incl ρ hcov
-      map_one' := repHom_one k U incl ρ hcov
-      map_mul' := repHom_mul k U incl ρ hcov }
-
 /-- **`V₁₄` with its `G`-action, as a scheme over `Spec k`.**  This is the
 coordinate-free replacement for `V14SchemeModel.actionOver`. -/
 @[expose] public def actionOver (ρ : Representation k G M)
     (hcov : ∀ g : G, Covers k U incl (ρ g)) :
-    Action (Over (Spec (.of k))) G := by
-  letI : (action k U incl ρ hcov).V.Over (Spec (.of k)) := by
-    change (scheme k U incl).Over (Spec (.of k))
-    infer_instance
-  exact SchemeGeometry.actionOverOfIsOver (action k U incl ρ hcov) fun g ↦ by
-    change (repHom k U incl ρ hcov g).IsOver (Spec (.of k))
-    exact schemeMap_isOver _ _ _ _ _ _ _
+    Action (Over (Spec (.of k))) G :=
+  SchemeGeometry.actionOverOfHoms (scheme k U incl) (repHom k U incl ρ hcov)
+    (repHom_one k U incl ρ hcov) (repHom_mul k U incl ρ hcov)
+    (fun _ ↦ schemeMap_isOver _ _ _ _ _ _ _)
 
 omit [FiniteDimensional k U] [Module.Free k U] in
 @[simp] public theorem actionOver_carrier (ρ : Representation k G M)

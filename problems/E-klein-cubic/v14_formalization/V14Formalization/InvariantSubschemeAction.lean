@@ -78,20 +78,14 @@ public theorem hom_mul (hI : IsInvariantIdeal A I) (g h : G) :
 invariant closed subscheme. -/
 @[expose] public def actionOver {S : Scheme.{u}} (hI : IsInvariantIdeal A I)
     [A.V.Over S] (hA : ∀ g : G, (A.ρ g).IsOver S) :
-    Action (Over S) G := by
-  letI hsub : I.subscheme.Over S :=
-    ⟨I.subschemeι ≫ A.V ↘ S⟩
-  letI : hI.action.V.Over S := by
-    change I.subscheme.Over S
-    exact hsub
-  apply actionOverOfIsOver hI.action
-  intro g
-  change (hI.hom g).IsOver S
-  refine ⟨?_⟩
-  change hI.hom g ≫ I.subschemeι ≫ A.V ↘ S =
-    I.subschemeι ≫ A.V ↘ S
-  rw [← Category.assoc, hI.hom_subschemeι, Category.assoc]
-  exact congrArg (fun f ↦ I.subschemeι ≫ f) (hA g).comp_over
+    Action (Over S) G :=
+  letI : I.subscheme.Over S := ⟨I.subschemeι ≫ A.V ↘ S⟩
+  actionOverOfHoms I.subscheme hI.hom hI.hom_one hI.hom_mul fun g ↦
+    ⟨by
+      change hI.hom g ≫ I.subschemeι ≫ A.V ↘ S =
+        I.subschemeι ≫ A.V ↘ S
+      rw [← Category.assoc, hI.hom_subschemeι, Category.assoc]
+      exact congrArg (fun f ↦ I.subschemeι ≫ f) (hA g).comp_over⟩
 
 end IsInvariantIdeal
 

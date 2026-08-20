@@ -127,6 +127,21 @@ morphism preserves the structure map. -/
         apply Over.OverMorphism.ext
         simp }
 
+/-- Package a `G`-action on a scheme over `S` directly from an endomorphism
+family: `f 1 = 𝟙`, the `End`-monoid law `f (a * b) = f b ≫ f a`, and
+compatibility of each `f g` with the structure morphism.  The
+`Action Scheme G` literal and the `Over` transport that every construction
+used to repeat are packaged here once. -/
+@[expose] public noncomputable def actionOverOfHoms
+    {S : Scheme.{u}} {G : Type v} [Group G]
+    (X : Scheme.{u}) [X.Over S] (f : G → (X ⟶ X))
+    (h1 : f 1 = 𝟙 X) (hmul : ∀ a b : G, f (a * b) = f b ≫ f a)
+    (hover : ∀ g : G, (f g).IsOver S) :
+    Action (Over S) G :=
+  actionOverOfIsOver
+    { V := X, ρ := { toFun := f, map_one' := h1, map_mul' := hmul } }
+    hover
+
 /-- Precompose a rational map by one automorphism from a group action. -/
 @[expose] public noncomputable def actionPrecomp {S : Scheme.{u}} {G : Type v} [Group G]
     (X : Action (Over S) G) [IrreducibleSpace X.V.left]
