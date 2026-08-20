@@ -27,6 +27,8 @@ import json
 from fractions import Fraction
 from math import lcm
 from pathlib import Path
+
+from emit_common import lean_rat
 from typing import Iterable
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -173,12 +175,6 @@ def compound_s6() -> list[list[list[Fraction]]]:
                            mul(s6[ia][jb], s6[ib][ja])))
         out.append(row)
     return out
-
-
-def lean_rat(x: Fraction) -> str:
-    if x.denominator == 1:
-        return str(x.numerator)
-    return f"({x.numerator} / {x.denominator} : ℚ)"
 
 
 def lean_poly(a: list[Fraction]) -> str:

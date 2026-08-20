@@ -44,6 +44,8 @@ from fractions import Fraction
 from math import lcm
 from pathlib import Path
 
+from emit_common import lean_rat
+
 ROOT = Path(__file__).resolve().parents[1]
 CORE = ROOT / "V14Formalization" / "D12SigmaPlusSegreCore.lean"
 
@@ -117,12 +119,6 @@ def parse_poly(body: str) -> dict[int, Fraction] | None:
             return None
         coeffs[deg] = c
     return coeffs
-
-
-def lean_rat(x: Fraction) -> str:
-    if x.denominator == 1:
-        return str(x.numerator)
-    return f"({x.numerator} / {x.denominator} : ℚ)"
 
 
 def render_poly(coeffs: dict[int, Fraction]) -> str:

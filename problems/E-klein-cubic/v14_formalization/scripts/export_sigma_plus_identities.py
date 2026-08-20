@@ -13,6 +13,8 @@ from fractions import Fraction
 from math import lcm
 from pathlib import Path
 
+from emit_common import lean_rat
+
 ROOT = Path(__file__).resolve().parents[1]
 JSON_PATH = ROOT / "results" / "sigma_plus_segre_Ki.json"
 PHI = [Fraction(1)] * 11
@@ -88,12 +90,6 @@ def lmul_raw(x, y):
 
 def lmat(rows):
     return [[ldec(c) for c in r] for r in rows]
-
-
-def lean_rat(x: Fraction) -> str:
-    if x.denominator == 1:
-        return str(x.numerator)
-    return f"({x.numerator} / {x.denominator} : ℚ)"
 
 
 def lean_poly(a) -> str:
