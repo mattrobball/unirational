@@ -75,8 +75,10 @@ public theorem toMatrix_Teven2_eq_T6 :
   change GeometricFanoCarrier.evalEven
       (WeilRep.T_even_b 2 (uBasisCore j)) i = WeilRep.T6 i j
   rw [D12U6Fourier.uBasisCore_apply]
-  simp [GeometricFanoCarrier.evalEven, WeilRep.T_even_b, WeilRep.Tfull_b,
-    GeometricFanoCarrier.extendEven, GeometricFanoCarrier.extendEvenFun,
+  simp [GeometricFanoCarrier.evalEven, WeilLambda2.evalEven,
+    WeilRep.T_even_b, WeilRep.Tfull_b,
+    GeometricFanoCarrier.extendEven, WeilLambda2.extendEven,
+    GeometricFanoCarrier.extendEvenFun, WeilLambda2.extendEvenFun,
     WeilRep.T6, WeilRep.twoInv, WeilRep.ψ_apply, hinv]
   fin_cases i <;> fin_cases j <;>
     norm_num [Matrix.diagonal_apply, Pi.single_apply]
@@ -163,7 +165,8 @@ public theorem actualF6_apply_eq_directValue (i j : Fin 6) :
     decide
   rw [ha, hd, hcval, chi2_three]
   simp only [Pi.neg_apply, one_mul,
-    GeometricFanoCarrier.extendEven, LinearMap.coe_mk, AddHom.coe_mk]
+    GeometricFanoCarrier.extendEven, WeilLambda2.extendEven,
+    LinearMap.coe_mk, AddHom.coe_mk]
   simp_rw [extendEven_single_apply]
   have hpos (x : ZMod 11) :
       3 * x = (j.val : ZMod 11) ↔ x = 4 * (j.val : ZMod 11) := by

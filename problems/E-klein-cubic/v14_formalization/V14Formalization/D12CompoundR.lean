@@ -119,7 +119,8 @@ public theorem actualRot_eq_compound_actualU6 :
         GeometricV14Carrier.ambientAct_rotGen_eq_map_Rlin
     _ = PluckerNaturality.compound2Lex D12U6Semantic.actualU6 := by
       simpa only [GeometricV14Carrier.Rlin,
-        GeometricFanoCarrier.weilLambda2, D12U6Semantic.actualU6]
+        GeometricFanoCarrier.weilLambda2, WeilLambda2.weilLambda2,
+        D12U6Semantic.actualU6]
         using PluckerNaturality.weilLambda2_toMatrix_eq_compound2Lex
           (CentralizerN.mkRot CentralizerN.rotPt)
 

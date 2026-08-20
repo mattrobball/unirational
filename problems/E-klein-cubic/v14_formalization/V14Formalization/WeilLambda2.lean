@@ -136,9 +136,11 @@ public theorem evalEven_extendEven : evalEven E ∘ₗ extendEven E = LinearMap.
   have hjlt : j.val < 11 := Nat.lt_trans j.isLt (by decide : 6 < 11)
   have hval : ((j.val : ZMod 11)).val = j.val := ZMod.val_cast_of_lt hjlt
   have hjle : j.val ≤ 5 := Nat.lt_succ_iff.mp j.isLt
+  -- evalEven (extendEven v) j = extendEvenFun v (j.val : ZMod 11)
   change extendEvenFun E v (j.val : ZMod 11) = v j
   unfold extendEvenFun
   rw [dif_pos (by rwa [hval] : ((j.val : ZMod 11)).val ≤ 5)]
+  -- now v ⟨((j.val:ZMod).val), _⟩ = v j and ((j.val:ZMod).val)=j.val
   congr 1
   exact Fin.ext hval
 
@@ -153,7 +155,8 @@ public theorem evalEven_injective : Function.Injective (evalEven E) := by
       ZMod.val_cast_of_lt (Nat.lt_trans hxlt (by decide : 6 < 11))
     have hxeq : (x.val : ZMod 11) = x := (ZMod.val_injective 11) hcast
     simpa [evalEven, hxeq] using hfun ⟨x.val, hxlt⟩
-  · have hx0 : x ≠ 0 := by
+  · -- use evenness and evaluate at -x (which has val ≤ 5)
+    have hx0 : x ≠ 0 := by
       intro h; subst h; exact hle (by decide : (0 : ZMod 11).val ≤ 5)
     haveI : NeZero x := ⟨hx0⟩
     have hneg : (-x).val = 11 - x.val := ZMod.val_neg_of_ne_zero x
@@ -332,11 +335,11 @@ public theorem weilLambda2Hom_ker_center :
 @[expose] public def ambientAct (g : PSL2F11) : Lambda2U E →ₗ[E] Lambda2U E :=
   pslLambda2Hom E g
 
-theorem ambientAct_one : ambientAct E 1 = LinearMap.id := by
+public theorem ambientAct_one : ambientAct E 1 = LinearMap.id := by
   change pslLambda2Hom E 1 = LinearMap.id
   rw [map_one, Module.End.one_eq_id]
 
-theorem ambientAct_mul (g h : PSL2F11) :
+public theorem ambientAct_mul (g h : PSL2F11) :
     ambientAct E (g * h) = ambientAct E g ∘ₗ ambientAct E h := by
   ext x; simp [ambientAct, map_mul, LinearMap.comp_apply]
 
@@ -358,7 +361,7 @@ theorem chi10'_eq_of_orderOf_eq {g h : PSL2F11} (ho : orderOf g = orderOf h) :
     chi10' E g = chi10' E h := by
   simp [chi10', ho]
 
-theorem orderOf_conj (g h : PSL2F11) : orderOf (h * g * h⁻¹) = orderOf g :=
+public theorem orderOf_conj (g h : PSL2F11) : orderOf (h * g * h⁻¹) = orderOf g :=
   (SemiconjBy.orderOf_eq (a := h) (x := g) (y := h * g * h⁻¹)
     (by simp [SemiconjBy, mul_assoc])).symm
 
@@ -376,7 +379,7 @@ theorem chi10'_conj (g h : PSL2F11) : chi10' E (h * g * h⁻¹) = chi10' E g :=
 @[expose] public noncomputable def Msub : Submodule E (Lambda2U E) :=
   LinearMap.range (projectorM E)
 
-theorem projectorM_apply (v : Lambda2U E) :
+public theorem projectorM_apply (v : Lambda2U E) :
     projectorM E v =
       (10 * (660 : E)⁻¹) • (∑ g : PSL2F11, chi10' E g • ambientAct E g v) := by
   dsimp [projectorM]
@@ -397,9 +400,10 @@ def conjEquiv (h : PSL2F11) : PSL2F11 ≃ PSL2F11 where
         = (h⁻¹ * h) * t * (h⁻¹ * h) := by simp [mul_assoc]
       _ = t := by simp
 
-theorem sum_chi_ambient_equivariant (h : PSL2F11) (v : Lambda2U E) :
+public theorem sum_chi_ambient_equivariant (h : PSL2F11) (v : Lambda2U E) :
     (∑ g : PSL2F11, chi10' E g • ambientAct E g (ambientAct E h v)) =
       ambientAct E h (∑ g : PSL2F11, chi10' E g • ambientAct E g v) := by
+  -- First rewrite each term: ρ(g)ρ(h) = ρ(h)ρ(h⁻¹gh)
   have hlink :
       (∑ g : PSL2F11, chi10' E g • ambientAct E g (ambientAct E h v)) =
         ∑ g : PSL2F11, chi10' E g • ambientAct E h (ambientAct E (h⁻¹ * g * h) v) := by
@@ -414,6 +418,7 @@ theorem sum_chi_ambient_equivariant (h : PSL2F11) (v : Lambda2U E) :
       _ = chi10' E g • ambientAct E h (ambientAct E (h⁻¹ * g * h) v) := by
           rw [ambientAct_mul, LinearMap.comp_apply]
   rw [hlink]
+  -- Replace χ(g) by χ(h⁻¹gh)
   have hχsum :
       (∑ g : PSL2F11, chi10' E g • ambientAct E h (ambientAct E (h⁻¹ * g * h) v)) =
         ∑ g : PSL2F11,
@@ -424,6 +429,7 @@ theorem sum_chi_ambient_equivariant (h : PSL2F11) (v : Lambda2U E) :
       rwa [inv_inv] at hraw
     rw [hχ]
   rw [hχsum]
+  -- Pull ambientAct h out of the sum
   have hpull :
       (∑ g : PSL2F11,
           chi10' E (h⁻¹ * g * h) • ambientAct E h (ambientAct E (h⁻¹ * g * h) v)) =
@@ -440,6 +446,7 @@ theorem sum_chi_ambient_equivariant (h : PSL2F11) (v : Lambda2U E) :
     (map_sum (ambientAct E h)
       (fun g => chi10' E (h⁻¹ * g * h) • ambientAct E (h⁻¹ * g * h) v) _).symm
   rw [hmap]
+  -- Reindex g ↦ h⁻¹gh via conjEquiv
   apply congrArg
   exact Fintype.sum_equiv (conjEquiv h)
     (fun g => chi10' E (h⁻¹ * g * h) • ambientAct E (h⁻¹ * g * h) v)

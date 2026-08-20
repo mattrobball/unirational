@@ -138,7 +138,7 @@ public theorem ambientAct_injective (g : PSL2F11) : Function.Injective (ambientA
 theorem pureWedge_map (g : SLG) (u v : U) :
     pureWedge (WeilHom.weilUHom g u) (WeilHom.weilUHom g v) =
       weilLambda2 g (pureWedge u v) := by
-  dsimp [pureWedge, weilLambda2]
+  dsimp [pureWedge, weilLambda2, WeilLambda2.weilLambda2]
   rw [exteriorPower.map_apply_ιMulti]
   congr 1; funext i; fin_cases i <;> rfl
 
@@ -337,7 +337,8 @@ theorem pure_b0b1_b2_ne : pureWedge (b0 + b1) b2 ≠ 0 := by
 
 private theorem b2_support {x : ZMod 11} (hx : b2.1 x ≠ 0) :
     x = (2 : F) ∨ x = (-2 : F) := by
-  dsimp [b2, extendEven, extendEvenFun] at hx
+  dsimp [b2, extendEven, WeilLambda2.extendEven, extendEvenFun,
+    WeilLambda2.extendEvenFun] at hx
   by_cases hle : x.val ≤ 5
   · rw [dif_pos hle] at hx
     by_cases hv : (⟨x.val, Nat.lt_succ_of_le hle⟩ : Fin 6) = 2
@@ -636,7 +637,7 @@ theorem Tmat_moves_movedPoint :
       ambientAct (QuotientGroup.mk WeilRep.Tmat) (pureWedge (b0 + b1) b2) =
         pureWedge (WeilRep.T_even_b 1 (b0 + b1)) (WeilRep.T_even_b 1 b2) := by
     dsimp [ambientAct]
-    rw [pslLambda2_mk, weilLambda2, hU]
+    rw [pslLambda2_mk, weilLambda2, WeilLambda2.weilLambda2, hU]
     dsimp [pureWedge]; rw [exteriorPower.map_apply_ιMulti]
     congr 1; funext i; fin_cases i <;> rfl
   -- mk_eq_mk_iff after map_mk gives: μ • pure = ambientAct T pure
@@ -2923,7 +2924,8 @@ theorem ambientAct_rotGen_pure (u v : U) :
     exteriorPower.ιMulti k 2
       ![WeilHom.weilUHom (CentralizerN.mkRot CentralizerN.rotPt) u,
         WeilHom.weilUHom (CentralizerN.mkRot CentralizerN.rotPt) v]
-  rw [pslLambda2_mk, weilLambda2, exteriorPower.map_apply_ιMulti]
+  rw [pslLambda2_mk, weilLambda2, WeilLambda2.weilLambda2,
+    exteriorPower.map_apply_ιMulti]
   congr 1; funext i; fin_cases i <;> rfl
 
 /-- Support plane of an R-character pure wedge is R-stable of rank 2. -/
@@ -3160,7 +3162,8 @@ theorem ambientAct_reflGen_pure (u v : U) :
     exteriorPower.ιMulti k 2
       ![WeilHom.weilUHom (CentralizerN.mkRefl CentralizerN.reflPt) u,
         WeilHom.weilUHom (CentralizerN.mkRefl CentralizerN.reflPt) v]
-  rw [pslLambda2_mk, weilLambda2, exteriorPower.map_apply_ιMulti]
+  rw [pslLambda2_mk, weilLambda2, WeilLambda2.weilLambda2,
+    exteriorPower.map_apply_ιMulti]
   congr 1; funext i; fin_cases i <;> rfl
 
 /-- `Slin` left-inverse is `-Slin`. -/
@@ -3677,7 +3680,7 @@ theorem residualKer_ne_top : residualKer ≠ (⊤ : Submodule k U) := by
       rw [h1, h2, h3, hmk_neg, ambientAct_one]
     have hWL : weilLambda2 (CentralizerN.mkRot CentralizerN.rotPt) ∘ₗ
         weilLambda2 (CentralizerN.mkRot CentralizerN.rotPt) = LinearMap.id := by
-      dsimp [weilLambda2]
+      dsimp [weilLambda2, WeilLambda2.weilLambda2]
       have hmap_comp :
           exteriorPower.map (R := k) (n := 2)
               (WeilHom.weilUHom (CentralizerN.mkRot CentralizerN.rotPt)) ∘ₗ

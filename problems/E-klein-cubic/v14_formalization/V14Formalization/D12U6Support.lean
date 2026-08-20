@@ -20,11 +20,11 @@ noncomputable section
 namespace V14Formalization.D12U6Support
 
 public theorem extendEven_single_apply (j : Fin 6) (x : ZMod 11) :
-    GeometricFanoCarrier.extendEvenFun (Pi.single j (1 : WeilRep.K)) x =
+    WeilLambda2.extendEvenFun WeilRep.K (Pi.single j (1 : WeilRep.K)) x =
       if x = (j.val : ZMod 11) then 1
       else if x = -(j.val : ZMod 11) then 1 else 0 := by
   classical
-  unfold GeometricFanoCarrier.extendEvenFun
+  unfold WeilLambda2.extendEvenFun
   by_cases hle : x.val ≤ 5
   · rw [dif_pos hle]
     have hxj : x = (j.val : ZMod 11) ↔

@@ -81,7 +81,8 @@ public theorem actualU6_apply_eq_directValue (i j : Fin 6) :
     exact (by decide : (-(27 : ZMod 11)) = 6)
   rw [ha, hd, hcval, chi2_six]
   simp only [Pi.neg_apply, neg_mul, mul_neg, one_mul, neg_neg,
-    GeometricFanoCarrier.extendEven, LinearMap.coe_mk, AddHom.coe_mk]
+    GeometricFanoCarrier.extendEven, WeilLambda2.extendEven,
+    LinearMap.coe_mk, AddHom.coe_mk]
   simp_rw [extendEven_single_apply]
   have hpos (x : ZMod 11) :
       6 * x = (j.val : ZMod 11) ↔ x = 2 * (j.val : ZMod 11) := by

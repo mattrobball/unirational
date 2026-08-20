@@ -72,8 +72,9 @@ public theorem toMatrix_Seven_eq_S6 :
   change GeometricFanoCarrier.evalEven
       (WeilRep.S_even (uBasisCore j)) i = WeilRep.S6 i j
   rw [uBasisCore_apply]
-  simp only [GeometricFanoCarrier.evalEven, WeilRep.S_even, WeilRep.Sfull,
-    LinearMap.coe_mk, AddHom.coe_mk, GeometricFanoCarrier.extendEven,
+  simp only [GeometricFanoCarrier.evalEven, WeilLambda2.evalEven,
+    WeilRep.S_even, WeilRep.Sfull, LinearMap.coe_mk, AddHom.coe_mk,
+    GeometricFanoCarrier.extendEven, WeilLambda2.extendEven,
     WeilRep.S6, Matrix.of_apply]
   simp_rw [extendEven_single_apply]
   simp_rw [mul_ite, mul_one, mul_zero]
