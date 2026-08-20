@@ -4,11 +4,11 @@ public import Mathlib
 
 /-! # Trusted base
 
-Target: `V14Formalization.IntrinsicV14Field.noEquivariantRationalMap_ofPrimitiveRoot`
+Target: `V14Formalization.IntrinsicV14Field.noEquivariantRationalMap_intrinsicV14`
 
 Boundary: V14Formalization, BConicBundleMultisections
 
-135 declarations from 19 modules, inlined in dependency order with every proof replaced by `sorry`. Imports above are outside the boundary and are trusted as given.
+134 declarations from 19 modules, inlined in dependency order with every proof replaced by `sorry`. Imports above are outside the boundary and are trusted as given.
 -/
 
 universe u v w
@@ -802,24 +802,6 @@ definition, and no field other than `F`. -/
   IntrinsicV14.actionOver F (WeilRep.U F) (inclM F) (repM F) (coversM F)
 
 end IntrinsicV14Field
-namespace IntrinsicV14Field
-open AlgebraicGeometry
-open V14Formalization.WeilRep (HasCycl11)
-
-/-- The intrinsic `V₁₄` attached to a characteristic-zero field and a chosen
-primitive 11th root of unity in it.
-
-This is the reader-facing form of the target: the hypothesis is a property of
-`F` and an element of `F`, with no reference to `AdjoinRoot Φ₁₁` or to any
-other carrier of this development.  `BaseFieldCriteria.algebraOfPrimitiveRoot`
-and `BaseFieldCriteria.isPrimitiveRoot_zetaOf` say this hypothesis and
-`[Algebra ℚ(ζ₁₁) F]` are the same data. -/
-@[expose] public def ofPrimitiveRoot {F : Type} [Field F] [CharZero F] {ζ : F}
-    (hζ : IsPrimitiveRoot ζ 11) : Action (Over (Spec (.of F))) WeilLambda2.PSL2F11 :=
-  letI : HasCycl11 F := ⟨ζ, hζ⟩
-  intrinsicV14 F
-
-end IntrinsicV14Field
 end V14Formalization
 
 
@@ -938,23 +920,30 @@ open CategoryTheory
 open scoped AlgebraicGeometry
 namespace V14Formalization
 namespace IntrinsicV14Field
-open AlgebraicGeometry
-open V14Formalization.SchemeGeometry
+open AlgebraicGeometry Module
+open V14Formalization.WeilLambda2
 open V14Formalization.WeilRep (HasCycl11)
+open V14Formalization.SchemeGeometry
+variable (F : Type) [Field F] [CharZero F] [HasCycl11 F]
 
-/-- **The same theorem with the field condition spelled out as an element and a
-property**, which is the form a reader checks.  Unconditional.
+/-- **No `PSL(2,11)`-equivariant rational map from `ℙ(V)` to the intrinsic
+`V₁₄`, over any field of characteristic zero carrying a primitive 11th root of
+unity.**  Unconditional.
 
-`hζ` is the entire hypothesis on `F` beyond characteristic zero: an element of
-`F` that is a primitive 11th root of unity.  `BaseFieldCriteria` shows this is
-interchangeable with `[Algebra ℚ(ζ₁₁) F]`, and the statement uses this side.
-There is no hypothesis on the target: no properness, no constancy on the fixed
-locus, no emptiness of the `D₁₂`-fixed points. -/
-public theorem noEquivariantRationalMap_ofPrimitiveRoot
-    {F : Type} [Field F] [CharZero F] {ζ : F} (hζ : IsPrimitiveRoot ζ 11)
+`V` is any faithful `F`-linear representation, `ℙ(V) = Proj (Sym (V*))` carries
+its action by functoriality, and the target is `Proj (Sym (M*) ⧸ I)` for the
+Plücker ideal `I` of the wedge pairing on the `10′` summand `M ⊆ ⋀²U` of the
+even Weil representation over `F`.  Neither `AdjoinRoot Φ₁₁` nor any other
+carrier of this development occurs in the statement, and nothing is assumed
+about the target.
+
+The proof post-composes along `IntrinsicV14BaseChange.compareBCPullback`, an
+equivariant morphism over `Spec F` from this target to the base change of the
+coordinate `V₁₄`, and cites the general-field coordinate theorem there. -/
+public theorem noEquivariantRationalMap_intrinsicV14
     {V : Type} [AddCommGroup V] [Module F V] [FiniteDimensional F V] [Nontrivial V]
-    (R : FaithfulLinearRep F WeilLambda2.PSL2F11 V) :
-    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R) (ofPrimitiveRoot hζ)  := sorry
+    (R : FaithfulLinearRep F PSL2F11 V) :
+    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R) (intrinsicV14 F)  := sorry
 
 end IntrinsicV14Field
 end V14Formalization
