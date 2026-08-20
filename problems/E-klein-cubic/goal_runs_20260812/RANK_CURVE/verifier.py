@@ -95,6 +95,13 @@ def main():
                 r331["qr_cut"].get("new_dim") == expect,
                 "got %s want %s" % (r331["qr_cut"].get("new_dim"), expect),
             )
+    c39 = load("p3_confirm_d39_p331.json")
+    r39 = load("p3_d39_p331.json")
+    check("C10 d=39 independent confirm present", c39 is not None)
+    if c39 and r39:
+        check("C11 d=39 confirm P3 matches", c39.get("P3") == r39.get("P3") == 4168,
+              str(c39.get("P3")))
+        check("C12 d=39 confirm saturated", c39.get("saturated") is True)
 
     print("[D] semi-regularity artefact")
     s331 = load("semireg_d35_p331.json")

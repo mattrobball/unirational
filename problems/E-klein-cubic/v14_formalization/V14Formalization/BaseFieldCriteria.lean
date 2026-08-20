@@ -89,5 +89,17 @@ consumes; the two are the same data. -/
       _ = eval ζ (cyclotomic 11 F) := by rw [hmap]
       _ = 0 := hroot)).toAlgebra
 
+/-- **The algebra structure built from a primitive 11th root sends the
+distinguished root of `ℚ(ζ₁₁)` to that root.**
+
+This one equation is all the Weil model asks of the embedding: `ψ`, the Gauss
+sum, the Weil operators, `⋀²` and the character projector are built from the
+chosen root and nothing else, so matching the two roots carries the whole model
+across (`WeilModelBaseChange`). -/
+public theorem algebraMap_algebraOfPrimitiveRoot
+    {F : Type*} [Field F] [CharZero F] {ζ : F} (hζ : IsPrimitiveRoot ζ 11) :
+    @algebraMap k F _ _ (algebraOfPrimitiveRoot hζ) WeilRep.ζ = ζ :=
+  AdjoinRoot.lift_root _
+
 end BaseField
 end V14Formalization

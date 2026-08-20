@@ -101,36 +101,31 @@ def run_one(p: int, nmax: int) -> dict:
     cell = cells.load_d35_cell(p)
     A, C, B = cell["A"], cell["C"], cell["Bcell"]
 
-    npts = 2000
-    print("[cubics] director restricted_cubics npts=%d" % npts, flush=True)
-    rows, mons = cubics.restricted_cubics_director(
-        fr, A, C, B, npts, p, seed=20260812
-    )
-    print("[cubics] shape=%s rss=%.2fGB" % (rows.shape, lin.rss_gb()), flush=True)
-    idx, rk = independent_rows(rows, p, P3_SEAL)
-    print("[cubics] independent rows %d (want %d)" % (rk, P3_SEAL), flush=True)
-    if rk != P3_SEAL:
-        print("WARNING: did not recover 1380 gens; continuing with %d" % rk, flush=True)
-
-    gens = rows[idx] % p
+    # Generators: sealed I3 echelon (same 1380-space as restricted_cubics).
+    # Control packet already checked director restricted_cubics rank = 1380.
+    i3path = os.path.join(paths.D35L_RES, "I3_echelon_p%d.npy" % p)
+    if not os.path.exists(i3path):
+        raise SystemExit("missing I3 basis %s" % i3path)
+    gens = np.load(i3path) % p
+    assert gens.shape[0] == P3_SEAL, gens.shape
     P3 = gens.shape[0]
-    # Reconstruct the same sample points the director used.
-    rows2, mons2, W = cubics.restricted_cubics(
-        fr, A, C, B, npts, p, seed=20260812, deg=35
-    )
-    if not np.array_equal(rows % p, rows2 % p):
-        raise SystemExit("director cubics != deg-parameterized copy")
-    Wsel = W[idx] % p
+    npts = 0
+    print("[gens] I3_echelon %s rss=%.2fGB" % (gens.shape, lin.rss_gb()), flush=True)
 
-    # F(T_z(x_j)) at many random parameter points z, via the same T-expansion.
+    # Evaluate each cubic at random z by the monomial contraction.
+    # mon (a,b,c) <-> combinations_with_replacement, same as restricted_cubics.
+    import itertools
+    mons = list(itertools.combinations_with_replacement(range(K), 3))
+    assert gens.shape[1] == len(mons), (gens.shape, len(mons))
     Nz = max(nmax + 200, 4200)
-    print("[eval] Nz=%d gens=%d; jet at selected x ..." % (Nz, P3), flush=True)
-    V = SL.jet_rows(fr, A, C, Wsel, np.zeros_like(Wsel), 1, deg=35)[:, :, :, 0] % p
-    v = np.tensordot(B % p, V % p, axes=(1, 0)) % p  # (K, P3, 5)
     rngz = np.random.default_rng(20260812 + 19 * p)
     Z = rngz.integers(0, p, size=(Nz, K), dtype=np.int64)
-    Tv = np.einsum("nm,mjc->njc", Z, v) % p  # (Nz, P3, 5)
-    G = lin.klein_F_batch(Tv, p).T % p  # (P3, Nz)
+    print("[eval] building z-monomials Nz=%d N3=%d" % (Nz, len(mons)), flush=True)
+    zmon = np.empty((Nz, len(mons)), dtype=np.int64)
+    for t, (a, b, c) in enumerate(mons):
+        zmon[:, t] = (Z[:, a] * Z[:, b] % p) * Z[:, c] % p
+    G = (gens.astype(np.int64) @ zmon.T) % p  # (P3, Nz)
+    del zmon
     print("[eval] G=%s rss=%.2fGB" % (G.shape, lin.rss_gb()), flush=True)
 
     schedule = [n for n in (2000, 4000, 6000, 8000, 10000, 12000, 15000) if n <= nmax]

@@ -53,9 +53,11 @@ public import V14Formalization.IntrinsicV14FieldHeadline
 -- project's carrier. `intrinsicV14` and `ofPrimitiveRoot` are the target built
 -- over any characteristic-zero field carrying a primitive 11th root of unity;
 -- `intrinsicV14_K` identifies it at ℚ(ζ₁₁) with the published target, so
--- `noEquivariantRationalMap_intrinsicV14_cycl` is unconditional. The
--- general-field form carries the three target hypotheses of
--- `AbstractTargetHeadline` and nothing else.
+-- `noEquivariantRationalMap_intrinsicV14_cycl` is unconditional. Since
+-- 2026-08-20 so is the general-field form,
+-- `noEquivariantRationalMap_intrinsicV14` / `..._ofPrimitiveRoot`: it assumes
+-- nothing about the target. `..._of_target` is the *record* of what
+-- `AbstractTargetHeadline` shows the argument uses, and is strictly weaker.
 #print axioms V14Formalization.WeilRep.IsCycl11
 #print axioms V14Formalization.WeilLambda2.pslLambda2Hom
 #print axioms V14Formalization.WeilLambda2.projectorM_equivariant
@@ -64,7 +66,12 @@ public import V14Formalization.IntrinsicV14FieldHeadline
 #print axioms V14Formalization.IntrinsicV14Field.intrinsicV14_K
 #print axioms V14Formalization.IntrinsicV14Field.noEquivariantRationalMap_intrinsicV14_cycl
 #print axioms V14Formalization.IntrinsicV14Field.noEquivariantRationalMap_intrinsicV14_of_target
+#print axioms V14Formalization.IntrinsicV14Field.noEquivariantRationalMap_intrinsicV14
 #print axioms V14Formalization.IntrinsicV14Field.noEquivariantRationalMap_ofPrimitiveRoot
+#print axioms V14Formalization.SchemeGeometry.hypothesisAOver
+#print axioms V14Formalization.SchemeGeometry.noEquivariantRationalMap_ambientFree_over_of_constancy
+#print axioms V14Formalization.WeilModelBaseChange.projectorMatrix_map_mulVec_Msub
+#print axioms V14Formalization.IntrinsicV14BaseChange.compareBCPullback
 
 -- Legacy audit surface.
 #print axioms V14Formalization.centralizerObstruction

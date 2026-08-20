@@ -1,24 +1,24 @@
 {
- "41": {
-  "331": {
-   "HF3": 6660732,
-   "I_3d": 15828,
-   "K": 341,
-   "N3": 6666891,
-   "P3": 6159,
+ "39": {
+  "661": {
+   "HF3": 1698848,
+   "I_3d": 13026,
+   "K": 216,
+   "N3": 1703016,
+   "P3": 4168,
    "P3_is_lower_bound": false,
-   "deficit_vs_I": 9669,
+   "deficit_vs_I": 8858,
    "error": null,
    "qr_cut": {
-    "expect_alive": 343,
+    "expect_alive": 218,
     "is_qr": false,
     "n_points": 60,
-    "new_dim": 343,
+    "new_dim": 218,
     "rank": 0
    },
    "qr_cut_p3": null,
    "saturated": true,
-   "seconds": 1680.145749092102
+   "seconds": 1100.2696058750153
   }
  }
 }

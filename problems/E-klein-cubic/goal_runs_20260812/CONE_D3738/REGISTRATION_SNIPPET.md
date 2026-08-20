@@ -22,7 +22,7 @@ No git operation was performed; nothing outside
   ],
   "machine_markers": ["CONE_D3738_VERIFY_OK", "ALLGREEN"],
   "primes": [331, 661],
-  "summary": "Extension of DATA_SPEC_CONE_SWARM_20260812 to the d=37 and d=38 windows. Anchors: post-C11 cells 120 and 150 (QR_POINT_CUTS); P3=2642 on the d=37 post-flip 119-cell and P3=3285 on the d=38 151-cell (LANDING_INVARIANT_SIDE). Free rungs fill Sym^3(L) up to the last m with C(m+2,3) <= P3_cut. Later rungs use the FULL restricted cubic span (never a subset) + msolve -g 1 -t 2. Tightest proven bound is N-m on the post-cut cell. Modular; no degree excluded.",
+  "summary": "Extension of DATA_SPEC_CONE_SWARM_20260812 to the d=37 and d=38 windows. Anchors: post-C11 cells 120 and 150; P3=2642 (K=119) and P3=3285 (K=151) at p=331 and 661. Free rungs fill Sym^3 through m=24 (d=37, dim V<=96) and m=25 (d=38, dim V<=125). Full restricted span + msolve -g 1 -t 2: m=25..30 zero-dim both primes. Tightest two-prime bound dim V<=90 at d=37 and dim V<=120 at d=38 (m=30). m=32: timeout (d=37) / RSS-cap (d=38), no verdict. Modular; no degree excluded.",
   "char0_scope": "P3 and free-span ranks that agree at p=331 and 661 are modular ranks (full rank lifts). Zero-dimensionality is a leading-ideal test over F_p on an F_p-generic section. Bound stated as modular. No characteristic-zero emptiness or degree exclusion claimed.",
   "depends_on": [
     "goal_runs_20260811/D34_GUIDED_SWEEP",

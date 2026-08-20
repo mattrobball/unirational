@@ -30,7 +30,14 @@
  "seconds": 795.0,
  "seconds_total": 1304.0,
  "salvaged_from_log": true,
- "salvage_note": "P3/saturation taken from produce_p3.py stdout (extra batches +0 at rank 4168). JSON write was skipped by a subsequent qr_cut crash; cell npy saved.",
+ "independent_confirm": {
+  "path": "p3_confirm_d39_p331.json",
+  "P3": 4168,
+  "saturated": true,
+  "mode": "inv_eval_matrix_batch",
+  "seed": 20260813
+ },
+ "salvage_note": "P3/saturation taken from produce_p3.py stdout (extra batches +0 at rank 4168). Independently recomputed from saved Bcell via confirm_from_npy.py (different seed): P3=4168 saturated.",
  "qr_cut": {
   "rank": 0,
   "new_dim": 218,

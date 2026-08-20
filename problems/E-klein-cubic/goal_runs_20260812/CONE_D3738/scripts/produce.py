@@ -36,8 +36,8 @@ FREE_MS = {
     38: (22, 24, 25, 26, 27, 28),
 }
 MSOLVE_MS = {
-    37: (25, 26, 28, 30, 32),
-    38: (27, 28, 30, 32),
+    37: (25, 26, 28, 30),
+    38: (26, 27, 28, 30),
 }
 N_FUNC = {37: 4500, 38: 5500}
 
@@ -326,7 +326,9 @@ def emit_and_run_msolve(fr, A, C, Bcell, V, p, d, m, P3_cell, timeout=900):
 
 
 def compile_summary(p=None):
-    primes = [p] if p else list(paths.PRIMES)
+    # Always scan both primes for summary.json so a one-prime run cannot
+    # wipe the other prime's ledger.
+    primes = list(paths.PRIMES)
     by_d = {}
     for d in paths.DEGREES:
         by_d[str(d)] = {}
