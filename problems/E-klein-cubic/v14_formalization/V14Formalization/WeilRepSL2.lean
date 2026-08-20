@@ -157,7 +157,7 @@ public theorem weilFun_preserves_even (g : SLG) {f : Fun}
     rw [hPos]
 
 /-- Weil action on the even module U. -/
-@[expose] public def weilU (g : SLG) : U →ₗ[K] U where
+@[expose] public def weilU (g : SLG) : WeilRep.U →ₗ[K] WeilRep.U where
   toFun f := ⟨weilFun g f.1, fun x => weilFun_preserves_even g (fun z => f.2 z) x⟩
   map_add' := by
     intro f₁ f₂
@@ -237,7 +237,7 @@ theorem Nfull_rightInv (t : F) : Nfull t ∘ₗ Nfull (-t) = LinearMap.id := by
   rw [← Nfull_add, add_neg_cancel, Nfull_zero]
 
 /-- On the even module, S² = −id (re-export). -/
-theorem S_even_sq' : S_even ∘ₗ S_even = (-LinearMap.id : U →ₗ[K] U) :=
+theorem S_even_sq' : S_even ∘ₗ S_even = (-LinearMap.id : WeilRep.U →ₗ[K] WeilRep.U) :=
   S_even_sq
 
 /-- Weil operator for Tmat on even U is T_even_b 1. -/
@@ -283,7 +283,7 @@ public theorem weilU_one : weilU (1 : SLG) = LinearMap.id := by
   rfl
 
 /-- On subspaces (and projective space), `L` and `-L` induce the same action. -/
-theorem submodule_map_neg {W : Submodule K U} (L : U →ₗ[K] U) :
+theorem submodule_map_neg {W : Submodule K WeilRep.U} (L : WeilRep.U →ₗ[K] WeilRep.U) :
     Submodule.map (-L) W = Submodule.map L W := by
   ext x
   constructor

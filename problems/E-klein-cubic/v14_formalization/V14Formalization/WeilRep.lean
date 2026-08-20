@@ -341,9 +341,18 @@ public theorem Sfull_sq_apply (f : Fun) (x : ZMod 11) :
   zero_mem' := fun x => rfl
   smul_mem' := fun r {f} hf x => by simp [hf x]
 
-public abbrev U := EvenSub
+-- `protected`, deliberately.  Three downstream namespaces re-export this same
+-- object under the bare name `U`: `GeometricFanoCarrier`,
+-- `GeometricV14Carrier` and `Lambda2Coordinates`.  Inside a source module only
+-- one of them is ever open at a time, so nothing is ambiguous there; but the
+-- generated trusted-base artifacts flatten many modules into one file and
+-- accumulate their `open`s, and a bare `U` in that file is ambiguous between
+-- this and an alias.  That is what broke `artifacts/trusted_base_intrinsic.lean`.
+-- Protecting the root keeps all three convenience aliases usable; the price is
+-- writing `WeilRep.U` here and in the two modules that `open WeilRep` directly.
+public protected abbrev U := EvenSub
 
-@[expose] public instance : Module K U := inferInstance
+@[expose] public instance : Module K WeilRep.U := inferInstance
 
 public theorem Sfull_preserves_even {f : Fun} (hf : ∀ x, f (-x) = f x) (x : ZMod 11) :
     Sfull f (-x) = Sfull f x := by
@@ -362,7 +371,7 @@ public theorem Sfull_preserves_even {f : Fun} (hf : ∀ x, f (-x) = f x) (x : ZM
     rfl
 
 /-- Fourier transform on the even subspace. -/
-@[expose] public def S_even : U →ₗ[K] U where
+@[expose] public def S_even : WeilRep.U →ₗ[K] WeilRep.U where
   toFun f :=
     ⟨Sfull f.1, fun x => Sfull_preserves_even (fun t => f.2 t) x⟩
   map_add' := by
@@ -431,7 +440,7 @@ theorem Tfull_preserves_even {f : Fun} (hf : ∀ x, f (-x) = f x) (x : ZMod 11) 
     congr 1; ring
   rw [this, hf x]
 
-def T_even : U →ₗ[K] U where
+def T_even : WeilRep.U →ₗ[K] WeilRep.U where
   toFun f := ⟨Tfull f.1, fun x => Tfull_preserves_even (fun t => f.2 t) x⟩
   map_add' := by
     intro f g; apply Subtype.ext
@@ -469,7 +478,7 @@ public theorem Tfull_b_preserves_even (b : ZMod 11) {f : Fun}
   have : ψ (b * (-x) ^ 2 * twoInv) = ψ (b * x ^ 2 * twoInv) := by congr 1; ring
   rw [this, hf x]
 
-@[expose] public def T_even_b (b : ZMod 11) : U →ₗ[K] U where
+@[expose] public def T_even_b (b : ZMod 11) : WeilRep.U →ₗ[K] WeilRep.U where
   toFun f := ⟨Tfull_b b f.1, fun x => Tfull_b_preserves_even b (fun t => f.2 t) x⟩
   map_add' := by
     intro f g; apply Subtype.ext
@@ -499,7 +508,7 @@ public theorem T_even_b_add (b c : ZMod 11) :
   rw [hψ]; ring
 
 /-- Standard unipotent t = [[1,1],[0,1]] acts as T_even_b 1. -/
-def T_gen : U →ₗ[K] U := T_even_b 1
+def T_gen : WeilRep.U →ₗ[K] WeilRep.U := T_even_b 1
 
 theorem T_gen_eq_T_even : T_gen = T_even := by
   apply LinearMap.ext
@@ -510,7 +519,7 @@ theorem T_gen_eq_T_even : T_gen = T_even := by
     twoInv, one_mul]
 
 /-- Weyl element S acts as S_even; S² = −id. -/
-def S_gen : U →ₗ[K] U := S_even
+def S_gen : WeilRep.U →ₗ[K] WeilRep.U := S_even
 
 theorem S_gen_sq : S_gen ∘ₗ S_gen = -LinearMap.id := S_even_sq
 

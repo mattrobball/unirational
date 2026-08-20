@@ -1346,7 +1346,7 @@ public theorem weilU_mul (g h : SLG) : weilU (g * h) = weilU g ∘ₗ weilU h :=
     · exact weilU_mul_big_big hg hh
 
 /-- The even Weil representation as a monoid homomorphism SL₂(F₁₁) → End(U). -/
-@[expose] public def weilUHom : SLG →* (U →ₗ[K] U) where
+@[expose] public def weilUHom : SLG →* (WeilRep.U →ₗ[K] WeilRep.U) where
   toFun := weilU
   map_one' := weilU_one
   map_mul' := weilU_mul

@@ -934,6 +934,60 @@ full (commit 7680055a) and must keep doing so.
 Before each stage, sweep for the same shape: any name declared in more than
 one file where at least one declaration is `public`.
 
+## Re-export aliases and the flattened artifacts (2026-08-20)
+
+The same name in two namespaces is legal, and inside a source module it is
+harmless: only one of the two namespaces is ever `open` at a time. The
+generated trusted-base artifacts break that assumption. `stan_boundary`
+emits one file with a banner per source module, and it never closes the
+sections it opens, so **every `open` in the file is still in force at the
+bottom of it**. A bare name that is unambiguous in each source module can be
+ambiguous in the emission.
+
+That is what broke `artifacts/trusted_base_intrinsic.lean`: `WeilRep.U` (the
+even Weil module) and `GeometricV14Carrier.U` (an alias for it, two links
+down a chain `GeometricV14Carrier.U → GeometricFanoCarrier.U → WeilRep.U`)
+were both in scope at `coversM`, and
+
+    error: Ambiguous term
+      U
+    Possible interpretations:
+      ↥GeometricV14Carrier.U : Type
+      ↥WeilRep.U : Type
+
+killed that declaration and then the next one with `Unknown identifier
+coversM`. Three errors, one root.
+
+The fix is `protected` on **the root definition, not the alias**:
+`WeilRep.U` is `public protected`. `open WeilRep` then does not put a bare
+`U` in scope, while `GeometricFanoCarrier`, `GeometricV14Carrier` and
+`Lambda2Coordinates` keep theirs — which is the right way round, because the
+aliases exist precisely to be `open`ed. Protecting an alias instead would
+make that alias pointless and, for `GeometricV14Carrier.U`, would cost 544
+qualifications in its own file against 10 for the root.
+
+Two things to know before doing this again:
+
+* `protected` in Lean 4 suppresses the short name **inside the declaring
+  namespace too**, not just at `open` sites. Protecting `WeilRep.U` made the
+  six later bare `U`s in `WeilRep.lean` autoImplicit variables, surfacing as
+  `failed to synthesize AddCommMonoid U`. Qualify them in the same edit.
+* `stan_boundary` re-emits declaration source text verbatim from the
+  `declRange`, modifiers included, so `public protected` propagates to the
+  artifact and a plain `--` comment above the declaration does not. Put the
+  rationale in a `--` comment if you do not want it in the artifact.
+
+The sweep to run when adding an alias: for each bare name declared in more
+than one namespace under `V14Formalization`, check whether any pair can end
+up open together in an emission. Cheaply: `grep -n '^open' artifacts/*.lean`
+and read the whole file as one scope.
+
+(The three long-dead `D12SigmaPlusSegreSmooth{U,V,W}` files carried a
+different `Ambiguous term C/X` — `Matrix.C` vs `Polynomial.C` vs
+`MvPolynomial.C` from `open Matrix Polynomial MvPolynomial`, pure Mathlib
+names that this project cannot protect. They were deleted in 31ca4ac9, so
+there is nothing left to fix there.)
+
 ## Validation (what the legacy build cannot tell you)
 
 * Build each converted file (`lake build V14Formalization.<X>`) — module
