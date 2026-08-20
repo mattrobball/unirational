@@ -4820,7 +4820,7 @@ public theorem projectorM_trace_eq_finrank :
 @[expose] public noncomputable def chiLambda2 (g : PSL2F11) : k :=
   LinearMap.trace k Lambda2U (ambientAct g)
 
-theorem chiLambda2_one : chiLambda2 1 = 15 := by
+public theorem chiLambda2_one : chiLambda2 1 = 15 := by
   dsimp [chiLambda2]
   rw [ambientAct_one, LinearMap.trace_id, finrank_Lambda2U]
   norm_num
@@ -5483,7 +5483,7 @@ theorem chiLambda2_sigma : chiLambda2 sigma = 3 := by
   norm_num
 
 /-- Every order-2 element has ambient character `3`. -/
-theorem chiLambda2_eq_three_of_order_two {g : PSL2F11} (hg : orderOf g = 2) :
+public theorem chiLambda2_eq_three_of_order_two {g : PSL2F11} (hg : orderOf g = 2) :
     chiLambda2 g = 3 := by
   rw [chiLambda2_eq_of_order_two hg, chiLambda2_sigma]
 
@@ -6926,7 +6926,7 @@ theorem isConj_rotGen_of_order_six {g : PSL2F11} (hg : orderOf g = 6) :
     mem_carrier_iff_mk_eq.mp hcar
   exact isConj_comm.mp ((mk_eq_mk_iff_isConj).mp hmk)
 
-theorem chiLambda2_eq_zero_of_order_six {g : PSL2F11} (hg : orderOf g = 6) :
+public theorem chiLambda2_eq_zero_of_order_six {g : PSL2F11} (hg : orderOf g = 6) :
     chiLambda2 g = 0 := by
   have hc := isConj_rotGen_of_order_six hg
   have h := chiLambda2_isConj hc
@@ -7384,7 +7384,7 @@ theorem isConj_rotGen_pow_two_of_order_three {g : PSL2F11} (hg : orderOf g = 3) 
   have hmk : ConjClasses.mk g = ConjClasses.mk r2 := mem_carrier_iff_mk_eq.mp hcar
   exact isConj_comm.mp ((mk_eq_mk_iff_isConj).mp hmk)
 
-theorem chiLambda2_eq_zero_of_order_three {g : PSL2F11} (hg : orderOf g = 3) :
+public theorem chiLambda2_eq_zero_of_order_three {g : PSL2F11} (hg : orderOf g = 3) :
     chiLambda2 g = 0 := by
   have hc := isConj_rotGen_pow_two_of_order_three hg
   have h := chiLambda2_isConj hc

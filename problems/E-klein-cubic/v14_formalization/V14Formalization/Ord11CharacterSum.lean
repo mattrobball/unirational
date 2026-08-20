@@ -1045,5 +1045,286 @@ public theorem finrank_Msub_eq_ten :
 #print axioms sum_chi_chiLambda2_eq_sixsixty
 #print axioms finrank_Msub_eq_ten
 
+/-! ## The norm of the ambient character
+
+`∑_{g} χ_Λ²(g) · χ_Λ²(g⁻¹) = 1320 = 2·660`.  This says the commutant of `Λ²U`
+is two-dimensional, i.e. that `Λ²U` splits into exactly two non-isomorphic
+irreducibles, and it is what makes `Msub` *the* ten-dimensional
+`PSL(2,11)`-stable subspace of `Λ²U` (`MsubUnique`).
+
+Class by class the sum is `225 + 495 + 0 + 0 + 0 + 600`.  Orders 1, 2, 3 and 6
+come from `GeometricV14Carrier`.  The two values proved here are the ones the
+weighted sum `∑ χ₁₀' χ_Λ²` never needed:
+
+* `χ_Λ²` on **order-5** elements is `0` — the weighted sum did not need it
+  because `χ₁₀'` vanishes there.  An order-5 element is conjugate to a
+  *diagonal* one, and a diagonal `SL₂` element acts on `U` as `χ₂(t)` times a
+  permutation of the six `evalEven` coordinates.  That permutation fixes only
+  the coordinate `0`, so the trace is `χ₂(t) = 1`, for `t` and for `t²`, and
+  Newton gives `½(1 − 1) = 0`.
+* the product `χ_Λ²(g)·χ_Λ²(g⁻¹)` on **order-11** elements is the constant `5`:
+  `χ_Λ²(t^n) = (−3 − χ₂(n)γ)/2` with `γ² = −11` and `χ₂(−1) = −1`, so the two
+  factors are conjugate over `ℚ` and their product is `(9 + 11)/4`.
+-/
+
+/-! ### Order 11, pointwise -/
+
+private theorem isConj_inv_of_isConj {a b : PSL2F11} (h : IsConj a b) :
+    IsConj a⁻¹ b⁻¹ := by
+  obtain ⟨c, hc⟩ := isConj_iff.mp h
+  refine isConj_iff.mpr ⟨c, ?_⟩
+  rw [← hc, mul_inv_rev, mul_inv_rev, inv_inv, mul_assoc]
+
+private theorem χ₂_neg (n : ZMod 11) : χ₂ (-n) = -χ₂ n := by
+  have h : (-n) = (-1 : ZMod 11) * n := by ring
+  rw [h, map_mul, χ₂_neg_one]
+  ring
+
+/-- On a pair of mutually inverse order-11 powers the product of characters is
+the constant `5`: the two Gauss-sum terms are conjugate. -/
+private theorem chiLambda2_tGen_pow_mul (n m : ℕ) (hn : (n : ZMod 11) ≠ 0)
+    (hm : (m : ZMod 11) = -(n : ZMod 11)) :
+    chiLambda2 (tGen ^ n) * chiLambda2 (tGen ^ m) = (5 : k) := by
+  have hm0 : (m : ZMod 11) ≠ 0 := by
+    rw [hm]; simpa using hn
+  rw [chiLambda2_tGen_pow_eq n hn, chiLambda2_tGen_pow_eq m hm0, hm, χ₂_neg]
+  set c : k := χ₂ (n : ZMod 11) * gauss with hc
+  have hcsq : c * c = (-11 : k) := by
+    have h1 : c * c = (χ₂ (n : ZMod 11) * χ₂ (n : ZMod 11)) * gauss ^ 2 := by
+      rw [hc]; ring
+    rw [h1, χ₂_sq_one hn, gauss_sq, one_mul]
+  have hstep :
+      (-3 - χ₂ (n : ZMod 11) * gauss) * (2 : k)⁻¹ *
+          ((-3 - -χ₂ (n : ZMod 11) * gauss) * (2 : k)⁻¹) =
+        (9 - c * c) * ((2 : k)⁻¹ * (2 : k)⁻¹) := by
+    rw [hc]; ring
+  rw [hstep, hcsq]
+  have h2 : (2 : k) ≠ 0 := by norm_num
+  field_simp
+  norm_num
+
+/-- `tGen` is the class of the `PSLCard` unipotent generator. -/
+private theorem tGen_eq_mk_Tmat :
+    tGen = (QuotientGroup.mk PSLCard.Tmat : PSL2F11) := rfl
+
+private theorem mk_Tmat_pow (n : ℕ) :
+    (QuotientGroup.mk (PSLCard.Tmat ^ n) : PSL2F11) = tGen ^ n := by
+  rw [tGen_eq_mk_Tmat, ← QuotientGroup.mk_pow]
+
+/-- **`χ_Λ²(g) · χ_Λ²(g⁻¹) = 5` on every order-11 element.** -/
+public theorem chiLambda2_mul_inv_of_order_eleven {g : PSL2F11} (hg : orderOf g = 11) :
+    chiLambda2 g * chiLambda2 g⁻¹ = (5 : k) := by
+  have key : ∀ n m : ℕ, (n : ZMod 11) ≠ 0 → ((m : ℕ) : ZMod 11) = -(n : ZMod 11) →
+      (tGen ^ n)⁻¹ = tGen ^ m → IsConj (tGen ^ n) g →
+      chiLambda2 g * chiLambda2 g⁻¹ = (5 : k) := by
+    intro n m hn hm hinv hconj
+    rw [← chiLambda2_isConj hconj, ← chiLambda2_isConj (isConj_inv_of_isConj hconj),
+      hinv]
+    exact chiLambda2_tGen_pow_mul n m hn hm
+  have h11 : tGen ^ 11 = 1 := tGen_pow_eleven
+  rcases PSLCard.isConj_Tmat_or_pow_of_order_eleven hg with h | h
+  · refine key 1 10 (by decide) (by decide) ?_ ?_
+    · rw [pow_one]
+      refine (inv_eq_of_mul_eq_one_right ?_)
+      calc tGen * tGen ^ 10 = tGen ^ 11 := by rw [← pow_succ']
+        _ = 1 := h11
+    · rw [pow_one, tGen_eq_mk_Tmat]; exact h
+  · refine key 2 9 (by decide) (by decide) ?_ ?_
+    · refine (inv_eq_of_mul_eq_one_right ?_)
+      calc tGen ^ 2 * tGen ^ 9 = tGen ^ 11 := by rw [← pow_add]
+        _ = 1 := h11
+    · rw [← mk_Tmat_pow 2]; exact h
+
+/-! ### Order 5: a diagonal element acts by a scaled permutation of coordinates -/
+
+section OrderFive
+
+open Matrix
+
+/-- `c` times the permutation matrix of `σ`, acting on `Fin 6 → k`. -/
+private def scaledPerm (c : k) (σ : Fin 6 → Fin 6) : Matrix (Fin 6) (Fin 6) k :=
+  fun j i => if i = σ j then c else 0
+
+private theorem toLin'_scaledPerm (c : k) (σ : Fin 6 → Fin 6) (v : Fin 6 → k)
+    (j : Fin 6) :
+    Matrix.toLin' (scaledPerm c σ) v j = c * v (σ j) := by
+  classical
+  have hexp : Matrix.toLin' (scaledPerm c σ) v j =
+      ∑ i : Fin 6, (if i = σ j then c else 0) * v i := rfl
+  rw [hexp, Finset.sum_eq_single (σ j)]
+  · rw [if_pos rfl]
+  · intro b _ hb
+    rw [if_neg hb, zero_mul]
+  · intro h
+    exact absurd (Finset.mem_univ (σ j)) h
+
+private theorem trace_scaledPerm (c : k) (σ : Fin 6 → Fin 6) :
+    LinearMap.trace k (Fin 6 → k) (Matrix.toLin' (scaledPerm c σ)) =
+      ∑ j : Fin 6, (if j = σ j then c else 0) := by
+  rw [Matrix.trace_toLin'_eq]
+  rfl
+
+/-- On a lower-left-zero, upper-right-zero `SL₂` element the Weil action of `U`
+is `f ↦ χ₂(a)·f(a·−)`: the Bruhat factorisation degenerates to `Dfull a`. -/
+private theorem weilU_apply_of_diag (A : WeilRepSL2.SLG)
+    (hc : WeilRepSL2.ec A = 0) (hb : WeilRepSL2.eb A = 0)
+    (f : GeometricV14Carrier.U) (x : ZMod 11) :
+    (WeilHom.weilUHom A f).1 x =
+      χ₂ (WeilRepSL2.ea A) * f.1 (WeilRepSL2.ea A * x) := by
+  show WeilRepSL2.weilFun A f.1 x = _
+  dsimp only [WeilRepSL2.weilFun]
+  rw [dif_pos hc]
+  dsimp only [WeilRepSL2.borelFun]
+  rw [LinearMap.comp_apply, hb, zero_mul, WeilRepSL2.Nfull_zero, LinearMap.id_apply]
+  rfl
+
+/-- **Trace of a diagonal Weil operator.**  If multiplication by `a = ea A`
+permutes the six `evalEven` coordinates by `σ` (up to the sign that evenness
+absorbs) and `σ` fixes only the coordinate `0`, then `tr_U ρ(A) = χ₂(a)`. -/
+private theorem trace_weilU_of_diag (A : WeilRepSL2.SLG)
+    (hc : WeilRepSL2.ec A = 0) (hb : WeilRepSL2.eb A = 0)
+    (σ : Fin 6 → Fin 6)
+    (hσ : ∀ j : Fin 6,
+      WeilRepSL2.ea A * ((j.val : ℕ) : ZMod 11) = (((σ j).val : ℕ) : ZMod 11) ∨
+        WeilRepSL2.ea A * ((j.val : ℕ) : ZMod 11) = -((((σ j).val : ℕ)) : ZMod 11))
+    (hfix : ∀ j : Fin 6, σ j = j ↔ j = 0) :
+    LinearMap.trace k GeometricV14Carrier.U (WeilHom.weilUHom A) =
+      χ₂ (WeilRepSL2.ea A) := by
+  classical
+  have hsv : ∀ (v : Fin 6 → k) (i : Fin 6),
+      (evalEvenEquiv.symm v).1 ((i.val : ℕ) : ZMod 11) = v i := by
+    intro v i
+    have h : GeometricFanoCarrier.evalEven (evalEvenEquiv.symm v) = v :=
+      evalEvenEquiv.apply_symm_apply v
+    calc (evalEvenEquiv.symm v).1 ((i.val : ℕ) : ZMod 11)
+        = GeometricFanoCarrier.evalEven (evalEvenEquiv.symm v) i := rfl
+      _ = v i := by rw [h]
+  have hconj : evalEvenEquiv.conj (WeilHom.weilUHom A) =
+      Matrix.toLin' (scaledPerm (χ₂ (WeilRepSL2.ea A)) σ) := by
+    apply LinearMap.ext
+    intro v
+    funext j
+    rw [toLin'_scaledPerm]
+    have hL : (evalEvenEquiv.conj (WeilHom.weilUHom A)) v j =
+        (WeilHom.weilUHom A (evalEvenEquiv.symm v)).1 ((j.val : ℕ) : ZMod 11) := rfl
+    rw [hL, weilU_apply_of_diag A hc hb]
+    rcases hσ j with h | h
+    · rw [h, hsv]
+    · rw [h, (evalEvenEquiv.symm v).2 ((((σ j).val : ℕ)) : ZMod 11), hsv]
+  have htr := (LinearMap.trace_conj' (WeilHom.weilUHom A) evalEvenEquiv).symm
+  rw [htr, hconj, trace_scaledPerm]
+  have hcond : ∀ j : Fin 6, (j = σ j) = (j = 0) := by
+    intro j
+    exact propext ⟨fun h => (hfix j).mp h.symm, fun h => ((hfix j).mpr h).symm⟩
+  simp only [hcond]
+  simp
+
+/-! #### The three diagonal representatives -/
+
+/-- `diag(9, 5)`: an order-5 element of the split torus. -/
+private def dm9 : WeilRepSL2.SLG :=
+  ⟨!![9, 0; 0, 5], by rw [Matrix.det_fin_two_of]; decide⟩
+
+/-- `dm9² = diag(4, 3)`. -/
+private def dm4 : WeilRepSL2.SLG :=
+  ⟨!![4, 0; 0, 3], by rw [Matrix.det_fin_two_of]; decide⟩
+
+/-- `dm9⁴ = diag(5, 9)`. -/
+private def dm5 : WeilRepSL2.SLG :=
+  ⟨!![5, 0; 0, 9], by rw [Matrix.det_fin_two_of]; decide⟩
+
+/-- Conjugates `el5` into the split torus: `cm5 · el5 · cm5⁻¹ = dm9`. -/
+private def cm5 : WeilRepSL2.SLG :=
+  ⟨!![3, 5; 10, 6], by rw [Matrix.det_fin_two_of]; decide⟩
+
+private theorem trace_weilU_dm9 :
+    LinearMap.trace k GeometricV14Carrier.U (WeilHom.weilUHom dm9) = 1 := by
+  rw [trace_weilU_of_diag dm9 (by decide) (by decide)
+      ![0, 2, 4, 5, 3, 1] (by decide) (by decide)]
+  rw [show WeilRepSL2.ea dm9 = 3 * 3 from by decide, map_mul]
+  exact χ₂_sq_one (by decide)
+
+private theorem trace_weilU_dm4 :
+    LinearMap.trace k GeometricV14Carrier.U (WeilHom.weilUHom dm4) = 1 := by
+  rw [trace_weilU_of_diag dm4 (by decide) (by decide)
+      ![0, 4, 3, 1, 5, 2] (by decide) (by decide)]
+  rw [show WeilRepSL2.ea dm4 = 2 * 2 from by decide, map_mul]
+  exact χ₂_sq_one (by decide)
+
+private theorem trace_weilU_dm5 :
+    LinearMap.trace k GeometricV14Carrier.U (WeilHom.weilUHom dm5) = 1 := by
+  rw [trace_weilU_of_diag dm5 (by decide) (by decide)
+      ![0, 5, 1, 4, 2, 3] (by decide) (by decide)]
+  rw [show WeilRepSL2.ea dm5 = 4 * 4 from by decide, map_mul]
+  exact χ₂_sq_one (by decide)
+
+private theorem dm9_sq : dm9 * dm9 = dm4 := by decide
+private theorem dm4_sq : dm4 * dm4 = dm5 := by decide
+
+/-! #### Newton on an `SL₂` element -/
+
+private theorem chiLambda2_mk_sl (A : WeilRepSL2.SLG) :
+    chiLambda2 (QuotientGroup.mk A) =
+      (2 : k)⁻¹ *
+        ((LinearMap.trace k GeometricV14Carrier.U (WeilHom.weilUHom A)) ^ 2 -
+          LinearMap.trace k GeometricV14Carrier.U (WeilHom.weilUHom (A * A))) := by
+  dsimp [chiLambda2]
+  have h1 : ambientAct (QuotientGroup.mk A) =
+      exteriorPower.map (R := k) (n := 2) (WeilHom.weilUHom A) := by
+    dsimp only [ambientAct]
+    rw [GeometricFanoCarrier.pslLambda2_mk A]
+    rfl
+  have hmul : WeilHom.weilUHom A ∘ₗ WeilHom.weilUHom A =
+      WeilHom.weilUHom (A * A) := by
+    rw [map_mul]; rfl
+  rw [h1, trace_exterior_newton, hmul]
+
+private theorem chiLambda2_mk_dm9 :
+    chiLambda2 (QuotientGroup.mk dm9 : PSL2F11) = 0 := by
+  rw [chiLambda2_mk_sl dm9, trace_weilU_dm9, dm9_sq, trace_weilU_dm4]
+  norm_num
+
+private theorem chiLambda2_mk_dm4 :
+    chiLambda2 (QuotientGroup.mk dm4 : PSL2F11) = 0 := by
+  rw [chiLambda2_mk_sl dm4, trace_weilU_dm4, dm4_sq, trace_weilU_dm5]
+  norm_num
+
+/-! #### `el5` is conjugate into the split torus -/
+
+private theorem cm5_mul_el5 : cm5 * PSLCard.el5 = dm9 * cm5 := by decide
+
+private theorem conj_el5 : cm5 * PSLCard.el5 * cm5⁻¹ = dm9 := by
+  rw [cm5_mul_el5, mul_assoc, mul_inv_cancel, mul_one]
+
+private theorem conj_el5_sq : cm5 * PSLCard.el5 ^ 2 * cm5⁻¹ = dm4 := by
+  have h : cm5 * PSLCard.el5 ^ 2 * cm5⁻¹ =
+      (cm5 * PSLCard.el5 * cm5⁻¹) * (cm5 * PSLCard.el5 * cm5⁻¹) := by
+    rw [sq]; group
+  rw [h, conj_el5, dm9_sq]
+
+private theorem isConj_mk_el5_dm9 :
+    IsConj (QuotientGroup.mk PSLCard.el5 : PSL2F11) (QuotientGroup.mk dm9) := by
+  refine isConj_iff.mpr ⟨QuotientGroup.mk cm5, ?_⟩
+  rw [← QuotientGroup.mk_inv, ← QuotientGroup.mk_mul, ← QuotientGroup.mk_mul,
+    conj_el5]
+
+private theorem isConj_mk_el5_sq_dm4 :
+    IsConj (QuotientGroup.mk (PSLCard.el5 ^ 2) : PSL2F11) (QuotientGroup.mk dm4) := by
+  refine isConj_iff.mpr ⟨QuotientGroup.mk cm5, ?_⟩
+  rw [← QuotientGroup.mk_inv, ← QuotientGroup.mk_mul, ← QuotientGroup.mk_mul,
+    conj_el5_sq]
+
+/-- **`χ_Λ² = 0` on every order-5 element.**  This is the value the weighted sum
+`∑ χ₁₀'·χ_Λ² = 660` never needed, because `χ₁₀'` vanishes on the two order-5
+classes; the quadratic sum has no such weight. -/
+public theorem chiLambda2_eq_zero_of_order_five {g : PSL2F11} (hg : orderOf g = 5) :
+    chiLambda2 g = 0 := by
+  rcases PSLCard.isConj_el5_or_pow_of_order_five hg with h | h
+  · rw [← chiLambda2_isConj h, chiLambda2_isConj isConj_mk_el5_dm9, chiLambda2_mk_dm9]
+  · rw [← chiLambda2_isConj h, chiLambda2_isConj isConj_mk_el5_sq_dm4,
+      chiLambda2_mk_dm4]
+
+end OrderFive
+
 end Ord11CharacterSum
 end V14Formalization

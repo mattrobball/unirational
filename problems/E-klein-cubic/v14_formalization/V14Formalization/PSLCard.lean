@@ -1156,7 +1156,7 @@ theorem pslOrd_Tmat : pslOrd Tmat = 11 := by decide
 def el3 : SLG := ⟨!![0, -1; 1, -1], by simp [Matrix.det_fin_two_of]⟩
 theorem pslOrd_el3 : pslOrd el3 = 3 := by decide
 
-def el5 : SLG := ⟨!![0, -1; 1, 3], by simp [Matrix.det_fin_two_of]⟩
+@[expose] public def el5 : SLG := ⟨!![0, -1; 1, 3], by simp [Matrix.det_fin_two_of]⟩
 theorem pslOrd_el5 : pslOrd el5 = 5 := by decide
 
 /-- Order-6 sample: `!![0,1; -1, 5]`. -/
@@ -2575,7 +2575,7 @@ private theorem disjoint_carriers_of_not_isConj {r1 r2 : PSL2F11}
   have hmk : ConjClasses.mk r1 = ConjClasses.mk r2 := hmk1.symm.trans hmk2
   exact hne ((mk_eq_mk_iff_isConj).mp hmk)
 
-theorem isConj_el5_or_pow_of_order_five {g : PSL2F11} (hg : orderOf g = 5) :
+public theorem isConj_el5_or_pow_of_order_five {g : PSL2F11} (hg : orderOf g = 5) :
     IsConj (QuotientGroup.mk el5) g ∨
       IsConj (QuotientGroup.mk (el5 ^ 2)) g := by
   classical
@@ -2640,7 +2640,7 @@ theorem isConj_el5_or_pow_of_order_five {g : PSL2F11} (hg : orderOf g = 5) :
         have : (ι (Sum.inr x) : PSL2F11) = g := congrArg Subtype.val hz
         convert x.property; exact this.symm)
 
-theorem isConj_Tmat_or_pow_of_order_eleven {g : PSL2F11} (hg : orderOf g = 11) :
+public theorem isConj_Tmat_or_pow_of_order_eleven {g : PSL2F11} (hg : orderOf g = 11) :
     IsConj (QuotientGroup.mk Tmat) g ∨
       IsConj (QuotientGroup.mk (Tmat ^ 2)) g := by
   classical
