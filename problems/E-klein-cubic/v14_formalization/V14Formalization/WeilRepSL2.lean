@@ -22,7 +22,7 @@ universe u
 namespace V14Formalization
 namespace WeilRepSL2
 
-variable {E : Type u} [Field E] [CharZero E] [IsCycl11 E]
+variable {E : Type u} [Field E] [CharZero E] [HasCycl11 E]
 
 public abbrev F := ZMod 11
 public abbrev SLG := SpecialLinearGroup (Fin 2) F
@@ -59,7 +59,7 @@ public theorem ea_ne_zero_of_ec_zero (g : SLG) (hc : ec g = 0) : ea g ≠ 0 := b
   map_smul' := by
     intro r f; funext x; simp [Pi.smul_apply, smul_eq_mul]; ring
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 public theorem Dfull_preserves_even (t : F) (ht : t ≠ 0) {f : (Fun E)}
     (hf : ∀ x, f (-x) = f x) (x : ZMod 11) :
     Dfull t ht f (-x) = Dfull t ht f x := by
@@ -67,7 +67,7 @@ public theorem Dfull_preserves_even (t : F) (ht : t ≠ 0) {f : (Fun E)}
   have hneg : t * (-x) = -(t * x) := by ring
   rw [hneg, hf (t * x)]
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 public theorem χ₂_one : (χ₂ : MulChar (ZMod 11) E) (1 : F) = 1 := by
   change (algebraMap ℤ E) (χ₂ℤ 1) = 1
   have : χ₂ℤ 1 = 1 := by
@@ -75,7 +75,7 @@ public theorem χ₂_one : (χ₂ : MulChar (ZMod 11) E) (1 : F) = 1 := by
     exact map_one (quadraticChar (ZMod 11))
   rw [this, map_one]
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 theorem Dfull_one : (Dfull (1 : F) one_ne_zero : (Fun E) →ₗ[E] (Fun E)) = LinearMap.id := by
   apply LinearMap.ext
   intro f
@@ -301,7 +301,7 @@ public theorem weilU_one : (weilU (1 : SLG) : (WeilRep.U E) →ₗ[E] (WeilRep.U
   rw [weilFun_one]
   rfl
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 /-- On subspaces (and projective space), `L` and `-L` induce the same action. -/
 theorem submodule_map_neg {W : Submodule E (WeilRep.U E)} (L : (WeilRep.U E) →ₗ[E] (WeilRep.U E)) :
     Submodule.map (-L) W = Submodule.map L W := by

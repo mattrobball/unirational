@@ -447,15 +447,15 @@ root of unity, with the target built over that field.
 
 ### The mechanism
 
-`WeilRep.IsCycl11 E` is a class carrying a chosen primitive 11th root. The five
-Weil modules take `{E} [Field E] [CharZero E] [IsCycl11 E]` with the field
+`WeilRep.HasCycl11 E` is a class carrying a chosen primitive 11th root. The five
+Weil modules take `{E} [Field E] [CharZero E] [HasCycl11 E]` with the field
 **implicit**, which is why the ripple was small: an expression that mentions the
 field anywhere determines it, and only expressions that mention it nowhere had
 to be annotated. `WeilRep.Fun`, `EvenSub`, `U`, `Ucoord` take the field
 explicitly (nothing else could determine it), so `WeilRep.U` became
 `WeilRep.U k` at its handful of call sites.
 
-`WeilRep.K` is unchanged and is an `IsCycl11` instance, so `V14SchemeModel.k`,
+`WeilRep.K` is unchanged and is an `HasCycl11` instance, so `V14SchemeModel.k`,
 `GeometricFanoCarrier.k` and every existing caller still mean exactly what they
 meant, and the three published statements are byte-identical.
 
@@ -504,7 +504,7 @@ budget unfolding them. The proof is unchanged.
 | `SchemeGeometry.noEquivariantRationalMap_ambientFree_of_target` | 47 / 11 | **47 / 11** |
 | `IntrinsicV14Field.noEquivariantRationalMap_ofPrimitiveRoot` | — | **157 / 24** |
 
-The `+5` on the first two is the `IsCycl11` class, its two projections, its
+The `+5` on the first two is the `HasCycl11` class, its two projections, its
 `K`-instance and `WeilRep.rootK`. The abstract target does not move, because
 its statement never reaches the Weil layer. All four artifacts in `artifacts/`
 were regenerated with `stan_boundary` and elaborate with zero errors;
@@ -2250,7 +2250,7 @@ theorem noEquivariantRationalMap_ofPrimitiveRoot
 ```
 
 with `noEquivariantRationalMap_intrinsicV14` the same statement for
-`intrinsicV14 F` under `[IsCycl11 F]`. `noEquivariantRationalMap_intrinsicV14_of_target`
+`intrinsicV14 F` under `[HasCycl11 F]`. `noEquivariantRationalMap_intrinsicV14_of_target`
 survives, marked `NOT THE THEOREM`: it is the record of what
 `AbstractTargetHeadline` shows the argument uses about a target.
 

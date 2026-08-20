@@ -22,7 +22,7 @@ universe u
 namespace V14Formalization
 namespace WeilHom
 
-variable {E : Type u} [Field E] [CharZero E] [IsCycl11 E]
+variable {E : Type u} [Field E] [CharZero E] [HasCycl11 E]
 
 public abbrev F := ZMod 11
 public abbrev SLG := SpecialLinearGroup (Fin 2) F
@@ -310,7 +310,7 @@ public theorem weilFun_mul_big_borel {g h : SLG} (hg : ec g ≠ 0) (hh : ec h = 
 
 /-! ## D(−1) = −R; on even functions R = id so D(−1) = −id -/
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 theorem Dfull_neg_one :
     (Dfull (-1 : F) (by decide : (-1 : F) ≠ 0) : (Fun E) →ₗ[E] (Fun E)) = -Rfull := by
   apply LinearMap.ext; intro f; funext x
@@ -320,7 +320,7 @@ theorem Dfull_neg_one :
   rw [this]
   ring
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 theorem Dfull_neg (t : F) (ht : t ≠ 0) :
     (Dfull (-t) (neg_ne_zero.mpr ht) : (Fun E) →ₗ[E] (Fun E)) =
       Dfull (-1 : F) (by decide) ∘ₗ Dfull t ht := by
@@ -329,13 +329,13 @@ theorem Dfull_neg (t : F) (ht : t ≠ 0) :
     (mul_ne_zero (by decide : (-1 : F) ≠ 0) ht)).trans
     (Dfull_mul (-1) t (by decide) ht)
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 /-- On even functions, R acts as the identity. -/
 theorem Rfull_even {f : (Fun E)} (hf : ∀ x, f (-x) = f x) (x : ZMod 11) :
     Rfull f x = f x := by
   dsimp [Rfull]; exact hf x
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 /-- On even functions, D(−t) = − D(t). -/
 theorem Dfull_neg_even (t : F) (ht : t ≠ 0) {f : (Fun E)}
     (hf : ∀ x, f (-x) = f x) (x : ZMod 11) :
@@ -1243,7 +1243,7 @@ private theorem Wfull_twice_eq_negR (f : (Fun E)) :
   simpa [LinearMap.comp_apply] using
     congrArg (fun L : (Fun E) →ₗ[E] (Fun E) => L f) Wfull_sq_R
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 private theorem negR_twice (f : (Fun E)) : (-Rfull) ((-Rfull) f) = f := by
   have hR2 : Rfull (Rfull f) = f := by
     simpa [LinearMap.comp_apply] using

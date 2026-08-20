@@ -60,10 +60,10 @@ open Set Matrix Module exteriorPower
 namespace V14Formalization
 namespace WeilModelBaseChange
 
-open V14Formalization.WeilRep (IsCycl11)
+open V14Formalization.WeilRep (HasCycl11)
 
 variable {A B : Type} [Field A] [Field B] [CharZero A] [CharZero B]
-  [IsCycl11 A] [IsCycl11 B] (φ : A →+* B)
+  [HasCycl11 A] [HasCycl11 B] (φ : A →+* B)
 
 /-! ## The scalars -/
 
@@ -163,7 +163,7 @@ public theorem bcU_weilUHom (g : WeilLambda2.SLG) (f : WeilRep.U A) :
 
 /-- Evaluation at `0,…,5` is an isomorphism `U ≃ 𝔽₁₁⁶`, over any base field.
 `Lambda2Coordinates.evalEvenEquivCore` is the instance at `ℚ(ζ₁₁)`. -/
-@[expose] public def evalEvenEquiv (E : Type) [Field E] [CharZero E] [IsCycl11 E] :
+@[expose] public def evalEvenEquiv (E : Type) [Field E] [CharZero E] [HasCycl11 E] :
     WeilRep.U E ≃ₗ[E] (Fin 6 → E) :=
   LinearEquiv.ofBijective (WeilLambda2.evalEven E)
     ⟨WeilLambda2.evalEven_injective E, fun v =>
@@ -173,23 +173,23 @@ public theorem bcU_weilUHom (g : WeilLambda2.SLG) (f : WeilRep.U A) :
 
 /-- The coordinate basis of `U` dual to evaluation at `0,…,5`, over any base
 field.  `Lambda2Coordinates.uBasisCore` is the instance at `ℚ(ζ₁₁)`. -/
-@[expose] public def uBasis (E : Type) [Field E] [CharZero E] [IsCycl11 E] :
+@[expose] public def uBasis (E : Type) [Field E] [CharZero E] [HasCycl11 E] :
     Basis (Fin 6) E (WeilRep.U E) :=
   Basis.ofEquivFun (evalEvenEquiv E)
 
-public theorem evalEvenEquiv_symm (E : Type) [Field E] [CharZero E] [IsCycl11 E]
+public theorem evalEvenEquiv_symm (E : Type) [Field E] [CharZero E] [HasCycl11 E]
     (v : Fin 6 → E) : (evalEvenEquiv E).symm v = WeilLambda2.extendEven E v := by
   apply (evalEvenEquiv E).injective
   rw [LinearEquiv.apply_symm_apply]
   simpa [LinearMap.comp_apply, evalEvenEquiv] using
     (LinearMap.congr_fun (WeilLambda2.evalEven_extendEven E) v).symm
 
-public theorem uBasis_repr (E : Type) [Field E] [CharZero E] [IsCycl11 E]
+public theorem uBasis_repr (E : Type) [Field E] [CharZero E] [HasCycl11 E]
     (v : WeilRep.U E) (i : Fin 6) :
     (uBasis E).repr v i = (v : WeilRep.Fun E) (i.val : ZMod 11) :=
   Basis.ofEquivFun_repr_apply (evalEvenEquiv E) v i
 
-public theorem uBasis_apply (E : Type) [Field E] [CharZero E] [IsCycl11 E] (j : Fin 6) :
+public theorem uBasis_apply (E : Type) [Field E] [CharZero E] [HasCycl11 E] (j : Fin 6) :
     uBasis E j = WeilLambda2.extendEven E (Pi.single j 1) := by
   rw [show uBasis E j = (evalEvenEquiv E).symm (Pi.single j 1) from
       congrFun (Basis.coe_ofEquivFun (evalEvenEquiv E)) j, evalEvenEquiv_symm]
@@ -351,7 +351,7 @@ public theorem toMatrix_ambientAct_map (g : WeilLambda2.PSL2F11) :
 
 public theorem map_chi10' (g : WeilLambda2.PSL2F11) :
     φ (WeilLambda2.chi10' A g) = WeilLambda2.chi10' B g := by
-  have h : ∀ (E : Type) [Field E] [CharZero E] [IsCycl11 E],
+  have h : ∀ (E : Type) [Field E] [CharZero E] [HasCycl11 E],
       WeilLambda2.chi10' E g =
         (if orderOf g = 1 then 10 else if orderOf g = 2 then 2 else
           if orderOf g = 3 then 1 else if orderOf g = 5 then 0 else
@@ -360,7 +360,7 @@ public theorem map_chi10' (g : WeilLambda2.PSL2F11) :
   rw [h A, h B]
   split_ifs <;> simp only [map_ofNat, map_one, map_zero, map_neg]
 
-public theorem toMatrix_projectorM_expand (E : Type) [Field E] [CharZero E] [IsCycl11 E] :
+public theorem toMatrix_projectorM_expand (E : Type) [Field E] [CharZero E] [HasCycl11 E] :
     LinearMap.toMatrix (Lambda4Coordinates.lex2 (uBasis E))
         (Lambda4Coordinates.lex2 (uBasis E)) (WeilLambda2.projectorM E) =
       (10 * (660 : E)⁻¹) • ∑ g : WeilLambda2.PSL2F11, WeilLambda2.chi10' E g •
@@ -424,7 +424,7 @@ in the lex Plücker basis attached to `uBasis F`.
 
 section OverBase
 
-variable (F : Type) [Field F] [CharZero F] [IsCycl11 F] [Algebra V14SchemeModel.k F]
+variable (F : Type) [Field F] [CharZero F] [HasCycl11 F] [Algebra V14SchemeModel.k F]
   (hzF : algebraMap V14SchemeModel.k F (WeilRep.ζ : V14SchemeModel.k) = (WeilRep.ζ : F))
 
 include hzF

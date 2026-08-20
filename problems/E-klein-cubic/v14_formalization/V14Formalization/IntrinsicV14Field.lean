@@ -42,9 +42,9 @@ namespace IntrinsicV14Field
 
 open AlgebraicGeometry Module
 open V14Formalization.WeilLambda2
-open V14Formalization.WeilRep (IsCycl11)
+open V14Formalization.WeilRep (HasCycl11)
 
-variable (F : Type) [Field F] [CharZero F] [IsCycl11 F]
+variable (F : Type) [Field F] [CharZero F] [HasCycl11 F]
 
 /-- The inclusion of the `10′` summand `M ⊆ ⋀²U`. -/
 @[expose] public def inclM : ↥(Msub F) →ₗ[F] Lambda2U F := (Msub F).subtype
@@ -104,7 +104,7 @@ end IntrinsicV14Field
 namespace IntrinsicV14Field
 
 open AlgebraicGeometry
-open V14Formalization.WeilRep (IsCycl11)
+open V14Formalization.WeilRep (HasCycl11)
 
 /-- The intrinsic `V₁₄` attached to a characteristic-zero field and a chosen
 primitive 11th root of unity in it.
@@ -116,7 +116,7 @@ and `BaseFieldCriteria.isPrimitiveRoot_zetaOf` say this hypothesis and
 `[Algebra ℚ(ζ₁₁) F]` are the same data. -/
 @[expose] public def ofPrimitiveRoot {F : Type} [Field F] [CharZero F] {ζ : F}
     (hζ : IsPrimitiveRoot ζ 11) : Action (Over (Spec (.of F))) WeilLambda2.PSL2F11 :=
-  letI : IsCycl11 F := ⟨ζ, hζ⟩
+  letI : HasCycl11 F := ⟨ζ, hζ⟩
   intrinsicV14 F
 
 end IntrinsicV14Field

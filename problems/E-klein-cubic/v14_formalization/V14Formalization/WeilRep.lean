@@ -60,7 +60,7 @@ its coefficient field: the additive character `ψ`, the Gauss sum and the
 Fourier operator are built out of `zeta` and nothing else.  It is a
 data-carrying class on purpose — the representation depends on *which* root is
 chosen, and two choices give genuinely different (though isomorphic) models. -/
-public class IsCycl11 (E : Type u) [Field E] where
+public class HasCycl11 (E : Type u) [Field E] where
   /-- The chosen root. -/
   zeta : E
   /-- It is a primitive 11th root of unity. -/
@@ -115,18 +115,18 @@ public theorem orderOf_rootK : orderOf rootK = 11 := by
     rootK_ne_one (orderOf_eq_one_iff.mp h1)
 /-- `K = ℚ(ζ₁₁)` is a field with a primitive 11th root of unity, so everything
 below applies to it.  This is the only place `AdjoinRoot Φ₁₁` is used. -/
-@[expose] public instance : IsCycl11 K := ⟨rootK, IsPrimitiveRoot.iff_orderOf.2 orderOf_rootK⟩
+@[expose] public instance : HasCycl11 K := ⟨rootK, IsPrimitiveRoot.iff_orderOf.2 orderOf_rootK⟩
 
 /-! ## The generic development -/
 
-variable {E : Type u} [Field E] [CharZero E] [IsCycl11 E]
+variable {E : Type u} [Field E] [CharZero E] [HasCycl11 E]
 
 /-- The chosen primitive 11th root of unity of the base field. -/
-@[expose] public def ζ : E := IsCycl11.zeta
+@[expose] public def ζ : E := HasCycl11.zeta
 
 omit [CharZero E] in
 public theorem isPrimitiveRoot_ζ : IsPrimitiveRoot (ζ : E) 11 :=
-  IsCycl11.isPrimitiveRoot_zeta
+  HasCycl11.isPrimitiveRoot_zeta
 
 omit [CharZero E] in
 public theorem ζ_pow_eleven : (ζ : E) ^ (11 : ℕ) = 1 :=
@@ -191,14 +191,14 @@ lemma ringChar_zmod11_ne_2 : ringChar (ZMod 11) ≠ 2 := by
   rw [ZMod.ringChar_zmod_n]; decide
 
 @[expose] public def χ₂ℤ : MulChar (ZMod 11) ℤ := quadraticChar (ZMod 11)
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 @[expose] public def χ₂ : MulChar (ZMod 11) E := χ₂ℤ.ringHomComp (algebraMap ℤ E)
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 public theorem χ₂_isQuadratic : IsQuadratic (χ₂ : MulChar (ZMod 11) E) :=
   (quadraticChar_isQuadratic (ZMod 11)).comp (algebraMap ℤ E)
 
-omit [IsCycl11 E] in
+omit [HasCycl11 E] in
 public theorem χ₂_ne_one : (χ₂ : MulChar (ZMod 11) E) ≠ 1 := by
   have hinj : Function.Injective (algebraMap ℤ E) :=
     FaithfulSMul.algebraMap_injective ℤ E
@@ -207,7 +207,7 @@ public theorem χ₂_ne_one : (χ₂ : MulChar (ZMod 11) E) ≠ 1 := by
     exact quadraticChar_ne_one ringChar_zmod11_ne_2
   exact (MulChar.ringHomComp_ne_one_iff hinj).mpr hχ
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 public theorem χ₂_neg_one : (χ₂ : MulChar (ZMod 11) E) (-1) = -1 := by
   have hℤ : χ₂ℤ (-1) = -1 := by
     change quadraticChar (ZMod 11) (-1) = -1
@@ -228,7 +228,7 @@ theorem gaussSum_χ₂_sq : (gaussSum χ₂ ψ) ^ 2 = (-11 : E) := by
 
 @[expose] public def gauss : E := ∑ x : ZMod 11, ψ (x ^ 2)
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 public theorem card_sq_eq (a : ZMod 11) :
     ((Finset.univ.filter (fun x : ZMod 11 => x ^ 2 = a)).card : E) = χ₂ a + 1 := by
   have h := quadraticChar_card_sqrts (F := ZMod 11) ringChar_zmod11_ne_2 a
@@ -303,9 +303,9 @@ public theorem cFourier_sq_mul_eleven : cFourier ^ 2 * 11 = (-1 : E) := by
 /-! ## Schrödinger representation on (Fun E) = F₁₁ → E -/
 
 public abbrev Fun (L : Type u) [Field L] : Type u := ZMod 11 → L
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 @[expose] public instance : AddCommGroup (Fun E) := inferInstance
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 @[expose] public instance : Module E (Fun E) := inferInstance
 
 /-- Mathlib character sum: Σ_x ψ(x·b) = 11 if b=0 else 0. -/
@@ -429,7 +429,7 @@ public theorem Sfull_sq_apply (f : (Fun E)) (x : ZMod 11) :
 -- writing `(WeilRep.U E)` here and in the two modules that `open WeilRep` directly.
 public protected abbrev U (L : Type u) [Field L] : Submodule L (Fun L) := EvenSub L
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 @[expose] public instance : Module E (WeilRep.U E) := inferInstance
 
 omit [CharZero E] in
@@ -480,17 +480,17 @@ public theorem S_even_sq :
 /-! ## Coordinate model K⁶ and seal matrices -/
 
 public abbrev Ucoord (L : Type u) [Field L] : Type u := Fin 6 → L
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 @[expose] public instance : AddCommGroup (Ucoord E) := inferInstance
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 @[expose] public instance : Module E (Ucoord E) := inferInstance
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 @[expose] public instance : Module.Free E (Ucoord E) := inferInstance
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 @[expose] public instance : FiniteDimensional E (Ucoord E) :=
   Module.Finite.equiv (Finsupp.linearEquivFunOnFinite E E (Fin 6))
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 theorem finrank_Ucoord : Module.finrank E (Ucoord E) = 6 := by
   rw [Module.finrank_fintype_fun_eq_card]; decide
 

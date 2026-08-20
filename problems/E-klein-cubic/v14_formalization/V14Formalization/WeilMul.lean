@@ -18,7 +18,7 @@ universe u
 namespace V14Formalization
 namespace WeilMul
 
-variable {E : Type u} [Field E] [CharZero E] [IsCycl11 E]
+variable {E : Type u} [Field E] [CharZero E] [HasCycl11 E]
 
 public abbrev F := ZMod 11
 public abbrev SLG := SpecialLinearGroup (Fin 2) F
@@ -38,7 +38,7 @@ public theorem Dfull_conj_Nfull (s t : F) (hs : s ≠ 0) :
   rw [hψ]
   ring
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 public theorem Dfull_mul (s t : F) (hs : s ≠ 0) (ht : t ≠ 0) :
     (Dfull (s * t) (mul_ne_zero hs ht) : (Fun E) →ₗ[E] (Fun E)) = Dfull s hs ∘ₗ Dfull t ht := by
   apply LinearMap.ext
@@ -51,11 +51,11 @@ public theorem Dfull_mul (s t : F) (hs : s ≠ 0) (ht : t ≠ 0) :
   rw [hx]
   ring
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 theorem Dfull_proof_irrel (t : F) (h1 h2 : t ≠ 0) :
     (Dfull t h1 : (Fun E) →ₗ[E] (Fun E)) = Dfull t h2 := rfl
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 /-- Congruence for Dfull under equality of the scaling parameter. -/
 public theorem Dfull_congr {t s : F} (h : t = s) (ht : t ≠ 0) (hs : s ≠ 0) :
     (Dfull t ht : (Fun E) →ₗ[E] (Fun E)) = Dfull s hs := by
@@ -222,7 +222,7 @@ public theorem weilU_mul_borel {g h : SLG} (hg : ec g = 0) (hh : ec h = 0) :
 
 /-! ## Quadratic character: χ(s⁻¹) = χ(s) for s ≠ 0 -/
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 public theorem χ₂_sq_one {s : F} (hs : s ≠ 0) : (χ₂ : MulChar (ZMod 11) E) s * χ₂ s = 1 := by
   have hℤ : (quadraticChar (ZMod 11) s) ^ 2 = 1 :=
     quadraticChar_sq_one (F := ZMod 11) hs
@@ -234,7 +234,7 @@ public theorem χ₂_sq_one {s : F} (hs : s ≠ 0) : (χ₂ : MulChar (ZMod 11) 
     _ = (algebraMap ℤ E) 1 := by rw [hℤ']
     _ = 1 := map_one _
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 public theorem χ₂_inv {s : F} (hs : s ≠ 0) : (χ₂ : MulChar (ZMod 11) E) s⁻¹ = χ₂ s := by
   have h1 : (χ₂ : MulChar (ZMod 11) E) s * χ₂ s⁻¹ = 1 := by
     rw [← map_mul, mul_inv_cancel₀ hs, χ₂_one]
@@ -305,7 +305,7 @@ public theorem Dfull_conj_Wfull (s : F) (hs : s ≠ 0) :
   map_add' := by intro f g; funext x; rfl
   map_smul' := by intro r f; funext x; rfl
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 public theorem Rfull_sq : (Rfull : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Rfull = LinearMap.id := by
   ext f x
   dsimp [Rfull]
@@ -328,7 +328,7 @@ public theorem Rfull_Nfull (t : F) : (Rfull : (Fun E) →ₗ[E] (Fun E)) ∘ₗ 
   have : (-x) ^ 2 = x ^ 2 := by ring
   rw [this]
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 theorem Rfull_Dfull (s : F) (hs : s ≠ 0) :
     (Rfull : (Fun E) →ₗ[E] (Fun E)) ∘ₗ Dfull s hs = Dfull s hs ∘ₗ Rfull := by
   apply LinearMap.ext
@@ -376,7 +376,7 @@ public theorem ec_big_borel_ne {g h : SLG} (hg : ec g ≠ 0) (hh : ec h = 0) :
 
 /-! ## Quadratic character values used by Fourier conjugation -/
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 public theorem χ₂_two : (χ₂ : MulChar (ZMod 11) E) (2 : F) = -1 := by
   have hℤ : χ₂ℤ (2 : ZMod 11) = -1 := by
     change quadraticChar (ZMod 11) 2 = -1
@@ -385,7 +385,7 @@ public theorem χ₂_two : (χ₂ : MulChar (ZMod 11) E) (2 : F) = -1 := by
   change (algebraMap ℤ E) (χ₂ℤ 2) = -1
   rw [hℤ, map_neg, map_one]
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 theorem χ₂_neg_two : (χ₂ : MulChar (ZMod 11) E) (-2 : F) = 1 := by
   have : (-2 : F) = (-1) * (2 : F) := by ring
   rw [this, map_mul, χ₂_neg_one, χ₂_two]

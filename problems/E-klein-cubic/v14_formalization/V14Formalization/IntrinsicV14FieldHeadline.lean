@@ -84,7 +84,7 @@ namespace IntrinsicV14Field
 
 open AlgebraicGeometry Module
 open V14Formalization.WeilLambda2
-open V14Formalization.WeilRep (IsCycl11)
+open V14Formalization.WeilRep (HasCycl11)
 open V14Formalization.SchemeGeometry
 
 /-! ## The distinguished field is one of the fields covered -/
@@ -111,7 +111,7 @@ public theorem noEquivariantRationalMap_intrinsicV14_cycl
 
 /-! ## The general field -/
 
-variable (F : Type) [Field F] [CharZero F] [IsCycl11 F]
+variable (F : Type) [Field F] [CharZero F] [HasCycl11 F]
 
 /-- **Hypothesis (a) for the intrinsic `V₁₄` over `F`.**  Every rational map
 over `Spec F` from a biprojective space to the `σ`-fixed locus of `V₁₄_F` is
@@ -179,7 +179,7 @@ namespace IntrinsicV14Field
 
 open AlgebraicGeometry
 open V14Formalization.SchemeGeometry
-open V14Formalization.WeilRep (IsCycl11)
+open V14Formalization.WeilRep (HasCycl11)
 
 /-- **The same theorem with the field condition spelled out as an element and a
 property**, which is the form a reader checks.  Unconditional.
@@ -194,7 +194,7 @@ public theorem noEquivariantRationalMap_ofPrimitiveRoot
     {V : Type} [AddCommGroup V] [Module F V] [FiniteDimensional F V] [Nontrivial V]
     (R : FaithfulLinearRep F WeilLambda2.PSL2F11 V) :
     ¬ HasEquivariantRationalMap (ambientFree R) (ofPrimitiveRoot hζ) :=
-  letI : IsCycl11 F := ⟨ζ, hζ⟩
+  letI : HasCycl11 F := ⟨ζ, hζ⟩
   noEquivariantRationalMap_intrinsicV14 F R
 
 #print axioms noEquivariantRationalMap_intrinsicV14

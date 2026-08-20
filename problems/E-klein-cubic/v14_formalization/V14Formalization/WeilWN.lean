@@ -20,7 +20,7 @@ universe u
 namespace V14Formalization
 namespace WeilWN
 
-variable {E : Type u} [Field E] [CharZero E] [IsCycl11 E]
+variable {E : Type u} [Field E] [CharZero E] [HasCycl11 E]
 
 public abbrev F := ZMod 11
 

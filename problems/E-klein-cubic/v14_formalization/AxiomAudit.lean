@@ -58,7 +58,7 @@ public import V14Formalization.IntrinsicV14FieldHeadline
 -- `noEquivariantRationalMap_intrinsicV14` / `..._ofPrimitiveRoot`: it assumes
 -- nothing about the target. `..._of_target` is the *record* of what
 -- `AbstractTargetHeadline` shows the argument uses, and is strictly weaker.
-#print axioms V14Formalization.WeilRep.IsCycl11
+#print axioms V14Formalization.WeilRep.HasCycl11
 #print axioms V14Formalization.WeilLambda2.pslLambda2Hom
 #print axioms V14Formalization.WeilLambda2.projectorM_equivariant
 #print axioms V14Formalization.IntrinsicV14Field.intrinsicV14

@@ -375,12 +375,12 @@ all: `finrank U = 6` is a sandwich between two injections whose proofs are
 
 ### What was done
 
-* `WeilRep.IsCycl11 E` — a class carrying a chosen primitive 11th root of
+* `WeilRep.HasCycl11 E` — a class carrying a chosen primitive 11th root of
   unity. `WeilRep.K` is an instance of it and is otherwise untouched, so
   `V14SchemeModel.k` and every existing caller still mean exactly what they
   meant.
 * `WeilRep`, `WeilRepSL2`, `WeilMul`, `WeilWN`, `WeilHom` now carry
-  `{E} [Field E] [CharZero E] [IsCycl11 E]`. The field is implicit, so call
+  `{E} [Field E] [CharZero E] [HasCycl11 E]`. The field is implicit, so call
   sites are unchanged except where nothing in the expression determines it.
 * `WeilLambda2.lean` — `Lambda2U`, `pslLambda2Hom`, `ambientAct`, `chi10'`,
   `projectorM`, `Msub` and `projectorM_equivariant` over any such `E`.

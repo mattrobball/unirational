@@ -25,7 +25,7 @@ public import Mathlib.Tactic.FinCases
 # `Λ²U` and the `PSL(2,11)`-action, over any field with a primitive 11th root
 
 This is `GeometricFanoCarrier`'s ambient block with the base field released
-from `ℚ(ζ₁₁)`.  Everything here takes a field `E` with `[WeilRep.IsCycl11 E]`
+from `ℚ(ζ₁₁)`.  Everything here takes a field `E` with `[WeilRep.HasCycl11 E]`
 — a chosen primitive 11th root of unity — and nothing else; `GeometricFanoCarrier`
 is the instantiation at `E = ℚ(ζ₁₁)` and keeps every name it had.
 
@@ -51,7 +51,7 @@ noncomputable section
 namespace V14Formalization
 namespace WeilLambda2
 
-open V14Formalization.WeilRep (IsCycl11)
+open V14Formalization.WeilRep (HasCycl11)
 
 /-- The finite field the group is defined over. -/
 public abbrev F := ZMod 11
@@ -63,7 +63,7 @@ public abbrev PSL2F11 : Type := PSL(2, F)
 @[expose] public instance : Fact (Nat.Prime 11) := ⟨Nat.prime_eleven⟩
 @[expose] public instance : Group PSL2F11 := inferInstance
 
-variable (E : Type) [Field E] [CharZero E] [IsCycl11 E]
+variable (E : Type) [Field E] [CharZero E] [HasCycl11 E]
 
 /-! ## `finrank U = 6`, by evaluation and even extension -/
 
@@ -81,7 +81,7 @@ variable (E : Type) [Field E] [CharZero E] [IsCycl11 E]
     have : x.val ≤ 10 := Nat.lt_succ_iff.mp (ZMod.val_lt x)
     omega⟩
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 set_option linter.unusedSectionVars false in
 public theorem extendEvenFun_even (v : Fin 6 → E) (x : ZMod 11) :
     extendEvenFun E v (-x) = extendEvenFun E v x := by
@@ -130,7 +130,7 @@ public theorem extendEvenFun_even (v : Fin 6 → E) (x : ZMod 11) :
     simp only [extendEvenFun, Pi.smul_apply, smul_eq_mul]
     split_ifs <;> rfl
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 public theorem evalEven_extendEven : evalEven E ∘ₗ extendEven E = LinearMap.id := by
   apply LinearMap.ext; intro v; funext j
   have hjlt : j.val < 11 := Nat.lt_trans j.isLt (by decide : 6 < 11)
@@ -142,7 +142,7 @@ public theorem evalEven_extendEven : evalEven E ∘ₗ extendEven E = LinearMap.
   congr 1
   exact Fin.ext hval
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 public theorem evalEven_injective : Function.Injective (evalEven E) := by
   intro f g heq
   apply Subtype.ext; funext x
@@ -171,7 +171,7 @@ public theorem evalEven_injective : Function.Injective (evalEven E) := by
       _ = g.1 (-x) := hfeq
       _ = g.1 x := g.2 x
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 public theorem extendEven_injective : Function.Injective (extendEven E) := by
   intro v w h
   have he := congrArg (evalEven E) h
@@ -179,7 +179,7 @@ public theorem extendEven_injective : Function.Injective (extendEven E) := by
   have hw : evalEven E (extendEven E w) = w := LinearMap.congr_fun (evalEven_extendEven E) w
   rwa [hv, hw] at he
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 public theorem finrank_U : Module.finrank E (WeilRep.U E) = 6 := by
   have hfin6 : Module.finrank E (Fin 6 → E) = 6 := by
     rw [Module.finrank_fintype_fun_eq_card]; decide
@@ -224,7 +224,7 @@ public theorem weilLambda2_mul (g h : SLG) :
   dsimp [weilLambda2]
   rw [map_mul, Module.End.mul_eq_comp, exteriorPower.map_comp]
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 theorem exteriorPower_map_smul_id (c : E) :
     exteriorPower.map (R := E) (n := 2) (c • LinearMap.id : WeilRep.U E →ₗ[E] WeilRep.U E) =
       (c ^ 2) • (LinearMap.id : Lambda2U E →ₗ[E] Lambda2U E) := by
@@ -247,7 +247,7 @@ theorem exteriorPower_map_smul_id (c : E) :
     funext i; simp
   rw [hcomp, hsmul]
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 theorem exteriorPower_map_neg_id :
     exteriorPower.map (R := E) (n := 2) (-LinearMap.id : WeilRep.U E →ₗ[E] WeilRep.U E) =
       LinearMap.id := by
@@ -353,7 +353,7 @@ are rational integers, so this definition is the same over every field. -/
   else if n = 11 then -1
   else 0
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 theorem chi10'_eq_of_orderOf_eq {g h : PSL2F11} (ho : orderOf g = orderOf h) :
     chi10' E g = chi10' E h := by
   simp [chi10', ho]
@@ -379,7 +379,7 @@ theorem orderOf_conj (g h : PSL2F11) : orderOf (h * g * h⁻¹) = orderOf g := b
       _ = h⁻¹ * 1 * h := by rw [h1]
       _ = 1 := by simp
 
-omit [CharZero E] [IsCycl11 E] in
+omit [CharZero E] [HasCycl11 E] in
 theorem chi10'_conj (g h : PSL2F11) : chi10' E (h * g * h⁻¹) = chi10' E g :=
   chi10'_eq_of_orderOf_eq E (orderOf_conj g h)
 

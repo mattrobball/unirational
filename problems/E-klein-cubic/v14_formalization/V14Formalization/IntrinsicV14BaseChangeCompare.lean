@@ -52,7 +52,7 @@ namespace IntrinsicV14BaseChange
 open AlgebraicGeometry Module BConicBundleMultisections
 open V14Formalization.SchemeGeometry
 open V14Formalization.WeilLambda2
-open V14Formalization.WeilRep (IsCycl11)
+open V14Formalization.WeilRep (HasCycl11)
 
 attribute [local instance] MvPolynomial.gradedAlgebra
 
@@ -130,7 +130,7 @@ public theorem mapCoeff_toSpec {R S : Type} [CommRing R] [CommRing S]
     simpa using congrArg CommRingCat.ofHom (coeff_zero_comp φ n)
   rw [hz]
 
-variable (F : Type) [Field F] [CharZero F] [IsCycl11 F] [Algebra k F]
+variable (F : Type) [Field F] [CharZero F] [HasCycl11 F] [Algebra k F]
   (hzF : algebraMap k F (WeilRep.ζ : k) = (WeilRep.ζ : F))
 
 /-! ## The graded ring homomorphism -/
