@@ -582,3 +582,54 @@ two-target figures above were measured with; it is not upstream.
 
 These two are the honest scope of the port. Everything else in the reuse section is
 copy-and-adapt.
+
+---
+
+### D16. The shipped challenge imports the development, so the statement comparison is vacuous
+
+`V14Challenge.lean` at `87e68ad0` imports `V14Formalization.HeadlineStatement` and
+`V14Formalization.IntrinsicV14Field` — the same project modules `V14Solution.lean`
+imports, resolving to the same oleans. Comparator compares the target's `ConstantVal`
+and then walks every constant reachable from its type, requiring challenge and solution
+`ConstantInfo`s to be equal. When both sides import the same modules, every one of those
+constants is identical *by construction*. The comparison cannot fail, whatever the
+statement says.
+
+So a green Comparator run on this configuration establishes:
+
+* the solution's proof is accepted by the Lean kernel and by Nanoda, and
+* its axiom closure is exactly `{propext, Quot.sound, Classical.choice}` with no `sorry`.
+
+It does **not** establish that the challenge statement is independent of the
+development, which is the property Comparator exists to check. `intrinsicV14`,
+`projectiveSpaceOfRep`, `HasCycl11` and the rest are trusted as the project defines
+them, not exhibited for a reader.
+
+Measured 2026-08-21, both at commit `87e68ad0`:
+
+| challenge | build | verdict |
+|---|---|---|
+| import-based (shipped) | CI run 32462714143, 4 cores / 15 GB, 3h39m | **success** — statement comparison vacuous |
+| stan, Mathlib-only, 130 decls / 18 modules | local container, 8 CPU / 32 GB | **FAIL**, exit 1 |
+
+The stan run is the first configuration in which the comparison has any content, and it
+fails at `V14Formalization.SchemeGeometry.projectiveSpaceOfRep_irreducibleSpace` — the
+`value` field, `sorryAx` against a real proof. The local gate's step 4 predicts the same
+constant and reports 28 in total; Comparator aborts at the first, so the gate is the
+cheaper instrument for this. This is D15's mechanism, still live on the current
+statement.
+
+**Consequence for the trusted-base figures.** The 174 → 134 → 130 declaration counts
+recorded during the 2026-08-21 work measure what a stan emission *would* contain. Since
+the shipped challenge imports the project instead, those declarations are trusted as
+given rather than exhibited. Narrowing the statement was real; it is not what a green
+check on this configuration certifies.
+
+**Correction to D15.** D15 states that listing constants in `theorem_names` "does not
+rescue it — inside `Compare.loop` only `definition_names` gets type-only treatment." At
+the pinned rev `c0c5a52`, `Compare.loop` tests
+`definitionTargets.contains … || theoremTargets.contains …`, so theorem targets get
+type-only treatment as well. For a theorem this is not a hole: the up-front loop still
+compares `toConstantVal`, and the solution's proof is kernel-checked and axiom-checked.
+For a *definition*, `definitionHoleMatches` discards the body, which is a real loss of
+meaning. The distinction matters for any attempt to close the 28.
