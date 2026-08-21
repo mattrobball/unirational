@@ -42,6 +42,7 @@ fail=0
 # Comparator targets. They would drag the coordinate machinery into the trusted
 # base, so `comparator.json` does not name them; this gate checks them anyway.
 CANARIES=(
+  V14Formalization.Comparator.noEquivariantRationalMap_projectiveSpaceOfRep
   V14Formalization.Comparator.noEquivariantRationalMap_from_ambient
   V14Formalization.Comparator.noEquivariantRationalMap_projectiveGVariety
 )

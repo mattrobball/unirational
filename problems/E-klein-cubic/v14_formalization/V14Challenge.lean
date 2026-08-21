@@ -1,19 +1,28 @@
 /-
 Comparator challenge: independent statement of the public no-map theorem.
-Trusted vocabulary is `HeadlineStatement` only — this file does not import
-the proof module `FaithfulHeadline`.
+Trusted vocabulary is `HeadlineStatement` and `IntrinsicV14Field` — this file
+imports neither proof module (`FaithfulHeadline`, `IntrinsicV14FieldHeadline`).
 
-`comparator.json` names ONE target, `noEquivariantRationalMap_projectiveSpaceOfRep`.
-The two coordinatized theorems below are stated and proved here, and the
-local gate scripts still check them, but they are not separately certified:
-listing them as targets pulls `PlusMinusCoords`, `ambientOf`, `ofFaithfulRep`
-and `plusMinusAmbientBasis` into the trusted base — 229 project declarations
-against 180 — which re-imports exactly the coordinate machinery the
-coordinate-free statement exists to eliminate.
+`comparator.json` names ONE target, `noEquivariantRationalMap_intrinsicV14`:
+no equivariant rational map from `ℙ(V)` to the intrinsic `V₁₄`, over ANY field
+of characteristic zero carrying a primitive 11th root of unity.  Its trusted
+base is 134 declarations from 19 modules, against 174 from 25 for the previous
+target `noEquivariantRationalMap_projectiveSpaceOfRep` below, and
+`V14SchemeModel.k` — a carrier of this development, not a condition a reader
+can check — no longer appears in the published statement.
+
+The three `V14SchemeModel.k`-specific theorems below remain stated, and the
+local gate scripts still check them as canaries, but they are not separately
+certified: targeting them pins the statement to the fixed field
+`AdjoinRoot Φ₁₁`, and the two coordinatized ones additionally pull
+`PlusMinusCoords`, `ambientOf`, `ofFaithfulRep` and `plusMinusAmbientBasis` —
+exactly the coordinate machinery the intrinsic statement exists to
+eliminate — back into the trusted base.
 -/
 module
 
 public import V14Formalization.HeadlineStatement
+public import V14Formalization.IntrinsicV14Field
 
 noncomputable section
 
@@ -24,6 +33,26 @@ namespace V14Formalization.Comparator
 
 open V14Formalization.SchemeGeometry
 open AlgebraicGeometry Module
+open V14Formalization.WeilLambda2 (PSL2F11)
+open V14Formalization.WeilRep (HasCycl11)
+open V14Formalization.IntrinsicV14Field (intrinsicV14)
+
+/-- **The target.**  No `PSL(2,11)`-equivariant rational map from `ℙ(V)` to
+the intrinsic `V₁₄`, over any field of characteristic zero carrying a
+primitive 11th root of unity.  Unconditional: nothing is assumed about the
+target.
+
+`V` is any faithful `F`-linear representation, `ℙ(V) = Proj (Sym (V*))`
+carries its action by functoriality, and the target is `Proj (Sym (M*) ⧸ I)`
+for the Plücker ideal `I` of the wedge pairing on the `10′` summand
+`M ⊆ ⋀²U` of the even Weil representation over `F`.  Neither `AdjoinRoot Φ₁₁`
+nor any other carrier of this development occurs in the statement. -/
+public theorem noEquivariantRationalMap_intrinsicV14
+    (F : Type) [Field F] [CharZero F] [HasCycl11 F]
+    {V : Type} [AddCommGroup V] [Module F V] [FiniteDimensional F V] [Nontrivial V]
+    (R : FaithfulLinearRep F PSL2F11 V) :
+    ¬ HasEquivariantRationalMap (projectiveSpaceOfRep R) (intrinsicV14 F) := by
+  sorry
 
 /-- **Coordinate-free form.**  There is no equivariant `Scheme.RationalMap`
 from `ℙ(V) = Proj (Sym (V*))`, the projectivization of a faithful linear
