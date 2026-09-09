@@ -1,0 +1,90 @@
+name: Build explicit Klein parametrization notes
+
+on:
+  push:
+    branches: [astra/klein-explicit-20260909]
+    paths:
+      - 'problems/E-klein-cubic/explicit_parametrization/source_bundle.zip'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: klein-explicit-notes-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish-notes:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          sparse-checkout: |
+            problems/E-klein-cubic/explicit_parametrization
+          sparse-checkout-cone-mode: true
+      - name: Unpack the audited source bundle, if present
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import zipfile
+          root = Path('problems/E-klein-cubic/explicit_parametrization')
+          bundle = root / 'source_bundle.zip'
+          if bundle.exists():
+              with zipfile.ZipFile(bundle) as archive:
+                  for member in archive.infolist():
+                      path = Path(member.filename)
+                      if path.is_absolute() or '..' in path.parts or member.is_dir():
+                          raise RuntimeError('Invalid source-bundle entry')
+                      if path.suffix not in {'.tex', '.py', '.json', '.md', '.txt', '.log'}:
+                          raise RuntimeError('Unexpected source-bundle file type')
+                  archive.extractall(root)
+              bundle.unlink()
+          PY
+      - name: Replay exact checks
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd problems/E-klein-cubic/explicit_parametrization
+          python3 verify_model_exact.py > model_replay.log
+          python3 verify_explicit.py > replay.log
+          python3 verify_coordinates.py > coordinates_replay.log
+      - name: Install LaTeX
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y --no-install-recommends latexmk texlive-latex-extra lmodern
+      - name: Build PDFs and record hashes
+        shell: bash
+        env:
+          SOURCE_DATE_EPOCH: '1788912000'
+          FORCE_SOURCE_DATE: '1'
+        run: |
+          set -euo pipefail
+          cd problems/E-klein-cubic/explicit_parametrization
+          mkdir -p .build
+          for name in klein_rational_coordinates klein_explicit_notes; do
+            latexmk -pdf -halt-on-error -interaction=nonstopmode -outdir=.build "$name.tex"
+            cp ".build/$name.pdf" "$name.pdf"
+          done
+          python3 - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root = Path('.')
+          data = {p.name: hashlib.sha256(p.read_bytes()).hexdigest()
+                  for p in sorted(root.iterdir()) if p.is_file()
+                  and p.suffix in {'.pdf', '.tex', '.py'} }
+          Path('SHA256.json').write_text(json.dumps(data, indent=2) + '\n')
+          PY
+      - name: Commit the built notes and exact replay results
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A -- problems/E-klein-cubic/explicit_parametrization
+          if ! git diff --cached --quiet; then
+            git commit -m 'Problem E: build PDF notes and record exact parametrization checks'
+            git push origin "HEAD:${GITHUB_REF_NAME}"
+          fi
