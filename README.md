@@ -85,17 +85,29 @@ the exceptional Klein-cubic action of \(\operatorname{PSL}_2(\mathbf F_{11})\).
   (1,k) for k ≥ 2, and the headline remain open.
 - **[Problem E](problems/E-klein-cubic/)** —
   \(\operatorname{PSL}_2(\mathbf F_{11})\)-equivariant unirationality of the
-  Klein cubic threefold.  **Open**: the exact reduction proved here is
-  \(C\) is \(G\)-unirational if and only if
-  \(\operatorname{ed}_{\mathbf C}(G)=3\), while a negative answer is
-  equivalent to essential dimension 4.  The repository records the exact
-  action and generic frame, a portable certificate suite, and scoped
-  exclusions for several bounded covariant constructions; none is an
-  all-degree negative result.
+  Klein cubic threefold.  **Affirmatively resolved (2026-09-09).**  An explicit
+  dominant \(G\)-equivariant rational map
+  \[
+     \Phi:\mathbf P(A^{\oplus4})=\mathbf P^{19}\dashrightarrow X
+  \]
+  is constructed from the equivariant Pfaffian model by a common-isotropic
+  three-plane pencil, a fixed cofactor relation, and residual secant descent.
+  In chosen bases its five coordinates are explicit homogeneous determinant
+  formulas; before common-factor cancellation they have degree 568.  At a
+  stated integral input the map lands at \([3:-2:2:-1:2]\), and an exact
+  Jacobian minor equals \(-221/27\neq0\), proving dominance.  Hence
+  \(\operatorname{ed}_{\mathbf C}(\operatorname{PSL}_2(\mathbf F_{11}))=3\).
+  See [`EXPLICIT_MAP_RESOLUTION_20260909.md`](problems/E-klein-cubic/EXPLICIT_MAP_RESOLUTION_20260909.md)
+  and [`explicit_map/`](problems/E-klein-cubic/explicit_map/).  The solution is
+  a mathematical proof with exact reproducible checks; it is not yet Lean
+  formalized.
 
 `problems/README.md` records the A--D shared conventions and the three
 semicontinuity/properness certificates that turn single finite-field
 computations into characteristic-zero theorems.
 
 Status: research artifacts under active verification — see each problem's
-`RESOLUTION.md` for precise claims, caveats, and literature context.
+current resolution document for precise claims, caveats, and literature
+context.  For Problem E, the September 2026 explicit-map resolution supersedes
+older files that still record the pre-solution `OPEN` state; those files are
+retained as historical research provenance.
